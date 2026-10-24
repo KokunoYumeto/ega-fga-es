@@ -1,0 +1,199 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noquoting,es-noshorthands]{babel}
+\usepackage{lmodern,amsmath,amssymb,geometry,hyperref}
+\geometry{margin=28mm}
+\setlength{\emergencystretch}{3em}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Exalcotop}{\operatorname{Exalcotop}}
+\title{Notas matemáticas sobre los preliminares de EGA IV-1}
+\author{}
+\date{}
+\begin{document}
+% BEGIN RIGHTS AND AI AUTHORSHIP NOTICE
+\begingroup
+\small
+\noindent\textbf{Derechos, disponibilidad y autoría}
+
+Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Este proyecto no dedica esas obras o contribuciones al dominio público ni concede una licencia sobre ellas. Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
+
+Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en \href{https://www.numdam.org/}{NUMDAM}. Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
+
+Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede \href{https://github.com/KokunoYumeto/ega-fga-es/issues}{abrir una incidencia en GitHub}. El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
+
+Estas notas matemáticas y su composición están producidas por IA. El trabajo documentado incluye OpenAI Codex, GPT-6 Astra, esfuerzo Ultra. Se conserva la autoría de las obras originales y de las contribuciones citadas; no se atribuyen a la IA. El responsable de la publicación no tradujo el texto.
+\par
+\endgroup
+\clearpage
+% END RIGHTS AND AI AUTHORSHIP NOTICE
+
+\maketitle
+Estas notas se refieren al capítulo~0 de A.~Grothendieck y J.~Dieudonné,
+\emph{Éléments de géométrie algébrique IV, première partie},
+\emph{Publications Mathématiques de l'IHÉS} \textbf{20} (1964).
+La numeración de los resultados es la de esa obra. La traducción según el
+impreso y la edición con enmiendas son textos distintos; las justificaciones
+matemáticas de las lecturas de esta última se exponen aquí por separado.
+
+\section*{Regularidad y homotecias: 15.1.8}
+La regularidad de un elemento sobre un módulo significa que la homotecia
+correspondiente es inyectiva. Una extensión polinómica, considerada como módulo
+sobre el anillo de base, es una suma directa de copias del módulo inicial;
+conserva, por tanto, esa inyectividad. No se requiere sobreyectividad.
+Por ejemplo, sean $A=k[x,y]$ y $M=A$, con la filtración $M_0=M$ y
+$M_i=0$ para $i\geq1$. La sucesión $(x,y)$ es regular, pero en
+$M/xM=k[y]$ la multiplicación por $y$ no tiene a $1$ en su imagen.
+En el argumento sobre $\gr_\bullet(M)\otimes_A(A/\mathfrak J'')$
+interviene, pues, la inyectividad. La biyectividad de los homomorfismos
+$\psi$, $\psi'$ y del homomorfismo de (15.1.8.1) es una afirmación distinta.
+
+\section*{Dimensión de un cociente: 16.3.4}
+Bajo las hipótesis de (16.3.4), sea $N=M/xM$. El número de elementos
+elegidos en el radical debe realizar el mínimo $s(N)$ para el que el cociente
+de $N$ tiene longitud finita. Por (16.2.3),
+$n=s(N)=\dim(N)$. Si esos elementos son $x_1,\ldots,x_n$, el cociente
+\[
+M/(xM+x_1M+\cdots+x_nM)
+\]
+tiene longitud finita. En consecuencia, $s(M)\leq n+1$ y
+$\dim(M)\leq\dim(N)+1$. Una elección arbitraria, no mínima, de $n$
+no bastaría por sí sola para obtener la última desigualdad.
+
+\section*{Cocadenas de Hochschild: 18.4.4}
+La estructura de $B$-módulo de $B\otimes_A B$ se define mediante el primer
+factor. Si $h':B\otimes_A B\to L$ es $B$-lineal, la aplicación
+$g(y)=h'(1\otimes y)$ es $A$-lineal. Recíprocamente, toda aplicación
+$A$-lineal $g:B\to L$ define un homomorfismo $B$-lineal mediante
+$h'(x\otimes y)=xg(y)$, pues $g(ay)=ag(y)$ para $a\in A$.
+Esto no implica que $g$ sea $B$-lineal. Para $A=\mathbf Q$ y
+$B=L=\mathbf Q[t]$, la derivación $g=d/dt$ satisface $g(1)=0$ y $g(t)=1$.
+La fórmula del coborde es
+\[
+h'(d_2(1\otimes x\otimes y))=xg(y)-g(xy)+yg(x),
+\]
+con $g$ simplemente $A$-lineal.
+
+\section*{Ideales abiertos de los dos anillos: 18.5.1}
+Para el homomorfismo continuo $\rho:A\to B$, los cocientes considerados
+son $A/\mathfrak J$ y $B/\mathfrak R$, donde
+$\mathfrak J\subset A$, $\mathfrak R\subset B$ y
+$\rho(\mathfrak J)\subset\mathfrak R$. Los refinamientos satisfacen
+$\mathfrak J'\subset\mathfrak J\subset A$ y
+$\mathfrak R'\subset\mathfrak R\subset B$.
+En el orden $(\mathfrak R',\mathfrak J')$, los anillos ambientes son,
+respectivamente, $B$ y $A$. Estas inclusiones proporcionan los homomorfismos
+entre cocientes del sistema inductivo de (18.5.1.1).
+
+\section*{Reducción y levantamiento de una base: 19.1.10}
+La reducción de $u:M\to N$ módulo el ideal maximal $\mathfrak J_0$
+tiene como módulo de llegada $N/\mathfrak J_0N$.
+En la parte local de la demostración, sea
+$r=\dim_{A/\mathfrak J}(M/\mathfrak JM)$ y elijamos $L=A^r$.
+Los levantamientos de una base de $M/\mathfrak JM$ definen $f:L\to M$,
+cuya reducción es un isomorfismo. Así, $L$ es libre de tipo finito.
+La libertad de $L$ es la propiedad utilizada en el argumento del determinante
+para la reducción de $u\circ f$; no basta con que $L$ sea de tipo finito.
+
+\section*{Denominadores de un inverso local: 19.1.12}
+Tras la reducción al caso en que $N$ es libre de tipo finito, un homomorfismo
+$w_{\mathfrak p}:N_{\mathfrak p}\to M_{\mathfrak p}$ se escribe
+\[
+w_{\mathfrak p}=w\otimes(1/f)1_{A_{\mathfrak p}},
+\qquad w:N\to M,\quad f\notin\mathfrak p.
+\]
+Si $w_{\mathfrak p}u_{\mathfrak p}=1$, entonces
+$(wu)_{\mathfrak p}=f1_{M_{\mathfrak p}}$.
+Como $M$ es de tipo finito, existe un mismo $g\notin\mathfrak p$ que
+anula $wu-f1_M$ sobre todos sus generadores. Después de localizar en $fg$,
+la multiplicación por $f$ es invertible y $f^{-1}w$ proporciona el inverso
+por la izquierda. Es el homomorfismo local $w_{\mathfrak p}$ el que se
+representa mediante la fracción indicada.
+
+\section*{Prolongamiento al completado: 19.3.6}
+El prolongamiento $B\to\widehat B\to C$ utiliza un homomorfismo
+\emph{continuo} de $B$ al álgebra discreta $C$.
+Un grupo topológico discreto es separado y completo; la continuidad da el
+prolongamiento al completado separado y la densidad de la imagen de $B$
+asegura su unicidad. La multiplicatividad y la compatibilidad con la acción
+de $A$ se prolongan junto con las operaciones continuas.
+Esta propiedad universal no se aplica a homomorfismos abstractos sin
+hipótesis de continuidad.
+
+\section*{Módulo de una extensión infinitesimal: 19.4.4}
+Si $\mathfrak J^2=0$ en $C$, el producto fibrado
+\[
+E_\lambda=B_\lambda\mathbin{\times}_{C/\mathfrak J}C
+\]
+es una extensión de $B_\lambda$ por $\mathfrak J$.
+La acción de $B$ sobre su núcleo pasa por
+$B\to B_\lambda\to C/\mathfrak J$. En particular, ese núcleo está
+anulado por el ideal abierto que define $B_\lambda$.
+El grupo cuya anulación trivializa la extensión después de refinar el índice
+es, por tanto, $\Exalcotop_A(B,\mathfrak J)$.
+La hipótesis de (19.4.4) se aplica precisamente a este módulo discreto.
+
+\section*{Anillo de coeficientes: 19.8.8}
+La demostración utiliza el homomorfismo $u:W\to A$ elegido al comienzo;
+no necesita una afirmación adicional de unicidad.
+El homomorfismo local $w:B\to A$, con
+$B=W[[T_1,\ldots,T_{m-1}]]$, hace de $A$ un $B$-módulo cuasifinito.
+La completitud de $B$ y la separación de $A$ permiten aplicar
+$(0_{\mathrm I},7.4.1)$ para concluir que $A$ es un $B$-módulo de tipo
+finito. El anillo de escalares de esa conclusión es $B$.
+
+\section*{Cocientes formalmente lisos: 19.10.3(i)}
+Sea $\rho:A\twoheadrightarrow B=A/I$ un homomorfismo sobreyectivo.
+En el caso discreto, $B$ es formalmente liso sobre $A$ si y solo si $I=I^2$.
+En efecto, la aplicación idéntica de $B$ a $A/I$ debe levantarse a
+$A/I^2$ como homomorfismo de $A$-álgebras. Esto obliga a que la imagen de
+$I$ en $A/I^2$ sea nula, de donde $I=I^2$.
+Recíprocamente, en un problema de levantamiento con ideal de cuadrado nulo
+$J\subset C$, la imagen de $I$ en $C$ está contenida en $J$.
+Si $I=I^2$, esa imagen está contenida en $J^2=0$; el homomorfismo
+$A\to C$ se factoriza, pues, por $B$ y proporciona el levantamiento.
+No es necesario que $\rho$ sea biyectivo.
+
+\section*{Homomorfismos de extensiones: 20.6.25}
+En la sucesión (20.6.25.1), el homomorfismo $u^1$ olvida parte de la
+estructura de álgebra: una extensión relativa a $B$ se considera relativa
+a $A$. Es la construcción de (18.3.6.4). El homomorfismo $v^1$ toma la
+imagen recíproca de una extensión mediante $B\to C$, según (18.3.6.2).
+La propia proposición (20.6.25) remite a estos dos apartados.
+El último párrafo de su demostración, en la página impresa 146, lleva
+«(18.3.4.2)»; la referencia pertinente para los dos homomorfismos es
+(18.3.6.4) y (18.3.6.2), respectivamente. La traducción según el impreso
+conserva el localizador impreso.
+
+\section*{Álgebra de base de la lisura formal: 22.1.1}
+En la torre $\Lambda\to A\to B$, las condiciones relativas a $A$
+caracterizan la lisura formal de $B$ como $A$-álgebra.
+En el sentido recíproco, la lisura formal de $B$ sobre $A$ y la de $A$
+sobre $\Lambda$ implican la de $B$ sobre $\Lambda$, por composición
+de los levantamientos. Son estas dos estructuras relativas las que
+intervienen en (19.3.5(ii)) y en la demostración de (22.1.1).
+
+\section*{Cancelación y número de variables: 23.1.3.1 y 23.1.4}
+En (23.1.3.1), la cancelación de $x$, que no es divisor de cero, conserva
+el factor $s'$ de la igualdad precedente: el miembro derecho es
+$x^{n-1}as'$.
+En (23.1.4), la inducción para el anillo de series formales
+$A[[T_1,\ldots,T_r]]$ recae sobre el número $r$ de variables.
+
+\section*{Intersecciones de anillos de Krull: 23.2.3--23.2.8}
+El homomorfismo inyectivo del lema (23.2.3) es
+\[
+(A'\otimes_A B)_{\mathrm{red}}
+\longrightarrow (K'\otimes_A R)_{\mathrm{red}}.
+\]
+Su numeración dentro del lema es (23.2.3.1); el impreso lleva (23.1.8.1).
+En (23.2.7.1), cada $\varphi_i^{-1}(B'_i)$ es un subanillo de $K$.
+Junto con $A'=B'\cap K$, las condiciones de pertenencia dan
+\[
+A'=\bigcap_i\varphi_i^{-1}(B'_i).
+\]
+La intersección finita de estos anillos de Krull es, por tanto, un anillo
+de Krull. En (23.2.8), el resultado utilizado para las clausuras integrales
+es la proposición (23.2.7).
+\end{document}

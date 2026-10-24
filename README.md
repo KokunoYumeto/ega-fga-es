@@ -1,68 +1,32 @@
 # EGA y FGA en español
 
+FGA es obra de Alexandre Grothendieck. EGA es obra de Alexandre Grothendieck, con la colaboración de Jean Dieudonné. Esta colección reúne traducciones españolas producidas por IA, lectores PDF, fuentes LaTeX completas para cada lector y notas matemáticas separadas.
 
+[Leer FGA](readers/FGA_CURRENT/FGA_ES_CURRENT.pdf) · [Leer EGA II](readers/EGA_II/EGA_II_es_current.pdf) · [Fuentes y autoría](ATTRIBUTION.md) · [Derechos y disponibilidad](RIGHTS_NOTICE.md).
 
-FGA es obra de Alexandre Grothendieck. EGA es obra de Alexandre Grothendieck, con la colaboración de Jean Dieudonné. Esta colección ofrece traducciones españolas producidas por IA, con lectores PDF y fuentes LaTeX editables. La selección de EGA es parcial; el lector de IV-1 comprende el capítulo 0, §§ 14–23, y no el volumen IV-1 completo.
+La colección de EGA comprende los volúmenes y secciones indicados en la tabla; no es una traducción de todo EGA. IV-1 comprende exclusivamente el capítulo 0, §§14–23, incluido §19b. Las traducciones diplomáticas y las ediciones con enmiendas son documentos separados. FGA reúne las exposiciones 149, 182, 190, 195, 212, 221, 232 y 236, sus ocho textos de erratas y los comentarios de 1962; la traducción diplomática de FGA comprende únicamente la exposición 149.
 
+## Lectores y fuentes
 
-
-## FGA
-
-
-
-FGA reúne las exposiciones 149, 182, 190, 195, 212, 221, 232 y 236 del Seminario Bourbaki, sus ocho textos de erratas y los comentarios de 1962. La edición corregida y la traducción de la exposición 149 según el impreso son textos distintos; esta última comprende únicamente esa exposición. Las cifras marginales remiten a las páginas originales.
-
-
-
-| Obra y alcance | Lectura | LaTeX | Fuentes |
-
+| Obra y alcance | Lectura | LaTeX completo | Fuentes |
 | --- | --- | --- | --- |
+| EGA II: edición corregida | [PDF](readers/EGA_II/EGA_II_es_current.pdf) | [LaTeX](readers/EGA_II/EGA_II_es_current.tex) | [ZIP](readers/EGA_II/EGA_II_es_current_sources.zip) |
+| EGA II: traducción diplomática | [PDF](readers/EGA_II/EGA_II_es_diplomatic.pdf) | [LaTeX](readers/EGA_II/EGA_II_es_diplomatic.tex) | [ZIP](readers/EGA_II/EGA_II_es_diplomatic_sources.zip) |
+| EGA II: notas matemáticas | [PDF](readers/EGA_II/EGA_II_Notas_matematicas.pdf) | [LaTeX](readers/EGA_II/EGA_II_Notas_matematicas.tex) | [ZIP](readers/EGA_II/EGA_II_Notas_matematicas_sources.zip) |
+| EGA III-1: capítulo 0, §§8–13; capítulo III, §§1–5; edición corregida | [PDF](readers/III1_CURRENT/EGA_III1_ES_CURRENT_READER.pdf) | [LaTeX](readers/III1_CURRENT/EGA_III1_ES_CURRENT_READER.tex) | [ZIP](readers/III1_CURRENT/EGA_III1_ES_CURRENT_READER_sources.zip) |
+| EGA III-1: traducción diplomática, con el mismo alcance | [PDF](readers/III1_DIPLOMATIC/EGA_III1_ES_DIPLOMATIC_READER.pdf) | [LaTeX](readers/III1_DIPLOMATIC/EGA_III1_ES_DIPLOMATIC_READER.tex) | [ZIP](readers/III1_DIPLOMATIC/EGA_III1_ES_DIPLOMATIC_READER_sources.zip) |
+| EGA III-2: capítulo III, §§6–7 y material final | [PDF](readers/III2/EGA_III2_ES.pdf) | [LaTeX](readers/III2/EGA_III2_ES.tex) | [ZIP](readers/III2/EGA_III2_ES_sources.zip) |
+| EGA IV-1: capítulo 0, §§14–23; edición corregida | [PDF](readers/IV1_CURRENT/EGA_IV1_ES.pdf) | [LaTeX](readers/IV1_CURRENT/EGA_IV1_ES.tex) | [ZIP](readers/IV1_CURRENT/EGA_IV1_ES_sources.zip) |
+| EGA IV-1: capítulo 0, §§14–23; traducción diplomática | [PDF](readers/IV1_DIPLOMATIC/EGA_IV1_ES.pdf) | [LaTeX](readers/IV1_DIPLOMATIC/EGA_IV1_ES.tex) | [ZIP](readers/IV1_DIPLOMATIC/EGA_IV1_ES_sources.zip) |
+| EGA IV-1: notas matemáticas sobre el capítulo 0 | [PDF](readers/IV1_NOTES/IV1_Notas_matematicas.pdf) | [LaTeX](readers/IV1_NOTES/IV1_Notas_matematicas.tex) | [ZIP](readers/IV1_NOTES/IV1_Notas_matematicas_sources.zip) |
+| EGA IV-3: §§8–15, bibliografía e índices | [PDF](readers/IV3/reader-es.pdf) | [LaTeX](readers/IV3/reader-es.tex) | [ZIP](readers/IV3/reader-es_sources.zip) |
+| EGA IV-4: §§16–21, bibliografía, índices y erratas | [PDF](readers/IV4/EGA_IV4_ES.pdf) | [LaTeX](readers/IV4/EGA_IV4_ES.tex) | [ZIP](readers/IV4/EGA_IV4_ES_sources.zip) |
+| FGA: ocho exposiciones, sus erratas y comentarios de 1962 | [PDF](readers/FGA_CURRENT/FGA_ES_CURRENT.pdf) | [LaTeX](readers/FGA_CURRENT/FGA_ES_CURRENT.tex) | [ZIP](readers/FGA_CURRENT/FGA_ES_CURRENT_sources.zip) |
+| FGA A: exposiciones 149, 182, 190 y 195, con erratas | [PDF](readers/FGA_A/FGA_ES_A_CURRENT.pdf) | [LaTeX](readers/FGA_A/FGA_ES_A_CURRENT.tex) | [ZIP](readers/FGA_A/FGA_ES_A_CURRENT_sources.zip) |
+| FGA B: exposiciones 212, 221, 232 y 236, con erratas y comentarios | [PDF](readers/FGA_B/FGA_ES_B_CURRENT.pdf) | [LaTeX](readers/FGA_B/FGA_ES_B_CURRENT.tex) | [ZIP](readers/FGA_B/FGA_ES_B_CURRENT_sources.zip) |
+| FGA 149: traducción según el impreso | [PDF](readers/FGA_149_DIPLOMATIC/FGA_ES_149_PRINTED.pdf) | [LaTeX](readers/FGA_149_DIPLOMATIC/FGA_ES_149_PRINTED.tex) | [ZIP](readers/FGA_149_DIPLOMATIC/FGA_ES_149_PRINTED_sources.zip) |
 
-| FGA: ocho exposiciones, sus erratas y comentarios de 1962 | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/001_FGA_ES_CURRENT.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/002_FGA_ES_CURRENT.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/003_FGA_ES_CURRENT_SOURCE.zip) |
-
-| FGA A: exposiciones 149, 182, 190 y 195, con erratas | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/004_FGA_ES_A_CURRENT.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/005_FGA_ES_A_CURRENT.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/006_FGA_ES_A_CURRENT_SOURCE.zip) |
-
-| FGA B: exposiciones 212, 221, 232 y 236, con erratas y comentarios | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/007_FGA_ES_B_CURRENT.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/008_FGA_ES_B_CURRENT.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/009_FGA_ES_B_CURRENT_SOURCE.zip) |
-
-| FGA 149: traducción según el impreso | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/010_FGA_ES_149_PRINTED.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/011_FGA_ES_149_PRINTED.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-10-08-fga.1/012_FGA_ES_149_PRINTED_SOURCE.zip) |
-
-
-
-## EGA III, primera parte
-
-
-
-EGA III, primera parte, comprende el capítulo 0, §§ 8–13; el capítulo III, §§ 1–5; la continuación de la bibliografía, el índice de notaciones, el índice terminológico y el índice general. La edición actual y la traducción según el impreso tienen lectores y fuentes separados.
-
-
-
-| Edición | Lectura | LaTeX | Fuentes |
-
-| --- | --- | --- | --- |
-
-| Actual | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-09-23-preview.3/013_EGA_III1_ES_CURRENT_READER.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-09-23-preview.3/014_EGA_III1_ES_CURRENT_READER.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-09-23-preview.3/015_EGA_III1_ES_CURRENT_READER_SOURCE.zip) |
-
-| Según el impreso | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-09-23-preview.3/016_EGA_III1_ES_DIPLOMATIC_READER.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-09-23-preview.3/017_EGA_III1_ES_DIPLOMATIC_READER.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-09-23-preview.3/018_EGA_III1_ES_DIPLOMATIC_READER_SOURCE.zip) |
-
-
-
-## Otras ediciones de EGA
-
-
-
-| Obra y alcance | Lectura | Fuentes |
-
-| --- | --- | --- |
-
-| EGA III-2: capítulo III, §§ 6–7 y material final | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_III2_ES.pdf) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_III2_ES_source.zip) |
-
-| EGA IV-1: capítulo 0, §§ 14–23, incluido § 19b | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_IV1_ES_CURRENT.pdf) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_IV1_ES_SPANISH_FINAL_20260826.zip) |
-
-| EGA IV-3: §§ 8–15 y material final | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_IV3_ES.pdf) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_IV3_ES_20260828_R4.zip) |
-
-| EGA IV-4: §§ 16–21 y material final | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_IV4_ES_20260826_r1.pdf) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-08-28-preview.2/EGA_IV4_ES_20260826_r1_SOURCES_EVIDENCE.zip) |
-
-
+[Proyectos LaTeX modulares](editions/README.md). Cada ZIP contiene su documento principal y los archivos de compilación necesarios.
 
 ## Fuentes y contribuciones
 
@@ -94,55 +58,23 @@ La traducción al español está producida por IA. Las correcciones, la edición
 
 Los modelos documentados incluyen OpenAI Codex, GPT-6 Astra, esfuerzo Ultra, y, para EGA III-1, GPT-5.6 Sol, esfuerzo Ultra. No se afirma revisión humana.
 
+### FGA: traducción inglesa
 
+La obra original, Fondements de la géométrie algébrique, es de Alexandre Grothendieck. La traducción humana al inglés de [Tim Hosgood](https://github.com/thosgood/fga/tree/9976dd5f8e2ddcb388f0a07f3aa334f120d1019f) constituye una fuente de referencia de esta edición. Su proyecto reconoce las correcciones de Steve Hnizdur y el apoyo técnico de Jon Sterling. La versión 9976dd5f8e2ddcb388f0a07f3aa334f120d1019f identifica el texto inglés utilizado para la comparación de procedencia; no establece la versión histórica exacta incorporada inicialmente. La traducción española y las correcciones y composición posteriores fueron producidas por IA. La autoría de la traducción inglesa permanece con su traductor; no se le atribuye la traducción española. Esta atribución no constituye permiso ni aval.
 
 ## Derechos y disponibilidad
 
-
-
 Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Este proyecto no dedica esas obras o contribuciones al dominio público ni concede una licencia sobre ellas. Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
 
-
-
 Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en [NUMDAM](https://www.numdam.org/). Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
-
-
 
 Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede [abrir una incidencia en GitHub](https://github.com/KokunoYumeto/ega-fga-es/issues). El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
 
 
-
 ## Ediciones y referencias
 
-
-
-- [Colección española: versiones históricas](https://doi.org/10.5281/zenodo.22142002)
-
-- [Edición española histórica](https://doi.org/10.5281/zenodo.22912129)
-
-- [Registro histórico de FGA](https://doi.org/10.5281/zenodo.23232922)
-
 - [Todas las ediciones en GitHub](https://github.com/KokunoYumeto/ega-fga-es/releases)
-
-- [EGA en francés](https://github.com/KokunoYumeto/ega-fr)
-
-- [EGA en inglés](https://github.com/KokunoYumeto/ega-en)
-
-- [Português brasileiro](https://github.com/KokunoYumeto/ega-fga-sga-pt-br)
-
-- [Tiếng Việt](https://github.com/KokunoYumeto/ega-fga-sga-vi)
-
-## Fuentes editables y lectura de EGA II
-
-[Fuentes LaTeX de las quince ediciones y documentos matemáticos](editions/README.md), con sus documentos principales y dependencias.
-
-[EGA II: edición corregida (PDF)](readers/EGA_II/EGA_II_es_current.pdf) · [traducción diplomática (PDF)](readers/EGA_II/EGA_II_es_diplomatic.pdf) · [notas matemáticas (PDF)](readers/EGA_II/EGA_II_Notas_matematicas.pdf).
-
-
-## Lectores de EGA III y IV
-
-- [EGA III-1: capítulo 0, §§8–13; capítulo III, §§1–5; edición corregida](readers/III1_CURRENT/README.md). PDF, LaTeX completo y fuentes modulares.
-- [EGA III-1: capítulo 0, §§8–13; capítulo III, §§1–5; traducción diplomática](readers/III1_DIPLOMATIC/README.md). PDF, LaTeX completo y fuentes modulares.
-- [EGA IV-1: capítulo 0, §§14–23; edición corregida](readers/IV1_CURRENT/README.md). PDF, LaTeX completo y fuentes modulares.
-- [EGA IV-1: capítulo 0, §§14–23; traducción diplomática](readers/IV1_DIPLOMATIC/README.md). PDF, LaTeX completo y fuentes modulares.
-- [EGA IV-4: §§16–21, bibliografía, índices y erratas](readers/IV4/README.md). PDF, LaTeX completo y fuentes modulares.
+- [Colección española: registro histórico](https://doi.org/10.5281/zenodo.22142002)
+- [Edición española: registro histórico](https://doi.org/10.5281/zenodo.22912129)
+- [FGA: registro histórico](https://doi.org/10.5281/zenodo.23232922)
+- [EGA en francés](https://github.com/KokunoYumeto/ega-fr) · [EGA en inglés](https://github.com/KokunoYumeto/ega-en) · [Português brasileiro](https://github.com/KokunoYumeto/ega-fga-sga-pt-br) · [Tiếng Việt](https://github.com/KokunoYumeto/ega-fga-sga-vi)

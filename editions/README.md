@@ -25,3 +25,12 @@ Traducciones al español producidas por IA, con las atribuciones y fuentes hered
 - [Notas matemáticas (PDF)](../readers/EGA_II/EGA_II_Notas_matematicas.pdf).
 
 [Derechos y disponibilidad](../RIGHTS_NOTICE.md). [Atribuciones](../ATTRIBUTION.md).
+
+
+## Lectores de EGA III y IV
+
+- [EGA III-1: capítulo 0, §§8–13; capítulo III, §§1–5; edición corregida](../readers/III1_CURRENT/README.md). PDF, LaTeX completo y fuentes modulares.
+- [EGA III-1: capítulo 0, §§8–13; capítulo III, §§1–5; traducción diplomática](../readers/III1_DIPLOMATIC/README.md). PDF, LaTeX completo y fuentes modulares.
+- [EGA IV-1: capítulo 0, §§14–23; edición corregida](../readers/IV1_CURRENT/README.md). PDF, LaTeX completo y fuentes modulares.
+- [EGA IV-1: capítulo 0, §§14–23; traducción diplomática](../readers/IV1_DIPLOMATIC/README.md). PDF, LaTeX completo y fuentes modulares.
+- [EGA IV-4: §§16–21, bibliografía, índices y erratas](../readers/IV4/README.md). PDF, LaTeX completo y fuentes modulares.

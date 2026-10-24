@@ -1,0 +1,650 @@
+\subsection{Haces y fibrados tangentes relativos; derivaciones.}
+\label{IV.16.5}
+
+\begin{env}[16.5.1]
+\label{IV.16.5.1}
+Sea $f=(\psi,\theta):X\to S$ un morfismo de espacios anillados. Para todo
+$\mathcal{O}_X$-módulo $\mathscr{F}$, se llama \emph{$S$-derivación}
+(o \emph{$(X/S)$-derivación}, o \emph{$f$-derivación}) \emph{de
+$\mathcal{O}_X$ en $\mathscr{F}$} a todo homomorfismo de \emph{haces de
+grupos aditivos} $D:\mathcal{O}_X\to\mathscr{F}$ que satisface las condiciones
+siguientes:
+\begin{enumerate}
+\item[(a)] para todo abierto $V$ de $X$ y todo par de secciones
+$(t_1,t_2)$ de $\mathcal{O}_X$ sobre $V$, se tiene
+\[
+  D(t_1t_2)=t_1D(t_2)+D(t_1)t_2;
+  \tag{16.5.1.1}
+  \label{IV.16.5.1.1}
+\]
+\item[(b)] para todo abierto $V$ de $X$, toda sección $t$ de $\mathcal{O}_X$
+sobre $V$ y toda sección $s$ de $\mathcal{O}_S$ sobre un abierto
+$U$ de $S$ tal que $V\subset f^{-1}(U)$, se tiene
+\[
+  D((s|V)t)=(s|V)D(t).
+  \tag{16.5.1.2}
+  \label{IV.16.5.1.2}
+\]
+\end{enumerate}
+Está claro que equivale a decir que, para todo $x\in X$,
+el homomorfismo de grupos aditivos
+$D_x:\mathcal{O}_x\to\mathscr{F}_x$ es una
+$\mathcal{O}_{f(x)}$-derivación.
+
+Otra interpretación consiste en considerar la $\mathcal{O}_X$-álgebra
+$\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})$ igual a
+$\mathcal{O}_X\oplus\mathscr{F}$, cuya estructura de álgebra se define por la
+condición de que, para todo abierto $V$ de $X$, el producto de dos secciones de
+$\mathcal{O}_X$ (resp. de una sección de $\mathcal{O}_X$ y una sección de
+$\mathscr{F}$) sobre $V$ viene dado por la estructura de anillo de
+$\Gamma(V,\mathcal{O}_X)$ (resp. por la estructura de
+$\Gamma(V,\mathcal{O}_X)$-módulo de $\Gamma(V,\mathscr{F})$), y el producto de
+dos secciones de $\mathscr{F}$ sobre $V$ se toma igual a 0; entonces,
+$\mathscr{F}$ es un ideal de
+$\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})$, núcleo del aumento canónico
+$\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})\to\mathcal{O}_X$, y decir que $D$
+es una $S$-derivación de $\mathcal{O}_X$ en $\mathscr{F}$ significa que
+$1_{\mathcal{O}_X}+D$ es un $\mathcal{O}_S$-homomorfismo de álgebras de
+$\mathcal{O}_X$ en $\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})$ que, compuesto
+con el aumento, da $1_{\mathcal{O}_X}$.
+
+Las $S$-derivaciones de $\mathcal{O}_X$ en $\mathscr{F}$ forman evidentemente
+un $\Gamma(X,\mathcal{O}_X)$-módulo
+$\Der_S(\mathcal{O}_X,\mathscr{F})$.
+
+Cuando $\mathscr{F}=\mathcal{O}_X$, una $S$-derivación de $\mathcal{O}_X$ en
+sí mismo se llama simplemente una \emph{$S$-derivación de $\mathcal{O}_X$}.
+\end{env}
+
+\begin{proposition}[16.5.2]
+\label{IV.16.5.2}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $L$ un $B$-módulo; pongamos
+$S=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$,
+$\mathscr{F}=\widetilde{L}$. Entonces la aplicación $D\mapsto\Gamma(D)$ que a
+toda $S$-derivación $D$ de $\mathcal{O}_X$ en $\mathscr{F}$ hace
+corresponder la aplicación $\Gamma(D):t\mapsto D(t)$ de $B$ en $L$ es un
+isomorfismo de $B$-módulos de
+$\Der_S(\mathcal{O}_X,\mathscr{F})$ en
+$\Der_A(B,L)$ (cf. (0, 20.1.2)).
+\end{proposition}
+
+Esto resulta inmediatamente de la interpretación dada anteriormente de las $S$-derivaciones
+en términos
+\oldpage[IV-4]{28}
+de homomorfismos de álgebras, de la interpretación análoga dada en
+(0, 20.1.6) y de la correspondencia canónica entre homomorfismos de
+$\mathcal{O}_X$-álgebras y homomorfismos de $B$-álgebras (I, 1.3.13 y
+1.3.8).
+
+\begin{proposition}[16.5.3]
+\label{IV.16.5.3}
+Sea $f=(\psi,\theta):X\to S$ un morfismo de preesquemas.
+\begin{enumerate}
+\item[(i)] La diferencial
+$d_{X/S}:\mathcal{O}_X\to\Omega_{X/S}^1$ (16.3.6) es una $S$-derivación.
+\item[(ii)] Para todo $\mathcal{O}_X$-módulo $\mathscr{F}$, la aplicación
+$u\mapsto u\circ d_{X/S}$ es un isomorfismo de
+$\Gamma(X,\mathcal{O}_X)$-módulos
+\[
+  \operatorname{Hom}_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathscr{F})
+  \xrightarrow{\sim}
+  \Der_S(\mathcal{O}_X,\mathscr{F}).
+  \tag{16.5.3.1}
+  \label{IV.16.5.3.1}
+\]
+\end{enumerate}
+\end{proposition}
+
+La afirmación (i) ya se señaló en (16.3.6). Por otra parte, es inmediato (en
+virtud de (0, 20.4.8)) que $u\mapsto u\circ d_{X/S}$ es inyectiva, considerando
+las restricciones de ambos miembros al tallo $\mathcal{O}_x$ y utilizando
+(16.4.16.2). Para ver que el homomorfismo (16.5.3.1) es sobreyectivo,
+consideremos una $S$-derivación $D:\mathcal{O}_X\to\mathscr{F}$; para todo
+abierto afín $V=\operatorname{Spec}(B)$ de $X$ tal que $f(V)$ esté contenido
+en un abierto afín $U=\operatorname{Spec}(A)$ de $S$,
+$D_V:B\to\Gamma(V,\mathscr{F})$ es una $A$-derivación, por lo que existe un
+\emph{único} $B$-homomorfismo
+$u_V:\Omega_{B/A}^1\to\Gamma(V,\mathscr{F})$ tal que
+$D_V=u_V\circ d_{B/A}$ (0, 20.4.8); además, la unicidad de $u_V$ muestra
+inmediatamente que, para todo abierto afín $W\subset V$, se tiene $u_W=u_V|W$, por lo que los
+$u_V$ definen un homomorfismo de $\mathcal{O}_X$-módulos
+$u:\mathcal{O}_X\to\mathscr{F}$ que responde a la cuestión.
+
+\begin{env}[16.5.4]
+\label{IV.16.5.4}
+Con las notaciones de (16.5.1), para todo abierto $U$ de $X$,
+$\Der_S(\mathcal{O}_U,\mathscr{F}|U)$ es un
+$\Gamma(U,\mathcal{O}_X)$-módulo y está claro que la aplicación
+$U\mapsto\Der_S(\mathcal{O}_U,\mathscr{F}|U)$ es un
+prehaz; de hecho, es incluso un \emph{haz} (y, por tanto, un
+$\mathcal{O}_X$-módulo), en virtud de la caracterización puntual de las
+$S$-derivaciones vista en (16.5.1). Este $\mathcal{O}_X$-módulo se denota por
+$\mathscr{D}\!{\rm er}_S(\mathcal{O}_X,\mathscr{F})$ y se llama
+\emph{haz de $S$-derivaciones de $\mathcal{O}_X$ en $\mathscr{F}$}; lo
+que acabamos de ver se expresa también mediante el corolario siguiente:
+\end{env}
+
+\begin{corollary}[16.5.5]
+\label{IV.16.5.5}
+Para todo $\mathcal{O}_X$-módulo $\mathscr{F}$, el homomorfismo de
+$\mathcal{O}_X$-módulos deducido de $u\mapsto u\circ d_{X/S}$
+\[
+  \mathscr{H}\!om_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathscr{F})
+  \longrightarrow
+  \mathscr{D}\!{\rm er}_S(\mathcal{O}_X,\mathscr{F})
+  \tag{16.5.5.1}
+  \label{IV.16.5.5.1}
+\]
+es biyectivo.
+\end{corollary}
+
+\begin{corollary}[16.5.6]
+\label{IV.16.5.6}
+\begin{enumerate}
+\item[(i)] Si el morfismo $f:X\to S$ es localmente de presentación finita y
+si $\mathscr{F}$ es un $\mathcal{O}_X$-módulo cuasicoherente, entonces
+$\mathscr{D}\!{\rm er}_S(\mathcal{O}_X,\mathscr{F})$ es un
+$\mathcal{O}_X$-módulo cuasicoherente.
+\item[(ii)] Si además $S$ es localmente noetheriano y si $\mathscr{F}$ es
+coherente, entonces $\mathscr{D}\!{\rm er}_S(\mathcal{O}_X,\mathscr{F})$ es un
+$\mathcal{O}_X$-módulo coherente.
+\end{enumerate}
+\end{corollary}
+
+La afirmación (i) resulta del isomorfismo (16.5.5.1), de (16.4.22) y de
+(I, 1.3.12); la afirmación (ii) resulta de (0$_{\rm I}$, 5.3.5).
+
+\begin{env}[16.5.7]
+\label{IV.16.5.7}
+Pongamos
+\[
+  \mathfrak{G}_{X/S}=
+  \mathscr{H}\!om_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathcal{O}_X)
+  =\mathscr{D}\!{\rm er}_S(\mathcal{O}_X,\mathcal{O}_X)
+  \tag{16.5.7.1}
+  \label{IV.16.5.7.1}
+\]
+y se dice que es el \emph{haz de $S$-derivaciones de
+$\mathcal{O}_X$}, o también el \emph{haz tangente de $X$ relativo a
+$S$}: es, por tanto, el \emph{dual} del $\mathcal{O}_X$-módulo
+$\Omega_{X/S}^1$. Si $f$ es localmente de presentación
+\oldpage[IV-4]{29}
+finita, $\mathfrak{G}_{X/S}$ es un $\mathcal{O}_X$-módulo cuasicoherente; si
+además $S$ es localmente noetheriano, $\mathfrak{G}_{X/S}$ es coherente
+(16.5.6).
+\end{env}
+
+\begin{env}[16.5.8]
+\label{IV.16.5.8}
+Supongamos, más particularmente, que $\Omega_{X/S}^1$ es un
+$\mathcal{O}_X$-módulo \emph{localmente libre} (de rango finito) (lo que ocurrirá
+cuando $f$ sea \emph{liso} (17.2.3)); entonces $\mathfrak{G}_{X/S}$ es un
+$\mathcal{O}_X$-módulo localmente libre y tiene el mismo rango que $\Omega_{X/S}^1$
+en cada punto. Más precisamente, supongamos que $\Omega_{X/S}^1$ tiene
+rango $n$ en un punto $x$; existen entonces $n$ secciones $s_i$ ($1\leq i\leq n$)
+de $\mathcal{O}_X$ sobre una vecindad afín $U$ de $x$ tales que las
+imágenes canónicas de los $ds_i$ en
+$\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x)$ forman una base de este
+$k(x)$-espacio vectorial; en virtud del lema de Nakayama, los gérmenes
+$(ds_i)_x=d(s_i)_x$ de los $ds_i$ en el punto $x$ forman una base del
+$\mathcal{O}_x$-módulo $(\Omega_{X/S}^1)_x$, por lo que, restringiendo $U$, se
+puede suponer que los $ds_i$ forman una \emph{base} del
+$\Gamma(U,\mathcal{O}_X)$-módulo $\Gamma(U,\Omega_{X/S}^1)$. Entonces el
+$\Gamma(U,\mathcal{O}_X)$-módulo $\Gamma(U,\mathfrak{G}_{X/S})$ es dual del
+anterior; se denota por $(D_i)_{1\leq i\leq n}$ o por
+$\left(\frac{\partial}{\partial s_i}\right)_{1\leq i\leq n}$ la base dual de
+$(ds_i)_{1\leq i\leq n}$, de modo que, por (16.5.3), se tiene
+\[
+  D_is_j=\langle D_i,ds_j\rangle
+  =\left\langle\frac{\partial}{\partial s_i},ds_j\right\rangle
+  =\delta_{ij}\qquad\text{(índice de Kronecker).}
+  \tag{16.5.8.1}
+  \label{IV.16.5.8.1}
+\]
+Toda $\Gamma(S,\mathcal{O}_S)$-derivación de la
+$\Gamma(S,\mathcal{O}_S)$-álgebra $\Gamma(U,\mathcal{O}_X)$ se escribe, por tanto,
+de manera única
+\[
+  D=\sum_{i=1}^n a_iD_i=\sum_{i=1}^n a_i\frac{\partial}{\partial s_i}
+\]
+donde los $a_i$ ($1\leq i\leq n$) son secciones de $\mathcal{O}_X$ sobre
+$U$. Para toda sección $g\in\Gamma(U,\mathcal{O}_X)$, si se pone
+$dg=\sum_{i=1}^n c_i ds_i$, se tiene
+$c_i=\langle D_i,dg\rangle=D_ig$ en virtud de (16.5.8.1), es decir,
+\[
+  dg=\sum_{i=1}^n(D_ig)ds_i
+  =\sum_{i=1}^n\frac{\partial g}{\partial s_i}ds_i.
+  \tag{16.5.8.2}
+  \label{IV.16.5.8.2}
+\]
+\end{env}
+
+\begin{env}[16.5.9]
+\label{IV.16.5.9}
+Sean $D_1$, $D_2$ dos $S$-derivaciones de $\mathcal{O}_X$. Para todo abierto
+$U$ de $X$, si $D_1^U$, $D_2^U$ son las derivaciones correspondientes del
+anillo $\Gamma(U,\mathcal{O}_X)$, el \emph{corchete}
+\[
+  [D_1^U,D_2^U]=D_1^U\circ D_2^U-D_2^U\circ D_1^U
+\]
+es también una derivación de este anillo, por lo que el
+$\psi^*(\mathcal{O}_S)$-endomorfismo de $\mathcal{O}_X$
+\[
+  [D_1,D_2]=D_1\circ D_2-D_2\circ D_1
+  \tag{16.5.9.1}
+  \label{IV.16.5.9.1}
+\]
+es de nuevo una $S$-derivación; como se comprueba inmediatamente que este corchete
+satisface la identidad de Jacobi, se ve que se ha definido así sobre
+$\Der_S(\mathcal{O}_X,\mathcal{O}_X)$ una estructura de
+$\Gamma(S,\mathcal{O}_S)$-álgebra de Lie. Como la definición de esta
+estructura conmuta con la restricción a un abierto de $X$, se ve que
+$\mathfrak{G}_{X/S}$ está canónicamente dotado de una estructura de
+$\psi^*(\mathcal{O}_S)$-álgebra de Lie. Obsérvese que la aplicación
+$(D_1,D_2)\mapsto[D_1,D_2]$ no es
+$\Gamma(X,\mathcal{O}_X)$-bilineal.
+\end{env}
+
+\begin{env}[16.5.10]
+\label{IV.16.5.10}
+Para todo cambio de base $g:S'\to S$, si se pone $X'=X\times_S S'$, se
+ha visto en (16.4.5) que se tiene un isomorfismo canónico
+\[
+  \Omega_{X/S}^1\otimes_S S'\xrightarrow{\sim}\Omega_{X'/S'}^1
+  \tag{16.5.10.1}
+  \label{IV.16.5.10.1}
+\]
+\oldpage[IV-4]{30}
+del que se deduce, en virtud de (16.5.10.1), un homomorfismo canónico
+(Bourbaki, \emph{Alg.}, cap. II, 3\textsuperscript{a} ed., \S~5,
+n\textsuperscript{o} 3)
+\[
+  \mathfrak{G}_{X/S}\otimes_{\mathcal{O}_S}\mathcal{O}_{S'}
+  \longrightarrow\mathfrak{G}_{X'/S'}
+  \tag{16.5.10.2}
+  \label{IV.16.5.10.2}
+\]
+que, en general, no es ni inyectivo ni sobreyectivo. Sin embargo:
+\end{env}
+
+\begin{proposition}[16.5.11]
+\label{IV.16.5.11}
+\begin{enumerate}
+\item[(i)] Si $g:S'\to S$ es un morfismo plano y si $f$ es localmente de
+tipo finito (resp.\ localmente de presentación finita), el homomorfismo
+(16.5.10.2) es inyectivo (resp.\ biyectivo).
+\item[(ii)] Si $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo localmente libre
+de tipo finito, el homomorfismo (16.5.10.2) es biyectivo.
+\end{enumerate}
+\end{proposition}
+
+En efecto, la afirmación (ii) resulta de Bourbaki, \emph{Alg.}, cap. II,
+3\textsuperscript{a} ed., \S~5, n\textsuperscript{o} 3, prop. 7. La afirmación
+(i) resulta asimismo de Bourbaki, \emph{Alg. comm.}, cap. I, \S~2,
+n\textsuperscript{o} 10, prop. 11 y del hecho de que, si $f$ es localmente de tipo
+finito (resp.\ localmente de presentación finita), $\Omega_{X/S}^1$ es un
+$\mathcal{O}_X$-módulo de tipo finito (resp.\ de presentación finita) ((16.3.9)
+y (16.4.22)).
+
+\begin{env}[16.5.12]
+\label{IV.16.5.12}
+Puesto que $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo cuasicoherente, se puede
+considerar el fibrado vectorial sobre $X$ definido por $\Omega_{X/S}^1$
+(II, 1.7.8)
+\[
+  T_{X/S}=\mathbf{V}(\Omega_{X/S}^1)
+  \tag{16.5.12.1}
+  \label{IV.16.5.12.1}
+\]
+que se llama \emph{fibrado tangente de $X$ relativo a $S$}. Se tiene, por tanto, una
+biyección canónica (II, 1.7.9)
+\[
+  \Gamma(T_{X/S}/S)\xrightarrow{\sim}
+  \operatorname{Hom}_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathcal{O}_X)
+  =\Gamma(X,\mathfrak{G}_{X/S})
+\]
+por definición de $\mathfrak{G}_{X/S}$, y en este isomorfismo se puede
+reemplazar $X$ por un abierto cualquiera $U$ de $X$; se puede decir, por tanto, que el
+\emph{haz tangente} de $X$ relativo a $S$ es isomorfo al
+\emph{haz de gérmenes de secciones sobre $S$} del fibrado tangente de $X$
+relativo a $S$. Si $f:X\to Y$ es un $S$-morfismo, se ha visto en (16.4.19)
+que se tiene un homomorfismo canónico
+$f_{X/Y/S}:f^*(\Omega_{Y/S}^1)\to\Omega_{X/S}^1$, lo que da, teniendo en cuenta
+que
+\[
+  \mathbf{V}(f^*(\Omega_{Y/S}^1))
+  =\mathbf{V}(\Omega_{Y/S}^1)\times_Y X\qquad\text{(II, 1.7.11),}
+\]
+un $X$-morfismo
+$T_{X/S}(f):T_{X/S}\to T_{Y/S}\times_Y X$. Si $g:Y\to Z$ es un segundo
+$S$-morfismo, se tiene
+$T_{X/S}(g\circ f)=(T_{Y/S}(g)\times1_X)\circ T_{X/S}(f)$ (0, 20.5.4.1).
+
+Resulta de (16.5.10.1) y de (II, 1.7.11) que, para todo cambio de base
+$g:S'\to S$, se tiene un isomorfismo canónico
+\[
+  T_{X'/S'}\xrightarrow{\sim}T_{X/S}\times_S S'
+  =T_{X/S}\times_X X'.
+  \tag{16.5.12.2}
+  \label{IV.16.5.12.2}
+\]
+\end{env}
+
+\begin{env}[16.5.13]
+\label{IV.16.5.13}
+Para todo punto $x\in X$, se llama \emph{espacio tangente a $X$ en el punto $x$}
+(relativo a $S$) al conjunto de puntos de la fibra
+$T_{X/S}\times_X\operatorname{Spec}(k(x))$ \emph{racionales sobre $k(x)$}, es decir,
+al conjunto
+\[
+  T_{X/S}(x)=
+  \operatorname{Hom}_{k(x)}
+  (\Omega_{X/S}^1\otimes_{\mathcal{O}_x}k(x),k(x))
+  \tag{16.5.13.1}
+  \label{IV.16.5.13.1}
+\]
+que es el \emph{dual} del $k(x)$-espacio vectorial
+$\Omega_{\mathcal{O}_x/\mathcal{O}_s}^1/
+\mathfrak{m}_x\cdot\Omega_{\mathcal{O}_x/\mathcal{O}_s}^1$. Cuando
+$\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo de \emph{tipo finito},
+$T_{X/S}(x)$ es, por tanto, un espacio vectorial de rango finito sobre $k(x)$ y, para
+todo
+\oldpage[IV-4]{31}
+cambio de base $g:S'\to S$ y todo punto
+$x'\in X'=X\times_S S'$ sobre $x$, se tiene un isomorfismo canónico
+\[
+  T_{X'/S'}(x')\xrightarrow{\sim}
+  T_{X/S}(x)\otimes_{k(x)}k(x').
+  \tag{16.5.13.2}
+  \label{IV.16.5.13.2}
+\]
+
+Si $x$ es \emph{racional sobre $k(s)$}, donde $s=f(x)$ (de modo que
+$k(s)\to k(x)$ es un isomorfismo), resulta de (16.4.13) que se tiene un
+isomorfismo canónico
+\[
+  T_{X/S}(x)=T_{X_s/k(s)}(x)
+  =\operatorname{Hom}_{k(s)}
+  (\mathfrak{m}'_x/\mathfrak{m}'_x{}^2,k(s))
+  \tag{16.5.13.3}
+  \label{IV.16.5.13.3}
+\]
+donde $\mathfrak{m}'_x$ es el ideal maximal de
+$\mathcal{O}_{X_s,x}=\mathcal{O}_{X,x}/
+\mathfrak{m}_s\mathcal{O}_{X,x}$. En el caso en que $S$ es el espectro de un cuerpo
+$k$, se recupera así la definición de Zariski del espacio tangente en un
+punto $x\in X$ \emph{racional sobre $k$}, como dual de
+$\mathfrak{m}_x/\mathfrak{m}_x^2$.
+
+Sea $Y$ un segundo $S$-preesquema y sea $g:Y\to X$ un $S$-morfismo; se tiene
+entonces un homomorfismo canónico de $\mathcal{O}_Y$-módulos (16.4.19)
+\[
+  g_{Y/X/S}:g^*(\Omega_{X/S}^1)\longrightarrow\Omega_{Y/S}^1.
+  \tag{16.5.13.4}
+  \label{IV.16.5.13.4}
+\]
+Observemos ahora que, si $y\in Y$ y $x=g(y)$, se tiene
+\[
+  g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y)
+  =(\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x))
+  \otimes_{k(x)}k(y)
+\]
+y, por consiguiente, si $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo
+\emph{de tipo finito}, se puede identificar
+\[
+  \operatorname{Hom}_{k(y)}
+  (g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y),k(y))
+\]
+con $T_{X/S}(x)\otimes_{k(x)}k(y)$. Se deduce entonces del homomorfismo
+(16.5.13.4) un homomorfismo de \emph{$k(y)$-espacios vectoriales}
+\[
+  T_y(g):T_{Y/S}(y)\longrightarrow
+  T_{X/S}(x)\otimes_{k(x)}k(y)
+  \tag{16.5.13.5}
+  \label{IV.16.5.13.5}
+\]
+llamado \emph{aplicación lineal tangente a $g$ en el punto $y$}. Cuando $y$ es
+\emph{racional sobre $k(s)$}, se pueden identificar $k(s)$, $k(y)$ y $k(x)$ y
+$T_y(g)$ es entonces un homomorfismo de $k(s)$-espacios vectoriales
+$T_{Y/S}(y)\to T_{X/S}(x)$; obsérvese además que, en este caso,
+$g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y)$ se identifica con
+$\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x)$, y el homomorfismo anterior queda
+así definido sin condición alguna de finitud sobre $\Omega_{X/S}^1$ y no es
+otro que el homomorfismo $T_{Y/S}(g)$ (16.5.12) restringido a la fibra en el punto
+$y$ de $T_{Y/S}$.
+\end{env}
+
+\begin{env}[16.5.14]
+\label{IV.16.5.14}
+La interpretación de las derivaciones de una $A$-álgebra $B$ en un $B$-módulo
+$L$, dada en (0, 20.1.1), se traduce al lenguaje de los preesquemas de la
+manera siguiente.
+
+Consideremos dos morfismos de preesquemas $f:X\to S$, $g:Y\to S$, y un
+subpreesquema cerrado $Y_0$ de $Y$ definido por un ideal de cuadrado nulo
+$\mathscr{J}$ de $\mathcal{O}_Y$ (de modo que $Y$ y $Y_0$ tienen el
+\emph{mismo espacio topológico subyacente}). Supongamos dado un $S$-morfismo
+$u_0:Y_0\to X$, de modo que se tiene un diagrama conmutativo
+\[
+  \xymatrix{
+    X\ar[d]_-f & Y_0\ar[l]_-{u_0}\ar[d]^j\\
+    S & Y\ar@{-->}[ul]_-u\ar[l]^-g
+  }
+  \tag{16.5.14.1}
+  \label{IV.16.5.14.1}
+\]
+\oldpage[IV-4]{32}
+y nos proponemos determinar si existen \emph{$S$-morfismos}
+$u:Y\to X$ tales que $u_0=u\circ j$ (es decir, si es posible
+completar el diagrama anterior con la flecha punteada $u$, de manera que siga
+siendo \emph{conmutativo}).
+
+Para ello, consideremos un abierto afín $U=\operatorname{Spec}(C)$ de $Y$;
+su imagen inversa $j^{-1}(U)$ es el abierto afín
+$U_0=\operatorname{Spec}(C/\mathfrak{L})$, donde
+$\mathfrak{L}=\Gamma(U,\mathscr{J})$, ideal \emph{de cuadrado nulo} en $C$;
+supondremos $U$ suficientemente pequeño para que $u_0(U_0)$ esté contenido en un
+abierto afín $V=\operatorname{Spec}(B)$ de $X$, y
+$g(U)=f(u_0(U_0))$ contenido en un abierto afín
+$W=\operatorname{Spec}(A)$ de $S$, de modo que $B$ y $C$ son
+$A$-álgebras y que $u_0|U_0$ corresponde a un $A$-homomorfismo $\psi$ de
+$B$ en $C/\mathfrak{L}$; sea $P(U_0)$ el conjunto de las restricciones $u|U$
+de los morfismos buscados, que corresponden canónicamente a los
+$A$-homomorfismos de álgebras $\varphi:B\to C$ tales que el \emph{compuesto}
+\[
+  B\xrightarrow{\varphi}C\longrightarrow C/\mathfrak{L}
+\]
+\emph{sea igual a $\psi$}. Se sabe entonces por (0, 20.1.1) que el conjunto de estos
+homomorfismos está vacío o es de la forma
+$\varphi_1+\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$; cuando $P(U_0)$ no es
+vacío, el grupo aditivo $\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$ actúa por
+adición en $P(U_0)$, que es, por tanto, un \emph{espacio afín} para el grupo
+aditivo $\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$ (o también un
+\emph{espacio homogéneo principal} (o \emph{torsor}) \emph{bajo}
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$).
+
+Observemos ahora que, puesto que $\mathfrak{L}$ está dotado de una estructura de
+$B$-módulo por medio de $\psi$, se tiene un \emph{isomorfismo}
+$v\mapsto v\circ d_{B/A}$ de
+$\operatorname{Hom}_B(\Omega_{B/A}^1,\mathfrak{L})$ en
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$ (0, 20.4.8). Además, como
+$\mathfrak{L}$ es de cuadrado nulo y, por tanto, un $(C/\mathfrak{L})$-módulo, todo
+$B$-homomorfismo $v:\Omega_{B/A}^1\to\mathfrak{L}$ puede considerarse
+como un $(C/\mathfrak{L})$-homomorfismo
+$\Omega_{B/A}^1\otimes_B(C/\mathfrak{L})\to\mathfrak{L}$. Como
+$\mathscr{J}$ es de cuadrado nulo, puede considerarse como un
+$\mathcal{O}_{Y_0}$-módulo cuasicoherente; introduzcamos el
+$\mathcal{O}_{Y_0}$-módulo
+\[
+  \mathscr{G}=\mathscr{H}om(u_0^*(\Omega_{X/S}^1),\mathscr{J});
+  \tag{16.5.14.2}
+  \label{IV.16.5.14.2}
+\]
+resulta entonces del hecho de que
+$\Omega_{B/A}^1=\Gamma(V,\Omega_{X/S}^1)$ (16.3.7) que se puede escribir
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{L})=\Gamma(U_0,\mathscr{G})$.
+
+Como $P(U_0)$ se define como conjunto de $S$-morfismos $U\to X$, está
+claro que $U_0\mapsto P(U_0)$ es un \emph{haz de conjuntos}
+$\mathscr{P}$ sobre $Y_0$. Utilicemos este hecho para probar que la aplicación
+\[
+  h:\Gamma(U_0,\mathscr{G})\times P(U_0)\longrightarrow P(U_0)
+\]
+que define la estructura de torsor sobre $P(U_0)$ es también independiente de la
+elección de $V$ y $W$, y además que, si $U'\subset U$ es un segundo abierto
+afín de $Y$, y $U'_0$ su imagen inversa en $Y_0$, el diagrama
+\[
+  \xymatrix{
+    \Gamma(U_0,\mathscr{G})\times P(U_0)\ar[d]\ar[r]^h
+      & P(U_0)\ar[d]\\
+    \Gamma(U'_0,\mathscr{G})\times P(U'_0)\ar[r]_{h'}
+      & P(U'_0)
+  }
+  \tag{16.5.14.3}
+  \label{IV.16.5.14.3}
+\]
+es conmutativo (siendo las flechas verticales los operadores de restricción).
+En virtud de la observación anterior, se reduce a probar la conmutatividad
+del diagrama precedente cuando $h$ se define como arriba a partir de los
+abiertos afines $V$, $W$ y $h'$ a partir de abiertos
+\oldpage[IV-4]{33}
+afines $V'\subset V$ y $W'\subset W$. Pero, en virtud de la descripción
+anterior de $h$, esto resulta de la conmutatividad del diagrama (0, 20.5.4.2).
+
+Las aplicaciones
+$\Gamma(U_0,\mathscr{G})\times P(U_0)\to P(U_0)$ definen, por tanto, un
+homomorfismo de \emph{haces de conjuntos}
+$m:\mathscr{G}\times\mathscr{P}\to\mathscr{P}$ tal que, para todo abierto
+$U_0$ para el cual $\Gamma(U_0,\mathscr{P})\neq\varnothing$,
+\[
+  m_{U_0}:\Gamma(U_0,\mathscr{G})\times\Gamma(U_0,\mathscr{P})
+  \longrightarrow\Gamma(U_0,\mathscr{P})
+\]
+sea una ley externa que define sobre $\Gamma(U_0,\mathscr{P})$ una estructura
+de torsor bajo el grupo $\Gamma(U_0,\mathscr{G})$.
+\end{env}
+
+\begin{env}[16.5.15]
+\label{IV.16.5.15}
+De manera general, cuando se dan sobre un espacio topológico $Z$ un
+haz de conjuntos $\mathscr{P}$, un haz de grupos $\mathscr{G}$ (no
+necesariamente conmutativo) y un homomorfismo de haces de conjuntos
+$m:\mathscr{G}\times\mathscr{P}\to\mathscr{P}$ tal que, para todo abierto
+$U\subset Z$ para el cual $\Gamma(U,\mathscr{P})\neq\varnothing$,
+\[
+  m_U:\Gamma(U,\mathscr{G})\times\Gamma(U,\mathscr{P})
+  \longrightarrow\Gamma(U,\mathscr{P})
+\]
+haga de $\Gamma(U,\mathscr{P})$ un \emph{torsor} bajo el grupo
+$\Gamma(U,\mathscr{G})$, se dice que $\mathscr{P}$ es un
+\emph{pseudotorsor} (o \emph{haz homogéneo formalmente principal})
+bajo el haz de grupos $\mathscr{G}$. Se dice que $\mathscr{P}$ es un
+\emph{torsor} (o \emph{haz homogéneo principal}) bajo $\mathscr{G}$ si,
+además, $\Gamma(U,\mathscr{P})\neq\varnothing$ para todo abierto
+$U\neq\varnothing$ de una base adecuada de la topología de $Z$.
+
+Para la teoría general de los torsores, remitimos a [42]; aquí nos
+limitaremos a recordar la correspondencia canónica entre las clases
+de isomorfismo de estos torsores (para un $\mathscr{G}$ dado) y los elementos del
+conjunto de cohomología $H^1(Z,\mathscr{G})$. Consideremos, en efecto, un
+torsor $\mathscr{P}$ bajo $\mathscr{G}$ y un recubrimiento abierto
+$(U_\lambda)$ de $Z$ tal que
+$\Gamma(U_\lambda,\mathscr{P})\neq\varnothing$ para todo $\lambda$;
+designemos por $p_\lambda$ un elemento de
+$\Gamma(U_\lambda,\mathscr{P})$. Para todo par de índices $\lambda$, $\mu$
+tal que $U_\lambda\cap U_\mu\neq\varnothing$, existe entonces un único elemento
+$\gamma_{\lambda\mu}$ de
+$\Gamma(U_\lambda\cap U_\mu,\mathscr{G})$ tal que
+\[
+  \gamma_{\lambda\mu}\cdot
+  (p_\mu|U_\lambda\cap U_\mu)=p_\lambda|U_\lambda\cap U_\mu;
+\]
+además, si $\lambda$, $\mu$, $\nu$ son tres índices tales que
+$U_\lambda\cap U_\mu\cap U_\nu\neq\varnothing$, las restricciones
+$\gamma'_{\lambda\mu}$, $\gamma'_{\mu\nu}$, $\gamma'_{\lambda\nu}$ de
+$\gamma_{\lambda\mu}$, $\gamma_{\mu\nu}$, $\gamma_{\lambda\nu}$ a
+$U_\lambda\cap U_\mu\cap U_\nu$ satisfacen la condición
+$\gamma'_{\lambda\nu}=\gamma'_{\lambda\mu}\gamma'_{\mu\nu}$; es decir,
+$(\lambda,\mu)\mapsto\gamma_{\lambda\mu}$ es un \emph{1-cociclo} del
+recubrimiento $(U_\lambda)$ con valores en $\mathscr{G}$. Si, para todo
+$\lambda$, $p'_\lambda$ es un segundo elemento de
+$\Gamma(U_\lambda,\mathscr{P})$, existe un único elemento
+$\beta_\lambda\in\Gamma(U_\lambda,\mathscr{G})$ tal que
+$p'_\lambda=\beta_\lambda\cdot p_\lambda$ y el 1-cociclo
+$(\gamma'_{\lambda\mu})$ correspondiente a la familia $(p'_\lambda)$ viene dado
+por
+\[
+  \gamma'_{\lambda\mu}=\beta_\lambda\gamma_{\lambda\mu}\beta_\mu^{-1},
+\]
+es decir, es \emph{cohomólogo} a $(\gamma_{\lambda\mu})$.
+Recíprocamente, el dato de un 1-cociclo $(\gamma_{\lambda\mu})$ define, para
+todo par $(\lambda,\mu)$, un automorfismo $\theta_{\lambda\mu}$ del
+haz \emph{de conjuntos}
+$\mathscr{G}|U_\lambda\cap U_\mu$, a saber, la traslación a la derecha por
+$\gamma_{\lambda\mu}$, y el hecho de que se trate de un cociclo muestra que se
+pueden \emph{pegar} los haces de conjuntos $\mathscr{G}|U_\lambda$ con
+ayuda de los automorfismos $\theta_{\lambda\mu}$ (0, 3.3.1); se obtiene así
+de manera evidente un torsor bajo $\mathscr{G}$, sea $\mathscr{P}$, y si
+se toma como $p_\lambda$ la sección unidad sobre $U_\lambda$, el
+1-cociclo correspondiente no es otro que el 1-cociclo dado
+$(\gamma_{\lambda\mu})$; además, si se reemplaza
+$(\gamma_{\lambda\mu})$ por un 1-cociclo
+$\gamma'_{\lambda\mu}=\beta_\lambda\gamma_{\lambda\mu}\beta_\mu^{-1}$ que
+le es cohomólogo, se comprueba inmediatamente que el torsor obtenido es isomorfo
+a $\mathscr{P}$.
+
+En particular, si $(\gamma_{\lambda\mu})$ es un \emph{1-coborde}, es decir,
+de la forma
+$\gamma_{\lambda\mu}=\beta_\lambda\beta_\mu^{-1}$, el torsor obtenido
+$\mathscr{P}$ es \emph{isomorfo a $\mathscr{G}$} (considerado como torsor
+bajo sí mismo para las traslaciones a la izquierda); en este caso se dice que
+$\mathscr{P}$ es \emph{trivial}, y la recíproca es evidente.
+
+Más particularmente, resulta de (III, 1.3.1) que se tiene:
+\end{env}
+
+\begin{proposition}[16.5.16]
+\label{IV.16.5.16}
+Sean $Z$ un esquema afín, $\mathscr{G}$ un $\mathcal{O}_Z$-módulo
+cuasicoherente; entonces todo torsor bajo $\mathscr{G}$ es trivial.
+\end{proposition}
+
+\oldpage[IV-4]{34}
+Volviendo al problema considerado en (16.5.13), se obtiene, por tanto:
+
+\begin{proposition}[16.5.17]
+\label{IV.16.5.17}
+Sean $X$, $Y$ dos $S$-preesquemas, $Y_0$ un subpreesquema cerrado de $Y$
+definido por un ideal cuasicoherente $\mathscr{J}$ de $\mathcal{O}_Y$ tal que
+$\mathscr{J}^2=0$, y $j:Y_0\to Y$ la inyección canónica. Sea
+$u_0:Y_0\to X$ un $S$-morfismo, y sea $\mathscr{P}$ el haz de conjuntos sobre
+$Y$ tal que, para todo abierto $U$ de $Y$, $\Gamma(U,\mathscr{P})$ sea
+el conjunto de los $S$-morfismos $u:U\to X$ tales que
+$u_0|U_0=u\circ(j|U_0)$, donde $U_0=j^{-1}(U)$. Entonces existe sobre
+$\mathscr{P}$ una estructura de pseudotorsor bajo el
+$\mathcal{O}_{Y_0}$-módulo
+\[
+  \mathscr{G}=\mathscr{H}om_{\mathcal{O}_{Y_0}}
+  (u_0^*(\Omega_{X/S}^1),\mathscr{J}).
+\]
+\end{proposition}
+
+En particular:
+
+\begin{corollary}[16.5.18]
+\label{IV.16.5.18}
+Con las notaciones de (16.5.16), supongamos $Y$ afín y $\Omega_{X/S}^1$ de
+presentación finita; si existe un recubrimiento abierto $(U_\alpha)$ de $Y$
+y, para cada índice $\alpha$, un $S$-morfismo $v_\alpha:U_\alpha\to X$
+tal que, si $U_\alpha^0=j^{-1}(U_\alpha)$, se tenga
+$v_\alpha\circ(j|U_\alpha^0)=u_0|U_\alpha^0$, entonces existe un
+$S$-morfismo $u:Y\to X$ tal que $u\circ j=u_0$.
+\end{corollary}
+
+En efecto, $\mathscr{G}$ es entonces un $\mathcal{O}_{Y_0}$-módulo
+cuasicoherente (I, 1.3.12); en virtud de (16.5.16) y del hecho de que $Y_0$ es
+entonces afín, el haz $\mathscr{P}$, que por hipótesis es un torsor bajo
+$\mathscr{G}$, y no solamente un pseudotorsor, es \emph{trivial}; pero si
+$w$ es un isomorfismo de $\mathscr{G}$ en $\mathscr{P}$ (como
+torsores bajo $\mathscr{G}$), la imagen por $w$ de la sección 0 de
+$\mathscr{G}$ es el $S$-morfismo $u$ buscado.

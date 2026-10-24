@@ -1,0 +1,130 @@
+\subsection{Propiedades de las inmersiones regulares}
+\label{subsection:IV.19.1}
+
+\begin{proposition}[19.1.1]
+\label{IV.19.1.1}
+Sean $X$ un preesquema localmente noetheriano, $j:Y\to X$ una inmersión e $y$ un punto regular de $Y$. Para que $j$ sea una inmersión regular en el punto $y$, es necesario y suficiente que $X$ sea regular en el punto $j(y)$.
+\end{proposition}
+
+Teniendo en cuenta (16.9.10), basta demostrar el
+
+\begin{corollary}[19.1.2]
+\label{IV.19.1.2}
+Sean $A$ un anillo local noetheriano y $\mathfrak J$ un ideal de $A$; supongamos que el anillo cociente $B=A/\mathfrak J$ sea regular. Para que $A$ sea regular, es necesario y suficiente que el ideal $\mathfrak J$ sea regular.
+\end{corollary}
+
+En efecto, si $A$ es regular, se sabe ($0$, 17.1.9) que $\mathfrak J$ está engendrado por una parte de un sistema regular de parámetros de $A$, por lo que $\mathfrak J$ es regular. Recíprocamente, si $\mathfrak J$ es regular y $(x_i)_{1\leq i\leq r}$ es una sucesión $A$-regular que engendra $\mathfrak J$, entonces $(x_i)$ forma parte de un sistema de parámetros de $A$ ($0$, 16.4.1), y se deduce de ($0$, 17.1.7) que $A$ es regular.
+
+\begin{definition}[19.1.3]
+\label{IV.19.1.3}
+Sean $X$ un preesquema, $Y$ un subpreesquema de $X$ y $U$ un abierto de $X$ que contiene a $Y$ y tal que $Y$ esté definido por un ideal $\mathscr J$ de $\sh{O}_U$; supongamos que $\mathscr J/\mathscr J^2$ sea un $(\sh{O}_U/\mathscr J)$-módulo localmente libre (como ocurre si $Y$ está inmerso cuasirregularmente en $X$). Para todo $y\in Y$, se llama \emph{codimensión transversal de $Y$ en $X$ en el punto $y$}, y se denota por $\operatorname{codim}_y^*(Y,X)$, al rango del $(\sh{O}_{U,y}/\mathscr J_y)$-módulo libre $\mathscr J_y/\mathscr J_y^2$. Si $f:Z\to X$ es una inmersión de imagen $Y$, se llama asimismo \emph{codimensión transversal de $f$ en el punto $z\in Z$} a la codimensión transversal en $X$, en el punto $f(z)$, del subpreesquema $Y$.
+\end{definition}
+
+\begin{proposition}[19.1.4]
+\label{IV.19.1.4}
+Sean $X$ un preesquema localmente noetheriano e $Y$ un subpreesquema de $X$ inmerso regularmente; entonces, para todo $y\in Y$, se tiene
+\begin{equation}
+  \operatorname{codim}_y^*(Y,X)=\operatorname{codim}_y(Y,X).
+  \tag{19.1.4.1}\label{IV.19.1.4.1}
+\end{equation}
+\end{proposition}
+
+En virtud de (5.1.3.2), $\operatorname{codim}_y(Y,X)$ es igual al menor valor de las dimensiones de los anillos locales $A=\sh{O}_{X,z}$, donde $z$ es un punto genérico de una componente
+
+\oldpage[IV-4]{186}
+
+irreducible de $Y$ que contiene a $y$; como tal punto $z$ pertenece a toda vecindad de $y$ en $X$, $\mathscr J_z/\mathscr J_z^2$ es un $(A/\mathscr J_z)$-módulo libre de rango $n=\operatorname{codim}_y^*(Y,X)$; basta, pues, comprobar que $\dim(A)=n$. Ahora bien, puesto que $z$ es un punto maximal del subpreesquema $Y$ definido por $\mathscr J$, se tiene $\dim(\sh{O}_{X,z}/\mathscr J_z)=0$, de modo que $\mathscr J_z$ es un \emph{ideal de definición} del anillo local noetheriano $A$; además, la hipótesis de que $\mathscr J$ es cuasirregular implica que $\mathscr J_z^m/\mathscr J_z^{m+1}$ es un $(A/\mathscr J_z)$-módulo libre de rango $\binom{m+n-1}{n-1}$; si $r$ es la longitud del anillo artiniano $A/\mathscr J_z$, la longitud de $\mathscr J_z^m/\mathscr J_z^{m+1}$ es, por tanto, $r\binom{m+n-1}{n-1}$; el polinomio de Hilbert--Samuel de $A$ para la filtración $\mathscr J_z$-preádica es entonces de grado $n$, lo que demuestra la proposición ($0$, 16.2.3).
+
+En virtud de (19.1.4), en lo sucesivo se dirá «codimensión» en lugar de «codimensión transversal» cuando se trate de un subpreesquema $Y$ inmerso regularmente en $X$ (\emph{incluso cuando $X$ no sea localmente noetheriano}).
+
+\begin{proposition}[19.1.5]
+\label{IV.19.1.5}
+\begin{enumerate}
+  \item[(i)] Para que una inmersión $j:Y\to X$ sea abierta, es necesario y suficiente que sea regular y de codimensión $0$ en todo punto.
+  \item[(ii)] Sean $f:Y\to X$ una inmersión regular (resp. cuasirregular), $g:X'\to X$ un morfismo plano y $Y'=Y\times_X X'$; entonces el morfismo $f'=f_{(X')}:Y'\to X'$ es una inmersión regular (resp. cuasirregular), y para todo $y'\in Y'$, si $y$ es la proyección de $y'$ en $Y$, la codimensión de $f'$ en el punto $y'$ es igual a la codimensión de $f$ en el punto $y$. Recíprocamente, si $f$ es una inmersión y $g:X'\to X$ un morfismo fielmente plano y cuasicompacto, entonces, si $f'$ es una inmersión cuasirregular, también lo es $f$.
+  \item[(iii)] Si $f:Y\to X$ y $g:Z\to Y$ son inmersiones regulares, entonces $f\circ g:Z\to X$ es una inmersión regular, y para todo $z\in Z$, la codimensión de $f\circ g$ en el punto $z$ es la suma de la codimensión de $g$ en el punto $z$ y de la codimensión de $f$ en el punto $g(z)$. Además, la sucesión de homomorfismos canónicos (16.2.7.1)
+\begin{equation}
+  0\longrightarrow g^*(\sh{N}_{Y/X})\longrightarrow\sh{N}_{Z/X}\longrightarrow\sh{N}_{Z/Y}\longrightarrow0
+  \tag{19.1.5.1}\label{IV.19.1.5.1}
+\end{equation}
+es exacta, y para todo $z\in Z$ existe una vecindad de $z$ en $Z$ en la cual las restricciones de los homomorfismos de esta sucesión forman una sucesión escindida.
+  \item[(iv)] Sean $X$ un preesquema localmente noetheriano, $f:Y\to X$ y $g:Z\to Y$ dos inmersiones, y $z$ un punto de $Z$. Las condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[a)] $g$ es una inmersión regular en el punto $z$ y $f$ una inmersión regular en el punto $g(z)$.
+    \item[b)] $g$ y $f\circ g$ son inmersiones regulares en el punto $z$.
+    \item[c)] $f\circ g$ es una inmersión regular en el punto $z$, $f$ es una inmersión regular en el punto $g(z)$, y la sucesión de homomorfismos canónicos (19.1.5.1), restringida a una vecindad abierta suficientemente pequeña de $z$ en $Z$, es exacta y escindida.
+  \end{enumerate}
+  \item[(v)] Sean $X$ un preesquema localmente noetheriano, $f:Y\to X$ y $g:Z\to Y$ dos inmersiones, y $z$ un punto de $Z$; supongamos que $y=g(z)$ sea un punto regular de $Y$ y que $x=f(g(z))$ sea un punto regular
+
+\oldpage[IV-4]{187}
+
+de $X$ (lo que implica, por (19.1.1), que $f$ es una inmersión regular en el punto $g(z)$); entonces, para que $f\circ g$ sea una inmersión regular en el punto $z$, es necesario y suficiente que $g$ sea una inmersión regular en el punto $z$.
+\end{enumerate}
+\end{proposition}
+
+La afirmación (i) es otra manera de expresar (16.1.10). Para demostrar la primera afirmación de (ii), podemos limitarnos al caso en que $Y$ es un subpreesquema cerrado de $X$ definido por un ideal regular (resp. cuasirregular) $\mathscr J$; entonces $Y'$ es el subpreesquema cerrado de $X'$ definido por el ideal $g^*(\mathscr J)\sh{O}_{X'}$ (I, 4.4.5), que se identifica aquí con $g^*(\mathscr J)$ puesto que $g$ es plano; reemplazando $X$ por un abierto afín suficientemente pequeño, podemos suponer que $\mathscr J$ admite una sucesión regular (resp. cuasirregular) de generadores $f_i$ (secciones de $\sh{O}_X$ sobre $X$). Si la sucesión $(f_i)$ es regular, también lo es la sucesión $(f_i\otimes1)$ (que engendra $g^*(\mathscr J)\sh{O}_{X'}$), en virtud de ($0$, 15.2.5); el resultado análogo para las sucesiones cuasirregulares se deduce inmediatamente de la planitud de $g$ y del criterio (16.9.4). Del mismo modo, si $g$ es fielmente plano y cuasicompacto, y si $g^*(\mathscr J)$ es cuasirregular, $\mathscr J$ es de tipo finito en virtud de (2.5.2); por planitud, se tiene $g^*(\mathscr J)/g^*(\mathscr J)^2=g^*(\mathscr J/\mathscr J^2)$, por lo que, dado que $g^*(\mathscr J/\mathscr J^2)$ es localmente libre por hipótesis (16.9.4), también lo es $\mathscr J/\mathscr J^2$ (2.5.2). Por último, la condición (iii) de (16.9.4) relativa a $g^*(\mathscr J)$ implica la misma condición para $\mathscr J$ en virtud de la planitud fiel de $g$ (2.2.7). Se concluye, por tanto, de (16.9.4) que $\mathscr J$ es cuasirregular.
+
+Para demostrar (iii), podemos suponer asimismo que $Y$ y $Z$ son subpreesquemas cerrados de $X$, definidos respectivamente por ideales $\mathscr J$, $\mathscr K$ de $\sh{O}_X$ tales que $\mathscr J\subset\mathscr K$; además, podemos suponer que existen secciones $f_i$ ($1\leq i\leq m$) de $\mathscr J$ sobre $X$ que engendran $\mathscr J$ y tales que, para $1\leq i\leq m$, el endomorfismo de $\sh{O}_X/(\sum_{j=1}^{i-1}f_j\sh{O}_X)$ definido por $f_i$ es inyectivo, y secciones $\overline f_i$ ($m+1\leq i\leq n$) de $\mathscr K/\mathscr J$ sobre $X$ que engendran $\mathscr K/\mathscr J$ y tales que, para $m+1\leq i\leq n$, el endomorfismo de
+\[
+  (\sh{O}_X/\mathscr J)\big/\Bigl(\sum_{j=m+1}^{i-1}\overline f_j(\sh{O}_X/\mathscr J)\Bigr)
+\]
+definido por $\overline f_i$ es inyectivo. Para todo $z\in Z$, sea $U$ una vecindad abierta de $z$ en $X$ tal que exista una sección $f_i$ de $\mathscr K$ sobre $U$, tal que $\overline f_i|U$ sea su clase en $\Gamma(U,\mathscr K/\mathscr J)$ para $m+1\leq i\leq n$; entonces
+\[
+  (\sh{O}_X/\mathscr J)\big/\Bigl(\sum_{j=m+1}^{i-1}\overline f_j(\sh{O}_X/\mathscr J)\Bigr),
+\]
+restringido a $U$ es isomorfo a
+\[
+  \sh{O}_U\big/\Bigl((\mathscr J|U)+\sum_{j=m+1}^{i-1}f_j\sh{O}_U\Bigr)
+  =\sh{O}_U\big/\Bigl(\sum_{j=1}^{i-1}f_j\sh{O}_U\Bigr),
+\]
+y se ve, por tanto, que la sucesión $(f_i)_{1\leq i\leq n}$ es regular en $\sh{O}_U$; como engendra $\mathscr K|U$, esto demuestra la primera afirmación de (iii). Para demostrar la última afirmación de (iii), podemos limitarnos (con las mismas notaciones) al caso en que las imágenes $t_i$ de los $f_i$ en $\mathscr K/\mathscr K^2$ (para $1\leq i\leq n$) formen una base de este $(\sh{O}_X/\mathscr K)$-módulo (16.9.5); por la misma razón, podemos suponer que los $t_i$ tales que $1\leq i\leq m$ son las imágenes canónicas de los elementos de una base del $(\sh{O}_X/\mathscr K)$-módulo $g^*(\mathscr J/\mathscr J^2)$, y que las imágenes canónicas $\overline t_i$ de los $t_i$ en $(\mathscr K/\mathscr J)/(\mathscr K/\mathscr J)^2$, para $m+1\leq i\leq n$, forman una base de este $(\sh{O}_X/\mathscr K)$-módulo. Esto termina la demostración de (iii).
+
+Pasemos a la demostración de (iv). El hecho de que $a)$ implica $c)$ resulta de (iii). Demostremos que $c)$ implica $a)$. Pongamos de nuevo $A=\sh{O}_{X,f(g(z))}$, de modo que $\sh{O}_{Y,g(z)}=A/\mathfrak J$,
+
+\oldpage[IV-4]{188}
+
+$\sh{O}_{Z,z}=A/\mathfrak R$ con $\mathfrak J\subset\mathfrak R$. Por hipótesis, $\mathfrak J$ y $\mathfrak R$ son ideales regulares de $A$ y se tiene una sucesión exacta escindida
+\[
+  0\longrightarrow\mathfrak J/\mathfrak J\mathfrak R\longrightarrow\mathfrak R/\mathfrak R^2\longrightarrow(\mathfrak R/\mathfrak J)/(\mathfrak R/\mathfrak J)^2\longrightarrow0
+\]
+(cf. (16.2.7)). Esto implica que existen elementos $f_j$ ($1\leq j\leq r+s$) de $\mathfrak R$ cuyas imágenes $f'_j$ en $\mathfrak R/\mathfrak R^2$ forman una base de este $(A/\mathfrak R)$-módulo, y tales además que los $f_j$ de índice $j\leq r$ pertenecen a $\mathfrak J$ y sus imágenes en $\mathfrak J/\mathfrak J\mathfrak R$ forman una base de este $(A/\mathfrak R)$-módulo. Los $f_j$ para $1\leq j\leq r+s$ engendran, pues, $\mathfrak R$, y los $f_j$ para $1\leq j\leq r$ engendran $\mathfrak J$ porque $A$ es noetheriano (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~3, n\textsuperscript{o}~2, prop. 5); como $\mathfrak R$ es un ideal regular, se deduce de (16.9.5) que la sucesión $(f_j)_{1\leq j\leq r+s}$ es regular. Por definición, las imágenes de $f_{r+1},\ldots,f_{r+s}$ en $\mathfrak R/\mathfrak J$ forman, por tanto, una sucesión regular en este $(A/\mathfrak J)$-módulo, lo que termina de demostrar que $c)$ implica $a)$ en (iv).
+
+Por último, teniendo en cuenta (16.9.10), es inmediato que (v), así como la equivalencia de $a)$ y $b)$ en (iv), resultan del
+
+\begin{corollary}[19.1.6]
+\label{IV.19.1.6}
+Sean $A$ un anillo local noetheriano, $\mathfrak J$, $\mathfrak R$ dos ideales de $A$ contenidos en su ideal maximal $\mathfrak m$ y tales que $\mathfrak J\subset\mathfrak R$, $A'=A/\mathfrak J$, $\mathfrak R'=\mathfrak R/\mathfrak J$. Entonces:
+\begin{enumerate}
+  \item[(i)] Si $\mathfrak J$ y $\mathfrak R'$ son ideales regulares, también lo es $\mathfrak R$.
+  \item[(ii)] Si $\mathfrak R$ y $\mathfrak R'$ son ideales regulares, también lo es $\mathfrak J$.
+  \item[(iii)] Supongamos que los anillos $A$ y $A'=A/\mathfrak J$ son regulares. Para que el ideal $\mathfrak R$ sea regular, es necesario y suficiente que $\mathfrak R'$ lo sea.
+\end{enumerate}
+\end{corollary}
+
+La afirmación (i) es un caso particular de (19.1.5, (iii)). Para demostrar (ii), consideremos el homomorfismo sobreyectivo canónico $u:\mathfrak R/\mathfrak R^2\to\mathfrak R'/\mathfrak R'^2=\mathfrak R/(\mathfrak R^2+\mathfrak J)$. Como, por hipótesis, $\mathfrak R/\mathfrak R^2$ y $\mathfrak R'/\mathfrak R'^2$ son $(A/\mathfrak R)$-módulos libres, cuyos rangos respectivos denotaremos por $p+q$ y $q$, el núcleo de $u$ es un $(A/\mathfrak R)$-módulo \emph{proyectivo} (Bourbaki, \emph{Alg.}, cap. II, 3\textsuperscript{a} ed., \textsection~2, n\textsuperscript{o}~2, prop. 4), y por tanto \emph{libre} de rango $p$, puesto que $A/\mathfrak R$ es un anillo local noetheriano ($0_{\mathrm{III}}$, 10.1.3); en otras palabras, existe una base de $\mathfrak R/\mathfrak R^2$ cuyos $p$ primeros elementos forman una base de $(\mathfrak R^2+\mathfrak J)/\mathfrak R^2$. Esto significa también (en virtud del lema de Nakayama) que existe un sistema de generadores $(f_i)_{1\leq i\leq p+q}$ de $\mathfrak R$, que forma una sucesión regular en $A$, tal que la sucesión $(f_i)_{1\leq i\leq p}$ está formada por elementos de $\mathfrak J$; se trata de demostrar que esta última sucesión engendra $\mathfrak J$. Para ello, denotemos por $\mathfrak J'\subset\mathfrak J$ el ideal que engendra; considerando el anillo $A/\mathfrak J'$, se ve que nos reducimos a demostrar el lema siguiente:
+
+\begin{lemma}[19.1.6.1]
+\label{IV.19.1.6.1}
+Sean $B$ un anillo local noetheriano de ideal maximal $\mathfrak n$, $(g_j)_{1\leq j\leq q}$ una sucesión regular en $B$ de elementos de $\mathfrak n$, $\mathfrak b$ el ideal que engendra, y $\mathfrak c\subset\mathfrak b$ un ideal tal que las imágenes canónicas de los $g_j$ en $B/\mathfrak c$ sigan formando una sucesión regular en este anillo. Entonces $\mathfrak c=0$.
+\end{lemma}
+
+Como el lema es trivial para $q=0$, razonemos por inducción sobre $q$. La hipótesis de inducción, aplicada al anillo $B/g_1B$ y a las imágenes canónicas de los $g_j$ ($2\leq j\leq q$)
+
+\oldpage[IV-4]{189}
+
+y de $\mathfrak c$ en este anillo cociente, muestra que $\mathfrak c\subset g_1B$. Sea $\mathfrak d$ el ideal de $B$ formado por los $x\in B$ tales que $g_1x\in\mathfrak c$; se tiene entonces $\mathfrak c=g_1\mathfrak d$; pero, como por hipótesis $g_1$ es regular en $B/\mathfrak c$, se tiene necesariamente $\mathfrak d=\mathfrak c$, y por tanto $\mathfrak c=g_1\mathfrak c$. Como $\mathfrak c$ es de tipo finito y $g_1$ está contenido en el radical de $B$, el lema de Nakayama muestra que $\mathfrak c=0$.
+
+Demostremos por último la afirmación (iii) de (19.1.6). En virtud de (i) y de (19.1.2), basta ver que, si $\mathfrak R$ es regular, también lo es $\mathfrak R'$. Observemos que $\mathfrak J$ es regular (19.1.2), y razonemos por inducción sobre el rango $q$ del $(A/\mathfrak J)$-módulo libre $\mathfrak J/\mathfrak J^2$. Si $q=0$, se tiene $\mathfrak J=0$ por el lema de Nakayama y la afirmación es trivial. Como $A$ y $A/\mathfrak J$ son regulares, se sabe ($0$, 17.1.9) que $\mathfrak J$ está engendrado por una parte de $q$ elementos de un sistema regular de parámetros de $A$; por tanto, si $f$ es uno de los elementos de este sistema de generadores de $\mathfrak J$, $A_1=A/fA$ es regular y $f\notin\mathfrak m^2$ ($0$, 17.1.8). Sean $\mathfrak J_1$, $\mathfrak R_1$ las imágenes canónicas de $\mathfrak J$, $\mathfrak R$ en $A_1$; se tiene $\mathfrak J_1\subset\mathfrak R_1$, $A_1/\mathfrak J_1=A/\mathfrak J$, luego $A_1/\mathfrak J_1$ es regular y, por consiguiente, $\mathfrak J_1$ es un ideal regular (19.1.2). Demostremos que $\mathfrak R_1$ es un ideal regular en $A_1$; como $\mathfrak R$ es un ideal regular en $A$, basta demostrar que $f$ forma parte de un sistema regular de generadores de $\mathfrak R$, y para ello (16.9.5) basta demostrar que la imagen de $f$ en $\mathfrak R/(\mathfrak R^2+\mathfrak m\mathfrak R)=\mathfrak R/\mathfrak m\mathfrak R$ forma parte de una base de este $(A/\mathfrak m)$-espacio vectorial; en otras palabras, que $f\notin\mathfrak m\mathfrak R$, lo que se deduce, en efecto, de $f\notin\mathfrak m^2$. Entonces, como $\mathfrak J_1/\mathfrak J_1^2$ es un $(A_1/\mathfrak J_1)$-módulo libre de rango $q-1$, la hipótesis de inducción muestra que $\mathfrak R'_1=\mathfrak R_1/\mathfrak J_1$ es un ideal regular de $A_1/\mathfrak J_1$; y como $\mathfrak R'$ se identifica con $\mathfrak R'_1$ en el isomorfismo canónico entre $A/\mathfrak J$ y $A_1/\mathfrak J_1$, $\mathfrak R'$ es regular. Q.E.D.
+
+\begin{remarks}[19.1.7]
+\label{IV.19.1.7}
+\begin{enumerate}
+  \item[(i)] Desconocemos si la compuesta de dos inmersiones cuasirregulares es cuasirregular.
+  \item[(ii)] En un espacio anillado en anillos locales $X$, para todo ideal $\mathscr J$ de $\sh{O}_X$, $\sh{O}_X/\mathscr J$ es de tipo finito y tiene, por tanto, soporte cerrado en $X$ ($0_{\mathrm I}$, 5.2.2). Se pueden definir entonces, como en (I, 4.1.3 y 4.2.1), las nociones de subespacio anillado (localmente cerrado) de $X$ definido por un ideal $\mathscr J$ de un haz $\sh{O}_U$, donde $U$ es un abierto de $X$, y la noción de inmersión. Las definiciones de inmersiones cuasirregulares y regulares y de codimensión transversal se aplican entonces sin modificación, y los resultados de (19.1.5, (i) a (iv))\footnote{El texto impreso remite a (19.1.4), que no contiene incisos; la referencia debe ser a la Proposición (19.1.5), inmediatamente anterior.} siguen siendo válidos, suponiendo en la segunda afirmación de (ii) y en (iv) que el haz $\sh{O}_X$ sea coherente y los anillos locales $\sh{O}_{X,x}$ noetherianos; en cuanto a (ii), hay que \emph{definir} $Y'$ como el subespacio anillado definido por el $\sh{O}_{X'}$-ideal $g^*(\mathscr J)$; las demostraciones permanecen sin cambio.
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[19.1.8]
+\label{IV.19.1.8}
+Ya hemos señalado (en particular en (16.9.6, (ii))) que, en los anillos no noetherianos, la noción de «sucesión regular» de elementos del anillo no posee las propiedades que la harían utilizable. Investigaciones recientes parecen mostrar que la noción que en este caso debe sustituir a la de sucesión regular es la de una sucesión $\mathbf f=(f_1,\ldots,f_n)$ con la propiedad de que el complejo del álgebra exterior $\mathrm K_0(\mathbf f,M)$ (III, 1.1.3) tenga \emph{homología nula en grados $>0$} (cf. (III, 1.1.4)); véase en particular A. Grothendieck, \emph{Séminaire de géométrie algébrique}, 1966, de próxima aparición.
+\end{env}

@@ -1,0 +1,321 @@
+\subsection{\texorpdfstring{Sucesiones $\sh F$-regulares y profundidad.}{Sucesiones F-regulares y profundidad.}}
+\label{subsection:IV.19.9}
+\label{IV.19.9}
+
+\oldpage[IV-4]{222}
+
+\begin{env}[19.9.1]
+\label{IV.19.9.1}
+Recordemos que, si $X$ es un preesquema localmente noetheriano, $\sh F$ un
+$\sh O_X$-módulo coherente y $T$ una parte de $X$, se define (5.10.1)
+\begin{equation}
+  \operatorname{prof}_T(\sh F)=\inf_{x\in T}\operatorname{prof}(\sh F_x).
+  \tag{19.9.1.1}\label{IV.19.9.1.1}
+\end{equation}
+
+Asimismo, para todo punto $t\in T$ se define
+\begin{equation}
+  \operatorname{prof}_{T,t}(\sh F)=\inf_{x\in T\cap\Spec(\sh O_{X,t})}\operatorname{prof}(\sh F_x),
+  \tag{19.9.1.2}\label{IV.19.9.1.2}
+\end{equation}
+y se dice que $\operatorname{prof}_{T,t}(\sh F)$ es la
+\emph{$T$-profundidad de $\sh F$ en el punto $t$}; es claro que se tiene
+\begin{equation}
+  \operatorname{prof}_T(\sh F)=\inf_{t\in T}\operatorname{prof}_{T,t}(\sh F).
+  \tag{19.9.1.3}\label{IV.19.9.1.3}
+\end{equation}
+\end{env}
+
+\begin{lemma}[19.9.2]
+\label{IV.19.9.2}
+Sean $A$ un anillo noetheriano, $M$ un $A$-módulo de tipo finito y
+$\mathfrak J$ un ideal de $A$. Para que, para todo ideal primo
+$\mathfrak p\supset\mathfrak J$, se tenga
+$\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\geq r$, es necesario
+y suficiente que exista una sucesión $M$-regular de $r$ elementos
+pertenecientes a $\mathfrak J$.
+\end{lemma}
+
+La suficiencia de la condición se deduce inmediatamente de ($0$, 16.4.5);
+probemos su necesidad. Razonamos por inducción sobre $r$ (no hay nada que
+demostrar si $r=0$): puesto que
+$\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\geq r-1$ para todo
+$\mathfrak p\supset\mathfrak J$, por hipótesis existe una sucesión
+$M$-regular $(g_i)_{1\leq i\leq r-1}$ formada por elementos de $\mathfrak J$.
+Pongamos $N=M/(g_1M+\cdots+g_{r-1}M)$; para todo
+$\mathfrak p\supset\mathfrak J$, las imágenes de los $g_i$ en $A_{\mathfrak p}$
+pertenecen por tanto al ideal maximal $\mathfrak pA_{\mathfrak p}$ y forman
+una sucesión $M_{\mathfrak p}$-regular ($0$, 15.1.14); se concluye entonces de
+($0$, 16.4.6) que
+$\operatorname{prof}_{A_{\mathfrak p}}(N_{\mathfrak p})
+=\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})-(r-1)\geq1$, y se ve
+que todo se reduce a demostrar el lema para $r=1$. Pero la hipótesis significa
+entonces que, para todo $\mathfrak p\supset\mathfrak J$,
+$\mathfrak pA_{\mathfrak p}$ no está asociado a $M_{\mathfrak p}$
+($0$, 16.4.6), por lo que (Bourbaki, \emph{Alg. comm.}, cap. IV, § 1,
+n\textsuperscript{o} 2, prop. 5), $\mathfrak p$ no está asociado a $M$. En
+otras palabras, $\mathfrak J$ no está contenido en ninguno de los ideales
+primos de $\operatorname{Ass}(M)$, y por tanto no está contenido en su unión
+(Bourbaki, \emph{Alg. comm.}, cap. II, § 1, n\textsuperscript{o} 1, prop. 2).
+Pero como esa unión es el conjunto de los elementos que no son $M$-regulares
+(Bourbaki, \emph{Alg. comm.}, cap. IV, § 1, n\textsuperscript{o} 1, cor. 2 de
+la prop. 2), queda demostrado el lema.
+
+\begin{proposition}[19.9.3]
+\label{IV.19.9.3}
+Sean $X$ un preesquema localmente noetheriano, $\sh F$ un
+$\sh O_X$-módulo coherente, $Y$ una parte cerrada de $X$, $y$ un punto de
+$Y$ y $n$ un entero $>0$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] Existe una vecindad abierta $U$ de $y$ en $X$ tal que
+  $\operatorname{prof}_{Y\cap U}(\sh F|U)\geq n$.
+  \item[b)] Existe una vecindad abierta $U$ de $y$ en $X$ y una sucesión
+  $(\sh F|U)$-regular de $n$ secciones $f_i$ de $\sh O_U$ sobre $U$, tales que
+  $f_i(x)=0$ ($0_{\mathrm I}$, 5.5.1) para $1\leq i\leq n$ en todo punto
+  $x\in U\cap Y$.
+  \item[c)] Se tiene $\operatorname{prof}_{Y,y}(\sh F)\geq n$.
+\end{enumerate}
+Además, el conjunto de los $y\in Y$ que verifican estas condiciones es abierto
+en $Y$.
+\end{proposition}
+
+La última afirmación se deduce trivialmente de a). La equivalencia de a) y b)
+se sigue de (19.9.2), aplicado a una vecindad abierta afín de $y$ en $X$, y
+de ($0$, 15.1.14). Es claro que a) implica c), pues toda vecindad abierta de
+$y$ en $X$ contiene $\Spec(\sh O_{X,y})$; demostremos recíprocamente que c)
+implica b). De c) y de la definición (19.9.1.1) se deduce que se puede aplicar
+(19.9.2) al anillo $\sh O_{X,y}$, al $\sh O_{X,y}$-módulo $\sh F_y$ y al ideal
+$\sh J_y$ de $\sh O_{X,y}$, por lo que existe una sucesión $\sh F_y$-regular
+$(t_i)_{1\leq i\leq n}$ de $n$ elementos de $\sh J_y$. Existe entonces una
+vecindad abierta $U$ de $y$ en $X$ y una sucesión $(f_i)_{1\leq i\leq n}$ de
+secciones de $\sh J$ sobre $U$ tales que los $t_i$ son los gérmenes de los
+$f_i$ en el punto $y$; usando ($0$, 15.2.4), se deduce que existe una
+vecindad abierta $U'\subset U$ de $y$ en $X$ tal que los $f_i|U'$ forman una
+sucesión $(\sh F|U')$-regular.
+
+\oldpage[IV-4]{223}
+
+\begin{corollary}[19.9.4]
+\label{IV.19.9.4}
+Con las notaciones de (19.9.3), la función
+$y\mapsto\operatorname{prof}_{Y,y}(\sh F)$ es semicontinua inferiormente en
+$Y$.
+\end{corollary}
+
+\begin{proposition}[19.9.5]
+\label{IV.19.9.5}
+Con las notaciones de (19.9.3), sean $X'$ un preesquema localmente noetheriano,
+$g:X'\to X$ un morfismo plano, $Y'=g^{-1}(Y)$ y $\sh F'=g^*(\sh F)$. Entonces,
+para todo punto $y'\in Y'$ situado sobre $y$, se tiene
+$\operatorname{prof}_{Y',y'}(\sh F')=\operatorname{prof}_{Y,y}(\sh F)$.
+\end{proposition}
+
+En efecto, para todo $z'\in\Spec(\sh O_{X',y'})$, se deduce de (6.3.1) que
+$\operatorname{prof}(\sh F'_{z'})\geq\operatorname{prof}(\sh F_{g(z')})$,
+y si $z''$ es un punto maximal de la fibra $g^{-1}(g(z'))$, generalización de
+$z'$ (y por tanto perteneciente también a $\Spec(\sh O_{X',y'})$), se tiene
+(\emph{loc. cit.})
+$\operatorname{prof}(\sh F'_{z''})=\operatorname{prof}(\sh F_{g(z')})$.
+La proposición se deduce entonces de
+$g(\Spec(\sh O_{X',y'}))=\Spec(\sh O_{X,g(y')})$, puesto que $g$ es plano
+(2.3.4).
+
+\begin{proposition}[19.9.6]
+\label{IV.19.9.6}
+Sean $f:X\to S$ un morfismo localmente de presentación finita, $Y$ una parte
+cerrada de $X$, $\sh F$ un $\sh O_X$-módulo de presentación finita y
+$f$-plano, y $n$ un entero $>0$. Para todo punto $y\in Y$, las condiciones
+siguientes son equivalentes (denotamos por $X_{f(y)}$ la fibra de $f$ en el
+punto $f(y)$, por $\sh F_{f(y)}$ la imagen inversa de $\sh F$ en
+$X_{f(y)}$, y ponemos $Y_{f(y)}=X_{f(y)}\cap Y$):
+\begin{enumerate}
+  \item[a)] Se tiene
+  $\operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})\geq n$.
+  \item[b)] Existe una vecindad abierta $U$ de $y$ en $X$ y una sucesión
+  $(g_i)_{1\leq i\leq n}$ de $n$ secciones de $\sh O_X$ sobre $U$ que es
+  transversalmente $\sh F$-regular relativamente a $S$ (cf. (19.2.1) para la
+  terminología), y tal que $g_i(x)=0$ para $1\leq i\leq n$ y para todo
+  $x\in U\cap Y$.
+\end{enumerate}
+El conjunto $V_n$ de los $y\in Y$ que verifican estas condiciones es abierto en
+$Y$; si además $Y$ es localmente constructible en $X$, $V_n$ es
+retrocompacto en $X$ ($0_{\mathrm{III}}$, 9.1.1).
+\end{proposition}
+
+En virtud de (19.9.3), la condición a) equivale a la existencia de una
+vecindad abierta $U$ de $y$ en $X$ y de una sucesión
+$(\sh F_{f(y)}|(U\cap X_{f(y)}))$-regular $(h_i)_{1\leq i\leq n}$ de secciones
+de $\sh O_{X_{f(y)}}$ sobre $U\cap X_{f(y)}$ tales que $h_i(z)=0$ para todo
+$z\in U\cap Y_{f(y)}$. Si se designa todavía por $Y$ un subpreesquema cerrado
+de $X$ cuyo espacio subyacente sea $Y$, y por $\sh J$ el ideal cuasi-coherente
+de $\sh O_X$ que define $Y$, también se puede decir que
+$h_i\in\sh J_{f(y)}$ para $1\leq i\leq n$. Como se puede sustituir $U$ por una
+vecindad afín más pequeña de $y$, se puede suponer que los $h_i$ son las
+imágenes de una sucesión $(g_i)_{1\leq i\leq n}$ de secciones de $\sh J$ sobre
+$U$, de modo que los gérmenes $(g_i)_y$ pertenecen al ideal maximal
+$\mathfrak m_y$ de $\sh O_{X,y}$. La equivalencia de a) y b) se deduce entonces
+de (11.3.8), que prueba también que el conjunto $V_n$ es abierto en $Y$.
+
+Queda por demostrar la última afirmación; como se trata todavía de propiedades
+locales sobre $X$, podemos suponer que $S=\Spec(A)$ es afín y que $X$ es de
+presentación finita sobre $S$; existe entonces un subanillo noetheriano $A_0$
+de $A$, un preesquema $X_0$ de tipo finito sobre $S_0=\Spec(A_0)$ y un
+$\sh O_{X_0}$-módulo coherente $\sh F_0$ tales que
+$X=X_0\times_{S_0}S$ y
+$\sh F=\sh F_0\otimes_{\sh O_{X_0}}\sh O_X$ (8.9.1); además se puede suponer
+que, si $f_0:X_0\to S_0$ es el morfismo estructural, $\sh F_0$ es
+$f_0$-plano (11.2.6). Puesto que $Y$ es constructible, se puede suponer además
+(8.3.11) que $Y=p^{-1}(Y_0)$, donde $p:X\to X_0$ es la proyección canónica.
+Entonces, para todo $y\in Y$, se deduce de (19.9.5) y de la transitividad de
+las fibras que
+\[
+  \operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})
+  =\operatorname{prof}_{(Y_0)_{f_0(y_0)},y_0}((\sh F_0)_{f_0(y_0)}),
+\]
+poniendo $y_0=p(y)$; si $V_n^0$ es el conjunto de los $y_0\in Y_0$ para los
+cuales el segundo miembro de esta relación es $\geq n$, se tiene por tanto
+$V_n=p^{-1}(V_n^0)$. Como $X_0$ es noetheriano, $V_n^0$ es un abierto
+retrocompacto en $X_0$, y por consiguiente (cf. la demostración de (1.8.2))
+$V_n$ es retrocompacto en $X$.
+
+\oldpage[IV-4]{224}
+
+\begin{corollary}[19.9.7]
+\label{IV.19.9.7}
+Bajo las hipótesis generales de (19.9.6), la función
+$y\mapsto\operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})$ es semicontinua
+inferiormente en $Y$. Si además $Y$ es localmente constructible, esta función
+es localmente constructible.
+\end{corollary}
+
+\begin{proposition}[19.9.8]
+\label{IV.19.9.8}
+Sean $f:X\to S$ un morfismo localmente de presentación finita, $Z$ una parte
+cerrada de $X$, $\sh F$ un $\sh O_X$-módulo de presentación finita y
+$f$-plano, y $\sh G$ un $\sh O_S$-módulo cuasi-coherente. Supongamos que, para
+todo $x\in Z$, se tiene
+$\operatorname{prof}((\sh F_{f(x)})_x)\geq1$
+(resp. $\operatorname{prof}((\sh F_{f(x)})_x)\geq2$). Entonces, si
+$j:X-Z\to X$ es la inmersión canónica y se pone
+$\sh H=\sh F\otimes_{\sh O_X}f^*(\sh G)$, el homomorfismo canónico
+$\rho_{\sh H}:\sh H\to j_*(j^*(\sh H))$ relativo a $j$ es inyectivo (resp.
+bijectivo).
+\end{proposition}
+
+La cuestión es evidentemente local sobre $X$ y $S$, y basta demostrar la
+proposición en una vecindad de un punto $x\in Z$. En otras palabras, podemos
+limitarnos al caso en que $X$ y $S$ son afines. Gracias a (19.9.6), podemos
+suponer que existe una sección transversalmente $\sh F$-regular $g_1$ de
+$\sh O_X$ sobre $X$ relativamente a $S$ (resp. una sucesión transversalmente
+$\sh F$-regular $(g_1,g_2)$ de dos secciones de $\sh O_X$ sobre $X$ relativamente
+a $S$) tal que, si $Z'$ es el conjunto de los $x'\in X$ para los cuales
+$g_1(x')=0$ (resp. $g_1(x')=g_2(x')=0$), se tenga $Z\subset Z'$.
+
+Volviendo a la demostración de (19.9.8), por (19.9.6) se tiene todavía
+$\operatorname{prof}((\sh F_{f(x)})_x)\geq1$
+(resp. $\operatorname{prof}((\sh F_{f(x)})_x)\geq2$) para todo $x\in Z'$.
+Si la proposición está demostrada sustituyendo el par $(X,Z)$ por
+$(X,Z')$ y $(X-Z,Z'\cap(X-Z))$, es inmediato que también lo estará para
+$(X,Z)$; podemos, pues, limitar la demostración al caso de $X$ y $Z'$. Es
+decir, podemos suponer que (19.9.8) se demuestra cuando
+$S=\Spec(A)$, $X=\Spec(B)$, donde $B$ es una $A$-álgebra de presentación
+finita, $Z=V(\mathfrak J)$, donde $\mathfrak J$ es un ideal de tipo finito del
+anillo $B$, $\sh F=\widetilde M$ y $\sh G=\widetilde N$, donde $N$ es un
+$A$-módulo y $M$ un $B$-módulo de presentación finita que es un $A$-módulo
+plano. Además podemos reducirnos al caso en que $N$ es un $A$-módulo de
+presentación finita. En efecto, $N$ es límite inductivo de un sistema inductivo
+filtrante de $A$-módulos de presentación finita $N_\alpha$ (por doble límite
+inductivo); si se pone $\sh G_\alpha=\widetilde{N_\alpha}$, $\sh H$ es el
+límite inductivo de los $\sh H_\alpha=\sh F\otimes_{\sh O_X}f^*(\sh G_\alpha)$;
+como $j_*$ y $j^*$ conmutan con los límites inductivos y
+$\varinjlim$ es un funtor exacto en la categoría de módulos cuasi-coherentes, si
+la proposición se demuestra para cada uno de los $\sh H_\alpha$, también se
+demostrará para $\sh H$.
+
+Además basta demostrar que el homomorfismo canónico
+\[
+  \Gamma(X,\sh H)\longrightarrow\Gamma(X-Z,\sh H)
+\]
+es inyectivo (resp. biyectivo). Existe entonces un subanillo noetheriano
+$A_0$ de $A$, una $A_0$-álgebra de tipo finito $B_0$, un ideal
+$\mathfrak J_0$ de $B_0$ y un $B_0$-módulo de tipo finito $M_0$ que es un
+
+\oldpage[IV-4]{225}
+
+$A_0$-módulo plano, y un $A_0$-módulo $N_0$, tales que
+$B=B_0\otimes_{A_0}A$, $\mathfrak J=\mathfrak J_0B$,
+$M=M_0\otimes_{A_0}A$ y $N=N_0\otimes_{A_0}A$ (8.9.1, 8.5.11 y 11.2.7).
+Además, sea $(A_\lambda)$ la familia de las sub-$A_0$-álgebras de tipo finito
+de $A$, de modo que $A=\varinjlim A_\lambda$; pongamos
+\[
+\begin{gathered}
+  B_\lambda=B_0\otimes_{A_0}A_\lambda,\qquad
+  \mathfrak J_\lambda=\mathfrak J_0B_\lambda,\qquad
+  M_\lambda=M_0\otimes_{A_0}A_\lambda=M_0\otimes_{B_0}B_\lambda,\\
+  N_\lambda=N_0\otimes_{A_0}A_\lambda,\qquad
+  S_\lambda=\Spec(A_\lambda),\quad
+  X_\lambda=\Spec(B_\lambda),\quad
+  Z_\lambda=V(\mathfrak J_\lambda);
+\end{gathered}
+\]
+si $p_\lambda:X\to X_\lambda$ es la proyección canónica, se tiene
+$Z=p_\lambda^{-1}(Z_\lambda)$ y
+$X-Z=p_\lambda^{-1}(X_\lambda-Z_\lambda)$. Como
+$X_\lambda-Z_\lambda$ es cuasicompacto y cuasi-separado, se deduce (8.5.2)
+que, si se pone $\sh F_\lambda=\widetilde{M_\lambda}$ y
+$\sh H_\lambda=(M_\lambda\otimes_{A_\lambda}N_\lambda)^\sim$, los
+homomorfismos
+\[
+  \varinjlim\Gamma(X_\lambda,\sh H_\lambda)\longrightarrow\Gamma(X,\sh H)
+  \qquad\text{y}\qquad
+  \varinjlim\Gamma(X_\lambda-Z_\lambda,\sh H_\lambda)\longrightarrow\Gamma(X-Z,\sh H)
+\]
+son biyectivos; por la exactitud del funtor $\varinjlim$, basta demostrar que
+para todo $\lambda$ suficientemente grande el homomorfismo canónico
+$\Gamma(X_\lambda,\sh H_\lambda)\to
+\Gamma(X_\lambda-Z_\lambda,\sh H_\lambda)$ es inyectivo (resp. biyectivo).
+Pero para todo $x\in Z$, si $x_\lambda$ es la proyección de $x$ en
+$Z_\lambda$, se tiene
+\[
+  \operatorname{prof}((\sh F_{f(x)})_x)
+  =\operatorname{prof}(((\sh F_\lambda)_{f_\lambda(x_\lambda)})_{x_\lambda})
+\]
+en virtud de (4.2.7) y (6.7.1); para reducirnos al caso en que $A$ es
+noetheriano, hay que probar que, para $\lambda$ suficientemente grande, se
+tiene
+$\operatorname{prof}(((\sh F_\lambda)_{f_\lambda(x_\lambda)})_{x_\lambda})
+\geq1$ (resp. $\geq2$) para todo punto $x_\lambda\in Z_\lambda$. Ahora bien,
+denotemos por $Z_\lambda'$ el conjunto de los puntos $x_\lambda\in Z_\lambda$
+para los cuales, para toda generalización $z_\lambda$ de $x_\lambda$ en
+$Z_\lambda\cap(X_\lambda)_{f_\lambda(x_\lambda)}$, se tiene
+$\operatorname{prof}(((\sh F_\lambda)_{f_\lambda(x_\lambda)})_{z_\lambda})
+\geq1$ (resp. $\geq2$); si $p_{\lambda\mu}:Z_\mu\to Z_\lambda$ es la proyección canónica
+para $\lambda\leq\mu$, se deduce de la hipótesis y de (19.9.5) que
+$Z_\mu'=p_{\lambda\mu}^{-1}(Z_\lambda')$ y
+$Z=p_\lambda^{-1}(Z_\lambda')$; por otra parte, se deduce de (19.9.6) que
+$Z_\lambda'$ es abierto en $Z_\lambda$, por lo que nuestra afirmación se sigue
+de (8.3.4).
+
+Para terminar la demostración cuando $A$ es noetheriano, observemos que, en
+virtud de la hipótesis de planitud y de (6.3.1), se tiene entonces
+$\operatorname{prof}_Z(\sh H)\geq1$
+(resp. $\operatorname{prof}_Z(\sh H)\geq2$); pero la conclusión de (19.9.8)
+se deduce en este caso de (5.10.2) (resp. 5.10.4)).
+
+\begin{remark}[19.9.9]
+\label{IV.19.9.9}
+La misma demostración, junto con los resultados de la parte 3 del cap. III
+sobre la profundidad y la cohomología local, permite establecer la siguiente
+generalización de (19.9.8):
+
+\emph{Bajo las condiciones generales de (19.9.8), supongamos que, para todo
+$x\in Z$, se tiene $\operatorname{prof}((\sh F_{f(x)})_x)\geq k$; entonces el
+homomorfismo canónico}
+\[
+  H^i(X,\sh H)\longrightarrow H^i(X-Z,\sh H|(X-Z))
+\]
+\emph{es biyectivo para $i\leq k-2$ e inyectivo para $i=k-1$} (lo que,
+expresado mediante la noción cohomológica general de profundidad introducida
+en el cap. III, se escribe también
+$\operatorname{prof}_Z(\sh H)\geq k$).
+\end{remark}

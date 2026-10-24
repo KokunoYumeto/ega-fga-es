@@ -1,0 +1,596 @@
+\subsection{Operadores diferenciales.}
+\footnote{Para un formalismo más general, véase la Exposición VII de [42]
+(debida a P. Gabriel).}
+\label{IV.16.8}
+
+\begin{definition}[16.8.1]
+\label{IV.16.8.1}
+Sean $f=(\psi,\theta):X\to S$ un morfismo de preesquemas,
+$\mathscr{F}$, $\mathscr{G}$ dos $\mathcal{O}_X$-módulos, y $n$ un entero
+$\geq0$. Se dice que un homomorfismo de haces de grupos aditivos
+$D:\mathscr{F}\to\mathscr{G}$ es un \emph{operador diferencial de orden
+$\leq n$} (relativamente a $S$) si existe un homomorfismo de
+$\mathcal{O}_X$-módulos
+$u:\mathscr{P}_{X/S}^n(\mathscr{F})\to\mathscr{G}$ (donde
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ está provisto de su estructura de
+$\mathcal{O}_X$-módulo a la izquierda (16.7.4)) tal que
+$D=u\circ d_{X/S,\mathscr{F}}^n$.
+\end{definition}
+
+Es claro, en virtud de la existencia de los homomorfismos canónicos
+\[
+  \mathscr{P}_{X/S}^m(\mathscr{F})
+  \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F})
+\]
+\oldpage[IV-4]{40}
+para $n\leq m$ (16.7.7), que un operador diferencial de orden $\leq n$ es
+también un operador diferencial de orden $\leq m$ para todo $m\geq n$. Si
+$D:\mathscr{F}\to\mathscr{G}$ es un operador diferencial de orden
+$\leq n$, entonces, para todo abierto $U$ de $X$,
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ es también un operador diferencial
+de orden $\leq n$.
+
+Se dice que un homomorfismo $D:\mathscr{F}\to\mathscr{G}$ de los haces de
+grupos aditivos subyacentes a $\mathscr{F}$ y $\mathscr{G}$ es un
+\emph{operador diferencial} (relativamente a $S$) si, para todo $x\in X$,
+existen una vecindad abierta $U$ de $x$ y un entero $n\geq0$ tales que
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ sea un operador diferencial de orden
+$\leq n$. El \emph{orden} de un operador diferencial
+$D:\mathscr{F}\to\mathscr{G}$ es el ínfimo de los enteros $n$ tales que
+$D$ sea un operador diferencial de orden $\leq n$ (y, por tanto, $+\infty$
+si no hay tales enteros); este orden es siempre finito si $X$ es
+\emph{cuasicompacto}. Los operadores diferenciales de orden $0$ no son sino
+los homomorfismos de $\mathcal{O}_X$-módulos
+$\mathscr{F}\to\mathscr{G}$; se conviene en que todo operador diferencial
+de orden $<0$ es \emph{nulo}. Para $n\geq0$, un operador diferencial no es,
+en general, un homomorfismo de $\mathcal{O}_X$-módulos, pero es siempre
+un homomorfismo de $\psi^*(\mathcal{O}_S)$-módulos.
+
+Cuando $\mathscr{F}=\mathcal{O}_X$, un operador diferencial de orden
+$\leq1$ de $\mathcal{O}_X$ en $\mathscr{G}$ se escribe de manera única
+en la forma $v+D$, donde $v:\mathcal{O}_X\to\mathscr{G}$ es un
+$\mathcal{O}_X$-homomorfismo, y $D$ una $S$-\emph{derivación} (16.5.1) de
+$\mathcal{O}_X$ en $\mathscr{G}$: esto resulta de la estructura de
+$P_{B/A}^1$ (0, 20.4.8).
+
+\begin{env}[16.8.2]
+\label{IV.16.8.2}
+Para describir de manera más explícita un operador diferencial de orden
+$\leq n$, $D:\mathscr{F}\to\mathscr{G}$, basta, para todo abierto afín
+$U$ de $X$ cuya imagen en $S$ esté contenida en un abierto afín $V$,
+caracterizar el homomorfismo
+$D=D_U:\Gamma(U,\mathscr{F})\to\Gamma(U,\mathscr{G})$. Si se pone
+$\Gamma(V,\mathcal{O}_S)=A$, $\Gamma(U,\mathcal{O}_X)=B$, de modo que $B$
+es una $A$-álgebra, se tiene
+\[
+  \Gamma(U,\mathscr{P}_{X/S}^n)
+  =(B\otimes_A B)/\mathfrak{I}^{n+1},
+\]
+donde se ha puesto, para abreviar, $\mathfrak{I}=\mathfrak{I}_{B/A}$.
+Pongamos además $M=\Gamma(U,\mathscr{F})$, $N=\Gamma(U,\mathscr{G})$;
+entonces la definición de $D$ significa que, para cada par $(U,V)$ que
+satisface las condiciones precedentes, el $A$-homomorfismo $D:M\to N$ se
+factoriza como
+\[
+  M\longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M
+  \xrightarrow{v}N
+\]
+donde la primera flecha es el homomorfismo canónico $t\mapsto1\otimes t$, y
+$v$ es un $B$-homomorfismo; la estructura de $B$-módulo de
+$((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M$ proviene del primer
+factor $B$ (mientras que, recordemos, al formar el producto tensorial
+sobre $B$, la estructura de $B$-módulo de
+$(B\otimes_A B)/\mathfrak{I}^{n+1}$ proviene del segundo factor $B$).
+Observemos ahora que el $B$-módulo
+$((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M$ es isomorfo a
+$(B\otimes_A M)/\mathfrak{I}^{n+1}(B\otimes_A M)$, donde $B\otimes_A M$ se
+considera como $(B\otimes_A B)$-módulo y su estructura de $B$-módulo
+proviene del homomorfismo $b\mapsto b\otimes1$ de $B$ en $B\otimes_A B$.
+Sea entonces $D'$ el $B$-homomorfismo de $B\otimes_A M$ en $N$ tal que
+$D'(b\otimes t)=bD(t)$; la condición de factorización de $D$ se expresa
+también diciendo que $D'$ debe \emph{anularse sobre el $B$-submódulo}
+$\mathfrak{I}^{n+1}(B\otimes_A M)$.
+\end{env}
+
+\begin{env}[16.8.3]
+\label{IV.16.8.3}
+Es claro que el conjunto de los operadores diferenciales de orden $\leq n$ de
+$\mathscr{F}$ en $\mathscr{G}$ es un grupo aditivo, denotado por
+$\operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})$; cuando
+$\mathscr{F}=\mathscr{G}=\mathcal{O}_X$, se escribe también
+$\operatorname{Diff}_{X/S}^n$ en lugar de
+$\operatorname{Diff}_{X/S}^n(\mathcal{O}_X,\mathcal{O}_X)$.
+
+Se ha visto en (16.8.1) que, para dos abiertos $U\supset V$ de $X$, se tiene
+un homomorfismo canónico de restricción
+\[
+  \operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U)
+  \longrightarrow
+  \operatorname{Diff}_{V/S}^n(\mathscr{F}|V,\mathscr{G}|V)
+\]
+\oldpage[IV-4]{41}
+por lo que $U\mapsto\operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U)$
+es un prehaz de grupos aditivos; de hecho, es incluso un \emph{haz}, pues,
+cuando $U$ recorre los abiertos de $X$, los homomorfismos
+$u\mapsto u\circ d_{U/S,\mathscr{F}|U}^n$ son \emph{isomorfismos} de grupos
+aditivos
+\[
+  \mathscr{H}\!om_{\mathcal{O}_U}
+  (\mathscr{P}_{U/S}^n(\mathscr{F}|U),\mathscr{G}|U)
+  \xrightarrow{\sim}
+  \operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U),
+  \tag{16.8.3.1}
+  \label{IV.16.8.3.1}
+\]
+en virtud de que la imagen de $\mathscr{F}$ por
+$d_{X/S,\mathscr{F}}^n$ engendra $\mathscr{P}_{X/S}^n(\mathscr{F})$
+(16.7.6). Se denota este haz por
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$, y se tiene, por tanto:
+\end{env}
+
+\begin{proposition}[16.8.4]
+\label{IV.16.8.4}
+Los isomorfismos (16.8.3.1) definen un isomorfismo de haces de grupos
+aditivos
+\[
+  \mathscr{H}\!om_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+  \xrightarrow{\sim}
+  \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G}).
+  \tag{16.8.4.1}
+  \label{IV.16.8.4.1}
+\]
+\end{proposition}
+
+Cuando $\mathscr{F}=\mathscr{G}=\mathcal{O}_X$, se escribe también
+$\mathscr{D}\!iff_{X/S}^n$ en lugar de
+$\mathscr{D}\!iff_{X/S}^n(\mathcal{O}_X,\mathcal{O}_X)$; de (16.8.4) resulta
+que $\mathscr{D}\!iff_{X/S}^n$ se identifica canónicamente con el
+\emph{dual} del $\mathcal{O}_X$-módulo $\mathscr{P}_{X/S}^n$; por ello se
+escribe $\langle t,D\rangle$ en lugar de $u(t)$ si $t$ es una sección de
+$\mathscr{P}_{X/S}^n$ sobre un abierto y si $u$ es el homomorfismo de
+$\mathscr{P}_{X/S}^n$ en $\mathcal{O}_X$ correspondiente a $D$.
+
+\begin{env}[16.8.5]
+\label{IV.16.8.5}
+Puesto que $\mathscr{P}_{X/S}^n(\mathscr{F})$ está provisto de una estructura
+de $\mathcal{O}_X$-bimódulo (16.7.4), se deduce canónicamente una estructura
+de $\mathcal{O}_X$-bimódulo sobre
+$\mathscr{H}\!om_{\mathcal{O}_X}
+(\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})$, y, por tanto, también sobre
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ en virtud de (16.8.4.1).
+Más precisamente, a la estructura de $\mathcal{O}_X$-módulo a la izquierda
+de $\mathscr{P}_{X/S}^n(\mathscr{F})$ corresponde, en virtud de la definición
+(16.8.1), la estructura de $\mathcal{O}_X$-módulo a la izquierda sobre
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ que se explicita como
+sigue: para todo abierto $U$ de $X$, toda sección
+$a\in\Gamma(U,\mathcal{O}_X)$ y todo operador diferencial
+$D:\mathscr{F}|U\to\mathscr{G}|U$, $aD$ es el operador diferencial que a
+toda sección $t\in\Gamma(U,\mathscr{F})$ hace corresponder la sección
+\[
+  (aD)(t)=a(D(t))
+  \tag{16.8.5.1}
+  \label{IV.16.8.5.1}
+\]
+de $\Gamma(U,\mathscr{G})$. Análogamente, a la estructura de
+$\mathcal{O}_X$-módulo a la derecha de $\mathscr{P}_{X/S}^n(\mathscr{F})$
+corresponde la estructura de $\mathcal{O}_X$-módulo a la derecha sobre
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ que se explicita como
+sigue: con las mismas notaciones que antes, $Da$ es el operador diferencial
+que a $t\in\Gamma(U,\mathscr{F})$ hace corresponder la sección
+\[
+  (Da)(t)=D(at).
+  \tag{16.8.5.2}
+  \label{IV.16.8.5.2}
+\]
+\end{env}
+
+\begin{proposition}[16.8.6]
+\label{IV.16.8.6}
+Si $f:X\to S$ es un morfismo localmente de presentación finita,
+$\mathscr{F}$ un $\mathcal{O}_X$-módulo cuasicoherente de presentación finita
+y $\mathscr{G}$ un $\mathcal{O}_X$-módulo cuasicoherente, entonces
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ es un
+$\mathcal{O}_X$-módulo cuasicoherente para una u otra de las estructuras
+definidas en (16.8.5).
+\end{proposition}
+
+La proposición resulta de que, bajo las hipótesis formuladas,
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ es un $\mathcal{O}_X$-módulo
+cuasicoherente de presentación finita (16.7.4), y de (I, 1.3.12).
+
+\begin{env}[16.8.7]
+\label{IV.16.8.7}
+El conjunto de los operadores diferenciales de $\mathscr{F}$ en
+$\mathscr{G}$ (de orden no especificado (16.8.1)) se denota por
+$\operatorname{Diff}_{X/S}(\mathscr{F},\mathscr{G})$; se ve también, como en
+(16.8.3), que
+$U\mapsto\operatorname{Diff}_{U/S}(\mathscr{F}|U,\mathscr{G}|U)$ es un haz de
+grupos aditivos, que se designará por
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$. Es inmediato que
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$ es la unión de la familia
+filtrante creciente de sus subhaces
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$; si $X$ es
+cuasicompacto, $\operatorname{Diff}_{X/S}(\mathscr{F},\mathscr{G})$
+\oldpage[IV-4]{42}
+es asimismo la unión de sus subgrupos
+$\operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})$ (16.8.1). Las
+estructuras de $\mathcal{O}_X$-bimódulo sobre los
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ definen, por tanto, una
+estructura de $\mathcal{O}_X$-bimódulo sobre
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$, explicitada también por
+(16.8.5.1) y (16.8.5.2).
+
+Obsérvese que, para $n\leq m$, se tiene un diagrama conmutativo
+\[
+  \xymatrix{
+    \mathscr{H}\!om_{\mathcal{O}_X}
+      (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+      \ar[r]^-{\sim}\ar[d]
+      &\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})\ar[d]\\
+    \mathscr{H}\!om_{\mathcal{O}_X}
+      (\mathscr{P}_{X/S}^m(\mathscr{F}),\mathscr{G})
+      \ar[r]^-{\sim}
+      &\mathscr{D}\!iff_{X/S}^m(\mathscr{F},\mathscr{G})
+  }
+  \tag{16.8.7.1}
+  \label{IV.16.8.7.1}
+\]
+donde las flechas horizontales son los isomorfismos
+(16.8.4.1)\footnote{El texto impreso remite a (16.8.4.2), que no existe; la
+remisión correcta es a (16.8.4.1).} y la flecha vertical de la izquierda
+proviene del homomorfismo canónico
+$\mathscr{P}_{X/S}^m(\mathscr{F})\to
+\mathscr{P}_{X/S}^n(\mathscr{F})$ (16.7.7). Para todo abierto $U$ de $X$,
+provistamos entonces
+\[
+  \Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))
+  =\varprojlim\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))
+\]
+de la topología de límite proyectivo de las topologías discretas sobre los
+$\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))$, lo que define
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ como un
+$\Gamma(U,\mathcal{O}_X)$-bimódulo topológico, de modo que
+$\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ aparece como un haz con valores en
+la categoría de los grupos conmutativos topológicos
+(0\textsubscript{I}, 3.2.6). Entonces, por (G, II, 1.11), el límite del sistema
+inductivo de haces de grupos conmutativos
+\[
+  (\mathscr{H}\!om_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G}))
+\]
+no es sino el haz de gérmenes de homomorfismos \emph{continuos} de
+$\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ en $\mathscr{G}$ (este último
+provisto de la topología discreta): en efecto, los homomorfismos continuos de
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ en el grupo discreto
+$\Gamma(U,\mathscr{G})$ corresponden biunívocamente a los sistemas inductivos
+de homomorfismos de grupos
+$\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))\to\Gamma(U,\mathscr{G})$. Se
+puede, por tanto, expresar también (16.8.4) diciendo que se tiene un
+isomorfismo canónico
+\[
+  \mathscr{H}\!om.\mathrm{cont}_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^{\infty}(\mathscr{F}),\mathscr{G})
+  \xrightarrow{\sim}
+  \mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})
+\]
+donde el primer miembro designa el haz de gérmenes de homomorfismos continuos
+de $\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ en $\mathscr{G}$.
+\end{env}
+
+\begin{proposition}[16.8.8]
+\label{IV.16.8.8}
+Sean $\mathscr{F}$, $\mathscr{G}$ dos $\mathcal{O}_X$-módulos,
+$D:\mathscr{F}\to\mathscr{G}$ un homomorfismo de
+$\psi^*(\mathcal{O}_S)$-módulos, y $n$ un entero $\geq0$. Las condiciones
+siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] $D$ es un operador diferencial de orden $\leq n$.
+  \item[(b)] Para toda sección $a$ de $\mathcal{O}_X$ sobre un abierto
+  $U$, el homomorfismo $D_a:\mathscr{F}|U\to\mathscr{G}|U$ tal que, para
+  toda sección $t$ de $\mathscr{F}$ sobre un abierto $V\subset U$, se tenga
+  \[
+    D_a(t)=D(at)-aD(t)
+    \tag{16.8.8.1}
+    \label{IV.16.8.8.1}
+  \]
+  es un operador diferencial de orden $\leq n-1$.
+  \item[(c)] Para todo abierto $U$ de $X$, toda familia
+  $(a_i)_{1\leq i\leq n+1}$ de $n+1$ secciones de $\mathcal{O}_X$ sobre
+  $U$ y toda sección $t$ de $\mathscr{F}$ sobre $U$, se tiene la identidad
+  \[
+    \sum_{H\subset I_{n+1}}(-1)^{\operatorname{Card}(H)}
+    \left(\prod_{i\in H}a_i\right)
+    D\!\left(\left(\prod_{i\notin H}a_i\right)t\right)=0
+    \tag{16.8.8.2}
+    \label{IV.16.8.8.2}
+  \]
+  (donde $I_{n+1}$ es el intervalo $1\leq i\leq n+1$ de $\mathbb{N}$).
+\end{enumerate}
+\oldpage[IV-4]{43}
+\end{proposition}
+
+Demostremos primero la equivalencia entre a) y c). Por definición, para
+demostrar que $D$ es un operador diferencial de orden $\leq n$, basta
+demostrarlo para la restricción
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ a todo abierto afín $U$ de $X$; por
+otra parte, la propiedad c) es válida para todo abierto $U$ de $X$ si lo es
+para todo abierto afín. Se puede, por tanto, reducir al caso en que
+$S=\operatorname{Spec}(A)$ y $X=\operatorname{Spec}(B)$ son afines. En
+virtud de (16.8.2) (cuyas notaciones se conservan), la condición a) significa
+entonces que el $A$-homomorfismo $D':B\otimes_A M\to N$ tal que
+$D'(b\otimes t)=bD(t)$ se anula sobre
+$\mathfrak{I}^{n+1}(B\otimes_A M)$, lo que, en virtud de (0, 20.4.4),
+equivale a decir que $D'$ se anula para todos los elementos de la forma
+\[
+  \left(\prod_{i=1}^{n+1}(a_i\otimes1-1\otimes a_i)\right).(1\otimes t)
+\]
+donde $a_i\in B$ y $t\in M$. Ahora bien, este elemento se escribe, salvo el
+signo común $(-1)^{n+1}$, como\footnote{El texto impreso omite en esta
+expansión los signos $(-1)^{\operatorname{Card}(H)}$; sin ellos, la imagen
+por $D'$ no es el primer miembro de (16.8.8.2).}
+\[
+  \sum_{H\subset I_{n+1}}(-1)^{\operatorname{Card}(H)}
+  \left(\prod_{i\in H}a_i\right)\otimes
+  \left(\left(\prod_{i\notin H}a_i\right)t\right),
+\]
+y el valor de $D'$ sobre este elemento no es sino, salvo ese signo común, el
+primer miembro de (16.8.8.2), lo que demuestra la equivalencia entre a) y c).
+
+Demostremos ahora la equivalencia entre b) y c). Razonemos por inducción
+sobre $n$, siendo trivial la afirmación para $n=0$. Escribiendo $a_{n+1}$ en
+lugar de $a$ en la condición b), se ve, en virtud de la hipótesis de
+inducción, que la condición b) significa que, para toda familia
+$(a_i)_{1\leq i\leq n}$ de $n$ secciones de $\mathcal{O}_X$ sobre $U$ y
+toda sección $t$ de $\mathscr{F}$ sobre $U$, se tiene
+\[
+  \sum_{H'\subset I_n}(-1)^{\operatorname{Card}(H')}
+  \left(\prod_{i\in H'}a_i\right)
+  D_{a_{n+1}}\!\left(\left(\prod_{i\notin H'}a_i\right)t\right)=0.
+\]
+Pero, si en esta relación se sustituye $D_{a_{n+1}}$ por su definición
+(16.8.8.1), se comprueba inmediatamente que se obtiene, salvo el signo, el
+primer miembro de (16.8.8.2); de donde se sigue la conclusión.
+
+\begin{proposition}[16.8.9]
+\label{IV.16.8.9}
+Si $D:\mathscr{F}\to\mathscr{G}$ es un operador diferencial de orden
+$\leq n$, y $D':\mathscr{G}\to\mathscr{H}$ un operador diferencial de orden
+$\leq n'$, entonces $D'\circ D:\mathscr{F}\to\mathscr{H}$ es un operador
+diferencial de orden $\leq n+n'$.
+\end{proposition}
+
+Por hipótesis, se puede escribir $D=u\circ d_{X/S,\mathscr{F}}^n$ y
+$D'=v\circ d_{X/S,\mathscr{G}}^{n'}$, donde
+$u:\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}\to\mathscr{G}$ y
+$v:\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}\to\mathscr{H}$
+son $\mathcal{O}_X$-homomorfismos. Todo se reduce a demostrar que el
+homomorfismo compuesto de haces de grupos aditivos
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^n}
+      &\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}
+        \ar[r]^-u
+      &\mathscr{G}\ar[r]^-{d_{X/S,\mathscr{G}}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}
+  }
+\]
+se factoriza como
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^{n+n'}}
+      &\mathscr{P}_{X/S}^{n+n'}\otimes_{\mathcal{O}_X}\mathscr{F}
+        \ar[r]^-w
+      &\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}
+  }
+\]
+donde $w$ es un $\mathcal{O}_X$-homomorfismo. Bastará demostrar el siguiente
+
+\begin{lemma}[16.8.9.1]
+\label{IV.16.8.9.1}
+Existe un único $\mathcal{O}_X$-homomorfismo
+\[
+  \delta:\mathscr{P}_{X/S}^{n+n'}
+  \longrightarrow
+  \mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n)
+  =\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{P}_{X/S}^n
+  \tag{16.8.9.2}
+  \label{IV.16.8.9.2}
+\]
+\oldpage[IV-4]{44}
+que hace conmutativo el diagrama
+\[
+  \xymatrix{
+    \mathcal{O}_X\ar[r]^-{d_{X/S}^{n+n'}}\ar[d]_-{d_{X/S}^n}
+      &\mathscr{P}_{X/S}^{n+n'}\ar[d]^-\delta\\
+    \mathscr{P}_{X/S}^n
+      \ar[r]_-{d_{X/S,\mathscr{P}_{X/S}^n}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n)
+  }
+  \tag{16.8.9.3}
+  \label{IV.16.8.9.3}
+\]
+\end{lemma}
+
+Se tendrá entonces, en efecto, un diagrama conmutativo deducido de (16.8.9.3)
+por tensorización con $\mathscr{F}$
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^{n+n'}}
+      \ar[d]_-{d_{X/S,\mathscr{F}}^n}
+      &\mathscr{P}_{X/S}^{n+n'}(\mathscr{F})
+        \ar[d]^-{\delta\otimes1}\\
+    \mathscr{P}_{X/S}^n(\mathscr{F})
+      \ar[r]_-{d_{X/S,\mathscr{P}_{X/S}^n(\mathscr{F})}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n(\mathscr{F}))
+  }
+\]
+y, por otra parte, se verifica inmediatamente a partir de la definición
+(16.7.5) que el diagrama
+\[
+  \xymatrix{
+    \mathscr{P}_{X/S}^n(\mathscr{F})\ar[r]^-u
+      \ar[d]_-{d_{X/S,\mathscr{P}_{X/S}^n(\mathscr{F})}^{n'}}
+      &\mathscr{G}\ar[d]^-{d_{X/S,\mathscr{G}}^{n'}}\\
+    \mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n(\mathscr{F}))
+      \ar[r]_-{1\otimes u}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{G})
+  }
+\]
+es conmutativo. Se resuelve, por tanto, la cuestión tomando como $w$ el
+$\mathcal{O}_X$-homomorfismo compuesto
+\[
+  \xymatrix{
+    \mathscr{P}_{X/S}^{n+n'}(\mathscr{F})
+      \ar[r]^-{\delta\otimes1}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n(\mathscr{F}))
+        \ar[r]^-{1\otimes u}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{G}).
+  }
+\]
+
+Queda por demostrar el lema (16.8.9.1). Teniendo en cuenta (16.7.6), que
+demuestra la unicidad de $\delta$, se reduce al caso en que
+$S=\operatorname{Spec}(A)$ y $X=\operatorname{Spec}(B)$ son afines; poniendo
+$\mathfrak{I}=\mathfrak{I}_{B/A}$, se trata de definir un homomorfismo
+canónico de $B$-módulos
+\[
+  \varphi:(B\otimes_A B)/\mathfrak{I}^{n+n'+1}
+  \longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n'+1})
+  \otimes_B((B\otimes_A B)/\mathfrak{I}^{n+1})
+\]
+donde las estructuras de $B$-módulo de ambos miembros provienen del
+primer factor $B$; recordemos que, en el producto tensorial del segundo
+miembro, $(B\otimes_A B)/\mathfrak{I}^{n'+1}$ debe considerarse
+\oldpage[IV-4]{45}
+como $B$-módulo a la derecha mediante su segundo factor $B$, y
+$(B\otimes_A B)/\mathfrak{I}^{n+1}$ como $B$-módulo a la izquierda
+mediante su primer factor $B$ (16.7.2). Esto equivale a definir un
+homomorfismo de $B$-módulos
+\[
+  \varphi_0:B\otimes_A B\longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n'+1})
+  \otimes_B((B\otimes_A B)/\mathfrak{I}^{n+1})
+\]
+y demostrar que se anula sobre $\mathfrak{I}^{n+n'+1}$. Ahora bien, se
+define inmediatamente tal homomorfismo mediante la condición
+\[
+  \varphi_0(b\otimes b')
+  =\pi_{n'}(b\otimes1)\otimes\pi_n(1\otimes b')
+  \qquad\text{para $b,b'$ en $B$}
+\]
+con las notaciones de (16.3.7). Además, es inmediato que $\varphi_0$ es un
+homomorfismo de \emph{anillos}. Ahora bien, se puede escribir
+\[
+  \begin{aligned}
+  \varphi_0(b\otimes1-1\otimes b)
+  ={}&\pi_{n'}(b\otimes1-1\otimes b)\otimes\pi_n(1\otimes1)\\
+  &+\pi_{n'}(1\otimes b)\otimes\pi_n(1\otimes1)
+  -\pi_{n'}(1\otimes1)\otimes\pi_n(1\otimes b)
+  \end{aligned}
+\]
+y se tiene
+\[
+  \begin{aligned}
+  \pi_{n'}(1\otimes b)\otimes\pi_n(1\otimes1)
+  &=\pi_{n'}(1\otimes1)b\otimes\pi_n(1\otimes1)\\
+  &=\pi_{n'}(1\otimes1)\otimes b\pi_n(1\otimes1)\\
+  &=\pi_{n'}(1\otimes1)\otimes\pi_n(b\otimes1)
+  \end{aligned}
+\]
+de donde, finalmente,
+\[
+  \begin{aligned}
+  \varphi_0(b\otimes1-1\otimes b)
+  ={}&\pi_{n'}(b\otimes1-1\otimes b)\otimes\pi_n(1\otimes1)\\
+  &+\pi_{n'}(1\otimes1)\otimes\pi_n(b\otimes1-1\otimes b).
+  \end{aligned}
+  \tag{16.8.9.4}
+  \label{IV.16.8.9.4}
+\]
+Un producto de $n+n'+1$ términos de la forma (16.8.9.4) es, por tanto,
+necesariamente nulo, pues así sucede con un producto de $n+1$ términos de la
+forma $\pi_n(b\otimes1-1\otimes b)$ y con un producto de $n'+1$ términos de
+la forma $\pi_{n'}(b\otimes1-1\otimes b)$. La conclusión resulta, por tanto,
+de (0, 20.4.4).
+
+\begin{corollary}[16.8.10]
+\label{IV.16.8.10}
+El haz $\mathscr{D}\!iff_{X/S}(\mathcal{O}_X,\mathcal{O}_X)$ (denotado también
+por $\mathscr{D}\!iff_{X/S}$) está provisto canónicamente de una estructura de
+haz de anillos, y los $\mathscr{D}\!iff_{X/S}^n$ forman una filtración
+creciente compatible con esta estructura.
+\end{corollary}
+
+En particular, $\mathscr{D}\!iff_{X/S}^0$ es un haz de subanillos de
+$\mathscr{D}\!iff_{X/S}$ que se identifica canónicamente con $\mathcal{O}_X$
+(16.8.1). Las fórmulas (16.8.5.1) y (16.8.5.2) muestran que la estructura de
+$\mathcal{O}_X$-bimódulo de $\mathscr{D}\!iff_{X/S}$ proviene de la
+multiplicación por la izquierda y por la derecha mediante las secciones de
+$\mathcal{O}_X$, considerado como haz de subanillos de
+$\mathscr{D}\!iff_{X/S}$.
+
+\begin{remarks}[16.8.11]
+\label{IV.16.8.11}
+\begin{enumerate}
+  \item[(i)] Supongamos que
+  $\mathscr{F}=\bigoplus_{\lambda\in L}\mathscr{F}_\lambda$; entonces es
+  claro por (16.7.2.1) que
+  $\mathscr{P}_{X/S}^n(\mathscr{F})=
+  \bigoplus_{\lambda\in L}\mathscr{P}_{X/S}^n(\mathscr{F}_\lambda)$; como el
+  funtor $\mathscr{F}\mapsto\Gamma(U,\mathscr{F})$ conmuta con la formación
+  de sumas directas cualesquiera, $d_{X/S,\mathscr{F}}^n$ es el homomorfismo
+  cuya restricción a cada $\mathscr{F}_\lambda$ es
+  \[
+    d_{X/S,\mathscr{F}_\lambda}^n:\mathscr{F}_\lambda
+    \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F}_\lambda);
+  \]
+  se concluye inmediatamente que se tiene
+  \[
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\lambda\in L}
+    \operatorname{Diff}_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}),
+  \]
+  y, por consiguiente, también (0\textsubscript{I}, 3.2.6)
+  \[
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\lambda\in L}
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}).
+  \]
+  Por otra parte, si $\mathscr{G}=\prod_{\mu\in M}\mathscr{G}_\mu$
+  (0\textsubscript{I}, 3.2.6), se tiene
+  \[
+    \operatorname{Hom}_{\mathcal{O}_X}
+    (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+    =\prod_{\mu\in M}\operatorname{Hom}_{\mathcal{O}_X}
+    (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G}_\mu),
+  \]
+  \oldpage[IV-4]{46}
+  pues todo homomorfismo $u$ de $\mathscr{P}_{X/S}^n(\mathscr{F})$ en
+  $\mathscr{G}$ corresponde biunívocamente a la familia de sus compuestos
+  \[
+    u_\mu:\mathscr{P}_{X/S}^n(\mathscr{F})
+    \longrightarrow\mathscr{G}\longrightarrow\mathscr{G}_\mu.
+  \]
+  Se tiene, por tanto,
+  \[
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\mu\in M}
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G}_\mu),
+  \]
+  y, por consiguiente, también
+  \[
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\mu\in M}
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G}_\mu).
+  \]
+  \item[(ii)] Hasta aquí apenas se han encontrado operadores diferenciales
+  $\mathscr{F}\to\mathscr{G}$ salvo cuando $\mathscr{F}$ y $\mathscr{G}$ son
+  $\mathcal{O}_X$-módulos localmente libres de rango finito, en cuyo caso, en
+  virtud de (i), su estructura se reduce localmente a la del haz
+  $\mathscr{D}\!iff_{X/S}$; esta última se estudiará más adelante (16.11) en
+  un caso particular.
+\end{enumerate}
+\end{remarks}

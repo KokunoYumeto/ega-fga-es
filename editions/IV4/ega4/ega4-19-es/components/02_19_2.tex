@@ -1,0 +1,115 @@
+\subsection{Inmersiones transversalmente regulares}
+\label{subsection:IV.19.2}
+
+\oldpage[IV-4]{190}
+
+\begin{definition}[19.2.1]
+\label{IV.19.2.1}
+Sean $u:X\to S$ un morfismo de preesquemas y $\mathscr F$ un $\sh{O}_X$-módulo cuasicoherente. Se dice que una sucesión $(f_i)_{1\leq i\leq n}$ de secciones de $\sh{O}_X$ sobre $X$ es \emph{transversalmente $\mathscr F$-regular relativamente a $S$} (o relativamente a $u$) si la sucesión $(f_i)$ es $\mathscr F$-regular y los $\sh{O}_X$-módulos
+\[
+  \mathscr F\big/\Bigl(\sum_{j\leq i}f_j\mathscr F\Bigr)
+\]
+sean planos sobre $S$ para $0\leq i\leq n$. Se dice que un ideal cuasicoherente $\mathscr J$ de $\sh{O}_X$ es \emph{transversalmente regular relativamente a $S$} (o relativamente a $u$) en un punto $x\in\operatorname{Supp}(\sh{O}_X/\mathscr J)$ si existe una vecindad abierta $U$ de $x$ y una sucesión finita $(f_i)$ de secciones de $\mathscr J$ sobre $U$ que es transversalmente $\sh{O}_U$-regular relativamente a $S$ y engendra $\mathscr J|U$.
+
+En una $A$-álgebra $B$, se dice que un ideal $\mathfrak J$ es \emph{transversalmente regular relativamente a $A$} si $\widetilde{\mathfrak J}$ es transversalmente regular relativamente a $S=\Spec(A)$ en todo punto de $V(\mathfrak J)$ en $\Spec(B)$.
+\end{definition}
+
+\begin{definition}[19.2.2]
+\label{IV.19.2.2}
+Sean $S$ un preesquema, $X$, $Y$ dos $S$-preesquemas, y $u:Y\to X$ un $S$-morfismo que es una inmersión. Se dice que $u$ es una \emph{inmersión transversalmente regular relativamente a $S$ en un punto $y\in Y$} si existe una vecindad $V$ de $u(y)$ en $X$ tal que el subpreesquema inducido sobre $u(Y)\cap V$ por el subpreesquema de $X$ asociado a $u$ esté definido por un ideal de $\sh{O}_V$ transversalmente regular relativamente a $S$ en el punto $u(y)$.
+
+Es claro que el conjunto de puntos de $Y$ en los que una inmersión es transversalmente regular relativamente a $S$ es \emph{abierto} en $Y$; si es igual a $Y$, se dice simplemente que $u$ es una \emph{inmersión transversalmente regular relativamente a $S$}.
+
+Si $S\to T$ es un morfismo \emph{plano}, entonces, si $\mathscr J$ es un ideal de $\sh{O}_X$ transversalmente regular relativamente a $S$ en $x\in X$, también lo es relativamente a $T$ ($0_{\mathrm I}$, 6.2.1). Una $S$-inmersión $Y\to X$ transversalmente regular en un punto $y\in Y$ relativamente a $S$ es, por tanto, también una $T$-inmersión transversalmente regular relativamente a $T$ en ese punto.
+\end{definition}
+
+\begin{proposition}[19.2.3]
+\label{IV.19.2.3}
+Sean $S$ un preesquema, $X$, $Y$ dos $S$-preesquemas, y $u:Y\to X$ un $S$-morfismo que es una inmersión transversalmente regular relativamente a $S$ en un punto $y\in Y$. Entonces, para todo cambio de base $S'\to S$, si se pone $X'=X\times_S S'$, $Y'=Y\times_S S'$, la inmersión $u'=u_{(S')}:Y'\to X'$ es transversalmente regular relativamente a $S'$ en todo punto $y'\in Y'$ situado sobre $y$.
+\end{proposition}
+
+Esto resulta inmediatamente de la definición y de ($0$, 15.1.15).
+
+\begin{proposition}[19.2.4]
+\label{IV.19.2.4}
+Sean $S$ un preesquema, $X$, $Y$ dos $S$-preesquemas, y $u:Y\to X$ un $S$-morfismo que es una inmersión. Se supone, o bien que $S$ y $X$ son localmente noetherianos, o bien que los morfismos estructurales $g:X\to S$, $h:Y\to S$ son localmente de presentación finita. Sean $y$ un punto de $Y$ y $s$ su imagen en $S$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $u$ es transversalmente regular relativamente a $S$ en el punto $y$.
+  \item[b)] Los morfismos $g$ y $h$ son planos en vecindades de los puntos $u(y)$ e $y$, respectivamente, y, si se pone $X_s=g^{-1}(s)$, $Y_s=h^{-1}(s)$, la inmersión $u_s:Y_s\to X_s$ es regular en el punto $y$.
+  \item[b$'$)] Los morfismos $g$ y $h$ son planos en vecindades de los puntos $u(y)$ e $y$, respectivamente, y, para todo cambio de base $S'\to S$, si se pone $X'=X\times_S S'$, $Y'=Y\times_S S'$, la inmersión $u'=u_{(S')}:Y'\to X'$ es regular en todo punto de $Y'$ situado sobre $y$.
+  \item[c)] El morfismo $h$ es plano en una vecindad del punto $y$, y la inmersión $u$ es regular en una vecindad del punto $y$.
+
+\oldpage[IV-4]{191}
+
+  \item[c$'$)] El morfismo $h$ es plano en una vecindad del punto $y$, y la inmersión $u$ es cuasirregular en una vecindad del punto $y$.
+\end{enumerate}
+\end{proposition}
+
+Ya se ha demostrado en (19.2.3) que $a)$ implica $b')$ sin hipótesis de finitud, y es trivial que $b')$ implica $b)$. Demostremos que $b)$ implica $c)$. Para ello, como la cuestión es local sobre $X$ y sobre $S$, podemos suponer que $Y$ es un subpreesquema cerrado de $X$ definido por un ideal cuasicoherente $\mathscr J$ de $\sh{O}_X$, y que $u$ es la inyección canónica. La hipótesis de que $\sh{O}_X/\mathscr J$ es $g$-plano implica que la sucesión
+\[
+  0\longrightarrow\mathscr J\otimes_{\sh{O}_S}\mathbf k(s)\longrightarrow\sh{O}_X\otimes_{\sh{O}_S}\mathbf k(s)\longrightarrow(\sh{O}_X/\mathscr J)\otimes_{\sh{O}_S}\mathbf k(s)\longrightarrow0
+\]
+es exacta ($0_{\mathrm I}$, 6.1.2); por tanto, $Y_s$ es el subpreesquema cerrado de $X_s$ definido por el ideal $\mathscr J_s$ de $\sh{O}_{X_s}=\sh{O}_X\otimes_{\sh{O}_S}\mathbf k(s)$, que se identifica con $\mathscr J\otimes_{\sh{O}_S}\mathbf k(s)=\mathscr J/\mathfrak m_s\mathscr J$. Consideremos una sucesión finita $(f_i)$ de secciones de $\mathscr J$ sobre una vecindad de $y$ en $X$, cuyas imágenes en
+\[
+  \mathscr J_y/(\mathfrak m_s\sh{O}_{X,y}\mathscr J_y+\mathscr J_y^2)
+\]
+forman una base de este $(\sh{O}_{X,y}/(\mathfrak m_s\sh{O}_{X,y}+\mathscr J_y))$-módulo (que es libre en virtud de la hipótesis $b)$). Puesto que $X_s$ es localmente noetheriano, se deduce de (16.9.11), (16.9.5) y de la hipótesis $b)$ que las imágenes $(f_i)_s=f_i\otimes1$, secciones de $\mathscr J_s=\mathscr J\otimes_{\sh{O}_S}\mathbf k(s)$ sobre una vecindad de $y$ en $X_s$, forman una sucesión regular que engendra la restricción de $\mathscr J_s$ a dicha vecindad. Como $\mathfrak m_s\sh{O}_{X,y}$ está contenido en el radical de $\sh{O}_{X,y}$, y como en los dos casos considerados $\mathscr J_y$ es un ideal de tipo finito de $\sh{O}_{X,y}$, se deduce del lema de Nakayama que los $(f_i)_y$ engendran también $\mathscr J_y$; como $\mathscr J$ es un ideal de tipo finito de $\sh{O}_X$ en ambos casos, existe una vecindad $U$ de $y$ en $X$ tal que los $f_i|U$ engendran $\mathscr J|U$ ($0_{\mathrm I}$, 5.2.2). El hecho de que $b)$ implica $c)$ es entonces consecuencia de ($0$, 15.1.16) cuando $S$ y $X$ son localmente noetherianos, y de (11.3.8) cuando $g$ y $h$ son localmente de presentación finita; en este último caso, (11.3.8) demuestra también la equivalencia de $c)$ y $c')$ (que es trivial cuando $X$ y $S$ son localmente noetherianos ($0$, 15.1.11)). Por último, si se verifica $c)$, para demostrar $a)$ podemos reducirnos de nuevo al caso en que $Y$ es un subpreesquema cerrado de $X$ definido por $\mathscr J$; por hipótesis, existe una sucesión regular $(f_i)$ de secciones de $\mathscr J$ sobre una vecindad de $y$ en $X$ tal que los $f_i$ engendran $\mathscr J|U$ y $h$ es plano en $U$; para ver que $c)$ implica $a)$, basta aplicar de nuevo ($0$, 15.1.16) cuando $S$ y $X$ son localmente noetherianos, y (11.3.8) cuando $g$ y $h$ son localmente de presentación finita.
+
+\begin{remarks}[19.2.5]
+\label{IV.19.2.5}
+\begin{enumerate}
+  \item[(i)] Si en la condición $b)$ se suprime la hipótesis de que $h$ es plano en una vecindad de $y$, la condición así modificada ya no implica $a)$. Basta tomar como $S$ el espectro de un anillo local que no sea un cuerpo, como $s$ el punto cerrado de $S$, y poner $Y=X_s$.
+  \item[(ii)] Supongamos que $Y$ es un subpreesquema cerrado de $X$ definido por un ideal cuasicoherente $\mathscr J$ de $\sh{O}_X$. En el curso de la demostración de (19.2.4) se ha probado que, cuando se cumplen las condiciones equivalentes de esta proposición, para todo sistema $(f_i)$ de secciones de $\mathscr J$ sobre una vecindad de $y$ en $X$, tal que las imágenes de los $f_i$ en $\mathscr J_y/(\mathfrak m_s\sh{O}_{X,y}\mathscr J_y+\mathscr J_y^2)$ forman una base de este $(\sh{O}_{X,y}/(\mathfrak m_s\sh{O}_{X,y}+\mathscr J_y))$-módulo, existe una vecindad abierta $U$ de $y$ en $X$ tal que los $f_i|U$ satisfacen las condiciones de la definición (19.2.1).
+\end{enumerate}
+\end{remarks}
+
+\oldpage[IV-4]{192}
+
+\begin{corollary}[19.2.6]
+\label{IV.19.2.6}
+Supongamos, o bien que $S$ y $X$ son localmente noetherianos, o bien que $g$ y $h$ son localmente de presentación finita. Supongamos además que las fibras $X_s$ e $Y_s$ son preesquemas regulares en los puntos $u(y)$ e $y$, respectivamente, y que los morfismos $g$ y $h$ son planos en vecindades de $u(y)$ e $y$, respectivamente. Entonces la inmersión $Y\to X$ es transversalmente regular en el punto $y$.\footnote{El texto impreso dice «x» aquí y de nuevo en la demostración; el punto introducido en la Proposición (19.2.4) es y.}
+\end{corollary}
+
+En efecto, se deduce de (19.1.1) que la inmersión $Y_s\to X_s$ es regular en el punto $y$, y basta aplicar (19.2.4, $b)$).
+
+\begin{proposition}[19.2.7]
+\label{IV.19.2.7}
+\begin{enumerate}
+  \item[(i)] Toda $S$-inmersión abierta cuyo dominio es plano sobre $S$ es transversalmente regular relativamente a $S$.
+  \item[(ii)] Sean $f:Y\to X$ una $S$-inmersión y $g:S'\to S$ un morfismo, y pongamos $X'=X_{(S')}$, $Y'=Y_{(S')}$, $f'=f_{(S')}:Y'\to X'$. Si $f$ es una inmersión transversalmente regular relativamente a $S$, entonces $f'$ es una inmersión transversalmente regular relativamente a $S'$. El recíproco es cierto si $g$ es fielmente plano y, además, $X$ e $Y$ son localmente de presentación finita sobre $S$.
+  \item[(iii)] Si $f:Y\to X$ y $g:Z\to Y$ son inmersiones transversalmente regulares relativamente a $S$, también lo es $f\circ g:Z\to X$.
+  \item[(iv)] Sean $X$ un $S$-preesquema y $f:Y\to X$, $g:Z\to Y$ dos $S$-inmersiones. Se supone, o bien que $S$ y $X$ son localmente noetherianos, o bien que $X$, $Y$ y $Z$ son localmente de presentación finita sobre $S$. Entonces, si $g$ y $f\circ g$ son transversalmente regulares en el punto $z\in Z$ relativamente a $S$, $f$ es transversalmente regular en el punto $g(z)$ relativamente a $S$.
+  \item[(v)] Bajo las condiciones generales de (iv), supongamos que $X$ e $Y$ son planos sobre $S$, que $Y_s$ es regular en el punto $g(z)$ y que $X_s$ es regular en el punto $f(g(z))$; entonces, si $f\circ g$ es transversalmente regular en el punto $z$, también lo es $g$.
+\end{enumerate}
+\end{proposition}
+
+La afirmación (i) es inmediata, y la primera afirmación de (ii) resulta inmediatamente de (19.2.3). Para demostrar la segunda afirmación de (ii), apliquemos (19.2.4): como $X'$ e $Y'$ son localmente de presentación finita sobre $S'$, este criterio muestra primero que $X'$ e $Y'$ son planos sobre $S'$, y por tanto que $X$ e $Y$ son planos sobre $S$ (2.5.1); por otra parte, para todo $s\in S$, si $s'\in S'$ es un punto situado sobre $s$, $Y'_{s'}\to X'_{s'}$ es por hipótesis una inmersión regular, y se deduce entonces de (19.1.5, (ii)) que lo mismo ocurre con $Y_s\to X_s$, puesto que estos preesquemas son localmente noetherianos y que, en tal caso, decir que la inmersión $Y_s\to X_s$ es regular equivale a decir que es cuasirregular. Para demostrar (iii), nos reducimos al caso en que $Z$ es un subpreesquema cerrado de $Y$ e $Y$ un subpreesquema cerrado de $X$, y formamos, como en (19.1.5, (iii)), un sistema de generadores del ideal de $\sh{O}_X$ que define $Z$. Para demostrar (iv), se observa que la hipótesis, junto con (19.2.4), muestra primero que $X$, $Y$ y $Z$ son planos sobre $S$ en una vecindad de $z$; además, si $s$ es la imagen de $z$ en $S$, basta demostrar que la inmersión $f_s:Y_s\to X_s$ es regular en el punto $g(z)$, sabiendo que ocurre lo mismo con $g_s:Z_s\to Y_s$ y $f_s\circ g_s$; pero esto resulta de (19.1.5, (iv)). Por último, para (v), se razona del mismo modo que para (iv); la hipótesis sobre $f\circ g$ implica ya, por (19.2.4, $b)$), que $Z$ es plano sobre $S$ en una vecindad de $z$, y lo mismo ocurre con $X$ e $Y$ por hipótesis; nos reducimos entonces a demostrar que $g_s$ es regular en el punto $z$, sabiendo que $f_s\circ g_s$ lo es, lo que se deduce de (19.1.5, (v)), dadas las hipótesis formuladas sobre $X_s$ e $Y_s$.
+
+\oldpage[IV-4]{193}
+
+\begin{proposition}[19.2.8]
+\label{IV.19.2.8}
+Sean $X$ un $S$-preesquema, $Y$ un subpreesquema cerrado de $X$ definido por un ideal cuasicoherente $\mathscr J$ de $\sh{O}_X$, y $u:Y\to X$ la inyección canónica. Si $u$ es transversalmente regular relativamente a $S$, los $\sh{O}_X$-módulos $\mathscr J^n$ y $\mathscr J^n/\mathscr J^m$ ($0\leq n<m$) son planos sobre $S$ en los puntos de $Y$. Para todo cambio de base $S'\to S$, si $X'=X_{(S')}$, $Y'=Y_{(S')}$ y $u'=u_{(S')}$, se tiene
+\[
+  \sh{G}r_n(u')=\sh{G}r_n(u)\otimes_{\sh{O}_S}\sh{O}_{S'}
+\]
+salvo isomorfismo para todo $n>0$.
+\end{proposition}
+
+En efecto, $\sh{O}_X$ y $\sh{O}_X/\mathscr J$ son, por hipótesis, planos sobre $S$ en los puntos de $Y$, y $\mathscr J^n/\mathscr J^{n+1}$ es un $(\sh{O}_X/\mathscr J)$-módulo localmente libre (16.9.3), luego es plano sobre $S$ en los puntos de $Y$. La primera afirmación resulta entonces de ($0_{\mathrm I}$, 6.1.2), y la segunda de (11.2.9.2).
+
+La proposición siguiente generaliza y precisa (17.16.1):
+
+\begin{proposition}[19.2.9]
+\label{IV.19.2.9}
+Sean $f:X\to S$ un morfismo, $x$ un punto de $X$ y $s=f(x)$. Supongamos que $f$ es de presentación finita en el punto $x$ y que es un morfismo de Cohen--Macaulay en el punto $x$ (6.8.1). Entonces existe un subpreesquema $Y$ de $X$ que contiene a $x$ y posee las propiedades siguientes:
+\begin{enumerate}
+  \item[(i)] La inyección canónica $j:Y\to X$ es transversalmente regular relativamente a $S$.
+  \item[(ii)] El morfismo $g=f\circ j:Y\to S$ es de Cohen--Macaulay (lo que equivale a decir, teniendo en cuenta (i), que todas las fibras $g^{-1}(g(y))$ de $g$ son preesquemas de Cohen--Macaulay).
+  \item[(iii)] El punto $x$ es un punto maximal de $Y_s=g^{-1}(s)$.
+\end{enumerate}
+\end{proposition}
+
+Pongamos $X_s=f^{-1}(s)$; por hipótesis, el anillo $\sh{O}_{X_s,x}$ es de Cohen--Macaulay; sea $(t_i)_{1\leq i\leq n}$ un sistema de parámetros de este anillo, que es por tanto una sucesión regular ($0$, 16.5.7). Existe una vecindad abierta $U$ de $x$ en $X$ y secciones $h_i$ ($1\leq i\leq n$) de $\sh{O}_X$ sobre $U$ tales que los $t_i$ son las imágenes canónicas de los $(h_i)_x$ en el anillo cociente $\sh{O}_{X_s,x}$ de $\sh{O}_{X,x}$. Sea $\mathscr J$ el ideal de $\sh{O}_U$ engendrado por los $h_i$, y tomemos como $Y$ el subpreesquema cerrado de $U$ definido por $\mathscr J$. Podemos suponer que $f|U$ es localmente de presentación finita, y entonces lo mismo ocurre con $g$ por la definición de $Y$; se deduce de la equivalencia de $c)$ y $a)$ en (11.3.8) que la sucesión $((h_i)_x)$ es regular en $\sh{O}_{X,x}$ y que $\sh{O}_{Y,x}$ es plano sobre $\sh{O}_{S,s}$; en virtud de (11.3.1), $f$ y $g$ son, por tanto, planos en una vecindad de $x$, y se deduce de (19.2.4) que $j$ es una inmersión transversalmente regular relativamente a $S$ (reemplazando, si es necesario, $Y$ por $Y\cap V$, donde $V$ es una vecindad abierta de $x$ en $X$). Así queda probado (i), y se ve que podemos suponer que $g:Y\to S$ es un morfismo plano. Como $\sh{O}_{Y_s,x}$, cociente de $\sh{O}_{X_s,x}$ por el ideal engendrado por los $t_i$, es artiniano por construcción ($0$, 16.3.6), $x$ es un punto maximal de $Y_s$. Por último, como el anillo $\sh{O}_{Y_s,x}$ es artiniano, es un anillo de Cohen--Macaulay ($0$, 16.5.1); por tanto, reemplazando si es necesario $Y$ por su intersección con una vecindad abierta de $x$ en $X$, podemos suponer que $g$ es un morfismo de Cohen--Macaulay, en virtud de (12.1.7, (iii)).
+
+En particular, se recupera la existencia de «cuasisecciones» \emph{planas} $Y$ de un morfismo $f:X\to S$ en un punto $x\in X_s$ que es \emph{cerrado} en $X_s$, tal que $f$ es plano en el punto $x$ y $\sh{O}_{X_s,x}$ es un anillo de Cohen--Macaulay (17.16.1); se ve además que la inmersión $Y\to X$ es \emph{transversalmente regular} relativamente a $S$. Este último complemento vale también para la cuasisección étale definida en (17.16.3, (i)).

@@ -1,0 +1,338 @@
+\section{Funtores representables}
+\label{section:0.8}
+
+\subsection{Funtores representables}
+\label{subsection:0.8.1}
+
+\oldpage[0\textsubscript{III}]{5}
+\begin{env}[8.1.1]
+\label{0.8.1.1}
+Denotamos por $\Set$ la categoría de conjuntos.
+Sea $\C$ una categoría; para dos objetos $X$, $Y$ de $\C$, ponemos $h_X(Y)=\Hom(Y,X)$; para cada morfismo $u:Y\to Y'$ de $\C$, denotamos por $h_X(u)$ la aplicación $v\mapsto vu$ de $\Hom(Y',X)$ en $\Hom(Y,X)$.
+Es inmediato que, con estas definiciones, $h_X:\C\to\Set$ es un \emph{funtor contravariante}, es decir, un objeto de la categoría $\CHom(\C\op,\Set)$ de funtores covariantes de la categoría $\C\op$ (la dual de la categoría $\C$) en la categoría $\Set$ (T, 1.7, (d) y \cite{III-29}).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2}
+Sea ahora $w:X\to X'$ un morfismo de $\C$; para cada $Y\in\C$ y cada $v\in\Hom(Y,X)=h_X(Y)$,
+tenemos $wv\in\Hom(Y,X')=h_{X'}(Y)$; denotamos por $h_w(Y)$ la aplicación $v\mapsto wv$ de
+$h_X(Y)$ en $h_{X'}(Y)$. Es inmediato que, para cada morfismo $u:Y\to Y'$ de $\C$, el
+diagrama
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+es conmutativo; en otros términos, $h_w$ es una \emph{transformación natural (o morfismo funtorial)
+$h_X\to h_{X'}$} (T, 1.2), y también un morfismo de la categoría $\CHom(\C\op,\Set)$ (T, 1.7, (d)). Las
+definiciones de $h_X$ y de $h_w$ constituyen, por tanto, la definición de un \emph{funtor covariante
+canónico}
+\[
+  h:\C\to\CHom(\C\op,\Set),\quad X\mapsto h_X.
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8.1.3}
+Sea $X$ un objeto de $\C$, y sea $F$ un funtor contravariante de $\C$ en $\Set$
+(un objeto de $\CHom(\C\op,\Set)$). Sea $g:h_X\to F$ una \emph{transformación natural}: para todo $Y\in\C$,
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ es, pues, una aplicación $h_X(Y)\to F(Y)$ tal que, para cada morfismo $u:Y\to Y'$ de $\C$,
+el diagrama
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{g(Y')} &
+    h_X(Y)\ar[d]^{g(Y)}\\
+    F(Y')\ar[r]_{F(u)} &
+    F(Y)
+  }
+  \tag{8.1.3.1}\label{0.8.1.3.1}
+\]
+es conmutativo. En particular, tenemos una aplicación $g(X):h_X(X)=\Hom(X,X)\to F(X)$ y, por consiguiente, un elemento
+\[
+  \alpha(g)=(g(X))(1_X)\in F(X)
+  \tag{8.1.3.2}
+\]
+y, en consecuencia, una aplicación canónica
+\[
+  \alpha:\Hom(h_X,F)\to F(X).
+  \tag{8.1.3.3}
+\]
+
+Recíprocamente, consideremos un elemento $\xi\in F(X)$; para cada morfismo $v:Y\to X$ de $\C$, $F(v)$ es una
+aplicación $F(X)\to F(Y)$; consideremos la aplicación
+\[
+  v\mapsto(F(v))(\xi)
+  \tag{8.1.3.4}
+\]
+de $h_X(Y)$ en $F(Y)$; si denotamos esta aplicación por $(\beta(\xi))(Y)$,
+\[
+  \beta(\xi):h_X\to F
+  \tag{8.1.3.5}
+\]
+es una \emph{transformación natural}, pues para cada morfismo $u:Y\to Y'$ de $\C$ tenemos
+$(F(vu))(\xi)=(F(v)\circ F(u))(\xi)$, lo cual hace conmutativo (\hyperref[0.8.1.3.1]{8.1.3.1}) para $g=\beta(\xi)$.
+Hemos definido así una aplicación canónica
+\[
+  \beta:F(X)\to\Hom(h_X,F).
+  \tag{8.1.3.6}
+\]
+\end{env}
+
+\begin{proposition}[8.1.4]
+\label{0.8.1.4}
+Las aplicaciones $\alpha$ y $\beta$ son biyecciones inversas entre sí.
+\end{proposition}
+
+\begin{proof}
+Calculemos $\alpha(\beta(\xi))$ para $\xi\in F(X)$; para cada $Y\in\C$, $(\beta(\xi))(Y)$ es la aplicación
+$g_1(Y):v\mapsto(F(v))(\xi)$ de $h_X(Y)$ en $F(Y)$. Tenemos, pues,
+\[
+  \alpha(\beta(\xi))=(g_1(X))(1_X)=(F(1_X))(\xi)=1_{F(X)}(\xi)=\xi.
+\]
+Calculemos ahora $\beta(\alpha(g))$ para $g\in\Hom(h_X,F)$; para cada $Y\in\C$, $(\beta(\alpha(g)))(Y)$
+es la aplicación $v\mapsto(F(v))((g(X))(1_X))$; por la conmutatividad de (\hyperref[0.8.1.3.1]{8.1.3.1}), esta aplicación
+no es otra que $v\mapsto(g(Y))((h_X(v))(1_X))=(g(Y))(v)$, por definición de $h_X(v)$; en otros términos,
+es igual a $g(Y)$, lo que termina la demostración.
+\end{proof}
+
+\begin{env}[8.1.5]
+\label{0.8.1.5}
+Recordemos que una \emph{subcategoría} $\C'$ de una categoría $\C$ se define por la condición de que sus objetos
+sean objetos de $\C$, y de que, si $X'$, $Y'$ son dos objetos de $\C'$, el conjunto
+$\Hom_{\C'}(X',Y')$ de morfismos $X'\to Y'$ \emph{en $\C'$} sea un subconjunto del conjunto $\Hom_\C(X',Y')$ de
+morfismos $X'\to Y'$ \emph{en $\C$}, siendo la aplicación canónica de ``composición de morfismos''
+\[
+  \Hom_{\C'}(X',Y')\times\Hom_{\C'}(Y',Z')\to\Hom_{\C'}(X',Z')
+\]
+\oldpage[0\textsubscript{III}]{7}
+la restricción de la aplicación canónica
+\[
+  \Hom_\C(X',Y')\times\Hom_\C(Y',Z')\to\Hom_\C(X',Z').
+\]
+
+Decimos que $\C'$ es una subcategoría \emph{plena} de $\C$ si $\Hom_{\C'}(X',Y')=\Hom_\C(X',Y')$ para todo
+par de objetos de $\C'$. La subcategoría $\C''$ de $\C$ formada por los objetos de $\C$ isomorfos a
+objetos de $\C'$ es entonces también una subcategoría plena de $\C$, \emph{equivalente} (T, 1.2) a $\C'$, como se
+comprueba fácilmente.
+
+Un funtor covariante $F:\C_1\to\C_2$ se llama \emph{plenamente fiel} si, para todo par de objetos
+$X_1$, $Y_1$ de $\C_1$, la aplicación $u\mapsto F(u)$ de $\Hom(X_1,Y_1)$ en $\Hom(F(X_1),F(Y_1))$ es
+\emph{biyectiva}; esto implica que la subcategoría $F(\C_1)$ de $\C_2$ es \emph{plena}. Además,
+si dos objetos $X_1$, $X_1'$ tienen la misma imagen $X_2$, existe un único isomorfismo
+$u:X_1\to X_1'$ tal que $F(u)=1_{X_2}$. Para cada objeto $X_2$ de $F(\C_1)$, sea $G(X_2)$ uno de
+los objetos $X_1$ de $\C_1$ tales que $F(X_1)=X_2$ ($G$ se define mediante el axioma de elección); para
+cada morfismo $v:X_2\to Y_2$ de $F(\C_1)$, $G(v)$ será el único morfismo $u:G(X_2)\to G(Y_2)$ tal
+que $F(u)=v$; $G$ es entonces un \emph{funtor} de $F(\C_1)$ en $\C_1$; $FG$ es el funtor identidad de
+$F(\C_1)$, y lo anterior muestra que existe un isomorfismo de funtores $\vphi:1_{\C_1}\to GF$
+tal que $F$, $G$, $\vphi$ y la identidad $1_{F(\C_1)}\to FG$ definen una \emph{equivalencia} entre
+la categoría $\C_1$ y la subcategoría plena $F(\C_1)$ de $\C_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6}
+Aplicamos la Proposición \sref{0.8.1.4} al caso en que $F$ es $h_{X'}$, siendo $X'$ un
+objeto cualquiera de $\C$; la aplicación $\beta:\Hom(X,X')\to\Hom(h_X,h_{X'})$ no es otra que la aplicación
+$w\mapsto h_w$ definida en \sref{0.8.1.2}; puesto que esta aplicación es \emph{biyectiva}, vemos,
+con la terminología de \sref{0.8.1.5}, que:
+\end{env}
+
+\begin{proposition}[8.1.7]
+\label{0.8.1.7}
+El funtor canónico $h:\C\to\CHom(\C\op,\Set)$ es plenamente fiel.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8}
+Sea $F$ un funtor contravariante de $\C$ en $\Set$; decimos que $F$ es \emph{representable} si
+existe un objeto $X\in\C$ tal que $F$ es \emph{isomorfo} a $h_X$; de la
+Proposición \sref{0.8.1.7} se sigue que los datos de un $X\in\C$ y de un isomorfismo de funtores
+$g:h_X\to F$ determinan $X$ salvo isomorfismo único. La Proposición \sref{0.8.1.7} implica entonces
+que $h$ define una \emph{equivalencia} entre $\C$ y la subcategoría plena de
+$\CHom(\C\op,\Set)$ formada por los \emph{funtores contravariantes representables}. De la
+Proposición \sref{0.8.1.4} se sigue que el dato de una transformación natural $g:h_X\to F$ es
+equivalente al de un elemento $\xi\in F(X)$; decir que $g$ es un \emph{isomorfismo} equivale
+a la siguiente condición sobre $\xi$: \emph{para todo objeto $Y$ de $\C$, la aplicación
+$v\mapsto(F(v))(\xi)$ de $\Hom(Y,X)$ en $F(Y)$ es biyectiva}. Cuando $\xi$ satisface esta condición,
+decimos que el par $(X,\xi)$ \emph{representa} al funtor representable $F$. Por abuso de lenguaje,
+decimos también que el objeto $X\in\C$ representa a $F$ si existe un $\xi\in F(X)$ tal que
+$(X,\xi)$ representa a $F$, es decir, si $h_X$ es isomorfo a $F$.
+
+Sean $F$, $F'$ dos funtores contravariantes representables de $\C$ en $\Set$, y sean $h_X\to F$ y
+$h_{X'}\to F'$ dos isomorfismos de funtores. Se sigue entonces de \sref{0.8.1.6} que
+existe una correspondencia biyectiva canónica entre $\Hom(X,X')$ y el conjunto $\Hom(F,F')$ de
+transformaciones naturales $F\to F'$.
+\end{env}
+
+\begin{env}[8.1.9]
+\label{0.8.1.9}
+\textit{Ejemplo I. Límites proyectivos}.
+La noción de funtor contravariante representable comprende, en particular, la noción ``dual'' de la noción usual de ``solución de un problema universal''.
+\oldpage[0\textsubscript{III}]{8}
+Más generalmente, veremos que la noción de \emph{límite proyectivo} es un caso particular de la noción de funtor representable.
+Recordemos que, en una categoría $\C$, se define un \emph{sistema proyectivo} mediante el dato de un conjunto preordenado $I$, de una familia $(A_\alpha)_{\alpha\in I}$ de objetos de $\C$ y, para cada par de índices $(\alpha,\beta)$ tal que $\alpha\leq\beta$, de un morfismo $u_{\alpha\beta}:A_\beta\to A_\alpha$.
+Un \emph{límite proyectivo} de este sistema en $\C$ consiste en un objeto $B$ de $\C$ (denotado $\varprojlim A_\alpha$) y, para cada $\alpha\in I$, un morfismo $u_\alpha:B\to A_\alpha$ tales que: 1\textsuperscript{o}. $u_\alpha=u_{\alpha\beta}u_\beta$ para $\alpha\leq\beta$; 2\textsuperscript{o}. para todo objeto $X$ de $\C$ y toda familia $(v_\alpha)_{\alpha\in I}$ de morfismos $v_\alpha:X\to A_\alpha$ tal que $v_\alpha=u_{\alpha\beta}v_\beta$ para $\alpha\leq\beta$, existe un único morfismo $v:X\to B$ (denotado $\varprojlim v_\alpha$) tal que $v_\alpha=u_\alpha v$ para todo $\alpha\in I$ (T, 1.8).
+Esto puede interpretarse de la manera siguiente: los $u_{\alpha\beta}$ definen canónicamente aplicaciones
+\[
+  \overline{u}_{\alpha\beta}:\Hom(X,A_\beta)\to\Hom(X,A_\alpha)
+\]
+que definen un \emph{sistema proyectivo} de conjuntos $(\Hom(X,A_\alpha),\overline{u}_{\alpha\beta})$, y $(v_\alpha)$ es, por definición, un elemento del conjunto $\varprojlim\Hom(X,A_\alpha)$; está claro que $X\mapsto\varprojlim\Hom(X,A_\alpha)$ es un \emph{funtor contravariante} de $\C$ en $\Set$, y la existencia del límite proyectivo $B$ equivale a decir que $(v_\alpha)\mapsto\varprojlim v_\alpha$ es un \emph{isomorfismo} de funtores en $X$
+\[
+  \varprojlim\Hom(X,A_\alpha)\isoto\Hom(X,B),
+  \tag{8.1.9.1}
+\]
+es decir, que el funtor $X\mapsto\varprojlim\Hom(X,A_\alpha)$ es \emph{representable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10}
+\textit{Ejemplo II. Objetos finales}.
+Sea $\C$ una categoría, y sea $\{a\}$ un conjunto unitario.
+Consideremos el funtor contravariante $F:\C\to\Set$ que envía cada objeto $X$ de $\C$ al conjunto $\{a\}$, y cada morfismo $X\to X'$ de $\C$ a la única aplicación $\{a\}\to\{a\}$.
+Decir que este funtor es \emph{representable} significa que existe un objeto $e\in\C$ tal que, para todo $Y\in\C$, $\Hom(Y,e)=h_e(Y)$ es un \emph{conjunto unitario}; decimos que $e$ es un \emph{objeto final} de $\C$, y está claro que dos objetos finales de $\C$ son isomorfos (lo cual permite definir, en general mediante el axioma de elección, \emph{un} objeto final de $\C$, que denotamos entonces por $e_\C$).
+Por ejemplo, en la categoría $\Set$, los objetos finales son los conjuntos unitarios; en la categoría de \emph{álgebras aumentadas} sobre un cuerpo $K$ (donde los morfismos son los homomorfismos de álgebras compatibles con el aumento), $K$ es un objeto final; en la categoría de \emph{$S$-esquemas} \sref[I]{I.2.5.1}, $S$ es un objeto final.
+\end{env}
+
+\begin{env}[8.1.11]
+\label{0.8.1.11}
+Para dos objetos $X$ e $Y$ de una categoría $\C$, pongamos $h_X'(Y)=\Hom(X,Y)$ y, para todo morfismo $u:Y\to Y'$, sea $h_X'(u)$ la aplicación $v\mapsto uv$ de $\Hom(X,Y)$ en $\Hom(X,Y')$; $h_X'$ es entonces un \emph{funtor covariante $\C\to\Set$}, de modo que deducimos, como en \sref{0.8.1.2}, la definición de un funtor covariante canónico $h':\C\op\to\CHom(\C,\Set)$; un funtor \emph{covariante} $F$ de $\C$ en $\Set$, es decir, un objeto de $\CHom(\C,\Set)$, es entonces \emph{representable} si existe un objeto $X\in\C$ (necesariamente único salvo isomorfismo único) tal que $F$ es \emph{isomorfo a $h_X'$}; dejamos al lector el desarrollo de las nociones ``duales'' de las anteriores, que esta vez comprenden la noción de \emph{límite inductivo}, y en particular la noción usual de ``solución de un problema universal''.
+\end{env}
+
+\subsection{Estructuras algebraicas en categorías}
+\label{subsection:0.8.2}
+
+\begin{env}[8.2.1]
+\label{0.8.2.1}
+\oldpage[0\textsubscript{III}]{9}
+Dados dos funtores contravariantes $F$ y $F'$ de $\C$ en $\Set$, recordemos que, para todo objeto $Y\in\C$, ponemos $(F\times F')(Y)=F(Y)\times F'(Y)$, y para todo morfismo $u:Y\to Y'$ de $\C$, ponemos $(F\times F')(u)=F(u)\times F'(u)$, que es la aplicación $(t,t')\mapsto(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ en $F(Y)\times F'(Y)$; $F\times F':\C\to\Set$ es así un \emph{funtor contravariante} (que no es otro que el \emph{producto} de los objetos $F$ y $F'$ en la categoría $\CHom(\C\op,\Set)$).
+Dado un objeto $X\in\C$, llamamos \emph{ley de composición interna} sobre $X$ a una \emph{transformación natural}
+\[
+\label{0.8.2.1.1}
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+En otros términos (T, 1.2), para todo objeto $Y\in\C$, $\gamma_X(Y)$ es una aplicación $h_X(Y)\times h_X(Y)\to h_X(Y)$ (por tanto, por definición, una \emph{ley de composición interna} sobre el conjunto $h_X(Y)$) con la condición de que, para todo morfismo $u:Y\to Y'$ de $\C$, el diagrama
+\[
+  \xymatrix{
+    h_X(Y')\times h_X(Y')\ar[rr]^{h_X(u)\times h_X(u)}\ar[dd]_{\gamma_X(Y')} & &
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y')\ar[rr]_{h_X(u)} & &
+    h_X(Y)
+  }
+\]
+sea conmutativo; esto implica que, para las leyes de composición $\gamma_X(Y)$ y $\gamma_X(Y')$, $h_X(u)$ es un \emph{homomorfismo} de $h_X(Y')$ en $h_X(Y)$.
+
+De manera análoga, dados dos objetos $Z$ y $X$ de $\C$, llamamos \emph{ley de composición externa sobre $X$, con $Z$ como dominio de operadores} a una transformación natural
+\[
+\label{0.8.2.1.2}
+  \omega_{X,Z}:h_Z\times h_X\to h_X.
+  \tag{8.2.1.2}
+\]
+
+Vemos como antes que, para todo $Y\in\C$, $\omega_{X,Z}(Y)$ es una ley de composición externa sobre $h_X(Y)$, con $h_Z(Y)$ como dominio de operadores, y tal que, para todo morfismo $u:Y\to Y'$, $h_X(u)$ y $h_Z(u)$ forman un \emph{dihomomorfismo} de $(h_Z(Y'),h_X(Y'))$ en $(h_Z(Y),h_X(Y))$.
+\end{env}
+
+\begin{env}[8.2.2]
+\label{0.8.2.2}
+Sea $X'$ un segundo objeto de $\C$, y supongamos dada una ley de composición interna $\gamma_{X'}$ sobre $X'$; decimos que un morfismo $w:X\to X'$ de $\C$ es un \emph{homomorfismo} para las leyes de composición si, para todo $Y\in\C$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ es un \emph{homomorfismo} para las leyes de composición $\gamma_X(Y)$ y $\gamma_{X'}(Y)$.
+Si $X''$ es un tercer
+\oldpage[0\textsubscript{III}]{10}
+objeto de $\C$ provisto de una ley de composición interna $\gamma_{X''}$, y $w':X'\to X''$ es un morfismo de $\C$ que es un homomorfismo para $\gamma_{X'}$ y $\gamma_{X''}$, está claro que el morfismo $w'w:X\to X''$ es un homomorfismo para las leyes de composición $\gamma_X$ y $\gamma_{X''}$.
+Un isomorfismo $w:X\isoto X'$ de $\C$ se llama \emph{isomorfismo para las leyes de composición $\gamma_X$ y $\gamma_{X'}$} si $w$ es un homomorfismo para estas leyes de composición, y si su morfismo inverso $w^{-1}$ es un homomorfismo para las leyes de composición $\gamma_{X'}$ y $\gamma_X$.
+
+Definimos de manera análoga los \emph{dihomomorfismos} para pares de objetos de $\C$ provistos de leyes de composición externa.
+\end{env}
+
+\begin{env}[8.2.3]
+\label{0.8.2.3}
+Cuando una ley de composición interna $\gamma_X$ sobre un objeto $X\in\C$ es tal que $\gamma_X(Y)$ es una \emph{ley de grupo} sobre $h_X(Y)$ para \emph{todo} $Y\in\C$, decimos que $X$, provisto de esta ley, es un \emph{$\C$-grupo} o un \emph{objeto grupo de $\C$}.
+Definimos análogamente los \emph{$\C$-anillos}, \emph{$\C$-módulos}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4}
+Supongamos que el \emph{producto} $X\times X$ de un objeto $X\in\C$ por sí mismo existe en $\C$; por definición, tenemos entonces $h_{X\times X}=h_X\times h_X$ salvo isomorfismo canónico, pues es un caso particular del límite proyectivo \sref{0.8.1.9}; una ley de composición interna sobre $X$ puede, por tanto, considerarse como un morfismo funtorial $\gamma_X:h_{X\times X}\to h_X$, y determina así canónicamente \sref{0.8.1.6} un elemento $c_X\in\Hom(X\times X,X)$ tal que $h_{c_X}=\gamma_X$; en este caso, el dato de una ley de composición interna sobre $X$ equivale al dato de un morfismo $X\times X\to X$; cuando $\C$ es la categoría $\Set$, recuperamos la noción clásica de ley de composición interna sobre un conjunto.
+Tenemos un resultado análogo para una ley de composición externa cuando el producto $Z\times X$ existe en $\C$.
+\end{env}
+
+\begin{env}[8.2.5]
+\label{0.8.2.5}
+Con la notación anterior, supongamos además que $X\times X\times X$ existe en $\C$; la caracterización del producto como objeto que representa un funtor \sref{0.8.1.9} implica la existencia de isomorfismos canónicos
+\[
+  (X\times X)\times X\isoto X\times X\times X\isoto X\times(X\times X);
+\]
+si identificamos canónicamente $X\times X\times X$ con $(X\times X)\times X$, la aplicación $\gamma_X(Y)\times 1_{h_X(Y)}$ se identifica con $h_{c_X\times 1_X}(Y)$ para todo $Y\in\C$.
+En consecuencia, es equivalente decir que, para todo $Y\in\C$, la ley interna $\gamma_X(Y)$ es asociativa, o que el diagrama de aplicaciones
+\[
+  \xymatrix{
+    h_X(Y)\times h_X(Y)\times h_X(Y)\ar[rr]^{\gamma_X(Y)\times 1}\ar[dd]_{1\times\gamma_X(Y)} & &
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y)\times h_X(Y)\ar[rr]_{\gamma_X(Y)} & &
+    h_X(Y)
+  }
+\]
+\oldpage[0\textsubscript{III}]{11}
+es conmutativo, o que el diagrama de morfismos
+\[
+  \xymatrix{
+    X\times X\times X\ar[rr]^{c_X\times 1_X}\ar[dd]_{1_X\times c_X} & &
+    X\times X\ar[dd]^{c_X}\\\\
+    X\times X\ar[rr]_{c_X} & &
+    X
+  }
+\]
+es conmutativo.
+\end{env}
+
+\begin{env}[8.2.6]
+\label{0.8.2.6}
+Bajo las hipótesis de \sref{0.8.2.5}, si queremos expresar, para todo $Y\in\C$, que la ley interna $\gamma_X(Y)$ es una \emph{ley de grupo}, es necesario, en primer lugar, que sea asociativa y, en segundo lugar, que exista una aplicación $\alpha_X(Y):h_X(Y)\to h_X(Y)$ con las propiedades de la operación de \emph{inverso} de un grupo; como hemos visto que, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ debe ser un homomorfismo de grupos $h_X(Y')\to h_X(Y)$, vemos primero que $\alpha_X:h_X\to h_X$ debe ser una \emph{transformación natural}.
+Por otra parte, se pueden expresar las propiedades características del inverso $s\mapsto s^{-1}$ de un grupo $G$ sin hacer intervenir el elemento identidad: basta comprobar que las dos aplicaciones compuestas
+\[
+  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,s^{-1}t)\mapsto s(s^{-1}t),
+\]
+\[
+  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,ts^{-1})\mapsto(ts^{-1})s
+\]
+son iguales a la segunda proyección $(s,t)\mapsto t$ de $G\times G$ en $G$.
+Por \sref{0.8.1.3}, tenemos $\alpha_X=h_{a_X}$, donde $a_X\in\Hom(X,X)$; la primera condición anterior expresa entonces que el morfismo compuesto
+\[
+  X\times X\xrightarrow{(1_X,a_X)\times 1_X}X\times X\times X\xrightarrow{1_X\times c_X}X\times X\xrightarrow{c_X}X
+\]
+es la segunda proyección $X\times X\to X$ en $\C$, y la segunda condición es análoga.
+\end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7}
+Supongamos ahora que existe un \emph{objeto final} $e$ \sref{0.8.1.10} en $\C$.
+Supongamos siempre que $\gamma_X(Y)$ es una ley de grupo sobre $h_X(Y)$ para todo $Y\in\C$, y denotemos por $\eta_X(Y)$ el elemento identidad de $\gamma_X(Y)$.
+Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
+Pongamos $e_X=\eta_X(X)$, el elemento identidad del grupo $h_X(X)=\Hom(X,X)$; la conmutatividad del diagrama
+\[
+  \xymatrix{
+    h_X(e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(e)} &
+    h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
+    h_X(e)\ar[r]_{h_X(\varepsilon)} &
+    h_X(Y)
+  }
+\]
+(cf. \sref{0.8.1.2}) muestra que, sobre el conjunto $h_X(Y)$, la aplicación $h_{e_X}(Y)$ no es otra que
+\oldpage[0\textsubscript{III}]{12}
+$s\mapsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
+Comprobamos entonces que el hecho de que $\eta_X(Y)$ sea el elemento identidad de $\gamma_X(Y)$ para todo $Y\in\C$ equivale a decir que el morfismo compuesto
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X\xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+y su análogo en el que se intercambian $1_X$ y $e_X$, son ambos \emph{iguales} a $1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8}
+Naturalmente, se podrían ampliar con facilidad los ejemplos de estructuras algebraicas en categorías.
+El ejemplo de los grupos se ha tratado con suficiente detalle, pero en adelante dejaremos por lo general al lector el desarrollo de las nociones análogas para los ejemplos de estructuras algebraicas que encontremos.
+\end{env}

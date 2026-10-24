@@ -1,0 +1,113 @@
+\subsection{Sucesiones regulares relativamente a un módulo filtrado cociente.}
+\label{subsection:IV.19.6}
+
+\begin{env}[19.6.1]
+\label{IV.19.6.1}
+Sean $A$ un anillo, $\mathbf f=(f_1,\ldots,f_n)$ una sucesión finita de elementos de $A$, $\mathfrak J=f_1A+\cdots+f_nA$ el ideal que engendra, y consideremos una sucesión exacta de $A$-módulos
+\[
+  0\longrightarrow R\xrightarrow{j}N\xrightarrow{p}M\longrightarrow0
+\]
+donde se supone que $N$ está provisto de una filtración decreciente $(N_k)$ formada por $A$-submódulos, con $N_0=N$. Pongamos $R_k=R\cap N_k$ (filtración inducida por $(N_k)$), $M_k=p(N_k)$ (filtración cociente de $(N_k)$), y denotemos por $\operatorname{gr}_\bullet(N)$, $\operatorname{gr}_\bullet(R)$ y $\operatorname{gr}_\bullet(M)$ los $A$-módulos graduados asociados a estas tres filtraciones. Pongamos además, para todo $k$,
+\[
+  N_k'=N_k+\mathfrak JN_{k-1}+\cdots+\mathfrak J^{k-1}N_1+\mathfrak J^kN_0
+\]
+de modo que $M_k'=p(N_k')=M_k+\mathfrak JM_{k-1}+\cdots+\mathfrak J^{k-1}M_1+\mathfrak J^kM_0$; pongamos además $R_k'=R\cap N_k'$ (filtración \emph{inducida} por $(N_k')$), y denotemos por $\operatorname{gr}_\bullet'(N)$, $\operatorname{gr}_\bullet'(M)$ y $\operatorname{gr}_\bullet'(R)$ los $A$-módulos graduados asociados a estas tres filtraciones; se tiene entonces un diagrama conmutativo de sucesiones exactas
+\begin{equation}
+\xymatrix{
+  0 \ar[r] & \operatorname{gr}_\bullet(R) \ar[r]^-{\operatorname{gr}(j)} \ar[d] & \operatorname{gr}_\bullet(N) \ar[r]^-{\operatorname{gr}(p)} \ar[d] & \operatorname{gr}_\bullet(M) \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \operatorname{gr}_\bullet'(R) \ar[r]^-{\operatorname{gr}'(j)} & \operatorname{gr}_\bullet'(N) \ar[r]^-{\operatorname{gr}'(p)} & \operatorname{gr}_\bullet'(M) \ar[r] & 0
+}
+\tag{19.6.1.1}\label{IV.19.6.1.1}
+\end{equation}
+
+\oldpage[IV-4]{210}
+
+donde las flechas verticales son los homomorfismos canónicos de un módulo graduado asociado a una filtración en el módulo graduado asociado a una filtración menos fina.
+
+Obsérvese que, si se pone
+\[
+  R_k''=R_k+\mathfrak JR_{k-1}+\cdots+\mathfrak J^{k-1}R_1+\mathfrak J^kR_0
+\]
+se tiene evidentemente $R_k''\subset R_k'$, pero las filtraciones $(R_k'')$ y $(R_k')$ son en general distintas; denotaremos por $\operatorname{gr}_\bullet''(R)$ el $A$-módulo graduado asociado a la filtración $(R_k'')$.
+\end{env}
+
+\begin{env}[19.6.2]
+\label{IV.19.6.2}
+En ($0$, 15.1.5.2) se definieron los homomorfismos graduados sobreyectivos de grado $0$
+\begin{align*}
+  \psi_N&:(\operatorname{gr}_\bullet(N)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n]\longrightarrow\operatorname{gr}_\bullet'(N),\\
+  \psi_M&:(\operatorname{gr}_\bullet(M)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n]\longrightarrow\operatorname{gr}_\bullet'(M),\\
+  \psi_R&:(\operatorname{gr}_\bullet(R)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n]\longrightarrow\operatorname{gr}_\bullet''(R),
+\end{align*}
+de los cuales los dos primeros se deducen de las dos últimas flechas verticales de (19.6.1.1).
+
+Como la filtración $(R_k'')$ es más fina que $(R_k')$ sobre $R$, se tiene un homomorfismo canónico $\gamma:\operatorname{gr}_\bullet''(R)\to\operatorname{gr}_\bullet'(R)$; denotaremos por $\psi_R'$ el homomorfismo compuesto $\gamma\circ\psi_R$. Se deduce entonces inmediatamente de las definiciones que se tiene un diagrama conmutativo
+\begin{equation}
+\xymatrix{
+  & 0 \ar[d] \\
+  (\operatorname{gr}_\bullet(R)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n] \ar[r]^-{\psi_R'} \ar[d]^{j'} & \operatorname{gr}_\bullet'(R) \ar[d]^{\operatorname{gr}'(j)} \\
+  (\operatorname{gr}_\bullet(N)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n] \ar[r]^-{\psi_N} \ar[d]^{p'} & \operatorname{gr}_\bullet'(N) \ar[d]^{\operatorname{gr}'(p)} \\
+  (\operatorname{gr}_\bullet(M)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n] \ar[r]^-{\psi_M} \ar[d] & \operatorname{gr}_\bullet'(M) \ar[d] \\
+  0 & 0
+}
+\tag{19.6.2.1}\label{IV.19.6.2.1}
+\end{equation}
+donde las columnas son exactas.
+\end{env}
+
+\begin{proposition}[19.6.3]
+\label{IV.19.6.3}
+Con las notaciones anteriores, supongamos que la sucesión $\mathbf f$ es $\operatorname{gr}_\bullet(N)$-regular. Consideremos las propiedades siguientes:
+\begin{enumerate}
+  \item[a)] $\mathbf f$ es $\operatorname{gr}_\bullet(M)$-regular.
+  \item[b)] $\psi_M$ es biyectivo.
+  \item[c)] $\psi_R'$ es sobreyectivo (dicho de otro modo, $\operatorname{gr}_\bullet'(R)$ está engendrado, como $\operatorname{gr}_{\mathfrak J}^*(A)$-módulo, por $\operatorname{Im}(\operatorname{gr}_\bullet(R)\to\operatorname{gr}_\bullet'(R))$).
+  \item[d)] $\psi_R'$ es inyectivo.
+  \item[d$'$)] El homomorfismo $(\psi_R')_0:\operatorname{gr}_\bullet(R)\otimes_A(A/\mathfrak J)\to\operatorname{gr}_\bullet'(R)$ obtenido restringiendo $\psi_R'$ a los polinomios de grado $0$ es inyectivo.
+  \item[e)] $\psi_R'$ es biyectivo.
+  \item[f)] $j'$ es inyectivo.
+
+\oldpage[IV-4]{211}
+
+  \item[f$'$)] El homomorfismo $\operatorname{gr}_\bullet(R)\otimes_A(A/\mathfrak J)\to\operatorname{gr}_\bullet(N)\otimes_A(A/\mathfrak J)$ obtenido restringiendo $j'$ a los polinomios de grado $0$ es inyectivo.
+  \item[g)] La filtración $\mathfrak J$-preádica de $\operatorname{gr}_\bullet(R)$ está inducida por la de $\operatorname{gr}_\bullet(N)$.
+  \item[h)] Las filtraciones $(R_k')$ y $(R_k'')$ sobre $R$ son idénticas.
+\end{enumerate}
+Se tienen entonces las implicaciones siguientes:
+\[
+\xymatrix@C=2.4em@R=1.8em{
+  a) \ar@{=>}[r] \ar@{=>}[dr] & e) \ar@{=>}[r] \ar@{=>}[dr] & b) \ar@{<=>}[r] & c) \ar@{<=>}[r] & h) \\
+  & g) \ar@{=>}[r] & d) \ar@{<=>}[r] & d') \ar@{<=>}[r] & f) \ar@{<=>}[r] & f')
+}
+\]
+Además, cuando todo módulo cociente de un submódulo de algún $\operatorname{gr}_k(M)$ es separado para la topología $\mathfrak J$-preádica (lo que ocurre cuando $A$ es noetheriano, los $f_i$ pertenecen al radical de $A$ y los $\operatorname{gr}_k(M)$ son $A$-módulos de tipo finito), las condiciones $a)$ a $h)$ son todas equivalentes.
+\end{proposition}
+
+Observemos que, según (19.5.5), de la hipótesis de que $\mathbf f$ es $\operatorname{gr}_\bullet(N)$-regular resulta que $\psi_N$ es \emph{biyectivo}; como $\operatorname{gr}'(j)$ es inyectivo, la equivalencia de $d)$ y $f)$ resulta del diagrama (19.6.2.1), así como la de $d')$ y $f')$; por otra parte, $f)$ y $f')$ son trivialmente equivalentes, lo que demuestra la equivalencia de $d)$, $d')$, $f)$ y $f')$.
+
+Como ya se sabe que $\psi_M$ es sobreyectivo y $\psi_N$ biyectivo, la equivalencia de $b)$ y $c)$ se deduce también del diagrama (19.6.2.1) por un caso particular del lema de los cinco.
+
+La relación $\psi_R'=\gamma\circ\psi_R$ (19.6.2) y el hecho de que $\psi_R$ es sobreyectivo muestran que la condición $c)$ equivale a decir que $\gamma$ es sobreyectivo, lo que equivale también a la condición $h)$; se ha demostrado, pues, la equivalencia de $b)$, $c)$ y $h)$.
+
+Es trivial que $e)$ equivale a la conjunción de $c)$ y $d)$, y por tanto también a la de $b)$ y $d)$. Observemos ahora que $a)$ implica $b)$ y que $b)$ implica $a)$ bajo la hipótesis de separación (19.5.5). Por otra parte, las implicaciones $a)\Rightarrow g)\Rightarrow f')$, y la implicación $f')\Rightarrow a)$ bajo la hipótesis de separación, resultan de (19.5.3). Se ha demostrado, pues, que $a)$ implica $e)$ (equivalente a la conjunción de $b)$ y $f')$), y también que todas las condiciones son equivalentes bajo la hipótesis de separación. Q.E.D.
+
+\begin{corollary}[19.6.4]
+\label{IV.19.6.4}
+Sean $\mathfrak R$ un ideal de $A$ y $\mathfrak L=\mathfrak J+\mathfrak R$. Supongamos que la filtración $(N_k)$ (y por tanto también $(M_k)$) es la filtración $\mathfrak R$-preádica, de modo que las filtraciones $(M_k')$ y $(N_k')$ son las filtraciones $\mathfrak L$-preádicas. Consideremos $\operatorname{gr}_\bullet(R)$ (resp. $\operatorname{gr}_\bullet'(R)$) como un módulo graduado sobre $\operatorname{gr}_{\mathfrak R}^*(A)$ (resp. $\operatorname{gr}_{\mathfrak L}^*(A)$).
+\begin{enumerate}
+  \item[(i)] Sea $S$ un subconjunto de $\operatorname{gr}_\bullet(R)$ que engendra $\operatorname{gr}_\bullet(R)$ como $\operatorname{gr}_{\mathfrak R}^*(A)$-módulo. Entonces la condición $c)$ de (19.6.3) equivale a la condición siguiente:
+  \item[c$'$)] La imagen de $S$ en $\operatorname{gr}_\bullet'(R)$ por $\psi_R'$ engendra $\operatorname{gr}_\bullet'(R)$ como $\operatorname{gr}_{\mathfrak L}^*(A)$-módulo.
+  \item[(ii)] Supongamos satisfecha la condición $e)$ de (19.6.3), y además que los cocientes de los $\operatorname{gr}_k(R)$ sean separados para la topología $\mathfrak J$-preádica (lo que ocurre cuando $A$ es noetheriano, los $f_i$ pertenecen al radical de $A$ y los $\operatorname{gr}_k(N)$ son $A$-módulos de tipo finito). Entonces, para que un subconjunto $S$ de $\operatorname{gr}_\bullet(R)$ formado por elementos homogéneos engendre $\operatorname{gr}_\bullet(R)$ como $\operatorname{gr}_{\mathfrak R}^*(A)$-módulo, es necesario y suficiente que su imagen por $\psi_R'$ engendre $\operatorname{gr}_\bullet'(R)$ como $\operatorname{gr}_{\mathfrak L}^*(A)$-módulo.
+\end{enumerate}
+\end{corollary}
+
+\oldpage[IV-4]{212}
+
+\begin{enumerate}
+  \item[(i)] Consideremos el homomorfismo de grado $0$
+  \[
+    \psi_A:(\operatorname{gr}_{\mathfrak R}^*(A)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n]\longrightarrow\operatorname{gr}_\bullet'(A)=\operatorname{gr}_{\mathfrak L}^*(A)
+  \]
+  ($0$, 15.1.5.2). El hecho de que este homomorfismo sea \emph{sobreyectivo} implica que el $\operatorname{gr}_{\mathfrak L}^*(A)$-submódulo\footnote{El texto impreso dice «sous-algèbre»; como $\operatorname{gr}_\bullet'(R)$ solo se considera aquí como módulo y la conclusión es $\operatorname{Im}(\psi_R')$, debe decir «sous-module».} de $\operatorname{gr}_\bullet'(R)$ engendrado por $S'=\psi_R'(S)$ no es otro que $\operatorname{Im}(\psi_R')$, de donde resulta la equivalencia de $c)$ y $c')$.
+  \item[(ii)] Puesto que $e)$ se satisface, también se satisface $c)$, y en virtud de (i) queda por demostrar la suficiencia de la condición del enunciado. Ahora bien, como $\psi_R'$ es biyectivo, decir que $S'$ engendra $\operatorname{gr}_\bullet'(R)$ considerado como $\operatorname{gr}_{\mathfrak L}^*(A)$-módulo equivale a decir que $S$ engendra $(\operatorname{gr}_\bullet(R)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n]$ como $\operatorname{gr}_{\mathfrak L}^*(A)$-módulo, y, en virtud de la sobreyectividad de $\psi_A$, en este enunciado se puede sustituir el anillo $\operatorname{gr}_{\mathfrak L}^*(A)$ por $(\operatorname{gr}_{\mathfrak R}^*(A)\otimes_A(A/\mathfrak J))[T_1,\ldots,T_n]$. Evidentemente, esto equivale a decir que $S$ engendra $\operatorname{gr}_\bullet(R)\otimes_A(A/\mathfrak J)$ como módulo sobre el anillo $\operatorname{gr}_{\mathfrak R}^*(A)\otimes_A(A/\mathfrak J)$, o también como $\operatorname{gr}_{\mathfrak R}^*(A)$-módulo. Ahora bien, si $T$ es el $\operatorname{gr}_{\mathfrak R}^*(A)$-submódulo graduado de $\operatorname{gr}_\bullet(R)$ engendrado por $S$, y si se pone $T'=\operatorname{gr}_\bullet(R)/T$, se tiene por hipótesis $T'/\mathfrak JT'=0$, o $\mathfrak JT'=T'$; pero $T'$ es un módulo graduado, y cada $T_p'$ es un cociente de $\operatorname{gr}_p(R)$, por tanto separado para la topología $\mathfrak J$-preádica; la hipótesis $\mathfrak JT_p'=T_p'$ implica, pues, $T_p'=0$ para todo entero $p$, y por tanto $T'=0$, lo que termina de demostrar el corolario.
+\end{enumerate}

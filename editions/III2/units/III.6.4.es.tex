@@ -1,0 +1,282 @@
+\subsection{Funtores hipertor locales de complejos de módulos cuasicoherentes: caso de los esquemas afines}
+\label{subsection:III.6.4}
+\label{III.6.4}
+
+\begin{env}[6.4.1]
+\label{III.6.4.1}
+Sean $S$ un esquema afín de anillo $A$, y $X$ e $Y$ dos
+$S$-esquemas afines de anillos $B$ y $C$, respectivamente; así,
+$B$ y $C$ son $A$-álgebras. Todo complejo $\sh P_\bullet$ de
+$\sh O_X$-módulos cuasicoherentes es de la forma
+$\widetilde{P_\bullet}$ para un complejo $P_\bullet$ de
+$B$-módulos, y análogamente todo complejo $\sh Q_\bullet$ de
+$\sh O_Y$-módulos cuasicoherentes es de la forma
+$\widetilde{Q_\bullet}$ para un complejo $Q_\bullet$ de
+$C$-módulos (\sref[I]{I.1.3.7} y \sref[I]{I.1.3.8}).
+
+Considerados como complejos de $A$-módulos, $P_\bullet$ y
+$Q_\bullet$ tienen módulos hipertor
+$\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$. Por bifuntorialidad, las
+$A$-álgebras $B$ y $C$ actúan sobre este $A$-módulo; estas acciones
+lo convierten en un $(B,C)$-bimódulo o, equivalentemente, en un
+módulo sobre
+\[
+  B\otimes_AC=A(X\times_SY).
+\]
+Hemos definido así un $\sh O_{X\times_SY}$-módulo cuasicoherente
+\[
+  \shTor_n^{\sh O_S}(\sh P_\bullet,\sh Q_\bullet)
+  =
+  \bigl(\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)\bigr)\supertilde.
+  \tag{6.4.1.1}\label{III.6.4.1.1}
+\]
+Se denomina \emph{hipertor local de índice $n$} de
+$\sh P_\bullet$ y $\sh Q_\bullet$, y también se denota por
+$\shTor_n^S(\sh P_\bullet,\sh Q_\bullet)$.
+\end{env}
+
+\begin{lemma}[6.4.2]
+\label{III.6.4.2}
+Con las notaciones de \sref{III.6.4.1}, supongamos que
+$A=R^{-1}A'$, donde $A'$ es un anillo y $R$ una parte
+multiplicativa de $A'$. Sea $S'=\Spec(A')$. Entonces $X$ e $Y$
+pueden considerarse como $S'$-preesquemas y
+$X\times_{S'}Y=X\times_SY$
+(\sref[I]{I.1.6.2} y \sref[I]{I.3.2.4}); además,
+\[
+  \shTor_\bullet^{S'}(\sh P_\bullet,\sh Q_\bullet)
+  =
+  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet).
+\]
+\end{lemma}
+
+\begin{proof}
+Esto se deduce de \sref{III.6.4.1.1} y \sref{III.6.3.13}.
+\end{proof}
+
+\begin{env}[6.4.3]
+\label{III.6.4.3}
+Con las notaciones e hipótesis de \sref{III.6.4.1}, sean
+$\sh F=\widetilde F$ un $\sh O_X$-módulo cuasicoherente y
+$\sh G=\widetilde G$ un $\sh O_Y$-módulo cuasicoherente.
+Considerando $\sh F$ y $\sh G$ como complejos concentrados en
+grado cero, denotamos por $\shTor_n^{\sh O_S}(\sh F,\sh G)$, o
+por $\shTor_n^S(\sh F,\sh G)$, su hipertor local de índice $n$.
+Por \sref{III.6.3.5}(ii),
+\[
+  \shTor_n^{\sh O_S}(\sh F,\sh G)
+  =
+  \bigl(\Tor_n^A(F,G)\bigr)\supertilde.
+  \tag{6.4.3.1}\label{III.6.4.3.1}
+\]
+
+Volvamos ahora a dos complejos arbitrarios de módulos
+cuasicoherentes $\sh P_\bullet$ y $\sh Q_\bullet$. Las fórmulas
+\sref{III.6.4.1.1} y \sref{III.6.4.3.1}, junto con
+\sref{III.6.3.2}, muestran que
+$\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)$ es el objeto al
+que convergen dos sucesiones espectrales
+$'\sh E(\sh P_\bullet,\sh Q_\bullet)$ y
+$''\sh E(\sh P_\bullet,\sh Q_\bullet)$, cuyos términos $E_2$ son
+\[
+  '\sh E_{pq}^2
+  =
+  \sh H_p\bigl(\shTor_q^S(\sh P_\bullet,\sh Q_\bullet)\bigr)
+  \tag{6.4.3.2}\label{III.6.4.3.2}
+\]
+y
+\[
+  ''\sh E_{pq}^2
+  =
+  \bigoplus_{q'+q''=q}
+  \shTor_p^S
+  \bigl(\sh H_{q'}(\sh P_\bullet),
+        \sh H_{q''}(\sh Q_\bullet)\bigr).
+  \tag{6.4.3.3}\label{III.6.4.3.3}
+\]
+Aquí $\shTor_q^S(\sh P_\bullet,\sh Q_\bullet)$ en
+\sref{III.6.4.3.2} denota el bicomplejo de
+$\sh O_{X\times_SY}$-módulos cuasicoherentes
+$\shTor_q^S(\sh P_i,\sh Q_j)$.
+\end{env}
+
+\begin{env}[6.4.4]
+\label{III.6.4.4}
+Sean
+\[
+  X^{(1)}=\Spec(B^{(1)}),
+  \qquad
+  Y^{(1)}=\Spec(C^{(1)})
+\]
+otros dos esquemas afines, donde $B^{(1)}$ y $C^{(1)}$ son
+$A$-álgebras, y sean
+\oldpage[III]{147}
+\[
+  u:X^{(1)}\longrightarrow X,
+  \qquad
+  v:Y^{(1)}\longrightarrow Y
+\]
+$S$-morfismos correspondientes a los $A$-homomorfismos
+$\vphi:B\longrightarrow B^{(1)}$ y
+$\psi:C\longrightarrow C^{(1)}$. Consideremos los complejos
+\[
+  u^*(\sh P_\bullet)
+  =
+  (P_\bullet\otimes_BB^{(1)})\supertilde,
+  \qquad
+  v^*(\sh Q_\bullet)
+  =
+  (Q_\bullet\otimes_CC^{(1)})\supertilde.
+\]
+Los $A$-homomorfismos canónicos
+\[
+  P_\bullet\longrightarrow P_\bullet\otimes_BB^{(1)},
+  \qquad
+  Q_\bullet\longrightarrow Q_\bullet\otimes_CC^{(1)}
+\]
+dan, por funtorialidad, un $A$-homomorfismo
+\[
+  \mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)
+  \longrightarrow
+  \mathbf{Tor}_\bullet^A
+  (P_\bullet\otimes_BB^{(1)},
+   Q_\bullet\otimes_CC^{(1)}).
+\]
+De nuevo por funtorialidad, se trata en realidad de un homomorfismo
+de $(B\otimes_AC)$-módulos. Por tanto, define un
+$(u\times_Sv)$-morfismo
+\[
+  \theta:
+  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
+  \longrightarrow
+  \shTor_\bullet^S(u^*\sh P_\bullet,v^*\sh Q_\bullet),
+  \tag{6.4.4.1}\label{III.6.4.4.1}
+\]
+y, en consecuencia, un homomorfismo de
+$\sh O_{X^{(1)}\times_SY^{(1)}}$-módulos
+\[
+  \theta^\sharp:
+  (u\times_Sv)^*
+  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
+  \longrightarrow
+  \shTor_\bullet^S(u^*\sh P_\bullet,v^*\sh Q_\bullet).
+  \tag{6.4.4.2}\label{III.6.4.4.2}
+\]
+Este es manifiestamente un morfismo de bi-$\partial$-funtores en
+las categorías de módulos cuasicoherentes acotados inferiormente.
+El homomorfismo \sref{III.6.4.4.2} no es necesariamente biyectivo;
+sin embargo:
+\end{env}
+
+\begin{lemma}[6.4.5]
+\label{III.6.4.5}
+Con las notaciones de \sref{III.6.4.4}, si $u$ y $v$ son
+inmersiones abiertas, entonces \sref{III.6.4.4.2} es biyectivo.
+\end{lemma}
+
+\begin{proof}
+Identifiquemos $X^{(1)}$ e $Y^{(1)}$ con abiertos de $X$ e $Y$,
+respectivamente. Son uniones de abiertos de la forma $\mathrm D(f)$
+y $\mathrm D(g)$, donde $f\in B$ y $g\in C$; los preesquemas
+inducidos sobre $\mathrm D(\vphi(f))$ y $\mathrm D(f)$, y asimismo
+sobre $\mathrm D(\psi(g))$ y $\mathrm D(g)$, son isomorfos.
+
+Basta demostrar el lema cuando $X^{(1)}=\mathrm D(f)$ e
+$Y^{(1)}=\mathrm D(g)$. En efecto, una vez sabido esto, en el caso
+general basta mostrar que la restricción de $\theta^\sharp$ a cada
+$\mathrm D(f)\times_S\mathrm D(g)$ es un isomorfismo. Si
+\[
+  u_1:\mathrm D(f)\longrightarrow X^{(1)},
+  \qquad
+  v_1:\mathrm D(g)\longrightarrow Y^{(1)}
+\]
+son las inclusiones canónicas, esta restricción es
+$(u_1\times_Sv_1)^*(\theta^\sharp)$. De
+\sref{III.6.4.4} y \sref[0]{0.4.4.8} se deduce inmediatamente que,
+al componerla con el homomorfismo canónico
+\[
+  (u_1\times_Sv_1)^*
+  \shTor_\bullet^S(u^*\sh P_\bullet,v^*\sh Q_\bullet)
+  \longrightarrow
+  \shTor_\bullet^S((u')^*\sh P_\bullet,(v')^*\sh Q_\bullet),
+  \tag{6.4.5.1}\label{III.6.4.5.1}
+\]
+donde $u'=u\circ u_1$ y $v'=v\circ v_1$, se obtiene el
+homomorfismo canónico
+\[
+  (u'\times_Sv')^*
+  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
+  \longrightarrow
+  \shTor_\bullet^S((u')^*\sh P_\bullet,(v')^*\sh Q_\bullet).
+  \tag{6.4.5.2}\label{III.6.4.5.2}
+\]
+Si \sref{III.6.4.5.1} y \sref{III.6.4.5.2} son isomorfismos,
+también lo es $(u_1\times_Sv_1)^*(\theta^\sharp)$.
+
+Supongamos, pues, que $X^{(1)}=\mathrm D(f)$ e
+$Y^{(1)}=\mathrm D(g)$, de modo que $B^{(1)}=B_f$ y
+$C^{(1)}=C_g$. Entonces $u^*(\sh P_\bullet)$ y
+$v^*(\sh Q_\bullet)$ se identifican, respectivamente, con
+$((P_\bullet)_f)\supertilde$ y $((Q_\bullet)_g)\supertilde$.
+Además, $X^{(1)}\times_SY^{(1)}$ se identifica con el subesquema
+abierto $\mathrm D(f\otimes g)$ de
+\[
+  X\times_SY=\Spec(B\otimes_AC)
+\]
+(\sref[II]{II.4.3.2.4}). Queda por demostrar que el homomorfismo
+\[
+  \bigl(\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)\bigr)_{f\otimes g}
+  \longrightarrow
+  \mathbf{Tor}_\bullet^A((P_\bullet)_f,(Q_\bullet)_g),
+  \tag{6.4.5.3}\label{III.6.4.5.3}
+\]
+\oldpage[III]{148}
+inducido por los homomorfismos canónicos
+$P_\bullet\longrightarrow(P_\bullet)_f$ y
+$Q_\bullet\longrightarrow(Q_\bullet)_g$, es biyectivo.
+
+Por \sref[0]{0.1.6.1},
+\[
+  (P_\bullet)_f=\varinjlim_m P_\bullet^{(m)},
+\]
+donde cada $P_\bullet^{(m)}$ es el mismo complejo de $B$-módulos
+que $P_\bullet$, y para $m\leq n$ la aplicación
+$P_\bullet^{(m)}\longrightarrow P_\bullet^{(n)}$ es la
+multiplicación por $f^{\,n-m}$. El enunciado análogo vale para
+$Q_\bullet$, sustituyendo $f$ por $g$. El homomorfismo
+\[
+  \mathbf{Tor}_\bullet^A(P_\bullet^{(m)},Q_\bullet^{(m)})
+  \longrightarrow
+  \mathbf{Tor}_\bullet^A(P_\bullet^{(n)},Q_\bullet^{(n)})
+\]
+correspondiente a estas aplicaciones de transición es, por
+definición, la multiplicación por $(f\otimes g)^{n-m}$. La
+conclusión se deduce de \sref[0]{0.1.6.1}, aplicado al miembro
+izquierdo de \sref{III.6.4.5.3}, y de \sref{III.6.3.6}.
+\end{proof}
+
+\begin{env}[6.4.6]
+\label{III.6.4.6}
+Con las notaciones de \sref{III.6.4.4}, se definen del mismo modo
+homomorfismos canónicos de funtores espectrales
+\[
+  \left\{
+  \begin{aligned}
+  (u\times_Sv)^*\,{}'\sh E(\sh P_\bullet,\sh Q_\bullet)
+  &\longrightarrow
+  {}'\sh E(u^*\sh P_\bullet,v^*\sh Q_\bullet),\\
+  (u\times_Sv)^*\,{}''\sh E(\sh P_\bullet,\sh Q_\bullet)
+  &\longrightarrow
+  {}''\sh E(u^*\sh P_\bullet,v^*\sh Q_\bullet).
+  \end{aligned}
+  \right.
+  \tag{6.4.6.1}\label{III.6.4.6.1}
+\]
+El razonamiento de \sref{III.6.4.5} muestra que, cuando $u$ y $v$
+son inmersiones abiertas, estos homomorfismos son biyectivos.
+Teniendo en cuenta \sref{III.6.3.6.2} y \sref{III.6.3.6.3}, el
+razonamiento demuestra que son isomorfismos en los términos $E^2$,
+mientras que \sref{III.6.4.5} demuestra que son isomorfismos en los
+objetos límite. La afirmación se deduce entonces de
+\sref[0]{0.11.1.2} y \sref[0]{0.11.2.4}.
+\end{env}

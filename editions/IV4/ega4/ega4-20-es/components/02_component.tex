@@ -1,0 +1,193 @@
+\subsection{Funciones meromorfas}
+\label{IV.20.1}
+
+\begin{env}[20.1.1]
+\label{IV.20.1.1}
+Sea $(X,\sh{O}_X)$ un espacio anillado, y sea $\sh{S}$ un subhaz \emph{de conjuntos} de $\sh{O}_X$.
+Para todo abierto $U$ de $X$, consideremos el \emph{anillo de fracciones} $\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ (Bourbaki, \emph{Alg. comm.}, cap.~II, \textsection2, n\textsuperscript{o}1).
+Es inmediato que la aplicación $U\mapsto\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ es un \emph{prehaz de anillos} (\sref[0]{0.1.5.1} y \sref[0]{0.1.5.7}).
+Denotamos por $\sh{O}_X[\sh{S}^{-1}]$ el \emph{haz de anillos} asociado a este prehaz y decimos que es el \emph{haz de anillos de fracciones de $\sh{O}_X$, con denominadores en $\sh{S}$}; es un $\sh{O}_X$-módulo \emph{plano}.
+Es inmediato que para todo $x\in X$ se tiene un isomorfismo canónico
+\[
+\label{IV.20.1.1.1}
+  (\sh{O}_X[\sh{S}^{-1}])_x\isoto\sh{O}_{X,x}[\sh{S}_x^{-1}],
+  \tag{20.1.1.1}
+\]
+pues el razonamiento de \sref[0]{0.1.4.5} se generaliza inmediatamente al caso en que se tiene un sistema inductivo $(A_\alpha,\vphi_{\beta\alpha})$ de anillos y, para cada índice $\alpha$, un subconjunto $S_\alpha$ de $A_\alpha$ tal que
+\oldpage[IV-4]{227}
+$\vphi_{\beta\alpha}(S_\alpha)\subset S_\beta$ para $\alpha\leq\beta$; tomamos entonces $S$ como el límite inductivo en $A=\varinjlim A_\alpha$ del sistema inductivo de subconjuntos $(S_\alpha)$.
+\end{env}
+
+\begin{env}[20.1.2]
+\label{IV.20.1.2}
+Sea ahora $\sh{F}$ un $\sh{O}_X$-módulo.
+Ponemos entonces
+\[
+\label{IV.20.1.2.1}
+  \sh{F}[\sh{S}^{-1}]=\sh{F}\otimes_{\sh{O}_X}\sh{O}_X[\sh{S}^{-1}]
+  \tag{20.1.2.1}
+\]
+y decimos que es el \emph{haz de módulos de fracciones de $\sh{F}$ con denominadores en $\sh{S}$}; es inmediato que está asociado al prehaz de módulos $U\mapsto\Gamma(U,\sh{F})[\Gamma(U,\sh{S})^{-1}]$, y que para todo $x\in X$ se tiene un isomorfismo canónico
+\[
+\label{IV.20.1.2.2}
+  (\sh{F}[\sh{S}^{-1}])_x\isoto\sh{F}_x[\sh{S}_x^{-1}].
+  \tag{20.1.2.2}
+\]
+\end{env}
+
+\begin{env}[20.1.3]
+\label{IV.20.1.3}
+Nos interesaremos aquí por el caso en que $\sh{S}$ es el subhaz $\sh{S}(\sh{O}_X)$ de $\sh{O}_X$ tal que, para todo abierto $U$, $\Gamma(U,\sh{S})$ sea el \emph{conjunto de elementos regulares} del anillo $\Gamma(U,\sh{O}_X)$; es inmediato que se trata de un haz (y no solamente de un prehaz), pues la regularidad de una sección de $\sh{O}_X$ sobre $U$ se verifica «fibra a fibra» (es decir, significa que el germen de la sección en $x$ es regular en $\sh{O}_{X,x}$ para todo $x\in U$); en otras palabras, $\sh{S}(\sh{O}_X)_x$ no es otro que el conjunto de elementos regulares de $\sh{O}_{X,x}$.
+El haz de anillos correspondiente
+\[
+  \sh{M}_X=\sh{O}_X[\sh{S}^{-1}]
+\]
+se llama el \emph{haz de gérmenes de funciones meromorfas sobre $X$}, y las secciones de $\sh{M}_X$ sobre $X$ se llaman las \emph{funciones meromorfas sobre $X$}; forman un anillo que denotamos por $M(X)$.
+Para todo $\sh{O}_X$-módulo $\sh{F}$,
+\[
+  \sh{F}\otimes_{\sh{O}_X}\sh{M}_X=\sh{F}[\sh{S}^{-1}]
+\]
+se denota también por $\sh{M}_X(\sh{F})$ y se llama el \emph{haz de gérmenes de secciones meromorfas de $\sh{F}$}; sus secciones sobre $X$ forman un $M(X)$-módulo que se denota por $M(X,\sh{F})$, cuyos elementos se llaman \emph{secciones meromorfas de $\sh{F}$ sobre $X$}.
+Estas definiciones implican que para todo abierto $U$ de $X$ se tiene un isomorfismo canónico $\sh{M}_X(\sh{F})|U\isoto\sh{M}_U(\sh{F}|U)$, en particular $\sh{M}_X|U\isoto\sh{M}_U$.
+\end{env}
+
+\begin{env}[20.1.3.1]
+\label{IV.20.1.3.1}
+Si $X$ es un \emph{preesquema reducido}, observemos que si un elemento $s\in\Gamma(U,\sh{O}_X)$ es tal que $s_\xi\neq0$ para todo punto maximal $\xi$ de $U$, entonces $s$ es \emph{regular}.
+En efecto, si $st=0$ para un $t\in\Gamma(U,\sh{O}_X)$, tenemos $s_\xi t_\xi=0$, luego $t_\xi=0$ pues $\sh{O}_{X,\xi}$ es un cuerpo, y decir que $t_\xi=0$ para todo punto maximal $\xi$ de $X$ significa que $t=0$: en efecto, nos reducimos inmediatamente al caso en que $U$ es afín, y un elemento de un anillo reducido que pertenece a todos los ideales primos mínimos es nulo por definición.
+La recíproca es cierta si el conjunto de componentes irreducibles de $X$ es \emph{localmente finito}.
+En efecto, nos reducimos inmediatamente al caso en que $X=\Spec(A)$ es afín; si $\mathfrak p_i$ ($1\leq i\leq n$) son los ideales primos mínimos de $A$ y si $s\in\mathfrak p_i$ para un índice $i$, existe $t\in A$ tal que $t\in\mathfrak p_j$ para $j\neq i$ y $t\notin\mathfrak p_i$ (Bourbaki, \emph{Alg. comm.}, cap.~II, \textsection1, n\textsuperscript{o}1, prop.~1); por tanto $st\in\mathfrak p_i$ para todo $i$, y en consecuencia $st=0$ puesto que $A$ es reducido; por tanto $s$ no es regular.
+\end{env}
+
+\begin{env}[20.1.4]
+\label{IV.20.1.4}
+Para todo abierto $U$ de $X$, el homomorfismo $t\mapsto t/1$ de $\Gamma(U,\sh{O}_X)$ en $\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ (que no es otro que el \emph{anillo total de fracciones} de
+\oldpage[IV-4]{228}
+$\Gamma(U,\sh{O}_X)$) es inyectivo; por tanto, estos homomorfismos definen un \emph{homomorfismo canónico inyectivo}
+\[
+\label{IV.20.1.4.1}
+  i:\sh{O}_X\to\sh{M}_X
+  \tag{20.1.4.1}
+\]
+que permite identificar $\sh{O}_X$ con un subhaz de $\sh{M}_X$.
+Dada una función meromorfa $\vphi\in M(X)$, decimos que $\vphi$ está \emph{definida} en un abierto $U$ de $X$ si $\vphi|U$ es una \emph{sección de $\sh{O}_U$} sobre $U$; los axiomas de los haces muestran que, para una sección $\vphi$ dada, existe un abierto \emph{mayor} en el que $\vphi$ está definida; lo llamamos \emph{dominio de definición} de $\vphi$ y lo denotamos por $\operatorname{dom}(\vphi)$.
+\end{env}
+
+\begin{env}[20.1.5]
+\label{IV.20.1.5}
+Para todo $\sh{O}_X$-módulo $\sh{F}$, se deduce de \sref{IV.20.1.4.1} un di-homomorfismo formado por $i$ y el homomorfismo de haces de grupos aditivos
+\[
+\label{IV.20.1.5.1}
+  1_{\sh{F}}\otimes i:\sh{F}\to\sh{M}_X(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_X.
+  \tag{20.1.5.1}
+\]
+Obsérvese que este último ya no es inyectivo en general; cuando lo es, se dice que $\sh{F}$ es \emph{estrictamente sin torsión}: esto significa que para todo abierto $U$ de $X$ y toda sección $s\in\Gamma(U,\sh{O}_X)$ que sea un elemento regular de este anillo, la homotecia $z\mapsto sz$ de $\Gamma(U,\sh{F})$ es inyectiva; esta condición se cumple evidentemente si $\sh{F}$ es \emph{localmente libre}.
+\end{env}
+
+\begin{proposition}[20.1.6]
+\label{IV.20.1.6}
+Sean $X$ un preesquema localmente noetheriano y $\sh{F}$ un $\sh{O}_X$-módulo cuasicoherente.
+Para que $\sh{F}$ sea estrictamente sin torsión, es necesario y suficiente que $\operatorname{Ass}(\sh{F})\subset\operatorname{Ass}(\sh{O}_X)$.
+\end{proposition}
+
+\begin{proof}
+En efecto, nos reducimos inmediatamente al caso en que $X=\Spec(A)$ es afín, $\sh{F}=\widetilde M$, y se sabe que los elementos $s$ de $A$ que pertenecen a un ideal de $\operatorname{Ass}(M)$ son exactamente aquellos para los cuales la homotecia $z\mapsto sz$ no es inyectiva (Bourbaki, \emph{Alg. comm.}, cap.~IV, \textsection1, n\textsuperscript{o}1, cor.~2 de la prop.~2).
+\end{proof}
+
+\begin{env}[20.1.7]
+\label{IV.20.1.7}
+Si $u$ es una sección de $\sh{M}_X(\sh{F})$ sobre $X$, decimos que $u$ está \emph{definida} en un punto $x\in X$ si existe un entorno abierto $V$ de $x$ en $X$ tal que $u|V$ es la imagen de una sección de $\sh{F}$ sobre $V$ mediante el di-homomorfismo \sref{IV.20.1.5.1}.
+Decimos que $u$ está \emph{definida} en un abierto $U$ de $X$ si está definida en todo punto de $U$; existe todavía un abierto mayor en el que $u$ está definida, llamado \emph{dominio de definición} de $u$ y denotado por $\operatorname{dom}(u)$.
+Cuando $\sh{F}$ es estrictamente sin torsión, de modo que $\sh{F}$ se identifica mediante \sref{IV.20.1.5.1} con un subhaz de $\sh{M}_X(\sh{F})$, decir que $u$ está definida en $U$ significa que $u|U$ es una \emph{sección de $\sh{F}$ sobre $U$}.
+\end{env}
+
+\begin{env}[20.1.8]
+\label{IV.20.1.8}
+Conforme a las notaciones generales de \sref[0\textsubscript{I}]{0.5.4.7}, denotamos por $\sh{M}_X^*$ el haz de grupos multiplicativos tal que $\Gamma(U,\sh{M}_X^*)$ sea (para todo abierto $U$ de $X$) el grupo de los \emph{elementos invertibles} de $\Gamma(U,\sh{M}_X)$.
+Este haz no es otro que el haz $\sh{S}(\sh{M}_X)$ definido en \sref{IV.20.1.3}: en efecto, si $s\in\Gamma(U,\sh{S}(\sh{M}_X))$, para todo $x\in U$ existe un entorno abierto $V\subset U$ de $x$ tal que $s|V$ es un elemento regular en el \emph{anillo total de fracciones} de $\Gamma(V,\sh{O}_X)$, y sabemos que tal elemento es necesariamente invertible en este anillo de fracciones.
+Diremos que las secciones de $\sh{M}_X^*$ sobre $X$ son las \emph{funciones meromorfas regulares} (obsérvese que aquí nos apartamos de la terminología seguida por ciertos autores, que llaman funciones meromorfas «regulares» a las que son \emph{secciones de $\sh{O}_X$}, identificado como un subhaz de $\sh{M}_X$).
+
+Sea $\sh{L}$ un $\sh{O}_X$-módulo invertible \sref[0\textsubscript{I}]{0.5.4.1}; entonces es claro que $\sh{M}_X(\sh{L})=\sh{L}\otimes_{\sh{O}_X}\sh{M}_X$
+\oldpage[IV-4]{229}
+es un $\sh{M}_X$-módulo invertible.
+Sea $U$ un abierto tal que $\sh{L}|U$ sea isomorfo a $\sh{O}_U$; como todo automorfismo de $\sh{M}_U$ es la multiplicación por un elemento invertible de $\Gamma(U,\sh{M}_X)$ \sref[0\textsubscript{I}]{0.5.4.7}, es equivalente decir que una sección $s\in\Gamma(U,\sh{M}_X(\sh{L}))$ tiene una imagen invertible en $\Gamma(U,\sh{M}_X)$ mediante \emph{algún} isomorfismo o mediante \emph{todo} isomorfismo sobre $\Gamma(U,\sh{M}_X)$; en este caso diremos que $s$ es una \emph{sección meromorfa regular de $\sh{L}$ sobre $U$}; una sección $s$ de $\sh{L}$ sobre $X$ se llamará \emph{sección meromorfa regular de $\sh{L}$} si, para todo abierto $U$ tal que $\sh{L}|U$ sea isomorfo a $\sh{O}_U$, $s|U$ es una sección meromorfa regular de $\sh{L}$ sobre $U$.
+Denotaremos por $(\sh{M}_X(\sh{L}))^*$ el subhaz de $\sh{M}_X(\sh{L})$ tal que, para todo abierto $U$, $\Gamma(U,(\sh{M}_X(\sh{L}))^*)$ sea el conjunto de secciones meromorfas regulares de $\sh{L}$ sobre $U$.
+Sea $s$ una sección meromorfa de $\sh{L}$ sobre $X$ (es decir, una sección de $\sh{M}_X(\sh{L})$); define un homomorfismo $h_s:\sh{M}_X\to\sh{M}_X(\sh{L})$ que a toda sección $t$ de $\sh{M}_X$ sobre un abierto $U$ hace corresponder $(s|U)t$.
+Se deduce inmediatamente de lo anterior que, para que $s$ sea \emph{regular}, es necesario y suficiente que $h_s$ sea \emph{inyectivo}, y de hecho entonces $h_s$ es un homomorfismo \emph{biyectivo} de $\sh{M}_X$ sobre $\sh{M}_X(\sh{L})$, y su restricción a $\sh{M}_X^*$ es una biyección sobre $(\sh{M}_X(\sh{L}))^*$.
+Concluimos que la homotecia $t\mapsto ts$ es un isomorfismo de $M(X)$ sobre $M(X,\sh{L})$.
+\end{env}
+
+\begin{env}[20.1.9]
+\label{IV.20.1.9}
+Sea $s$ una sección meromorfa regular del $\sh{O}_X$-módulo invertible $\sh{L}$ sobre $X$; entonces, para todo $\sh{O}_X$-módulo $\sh{F}$, $s$ define igualmente un homomorfismo $h_s\otimes1_{\sh{F}}:\sh{M}_X(\sh{F})\to\sh{M}_X(\sh{F}\otimes_{\sh{O}_X}\sh{L})$, que es de nuevo \emph{biyectivo}.
+\end{env}
+
+\begin{env}[20.1.10]
+\label{IV.20.1.10}
+Sea $s$ una sección meromorfa de un $\sh{O}_X$-módulo invertible $\sh{L}$ sobre $X$; para que $s$ sea regular, es necesario y suficiente que exista una sección meromorfa $s'$ de $\sh{L}^{-1}$ sobre $X$ tal que la imagen canónica de $s\otimes s'$ en $\sh{M}_X$ \sref[0\textsubscript{I}]{0.5.4.3} sea la sección unidad, y esta sección $s'$ es entonces única: en efecto, la necesidad de la existencia local de tal sección es evidente, y su unicidad local entraña su existencia (y unicidad) global; además, la existencia de $s'$ es trivialmente suficiente para que $s$ sea regular.
+Pondremos $s'=s^{-1}$.
+
+Finalmente, si $\sh{L}'$ es un segundo $\sh{O}_X$-módulo invertible, $s$ (resp. $s'$) una sección meromorfa regular de $\sh{L}$ (resp. $\sh{L}'$) sobre $X$, entonces $s\otimes s'$ es evidentemente una sección meromorfa regular de $\sh{L}\otimes\sh{L}'$ sobre $X$.
+\end{env}
+
+\begin{env}[20.1.11]
+\label{IV.20.1.11}
+Si $f:X'\to X$ es un morfismo de espacios anillados, no existe en general una aplicación natural que asocie a una función meromorfa sobre $X$ una función meromorfa sobre $X'$.
+Por ejemplo, si $X$ es el espectro de un anillo local íntegro $A$ y $X'$ el de su cuerpo residual $k$, no existe ningún homomorfismo natural del cuerpo de fracciones $K$ de $A$ en $k$, y solo se puede hacer corresponder a un elemento de $K$ un elemento de $k$ si ya pertenece a $A$.
+
+En general, si $f=(\psi,\theta)$, denotemos, para todo abierto $U$ de $X$, por $\sh{S}_f(U)$ el conjunto de secciones \emph{regulares} $s\in\Gamma(U,\sh{O}_X)$ tales que la imagen de $s$ mediante
+\[
+  \Gamma(\theta^\#):\Gamma(U,\sh{O}_X)\to\Gamma(f^{-1}(U),\sh{O}_{X'})
+\]
+sea una sección \emph{regular}.
+Es inmediato que $U\mapsto\sh{S}_f(U)$ es un \emph{subhaz} del haz de conjuntos $\sh{S}(\sh{O}_X)$, que denotamos por $\sh{S}_f$.
+Ponemos $\sh{M}_f=\sh{O}_X[\sh{S}_f^{-1}]$; es un subhaz
+\oldpage[IV-4]{230}
+de anillos de $\sh{M}_X$, y se deduce canónicamente de $\theta^\#:\psi^*(\sh{O}_X)\to\sh{O}_{X'}$ un homomorfismo de haces de anillos $\theta^{\prime\#}:\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ que prolonga $\theta^\#$ (Bourbaki, \emph{Alg. comm.}, cap.~II, \textsection2, n\textsuperscript{o}1, prop.~2); de donde, recordando que $f^*(\sh{M}_f)=\psi^*(\sh{M}_f)\otimes_{\psi^*(\sh{O}_X)}\sh{O}_{X'}$, un homomorfismo canónico de $\sh{O}_{X'}$-álgebras
+\[
+\label{IV.20.1.11.1}
+  f^*(\sh{M}_f)\to\sh{M}_{X'}.
+  \tag{20.1.11.1}
+\]
+Para toda función meromorfa $\vphi$ sobre $X$ que \emph{sea una sección de $\sh{M}_f$}, $\Gamma(\theta^{\prime\#})(\vphi)$ es una función meromorfa sobre $X'$, llamada \emph{imagen inversa de $\vphi$ por $f$}, y denotada por $\vphi\circ f$ si no hay riesgo de confusión.
+
+Asimismo, si $\sh{F}$ es un $\sh{O}_X$-módulo, ponemos $\sh{M}_f(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_f$, y deducimos inmediatamente de $\theta^{\prime\#}$ un homomorfismo canónico (que también se escribe $u\mapsto u\circ f$)
+\[
+  \Gamma(X,\sh{M}_f(\sh{F}))\to\Gamma(X',\sh{M}_{X'}(f^*(\sh{F}))).
+\]
+Además, si $u\in\Gamma(X,\sh{M}_f(\sh{F}))$ está definida \sref{IV.20.1.7} en un punto $x$, $u$ coincide, en un entorno $U$ de $x$, con una sección de la forma $\sum_i h_i\otimes(t_i/s_i)$, donde los $h_i$ pertenecen a $\Gamma(U,\sh{F})$, los $t_i$ a $\Gamma(U,\sh{O}_X)$ y los $s_i$ a $\Gamma(U,\sh{S}_f)$.
+Como, por hipótesis, las imágenes de los $s_i$ en $\Gamma(f^{-1}(U),\sh{O}_{X'})$ son regulares, se ve que $u\circ f$ está definida en todo punto de $f^{-1}(U)$; en otras palabras, se tiene
+\[
+\label{IV.20.1.11.2}
+  f^{-1}(\operatorname{dom}(u))\subset\operatorname{dom}(u\circ f).
+  \tag{20.1.11.2}
+\]
+Veremos más adelante \sref{IV.20.6.5}[(i)] ejemplos (con $\sh{F}=\sh{O}_X$) en los que los dos miembros de \sref{IV.20.1.11.2} pueden ser distintos.
+
+Consideremos en particular el caso en que $\sh{M}_f=\sh{M}_X$; entonces, si $\sh{L}$ es un $\sh{O}_X$-módulo invertible, la imagen en $\sh{M}_{X'}(f^*(\sh{L}))$, mediante $\Gamma(\theta^{\prime\#})$, de una sección meromorfa \emph{regular} de $\sh{L}$ sobre $X$ \sref{IV.20.1.8} es una sección meromorfa \emph{regular} de $f^*(\sh{L})$ sobre $X'$, como se deduce inmediatamente de la definición de estas secciones y del hecho de que un homomorfismo de anillos transforma un elemento invertible en un elemento invertible.
+
+Sea $f':X''\to X'$ un segundo morfismo de espacios anillados, y supongamos que $\sh{M}_f=\sh{M}_X$ y $\sh{M}_{f'}=\sh{M}_{X'}$; entonces, si ponemos $f''=f\circ f'$, también se tiene $\sh{M}_{f''}=\sh{M}_X$, y se ve inmediatamente que para toda sección meromorfa $u$ de $\sh{F}$ sobre $X$ se tiene $u\circ f''=(u\circ f)\circ f'$.
+\end{env}
+
+\begin{proposition}[20.1.12]
+\label{IV.20.1.12}
+Si el morfismo $f:X'\to X$ es plano \sref[0\textsubscript{I}]{0.6.7.1}, se tiene $\sh{M}_f=\sh{M}_X$, y el homomorfismo $\vphi\mapsto\vphi\circ f$ está definido en todo $M(X)$.
+Además, si $f$ es un morfismo (plano) de espacios anillados en anillos locales, se tiene $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$; si además $f$ es sobreyectivo (por tanto, fielmente plano), el homomorfismo $\vphi\mapsto\vphi\circ f$ es inyectivo.
+\end{proposition}
+
+\begin{proof}
+La primera afirmación se deduce del hecho de que, si $B$ es una $A$-álgebra que es un $A$-módulo plano, todo elemento de $A$ que no es divisor de $0$ en $A$ tampoco es divisor de $0$ en $B$ \sref[0\textsubscript{I}]{0.6.3.4}.
+Para demostrar las otras afirmaciones, observemos que, para todo $x'\in X'$, si $x=f(x')$, $\sh{O}_{X',x'}$ es un $\sh{O}_{X,x}$-módulo plano, y como el homomorfismo $\sh{O}_{X,x}\to\sh{O}_{X',x'}$ es \emph{local} por hipótesis, es inyectivo (\sref[0\textsubscript{I}]{0.6.5.1} y \sref[0\textsubscript{I}]{0.6.6.2}); si ponemos $A=\sh{O}_{X,x}$, $B=\sh{O}_{X',x'}$, de modo que $A$ se identifica con un subanillo de $B$, $(f^*(\sh{M}_X))_{x'}$ es igual a $S^{-1}A\otimes_A B=S^{-1}B$, donde $S$ es el conjunto de elementos regulares de $A$, $(\sh{M}_{X'})_{x'}$ es igual a $T^{-1}B$, donde $T$ es el conjunto
+\oldpage[IV-4]{231}
+de elementos regulares de $B$, y como se ha visto que $S\subset T$, el homomorfismo $S^{-1}B\to T^{-1}B$ es inyectivo; en otras palabras, esto prueba que el homomorfismo \sref{IV.20.1.11.1} $f^*(\sh{M}_X)\to\sh{M}_{X'}$ es \emph{inyectivo} (de donde se deduce la última afirmación del enunciado).
+El cociente $f^*(\sh{M}_X)/\sh{O}_{X'}$ se identifica con un sub-$\sh{O}_{X'}$-módulo de $\sh{M}_{X'}/\sh{O}_{X'}$, y $(f^*(\sh{M}_X)/\sh{O}_{X'})_{x'}$ se identifica con $(\sh{M}_X/\sh{O}_X)_x\otimes_{\sh{O}_{X,x}}\sh{O}_{X',x'}$.
+Supongamos entonces que $x\notin\operatorname{dom}(\vphi)$; la imagen de $\vphi_x$ en $(\sh{M}_X/\sh{O}_X)_x$ es por tanto $\neq0$; por fiel planitud, se deduce que lo mismo ocurre con la imagen de $(\vphi\circ f)_{x'}$ en $(\sh{M}_{X'}/\sh{O}_{X'})_{x'}$, luego $x'\notin\operatorname{dom}(\vphi\circ f)$, lo que concluye la demostración.
+\end{proof}
+
+\begin{remark}[20.1.13]
+\label{IV.20.1.13}
+Sea $X$ un espacio analítico complejo \emph{reducido}; entonces la noción de función meromorfa sobre $X$ definida anteriormente coincide con la noción usual.
+Consideremos por otra parte un preesquema $Y$, localmente de tipo finito sobre el cuerpo $\bb{C}$; sabemos entonces que se puede asociar a $Y$ un espacio analítico $Y^\mathrm{an}$ que tiene el mismo espacio topológico subyacente, y que el morfismo canónico $f:Y^\mathrm{an}\to Y$ es \emph{plano}~\cite{IV-37}; en virtud de \sref{IV.20.1.12}, el homomorfismo canónico $u\mapsto u\circ f$ de $M(Y)$ en $M(Y^\mathrm{an})$ está por tanto definido en todas partes y es inyectivo; pero no es \emph{sobreyectivo} en general.
+Por ejemplo, cuando $Y=\bb{V}_{\bb{C}}^r$ (\textbf{Err}\textsubscript{\textbf{III}},~14) es el espacio afín de dimensión $r$ sobre $\bb{C}$, $M(Y)$ se identifica canónicamente con el cuerpo $R(Y)$ de las funciones racionales sobre $Y$ \sref{IV.20.2.13}[(i)], mientras que $M(Y^\mathrm{an})$ es el cuerpo de las funciones meromorfas usuales sobre $\bb{C}^r$.
+En razón de este hecho, a menudo es preferible, en Geometría algebraica, abstenerse de la terminología introducida en esta sección y utilizar la terminología equivalente de «pseudo-función», que se definirá más abajo.
+\end{remark}

@@ -1,0 +1,222 @@
+\subsection{Anillos estrictamente locales y henselización estricta.}
+\label{subsection:IV.18.8}
+
+\begin{proposition}[18.8.1]
+\label{IV.18.8.1}
+Sea $A$ un anillo local. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $A$ es un anillo henseliano y su cuerpo residual $k$ es separablemente cerrado.
+  \item[$b)$] $A$ es un anillo henseliano y todo recubrimiento étale de $S=\Spec(A)$ es trivial.
+  \item[$c)$] Para todo morfismo étale $f:X\to S$ y todo punto $x\in X$ tal que $f(x)$ sea el punto cerrado $s$ de $S$, existe una $S$-sección $u:S\to X$ de $X$ tal que $u(s)=x$.
+\end{enumerate}
+\end{proposition}
+
+La hipótesis $c)$ implica que, para todo morfismo étale $f:X\to S$, los cuerpos residuales en los puntos de $f^{-1}(s)$ son todos isomorfos a $k$ y, además, que se verifica la condición $b)$ de (18.5.11).
+Por tanto, $A$ es henseliano, y el hecho de que todo recubrimiento étale de $S$ sea trivial se deduce de (18.2.10, (ii)); así pues, $c)$ implica $b)$. Como los recubrimientos étale de $\Spec(k)$ son triviales si y solo si $k$ es separablemente cerrado, $b)$ implica $a)$ en virtud de (18.5.11, $b)$). Por último, también se deduce de (18.5.11, $b)$) que $a)$ implica $c)$.
+
+\begin{definition}[18.8.2]
+\label{IV.18.8.2}
+Se dice que un anillo local es un anillo \emph{estrictamente local} si verifica las condiciones equivalentes de (18.8.1). Se llama \emph{esquema estrictamente local} a un esquema isomorfo al espectro de un anillo estrictamente local.
+\end{definition}
+
+\begin{remark}[18.8.3]
+\label{IV.18.8.3}
+Las condiciones de (18.8.1) son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[$d)$] Para todo morfismo localmente de tipo finito $f:X\to S$ y todo punto $x\in X$ tal que $f(x)$ sea el punto cerrado $s$ de $S$ y que $\sh{O}_{X,x}/\mathfrak m_s\sh{O}_{X,x}$ sea un cuerpo, extensión finita separable de $k(s)=k$, existe una vecindad abierta $U$ de $x$ en $X$ tal que $f|U$ sea una inmersión cerrada.
+\end{enumerate}
+\end{remark}
+
+\oldpage[IV-4]{145}
+
+(Se observará que la hipótesis de $d)$ se verifica si $f$ es \emph{formalmente no ramificado} en el punto $x$ (17.4.1.2).)
+
+Dejamos al lector la demostración, que es sustancialmente la misma que la de (18.5.18).
+
+\begin{lemma}[18.8.4]
+\label{IV.18.8.4}
+Sean $A$, $A'$ dos anillos locales, $\varphi:A\to A'$ un homomorfismo local que hace de $A'$ una $A$-álgebra esencialmente étale (18.6.1). Entonces, para todo anillo estrictamente local $B$, todo homomorfismo local $\psi:A\to B$ y todo homomorfismo de $k(A)$-álgebras $\alpha:k(A')\to k(B)$, existe un único homomorfismo local $\psi':A'\to B$ tal que $\psi=\psi'\circ\varphi$ y que $\alpha$ sea igual al homomorfismo $\overline{\psi'}$ deducido de $\psi'$ por paso a los cocientes.
+\end{lemma}
+
+Con las notaciones de (18.6.2), el homomorfismo $\alpha$ corresponde a un $k(s)$-morfismo $\Spec(k(y))\to\Spec(k(x))$ y, por tanto, a un punto $x'$ bien determinado de $X'$ situado sobre $y$. La existencia de la $Y$-sección $f'$ de $X'$ tal que $f'(y)=x'$ se deduce entonces de (18.8.1, $c)$), puesto que $f'$ es étale y $B$ estrictamente local, y su unicidad se deduce de que $f'$ es separado y de (17.4.9).
+
+\begin{lemma}[18.8.5]
+\label{IV.18.8.5}
+Sean $A$ un anillo local, $A_1$, $A_2$ dos $A$-álgebras locales esencialmente étale, y $K$ un cuerpo, extensión de $k(A)$.
+\begin{enumerate}
+  \item[(i)] Para todo $k(A)$-homomorfismo $\gamma:k(A_1)\to k(A_2)$, existe a lo sumo un $A$-homomorfismo (necesariamente local) $\psi:A_1\to A_2$ tal que $\gamma$ sea el homomorfismo $\overline\psi$ deducido de $\psi$ por paso a los cocientes.
+  \item[(ii)] Para todo par de $A$-homomorfismos locales $\beta_1:A_1\to K$, $\beta_2:A_2\to K$, existe una $A$-álgebra local esencialmente étale $A_3$, dos $A$-homomorfismos $\varphi_1:A_1\to A_3$, $\varphi_2:A_2\to A_3$ y un $A$-homomorfismo $\beta:A_3\to K$ tales que $\beta_1=\beta\circ\varphi_1$ y $\beta_2=\beta\circ\varphi_2$.
+\end{enumerate}
+\end{lemma}
+
+Con las notaciones de (18.6.3), los homomorfismos $\beta_1$, $\beta_2$ de (ii) corresponden a dos $S$-morfismos $\Spec(K)\to X_1$, $\Spec(K)\to X_2$, de imágenes respectivas $x_1$, $x_2$; se deduce de ellos un $S$-morfismo bien determinado $\Spec(K)\to X_3$ (I, 3.2.1), de imagen $x_3$ situada sobre $x_1$ y $x_2$; la $A$-álgebra $A_3=\sh{O}_{X_3,x_3}$ y el homomorfismo $A_3\to K$ correspondientes a estos datos satisfacen las condiciones de (ii). Por otra parte, el dato de $\gamma$ en (i) corresponde a un $S$-morfismo $\Spec(k(x_2))\to\Spec(k(x_1))$, o también a un punto $x'_3$ de $X'_3$ situado sobre $x_2$; la unicidad de $\psi$ se deduce de la unicidad de una $X_2$-sección de $X'_3$ que pase por $x'_3$ (17.4.9).
+
+\begin{env}[18.8.6]
+\label{IV.18.8.6}
+Sean $A$ un anillo local, $\mathfrak m$ su ideal maximal, $k$ su cuerpo residual y $\Omega$ una clausura separable de $k$. Consideremos el conjunto $\mathfrak E$ de $A$-álgebras esencialmente étale definido en (18.6.1), y denotemos por $L$ el conjunto de los $A$-homomorfismos locales $A'\to\Omega$, donde $A'$ recorre $\mathfrak E$; se observará que tal homomorfismo se factoriza en
+\[
+  \lambda:A'\longrightarrow k(A')\xrightarrow{\omega_\lambda}\Omega,
+\]
+donde $\omega_\lambda:k(A')\to\Omega$ es un $k$-homomorfismo (puesto que $\mathfrak mA'$ es el ideal maximal de $A'$); recíprocamente, el dato de tal homomorfismo $\omega_\lambda$ determina de manera única un homomorfismo $\lambda\in L$. Para todo $\lambda\in L$, denotaremos por $A_\lambda$ la $A$-álgebra esencialmente étale perteneciente a $\mathfrak E$ sobre la que está definido $\lambda$. El conjunto $L$ está \emph{preordenado} por la relación «existe un $A$-homomorfismo $\varphi_{\mu\lambda}:A_\lambda\to A_\mu$ tal que $\lambda=\mu\circ\varphi_{\mu\lambda}$», y se deduce de (18.8.5, (i)) que este homomorfismo $\varphi_{\mu\lambda}$ es \emph{único}. Además, $L$ es \emph{filtrante creciente} para la relación de preorden anterior (que seguiremos denotando por $\lambda\leq\mu$), en virtud
+
+\oldpage[IV-4]{146}
+
+de (18.8.5, (ii)). Es claro que $(A_\lambda,\varphi_{\mu\lambda})$ es un \emph{sistema inductivo} de $A$-álgebras locales, siendo los $\varphi_{\mu\lambda}$ homomorfismos locales; además, se deduce de (17.3.5) que, para $\lambda\leq\mu$, $A_\mu$ es una $A_\lambda$-álgebra esencialmente étale. Si $\overline\varphi_{\mu\lambda}:k(A_\lambda)\to k(A_\mu)$ es el $k$-homomorfismo deducido de $\varphi_{\mu\lambda}$ por paso a los cocientes, $(k(A_\lambda),\overline\varphi_{\mu\lambda})$ es un \emph{sistema inductivo} de extensiones algebraicas separables de $k$, y los $\omega_\lambda:k(A_\lambda)\to\Omega$ forman un sistema inductivo de $k$-homomorfismos. Además, el límite inductivo
+\begin{equation}
+  \omega:\varinjlim k(A_\lambda)\longrightarrow\Omega
+  \label{IV.18.8.6.1}
+  \tag{18.8.6.1}
+\end{equation}
+es un $k$-\emph{isomorfismo}. Basta, en efecto, demostrar que, para toda extensión finita separable $k'$ de $k$, existe una $A$-álgebra esencialmente étale $A'$ tal que $k'$ sea el cuerpo residual de $A'$ y que el homomorfismo $k\to k'$ se deduzca de $A\to A'$ por paso a los cocientes. Pero esto se deduce de (18.1.1), aplicado a los morfismos étale, teniendo en cuenta que $\Spec(A)$ es la única vecindad de su punto cerrado.
+
+Observemos ahora que, si $\mathfrak m_\lambda$ es el ideal maximal de $A_\lambda$, se deduce de (17.6.1) que, para $\lambda\leq\mu$, se tiene $\mathfrak m_\mu=\mathfrak m_\lambda A_\mu$ y que $A_\mu$ es un $A_\lambda$-módulo plano. Por tanto, se deduce de ($0_{\mathrm{III}}$, 10.3.1.3) que el anillo $\varinjlim A_\lambda$ es \emph{local}, que el homomorfismo canónico $w:A\to\varinjlim A_\lambda$ es local y que se tiene un $k$-isomorfismo canónico
+\[
+  \varinjlim k(A_\lambda)\xrightarrow{\sim}k(\varinjlim A_\lambda);
+\]
+identificando estos dos cuerpos, se deduce un $k$-\emph{isomorfismo canónico}
+\begin{equation}
+  \omega^{-1}:\Omega\xrightarrow{\sim}k(\varinjlim A_\lambda).
+  \label{IV.18.8.6.2}
+  \tag{18.8.6.2}
+\end{equation}
+\end{env}
+
+\begin{definition}[18.8.7]
+\label{IV.18.8.7}
+Sean $A$ un anillo local, $k=k(A)$ su cuerpo residual, e $i:k\to\Omega$ un homomorfismo de $k$ en una clausura separable $\Omega$ de $k$; se llama \emph{henselizado estricto} de $A$ relativo a $i$, y se denota por ${}^{hs}\!A_{(i)}$ (o por ${}^{hs}\!A$ cuando ello no da lugar a confusión), al límite inductivo del sistema inductivo $(A_\lambda,\varphi_{\mu\lambda})$ definido en (18.8.6).
+\end{definition}
+
+Como se tiene un $k$-isomorfismo canónico $\omega^{-1}:\Omega\xrightarrow{\sim}k({}^{hs}\!A_{(i)})$, $\Omega$ está dotado canónicamente de una estructura de ${}^{hs}\!A_{(i)}$-álgebra por el homomorfismo local
+\[
+  {}^{hs}\!A_{(i)}\longrightarrow k({}^{hs}\!A_{(i)})\xrightarrow{\omega}\Omega.
+\]
+
+Como en (18.6.5), se ve que la definición dada en (18.8.7) solo depende en apariencia de la elección del conjunto $\mathfrak E$; veremos además más abajo (18.8.8, (i) y (ii)) que ${}^{hs}\!A_{(i)}$ es un objeto que representa un funtor enteramente definido por los datos de $A$ y de $i$ ($0_{\mathrm{III}}$, 8.1.8), y que, por tanto, está definido como tal salvo isomorfismo único.
+
+\begin{proposition}[18.8.8]
+\label{IV.18.8.8}
+Sean $A$ un anillo local, $k$ su cuerpo residual, $i:k\to\Omega$ un homomorfismo de $k$ en una clausura separable de $k$, y ${}^{hs}\!A_{(i)}$ el henselizado estricto de $A$ correspondiente a $i$.
+\begin{enumerate}
+  \item[(i)] ${}^{hs}\!A_{(i)}$ es un anillo estrictamente local (18.8.2) y el homomorfismo estructural $w:A\to{}^{hs}\!A_{(i)}$ es local.
+  \item[(ii)] Para todo homomorfismo local $u:A\to B$, donde $B$ es un anillo estrictamente local, y todo $k$-homomorfismo $\psi:\Omega\to k(B)$, existe un único $A$-homomorfismo $v:{}^{hs}\!A_{(i)}\to B$ tal que $\psi$ se factoriza en $\Omega\xrightarrow{\omega^{-1}}k({}^{hs}\!A_{(i)})\xrightarrow{\overline v}k(B)$, donde $\overline v$ se deduce de $v$ por paso a los cocientes.
+
+\oldpage[IV-4]{147}
+
+  \item[(iii)] ${}^{hs}\!A_{(i)}$ es un $A$-módulo fielmente plano y, si $\mathfrak m$ es el ideal maximal de $A$, $\mathfrak m.{}^{hs}\!A_{(i)}$ es el ideal maximal de ${}^{hs}\!A_{(i)}$, y $k({}^{hs}\!A_{(i)})$ es una clausura separable de $k$.
+  \item[(iv)] Para que ${}^{hs}\!A_{(i)}$ sea noetheriano, es necesario y suficiente que $A$ lo sea.
+  \item[(v)] Si $A$ es estrictamente local (y, por tanto, $\Omega=k$), se tiene ${}^{hs}\!A\xrightarrow{\sim}A$.
+  \item[(vi)] Si $i':k\to\Omega'$ es un segundo homomorfismo de $k$ en una clausura separable de $k$, para todo $k$-isomorfismo $\sigma:\Omega\xrightarrow{\sim}\Omega'$, el $A$-homomorfismo correspondiente (por (ii)) $v_\sigma:{}^{hs}\!A_{(i)}\to{}^{hs}\!A_{(i')}$ es un isomorfismo.
+\end{enumerate}
+\end{proposition}
+
+Ya hemos visto más arriba que ${}^{hs}\!A_{(i)}$ es un anillo local y que $w$ es un homomorfismo local; el hecho de que ${}^{hs}\!A_{(i)}$ sea henseliano (y, por tanto, estrictamente local) se demuestra como en (18.6.6). Las afirmaciones de (iii), así como la suficiencia de la condición (iv), se deducen también de ($0_{\mathrm{III}}$, 10.3.1.3); la necesidad de esta condición se deduce de que ${}^{hs}\!A_{(i)}$ es un $A$-módulo fielmente plano ($0_{\mathrm I}$, 6.5.2).
+
+Para demostrar (ii), observemos, con las notaciones de (18.8.6), que, para todo $\lambda\in L$, existe un único $A$-homomorfismo local $v_\lambda:A_\lambda\to B$ tal que el compuesto $k(A_\lambda)\xrightarrow{\omega_\lambda}\Omega\xrightarrow{\psi}k(B)$ se deduce de $v_\lambda$ por paso a los cocientes, en virtud de (18.8.4) y de la hipótesis de que $B$ es estrictamente local. La unicidad de $v_\lambda$ implica además que los $v_\lambda$ forman un sistema inductivo, de donde se deduce la existencia del homomorfismo $v$ que satisface las condiciones de (ii); su unicidad se deduce de (17.4.9). La unicidad de $v$ implica inmediatamente la afirmación (vi), considerando los compuestos $v_\sigma\circ v_{\sigma^{-1}}$ y $v_{\sigma^{-1}}\circ v_\sigma$. Por último, si $A$ es estrictamente local y $A'=B_{\mathfrak n}$ es una $A$-álgebra local esencialmente étale, donde $B$ es una $A$-álgebra étale, se deduce de (18.8.1) que existe una $\Spec(A)$-sección de $\Spec(B)$ que toma el valor $\mathfrak n$ en el punto cerrado de $\Spec(A)$; por tanto, se deduce de (17.4.1) que el homomorfismo $A\to A'$ es biyectivo, lo que demuestra (v).
+
+\begin{env}[18.8.8.1]
+\label{IV.18.8.8.1}
+Sea $\mathcal C$ la categoría de los anillos estrictamente locales, cuyos morfismos son los homomorfismos locales; para todo $B\in\mathcal C$, denotemos por $F(B)$ el conjunto de los pares $(u,\psi)$ formados por un homomorfismo local $u:A\to B$ y un $k$-homomorfismo $\psi:\Omega\to k(B)$ tales que el compuesto $k(A)=k\xrightarrow{i}\Omega\xrightarrow{\psi}k(B)$ se deduce de $u$ por paso a los cocientes. Puede decirse que el objeto ${}^{hs}\!A_{(i)}$ \emph{representa} el funtor covariante $F:\mathcal C\to\mathbf{Ens}$ ($0_{\mathrm{III}}$, 8.1.11).
+
+Se observará que, en virtud de (18.8.8, (vi)), los henselizados estrictos ${}^{hs}\!A_{(i)}$ son todos $A$-isomorfos (para los diversos $k$-homomorfismos $i$ de $k$ en clausuras separables de $k$), pero, para $i$ e $i'$ dados, hay en general una infinidad de $A$-isomorfismos ${}^{hs}\!A_{(i)}\xrightarrow{\sim}{}^{hs}\!A_{(i')}$. Más precisamente, el grupo de los $A$-automorfismos de ${}^{hs}\!A_{(i)}$ es isomorfo al grupo de Galois de $\Omega$ sobre $k$.
+\end{env}
+
+\begin{env}[18.8.9]
+\label{IV.18.8.9}
+Sea ahora $A$ un anillo \emph{semilocal}, sean $\mathfrak m_j$ ($1\leq j\leq r$) sus ideales maximales y, para todo índice $j$, consideremos un homomorfismo $i_j:k(A_{\mathfrak m_j})\to\Omega_j$ de $k(A_{\mathfrak m_j})$ en una clausura separable de este cuerpo. Se llama \emph{henselizado estricto} de $A$ relativo a los $i_j$, y se denota por ${}^{hs}\!A$ (cuando ello no da lugar a confusión), al producto $\prod_{j=1}^r({}^{hs}(A_{\mathfrak m_j}))$ de los henselizados estrictos de los anillos locales $A_{\mathfrak m_j}$ relativos a los homomorfismos $i_j$.
+
+\oldpage[IV-4]{148}
+
+Es, por tanto, en virtud de (18.8.8), un $A$-módulo fielmente plano y una $A$-álgebra semilocal cuyos ideales maximales son los $\mathfrak m_j.{}^{hs}\!A$, y cuyo radical es $\mathfrak r.{}^{hs}\!A$ (si $\mathfrak r$ denota el radical de $A$). Por último, la propiedad universal (18.8.8, (ii)) sigue siendo válida sustituyendo «homomorfismo local» por «homomorfismo semilocal» (18.6.7), y sustituyendo $\Omega$ por $\prod_j\Omega_j$.
+\end{env}
+
+\begin{proposition}[18.8.10]
+\label{IV.18.8.10}
+Sean $A$ un anillo semilocal y $B$ una $A$-álgebra finita. Sean $\mathfrak n_j$ ($1\leq j\leq r$) los ideales maximales de $B$. Entonces existe, para cada $j$, un ideal maximal $\mathfrak q_j$ de $B\otimes_A({}^{hs}\!A)$ situado sobre $\mathfrak n_j$, tal que ${}^{hs}\!B$ es isomorfo al producto directo de los anillos locales $(B\otimes_A({}^{hs}\!A))_{\mathfrak q_j}$ ($1\leq j\leq r$).
+\end{proposition}
+
+Evidentemente, podemos limitarnos al caso en que $A$ es local, sustituyendo $A$ por $A_{\mathfrak m_j}$, donde $\mathfrak m_j$ es el ideal maximal de $A$ imagen inversa de $\mathfrak n_j$. Pongamos, por otra parte, $C=B_{\mathfrak n_j}$; en virtud de la definición de ${}^{hs}\!B$ (18.8.9), todo se reduce a ver que ${}^{hs}\!C$ es $C$-isomorfo a $(C\otimes_A({}^{hs}\!A))_{\mathfrak q}$, donde $\mathfrak q$ es uno de los ideales maximales de $C\otimes_A({}^{hs}\!A)$. Sean $k$ y $K$ los cuerpos residuales de $A$ y $C$, y $\Omega$ el de ${}^{hs}\!A$, que es por definición una clausura separable de $k$; como $K$ es una extensión finita de $k$, podemos suponer que $K$ y $\Omega$ están contenidos en una misma clausura algebraica de $k$; entonces es inmediato que $K\otimes_k\Omega$ es producto directo de un número finito de cuerpos, todos isomorfos a la clausura separable $K\Omega$ de $K$. Por otra parte, como el anillo ${}^{hs}\!A$ es henseliano, $C\otimes_A({}^{hs}\!A)$ es producto directo de los anillos locales $(C\otimes_A({}^{hs}\!A))_{\mathfrak q_i}$, donde $\mathfrak q_i$ ($1\leq i\leq s$) recorre los ideales maximales de $C\otimes_A({}^{hs}\!A)$, y estos anillos locales son henselianos (18.5.10) y tienen $K\Omega$ por cuerpo residual, luego son estrictamente locales (18.8.1). Para abreviar, pongamos $C'=C\otimes_A({}^{hs}\!A)$ y $C'_i=C'_{\mathfrak q_i}$, que es, por tanto, un anillo cociente de $C'$; sean $f:C\to C'$, $g:{}^{hs}\!A\to C'$ y $\varphi_i:C'\to C'_i$ las aplicaciones canónicas.
+
+\[
+\xymatrix{
+  &&& {}^{hs}\!C \ar@<0.8ex>[dl]_{w'} \\
+  && C'_i \ar@<0.8ex>[ur]_{w} \\
+  C \ar[uurrr]^{v} \ar[r]_{f} & C' \ar[ur] \\
+  A \ar[u] \ar[r] & {}^{hs}\!A \ar[u]^{g} \ar[uuurr]_{u}
+}
+\]
+
+Sea $v:C\to{}^{hs}\!C$ el homomorfismo canónico; existe un único homomorfismo local $u:{}^{hs}\!A\to{}^{hs}\!C$ que, por paso a los cocientes, da la inyección canónica $\Omega\to K\Omega$ y tal que el compuesto $A\to C\xrightarrow{v}{}^{hs}\!C$ sea igual al compuesto $A\to{}^{hs}\!A\xrightarrow{u}{}^{hs}\!C$ (18.8.8); por tanto, existe un único homomorfismo local $w_0:C'\to{}^{hs}\!C$ tal que $w_0\circ g=u$, $w_0\circ f=v$, y, puesto que ${}^{hs}\!C$ es un anillo local, este homomorfismo se factoriza en $C'\xrightarrow{\varphi_i}C'_i\xrightarrow{w}{}^{hs}\!C$ para un índice $i$ bien determinado, siendo $w$ un homomorfismo local. Por otra parte, como el anillo $C'_i$ es estrictamente local, existe un homomorfismo local $w':{}^{hs}\!C\to C'_i$ que, por paso a los cocientes, da el automorfismo identidad de $K\Omega$ y que satisface $w'\circ v=\varphi_i\circ f$ (18.8.8). Se deduce en primer lugar que $w\circ w'$ es un endomorfismo de ${}^{hs}\!C$ que, por paso a los cocientes, da el automorfismo identidad de $K\Omega$ y, por tanto, es
+
+\oldpage[IV-4]{149}
+
+la identidad (18.8.8). Por otra parte, se tiene $w'\circ w\circ\varphi_i\circ f=w'\circ v=\varphi_i\circ f$, y $w'\circ w\circ\varphi_i\circ g=w'\circ u=\varphi_i\circ g$; de donde $w'\circ w\circ\varphi_i=\varphi_i$, es decir, $w'\circ w$ es el automorfismo identidad de $C'_i$. Q.E.D.
+
+\begin{remark}[18.8.11]
+\label{IV.18.8.11}
+La demostración de (18.8.10) utiliza el hecho de que $B$ es entera sobre $A$, pero solo utiliza el hecho de que $B$ sea una $A$-álgebra \emph{finita} para establecer que $K\otimes_k\Omega$ es producto directo de un número finito de cuerpos. Ahora bien, esta última propiedad sigue verificándose cuando se supone que $B$ es una $A$-álgebra \emph{entera semilocal} cuyos ideales maximales $\mathfrak n_j$ tienen grados residuales separables $[k(\mathfrak n_j):k]_s$ finitos.
+\end{remark}
+
+\begin{proposition}[18.8.12]
+\label{IV.18.8.12}
+Sea $A$ un anillo semilocal.
+\begin{enumerate}
+  \item[(i)] Para que ${}^{hs}\!A$ sea reducido (resp. normal), es necesario y suficiente que $A$ lo sea.
+  \item[(ii)] Supongamos que $A$ es noetheriano. Entonces, para todo ideal primo $\mathfrak p$ de $A$, el anillo $({}^{hs}\!A)_{\mathfrak p}/\mathfrak p.({}^{hs}\!A)_{\mathfrak p}$ es producto directo de un número finito de extensiones algebraicas separables de $k(\mathfrak p)$ (lo que implica que las fibras del morfismo canónico $\Spec({}^{hs}\!A)\to\Spec(A)$ son \emph{geométricamente regulares} y son espacios \emph{discretos}).
+\end{enumerate}
+\end{proposition}
+
+\begin{corollary}[18.8.13]
+\label{IV.18.8.13}
+Sea $A$ un anillo local noetheriano. Para que ${}^{hs}\!A$ posea una de las propiedades siguientes:
+\begin{enumerate}
+  \item[$a)$] ser un anillo de Cohen--Macaulay (0, 16.5.3);
+  \item[$b)$] verificar la condición $(S_n)$ (5.7.3);
+  \item[$c)$] ser regular;
+  \item[$d)$] verificar la condición $(R_n)$ (5.8.2);
+\end{enumerate}
+es necesario y suficiente que $A$ posea esta misma propiedad.
+\end{corollary}
+
+\begin{corollary}[18.8.14]
+\label{IV.18.8.14}
+Sea $A$ un anillo semilocal noetheriano. Para que un ideal primo $\mathfrak p$ de ${}^{hs}\!A$ pertenezca a $\operatorname{Ass}({}^{hs}\!A)$, es necesario y suficiente que $\mathfrak p\cap A$ pertenezca a $\operatorname{Ass}(A)$.
+\end{corollary}
+
+Las demostraciones son las mismas que las de (18.6.9), (18.6.10) y (18.6.11), respectivamente.
+
+\begin{proposition}[18.8.15]
+\label{IV.18.8.15}
+Sea $A$ un anillo local; las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $A$ es geométricamente unirrama (resp. reducido y geométricamente unirrama).
+  \item[$b)$] Para toda $A$-álgebra local esencialmente étale $A'$, $\Spec(A')$ es irreducible (resp. íntegro).
+  \item[$c)$] $\Spec({}^{hs}\!A)$ es irreducible (resp. íntegro).
+\end{enumerate}
+\end{proposition}
+
+Como en (18.6.12), se reduce al caso en que $A$ es reducido, utilizando la relación ${}^{hs}(A_{\mathrm{red}})=({}^{hs}\!A)\otimes_A A_{\mathrm{red}}$ (18.8.11), y la equivalencia entre $b)$ y $c)$ se demuestra como en (18.6.12); lo mismo sucede con el hecho de que $a)$ implica $c)$, teniendo en cuenta (18.8.11) y la definición de un anillo local íntegro geométricamente unirrama. Por último, para demostrar que $c)$ implica $a)$, conservemos las mismas notaciones que en (18.6.12); se trata también de ver que ${}^{hs}\!B$ es íntegro. Pero, por (18.8.10), ${}^{hs}\!B$ es un anillo localizado del anillo semilocal $B\otimes_A({}^{hs}\!A)$, que, por planitud, se identifica también con un subanillo del cuerpo $L$ y, por tanto, es íntegro; en consecuencia, lo mismo sucede con ${}^{hs}\!B$, lo que termina la demostración.
+
+\begin{corollary}[18.8.16]
+\label{IV.18.8.16}
+Sea $A$ un anillo local henseliano (resp. estrictamente local). Para que $A$ sea unirrama (resp. geométricamente unirrama), es necesario y suficiente que $\Spec(A)$ sea irreducible.
+\end{corollary}
+
+\oldpage[IV-4]{150}
+
+\begin{proposition}[18.8.17]
+\label{IV.18.8.17}
+Sea $A$ un anillo local noetheriano. Si $A$ es universalmente catenario, lo mismo sucede con ${}^{hs}\!A$.
+\end{proposition}
+
+La demostración es la misma que la de (18.7.5).
+
+\begin{proposition}[18.8.18]
+\label{IV.18.8.18}
+\begin{enumerate}
+  \item[(i)] Todo límite inductivo filtrante de anillos estrictamente locales (donde los homomorfismos de transición son locales) es un anillo estrictamente local.
+  \item[(ii)] El funtor $A\leadsto{}^{hs}\!A$ en la categoría de los anillos locales (donde los morfismos son los homomorfismos locales) conmuta con los límites inductivos filtrantes.
+  \item[(iii)] Todo anillo estrictamente local $A$ es límite inductivo de un sistema inductivo filtrante de anillos estrictamente locales noetherianos (siendo locales los homomorfismos de transición).
+\end{enumerate}
+\end{proposition}
+
+Las demostraciones están calcadas de las de (18.6.14).

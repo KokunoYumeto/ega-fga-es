@@ -1,0 +1,117 @@
+\documentclass[10pt,oneside]{book}
+
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=15\fi
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{aurical}
+\usepackage[all]{xy}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,hypertexnames=false,unicode=true,pdfencoding=auto]{hyperref}
+\hypersetup{
+  pdftitle={Elementos de geometría algebraica III, segunda parte — edición española},
+  pdfauthor={Alexander Grothendieck y Jean Dieudonné},
+  pdfsubject={Estudio cohomológico de los haces coherentes: secciones 6 y 7}
+}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\newcommand{\sh}[1]{\mathscr{#1}}
+\newcommand{\shTor}{\sh{T}\textup{\kern-2.2pt{\Fontauri\slshape or}}}
+\newcommand{\RR}{\mathrm R}
+\newcommand{\HH}{\mathrm H}
+\newcommand{\bb}[1]{\mathbf{#1}}
+\newcommand{\cat}[1]{\mathtt{#1}}
+\newcommand{\kres}{\kappa}
+\newcommand{\vphi}{\phi}
+\newcommand{\supertilde}{{\,\widetilde{\,}\,}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\shProj}{\mathscr{P}\!roj}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Coker}{\operatorname{Coker}}
+\newcommand{\isoto}{\xrightarrow{\sim}}
+\newcommand{\simto}{\xrightarrow{\sim}}
+\newcommand{\shHom}{\mathscr{H}\!om}
+\newcommand{\sref}[2][]{(#2)}
+\newcommand{\oldpage}[2][]{\setcounter{footnote}{0}\marginpar{\scriptsize\textbf{#1}~|~#2}\ignorespaces}
+\newenvironment{env}[1][]{\par\medskip\noindent\textbf{(#1)}\ }{\par}
+\newenvironment{theorem}[1][]{\par\medskip\noindent\itshape Teorema (#1). ---\ }{\par}
+\newenvironment{proposition}[1][]{\par\medskip\noindent\itshape Proposición (#1). ---\ }{\par}
+\newenvironment{lemma}[1][]{\par\medskip\noindent\itshape Lema (#1). ---\ }{\par}
+\newenvironment{corollary}[1][]{\par\medskip\noindent\itshape Corolario (#1). ---\ }{\par}
+\newenvironment{remark}[1][]{\par\medskip\noindent\itshape Observación (#1). ---\ }{\par}
+\newenvironment{remarks}[1][]{\par\medskip\noindent\itshape Observaciones (#1). ---\ }{\par}
+\newenvironment{scholium}[1][]{\par\medskip\noindent\textit{Escolio (#1). ---\ }}{\par}
+\newenvironment{definition}[1][]{\par\medskip\noindent\itshape Definición (#1). ---\ }{\par}
+\newenvironment{proof}{\par\medskip\noindent\textit{Demostración. ---\ }}{\par}
+\newenvironment{namedtheorem}[2][]{\par\medskip\noindent\itshape #2 (#1). ---\ }{\par}
+
+\newcommand{\EGAUnit}[1]{\input{units/#1.es.tex}}
+
+\setlength{\emergencystretch}{6em}
+\begin{document}
+% BEGIN RIGHTS AND AI TRANSLATION NOTICE
+\begingroup
+\small
+\noindent\textbf{Derechos, disponibilidad y autoría}
+
+Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Este proyecto no dedica esas obras o contribuciones al dominio público ni concede una licencia sobre ellas. Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
+
+Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en NUMDAM (www.numdam.org/). Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
+
+Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede abrir una incidencia en GitHub (github.com/KokunoYumeto/ega-fga-es/issues). El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
+
+La traducción al español está producida por IA. Las correcciones, la edición y la composición también están producidas por IA. El responsable de la publicación no tradujo el texto. Se conservan la autoría y las atribuciones de las obras originales y de las contribuciones heredadas; no se atribuyen a la IA. Los modelos documentados se identifican en cada edición.
+\par
+\endgroup
+\clearpage
+% END RIGHTS AND AI TRANSLATION NOTICE
+
+\begin{titlepage}
+  \centering
+  {\Large A. Grothendieck y J. Dieudonné\par}
+  \vfill
+  {\Huge Elementos de geometría algebraica III\par}
+  \vspace{1.5ex}
+  {\LARGE Segunda parte\par}
+  \vfill
+  {\large Traducción española\par}
+  \vspace{1ex}
+  {\small Texto original: A. Grothendieck y J. Dieudonné, Publications Mathématiques de l’IHÉS, volumen 17 (1963)\par}
+\end{titlepage}
+
+\chapter*{CAPÍTULO III (continuación)\\[1.2ex]
+\Large ESTUDIO COHOMOLÓGICO DE LOS HACES COHERENTES}
+
+\setcounter{section}{5}
+\setcounter{subsection}{0}
+\setcounter{equation}{0}
+\setcounter{footnote}{0}
+\EGAUnit{III.6.1}
+\EGAUnit{III.6.2}
+\EGAUnit{III.6.3}
+\EGAUnit{III.6.4}
+\EGAUnit{III.6.5}
+\EGAUnit{III.6.6}
+\EGAUnit{III.6.7}
+\EGAUnit{III.6.8}
+\EGAUnit{III.6.9}
+\EGAUnit{III.6.10}
+\EGAUnit{III.7.1}
+\EGAUnit{III.7.2}
+\EGAUnit{III.7.3}
+\EGAUnit{III.7.4}
+\EGAUnit{III.7.5}
+\EGAUnit{III.7.6}
+\EGAUnit{III.7.7}
+\EGAUnit{III.7.8}
+\EGAUnit{III.7.9}
+\EGAUnit{III.backmatter}
+\end{document}

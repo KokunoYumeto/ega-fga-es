@@ -1,0 +1,681 @@
+\oldpage[IV-3]{173}
+
+\section{Estudio de las fibras de los morfismos planos de presentación finita}
+\label{section:IV.12}
+
+\setcounter{subsection}{-1}
+\subsection{Introducción}
+\label{subsection:IV.12.0}
+
+\emph{En todo este parágrafo utilizaremos la notación general de} \sref{IV.9.4.1}.
+
+\begin{env}[12.0.1]
+\label{IV.12.0.1}
+Dado un morfismo \emph{localmente de presentación finita} $f:X\to Y$, hemos visto \sref{IV.9.9} que, para ciertas propiedades \emph{locales} $\mathbf{P}$ de preesquemas sobre cuerpos o de Módulos sobre estos preesquemas, el conjunto $\mathrm{E}$ de los $x\in\mathrm{X}$ tales que la propiedad $\mathbf{P}$ se cumple, para la \emph{fibra} $\mathrm{X}_{f(x)}$, en el punto $x$ de esta fibra, es \emph{localmente construible en} $\mathrm{X}$.
+Nos proponemos ahora demostrar que, para la mayoría de estas propiedades, si se supone además que el morfismo $f$ es \emph{plano}, entonces el conjunto $\mathrm{E}$ es de hecho \emph{abierto en} $\mathrm{X}$.
+Análogamente (\sref{IV.9.2} a \sref{IV.9.8}), hemos demostrado que, si $f$ es \emph{de presentación finita} y esta vez $\mathbf{P}$ designa ciertas propiedades \emph{globales} de preesquemas sobre cuerpos o de Módulos sobre estos preesquemas, el conjunto $\mathrm{F}$ de los $y\in\mathrm{Y}$ tales que la propiedad $\mathbf{P}$ se cumple para la fibra $\mathrm{X}_y$ es \emph{localmente construible en} $\mathrm{Y}$.
+Demostraremos que, si se supone además que el morfismo $f$ es \emph{propio} y \emph{plano}, $\mathrm{F}$ es de hecho \emph{abierto en} $\mathrm{Y}$.
+\end{env}
+
+\begin{env}[12.0.2]
+\label{IV.12.0.2}
+El método general de demostración de las propiedades consideradas comprende tres etapas.
+Primero se reduce al caso en que $\mathrm{Y}$ es \emph{afín} y $\mathrm{X}$ es de presentación finita; después:
+
+\medskip
+\begin{enumerate}[label=\emph{\Alph*)}]
+  \item Con ayuda de \sref{IV.8.9.1} (y eventualmente de otros resultados de \textsection\,8) y de \sref{IV.11.2.6}, se reduce al caso en que $\mathrm{X}$ y $\mathrm{Y}$ son \emph{noetherianos}.
+
+  \item Se aplican los resultados de \textsection\,9 recordados en \sref{IV.12.0.1} para demostrar que $\mathrm{E}$ (resp.\ $\mathrm{F}$) es \emph{construible}.
+
+  \item Para ver que $\mathrm{E}$ es abierto basta, en virtud de \sref[0]{0.9.2.5}, demostrar que, si $x\in\mathrm{E}$, toda \emph{generización} $x'$ de $x$ pertenece también a $\mathrm{E}$.
+Mediante \sref[II]{II.7.1.7} se ve que, puesto que $\mathrm{Y}$ es \emph{noetheriano}, existe el espectro de un \emph{anillo de valoración discreta} $\mathrm{Y}_1$ y un morfismo $h:\mathrm{Y}_1\to\mathrm{X}$ tales que, si $y_1$ (resp.\ $y_1'$) es el punto cerrado (resp.\ el punto genérico) de $\mathrm{Y}_1$, se tiene $h(y_1)=x$, $h(y_1')=x'$.
+Se efectúa entonces el cambio de base $g=f\circ h:\mathrm{Y}_1\to\mathrm{Y}$; teniendo en cuenta los resultados de \textsection\textsection\,4 y 6 sobre los preesquemas localmente noetherianos sobre cuerpos y los cambios del cuerpo base, se reduce a demostrar la afirmación considerada para un punto $x_1$ de $\mathrm{X}_1=\mathrm{X}\times_{\mathrm{Y}}\mathrm{Y}_1$ situado sobre $y_1$ y para una generización $x_1'$ de $x_1$ situada sobre $y_1'$.
+Como $\mathrm{Y}_1=\Spec(\mathrm{A})$, donde $\mathrm{A}$ es un anillo de valoración discreta, de uniformizante $t$, hay que demostrar finalmente, para un $\mathrm{A}$-módulo $\mathrm{M}$, una propiedad de $\mathrm{M}$ sabiendo que $\mathrm{M}/t\mathrm{M}$ posee la misma propiedad y que $t$ es $\mathrm{M}$-\emph{regular} (lo cual resulta de la hipótesis de planitud); para ello se utilizan los resultados de \sref{IV.3.4} y de \sref{IV.5.12}.
+Se procede de manera análoga para el conjunto $\mathrm{F}\subset\mathrm{Y}$.
+\end{enumerate}
+\end{env}
+
+\oldpage[IV-3]{174}
+
+\subsection{Propiedades locales de las fibras de un morfismo plano localmente de presentación finita}
+\label{subsection:IV.12.1}
+
+\begin{theorem}[12.1.1]
+\label{IV.12.1.1}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita, $\sh{F}$ un $\sh{O}_X$-Módulo $f$-plano y de presentación finita, $\Phi$ una parte finita de $\mathbf{Z}\cup\{\pm\infty\}$ y $k$ un entero.
+Los siguientes subconjuntos de $X$ son abiertos:
+\begin{enumerate}[label=(\roman*)]
+  \item El conjunto de los $x\in X$ tales que las dimensiones de los ciclos primos asociados a $\sh{F}_{f(x)}$ y que contienen a $x$ pertenecen a $\Phi$.
+  \item El conjunto de los $x\in X$ tales que todos los ciclos primos asociados a $\sh{F}_{f(x)}$ y que contienen a $x$ tienen dimensión $k$.
+  \item El conjunto de los $x\in X$ tales que $x$ no pertenece a ningún ciclo primo inmerso asociado de $\sh{F}_{f(x)}$.
+  \item El conjunto de los $x\in X$ tales que $\sh{F}_{f(x)}$ es equidimensional en el punto $x$ y posee la propiedad $(\mathrm{S}_k)$ en el punto $x$ \sref{IV.5.7.2}.
+  \item El conjunto de los $x\in X$ tales que $\operatorname{coprof}((\sh{F}_{f(x)})_x)\leqslant k$ \sref[0]{0.16.4.9}.
+  \item El conjunto de los $x\in X$ tales que $\sh{F}_{f(x)}$ es un $\sh{O}_{X_{f(x)}}$-Módulo de Cohen--Macaulay en el punto $x$ \sref{IV.5.7.1}.
+  \item El conjunto de los $x\in X$ tales que $\sh{F}_{f(x)}$ es geométricamente reducido en el punto $x$ \sref{IV.4.6.22}.
+  \item El conjunto de los $x\in X$ tales que $\sh{F}_{f(x)}$ es geométricamente puntualmente íntegro en el punto $x$ \sref{IV.4.6.22}.
+\end{enumerate}
+
+Como las cuestiones son locales sobre $X$, se reduce primero al caso en que $X=\Spec(B)$ e $Y=\Spec(A)$ son afines y $f$ es un morfismo de presentación finita.
+Existe entonces un subanillo noetheriano $A_0$ de $A$, un $A_0$-preesquema de tipo finito $X_0$ y un $\sh{O}_{X_0}$-Módulo coherente $\sh{F}_0$ tales que $\sh{F}_0\otimes_{A_0}A$ es isomorfo a $\sh{F}$ \sref{IV.8.9.1}; además, en virtud de \sref{IV.11.2.6}, se puede suponer que $\sh{F}_0$ es $Y_0$-plano (con $Y_0=\Spec(A_0)$).
+Si $h:X\to X_0$ es la proyección canónica, el conjunto $E$ de los puntos $x\in X$ en los que se satisface una de las propiedades (i) a (viii) es igual a $h^{-1}(E_0)$, donde $E_0$ es el conjunto de los $x_0\in X_0$ en los que se satisface la propiedad correspondiente para $\sh{F}_0$: esto resulta, para las propiedades (i) a (iii), de \sref{IV.4.2.7}; para las propiedades (iv) a (vi), de \sref{IV.6.7.1}; para las propiedades (vii) y (viii), de \sref{IV.4.7.11}.
+\end{theorem}
+
+Se reduce así al caso en que $A$ y $B$ son noetherianos, $f$ es de tipo finito y $\sh{F}=\widetilde{M}$, donde $M$ es un $B$-módulo de tipo finito.
+En virtud de \sref{IV.9.9.2}, se sabe que el conjunto $E$ es \emph{construible} para todas las propiedades consideradas, y queda en cada caso la etapa~C) de \sref{IV.12.0.2}, en la que hay que demostrar que $E$ es \emph{estable por generización}.
+
+\begin{env}[12.1.1.1]
+\label{IV.12.1.1.1}
+Comencemos por el caso~(iii), que es el más sencillo.
+Sea $x'\neq x$ una generización de $x$ en $X$.
+Pongamos $y=f(x)$, $y'=f(x')$; existe el espectro de un anillo de valoración discreta $Y_1$ y un morfismo $u:Y_1\to X$ tales que, si $y_1$ e $y_1'$ son respectivamente el punto cerrado y el punto genérico de $Y_1$, se tiene $u(y_1)=x$ y $u(y_1')=x'$ \sref[II]{II.7.1.7}; pongamos $g=f\circ u:Y_1\to Y$; si $X_1=X\times_Y Y_1$, existe una $Y_1$-sección $u_1:Y_1\to X_1$ tal que $u=g_1\circ u_1$, donde $g_1:X_1\to X$ es la proyección canónica.
+Si $x_1=u_1(y_1)$, $x_1'=u_1(y_1')$, se tiene $g_1(x_1)=x$ y $g_1(x_1')=x'$, y $x_1'$ es una generización de $x_1$.
+Aplicando de nuevo \sref{IV.4.2.7}, se ve
+\oldpage[IV-3]{175}
+que se reduce al caso en que $Y=\Spec(A)$ es el espectro de un anillo de valoración discreta, siendo $y$ el punto cerrado e $y'$ el punto genérico de $Y$.
+Si $t$ es un uniformizante de $A$, la hipótesis de que $\sh{F}$ es $f$-plano implica que $t$ es $\sh{F}$-regular \sref[0]{0.6.3.4}.
+Por hipótesis, ninguno de los ciclos primos inmersos asociados de $\sh{F}/t\sh{F}$ contiene a $x$.
+Entonces, de \sref{IV.3.4.4} se sigue que $x$ no pertenece a ningún ciclo primo inmerso asociado de $\sh{F}$, y lo mismo ocurre con toda generización de $x$.
+En particular, $x'$ no pertenece a ningún ciclo primo inmerso asociado de $\sh{F}$, ni \emph{a fortiori} a ninguno de los asociados a $\sh{F}_{y'}$ (pues $X_{y'}$ es un subpreesquema que induce un subconjunto abierto de $X$).
+\end{env}
+
+\begin{env}[12.1.1.2]
+\label{IV.12.1.1.2}
+Consideremos ahora los casos~(iv) y~(v) ((vi) no es sino un caso particular de~(v)).
+Se procede como antes (utilizando \sref{IV.6.7.1} en lugar de \sref{IV.4.2.7}) y se reduce al caso en que $Y$ es el espectro de un anillo de valoración discreta~$A$.
+
+El anillo $C=\sh{O}_{X,x}$ es entonces el localizado de una $A$-álgebra de tipo finito, luego es catenario \sref{IV.5.6.4}, y por hipótesis el $C$-módulo $M_x/tM_x$ satisface $(\mathrm{S}_k)$ y es equidimensional (resp.\ se tiene $\operatorname{coprof}(M_x/tM_x)\leqslant k$); se deduce de \sref{IV.5.12.2} (resp.\ de \sref[0]{0.16.4.10}) que $M_x$ satisface $(\mathrm{S}_k)$ y es equidimensional (resp.\ que $\operatorname{coprof}(M_x)\leqslant k$), pues $t$ es $M_x$-regular y pertenece al ideal maximal de $C$.
+De aquí resultan las conclusiones, puesto que $x'$ es una generización de $x$ y $(\sh{F}_{y'})_{x'}=\sh{F}_{x'}$.
+\end{env}
+
+\begin{env}[12.1.1.3]
+\label{IV.12.1.1.3}
+Pasemos a los casos~(vii) y~(viii).
+Evidentemente se puede sustituir $Y$ por el subpreesquema íntegro cuyo espacio subyacente es $\overline{\{y'\}}$, y $X$ por $f^{-1}(\overline{\{y'\}})$, sin cambiar las fibras en $y$ e $y'$; se puede suponer, pues, que $A$ es íntegro, con cuerpo de fracciones $K=k(y')$.
+Se sabe (\sref{IV.4.5.11} y \sref{IV.4.7.8}) que existe una extensión finita $K'$ de $K$ tal que, para el $(\sh{O}_X\otimes_A K')$-Módulo $\sh{F}'=\sh{F}\otimes_A K'$, los ciclos primos asociados son geométricamente irreducibles y las longitudes geométricas de $\sh{F}'$ en los puntos maximales $z_i'$ de su soporte son respectivamente iguales a las longitudes de $\sh{F}'_{z_i'}$ en estos puntos; por tanto, teniendo en cuenta \sref{IV.4.2.7}, equivale decir que $\sh{F}$ es geométricamente reducido (resp.\ geométricamente puntualmente íntegro) en un punto $x'$ de $X_{y'}=X\otimes_A K$, o decir que $\sh{F}'$ es \emph{reducido} (resp.\ \emph{íntegro}) en los puntos de $X\otimes_A K'$ situados sobre $x'$.
+Sea $A'$ una $A$-álgebra finita cuyo cuerpo de fracciones es $K'$; de \sref{IV.4.7.11} se sigue que, en todo punto de $X\otimes_A A'$ situado sobre $x$, $\sh{F}\otimes_A A'$ posee la propiedad~(vii) (resp.~(viii)).
+Sustituyendo $A$ por $A'$ y $X$ por $X\otimes_A A'$, se ve que se puede reducir a demostrar que $\sh{F}$ es \emph{reducido} (resp.\ \emph{íntegro}) en toda generización $x'$ de $x$.
+Se procede entonces como en \sref{IV.12.1.1.1}, utilizando esta vez \sref{IV.4.7.11}, en el caso en que $A$ es un anillo de valoración discreta, $y$ es el punto cerrado, $y'$ el punto genérico de $Y$, y el uniformizante $t$ de $A$ es un elemento $M$-\emph{regular}.
+Como por hipótesis $\sh{F}/t\sh{F}$ es reducido (resp.\ íntegro) en el punto $x$, de \sref{IV.3.4.6} (resp.\ \sref{IV.3.4.5}) se sigue que $\sh{F}$ es reducido (resp.\ íntegro) en el punto $x$, y por tanto también en un entorno de $x$, en particular en el punto $x'$, lo que termina la demostración en los casos~(vii) y~(viii).
+\end{env}
+
+\begin{env}[12.1.1.4]
+\label{IV.12.1.1.4}
+Queda examinar los casos~(i) y~(ii).
+Sustituyendo $Y$ por el subpreesquema íntegro cuyo espacio subyacente es $\overline{\{y'\}}$, se puede reducir al caso en que $Y$ es irreducible e $y'$ es su punto genérico. Sea $z'$ un punto genérico de un ciclo primo asociado de $\sh{F}_{y'}$
+\oldpage[IV-3]{176}
+que contiene a $x'$, y sea $Z'$ la adherencia de $z'$ en $X$, de modo que $x\in Z'$.
+Para tratar el caso~(i), bastará demostrar la
+
+\begin{proposition}[12.1.1.5]
+\label{IV.12.1.1.5}
+Sea $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $\sh{F}$ un $\sh{O}_X$-Módulo coherente y $f$-plano; para todo $y\in Y$, pongamos $\sh{F}_y=\sh{F}\otimes_{\sh{O}_Y}k(y)$.
+Sea $z'$ un punto de $X$, $y'=f(z')$, y supongamos que $z'\in\operatorname{Ass}(\sh{F}_{y'})$.
+Sea $Z'$ \textnormal{(}resp.\ $Y'$\textnormal{)} el subpreesquema reducido de $X$ \textnormal{(}resp.\ de $Y$\textnormal{)} cuyo espacio subyacente es la adherencia de $\{z'\}$ en $X$ \textnormal{(}resp.\ de $\{y'\}$ en $Y$\textnormal{)}.
+Entonces, para todo $y\in f(Z')$, las dimensiones de todas las componentes irreducibles de $Z'_y$ son iguales a $\dim(Z'_{y'})$ \textnormal{(}dimensión de la adherencia de $z'$ en $X_{y'}$\textnormal{)} \textnormal{(}lo que expresaremos más precisamente después \sref{IV.13.2.2} diciendo que la restricción $Z'\to Y'$ de $f$ es un morfismo equidimensional\textnormal{)}; además, en todo punto maximal $z$ de $Z'_y$, se tiene $z\in\operatorname{Ass}(\sh{F}_y)$.
+\end{proposition}
+
+Para ello, reduzcamos ahora al caso en que $Y$ es el espectro de un anillo de valoración discreta.
+Tomemos el espectro de un anillo de valoración discreta $Y_1$ y un morfismo $h:Y_1\to X$ tales que $h(y_1)=z$, $h(y_1')=z'$, siendo $y_1$ e $y_1'$ respectivamente el punto cerrado y el punto genérico de $Y_1$ \sref[II]{II.7.1.7}.
+Pongamos $g=f\circ h:Y_1\to Y$, $X_1=X\times_Y Y_1$, y sean $f_1:X_1\to Y_1$, $g_1:X_1\to X$ las proyecciones canónicas; existe una $Y_1$-sección $h_1:Y_1\to X_1$ tal que $h=g_1\circ h_1$ \sref[I]{I.3.3.14}.
+Si $Z_1'=Z'_{y'}\otimes_{k(y')}k(y_1')$, se sabe \sref{IV.4.2.6} que las componentes irreducibles de $Z_1'$ dominan $Z'_{y'}$; sea $z_1'$ el punto genérico de una de estas componentes que contiene a $h_1(y_1')$, de modo que $f_1(z_1')=y_1'$ y $g_1(z_1')=z'$.
+Como $h_1(y_1)$ es una especialización de $h_1(y_1')$, es \emph{a fortiori} una especialización de $z_1'$; sea $z_1$ un punto genérico de una de las componentes irreducibles de $\overline{\{z_1'\}}\cap(X_1)_{y_1}$ que contienen a $h_1(y_1)$.
+Entonces $g_1(z_1)$ es una especialización de $g_1(z_1')=z'$ en $X$, y $z=h(y_1)=g_1(h_1(y_1))$ es una especialización de $g_1(z_1)$; pero, puesto que $f(g_1(z_1))=y$ y $z$ es un punto genérico de $Z'_y$, se tiene necesariamente $z=g_1(z_1)$.
+
+Supongamos ahora demostrado que, si se pone $\sh{F}_1=\sh{F}\otimes_{\sh{O}_Y}\sh{O}_{Y_1}$, entonces $z_1\in\operatorname{Ass}((\sh{F}_1)_{y_1})$; de \sref{IV.4.2.7} se seguirá que $z\in\operatorname{Ass}(\sh{F}_y)$; además, las dimensiones de $\overline{\{z_1\}}\cap(X_1)_{y_1}$ y de $\overline{\{z\}}\cap X_y$ son iguales, y asimismo las dimensiones de $\overline{\{z_1'\}}\cap(X_1)_{y_1'}$ y de $\overline{\{z'\}}\cap X_{y'}$ son iguales \sref{IV.4.2.7}; se ha reducido, pues, como se anunció, al caso en que $Y$ es el espectro de un anillo de valoración discreta $A$, siendo $y$ e $y'$ respectivamente su punto cerrado y su punto genérico.
+
+Como $z'\in\operatorname{Ass}(\sh{F}_{y'})$, se tiene \emph{a fortiori} $z'\in\operatorname{Ass}(\sh{F})$.
+Si $t$ es un uniformizante de $A$, $t$ es $\sh{F}$-regular por planitud, por lo que \sref{IV.3.4.3} da $z\in\operatorname{Ass}(\sh{F}/t\sh{F})=\operatorname{Ass}(\sh{F}_y)$.
+En cuanto a la afirmación relativa a las dimensiones, se deduce de \sref{IV.7.1.13}, aplicado a un subpreesquema cerrado de $X$ cuyo espacio subyacente es $Z'$.
+
+Abordemos finalmente el caso~(ii) de \sref{IV.12.1.1}.
+Con la misma notación, hay que demostrar que, si todos los ciclos primos asociados a $\sh{F}_y$ y que contienen a $x$ tienen dimensión $k$, lo mismo ocurre con todos los ciclos primos asociados a $\sh{F}_{y'}$ y que contienen a $x'$.
+Ahora bien, acabamos de ver que \emph{todo} ciclo primo asociado a $\sh{F}_{y'}$ y que contiene a $x'$ tiene la misma dimensión que \emph{uno} de los ciclos primos asociados a $\sh{F}_y$ y que contienen a $x$; esto demuestra~(ii).
+\end{env}
+
+\begin{remarks}[12.1.2]
+\label{IV.12.1.2}
+\begin{enumerate}[label=(\roman*)]
+  \item En las condiciones de \sref{IV.12.1.1.5}, con $\sh{F}=\sh{O}_X$ (de modo que $f$ es \emph{plano}), no se puede afirmar en general que la restricción $Z'\to Y'$ de $f$ sea un morfismo plano, ni siquiera un morfismo \emph{abierto}.
+Esto es lo que muestra el ejemplo \sref{IV.6.5.5},
+\oldpage[IV-3]{177}
+(ii), en el que se toma por $Z'$ una de las dos componentes irreducibles de $X=\Spec(B)$.
+Es inmediato que este morfismo restricción no es abierto en los puntos de $Z'$ situados sobre el «punto doble» de $Y'=Y$.
+
+  \item Bajo las hipótesis de \sref{IV.12.1.1.5}, con $\sh{F}=\sh{O}_X$, no se puede debilitar la condición «$f$ es plano» sustituyéndola por «$f$ es universalmente abierto» (cf.\ \sref{IV.2.4.6}), como veremos más adelante con un ejemplo \sref{IV.14.4.10},~(i)).
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[12.1.3]
+\label{IV.12.1.3}
+Bajo las hipótesis de \sref{IV.12.1.1}, la función $x\mapsto\operatorname{coprof}((\sh{F}_{f(x)})_x)$ es semicontinua superiormente en $X$, y la función $x\mapsto\operatorname{prof}_x^*(\sh{F}_{f(x)})$ \sref{IV.10.8.1} es semicontinua inferiormente en $X$.
+\end{corollary}
+
+La primera afirmación no es sino una formulación equivalente de \sref{IV.12.1.1},~(v).
+Para demostrar la segunda, se puede primero, teniendo en cuenta \sref{IV.10.8.7} y \sref{IV.10.8.8}, reducir como en \sref{IV.12.1.1} al caso en que $Y$ es el espectro de un anillo de valoración discreta $A$, de punto cerrado $y$ y punto genérico $y'$, siendo $X=\Spec(B)$ afín y $\sh{F}=\widetilde{M}$, donde $M$ es un $B$-módulo de tipo finito.
+Como $\sh{F}$ es $f$-plano, toda componente irreducible de $\operatorname{Supp}(\sh{F})$ que contiene a $x\in X_y$ domina $Y$ \sref{IV.2.3.4}; en otras palabras, su punto genérico $z'$ pertenece a $X_{y'}$. Las componentes irreducibles $Z$ de $\operatorname{Supp}(\sh{F})$ que contienen una generización $x'$ de $x$ perteneciente a $X_{y'}$ son, por tanto, exactamente las que contienen a $x$; además, por \sref{IV.12.1.1.5}, se tiene $\dim(Z_{y'})=\dim(Z_y)$, de donde, si $T=\operatorname{Supp}(\sh{F})$, $\dim_x(T_y)=\dim_{x'}(T_{y'})$.
+Además, para un uniformizante $t$ de $A$, se ha visto en \sref{IV.12.1.1},~(v) que $\operatorname{coprof}(M_x)=\operatorname{coprof}(M_x/tM_x)$; como, por otra parte, $\operatorname{coprof}(M_{x'})\leqslant\operatorname{coprof}(M_x)$ \sref{IV.6.11.5}, se ve que $\operatorname{coprof}((\sh{F}_{y'})_{x'})\leqslant\operatorname{coprof}((\sh{F}_y)_x)$; la relación $\operatorname{prof}_x^*(\sh{F}_y)\leqslant\operatorname{prof}_{x'}^*(\sh{F}_{y'})$ resulta entonces de \sref{IV.10.8.7}.
+
+\begin{remark}[12.1.4]
+\label{IV.12.1.4}
+También se deduce de \sref{IV.12.1.1},~(i) que la función $x\mapsto\dim_x(X_{f(x)})$ es semicontinua superiormente en $X$, pero veremos más adelante \sref{IV.13.1.3} que esta propiedad es cierta incluso sin suponer $f$ plano.
+\end{remark}
+
+\begin{corollary}[12.1.5]
+\label{IV.12.1.5}
+Sea $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $\sh{F}$ un $\sh{O}_X$-Módulo coherente $f$-plano, $\sh{G}$ un $\sh{O}_Y$-Módulo coherente, $x$ un punto de $X$ e $y=f(x)$.
+Supongamos que $\sh{G}$ posee la propiedad $(\mathrm{S}_k)$ en el punto $y$, y que $\sh{F}_y$ posee la propiedad $(\mathrm{S}_k)$ en el punto $x$ y es equidimensional en el punto $x$.
+Entonces:
+\begin{enumerate}[label=(\roman*)]
+  \item $\sh{F}\otimes_{\sh{O}_Y}\sh{G}$ posee la propiedad $(\mathrm{S}_k)$ en el punto $x$.
+  \item Si además $Y$ es localmente inmersible en un esquema regular, o es un preesquema excelente \sref{IV.7.8.5}, existe un entorno $V$ de $x$ en $X$ tal que $\sh{F}\otimes_{\sh{O}_Y}\sh{G}$ posee la propiedad $(\mathrm{S}_k)$ en ese entorno.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+En efecto, por \sref{IV.12.1.1},~(iv), existe un entorno abierto $V$ de $x$ tal que, para todo $x'\in V$, $\sh{F}_{f(x')}$ satisface $(\mathrm{S}_k)$ en el punto $x'$.
+Por otra parte, $\sh{G}$ satisface $(\mathrm{S}_k)$ en todos los puntos de $\Spec(\sh{O}_y)$ \sref{IV.5.7.2}.
+Sustituyendo $Y$ por $Y'=\Spec(\sh{O}_y)$ y $X$ por $V\times_Y Y'$, se reduce (teniendo en cuenta \sref[I]{I.3.6.5}) al caso en que $\sh{G}$ satisface $(\mathrm{S}_k)$ en todo $Y$ y en que, para todo $y\in f(X)$, $\sh{F}_y$ posee la propiedad $(\mathrm{S}_k)$ en todos los puntos de $f^{-1}(y)$; como $\sh{F}$ es $f$-plano, se sabe entonces por \sref{IV.6.4.1} que $\sh{F}\otimes_{\sh{O}_Y}\sh{G}$ posee la propiedad $(\mathrm{S}_k)$ en $X$, lo que demuestra~(i).
+Para demostrar~(ii), basta observar que, bajo las hipótesis formuladas, $\sh{G}$ posee la
+\oldpage[IV-3]{178}
+propiedad $(\mathrm{S}_k)$ en un entorno $U$ de $y$ en $Y$ \sref{IV.6.11.2} y \sref{IV.7.8.3},~(iv)); se concluye entonces de la misma manera, sustituyendo esta vez $Y$ por $U$ y $X$ por $V\times_Y U$.
+\end{proof}
+
+\begin{theorem}[12.1.6]
+\label{IV.12.1.6}
+Sea $f:X\to Y$ un morfismo plano localmente de presentación finita, y sea $k$ un entero.
+Los siguientes subconjuntos de $X$ son abiertos:
+\begin{enumerate}[label=(\roman*)]
+  \item El conjunto de los puntos $x\in X$ tales que $X_{f(x)}$ posee la propiedad $(\mathrm{S}_k)$ en el punto $x$.
+  \item El conjunto de los $x\in X$ tales que $X_{f(x)}$ satisface geométricamente la propiedad $(\mathrm{R}_k)$ en el punto $x$, es equidimensional en el punto $x$ y, además, $x$ no pertenece a ningún ciclo primo inmerso asociado de $X_{f(x)}$.
+  \item El conjunto de los $x\in X$ tales que $X_{f(x)}$ es geométricamente regular (es decir, liso) en el punto $x$.
+  \item El conjunto de los $x\in X$ tales que $X_{f(x)}$ es geométricamente normal en el punto $x$.
+\end{enumerate}
+
+Las etapas~A) y~B) de \sref{IV.12.0.2} se efectúan aquí como en \sref{IV.12.1.1}; para la etapa~A), se utiliza \sref{IV.6.7.8}, y también \sref{IV.4.2.7} para~(ii); para la etapa~B), se utilizan \sref{IV.9.9.2} y \sref{IV.9.9.4}.
+Queda examinar la etapa~C) en cada caso.
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item[(i)] Como en \sref{IV.12.1.1.2}, se reduce (utilizando \sref{IV.6.7.8}) al caso en que $Y$ es el espectro de un anillo de valoración discreta $A$, $X=\Spec(B)$, donde $B$ es una $A$-álgebra de tipo finito, y $x,x'$ son dos puntos de $X$ tales que $f(x)=y$ es el punto cerrado e $y'=f(x')$ el punto genérico de $Y$, siendo además $x'$ una generización de $x$.
+Como se quiere demostrar que $X$ satisface $(\mathrm{S}_k)$ en el punto $x'$, se puede sustituir $X$ por $\Spec(\sh{O}_{X,x})$; es decir, se puede suponer que el anillo $B$ es local, que el homomorfismo $A\to B$ es local y que $B$ es una $A$-álgebra esencialmente de tipo finito \sref{IV.1.3.8}.
+Entonces, por hipótesis, si $t$ es un uniformizante de $A$, $t$ es un elemento $B$-regular por planitud, y $B/tB$ satisface $(\mathrm{S}_k)$.
+Pero, como $A$ es un anillo universalmente catenario \sref{IV.5.6.4}, $B$ es catenario; por tanto, de \sref{IV.5.12.4} se sigue que $B$ satisface $(\mathrm{S}_k)$, lo que termina la demostración en el caso~(i).
+
+  \item[(iii)] Aquí la etapa~C) es innecesaria; en efecto, como $f$ es plano, se sabe por \sref{IV.6.8.7} que, cuando $Y$ es localmente noetheriano y $f$ localmente de tipo finito, el conjunto de los $x\in X$ tales que $X_{f(x)}$ es geométricamente regular en el punto $x$ es abierto en $X$.
+
+  \item[(ii)] Razonando como en \sref{IV.12.1.1.3}, para demostrar que la propiedad considerada es estable por generización, se puede primero, considerando una extensión finita arbitraria $K'$ de $k(y')$ y teniendo en cuenta la definición \sref{IV.6.7.6} de la propiedad geométrica $(\mathrm{R}_k)$, así como la invariancia por cambio del cuerpo base de las otras dos propiedades que aparecen en~(ii), sustituir en~(ii) la propiedad geométrica $(\mathrm{R}_k)$ por la propiedad $(\mathrm{R}_k)$.
+Procediendo entonces como en~(i), se reduce al caso en que $Y$ es el espectro de un anillo de valoración discreta $A$; como $A$ es catenario, basta aplicar \sref{IV.5.12.5} para concluir.
+
+  \item[(iv)] El conjunto de los puntos $x\in X$ tales que $X_{f(x)}$ es geométricamente normal en el punto $x$ está contenido en el de los $x\in X$ tales que $X_{f(x)}$ es geométricamente puntualmente íntegro y satisface $(\mathrm{S}_2)$ en el punto $x$, y este último conjunto es abierto en $X$ en virtud de \sref{IV.12.1.1},~(viii).
+Se puede, pues, suponer ya que, para todo $x\in X$, $X_{f(x)}$ es geométricamente puntualmente íntegro y satisface $(\mathrm{S}_2)$ en el punto $x$, y \emph{a fortiori} es equidimensional.
+Por otra parte, según el criterio de Serre \sref{IV.5.8.6}, decir que $X_{f(x)}$ es geométricamente normal en el punto $x$ significa que $X_{f(x)}$ satisface $(\mathrm{S}_2)$ y geométricamente la propiedad $(\mathrm{R}_1)$ en $x$;
+\oldpage[IV-3]{179}
+pero, en virtud de~(ii) y de las observaciones precedentes, este conjunto es la intersección de dos subconjuntos abiertos de $X$, luego es abierto en $X$.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[12.1.7]
+\label{IV.12.1.7}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita.
+Entonces, el conjunto de los puntos $x\in X$ en los que $f$ posee una de las propiedades siguientes \sref{IV.6.8.1}:
+\begin{enumerate}[label=(\roman*)]
+  \item satisface la propiedad $(\mathrm{S}_k)$;
+  \item tiene coprofundidad $\leqslant n$;
+  \item es de Cohen--Macaulay;
+  \item es regular (o liso, lo que equivale a lo mismo);
+  \item es normal;
+  \item es reducido;
+\end{enumerate}
+es abierto en $X$.
+\end{corollary}
+
+\begin{proof}
+En efecto, de \sref{IV.11.3.1} se sigue que el conjunto de los $x\in X$ en los que $f$ es \emph{plano} es \emph{abierto}.
+Se puede, pues, restringir al caso en que $f$ es plano, y entonces el corolario resulta de \sref{IV.12.1.1},~(iv),~(vi) y~(vii), y de \sref{IV.12.1.6},~(i),~(ii) y~(iv).
+\end{proof}
+
+\begin{remarks}[12.1.8]
+\label{IV.12.1.8}
+\begin{enumerate}[label=(\roman*)]
+  \item En \sref{IV.12.1.6},~(ii), no se puede suprimir la hipótesis de que $x$ no pertenece a ningún ciclo primo inmerso asociado de $X_{f(x)}$.
+Lo muestra el ejemplo \sref{IV.5.12.3}: se toma $X=\Spec(A)$, siendo $Y$ el espectro del anillo local $A_0$ de $k[T]$ correspondiente al ideal primo $(T)$, y el morfismo $X\to Y$ correspondiente al homomorfismo inyectivo $A_0\to A$ obtenido, por localización y paso al cociente, de la inyección $k[T]\to k[T,U,V]$.
+Este morfismo es plano porque $A$ es un $A_0$-módulo sin torsión \sref[0]{0.6.3.4}.
+Aquí la fibra $X_y$ en el punto cerrado $y$ de $Y$, igual a $\Spec(A/tA)$, es irreducible, de dimensión~1 y satisface geométricamente la condición $(\mathrm{R}_0)$, pues el anillo local en su punto genérico es un cuerpo.
+En cambio, en el punto genérico $y'$ de $Y$, la fibra $X_{y'}$ tiene dos componentes irreducibles de dimensiones~0 y~1, y la de dimensión~0 no es reducida, de modo que $X_{y'}$ no satisface la condición $(\mathrm{R}_0)$.
+
+  \item En \sref{IV.12.1.6},~(ii), tampoco se puede suprimir la hipótesis de que $X_{f(x)}$ es equidimensional en el punto $x$.
+Se ve mediante el ejemplo \sref{IV.5.12.6}, con $X=\Spec(A)$ e $Y=\Spec(A_0)$, donde $A_0$ se define como en~(i); el morfismo $X\to Y$ se obtiene de nuevo de la inyección $k[T]\to k[T,U,V,W]$ por localización y paso al cociente, y es plano porque $A$ es un $A_0$-módulo sin torsión \sref[0]{0.6.3.4}.
+La fibra $X_y$ en el punto cerrado $y$ de $Y$ es reducida (por tanto satisface $(\mathrm{S}_1)$) y satisface $(\mathrm{R}_1)$, pero tiene dos componentes irreducibles de dimensiones~2 y~1, mientras que la fibra $X_{y'}$ en el punto genérico $y'$ de $Y$ no satisface $(\mathrm{R}_1)$.
+\end{enumerate}
+\end{remarks}
+
+
+\subsection{Propiedades locales y globales de las fibras de un morfismo propio y plano de presentación finita}
+\label{subsection:IV.12.2}
+
+\oldpage[IV-3]{179}
+
+\begin{theorem}[12.2.1]
+\label{IV.12.2.1}
+Sea $f:X\to Y$ un morfismo \emph{propio} de presentación finita, $\sh{F}$ un $f$-plano $\sh{O}_X$-módulo de presentación finita, $\Phi$ una parte finita de $\mathbf{Z}\cup\{\pm\infty\}$ y $k$ un entero.
+Los siguientes subconjuntos de $Y$ son abiertos:
+\begin{enumerate}[label=(\roman*)]
+  \item El conjunto de los $y\in Y$ tales que el conjunto de las dimensiones de los ciclos primos asociados a $\sh{F}_y$ está contenido en $\Phi$.
+  \item El conjunto de los $y\in Y$ tales que el conjunto de las dimensiones de las componentes irreducibles de $\operatorname{Supp}(\sh{F}_y)$ contiene a $\Phi$.
+  \item El conjunto de los $y\in Y$ tales que todos los ciclos primos asociados a $\sh{F}_y$ tienen la misma dimensión, igual a $k$.
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ no tiene ningún ciclo primo inmerso asociado y el conjunto de las dimensiones de las componentes irreducibles de $\operatorname{Supp}(\sh{F}_y)$ es igual a $\Phi$.
+\oldpage[IV-3]{180}
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ posee la propiedad $(\mathrm{S}_k)$ y es equidimensional en todo punto de $X_y$.
+  \item El conjunto de los $y\in Y$ tales que $\operatorname{coprof}(\sh{F}_y)\leqslant k$.
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ es un $\sh{O}_{X_y}$-Módulo de Cohen--Macaulay.
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ es geométricamente reducido.
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ es geométricamente puntualmente íntegro en todo punto de $X_y$.
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ es geométricamente íntegro.
+  \item El conjunto de los $y\in Y$ tales que $\sh{F}_y$ no tiene ningún ciclo primo inmerso asociado y la suma $l(y)$ de las multiplicidades totales \sref{IV.4.7.12} de $\sh{F}_y$ en los puntos maximales de $\operatorname{Supp}(\sh{F}_y)$ es $\leqslant k$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Con excepción de~(ii), (iii), (iv), (x) y~(xi), las propiedades $\mathbf{P}(y)$ consideradas son de la forma: «para todo $x\in X_y$, $\sh{F}_y$ posee la propiedad $\mathbf{Q}(x)$», donde $\mathbf{Q}(x)$ es una de las propiedades~(i) a~(viii) de \sref{IV.12.1.1}.
+De \sref{IV.12.1.1} se sigue que el conjunto $U$ de los $x\in X$ tales que $\mathbf{Q}(x)$ es verdadera es abierto, y que el conjunto $V$ de los $y\in Y$ tales que $\mathbf{P}(y)$ es verdadera es precisamente $Y-f(X-U)$; en todos estos casos, el teorema queda, por tanto, demostrado bajo la sola hipótesis de que el morfismo $f$ sea \emph{cerrado}.
+Para~(iii), se aplica~(i) con $\Phi$ reducido a un solo elemento.
+Queda examinar por separado los casos~(ii), (iv) y~(xi) ((x) se deduce inmediatamente de~(xi) y \sref{IV.4.7.13}),\footnote{La fuente impresa cita (4.7.14), pero la {\EGAReadLink{IV.4.7}{Sección 4.7}} termina con la {\EGAReadLink{IV.4.7.13}{Proposición 4.7.13}} antes de que comience la {\EGAReadLink{IV.4.8}{Sección 4.8}}; la {\EGAReadLink{IV.4.7.13}{Proposición 4.7.13}} es el criterio pertinente de integralidad geométrica.} aplicando siempre el método descrito en \sref{IV.12.0.2}.
+\end{proof}
+
+\begin{env}[12.2.1.1]
+\label{IV.12.2.1.1}
+Caso~(ii): Las etapas~A) y~B) de la demostración se desarrollan como al comienzo de \sref{IV.12.1.1}; para la etapa~A), se utilizan \sref{IV.8.9.1}, \sref{IV.11.2.6}, así como \sref{IV.4.2.7}; para la etapa~B), se utiliza \sref{IV.9.5.5} aplicado a $\operatorname{Supp}(\sh{F})$.
+Queda demostrar que, si (suponiendo $Y$ noetheriano) el conjunto de las dimensiones de las componentes irreducibles de $\operatorname{Supp}(\sh{F}_y)$ contiene a $\Phi$, ocurre lo mismo con el conjunto de las dimensiones de las componentes irreducibles de $\operatorname{Supp}(\sh{F}_{y'})$, para toda \emph{generización} $y'$ de $y$ en $Y$.
+Sea $Y_1$ el espectro de un anillo de valoración discreta tal que, si $y_1$ e $y_1'$ son el punto cerrado y el punto genérico de $Y_1$, existe un morfismo $h:Y_1\to Y$ tal que $h(y_1)=y$, $h(y_1')=y'$ \sref[II]{II.7.1.7}.
+Aplicando \sref{IV.4.2.7}, se ve que se puede sustituir $Y$ por $Y_1$ y $X$ por $X_1=X\times_Y Y_1$; en otras palabras, se puede restringir al caso en que $Y$ es el espectro de un anillo de valoración discreta, $y$ su punto cerrado e $y'$ su punto genérico.
+
+Utilizando (\textbf{Err}\textsubscript{\textbf{III}},~30), se puede restringir al caso en que $\operatorname{Supp}(\sh{F})=X$, de modo que $f$ es cuasiplano \sref{IV.2.3.3}; las componentes irreducibles $Z_i$ de $X$ dominan entonces $Y$ \sref{IV.2.3.4}, es decir, sus puntos genéricos pertenecen a $X_{y'}$, y los $Z_i\cap X_{y'}$ son las componentes irreducibles de $X_{y'}$.
+Pero toda componente irreducible de $X_y$ está contenida en uno de los $Z_i$, luego es una componente irreducible de $(Z_i)_y$; ahora bien, se sabe por \sref{IV.7.1.13} que las dimensiones de todas las componentes irreducibles de $(Z_i)_y$ son iguales a $\dim((Z_i)_{y'})$, lo que termina la demostración de~(ii).
+\end{env}
+
+\begin{env}[12.2.1.2]
+\label{IV.12.2.1.2}
+Caso~(iv): El mismo razonamiento que al comienzo de \sref{IV.12.2.1.1}, utilizando \sref{IV.12.1.1},~(iii), muestra que se puede suponer ya (sustituyendo $Y$ por un subconjunto abierto de $Y$) que, para todo $y\in Y$, $\sh{F}_y$ no tiene ningún ciclo primo inmerso asociado.
+La afirmación del caso~(iv) es entonces consecuencia inmediata de las afirmaciones de los casos~(i) y~(ii).
+\end{env}
+
+\begin{env}[12.2.1.3]
+\label{IV.12.2.1.3}
+\oldpage[IV-3]{181}
+Caso~(xi): Para la etapa~A) del razonamiento, se utilizan \sref{IV.8.9.1}, \sref{IV.11.2.6}, {\hyperlink{ega4.c04.thm.8-10-5}{(8.10.5,~(xii))}} (para conservar la hipótesis de que $f$ es propio), así como \sref{IV.4.2.7}, \sref{IV.4.5.6} y \sref{IV.4.7.9}.
+Para la etapa~B), se ve, como en el caso~(iv), que se puede suponer que, para todo $y\in Y$, $\sh{F}_y$ no tiene ningún ciclo primo inmerso asociado, y se aplica \sref{IV.9.8.8}, que demuestra que la función $z\mapsto l(z)$ es construible.
+Queda, por tanto, ver (suponiendo $Y$ noetheriano y $f$ propio) que, para toda generización $y'$ de un punto $y\in Y$, $l(y')\leqslant l(y)$.
+Razonando como en \sref{IV.12.1.1.3}, se ve (con ayuda de \sref{IV.4.7.8} y \sref{IV.4.5.11}) que se puede suponer que las componentes irreducibles de $\operatorname{Supp}(\sh{F}_{y'})$ son geométricamente irreducibles y que $l(y')$ es la \emph{suma de las longitudes} de $(\sh{F}_{y'})_{z_j'}$ en los puntos maximales $z_j'$ de $\operatorname{Supp}(\sh{F}_{y'})$.
+Aplicando de nuevo \sref{IV.4.2.7}, \sref{IV.4.5.6} y \sref{IV.4.7.9}, se reduce, como en \sref{IV.12.2.1.1}, al caso en que $Y$ es el espectro de un anillo de valoración discreta, $y$ su punto cerrado e $y'$ su punto genérico.
+El hecho de que $l(y')\leqslant l(y)$ será entonces consecuencia del
+
+\begin{lemma}[12.2.1.4]
+\label{IV.12.2.1.4}
+Sea $Y$ el espectro de un anillo de valoración discreta, $y$ su punto cerrado, $y'$ su punto genérico, $f:X\to Y$ un morfismo propio, $\sh{F}$ un $\sh{O}_X$-Módulo coherente y $f$-plano, y sean $z_i$ \textnormal{(}resp.\ $z_j'$\textnormal{)} los puntos maximales de $\operatorname{Supp}(\sh{F}_y)$ \textnormal{(}resp.\ de $\operatorname{Supp}(\sh{F}_{y'})$\textnormal{)}.
+Supongamos que $\sh{F}_y$ no tiene ningún ciclo primo inmerso asociado.
+Entonces se tiene
+\[
+  \sum_j \operatorname{long}((\sh{F}_{y'})_{z_j'}) \leqslant \sum_i \operatorname{long}((\sh{F}_y)_{z_i}).
+\]
+\end{lemma}
+
+Se tiene $Y=\Spec(A)$, donde $A$ es un anillo de valoración discreta, cuyo uniformizante denotaremos por $t$, de modo que $\sh{F}_y=\sh{F}/t\sh{F}$.
+Como $\sh{F}$ es $f$-plano, los $z_j'$ son también los puntos maximales de $\operatorname{Supp}(\sh{F})$ \sref{IV.2.3.4}; para cada $z_i$, denotemos por $z_{ik}'$ aquellos $z_j'$ que son generizaciones de $z_i$; de \sref{IV.3.4.1.1} se sigue que
+\[
+  \operatorname{long}((\sh{F}_y)_{z_i}) \geqslant \sum_k \operatorname{long}((\sh{F}_{y'})_{z_{ik}'})
+\]
+de donde, sumando,
+\[
+  \sum_i \operatorname{long}((\sh{F}_y)_{z_i}) \geqslant \sum_i \sum_k \operatorname{long}((\sh{F}_{y'})_{z_{ik}'}).
+\]
+
+El lema quedará, por tanto, demostrado si establecemos que, para todo $z_j'$, existe al menos un índice $i$ tal que $z_j'$ es uno de los $z_{ik}'$.
+Ahora bien, como $f$ es propio (luego cerrado) y $f(z_j')=y'$, existe $x\in X$ que es una especialización de $z_j'$ y tal que $f(x)=y$; en otras palabras, $\overline{\{z_j'\}}\cap X_y$ no es vacío.
+Como $t$ es $\sh{F}$-regular por planitud, se deduce de \sref{IV.3.4.3} que existe al menos un punto de $\operatorname{Ass}(\sh{F}_y)$ del cual $z_j'$ es una generización; pero, como los puntos de $\operatorname{Ass}(\sh{F}_y)$ son por hipótesis los $z_i$, esto termina la demostración del lema.
+\end{env}
+
+\begin{corollary}[12.2.2]
+\label{IV.12.2.2}
+Bajo las hipótesis de \sref{IV.12.2.1}:
+\begin{enumerate}[label=(\roman*)]
+  \item La función $y\mapsto\dim(\operatorname{Supp}(\sh{F}_y))$ es continua (y por tanto localmente constante) en $Y$.
+  \item La función $y\mapsto\operatorname{coprof}(\sh{F}_y)$ \sref{IV.5.7.1} es semicontinua superiormente en $Y$.
+  \item La función $y\mapsto l(y)$ \sref{IV.12.2.1},~(xi) es semicontinua superiormente en $Y$ cuando los $\sh{F}_y$ no tienen ningún ciclo primo inmerso asociado.
+\oldpage[IV-3]{182}
+  \item La función $y\mapsto\operatorname{prof}^*(\sh{F}_y)$ \sref{IV.10.8.1} es semicontinua inferiormente en $Y$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item De \sref{IV.12.2.1},~(i), aplicado a $\Phi$ igual al menor intervalo de $\mathbf{N}$ que contiene las dimensiones de los ciclos primos asociados a $\sh{F}_y$, se sigue que $z\mapsto\dim(\operatorname{Supp}(\sh{F}_z))$ es semicontinua superiormente en el punto $y$; por otra parte, de \sref{IV.12.2.1},~(ii), aplicado a $\Phi$ igual al conjunto de las dimensiones de las componentes irreducibles de $\operatorname{Supp}(\sh{F}_y)$, se sigue que esta misma función es semicontinua inferiormente en el punto $y$, de donde la conclusión.
+Las afirmaciones~(ii) y~(iii) no son sino otras formulaciones de \sref{IV.12.2.1},~(vi) y~(xi).
+Finalmente, por \sref{IV.12.1.3}, el conjunto de los $x\in X$ tales que $\operatorname{prof}_{f(x)}^*(\sh{F}_{f(x)})\leqslant k$ es abierto, y la conclusión de~(iv) resulta por el mismo razonamiento que al comienzo de \sref{IV.12.2.1}.
+\end{enumerate}
+\end{proof}
+
+\begin{remarks}[12.2.3]
+\label{IV.12.2.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Obsérvese que, para \sref{IV.12.2.1},~(ii), se puede prescindir de la hipótesis de que $f$ es \emph{propio}.
+
+  \item En \sref{IV.12.2.1},~(ii), no se puede sustituir la condición de que el conjunto $E(y)$ de las dimensiones de las componentes irreducibles de $\operatorname{Supp}(\sh{F}_y)$ contenga a $\Phi$ por la condición de que $E(y)$ sea \emph{igual a} $\Phi$.
+En efecto, sea $k$ un cuerpo, y consideremos el espacio proyectivo $P=\mathbf{P}_k^3=\operatorname{Proj}(C)$ de dimensión~$3$, donde $C=k[t_0,t_1,t_2,t_3]$ (siendo los $t_i$ indeterminadas). En $P$, sea $X_0$ el subpreesquema cerrado que es la «unión de la recta $X_1$ definida por $t_1=t_3=0$ y el plano $X_2$ definido por $t_2-t_3=0$». En términos geométricos, esto significa que $X_0=\operatorname{Proj}(C/\mathfrak{a})$, donde el ideal graduado $\mathfrak{a}=\mathfrak{b}\mathfrak{c}$, con $\mathfrak{b}=Ct_1+Ct_3$ y $\mathfrak{c}=C(t_2-t_3)$. Consideremos el morfismo $f_0:X_0\to X_1$ que, geométricamente, es la «proyección de $X_0$ sobre $X_1$ desde la recta del infinito $D$ definida por $t_0=t_2=0$». Algebraicamente, $f_0$ corresponde al homomorfismo de álgebras graduadas
+\[
+  k[t_0,t_2]\longrightarrow k[t_0,t_1,t_2,t_3]/\mathfrak{a}
+\]
+obtenido, por paso al cociente, de la inyección canónica $k[t_0,t_2]\to k[t_0,t_1,t_2,t_3]$.
+Está claro que $f_0$ es un morfismo proyectivo, luego \emph{propio}; lo mismo ocurre, por tanto, con su restricción $f:X\to Y$, donde $Y=D_+(t_0)$ y $X=f_0^{-1}(Y)$. Para ver que $f$ es \emph{plano}, basta observar que $k[t_2]$ es un dominio de ideales principales y que el anillo
+\[
+  C'=k[t_1,t_2,t_3]/(t_2-t_3)((t_1)+(t_3))
+\]
+es un $k[t_2]$-módulo sin torsión \sref[0]{0.6.3.4}.
+Para todo $y\in Y$ distinto del punto $y_0$ definido por $t_2=0$, $f^{-1}(y)$ tiene entonces dos componentes irreducibles, de dimensiones~0 y~1, mientras que $f^{-1}(y_0)$ solo tiene una componente irreducible, de dimensión~1.
+
+  \item En \sref{IV.12.2.1},~(i), tampoco se puede sustituir la condición de que el conjunto $E'(y)\supset E(y)$ de las dimensiones de los ciclos primos asociados a $\sh{F}_y$ esté contenido en $\Phi$ por la condición de que sea \emph{igual a} $\Phi$.
+En efecto, sea $k$ un cuerpo, sea $A$ el anillo de polinomios $k[t]$, y sea $B$ el subanillo $k[t^4,t^3u,tu^3,u^4]$ del anillo de polinomios $k[t,u]$ (donde $t,u$ son indeterminadas). El anillo $B$ no es íntegramente cerrado: el elemento $t^2u^2$ pertenece a su clausura integral, pero no a $B$. Si $\mathfrak{m}$ es el ideal maximal de $B$ generado por $t^4,t^3u,tu^3,u^4$, entonces $\mathfrak{m}$ es un ideal primo inmerso asociado de $B/Bt^4$.\footnote{La fuente impresa dice $A/At^4$; la construcción y el cálculo de la fibra que sigue requieren $B/Bt^4$.}
+Pongamos $Y=\Spec(A)$, $X=\Spec(B)$, y sea $f:X\to Y$ el morfismo correspondiente al homomorfismo $A\to B$ que envía $t$ en $t^4$.
+Como este homomorfismo hace de $B$ un $A$-módulo sin torsión, $f$ es plano \sref[0]{0.6.3.4}.
+Si $y$ es el punto de $Y$ correspondiente al ideal maximal $tA$, el preesquema $f^{-1}(y)$ es irreducible y de dimensión~1, pero tiene un ciclo primo inmerso asociado de dimensión~0. En cambio, si $y'$ es el punto genérico de $Y$, entonces $f^{-1}(y')$ no tiene ningún ciclo primo inmerso asociado, pues es el espectro de una $k(y')$-álgebra íntegra de dimensión~1. En este ejemplo, $f$ es un morfismo afín no propio; se obtiene inmediatamente un ejemplo análogo en el que $f$ es propio y plano considerando $X$ como un subconjunto abierto denso en todas partes de un esquema proyectivo sobre $Y$ \sref[II]{II.5.3.4} y \sref[II]{II.5.3.2}, o procediendo directamente como en la Observación~(ii).
+
+Las Observaciones~(ii) y~(iii) muestran la necesidad de incluir en \sref{IV.12.2.1},~(iv) la condición de que $\sh{F}_y$ no tenga ningún ciclo primo inmerso asociado.
+
+  \item En \sref{IV.12.2.1},~(xi), no se puede suprimir la hipótesis de que $f$ sea propio.
+En efecto, sea $k$ un cuerpo, sea $Y$ la «recta afín», el espectro del anillo de polinomios $k[t]$ ($t$ una indeterminada), y sea $X$ la unión disjunta de $Y$ y del abierto complementario del punto cerrado $y$ de $Y$ definido por $t=0$. Está claro que el morfismo $f:X\to Y$, que es igual a las inyecciones canónicas en las dos componentes de $X$, es plano y que, tomando $\sh{F}=\sh{O}_X$, el Módulo $\sh{F}_z$ no tiene ningún ciclo primo inmerso asociado para ningún $z\in Y$. Sin embargo, se tiene $l(y)=1$ y $l(z)=2$ para todo $z\neq y$.
+
+  \item En \sref{IV.12.2.1},~(xi), tampoco se puede suprimir la hipótesis de que $\sh{F}_y$ no tenga ningún ciclo primo inmerso asociado.
+Lo muestra el ejemplo de la Observación~(ii): se ve inmediatamente que, con $\sh{F}=\sh{O}_X$, $l(y_0)=1$ y $l(y)=2$ para $y\neq y_0$ en $Y$.
+
+  \item No sabemos si, en \sref{IV.12.2.1},~(xi), se puede sustituir la hipótesis de que $\sh{F}$ es $f$-plano por la hipótesis de que $\operatorname{Supp}(\sh{F})=X$ y $f$ es universalmente abierto.
+Retomando la demostración de \sref{IV.12.2.1.4}, se ve (utilizando también \sref{IV.14.3.6}) que habría que resolver la cuestión siguiente: sea $A$ un anillo local noetheriano, $M$ un $A$-módulo de tipo finito,
+\oldpage[IV-3]{183}
+$t$ un elemento del ideal maximal $\mathfrak{m}$ de $A$ que no está contenido en ningún ideal primo minimal de $A$; si existe uno de estos ideales primos minimales $\mathfrak{p}$ tal que $\dim(A/\mathfrak{p})=1$, ¿es cierto que $\mathfrak{m}$ es un ideal primo asociado de $M/tM$ (sin suponer que $t$ es $M$-regular)?
+
+Obsérvese, sin embargo, que en \sref{IV.12.2.1},~(xi) no se puede suprimir sin más la hipótesis de que $\sh{F}$ es $f$-plano. Tomemos aquí el $P$ de la Observación~(ii), y sea en $P$ el subpreesquema cerrado $X_0$ que es la unión de las tres rectas $X_1,X_2,X_3$ definidas respectivamente por $t_1=t_3=0$, $t_1-t_0=t_3=0$ y $t_2=t_3=0$. Definamos como antes la proyección $f_0$ de $X_0$ sobre $X_1$, y su restricción $f:X\to Y$, donde $Y=D_+(t_0)$ es la recta afín y $X=f_0^{-1}(Y)$. El morfismo $f$ es propio pero no plano y, tomando $\sh{F}=\sh{O}_X$, el Módulo $\sh{F}_y$ no tiene ningún ciclo primo inmerso asociado para ningún $y\in Y$. Pero se tiene $l(y_0)=1$ y $l(y)=2$ para $y\neq y_0$ en $Y$.
+\end{enumerate}
+\end{remarks}
+
+\begin{theorem}[12.2.4]
+\label{IV.12.2.4}
+Sea $f:X\to Y$ un morfismo propio y plano de presentación finita, y sea $k$ un entero $\geqslant 1$.
+Los siguientes subconjuntos de $Y$ son abiertos:
+\begin{enumerate}[label=(\roman*)]
+  \item El conjunto de los $y\in Y$ tales que $X_y$ posee la propiedad $(\mathrm{S}_k)$.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ satisface geométricamente la propiedad $(\mathrm{R}_k)$, es equidimensional en todo punto y no tiene ningún ciclo primo inmerso asociado.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ es geométricamente regular (es decir, liso sobre $k(y)$).
+  \item El conjunto de los $y\in Y$ tales que $X_y$ es geométricamente normal.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ es geométricamente reducido.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ es geométricamente reducido y el número de componentes conexas geométricas de $X_y$ es igual a $k$.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ es geométricamente puntualmente íntegro \sref{IV.4.6.9}.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ es geométricamente íntegro.
+  \item El conjunto de los $y\in Y$ tales que $X_y$ no tiene ningún ciclo primo inmerso asociado y la multiplicidad total \sref{IV.4.7.4} de $X_y$ sobre $k(y)$ es $\leqslant k$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Salvo~(vi), estas afirmaciones son casos particulares de afirmaciones de \sref{IV.12.2.1}, o se deducen de afirmaciones de \sref{IV.12.1.6} como al comienzo de la demostración de \sref{IV.12.2.1}.
+Para~(vi), se reduce como siempre (teniendo en cuenta la invariancia del número geométrico de componentes conexas por cambio de base \sref{IV.4.5.6}) al caso en que $Y$ es noetheriano.
+El conjunto $U$ de los $y\in Y$ tales que $X_y$ es geométricamente reducido es abierto en $Y$ en virtud de~(v); de \sref[III]{III.7.8.7} y~\sref[III]{III.7.8.6} se sigue entonces que, para todo $y\in U$, existe un entorno $V\subset U$ de $y$ y un entero $m$ tales que, para \emph{todo} $z\in V$, $\Gamma(X_z,\sh{O}_{X_z})$ es isomorfo a $(k(z))^m$; pero, en virtud de \sref[III]{III.4.3.4}, $m$ es entonces el número geométrico de componentes conexas de $X_z$, de donde la conclusión.
+Daremos otra demostración de~(vi) en \sref{IV.15.5.9}.
+\end{proof}
+
+
+\subsection{Propiedades cohomológicas locales de las fibras de un morfismo plano localmente de presentación finita}
+\label{subsection:IV.12.3}
+
+\begin{lemma}[12.3.1]
+\label{IV.12.3.1}
+Sea $A$ un anillo, $B$ una $A$-álgebra de presentación finita que es un $A$-módulo plano, y $M$ un $B$-módulo de presentación finita que es un $A$-módulo plano.
+Entonces las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $M$ es un $B$-módulo proyectivo.
+  \item $M$ es un $B$-módulo plano.
+  \item Para todo $y\in\Spec(A)$, $M\otimes_A k(y)$ es un $(B\otimes_A k(y))$-módulo proyectivo.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\oldpage[IV-3]{184}
+
+La equivalencia de \emph{a)} y \emph{b)} se deduce de Bourbaki, \emph{Alg.\ comm.}, cap.~II, \textsection\,5, n\textsuperscript{o}\,2, cor.~2 del teo.~1.
+Como \emph{a)} implica trivialmente \emph{c)}, queda demostrar que \emph{c)} implica \emph{b)}, lo cual resulta del criterio de planitud por las fibras \sref{IV.11.3.10}, aplicado con $g=h$, $f=1_X$.
+\end{proof}
+
+\begin{proposition}[12.3.2]
+\label{IV.12.3.2}
+Sea $A$ un anillo, $B$ una $A$-álgebra de presentación finita que es un $A$-módulo plano, y $M$ un $B$-módulo de presentación finita que es un $A$-módulo plano.
+Entonces:
+\begin{enumerate}[label=(\roman*)]
+  \item Existe una resolución por la izquierda de $M$ mediante $B$-módulos libres de tipo finito.
+  \item Se tiene
+  \begin{equation}
+  \tag{12.3.2.1}
+  \label{IV.12.3.2.1}
+    \operatorname{dim.proj}_B(M)
+    = \sup_{y\in\Spec(A)} \operatorname{dim.proj}_{B\otimes_A k(y)}(M\otimes_A k(y))
+    = \operatorname{Tor.dim}_B(M).
+  \end{equation}
+  Aquí $\operatorname{Tor.dim}_B(M)$ es el menor entero $i$ tal que $\operatorname{Tor}_j^B(M,N)=0$ para todo $j>i$ y todo $B$-módulo $N$ (y es $+\infty$ si no existe tal entero $i$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Por \sref{IV.8.9.1}, existen un subanillo noetheriano $A_0$ de $A$, una $A_0$-álgebra de tipo finito $B_0$ y un $B_0$-módulo de tipo finito $M_0$ tales que $B\simeq B_0\otimes_{A_0}A$ y $M\simeq M_0\otimes_{A_0}A$.
+  Por \sref{IV.11.2.7}, podemos suponer además que $B_0$ y $M_0$ son $A_0$-módulos planos.
+  Sea $(L_0)_\bullet$ una resolución por la izquierda de $M_0$ mediante $B_0$-módulos libres de tipo finito.
+  Como $M_0$ y los $(L_0)_i$ son $A_0$-módulos planos, $(L_0)_\bullet\otimes_{A_0}A$ es una resolución por la izquierda de $M$ mediante $B$-módulos libres de tipo finito \sref{IV.2.1.10}.
+
+  \item Por \sref[0]{0.17.2.2},~(ii),
+  $\operatorname{Tor.dim}_B(M)\leqslant\operatorname{dim.proj}_B(M)$; y la definición de dimensión proyectiva da inmediatamente
+  \[
+    \operatorname{dim.proj}_{B\otimes_A k(y)}(M\otimes_A k(y))
+    \leqslant \operatorname{dim.proj}_B(M)
+  \]
+  para todo $y\in\Spec(A)$.
+  Para demostrar las desigualdades inversas, consideremos una resolución por la izquierda $(L_i)$ de $M$ mediante $B$-módulos libres de tipo finito, y supongamos que $\operatorname{Tor.dim}_B(M)=n$ (resp.\ $\operatorname{dim.proj}_{B\otimes_A k(y)}(M\otimes_A k(y))\leqslant n$ para todo $y\in\Spec(A)$).
+  Entonces
+  $R=\operatorname{Im}(L_n\to L_{n-1})=\operatorname{Ker}(L_{n-1}\to L_{n-2})$
+  es un $B$-módulo de tipo finito y un $A$-módulo plano, por las hipótesis sobre $M$ y $B$ y por \sref{IV.2.1.10}.
+  Además,
+  \[
+    \operatorname{Tor}_{n+1}^B(M,N)=\operatorname{Tor}_1^B(R,N)
+  \]
+  para todo $B$-módulo $N$ (M, V, 7).
+  La hipótesis $\operatorname{Tor.dim}_B(M)=n$ implica, por tanto, $\operatorname{Tor}_1^B(R,N)=0$ para todo $B$-módulo $N$; es decir, $R$ es un $B$-módulo plano, luego proyectivo por \sref{IV.12.3.1}.
+  Así, $\operatorname{dim.proj}_B(M)\leqslant n$.
+  Por otra parte, la hipótesis $\operatorname{dim.proj}_{B\otimes_A k(y)}(M\otimes_A k(y))\leqslant n$ para todo $y\in\Spec(A)$ implica, al tensorizar por $k(y)$, que en cada una de las sucesiones siguientes (que son exactas por la planitud sobre $A$ de $M$, de los $L_i$ y de $R$ \sref{IV.2.1.10})
+  \[
+    0\to R\otimes_A k(y)\to L_{n-1}\otimes_A k(y)\to\cdots\to L_0\otimes_A k(y)\to M\otimes_A k(y)\to 0
+  \]
+  el $(B\otimes_A k(y))$-módulo $R\otimes_A k(y)$ es proyectivo, para todo $y\in\Spec(A)$.
+  De nuevo se sigue de \sref{IV.12.3.1} que $R$ es un $B$-módulo proyectivo y, por tanto, que $\operatorname{dim.proj}_B(M)\leqslant n$.
+\end{enumerate}
+\end{proof}
+
+\begin{proposition}[12.3.3]
+\label{IV.12.3.3}
+Sea $f:X\to S$ un morfismo localmente de presentación finita, y sea $\sh{L}_\bullet$ un complejo de $\sh{O}_X$-módulos cuasicoherentes de presentación finita; para todo $s\in S$, denotemos por $(\sh{L}_\bullet)_s$ el complejo $\sh{L}_\bullet\otimes_{\sh{O}_S}k(s)$ de $\sh{O}_{X_s}$-módulos de tipo finito.
+Supongamos que $\sh{L}_{n-1}$ es $f$-plano.
+Entonces el conjunto $U$ de los $x\in X$ tales que $(\sh{H}_n((\sh{L}_\bullet)_{f(x)}))_x=0$ es abierto en $X$.
+Si, además, $\sh{L}_n$ es $f$-plano, entonces $\sh{H}_n(\sh{L}_\bullet)|_U=0$.
+\end{proposition}
+
+\begin{proof}
+Evidentemente basta considerar el caso $n=1$, en el que el complejo $\sh{L}_\bullet$ se reduce a
+$0\to\sh{L}_2\xrightarrow{u}\sh{L}_1\xrightarrow{v}\sh{L}_0\to 0$.
+Podemos reducir primero al caso en que $S=\Spec(A)$ y $X$
+\oldpage[IV-3]{185}
+son afines, y después al caso en que $S$ es \emph{noetheriano}. En efecto, por \sref{IV.8.9.1} y \sref{IV.8.5.2}, existen un preesquema noetheriano $S'=\Spec(A')$, donde $A'$ es un subanillo de $A$, un morfismo de tipo finito $f':X'\to S'$ y tres $\sh{O}_{X'}$-módulos coherentes $\sh{L}'_i$ ($0\leqslant i\leqslant 2$), tales que
+$X=X'\times_{S'}S$, $f=f'_{(S)}$ y $\sh{L}_i=\sh{L}'_i\otimes_{S'}S$, junto con dos homomorfismos $u'$, $v'$ tales que $u=u'\otimes 1$, $v=v'\otimes 1$ y $v'\circ u'=0$.
+Podemos suponer además que $\sh{L}'_0$ es $f'$-plano \sref{IV.11.2.7}, y que $\sh{L}'_1$ es $f'$-plano cuando se supone que $\sh{L}_1$ es $f$-plano.
+Por planitud fiel, la hipótesis
+$(\sh{H}_n((\sh{L}_\bullet)_{f(x)}))_x=0$
+es equivalente a
+$(\sh{H}_n((\sh{L}'_\bullet)_{f'(x')}))_{x'}=0$,
+donde $x'$ es la proyección de $x$ en $X'$.
+Así, si $U'$ es el conjunto de los $x'\in X'$ tales que
+$(\sh{H}_n((\sh{L}'_\bullet)_{f'(x')}))_{x'}=0$,
+entonces $U$ es la imagen inversa de $U'$ por la proyección $X\to X'$; esto reduce la primera afirmación al caso en que $S$ es noetheriano.
+
+Para la segunda afirmación, obsérvese también que $A$ es el límite inductivo filtrante de sus subanillos $A_\lambda$ que son $A'$-álgebras de tipo finito.
+Pongamos $S_\lambda=\Spec(A_\lambda)$,
+$X_\lambda=X'\times_{S'}S_\lambda$, y
+$\sh{L}^{(\lambda)}_i=\sh{L}'_i\otimes_{S'}S_\lambda$; sean
+$u_\lambda=u'\otimes 1:\sh{L}_2^{(\lambda)}\to\sh{L}_1^{(\lambda)}$ y
+$v_\lambda=v'\otimes 1:\sh{L}_1^{(\lambda)}\to\sh{L}_0^{(\lambda)}$, de modo que
+$\sh{H}_1(\sh{L}_\bullet^{(\lambda)})=\operatorname{Ker}(v_\lambda)/\operatorname{Im}(u_\lambda)$.
+Como los límites inductivos filtrantes son exactos en la categoría de grupos conmutativos,
+\[
+  \operatorname{Ker}(v)=\varinjlim_\lambda\operatorname{Ker}(v_\lambda),\qquad
+  \operatorname{Im}(u)=\varinjlim_\lambda\operatorname{Im}(u_\lambda),\qquad
+  \sh{H}_1(\sh{L}_\bullet)=\varinjlim_\lambda\sh{H}_1(\sh{L}_\bullet^{(\lambda)}).
+\]
+Si se ha supuesto que $\sh{L}_1$ es $f$-plano y, tras reducir al caso $X=U$, se ha demostrado que
+$\sh{H}_1(\sh{L}_\bullet^{(\lambda)})=0$ para todo $\lambda$, se sigue que
+$\sh{H}_1(\sh{L}_\bullet)=0$.
+
+\medskip
+I) Supongamos en lo sucesivo que $S$ es noetheriano.
+Sabemos (sin ninguna hipótesis de planitud sobre $\sh{L}_0$) que el conjunto $U$ es \emph{construible} en $X$ \sref{IV.9.9.6}.
+Por \EGAReadLink{0.9.2.5}{($\mathbf{0}_{\mathrm{III}}$,~9.2.5)}, queda demostrar que toda \emph{generización} $x'$ en $X$ de un punto $x\in U$ pertenece también a $U$.
+El método expuesto en \sref{IV.12.0.2} se aplica sin modificación (teniendo en cuenta que, para un preesquema $Z$ sobre un cuerpo $k$ y una extensión $k'$ de $k$, la proyección $Z\otimes_k k'\to Z$ es fielmente plana).
+Podemos suponer, por tanto, que $S$ es el espectro de un anillo de valoración discreta $A$, de uniformizante $t$, que $x$ está situado sobre el punto cerrado de $S$ y que $x'$ está situado sobre el punto genérico de $S$.
+La hipótesis de que $\sh{L}_0$ es $f$-plano implica que $t$ es $\sh{L}_0$-regular \EGAReadLink{0.6.3.4}{($\mathbf{0}_{\mathrm{I}}$,~6.3.4)}.
+Se reduce así a demostrar el lema siguiente, en el que $B$, $M$, $N$ y $P$ serán sustituidos respectivamente por $\sh{O}_x$, $(\sh{L}_2)_x$, $(\sh{L}_1)_x$ y $(\sh{L}_0)_x$.
+
+\begin{lemma}[12.3.3.1]
+\label{IV.12.3.3.1}
+Sea $B$ un anillo local noetheriano, sean $M$, $N$ y $P$ tres $B$-módulos, con $N$ de tipo finito, y sean
+$M\xrightarrow{u}N\xrightarrow{v}P$ dos homomorfismos tales que $v\circ u=0$.
+Sea $t$ un elemento del ideal maximal de $B$ que es $P$-regular.
+Si la sucesión
+\begin{equation}
+\tag{12.3.3.2}
+\label{IV.12.3.3.2}
+M/tM \xrightarrow{u\otimes 1_{B/tB}} N/tN \xrightarrow{v\otimes 1_{B/tB}} P/tP
+\end{equation}
+es exacta, entonces la sucesión $M\xrightarrow{u}N\xrightarrow{v}P$ es exacta.
+\end{lemma}
+
+Obsérvese primero que, si se sustituye $M$ por su imagen $Q$ en $N$ y $u$ por la inyección $j:Q\to N$, la imagen de $j\otimes 1$ es la misma que la de $u\otimes 1$; por tanto, sin cambiar ni la hipótesis ni la conclusión, podemos suponer que $u$ es inyectivo.
+Por otra parte, si $R$ es la imagen de $v$ y $\rho:N\to R$ la sobreyección canónica, entonces $t$ es evidentemente $R$-regular, $\rho\circ u=0$, y el núcleo de $\rho\otimes 1$ está contenido en el de $v\otimes 1$.
+Por tanto, es igual a él si \sref{IV.12.3.3.2} es exacta; como además $\operatorname{Ker}(\rho)=\operatorname{Ker}(v)$,
+\oldpage[IV-3]{186}
+vemos que, para demostrar el lema, también podemos suponer que $v$ es sobreyectivo.
+El lema es entonces consecuencia del siguiente.
+
+\begin{lemma}[12.3.3.3]
+\label{IV.12.3.3.3}
+Sea $B$ un anillo, sean $M$, $N$ y $P$ tres $B$-módulos, y sean
+$u:M\to N$, $v:N\to P$ dos homomorfismos tales que $u$ es inyectivo, $v$ es sobreyectivo y $v\circ u=0$.
+Sea $t$ un elemento de $B$ que es $P$-regular.
+Entonces se tiene, salvo isomorfismo canónico,
+\begin{equation}
+\tag{12.3.3.4}
+\label{IV.12.3.3.4}
+\operatorname{Ker}(v\otimes 1)/\operatorname{Im}(u\otimes 1) = (\operatorname{Ker}(v)/\operatorname{Im}(u))\otimes_B(B/tB)
+\end{equation}
+\end{lemma}
+
+En efecto, la hipótesis de que la sucesión \sref{IV.12.3.3.2} es exacta implica entonces que $(\operatorname{Ker}\,v/\operatorname{Im}\,u)\otimes_B(B/tB)=0$ y, como $t$ pertenece al ideal maximal de $B$ y $\operatorname{Ker}(v)$ es un $B$-módulo de tipo finito (pues $B$ se supone noetheriano en \sref{IV.12.3.3.1}), el lema de Nakayama demuestra que $\operatorname{Ker}(v)=\operatorname{Im}(u)$.
+
+Queda, pues, demostrar \sref{IV.12.3.3.3}.
+Pongamos $u'=u\otimes 1$, $v'=v\otimes 1$, $Z=\operatorname{Ker}(v)$, $H=Z/\operatorname{Im}(u)$, de modo que las sucesiones
+\begin{gather*}
+  0\to M\to Z\to H\to 0\\
+  0\to Z\to N\xrightarrow{v} P\to 0
+\end{gather*}
+dan, al tensorizar por $B/tB$ y utilizar el lema \sref{IV.3.4.1.4} y el hecho de que $t$ es $P$-regular, las sucesiones exactas
+\begin{gather*}
+  M/tM \xrightarrow{w'} Z/tZ \to H/tH \to 0\\
+  0\to Z/tZ \to N/tN \xrightarrow{v'} P/tP \to 0
+\end{gather*}
+de donde $\operatorname{Ker}(v')=Z/tZ$, y como $\operatorname{Im}(w')=\operatorname{Im}(u')$, se obtiene \sref{IV.12.3.3.4}.
+
+\medskip
+II) Supongamos ahora además que $\sh{L}_1$ es $f$-plano; sustituyendo asimismo $X$ por $U$, se puede suponer que $X=U$.
+Se trata de ver que, para todo $x\in X$, $(\sh{H}_1(\sh{L}_\bullet))_x=0$.
+Pongamos $s=f(x)$, y sea $\mathfrak{n}$ el ideal $\mathfrak{m}_s\sh{O}_{X,x}$, que está contenido en el ideal maximal de $\sh{O}_{X,x}$.
+Como $(\sh{H}_1(\sh{L}_\bullet))_x$ es un $\sh{O}_{X,x}$-módulo de tipo finito ($X$ es localmente noetheriano), es separado para la topología $\mathfrak{n}$-ádica \EGAReadLink{0.7.3.5}{($\mathbf{0}_{\mathrm{I}}$,~7.3.5)} y basta, por tanto, demostrar que su completado separado para esta topología es $0$.
+Ahora bien, en virtud de \sref[III]{III.7.4.7.2}, este completado separado es igual a
+$\varprojlim_k\sh{H}_1(\sh{L}_\bullet\otimes_{\sh{O}_S}(\sh{O}_{S,s}/\mathfrak{m}_s^{k+1}))$; bastará, por tanto, demostrar que cada término de este sistema proyectivo es cero.
+Esto es cierto por hipótesis para $k=0$; razonamos, pues, por inducción sobre $k$.
+La conclusión se deducirá del lema más general siguiente, que aplicamos con $A=\sh{O}_{S,s}/\mathfrak{m}_s^{k+1}$ y $\mathfrak{J}$ igual al ideal maximal $\mathfrak{m}_s/\mathfrak{m}_s^{k+1}$ de $A$.
+
+\begin{lemma}[12.3.3.5]
+\label{IV.12.3.3.5}
+Sea $A$ un anillo, sea $\mathfrak{J}$ un ideal nilpotente de $A$, y sea
+$L_\bullet:P\xrightarrow{u}Q\xrightarrow{v}R$ un complejo de $A$-módulos.
+Pongamos $A_0=A/\mathfrak{J}$ y
+$L_\bullet^{(0)}=L_\bullet\otimes_A A_0:P_0\xrightarrow{u_0}Q_0\xrightarrow{v_0}R_0$.
+Supongamos que $\operatorname{gr}_{\mathfrak{J}}^{\bullet}(A)$ es un $A_0$-módulo plano, y que $Q$ y $R$ son $A$-módulos planos.
+Entonces la relación $\mathrm{H}_1(L_\bullet^{(0)})=0$ implica $\mathrm{H}_1(L_\bullet)=0$.
+\end{lemma}
+
+Pongamos
+$L_\bullet^{(k)}=L_\bullet\otimes_A(A/\mathfrak{J}^{k+1}):P_k\xrightarrow{u_k}Q_k\xrightarrow{v_k}R_k$.
+Como existe un entero $k\geqslant 1$ tal que $L_\bullet^{(k)}=L_\bullet$, bastará demostrar, por inducción sobre $k$, que la sucesión
+$P_k\xrightarrow{u_k}Q_k\xrightarrow{v_k}R_k$
+\oldpage[IV-3]{187}
+es exacta (esta afirmación resulta de la hipótesis para $k=0$).
+Sea entonces $x\in Q_k$ un elemento tal que $v_k(x)=0$.
+Como, por la hipótesis de inducción, la sucesión
+$P_{k-1}\xrightarrow{u_{k-1}}Q_{k-1}\xrightarrow{v_{k-1}}R_{k-1}$ es exacta, la imagen canónica de $x$ en
+$Q_{k-1}=Q_k/(\mathfrak{J}^kQ/\mathfrak{J}^{k+1}Q)$ pertenece a $\operatorname{Im}(u_{k-1})$.
+Existe, por tanto, $z\in P_k$ tal que
+$x=u_k(z)+x'$, con $x'\in\mathfrak{J}^kQ/\mathfrak{J}^{k+1}Q$.
+Como $v_k\circ u_k=0$, la relación $v_k(x)=0$ implica $v_k(x')=0$; además, se tiene evidentemente
+$v_k(x')\in\mathfrak{J}^kR/\mathfrak{J}^{k+1}R$.
+Todo se reduce, por tanto, a demostrar que la sucesión
+\[
+  \mathfrak{J}^kP/\mathfrak{J}^{k+1}P
+  \xrightarrow{u'}
+  \mathfrak{J}^kQ/\mathfrak{J}^{k+1}Q
+  \xrightarrow{v'}
+  \mathfrak{J}^kR/\mathfrak{J}^{k+1}R
+\]
+donde $u'$ y $v'$ son inducidos por $u$ y $v$ por restricción y paso a los cocientes, es exacta.
+Ahora bien, por hipótesis, $\mathfrak{J}^k/\mathfrak{J}^{k+1}$ es un $(A/\mathfrak{J})$-módulo plano, por lo que la sucesión
+\[
+  (P/\mathfrak{J}P)\otimes_{A/\mathfrak{J}}(\mathfrak{J}^k/\mathfrak{J}^{k+1})
+  \xrightarrow{u''}
+  (Q/\mathfrak{J}Q)\otimes_{A/\mathfrak{J}}(\mathfrak{J}^k/\mathfrak{J}^{k+1})
+  \xrightarrow{v''}
+  (R/\mathfrak{J}R)\otimes_{A/\mathfrak{J}}(\mathfrak{J}^k/\mathfrak{J}^{k+1})
+\]
+es exacta.
+Pero
+$(Q/\mathfrak{J}Q)\otimes_{A/\mathfrak{J}}(\mathfrak{J}^k/\mathfrak{J}^{k+1})
+=Q\otimes_A(\mathfrak{J}^k/\mathfrak{J}^{k+1})$
+se identifica con $\mathfrak{J}^kQ/\mathfrak{J}^{k+1}Q$ por la planitud de $Q$ sobre $A$; análogamente,
+$(R/\mathfrak{J}R)\otimes_{A/\mathfrak{J}}(\mathfrak{J}^k/\mathfrak{J}^{k+1})$
+se identifica con $\mathfrak{J}^kR/\mathfrak{J}^{k+1}R$.
+Finalmente, la imagen de $u'$ se identifica con la de $u''$, lo que completa la demostración.
+\end{proof}
+
+\begin{corollary}[12.3.4]
+\label{IV.12.3.4}
+Sea $f:X\to S$ un morfismo plano y localmente de presentación finita, y sean $\sh{F}$ y $\sh{G}$ dos $\sh{O}_X$-módulos de presentación finita que son $f$-planos.
+Sea $n$ un entero $\geq 0$, y sea $U$ el conjunto de los $x\in X$ tales que $(\mathscr{E}\!xt^n_{\sh{O}_{X_{f(x)}}}(\sh{F}_{f(x)},\sh{G}_{f(x)}))_x=0$ (resp.\ $(\mathscr{T}\!or_n^{\sh{O}_{X_{f(x)}}}(\sh{F}_{f(x)},\sh{G}_{f(x)}))_x=0$).
+Entonces $U$ es abierto, y se tiene
+$\mathscr{E}\!xt^n_{\sh{O}_X}(\sh{F},\sh{G})|_U=0$
+(resp.\ $\mathscr{T}\!or_n^{\sh{O}_X}(\sh{F},\sh{G})|_U=0$).
+\end{corollary}
+
+\begin{proof}
+Podemos evidentemente restringirnos al caso en que $S$ y $X$ son afines.
+Entonces \sref{IV.12.3.2} proporciona una resolución por la izquierda $\sh{L}_\bullet=(\sh{L}_i)$ de $\sh{F}$ formada por $\sh{O}_X$-módulos \emph{libres de tipo finito}.
+Si ponemos $\sh{M}^\bullet=\mathscr{H}\!om(\sh{L}_\bullet,\sh{G})$ (resp.\ $\sh{N}_\bullet=\sh{L}_\bullet\otimes_{\sh{O}_X}\sh{G}$), resulta que cada $\sh{M}^i$ (resp.\ $\sh{N}_i$) es isomorfo a un $\sh{O}_X$-módulo de la forma $\sh{G}^m$; por tanto, los $\sh{M}^i$ y los $\sh{N}_i$ son $\sh{O}_X$-módulos de presentación finita y son $f$-planos.
+Además, para todo cambio de base $S'\to S$, si ponemos
+$X'=X\times_S S'$, $\sh{F}'=\sh{F}\otimes_S S'$, $\sh{G}'=\sh{G}\otimes_S S'$, y
+$\sh{L}'_\bullet=\sh{L}_\bullet\otimes_S S'$, entonces $\sh{L}'_\bullet$ sigue siendo una resolución por la izquierda de $\sh{F}'$ mediante $\sh{O}_{X'}$-módulos libres de tipo finito \sref{IV.2.1.10}; además,
+$\sh{M}'^\bullet=\sh{M}^\bullet\otimes_S S'$ es igual a $\mathscr{H}\!om(\sh{L}'_\bullet,\sh{G}')$
+(resp.\ $\sh{N}'_\bullet=\sh{N}_\bullet\otimes_S S'$ es igual a $\sh{L}'_\bullet\otimes_{\sh{O}_{X'}}\sh{G}'$), por lo que precede.
+En particular, para todo $s\in S$, se tiene
+$\mathscr{E}\!xt^n_{\sh{O}_{X_s}}(\sh{F}_s,\sh{G}_s)=\sh{H}^n((\sh{M}^\bullet)_s)$
+(resp.\ $\mathscr{T}\!or_n^{\sh{O}_{X_s}}(\sh{F}_s,\sh{G}_s)=\sh{H}_n((\sh{N}_\bullet)_s)$).
+Aplicando \sref{IV.12.3.3} a los complejos $f$-planos $\sh{M}^\bullet$ y $\sh{N}_\bullet$, se deduce inmediatamente el corolario.
+\end{proof}

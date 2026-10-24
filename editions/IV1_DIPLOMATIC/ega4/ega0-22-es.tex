@@ -1,0 +1,2668 @@
+\section{Criterios diferenciales de lisitud formal y de regularidad}
+\label{section:0.22-es}
+
+Los principales resultados de este parágrafo son los siguientes:
+\begin{enumerate}
+  \item[a)] Los criterios (22.2.2) y (22.5.8), que dan condiciones
+  necesarias y suficientes para que un anillo local noetheriano completo $A$
+  que contiene un cuerpo $k$ sea formalmente liso sobre $k$; el criterio
+  (22.5.8) se enuncia sin hacer intervenir nociones diferenciales y completa
+  (19.6.6); el enunciado (22.2.2), de naturaleza algo más técnica, permite dar
+  una \emph{clasificación}, para $k$ fijado, de los anillos locales $A$
+  considerados (22.2.5): vienen dados por su dimensión $n$ y por su cuerpo
+  residual $K$, con la única condición
+  $n\geqslant\operatorname{rg}_K\Upsilon_{K/k}$.
+
+  \item[b)] El teorema (22.3.3) y el corolario (22.7.6) del criterio
+  jacobiano de Nagata (22.7.3), que dan condiciones que permiten afirmar que
+  una \emph{localización} de un anillo local noetheriano completo $A$ que
+  contiene un cuerpo $k$ es geométricamente regular sobre $k$; desempeñarán
+  un papel importante en el estudio de las propiedades «~finas~» de los
+  anillos locales realizado en el cap.~IV, §~7. Por el momento no se conoce
+  ninguna demostración de (22.7.6) independiente del criterio jacobiano de
+  Nagata.
+
+  \item[c)] El criterio jacobiano de Zariski (22.6.7) y sus variantes, que
+  son consecuencias fáciles de (20.7.8).
+\end{enumerate}
+
+\oldpage[0\textsubscript{IV-1}]{183}
+
+\subsection{Levantamiento de la lisitud formal}
+\label{subsection:0.22.1-es}
+
+\begin{theorem}[22.1.1]
+\label{0.22.1.1-es}
+Sean $s:\Lambda\to A$, $u:A\to B$ dos homomorfismos de anillos,
+$\mathfrak J$ un ideal de $B$ y $C$ el anillo cociente $B/\mathfrak J$. Se
+supone que $C$ es una $\Lambda$-álgebra formalmente lisa para la topología
+discreta.
+\begin{enumerate}
+  \item[(i)] Supongamos que se cumplen las condiciones siguientes:
+  \begin{enumerate}
+    \item[$\alpha$)] $\mathfrak J/\mathfrak J^2$ es un $C$-módulo proyectivo.
+    \item[$\beta$)] El homomorfismo canónico
+    $\mathbf S_C^*(\mathfrak J/\mathfrak J^2)\to
+    \operatorname{gr}_{\mathfrak J}^*(B)$ (19.5.2) es biyectivo.
+    \item[$\gamma$)] El homomorfismo característico
+    $\chi:\Upsilon_{C/B/\Lambda}\to\mathfrak J/\mathfrak J^2$ (20.6.20)
+    es inyectivo.
+    \item[$\delta$)] El $C$-módulo
+    $\Omega^1_{B/A}\otimes_BC$ es proyectivo.
+  \end{enumerate}
+  Entonces $B$, provisto de la topología $\mathfrak J$-preádica, es una
+  $\Lambda$-álgebra formalmente lisa.
+
+  \item[(ii)] Recíprocamente, supongamos que $B$ sea una $\Lambda$-álgebra
+  formalmente lisa para la topología $\mathfrak J$-preádica y que $A$ sea una
+  $\Lambda$-álgebra formalmente lisa para la topología discreta. Entonces se
+  cumplen las condiciones $\alpha$), $\beta$), $\gamma$), $\delta$) de (i).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+En virtud de la sucesión exacta (20.6.22.1) (que es aplicable, puesto que
+$B/\mathfrak J^2$ es una extensión $\Lambda$-trivial de $C$ por
+$\mathfrak J/\mathfrak J^2$, al suponerse que $C$ es una $\Lambda$-álgebra
+formalmente lisa (19.4.4)), la condición $\gamma$) equivale a
+$\Upsilon^C_{B/A/\Lambda}=0$, o también a la siguiente:
+\begin{enumerate}
+  \item[$\gamma'$)] El homomorfismo
+  \[
+    u_{B/A/\Lambda}\otimes 1_C:
+    \Omega^1_{A/\Lambda}\otimes_A C
+    \longrightarrow \Omega^1_{B/\Lambda}\otimes_B C
+  \]
+  es inyectivo.
+\end{enumerate}
+
+(i) Las condiciones $\alpha$) y $\beta$) implican que $B$ es una
+$\Lambda$-álgebra formalmente lisa para la topología
+$\mathfrak J$-preádica (19.5.4). Por tanto, equivale decir que $B$ es (para la
+topología $\mathfrak J$-preádica) una $A$-álgebra formalmente lisa o una
+$A$-álgebra formalmente lisa \emph{relativamente a $\Lambda$}. Para ver que
+$B$ es una $A$-álgebra formalmente lisa basta, en virtud de (20.7.2), probar
+que el homomorfismo continuo de $B$-módulos topológicos
+\[
+  u_{B/A/\Lambda}:\Omega^1_{A/\Lambda}\otimes_A B
+  \longrightarrow\Omega^1_{B/\Lambda}
+\]
+es \emph{formalmente invertible por la izquierda}. Ahora bien, puesto que $B$
+es una $\Lambda$-álgebra formalmente lisa, el $B$-módulo topológico
+$\Omega^1_{B/\Lambda}$ es formalmente proyectivo (20.4.9) y su topología se
+deduce de la de $B$ (20.4.5). En virtud de (19.1.9), para que
+$u_{B/A/\Lambda}$ sea formalmente invertible por la izquierda basta que
+$u_{B/A/\Lambda}\otimes 1_C$ sea invertible por la izquierda. Pero, en virtud
+de $\gamma'$), esta última aplicación es inyectiva, por lo que se tiene la
+sucesión exacta (20.6.14.7)
+\[
+  0\longrightarrow\Omega^1_{A/\Lambda}\otimes_A C
+  \longrightarrow\Omega^1_{B/\Lambda}\otimes_B C
+  \longrightarrow\Omega^1_{B/A}\otimes_B C\longrightarrow0.
+\]
+Finalmente, en virtud de $\delta$), el $C$-módulo
+$\Omega^1_{B/A}\otimes_BC$ es proyectivo, luego la sucesión exacta anterior
+se escinde, lo que termina de probar (i).
+
+\oldpage[0\textsubscript{IV-1}]{184}
+
+(ii) Si $B$ es una $\Lambda$-álgebra formalmente lisa para la topología
+$\mathfrak J$-preádica y $A$ una $\Lambda$-álgebra formalmente lisa para la
+topología discreta, $B$ es una $A$-álgebra formalmente lisa para la topología
+$\mathfrak J$-preádica (19.3.5, (ii)); por tanto, las condiciones $\alpha$) y
+$\beta$) resultan de (19.5.6). Además, (20.7.2) muestra que
+$u_{B/A/\Lambda}$ es formalmente invertible por la izquierda, luego
+$u_{B/A/\Lambda}\otimes 1_C$ es invertible por la izquierda (19.1.7) y, \emph{a
+fortiori}, inyectivo. Finalmente, $\Omega^1_{B/A}$ es un $B$-módulo
+formalmente proyectivo (20.4.9) y, por consiguiente,
+$\Omega^1_{B/A}\otimes_BC$ es un $C$-módulo proyectivo (19.2.4).
+\end{proof}
+
+\begin{corollary}[22.1.2]
+\label{0.22.1.2-es}
+Sean $s:\Lambda\to A$, $u:A\to B$ dos homomorfismos de anillos,
+$\mathfrak m$ un ideal maximal de $B$ y $K=B/\mathfrak m$ el cuerpo cociente.
+Se supone que las $\Lambda$-álgebras $A$ y $K$ son formalmente lisas para la
+topología discreta. Entonces las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es una $A$-álgebra formalmente lisa para la topología
+  $\mathfrak m$-preádica.
+  \item[b)] El homomorfismo canónico
+  \begin{equation}
+  \tag{22.1.2.1}
+  \label{0.22.1.2.1-es}
+    \mathbf S_K^*(\mathfrak m/\mathfrak m^2)
+    \longrightarrow\operatorname{gr}_{\mathfrak m}^*(B)
+  \end{equation}
+  es biyectivo, y el homomorfismo característico
+  \begin{equation}
+  \tag{22.1.2.2}
+  \label{0.22.1.2.2-es}
+    \chi:\Upsilon_{K/B/\Lambda}\longrightarrow\mathfrak m/\mathfrak m^2
+  \end{equation}
+  es inyectivo.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Esto resulta inmediatamente de (22.1.1), pues las condiciones $\alpha$) y
+$\delta$) se cumplen aquí trivialmente, ya que $K$ es un cuerpo.
+\end{proof}
+
+\begin{remark}[22.1.3]
+\label{0.22.1.3-es}
+Supongamos que se cumplen las hipótesis de (22.1.2) y, además, que
+$\mathfrak m/\mathfrak m^2$ es un $K$-espacio vectorial de rango \emph{finito}.
+Entonces, para que $B$ sea una $A$-álgebra formalmente lisa para la topología
+$\mathfrak m$-preádica, basta que se satisfagan las condiciones siguientes:
+
+\begin{env}[22.1.3.1]
+\label{0.22.1.3.1-es}
+Dados un álgebra de polinomios $E=K[T_1,\ldots,T_n]$, el ideal maximal
+$\mathfrak n$ de $E$ engendrado por los $T_i$ $(1\leqslant i\leqslant n)$ y
+un ideal $\mathfrak b\supset\mathfrak n^k$ de $E$, todo
+$\Lambda$-homomorfismo $v:B\to E/\mathfrak b$ que, al pasar a los cocientes,
+da la identidad $K\to K$, se factoriza como
+\[
+  B\xrightarrow{w}E/\mathfrak n^k\longrightarrow E/\mathfrak b,
+\]
+donde $w$ es un $\Lambda$-homomorfismo.
+\end{env}
+
+\begin{env}[22.1.3.2]
+\label{0.22.1.3.2-es}
+Si $F$ es la extensión trivial $D_K(K)$ («~álgebra de los números duales
+sobre $K$~»), $\rho:A\to F$ un homomorfismo de anillos tal que el compuesto
+$A\xrightarrow{\rho}F\to K$ sea el homomorfismo canónico, entonces todo
+$\Lambda$-homomorfismo $v:B\to K$ que, al pasar a los cocientes, da la
+identidad $K\to K$, se factoriza como
+\[
+  B\xrightarrow{w}F\longrightarrow K,
+\]
+donde $w$ es un $\Lambda$-homomorfismo (para la estructura de $A$-álgebra
+sobre $F$ definida por $\rho$).
+\end{env}
+
+En efecto, se ha visto (19.5.5) que la condición (22.1.3.1) implica que el
+homomorfismo canónico (22.1.2.1) es biyectivo. En virtud de (22.1.2), basta
+entonces ver que el homomorfismo canónico
+\[
+  u_{B/A/\Lambda}\otimes1_K:
+  \Omega^1_{A/\Lambda}\otimes_AK
+  \longrightarrow\Omega^1_{B/\Lambda}\otimes_BK
+\]
+es inyectivo, o también (puesto que se trata de espacios vectoriales sobre
+$K$) que, para todo $K$-espacio vectorial $L$, el homomorfismo canónico
+$\operatorname{D\acute{e}r}_\Lambda(B,L)\to\operatorname{D\acute{e}r}_\Lambda(A,L)$ es
+\emph{sobreyectivo} (en virtud de (20.4.8)); es claro que, para ello, es
+necesario y suficiente que el homomorfismo canónico
+$\operatorname{D\acute{e}r}_\Lambda(B,K)\to\operatorname{D\acute{e}r}_\Lambda(A,K)$ sea
+sobreyectivo, de donde resulta nuestra afirmación en virtud de (20.1.5).
+
+Se observará que las dos condiciones (22.1.3.1) y (22.1.3.2) son consecuencia
+de la siguiente:
+
+\begin{env}[22.1.3.3]
+\label{0.22.1.3.3-es}
+Para toda $\Lambda$-álgebra local artiniana $E$ de cuerpo residual igual a
+$K$, y todo ideal nilpotente $\mathfrak r$ de $E$, todo
+$\Lambda$-homomorfismo $B\to E/\mathfrak r$ que, al pasar a los cocientes,
+da la identidad $K\to K$, se factoriza como
+$B\xrightarrow{u}E\to E/\mathfrak r$, donde $u$ es un
+$\Lambda$-homomorfismo.
+\end{env}
+\end{remark}
+
+\oldpage[0\textsubscript{IV-1}]{185}
+
+Este resultado se generaliza como sigue:
+
+\begin{proposition}[22.1.4]
+\label{0.22.1.4-es}
+Sea $\varphi:A\to B$ un homomorfismo local de anillos locales noetherianos,
+$k$ (resp. $K$) el cuerpo residual de $A$ (resp. de $B$). Para que $B$ sea una
+$A$-álgebra formalmente lisa (para las topologías preádicas), es necesario y
+suficiente que, para todo anillo local artiniano $C$, de cuerpo residual igual
+a $K$, todo homomorfismo local $A\to C$ (que hace de $C$ una $A$-álgebra
+topológica), y todo ideal nilpotente $\mathfrak J$ de $C$, todo
+$A$-homomorfismo local $B\to C/\mathfrak J$ tal que el homomorfismo
+$K\to K$ obtenido al pasar a los cocientes sea la identidad, se factorice como
+\[
+  B\xrightarrow{f}C\longrightarrow C/\mathfrak J,
+\]
+donde $f$ es un $A$-homomorfismo local.
+\end{proposition}
+
+\begin{proof}
+Como la condición es necesaria por definición (19.3.1), mostremos que es
+suficiente. Puesto que los $\widehat A$-homomorfismos locales de $\widehat B$
+en una $\widehat A$-álgebra local discreta proceden, por extensión, de los
+$A$-homomorfismos locales de $B$ en esta álgebra, podemos limitarnos al caso
+en que $A$ y $B$ sean \emph{completos}, en virtud de (19.3.6). Cuando $A$ es
+un \emph{cuerpo} $k$, la proposición resulta de (22.1.3.3), tomando para
+$\Lambda$ el subcuerpo primo de $k$, y de (19.6.1).
+
+En el caso general, pongamos $B_0=B\otimes_Ak=B/\mathfrak mB$
+($\mathfrak m$ ideal maximal de $A$), que es completo. Si $C_0$ es una
+$k$-álgebra local artiniana de cuerpo residual igual a $K$, $\mathfrak J_0$
+un ideal nilpotente de $C_0$, todo $k$-homomorfismo local
+$g_0:B_0\to C_0/\mathfrak J_0$ que da la identidad sobre $K$ al pasar a los
+cocientes da, por composición, un $A$-homomorfismo local
+\[
+  g:B\longrightarrow B_0\xrightarrow{g_0}C_0/\mathfrak J_0
+\]
+que, por hipótesis, se factoriza por tanto como
+$B\xrightarrow{f}C_0\to C_0/\mathfrak J_0$, donde $f$ es un
+$A$-homomorfismo local; pero, como $C_0$ es una $k$-álgebra, $f$ se factoriza
+como $B\to B_0\xrightarrow{f_0}C_0$, donde $f_0$ es un
+$k$-homomorfismo local. Se ve así que las hipótesis del enunciado siguen
+cumpliéndose cuando se sustituyen $B_0$ y $k$ por $B$ y $A$, respectivamente;
+por tanto, $B_0$ es una $k$-álgebra \emph{formalmente lisa} por lo que se acaba
+de ver.
+
+Aplicando (19.7.2) y (19.7.1), se ve que existen un anillo local noetheriano
+completo $B'$, un homomorfismo local $A\to B'$ que hace de $B'$ un $A$-módulo
+\emph{plano} y una $A$-álgebra \emph{formalmente lisa}, y un
+$k$-isomorfismo
+\[
+  u'_0:B'_0=B'\otimes_Ak\xrightarrow{\sim}B_0.
+\]
+Sea $v'_0$ el isomorfismo recíproco de $u'_0$; nos proponemos mostrar que
+existe un $A$-homomorfismo local $v:B\to B'$ tal que $v'_0$ proceda de $v$ al
+pasar a los cocientes. Para ello, designemos por $\mathfrak n$ y
+$\mathfrak n'$ los ideales maximales respectivos de $B$ y $B'$ y, para todo
+$j$, sea
+\[
+  w_j:B/(\mathfrak n^{j+1}+\mathfrak mB)
+  \longrightarrow B'/(\mathfrak n'^{j+1}+\mathfrak mB')
+\]
+el homomorfismo deducido de $v'_0$ al pasar a los cocientes; bastará construir,
+para todo $j$, un $A$-homomorfismo local
+$v_j:B/\mathfrak n^{j+1}\to B'/\mathfrak n'^{j+1}$ tal que los diagramas
+\[
+\xymatrix@C=4em@R=3em{
+  B/\mathfrak n^{j+1} \ar[r]^{v_j} \ar[d] &
+  B'/\mathfrak n'^{j+1} \ar[d] \\
+  B/\mathfrak n^j \ar[r]_{v_{j-1}} & B'/\mathfrak n'^j
+}
+\qquad
+\xymatrix@C=4em@R=3em{
+  B/\mathfrak n^{j+1} \ar[r]^{v_j} \ar[d] &
+  B'/\mathfrak n'^{j+1} \ar[d] \\
+  B/(\mathfrak n^{j+1}+\mathfrak mB) \ar[r]_{w_j} &
+  B'/(\mathfrak n'^{j+1}+\mathfrak mB')
+}
+\]
+sean conmutativos; como $B$ y $B'$ son completos, el homomorfismo
+$v=\varprojlim v_j$ responderá a la cuestión.
+
+\oldpage[0\textsubscript{IV-1}]{186}
+
+Ahora bien, la construcción por recurrencia de $v_j$ resulta de la hipótesis
+sobre $B$ y del mismo razonamiento que en (19.3.10.1), utilizando el lema
+(19.3.10.2) y el hecho de que
+\[
+  \mathfrak n'^j+(\mathfrak n'^{j+1}+\mathfrak mB')
+  =\mathfrak n'^j+\mathfrak mB'.
+\]
+Resulta entonces de (19.7.1.4) que $v$ es un $A$-\emph{isomorfismo}, pues
+$B'$ es un $A$-módulo plano y $B$ es completo para la topología
+$\mathfrak m$-preádica, pues los ideales $\mathfrak m^iB$ son cerrados en $B$
+para la topología $\mathfrak n$-ádica ($\mathbf 0_{\mathrm I}$, 7.3.5).
+Q.E.D.
+\end{proof}
+
+\subsection{Caracterización diferencial de las álgebras locales formalmente
+lisas sobre un cuerpo}
+\label{subsection:0.22.2-es}
+
+\begin{env}[22.2.1]
+\label{0.22.2.1-es}
+Sean $k$ un cuerpo, $P$ su subcuerpo primo, $A$ una $k$-álgebra que es un
+anillo \emph{local}, $\mathfrak m$ su ideal maximal y $K=A/\mathfrak m$ su
+cuerpo residual. Como $K$ es separable sobre $P$, $K$ es una $P$-álgebra
+formalmente lisa para la topología discreta (19.6.1), y por consiguiente la
+$P$-extensión $A/\mathfrak m^2$ de $K$ por $\mathfrak m/\mathfrak m^2$ es
+$P$-\emph{trivial}, y el homomorfismo característico
+\begin{equation}
+\tag{22.2.1.1}
+\label{0.22.2.1.1-es}
+  \chi_{A/k}:\Upsilon_{K/k}\longrightarrow\mathfrak m/\mathfrak m^2
+\end{equation}
+queda así definido (20.6.23).
+\end{env}
+
+\begin{theorem}[22.2.2]
+\label{0.22.2.2-es}
+Bajo las condiciones de (22.2.1), para que $A$ sea una $k$-álgebra
+formalmente lisa para la topología $\mathfrak m$-preádica, es necesario y
+suficiente que se satisfagan las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] El homomorfismo canónico
+  $\mathbf S_K^*(\mathfrak m/\mathfrak m^2)\to
+  \operatorname{gr}_{\mathfrak m}^*(A)$ es biyectivo.
+  \item[(ii)] El homomorfismo característico
+  $\chi_{A/k}:\Upsilon_{K/k}\to\mathfrak m/\mathfrak m^2$ es inyectivo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Es un caso particular de (22.1.2), donde se sustituye $\Lambda$ por $P$, $A$
+por $k$ y $B$ por $A$; en efecto, como $K$ y $k$ son separables sobre $P$,
+son $P$-álgebras formalmente lisas (19.6.1).
+\end{proof}
+
+\begin{remark}[22.2.3]
+\label{0.22.2.3-es}
+La condición (ii) de (22.2.2) puede sustituirse por cualquiera de las
+siguientes:
+\begin{enumerate}
+  \item[a)] El homomorfismo canónico
+  $\Omega^1_k\otimes_kK\to\Omega^1_A\otimes_AK$ es inyectivo.
+  \item[b)] Para todo $n$, el homomorfismo canónico
+  \[
+    \Omega^1_k\otimes_k(A/\mathfrak m^{n+1})
+    \longrightarrow
+    \Omega^1_A\otimes_A(A/\mathfrak m^{n+1})
+  \]
+  es invertible por la izquierda.
+  \item[c)] El homomorfismo canónico
+  $\Omega^1_k\widehat\otimes_kA\to\widehat\Omega^1_A$ es invertible por la
+  izquierda.
+  \item[d)] $A$ es una $k$-álgebra formalmente lisa (para la topología
+  $\mathfrak m$-preádica) \emph{relativamente al cuerpo primo}.
+\end{enumerate}
+En efecto, ya se ha observado en (22.1.1) que la inyectividad de $\chi_{A/k}$
+equivale a $a)$, y que la conjunción de $a)$ y de la condición (i) de (22.2.2)
+equivale a la de $d)$ y (i). Finalmente, también se ha visto en (22.1.1) que
+$b)$ y $d)$ son equivalentes, y la equivalencia de $b)$ y $c)$ resulta de
+(19.1.8).
+\end{remark}
+
+\begin{env}[22.2.4]
+\label{0.22.2.4-es}
+La principal aplicación de (22.2.2) se refiere a las $k$-álgebras locales
+noetherianas y \emph{completas} (caso en que $\mathfrak m/\mathfrak m^2$ es un
+$K$-espacio vectorial de rango \emph{finito}). Precisamente, sean $k$ un
+cuerpo, $K$ una extensión de $k$ y $V$ un $K$-espacio vectorial de
+
+\oldpage[0\textsubscript{IV-1}]{187}
+
+rango finito; consideramos las ternas $(A,\alpha,\beta)$, donde $A$ es una
+$k$-álgebra local noetheriana completa \emph{formalmente lisa} de ideal
+maximal $\mathfrak m$, $\alpha:A/\mathfrak m\xrightarrow{\sim}K$ un
+isomorfismo de $k$-álgebras y
+$\beta:\mathfrak m/\mathfrak m^2\xrightarrow{\sim}V$ un diisomorfismo de
+espacios vectoriales (para el isomorfismo $\alpha$). Dadas dos de tales ternas
+$(A,\alpha,\beta)$, $(A',\alpha',\beta')$, una \emph{equivalencia} de la
+primera sobre la segunda es un $k$-isomorfismo $u:A\xrightarrow{\sim}A'$ tal
+que (si $\mathfrak m'$ es el ideal maximal de $A'$) los diagramas
+\[
+\xymatrix@C=4em@R=3em{
+  A/\mathfrak m \ar[r]^{\operatorname{gr}^0(u)} \ar[d]_{\alpha} &
+  A'/\mathfrak m' \ar[d]^{\alpha'} \\
+  K \ar[r]_{1_K} & K
+}
+\qquad
+\xymatrix@C=4em@R=3em{
+  \mathfrak m/\mathfrak m^2 \ar[r]^{\operatorname{gr}^1(u)}
+    \ar[d]_{\beta} &
+  \mathfrak m'/\mathfrak m'^2 \ar[d]^{\beta'} \\
+  V \ar[r]_{1_V} & V
+}
+\]
+sean conmutativos. Es inmediato que las \emph{clases de equivalencia} de las
+ternas $(A,\alpha,\beta)$ forman un \emph{conjunto} que denotaremos por
+$\operatorname{FL}(K/k,V)$. Observemos ahora que a toda terna
+$(A,\alpha,\beta)$ se asocia el $K$-homomorfismo compuesto de espacios
+vectoriales
+\[
+  \Upsilon_{K/k}\xrightarrow{\chi_{A/k}}
+  \mathfrak m/\mathfrak m^2\xrightarrow{\beta}V
+\]
+(donde $\chi_{A/k}$ se considera como un dihomomorfismo relativo a
+$\alpha^{-1}$); la definición anterior demuestra (por (20.6.22.2)) que este
+$K$-homomorfismo \emph{solo depende de la clase de equivalencia} de
+$(A,\alpha,\beta)$ en $\operatorname{FL}(K/k,V)$; en otras palabras, se ha
+definido una aplicación canónica
+\begin{equation}
+\tag{22.2.4.1}
+\label{0.22.2.4.1-es}
+  \operatorname{FL}(K/k,V)\longrightarrow
+  \operatorname{Hom}_K(\Upsilon_{K/k},V).
+\end{equation}
+\end{env}
+
+\begin{proposition}[22.2.5]
+\label{0.22.2.5-es}
+Sean $k$ un cuerpo, $K$ una extensión de $k$ y $V$ un $K$-espacio vectorial
+de rango finito. La aplicación canónica (22.2.4.1) es una biyección de
+$\operatorname{FL}(K/k,V)$ sobre el conjunto de los $K$-homomorfismos
+inyectivos de $\Upsilon_{K/k}$ en $V$.
+\end{proposition}
+
+\begin{proof}
+(i) Para mostrar que (22.2.4.1) es inyectiva, hay que probar lo siguiente:
+sean $A$, $A'$ dos $k$-álgebras locales noetherianas completas formalmente
+lisas, $\mathfrak m$, $\mathfrak m'$ sus ideales maximales respectivos,
+$\alpha:A/\mathfrak m\xrightarrow{\sim}K$,
+$\alpha':A'/\mathfrak m'\xrightarrow{\sim}K$ dos $k$-isomorfismos;
+supongamos dados dos $k$-isomorfismos
+\[
+  v^0:A/\mathfrak m\xrightarrow{\sim}A'/\mathfrak m',\qquad
+  v^1:\mathfrak m/\mathfrak m^2\xrightarrow{\sim}
+      \mathfrak m'/\mathfrak m'^2
+\]
+tales que los diagramas
+\begin{equation}
+\tag{22.2.5.1}
+\label{0.22.2.5.1-es}
+\xymatrix@C=4em@R=3em{
+  A/\mathfrak m \ar[r]^{v^0} \ar[dr]_{\alpha} &
+  A'/\mathfrak m' \ar[dl]^{\alpha'} \\
+  & K
+}
+\qquad
+\xymatrix@C=4em@R=3em{
+  \mathfrak m/\mathfrak m^2 \ar[r]^{v^1} &
+  \mathfrak m'/\mathfrak m'^2 \\
+  \Upsilon_{K/k} \ar[u]^{\chi_A} \ar[ur]_{\chi_{A'}} &
+}
+\end{equation}
+sean conmutativos. Se trata de probar que existe un $k$-isomorfismo
+$u:A\xrightarrow{\sim}A'$ tal que $\operatorname{gr}^0(u)=v^0$ y
+$\operatorname{gr}^1(u)=v^1$. Observemos primero que, puesto que $K$ es un
+cuerpo, el homomorfismo canónico (20.6.7.1) es \emph{biyectivo} (20.6.11),
+luego ya existe un $k$-isomorfismo
+$v:A/\mathfrak m^2\xrightarrow{\sim}A'/\mathfrak m'^2$ tal que
+$\operatorname{gr}^0(v)=v^0$ y $\operatorname{gr}^1(v)=v^1$. Observemos ahora
+que, puesto que $A'$ es metrizable y completo y $A$ una $k$-álgebra
+formalmente lisa, el homomorfismo compuesto
+$A\to A/\mathfrak m^2\xrightarrow{v}A'/\mathfrak m'^2$ se factoriza como
+$A\xrightarrow{u}A'\to A'/\mathfrak m'^2$, donde $u$ es
+
+\oldpage[0\textsubscript{IV-1}]{188}
+
+un $k$-homomorfismo (19.3.11), y se tiene ya, por tanto,
+$\operatorname{gr}^0(u)=v^0$ y $\operatorname{gr}^1(u)=v^1$. Ahora bien, se
+tiene el diagrama conmutativo
+\[
+\xymatrix@C=5em@R=3em{
+  \mathbf S_K^*(\mathfrak m/\mathfrak m^2) \ar[r] \ar[d]_{w} &
+  \operatorname{gr}_{\mathfrak m}^*(A) \ar[d]^{\operatorname{gr}^*(u)} \\
+  \mathbf S_K^*(\mathfrak m'/\mathfrak m'^2) \ar[r] &
+  \operatorname{gr}_{\mathfrak m'}^*(A')
+}
+\]
+donde las flechas horizontales son los homomorfismos canónicos y $w$ procede
+de $v^0$ y $v^1$; como $v^0$ y $v^1$ son biyectivos, también lo es $w$, y,
+puesto que $A$ y $A'$ son $k$-álgebras formalmente lisas, se deduce de
+(22.2.2, (i)) que $\operatorname{gr}(u)$ es biyectivo; pero, como $A$ y $A'$
+son separados y completos, esto implica que el propio $u$ es
+\emph{biyectivo} (Bourbaki, \emph{Alg. comm.}, cap.~III, §~2,
+n\textsuperscript{o}~8, cor.~3 del th.~1).
+
+(ii) Queda por mostrar que la imagen de (22.2.4.1) es el conjunto de los
+homomorfismos \emph{inyectivos} de $\Upsilon_{K/k}$ en $V$; ya se sabe por
+(22.2.2, (ii)) que está contenida en este conjunto; bastará entonces probar el
+lema siguiente.
+\end{proof}
+
+\begin{lemma}[22.2.5.2]
+\label{0.22.2.5.2-es}
+Para todo $K$-homomorfismo $h:\Upsilon_{K/k}\to V$, existe una $k$-álgebra
+$A$ que es un anillo local noetheriano regular y completo, de ideal maximal
+$\mathfrak m$, de cuerpo residual $K$, y un $K$-isomorfismo
+$\beta:\mathfrak m/\mathfrak m^2\xrightarrow{\sim}V$ tales que
+$h=\beta\circ\chi_{A/k}$.
+\end{lemma}
+
+\begin{proof}
+En efecto, si se prueba este lema, el hecho de que $A$ sea regular implica que
+se satisface la condición (i) de (22.2.2) (17.1.1); si además $h$ es
+inyectivo, (22.2.2) mostrará que $A$ es una $k$-álgebra formalmente lisa cuya
+clase tendrá por imagen $h$ (en cambio, si $h$ no es inyectivo, la $k$-álgebra
+$A$ cuya existencia prueba (22.2.5.2) no es formalmente lisa).
+
+Para probar (22.2.5.2), sean $B$ la $K$-álgebra $\mathbf S_K^*(V)$,
+$\mathfrak n$ el ideal de aumentación de $B$ y $A=\widehat B$ la $K$-álgebra
+completada de $B$ para la topología $\mathfrak n$-preádica (de modo que $A$ es
+isomorfa al álgebra de series formales $K[[T_1,\ldots,T_n]]$ si
+$n=\operatorname{rg}_KV$). En virtud de (20.6.11), existe sobre
+$A/\mathfrak m^2$ (donde $\mathfrak m=\mathfrak nA$) una estructura de
+$k$-extensión de $K$ por $V$ (en general \emph{distinta} de la estructura
+$k$-trivial definida por la inyección canónica $k\to K\to A$) tal que $h$ sea
+el homomorfismo característico de esta extensión. Si
+$f:k\to A/\mathfrak m^2$ es el homomorfismo estructural, el hecho de que $k$
+sea separable sobre el cuerpo primo permite (19.6.1) factorizar $f$ como
+$k\xrightarrow{g}A\to A/\mathfrak m^2$, y la $k$-álgebra $A$ así definida
+responde a la cuestión (20.6.22.2).
+\end{proof}
+
+\begin{theorem}[22.2.6]
+\label{0.22.2.6-es}
+Sean $k$ un cuerpo y $K$ una extensión de $k$. Para que exista una $k$-álgebra
+local noetheriana $A$, de ideal maximal $\mathfrak m$, tal que
+$A/\mathfrak m=K$ y que $A$ sea formalmente lisa (para su topología
+$\mathfrak m$-preádica), es necesario y suficiente que $\Upsilon_{K/k}$ sea
+un $K$-espacio vectorial de rango finito. La $k$-álgebra $A$ queda entonces
+determinada (salvo un $k$-isomorfismo que, al pasar a los cocientes, da la
+identidad $K\to K$) por su dimensión, que está sometida a la única condición
+de ser $\geqslant\operatorname{rg}_K\Upsilon_{K/k}$.
+\end{theorem}
+
+\begin{proof}
+Como $\mathfrak m/\mathfrak m^2$ es de rango finito sobre $K$, la necesidad
+de la condición resulta de (22.2.2, (ii)); recíprocamente, (22.2.5) muestra que
+la condición es suficiente y que se puede tomar como
+$\mathfrak m/\mathfrak m^2$ un $K$-espacio vectorial de rango cualquiera
+$\geqslant\operatorname{rg}_K(\Upsilon_{K/k})$.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{189}
+
+En particular, el homomorfismo identidad de $\Upsilon_{K/k}$ asocia
+\emph{canónicamente} a $K$ una $k$-álgebra noetheriana completa, formalmente
+lisa, para la cual $\Upsilon_{K/k}$ es isomorfo a
+$\mathfrak m/\mathfrak m^2$.
+
+\begin{remarks}[22.2.7]
+\label{0.22.2.7-es}
+\begin{enumerate}
+  \item[(i)] Sea $\Lambda$ un anillo local noetheriano, de cuerpo residual
+  $k$; resulta de (19.7.1) y (19.7.2) que la determinación de las
+  $\Lambda$-álgebras $A$ que son anillos locales noetherianos completos y que
+  son formalmente lisas es \emph{equivalente} al mismo problema en el que
+  $\Lambda$ se sustituye por $k$, y queda por tanto, en principio, enteramente
+  resuelta por (22.2.5), que reduce la cuestión a la estructura de los
+  \emph{cuerpos residuales} de las $k$-álgebras buscadas, como extensiones de
+  $k$.
+
+  \item[(ii)] El hecho de que $\Upsilon_{K/k}$ sea de rango finito sobre $K$
+  \emph{no implica} que $K$ sea «~de multiplicidad radicial finita~» sobre
+  $k$ (cf. (19.6.6)). Por ejemplo, sean $k_0$ un cuerpo perfecto de
+  característica $p>0$, $k=k_0(T)$ el cuerpo de las fracciones racionales en
+  una indeterminada sobre $k_0$ y $K=k^{p^{-\infty}}$ la menor extensión
+  perfecta de $k$. Se tiene entonces $\Omega^1_K=\Omega^1_{K/k}=0$ (21.4.4),
+  luego, por definición (20.6.1.1),
+  $\Upsilon_{K/k}=\Omega^1_k\otimes_kK$; y como $k^p=k_0(T^p)$, $T$ es una
+  $p$-base de $k$ sobre $k^p$, luego (21.4.5) $\Omega^1_k$ es de rango $1$
+  sobre $k$ y, por consiguiente, $\Upsilon_{K/k}$ de rango $1$ sobre $K$.
+  Pero, para todo $n$, el cuerpo residual del anillo local
+  $K\otimes_kk^{p^{-n}}$ es isomorfo a $K$ y, por tanto, no es separable sobre
+  $k^{p^{-n}}$.
+\end{enumerate}
+\end{remarks}
+
+El teorema (22.2.2) se generaliza como sigue:
+
+\begin{proposition}[22.2.8]
+\label{0.22.2.8-es}
+Bajo las condiciones de (22.2.1), supongamos que la característica $p$ de $k$
+sea $>0$; sea $(k_\alpha)$ una familia filtrante decreciente de subcuerpos de
+$k$ tal que $\bigcap_\alpha k_\alpha(k^p)=k^p$. Entonces la condición (ii) de
+(22.2.2) puede sustituirse por cualquiera de las siguientes:
+\begin{enumerate}
+  \item[a)] Existe $\alpha_0$ tal que el homomorfismo canónico
+  \[
+    \Omega^1_{k/k_\alpha}\otimes_kK
+    \longrightarrow\Omega^1_{A/k_\alpha}\otimes_AK
+  \]
+  sea inyectivo para todo $\alpha\geqslant\alpha_0$.
+  \item[b)] Existe $\alpha_0$ tal que $A$ sea una $k$-álgebra formalmente
+  lisa (para la topología $\mathfrak m$-preádica) relativamente a $k_\alpha$,
+  para todo $\alpha\geqslant\alpha_0$.
+  \item[c)] Para todo $\alpha$ y todo entero $n\geqslant0$, el homomorfismo
+  canónico
+  \[
+    \Omega^1_{k/k_\alpha}\otimes_k(A/\mathfrak m^{n+1})
+    \longrightarrow
+    \Omega^1_{A/k_\alpha}\otimes_A(A/\mathfrak m^{n+1})
+  \]
+  es invertible por la izquierda.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En efecto, si $A$ es una $k$-álgebra formalmente lisa, lo es \emph{a
+fortiori} relativamente a todo subcuerpo de $k$, lo que implica $c)$ en virtud
+de (20.7.2) y (19.1.7); es claro que $c)$ implica $b)$, en virtud de (20.7.2),
+y que $b)$ implica $a)$. Finalmente, teniendo en cuenta (22.2.3), queda por
+probar que $a)$ implica que el homomorfismo canónico
+\[
+  u:\Omega^1_k\otimes_kK\longrightarrow\Omega^1_A\otimes_AK
+\]
+es inyectivo. Ahora bien, se tiene para todo $\alpha$ un diagrama conmutativo
+\[
+\xymatrix@C=5em@R=3em{
+  \Omega^1_k\otimes_kK \ar[r]^{u} \ar[d]_{v_\alpha} &
+  \Omega^1_A\otimes_AK \ar[d] \\
+  \Omega^1_{k/k_\alpha}\otimes_kK \ar[r]_{u_\alpha} &
+  \Omega^1_{A/k_\alpha}\otimes_AK
+}
+\]
+
+\oldpage[0\textsubscript{IV-1}]{190}
+
+y la hipótesis de que $u_\alpha$ es inyectivo para
+$\alpha\geqslant\alpha_0$ implica que $\operatorname{Ker}(u)$ está contenido
+en la \emph{intersección} de los $\operatorname{Ker}(v_\alpha)$. Pero se ha
+visto (21.8.3) que esta intersección es nula en virtud de la hipótesis
+$\bigcap_\alpha k_\alpha(k^p)=k^p$, lo que termina la demostración.
+\end{proof}
+
+\begin{proposition}[22.2.9]
+\label{0.22.2.9-es}
+Bajo las hipótesis de (22.2.1), las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $A/\mathfrak m^2$ es una $k$-extensión $k$-trivial de $K$ por
+  $\mathfrak m/\mathfrak m^2$.
+  \item[b)] $\chi_{A/k}=0$.
+  \item[c)] El homomorfismo canónico (20.5.11.2)
+  \[
+    \delta_{K/A/k}:\mathfrak m/\mathfrak m^2
+    \longrightarrow\Omega^1_{A/k}\otimes_AK
+  \]
+  es inyectivo (en otras palabras, la sucesión
+  \begin{equation}
+  \tag{22.2.9.1}
+  \label{0.22.2.9.1-es}
+    0\longrightarrow\mathfrak m/\mathfrak m^2
+    \longrightarrow\Omega^1_{A/k}\otimes_AK
+    \longrightarrow\Omega^1_{K/k}\longrightarrow0
+  \end{equation}
+  es exacta).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La equivalencia de $b)$ y $c)$ resulta de la sucesión exacta (20.6.22.1); la
+equivalencia de $c)$ y $a)$ resulta de (20.5.12), pues la sucesión (22.2.9.1) se
+escinde si es exacta, ya que se trata de espacios vectoriales.
+
+Se observará que, si $K$ es \emph{separable sobre $k$}, se satisfacen las
+condiciones equivalentes de (22.2.9), en virtud de la definición de
+$\chi_{A/k}$ (22.2.1) y de (20.6.3).
+\end{proof}
+
+\begin{corollary}[22.2.10]
+\label{0.22.2.10-es}
+Bajo las hipótesis de (22.2.1), consideremos un subcuerpo $k_0$ de $k$. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $A/\mathfrak m^2$ es una $k_0$-extensión $k_0$-trivial de $K$
+  por $\mathfrak m/\mathfrak m^2$.
+  \item[b)] El homomorfismo compuesto
+  \[
+    \Upsilon_{K/k_0}\longrightarrow\Upsilon_{K/k}
+    \xrightarrow{\chi_{A/k}}\mathfrak m/\mathfrak m^2
+  \]
+  es nulo.
+  \item[c)] El homomorfismo característico
+  $\chi_{A/k}:\Upsilon_{K/k}\to\mathfrak m/\mathfrak m^2$ se factoriza como
+  \[
+    \Upsilon_{K/k}\longrightarrow\Upsilon_{K/k/k_0}
+    \xrightarrow{\chi'}\mathfrak m/\mathfrak m^2.
+  \]
+\end{enumerate}
+Además, cuando se cumplen estas condiciones, el homomorfismo $\chi'$ queda
+determinado de manera única y coincide con el homomorfismo característico de
+la $k_0$-extensión $k_0$-trivial $A/\mathfrak m^2$ de $K$ por
+$\mathfrak m/\mathfrak m^2$.
+\end{corollary}
+
+\begin{proof}
+Como el compuesto de $b)$ no es otro que $\chi_{A/k_0}$, la equivalencia de
+$a)$ y $b)$ resulta de (22.2.9); por otra parte, $b)$ y $c)$ son equivalentes
+en virtud de
+la sucesión exacta (20.6.18.1)
+\[
+  \Upsilon_{K/k_0}\longrightarrow\Upsilon_{K/k}
+  \longrightarrow\Upsilon_{K/k/k_0}\longrightarrow0,
+\]
+y, como el homomorfismo canónico
+$\Upsilon_{K/k}\to\Upsilon_{K/k/k_0}$ es sobreyectivo, esto implica la
+unicidad de $\chi'$; el hecho de que $\chi'$ sea el homomorfismo característico
+de la $k_0$-extensión $A/\mathfrak m^2$ resulta de (20.6.22.2).
+\end{proof}
+
+\begin{corollary}[22.2.11]
+\label{0.22.2.11-es}
+Bajo las hipótesis de (22.2.1), sea $p$ el exponente característico de $k$ y
+sea $(k_\alpha)$ una familia filtrante decreciente de subcuerpos de $k$ tal
+que $\bigcap_\alpha k_\alpha(k^p)=k^p$. Si $\Upsilon_{K/k}$ es de rango finito
+sobre $K$, existe un índice $\alpha$ tal que $A/\mathfrak m^2$ sea una
+$k_\alpha$-extensión $k_\alpha$-trivial de $K$ por
+$\mathfrak m/\mathfrak m^2$.
+\end{corollary}
+
+\begin{proof}
+En efecto, se sabe (21.8.3) que existe entonces un índice $\alpha$ tal que el
+homomorfismo canónico $\Upsilon_{K/k}\to\Upsilon_{K/k/k_\alpha}$ sea
+biyectivo, luego se satisface la condición $b)$ de (22.2.10) (donde $k_\alpha$
+sustituye a $k_0$).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{191}
+
+\subsection{Aplicación a las relaciones entre ciertos anillos locales y sus completados}
+\label{subsection:0.22.3-es}
+
+\begin{lemma}[22.3.1]
+\label{0.22.3.1-es}
+Sean $A_0$ un anillo semilocal noetheriano y $A$ una $A_0$-álgebra finita
+(que es, por tanto, un anillo semilocal noetheriano, cf. Bourbaki,
+\emph{Alg. comm.}, cap.~IV, §~2, n\textsuperscript{o}~5, cor.~3 de la
+prop.~9). Si $\widehat A_0$ y $\widehat A$ son los completados de $A_0$ y $A$
+para sus topologías preádicas respectivas, entonces, cuando se provee a
+$A_0$, $A$ y $\widehat A$ de las topologías discretas, $\widehat A$ es una
+$A$-álgebra formalmente lisa relativamente a $A_0$ (19.9.1).
+\end{lemma}
+
+\begin{proof}
+En efecto, se sabe que
+$\widehat A=A\otimes_{A_0}\widehat A_0$ (Bourbaki,
+\emph{Alg. comm.}, cap.~IV, §~2, n\textsuperscript{o}~5, cor.~3 de la
+prop.~9 y cap.~III, §~3, n\textsuperscript{o}~4, th.~1), luego la proposición
+resulta de (19.9.3).
+\end{proof}
+
+\begin{proposition}[22.3.2]
+\label{0.22.3.2-es}
+Sean $A$ un anillo local noetheriano regular, $K$ su cuerpo de fracciones y
+$p$ la característica de $K$. Se supone que se cumple una de las hipótesis
+siguientes:
+\begin{enumerate}
+  \item[(i)] $p=0$.
+  \item[(ii)] $p>0$ y existe una familia filtrante decreciente $(A_\alpha)$
+  de subanillos noetherianos de $A$, tales que $A$ sea una
+  $A_\alpha$-álgebra finita para todo $\alpha$, que
+  $A^{p^{h(\alpha)}}\subset A_\alpha$ para un entero $h(\alpha)$ conveniente,
+  y que, si $K_\alpha$ denota el cuerpo de fracciones de $A_\alpha$, se tenga
+  \[
+    \bigcap_\alpha K_\alpha(K^p)=K^p.
+  \]
+\end{enumerate}
+Sean entonces $B$ una $A$-álgebra finita íntegra que contiene a $A$,
+$\mathfrak n$ un ideal primo de $B$, $C$ el anillo local $B_\mathfrak n$ y
+$\mathfrak q$ un ideal primo del completado $\widehat C$ tal que
+$\mathfrak q\cap C=0$, de modo que el anillo local
+$\widehat C_\mathfrak q$ es un álgebra sobre el cuerpo de fracciones $L$ de
+$B$. Entonces $\widehat C_\mathfrak q$ es una $L$-álgebra formalmente lisa
+para su topología $\mathfrak q$-ádica y, por consiguiente, un anillo
+geométricamente regular sobre $L$ (19.6.5).
+\end{proposition}
+
+\begin{proof}
+Distinguamos dos casos.
+
+I) Supongamos que $\mathfrak n$ contiene el ideal maximal $\mathfrak m$ de
+$A$, y por consiguiente $\mathfrak n\cap A=\mathfrak m$. Entonces
+$\mathfrak n$ es maximal (Bourbaki, \emph{Alg. comm.}, cap.~V, §~2,
+n\textsuperscript{o}~1, prop.~1) y, si $\mathfrak r$ es el radical del anillo
+semilocal $B$, $\widehat C$ es el completado separado de $B$ para la topología
+$\mathfrak n$-preádica, y uno de los componentes del anillo semilocal
+$\widehat B$, completado de $B$ para la topología $\mathfrak r$-preádica
+(Bourbaki, \emph{Alg. comm.}, cap.~III, §~3, n\textsuperscript{o}~4,
+prop.~8); se puede escribir, por tanto,
+$\widehat C_\mathfrak q=\widehat B_{\mathfrak q'}$, donde $\mathfrak q'$ es
+el ideal primo de $\widehat B$ imagen recíproca de $\mathfrak q$. Observemos
+ahora que $B$ es un subanillo de $\widehat B$ y la hipótesis
+$\mathfrak q\cap C=0$ implica $\mathfrak q'\cap B=0$, luego
+$\widehat B_{\mathfrak q'}$ es también una localización del anillo
+$\widehat B\otimes_B L$ en uno de sus ideales primos $\mathfrak q''$, y
+$\mathfrak q'$ es su imagen recíproca en $\widehat B$. Además, se tiene
+$\widehat B=\widehat A\otimes_A B$ (Bourbaki, \emph{Alg. comm.}, cap.~IV,
+§~2, n\textsuperscript{o}~5, cor. de la prop.~9 y cap.~III, §~3,
+n\textsuperscript{o}~4, th.~1), luego
+$\widehat B\otimes_B L=\widehat A\otimes_A L$; finalmente, si $\mathfrak p$
+es el ideal primo de $\widehat A$, imagen recíproca de $\mathfrak q''$, el
+hecho de que $A\to B$ sea inyectivo y la conmutatividad del diagrama
+\[
+  \xymatrix{
+    B \ar[r] & \widehat B\\
+    A \ar[u] \ar[r] & \widehat A \ar[u]
+  }
+\]
+implican que $\mathfrak p\cap A=0$, luego
+$(\widehat A\otimes_A L)_{\mathfrak q''}$ es también una localización del
+anillo
+\[
+  \widehat A_\mathfrak p\otimes_A L
+  =(\widehat A_\mathfrak p\otimes_A K)\otimes_K L
+\]
+en uno de sus ideales primos.
+
+\oldpage[0\textsubscript{IV-1}]{192}
+
+Para mostrar que este anillo local es una $L$-álgebra formalmente lisa, basta
+probar que $\widehat A_\mathfrak p\otimes_A K$ es una $K$-álgebra formalmente
+lisa (19.3.5, (iii) y (iv)); por otra parte,
+$\widehat A_\mathfrak p\otimes_A K=\widehat A_\mathfrak p$, puesto que
+$\mathfrak p\cap A=0$. Vamos a aplicar los criterios (22.2.2) y (22.2.8).
+En primer lugar, como $A$ es regular, también lo es $\widehat A$ (17.1.5),
+luego $\widehat A_\mathfrak p$ (17.3.2), y se cumple la condición (i) de
+(22.2.2) (17.1.1). Basta por consiguiente (cuando $p>0$) verificar la
+condición b) de (22.2.8). Ahora bien, (22.3.1) muestra que, para todo
+$\alpha$, $\widehat A$ es una $A$-álgebra formalmente lisa relativamente a
+$A_\alpha$ (para las topologías discretas); por consiguiente,
+\[
+  \widehat A\otimes_{A_\alpha}K_\alpha
+  =\widehat A\otimes_A(A\otimes_{A_\alpha}K_\alpha)
+\]
+es una $(A\otimes_{A_\alpha}K_\alpha)$-álgebra formalmente lisa relativamente
+a $K_\alpha$, para las topologías discretas (19.9.2, (iii)). Pero, como $A$
+es una $A_\alpha$-álgebra finita, se tiene
+$A\otimes_{A_\alpha}K_\alpha=K$; como $\widehat A_\mathfrak p$ es un anillo
+de fracciones de $\widehat A\otimes_A K$, se concluye (19.9.2, (iv)) que
+$\widehat A_\mathfrak p$ es una $K$-álgebra formalmente lisa relativamente a
+$K_\alpha$, para la topología discreta, y \emph{a fortiori} para su topología
+$\mathfrak p$-ádica ((19.3.8) y (19.9.5)). Pero esta es precisamente la
+condición b) de (22.2.8), luego la proposición queda demostrada en este caso
+para $p>0$. Cuando $p=0$, el cuerpo residual de
+$\widehat A_\mathfrak p$ es separable sobre $K$, y como
+$\widehat A_\mathfrak p$ es un anillo regular, es una $K$-álgebra formalmente
+lisa en virtud de (19.6.4).
+
+II) Caso general. Sea $\mathfrak s$ el ideal primo $\mathfrak n\cap A$ de
+$A$, y pongamos $S=A-\mathfrak s$, de modo que $S^{-1}A=A_\mathfrak s$ y se
+tiene $C=(S^{-1}B)_{S^{-1}\mathfrak n}$, donde ahora
+$S^{-1}\mathfrak n$ contiene el ideal maximal
+$\mathfrak sA_\mathfrak s$ de $A_\mathfrak s$. Como $A_\mathfrak s$ es
+regular (17.3.2) y $S^{-1}B$ una $A_\mathfrak s$-álgebra finita íntegra que
+contiene a $A_\mathfrak s$, todo se reduce a verificar la condición (ii) para
+$A_\mathfrak s$ cuando $p>0$: ahora bien, pongamos
+$\mathfrak s_\alpha=\mathfrak s\cap A_\alpha$ y consideremos el anillo local
+$(A_\alpha)_{\mathfrak s_\alpha}$. Para todo $t\notin\mathfrak s$, por
+hipótesis, poniendo $q=p^{h(\alpha)}$, se tiene $t^q\in A_\alpha$ y
+$t^q\notin\mathfrak s$, luego $t^q\notin\mathfrak s_\alpha$; si se pone
+$S_\alpha=A_\alpha-\mathfrak s_\alpha$, se ve por tanto que
+$A_\mathfrak s=S_\alpha^{-1}A$, y la hipótesis implica que
+$A_\mathfrak s$ es una $(A_\alpha)_{\mathfrak s_\alpha}$-álgebra finita;
+además, $K_\alpha$ es también el cuerpo de fracciones de
+$(A_\alpha)_{\mathfrak s_\alpha}$, lo que termina la demostración.
+\end{proof}
+
+\begin{theorem}[22.3.3]
+\label{0.22.3.3-es}
+Sean $A$ un anillo local noetheriano completo, $\mathfrak p$ un ideal primo
+de $A$, $B$ el anillo localizado $A_\mathfrak p$, $\mathfrak q$ un ideal
+primo del completado $\widehat B$ y $\mathfrak r=\mathfrak q\cap B$.
+Entonces el anillo localizado $\widehat B_\mathfrak q$ de $\widehat B$ es una
+$B_\mathfrak r$-álgebra formalmente lisa para las topologías preádicas.
+\end{theorem}
+
+\begin{proof}
+El ideal primo $\mathfrak r$ de $B$ es de la forma
+$\mathfrak n_\mathfrak p$, donde $\mathfrak n\subset\mathfrak p$ es un ideal
+primo de $A$, y se tiene $B_\mathfrak r=A_\mathfrak n$; sea $k$ el cuerpo
+residual de $B_\mathfrak r$, que es también el cuerpo de fracciones del anillo
+local íntegro y completo $A'=A/\mathfrak n$. Como $\widehat B$ es un
+$B$-módulo plano $(\mathbf 0_\mathrm I,~7.3.5)$,
+$\widehat B_\mathfrak q$ es un $B_\mathfrak r$-módulo plano
+$(\mathbf 0_\mathrm I,~6.3.2)$, y para probar que
+$\widehat B_\mathfrak q$ es una $B_\mathfrak r$-álgebra formalmente lisa
+basta probar que
+\[
+  \widehat B_\mathfrak q\otimes_{B_\mathfrak r}k
+  =\widehat B_\mathfrak q/\mathfrak r\widehat B_\mathfrak q
+\]
+es una $k$-álgebra formalmente lisa (19.7.1). Ahora bien,
+$\widehat B_\mathfrak q/\mathfrak r\widehat B_\mathfrak q
+=(\widehat B/\mathfrak r\widehat B)_{\mathfrak q'}$, donde $\mathfrak q'$ es
+la imagen canónica de $\mathfrak q$ en
+$\widehat B/\mathfrak r\widehat B$; por definición se tiene
+$\mathfrak q'\cap(B/\mathfrak r)=0$ y
+$B/\mathfrak r=A_{\mathfrak p'}$, donde
+$\mathfrak p'=\mathfrak p/\mathfrak n$; además,
+$\widehat B/\mathfrak r\widehat B$ es el completado de $B/\mathfrak r$.
+
+Quedamos así reducidos a demostrar el corolario siguiente:
+\end{proof}
+
+\begin{corollary}[22.3.4]
+\label{0.22.3.4-es}
+Sean $A$ un anillo local noetheriano completo e íntegro, $K$ su cuerpo de
+fracciones, $\mathfrak p$ un ideal primo de $A$ y $B$ el anillo localizado
+$A_\mathfrak p$. Entonces, para todo ideal primo $\mathfrak q$
+
+\oldpage[0\textsubscript{IV-1}]{193}
+
+del completado $\widehat B$, tal que $\mathfrak q\cap B=0$, el anillo local
+$\widehat B_\mathfrak q$ es una $K$-álgebra formalmente lisa para su topología
+$\mathfrak q$-ádica y, por tanto, un anillo geométricamente regular sobre
+$K$.
+\end{corollary}
+
+\begin{proof}
+En efecto, resulta de (19.8.9) que existe un subanillo $A_0$ de $A$ que es un
+anillo de series formales sobre un cuerpo de característica $p>0$ o sobre un
+anillo de Cohen (se recuerda que los anillos de Cohen tienen un cuerpo de
+fracciones de característica $0$), y tal que $A$ es una $A_0$-álgebra finita.
+Ahora bien, se sabe que el anillo $A_0$ es regular (17.3.8) y cumple una de las
+hipótesis (i), (ii) de (22.3.2), en virtud de (21.8.8); basta entonces aplicar
+(22.3.2), sustituyendo $B$ por $A$ y $A$ por $A_0$.
+\end{proof}
+\subsection{Resultados preliminares sobre las extensiones finitas de anillos locales cuyo ideal maximal es de cuadrado nulo}
+\label{subsection:0.22.4-es}
+\label{0.22.4-es}
+
+\begin{proposition}[22.4.1]
+\label{0.22.4.1-es}
+Sean $A$ un anillo local cuyo ideal maximal $\mathfrak m$ es de cuadrado
+nulo, $K=A/\mathfrak m$ su cuerpo residual; denotemos por $V$ el ideal
+$\mathfrak m$ considerado como $K$-espacio vectorial. Sean $T_i$
+$(1\leqslant i\leqslant r)$ indeterminadas y, para cada $i$, sea
+$F_i$ un polinomio mónico de $A[T_i]$ de grado $d_i$; denotemos por $A'$ el
+cociente del anillo de polinomios $A[T_1,\ldots,T_r]$ por el ideal
+$\mathfrak b$ engendrado por los $r$ polinomios $F_i$. Supongamos que $A'$ es
+un anillo local, y sean $\mathfrak m'$ su ideal maximal y
+$K'=A'/\mathfrak m'$ su cuerpo residual. Entonces:
+\begin{enumerate}
+  \item[(i)] Si se pone $d=\prod_{i=1}^r d_i$, $A'$ es un $A$-módulo
+  libre de rango $d$, y se tiene $[K':K]\leqslant d$.
+  \item[(ii)] Para que $[K':K]=d$, es necesario y suficiente que
+  $A'\otimes_AK=A'/\mathfrak mA'$ sea un cuerpo (necesariamente isomorfo a
+  $K'$), es decir, que $\mathfrak m'=\mathfrak mA'$. En este caso se tiene
+  $\mathfrak m'^2=0$, y si $V'$ denota el ideal $\mathfrak m'$ considerado
+  como $K'$-espacio vectorial, el homomorfismo canónico
+  $V\otimes_KK'\to V'$ es biyectivo (y, por consiguiente,
+  $\operatorname{rg}_{K'}V'=\operatorname{rg}_K V$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Sin suponer que $A'$ sea local, es evidente, por división euclídea e
+inducción sobre $r$, que si $t_i$ es la clase de $T_i$ mod.~$\mathfrak b$,
+los monomios
+$M_\nu=t_1^{\nu_1}t_2^{\nu_2}\cdots t_r^{\nu_r}$, donde
+$0\leqslant\nu_i\leqslant d_i-1$, forman una base del $A$-módulo $A'$. Si
+$A'$ se supone local, $K'$ es un cociente de
+$A'/\mathfrak mA'=A'\otimes_AK$, por tanto
+$[K':K]\leqslant[A'\otimes_AK:K]=d$, y no puede haber igualdad salvo si
+$\mathfrak m'=\mathfrak mA'$, lo que demuestra (i) y la primera afirmación
+de (ii). Por otra parte, está claro que cuando
+$\mathfrak m'=\mathfrak mA'$, se tiene $\mathfrak m'^2=0$, y
+$V\otimes_KK'=\mathfrak m\otimes_AA'=\mathfrak mA'=V'$ puesto que $A'$ es
+un $A$-módulo libre.
+\end{proof}
+
+\begin{remark}[22.4.2]
+\label{0.22.4.2-es}
+Cuando $A$ es artiniano (es decir, $\operatorname{rg}_K(V)$ es finito),
+la hipótesis de que $A'$ sea local implica siempre que
+$\operatorname{rg}_{K'}(\mathfrak m'/\mathfrak m'^2)
+\geqslant\operatorname{rg}_K(V)$, como veremos más adelante (22.5.2).
+Obsérvese que estos dos rangos pueden ser iguales sin que se tenga
+$\mathfrak m'=\mathfrak mA'$.
+\end{remark}
+
+\begin{proposition}[22.4.3]
+\label{0.22.4.3-es}
+Siendo las hipótesis sobre $A$ y las notaciones las de (22.4.1), supongamos
+que los $F_i$ son de la forma
+\begin{equation}
+\label{0.22.4.3.1-es}
+  F_i(T_i)=T_i^{d_i}+\sum_{1\leqslant k\leqslant d_i}
+  c_{ik}T_i^{d_i-k},
+  \tag{22.4.3.1}
+\end{equation}
+donde $d_i\geqslant2$ para todo $i$, y $c_{ik}\in\mathfrak m$
+(«polinomios de Eisenstein»). Entonces:
+\begin{enumerate}
+  \item[(i)] $A'$ es un anillo local, y su cuerpo residual
+  $K'=A'/\mathfrak m'$ es isomorfo a $K$.
+
+  \oldpage[0\textsubscript{IV-1}]{194}
+
+  \item[(ii)] El núcleo del homomorfismo canónico
+  $V\to V'=\mathfrak m'/\mathfrak m'^2$ es el ideal $\mathfrak n$ de $A$
+  engendrado por los $\xi_i=c_{i,d_i}$ («términos constantes» de los $F_i$), y
+  el conúcleo de este homomorfismo tiene por base sobre $K'$ las imágenes de los $T_i$;
+  en particular, se tiene
+  \begin{equation}
+  \label{0.22.4.3.2-es}
+    \operatorname{rg}_{K'}(V')=\operatorname{rg}_K(V)+r-r',
+    \tag{22.4.3.2}
+  \end{equation}
+  donde $r'=\operatorname{rg}_K(\mathfrak n)$. Cuando
+  $\operatorname{rg}_K(V)$ es finito (es decir, cuando $A$ es
+  artiniano), para que
+  $\operatorname{rg}_{K'}(V')=\operatorname{rg}_K(V)$, es necesario y suficiente
+  que los $\xi_i$ sean linealmente independientes sobre $K$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Está claro que $A'\otimes_AK=A'/\mathfrak mA'$ es isomorfo a
+$K[T_1,\ldots,T_r]/\mathfrak b'$, donde $\mathfrak b'$ es el ideal engendrado
+por los $r$ polinomios $T_i^{d_i}$; es, pues, un anillo local de cuerpo
+residual $K$, cuyo ideal maximal está engendrado por las clases de los $T_i$
+mod.~$\mathfrak b'$, de donde (i).
+
+(ii) Sea $t_i$ $(1\leqslant i\leqslant r)$ la clase de $T_i$
+mod.~$\mathfrak b$; se deduce de (i) que el ideal maximal $\mathfrak m'$ de
+$A'$ viene dado por
+\[
+  \mathfrak m'=\mathfrak mA'+\sum_{i=1}^r t_iA',
+\]
+de donde, teniendo en cuenta que $\mathfrak m^2=0$,
+\[
+  \mathfrak m'^2=\sum_{i,j}t_it_jA'+\sum_i t_i\mathfrak mA'.
+\]
+Se concluye que $A'/\mathfrak m'^2$ es isomorfo al anillo
+$A[T_1,\ldots,T_r]/\mathfrak c$, donde $\mathfrak c$ es el ideal engendrado por
+los elementos
+\[
+  F_i\ (1\leqslant i\leqslant r),\qquad
+  T_iT_j\ (1\leqslant i\leqslant r,\ 1\leqslant j\leqslant r),\qquad
+  xT_i\ (1\leqslant i\leqslant r,\ x\in\mathfrak m).
+\]
+Como $d_i\geqslant2$ y los $T_i^2$ pertenecen a
+$\mathfrak c$, las hipótesis hechas implican que $\mathfrak c$ está también
+engendrado por los elementos
+\[
+  \xi_i\ (1\leqslant i\leqslant r),\qquad
+  T_iT_j\ (1\leqslant i\leqslant r,\ 1\leqslant j\leqslant r),\qquad
+  T_ix\ (1\leqslant i\leqslant r,\ x\in\mathfrak m).
+\]
+Sean
+\[
+  \mathfrak c_1=\sum_{i,j}T_iT_jA[T_1,\ldots,T_r],\qquad
+  \mathfrak c_2=\mathfrak c_1+\sum_i\mathfrak mT_iA[T_1,\ldots,T_r],
+\]
+de modo que
+$\mathfrak c=\mathfrak c_2+\sum_i\xi_iA[T_1,\ldots,T_r]$. Está claro que
+$A[T_1,\ldots,T_r]/\mathfrak c_1$ es el $A$-módulo suma directa de $A$ y
+de los $At_i^{(1)}$, donde $t_i^{(1)}$ es la clase de $T_i$
+mod.~$\mathfrak c_1$. Se deduce que
+$A[T_1,\ldots,T_r]/\mathfrak c_2$ es suma directa de $A$ y de los
+$Kt_i^{(2)}$, donde $t_i^{(2)}$ es la clase de $T_i$
+mod.~$\mathfrak c_2$. Finalmente, $A[T_1,\ldots,T_r]/\mathfrak c$ es suma
+directa de $A/\mathfrak n$ y de los $Kt_i'$, donde $t_i'$ es la clase de $T_i$
+mod.~$\mathfrak c$, y $\mathfrak n$ es el ideal de $A$ engendrado por los
+$\xi_i$; en la identificación de $A'/\mathfrak m'^2$ con
+$A[T_1,\ldots,T_r]/\mathfrak c$, la imagen de $V$ se identifica con
+$\mathfrak m/\mathfrak n$, y lo anterior demuestra, por tanto, (ii).
+\end{proof}
+
+\begin{proposition}[22.4.4]
+\label{0.22.4.4-es}
+Siendo las hipótesis sobre $A$ y las notaciones las de (22.4.1), supongamos
+que $K$ es de característica $p>0$ (por tanto $p\cdot1\in\mathfrak m$ en
+$A$) y que los $F_i$ son de la forma
+\begin{equation}
+\label{0.22.4.4.1-es}
+  F_i(T_i)=T_i^p+p\sum_{k=1}^{p-1}c_{ik}T_i^{p-k}-f_i
+  \tag{22.4.4.1}
+\end{equation}
+con $c_{ik}\in A$ y $f_i\in A$ para todo $i$ y todo $k$ tal que
+$1\leqslant k\leqslant p-1$; además, si $a_i$ es la clase de $f_i$
+mod.~$\mathfrak m$, se supone que la familia $(a_i)_{1\leqslant i\leqslant r}$
+es $p$-libre sobre $K^p$ («absolutamente $p$-libre»). Entonces:
+\begin{enumerate}
+  \item[(i)] $A'$ es un anillo local, de ideal maximal $\mathfrak mA'$,
+  cuyo cuerpo residual $K'$ es isomorfo a la extensión de $K$ obtenida por
+  adjunción de los $a_i^{1/p}$ $(1\leqslant i\leqslant r)$.
+
+  \oldpage[0\textsubscript{IV-1}]{195}
+
+  \item[(ii)] Los elementos $d_Af_i\otimes1_{K'}$ forman una base del núcleo
+  $N=\Upsilon^{K'}_{A'/A}$ del homomorfismo canónico
+  \[
+    \Omega^1_A\otimes_AK'\longrightarrow
+    \Omega^1_{A'}\otimes_{A'}K'.
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Esta vez $A'\otimes_AK=A'/\mathfrak mA'$ es isomorfo a
+$K[T_1,\ldots,T_r]/\mathfrak b'$, donde $\mathfrak b'$ es el ideal engendrado
+por los polinomios $T_i^p-a_i$; la hipótesis hecha sobre los $a_i$ implica que
+este anillo cociente es un cuerpo (21.1.8), de donde las afirmaciones de (i).
+
+Antes de demostrar (ii), estableceremos el
+
+\begin{lemma}[22.4.4.2]
+\label{0.22.4.4.2-es}
+Sean $\Lambda$ un anillo, $A$ una $\Lambda$-álgebra y $\mathfrak J$ un
+ideal de $A$ tal que el anillo $C=A/\mathfrak J$ sea de característica
+$p>0$ (lo que equivale a decir que $p\cdot1\in\mathfrak J$ en $A$). Sea
+$\pi$ la imagen canónica de $p\cdot1$ en
+$\mathfrak J/\mathfrak J^2$. Si $C$ es una $(\Lambda/p\Lambda)$-álgebra
+formalmente lisa para las topologías discretas, se tiene una sucesión exacta
+canónica
+\begin{equation}
+\label{0.22.4.4.3-es}
+  0\longrightarrow(\mathfrak J/\mathfrak J^2)/C\cdot\pi
+  \longrightarrow\Omega^1_{A/\Lambda}\otimes_AC
+  \longrightarrow\Omega^1_{C/\Lambda}\longrightarrow0.
+  \tag{22.4.4.3}
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Demostración del lema]
+Pongamos, en efecto, $A'=A/pA$, $\mathfrak J'=\mathfrak J/pA$, de modo que
+$C=A'/\mathfrak J'$. Como
+$A'=A\otimes_\Lambda(\Lambda/p\Lambda)$, se tiene
+$\Omega^1_{A/\Lambda}\otimes_AA'=\Omega^1_{A'/\Lambda'}$ salvo
+isomorfismo canónico, donde $\Lambda'$ denota el anillo
+$\Lambda/p\Lambda$ (20.5.5). Aplicando entonces la sucesión exacta (20.5.14.1) a
+la $\Lambda'$-álgebra formalmente lisa $C=A'/\mathfrak J'$, se obtiene la
+sucesión exacta
+\[
+  0\longrightarrow\mathfrak J'/\mathfrak J'^2
+  \longrightarrow\Omega^1_{A'/\Lambda'}\otimes_{A'}C
+  \longrightarrow\Omega^1_{C/\Lambda'}\longrightarrow0
+\]
+y como el homomorfismo $\Lambda\to\Lambda'$ es sobreyectivo, se tiene
+$\Omega^1_{C/\Lambda'}=\Omega^1_{C/\Lambda}$ salvo isomorfismo canónico
+(20.5.15); de donde la sucesión exacta (22.4.4.3) en virtud de lo anterior.
+\end{proof}
+
+(ii) Como se tiene $\mathfrak m'^2=0$, denotaremos también por $V'$ el ideal
+$\mathfrak m'$ considerado como $K'$-espacio vectorial, y pondremos
+\begin{equation}
+\label{0.22.4.4.4-es}
+  V_0=V/K\cdot p=\mathfrak m/(\mathfrak m^2+pA),\qquad
+  V_0'=V'/K'\cdot p=\mathfrak m'/(\mathfrak m'^2+pA').
+  \tag{22.4.4.4}
+\end{equation}
+Aplicando la sucesión exacta (22.4.4.3) al caso en que $\Lambda=\mathbf Z$, a la
+$\mathbf Z$-álgebra $A$ (resp. $A'$) y a su ideal $\mathfrak m$
+(resp. $\mathfrak m'$), se obtienen, puesto que $K$ (resp. $K'$) es separable sobre
+el cuerpo primo $\mathbf Z/p\mathbf Z$, y por tanto una
+$(\mathbf Z/p\mathbf Z)$-álgebra formalmente lisa (19.6.1), las sucesiones
+exactas
+\begin{equation}
+\label{0.22.4.4.5-es}
+  0\longrightarrow V_0\longrightarrow\Omega^1_A\otimes_AK
+  \longrightarrow\Omega^1_K\longrightarrow0,\qquad
+  0\longrightarrow V_0'\longrightarrow\Omega^1_{A'}\otimes_{A'}K'
+  \longrightarrow\Omega^1_{K'}\longrightarrow0.
+  \tag{22.4.4.5}
+\end{equation}
+Consideremos entonces el diagrama (22.4.4.6), donde las dos columnas centrales son
+la segunda sucesión (22.4.4.5) y la primera tensorizada por $K'$; como la
+primera sucesión exacta (22.4.4.5) está formada por espacios vectoriales sobre $K$,
+las dos columnas centrales de (22.4.4.6) son exactas; además, el
+diagrama formado por estas columnas y las flechas horizontales que las
+conectan es conmutativo, en virtud de la demostración de (22.4.4.2) y de
+la conmutatividad del diagrama (20.5.11.3). La última fila de (22.4.4.6)
+es la sucesión exacta obtenida a partir de (20.6.1.1) sustituyendo $A$, $B$,
+$C$ por $\mathbf Z$, $K$ y $K'$; la fila central se obtiene por
+tensorización con $K'$ de la sucesión exacta de $K$-módulos deducida de
+(20.6.1.1) sustituyendo $A$, $B$, $C$ por $\mathbf Z$, $A$, $K$
+respectivamente. El diagrama formado por estas dos filas y las flechas
+verticales que las conectan es conmutativo en virtud de la conmutatividad de
+(20.6.4.3). Observemos, por otra parte, que se está en las condiciones de aplicación
+de (22.4.1, (ii)), por lo que la fila superior del diagrama (22.4.4.6) es
+exacta, y las columnas extremas del diagrama
+
+\oldpage[0\textsubscript{IV-1}]{196}
+
+\begin{equation}
+\label{0.22.4.4.6-es}
+  \xymatrix{
+    && 0 \ar[d] & 0 \ar[d] && \\
+    & 0 \ar[r] & V_0\otimes_KK' \ar[r] \ar[d] & V_0' \ar[r] \ar[d] & 0 & \\
+    0 \ar[r] & N \ar[r] \ar[d] & \Omega^1_A\otimes_AK' \ar[r] \ar[d] &
+      \Omega^1_{A'}\otimes_{A'}K' \ar[r] \ar[d] &
+      \Omega^1_{A'/A}\otimes_{A'}K' \ar[r] \ar[d] & 0 \\
+    0 \ar[r] & \Upsilon_{K'/K} \ar[r] \ar[d] &
+      \Omega^1_K\otimes_KK' \ar[r] \ar[d] & \Omega^1_{K'} \ar[r] \ar[d] &
+      \Omega^1_{K'/K} \ar[r] \ar[d] & 0 \\
+    & 0 & 0 & 0 & 0 &
+  }
+  \tag{22.4.4.6}
+\end{equation}
+están formadas, respectivamente, por los núcleos y los conúcleos de las flechas
+horizontales centrales, lo que termina de probar que el diagrama es
+conmutativo. Además:
+
+\begin{lemma}[22.4.4.7]
+\label{0.22.4.4.7-es}
+Los homomorfismos
+\[
+  N\longrightarrow\Upsilon_{K'/K}\qquad\text{y}\qquad
+  \Omega^1_{A'/A}\otimes_{A'}K'\longrightarrow\Omega^1_{K'/K}
+\]
+del diagrama (22.4.4.6) son biyectivos.
+\end{lemma}
+
+\begin{proof}
+En efecto, el diagrama de la serpiente (Bourbaki, \emph{Alg. conmut.}, cap.~I,
+§~1, n\textsuperscript{o}~4, prop.~2), aplicado a las dos columnas centrales de
+(22.4.4.6), da una sucesión exacta
+\[
+  0\longrightarrow N\longrightarrow\Upsilon_{K'/K}\longrightarrow0
+  \longrightarrow\Omega^1_{A'/A}\otimes_{A'}K'
+  \longrightarrow\Omega^1_{K'/K}\longrightarrow0.
+\]
+Ahora bien, si $t_i$ es la imagen canónica de $T_i$ en $A'$, la relación
+$F_i(t_i)=0$, junto con el hecho de que en $A'$ se tiene
+$p\cdot1\in\mathfrak mA'\subset\mathfrak m'$, muestra inmediatamente que
+$d_{A'}f_i\in\mathfrak m'\Omega^1_{A'}$, por tanto
+$d_{A'}f_i\otimes1_{K'}=0$; esto demuestra que los
+$d_Af_i\otimes1_{K'}$ pertenecen a $N$. Además, sus imágenes en
+$\Upsilon_{K'/K}$ son los $d_Ka_i\otimes1_{K'}$, que forman una base de
+$\Upsilon_{K'/K}$ sobre $K'$ (21.4.7); teniendo en cuenta (22.4.4.7), esto termina
+de demostrar (22.4.4).
+\end{proof}
+\end{proof}
+\begin{env}[22.4.5]
+\label{0.22.4.5-es}
+Consideremos ahora dos anillos $A$, $B$ \emph{de característica} $p>0$, y
+dos homomorfismos
+\[
+  A\xrightarrow{i}B\xrightarrow{j}A
+\]
+
+\oldpage[0\textsubscript{IV-1}]{197}
+
+que verifican las condiciones de (21.3.1). Sea además $\mathfrak m$ un ideal
+\emph{de cuadrado nulo} en $A$; pongamos
+\[
+  K=A/\mathfrak m,\qquad
+  B_{(K)}=B\otimes_AK=B/Bi(\mathfrak m)
+\]
+y sean
+\[
+  \varphi:A\longrightarrow K,\qquad
+  \psi:B\longrightarrow B_{(K)}
+\]
+los homomorfismos canónicos.
+
+Como $\varphi$ es sobreyectivo, $\Omega^1_{B_{(K)}/A}$ se identifica
+canónicamente con $\Omega^1_{B_{(K)}/K}$ (20.5.15). Observemos que, puesto que
+$p\geqslant2$, para todo $x\in\mathfrak m$, se tiene $j(i(x))=x^p=0$, es decir,
+$j(i(\mathfrak m))=0$; pasando a los cocientes, se deduce, pues, de $j$ un
+homomorfismo
+\[
+  j':B_{(K)}\longrightarrow A
+\]
+tal que, si $i'=\psi\circ i:A\longrightarrow B_{(K)}$, se tiene
+\[
+  j'(i'(x))=x^p\qquad\text{y}\qquad i'(j'(y))=y^p
+  \qquad\text{para }x\in A\text{ e }y\in B_{(K)}.
+\]
+Poniendo, según las notaciones de (21.3.2),
+\[
+  \Theta_{B_{(K)}/A}
+  =\Omega^1_{B_{(K)}/A}\otimes_{B_{(K)}}A_{[j']}
+  =\Omega^1_{B_{(K)}/K}\otimes_{B_{(K)}}A_{[j']},
+\]
+se tiene, pues, (21.3.2.2) un homomorfismo canónico
+\begin{equation}
+\label{0.22.4.5.1-es}
+  \pi_{B_{(K)}/A}:\Theta_{B_{(K)}/A}\longrightarrow\Omega^1_A.
+  \tag{22.4.5.1}
+\end{equation}
+
+Por otra parte, se deducen de $i$ y $j$, pasando a los cocientes (teniendo en
+cuenta que $j(i(\mathfrak m))=0$), homomorfismos
+\[
+  K\xrightarrow{i_0}B_{(K)}\xrightarrow{j_0}K
+\]
+de modo que se tiene el diagrama conmutativo
+\[
+  \xymatrix{
+    A \ar[r]^i \ar[d]_\varphi & B \ar[r]^j \ar[d]^\psi & A \ar[d]^\varphi \\
+    K \ar[r]_{i_0} & B_{(K)} \ar[r]_{j_0} \ar[ur]_{j'} & K
+  }
+\]
+Está claro, además, que se tiene
+\[
+  j_0(i_0(s))=s^p\qquad\text{y}\qquad i_0(j_0(t))=t^p
+  \qquad\text{para }s\in K\text{ y }t\in B_{(K)}.
+\]
+Se define, pues, del mismo modo
+\[
+  \Theta_{B_{(K)}/K}
+  =\Omega^1_{B_{(K)}/K}\otimes_{B_{(K)}}K_{[j_0]}
+  =\Theta_{B_{(K)}/A}\otimes_AK,
+\]
+por lo que, tensorizando (22.4.5.1) por $K$, se obtiene un
+$K$-\emph{homomorfismo canónico}
+\begin{equation}
+\label{0.22.4.5.2-es}
+  \pi'_{B_{(K)}/K}=\pi_{B_{(K)}/A}\otimes1_K:
+  \Theta_{B_{(K)}/K}\longrightarrow\Omega^1_A\otimes_AK.
+  \tag{22.4.5.2}
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{198}
+
+Se deduce inmediatamente de las definiciones que el diagrama
+\[
+  \xymatrix{
+    \Theta_{B_{(K)}/K} \ar[r]^{\pi'_{B_{(K)}/K}} \ar[dr]_{\pi_{B_{(K)}/K}}
+      & \Omega^1_A\otimes_AK \ar[d]^{\varphi_{K/A}} \\
+    & \Omega^1_K
+  }
+\]
+es conmutativo, siendo $\pi_{B_{(K)}/K}$ el homomorfismo canónico
+correspondiente a $i_0$ y $j_0$ (21.3.2.2). Por \emph{restricción} a
+$\Xi_{B_{(K)}/K}=\operatorname{Ker}(\pi_{B_{(K)}/K})$, el homomorfismo
+$\pi'_{B_{(K)}/K}$ define, pues, un \emph{homomorfismo canónico}
+\begin{equation}
+\label{0.22.4.5.3-es}
+  \Xi_{B_{(K)}/K}\longrightarrow
+  \operatorname{Ker}(\Omega^1_A\otimes_AK\longrightarrow\Omega^1_K)=\Upsilon_{K/A}.
+  \tag{22.4.5.3}
+\end{equation}
+\end{env}
+
+\begin{env}[22.4.6]
+\label{0.22.4.6-es}
+Siendo las hipótesis y notaciones las de (22.4.5), supongamos además que
+$\mathfrak m$ es un ideal \emph{maximal de cuadrado nulo}, de modo que $K$ es un
+\emph{cuerpo}, y denotemos por $V$ el ideal $\mathfrak m$ considerado como
+$K$-espacio vectorial. Como $K$ es un álgebra formalmente lisa sobre su cuerpo primo
+$\mathbf F_p$ (21.5.2) y $A$ es un álgebra sobre $\mathbf F_p$ (de modo
+que $\Omega^1_A=\Omega^1_{A/\mathbf F_p}$), se deduce de (20.5.14) que se tiene
+una \emph{sucesión exacta}
+\begin{equation}
+\label{0.22.4.6.1-es}
+  0\longrightarrow V\longrightarrow\Omega^1_A\otimes_AK
+  \longrightarrow\Omega^1_K\longrightarrow0.
+  \tag{22.4.6.1}
+\end{equation}
+Se tiene, pues, por (22.4.5.3) un homomorfismo denotado por
+\begin{equation}
+\label{0.22.4.6.2-es}
+  \chi'_{B/A}:\Xi_{B_{(K)}/K}\longrightarrow V
+  \tag{22.4.6.2}
+\end{equation}
+que llamaremos \emph{homomorfismo característico} de la $A$-álgebra
+$B$ (relativo a $i$, $j$ y $\mathfrak m$). Se deduce de las definiciones que para
+que $\chi'_{B/A}$ sea \emph{inyectivo}, es necesario y suficiente que
+$\pi'_{B_{(K)}/K}$ sea inyectivo, pues el núcleo de este último está evidentemente
+contenido en $\Xi_{B_{(K)}/K}$.
+\end{env}
+
+\begin{proposition}[22.4.7]
+\label{0.22.4.7-es}
+Sean $A$ un anillo local artiniano cuyo ideal maximal $\mathfrak m$ es de
+cuadrado nulo, $K=A/\mathfrak m$ su cuerpo residual y $V$ el ideal $\mathfrak m$
+considerado como $K$-espacio vectorial; se supone que $A$ es de
+característica $p>0$; sean
+\begin{equation}
+\label{0.22.4.7.1-es}
+  F_i(T_i)=T_i^p-f_i\qquad\text{con }f_i\in A\quad(1\leqslant i\leqslant r)
+  \tag{22.4.7.1}
+\end{equation}
+y denotemos por $B$ el anillo cociente de $A[T_1,\ldots,T_r]$ por el ideal
+engendrado por los $r$ polinomios $F_i$. Entonces:
+\begin{enumerate}
+  \item[\rm(i)] $B$ es un anillo local.
+  \item[\rm(ii)] Si $\mathfrak m'$ es el ideal maximal de $B$,
+  $K'=B/\mathfrak m'$ su cuerpo residual y $V'$ el $B$-módulo
+  $\mathfrak m'/\mathfrak m'^2$ considerado como $K'$-espacio vectorial, entonces,
+  para que $\operatorname{rg}_K(V)=\operatorname{rg}_{K'}(V')$, es necesario y suficiente que el homomorfismo
+  característico de $K$-espacios vectoriales
+  \begin{equation}
+  \label{0.22.4.7.2-es}
+    \chi'_{B/A}:\Xi_{B_{(K)}/K}\longrightarrow V
+    \tag{22.4.7.2}
+  \end{equation}
+  (cf. (22.4.6.2)) sea inyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Denotemos también por $a_i$ $(1\leqslant i\leqslant r)$ la clase de $f_i$
+mod.~$\mathfrak m$; los $a_i$ ya no son necesariamente $p$-independientes
+sobre $K^p$, pero siempre se puede suponer que la subfamilia
+
+\oldpage[0\textsubscript{IV-1}]{199}
+
+$(a_i)_{s+1\leqslant i\leqslant r}$ es $p$-libre sobre $K^p$ y forma una
+$p$-base sobre $K^p$ del cuerpo $K^p(a_1,\ldots,a_r)$, de modo que se tiene
+\[
+  a_i\in K^p(a_{s+1},\ldots,a_r)\qquad\text{para }1\leqslant i\leqslant s.
+\]
+Denotemos por $A''$ el anillo cociente de $A[T_{s+1},\ldots,T_r]$ por el ideal
+engendrado por los $F_i$ de índice $i\geqslant s+1$; entonces, por (22.4.4), $A''$
+es un anillo local cuyo ideal maximal es $\mathfrak m''=\mathfrak mA''$
+(por tanto de cuadrado nulo) y cuyo cuerpo residual es
+$K''=K(a_{s+1}^{1/p},\ldots,a_r^{1/p})$. Se tiene, pues,
+$a_i\in K''^p$ para $1\leqslant i\leqslant s$ y, por consiguiente, en $A''$,
+el elemento $f_i$, para $1\leqslant i\leqslant s$, puede escribirse
+\begin{equation}
+\label{0.22.4.7.3-es}
+  f_i=g_i^p+h_i
+  \tag{22.4.7.3}
+\end{equation}
+donde $g_i\in A''$ y $h_i\in\mathfrak m''$ (como $\mathfrak m''^2=0$ y
+$p\mathfrak m''=0$, es inmediato que $h_i$ está determinado de manera
+\emph{única} por estas condiciones). Sustituyendo $T_i$ por $T_i+g_i$, se ve, pues,
+que si se pone
+\[
+  G_i(T_i)=T_i^p+\sum_{k=1}^{p-1}\binom pk g_i^{p-k}T_i^k-h_i
+  \qquad(1\leqslant i\leqslant s),
+\]
+$B$ es el anillo cociente de $A''[T_1,\ldots,T_s]$ por el ideal engendrado por los
+$G_i$; ahora bien, todos los coeficientes de $G_i$, salvo el coeficiente dominante,
+pertenecen a $\mathfrak m''$, por lo que se está en la situación de (22.4.3),
+$B$ es un anillo local, y su cuerpo residual $K'$ es \emph{isomorfo} a
+$K''$, lo que demuestra (i) (que, por lo demás, resulta directamente de que
+$B^p\subset A$, y por tanto solo hay un ideal de $B$ por encima de
+$\mathfrak m$).
+
+Observemos ahora que para que (22.4.7.2) sea inyectivo, es necesario y suficiente
+que lo sea
+\[
+  \pi'_{B_{(K)}/K}:\Omega^1_{B_{(K)}/K}\otimes_{B_{(K)}}K
+  \longrightarrow\Omega^1_A\otimes_AK
+\]
+(por (22.4.6)). Ahora bien, $B_{(K)}=B/\mathfrak mB$ es el álgebra cociente de
+$C=K[T_1,\ldots,T_r]$ por el ideal engendrado por los polinomios
+$\overline F_i=T_i^p-a_i$, y como $d_{C/K}\overline F_i=0$, se deduce de
+(20.5.13) que $\Omega^1_{B_{(K)}/K}$ es un $B_{(K)}$-módulo libre que tiene por
+\emph{base} los $d_{B_{(K)}/K}t_i$, donde $t_i$ es la imagen canónica de $T_i$
+$(1\leqslant i\leqslant r)$. Pero, por definición (22.4.5), la imagen canónica por
+$j':B_{(K)}\longrightarrow A$ de una clase mod.~$\mathfrak mB$ de un elemento
+$x\in B$ es el elemento $x^p\in A$; se deduce inmediatamente, puesto que $t_i^p=f_i$,
+que la imagen de $d_{B_{(K)}/K}t_i\otimes1$ por $\pi'_{B_{(K)}/K}$ es
+$d_Af_i\otimes1$ en $\Omega^1_A\otimes_AK$; la condición de que
+$\pi'_{B_{(K)}/K}$ sea inyectivo equivale, pues, a que los
+$d_Af_i\otimes1_K$ sean \emph{linealmente independientes sobre $K$}, o también
+a que sus imágenes $d_Af_i\otimes1_{K'}$ sean \emph{linealmente independientes
+sobre $K'$} en $\Omega^1_A\otimes_AK'$.
+
+Ahora bien, si se aplica (22.4.4) a la $A$-álgebra $A''$, se ve que el núcleo del
+homomorfismo canónico
+$\Omega^1_A\otimes_AK'\longrightarrow\Omega^1_{A''}\otimes_{A''}K'$ tiene por
+base los $d_Af_i\otimes1_{K'}$ para $s+1\leqslant i\leqslant r$. La condición
+precedente equivale, pues, también a decir que los $d_{A''}f_i\otimes1_{K'}$ son
+linealmente independientes en $\Omega^1_{A''}\otimes_{A''}K'$ para
+$1\leqslant i\leqslant s$. Ahora bien, se tiene $d_{A''}f_i=d_{A''}h_i$ por (22.4.7.3);
+por otra parte, si $V''$ es el $K'$-espacio vectorial $\mathfrak m''$, se tiene
+$\operatorname{rg}_{K'}(V'')=\operatorname{rg}_K(V)$ (22.4.1, (ii)), y la condición
+$\operatorname{rg}_{K'}(V')=\operatorname{rg}_K(V)$ equivale, pues, a
+$\operatorname{rg}_{K'}(V'')=\operatorname{rg}_{K'}(V')$. Pero se deduce de (22.4.3) que esta última
+relación equivale a que las clases $h_i$
+
+\oldpage[0\textsubscript{IV-1}]{200}
+
+en $V''$ sean \emph{linealmente independientes sobre $K'$}. Ahora bien, en
+$\Omega^1_{A''}\otimes_{A''}K'$, los $d_{A''}h_i\otimes1_{K'}$ son las imágenes
+canónicas (20.5.11.2) de los $h_i$ por la inyección
+$V''\longrightarrow\Omega^1_{A''}\otimes_{A''}K'$ (cf. (22.4.6.1)), y esto
+termina de demostrar (22.4.7).
+\end{proof}
+
+Además, se ha demostrado:
+
+\begin{corollary}[22.4.7.4]
+\label{0.22.4.7.4-es}
+Para que $\operatorname{rg}_K(V)=\operatorname{rg}_{K'}(V')$, es necesario y suficiente que los elementos
+$d_Af_i\otimes1_K$ $(1\leqslant i\leqslant r)$ sean linealmente
+independientes en el $K$-espacio vectorial $\Omega^1_A\otimes_AK$.
+\end{corollary}
+
+\begin{remark}[22.4.8]
+\label{0.22.4.8-es}
+Se pueden definir los homomorfismos (22.4.5.2) y (22.4.6.2) en condiciones
+algo distintas. Sean $A$ un anillo, $\mathfrak m$ un ideal \emph{de cuadrado
+nulo} en $A$, $K=A/\mathfrak m$ y $p$ un número primo tal que
+$p\cdot1\in\mathfrak m$ (es decir, $K$ es de característica $p$, pero no
+necesariamente $A$). Sea, por otra parte, $B$ una $A$-álgebra que sea un $A$-módulo
+\emph{fielmente plano} (de modo que $A\subset B$), y supongamos que se tiene
+\begin{equation}
+\label{0.22.4.8.1-es}
+  y^p\in A+pB\subset A+\mathfrak mB
+  \tag{22.4.8.1}
+\end{equation}
+para todo $y\in B$. Si $y^p=x+pz$ con $x\in A$, $z\in B$, la \emph{clase}
+mod.~$(A\cap pB)$ de $x$ está bien determinada, y como $A\cap pB=pA$ puesto que
+$B$ es un $A$-módulo fielmente plano, se ha definido así una aplicación
+canónica $j:B\longrightarrow A/pA$, tal que, para $x\in A$, $j(x)$ sea la
+clase de $x^p$ mod.~$pA$. Por otra parte, si $y'\in B$ y
+$y'^p=x'+pz'$ con $x'\in A$, $z'\in B$, es inmediato que los elementos
+$(y+y')^p-x-x'$ y $(yy')^p-xx'$ pertenecen a $pB$, en virtud de que los
+coeficientes binomiales $\binom pi$ son múltiplos de $p$ para
+$1\leqslant i\leqslant p-1$. La aplicación $j$ es, pues, un
+\emph{homomorfismo de anillos}. Por composición, se deduce de $j$ un
+homomorfismo $j':B\xrightarrow{j}A/pA\longrightarrow A/\mathfrak m=K$ y, por
+consiguiente, un homomorfismo $j_0:B_{(K)}\longrightarrow K$ tal que $j'$ sea el
+compuesto $B\longrightarrow B_{(K)}=B\otimes_AK\xrightarrow{j_0}K$; además,
+si $i_0:K\longrightarrow B_{(K)}$ es la aplicación canónica, $i_0$ y $j_0$
+verifican las condiciones de (21.3.1) para los anillos \emph{de característica
+$p$}, $K$ y $B_{(K)}$. Dicho esto, para definir un $K$-homomorfismo
+$\pi'_{B_{(K)}/K}:\Omega^1_{B_{(K)}/K}\otimes_{B_{(K)}}K_{[j_0]}
+\longrightarrow\Omega^1_A\otimes_AK$, basta (20.4.8) definir una
+$K$-derivación
+\begin{equation}
+\label{0.22.4.8.2-es}
+  D_0:B_{(K)}\longrightarrow\Omega^1_A\otimes_AK
+  \tag{22.4.8.2}
+\end{equation}
+donde el segundo miembro se considera como un $B_{(K)}$-módulo por medio de $j_0$.
+Para ello basta definir una $A$-derivación
+\begin{equation}
+\label{0.22.4.8.3-es}
+  D:B\longrightarrow\Omega^1_A\otimes_AK
+  \tag{22.4.8.3}
+\end{equation}
+que \emph{se anule en} $\mathfrak mB$ (considerándose el segundo miembro como
+$B$-módulo por medio de $j'$). Ahora bien, si se tiene la relación $y^p=x+pz$ con
+$y\in B$, $x\in A$, $z\in B$, el elemento $d_Ax\otimes1_K$ de
+$\Omega^1_A\otimes_AK$ solo depende de la clase $j(y)$ mod.~$pA$ de $x$
+(por tanto solo de $y$), pues para todo $t\in A$ se tiene
+$d_A(pt)=p\,d_A(t)$, por tanto $d_A(pt)\otimes1=0$ en
+$\Omega^1_A\otimes_AK=\Omega^1_A/\mathfrak m\Omega^1_A$, puesto que
+$p\cdot1\in\mathfrak m$. Se puede tomar, pues,
+\[
+  D(y)=d_Ax\otimes1_K.
+\]
+El hecho de que $D$ sea una derivación se deduce fácilmente de que $j$ es un
+homomorfismo de anillos; además, para $t\in A$, se tiene
+$d_A(t^px)=t^p d_A(x)+pt^{p-1}x d_A(t)$, y de ello se deduce que
+$D(ty)=tD(y)$, por tanto $D$ es una $A$-derivación; finalmente, si se tiene además
+$t\in\mathfrak m$, se tiene
+
+\oldpage[0\textsubscript{IV-1}]{201}
+
+$D(ty)=tD(y)=0$, puesto que $\Omega^1_A\otimes_AK$ está anulado por $\mathfrak m$.
+Se ha definido así el homomorfismo (22.4.5.2) buscado, y es inmediato
+verificar que el homomorfismo compuesto
+\[
+  \Theta_{B_{(K)}/K}\xrightarrow{\pi'_{B_{(K)}/K}}
+  \Omega^1_A\otimes_AK\longrightarrow\Omega^1_K
+\]
+es todavía el homomorfismo canónico $\pi_{B_{(K)}/K}$ (relativo a $i_0$ y
+$j_0$). Se tiene, pues, también un homomorfismo canónico análogo a (22.4.5.3).
+
+Si ahora $K$ es un \emph{cuerpo}, $A/pA$ es una $\mathbf F_p$-álgebra,
+y se tiene la sucesión exacta (20.5.14)
+\[
+  0\longrightarrow V/pA\longrightarrow
+  \Omega^1_{A/pA}\otimes_{A/pA}K\longrightarrow\Omega^1_K\longrightarrow0
+\]
+y, por otra parte, se tiene la sucesión exacta (20.5.12.1)
+\[
+  pA\longrightarrow\Omega^1_A\otimes_A(A/pA)
+  \longrightarrow\Omega^1_{A/pA}\longrightarrow0
+\]
+que muestra, tensorizando con $K$, que los $K$-espacios vectoriales
+$\Omega^1_A\otimes_AK$ y
+$\Omega^1_{A/pA}\otimes_{A/pA}K$ son isomorfos. El análogo de (22.4.6.2) es,
+por tanto, aquí un homomorfismo
+\begin{equation}
+\label{0.22.4.8.4-es}
+  \Xi_{B_{(K)}/K}\longrightarrow V/pA=\mathfrak m/(\mathfrak m^2+pA).
+  \tag{22.4.8.4}
+\end{equation}
+
+Dicho esto, \emph{el criterio (22.4.7), en el que se sustituyen $V$ y $V'$ por $V/pA$
+y $V'/pB$ respectivamente, sigue siendo válido suponiendo solamente que $K$ sea
+de característica $p>0$} (es decir, que $p\cdot1\in\mathfrak m$ en
+$A$), \emph{y que los $F_i(T_i)$ sean de la forma más general
+(22.4.4.1)}: en efecto, $B$ es un $A$-módulo libre (por tanto fielmente plano), y
+basta retomar el razonamiento de (22.4.7), sustituyendo (22.4.6.2)
+por (22.4.8.4) y $V''$ por $V''/pA''$.
+\end{remark}
+
+\subsection{Álgebras geométricamente regulares y álgebras formalmente lisas}
+\label{subsection:0.22.5-es}
+
+\begin{proposition}[22.5.1]
+\label{0.22.5.1-es}
+Sean $A$ un anillo local regular y $A'$ un anillo local que contiene a $A$ y que
+es una $A$-álgebra finita, $\mathfrak m$ (resp. $\mathfrak m'$) el ideal maximal
+de $A$ (resp. $A'$), y $K=A/\mathfrak m$ (resp. $K'=A'/\mathfrak m'$) su cuerpo
+residual. Para que $A'$ sea un anillo regular, es necesario y suficiente que se
+tenga
+\begin{equation}
+\label{0.22.5.1.1-es}
+  \operatorname{rg}_K(\mathfrak m/\mathfrak m^2)
+  =\operatorname{rg}_{K'}(\mathfrak m'/\mathfrak m'^2).
+  \tag{22.5.1.1}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+En efecto, el primer miembro de (22.5.1.1) es $\dim(A)$ (17.1.1), y como
+$A\subset A'$ y $A'$ es una $A$-álgebra finita,
+$\dim(A')=\dim(A)$ (16.1.5); la igualdad (22.5.1.1) es, pues, necesaria y
+suficiente para que $A'$ sea regular (17.1.1).
+\end{proof}
+
+\begin{remark}[22.5.2]
+\label{0.22.5.2-es}
+\begin{enumerate}
+  \item[\rm(i)] Sean $A_1=A/\mathfrak m^2$,
+  $A'_1=A'\otimes_AA_1=A'/\mathfrak m^2A'$; como
+  $\mathfrak m^2A'\subset\mathfrak m'^2$,
+  $\mathfrak m'_1=\mathfrak m'/\mathfrak m^2A'$ es el ideal maximal de $A'_1$
+  y $\mathfrak m'_1/\mathfrak m_1'^2$ es un $K'$-espacio vectorial isomorfo
+  a $\mathfrak m'/\mathfrak m'^2$; la condición de regularidad de $A'$ solo
+  depende, pues, de la estructura de la $A_1$-álgebra $A'_1$, lo que nos
+  permitirá a continuación aplicar los resultados preliminares de (22.4) sobre
+  las álgebras finitas sobre anillos artinianos.
+  \item[\rm(ii)] Se deduce de la demostración de (22.5.1) y de (16.2.6.1)
+  que se tiene en todo caso
+  \begin{equation}
+  \label{0.22.5.2.1-es}
+    \operatorname{rg}_K(\mathfrak m/\mathfrak m^2)
+    \leqslant\operatorname{rg}_{K'}(\mathfrak m'/\mathfrak m'^2).
+    \tag{22.5.2.1}
+  \end{equation}
+
+  \oldpage[0\textsubscript{IV-1}]{202}
+
+  \item[\rm(iii)] Supongamos que $A$ y $A'$ verifican las hipótesis generales
+  de (22.4.1). Se sabe (19.8.10) que existe un anillo local \emph{regular}
+  $B$, de ideal maximal $\mathfrak n$, tal que $A$ es isomorfo a
+  $B/\mathfrak n^2$; denotemos por $G_i\in B[T_i]$ un polinomio mónico cuya
+  imagen canónica en $A[T_i]$ sea $F_i$ $(1\leqslant i\leqslant r)$;
+  entonces, si $B'$ es el anillo cociente de $B[T_1,\ldots,T_r]$ por el ideal
+  engendrado por los $G_i$, está claro que $B'$ es un $B$-módulo libre de rango
+  $d$ y que $A'=B'\otimes_BA=B'/\mathfrak n^2B'$; como $A'$ se supone un
+  anillo local, lo mismo sucede con $B'$, y si $\mathfrak n'$ es el ideal
+  maximal de $B'$, $B'/\mathfrak n'$ es isomorfo a $K'$ y
+  $\mathfrak n'/\mathfrak n'^2$ es isomorfo a $\mathfrak m'/\mathfrak m'^2$ como
+  espacio vectorial sobre $K'$; la desigualdad (22.5.2.1) muestra, pues, que
+  se tiene, bajo las hipótesis de (22.4.1),
+  \begin{equation}
+  \label{0.22.5.2.2-es}
+    \operatorname{rg}_K(V)\leqslant\operatorname{rg}_{K'}(\mathfrak m'/\mathfrak m'^2).
+    \tag{22.5.2.2}
+  \end{equation}
+\end{enumerate}
+\end{remark}
+
+\begin{corollary}[22.5.3]
+\label{0.22.5.3-es}
+Sean $A$ un anillo local regular, $\mathfrak m$ su ideal maximal,
+$T_i$ $(1\leqslant i\leqslant r)$ indeterminadas y, para cada $i$, sea
+\begin{equation}
+\label{0.22.5.3.1-es}
+  F_i(T_i)=T_i^{d_i}+\sum_{1\leqslant k\leqslant d_i}c_{ik}T_i^{d_i-k}
+  \tag{22.5.3.1}
+\end{equation}
+un polinomio mónico de $A[T_i]$, tal que $d_i\geqslant2$ para todo $i$ y
+$c_{ik}\in\mathfrak m$. Sea $A'$ el cociente del anillo de polinomios
+$A[T_1,\ldots,T_r]$ por el ideal engendrado por los $r$ polinomios $F_i$. Entonces:
+\begin{enumerate}
+  \item[\rm(i)] $A'$ es un anillo local, y su cuerpo residual $K'$ es
+  isomorfo al cuerpo residual $K$ de $A$.
+  \item[\rm(ii)] Para que $A'$ sea un anillo regular, es necesario y suficiente
+  que las clases $\xi_i$ mod.~$\mathfrak m^2$ de los elementos $c_{i,d_i}$
+  $(1\leqslant i\leqslant r)$ sean linealmente independientes sobre $K$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+En efecto, con las notaciones de (22.5.2, (i)), si $\overline F_i$ denota el
+polinomio de $A_1[T_i]$ obtenido aplicando a los coeficientes de $F_i$
+el homomorfismo $A\longrightarrow A_1$, $A'_1$ se define a partir de $A_1$ y
+de los polinomios $\overline F_i$ como en (22.4.1), y la conclusión se deduce,
+por tanto, de (22.5.1) y de (22.4.3).
+\end{proof}
+
+\begin{theorem}[22.5.4]
+\label{0.22.5.4-es}
+Sean $A$ un anillo local regular y $K$ su cuerpo residual; se supone que
+$K$ es de característica $p>0$; sean
+\begin{equation}
+\label{0.22.5.4.1-es}
+  F_i(T_i)=T_i^p+p\sum_{k=1}^{p-1}c_{ik}T_i^{p-k}-f_i
+  \tag{22.5.4.1}
+\end{equation}
+con $c_{ik}\in A$ y $f_i\in A$ $(1\leqslant i\leqslant r)$; sea $B$
+el anillo cociente de $A[T_1,\ldots,T_r]$ por el ideal engendrado por los $r$
+polinomios $F_i$. Entonces $B$ es un anillo local, y las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es regular;
+  \item[b)] los elementos $d_Af_i\otimes1_K$ $(1\leqslant i\leqslant r)$ son
+  linealmente independientes en el $K$-espacio vectorial
+  $\Omega^1_A\otimes_AK$;
+  \item[c)] si $B'=B/\mathfrak m^2B$ y si se pone
+  $\Xi_{B_{(K)}/K}=\Xi_{B'_{(K)}/K}$ (22.4.5), el homomorfismo
+  característico $\Xi_{B_{(K)}/K}\longrightarrow\mathfrak m/\mathfrak m^2$
+  (22.4.6.2) es inyectivo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+En efecto, $B'$ se define también a partir de $A_1=A/\mathfrak m^2$ y de los
+polinomios $\overline F_i$ obtenidos aplicando a los $F_i$ el homomorfismo
+$A\longrightarrow A_1$. Teniendo en cuenta que $\Omega^1_A\otimes_AK$ es
+canónicamente isomorfo a $\Omega^1_{A_1}\otimes_{A_1}K$ (20.5.12, (ii)), el
+teorema se deduce de (22.5.1) y de (22.4.7.4), utilizando la observación
+(22.4.8) cuando $A_1$ no es de característica $p$.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{203}
+
+\begin{env}[22.5.5]
+\label{0.22.5.5-es}
+Sean $k$ un cuerpo de característica $p>0$, $A$ un anillo local y $k'$ una
+extensión \emph{radicial finita} de $k$ tal que $k'^p\subset k$,
+$\mathfrak m$ el ideal maximal de $A$ y $K=A/\mathfrak m$ su cuerpo residual;
+recordemos que $A'=A\otimes_kk'$ es un anillo local cuyo cuerpo residual es
+el mismo que el del anillo local $K\otimes_kk'$ (Bourbaki,
+\emph{Alg. conmut.}, cap.~V, §~2, n\textsuperscript{o}~3, lema~4). Observemos que
+se tiene $A'_{(K)}=A'\otimes_AK=K\otimes_kk'$, y por consiguiente (21.3.6)
+\begin{equation}
+\label{0.22.5.5.1-es}
+  \Theta_{A'_{(K)}/K}=\Theta_{k'/k}\otimes_kK
+  \tag{22.5.5.1}
+\end{equation}
+salvo isomorfismo canónico. Además, se sabe (21.4.7) que se tiene
+$\Xi_{k'/k}=0$, es decir, el homomorfismo canónico (21.3.2.2)
+\[
+  \pi_{k'/k}:\Theta_{k'/k}\longrightarrow\Omega^1_k
+\]
+es inyectivo, de modo que se tiene una \emph{inyección canónica}
+\begin{equation}
+\label{0.22.5.5.2-es}
+  \Theta_{A'_{(K)}/K}\longrightarrow\Omega^1_k\otimes_kK
+  \tag{22.5.5.2}
+\end{equation}
+que se explicita de la manera siguiente (teniendo en cuenta (22.5.5.1)): para todo
+$x'\in k'$, al elemento
+$d_{A'_{(K)}/K}(x'\otimes1_K)\otimes1_K$ de
+$\Omega^1_{A'_{(K)}/K}\otimes_{A'_{(K)}}K$ se hace corresponder el elemento
+$d_k(x'^p)\otimes1_K$ de $\Omega^1_k\otimes_kK$.
+\end{env}
+
+\begin{lemma}[22.5.6]
+\label{0.22.5.6-es}
+Con las notaciones de (22.5.5):
+\begin{enumerate}
+  \item[\rm(i)] El núcleo del homomorfismo canónico
+  $\pi_{A'_{(K)}/K}$ (21.3.2.2) se identifica por (22.5.5.2) con
+  $(\Theta_{k'/k}\otimes_kK)\cap\Upsilon_{K/k}$.
+  \item[\rm(ii)] Sean $A_1=A/\mathfrak m^2$,
+  $A'_1=A_1\otimes_kk'=A'/\mathfrak m^2A'$; entonces el homomorfismo
+  característico $\chi'_{A'_1/A_1}$ (22.4.6.2) se identifica con la restricción del
+  homomorfismo característico
+  $\chi_{A/k}:\Upsilon_{K/k}\longrightarrow V=\mathfrak m/\mathfrak m^2$
+  (20.6.24) a $(\Theta_{k'/k}\otimes_kK)\cap\Upsilon_{K/k}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) En virtud de (20.6.9), aplicado sustituyendo $A$ por el cuerpo primo, $B$
+por $k$, $C$ por $K$ y $E$ por $A_1=A/\mathfrak m^2$ (extensión de $K$ por
+$V=\mathfrak m/\mathfrak m^2$), basta (cf. (22.5.5)) verificar que si
+$x'\in k'$ y $z\in A_1$ es un elemento cuya clase mod.
+$\mathfrak m/\mathfrak m^2$ es $x'^p\in k$, entonces la imagen de
+$d_k(x'^p)\otimes1_K$ por el homomorfismo canónico
+$\Omega^1_k\otimes_kK\longrightarrow\Omega^1_{A_1}\otimes_{A_1}K$ es
+$d_{A_1}z\otimes1_K$, lo que se deduce de las definiciones.
+
+(ii) Como $A'_{(K)}=K\otimes_kk'=(A'_1)_{(K)}$ (en virtud de la relación
+$K=A_1/(\mathfrak m/\mathfrak m^2)$), $\Theta_{A'_{(K)}/K}$ se identifica con
+$\Theta_{(A'_1)_{(K)}/K}$ y la verificación resulta del mismo cálculo que en
+(i) y de la definición (22.4.5.2) de $\pi'_{(A'_1)_{(K)}/K}$.
+\end{proof}
+
+\begin{proposition}[22.5.7]
+\label{0.22.5.7-es}
+Sean $k$ un cuerpo de característica $p>0$ y $A$ una $k$-álgebra que es un
+anillo local regular, $\mathfrak m$ su ideal maximal y $K=A/\mathfrak m$ su
+cuerpo residual; sea $V=\mathfrak m/\mathfrak m^2$, considerado como
+$K$-espacio vectorial. Sean $k'$ una extensión finita de $k$ tal que
+$k'^p\subset k$, y $A'=A\otimes_kk'$; para que el anillo local $A'$ sea
+regular, es necesario y suficiente que la restricción del homomorfismo
+característico $\chi_{A/k}:\Upsilon_{K/k}\longrightarrow V$ (20.6.24) a
+$(\Theta_{k'/k}\otimes_kK)\cap\Upsilon_{K/k}$ sea inyectiva.
+\end{proposition}
+
+\begin{proof}
+Se trata de demostrar que la condición del enunciado equivale a
+(22.5.1.1), denotando por $\mathfrak m'$ el ideal maximal de $A'$ y por
+$K'=A'/\mathfrak m'$ su cuerpo residual. Con las notaciones de la observación
+(22.5.2, (i)), se tiene $A'_1=A_1\otimes_kk'$. Ahora bien, sea
+$(a_i)_{1\leqslant i\leqslant r}$ una $p$-base de $k'$ sobre $k$, de modo que
+$a_i^p=b_i\in k$, y $k'$ es isomorfo al cociente del anillo de
+
+\oldpage[0\textsubscript{IV-1}]{204}
+
+polinomios $k[T_1,\ldots,T_r]$ por el ideal engendrado por los polinomios
+$F_i=T_i^p-b_i$ $(1\leqslant i\leqslant r)$; se deduce que $A'_1$ es
+isomorfo al cociente del anillo de polinomios $A_1[T_1,\ldots,T_r]$ por
+el ideal engendrado por los $F_i$. Se puede aplicar entonces el criterio (22.4.7), y
+la condición del enunciado equivale, por tanto, a que $\chi'_{A'_1/A_1}$ sea
+inyectivo; se concluye con ayuda de (22.5.6).
+\end{proof}
+
+Podemos ahora demostrar el recíproco de (19.6.5):
+
+\begin{theorem}[22.5.8]
+\label{0.22.5.8-es}
+Sean $k$ un cuerpo, $p$ su exponente característico y $A$ una $k$-álgebra
+local noetheriana. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $A$ es una $k$-álgebra formalmente lisa (para su topología
+  preádica).
+  \item[b)] $A$ es geométricamente regular sobre $k$.
+  \item[b')] Para toda extensión finita $k'$ de $k$ tal que $k'^p\subset k$,
+  $A'=A\otimes_kk'$ es un anillo regular.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Teniendo en cuenta (19.6.6), se puede reducir al caso $p>1$.
+
+El hecho de que a) implique b) no es otro que (19.6.5), y b) implica
+trivialmente b'). Demostremos que b') implica que se satisfacen las condiciones de
+(22.2.2); esto es evidente para la primera (17.1.1), puesto que b') implica
+en primer lugar que $A$ es regular. Por otra parte, sea $(x_\alpha)_{\alpha\in I}$ una
+$p$-base de $k^{1/p}$ sobre $k$; se sabe que los elementos $d_k(x_\alpha^p)$
+forman una base del $k$-espacio vectorial $\Omega^1_k$ (21.4.5), por lo que los
+elementos $d_k(x_\alpha^p)\otimes1_K$ forman una base del $K$-espacio vectorial
+$\Omega^1_k\otimes_kK$. Se concluye (cf. (22.5.5)) que cuando $k'$ recorre
+el conjunto de las subextensiones de $k^{1/p}$, finitas sobre $k$, la familia de
+subespacios $\Theta_{k'/k}\otimes_kK$ de $\Omega^1_k\otimes_kK$ es filtrante
+creciente y tiene por unión $\Omega^1_k\otimes_kK$. Se deduce entonces de
+(22.5.7) que la condición b') implica que $\chi_{A/k}$ es inyectivo, lo que
+no es sino la condición (ii) de (22.2.2).
+\end{proof}
+
+\begin{corollary}[22.5.9]
+\label{0.22.5.9-es}
+Sean $k$ un cuerpo y $A$ una $k$-álgebra local noetheriana formalmente
+lisa. Entonces, para todo ideal primo $\mathfrak p$ de $A$, el anillo local
+$A_{\mathfrak p}$ es una $k$-álgebra formalmente lisa (para la topología
+$\mathfrak p$-preádica).
+\end{corollary}
+
+\begin{proof}
+En efecto, con las notaciones de (22.5.8, b')), basta demostrar que
+el anillo local $A_{\mathfrak p}\otimes_kk'$ es regular; pero como es un
+anillo de fracciones del anillo local $A\otimes_kk'$ y este último es
+regular por hipótesis, lo mismo sucede con $A_{\mathfrak p}\otimes_kk'$
+(17.3.6).
+\end{proof}
+
+\begin{remark}[22.5.10]
+\label{0.22.5.10-es}
+\begin{enumerate}
+  \item[\rm(i)] La conclusión de (22.5.8) falla cuando, en la
+  condición b'), uno se limita a las extensiones \emph{monógenas} $k'=k(x)$ de $k$
+  (con $x^p\in k$). Puede suceder, en efecto, que para todas estas extensiones $k'$,
+  se tenga
+  $\Upsilon_{K/k}\cap(\Theta_{k'/k}\otimes_kK)=0$, aunque
+  $\Upsilon_{K/k}\neq0$; esto significa que para todo $x\in k^{1/p}$ tal que
+  $x\notin k$, debe tenerse
+  $d_k(x^p)\otimes1_K\notin\Upsilon_{K/k}$, o también $d_K(x^p)\neq0$,
+  es decir, $x^p\notin K^p$; en otras palabras, debe tenerse
+  $K^p\cap k=k^p$, aunque $K$ sea una extensión \emph{inseparable} de $k$.
+  Ahora bien, se construyen fácilmente ejemplos de tales extensiones: partamos de un
+  cuerpo perfecto $k_0$ de característica $p>0$, sean $X$, $Y$, $Z$ tres
+  indeterminadas y pongamos $k=k_0(X,Y)$ y
+  $K=k(X^{1/p}+ZY^{1/p})$; se verifica fácilmente que $K$ satisface las condiciones
+  precedentes, por lo que $\Upsilon_{K/k}\neq0$. Apliquemos ahora el lema
+  (22.2.5.2) tomando $V=K$ y como $h$ el homomorfismo nulo; $A$ es entonces
+  un anillo de valoración discreta que tiene a $K$ por cuerpo residual, con
+  $\chi_{A/k}=0$, y no es, por tanto, una $k$-álgebra formalmente lisa por
+  (22.2.2); sin embargo, $A\otimes_kk'$ es un anillo regular para toda
+  extensión \emph{monógena} $k'\subset k^{1/p}$ de $k$.
+
+  \oldpage[0\textsubscript{IV-1}]{205}
+
+  \item[\rm(ii)] El corolario (22.5.9) lleva a considerar la cuestión
+  siguiente: si $A$ es una $k$-álgebra noetheriana, ¿bajo qué condiciones
+  el conjunto de los ideales primos $\mathfrak p\in\operatorname{Spec}(A)$ tales que
+  $A_{\mathfrak p}$ sea una $k$-álgebra formalmente lisa es
+  \emph{abierto}? Abordaremos más adelante algunos casos particulares.
+\end{enumerate}
+\end{remark}
+\subsection{Criterio jacobiano de Zariski}
+\label{subsection:0.22.6-es}
+
+\begin{theorem}[22.6.1]
+\label{0.22.6.1-es}
+\textnormal{(criterio jacobiano de lisitud formal).}
+Sean $A$, $B$ dos anillos topológicos,
+$u:A\longrightarrow B$ un homomorfismo continuo que hace de $B$ una
+$A$-álgebra formalmente lisa, $\mathfrak J$ un ideal de $B$ (no
+necesariamente cerrado), $C=B/\mathfrak J$ el $A$-álgebra topológica cociente.
+Para que $C$ sea una $A$-álgebra formalmente lisa, es necesario y suficiente que
+el homomorfismo canónico (cf. (20.5.11.2))
+\begin{equation}
+\label{0.22.6.1.1-es}
+  \delta_{C/B/A}:\mathfrak J/\mathfrak J^2
+  \longrightarrow\Omega^1_{B/A}\otimes_BC
+  \tag{22.6.1.1}
+\end{equation}
+sea \emph{formalmente invertible por la izquierda} (cf. (19.1.5)).
+\end{theorem}
+
+\begin{proof}
+En efecto, decir que $B$ (resp. $C$) es una $A$-álgebra formalmente lisa
+significa (19.4.4) que se tiene
+$\operatorname{Exalcotop}_A(B,L)=0$ (resp.
+$\operatorname{Exalcotop}_A(C,L)=0$) para todo $B$-módulo (resp. $C$-módulo)
+discreto $L$ anulado por un ideal abierto de $B$ (resp. $C$). Como, por hipótesis,
+$\operatorname{Exalcotop}_A(B,L)=0$ para todo $C$-módulo discreto $L$ anulado
+por un ideal abierto de $C$, decir que $C$ es una $A$-álgebra formalmente lisa
+significa, pues, que el homomorfismo canónico
+$\operatorname{Exalcotop}_A(C,L)\longrightarrow
+\operatorname{Exalcotop}_A(B,L)$ es inyectivo, y por tanto el teorema resulta de
+(20.7.8).
+\end{proof}
+
+Recordemos (19.5.3) que, cuando $B$ y $C$ son $A$-álgebras formalmente
+lisas, $\mathfrak J/\mathfrak J^2$ es un $C$-módulo topológico
+\emph{formalmente proyectivo}; además, los homomorfismos canónicos
+$\varphi_n:\mathbf S_C^n(\mathfrak J/\mathfrak J^2)
+\longrightarrow\mathfrak J^n/\mathfrak J^{n+1}$ son
+\emph{bimorfismos formales} cuando se supone que $B$ es un anillo
+\emph{preadmisible}.
+\begin{corollary}[22.6.2]
+\label{0.22.6.2-es}
+Siendo las hipótesis y notaciones las de (22.6.1), supongamos además que
+en $B$ el cuadrado de todo ideal abierto es abierto, y que sobre $\mathfrak J$ la
+topología inducida por la de $B$ es idéntica a la topología deducida de
+la de $B$ (19.0) (se observará que estas dos condiciones se verifican cuando
+$B$ es noetheriano y su topología es preádica ($0_{\mathrm I}$, 7.3.2), o si la
+topología de $B$ es la topología $\mathfrak J$-preádica). Sea
+$(\mathfrak b_\lambda)$ un sistema fundamental de ideales abiertos de $B$ y
+pongamos $B_\lambda=B/\mathfrak b_\lambda$ para todo $\lambda$. Entonces:
+\begin{enumerate}
+  \item[\rm(i)] Las condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[a)] $C$ es una $A$-álgebra formalmente lisa.
+    \item[b)] Para todo $\lambda$, el homomorfismo de $B_\lambda$-módulos
+    \begin{equation}
+    \label{0.22.6.2.1-es}
+      (\mathfrak J/\mathfrak J^2)\otimes_BB_\lambda
+      \longrightarrow\Omega^1_{B/A}\otimes_BB_\lambda
+      \tag{22.6.2.1}
+    \end{equation}
+    deducido de $\delta_{C/B/A}$ por tensorización, es invertible por la izquierda
+    (en otras palabras, un isomorfismo sobre un factor directo de
+    $\Omega^1_{B/A}\otimes_BB_\lambda$).
+  \end{enumerate}
+  \item[\rm(ii)] Supongamos además que el anillo topológico $C$ es
+  preadmisible ($0_{\mathrm I}$, 7.1.2) y
+
+  \oldpage[0\textsubscript{IV-1}]{206}
+
+  sea $\mathfrak L$ un ideal de definición de $C$; entonces las condiciones a)
+  y b) de (i) también equivalen a:
+  \begin{enumerate}
+    \item[c)] El homomorfismo de $(C/\mathfrak L)$-módulos
+    \[
+      (\mathfrak J/\mathfrak J^2)\otimes_C(C/\mathfrak L)
+      \longrightarrow\Omega^1_{B/A}\otimes_B(C/\mathfrak L)
+    \]
+    es invertible por la izquierda.
+  \end{enumerate}
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Las hipótesis implican que sobre $\Omega^1_{B/A}$ la topología es deducida de
+la de $B$ (20.4.5), por lo que (i) resulta de (22.6.1) y de (19.1.7). Por otra
+parte, recordemos (20.4.9) que, puesto que $B$ es una $A$-álgebra formalmente
+lisa, $\Omega^1_{B/A}$ es un $B$-módulo formalmente proyectivo, luego
+$\Omega^1_{B/A}\otimes_BB_\lambda$ es un $B_\lambda$-módulo proyectivo para
+todo $\lambda$ (19.2.4); la equivalencia de c) con a) y b) cuando $C$ es
+preadmisible resulta entonces de (19.1.9).
+\end{proof}
+
+En particular:
+
+\begin{corollary}[22.6.3]
+\label{0.22.6.3-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $\mathfrak J$ un ideal de $B$,
+$C=B/\mathfrak J$; se supone que $A$, $B$, $C$ están provistos de las topologías discretas
+y que $B$ es una $A$-álgebra formalmente lisa. Para que $C$ sea una
+$A$-álgebra formalmente lisa, es necesario y suficiente que el homomorfismo
+canónico (22.6.1.1) sea invertible por la izquierda.
+\end{corollary}
+
+Se observará que, puesto que toda $A$-álgebra $C$ es cociente de un álgebra de
+polinomios $A[T_\alpha]_{\alpha\in I}$, y que esta última es formalmente
+lisa (19.3.3), el criterio (22.6.3) permite en principio reconocer si $C$
+es una $A$-álgebra formalmente lisa.
+
+\begin{proposition}[22.6.4]
+\label{0.22.6.4-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra formalmente lisa (para las
+topologías discretas), $\mathfrak J$ un ideal de $B$, $C=B/\mathfrak J$; se
+supone que $\mathfrak J/\mathfrak J^2$ es un $C$-módulo de tipo finito. Sean
+$\mathfrak p$ un ideal primo de $C$, $k(\mathfrak p)$ el cuerpo residual de
+$C_{\mathfrak p}$, $\mathfrak p'$ la imagen inversa de $\mathfrak p$ en
+$B$, $\mathfrak q$ el ideal primo de $A$ imagen inversa de $\mathfrak p'$.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $C_{\mathfrak p}$ es una $A_{\mathfrak q}$-álgebra formalmente
+  lisa (para las topologías discretas).
+  \item[a')] $C_{\mathfrak p}$ es una $A$-álgebra formalmente lisa (para
+  las topologías discretas).
+  \item[b)] El homomorfismo canónico
+  \begin{equation}
+  \label{0.22.6.4.1-es}
+    (\mathfrak J/\mathfrak J^2)\otimes_Ck(\mathfrak p)
+    \longrightarrow\Omega^1_{B/A}\otimes_Bk(\mathfrak p)
+    \tag{22.6.4.1}
+  \end{equation}
+  es inyectivo.
+  \item[c)] Existe $f\in C-\mathfrak p$ tal que $C_f$ es una
+  $A$-álgebra formalmente lisa.
+\end{enumerate}
+Si además $B$ es noetheriano, las condiciones anteriores también son
+equivalentes a:
+\begin{enumerate}
+  \item[d)] $C_{\mathfrak p}$ es una $A_{\mathfrak q}$-álgebra formalmente
+  lisa para la topología $\mathfrak p$-preádica sobre $C_{\mathfrak p}$ y la
+  topología discreta (o la topología $\mathfrak q$-preádica) sobre
+  $A_{\mathfrak q}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Como $A_{\mathfrak q}$ es una $A$-álgebra formalmente lisa (19.3.5, (iv)
+y (ii)), ya se sabe que a) y a') son equivalentes (19.3.5, (ii)). Se tiene
+$C_{\mathfrak p}=B_{\mathfrak p'}/\mathfrak J B_{\mathfrak p'}$, y
+$B_{\mathfrak p'}$ es una $A$-álgebra formalmente lisa para la topología
+discreta (19.3.5, (iv)); además,
+$\Omega^1_{B_{\mathfrak p'}/A}=(\Omega^1_{B/A})_{\mathfrak p'}$ (20.5.9).
+La equivalencia de a') y b) resulta entonces de aplicar (22.6.3) a
+$B_{\mathfrak p'}$ y $C_{\mathfrak p}$, teniendo en cuenta que
+$\Omega^1_{B/A}$ es un $B$-módulo proyectivo (20.4.9) y (19.2.11), y que
+$\mathfrak J/\mathfrak J^2$ es un $B$-módulo de tipo finito, y utilizando
+(19.1.12). La aplicación de (19.1.12) prueba también la equivalencia de b) y c).
+Por último, observemos que, puesto que $B_{\mathfrak p'}$ es una
+$A_{\mathfrak q}$-álgebra formalmente lisa para las topologías
+
+\oldpage[0\textsubscript{IV-1}]{207}
+
+discretas (19.3.5, (iv)), $B_{\mathfrak p'}$, provisto de la topología
+$\mathfrak p'$-preádica, sigue siendo una $A_{\mathfrak q}$-álgebra
+formalmente lisa cuando se toma sobre $A_{\mathfrak q}$ la topología
+discreta o la topología $\mathfrak q$-preádica (19.3.8). Para demostrar
+la equivalencia de b) y d) cuando $B$ es noetheriano, apliquemos (22.6.2) al
+anillo $A_{\mathfrak q}$ discreto (o $\mathfrak q$-preádico) y al anillo
+$B_{\mathfrak p'}$, provisto de la topología $\mathfrak p'$-preádica; como
+$C_{\mathfrak p}$ es preadmisible y $\mathfrak pC_{\mathfrak p}$ es
+un ideal de definición para su topología, se puede invocar la equivalencia de
+c) y a) en (22.6.2).
+\end{proof}
+
+\begin{corollary}[22.6.5]
+\label{0.22.6.5-es}
+Bajo las hipótesis generales de (22.6.4), el conjunto de los
+$\mathfrak p\in\operatorname{Spec}(C)$ tales que $C_{\mathfrak p}$ sea una $A$-álgebra
+formalmente lisa (o una $A_{\mathfrak q}$-álgebra formalmente lisa, designando
+por $\mathfrak q$ la imagen inversa de $\mathfrak p$ en $A$)
+para las topologías discretas, es abierto en $\operatorname{Spec}(C)$.
+\end{corollary}
+
+Esto resulta de la forma c) de (22.6.4). Se observará que, cuando $B$ es
+noetheriano, se pueden sustituir las topologías discretas por las topologías
+preádicas.
+
+\begin{corollary}[22.6.6]
+\label{0.22.6.6-es}
+Bajo las hipótesis generales de (22.6.4), las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[a)] $C$ es una $A$-álgebra formalmente lisa (para las topologías
+  discretas).
+  \item[b)] Para todo $\mathfrak p\in\operatorname{Spec}(C)$ (o solamente para todo ideal
+  máximo $\mathfrak p$ de $C$), $C_{\mathfrak p}$ es una $A$-álgebra
+  formalmente lisa (o una $A_{\mathfrak q}$-álgebra formalmente lisa, designando
+  por $\mathfrak q$ la imagen inversa de $\mathfrak p$ en $A$)
+  para las topologías discretas.
+\end{enumerate}
+Además, cuando $B$ es noetheriano, se pueden sustituir en b) las topologías
+discretas por las topologías preádicas sobre $A_{\mathfrak q}$ y
+$C_{\mathfrak p}$.
+\end{corollary}
+
+\begin{proof}
+La última afirmación resulta de (22.6.4). En virtud de (22.6.3), la condición
+a) equivale a que el homomorfismo (22.6.1.1) sea invertible por la izquierda;
+la equivalencia de a) y b) resulta, pues, de (19.1.14), teniendo en cuenta que
+$\Omega^1_{B/A}$ es un $B$-módulo proyectivo y $\mathfrak J/\mathfrak J^2$
+un $C$-módulo de tipo finito.
+\end{proof}
+
+\begin{proposition}[22.6.7]
+\label{0.22.6.7-es}
+Sean $k_0$ un cuerpo, $k$ una extensión separable de $k_0$, $C$ una
+$k$-álgebra de tipo finito.
+\begin{enumerate}
+  \item[\rm(i)] Sea $\mathfrak p$ un ideal primo de $C$. Las condiciones
+  siguientes son equivalentes:
+  \begin{enumerate}
+    \item[a)] $C_{\mathfrak p}$ es una $k_0$-álgebra formalmente lisa para
+    la topología discreta.
+    \item[b)] $C_{\mathfrak p}$ es una $k_0$-álgebra formalmente lisa para
+    la topología $\mathfrak p$-preádica.
+    \item[c)] Existe $f\in C-\mathfrak p$ tal que $C_f$ es una
+    $k_0$-álgebra formalmente lisa para la topología discreta.
+    \item[d)] $C_{\mathfrak p}$ es un anillo geométricamente regular
+    (19.6.5) sobre $k_0$.
+  \end{enumerate}
+  Además, el conjunto de los $\mathfrak p\in\operatorname{Spec}(C)$ que poseen cualquiera de
+  estas propiedades es abierto en $\operatorname{Spec}(C)$.
+  \item[\rm(ii)] Las condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[a)] $C$ es una $k_0$-álgebra formalmente lisa para la topología
+    discreta.
+    \item[b)] Todo $\mathfrak p\in\operatorname{Spec}(C)$ verifica las condiciones
+    equivalentes de (i).
+    \item[c)] Todo ideal máximo $\mathfrak m$ de $C$ verifica las condiciones
+    equivalentes de (i).
+    \item[d)] Para toda extensión $k'$ de $k_0$, $C\otimes_{k_0}k'$ es un
+    anillo regular (17.3.6); se dice también que $C$ es un anillo
+    geométricamente regular sobre $k_0$.
+  \end{enumerate}
+
+  \oldpage[0\textsubscript{IV-1}]{208}
+
+  \item[\rm(iii)] Sean $B=k[T_1,\ldots,T_r]$ un álgebra de polinomios,
+  $\mathfrak J$ un ideal de $B$ tales que $C$ sea isomorfa a
+  $B/\mathfrak J$. Sea $\mathfrak q$ un ideal primo de $B$ que contiene
+  $\mathfrak J$ y sea $\mathfrak p=\mathfrak q/\mathfrak J$. Las condiciones
+  de (i) son entonces también equivalentes a la siguiente («criterio jacobiano de
+  Zariski»):
+  \begin{enumerate}
+    \item[e)] Existe un sistema de elementos
+    $(f_i)_{1\leq i\leq m}$ de $\mathfrak J$, que engendra el ideal
+    $\mathfrak J_{\mathfrak q}$ en $B_{\mathfrak q}$, y de
+    $k_0$-derivaciones $D_j$ de $B$ en sí mismo $(1\leq j\leq m)$ tales que
+    $\det(D_j(f_i))\notin\mathfrak q$.
+  \end{enumerate}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Se sabe que $C$ es siempre isomorfa a una $k$-álgebra de la forma
+$B/\mathfrak J$. Como $B$ es una $k$-álgebra formalmente lisa (19.3.3) y
+$k$, al ser separable sobre $k_0$, es una $k_0$-álgebra formalmente lisa
+(19.6.1), $B$ es una $k_0$-álgebra formalmente lisa (19.3.5, (ii)).
+La equivalencia de las condiciones a), b), c) de (i) resulta, pues, de (22.6.4), y
+la de a), b), c) en (ii) resulta de (22.6.6); la equivalencia de a) y d)
+en (i) resulta de (22.5.8); como todo localizado de $C\otimes_{k_0}k'$ es
+también un localizado de $C_{\mathfrak p}\otimes_{k_0}k'$ para un ideal primo
+$\mathfrak p\in\operatorname{Spec}(C)$ conveniente, la equivalencia de d) y b) en (ii)
+resulta de la equivalencia de d) y a) en (i). Finalmente, como
+$\Omega^1_{B/k_0}$ es un $B$-módulo proyectivo, la equivalencia del criterio de
+Zariski e) y de las demás condiciones de (i) se deduce de (19.1.12) y de
+(22.6.3), teniendo en cuenta (20.4.8).
+\end{proof}
+
+Zariski se interesaba, de hecho, por un criterio diferencial de regularidad para los
+anillos locales $C_{\mathfrak p}$. Como es equivalente decir que un anillo
+local noetheriano que contiene un cuerpo es regular o es formalmente liso en
+tanto que álgebra sobre su subcuerpo primo (19.6.4), se obtiene inmediatamente tal
+criterio sustituyendo $k_0$ por el subcuerpo primo de $k$ en (22.6.7); en
+particular, se obtiene el resultado siguiente, que volveremos a encontrar más adelante
+(IV, 6.12.5) como caso particular de resultados más generales de Nagata:
+
+\begin{corollary}[22.6.8]
+\label{0.22.6.8-es}
+\textnormal{(Zariski).}
+Sea $C$ un álgebra de tipo finito sobre un cuerpo. Entonces el conjunto de los
+$\mathfrak p\in\operatorname{Spec}(C)$ tales que $C_{\mathfrak p}$ sea un anillo local
+regular es abierto en $\operatorname{Spec}(C)$.
+\end{corollary}
+
+\begin{remark}[22.6.9]
+\label{0.22.6.9-es}
+\begin{enumerate}
+  \item[\rm(i)] Los enunciados de (22.6.7) siguen siendo válidos si, en lugar de
+  suponer $k$ separable sobre $k_0$, se supone solamente que es de
+  \emph{multiplicidad radicial finita}, es decir (19.6.6), que existe
+  una extensión radicial finita $k'_0$ de $k_0$ tal que el cuerpo residual del
+  anillo artiniano local $k\otimes_{k_0}k'_0$ sea una extensión separable
+  $k'$ de $k'_0$. Existe entonces un $k'_0$-monomorfismo
+  $k'\longrightarrow k\otimes_{k_0}k'_0$ que, compuesto con el homomorfismo
+  canónico $k\otimes_{k_0}k'_0\longrightarrow k'$, da la identidad, puesto que
+  $k'$ es una $k'_0$-álgebra formalmente lisa (19.6.1); se concluye que
+  $C\otimes_{k_0}k'_0$ está provista de una estructura de $k'$-álgebra de tipo finito,
+  y, como $k'$ es separable sobre $k'_0$, se puede aplicar (22.6.7) a esta
+  $k'$-álgebra; se concluye nuestra afirmación aplicando (19.4.7). Como
+  no habremos de utilizar esta generalización, dejamos los detalles al
+  lector. Ignoramos, en cambio, si los resultados de (22.6.7) son válidos sin
+  \emph{ninguna} hipótesis sobre la extensión $k$ de $k_0$.
+  \item[\rm(ii)] Bajo las hipótesis generales de (22.6.7), sea $(k_\alpha)$
+  una familia filtrante decreciente de subcuerpos de $k$ que contienen $k_0$ y
+  tal que
+  $\bigcap_\alpha k_\alpha(k^p)=k_0(k^p)$ (donde $p$ es el exponente
+  característico de $k_0$). Utilizando un método de cómputo de dimensiones
+  debido a Nagata, se puede demostrar que, en el criterio jacobiano (22.6.7, (iii)),
+  se puede uno limitar a derivaciones $D_j$ de $B$ que sean
+  $k_\alpha$-derivaciones para un $\alpha$ conveniente.
+
+  \oldpage[0\textsubscript{IV-1}]{209}
+
+  El interés de este resultado es que siempre existen tales familias
+  $(k_\alpha)$ para las cuales $[k:k_\alpha]$ es finito (21.8.6). No
+  demostraremos este refinamiento del criterio de Zariski, que no habremos de
+  utilizar. En (22.7), vamos a dar, para los anillos locales completos,
+  una variante (debida también a Nagata) del criterio de Zariski, que se demuestra
+  esencialmente por el mismo método (con dificultades técnicas algo
+  mayores).
+\end{enumerate}
+\end{remark}
+
+\subsection{El criterio jacobiano de Nagata}
+\label{subsection:0.22.7-es}
+
+\begin{env}[22.7.1]
+\label{0.22.7.1-es}
+El criterio jacobiano de Nagata es el análogo del criterio jacobiano de Zariski,
+pero para anillos cocientes de anillos de \emph{series formales} sobre un
+cuerpo. Daremos, como Nagata [31], dos versiones, presentadas aquí
+como criterios de lisitud formal.
+\end{env}
+
+\begin{proposition}[22.7.2]
+\label{0.22.7.2-es}
+Sean $k$ un cuerpo, $A=k[[T_1,\ldots,T_r]]$ un anillo de series formales sobre
+$k$, provisto de su estructura usual de $k$-álgebra, $\mathfrak q$ un ideal de
+$A$, $B=A/\mathfrak q$. Sea $\mathfrak p$ un ideal primo de $A$ que contiene
+$\mathfrak q$. Se supone que existe una sub-$k$-álgebra $C'$ de
+$C=A/\mathfrak p$, isomorfa a un álgebra de series formales
+$k[[X_1,\ldots,X_s]]$, tal que $C$ sea finita sobre $C'$ y que el cuerpo de
+fracciones $L$ de $C$ sea una extensión separable de
+$L'=k((X_1,\ldots,X_s))$ (hipótesis siempre satisfecha si $k$ es de
+característica 0). Entonces las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $B_{\mathfrak p}=A_{\mathfrak p}/\mathfrak qA_{\mathfrak p}$ es
+  una $k$-álgebra formalmente lisa para la topología
+  $\mathfrak p$-preádica.
+  \item[b)] Existen $k$-derivaciones $D_i$ $(1\leq i\leq m)$ de $A$ en
+  sí mismo, y elementos $f_i$ $(1\leq i\leq m)$ de $\mathfrak q$, tales
+  que las imágenes de los $f_i$ en $\mathfrak qA_{\mathfrak p}$ engendran este
+  ideal de $A_{\mathfrak p}$, y se tiene
+  $\det(D_i(f_j))\notin\mathfrak p$.
+  \item[c)] $B_{\mathfrak p}$ es un anillo regular.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+El cuerpo residual de $B_{\mathfrak p}$ es $k(\mathfrak p)$; como
+$k((X_1,\ldots,X_s))$ es separable sobre $k$ (21.9.6.4), $k(\mathfrak p)$ es
+separable sobre $k$ por hipótesis, y ya se sabe que en estas condiciones las
+propiedades a) y c) son equivalentes (19.6.4). Por otra parte,
+$A_{\mathfrak p}$ es un anillo regular ((17.1.4) y (17.3.2)), y como su
+cuerpo residual $k(\mathfrak p)$ es separable sobre $k$, $A_{\mathfrak p}$ es
+formalmente lisa sobre $k$ para la topología $\mathfrak p$-preádica
+(19.6.4). Resulta, pues, de (22.6.2, (ii)) que la condición a) equivale a que
+el homomorfismo de $L$-espacios vectoriales
+\begin{equation}
+\label{0.22.7.2.1-es}
+  j_0:(\mathfrak q/\mathfrak q^2)\otimes_AL
+  \longrightarrow\Omega^1_{A_{\mathfrak p}/k}\otimes_{A_{\mathfrak p}}L
+  =\widehat\Omega^1_{A/k}\otimes_AL
+  \tag{22.7.2.1}
+\end{equation}
+sea inyectivo.
+
+Consideremos, por otra parte, el homomorfismo compuesto
+\begin{equation}
+\label{0.22.7.2.2-es}
+  j:(\mathfrak q/\mathfrak q^2)\otimes_AL
+  \xrightarrow{j_0}\Omega^1_{A/k}\otimes_AL
+  \longrightarrow\widehat\Omega^1_{A/k}\otimes_AL
+  \tag{22.7.2.2}
+\end{equation}
+y demostremos que la condición b) equivale a decir que $j$ es inyectivo. Observemos, en
+efecto, que
+\[
+  (\mathfrak q/\mathfrak q^2)\otimes_AL
+  =(\mathfrak qA_{\mathfrak p}/\mathfrak q^2A_{\mathfrak p})
+  \otimes_{A_{\mathfrak p}}L~;
+\]
+la condición b) significa que, si $F_i=j(f'_i\otimes1)$, donde $f'_i$ es la imagen
+de $f_i$ en
+$\mathfrak qA_{\mathfrak p}/\mathfrak q^2A_{\mathfrak p}$, la matriz
+$(\langle F_i,D_j\otimes1\rangle)$ es invertible; por tanto, esto implica que los
+$F_i$ son linealmente independientes, y \emph{a fortiori} que ocurre lo
+mismo con los $f'_i\otimes1$; pero como estos últimos engendran
+$(\mathfrak qA_{\mathfrak p}/\mathfrak q^2A_{\mathfrak p})
+\otimes_{A_{\mathfrak p}}L$, se concluye que $j$ es inyectivo. Recíprocamente,
+supongamos $j$ inyectivo, y tomemos los $f_i$ de modo que los $f'_i\otimes1$
+formen
+
+\oldpage[0\textsubscript{IV-1}]{210}
+
+una base de
+$(\mathfrak qA_{\mathfrak p}/\mathfrak q^2A_{\mathfrak p})
+\otimes_{A_{\mathfrak p}}L$; entonces los $F_i$ forman una base de la imagen de
+$j$; pero se sabe (21.9.3) que $\widehat\Omega^1_{A/k}$ es un $A$-módulo
+libre de rango $r$ y que las $k$-derivaciones de $A$ en sí mismo engendran su
+dual; el hecho de que los $F_i$ sean linealmente independientes implica, pues,
+la existencia de $k$-derivaciones $D_j$ de $A$ en sí mismo tales que la matriz
+$(\langle F_i,D_j\otimes1\rangle)$ sea invertible, es decir, la condición
+b).
+
+Estas observaciones muestran ya que b) implica a). Para probar recíprocamente que
+la condición a) implica que $j$ es inyectivo, consideremos el diagrama
+conmutativo
+\begin{equation}
+\label{0.22.7.2.3-es}
+\xymatrix{
+  (\mathfrak q/\mathfrak q^2)\otimes_AL
+    \ar[r]^j \ar[d]_\alpha &
+  \widehat\Omega^1_{A/k}\otimes_AL \ar@{=}[d] \\
+  (\mathfrak p/\mathfrak p^2)\otimes_AL
+    \ar[r]_i &
+  \widehat\Omega^1_{A/k}\otimes_AL
+}
+\tag{22.7.2.3}
+\end{equation}
+y observemos el lema siguiente:
+\end{proof}
+
+\begin{lemma}[22.7.2.4]
+\label{0.22.7.2.4-es}
+Sean $R$ un anillo local regular, $\mathfrak m$ su ideal máximo,
+$K=R/\mathfrak m$ su cuerpo residual. Si $\mathfrak n$ es un ideal de $R$ tal
+que $R/\mathfrak n$ sea regular, entonces el homomorfismo canónico
+\begin{equation}
+\label{0.22.7.2.5-es}
+  \alpha:(\mathfrak n/\mathfrak n^2)\otimes_RK
+  \longrightarrow(\mathfrak m/\mathfrak m^2)\otimes_RK
+  \tag{22.7.2.5}
+\end{equation}
+es inyectivo.
+\end{lemma}
+
+\begin{proof}
+En efecto, se sabe (17.1.6) que $\mathfrak n$ está engendrado por una sucesión
+$(x_i)_{1\leq i\leq t}$ que forma parte de un sistema regular de parámetros
+$(x_i)_{1\leq i\leq n}$ de $R$; las imágenes de los $x_i$ $(1\leq i\leq t)$
+forman una base de $(\mathfrak n/\mathfrak n^2)\otimes_RK$, y sus imágenes
+por $\alpha$ forman parte de la base de
+$(\mathfrak m/\mathfrak m^2)\otimes_RK$ constituida por las imágenes de los $x_i$ para
+$1\leq i\leq n$, de donde resulta el lema.
+\end{proof}
+
+\begin{proof}[Continuación de la demostración de la proposición~{\rm(22.7.2)}]
+Este lema y el diagrama (22.7.2.3) reducen, pues, (en virtud de la hipótesis a))
+la cuestión a probar que $i$ es inyectivo. Ahora bien, en la sucesión
+\begin{equation}
+\label{0.22.7.2.6-es}
+  \mathfrak p/\mathfrak p^2\xrightarrow{h}
+  \widehat\Omega^1_{A/k}\widehat\otimes_A(A/\mathfrak p)
+  \xrightarrow{g}\widehat\Omega^1_{(A/\mathfrak p)/k}\longrightarrow0
+  \tag{22.7.2.6}
+\end{equation}
+se sabe (20.7.20) que $g$ es sobreyectivo y que la imagen de $h$ es densa en
+el núcleo de $g$ para la topología $\mathfrak m$-ádica ($\mathfrak m$ es
+el ideal máximo de $A$); como $\widehat\Omega^1_{A/k}$ es un $A$-módulo de
+tipo finito, todos los submódulos del $(A/\mathfrak p)$-módulo
+\[
+  \widehat\Omega^1_{A/k}\otimes_A(A/\mathfrak p)
+  =\widehat\Omega^1_{A/k}\widehat\otimes_A(A/\mathfrak p)
+\]
+son cerrados para la topología $\mathfrak m$-ádica ($0_{\mathrm I}$, 7.3.5),
+por lo que la sucesión (22.7.2.6) es exacta. Tensorizando por $L$, se obtiene la sucesión
+exacta
+\[
+  (\mathfrak p/\mathfrak p^2)\otimes_AL\xrightarrow{i}
+  \widehat\Omega^1_{A/k}\otimes_AL\longrightarrow
+  \widehat\Omega^1_{(A/\mathfrak p)/k}\otimes_{A/\mathfrak p}L
+  \longrightarrow0.
+\]
+
+Ahora bien, la hipótesis de separabilidad hecha sobre $L$ implica, en virtud de (21.9.5),
+que $\widehat\Omega^1_{(A/\mathfrak p)/k}\otimes_{A/\mathfrak p}L$ tiene
+rango $s$ sobre $L$; como $\widehat\Omega^1_{A/k}\otimes_AL$ tiene rango $r$
+sobre $L$ (21.9.3), se tiene $\operatorname{rg}_L(\operatorname{Im}i)=r-s$. Pero como
+$A/\mathfrak p$ es finita sobre una subálgebra isomorfa a
+$k[[T_1,\ldots,T_s]]$, se tiene $\dim(A/\mathfrak p)=s$ ((17.1.4) y (16.1.5));
+por tanto,
+\[
+  r-s=\dim(A)-\dim(A/\mathfrak p)=\dim(A_{\mathfrak p})
+\]
+
+\oldpage[0\textsubscript{IV-1}]{211}
+
+por (16.5.11). Ahora bien, como $A_{\mathfrak p}$ es regular (17.3.2),
+$\dim(A_{\mathfrak p})$ es igual al rango sobre $L$ de
+$\mathfrak pA_{\mathfrak p}/\mathfrak p^2A_{\mathfrak p}$ (17.1.1), y por tanto al
+rango sobre $L$ de $(\mathfrak p/\mathfrak p^2)\otimes_AL$, lo que acaba de
+probar que $i$ es inyectivo.
+\end{proof}
+
+\begin{theorem}[22.7.3]
+\label{0.22.7.3-es}
+Sean $k$ un cuerpo, $A$ un anillo local noetheriano completo de cuerpo residual
+$K$. Se supone que:
+\begin{enumerate}
+  \item[$1^\circ$] $[k:k^p]<+\infty$ (donde $p$ es el exponente característico
+  de $k$);
+  \item[$2^\circ$] $K$ es una extensión finita de una extensión separable
+  $K_0$ de $k$;
+  \item[$3^\circ$] $A$ está provisto de una estructura de $K_0$-álgebra formalmente
+  lisa (para la topología preádica).
+\end{enumerate}
+Sean $\mathfrak q$ un ideal de $A$, $B=A/\mathfrak q$, $\mathfrak p$ un
+ideal primo de $A$ que contiene $\mathfrak q$. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[a)] $B_{\mathfrak p}$ es una $k$-álgebra formalmente lisa (para la
+  topología $\mathfrak p$-preádica).
+  \item[b)] Existen $k$-derivaciones $D_i$ de $A$ en sí mismo
+  $(1\leq i\leq m)$ y elementos $f_i$ $(1\leq i\leq m)$ de
+  $\mathfrak q$, tales que las imágenes de los $f_i$ en
+  $\mathfrak qA_{\mathfrak p}$ engendran este ideal de $A_{\mathfrak p}$, y
+  se tiene $\det(D_i(f_j))\notin\mathfrak p$.
+  \item[b')] Existe una subextensión $k'$ de $K_0$, que contiene $K_0^p$,
+  tal que $[K_0:k']<+\infty$, $k'$-derivaciones $D_i$ de $A$ en
+  sí mismo $(1\leq i\leq m)$ y elementos $f_i$ de $\mathfrak q$
+  $(1\leq i\leq m)$, tales que las imágenes de los $f_i$ en
+  $\mathfrak qA_{\mathfrak p}$ engendran este ideal de $A_{\mathfrak p}$, y
+  se tiene $\det(D_i(f_j))\notin\mathfrak p$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Distingamos dos casos, según que $p=1$ o $p>1$.
+
+\emph{A)} $k$ \emph{es de característica} $0$. Como $K$ es entonces una
+extensión separable de $K_0$, resulta de (19.6.4) que $A$ es
+$K_0$-isomorfo a un anillo de series formales $K[[T_1,\ldots,T_r]]$ provisto de
+su estructura usual de $K$-álgebra. Pero entonces, teniendo en cuenta (19.8.8, (ii))
+aplicado a $A/\mathfrak p$, se ve que las condiciones generales de (22.7.2)
+se verifican sustituyendo allí $k$ por $K$. Además, en virtud de (19.6.4), es
+equivalente decir que $B_{\mathfrak p}$ es una $k$-álgebra
+formalmente lisa o una $K$-álgebra formalmente lisa, pues ambas condiciones
+equivalen a que $B_{\mathfrak p}$ sea un anillo regular. Se pueden
+aplicar, pues, las conclusiones de (22.7.2), y es inmediato que esto
+prueba la equivalencia de a), b) y b') (con $k'=K_0$ en b')).
+
+\emph{B)} $k$ \emph{es de característica} $p>0$. Como $A$ es una
+$K_0$-álgebra formalmente lisa y $K_0$ es separable sobre $k$,
+resulta de (19.3.5, (ii)) y (19.6.1) que $A$ es una $k$-álgebra
+formalmente lisa; en virtud de (22.5.9), $A_{\mathfrak p}$ es también una
+$k$-álgebra formalmente lisa para la topología $\mathfrak p$-preádica. Resulta,
+pues, de nuevo de (22.6.2, (ii)) que la condición a) equivale a que
+el homomorfismo $j_0$ definido en (22.7.2.1) (donde $L=k(\mathfrak p)$) sea
+inyectivo. Por tanto, (19.1.12, c)) muestra ya que b) implica a); como, por
+otra parte, b') implica trivialmente b), todo se reduce a demostrar que la hipótesis
+de que $j_0$ es inyectivo implica b').
+
+Designemos primero por $k'$ una subextensión cualquiera de $K_0$ tal que
+$[K_0:k']<+\infty$. Observemos que $\widehat\Omega^1_{A/k'}$ es un $A$-módulo
+libre de tipo finito. Por el razonamiento de (22.7.2), basta demostrar que
+(para una elección conveniente de $k'$), el homomorfismo compuesto
+\begin{equation}
+\label{0.22.7.3.1-es}
+  j':(\mathfrak q/\mathfrak q^2)\otimes_AL
+  \xrightarrow{j_0}\Omega^1_{A/k}\otimes_AL
+  \longrightarrow\widehat\Omega^1_{A/k'}\otimes_AL
+  \tag{22.7.3.1}
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{212}
+
+es inyectivo. Consideremos de nuevo el diagrama conmutativo
+\begin{equation}
+\label{0.22.7.3.2-es}
+\xymatrix{
+  (\mathfrak q/\mathfrak q^2)\otimes_AL
+    \ar[r]^{j_0} \ar[d]_\alpha &
+  \Omega^1_{A/k}\otimes_AL \ar[r] \ar@{=}[d] &
+  \widehat\Omega^1_{A/k'}\otimes_AL \ar@{=}[d] \\
+  (\mathfrak p/\mathfrak p^2)\otimes_AL
+    \ar[r]_{i_0} &
+  \Omega^1_{A/k}\otimes_AL \ar[r] &
+  \widehat\Omega^1_{A/k'}\otimes_AL
+}
+\tag{22.7.3.2}
+\end{equation}
+
+Como $j_0$ es inyectivo, se tiene $\operatorname{Ker}(i_0\circ\alpha)=0$. Pero como
+$A_{\mathfrak p}$ es un anillo regular y la hipótesis a) implica que
+$B_{\mathfrak p}=A_{\mathfrak p}/\mathfrak qA_{\mathfrak p}$ es también un
+anillo regular (19.6.5), el lema (22.7.2.4) muestra que $\alpha$ es inyectivo,
+de donde $\alpha^{-1}(\operatorname{Ker} i_0)=0$. Si $i'$ es el compuesto de los homomorfismos de la
+segunda línea de (22.7.3.2), se tiene asimismo
+$\operatorname{Ker}(j')=\alpha^{-1}(\operatorname{Ker}(i'))$, y todo se reduce, pues, a demostrar que, para una
+elección conveniente de $k'$, se tiene
+\begin{equation}
+\label{0.22.7.3.3-es}
+  \operatorname{Ker}(i')=\operatorname{Ker}(i).
+  \tag{22.7.3.3}
+\end{equation}
+
+Pero el mismo razonamiento que en (22.7.2) muestra que se tiene una sucesión exacta
+\[
+  (\mathfrak p/\mathfrak p^2)\otimes_AL\xrightarrow{i'}
+  \widehat\Omega^1_{A/k'}\otimes_AL\longrightarrow
+  \widehat\Omega^1_{(A/\mathfrak p)/k'}\otimes_{A/\mathfrak p}L
+  \longrightarrow0.
+\]
+Ahora bien, las hipótesis hechas permiten aplicar (21.9.8), por lo que existe una
+subextensión $k'$ de $K_0$ que contiene $K_0^p$, tal que
+$[K_0:k']<+\infty$, y para la cual se tiene
+\[
+  \operatorname{rg}_L\bigl(\widehat\Omega^1_{(A/\mathfrak p)/k'}
+  \otimes_{A/\mathfrak p}L\bigr)
+  =\dim(A/\mathfrak p)+\operatorname{rg}_L\Upsilon_{L/k}
+  +\operatorname{rg}_{K_0}\Omega^1_{K_0/k'}.
+\]
+Pero se tiene
+\[
+  \dim(A/\mathfrak p)=\dim(A)-\dim(A_{\mathfrak p})
+\]
+por (16.5.11),
+\[
+  \dim(A_{\mathfrak p})
+  =\operatorname{rg}_L\bigl((\mathfrak p/\mathfrak p^2)\otimes_AL\bigr)
+\]
+puesto que $A_{\mathfrak p}$ es regular (17.1.1), y finalmente
+\[
+  \dim(A)+\operatorname{rg}_{K_0}\Omega^1_{K_0/k'}
+  =\operatorname{rg}_L\bigl(\widehat\Omega^1_{A/k'}\otimes_AL\bigr)
+\]
+en virtud de (21.9.2); se obtiene, pues,
+\begin{equation}
+\label{0.22.7.3.4-es}
+  \operatorname{rg}_L(\operatorname{Ker}(i'))=\operatorname{rg}_L\Upsilon_{L/k}.
+  \tag{22.7.3.4}
+\end{equation}
+
+Por otra parte, siendo el cuerpo residual de $A_{\mathfrak p}$ formalmente liso
+sobre el cuerpo primo de $k$, se tiene una sucesión exacta (20.6.22.1)
+\[
+  \Upsilon_{L/k}\xrightarrow{\chi_{A_{\mathfrak p}/k}}
+  (\mathfrak pA_{\mathfrak p})/(\mathfrak pA_{\mathfrak p})^2
+  \xrightarrow{i}\Omega^1_{A_{\mathfrak p}/k}
+  \otimes_{A_{\mathfrak p}}L,
+\]
+y como $A_{\mathfrak p}$ es una $k$-álgebra formalmente lisa para la
+topología $\mathfrak p$-preádica, resulta de (22.2.2) que
+$\chi_{A_{\mathfrak p}/k}$ es un homomorfismo inyectivo, por lo que $\operatorname{Ker}(i)$ es
+isomorfo a $\Upsilon_{L/k}$ y, teniendo en cuenta (22.7.3.4) y que
+$\operatorname{Ker}(i)\subset\operatorname{Ker}(i')$, esto acaba de probar (22.7.3.3) y, por consiguiente, el
+teorema.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{213}
+
+\begin{remark}[22.7.4]
+\label{0.22.7.4-es}
+De hecho se ha demostrado (utilizando (21.9.6)) que la condición b') sigue siendo
+equivalente a las demás condiciones de (22.7.3) cuando se obliga a $k'$ a
+ser uno de los cuerpos de una familia filtrante decreciente $(k_\alpha)$ de
+subcuerpos de $K_0$ que contienen $K_0^p$, tales que
+$[K_0:k_\alpha]<+\infty$ para todo $\alpha$ y que
+$\bigcap_\alpha k_\alpha=K_0^p$.
+\end{remark}
+
+\begin{corollary}[22.7.5]
+\label{0.22.7.5-es}
+Bajo las hipótesis generales de (22.7.3), el conjunto de los ideales primos
+$\mathfrak n\in\operatorname{Spec}(B)$ tales que $B_{\mathfrak n}$ sea una
+$k$-álgebra formalmente lisa (para la topología $\mathfrak n$-preádica)
+es abierto en $\operatorname{Spec}(B)$.
+\end{corollary}
+
+\begin{proof}
+Con las notaciones de (22.7.3), basta ver que, si $B_{\mathfrak p}$
+es formalmente lisa sobre $k$, ocurre lo mismo con $B_{\mathfrak p'}$, para
+todo $\mathfrak p'\in V(\mathfrak q)$ suficientemente próximo a $\mathfrak p$ en
+$\operatorname{Spec}(A)$. Ahora bien, si las $k$-derivaciones $D_i$ y los elementos
+$f_i$ de $\mathfrak q$ verifican el criterio b) de (22.7.3), se tiene también
+$f=\det(D_if_j)\notin\mathfrak p'$ para $\mathfrak p'\in D(f)$; por otra
+parte, existe un $g\notin\mathfrak p$ tal que las imágenes de los $f_i$ en
+$\mathfrak qA_{\mathfrak p'}$ engendran $\mathfrak qA_{\mathfrak p'}$ para
+$\mathfrak p'\in D(g)$ (Bourbaki, \emph{Alg. comm.}, chap.~II, §~5,
+n\textsuperscript{o}~1, prop.~2), lo que acaba de probar el corolario.
+\end{proof}
+
+\begin{corollary}[22.7.6]
+\label{0.22.7.6-es}
+\textnormal{(Nagata).} Sea $B$ un anillo local noetheriano completo que contiene
+un cuerpo. Entonces el conjunto de los $\mathfrak n\in\operatorname{Spec}(B)$ tales
+que $B_{\mathfrak n}$ sea regular es abierto en $\operatorname{Spec}(B)$.
+\end{corollary}
+
+\begin{proof}
+En efecto, $B$ es un álgebra sobre un cuerpo primo $k$, por tanto (19.8.8, (ii))
+de la forma $A/\mathfrak q$, donde
+$A=K_0[[T_1,\ldots,T_n]]$ es un anillo de series formales y $K_0$ una
+extensión de $k$; por otra parte, decir que $B_{\mathfrak n}$ es regular
+equivale a decir que es una $k$-álgebra formalmente lisa para la topología
+$\mathfrak n$-preádica (19.6.4). Se verifican, pues, todas las condiciones de aplicación de
+(22.7.5).
+\end{proof}
+
+\begin{remarks}[22.7.7]
+\label{0.22.7.7-es}
+\begin{enumerate}
+  \item[(i)] Veremos más adelante, con Nagata, utilizando (22.7.6), que
+  se puede extender la conclusión de (22.7.6) al caso de un anillo local
+  noetheriano completo cualquiera (IV, 6.12.7).
+
+  \item[(ii)] La conclusión del teorema (22.7.3) ya no es necesariamente
+  exacta cuando no se supone que $[k:k^p]$ sea finito. Tomemos, por
+  ejemplo, $k=\mathbf F_p(X_n)_{n\geqslant0}$,
+  $A=k[[T,U]]$, $\mathfrak q$ igual al ideal principal $Af$, donde
+  \[
+    f=U^p-\sum_{n=0}^{\infty}X_nT^{np}~;
+  \]
+  $A$ es un anillo factorial en el cual $f$ es un elemento irreducible, pues es
+  irreducible en el anillo de polinomios $k((T))[U]$, y por tanto también en
+  el anillo de series formales $k((T))[[U]]$ (Bourbaki,
+  \emph{Alg. comm.}, chap.~VII, §~3), y \emph{a fortiori} en $A$.
+  Tomemos $\mathfrak p=\mathfrak q$, de modo que $B_{\mathfrak p}$ es el
+  cuerpo designado por $E$ en (21.9.7), que es separable sobre $k$
+  (\emph{loc. cit.}), luego una $k$-álgebra formalmente lisa. Pero se tiene aquí,
+  con las notaciones de (22.7.3), $k=K_0=K$, y las $k$-derivaciones de $A$
+  en sí mismo son las combinaciones lineales de $\partial/\partial T$ y
+  $\partial/\partial U$; como se tiene
+  $\partial f/\partial T=\partial f/\partial U=0$, los criterios b) y b') de
+  (22.7.3) no se verifican.
+\end{enumerate}
+\end{remarks}

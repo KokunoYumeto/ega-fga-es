@@ -1,0 +1,155 @@
+\subsection{Interpretación de los ciclos positivos de codimensión 1 en términos de subpreesquemas}
+\label{subsection:IV.21.7}
+\label{IV.21.7}
+
+\begin{env}[21.7.1]
+\label{IV.21.7.1}
+Sean $X$ un preesquema localmente noetheriano y $C=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}$ un ciclo positivo de codimensión $1$ (de modo que se tiene $n_x\geq0$ para todo $x\in X^{(1)}$, y $n_x=0$ salvo en un conjunto localmente finito de puntos).
+Denotemos por $Y(C)$ el subpreesquema cerrado de $X$, \emph{imagen cerrada} (\sref[I]{I.9.5.3} y \sref{IV.9.5.1}) del preesquema \emph{suma} $Y'(C)=\coprod_{x\in X^{(1)}}\Spec(\sh{O}_{X,x}/\mathfrak{m}_x^{n_x})$ por el morfismo canónico, y por $\sh{J}_X(C)$ (o $\sh{J}(C)$) el ideal de $\sh{O}_X$ que define $Y(C)$.
+\end{env}
+
+\begin{proposition}[21.7.2]
+\label{IV.21.7.2}
+Sea $X$ un preesquema localmente noetheriano que satisface la condición $(\mathrm{R}_1)$ \sref{IV.5.8.2}.
+Para que un subpreesquema cerrado $Y$ de $X$ sea de la forma $Y(C)$, donde $C$ es un ciclo positivo de codimensión $1$, es necesario y suficiente que satisfaga las dos condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+  \item $Y$ es puramente de codimensión $1$.
+\oldpage[IV-4]{278}
+  \item $Y$ satisface la condición $(\mathrm{S}_1)$; en otros términos \sref{IV.5.7.5}, no tiene ningún ciclo primo asociado inmerso.
+\end{enumerate}
+Se tiene entonces
+\[
+\label{IV.21.7.2.1}
+  \operatorname{mult}_x(C)=\operatorname{long}\sh{O}_{Y,x}.
+  \tag{21.7.2.1}
+\]
+La aplicación $C\mapsto Y(C)$ es una biyección de $\mathfrak{Z}^{1+}(X)$ sobre el conjunto de los subpreesquemas cerrados de $X$ que satisfacen las condiciones (i) y (ii).
+\end{proposition}
+
+\begin{proof}
+Las condiciones son necesarias (sin suponer que $X$ satisface $(\mathrm{R}_1)$).
+En efecto, como la cuestión es local sobre $X$, se puede suponer que $X=\Spec(A)$, donde $A$ es un anillo noetheriano;
+se tiene entonces $Y(C)=\Spec(A/\mathfrak{J})$, donde $\mathfrak{J}$ es, por definición \sref[I]{I.9.5.1}, el núcleo del homomorfismo canónico $A\to\bigoplus_i A_{\mathfrak{p}_i}/\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$, donde los $\mathfrak{p}_i$ son los ideales primos correspondientes a los puntos $x\in X^{(1)}$ para los que $n_x>0$, y donde se ha puesto $n_i=n_x$.
+La imagen inversa $\mathfrak{q}_i$ de $\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$ en $A$ es un ideal $\mathfrak{p}_i$-primario y se tiene $\mathfrak{J}=\bigcap_i\mathfrak{q}_i$.
+Además, como los $x\in X^{(1)}$ son tales que $\overline{\{x\}}$ es de codimensión $1$, ningún punto de $X^{(1)}$ puede ser adherente a otro punto de $X^{(1)}$.
+Por tanto, los $\mathfrak{p}_i$ son los ideales primos minimales de $A/\mathfrak{J}$ y el conjunto de los $\mathfrak{p}_i$ es igual a $\operatorname{Ass}(A/\mathfrak{J})$, lo que prueba las condiciones (i) y (ii).
+
+Las condiciones son suficientes.
+Denotando por $\sh{J}$ el ideal de $\sh{O}_X$ que define $Y$, la hipótesis (ii) implica que $\operatorname{Ass}(\sh{O}_X/\sh{J})$ es idéntico al conjunto $F$ de los puntos maximales de $Y$, y la hipótesis (i) implica que $F$ está contenido en $X^{(1)}$;
+por tanto \sref{IV.3.2.6}, $\sh{O}_X/\sh{J}$ se identifica con un sub-$\sh{O}_X$-módulo de $\bigoplus_{x\in F}\mathscr{G}(x)$, donde, para cada $x\in F$, $\mathscr{G}(x)$ es un $\sh{O}_X$-módulo irredundante tal que $\operatorname{Ass}(\mathscr{G}(x))=\{x\}$.
+Ahora bien, como $X$ satisface $(\mathrm{R}_1)$, para cada $x\in F$, $\sh{O}_{X,x}$ es un anillo de valoración discreta y, por consiguiente, los ideales primarios no nulos de este anillo son las potencias $\mathfrak{m}_x^{n_x}$ del ideal maximal;
+suponiendo de nuevo que $X=\Spec(A)$, se concluye que $\mathfrak{J}=\widetilde{\mathfrak{J}}$\footnote{La transcripción francesa imprime aquí el haz $\sh{J}$, pero tras suponer $X=\Spec(A)$ la igualdad es entre los ideales $\mathfrak{J}$ y $\widetilde{\mathfrak{J}}$ de $A$, como confirma el testigo inglés mantenido.}, donde $\widetilde{\mathfrak{J}}=\bigcap_i\mathfrak{q}_i$, siendo los $\mathfrak{q}_i$ las imágenes inversas en $A$ de los ideales $\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$, donde los $\mathfrak{p}_i$ corresponden a los puntos de $F$.
+Se ve, pues, que $Y$ es efectivamente de la forma $Y(C)$.
+\end{proof}
+
+\begin{corollary}[21.7.3]
+\label{IV.21.7.3}
+Sea $X$ un preesquema localmente noetheriano.
+Para todo divisor positivo $D$ sobre $X$, tal que $X$ satisfaga $(\mathrm{R}_1)$ en los puntos maximales del subpreesquema cerrado $Y(D)$ \sref{IV.21.2.12}, $Y(D)$ mayora al subpreesquema cerrado $Y(\operatorname{cyc}(D))$ \sref{IV.21.7.1}, y tiene el mismo espacio subyacente;
+para que estos dos subpreesquemas sean iguales, es necesario y suficiente que $Y(D)$ satisfaga la condición $(\mathrm{S}_1)$, o también que, para todo $z\in Y(D)$ distinto de un punto maximal de $Y(D)$, se tenga $\operatorname{prof}(\sh{O}_{X,z})\geq2$ (condición que se satisface siempre cuando $X$ es \emph{normal}).
+\end{corollary}
+
+\begin{proof}
+En efecto, como la cuestión es local, siempre se puede suponer que $\sh{J}_X(D)=t\sh{O}_X$, siendo $t$ una sección regular de $\sh{O}_X$ sobre $X$;
+en todo punto maximal $x$ de $Y(D)$, que pertenece necesariamente a $X^{(1)}$, $\sh{O}_{X,x}$ es por hipótesis un anillo de valoración discreta, por lo que $t_x\sh{O}_{X,x}=\mathfrak{m}_x^{n_x}$, donde $n_x=\operatorname{mult}_x(D)$.
+Se puede suponer que $X=\Spec(A)$, y entonces, si $\sh{J}_X(\operatorname{cyc}(D))=\widetilde{\mathfrak{J}}$, se deduce de lo anterior y de \sref{IV.21.7.1} que $\mathfrak{J}=tA$ y $\widetilde{\mathfrak{J}}$ tienen los mismos \emph{ideales primarios no inmersos}, y por tanto $\widetilde{\mathfrak{J}}\subset\mathfrak{J}$, puesto que $\widetilde{\mathfrak{J}}$ es la intersección
+\oldpage[IV-4]{279}
+de estos ideales primarios \sref{IV.21.7.2}.
+Esto prueba que $Y(D)$ mayora a $Y(\operatorname{cyc}(D))$ y que estos dos subpreesquemas son iguales si y solo si $Y(D)$ no tiene ningún ciclo primo asociado inmerso (en otros términos, si satisface $(\mathrm{S}_1)$).
+Como para todo $x\in Y(D)$ existe, por hipótesis, un entorno abierto $U$ de $x$ en $X$ y un elemento regular $t\in\Gamma(U,\sh{O}_X)$ tal que $\sh{O}_{Y(D)}|(U\cap Y(D))$ sea la restricción a $Y(D)\cap U$ de $\sh{O}_U/t\sh{O}_U$, decir que $Y(D)$ satisface $(\mathrm{S}_1)$ significa también que en todo punto $z\in Y(D)$ no maximal se tiene $\operatorname{prof}(\sh{O}_{X,z}/t_z\sh{O}_{X,z})\geq1$, es decir \sref[0]{0.16.4.6}, $\operatorname{prof}(\sh{O}_{X,z})\geq2$.
+La afirmación relativa al caso en que $X$ es normal es entonces inmediata, puesto que $X$ satisface $(\mathrm{S}_2)$ y que en los puntos no maximales $z$ de $Y(D)$ se tiene $\dim(\sh{O}_{X,z})\geq2$ \sref[0]{0.16.3.4}.
+\end{proof}
+
+\begin{env}[21.7.3.1]
+\label{IV.21.7.3.1}
+Se ve, pues, que cuando $X$ es \emph{normal}, $\operatorname{Div}^+(X)$ se identifica canónicamente con el conjunto de los subpreesquemas cerrados $Y$ de $X$ que satisfacen las condiciones (i) y (ii) de \sref{IV.21.7.2} y están \emph{regularmente inmersos} en $X$.
+\end{env}
+
+\begin{proposition}[21.7.4]
+\label{IV.21.7.4}
+Sea $X$ un preesquema localmente noetheriano, reducido en cada uno de sus puntos aislados.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] El homomorfismo canónico $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ \sref{IV.21.6.4} es un isomorfismo de haces de grupos ordenados.
+  \item[\emph{a$'$)}] Todo ciclo primo de codimensión $1$ de $X$ es la imagen por $\operatorname{cyc}$ de un divisor positivo, y el homomorfismo canónico $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ es inyectivo.
+  \item[\emph{a$''$)}] Para todo subpreesquema cerrado íntegro $Y$ de $X$, de codimensión $1$, la inmersión canónica $Y\to X$ es regular.
+  \item[\emph{b)}] $X$ es normal y el homomorfismo $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ es biyectivo.
+  \item[\emph{c)}] $X$ es localmente factorial.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La equivalencia de \emph{b)} y \emph{c)} se ha demostrado en \sref{IV.21.6.9}, así como el hecho de que \emph{c)} implica \emph{a)}.
+Además, \emph{b)} implica \emph{a$''$)} en virtud de \sref{IV.21.7.3.1}, y \emph{a)} implica trivialmente \emph{a$'$)}.
+Queda por ver que \emph{a$'$)} o \emph{a$''$)} implica \emph{c)}.
+
+Supongamos, pues, que se satisface la condición \emph{a$'$)}, y mostremos primero que $X$ es normal.
+Observemos en primer lugar que, si $X$ satisface \emph{a$'$)}, ocurre lo mismo con todo esquema local $\Spec(\sh{O}_{X,x})$.
+Consideremos entonces $x\in X^{(1)}$, de modo que $A=\sh{O}_{X,x}$ es un anillo local noetheriano de dimensión $1$.
+Aplicando la condición \emph{a$'$)} a $\Spec(A)$ y al ciclo primo de codimensión $1$ formado por el punto cerrado de $\Spec(A)$, se ve que en $A$ el ideal maximal está engendrado por un solo elemento regular de $A$;
+por tanto \sref[0]{0.17.1.1}, $A$ es un anillo regular.
+Como los anillos localizados $A_{\mathfrak p}$ son también regulares \sref[0]{0.17.3.2}, se ve que $X$ es regular en todos sus puntos maximales no aislados;
+como también es reducido (y por tanto regular) en sus puntos aislados por hipótesis, se concluye que $X$ satisface la condición $(\mathrm{R}_1)$.
+Mostremos además que $X$ satisface también $(\mathrm{S}_1)$; en otros términos, que para todo $x\in X$ tal que $\dim(\sh{O}_{X,x})\geq1$, se tiene $\mathfrak{m}_x\notin\operatorname{Ass}(\sh{O}_{X,x})$ \sref[0]{0.16.4.6}.
+En efecto, la hipótesis \emph{a$'$)} aplicada a $X_1=\Spec(\sh{O}_{X,x})$ muestra que existe sobre este preesquema al menos un divisor no nulo; en otros términos, se tiene $\sh{M}_{X_1}^*\neq\sh{O}_{X_1}^*$, y basta aplicar \sref{IV.21.1.10}.
+De estos resultados se deduce ya que $X$ es reducido \sref{IV.5.8.5}.
+Probemos a continuación que satisface la condición $(\mathrm{S}_2)$ (lo que establecerá que $X$ es normal, en virtud del criterio de Serre \sref{IV.5.8.6}).
+Razonemos por reducción al absurdo, suponiendo que el conjunto $E$ de los puntos $x\in X$ en los que $X$ no satisface $(\mathrm{S}_2)$ no es vacío, y sea $x\in E$ un punto para el que $\dim(\sh{O}_{X,x})$ sea la menor posible;
+como $X$ satisface $(\mathrm{S}_1)$, se tiene $\dim(\sh{O}_{X,x})\geq2$.
+En $X_1=\Spec(\sh{O}_{X,x})$, el abierto $U=X_1-\{x\}$ satisface $(\mathrm{S}_2)$;
+mostremos que $X_1$ satisface $(\mathrm{S}_2)$, con lo cual se llegará a una contradicción.
+Basta, en virtud de \sref{IV.5.10.5}, mostrar que toda sección $f$ de $\sh{O}_{X_1}$ sobre $U$ se prolonga a una sección de $\sh{O}_{X_1}$ sobre $X_1$.
+Como $X_1$ es reducido y $U$ es denso en $X_1$, $U$ es esquemáticamente denso en $X_1$ y, por consiguiente, $f$ es la restricción a $U$ de una sección meromorfa regular $g\in M(X_1)$.
+Además, como $\dim(\sh{O}_{X,x})\geq2$, se tiene $\operatorname{cyc}(\operatorname{div}(g))\geq0$ puesto que $g|U=f$;
+como el homomorfismo $\operatorname{cyc}$ es inyectivo, se tiene necesariamente $\operatorname{div}(g)\geq0$, luego \sref{IV.21.6.4}, $g$ es una sección de $\sh{O}_{X_1}$ sobre $X_1$, lo que establece nuestra afirmación.
+
+Para mostrar que \emph{a$'$)} implica \emph{c)}, observemos entonces que la condición \emph{a$'$)} implica que el homomorfismo canónico $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ es sobreyectivo;
+como $X$ es normal, basta aplicar \sref{IV.21.6.9}.
+
+Probemos ahora que \emph{a$''$)} implica \emph{c)}.
+Se deduce de \sref{IV.21.6.5} que \emph{a$''$)} implica que todo ciclo primo de codimensión $1$ sobre $X$ es la imagen por $\operatorname{cyc}$ de un divisor positivo;
+la primera parte del razonamiento anterior prueba, por tanto, de nuevo que $X$ satisface $(\mathrm{R}_1)$ y $(\mathrm{S}_1)$.
+Queda aún por ver que $X$ es normal (siendo entonces idéntico el final del razonamiento); es decir, que si $x\in X$ es tal que $\dim(\sh{O}_{X,x})\geq2$, se tiene $\operatorname{prof}(\sh{O}_{X,x})\geq2$.
+Ahora bien, si $y$ es una generalización de $x$ tal que $\overline{\{y\}}$ sea de codimensión $1$ en $X$, el subpreesquema reducido $Y$ de $X$ que tiene a $\overline{\{y\}}$ por espacio
+\oldpage[IV-4]{280}
+subyacente es íntegro, y por tanto está regularmente inmerso en $X$ por hipótesis.
+Esto implica que existe un elemento regular $t$ de $\sh{O}_{X,x}$ tal que el ideal $t\sh{O}_{X,x}$ sea el ideal primo que define el preesquema $Y_1$, imagen inversa de $Y$ en $X_1=\Spec(\sh{O}_{X,x})$.
+Como $\sh{O}_{X,x}/t\sh{O}_{X,x}$ es íntegro, esto prueba que $\operatorname{prof}(\sh{O}_{X,x})\geq2$ y termina la demostración de \sref{IV.21.7.4}.
+\end{proof}
+
+\begin{remark}[21.7.5]
+\label{IV.21.7.5}
+En \sref{IV.21.7.4} no se puede sustituir la condición \emph{a$'$)} por la condición más débil de que todo ciclo primo de codimensión $1$ de $X$ sea la imagen por $\operatorname{cyc}$ de un divisor positivo.
+Así lo muestra el ejemplo en que $X$ es el esquema afín definido en \sref{IV.14.1.5} («unión de un plano y de una recta que lo corta») \emph{que no es normal};
+con las notaciones introducidas en \sref{IV.14.1.5}, los ciclos primos de codimensión $1$ de $X$ son los del plano $X_1$ y los puntos cerrados de la recta $X_2$ distintos del punto común a $X_1$ y $X_2$;
+si $t_1$, $t_2$, $t_3$ son las imágenes de $T_1$, $T_2$, $T_3$ en $A/\mathfrak a$, se ve, pues, que los ciclos primos de codimensión $1$ de $X$ están definidos por los ideales primos principales generados por $P(t_1,t_2)$ ($P$ irreducible en $K[T_1,T_2]$) o por $t_3-a$, con $a\neq0$ en $K$;
+como estos elementos son regulares en $A/\mathfrak a$, todo ciclo de codimensión $1$ es efectivamente la imagen canónica de un divisor positivo.
+\end{remark}
+
+\begin{corollary}[21.7.6]
+\label{IV.21.7.6}
+Sea $X$ un preesquema localmente noetheriano, reducido en cada uno de sus puntos aislados.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] El homomorfismo canónico $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ es un isomorfismo de haces de grupos ordenados, y se tiene $\operatorname{Div}(X)=\operatorname{Div.princ}(X)$.
+  \item[\emph{a$'$)}] El homomorfismo canónico $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ es inyectivo, y todo ciclo primo de codimensión $1$ es la imagen por $\operatorname{cyc}$ de un divisor positivo principal; en otros términos, es de la forma $\operatorname{cyc}(\operatorname{div}(f))$, donde $f$ es una sección regular de $\sh{O}_X$ sobre $X$.
+  \item[\emph{a$''$)}] Para todo subpreesquema cerrado íntegro $Y$ de $X$, de codimensión $1$, existe una sección regular $f$ de $\sh{O}_X$ sobre $X$ tal que $Y$ esté definido por el ideal $f\sh{O}_X$.
+  \item[\emph{b)}] $X$ es normal y todo ciclo primo de codimensión $1$ sobre $X$ es principal.
+  \item[\emph{c)}] $X$ es localmente factorial y $\operatorname{Pic}(X)=0$.
+  \item[\emph{d)}] $X$ es normal, y para todo abierto $U$ de $X$, se tiene $\operatorname{Pic}(U)=0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La equivalencia de \emph{a)}, \emph{a$'$)}, \emph{a$''$)}, \emph{b)} y \emph{c)} se deduce inmediatamente de \sref{IV.21.7.4} y de \sref{IV.21.6.11}.
+Además, se deduce inmediatamente de \emph{a$''$)} que todo abierto no vacío $U$ de $X$ satisface también las mismas condiciones; en otros términos, estas condiciones implican \emph{d)}.
+Queda por ver que \emph{d)} implica \emph{b)}.
+Ahora bien, denotemos por $U_\lambda$ los abiertos complementarios de las uniones finitas de conjuntos de la forma $\overline{\{x\}}$, donde $\dim(\sh{O}_{X,x})\geq2$;
+está claro que los $U_\lambda$ forman una familia filtrante decreciente y que, para todo $x\in\bigcap_\lambda U_\lambda$, se tiene $\dim(\sh{O}_{X,x})\leq1$, por lo que $\sh{O}_{X,x}$ es un anillo principal en virtud de la hipótesis.
+Se puede, pues, aplicar a la familia $(U_\lambda)$ la proposición \sref{IV.21.6.12}, que muestra que $\mathfrak{Cl}(X)$ es isomorfo a $\varinjlim\operatorname{Pic}(U_\lambda)$, luego $\mathfrak{Cl}(X)=0$ en virtud de la hipótesis, lo que prueba \emph{b)} por definición.
+\end{proof}
+
+\begin{remark}[21.7.7]
+\label{IV.21.7.7}
+Cuando $X=\Spec(A)$, donde $A$ es un anillo noetheriano íntegro, las condiciones equivalentes de \sref{IV.21.7.6} equivalen a decir que $A$ es un anillo \emph{factorial}.
+\end{remark}

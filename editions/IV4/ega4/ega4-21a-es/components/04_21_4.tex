@@ -1,0 +1,113 @@
+\subsection{Imágenes recíprocas de divisores}
+\label{subsection:IV.21.4}
+\label{IV.21.4}
+
+\begin{env}[21.4.1]
+\label{IV.21.4.1}
+Sea $f:X'\to X$ un morfismo de espacios anillados;
+nos proponemos dar condiciones que permitan asociar a un divisor $D$ sobre $X$ un divisor $D'$ sobre $X'$, \emph{imagen recíproca} de $D$ por $f$.
+Observemos primero que, para toda sección $t\in\Gamma(X,\sh{O}_X^*)$, la imagen de $t$ mediante el homomorfismo canónico $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ sigue siendo invertible; es decir, pertenece a $\Gamma(X',\sh{O}_{X'}^*)$.
+Consideremos entonces $D$ dado por la clase de equivalencia de un par $(\sh{L},s)$, donde $\sh{L}$ es un $\sh{O}_X$-Módulo invertible y $s$ una sección meromorfa regular de $\sh{L}$ sobre $X$ \sref{IV.21.2.11}.
+Formemos el $\sh{O}_{X'}$-Módulo invertible $f^*(\sh{L})=\sh{L}'$;
+decir que la imagen recíproca $s\circ f$ de $s$ por $f$ existe \sref{IV.20.1.11} y es una sección meromorfa regular de $\sh{L}'$ sobre $X'$ equivale a decir que existen las imágenes recíprocas por $f$ de $s$ y de $s^{\otimes(-1)}$; es decir, que $s\in\Gamma(X,\sh{M}_f(\sh{L}))$ y $s^{\otimes(-1)}\in\Gamma(X,\sh{M}_f(\sh{L}^{-1}))$;
+la observación anterior muestra entonces que, si $(\sh{L}_1,s_1)$ es un par equivalente a $(\sh{L},s)$ en el sentido de \sref{IV.21.2.10}, la imagen recíproca $s_1\circ f$ existe y es una sección meromorfa regular de $\sh{L}_1'=f^*(\sh{L}_1)$ sobre $X'$, y los pares $(\sh{L}',s\circ f)$ y $(\sh{L}_1',s_1\circ f)$ son equivalentes.
+Se puede, pues, dar la siguiente definición:
+\end{env}
+
+\begin{definition}[21.4.2]
+\label{IV.21.4.2}
+Dado un morfismo $f:X'\to X$ de espacios anillados, se dice que la \emph{imagen recíproca por $f$} de un divisor $D$ sobre $X$ existe si se tiene $s_D\in\Gamma(X,\sh{M}_f(\sh{O}_X(D)))$ y $s_{-D}\in\Gamma(X,\sh{M}_f(\sh{O}_X(-D)))$ (cf. \sref{IV.20.1.11}).
+Se llama entonces \emph{imagen recíproca} de $D$ por $f$ y se denota por $f^*(D)$ al divisor sobre $X'$ que corresponde canónicamente \sref{IV.21.2.11} a la clase del par $(f^*(\sh{O}_X(D)),s_D\circ f)$.
+\end{definition}
+
+De esta definición se deduce inmediatamente que, si $D$ y $D'$ tienen imágenes recíprocas por $f$, lo mismo ocurre con $-D$ y con $D+D'$ (teniendo en cuenta \sref{IV.21.2.9.4}), y que se tiene
+\oldpage[IV-4]{266}
+$f^*(D+D')=f^*(D)+f^*(D')$.
+En otras palabras, el conjunto $\operatorname{Div}^f(X)$ de los divisores sobre $X$ cuya imagen recíproca por $f$ existe es un subgrupo de $\operatorname{Div}(X)$, y la aplicación $D\mapsto f^*(D)$ es un homomorfismo creciente del subgrupo ordenado $\operatorname{Div}^f(X)$ al grupo ordenado $\operatorname{Div}(X')$, que hace conmutativo el diagrama
+\[
+\label{IV.21.4.2.1}
+  \xymatrix{
+    \operatorname{Div}^f(X) \ar[r]^{l_X} \ar[d]_{f^*} & \operatorname{Pic}(X) \ar[d]^{\operatorname{Pic}(f)} \\
+    \operatorname{Div}(X') \ar[r]^{l_{X'}} & \operatorname{Pic}(X')
+  }
+  \tag{21.4.2.1}
+\]
+
+\begin{env}[21.4.3]
+\label{IV.21.4.3}
+La definición \sref{IV.21.4.2} muestra inmediatamente que, para que $f^*(D)$ exista, es necesario y suficiente que, para todo abierto $U$ de $X$, exista la imagen recíproca por $f^U:f^{-1}(U)\to U$ (restricción de $f$) de $D|U$.
+Ahora bien, si $D=\operatorname{div}(g)$, donde $g$ es una función meromorfa regular sobre $X$, decir que la imagen recíproca de $s_D$ por $f$ existe y es una sección meromorfa regular de $f^*(\sh{O}_X(D))$ significa \sref{IV.21.2.9} que la imagen recíproca de $g$ por $f$ existe y es una función meromorfa regular sobre $X'$.
+De ello se deduce inmediatamente una segunda descripción de $\operatorname{Div}^f(X)$ y de $f^*(D)$: se considera el subhaz de grupos de $\sh{M}_X^*$, denotado $\sh{M}_f^*$, formado por los gérmenes de funciones meromorfas regulares definidas sobre un abierto de $X$ cuyas imágenes recíprocas por $f$ existen y son regulares sobre el abierto obtenido por imagen recíproca \sref{IV.20.1.11}.
+Entonces, si $f=(\psi,\theta)$, el homomorfismo canónico \sref{IV.20.1.11} $\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ induce por restricción un homomorfismo de haces de grupos $\psi^*(\sh{M}_f^*)\to\sh{M}_{X'}^*$.
+Poniendo $\sh{D}iv_X'=\sh{M}_f^*/\sh{O}_X^*$, se tiene $\operatorname{Div}^f(X)=\Gamma(X,\sh{D}iv_X')$, y la aplicación $D\mapsto f^*(D)$ corresponde al homomorfismo de haces de grupos $\psi^*(\sh{M}_f^*)/\psi^*(\sh{O}_X^*)\to\sh{M}_{X'}^*/\sh{O}_{X'}^*=\sh{D}iv_{X'}$ deducido del anterior por paso a los cocientes.
+\end{env}
+
+\begin{env}[21.4.4]
+\label{IV.21.4.4}
+De las definiciones anteriores se deduce inmediatamente que, si $f':X''\to X'$ es un segundo morfismo de espacios anillados y $D$ es un divisor sobre $X$ tal que existen las imágenes recíprocas $f^*(D)$ y $f'^*(f^*(D))$, entonces $(f\circ f')^*(D)$ existe y es igual a $f'^*(f^*(D))$.
+\end{env}
+
+\begin{proposition}[21.4.5]
+\label{IV.21.4.5}
+Sea $f:X'\to X$ un morfismo de espacios anillados.
+En cada uno de los tres casos siguientes, está definida la imagen recíproca por $f$ de todo divisor sobre $X$:
+\begin{enumerate}[label=(\roman*)]
+  \item $f$ es plano.
+  \item $X$ y $X'$ son preesquemas localmente noetherianos y se tiene $f(\operatorname{Ass}(\sh{O}_{X'}))\subset\operatorname{Ass}(\sh{O}_X)$.
+  \item $X$ y $X'$ son preesquemas, el conjunto de las componentes irreducibles de $X$ es localmente finito, $X'$ es reducido y toda componente irreducible de $X'$ domina una componente irreducible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Basta, en efecto, mostrar que en los tres casos se tiene $\sh{M}_f=\sh{M}_X$;
+en el caso (i), esto se deduce de \sref{IV.20.1.12}.
+En el caso (iii), podemos limitarnos al caso en que $X=\operatorname{Spec}(A)$ y $X'=\operatorname{Spec}(A')$ son afines;
+si $s\in A$ es regular, no pertenece a ningún ideal primo minimal de $A$ \sref{IV.20.1.3.1}, por lo que la hipótesis implica que su imagen en $A'$ no pertenece a ningún ideal primo minimal de $A'$, y es, por consiguiente, un elemento regular de $A'$ \sref{IV.20.1.3.1}.
+En el caso (ii), las funciones meromorfas sobre $X'$ se identifican con las pseudo-funciones sobre $X'$ \sref{IV.20.2.11}, y la hipótesis, junto con \sref{IV.20.2.13},~(iv), asegura que la imagen recíproca
+\oldpage[IV-4]{267}
+por $f$ de todo abierto esquemáticamente denso en $X$ es un abierto esquemáticamente denso en $X'$;
+se concluye, pues, por \sref{IV.20.3.12}.
+\end{proof}
+
+\begin{corollary}[21.4.6]
+\label{IV.21.4.6}
+Sea $X$ un preesquema que posea una de las propiedades siguientes:
+\begin{enumerate}[label=(\roman*)]
+  \item $X$ es localmente noetheriano.
+  \item $X$ es reducido y el conjunto de sus componentes irreducibles es localmente finito.
+\end{enumerate}
+Entonces, para todo $x\in X$, se tiene un isomorfismo canónico
+\[
+\label{IV.21.4.6.1}
+  (\sh{D}iv_X)_x\xrightarrow{\sim}\operatorname{Div}(\sh{O}_{X,x}).
+  \tag{21.4.6.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Esto se deduce, en efecto, de \sref{IV.20.2.11}, \sref{IV.20.3.7} y del hecho de que $(\sh{O}_X^*)_x$ se identifica con el grupo de los elementos invertibles del anillo $\sh{O}_{X,x}$.
+\end{proof}
+
+\begin{env}[21.4.7]
+\label{IV.21.4.7}
+Sean $X$, $X'$ dos preesquemas y $f:X'\to X$ un morfismo.
+Si $D$ es un divisor \emph{positivo} sobre $X$ tal que la imagen recíproca $f^*(D)$ esté definida \sref{IV.21.4.2}, entonces el subpreesquema cerrado $Y(f^*(D))$ de $X'$ no es sino la imagen recíproca $f^{-1}(Y(D))$;
+esto se deduce inmediatamente de las definiciones \sref{IV.21.4.2} y \sref{IV.21.2.12}.
+\end{env}
+
+\begin{proposition}[21.4.8]
+\label{IV.21.4.8}
+Sean $X$, $Y$ dos preesquemas;
+sea $f:X\to Y$ un morfismo fielmente plano.
+Entonces, si un divisor $D$ sobre $Y$ es tal que $f^*(D)\geq0$ (la existencia de $f^*(D)$ se deduce de \sref{IV.21.4.5}), se tiene $D\geq0$.
+En particular, la aplicación $D\mapsto f^*(D)$ de $\operatorname{Div}(Y)$ en $\operatorname{Div}(X)$ es inyectiva.
+\end{proposition}
+
+\begin{proof}
+Como la cuestión es local sobre $Y$, podemos limitarnos al caso en que $D=\operatorname{div}(w)$, con $w=uv^{-1}$, siendo $u$ y $v$ dos secciones regulares de $\sh{O}_Y$ sobre $Y$.
+Por hipótesis se tiene $u\sh{O}_X\subset v\sh{O}_X$, por lo que, para todo $x\in X$, si se pone $y=f(x)$, se tiene $u_y\sh{O}_{X,x}\subset v_y\sh{O}_{X,x}$;
+se concluye que $u_y\sh{O}_{Y,y}\subset v_y\sh{O}_{Y,y}$ en virtud de la hipótesis de que $\sh{O}_{X,x}$ es un $\sh{O}_{Y,y}$-módulo fielmente plano y de Bourbaki, \emph{Alg. comm.}, cap.~I, \textsection~3, n\textsuperscript{o}~5, prop.~10,~(ii);
+de donde $u\sh{O}_Y\subset v\sh{O}_Y$, puesto que $f$ es sobreyectivo, y por consiguiente $D\geq0$.
+\end{proof}
+
+\input{ega4/ega4-21-erratum53-insertion-es}

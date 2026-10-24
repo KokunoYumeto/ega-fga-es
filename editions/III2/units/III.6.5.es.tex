@@ -1,0 +1,531 @@
+\subsection{Funtores hipertor locales de complejos de módulos cuasicoherentes: caso general}
+\label{subsection:III.6.5}
+
+\begin{env}[6.5.1]
+\label{III.6.5.1}
+Sea ahora $S$ un preesquema arbitrario, y sean $X$ e $Y$ dos
+$S$-preesquemas. Sean $\sh P_\bullet$ un complejo de
+$\sh O_X$-módulos cuasicoherentes y $\sh Q_\bullet$ un complejo
+de $\sh O_Y$-módulos cuasicoherentes. Pongamos $Z=X\times_SY$.
+Vamos a definir $\sh O_Z$-módulos cuasicoherentes
+\[
+  \shTor_n^S(\sh P_\bullet,\sh Q_\bullet),
+\]
+denominados \emph{hipertor locales} de $\sh P_\bullet$ y
+$\sh Q_\bullet$, que se reducen a los de \sref{III.6.4} cuando
+$S$, $X$ e $Y$ son afines.
+
+Cuando $\sh P_\bullet$ y $\sh Q_\bullet$ están concentrados en
+grado cero, con términos respectivos $\sh F$ y $\sh G$, escribimos
+$\shTor_n^S(\sh F,\sh G)$ en lugar de
+$\shTor_n^S(\sh P_\bullet,\sh Q_\bullet)$.
+\end{env}
+
+\begin{env}[6.5.2]
+\label{III.6.5.2}
+Supongamos primero que $S$ es afín, y sean $(X_\lambda)$ y
+$(Y_\mu)$ recubrimientos de $X$ e $Y$ por abiertos afines.
+Entonces
+\[
+  Z_{\lambda\mu}=X_\lambda\times_SY_\mu
+\]
+forma un recubrimiento abierto afín de $Z$. Pongamos
+\[
+  \sh P_{\lambda,\bullet}=\sh P_\bullet|X_\lambda,
+  \qquad
+  \sh Q_{\mu,\bullet}=\sh Q_\bullet|Y_\mu.
+\]
+Para cada par $(\lambda,\mu)$ tenemos así un
+$\sh O_{Z_{\lambda\mu}}$-módulo cuasicoherente
+\[
+  \sh F_{\lambda\mu}
+  =
+  \shTor_n^S(\sh P_{\lambda,\bullet},\sh Q_{\mu,\bullet}).
+\]
+Debemos mostrar que los $\sh F_{\lambda\mu}$ satisfacen la
+condición de pegado \sref[0]{0.3.3.1}. Basta comprobar que, para
+todo abierto afín
+\[
+  U\subset X_\lambda\cap X_{\lambda'},
+  \qquad
+  V\subset Y_\mu\cap Y_{\mu'},
+\]
+las restricciones de $\sh F_{\lambda\mu}$ y
+$\sh F_{\lambda'\mu'}$ a $U\times_SV$ son canónicamente
+isomorfas. Esto se deduce inmediatamente de sus isomorfismos
+canónicos con
+\[
+  \shTor_n^S(\sh P_\bullet|U,\sh Q_\bullet|V),
+\]
+dados por \sref{III.6.4.5}.
+
+La definición y \sref{III.6.4.5} muestran también que el
+$\sh O_Z$-módulo así obtenido es independiente, salvo isomorfismo
+único compatible con las identificaciones locales, de los
+recubrimientos abiertos elegidos.
+\oldpage[III]{149}
+Lo denotamos por
+\[
+  \shTor_n^S(\sh P_\bullet,\sh Q_\bullet).
+\]
+Finalmente, para todo abierto $U$ de $X$ y todo abierto $V$ de
+$Y$, su restricción a $U\times_SV$ es canónicamente isomorfa a
+\[
+  \shTor_n^S(\sh P_\bullet|U,\sh Q_\bullet|V).
+\]
+\end{env}
+
+\begin{env}[6.5.3]
+\label{III.6.5.3}
+Pasemos ahora al caso general, en que $S$ es arbitrario. Sea
+$(S_\alpha)$ un recubrimiento de $S$ por abiertos afines, y sean
+$X_\alpha$ e $Y_\alpha$ las imágenes inversas de $S_\alpha$ en
+$X$ e $Y$. Debemos mostrar que los haces
+\[
+  \sh G_\alpha
+  =
+  \shTor_n^{S_\alpha}
+  (\sh P_\bullet|X_\alpha,\sh Q_\bullet|Y_\alpha)
+\]
+satisfacen la condición de pegado.
+
+Para todo abierto afín $T\subset S_\alpha\cap S_\beta$, sean
+$U$ y $V$ sus imágenes inversas en $X$ e $Y$. Basta definir
+isomorfismos canónicos entre las restricciones de $\sh G_\alpha$
+y $\sh G_\beta$ a $U\times_SV$ y
+\[
+  \shTor_n^T(\sh P_\bullet|U,\sh Q_\bullet|V).
+\]
+Podemos restringirnos además al caso en que
+$T=\mathrm D(f_\alpha)=\mathrm D(f_\beta)$, donde $f_\alpha$ y
+$f_\beta$ son secciones de $\sh O_S$ sobre $S_\alpha$ y
+$S_\beta$, respectivamente. Por \sref{III.6.4.2},
+\[
+  \shTor_n^T(\sh P_\bullet|U,\sh Q_\bullet|V)
+\]
+es canónicamente isomorfo tanto a
+$\shTor_n^{S_\alpha}(\sh P_\bullet|U,\sh Q_\bullet|V)$ como a
+$\shTor_n^{S_\beta}(\sh P_\bullet|U,\sh Q_\bullet|V)$.
+Combinando estos isomorfismos con las identificaciones locales de
+\sref{III.6.5.2}, queda definido el $\sh O_Z$-módulo
+\[
+  \shTor_n^S(\sh P_\bullet,\sh Q_\bullet).
+\]
+Para todo abierto $U$ de $X$ y todo abierto $V$ de $Y$, la
+restricción de este módulo a $U\times_SV$ es canónicamente
+isomorfa a
+\[
+  \shTor_n^S(\sh P_\bullet|U,\sh Q_\bullet|V).
+\]
+
+Esta construcción define manifiestamente, en las categorías de
+complejos acotados inferiormente de módulos cuasicoherentes, un
+bi-$\partial$-funtor
+\[
+  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
+\]
+con valores en los $\sh O_Z$-módulos. En efecto, la afirmación es
+local en $X$, $Y$ y $S$, por \sref{III.6.4.5} y por el hecho de
+que \sref{III.6.4.4.2} es un morfismo de bi-$\partial$-funtores.
+
+Si $\sh P_\bullet$ y $\sh Q_\bullet$ están concentrados en grado
+cero, con términos respectivos $\sh F$ y $\sh G$, entonces
+\[
+  \shTor_0^S(\sh F,\sh G)
+  =
+  \sh F\otimes_S\sh G,
+\]
+el producto tensorial externo definido en \sref[I]{I.9.1.2}; esto
+se deduce de \sref{III.6.4.1.1} y \sref[I]{I.9.1.3}.
+\end{env}
+
+\begin{env}[6.5.4]
+\label{III.6.5.4}
+La construcción precedente y \sref{III.6.4.6} muestran que
+$\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)$ es el objeto al
+que convergen dos funtores espectrales
+$'\sh E(\sh P_\bullet,\sh Q_\bullet)$ y
+$''\sh E(\sh P_\bullet,\sh Q_\bullet)$, cuyos términos $E_2$ son
+\[
+  '\sh E_{pq}^2
+  =
+  \sh H_p\bigl(\shTor_q^S(\sh P_\bullet,\sh Q_\bullet)\bigr)
+  \tag{6.5.4.1}\label{III.6.5.4.1}
+\]
+y
+\[
+  ''\sh E_{pq}^2
+  =
+  \bigoplus_{q'+q''=q}
+  \shTor_p^S
+  \bigl(\sh H_{q'}(\sh P_\bullet),
+        \sh H_{q''}(\sh Q_\bullet)\bigr).
+  \tag{6.5.4.2}\label{III.6.5.4.2}
+\]
+La sucesión espectral \sref{III.6.5.4.2} es siempre regular.
+Ambas sucesiones espectrales son birregulares cuando
+$\sh P_\bullet$ y $\sh Q_\bullet$ están acotados inferiormente.
+A continuación se describe otro caso en que son birregulares.
+\end{env}
+
+\begin{env}[6.5.5]
+\label{III.6.5.5}
+Sea $T$ un espacio topológico. Se dice que un haz de anillos
+$\sh A$ sobre $T$ tiene \emph{dimensión cohomológica a lo sumo
+$n$} si el anillo $\sh A_t$ tiene dimensión cohomológica a lo
+sumo $n$ para todo $t\in T$. En este caso se dice también que el
+espacio anillado $(T,\sh A)$ tiene dimensión cohomológica a lo
+sumo $n$. Un haz de anillos, o un espacio anillado, tiene
+\emph{dimensión cohomológica finita} si esto se cumple para algún
+entero $n$.
+
+Si los $\sh A_t$ son anillos locales noetherianos conmutativos,
+\oldpage[III]{150}
+decir que tienen dimensión cohomológica a lo sumo $n$ significa
+que son regulares y tienen dimensión de Krull a lo sumo $n$
+(\sref[0]{0.17.3.1}). En la terminología de la teoría de la
+dimensión que se introducirá en el capítulo IV, un preesquema
+localmente noetheriano $T$ tiene dimensión cohomológica a lo sumo
+$n$ exactamente cuando es regular (\sref[0]{0.4.1.4}) y tiene
+dimensión a lo sumo $n$. Equivalentemente, para todo abierto afín
+$U$ de $T$, el anillo $\Gamma(U,\sh O_T)$ tiene dimensión
+cohomológica a lo sumo $n$ (\sref[0]{0.17.2.6}).
+
+En consecuencia, si $S$ es localmente noetheriano y tiene
+dimensión cohomológica finita, \sref{III.6.3.2} muestra que tanto
+$'\sh E(\sh P_\bullet,\sh Q_\bullet)$ como
+$''\sh E(\sh P_\bullet,\sh Q_\bullet)$ son birregulares.
+
+Finalmente, bajo el isomorfismo canónico
+$X\times_SY\xrightarrow{\sim}Y\times_SX$,
+$\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)$ corresponde
+canónicamente a
+$\shTor_\bullet^S(\sh Q_\bullet,\sh P_\bullet)$.
+\end{env}
+
+\begin{proposition}[6.5.6]
+\label{III.6.5.6}
+Sea $(\sh P_{\alpha\bullet})$ un sistema inductivo filtrante de
+complejos de $\sh O_X$-módulos cuasicoherentes. Existe un
+isomorfismo canónico
+\[
+  \varinjlim_\alpha
+  \shTor_\bullet^S(\sh P_{\alpha\bullet},\sh Q_\bullet)
+  \xrightarrow{\sim}
+  \shTor_\bullet^S
+  \left(\varinjlim_\alpha\sh P_{\alpha\bullet},\sh Q_\bullet\right).
+  \tag{6.5.6.1}\label{III.6.5.6.1}
+\]
+\end{proposition}
+
+\begin{proof}
+La cuestión es local en $S$, $X$ e $Y$. Por tanto, podemos
+suponer que $S$, $X$ e $Y$ son afines, en cuyo caso la proposición
+se reduce a \sref{III.6.3.6}.
+\end{proof}
+
+\begin{env}[6.5.7]
+\label{III.6.5.7}
+\emph{Observaciones.}
+
+\textnormal{(i)} Consideremos en particular el caso $S=X=Y$, con
+$\sh P_\bullet$ y $\sh Q_\bullet$ dos complejos de
+$\sh O_S$-módulos cuasicoherentes. Entonces los
+$\shTor_n^S(\sh P_\bullet,\sh Q_\bullet)$ son
+$\sh O_S$-módulos cuasicoherentes. Además, para todo punto
+$z\in S$, \sref{III.6.5.6} da un isomorfismo canónico
+\[
+  \bigl(\shTor_n^S(\sh P_\bullet,\sh Q_\bullet)\bigr)_z
+  \xrightarrow{\sim}
+  \mathbf{Tor}_n^{\sh O_z}
+  \bigl((\sh P_\bullet)_z,(\sh Q_\bullet)_z\bigr),
+  \tag{6.5.7.1}\label{III.6.5.7.1}
+\]
+porque la cuestión es local y, por \sref{III.6.4.1.1}, se reduce
+al caso de módulos.
+
+\textnormal{(ii)} La definición de hipertor puede generalizarse
+a dos complejos $\sh P_\bullet,\sh Q_\bullet$ de
+$\sh O_X$-módulos sobre un mismo espacio anillado $(X,\sh O_X)$.
+Para cada abierto $U$ de $X$, pongamos
+\[
+  A(U)=\Gamma(U,\sh O_X),\qquad
+  P_\bullet(U)=\Gamma(U,\sh P_\bullet),\qquad
+  Q_\bullet(U)=\Gamma(U,\sh Q_\bullet).
+\]
+Los $A(U)$-módulos
+\[
+  \mathbf{Tor}_n^{A(U)}\bigl(P_\bullet(U),Q_\bullet(U)\bigr)
+\]
+forman entonces un prehaz sobre $X$; denotemos por
+$\shTor_n^X(\sh P_\bullet,\sh Q_\bullet)$ el $\sh O_X$-módulo
+asociado. Cuando $X$ es un preesquema, \sref{III.6.3.12} muestra
+que este módulo es canónicamente isomorfo al hipertor definido
+más arriba. No desarrollaremos más esta generalización.
+\end{env}
+
+\begin{proposition}[6.5.8]
+\label{III.6.5.8}
+Sean $X$ e $Y$ dos $S$-preesquemas, y sea $\sh F$
+(respectivamente $\sh G$) un $\sh O_X$-módulo cuasicoherente
+(respectivamente un $\sh O_Y$-módulo cuasicoherente). Si
+$\sh F$ o $\sh G$ es plano sobre $S$, entonces
+\[
+  \shTor_n^S(\sh F,\sh G)=0\qquad(n\ne0).
+\]
+\end{proposition}
+
+\begin{proof}
+La cuestión es local en $X$ e $Y$, por lo que podemos suponer que
+$X$, $Y$ y $S$ son afines, de anillos respectivos $B$, $C$ y
+$A$, y escribir $\sh F=\widetilde M$ y $\sh G=\widetilde N$,
+donde $M$ es un $B$-módulo y $N$ un $C$-módulo. Supongamos, por
+ejemplo, que $\sh F$ es plano sobre $S$. Esto significa que, para
+todo $s\in S$, $M_s$ es un $A_s$-módulo plano
+(\sref[0]{0.6.7.1}); por consiguiente, $M$ es un $A$-módulo plano
+(\sref[0]{0.6.3.3}). Así,
+$\Tor_n^A(M,N)=0$ para $n>0$ y todo $C$-módulo $N$
+(\sref[0]{0.6.1.1}), y la conclusión se deduce de
+\sref{III.6.4.1.1}.
+\end{proof}
+
+\begin{corollary}[6.5.9]
+\label{III.6.5.9}
+Sean $X$ e $Y$ dos $S$-preesquemas, y sea $\sh P_\bullet$
+(respectivamente $\sh Q_\bullet$) un complejo
+\oldpage[III]{151}
+acotado
+inferiormente de $\sh O_X$-módulos cuasicoherentes
+(respectivamente de $\sh O_Y$-módulos cuasicoherentes).
+Supongamos que cada $\sh P_i$ es plano sobre $S$. Entonces existe
+un isomorfismo canónico de $\partial$-funtores en $\sh Q_\bullet$
+\[
+  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
+  \xrightarrow{\sim}
+  \sh H_\bullet(\sh P_\bullet\otimes_S\sh Q_\bullet).
+  \tag{6.5.9.1}\label{III.6.5.9.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Cuando $S$, $X$ e $Y$ son afines, esto es precisamente
+\sref{III.6.3.7}; el caso general se deduce mediante los
+razonamientos de \sref{III.6.5.2} y \sref{III.6.5.3}.
+\end{proof}
+
+\begin{env}[6.5.10]
+\label{III.6.5.10}
+\emph{Corolario.}
+Supongamos que $X$ es plano sobre $S$ (\sref[0]{0.6.7.1}), que
+$\sh P_\bullet$ y $\sh Q_\bullet$ están acotados inferiormente,
+y que cada $\sh P_i$ es un $\sh O_X$-módulo localmente libre, no
+necesariamente de tipo finito. Entonces el homomorfismo
+\sref{III.6.5.9.1} es biyectivo.
+
+En efecto, se cumple la hipótesis de \sref{III.6.5.9}: la
+planitud es, por definición, una propiedad puntual en $X$, y toda
+suma directa de módulos planos es plana (\sref[0]{0.6.1.2}).
+\end{env}
+
+\begin{proposition}[6.5.11]
+\label{III.6.5.11}
+Sean $X'$ e $Y'$ dos $S$-preesquemas, y sean
+$f:X\to X'$ y $g:Y\to Y'$ dos $S$-morfismos afines. Para un
+complejo $\sh P_\bullet$ de $\sh O_X$-módulos cuasicoherentes y
+un complejo $\sh Q_\bullet$ de $\sh O_Y$-módulos
+cuasicoherentes, existe un isomorfismo canónico funtorial
+\[
+  (f\times_Sg)_*
+  \bigl(\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)\bigr)
+  \xrightarrow{\sim}
+  \shTor_\bullet^S(f_*\sh P_\bullet,g_*\sh Q_\bullet).
+  \tag{6.5.11.1}\label{III.6.5.11.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Como $f$ y $g$ son afines, $f_*\sh P_\bullet$ y
+$g_*\sh Q_\bullet$ son complejos de módulos cuasicoherentes
+(\sref[II]{II.1.2.6}). Si $Z'=X'\times_SY'$, ambos miembros de
+\sref{III.6.5.11.1} son $\sh O_{Z'}$-módulos cuasicoherentes por
+\sref{III.6.5.1}. Nos reducimos inmediatamente al caso en que
+$S$, $X'$ e $Y'$ son afines; entonces $X$ e $Y$ también son
+afines, y la afirmación se deduce de \sref{III.6.4.1.1} y
+\sref[I]{I.1.6.3}.
+\end{proof}
+
+\begin{env}[6.5.12]
+\label{III.6.5.12}
+\emph{Observación.}
+Sean $X'$ e $Y'$ dos $S$-preesquemas, con $X'$ plano sobre $S$.
+Sea $X$ un subpreesquema cerrado de $X'$, y sea
+$i:X\to X'$ la inmersión canónica. Sea $\sh P_\bullet$
+(respectivamente $\sh Q_\bullet$) un complejo acotado
+inferiormente de $\sh O_X$-módulos cuasicoherentes
+(respectivamente de $\sh O_{Y'}$-módulos cuasicoherentes).
+Finalmente, sea $\sh L'_{\bullet\bullet}$ una resolución de
+$i_*\sh P_\bullet$ formada por $\sh O_{X'}$-módulos localmente
+libres, tal que cada punto de $X'$ tenga un entorno abierto afín
+$U$ para el cual $\sh L'_{j,\bullet}|U$ sea una resolución libre de
+$i_*\sh P_j|U$, para todo $j$. Existe entonces un isomorfismo
+canónico
+\[
+  (i\times_S1)_*
+  \bigl(\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)\bigr)
+  \xrightarrow{\sim}
+  \sh H_\bullet(\sh L'_{\bullet\bullet}\otimes_S\sh Q_\bullet).
+  \tag{6.5.12.1}\label{III.6.5.12.1}
+\]
+
+Si $S$, $X'$ e $Y'$ son afines, y si
+$\sh L'_{j,\bullet}$ es una resolución libre de $i_*\sh P_j$ para
+todo $j$, \sref{III.6.5.11} nos reduce al caso $X'=X$, con $X$
+plano sobre $S$, y basta aplicar \sref{III.6.3.4}. En general,
+\sref{III.6.5.12.1} se define localmente, y queda comprobar que
+estas definiciones locales dan un isomorfismo global.
+
+Para ello, recordemos la definición del primer isomorfismo
+\sref{III.6.3.4.1}. Proviene de un isomorfismo de sucesiones
+espectrales (\sref[0]{0.11.6.5} y \sref[0]{0.11.5.3}), obtenido a
+su vez de un morfismo de bicomplejos
+\[
+  L_{\bullet\bullet}\longrightarrow L''_{\bullet\bullet},
+\]
+donde $L_{\bullet\bullet}$ es la resolución dada de $P_\bullet$,
+y $L''_{\bullet\bullet}$ es una resolución proyectiva de
+$P_\bullet$ en la categoría de complejos acotados
+\oldpage[III]{152}
+inferiormente
+de $A$-módulos (\sref[0]{0.11.5.2.2}). La afirmación se deduce del
+hecho de que \sref{III.6.3.4.1} es independiente de la resolución
+proyectiva elegida $L''_{\bullet\bullet}$, pues existe una equivalencia
+homotópica entre cualesquiera dos resoluciones de este tipo
+(\emph{M}, V, 1.2).
+\end{env}
+
+\begin{proposition}[6.5.13]
+\label{III.6.5.13}
+Sean $X$ e $Y$ dos $S$-preesquemas, y supongamos que se cumple
+una de las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $X$ y $Z=X\times_SY$ son localmente noetherianos, y
+    $X$ es plano sobre $S$;
+  \item[(ii)] $S$ y $X$ son localmente noetherianos, y $Y$ es de
+    tipo finito sobre $S$.
+\end{enumerate}
+Sea $\sh P_\bullet$ (respectivamente $\sh Q_\bullet$) un complejo
+acotado inferiormente de $\sh O_X$-módulos cuasicoherentes
+(respectivamente de $\sh O_Y$-módulos cuasicoherentes).
+Supongamos además que, para todo $n$,
+$\sh H_n(\sh P_\bullet)$ (respectivamente
+$\sh H_n(\sh Q_\bullet)$) es un $\sh O_X$-módulo
+(respectivamente un $\sh O_Y$-módulo) de tipo finito. Entonces
+\[
+  \shTor_n^S(\sh P_\bullet,\sh Q_\bullet)
+\]
+es un $\sh O_Z$-módulo coherente para todo $n$.
+\end{proposition}
+
+\begin{proof}
+Como $\sh P_\bullet$ y $\sh Q_\bullet$ están acotados
+inferiormente, la sucesión espectral
+$''\sh E(\sh P_\bullet,\sh Q_\bullet)$ es birregular por
+\sref{III.6.5.4}. Tanto en el caso (i) como en el caso (ii), $Z$
+es localmente noetheriano, de modo que \sref[0]{0.11.1.8} reduce
+la afirmación a la coherencia de los términos
+$''\sh E_{pq}^2$. La hipótesis de tipo finito sobre los módulos de
+homología y la fórmula \sref{III.6.5.4.2} reducen la proposición
+al caso particular en que $\sh P_\bullet$ y $\sh Q_\bullet$ están
+concentrados en grado cero, es decir, al corolario siguiente.
+\end{proof}
+
+\begin{corollary}[6.5.14]
+\label{III.6.5.14}
+Supongamos que se cumple una de las condiciones \emph{(i)} y
+\emph{(ii)} de \sref{III.6.5.13}, y sea $\sh F$
+(respectivamente $\sh G$) un $\sh O_X$-módulo cuasicoherente
+(respectivamente un $\sh O_Y$-módulo cuasicoherente) de tipo
+finito. Entonces $\shTor_n^S(\sh F,\sh G)$ es un
+$\sh O_Z$-módulo coherente para todo $n$.
+\end{corollary}
+
+\begin{proof}
+La cuestión es local en $X$ e $Y$, por lo que podemos suponer que
+$S$, $X$ e $Y$ son afines.
+
+\textnormal{(i)} Bajo las hipótesis de (i), $S$, $X$ y $Z$ son
+noetherianos. Existe, por tanto, una resolución localmente libre
+$\sh L_\bullet$ de $\sh F$, formada por $\sh O_X$-módulos de
+tipo finito (\sref[I]{I.1.3.7}). Como $X$ es plano sobre $S$,
+\sref{III.6.3.4} da
+\[
+  \shTor_n^S(\sh F,\sh G)
+  =
+  \sh H_n(\sh L_\bullet\otimes_S\sh G).
+\]
+Los módulos $\sh L_i\otimes_S\sh G$ son
+$\sh O_Z$-módulos cuasicoherentes de tipo finito
+(\sref[I]{I.9.1.1}), luego son coherentes. Se sigue que
+$\sh H_n(\sh L_\bullet\otimes_S\sh G)$ es coherente
+(\sref[0]{0.5.3.4}).
+
+\textnormal{(ii)} Supongamos ahora que se cumple la condición
+(ii). Como $A(Y)$ es cociente de una $A(S)$-álgebra de polinomios
+en un número finito de indeterminadas (\sref[I]{I.6.3.3}), $Y$ es
+un subpreesquema cerrado de un $S$-esquema afín $Y'$ plano y de
+tipo finito sobre $S$. El esquema $Y'$ es noetheriano
+(\sref[I]{I.6.3.7}), por lo que existe una resolución localmente
+libre $\sh M_\bullet$ de $j_*\sh G$ por
+$\sh O_{Y'}$-módulos de tipo finito, donde $j:Y\to Y'$ es la
+inmersión canónica. Por \sref{III.6.5.12},
+$\shTor_n^S(\sh F,\sh G)$ es la imagen inversa por $1\times j$
+del $\sh O_{Z'}$-módulo
+\[
+  \sh H_n(\sh F\otimes_S\sh M_\bullet),
+  \qquad Z'=X\times_SY'.
+\]
+Como en (i), los $\sh F\otimes_S\sh M_i$ son
+$\sh O_{Z'}$-módulos coherentes, y \sref[0]{0.5.3.4} da de nuevo
+la conclusión.
+\end{proof}
+
+\begin{env}[6.5.15]
+\label{III.6.5.15}
+La teoría desarrollada arriba para dos complejos
+$\sh P_\bullet,\sh Q_\bullet$ de haces cuasicoherentes sobre dos
+$S$-preesquemas $X$ e $Y$ se extiende sin dificultad a una
+familia finita arbitraria de $S$-preesquemas $X^{(i)}$
+$(1\leq i\leq m)$, cada uno provisto de un complejo
+$\sh P_\bullet^{(i)}$ de $\sh O_{X^{(i)}}$-módulos
+cuasicoherentes. Si
+\[
+  Z=X^{(1)}\times_SX^{(2)}\times_S\cdots\times_SX^{(m)},
+\]
+se define así un $\sh O_Z$-módulo cuasicoherente
+\[
+  \shTor_q^S
+  \bigl(\sh P_\bullet^{(1)},\sh P_\bullet^{(2)},\ldots,
+        \sh P_\bullet^{(m)}\bigr).
+\]
+Dejamos al lector el desarrollo de la teoría en este caso general,
+y registramos únicamente, para referencia posterior, el término
+$E_2$ de la segunda sucesión espectral regular que converge a este
+hipertor:
+
+\oldpage[III]{153}
+
+\[
+  ''\sh E_{pq}^2
+  =
+  \bigoplus_{q_1+q_2+\cdots+q_m=q}
+  \shTor_p^S
+  \bigl(
+    \sh H_{q_1}(\sh P_\bullet^{(1)}),\ldots,
+    \sh H_{q_m}(\sh P_\bullet^{(m)})
+  \bigr).
+  \tag{6.5.15.1}\label{III.6.5.15.1}
+\]
+En \sref{III.6.8} estudiaremos las sucesiones espectrales de
+asociatividad a las que dan lugar estos funtores hipertor de un
+número finito arbitrario de complejos.
+\end{env}

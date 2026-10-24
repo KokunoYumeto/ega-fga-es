@@ -1,0 +1,402 @@
+\subsection{\texorpdfstring{Criterios de exactitud para los funtores
+$H_\bullet(P_\bullet\otimes_A M)$}{Criterios de exactitud para los funtores H.(P. tensor M)}}
+\label{subsection:III.7.4}
+\label{III.7.4}
+
+\begin{env}[7.4.1]
+\label{III.7.4.1}
+Sean $A$ un anillo (no necesariamente conmutativo) y $P_\bullet$ un complejo
+de $A$-módulos planos a derecha. Como el funtor
+$M\mapsto P_k\otimes_A M$ es entonces exacto en $\cat{Ab}_A$ para todo $k$,
+el $\partial$-funtor
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.eq}
+\]
+\oldpage[III]{186}
+es un funtor homológico de $\cat{Ab}_A$ en $\cat{Ab}$,
+evidentemente $A$-lineal cuando $A$ es conmutativo
+\sref{III.7.1.2}, y conmuta con los límites inductivos.
+
+Si $A$ es conmutativo, entonces, para toda $A$-álgebra $B$, el funtor
+homológico $T_\bullet^{(B)}$ \sref{III.7.3.8} viene dado, por definición, por
+\[
+  T_\bullet^{(B)}(N)
+  =
+  H_\bullet(P_\bullet\otimes_A N_{[\rho]})
+  \tag{7.4.1.2}\label{III.7.4.1.2.eq}
+\]
+donde $\rho:A\to B$ es el homomorfismo que define la estructura de álgebra de
+$B$; como también se puede escribir
+\[
+  P_\bullet\otimes_A N_{[\rho]}
+  =P_\bullet\otimes_A(B\otimes_B N)_{[\rho]}
+  =(P_\bullet\otimes_A B)\otimes_B N,
+\]
+se ve que
+\[
+  T_\bullet^{(B)}(N)=H_\bullet(P'_\bullet\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.eq}
+\]
+para todo $B$-módulo $N$, siendo $P'_\bullet$ el complejo
+$P_\bullet\otimes_A B$ de $B$-módulos planos
+\sref[0]{0.6.2.1}.
+\end{env}
+
+\begin{proposition}[7.4.2]
+\label{III.7.4.2}
+Bajo las condiciones generales de \sref{III.7.4.1}, y para un entero dado
+$p\in\bb Z$, las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_p$ es exacto por la izquierda (o, lo que es lo mismo,
+    $T_{p+1}$ es exacto por la derecha);
+  \item[(b)]
+    \[
+      Z'_p(P_\bullet)
+      =
+      \Coker(P_{p+1}\longrightarrow P_p)
+    \]
+    es un $A$-módulo plano a derecha;
+  \item[(c)] existe un complejo $P'_\bullet$ de $A$-módulos planos a derecha
+    tal que la diferencial
+    \[
+      d'_{p+1}:P'_{p+1}\longrightarrow P'_p
+    \]
+    sea nula, y un isomorfismo de funtores homológicos de
+    $H_\bullet(P_\bullet\otimes_A M)$ sobre
+    $H_\bullet(P'_\bullet\otimes_A M)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Por definición, se tiene una sucesión exacta funtorial en $M$
+\[
+  0\longrightarrow T_p(M)
+  \longrightarrow Z'_p(P_\bullet\otimes M)
+  \longrightarrow P_{p-1}\otimes M
+\]
+donde
+\[
+  Z'_p(P_\bullet\otimes M)
+  =
+  \Coker(P_{p+1}\otimes M\longrightarrow P_p\otimes M)
+  =
+  Z'_p(P_\bullet)\otimes M
+\]
+en virtud de la exactitud por la derecha del producto tensorial. Para todo
+homomorfismo $f:M\to N$, se tiene, por tanto, un diagrama conmutativo
+\[
+\xymatrix@C=30pt@R=38pt{
+  0\ar[r]
+  &T_p(M)\ar[r]\ar[d]_u
+  &Z'_p(P_\bullet)\otimes M\ar[r]\ar[d]_v
+  &P_{p-1}\otimes M\ar[d]_w
+  \\
+  0\ar[r]
+  &T_p(N)\ar[r]
+  &Z'_p(P_\bullet)\otimes N\ar[r]
+  &P_{p-1}\otimes N
+}
+\tag{7.4.2.1}\label{III.7.4.2.1.eq}
+\]
+cuyas filas son exactas. Si $f$ es un monomorfismo, lo mismo ocurre con $w$,
+puesto que $P_{p-1}$ es plano; si $T_p$ es exacto por la izquierda, $u$ es
+también un monomorfismo; se concluye que $v$ es un monomorfismo, lo cual
+implica que $Z'_p(P_\bullet)$ es plano. Recíprocamente, si es así, $v$ es un
+monomorfismo para todo monomorfismo $f:M\to N$, luego el diagrama
+\eqref{III.7.4.2.1.eq} muestra que $u$ es un monomorfismo, y, por consiguiente,
+$T_p$ (que ya es semiexacto) es exacto por la izquierda. Así, (a) y (b) son
+equivalentes. Es inmediato que (c) implica (a), pues si
+$d'_{p+1}:P'_{p+1}\to P'_p$ es nula, y
+$0\to M'\to M\to M''\to0$ es una sucesión exacta de $A$-módulos, el
+homomorfismo de borde en la sucesión exacta
+\[
+  H_{p+1}(P'_\bullet\otimes M'')
+  \xrightarrow{\partial}H_p(P'_\bullet\otimes M')
+  \longrightarrow H_p(P'_\bullet\otimes M)
+\]
+\oldpage[III]{187}
+es nulo por definición \emph{(M, IV, 1)}, luego $T_p$ es exacto por la
+izquierda. Demostremos recíprocamente que (b) implica (c). Si
+\[
+  Z_{p+1}(P_\bullet)=\Ker(P_{p+1}\longrightarrow P_p),
+\]
+se tiene una sucesión exacta
+\[
+  0\longrightarrow Z_{p+1}(P_\bullet)\longrightarrow P_{p+1}
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0
+\]
+en la cual $P_{p+1}$ y $Z'_p(P_\bullet)$ son planos, luego
+$Z_{p+1}(P_\bullet)$ es plano \sref[0]{0.6.1.2}. Tomaremos
+\[
+  P'_i=P_i\quad\text{para }i\ne p\text{ y }i\ne p+1,
+  \qquad
+  P'_p=Z'_p(P_\bullet),
+  \qquad
+  P'_{p+1}=Z_{p+1}(P_\bullet);
+\]
+como diferencial $d'_i:P'_i\to P'_{i-1}$, se tomará la del complejo
+$P_\bullet$ para $i\ne p$ e $i\ne p+1$, $0$ para $i=p+1$ y, para $i=p$,
+el homomorfismo $Z'_p(P_\bullet)\to P_{p-1}$ deducido de $d_p$ por paso al
+cociente. Como los $P_i$ son planos, se tiene
+\[
+  Z'_i(P_\bullet\otimes M)=Z'_i(P_\bullet)\otimes M,
+  \qquad
+  Z_i(P_\bullet\otimes M)=Z_i(P_\bullet)\otimes M
+\]
+y
+\[
+  B_i(P_\bullet\otimes M)=B_i(P_\bullet)\otimes M
+\]
+(poniendo $B_i(P_\bullet)=\Im(P_{i+1}\to P_i)$); se deducen inmediatamente,
+para todo $M$, isomorfismos funtoriales
+\[
+  H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)
+\]
+para todo $i$, y la comprobación de que se trata de un isomorfismo de
+$\partial$-funtores resulta sin dificultad de la definición de $\partial$
+\emph{(M, IV, 1)}.
+\end{proof}
+
+Obsérvese que las condiciones de \sref{III.7.4.2} implican también que
+$B_p(P_\bullet)$ es plano, pues se tiene una sucesión exacta
+\[
+  0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0,
+\]
+en la cual $P_p$ y $Z'_p(P_\bullet)$ son planos
+\sref[0]{0.6.1.2}.
+
+\begin{corollary}[7.4.3]
+\label{III.7.4.3}
+Supongamos que $A$ es un anillo noetheriano regular de dimensión $1$ (es
+decir, un producto de anillos de Dedekind \sref[0]{0.17.1.3} y
+\sref[0]{0.17.3.7}, por ejemplo un anillo de ideales principales). Entonces,
+para que $T_p$ sea exacto por la izquierda, es necesario y suficiente que
+$T_p(A)$ sea un $A$-módulo plano. Para que $T_p$ sea exacto, es necesario y
+suficiente que $T_p(A)$ y $T_{p-1}(A)$ sean $A$-módulos planos.
+\end{corollary}
+
+\begin{proof}
+Recordemos que, para un módulo $M$ sobre un anillo de Dedekind, es equivalente
+decir que $M$ es plano o que es libre de torsión \sref[0]{0.6.3.3} y
+\sref[0]{0.6.3.4}; bajo las hipótesis de \sref{III.7.4.3}, todo submódulo de un
+$A$-módulo plano es, por tanto, plano.
+
+La segunda aserción de \sref{III.7.4.3} resulta de la primera, puesto que decir
+que $T_p$ es exacto significa que $T_p$ y $T_{p-1}$ son exactos por la
+izquierda. Para demostrar la primera aserción, observemos que se tiene una
+sucesión exacta
+\[
+  0\longrightarrow H_p(P_\bullet)\longrightarrow Z'_p(P_\bullet)
+  \longrightarrow B_{p-1}(P_\bullet)\longrightarrow0
+\]
+en la cual $B_{p-1}(P_\bullet)$ es un $A$-módulo plano, por ser un submódulo
+del $A$-módulo plano $P_{p-1}$. Por tanto, es equivalente decir que
+$H_p(P_\bullet)$ es plano o que $Z'_p(P_\bullet)$ es plano
+\sref[0]{0.6.1.2}.
+\end{proof}
+
+Las aplicaciones más importantes de \sref{III.7.4.2} son las siguientes:
+
+\begin{proposition}[7.4.4]
+\label{III.7.4.4}
+Sean $A$ un anillo noetheriano y $P_\bullet$ un complejo de $A$-módulos
+planos; se supone, o bien que los $P_i$ son de tipo finito, o bien que los
+$H_i(P_\bullet)$ son $A$-módulos de tipo finito y que existe $i_0$ tal que
+$H_i(P_\bullet)=0$ para $i<i_0$. Sea $T$ el funtor homológico definido por
+\eqref{III.7.4.1.1.eq}. Entonces, el conjunto $U$ de los
+$y\in\Spec(A)$ tales que $(T_p)_y$ \sref{III.7.1.4} sea exacto por la derecha
+(resp. exacto por la izquierda, exacto) es abierto en $\Spec(A)$.
+\end{proposition}
+
+\begin{proof}
+En la segunda hipótesis sobre $P_\bullet$, se puede reemplazar $P_\bullet$ por
+un complejo $P'_\bullet$ de
+\oldpage[III]{188}
+$A$-módulos libres de tipo finito para el cual el funtor
+$H_\bullet(P'_\bullet\otimes_A M)$ es isomorfo (como $\partial$-funtor) a
+$T_\bullet(M)$ \sref[0]{0.11.9.3}. Por tanto, siempre se puede reducir a la
+primera hipótesis, y, en este caso, los $Z'_i(P_\bullet)$ son de tipo finito;
+además, basta limitarse a demostrar las aserciones relativas a la exactitud por
+la izquierda (cf. \sref{III.7.4.2}, (a)). Dicho esto, sea $x\in U$; como el
+funtor $M\mapsto M_x$ es exacto, se tiene
+\[
+  (Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x),
+\]
+y (teniendo en cuenta \eqref{III.7.4.1.3.eq}) la hipótesis implica, en virtud
+de \sref{III.7.4.2}, (b), que $(Z'_p(P_\bullet))_x$ es un $A_x$-módulo plano,
+luego libre, pues es de tipo finito y $A_x$ es un anillo local noetheriano
+(Bourbaki, \emph{Algèbre commutative}, cap.~II, \S~3,
+n\textsuperscript{o}~2, cor.~2 de la prop.~5). Se deduce que existe $f\in A$
+tal que $(Z'_p(P_\bullet))_f$ es libre sobre $A_f$ (Bourbaki,
+\emph{Algèbre commutative}, cap.~II, \S~5, n\textsuperscript{o}~1, cor.~de la
+prop.~2), y, \emph{a fortiori}, $(Z'_p(P_\bullet))_y$ es libre sobre $A_y$ para
+todo $y\in D(f)$, lo cual termina la demostración en virtud de
+\sref{III.7.4.2}, (b).
+\end{proof}
+
+\begin{corollary}[7.4.5]
+\label{III.7.4.5}
+Bajo las hipótesis de \sref{III.7.4.4}, supongamos además que $A$ es un
+dominio entero.
+Entonces, el conjunto $U$ de los $x\in\Spec(A)$ tales que $(T_p)_x$ sea
+exacto es abierto no vacío.
+\end{corollary}
+
+\begin{proof}
+En efecto, basta demostrar que $(T_p)_x$ es exacto para el punto genérico $x$
+de $\Spec(A)$, lo cual es inmediato, pues $A_x$ es un cuerpo, y, por tanto,
+todo funtor aditivo sobre $\cat{Ab}_{A_x}$ es exacto.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+\label{III.7.4.6}
+Bajo las hipótesis generales de \sref{III.7.4.4}, las condiciones (a), (b) y
+(c) de \sref{III.7.4.2} son también equivalentes a:
+\begin{enumerate}
+  \item[(d)] existe un $A$-módulo $Q$ y un isomorfismo funtorial
+    \[
+      T_p(M)\xrightarrow{\sim}\Hom_A(Q,M).
+      \tag{7.4.6.1}\label{III.7.4.6.1.eq}
+    \]
+    Además, el $A$-módulo $Q$ queda determinado, salvo isomorfismo único, por
+    esta propiedad, y es de tipo finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La unicidad de $Q$ es un caso particular de la unicidad de un objeto
+representante de un funtor representable \sref[0]{0.8.1.5}. Es claro que el
+segundo miembro de \eqref{III.7.4.6.1.eq} es exacto por la izquierda.
+Recíprocamente, para demostrar la existencia de $Q$, cuando $T_p$ es exacto
+por la izquierda, primero se puede, como en \sref{III.7.4.4}, reducir al caso
+en que los $P_i$ son planos y de tipo finito, luego (puesto que $A$ es
+noetheriano) proyectivos de tipo finito (Bourbaki,
+\emph{Algèbre commutative}, cap.~II, \S~5, n\textsuperscript{o}~2, cor.~del
+teor.~1). El dual $\check P_i$ de $P_i$ es entonces también un $A$-módulo
+proyectivo de tipo finito, $P_i$ es canónicamente isomorfo al dual de
+$\check P_i$, y el homomorfismo canónico
+\[
+  P_i\otimes_A M\longrightarrow\Hom_A(\check P_i,M)
+\]
+es biyectivo (Bourbaki, \emph{Algèbre}, cap.~II, 3.\textsuperscript{a} ed.,
+\S~4, n\textsuperscript{o}~2, prop.~2). Por otra parte, se sabe por
+\sref{III.7.4.2}, (c), que se puede suponer que
+$d_{p+1}:P_{p+1}\to P_p$ es nula, de modo que se tiene una sucesión exacta
+\[
+  0\longrightarrow T_p(M)\xrightarrow{u}P_p\otimes M
+  \xrightarrow{v}P_{p-1}\otimes M
+\]
+donde $v=d_p\otimes1$. Pongamos entonces $Q'=\Ker(d_p)$, de modo que se tiene
+la sucesión exacta
+\[
+  0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1},
+\]
+de donde, por transposición, la sucesión exacta
+\[
+  \check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+  \xrightarrow{{}^t w}\check Q'\longrightarrow0.
+\]
+Vamos a ver que
+\[
+  Q=\check Q'=\Coker({}^t d_p)
+\]
+responde a la cuestión. En efecto, se tiene la sucesión exacta
+\[
+  0\longrightarrow\Hom_A(Q,M)
+  \longrightarrow\Hom_A(\check P_p,M)
+  \xrightarrow{v'}\Hom_A(\check P_{p-1},M)
+\]
+\oldpage[III]{189}
+donde $v'=\Hom({}^t d_p,1)$; al identificar canónicamente
+$P_i\otimes M$ con $\Hom(\check P_i,M)$, $v'$ se identifica, por tanto, con
+$v=d_p\otimes1$, y se obtiene así el isomorfismo funtorial
+\[
+  T_p(M)\xrightarrow{\sim}\Hom_A(Q,M)
+\]
+buscado. Además, $Q$, por ser un cociente de $\check P_p$, es de tipo finito.
+\end{proof}
+
+\begin{proposition}[7.4.7]
+\label{III.7.4.7}
+Supongamos verificadas las condiciones generales de \sref{III.7.4.4}. Entonces,
+para todo $A$-módulo $M$ de tipo finito:
+\begin{enumerate}
+  \item[(i)] los $T_i(M)$ son $A$-módulos de tipo finito;
+  \item[(ii)] para todo ideal $\mathfrak m$ de $A$, el homomorfismo canónico
+    \[
+      \widehat{T_i(M)}
+      \longrightarrow
+      \varprojlim_n T_i\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+      \tag{7.4.7.1}\label{III.7.4.7.1.eq}
+    \]
+    (donde el primer miembro es el completado separado de $T_i(M)$ para la
+    topología $\mathfrak m$-ádica) es biyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Como en \sref{III.7.4.4}, se reduce primero al caso en que los $P_i$ son de
+tipo finito; como $A$ es noetheriano, los submódulos de los
+$P_i\otimes_A M$ son de tipo finito, de donde se deduce trivialmente la
+aserción (i). En cuanto a la aserción (ii), resulta más generalmente del lema
+siguiente:
+\end{proof}
+
+\begin{lemma}[7.4.7.2]
+\label{III.7.4.7.2}
+Sean $A$ un anillo noetheriano y $u:E\to F$ un homomorfismo de $A$-módulos de
+tipo finito. Para todo $A$-módulo $M$ de tipo finito, pongamos
+\[
+  K(M)=\Ker(u\otimes1_M),
+  \qquad
+  C(M)=\Coker(u\otimes1_M);
+\]
+entonces, los homomorfismos canónicos
+\[
+  \widehat{K(M)}\longrightarrow\varprojlim_n K(M_n),
+  \qquad
+  \widehat{C(M)}\longrightarrow\varprojlim_n C(M_n)
+  \tag{7.4.7.3}\label{III.7.4.7.3.eq}
+\]
+(donde se ha puesto
+$M_n=M\otimes_A(A/\mathfrak m^{n+1})=M/\mathfrak m^{n+1}M$) son biyectivos
+para todo ideal $\mathfrak m$ de $A$.
+\end{lemma}
+
+\begin{proof}
+Como $E\otimes M$ y $F\otimes M$ son de tipo finito, y el funtor
+$M\mapsto\widehat M$ es exacto en la categoría de los $A$-módulos de tipo
+finito \sref[0]{0.7.3.3}, $\widehat{K(M)}$ y $\widehat{C(M)}$ son,
+respectivamente, el núcleo y el conúcleo de
+\[
+  \widehat{(u\otimes1)}:
+  \widehat{(E\otimes M)}\longrightarrow\widehat{(F\otimes M)}.
+\]
+La exactitud por la izquierda del funtor $\varprojlim$ muestra, por tanto, que
+$\widehat{K(M)}=\varprojlim_n K(M_n)$; por otra parte, la exactitud por la
+derecha del producto tensorial prueba que
+$C(M_n)=C(M)\otimes_A(A/\mathfrak m^{n+1})$, luego
+$\widehat{C(M)}=\varprojlim_n C(M_n)$ por definición.
+\end{proof}
+
+\begin{remark}[7.4.8]
+\label{III.7.4.8}
+Teniendo en cuenta \sref{III.6.10.5} y \sref{III.6.10.6}, se ve que, bajo una
+hipótesis suplementaria de planitud, \sref{III.7.4.7} vuelve a dar el hecho de
+que (4.1.7.1) es un isomorfismo, es decir, lo esencial del «primer teorema de
+comparación» para los morfismos propios; además, el enunciado se aplica ya no
+solo a un $\sh{O}_X$-módulo coherente, sino a un complejo de tales módulos.
+Sería interesante obtener un enunciado que comprendiese a la vez
+\sref{III.7.4.7} y (4.1.7.1) como casos particulares. Obsérvese que, cuando los
+$P_i$ son de tipo finito, la demostración de \sref{III.7.4.7} no utiliza el
+hecho de que sean módulos planos; convendría examinar si la conclusión de
+\sref{III.7.4.7} sigue siendo válida cuando no se supone que los $P_i$ sean
+planos ni de tipo finito, sino que se supone que los $H_i(P_\bullet)$ son de
+tipo finito para todo $i$ y nulos para $i<i_0$. ¿Es posible entonces reemplazar
+$P_\bullet$ por un complejo $P'_\bullet$ de $A$-módulos de tipo finito tal que
+los funtores $H_\bullet(P_\bullet\otimes M)$ y
+$H_\bullet(P'_\bullet\otimes M)$ (que ya no son homológicos) sigan siendo
+isomorfos?
+\end{remark}

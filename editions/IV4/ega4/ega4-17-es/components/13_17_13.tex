@@ -1,0 +1,391 @@
+\subsection{Morfismos transversales.}
+\label{subsection:IV.17.13}
+\label{IV.17.13}
+
+\begin{env}[17.13.1]
+\label{IV.17.13.1}
+Sean $S$ un preesquema, $X$, $Y$, $X'$ tres $S$-preesquemas, $i:Y\to X$ una $S$-inmersión, $f:X'\to X$ un $S$-morfismo. Pongamos $Y'=Y\times_XX'$, y sean $g:Y'\to Y$, $j:Y'\to X'$ las proyecciones canónicas, de modo que se tiene el diagrama conmutativo
+\[
+\label{IV.17.13.1.1}
+\tag{17.13.1.1}
+\xymatrix{
+  Y \ar[d]_i & Y' \ar[l]_g \ar[d]^j\\
+  X & X' \ar[l]^f
+}
+\]
+y que $j$ es una $S$-inmersión. Se tiene entonces un diagrama conmutativo de $\sh{O}_{Y'}$-módulos cuasicoherentes
+\[
+\label{IV.17.13.1.2}
+\tag{17.13.1.2}
+\begin{tikzcd}
+  g^*(\sh{N}_{Y/X}) \ar{r} \ar{d}{\operatorname{gr}_1(g)} & f^*(\Omega^1_{X/S})\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} \ar{d} & g^*(\Omega^1_{Y/S}) \ar{r} \ar{d} & 0\\
+  \sh{N}_{Y'/X'} \ar{r} & \Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} & \Omega^1_{Y'/S} \ar{r} & 0
+\end{tikzcd}
+\]
+donde la fila inferior es la sucesión exacta (16.4.21) aplicada a $j$, la fila superior proviene de la misma sucesión exacta para $i$, mediante la aplicación del funtor exacto por la derecha $g^*$ (que, por tanto, la deja exacta); $\operatorname{gr}_1(g)$ se define en (16.2.1), y la conmutatividad de los dos cuadrados resulta de (0, 20.5.7.3) y (0, 20.5.11.3).
+
+\oldpage[IV-4]{90}
+
+Además, se ha visto en (16.2.2, (iii)) que $\operatorname{gr}_1(g)$ es aquí sobreyectivo, por lo que se deduce de (17.13.1.2) la sucesión exacta
+\[
+\label{IV.17.13.1.3}
+\tag{17.13.1.3}
+g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0.
+\]
+\end{env}
+
+\begin{proposition}[17.13.2]
+\label{IV.17.13.2}
+Con las notaciones de (17.13.1), sea $x'$ un punto de $Y'$, $x=g(x')$ su imagen en $Y$; supongamos que $X$ e $Y$ son lisos sobre $S$ en el punto $x$, y que $X'$ es liso sobre $S$ en el punto $x'$. Sean $m$, $m-c$ las dimensiones relativas de $X$ e $Y$ sobre $S$ en el punto $x$ (17.10.1), y $n$ la de $X'$ sobre $S$ en el punto $x'$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $Y'$ es liso sobre $S$ en el punto $x'$ y de dimensión relativa $n-c$.
+  \item[b)] El homomorfismo $\alpha\otimes1:g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}k(x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')$ deducido del homomorfismo $\alpha$ de (17.13.1.3) es inyectivo.
+\end{enumerate}
+Sea $s$ la imagen canónica de $x$ en $S$, y supongamos que $x'$ es racional sobre $k(s)$. Entonces las condiciones a) y b) son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo transpuesto de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x'))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  (cf. (16.5.12)) es sobreyectivo.
+\end{enumerate}
+Además, cuando las condiciones a) y b) se cumplen en $x'$, se cumplen en una vecindad de $x'$ en $Y'$; sustituyendo, si es preciso, $X'$ por una vecindad de $x'$, el homomorfismo
+\[
+\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}
+\]
+es biyectivo, y la sucesión
+\[
+\label{IV.17.13.2.1}
+\tag{17.13.2.1}
+0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+\]
+obtenida añadiendo un $0$ a (17.13.1.3), es exacta.
+\end{proposition}
+
+El hecho de que, si las condiciones equivalentes a) y b) se cumplen en el punto $x'$, se cumplen también en una vecindad de $x'$ en $Y'$, resulta de que el conjunto de los puntos donde un morfismo es liso es abierto (17.3.7) y de (17.10.2).
+
+En virtud de (17.12.1), aplicado a $X'$ e $Y'$, decir que $Y'$ es liso sobre $S$ en el punto $x'$ equivale a decir que el homomorfismo
+\[
+\delta\otimes1:\sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}k(x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')
+\]
+es inyectivo, teniendo en cuenta (0, 19.1.12) y que $\Omega^1_{X'/S}$ es un $\sh{O}_{X'}$-módulo localmente libre en el punto $x'$ (17.2.3); como entonces $\Omega^1_{Y'/S}$ es también un $\sh{O}_{Y'}$-módulo localmente libre en una vecindad de $x'$ y la sucesión
+\[
+\label{IV.17.13.2.2}
+\tag{17.13.2.2}
+0\to\sh{N}_{Y'/X'}\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+\]
+es exacta (17.2.5), decir que $Y'$ es de dimensión relativa $n-c$ sobre $S$ en el punto $x'$ significa, por (17.10.2), que $\sh{N}_{Y'/X'}$ (que es localmente libre en una vecindad de $x'$) es de rango $c$ en el punto $x'$. Pero, en virtud de las hipótesis sobre $X$ e $Y$ en el punto $x$, y por el mismo razonamiento, $\sh{N}_{Y/X}$ es localmente libre y de rango $c$ en el punto $x$, por lo que $g^*(\sh{N}_{Y/X})$ es también localmente libre y de rango $c$ en el punto $x'$. Como el homomorfismo $\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}$ es sobreyectivo, las condiciones anteriores equivalen a decir que este homomorfismo es
+
+\oldpage[IV-4]{91}
+
+biyectivo en el punto $x'$ (Bourbaki, \emph{Alg. comm.}, cap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6), y, por tanto, también en una vecindad de $x'$ (0$_{\mathrm I}$, 5.2.7); esto implica evidentemente b), así como la última afirmación del enunciado, en virtud de la exactitud de (17.13.2.2). Recíprocamente, como $\alpha\otimes1$ se factoriza en
+\[
+g^*(\sh{N}_{Y/X})\otimes k(x')\xrightarrow{\operatorname{gr}_1(g)\otimes1}\sh{N}_{Y'/X'}\otimes k(x')\xrightarrow{\delta\otimes1}\Omega^1_{X'/S}\otimes k(x')
+\]
+y $\operatorname{gr}_1(g)$ es sobreyectivo, decir que $\alpha\otimes1$ es inyectivo implica que $\delta\otimes1$ lo es y que $\operatorname{gr}_1(g)\otimes1$ es biyectivo. Se concluye de (17.12.1) que $Y'$ es liso sobre $S$ en el punto $x'$, y que $\operatorname{gr}_1(g)$ es biyectivo en una vecindad de $x'$ (Bourbaki, \emph{loc. cit.}). Además, como la sucesión (17.13.2.2) es entonces exacta, y $\sh{N}_{Y'/X'}$, isomorfo a $g^*(\sh{N}_{Y/X})$, es de rango $c$ en el punto $x'$, $\Omega^1_{Y'/S}$ es de rango $n-c$ en este punto, lo que termina de demostrar la equivalencia de a) y b), en virtud de (17.10.2).
+
+Queda por demostrar la equivalencia de b) y b') cuando $x'$ es racional sobre $k(s)$ (lo que implica que también lo es $x$); entonces $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}k(x')$ se identifica con $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x')$, y puesto que la sucesión
+\[
+0\to\sh{N}_{Y/X}\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\Omega^1_{Y/S}\to0
+\]
+es exacta en el punto $x$ y está formada por $\sh{O}_Y$-módulos localmente libres, el dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x)$ se identifica con el espacio cociente $\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)$ (16.5.12); de ahí la equivalencia de b) y b').
+
+\begin{definition}[17.13.3]
+\label{IV.17.13.3}
+Con las notaciones de (17.13.1), se dice que el morfismo $f$ es \emph{transversal} a $Y$ en el punto $x'$, relativamente a $S$, si $X$ e $Y$ son lisos sobre $S$ en el punto $x$, $X'$ es liso sobre $S$ en el punto $x'$, y si se satisfacen las condiciones equivalentes a), b) de (17.13.2).
+\end{definition}
+
+Cuando no hay riesgo de confusión, se omite la mención del preesquema $S$ y se dice simplemente que $f$ es transversal a $Y$ en el punto $x'$.
+
+\begin{remarks}[17.13.4]
+\label{IV.17.13.4}
+(i) Supongamos que $X$, $Y$ y $X'$ son \emph{planos y localmente de presentación finita} sobre $S$. Para todo $s\in S$, denotemos por $X_s$, $Y_s$, $X'_s$, $Y'_s$ las fibras de $X$, $Y$, $X'$, $Y'$ en el punto $s$, y por $f_s:X'_s\to X_s$ el morfismo deducido de $f$ por cambio de base. Resulta entonces de (17.5.1)\footnote{El texto impreso cita (17.5.9), pero no existe tal apartado; el criterio de lisura por fibras utilizado aquí es (17.5.1).} que, para que $f$ sea un morfismo transversal a $Y$ en el punto $x'$, es necesario y suficiente que, si $s$ es la imagen de $x$ en $S$, $f_s$ sea transversal a $Y_s$ en el punto $x'$, relativamente a $k(s)$.
+
+(ii) Se ha visto en (17.13.2) que el conjunto de los puntos $x'\in Y'$ donde $f$ es transversal a $Y$ es \emph{abierto} en $Y'$; si, además, $Y'$ es \emph{propio} sobre $S$, se deduce que el conjunto de los $s\in S$ tales que $f$ sea transversal a $Y$ en todos los puntos de $Y'_s$, relativamente a $S$, es \emph{abierto} en $S$.
+
+Cuando $X$, $Y$ y $X'$ son planos y localmente de presentación finita sobre $S$, resulta de (i) que el conjunto de los $x'\in Y'$ tales que $f_s$ sea transversal a $Y_s$ en el punto $x'$ (siendo $s$ la imagen de $x'$ en $S$), relativamente a $k(s)$, es \emph{abierto} en $Y'$. Si, además, $Y'$ es propio sobre $S$, el conjunto de los $s\in S$ tales que $f_s$ sea transversal a $Y_s$ en todos los puntos de $Y'_s$ (relativamente a $k(s)$) es \emph{abierto} en $S$.
+
+(iii) Puesto que la propiedad de ser liso sobre $S$, así como la noción de dimensión relativa a $S$ en un punto, son estables por todo cambio de base $S'\to S$ ((17.3.3) y (4.2.7)), lo mismo ocurre con la propiedad de que un morfismo $f:X'\to X$ sea transversal a un subpreesquema de $X$ en un punto, relativamente a $S$.
+
+\oldpage[IV-4]{92}
+
+(iv) La condición b) de (17.13.2) expresa también que el homomorfismo $\alpha:g^*(\sh{N}_{Y/X})\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ es \emph{universalmente inyectivo} relativamente a $Y'$ (11.9.18).\footnote{El texto fuente cita (II, 9.18); la caracterización de los homomorfismos universalmente inyectivos utilizada aquí es la observación (11.9.18).}
+\end{remarks}
+
+\begin{env}[17.13.5]
+\label{IV.17.13.5}
+Consideremos ahora un preesquema $S$, tres $S$-preesquemas $X$, $Y$, $Z$, dos $S$-morfismos $f:Y\to X$, $g:Z\to X$; pongamos $T=Y\times_XZ$; se sabe entonces (I, 5.3.5) que se tiene un diagrama conmutativo
+\[
+\label{IV.17.13.5.1}
+\tag{17.13.5.1}
+\xymatrix{
+  X \ar[d]^{\Delta} & T=Y\times_X Z \ar[l] \ar[d]^{j}\\
+  X\times_S X & Y\times_S Z \ar[l]^{u}
+}
+\]
+que hace de $T$ el producto de los $(X\times_SX)$-preesquemas $X$ e $Y\times_SZ$, donde $u=f\times_Sg$. Como $\Delta$ es una $S$-inmersión (I, 5.3.9), se está en la situación del diagrama (17.13.1.1); lo que corresponde a $\Omega^1_{X'/S}$ en (17.13.1) es entonces $(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_{Y\times_SZ})$, en virtud de (16.4.23). Por otra parte, lo que corresponde al $\sh{O}_Y$-módulo $\sh{N}_{Y/X}$ en (17.13.1) es aquí, por definición, $\Omega^1_{X/S}$ (16.3.1); corresponde, por tanto, a (17.13.1.3) una sucesión exacta
+\[
+\label{IV.17.13.5.2}
+\tag{17.13.5.2}
+\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+\]
+donde quedan por precisar los homomorfismos $\rho$ y $\sigma$. Teniendo en cuenta, en primer lugar, (16.4.23) y (0, 20.5.2), se ve que, si $p:T\to Y$, $q:T\to Z$ son las proyecciones canónicas, se tiene, con las notaciones de (16.4.19),
+\[
+\label{IV.17.13.5.3}
+\tag{17.13.5.3}
+\sigma=p_{T/Y/S}+q_{T/Z/S}.
+\]
+Por otra parte, para calcular $\rho$, utilicemos la conmutatividad del cuadrado izquierdo de (17.13.1.2), lo que, en el caso presente, reduce primero a explicitar el homomorfismo canónico
+\[
+\rho':\Omega^1_{X/S}\to\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X
+\]
+definido en (16.4.21), aplicado a la inmersión $\Delta$. Se puede reducir al caso en que $S=\Spec(A)$, $X=\Spec(B)$ son afines, y entonces $\rho'$ corresponde al homomorfismo $\delta$ de (0, 20.5.11.2), donde hay que sustituir $B$ por $B\otimes_AB$ y $C$ por $B=(B\otimes_AB)/\mathfrak J_{B/A}$. Se ve entonces que $\delta$ hace corresponder a la clase de $x\otimes1-1\otimes x\pmod{\mathfrak J_{B/A}^2}$ (para un $x\in B$) la imagen de
+\[
+(x\otimes1-1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1-1\otimes x)
+\]
+en $\Omega^1_{(B\otimes_AB)/A}\otimes_{B\otimes_AB}B$; pero el elemento anterior puede escribirse
+\[
+\begin{split}
+&((x\otimes1)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1))\\
+&\quad-((1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(1\otimes x))
+\end{split}
+\]
+y se ve, por tanto, que $\rho'$ es la diferencia de los dos homomorfismos $\pi^{(1)}$ y $\pi^{(2)}$ de $\Omega^1_{X/S}$ en $\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X$, correspondientes, respectivamente, a la primera y a la segunda proyección de $X\times_SX$ en $X$, por (16.4.3.3). Para obtener $\rho$, hay que considerar primero el homomorfismo
+\[
+\rho'':\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{Y\times_SZ}\to\Omega^1_{(Y\times_SZ)/S}
+\]
+correspondiente, por (16.4.3.3), al morfismo $u$ de (17.13.5.1), y luego, tras tensorizar por $\sh{O}_T$, formar el compuesto $(\rho''\otimes1)\circ(\rho'\otimes1)$; resulta de lo anterior que se tiene, con las notaciones de (16.4.18),
+\[
+\label{IV.17.13.5.4}
+\tag{17.13.5.4}
+\rho=(f_{Y/X/S}\otimes1_{\sh{O}_T})\oplus(-g_{Z/X/S}\otimes1_{\sh{O}_T}).
+\]
+
+\oldpage[IV-4]{93}
+
+Dicho esto, la aplicación de (17.13.2) a la situación del diagrama (17.13.5.1) (teniendo en cuenta (17.3.3, (iv)), que implica que $X\times_SX$ es liso sobre $S$ en $(x,x)$ si $X$ lo es)\footnote{El texto impreso dice que $X\times_SX$ es liso «en $x$»; el punto correspondiente de $X\times_SX$ es $\Delta(x)=(x,x)$.} da el corolario siguiente.
+\end{env}
+
+\begin{corollary}[17.13.6]
+\label{IV.17.13.6}
+Sean $S$ un preesquema, $X$, $Y$, $Z$ tres $S$-preesquemas, $f:Y\to X$, $g:Z\to X$ dos $S$-morfismos; pongamos $T=Y\times_XZ$, y sean $p:T\to Y$, $q:T\to Z$ las proyecciones canónicas. Sea $t$ un punto de $T$, $y=p(t)$, $z=q(t)$, $x=f(y)=g(z)$. Supongamos que $X$ es liso sobre $S$ en el punto $x$, de dimensión relativa $m$, que $Y$ (resp. $Z$) es liso sobre $S$ en el punto $y$ (resp. $z$), de dimensión relativa $m+a$ (resp. $m+b$), siendo $a$ y $b$ positivos o negativos. Entonces las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $T$ es liso sobre $S$ en el punto $t$, de dimensión relativa $m+a+b$.
+  \item[b)] El homomorfismo
+  \[
+  \rho\otimes1:\Omega^1_{X/S}\otimes_{\sh{O}_X}k(t)\to
+  (\Omega^1_{Y/S}\otimes_{\sh{O}_Y}k(t))\oplus
+  (\Omega^1_{Z/S}\otimes_{\sh{O}_Z}k(t))
+  \]
+  donde $\rho$ viene dado por (17.13.5.4), es inyectivo.
+  \item[c)] El morfismo $u:Y\times_SZ\to X\times_SX$ es transversal a la diagonal de $X\times_SX$ en el punto $t$.\footnote{El texto impreso escribe $T=Y\times_SZ\to X\times_SX$; aquí $T$ ya denota $Y\times_XZ$, mientras que el morfismo transversal es $u:Y\times_SZ\to X\times_SX$ del diagrama (17.13.5.1).}
+\end{enumerate}
+Si $t$ es racional sobre el cuerpo residual de su imagen $s$ en $S$, estas condiciones son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo
+  \[
+  \label{IV.17.13.6.1}
+  \tag{17.13.6.1}
+  \mathrm{T}_y(f)-\mathrm{T}_z(g):\mathrm{T}_{Y/S}(y)\oplus\mathrm{T}_{Z/S}(z)\to\mathrm{T}_{X/S}(x)
+  \]
+  (cf. (16.5.13.5))\footnote{El texto impreso cita (16.5.12.5); el morfismo tangente empleado está definido en (16.5.13.5).} es sobreyectivo.
+\end{enumerate}
+Además, cuando las condiciones a) y b) se cumplen en $t$, se cumplen en una vecindad de $t$ en $T$, y, restringiendo $T$ a tal vecindad, la sucesión
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+\]
+(donde $\sigma$ viene dado por (17.13.5.3)) es exacta.
+
+El único punto que queda por demostrar en (17.13.6) concierne a b'), y resulta de que, bajo la hipótesis de que $t$ es racional sobre $k(s)$, el homomorfismo $\rho\otimes1$ es \emph{transpuesto} de $\mathrm{T}_y(f)-\mathrm{T}_z(g)$, en virtud de (17.13.5.4).
+
+Cuando se satisfacen las condiciones equivalentes de (17.13.6), se dice que $f$ y $g$ forman un \emph{par de morfismos transversales en el punto $t$, relativamente} a $S$; también aquí se omite a menudo la mención de $S$.
+\end{corollary}
+
+\begin{env}[17.13.7]
+\label{IV.17.13.7}
+Consideremos, en particular, el caso en que $Y$ y $Z$ son \emph{subpreesquemas} de $X$, siendo $f$ y $g$ las inyecciones canónicas; $T$ es entonces el subpreesquema «intersección»
+
+\oldpage[IV-4]{94}
+
+$\inf(Y,Z)$ de $X$ (I, 4.4.3), y se tiene $t=y=z=x$. En lugar de decir que el par $(f,g)$ es transversal en el punto $x$, se dice entonces que $Y$ y $Z$ \emph{se cortan transversalmente en el punto $x$} (relativamente a $S$). Denotando por $X_s$, $Y_s$, $Z_s$, $T_s$ las fibras de $X$, $Y$, $Z$, $T$ en el punto $s$, imagen de $x$ en $S$, y teniendo en cuenta (5.2.3), (5.1.9) y (0, 16.5.12), se ve que, para que esto ocurra (cuando $X$, $Y$, $Z$ son lisos sobre $S$ en el punto $x$), es necesario y suficiente que $T$ sea liso sobre $S$ en el punto $x$, y que se tenga la relación
+\[
+\label{IV.17.13.7.1}
+\tag{17.13.7.1}
+\operatorname{codim}_x(T_s,X_s)=\operatorname{codim}_x(Y_s,X_s)+\operatorname{codim}_x(Z_s,X_s).
+\]
+\end{env}
+
+\begin{proposition}[17.13.8]
+\label{IV.17.13.8}
+Sean $S$ un preesquema, $X$ un $S$-preesquema localmente de presentación finita sobre $S$, $Y$, $Z$ dos subpreesquemas de $X$, $T=\inf(Y,Z)$ el subpreesquema «intersección» de $Y$ y $Z$, $x$ un punto de $T$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] La inyección canónica $i:Y\to X$ es un morfismo transversal a $Z$ en el punto $x$, relativamente a $S$ (17.13.3).
+  \item[a')] La inyección canónica $j:Z\to X$ es un morfismo transversal a $Y$ en el punto $x$, relativamente a $S$.
+  \item[a'')] $Y$ y $Z$ se cortan transversalmente en el punto $x$, relativamente a $S$.
+  \item[b)] $X$, $Y$, $Z$ son lisos sobre $S$ en el punto $x$, y el homomorfismo $\rho$ (17.13.5.4) es tal que
+  \[
+  \rho\otimes1:\Omega^1_{X/S}\otimes_{\sh{O}_X}k(x)\to
+  (\Omega^1_{Y/S}\otimes_{\sh{O}_Y}k(x))\oplus
+  (\Omega^1_{Z/S}\otimes_{\sh{O}_Z}k(x))
+  \]
+  es inyectivo.
+\end{enumerate}
+Cuando $x$ es racional sobre $k(s)$ (siendo $s$ la imagen de $x$ en $S$), estas condiciones son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo
+  \[
+  \mathrm{T}_x(i)-\mathrm{T}_x(j):\mathrm{T}_{Y/S}(x)\oplus\mathrm{T}_{Z/S}(x)\to\mathrm{T}_{X/S}(x)
+  \]
+  es sobreyectivo.
+\end{enumerate}
+Además, cuando las condiciones equivalentes a) a b) se cumplen en el punto $x$, se cumplen en una vecindad de $x$ en $T$, y, restringiendo $X$ a una vecindad de $x$, la sucesión (17.13.6.2) es exacta, y se tiene un isomorfismo canónico
+\[
+\label{IV.17.13.8.1}
+\tag{17.13.8.1}
+\sh{N}_{T/X}\xrightarrow{\sim}
+(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\sh{N}_{Z/X}\otimes_{\sh{O}_Z}\sh{O}_T).
+\]
+\end{proposition}
+
+Las condiciones a), a'), a'') implican todas que $X$, $Y$, $Z$ son lisos sobre $S$ en el punto $x$. Sean además $m$, $m-a$, $m-b$ las dimensiones relativas de $X$, $Y$, $Z$ sobre $S$ en el punto $x$. Resulta entonces de (17.13.2), aplicado sustituyendo $X'$ por $Z$ e $Y'$ por $T=Y\times_XZ$, que las condiciones a), a') equivalen ambas a decir que $T$ es liso sobre $S$ en el punto $x$ y de dimensión relativa $m-a-b$ en este punto; pero, en virtud de (17.13.7), esto significa precisamente que se cumple la condición a''), de donde resulta la equivalencia de a), a') y a''). La equivalencia de a'') y b) (o b') cuando $x$ es racional sobre $k(s)$) se ha demostrado en (17.13.6), así como el hecho de que, si estas condiciones se satisfacen en el punto $x$, se satisfacen en una vecindad de $x$, y la exactitud de la sucesión (17.13.6.2) en tal vecindad. Queda por definir el isomorfismo canónico (17.13.8.1).
+
+\oldpage[IV-4]{95}
+
+Denotemos por $\alpha$ y $-\beta$ los homomorfismos que figuran en el segundo miembro de (17.13.5.4), y por $\gamma$ y $\delta$ los que figuran en el segundo miembro de (17.13.5.2). Decir que la sucesión (17.13.6.2)
+\[
+0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\Omega^1_{T/S}\to0
+\]
+es exacta significa que, en la categoría de los $\sh{O}_T$-módulos, $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ se identifica canónicamente con el \emph{producto fibrado} de $\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ y $\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T$ sobre $\Omega^1_{T/S}$, para los homomorfismos $\gamma$ y $\delta$. El mismo razonamiento que en (0, 18.1.2 y 18.1.3), sustituyendo respectivamente los anillos y los ideales biláteros por módulos y submódulos, proporciona un diagrama conmutativo
+{\scriptsize
+\[
+\begin{tikzcd}[column sep=small,row sep=large]
+0 \ar[dr] & & 0 \ar[d] & 0 \ar[d] & \\
+& (\sh{N}_{Y/X}\otimes\sh{O}_T)\oplus(\sh{N}_{Z/X}\otimes\sh{O}_T)
+  \ar[r] \ar[d] \ar[dr,"\iota" description]
+& \sh{N}_{Z/X}\otimes\sh{O}_T \ar[r,"\sim"] \ar[d]
+& \sh{N}_{T/Y} \ar[d] & \\
+0 \ar[r] & \sh{N}_{Y/X}\otimes\sh{O}_T \ar[r] \ar[d]
+& \Omega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta"] \ar[dr,"\varepsilon" description]
+& \Omega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \Omega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta"] \ar[d]
+& \Omega^1_{T/S} \ar[r] \ar[d] \ar[dr] & 0\\
+& & 0 & 0 & 0
+\end{tikzcd}
+\]
+}
+donde las 3\textsuperscript{a} y 4\textsuperscript{a} filas y columnas son exactas en virtud de las hipótesis de lisura. El hecho de que el homomorfismo compuesto $\varepsilon=\gamma\circ\alpha=\delta\circ\beta$ sea el homomorfismo correspondiente a la inyección canónica $T\to X$ resulta de (0, 20.5.2.7). Como la diagonal del diagrama anterior es exacta, $\operatorname{Ker}(\varepsilon)$ se identifica canónicamente con $\sh{N}_{T/X}$, teniendo en cuenta que $T$ es liso sobre $S$ (17.2.5); por tanto, se tiene un isomorfismo canónico (17.13.8.1), inverso de $\iota$.
+
+\begin{env}[17.13.9]
+\label{IV.17.13.9}
+Se pueden generalizar los resultados de (17.13.5) y (17.13.6) a un número finito cualquiera de $S$-morfismos $f_i:Y_i\to X$ ($i\in I$, siendo $I$ un conjunto finito). Para ello, denotemos por $X^I$ el producto de la familia $(X_i)_{i\in I}$ de $S$-preesquemas todos idénticos a $X$ (I, 3.3.5), y sean $p_i$ ($i\in I$) las proyecciones canónicas. El \emph{morfismo diagonal} $\Delta:X\to X^I$ se define (como en (I, 5.3.1)) como el único $S$-morfismo tal que $p_i\circ\Delta=1_X$ para todo $i\in I$. Es una $X$-sección de $X^I$ para el morfismo $p_1$, y, por tanto, (I, 5.3.11) una \emph{inmersión}.
+
+\oldpage[IV-4]{96}
+
+Sea entonces $Y$ el producto de los $S$-preesquemas $Y_i$ (para los morfismos compuestos $Y_i\xrightarrow{f_i}X\to S$), y $T$ el producto de los $X$-preesquemas $Y_i$ (para los morfismos $f_i$). Se demuestra, como en (I, 5.3.5), que se tiene un diagrama conmutativo
+\[
+\label{IV.17.13.9.1}
+\tag{17.13.9.1}
+\xymatrix{
+  X \ar[d]^{\Delta} & T \ar[l]_-v \ar[d]^{j}\\
+  X^I & Y \ar[l]^{u}
+}
+\]
+(donde $u$ es el producto (sobre $S$) de los $f_i$), que hace de $T$ el producto de los $X^I$-preesquemas $X$ e $Y$.
+
+Por recurrencia sobre el número de elementos de $I$, resulta de (16.4.23) que $\Omega^1_{X^I/S}$ (resp. $\Omega^1_{Y/S}$) se identifica canónicamente con la suma directa de los $p_i^*(\Omega^1_{X/S})$ (resp. de los $q_i^*(\Omega^1_{Y_i/S})$, si $q_i:Y\to Y_i$ son las proyecciones canónicas).
+
+Supongamos ahora que $X$ es \emph{liso} sobre $S$ en un punto $x$ (y, por tanto, en una vecindad de este punto). Lo mismo ocurre entonces con $X^I$ en este punto (17.3.3, (iv)), y, restringiendo $X$ a una vecindad de $x$, se tiene, por (17.2.5), una sucesión exacta de $\sh{O}_X$-módulos localmente libres
+\[
+0\to\operatorname{gr}_1(\Delta)\to(\Omega^1_{X/S})^I\to\Omega^1_{X/S}\to0.
+\]
+Pongamos $\sh{J}=\operatorname{gr}_1(\Delta)$; se deduce de la sucesión anterior una sucesión exacta de $\sh{O}_T$-módulos localmente libres
+\[
+\label{IV.17.13.9.1-seq}
+\tag{17.13.9.1}
+0\to\sh{J}\otimes_{\sh{O}_X}\sh{O}_T\to(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+\]
+que corresponde a la primera fila del diagrama (17.13.1.2), y donde $\sigma$ no es otro que el homomorfismo canónico que hace corresponder a cada familia de secciones $(t_i)_{i\in I}$ de $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ sobre un abierto de $T$ su \emph{suma}.
+
+Por otra parte, lo que corresponde aquí a la segunda flecha vertical del diagrama (17.13.1.2) es el homomorfismo
+\[
+\label{IV.17.13.9.2}
+\tag{17.13.9.2}
+\tau:(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)
+\]
+que, a toda familia $(t'_i\otimes1)_{i\in I}$, donde los $t'_i$ son aquí secciones sobre un abierto de $X$ de $\Omega^1_{X/S}$, asocia la suma de los $((f_i)_{Y_i/X/S}(t'_i))\otimes1$, con la notación de (16.4.18). El homomorfismo $\rho$ que corresponde al homomorfismo $\alpha$ de (17.13.1.3) es, por tanto, la \emph{restricción} a $\sh{J}\otimes_{\sh{O}_X}\sh{O}_T$ del homomorfismo $\tau$ anterior.
+
+Precisadas estas hipótesis y notaciones, se puede aplicar a la situación de (17.13.9.1) la prop. (17.13.2), lo que da el
+\end{env}
+
+\begin{corollary}[17.13.10]
+\label{IV.17.13.10}
+Bajo las hipótesis generales de (17.13.9), sea $t$ un punto de $T$, $y_i$ ($i\in I$) sus proyecciones en los $Y_i$, y $x$ el punto de $X$ igual a cada uno de los $f_i(y_i)$. Supongamos que $X$ es liso sobre $S$ en el punto $x$ y de dimensión relativa $d$, y que cada uno de los $Y_i$ es liso sobre $S$ en el punto $y_i$; sea $d+c_i$ (siendo $c_i$ un entero positivo o negativo) la dimensión relativa de $Y_i$ en el punto $y_i$. Entonces las condiciones siguientes son equivalentes:
+
+\oldpage[IV-4]{97}
+
+\begin{enumerate}
+  \item[a)] $T$ es liso sobre $S$ en el punto $t$, de dimensión relativa $d+\sum_{i\in I}c_i$.
+  \item[b)] El homomorfismo
+  \[
+  \rho\otimes1:\sh{J}\otimes_{\sh{O}_X}k(t)\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}k(t))
+  \]
+  es inyectivo.
+\end{enumerate}
+Cuando $t$ es racional sobre el cuerpo $k(s)$ (donde $s$ es la imagen de $t$ en $S$), estas condiciones son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo transpuesto de $\rho\otimes1$
+  \[
+  \bigoplus_{i\in I}\mathrm{T}_{Y_i/S}(y_i)\to(\mathrm{T}_{X/S}(x))^I/\delta(\mathrm{T}_{X/S}(x))
+  \]
+  (donde $\delta$ es la aplicación diagonal) es sobreyectivo.\footnote{El texto impreso pone $\mathrm{T}_{Y_i/X}(y_i)$ en el miembro izquierdo; el transpuesto de $\rho\otimes1$ tiene como dominio la suma directa de los espacios tangentes relativos $\mathrm{T}_{Y_i/S}(y_i)$.}
+\end{enumerate}
+Basta observar que $X^I$ es liso sobre $S$ y de dimensión relativa $d\cdot\operatorname{Card}(I)$, e $Y$ es liso sobre $S$ y de dimensión relativa $d\cdot\operatorname{Card}(I)+\sum_{i\in I}c_i$.
+
+Cuando se cumplen las condiciones equivalentes de (17.13.10), se dice también que los $f_i$ forman una \emph{familia de morfismos transversales en el punto $t$, relativamente} a $S$. Se ve asimismo que el conjunto de los puntos $t\in T$ donde esto ocurre es \emph{abierto} en $T$. La observación (17.13.4, (ii))\footnote{El texto impreso remite a (17.13.4, (iii)); la afirmación de apertura bajo la hipótesis de ser propio es la observación (ii).} muestra entonces que, si $X$ y los $Y_i$ son planos y localmente de presentación finita sobre $S$, y, además, $T$ es \emph{propio} sobre $S$, el conjunto de los $s\in S$ tales que los $f_i$ formen una familia de morfismos transversales en \emph{todos} los puntos de $T_s$, relativamente a $S$, es \emph{abierto} en $S$.
+\end{corollary}
+
+\begin{env}[17.13.11]
+\label{IV.17.13.11}
+Consideremos, en particular, el caso, que generaliza (17.13.7), en que los $Y_i$ ($i\in I$) son \emph{subpreesquemas} de $X$, siendo los $f_i$ las inyecciones canónicas, de modo que $T=\inf_{i\in I}(Y_i)$ es también el subpreesquema «intersección» de los $Y_i$, y $t=y_i=x$ para todo $i$; en lugar de decir que los $f_i$ forman una familia de morfismos transversales en el punto $x$, se dice también que \emph{los $Y_i$ se cortan transversalmente en el punto $x$} (relativamente a $S$). La condición a) de (17.13.10) se expresa asimismo mediante la relación que generaliza (17.13.7.1)
+\[
+\label{IV.17.13.11.1}
+\tag{17.13.11.1}
+\operatorname{codim}_x(T_s,X_s)=\sum_{i\in I}\operatorname{codim}_x((Y_i)_s,X_s).
+\]
+Además, se tiene la propiedad siguiente, que extiende (17.13.8.1), y proporciona otra demostración de ella cuando $I$ tiene 2 elementos:
+\end{env}
+
+\begin{corollary}[17.13.12]
+\label{IV.17.13.12}
+Cuando los $Y_i$ se cortan transversalmente en el punto $x$, se tiene un isomorfismo canónico
+\[
+\label{IV.17.13.12.1}
+\tag{17.13.12.1}
+\sh{N}_{T/X}\xrightarrow{\sim}\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T).
+\]
+\end{corollary}
+
+Se puede reducir al caso en que los $Y_i$ son subpreesquemas cerrados de $X$, definidos por ideales cuasicoherentes $\sh{J}_i$, de modo que $T$ está definido por el ideal $\sh{J}=\sum_i\sh{J}_i$. Por definición del haz conormal a una inmersión (16.1.3), el homomorfismo canónico $\bigoplus_i\sh{J}_i\to\sh{J}$ da, al pasar a los cocientes, un homomorfismo \emph{sobreyectivo}
+\[
+\label{IV.17.13.12.2}
+\tag{17.13.12.2}
+\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)\to\sh{N}_{T/X}.
+\]
+
+\oldpage[IV-4]{98}
+
+Pero aquí los $\sh{O}_T$-módulos de los dos miembros de (17.13.12.2) son localmente libres y \emph{del mismo rango} $\sum_i c_i$ (si $c_i$ es el rango de $\sh{N}_{Y_i/X}$), en virtud de (17.2.5) y de la condición a) de (17.13.10); se concluye, por tanto, de Bourbaki, \emph{Alg. comm.}, cap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6, que (17.13.12.2) es biyectivo, y (17.13.12.1) es el isomorfismo inverso.

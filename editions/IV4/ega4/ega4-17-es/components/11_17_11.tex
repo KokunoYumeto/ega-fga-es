@@ -1,0 +1,99 @@
+\subsection{Morfismos lisos de preesquemas lisos}
+\label{subsection:IV.17.11}
+
+\begin{theorem}[17.11.1]
+\label{IV.17.11.1}
+Sean $f:Y\to S$ y $h:X\to S$ dos morfismos localmente de presentación finita, $g:X\to Y$ un $S$-morfismo y $x$ un punto de $X$; pongamos $y=g(x)$, $s=f(y)=h(x)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es liso en el punto $y$ y $g$ es liso en el punto $x$.
+  \item[b)] $g$ y $h$ son lisos en el punto $x$.
+  \item[c)] $h$ es liso en el punto $x$, y el homomorfismo canónico (16.4.18)
+  \begin{equation}
+  \label{IV.17.11.1.1}
+  \tag{17.11.1.1}
+  (g^*(\Omega^1_{Y/S}))_x\to(\Omega^1_{X/S})_x
+  \end{equation}
+  admite un inverso por la izquierda (dicho de otro modo, es un isomorfismo sobre un \emph{factor directo} de $(\Omega^1_{X/S})_x$).
+  \item[c')] $h$ es liso en el punto $x$, y el homomorfismo canónico
+  \begin{equation}
+  \label{IV.17.11.1.2}
+  \tag{17.11.1.2}
+  ((\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y))\otimes_{k(y)}k(x)\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \end{equation}
+  es inyectivo.
+\end{enumerate}
+Supongamos, además, que el homomorfismo $k(y)\to k(x)$ sea biyectivo. Entonces las condiciones anteriores son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[d)] $h$ es liso en el punto $x$, y la aplicación canónica $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ que va del espacio vectorial tangente en $x$ a $X$ al espacio vectorial tangente en $y$ a $Y$ (16.5.12) es sobreyectiva.
+\end{enumerate}
+\end{theorem}
+
+El hecho de que a) implique b) resulta trivialmente de (17.3.3, (iii)); b) implica c) por aplicación de (17.2.3, (ii)). Para ver que c) equivale a c'), observemos que, en virtud de (17.2.3, (i)), $\Omega^1_{X/S}$ es un $\sh{O}_X$-módulo localmente libre de tipo finito; basta entonces aplicar (0, 19.1.12) al anillo local $\sh{O}_{X,x}$ y al homomorfismo (17.11.1.1) de $\sh{O}_{X,x}$-módulos de tipo finito. Cuando $k(x)=k(y)$, la aplicación lineal tangente $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ es la transpuesta de (17.11.1.2), por (16.5.12), lo que establece en este caso la equivalencia de c') y d).
+
+\oldpage[IV-4]{83}
+
+Queda, por tanto, probar que c) implica a). Podemos limitarnos al caso en que $S=\Spec(A)$, $Y=\Spec(B)$, $X=\Spec(C)$ son afines. La hipótesis implica (17.2.3, (i)) que $(\Omega^1_{X/S})_x=\Omega^1_{C_{\mathfrak m}/A_{\mathfrak s}}$ es un $C_{\mathfrak m}$-módulo libre: en efecto, (16.10.6) asegura que existen elementos $t_i$ ($1\leq i\leq r$) de $B_{\mathfrak p}=\sh{O}_{Y,y}$ tales que las diferenciales $d_{B_{\mathfrak p}/A_{\mathfrak s}}(t_i)$ generan el $B_{\mathfrak p}$-módulo $\Omega^1_{B_{\mathfrak p}/A_{\mathfrak s}}$ y que sus imágenes en $\Omega^1_{C_{\mathfrak m}/A_{\mathfrak s}}$ forman parte de una base de este $C_{\mathfrak m}$-módulo libre. Como $\Omega^1_{Y/S}$ (resp. $\Omega^1_{X/S}$) es un $\sh{O}_Y$-módulo (resp. un $\sh{O}_X$-módulo) de presentación finita (16.4.22), podemos, reemplazando si es preciso $X$ e $Y$ por vecindades abiertas afines adecuadas de $x$ e $y$, respectivamente, suponer que $\Omega^1_{C/A}$ es un $C$-módulo libre y que los $t_i$ son las imágenes de elementos $s_i$ ($1\leq i\leq r$) de $B$ tales que los $d_{B/A}(s_i)$ generan el $B$-módulo $\Omega^1_{B/A}$ y que sus imágenes en $\Omega^1_{C/A}$ forman parte de una base de este $C$-módulo (Bourbaki, \emph{Alg. comm.}, cap. II, § 5, n\textsuperscript{o} 1, prop. 2). Sea $\varphi$ el $A$-homomorfismo de $B'=A[T_1,\ldots,T_r]$ en $B$ tal que $\varphi(T_i)=s_i$ para todo $i$; el dihomomorfismo correspondiente $\Omega^1_{B'/A}\to\Omega^1_{B/A}$ (0, 20.5.2) envía los $d_{B'/A}(T_i)$, que forman una base de $\Omega^1_{B'/A}$ (0, 20.4.13), a los $d_{B/A}(s_i)$ y es, por tanto, \emph{sobreyectivo}; si $Y'=\Spec(B')$, y si $u:Y\to Y'$ es el $S$-morfismo correspondiente a $\varphi$, se concluye de (17.2.2) que $u$ es \emph{no ramificado}. Si se prueba que el morfismo compuesto $u\circ g:X\to Y'$ es liso en el punto $x$, se seguirá de (17.7.10) que $u$ es étale en el punto $y$, y después de (17.3.5) que $g$ es liso en el punto $x$; finalmente, como el morfismo estructural $f':Y'\to S$ es liso (17.3.8), $f=f'\circ u$ será liso en el punto $y$. Como las imágenes canónicas de los $d_{B'/A}(T_i)$ en $\Omega^1_{C/A}$ son las de los $d_{B/A}(s_i)$, forman parte de una base de $\Omega^1_{C/A}$. Vemos así que, para probar que c) implica a), podemos limitarnos al caso en que $Y'=Y$, y por tanto suponer que $f$ es un morfismo \emph{liso}.
+
+En virtud de (17.8.2), podemos entonces limitarnos al caso en que $S=\Spec(k)$ es el espectro de un cuerpo; además, gracias a (17.7.1, (ii)), podemos suponer que $k$ es algebraicamente cerrado; finalmente, reemplazando si es preciso $X$ e $Y$ por vecindades abiertas de $x$ e $y$, respectivamente, podemos suponer que $f$ y $h$ son ambos lisos, y que el homomorfismo canónico
+\[
+g^*(\Omega^1_{Y/S})\to\Omega^1_{X/S}
+\]
+admite un inverso por la izquierda (0, 19.1.12). Entonces el conjunto de los puntos de $X$ racionales sobre $k$ es muy denso en $X$ (10.4.8), de modo que, para probar que $g$ es liso, basta probar que $g$ es liso en todo punto $x\in X$ racional sobre $k$, o también que, en tal punto, $\sh{O}_{X,x}$ es un $\sh{O}_{Y,y}$-módulo plano y que $\sh{O}_{X,x}/\mathfrak m_y\sh{O}_{X,x}$ es un anillo regular (17.5.1). Ahora bien, $y=g(x)$ es
+
+\oldpage[IV-4]{84}
+
+\emph{a fortiori} racional sobre $k$, y como $\sh{O}_{Y,y}$ es entonces una $k$-álgebra formalmente lisa para las topologías discretas y $\sh{O}_{Y,y}/\mathfrak m_y=k$, resulta de (0, 20.5.14) que el homomorfismo canónico $\mathfrak m_y/\mathfrak m_y^2\to(\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y)$ es biyectivo; de igual modo, el homomorfismo canónico $\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)$ es biyectivo. La hipótesis c'), equivalente a c), significa, por tanto, aquí que el homomorfismo canónico
+\[
+(\mathfrak m_y/\mathfrak m_y^2)\otimes_{k(y)}k(x)\to\mathfrak m_x/\mathfrak m_x^2
+\]
+es inyectivo. Como el anillo $\sh{O}_{X,x}$ es regular, la conclusión resulta de (0, 17.3.3). C.Q.D.
+
+\begin{corollary}[17.11.2]
+\label{IV.17.11.2}
+Bajo las hipótesis generales de (17.11.1), las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es liso en el punto $y$ y $g$ es étale en el punto $x$.
+  \item[b)] $h$ es liso en el punto $x$ y $g$ es étale en el punto $x$.
+  \item[c)] $h$ es liso en el punto $x$, y el homomorfismo canónico
+  \[
+  (g^*(\Omega^1_{Y/S}))_x\to(\Omega^1_{X/S})_x
+  \]
+  es biyectivo.
+  \item[c')] $h$ es liso en el punto $x$, y el homomorfismo canónico
+  \[
+  ((\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y))\otimes_{k(y)}k(x)\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \]
+  es biyectivo.
+\end{enumerate}
+Supongamos, además, que el homomorfismo $k(y)\to k(x)$ sea biyectivo. Entonces las condiciones anteriores son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[d)] $h$ es liso en el punto $x$, y la aplicación canónica $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ (16.5.12) es biyectiva.
+\end{enumerate}
+\end{corollary}
+
+Cada una de las condiciones a), b), c) de (17.11.2) equivale a la conjunción de la condición correspondiente de (17.11.1) y del hecho de que $g$ es no ramificado en el punto $x$, teniendo en cuenta (17.2.2) por lo que respecta a la condición c); de donde resulta la equivalencia de a), b) y c). La equivalencia de c) y c') resulta de la equivalencia de las condiciones correspondientes de (17.11.1) y del lema de Nakayama; la equivalencia de c') y d) cuando $k(x)=k(y)$ es inmediata por transposición (16.5.12).
+
+\begin{corollary}[17.11.3]
+\label{IV.17.11.3}
+Sean $h:X\to S$ un morfismo liso, $s_i$ ($1\leq i\leq r$) secciones de $\sh{O}_X$ sobre $X$ (que son también secciones de $h_*(\sh{O}_X)$ sobre $S$), y $g:X\to S[T_1,\ldots,T_r]=\mathbf{V}_S^r$ el $S$-morfismo correspondiente al homomorfismo de $\sh{O}_S$-módulos $\sh{O}_S^r\to h_*(\sh{O}_X)$ definido por dichas secciones (II, 1.2.7). Para que $g$ sea liso (resp. étale) en un punto $x\in X$, es necesario y suficiente que los $(d_{X/S}(s_i))_x$ formen parte de una base (resp. constituyan una base) del $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/S})_x$.
+\end{corollary}
+
+Basta aplicar (17.11.1) (resp. (17.11.2)) tomando como $f$ el morfismo estructural $S[T_1,\ldots,T_r]\to S$.
+
+\begin{corollary}[17.11.4]
+\label{IV.17.11.4}
+Para que un morfismo $h:X\to S$ sea liso en un punto $x\in X$, es necesario y suficiente que existan una vecindad abierta $U$ de $x$, un entero $r$ y un $S$-morfismo étale $U\to S[T_1,\ldots,T_r]$.
+\end{corollary}
+
+\oldpage[IV-4]{85}
+
+La condición es evidentemente suficiente, puesto que el morfismo estructural $S[T_1,\ldots,T_r]\to S$ es liso (17.3.8). Para mostrar que es necesaria, observemos que, puesto que $h$ es liso en el punto $x$, existe una vecindad abierta $U$ de $x$ tal que $\Omega^1_{X/S}|U$ sea localmente libre (17.2.3); basta entonces utilizar (16.10.6) para obtener (restringiendo $U$ si es preciso) secciones $s_i$ de $\sh{O}_X$ sobre $U$ tales que los $d_{X/S}(s_i)$ formen una base de $\Omega^1_{X/S}|U$; se concluye aplicando (17.11.3).
+
+\begin{proposition}[17.11.5]
+\label{IV.17.11.5}
+Sean $f:Y\to S$, $h:X\to S$ dos morfismos lisos. Para que un $S$-morfismo $g:X\to Y$ sea una inmersión abierta, es necesario y suficiente que $g$ sea un monomorfismo de preesquemas y que, para todo $x\in X$, si se pone $y=g(x)$, se tenga $\dim_y(f)=\dim_x(h)$ (para una generalización de esta proposición, véase (18.10.5)).
+\end{proposition}
+
+La condición es evidentemente necesaria; probemos que es suficiente.
+
+En virtud de (17.9.5), nos reducimos de inmediato al caso en que $S=\Spec(k)$ es el espectro de un cuerpo, y en virtud de (2.7.1, (x)), podemos suponer que $k$ es algebraicamente cerrado. Teniendo en cuenta (17.9.1), basta entonces probar que $g$ es étale, y como el conjunto de los puntos donde $g$ es étale es abierto, basta mostrar que $g$ es étale en los puntos \emph{cerrados} (o también, racionales sobre $k$) de $X$ (10.4.8). Sea, pues, $x$ un punto tal, y pongamos $y=g(x)$, que también es racional sobre $k$; por hipótesis, el anillo $A=\sh{O}_{Y,y}$ es regular y tiene cuerpo residual $k$; sean $d=\dim(A)$ y $(t_i)_{1\leq i\leq d}$ un sistema regular de parámetros para $A$. Pongamos $B=\sh{O}_{X,x}$, $C=B/\mathfrak m_yB$. Como $g$ es un monomorfismo, lo mismo ocurre con el morfismo $\Spec(C)\to\Spec(k(y))=\Spec(k)$ deducido de $g$ por cambio de base (I, 3.3.12); pero esto significa que el homomorfismo correspondiente $u:k\to C$ es \emph{sobreyectivo} (y por tanto biyectivo), pues $u$ admite un inverso por la izquierda $v:C\to k$, y $u\circ v$ y la identidad de $C$, compuestos con $u$, dan el mismo morfismo $u:k\to C$. Como, por hipótesis, $B$ es un anillo regular de dimensión $d$, las imágenes de los $t_i$ en $B$ forman un sistema regular de parámetros para $B$ (0, 17.1.7); la condición (17.6.3, $e''$) se verifica, por tanto, para $g$ en el punto $x$ (0, 17.1.1 y Bourbaki, \emph{Alg. comm.}, cap. III, § 2, n\textsuperscript{o} 8, cor. 3 del teorema 1), lo que termina la demostración.

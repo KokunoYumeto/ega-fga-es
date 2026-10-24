@@ -1,0 +1,507 @@
+\subsection{Estructura local de ciertos funtores cohomológicos}
+\label{subsection:III.6.10}
+\label{III.6.10}
+
+\begin{proposition}[6.10.1]
+\label{III.6.10.1}
+Sea $S=\Spec(A)$ un esquema afín, y sea $Y^{(i)}$
+$(1\leq i\leq n)$ una familia finita de $S$-esquemas afines,
+planos sobre $S$. Para cada $i$, sea
+\[
+  f_i:X^{(i)}\longrightarrow Y^{(i)}
+\]
+un $S$-morfismo separado y cuasicompacto, y sea
+$\sh P_\bullet^{(i)}$ un complejo acotado inferiormente de
+$\sh O_{X^{(i)}}$-módulos cuasicoherentes. Sea $Y$ el producto
+sobre $S$ de los esquemas $Y^{(i)}$.
+
+Existe un complejo $\sh R_\bullet$ de $\sh O_Y$-módulos
+cuasicoherentes, planos sobre $S$, con la propiedad siguiente.
+Para todo $S$-esquema afín $S'$ y todo complejo acotado
+inferiormente $\sh Q_\bullet'$ de $\sh O_{S'}$-módulos
+cuasicoherentes, existe un isomorfismo
+\begin{env}[6.10.1.1]
+\label{III.6.10.1.1}
+\[
+  \mathbf{Tor}_\bullet^S
+  \bigl(
+    f_1,\ldots,f_n,1_{S'};
+    \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(n)},
+    \sh Q_\bullet'
+  \bigr)
+  \xrightarrow{\sim}
+  \sh H_\bullet
+  \bigl(
+    \sh R_\bullet\otimes_{\sh O_S}\sh Q_\bullet'
+  \bigr),
+  \tag{6.10.1.1}\label{III.6.10.1.1.eq}
+\]
+\end{env}
+que es un isomorfismo de $\partial$-funtores en
+$\sh Q_\bullet'$.
+
+Además, para todo $S$-morfismo $u:S''\to S'$ de $S$-esquemas
+afines, el diagrama
+\begin{env}[6.10.1.2]
+\label{III.6.10.1.2}
+\[
+\xymatrix@C=12pt@R=30pt{
+  {\begin{gathered}
+    \mathbf{Tor}_\bullet^S
+    (f_1,\ldots,f_n,1_{S'};\\
+    \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(n)},
+    \sh Q_\bullet')
+  \end{gathered}}
+  \ar[r]^-{\sim}\ar[d]
+  &
+  {\sh H_\bullet
+    (\sh R_\bullet\otimes_{\sh O_S}\sh Q_\bullet')}
+  \ar[d]
+  \\
+  {\begin{gathered}
+    \mathbf{Tor}_\bullet^S
+    (f_1,\ldots,f_n,1_{S''};\\
+    \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(n)},
+    u^*(\sh Q_\bullet'))
+  \end{gathered}}
+  \ar[r]^-{\sim}
+  &
+  {\sh H_\bullet
+    (\sh R_\bullet\otimes_{\sh O_S}u^*(\sh Q_\bullet'))}
+}
+\tag{6.10.1.2}\label{III.6.10.1.2.eq}
+\]
+\end{env}
+es conmutativo. Aquí las flechas verticales son los
+$(1_Y\times_Su)$-morfismos canónicos definidos en
+\sref{III.6.7.10}.
+\end{proposition}
+
+\begin{proof}
+\oldpage[III]{172}
+Calculemos el hipertor mediante el método de \sref{III.6.6.2},
+teniendo en cuenta la Observación \sref{III.6.6.6}. Con las
+notaciones allí utilizadas, cada $L_{\bullet\bullet}^{(i)}$ es un
+bicomplejo de $A_i$-módulos, donde $A_i$ denota el anillo de
+$Y^{(i)}$. Tiene, por tanto, una resolución proyectiva de
+Cartan--Eilenberg $M_{\bullet\bullet\bullet}^{(i)}$ (en el sentido
+de \sref[0]{0.11.7.1}) por $A_i$-módulos proyectivos. Por
+\sref{III.6.6.6}, el miembro izquierdo de
+\eqref{III.6.10.1.1.eq} es canónicamente isomorfo a
+\[
+  \HH_\bullet
+  \bigl(
+    M_{\bullet\bullet\bullet}\otimes_AQ_\bullet'
+  \bigr),
+\]
+donde
+\[
+  M_{\bullet\bullet\bullet}
+  =
+  M_{\bullet\bullet\bullet}^{(1)}
+  \otimes_A
+  M_{\bullet\bullet\bullet}^{(2)}
+  \otimes_A\cdots\otimes_A
+  M_{\bullet\bullet\bullet}^{(n)}
+\]
+y $\sh Q_\bullet'=\widetilde{Q_\bullet'}$.
+
+Por hipótesis, los anillos $A_i$ son $A$-módulos planos. Por
+tanto, los $M_{\bullet\bullet\bullet}^{(i)}$ son tricomplejos de
+$A$-módulos planos \sref[0]{0.6.2.1}, y lo mismo ocurre con
+$M_{\bullet\bullet\bullet}$. Además, si $B$ es el anillo de $Y$,
+es decir, el producto tensorial sobre $A$ de los $A_i$, entonces
+$M_{\bullet\bullet\bullet}$ es un tricomplejo de $B$-módulos.
+En consecuencia, el complejo
+\[
+  \sh R_\bullet
+  =
+  \widetilde{M_{\bullet\bullet\bullet}},
+\]
+donde $M_{\bullet\bullet\bullet}$ se considera como complejo
+simple, tiene las propiedades requeridas, como se deduce
+inmediatamente de \sref{III.6.7.10}.
+\end{proof}
+
+\begin{corollary}[6.10.2]
+\label{III.6.10.2}
+En la Proposición \sref{III.6.10.1}, el complejo
+$\sh R_\bullet$ puede tomarse acotado inferiormente. Si los
+$\sh P_\bullet^{(i)}$ están acotados superiormente y los
+$Y^{(i)}$ tienen dimensión cohomológica finita, entonces
+$\sh R_\bullet$ puede tomarse acotado superiormente.
+\end{corollary}
+
+\begin{proof}
+La primera afirmación se deduce de que los tres grados de cada
+$M_{\bullet\bullet\bullet}^{(i)}$ están acotados inferiormente.
+Por otra parte, si los anillos $A_i$ tienen dimensión
+cohomológica finita, el tercer grado de cada
+$M_{\bullet\bullet\bullet}^{(i)}$ solo toma un número finito de
+valores, y por su construcción lo mismo ocurre con su primer grado
+\sref{III.6.6.2}. Su segundo grado está acotado superiormente
+exactamente cuando lo está el grado de $\sh P_\bullet^{(i)}$
+\sref{III.6.6.2}, lo que demuestra la segunda afirmación.
+\end{proof}
+
+\begin{remarks}[6.10.3]
+\label{III.6.10.3}
+\textnormal{(i)}
+Con las notaciones de \sref{III.6.10.1},
+\[
+  \sh H_\bullet
+  (\sh R_\bullet\otimes_S\sh Q_\bullet')
+  \simeq
+  \mathbf{Tor}_\bullet(\sh R_\bullet,\sh Q_\bullet'),
+\]
+porque $\sh R_\bullet$ consta de $\sh O_Y$-módulos planos sobre
+$S$ \sref{III.6.5.9}. Es, por tanto, según \sref{III.6.5.4}, el
+objeto al que converge una sucesión espectral regular cuyo término
+$E^2$ es
+\begin{env}[6.10.3.1]
+\label{III.6.10.3.1}
+\[
+  E^2_{pq}
+  =
+  \bigoplus_{q'+q''=q}
+  \shTor_p^S
+  \bigl(
+    \sh H_{q'}(\sh R_\bullet),
+    \sh H_{q''}(\sh Q_\bullet')
+  \bigr).
+  \tag{6.10.3.1}\label{III.6.10.3.1.eq}
+\]
+\end{env}
+Esta es precisamente la sucesión espectral (e) de cambio de base
+de \sref{III.6.9.3}.
+
+\medskip
+\textnormal{(ii)}
+Sea $\sh R_\bullet'$ otro complejo de $\sh O_Y$-módulos
+cuasicoherentes, planos sobre $S$, y sea
+\[
+  g:\sh R_\bullet'\longrightarrow\sh R_\bullet
+\]
+un homomorfismo de complejos para el cual
+\[
+  \sh H_\bullet(g):
+  \sh H_\bullet(\sh R_\bullet')
+  \longrightarrow
+  \sh H_\bullet(\sh R_\bullet)
+\]
+es un isomorfismo. Por \sref{III.6.3.3} y
+\sref{III.6.5.9}, $g$ induce un isomorfismo de
+$\partial$-funtores en $\sh Q_\bullet'$,
+\[
+  \sh H_\bullet
+  (\sh R_\bullet'\otimes_S\sh Q_\bullet')
+  \xrightarrow{\sim}
+  \sh H_\bullet
+  (\sh R_\bullet\otimes_S\sh Q_\bullet'),
+\]
+tal que el diagrama
+\[
+\xymatrix@C=28pt@R=30pt{
+  \sh H_\bullet
+  (\sh R_\bullet'\otimes_S\sh Q_\bullet')
+  \ar[r]^-{\sim}\ar[d]
+  &
+  \sh H_\bullet
+  (\sh R_\bullet\otimes_S\sh Q_\bullet')
+  \ar[d]
+  \\
+  \sh H_\bullet
+  (\sh R_\bullet'\otimes_Su^*(\sh Q_\bullet'))
+  \ar[r]^-{\sim}
+  &
+  \sh H_\bullet
+  (\sh R_\bullet\otimes_Su^*(\sh Q_\bullet'))
+}
+\]
+es conmutativo. Así, las propiedades de \sref{III.6.10.1} no
+determinan por completo el complejo $\sh R_\bullet$.
+
+\medskip
+\oldpage[III]{173}
+\textnormal{(iii)}
+En la demostración de \sref{III.6.10.1}, los
+$M_{\bullet\bullet\bullet}^{(i)}$ pueden elegirse formados por
+$A_i$-módulos libres, como se deduce inmediatamente dualizando la
+demostración de \sref[0]{0.11.5.2.1}. Entonces los
+\[
+  M_{\bullet\bullet\bullet}^{(i)}\otimes_{A_i}B
+\]
+constan de $B$-módulos libres; como
+$M_{\bullet\bullet\bullet}$ es su producto tensorial sobre $B$,
+se puede exigir además en \sref{III.6.10.1} que
+$\sh R_\bullet$ esté asociado a un complejo de $B$-módulos
+libres.
+
+Además, por (M, XVII, 1.2), el tricomplejo
+$M_{\bullet\bullet\bullet}$ depende funtorialmente de cada uno de
+los bicomplejos $L_{\bullet\bullet}^{(i)}$ y, por tanto, de cada
+$\sh P_\bullet^{(i)}$, una vez fijado un recubrimiento finito de
+cada $X^{(i)}$. Aquí se entienden por «morfismos» de tricomplejos
+las clases de homomorfismos módulo homotopía. Sustituir un
+recubrimiento de $X^{(i)}$ por otro más fino proporciona, para
+$L_{\bullet\bullet}^{(i)}$, homomorfismos definidos salvo
+homotopía por \sref{III.6.6.8}; así, con la convención precedente
+sobre los morfismos, $M_{\bullet\bullet\bullet}$ es un funtor en
+cada $\sh P_\bullet^{(i)}$.
+
+Precisaremos esta dependencia funtorial, en particular el
+comportamiento de $\sh R_\bullet$ respecto de sucesiones exactas
+cortas
+\[
+  0\longrightarrow\sh P_\bullet^{\prime(i)}
+  \longrightarrow\sh P_\bullet^{(i)}
+  \longrightarrow\sh P_\bullet^{\prime\prime(i)}
+  \longrightarrow0,
+\]
+en el capítulo dedicado a un álgebra general de funtores
+cohomológicos mencionado en \sref{III.6.1.3}.
+\end{remarks}
+
+\begin{scholium}[6.10.4]
+\label{III.6.10.4}
+El hecho de que $\sh R_\bullet$ conste de $\sh O_Y$-módulos
+planos sobre $S$ implica inmediatamente que
+\[
+  \sh H_\bullet
+  (\sh R_\bullet\otimes_S\sh Q_\bullet')
+\]
+es un funtor homológico en $\sh Q_\bullet'$; compárese el
+razonamiento de \sref{III.7.7.1}. Como se señaló en
+\sref{III.6.1.1}, esta propiedad motiva la introducción del
+hipertor.
+
+Pongamos
+\[
+  X=X^{(1)}\times_SX^{(2)}\times_S\cdots\times_SX^{(n)},
+  \qquad
+  f=f_1\times_Sf_2\times_S\cdots\times_Sf_n,
+\]
+\[
+  \sh P_\bullet
+  =
+  \sh P_\bullet^{(1)}
+  \otimes_S\sh P_\bullet^{(2)}
+  \otimes_S\cdots\otimes_S\sh P_\bullet^{(n)},
+\]
+y
+\[
+  X'=X\times_SS',
+  \qquad
+  Y'=Y\times_SS',
+  \qquad
+  f'=f\times_S1_{S'}.
+\]
+Los problemas de cambio de base llevan a estudiar la
+hipercohomología
+\[
+  \sh H^*_{f'}
+  (\sh P_\bullet\otimes_S\sh N')
+\]
+como funtor del $\sh O_{S'}$-módulo cuasicoherente $\sh N'$, o,
+equivalentemente, la hipercohomología
+\[
+  \sh H^*_f
+  (\sh P_\bullet\otimes_S\sh N)
+\]
+como funtor del $\sh O_S$-módulo cuasicoherente $\sh N$. Cuando
+los $\sh P_\bullet^{(i)}$, y por tanto $\sh P_\bullet$, son
+planos sobre $S$, los resultados precedentes y
+\sref{III.6.7.6} muestran que este es efectivamente un funtor
+cohomológico en $\sh N$. Esto deja de ser cierto cuando no se
+supone la planitud de los $\sh P_\bullet^{(i)}$, y el estudio de
+\[
+  \sh H^*_f(\sh P_\bullet\otimes_S\sh N)
+\]
+ya no puede abordarse mediante los métodos usuales del álgebra
+homológica.
+
+Utilizaremos principalmente el caso $n=1$, $Y=S$, en el que
+$\sh P_\bullet$ consta de $\sh O_X$-módulos planos sobre $Y$.
+En este caso se tiene el teorema siguiente.
+\end{scholium}
+
+\begin{theorem}[6.10.5]
+\label{III.6.10.5}
+Sea $Y=\Spec(A)$ un esquema afín noetheriano, sea
+$f:X\to Y$ un morfismo propio y sea $\sh P_\bullet$ un complejo
+acotado inferiormente de $\sh O_X$-módulos coherentes, planos
+sobre $Y$. Existe un complejo acotado inferiormente
+$\sh L_\bullet$ de $\sh O_Y$-módulos, cuyos términos son de la
+forma
+\[
+  \sh L_i=\sh O_Y^{m_i},
+\]
+y un isomorfismo
+\begin{env}[6.10.5.1]
+\label{III.6.10.5.1}
+\[
+  \sh H^*
+  (f,\sh P_\bullet\otimes_Y\sh Q_\bullet)
+  \xrightarrow{\sim}
+  \sh H_\bullet
+  (\sh L_\bullet\otimes_Y\sh Q_\bullet)
+  \tag{6.10.5.1}\label{III.6.10.5.1.eq}
+\]
+\end{env}
+de $\partial$-funtores en el complejo acotado inferiormente
+$\sh Q_\bullet$ de $\sh O_Y$-módulos cuasicoherentes.
+
+Además, para todo morfismo $u:Y'\to Y$, pongamos
+\[
+  X'=X_{(Y')},
+  \qquad
+  f'=f_{(Y')},
+  \qquad
+  \sh P_\bullet'
+  =
+  \sh P_\bullet\otimes_Y\sh O_{Y'},
+  \qquad
+  \sh L_\bullet'=u^*(\sh L_\bullet).
+\]
+\oldpage[III]{174}
+Entonces $\sh L_\bullet'$ es un complejo de
+$\sh O_{Y'}$-módulos localmente libres de tipo finito, y existe
+un isomorfismo
+\begin{env}[6.10.5.2]
+\label{III.6.10.5.2}
+\[
+  \sh H^*
+  (f',\sh P_\bullet'\otimes_{Y'}\sh Q_\bullet')
+  \xrightarrow{\sim}
+  \sh H_\bullet
+  (\sh L_\bullet'\otimes_{Y'}\sh Q_\bullet')
+  \tag{6.10.5.2}\label{III.6.10.5.2.eq}
+\]
+\end{env}
+de $\partial$-funtores en el complejo acotado inferiormente
+$\sh Q_\bullet'$ de $\sh O_{Y'}$-módulos cuasicoherentes. Estos
+isomorfismos pueden elegirse de modo que el diagrama
+\begin{env}[6.10.5.3]
+\label{III.6.10.5.3}
+\[
+\xymatrix@C=24pt@R=30pt{
+  \sh H^*
+  (f,\sh P_\bullet\otimes_Y\sh Q_\bullet)
+  \ar[r]^-{\sim}\ar[d]
+  &
+  \sh H_\bullet
+  (\sh L_\bullet\otimes_Y\sh Q_\bullet)
+  \ar[d]
+  \\
+  \sh H^*
+  (f',\sh P_\bullet'\otimes_{Y'}u^*(\sh Q_\bullet))
+  \ar[r]^-{\sim}
+  &
+  \sh H_\bullet
+  (\sh L_\bullet'\otimes_{Y'}u^*(\sh Q_\bullet))
+}
+\tag{6.10.5.3}\label{III.6.10.5.3.eq}
+\]
+\end{env}
+sea conmutativo.
+\end{theorem}
+
+\begin{proof}
+La Proposición \sref{III.6.10.1} da primero un complejo acotado
+inferiormente $\sh R_\bullet$ \sref{III.6.10.2} de
+$\sh O_Y$-módulos cuasicoherentes libres sobre $Y$
+\sref{III.6.10.3}~(iii), junto con un isomorfismo
+\begin{env}[6.10.5.4]
+\label{III.6.10.5.4}
+\[
+  \sh H^*
+  (f,\sh P_\bullet\otimes_Y\sh Q_\bullet)
+  \xrightarrow{\sim}
+  \sh H_\bullet
+  (\sh R_\bullet\otimes_Y\sh Q_\bullet)
+  \tag{6.10.5.4}\label{III.6.10.5.4.eq}
+\]
+\end{env}
+de $\partial$-funtores en $\sh Q_\bullet$. Los términos de
+$\sh R_\bullet$ no son necesariamente, \emph{a priori},
+$\sh O_Y$-módulos de tipo finito.
+
+Apliquemos \eqref{III.6.10.5.4.eq} cuando $\sh Q_\bullet$ es el
+complejo concentrado en un grado cuyo único término es $\sh O_Y$.
+Se sigue que $\sh H_\bullet(\sh R_\bullet)$ es isomorfo a
+$\sh H^*(f,\sh P_\bullet)$ y, por tanto, consta de
+$\sh O_Y$-módulos coherentes \sref{III.6.2.5}. Por
+\sref[0]{0.11.9.2}, existe entonces un complejo acotado
+inferiormente $\sh L_\bullet$ cuyos términos están asociados a
+$A$-módulos libres de tipo finito, y un homomorfismo
+\[
+  \sh L_\bullet\longrightarrow\sh R_\bullet
+\]
+que induce un isomorfismo
+\[
+  \sh H_\bullet(\sh L_\bullet)
+  \xrightarrow{\sim}
+  \sh H_\bullet(\sh R_\bullet).
+\]
+La fórmula \eqref{III.6.10.5.1.eq} se deduce ahora de
+\sref{III.6.10.3}~(ii).
+
+Las demás afirmaciones de \sref{III.6.10.5} se deducen de
+\sref{III.6.10.1} y \sref{III.6.10.3}~(ii) cuando $Y'$ es afín.
+En el caso general, recubrámoslo por abiertos afines $(V_\alpha)$.
+Si \eqref{III.6.10.5.2.eq} se forma sobre cada $V_\alpha$, sus
+restricciones desde $V_\alpha$ y $V_\beta$ a un abierto afín
+\[
+  W\subset V_\alpha\cap V_\beta
+\]
+coinciden ambas con el isomorfismo formado sobre $W$. Esto se
+deduce de la conmutatividad de \eqref{III.6.10.1.2.eq}, aplicada
+a las inclusiones canónicas $W\to V_\alpha$ y $W\to V_\beta$, y
+demuestra que los isomorfismos locales se pegan.
+\end{proof}
+
+\begin{remark}[6.10.6]
+\label{III.6.10.6}
+En los capítulos siguientes aplicaremos \sref{III.6.10.5}
+principalmente cuando $\sh P_\bullet$ está concentrado en un grado
+y su único término es un $\sh O_X$-módulo coherente $\sh F$ plano
+sobre $Y$. Como
+\[
+  \sh H_n(\sh L_\bullet)
+  =
+  \sh H^{-n}(f,\sh F)
+  =
+  R^{-n}f_*(\sh F)
+  \qquad\text{\sref{III.6.2.1}},
+\]
+los $\sh H_n(\sh L_\bullet)$ se anulan para $n>0$. Veremos más
+adelante, en \sref{III.7.7.12}~(i), que $\sh L_\bullet$ puede
+elegirse con términos solo en grados $\leq0$ y, por tanto, con un
+número finito de términos, siempre que la exigencia de que sus
+términos estén asociados a $A$-módulos libres de tipo finito se
+sustituya por la de que sean localmente libres de tipo finito.
+El complejo $\sh L_\bullet$ correspondiente a tal
+$\sh O_X$-módulo $\sh F$ no parece tener ninguna propiedad
+especial
+\oldpage[III]{175}
+aparte de la restricción precedente sobre sus grados. Cabe, pues,
+preguntarse recíprocamente si, dado un complejo acotado
+inferiormente $\sh L_\bullet$ cuyos términos son
+$\sh O_Y$-módulos asociados a $A$-módulos proyectivos de tipo
+finito y cuyos términos de grado $>0$ se anulan, existen un
+$Y$-esquema $X$, proyectivo y plano sobre $Y$, y un
+$\sh O_X$-módulo localmente libre $\sh F$ tales que exista un
+isomorfismo
+\[
+  \sh H^*
+  (f,\sh F\otimes_Y\sh Q_\bullet)
+  \xrightarrow{\sim}
+  \sh H_\bullet
+  (\sh L_\bullet\otimes_Y\sh Q_\bullet)
+\]
+funtorial en $\sh Q_\bullet$. Un resultado de este tipo reduciría
+por completo la teoría cohomológica de los módulos coherentes
+planos sobre $Y$ en $Y$-esquemas propios a la teoría, «salvo
+homotopía», de los complejos de $A$-módulos proyectivos de tipo
+finito sobre un anillo noetheriano $A$.
+\end{remark}

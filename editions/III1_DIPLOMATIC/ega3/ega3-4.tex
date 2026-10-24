@@ -1,0 +1,3339 @@
+\section{El teorema fundamental de los morfismos propios. Aplicaciones}
+\label{section:III.4}
+
+
+\subsection{El teorema fundamental}
+\label{subsection:III.4.1}
+
+\begin{env}[4.1.1]
+\label{III.4.1.1}
+Sean $X$ e $Y$ esquemas ordinarios noetherianos, sea $f:X\to Y$ un
+morfismo propio, sea $Y'$ un subconjunto cerrado de $Y$, y pongamos
+\[
+  X'=f^{-1}(Y').
+\]
+Denotamos por $\widehat{X}$ y $\widehat{Y}$ los esquemas formales
+$X_{/X'}$ y $Y_{/Y'}$, obtenidos completando $X$ e $Y$ a lo largo de
+$X'$ e $Y'$, respectivamente \sref[I]{I.10.8.5}.
+Denotamos por $\widehat{f}:\widehat{X}\to\widehat{Y}$ la extensión de
+$f$ a estas completaciones \sref[I]{I.10.9.1}.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, denotamos por
+
+\oldpage[III]{123}
+
+\[
+  \widehat{\sh{F}}=\sh{F}_{/X'}
+\]
+su completación a lo largo de $X'$ \sref[I]{I.10.8.4}; este es un
+$\sh{O}_{\widehat{X}}$-módulo coherente \sref[I]{I.10.8.8}.
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2}
+Sea $\sh{J}$ un ideal coherente de $\sh{O}_Y$ tal que
+\[
+  \Supp(\sh{O}_Y/\sh{J})=Y'
+\]
+\sref[I]{I.5.2.1}.
+Sabemos \sref[I]{I.4.4.5} que
+\[
+  \sh{K}=f^*(\sh{J})\sh{O}_X
+\]
+es un ideal coherente de $\sh{O}_X$ que satisface
+\[
+  \Supp(\sh{O}_X/\sh{K})=X'.
+\]
+Para todo $k\geq0$, consideremos el $\sh{O}_X$-módulo coherente
+\[
+  \sh{F}_k
+  =
+  \sh{F}\otimes_{\sh{O}_Y}(\sh{O}_Y/\sh{J}^{k+1})
+  =
+  \sh{F}/\sh{K}^{k+1}\sh{F}.
+\]
+Los $\sh{O}_Y$-módulos
+\[
+  \RR^n f_*(\sh{F})
+  \quad\text{y}\quad
+  \RR^n f_*(\sh{F}_k)
+\]
+son coherentes para todo $n$ \sref{III.3.2.1}.
+Para todo $k\geq0$ y todo $n$, el homomorfismo canónico
+$\sh{F}\to\sh{F}_k$ induce, por funtorialidad, un homomorfismo
+\[
+  \RR^n f_*(\sh{F})
+  \longrightarrow
+  \RR^n f_*(\sh{F}_k).
+  \tag{4.1.2.1}
+  \label{III.4.1.2.1}
+\]
+Como $\sh{F}_k$ es un $\sh{O}_X/\sh{K}^{k+1}$-módulo,
+$\RR^n f_*(\sh{F}_k)$ es un
+$\sh{O}_Y/\sh{J}^{k+1}$-módulo \sref[0]{0.12.2.1}.
+Deducimos, pues, de \eqref{III.4.1.2.1} un homomorfismo
+\[
+  \RR^n f_*(\sh{F})
+  \otimes_{\sh{O}_Y}(\sh{O}_Y/\sh{J}^{k+1})
+  \longrightarrow
+  \RR^n f_*(\sh{F}_k).
+  \tag{4.1.2.2}
+  \label{III.4.1.2.2}
+\]
+Los dos miembros de \eqref{III.4.1.2.2} forman sistemas proyectivos.
+El límite proyectivo del miembro izquierdo es la completación
+\[
+  \bigl(\RR^n f_*(\sh{F})\bigr)_{/Y'},
+\]
+que denotaremos por
+\[
+  \widehat{\RR^n f_*(\sh{F})}.
+\]
+Los homomorfismos \eqref{III.4.1.2.2} son compatibles con los sistemas
+proyectivos y definen, por tanto, al pasar al límite, un homomorfismo
+canónico
+\[
+  \vphi_n:
+  \widehat{\RR^n f_*(\sh{F})}
+  \longrightarrow
+  \varprojlim_k\RR^n f_*(\sh{F}_k).
+  \tag{4.1.2.3}
+  \label{III.4.1.2.3}
+\]
+Además, \eqref{III.4.1.2.2} es un homomorfismo de
+$\sh{O}_Y/\sh{J}^{k+1}$-módulos.
+Por \sref[I]{I.10.8.3}, puede considerarse, por tanto, como un
+homomorfismo continuo de $\sh{O}_{\widehat{Y}}$-módulos topológicos
+provistos de sus topologías seudodiscretas \sref[0]{0.3.8.1}.
+En consecuencia, $\vphi_n$ es un homomorfismo continuo de
+$\sh{O}_{\widehat{Y}}$-módulos topológicos.
+\end{env}
+
+\begin{env}[4.1.3]
+\label{III.4.1.3}
+Sea $i:\widehat{X}\to X$ el morfismo canónico de espacios anillados
+definido en \sref[I]{I.10.8.7}.
+Tenemos el diagrama conmutativo
+\[
+  \xymatrix{
+    X_k\ar[r]^{h_k}\ar[dr]_{i_k} &
+    \widehat{X}\ar[d]^{i}\\
+    & X
+  }
+  \tag{4.1.3.1}
+  \label{III.4.1.3.1}
+\]
+donde $X_k$ es el subesquema cerrado de $X$ definido por
+$\sh{K}^{k+1}$, $i_k$ es la inmersión canónica, y $h_k$ es el
+morfismo de espacios anillados que corresponde a la identidad sobre
+los espacios subyacentes y al homomorfismo canónico
+\[
+  \sh{O}_{\widehat{X}}
+  \longrightarrow
+  \sh{O}_X/\sh{K}^{k+1}
+\]
+\sref[I]{I.10.5.2}.
+Además,
+\[
+  \widehat{\sh{F}}=i^*(\sh{F})
+\]
+salvo isomorfismo canónico \sref[I]{I.10.8.8}.
+Tenemos
+\[
+  \HH^n(X_k,i_k^*(\sh{F}_k))
+  =
+  \HH^n(X,\sh{F}_k)
+  \tag{4.1.3.2}
+  \label{III.4.1.3.2}
+\]
+salvo isomorfismo canónico.
+
+\oldpage[III]{124}
+
+En efecto,
+\[
+  \sh{F}_k=(i_k)_*(i_k^*(\sh{F}_k))
+\]
+(G,~II,~4.9.1).
+El homomorfismo canónico
+\[
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \HH^n(X_k,h_k^*(\widehat{\sh{F}}))
+\]
+\sref[0]{0.12.1.3.5} puede escribirse también
+\[
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \HH^n(X,\sh{F}_k).
+  \tag{4.1.3.3}
+  \label{III.4.1.3.3}
+\]
+Estos homomorfismos forman un sistema proyectivo y definen, por tanto,
+un homomorfismo canónico
+\[
+  \psi_{n,X}:
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k).
+  \tag{4.1.3.4}
+  \label{III.4.1.3.4}
+\]
+Reemplazando $X$ por un subconjunto abierto de la forma $f^{-1}(V)$,
+donde $V$ es un abierto afín de $Y$, y teniendo en cuenta
+\sref{III.1.4.11}, obtenemos homomorfismos
+\[
+  \psi_{n,V}:
+  \HH^n(\widehat{X}\cap f^{-1}(V),\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\Gamma(V,\RR^n f_*(\sh{F}_k)).
+  \tag{4.1.3.5}
+  \label{III.4.1.3.5}
+\]
+Estos homomorfismos conmutan manifiestamente con la restricción de $V$
+a un subconjunto abierto afín más pequeño.
+Definen, por tanto, un homomorfismo canónico de haces
+\[
+  \psi_n:
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\RR^n f_*(\sh{F}_k).
+  \tag{4.1.3.6}
+  \label{III.4.1.3.6}
+\]
+\end{env}
+
+\begin{env}[4.1.4]
+\label{III.4.1.4}
+Por último, sea $j:\widehat{Y}\to Y$ el morfismo canónico de espacios
+anillados \sref[I]{I.10.8.7}.
+Como $\RR^n f_*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente
+\sref{III.3.2.1}, tenemos, salvo isomorfismo canónico,
+\[
+  j^*(\RR^n f_*(\sh{F}))
+  =
+  \widehat{\RR^n f_*(\sh{F})}
+\]
+\sref[I]{I.10.8.8}.
+Existe, en consecuencia, un homomorfismo canónico
+\[
+  \rho_n:
+  \widehat{\RR^n f_*(\sh{F})}
+  =
+  j^*(\RR^n f_*(\sh{F}))
+  \longrightarrow
+  \RR^n\widehat{f}_*(i^*(\sh{F}))
+  =
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+  \tag{4.1.4.1}
+  \label{III.4.1.4.1}
+\]
+definido para los espacios anillados en general; véase la demostración
+de \sref{III.1.4.15}.
+Demostraremos que el diagrama
+\[
+  \xymatrix{
+    \widehat{\RR^n f_*(\sh{F})}
+      \ar[rr]^{\rho_n}\ar[dr]_{\vphi_n}
+    &&
+    \RR^n\widehat{f}_*(\widehat{\sh{F}})
+      \ar[dl]^{\psi_n}\\
+    &
+    \displaystyle\varprojlim_k\RR^n f_*(\sh{F}_k)
+    &
+  }
+  \tag{4.1.4.2}
+  \label{III.4.1.4.2}
+\]
+es conmutativo.
+Basta demostrar la conmutatividad del diagrama formado por los
+homomorfismos correspondientes de prehaces.
+Podemos, por tanto, restringirnos al caso en que $Y$ es afín, y basta
+demostrar que
+\[
+  \xymatrix{
+    \widehat{\HH^n(X,\sh{F})}
+      \ar[rr]^{\rho_n}\ar[dr]_{\vphi_n}
+    &&
+    \HH^n(\widehat{X},\widehat{\sh{F}})
+      \ar[dl]^{\psi_{n,X}}\\
+    &
+    \displaystyle\varprojlim_k\HH^n(X,\sh{F}_k)
+    &
+  }
+  \tag{4.1.4.3}
+  \label{III.4.1.4.3}
+\]
+es conmutativo.
+La conmutatividad de \eqref{III.4.1.3.1}, junto con las relaciones
+entre los grupos de cohomología establecidas en \sref{III.4.1.3}, da
+el diagrama conmutativo
+
+\oldpage[III]{125}
+
+\[
+  \xymatrix{
+    \HH^n(X,\sh{F})
+      \ar[r]\ar[dr]
+    &
+    \HH^n(\widehat{X},\widehat{\sh{F}})
+      =
+    \HH^n(\widehat{X},i^*(\sh{F}))
+      \ar[d]\\
+    &
+    \HH^n(X,\sh{F}_k)
+      =
+    \HH^n(X_k,i_k^*(\sh{F})).
+  }
+\]
+La conmutatividad de \eqref{III.4.1.4.3} se sigue inmediatamente.
+\end{env}
+
+\begin{theorem}[4.1.5]
+\label{III.4.1.5}
+Sea $f:X\to Y$ un morfismo propio de esquemas noetherianos, sea
+$Y'$ un subconjunto cerrado de $Y$, y pongamos $X'=f^{-1}(Y')$.
+Entonces, para todo $\sh{O}_X$-módulo coherente $\sh{F}$,
+\[
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+\]
+es un $\sh{O}_{\widehat{X}}$-módulo coherente, y los homomorfismos
+$\vphi_n$, $\psi_n$ y $\rho_n$ del diagrama
+\eqref{III.4.1.4.2} son isomorfismos topológicos.
+\end{theorem}
+
+\begin{proof}
+Basta demostrar que $\vphi_n$ y $\psi_n$ son isomorfismos.
+En efecto, $\RR^n f_*(\sh{F})$ es coherente \sref{III.3.2.1}, luego
+su completación $\widehat{\RR^n f_*(\sh{F})}$ es coherente
+\sref[I]{I.10.8.8}; la bicontinuidad de $\vphi_n$, $\psi_n$ y
+$\rho_n$ es entonces automática \sref[I]{I.10.11.6}.
+\end{proof}
+
+\begin{env}[4.1.6]
+\label{III.4.1.6}
+\emph{Observaciones.}
+\begin{enumerate}
+  \item[(i)] Pongamos
+  \[
+    \widehat{\sh{F}}_k
+    =
+    \widehat{\sh{F}}/
+    \widehat{\sh{K}}^{\,k+1}\widehat{\sh{F}}.
+  \]
+  Entonces, inmediatamente,
+  \[
+    \sh{F}_k=i_*(\widehat{\sh{F}}_k),
+  \]
+  y el homomorfismo canónico \eqref{III.4.1.3.6} es precisamente el
+  homomorfismo ya definido en (\hyperref[III.3.4.2.2]{3.4.2.2}):
+  \[
+    \RR^n\widehat{f}_*(\widehat{\sh{F}})
+    \longrightarrow
+    \varprojlim_k
+    \RR^n\widehat{f}_*(\widehat{\sh{F}}_k).
+    \tag{4.1.6.1}
+    \label{III.4.1.6.1}
+  \]
+  Así, el hecho de que $\psi_n$ sea un isomorfismo es un caso particular
+  de \sref{III.3.4.3}.
+  Daremos, no obstante, más adelante una demostración directa, evitando
+  las delicadas consideraciones relativas a los límites proyectivos de
+  sucesiones espectrales \sref[0]{0.13.7} en las que se apoya el teorema
+  general \sref{III.3.4.3}.
+
+  \item[(ii)] Como los $\psi_n$ son isomorfismos, decir que los
+  $\vphi_n$ son isomorfismos equivale a decir que
+  \[
+    \rho_n=\psi_n^{-1}\circ\vphi_n
+  \]
+  son isomorfismos.
+  El Teorema~\sref{III.4.1.5} afirma, en particular, que la formación de
+  $\RR^n f_*$ conmuta con la completación; puede llamarse, por tanto, el
+  primer teorema de comparación entre las teorías ``algebraica'' y
+  ``formal''.
+\end{enumerate}
+Comenzaremos demostrando la forma afín de \sref{III.4.1.5}.
+\end{env}
+
+\begin{corollary}[4.1.7]
+\label{III.4.1.7}
+Bajo las hipótesis de \sref{III.4.1.5}, supongamos además que
+$Y=\Spec(A)$, donde $A$ es noetheriano, y que
+$\sh{J}=\widetilde{\mathfrak{J}}$, donde $\mathfrak{J}$ es un ideal
+de $A$, de modo que
+\[
+  \sh{F}_k=\sh{F}/\mathfrak{J}^{k+1}\sh{F}.
+\]
+El homomorfismo canónico
+\[
+  \vphi_n:
+  \widehat{\HH^n(X,\sh{F})}
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k)
+  \tag{4.1.7.1}
+  \label{III.4.1.7.1}
+\]
+donde el primer término es la completación separada de
+$\HH^n(X,\sh{F})$ para la topología $\mathfrak{J}$-preádica, es un
+isomorfismo.
+Para todo $n$, el sistema proyectivo
+\[
+  \bigl(\HH^n(X,\sh{F}_k)\bigr)_{k\geq0}
+\]
+satisface la condición \emph{(ML)}, y el homomorfismo canónico
+\[
+  \psi_n:
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k)
+  \tag{4.1.7.2}
+  \label{III.4.1.7.2}
+\]
+
+\oldpage[III]{126}
+
+es un isomorfismo.
+Por último, la filtración sobre $\HH^n(X,\sh{F})$ definida por los
+núcleos de los homomorfismos canónicos
+\[
+  \HH^n(X,\sh{F})\longrightarrow\HH^n(X,\sh{F}_k)
+\]
+es $\mathfrak{J}$-buena \sref[0]{0.13.7.7}, y $\vphi_n$ es un
+isomorfismo topológico.\footnote{La demostración siguiente, más sencilla
+que la demostración original, y el complemento relativo a la filtración
+de $\HH^n(X,\sh{F})$, nos fueron comunicados por J.-P. Serre.}
+\end{corollary}
+
+\begin{proof}
+Fijemos $n\geq0$ durante toda esta demostración y, para simplificar,
+pongamos
+\[
+  \mathrm{H}=\HH^n(X,\sh{F}),
+  \qquad
+  \mathrm{H}_k=\HH^n(X,\sh{F}_k).
+  \tag{4.1.7.3}
+  \label{III.4.1.7.3}
+\]
+Pongamos también
+\[
+  \mathrm{R}_k
+  =
+  \Ker(\mathrm{H}\longrightarrow\mathrm{H}_k),
+  \qquad
+  \text{un sub-$A$-módulo de $\mathrm{H}$.}
+  \tag{4.1.7.4}
+  \label{III.4.1.7.4}
+\]
+La sucesión exacta de cohomología
+\[
+  \HH^n(X,\mathfrak{J}^{k+1}\sh{F})
+  \longrightarrow
+  \HH^n(X,\sh{F})
+  \longrightarrow
+  \HH^n(X,\sh{F}_k)
+  \xrightarrow{\partial}
+  \HH^{n+1}(X,\mathfrak{J}^{k+1}\sh{F})
+  \longrightarrow
+  \HH^{n+1}(X,\sh{F})
+\]
+muestra que
+\[
+  \mathrm{R}_k
+  =
+  \Im\bigl(
+    \HH^n(X,\mathfrak{J}^{k+1}\sh{F})
+    \longrightarrow
+    \HH^n(X,\sh{F})
+  \bigr).
+\]
+Ponemos
+\[
+  \begin{split}
+  \mathrm{Q}_k
+  &=
+  \Ker\bigl(
+    \HH^{n+1}(X,\mathfrak{J}^{k+1}\sh{F})
+    \longrightarrow
+    \HH^{n+1}(X,\sh{F})
+  \bigr)
+  \\
+  &=
+  \Im\bigl(
+    \HH^n(X,\sh{F}_k)
+    \longrightarrow
+    \HH^{n+1}(X,\mathfrak{J}^{k+1}\sh{F})
+  \bigr).
+  \end{split}
+  \tag{4.1.7.5}
+  \label{III.4.1.7.5}
+\]
+Tenemos, por tanto, la sucesión exacta
+\[
+  0\longrightarrow\mathrm{R}_k
+  \longrightarrow\mathrm{H}
+  \longrightarrow\mathrm{H}_k
+  \longrightarrow\mathrm{Q}_k
+  \longrightarrow0.
+  \tag{4.1.7.6}
+  \label{III.4.1.7.6}
+\]
+
+\begin{env}[4.1.7.7]
+\label{III.4.1.7.7}
+Sea $x\in\mathfrak{J}^m$, donde $m\geq0$.
+La multiplicación por $x$ sobre $\mathfrak{J}^k\sh{F}$ es un
+homomorfismo
+\[
+  \mathfrak{J}^k\sh{F}
+  \longrightarrow
+  \mathfrak{J}^{k+m}\sh{F},
+\]
+y da, por tanto, un homomorfismo
+\[
+  \mu_{x,m}:
+  \HH^n(X,\mathfrak{J}^k\sh{F})
+  \longrightarrow
+  \HH^n(X,\mathfrak{J}^{k+m}\sh{F}).
+  \tag{4.1.7.8}
+  \label{III.4.1.7.8}
+\]
+Sea
+\[
+  S=\bigoplus_{k\geq0}\mathfrak{J}^k
+\]
+la $A$-álgebra graduada.
+Sabemos que las multiplicaciones $\mu_{x,m}$ dotan a
+\[
+  \mathrm{E}
+  =
+  \bigoplus_{k\geq0}
+  \HH^n(X,\mathfrak{J}^k\sh{F})
+\]
+de una estructura de $S$-módulo graduado de tipo finito
+\sref{III.3.3.2}; el anillo graduado $S$ es noetheriano
+\sref[II]{II.2.1.5}.
+\end{env}
+
+\begin{lemma}[4.1.7.9]
+\label{III.4.1.7.9}
+Los submódulos $\mathrm{R}_k$ de $\mathrm{H}$ definen una
+filtración $\mathfrak{J}$-buena sobre $\mathrm{H}$.
+\end{lemma}
+
+\begin{proof}
+Demostremos primero que
+\[
+  \mathfrak{J}^m\mathrm{R}_k
+  \subset
+  \mathrm{R}_{k+m},
+  \tag{4.1.7.10}
+  \label{III.4.1.7.10}
+\]
+donde la multiplicación sobre
+$\mathrm{H}=\HH^n(X,\sh{F})$ por un elemento
+$x\in\mathfrak{J}^m$ es la aplicación $\mu_{x,0}$.
+Para todo $x\in\mathfrak{J}^m$, el diagrama
+\[
+  \xymatrix{
+    \mathfrak{J}^{k+1}\sh{F}
+      \ar[r]^{x}\ar[d]
+    &
+    \mathfrak{J}^{k+m+1}\sh{F}
+      \ar[d]
+    \\
+    \sh{F}
+      \ar[r]_{x}
+    &
+    \sh{F}
+  }
+  \tag{4.1.7.11}
+  \label{III.4.1.7.11}
+\]
+
+\oldpage[III]{127}
+
+es conmutativo; sus flechas horizontales son las multiplicaciones por
+$x$, y sus flechas verticales son las inyecciones canónicas.
+En consecuencia, el diagrama correspondiente
+\[
+  \xymatrix{
+    \HH^n(X,\mathfrak{J}^{k+1}\sh{F})
+      \ar[r]^{\mu_{x,m}}\ar[d]
+    &
+    \HH^n(X,\mathfrak{J}^{k+m+1}\sh{F})
+      \ar[d]
+    \\
+    \HH^n(X,\sh{F})
+      \ar[r]_{\mu_{x,0}}
+    &
+    \HH^n(X,\sh{F})
+  }
+\]
+es conmutativo.
+La interpretación de $\mathrm{R}_k$ como la imagen de
+\[
+  \HH^n(X,\mathfrak{J}^{k+1}\sh{F})
+  \longrightarrow
+  \HH^n(X,\sh{F})
+\]
+demuestra, por tanto, \eqref{III.4.1.7.10}.
+Muestra también que el $S$-módulo graduado
+\[
+  \mathrm{R}=\bigoplus_{k\geq0}\mathrm{R}_k
+\]
+es un cociente del sub-$S$-módulo
+\[
+  \mathrm{M}
+  =
+  \bigoplus_{k\geq0}
+  \HH^n(X,\mathfrak{J}^{k+1}\sh{F})
+\]
+de $\mathrm{E}$.
+La observación anterior muestra, pues, que $\mathrm{R}$ es un
+$S$-módulo de tipo finito.
+Esto equivale a la afirmación del lema
+(Bourbaki, \emph{Alg.\ comm.}, cap.~III, \S3, n.º~1, teorema~1).
+\end{proof}
+
+\begin{env}[4.1.7.12]
+\label{III.4.1.7.12}
+Consideremos ahora el $S$-módulo graduado
+\[
+  \mathrm{N}
+  =
+  \bigoplus_{k\geq0}
+  \HH^{n+1}(X,\mathfrak{J}^{k+1}\sh{F}),
+\]
+definido como en \eqref{III.4.1.7.8}.
+También es un $S$-módulo de tipo finito por \sref{III.3.3.2}.
+Por \eqref{III.4.1.7.5}, tenemos
+$\mathrm{Q}_k\subset\mathrm{N}_k$ para todo $k$, y el diagrama
+\eqref{III.4.1.7.11}, sustituyendo $n$ por $n+1$, muestra que
+\[
+  S_m\mathrm{Q}_k
+  =
+  \mathfrak{J}^m\mathrm{Q}_k
+  \subset
+  \mathrm{Q}_{k+m}.
+\]
+En otros términos, $\mathrm{Q}$ es un sub-$S$-módulo graduado de
+$\mathrm{N}$ y es, por tanto, de tipo finito.
+\end{env}
+
+\begin{env}[4.1.7.13]
+\label{III.4.1.7.13}
+Denotemos por $\alpha_m$ la inyección canónica
+\[
+  \mathfrak{J}^m\longrightarrow A,
+\]
+que también puede escribirse $S_m\to S_0$.
+Como $\mathfrak{J}^{k+1}\sh{F}_k=0$, el $A$-módulo
+$\HH^n(X,\sh{F}_k)$ es anulado por $\mathfrak{J}^{k+1}$.
+Como $\mathrm{Q}_k$ es la imagen del $A$-homomorfismo
+\[
+  \HH^n(X,\sh{F}_k)
+  \longrightarrow
+  \HH^{n+1}(X,\mathfrak{J}^{k+1}\sh{F}),
+\]
+$\mathrm{Q}_k$ es igualmente anulado por $\mathfrak{J}^{k+1}$.
+Equivalentemente, en el $S$-módulo $\mathrm{Q}$,
+\[
+  \alpha_{k+1}(S_{k+1})\mathrm{Q}_k=0.
+  \tag{4.1.7.14}
+  \label{III.4.1.7.14}
+\]
+Como $\mathrm{Q}$ es un $S$-módulo de tipo finito, existen enteros
+$k_0$ y $h$ tales que
+\[
+  \mathrm{Q}_{k+h}=S_h\mathrm{Q}_k
+  \qquad(k\geq k_0)
+\]
+\sref[II]{II.2.1.6}[ii].
+Esta relación y \eqref{III.4.1.7.14} implican que existe un entero
+$r>0$ tal que
+\[
+  \alpha_r(S_r)\mathrm{Q}=0.
+  \tag{4.1.7.15}
+  \label{III.4.1.7.15}
+\]
+\end{env}
+
+\begin{env}[4.1.7.16]
+\label{III.4.1.7.16}
+La inyección canónica
+\[
+  \mathfrak{J}^{k+m}\sh{F}
+  \longrightarrow
+  \mathfrak{J}^k\sh{F}
+\]
+induce en cohomología un $A$-homomorfismo
+\[
+  \nu_m:
+  \HH^{n+1}(X,\mathfrak{J}^{k+m}\sh{F})
+  \longrightarrow
+  \HH^{n+1}(X,\mathfrak{J}^k\sh{F}).
+  \tag{4.1.7.17}
+  \label{III.4.1.7.17}
+\]
+Para todo $x\in\mathfrak{J}^m$, tenemos manifiestamente la
+factorización
+\[
+  \xymatrix@C=4.5em{
+    \HH^{n+1}(X,\mathfrak{J}^k\sh{F})
+      \ar[r]^{\mu_{x,m}}
+    &
+    \HH^{n+1}(X,\mathfrak{J}^{k+m}\sh{F})
+      \ar[r]^{\nu_m}
+    &
+    \HH^{n+1}(X,\mathfrak{J}^k\sh{F}),
+  }
+  \tag{4.1.7.18}
+  \label{III.4.1.7.18}
+\]
+cuya compuesta es $\mu_{x,0}$.
+\end{env}
+
+\oldpage[III]{128}
+
+Se sigue que, para todo sub-$A$-módulo $\mathrm{P}$ de
+$\HH^{n+1}(X,\mathfrak{J}^k\sh{F})$, tenemos en el $S$-módulo
+$\mathrm{N}$
+\[
+  \nu_m(S_m\mathrm{P})
+  =
+  \alpha_m(S_m)\mathrm{P}.
+  \tag{4.1.7.19}
+  \label{III.4.1.7.19}
+\]
+
+\begin{lemma}[4.1.7.20]
+\label{III.4.1.7.20}
+Existe un entero $m>0$ tal que
+\[
+  \nu_m(\mathrm{Q}_{k+m})=0
+\]
+para todo $k\geq k_0$.
+\end{lemma}
+
+\begin{proof}
+Tomemos $m$ múltiplo de $h$ con $m\geq r$.
+Como
+\[
+  \mathrm{Q}_{k+m}=S_m\mathrm{Q}_k
+  \qquad(k\geq k_0),
+\]
+las relaciones \eqref{III.4.1.7.19} y \eqref{III.4.1.7.15} dan
+\[
+  \nu_m(\mathrm{Q}_{k+m})
+  =
+  \alpha_m(S_m)\mathrm{Q}_k
+  \subset
+  \alpha_r(S_r)\mathrm{Q}_k
+  =
+  0.
+\]
+\end{proof}
+
+\begin{env}[4.1.7.21]
+\label{III.4.1.7.21}
+El diagrama conmutativo
+\[
+  \xymatrix@C=2.5em{
+    \HH^n(X,\sh{F})
+      \ar[r]
+    &
+    \HH^n(X,\sh{F}_k)
+      \ar[r]^-{\partial}
+    &
+    \HH^{n+1}(X,\mathfrak{J}^{k+1}\sh{F})
+      \ar[r]
+    &
+    \HH^{n+1}(X,\sh{F})
+    \\
+    \HH^n(X,\sh{F})
+      \ar[r]\ar[u]
+    &
+    \HH^n(X,\sh{F}_{k+m})
+      \ar[r]^-{\partial}\ar[u]
+    &
+    \HH^{n+1}(X,\mathfrak{J}^{k+m+1}\sh{F})
+      \ar[r]\ar[u]
+    &
+    \HH^{n+1}(X,\sh{F})
+      \ar[u]
+  }
+\]
+procede a su vez del diagrama conmutativo
+\[
+  \xymatrix{
+    0\ar[r]
+    &
+    \mathfrak{J}^{k+1}\sh{F}\ar[r]
+    &
+    \sh{F}\ar[r]
+    &
+    \sh{F}_k\ar[r]
+    &
+    0
+    \\
+    0\ar[r]
+    &
+    \mathfrak{J}^{k+m+1}\sh{F}\ar[r]\ar[u]
+    &
+    \sh{F}\ar[r]\ar[u]
+    &
+    \sh{F}_{k+m}\ar[r]\ar[u]
+    &
+    0.
+  }
+\]
+Aquí las flechas verticales son las aplicaciones canónicas.
+Obtenemos, por tanto, el diagrama conmutativo
+\[
+  \xymatrix@C=2.2em{
+    0\ar[r]
+    &
+    \mathrm{R}_k\ar[r]
+    &
+    \mathrm{H}\ar[r]
+    &
+    \mathrm{H}_k\ar[r]
+    &
+    \mathrm{Q}_k\ar[r]
+    &
+    0
+    \\
+    0\ar[r]
+    &
+    \mathrm{R}_{k+m}\ar[r]\ar[u]
+    &
+    \mathrm{H}\ar[r]\ar@{=}[u]
+    &
+    \mathrm{H}_{k+m}\ar[r]\ar[u]
+    &
+    \mathrm{Q}_{k+m}\ar[r]\ar[u]^{\nu_m}
+    &
+    0,
+  }
+\]
+de filas exactas.
+Para $k\geq k_0$, la última flecha vertical es nula por
+\sref{III.4.1.7.20}.
+Así, la imagen de $\mathrm{H}_{k+m}$ en $\mathrm{H}_k$ está contenida
+en
+\[
+  \Ker(\mathrm{H}_k\longrightarrow\mathrm{Q}_k)
+  =
+  \Im(\mathrm{H}\longrightarrow\mathrm{H}_k).
+\]
+Recíprocamente, la conmutatividad muestra que contiene
+$\Im(\mathrm{H}\to\mathrm{H}_k)$ y, por tanto, que es igual a esta
+imagen.
+Lo mismo ocurre, pues, con las imágenes en $\mathrm{H}_k$ de
+$\mathrm{H}_{k'}$ para $k'\geq k+m$.
+Esto demuestra la condición \emph{(ML)} para el sistema proyectivo
+$(\mathrm{H}_k)_{k\geq0}$.
+
+Además, para todo subconjunto abierto afín $U$ de $X$,
+\[
+  \HH^i(U,\sh{F}_k)=0
+  \qquad(i>0)
+\]
+por \sref{III.1.3.1}, y, para $m>0$, la aplicación
+\[
+  \HH^0(U,\sh{F}_{k+m})
+  \longrightarrow
+  \HH^0(U,\sh{F}_k)
+\]
+es sobreyectiva \sref[I]{I.1.3.9}.
+Podemos, por tanto,
+
+\oldpage[III]{129}
+
+aplicar \sref[0]{0.13.3.1}; el homomorfismo canónico
+\[
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k)
+\]
+es biyectivo para todo $n\geq0$.
+
+Como el sistema proyectivo
+$(\mathrm{H}/\mathrm{R}_k)_{k\geq0}$ es estricto, podemos pasar al
+límite proyectivo en las sucesiones exactas
+\[
+  0
+  \longrightarrow
+  \mathrm{H}/\mathrm{R}_k
+  \longrightarrow
+  \mathrm{H}_k
+  \longrightarrow
+  \mathrm{Q}_k
+  \longrightarrow
+  0
+  \tag{4.1.7.22}
+  \label{III.4.1.7.22}
+\]
+por \sref[0]{0.13.2.2}.
+Como $\nu_m(\mathrm{Q}_{k+m})=0$, tenemos
+\[
+  \varprojlim_k\mathrm{Q}_k=0,
+\]
+y, por tanto, un isomorfismo topológico
+\[
+  \varprojlim_k(\mathrm{H}/\mathrm{R}_k)
+  \isoto
+  \varprojlim_k\mathrm{H}_k.
+\]
+Pero la filtración $(\mathrm{R}_k)$ de $\mathrm{H}$ es
+$\mathfrak{J}$-buena y define, por tanto, sobre $\mathrm{H}$ la
+topología $\mathfrak{J}$-preádica.
+Así, $\varprojlim_k(\mathrm{H}/\mathrm{R}_k)$ es la completación
+separada de $\mathrm{H}$ para esta topología.
+Esto termina la demostración de \sref{III.4.1.7}.
+\end{env}
+\end{proof}
+
+\begin{env}[4.1.8]
+\label{III.4.1.8}
+Podemos terminar ahora la demostración de \sref{III.4.1.5}.
+Para todo subconjunto abierto afín $V$ de $Y$,
+\[
+  \Gamma\bigl(
+    V,\widehat{\RR^n f_*(\sh{F})}
+  \bigr)
+\]
+es la completación separada de
+$\Gamma(V,\RR^n f_*(\sh{F}))$ para la topología
+$\mathfrak{J}$-preádica, si
+$\sh{J}|V=\widetilde{\mathfrak{J}}$, porque
+$\RR^n f_*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente
+\sref[I]{I.10.8.4}.
+Además,
+\[
+  \Gamma\left(
+    V,\varprojlim_k\RR^n f_*(\sh{F}_k)
+  \right)
+  =
+  \varprojlim_k
+  \Gamma\bigl(V,\RR^n f_*(\sh{F}_k)\bigr)
+\]
+por \sref[0]{0.3.2.6}.
+De \sref{III.4.1.7} y \sref{III.1.4.11} se sigue que
+$\vphi_n$ es un isomorfismo topológico.
+Del mismo modo, de nuevo por \sref{III.1.4.11}, \sref{III.4.1.7}
+muestra que el homomorfismo $\psi_{n,V}$ de \eqref{III.4.1.3.5} es un
+isomorfismo.
+Por la definición de
+$\RR^n\widehat{f}_*(\widehat{\sh{F}})$, se sigue que $\psi_n$ es un
+isomorfismo.
+\end{env}
+
+\begin{corollary}[4.1.9]
+\label{III.4.1.9}
+Bajo las hipótesis de \sref{III.4.1.4}, para todo subconjunto abierto
+afín $V$ de $Y$, el homomorfismo canónico
+\[
+  \HH^n\bigl(
+    \widehat{X}\cap f^{-1}(V),
+    \widehat{\sh{F}}
+  \bigr)
+  \longrightarrow
+  \Gamma\bigl(
+    \widehat{Y}\cap V,
+    \RR^n\widehat{f}_*(\widehat{\sh{F}})
+  \bigr)
+\]
+es biyectivo.
+\end{corollary}
+
+\begin{env}[4.1.10]
+\label{III.4.1.10}
+\emph{Observación.}
+Sea $f:X\to Y$ un morfismo de tipo finito entre esquemas ordinarios
+noetherianos, y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente cuyo
+soporte es propio sobre $Y$ \sref[II]{II.5.4.10}.
+Sabemos entonces \sref{III.3.2.4} que $\RR^n f_*(\sh{F})$ es un
+$\sh{O}_Y$-módulo coherente para todo $n\geq0$.
+Además, siempre podemos suponer que
+\[
+  \sh{F}=u_*(\sh{G}),
+  \qquad
+  \sh{G}=u^*(\sh{F}),
+\]
+donde $\sh{G}$ es un $\sh{O}_Z$-módulo coherente, $Z$ es un
+subesquema cerrado adecuado de $X$ cuyo espacio subyacente es
+$\Supp(\sh{F})$, y $u:Z\to X$ es la inyección canónica
+\sref[I]{I.9.3.5}.
+Si
+\[
+  \sh{G}_k
+  =
+  \sh{G}\otimes_{\sh{O}_Y}
+  (\sh{O}_Y/\sh{J}^{k+1}),
+\]
+entonces
+\[
+  \sh{G}_k=u^*(\sh{F}_k),
+  \qquad
+  \RR^n f_*(\sh{F}_k)
+  =
+  \RR^n(f\circ u)_*(\sh{G}_k)
+\]
+y
+\[
+  \RR^n f_*(\sh{F})
+  =
+  \RR^n(f\circ u)_*(\sh{G})
+\]
+por \sref{III.1.3.4}; y, teniendo en cuenta \sref[I]{I.10.9.5},
+\[
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+  =
+  \RR^n\widehat{(f\circ u)}_*(\widehat{\sh{G}}).
+\]
+Podemos, por tanto, aplicar \sref{III.4.1.5} a $\sh{G}$ y al morfismo
+propio $f\circ u$.
+Se sigue que, bajo estas hipótesis, los resultados de
+\sref{III.4.1.5} siguen siendo válidos para $\sh{F}$ y $f$.
+\end{env}
+
+
+\subsection{Casos particulares y variantes}
+\label{subsection:III.4.2}
+
+La forma más útil del teorema de comparación \sref{III.4.1.5} es la
+siguiente.
+
+\begin{proposition}[4.2.1]
+\label{III.4.2.1}
+Sea $Y$ un esquema localmente noetheriano, sea $f:X\to Y$ un
+morfismo propio, y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Entonces, para todo $y\in Y$ y todo $p$,
+\[
+  \bigl(\RR^p f_*(\sh{F})\bigr)_y
+\]
+
+\oldpage[III]{130}
+
+es un $\sh{O}_y$-módulo de tipo finito y está, por tanto, separado
+para la topología $\mathfrak{m}_y$-preádica.
+Además, existe un isomorfismo topológico canónico
+\[
+  \widehat{\bigl(\RR^p f_*(\sh{F})\bigr)_y}
+  \isoto
+  \varprojlim_k
+  \HH^p\left(
+    f^{-1}(y),
+    \sh{F}\otimes_{\sh{O}_Y}
+    (\sh{O}_y/\mathfrak{m}_y^k)
+  \right).
+  \tag{4.2.1.1}
+  \label{III.4.2.1.1}
+\]
+Aquí el primer término es la completación de
+$\bigl(\RR^p f_*(\sh{F})\bigr)_y$ para la topología
+$\mathfrak{m}_y$-preádica.
+En el segundo término, para todo $k\geq0$, $f^{-1}(y)$ se considera
+como el espacio subyacente del esquema
+\[
+  X\times_Y\Spec(\sh{O}_y/\mathfrak{m}_y^k)
+\]
+\sref[I]{I.3.6.1}.
+\end{proposition}
+
+\begin{proof}
+Como $\sh{O}_y$ es un anillo local noetheriano y
+$\bigl(\RR^p f_*(\sh{F})\bigr)_y$ es un $\sh{O}_y$-módulo de tipo
+finito \sref{III.3.2.1}, la topología $\mathfrak{m}_y$-preádica sobre
+este módulo está separada \sref[0]{0.7.3.5}.
+
+Cuando $Y$ es noetheriano e $y$ es cerrado, las demás afirmaciones se
+siguen de \sref{III.4.1.7}, reemplazando $Y$ por un entorno afín de
+$y$ y tomando $Y'=\{y\}$; aquí utilizamos (G,~II,~4.9.1).
+
+En general, pongamos
+\[
+  Y_1=\Spec(\sh{O}_y),
+  \qquad
+  X_1=X\times_Y Y_1,
+  \qquad
+  \sh{F}_1
+  =
+  \sh{F}\otimes_{\sh{O}_Y}\sh{O}_{Y_1},
+\]
+y sea
+\[
+  f_1=f\times 1_{Y_1}:X_1\longrightarrow Y_1.
+\]
+El esquema $Y_1$ es noetheriano, el morfismo $f_1$ es propio
+\sref[II]{II.5.4.2}[iii], y $\sh{F}_1$ es coherente
+\sref[0]{0.5.3.11}.
+Sea $y_1$ el único punto cerrado de $Y_1$.
+La proposición ya demostrada se aplica a $f_1$, $\sh{F}_1$ y
+$y_1$.
+Tenemos
+\[
+  \sh{O}_{y_1}=\sh{O}_y,
+  \qquad
+  f_1^{-1}(y_1)=f^{-1}(y)
+\]
+\sref[I]{I.3.6.5}.
+Además, los esquemas
+\[
+  X\times_Y\Spec(\sh{O}_y/\mathfrak{m}_y^k)
+  \quad\text{y}\quad
+  X_1\times_{Y_1}\Spec(\sh{O}_y/\mathfrak{m}_y^k)
+\]
+se identifican canónicamente \sref[I]{I.3.3.9}, al igual que
+\[
+  \sh{F}_1
+  \otimes_{\sh{O}_{Y_1}}
+  (\sh{O}_y/\mathfrak{m}_y^k)
+  \quad\text{y}\quad
+  \sh{F}
+  \otimes_{\sh{O}_Y}
+  (\sh{O}_y/\mathfrak{m}_y^k)
+\]
+\sref[I]{I.9.1.6}.
+Solo queda observar que
+\[
+  \RR^p f_{1*}(\sh{F}_1)
+  \simeq
+  \RR^p f_*(\sh{F})
+  \otimes_{\sh{O}_Y}
+  \sh{O}_{Y_1}.
+\]
+Esto se sigue de \sref{III.1.4.15}, pues el morfismo local
+$\Spec(\sh{O}_y)\to Y$ es plano
+\sref[0]{0.6.7.1}, \sref[I]{I.2.4.2}.
+\end{proof}
+
+El corolario siguiente utiliza la terminología de la teoría de la
+dimensión (capítulo~IV) y no se aplicará antes de dicho capítulo.
+
+\begin{corollary}[4.2.2]
+\label{III.4.2.2}
+Sea $Y$ un esquema localmente noetheriano, sea $f:X\to Y$ un
+morfismo propio, sea $y\in Y$, y sea $r$ la dimensión de
+$f^{-1}(y)$.
+Entonces, para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los haces
+$\RR^p f_*(\sh{F})$ se anulan en un entorno de $y$ para todo
+$p>r$.
+\end{corollary}
+
+\begin{proof}
+Para todo $k$, tenemos
+\[
+  \HH^p\left(
+    f^{-1}(y),
+    \sh{F}\otimes_{\sh{O}_Y}
+    (\sh{O}_y/\mathfrak{m}_y^k)
+  \right)
+  =
+  0
+\]
+por (G,~II,~4.15.2).
+De \sref{III.4.2.1} se sigue que la completación separada de
+$\bigl(\RR^p f_*(\sh{F})\bigr)_y$ para la topología
+$\mathfrak{m}_y$-preádica es nula.
+Como esta topología está separada, tenemos también
+\[
+  \bigl(\RR^p f_*(\sh{F})\bigr)_y=0.
+\]
+La conclusión se sigue porque $\RR^p f_*(\sh{F})$ es coherente
+\sref[0]{0.5.2.2}.
+\end{proof}
+
+\begin{env}[4.2.3]
+\label{III.4.2.3}
+El resultado \sref{III.4.2.1} se utiliza especialmente cuando $p=0$.
+Obtenemos el corolario siguiente.
+\end{env}
+
+\begin{corollary}[4.2.4]
+\label{III.4.2.4}
+Bajo las hipótesis de \sref{III.4.2.1}, existe un isomorfismo
+topológico canónico
+\[
+  \widehat{\bigl(f_*(\sh{F})\bigr)_y}
+  \isoto
+  \varprojlim_k
+  \Gamma\left(
+    f^{-1}(y),
+    \sh{F}_y/\mathfrak{m}_y^k\sh{F}_y
+  \right).
+\]
+\end{corollary}
+
+
+\subsection{Teorema de conexidad de Zariski}
+\label{subsection:III.4.3}
+\label{III.4.3}
+
+Los resultados de esta sección y de la siguiente generalizan teoremas
+bien conocidos de Zariski, y todos pueden deducirse de
+\sref{III.4.2.4}. Son consecuencias del teorema siguiente.
+
+\begin{theorem}[4.3.1]
+\label{III.4.3.1}
+\textnormal{(Teorema de conexidad).}
+Sea $Y$ un esquema localmente noetheriano y sea $f:X\to Y$ un
+morfismo propio. Entonces
+\[
+  \sh{A}(X)=f_*(\sh{O}_X)
+\]
+es una $\sh{O}_Y$-álgebra coherente.
+
+\oldpage[III]{131}
+
+Sea $Y'$ el $Y$-esquema finito tal que
+$\sh{A}(Y')=\sh{A}(X)$; está determinado salvo $Y$-isomorfismo
+\sref[II]{II.1.3.1}, \sref[II]{II.6.1.3}.
+Si $f'=\sh{A}(e)$ es el $Y$-morfismo $X\to Y'$ deducido del
+isomorfismo identidad
+\[
+  e:\sh{A}(Y')\isoto\sh{A}(X)
+\]
+\sref[II]{II.1.2.7}, entonces $f'$ es propio,
+$f'_*(\sh{O}_X)$ es isomorfo a $\sh{O}_{Y'}$, y toda fibra
+$f'^{-1}(y')$, $y'\in Y'$, es conexa y no vacía.
+\end{theorem}
+
+\begin{proof}
+Sea $g:Y'\to Y$ el morfismo estructural. Para demostrar que el
+homomorfismo
+\[
+  \theta:\sh{O}_{Y'}\longrightarrow f'_*(\sh{O}_X)
+\]
+que interviene en la definición de $f'$ es biyectivo, basta, como
+$Y'$ es afín sobre $Y$, demostrar que
+\[
+  g_*(\theta):
+  g_*(\sh{O}_{Y'})
+  \longrightarrow
+  g_*\bigl(f'_*(\sh{O}_X)\bigr)
+  =
+  f_*(\sh{O}_X)
+\]
+es la identidad \sref[II]{II.1.4.2}. Esto se sigue de las
+definiciones, pues
+$g_*(\sh{O}_{Y'})=\sh{A}(Y')$ y
+$f_*(\sh{O}_X)=\sh{A}(X)$.
+La coherencia de $\sh{A}(X)$ es un caso particular del teorema de
+finitud \sref{III.3.2.1}. Como $f$ es propio y $g$ es separado,
+$f'$ es propio \sref[II]{II.5.4.3}[i]. para terminar la demostración de
+\sref{III.4.3.1}, basta, pues, demostrar el
+\end{proof}
+
+\begin{corollary}[4.3.2]
+\label{III.4.3.2}
+Bajo las hipótesis de \sref{III.4.3.1}, supongamos además que
+$f_*(\sh{O}_X)$ es isomorfo a $\sh{O}_Y$. Entonces toda fibra
+$f^{-1}(y)$ de $f$ es conexa y no vacía.
+\end{corollary}
+
+\begin{proof}
+La hipótesis de que $f_*(\sh{O}_X)$ es isomorfo a $\sh{O}_Y$ implica
+ya que $f$ es dominante, luego sobreyectivo porque $f$ es una
+aplicación cerrada. Como en \sref{III.4.2.1}, podemos reducirnos al
+caso en que $y$ es cerrado en $Y$. Como $f^{-1}(y)$ es un espacio
+noetheriano, tiene un número finito de componentes conexas; estas son
+también las componentes conexas del espacio subyacente de la
+completación $\widehat{X}$ a lo largo de $f^{-1}(y)$.
+
+Si $Z_i$, $1\leq i\leq n$, son estas componentes conexas, entonces
+\[
+  \Gamma(\widehat{X},\sh{O}_{\widehat{X}})
+  =
+  \prod_{i=1}^{n}\Gamma(Z_i,\sh{O}_{\widehat{X}}),
+\]
+y ninguno de los anillos del miembro derecho es nulo, pues la sección
+unidad no es nula en ningún punto de $\widehat{X}$. Aplicando
+\sref{III.4.1.5} a $\sh{F}=\sh{O}_X$, cuya completación a lo largo de
+$f^{-1}(y)$ es $\sh{O}_{\widehat{X}}$, se ve que
+$\Gamma(\widehat{X},\sh{O}_{\widehat{X}})$ es isomorfo a la
+completación $\mathfrak{m}_y$-ádica separada
+$\widehat{\sh{O}}_y$ del anillo local $\sh{O}_y$. Es, por tanto, un
+anillo local y no puede ser un producto directo de varios anillos no
+nulos. Así, $n=1$.
+\end{proof}
+
+\begin{corollary}[4.3.3]
+\label{III.4.3.3}
+Bajo las hipótesis de \sref{III.4.3.1}, para todo $y\in Y$ el conjunto
+de componentes conexas de la fibra $f^{-1}(y)$ está en correspondencia
+biyectiva con el conjunto finito de puntos de la fibra
+$g^{-1}(y)$, donde $g:Y'\to Y$ es el morfismo estructural; en otros
+términos, corresponde al conjunto de ideales maximales de
+$\bigl(f_*(\sh{O}_X)\bigr)_y$.
+\end{corollary}
+
+\begin{proof}
+Como $Y'$ es finito sobre $Y$, el espacio $g^{-1}(y)$ es finito y
+discreto \sref[II]{II.6.1.7}. Como
+\[
+  f^{-1}(y)=f'^{-1}\bigl(g^{-1}(y)\bigr),
+\]
+la afirmación se sigue de esta observación y de
+\sref{III.4.3.1}.
+\end{proof}
+
+Esto da una interpretación notable del $Y$-esquema $Y'$ definido en
+\sref{III.4.3.1}. La factorización
+$f=g\circ f'$ del morfismo propio $f$ es análoga a la factorización
+obtenida por K.~Stein para aplicaciones holomorfas de espacios
+analíticos, y se llamará en adelante la \emph{factorización de Stein}
+de $f$.
+
+\begin{remark}[4.3.4]
+\label{III.4.3.4}
+Sea $k$ una extensión del cuerpo $\kres(y)$. Si
+\[
+  f^{-1}(y)\otimes_{\kres(y)}k
+  =
+  X\times_Y\Spec(k)
+\]
+es conexo, entonces $f^{-1}(y)$ también es conexo, pues es la imagen
+del primero por un morfismo de proyección
+\sref[I]{I.3.4.7}. Para un morfismo $f:X\to Y$ de esquemas y un punto
+$y\in Y$, diremos que la fibra $f^{-1}(y)$ es
+\emph{geométricamente conexa} si, para toda extensión $k$ de
+$\kres(y)$, el esquema
+$f^{-1}(y)\otimes_{\kres(y)}k=X\times_Y\Spec(k)$ es conexo.
+
+\oldpage[III]{132}
+
+Bajo las hipótesis de \sref{III.4.3.2}, la conclusión puede
+reforzarse: las fibras $f^{-1}(y)$ son geométricamente conexas.
+En efecto, para toda extensión $k$ de $\kres(y)$ existen un anillo
+local noetheriano $A$ y un homomorfismo local
+\[
+  \varphi:\sh{O}_y\longrightarrow A
+\]
+tal que $A$ es un $\sh{O}_y$-módulo plano y el cuerpo residual de
+$A$ es $\kres(y)$-isomorfo a $k$ \sref[0]{0.10.3.1}.
+Sea $Y_1=\Spec(A)$, y sea $h:Y_1\to Y$ el morfismo local
+correspondiente a $\varphi$, que lleva el único punto cerrado $y_1$ de
+$Y_1$ a $y$ \sref[I]{I.2.4.1}. Pongamos
+\[
+  X_1=X\times_Y Y_1,
+  \qquad
+  f_1=f\times 1_{Y_1}.
+\]
+El esquema $Y_1$ es noetheriano, $f_1$ es propio
+\sref[II]{II.5.4.2}, y $f_1^{-1}(y_1)$ es un
+$\kres(y_1)$-esquema isomorfo a $X\times_Y\Spec(k)$. Basta, por
+tanto, demostrar que
+\[
+  f_{1*}(\sh{O}_{X_1})=\sh{O}_{Y_1},
+\]
+de modo que \sref{III.4.3.2} pueda aplicarse a $f_1$. Ahora $g$ es
+plano por \sref[I]{I.2.4.2}; por tanto, por \sref{III.1.4.15} con
+$q=0$,
+\[
+  f_{1*}(\sh{O}_{X_1})
+  =
+  h^*\bigl(f_*(\sh{O}_X)\bigr)
+  =
+  h^*(\sh{O}_Y)
+  =
+  \sh{O}_{Y_1}.
+\]
+
+En el caso general de \sref{III.4.3.1}, el mismo argumento muestra,
+con la notación de dicho teorema, que
+\[
+  f_{1*}(\sh{O}_{X_1})
+  =
+  h^*\bigl(g_*(\sh{O}_{Y'})\bigr),
+\]
+y que la factorización de Stein $f_1=g_1\circ f'_1$ de $f_1$
+satisface
+\[
+  g_1=g\times 1_{Y_1}
+\]
+\sref[II]{II.1.5.2}, siendo el $Y_1$-esquema finito correspondiente
+$Y'_1=Y'\times_Y Y_1$. Teniendo en cuenta la transitividad de las
+fibras \sref[I]{I.3.6.4}, se sigue de
+\sref{III.4.3.3} que el número de componentes conexas de
+$f_1^{-1}(y_1)$ es el número de elementos de
+\[
+  g_1^{-1}(y_1)
+  =
+  g^{-1}(y)\otimes_{\kres(y)}k.
+\]
+Si $k$ se elige algebraicamente cerrado, este número es independiente
+de la extensión algebraicamente cerrada elegida y es igual al
+\emph{número geométrico de puntos} de $g^{-1}(y)$
+\sref[I]{I.6.4.7}, o equivalentemente a
+\[
+  \sum_i[\kres(y'_i):\kres(y)]_s,
+\]
+donde los $y'_i$ recorren el conjunto finito $g^{-1}(y)$. Este número
+se llama \emph{número geométrico de componentes conexas} de
+$f^{-1}(y)$. Los cuerpos $\kres(y'_i)$ son precisamente los cuerpos
+residuales del anillo semilocal $\bigl(f_*(\sh{O}_X)\bigr)_y$.
+\end{remark}
+
+\begin{proposition}[4.3.5]
+\label{III.4.3.5}
+Sean $X$ e $Y$ esquemas íntegros localmente noetherianos, y sea
+$f:X\to Y$ un morfismo propio dominante. Para todo $y\in Y$, el
+número de componentes conexas de $f^{-1}(y)$ es a lo sumo el número
+de ideales maximales de la clausura entera $\sh{O}'_y$ de
+$\sh{O}_y$ en el cuerpo de funciones racionales $\mathrm{R}(X)$.
+\end{proposition}
+
+\begin{proof}
+Para todo abierto $U$ de $Y$,
+\[
+  \Gamma\bigl(U,f_*(\sh{O}_X)\bigr)
+  =
+  \Gamma\bigl(f^{-1}(U),\sh{O}_X\bigr)
+\]
+es la intersección de los anillos locales $\sh{O}_x$ para
+$x\in f^{-1}(U)$ \sref[I]{I.8.2.1.1}. Se sigue inmediatamente que
+$\bigl(f_*(\sh{O}_X)\bigr)_y$ es un subanillo de $\mathrm{R}(X)$ que
+contiene a $\sh{O}_y$. Como $f_*(\sh{O}_X)$ es un
+$\sh{O}_Y$-módulo coherente, $\bigl(f_*(\sh{O}_X)\bigr)_y$ es un
+$\sh{O}_y$-módulo finito y, por tanto, está contenido en $\sh{O}'_y$.
+Todo ideal maximal de tal anillo es la intersección de este anillo con
+un ideal maximal de $\sh{O}'_y$
+\cite[vol.~I, pp.~257 and 259]{I-13}, lo que demuestra la proposición.
+\end{proof}
+
+\begin{definition}[4.3.6]
+\label{III.4.3.6}
+Un anillo local íntegro se dice \emph{unirrama} si su clausura entera
+es de nuevo un anillo local. Un punto $y$ de un esquema íntegro
+$Y$ se dice \emph{unirrama} si el anillo local $\sh{O}_y$ es
+unirrama; este es, en particular, el caso cuando $Y$ es normal en
+$y$.
+\end{definition}
+
+Sea $A$ un anillo local íntegro y sea $K$ su cuerpo de fracciones. El
+anillo $A$ es unirrama si y solo si todo subanillo $A_1$ de $K$ que
+contenga a $A$ y sea una $A$-álgebra finita es local. En efecto, sea
+$A'$ la clausura entera de $A$. Por el primer teorema de
+Cohen--Seidenberg (Bourbaki, \emph{Alg\`ebre commutative}, capítulo~V,
+\S2, n.º~1, teorema~1), todo ideal maximal de $A_1$ es la contracción
+a $A_1$ de un ideal maximal de $A'$; así, si $A'$ es local, también
+lo es $A_1$.
+
+\oldpage[III]{133}
+
+Recíprocamente, $A'$ es el límite inductivo de la familia dirigida de
+$A$-subálgebras finitas $A_\alpha$ de $A'$. Si cada $A_\alpha$ es
+local, entonces, para $A_\alpha\subset A_\beta$, el ideal maximal de
+$A_\alpha$ es la contracción del ideal maximal de $A_\beta$, por el
+mismo argumento; por tanto, $A'$ es local
+\sref[0]{0.10.3.1.3}.
+
+Observemos también que, si la completación de un anillo local
+noetheriano $A$ es íntegra ---propiedad que se expresa diciendo que
+$A$ es \emph{analíticamente íntegro}---, entonces $A$ es unirrama.
+Sea $\mathfrak{m}$ el ideal maximal de $A$, sea $K$ su cuerpo de
+fracciones, y sea $K'$ el cuerpo de fracciones de $\widehat{A}$;
+entonces
+\[
+  K'=K\otimes_A\widehat{A}.
+\]
+Sea $A'_F$ una $A$-subálgebra finita de $K$. El subanillo $B_F$ de
+$K'$ generado por $\widehat{A}$ y $A'_F$ es isomorfo a
+\[
+  A'_F\otimes_A\widehat{A};
+\]
+es un $\widehat{A}$-módulo finito y es la completación de $A'_F$
+para la topología $\mathfrak{m}$-ádica
+\sref[0]{0.7.3.3}, \sref[0]{0.7.3.6}. Como $A'_F$ es semilocal
+(Bourbaki, \emph{Alg\`ebre commutative}, capítulo~IV, \S2, n.º~5,
+corolario~3 de la proposición~9), mientras que su completación es
+íntegra, $A'_F$ solo puede tener un ideal maximal $\mathfrak{m}'_F$, y
+$\mathfrak{m}'_F\cap A=\mathfrak{m}$. Esto demuestra la afirmación.
+
+\begin{corollary}[4.3.7]
+\label{III.4.3.7}
+Bajo las hipótesis de \sref{III.4.3.5}, supongamos que la clausura
+algebraica de $\mathrm{R}(Y)$ en $\mathrm{R}(X)$ tiene grado separable
+$n$ y que $y\in Y$ es unirrama. Entonces la fibra $f^{-1}(y)$ tiene a
+lo sumo $n$ componentes conexas. En particular, si la clausura
+algebraica de $\mathrm{R}(Y)$ en $\mathrm{R}(X)$ es radicial sobre
+$\mathrm{R}(X)$, entonces $f^{-1}(y)$ es conexa.
+\end{corollary}
+
+\begin{proof}
+Sea $\sh{O}'_y$ la clausura entera de $\sh{O}_y$, y sea
+$\sh{O}''_y$ la clausura entera de $\sh{O}_y$ en $\mathrm{R}(X)$.
+Esta última es también la clausura entera de $\sh{O}'_y$ en
+$\mathrm{R}(X)$. Si $\sh{O}'_y$ es local, entonces $\sh{O}''_y$ es
+un anillo semilocal que tiene a lo sumo $n$ ideales maximales
+\cite[vol.~I, p.~289, Theorem~22]{I-13}.
+
+Este corolario es esencialmente la forma en la que Zariski enuncia su
+``teorema de conexidad'' para esquemas algebraicos.
+\end{proof}
+
+\begin{remark}[4.3.8]
+\label{III.4.3.8}
+Si, además de las hipótesis de \sref{III.4.3.7}, $Y$ es normal en
+$y$, entonces la fibra $f^{-1}(y)$ es geométricamente conexa: con la
+notación de \sref{III.4.3.4}, $g^{-1}(y)$ es un solo punto $y'$, y
+$\kres(y')$ es radicial sobre $\kres(y)$.
+\end{remark}
+
+\begin{definition}[4.3.9]
+\label{III.4.3.9}
+Sea $Y$ un esquema localmente noetheriano. Un morfismo de tipo finito
+$f:X\to Y$ se dice \emph{universalmente abierto} si, para todo esquema
+irreducible localmente noetheriano $Y'$ y todo morfismo dominante
+$g:Y'\to Y$, toda componente irreducible de
+$X'=X\times_Y Y'$ domina a $Y'$.
+\end{definition}
+
+Si $Y$ es irreducible, esto significa que, si $\eta$ y $\eta'$ son
+los puntos genéricos de $Y$ e $Y'$, respectivamente, y si
+$f'=f\times 1_{Y'}$, toda componente irreducible de $X'$ tiene su
+punto genérico en $f'^{-1}(\eta')$. En consecuencia, para todo
+abierto $U$ de $Y$, el morfismo restringido $f^{-1}(U)\to U$ es
+universalmente abierto.
+
+\begin{corollary}[4.3.10]
+\label{III.4.3.10}
+Sean $X$ e $Y$ esquemas íntegros localmente noetherianos, y sea
+$f:X\to Y$ propio, dominante y universalmente abierto. Si la clausura
+algebraica de $\mathrm{R}(Y)$ en $\mathrm{R}(X)$ es radicial sobre
+$\mathrm{R}(Y)$, entonces toda fibra $f^{-1}(y)$, $y\in Y$, es
+geométricamente conexa.
+\end{corollary}
+
+\begin{proof}
+Podemos reducirnos al caso $Y=\Spec(B)$, donde $B$ es un anillo
+íntegro noetheriano. Por \sref[II]{II.7.1.7}, existe un anillo local
+noetheriano íntegramente cerrado $A$ que domina a $\sh{O}_y$ y tiene a
+$\mathrm{R}(Y)$ como cuerpo de fracciones. Pongamos $Y'=\Spec(A)$, y
+sea $h:Y'\to Y$ el morfismo correspondiente a la inyección canónica
+$B\to A$. Es birracional, luego dominante; además, si $y'$ es el
+único punto cerrado de $Y'$, entonces $h(y')=y$.
+
+Pongamos
+\[
+  X'=X\times_Y Y',
+  \qquad
+  f'=f\times 1_{Y'}.
+\]
+Sean $\eta$, $\eta'$ y $\xi$ los puntos genéricos de $Y$, $Y'$ y
+$X$, respectivamente. Entonces $f(\xi)=\eta$ y
+$h^{-1}(\eta)=\{\eta'\}$; además,
+$\kres(\eta)=\kres(\eta')=\mathrm{R}(Y)$. Así, $f'^{-1}(\eta')$ es
+isomorfo a $f^{-1}(\eta)$ \sref[I]{I.3.6.4}, y tiene un único punto
+genérico, pues $\xi$ es el punto genérico de
+$f^{-1}(\eta)$ \sref[0]{0.2.1.8}. Por la apertura universal, toda
+componente irreducible de $X'$ tiene su punto genérico en
+$f'^{-1}(\eta')$. Por tanto, $X'$ es irreducible; su punto genérico
+$\xi'$ es el de $f'^{-1}(\eta')$, y
+$\kres(\xi')=\kres(\xi)$.
+
+\oldpage[III]{134}
+
+Pongamos $X''=X'_{\mathrm{red}}$ y $f''=f'_{\mathrm{red}}$. Entonces
+$X''$ es íntegro y noetheriano, $f''$ es propio
+\sref[II]{II.5.4.6}, y los espacios subyacentes de las fibras
+$f'^{-1}(y')$ y $f''^{-1}(y')$ son iguales. Además,
+\[
+  \mathrm{R}(X'')=\kres(\xi')=\mathrm{R}(X).
+\]
+Así, $f''$ satisface las hipótesis de \sref{III.4.3.8}, y
+$f''^{-1}(y')$ es geométricamente conexa.
+
+Sea ahora $k$ una extensión cualquiera de $\kres(y)$. Existe una
+extensión $k_1$ de $\kres(y)$ en la que tanto $\kres(y')$ como $k$
+pueden considerarse subextensiones (Bourbaki, \emph{Alg\`ebre},
+capítulo~V, \S4, proposición~2). Por el párrafo anterior,
+\[
+  f''^{-1}(y')\times_{Y'}\Spec(k_1)
+\]
+es conexo. Tiene el mismo esquema reducido asociado que
+$f'^{-1}(y')\times_{Y'}\Spec(k_1)$
+\sref[I]{I.5.1.8}, luego este último es conexo; es isomorfo a
+$f^{-1}(y)\times_Y\Spec(k_1)$ \sref[I]{I.3.6.4}. Por tanto,
+$f^{-1}(y)\times_Y\Spec(k)$ es conexo, y la observación al comienzo
+de \sref{III.4.3.4} termina la demostración.
+\end{proof}
+
+\begin{remark}[4.3.11]
+\label{III.4.3.11}
+\emph{(i)}
+El argumento anterior se debe, en lo esencial, a Zariski
+\cite{I-20}, salvo que, en su marco, puede tomarse como $A$ la
+clausura entera de $\sh{O}_y$, pues esta es un anillo noetheriano para
+los anillos locales de la geometría algebraica clásica. Zariski
+demuestra también que, si $Y$ es la variedad de Chow de un espacio
+proyectivo $\mathbf{P}_k^r$ sobre un cuerpo $k$, y $X$ es el
+subconjunto cerrado de $\mathbf{P}_k^r\times_kY$ que define la
+correspondencia de Chow entre $\mathbf{P}_k^r$ e $Y$, entonces la
+proyección $X\to Y$ es universalmente abierta (\emph{loc.\ cit.},
+lema de la p.~82).
+Parece que esta es la única propiedad formal de las ``coordenadas de
+Chow'' utilizada en ciertas aplicaciones. En tal situación es, por
+tanto, útil reemplazar el lenguaje de la especialización de ciclos en
+el espacio proyectivo por el de las fibras de un morfismo propio,
+supuesto eventualmente universalmente abierto o sometido a condiciones
+análogas de regularidad local.
+
+\emph{(ii)}
+En el capítulo~IV veremos que un morfismo universalmente abierto
+$f:X\to Y$ puede definirse equivalentemente exigiendo que, para todo
+morfismo $Z\to Y$, el morfismo obtenido por cambio de base
+$f_{(Z)}:X_{(Z)}\to Z$ sea abierto. También puede demostrarse que, si
+$f$ satisface las hipótesis de \sref{III.4.3.10}, y si $y$ es una
+especialización de $y'$, entonces el número geométrico de componentes
+conexas de $f^{-1}(y)$ es a lo sumo el de $f^{-1}(y')$.
+\end{remark}
+
+\begin{corollary}[4.3.12]
+\label{III.4.3.12}
+Bajo las hipótesis de \sref{III.4.3.5}, supongamos además que
+$\mathrm{R}(Y)$ es algebraicamente cerrado en $\mathrm{R}(X)$, y sea
+$y$ un punto normal de $Y$. Entonces $f^{-1}(y)$ es geométricamente
+conexa, y existe un entorno abierto $U$ de $y$ en $Y$ tal que
+\[
+  f_*\bigl(\sh{O}_X|_{f^{-1}(U)}\bigr)
+  \simeq
+  \sh{O}_Y|_U.
+\]
+En particular, si $Y$ es normal y $\mathrm{R}(Y)$ es algebraicamente
+cerrado en $\mathrm{R}(X)$, entonces
+$f_*(\sh{O}_X)\simeq\sh{O}_Y$.
+\end{corollary}
+
+\begin{proof}
+La afirmación relativa a $f^{-1}(y)$ es un caso particular de
+\sref{III.4.3.8}.
+
+\oldpage[III]{135}
+
+Si
+\[
+  X\xrightarrow{f'}Y'\xrightarrow{g}Y
+\]
+es la factorización de Stein de $f$ \sref{III.4.3.3}, se sigue que
+$g^{-1}(y)$ consta de un solo punto $y'$. Además,
+\[
+  \sh{O}_y
+  \subset
+  \sh{O}_{y'}
+  =
+  \bigl(f_*(\sh{O}_X)\bigr)_y
+  \subset
+  \mathrm{R}(X).
+\]
+Como $\sh{O}_{y'}$ es finito sobre $\sh{O}_y$ (y \emph{a fortiori} sobre $\mathrm{R}(Y)$), está contenido en $\mathrm{R}(Y)$ en virtud de la hipótesis. Como $y$ es normal, necesariamente
+$\sh{O}_{y'}=\sh{O}_y$. Así, $g$ es un isomorfismo local en $y'$
+\sref[I]{I.6.5.4}, lo que demuestra la primera parte. La segunda
+afirmación se sigue de la primera: la hipótesis adicional hace que $g$
+sea biyectivo y un isomorfismo local en un entorno de cada punto de
+$Y'$, luego un isomorfismo.
+\end{proof}
+
+El hecho de que \sref{III.4.3.7} esté disponible para esquemas da, por
+ejemplo, la aplicación siguiente.
+
+\begin{proposition}[4.3.13]
+\label{III.4.3.13}
+Sea $A$ un anillo local noetheriano unirrama, sea $\mathfrak{a}$ un
+ideal de definición de $A$, y sean
+\[
+  A_0=A/\mathfrak{a},
+  \qquad
+  S=\operatorname{gr}_{\mathfrak{a}}(A)
+\]
+el anillo graduado asociado a la filtración $\mathfrak{a}$-preádica.
+Supongamos que $S$ es una $A_0$-álgebra graduada generada por $S_1$,
+donde $S_1$ es un $A_0$-módulo finito. Entonces $\Proj(S)$ es un
+$A_0$-esquema conexo.
+\end{proposition}
+
+\begin{proof}
+Sea $\mathfrak{m}$ el ideal maximal de $A$. El esquema
+$Y=\Spec(A)$ es íntegro, y el punto $y$ correspondiente a
+$\mathfrak{m}$ es su único punto cerrado. Para cierto entero $p$,
+\[
+  \mathfrak{m}^p\subset\mathfrak{a}\subset\mathfrak{m},
+\]
+de modo que $V(\mathfrak{a})=\{\mathfrak{m}\}$. Pongamos
+\[
+  S'=\bigoplus_{n\geq0}\mathfrak{a}^n
+  \qquad\text{y}\qquad
+  X=\Proj(S').
+\]
+Este es el $Y$-esquema obtenido por la explosión del ideal
+$\mathfrak{a}$. Es íntegro, y el morfismo estructural
+$f:X\to Y$ es birracional \sref[II]{II.8.1.4} y proyectivo.
+Por tanto, \sref{III.4.3.7} se aplica y muestra que $f^{-1}(y)$ es
+conexo. Pero el espacio subyacente de $f^{-1}(y)$ es el de
+\[
+  \Proj(S'\otimes_A A_0)
+\]
+\sref[I]{I.3.6.1}, \sref[II]{II.2.8.10}; como
+$S'\otimes_AA_0=S$ por definición, se sigue la proposición.
+\end{proof}
+
+
+\subsection{El ``teorema principal'' de Zariski}
+\label{subsection:III.4.4}
+
+\begin{proposition}[4.4.1]
+\label{III.4.4.1}
+Sea $Y$ un esquema localmente noetheriano y sea $f:X\to Y$ un
+morfismo propio. Sea $X'$ el conjunto de puntos $x\in X$ que están
+aislados en su fibra $f^{-1}(f(x))$. Entonces $X'$ es abierto en $X$.
+Si
+\[
+  f=g\circ f'
+\]
+es la factorización de Stein de $f$ \sref{III.4.3.3}, la restricción
+de $f'$ a $X'$ es un isomorfismo de $X'$ sobre el subesquema inducido
+en un subconjunto abierto $U$ de $Y'$, y
+$X'=f'^{-1}(U)$.
+\end{proposition}
+
+\begin{proof}
+Como $g^{-1}(f(x))$ es finito y discreto
+\sref{III.4.3.3}, \sref[II]{II.6.1.7}, el punto $x$ está aislado en
+$f^{-1}(f(x))$ si y solo si está aislado en
+$f'^{-1}(f'(x))$. Podemos, por tanto, reducirnos al caso $f'=f$, de
+modo que $f_*(\sh{O}_X)=\sh{O}_Y$. Si $x\in X'$, la fibra
+$f^{-1}(f(x))$, que es conexa por \sref{III.4.3.2}, debe constar
+entonces del único punto $x$.
+
+Como $f$ es cerrado, para todo entorno abierto $V$ de $x$ en $X$, el
+conjunto cerrado $f(X-V)$ no contiene a $y=f(x)$. Si $U$ es su
+complementario en $Y$, entonces $f^{-1}(U)\subset V$. Así, las
+imágenes inversas por $f$ de un sistema fundamental de entornos
+abiertos de $y$ forman un sistema fundamental de entornos abiertos de
+$x$. La igualdad $f_*(\sh{O}_X)=\sh{O}_Y$ y la definición de la
+imagen directa de un haz \sref[0]{0.3.4.1}, \sref{III.4.2.1} implican
+ahora que, si $f=(\psi,\theta)$, el homomorfismo
+\[
+  \theta_y^\#:\sh{O}_y\longrightarrow\sh{O}_x
+\]
+es un isomorfismo. Por tanto, existen entornos abiertos $V$ de $x$ y
+$U$ de $y$ tales que la restricción de $f$ es un isomorfismo
+$V\isoto U$ \sref[I]{I.6.5.4}.
+
+\oldpage[III]{136}
+
+Por el párrafo anterior podemos disponer además que
+$f^{-1}(U)=V$. Se sigue inmediatamente que $V\subset X'$, lo que
+termina la demostración.
+\end{proof}
+
+La proposición siguiente fue demostrada por Chevalley para esquemas
+algebraicos.
+
+\begin{proposition}[4.4.2]
+\label{III.4.4.2}
+Sea $Y$ un esquema localmente noetheriano y sea $f:X\to Y$ un
+morfismo. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[{\rm a)}] $f$ es finito;
+  \item[{\rm b)}] $f$ es afín y propio;
+  \item[{\rm c)}] $f$ es propio y, para todo $y\in Y$, el conjunto
+    $f^{-1}(y)$ es finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La condición~a) implica b) por \sref[II]{II.6.1.2} y
+\sref[II]{II.6.1.11}. Si $f$ es propio y afín, también lo es
+\[
+  f^{-1}(y)\longrightarrow\Spec(\kres(y))
+\]
+\sref[II]{II.1.6.2}, \sref[II]{II.5.4.2}. El teorema de finitud
+\sref{III.3.2.1}, aplicado al haz estructural de $f^{-1}(y)$, muestra
+que $f^{-1}(y)=\Spec(A)$ para una $\kres(y)$-álgebra finita $A$. Así,
+$f^{-1}(y)$ es un conjunto finito \sref[II]{II.6.1.7}, y b) implica
+c).
+
+Por último, si se cumple c), la fibra $f^{-1}(y)$ es un esquema
+algebraico sobre $\kres(y)$ cuyo conjunto subyacente es finito y es,
+por tanto, discreto \sref[I]{I.6.4.4}. Con la notación de
+\sref{III.4.4.1}, tenemos $X'=X$, luego
+$f':X\to Y'$ es un isomorfismo. Como $g$ es finito, c) implica a).
+\end{proof}
+
+\begin{theorem}[4.4.3]
+\label{III.4.4.3}
+\textnormal{(``Teorema principal'' de Zariski).}
+Sea $Y$ un esquema noetheriano, sea $f:X\to Y$ un morfismo
+cuasiproyectivo, y sea $X'$ el conjunto de puntos $x\in X$ que están
+aislados en su fibra $f^{-1}(f(x))$. Entonces $X'$ es abierto en $X$,
+y el subesquema inducido por $X$ sobre $X'$ es isomorfo a un
+subesquema inducido sobre un subconjunto abierto de un $Y$-esquema
+$Y'$ finito sobre $Y$.
+\end{theorem}
+
+\begin{proof}
+Existe un $Y$-esquema proyectivo $Z$ tal que $X$ es
+$Y$-isomorfo al subesquema inducido sobre un subconjunto abierto de
+$Z$ \sref[II]{II.5.3.2}, \sref[II]{II.5.5.1}. Nos reducimos así al
+caso en que $f$ es proyectivo, luego propio \sref[II]{II.5.5.3}, y el
+teorema se sigue inmediatamente de
+\sref{III.4.4.1}.
+\end{proof}
+
+\begin{remark}[4.4.4]
+\label{III.4.4.4}
+Si $X$ es reducido (respectivamente, si $X$ es irreducible y $X'$ no
+es vacío), puede exigirse en \sref{III.4.4.3} que $Y'$ sea reducido
+(respectivamente, irreducible). En efecto, $Y'$ puede reemplazarse por
+la clausura esquemática $\overline{X'}$ de $X'$ en $Y'$
+\sref[I]{I.9.5.11}, \sref[II]{II.6.1.5}. Si $X'$ es reducido, también
+lo es $\overline{X'}$ \sref[I]{I.9.5.9}; si $X'$ no es vacío y es
+irreducible, entonces $\overline{X'}$ también es irreducible.
+\end{remark}
+
+\begin{corollary}[4.4.5]
+\label{III.4.4.5}
+Sea $Y$ un esquema localmente noetheriano, sea $f:X\to Y$ un
+morfismo de tipo finito, y sea $x$ un punto de $X$ aislado en su fibra
+$f^{-1}(f(x))$. Entonces existe un entorno abierto de $x$ en $X$
+isomorfo a un subconjunto abierto de un $Y$-esquema finito sobre $Y$.
+\end{corollary}
+
+\begin{proof}
+Pongamos $y=f(x)$, sea $U$ un entorno abierto afín de $y$ en $Y$, y
+sea $V$ un entorno abierto afín de $x$ en $X$, contenido en
+$f^{-1}(U)$. Como $Y$ es separado, la inclusión $U\to Y$ es afín
+\sref[II]{II.1.6.3}; y como $V$ es afín sobre $U$ (\emph{ibid.}), la
+restricción de $f$ a $V$ es un morfismo afín $V\to Y$
+\sref[II]{II.1.6.2}. A fortiori, esta restricción es
+cuasiproyectiva, pues es de tipo finito
+\sref[I]{I.6.3.5}, \sref[II]{II.5.3.4}. Solo queda aplicar
+\sref{III.4.4.3} a esta restricción.
+\end{proof}
+
+El Corolario \sref{III.4.4.5} puede enunciarse en el lenguaje del
+álgebra conmutativa como sigue.
+
+\begin{corollary}[4.4.6]
+\label{III.4.4.6}
+Sea $A$ un anillo noetheriano, sea $B$ una $A$-álgebra de tipo
+finito, sea $\mathfrak q$ un ideal primo de $B$, y sea $\mathfrak p$
+su imagen inversa en $A$. Supongamos que $\mathfrak q$ es a la vez
+maximal y minimal en el conjunto de ideales primos de $B$ cuya imagen
+inversa es $\mathfrak p$. Entonces existen un elemento
+$g\in B-\mathfrak q$, una $A$-álgebra finita $A'$, y un elemento
+$f'\in A'$ tales que las $A$-álgebras $B_g$ y $A'_{f'}$ son
+isomorfas.
+\end{corollary}
+
+\begin{proof}
+Apliquemos \sref{III.4.4.5} a $Y=\Spec(A)$ y $X=\Spec(B)$. La
+hipótesis sobre $\mathfrak q$ dice precisamente que $\mathfrak q$
+está aislado en su fibra \sref[I]{I.1.1.7}.
+\end{proof}
+
+La consecuencia siguiente parece menos general.
+
+\oldpage[III]{137}
+
+\begin{corollary}[4.4.7]
+\label{III.4.4.7}
+Sea $A$ un anillo local noetheriano, sea $B$ una $A$-álgebra de tipo
+finito, y sea $\mathfrak n$ un ideal primo de $B$ cuya imagen inversa
+en $A$ es el ideal maximal $\mathfrak m$. Supongamos que $\mathfrak n$
+es maximal en $B$ y minimal en el conjunto de ideales primos de $B$
+cuya imagen inversa es $\mathfrak m$ (lo que significa también que
+$\mathfrak mB$ es $\mathfrak n$-primario). Entonces existen una
+$A$-álgebra finita $A'$ y un ideal maximal $\mathfrak m'$ de $A'$
+(cuya imagen inversa en $A$ es $\mathfrak m$) tales que $B_{\mathfrak
+n}$ es isomorfo, como $A$-álgebra, a $A'_{\mathfrak m'}$.
+\end{corollary}
+
+El caso particular siguiente de \sref{III.4.4.7} se llama también a
+veces el ``teorema principal''.
+
+\begin{corollary}[4.4.8]
+\label{III.4.4.8}
+Bajo las hipótesis de \sref{III.4.4.7}, supongamos además que $A$ y
+$B$ son dominios íntegros con el mismo cuerpo de fracciones $K$.
+Si $A$ es íntegramente cerrado, entonces $A=B$.
+\end{corollary}
+
+\begin{proof}
+La Observación \sref{III.4.4.4} muestra que, al aplicar
+\sref{III.4.4.7}, podemos suponer que $A'$ es un dominio íntegro con
+cuerpo de fracciones $K$. La hipótesis sobre $A$ da entonces
+$A'=A$, luego $B_{\mathfrak n}=A$. Como
+$A\subset B\subset B_{\mathfrak n}$, se sigue que $A=B$.
+\end{proof}
+
+El enunciado \sref{III.4.4.8} es la forma en la que Zariski dio su
+``teorema principal'' (extendido aquí a anillos locales íntegros
+noetherianos arbitrarios).
+
+Los corolarios anteriores eran variantes locales de
+\sref{III.4.4.3}, que es un resultado global. He aquí otra
+consecuencia de naturaleza global.
+
+\begin{corollary}[4.4.9]
+\label{III.4.4.9}
+Sea $Y$ un preesquema íntegro localmente noetheriano, y sea
+$f:X\to Y$ un morfismo separado, de tipo finito y birracional.
+Supongamos además que $Y$ es normal y que toda fibra $f^{-1}(y)$,
+para $y\in Y$, es finita. Entonces $f$ es una inmersión abierta. Si,
+además, $f$ es cerrado (en particular, si $f$ es propio), entonces
+$f$ es un isomorfismo.
+\end{corollary}
+
+\begin{proof}
+Sea $x\in X$ y pongamos $y=f(x)$. Como $f^{-1}(y)$ es un esquema
+algebraico sobre $\kres(y)$, la hipótesis de que es finito implica que
+es discreto \sref[I]{I.6.4.4}. Además, $\sh{O}_y$ es íntegramente
+cerrado, y $\sh{O}_x$ y $\sh{O}_y$ tienen el mismo cuerpo de fracciones
+\sref[I]{I.7.1.5}. Podemos, por tanto, aplicar
+\sref{III.4.4.8}; si $f=(\psi,\theta)$, el homomorfismo
+\[
+  \theta_y^\#:\sh{O}_y\longrightarrow\sh{O}_x
+\]
+es biyectivo. De \sref[I]{I.6.5.4} se sigue que $f$ es un isomorfismo
+local. Como $f$ es separado y $X$ es íntegro, $f$ es una inmersión
+abierta \sref[I]{I.8.2.8}. La última afirmación se sigue del hecho de
+que $f$ es dominante.
+\end{proof}
+
+\begin{proposition}[4.4.10]
+\label{III.4.4.10}
+Sea $Y$ un esquema localmente noetheriano, y sea $f:X\to Y$ un
+morfismo localmente de tipo finito. El conjunto $X'$ de puntos
+$x\in X$ que están aislados en su fibra $f^{-1}(f(x))$ es abierto en
+$X$.
+\end{proposition}
+
+\begin{proof}
+La cuestión es local sobre $X$ e $Y$, por lo que podemos suponer que
+$X$ e $Y$ son afines noetherianos y que $f$ es de tipo finito. El
+morfismo $f$ es entonces afín y de tipo finito, luego
+cuasiproyectivo \sref[II]{II.5.3.4}; basta aplicar
+\sref{III.4.4.3}.
+\end{proof}
+
+\oldpage[III]{138}
+
+\begin{corollary}[4.4.11]
+\label{III.4.4.11}
+Sea $Y$ un esquema localmente noetheriano, y sea $f:X\to Y$ un
+morfismo propio. El conjunto $U$ de puntos $y\in Y$ para los que
+$f^{-1}(y)$ es discreto es abierto en $Y$, y el morfismo restringido
+$f^{-1}(U)\to U$ es finito. En particular, todo morfismo propio
+cuasifinito $X\to Y$ es finito.
+\end{corollary}
+
+\begin{proof}
+El complementario de $U$ en $Y$ es la imagen por $f$ de $X-X'$, que
+es cerrado en $X$ por \sref{III.4.4.10}; como $f$ es una aplicación
+cerrada, $U$ es abierto. Además, \sref[II]{II.6.2.2} muestra que
+$f^{-1}(y)$ es finita para todo $y\in U$. Como el morfismo restringido
+$f^{-1}(U)\to U$ es propio \sref[II]{II.5.4.1}, es finito por
+\sref{III.4.4.2}.
+\end{proof}
+
+\begin{remark}[4.4.12]
+\label{III.4.4.12}
+\emph{(i)}
+Como se anunció en \sref[II]{II.6.2.7}, demostraremos en el capítulo~V
+que, si $Y$ es localmente noetheriano, todo morfismo separado
+cuasifinito $f:X\to Y$ es cuasiafín, luego cuasiproyectivo. Se seguirá
+que la conclusión del teorema principal \sref{III.4.4.3} sigue siendo
+válida cuando solo se supone que $f$ es separado y de tipo finito.
+En efecto, \sref{III.4.4.10} muestra que $X'$ es abierto en $X$; y
+como $X$ es localmente noetheriano, la restricción de $f$ a $X'$ sigue
+siendo de tipo finito \sref[I]{I.6.3.5}, luego cuasifinita por la
+definición de $X'$, y claramente separada. Podemos, por tanto, aplicar
+\sref{III.4.4.3} a esta restricción.
+
+\emph{(ii)}
+En el capítulo~IV daremos una demostración más elemental de
+\sref{III.4.4.10}, utilizando la teoría de la dimensión.
+\end{remark}
+
+
+\subsection{Completaciones de módulos de homomorfismos}
+\label{subsection:III.4.5}
+
+\begin{proposition}[4.5.1]
+\label{III.4.5.1}
+Sea $A$ un anillo noetheriano, sea $\mathfrak J$ un ideal de $A$, sea
+$X$ un $A$-esquema de tipo finito, y sean $\sh{F}$ y $\sh{G}$ dos
+$\sh{O}_X$-módulos coherentes cuyos soportes tienen intersección
+propia sobre $Y=\Spec(A)$ \sref[II]{II.5.4.10}. Entonces, para todo
+entero $n\geq0$,
+\[
+  \Ext^n_{\sh{O}_X}(X;\sh{F},\sh{G})
+\]
+es un $A$-módulo finito, y su completación separada para la topología
+$\mathfrak J$-preádica se identifica canónicamente, con la notación de
+\sref{III.4.1.7}, con
+\[
+  \Ext^n_{\sh{O}_{\hat{X}}}
+    (\hat{X};\hat{\sh{F}},\hat{\sh{G}}).
+\]
+\end{proposition}
+
+\begin{proof}
+Sabemos por (T, 4.2) que existe una sucesión espectral birregular
+$\mathrm{E}(\sh{F},\sh{G})$ cuyo término límite es
+\[
+  \Ext_{\sh{O}_X}(X;\sh{F},\sh{G})
+\]
+y cuyos términos $\mathrm{E}_2$ son
+\[
+  \mathrm{E}_2^{pq}
+  =\HH^p\bigl(X,\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})\bigr).
+\]
+El $\sh{O}_X$-módulo
+$\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})$ es coherente
+\sref[0]{0.12.3.3}; su soporte está contenido en la intersección de
+los soportes de $\sh{F}$ y $\sh{G}$ (T, 4.2.2) y, en consecuencia, es
+propio sobre $Y$ \sref[II]{II.5.4.10}. De \sref{III.3.2.4} se sigue
+que los $\mathrm{E}_2^{pq}$ son $A$-módulos finitos, y después, de
+\sref[0]{0.11.1.8}, que lo mismo ocurre con todo término
+$\mathrm{E}_r^{pq}$ de la sucesión espectral y con su término límite.
+
+Por otra parte, si $i:\hat{X}\to X$ es el morfismo canónico, entonces
+$\hat{\sh{F}}$ y $\hat{\sh{G}}$ se identifican canónicamente con
+$i^*(\sh{F})$ e $i^*(\sh{G})$, y $i$ es plano
+\sref[I]{I.10.8.8}, \sref[I]{I.10.8.9}. Para todo $q\geq0$ existe,
+por tanto, un $i$-morfismo canónico
+\[
+  u_q:\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})
+  \longrightarrow
+  \shExt^q_{\sh{O}_{\hat{X}}}
+    (\hat{\sh{F}},\hat{\sh{G}})
+\]
+\sref[0]{0.12.3.4}, y el $\sh{O}_{\hat{X}}$-homomorfismo
+correspondiente
+\[
+  u_q^\#:
+  i^*\bigl(\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})\bigr)
+  \longrightarrow
+  \shExt^q_{\sh{O}_{\hat{X}}}
+    (\hat{\sh{F}},\hat{\sh{G}})
+\]
+es un isomorfismo \sref[0]{0.12.3.5}. En otros términos,
+\sref[I]{I.10.8.8} identifica
+\[
+  \shExt^q_{\sh{O}_{\hat{X}}}
+    (\hat{\sh{F}},\hat{\sh{G}})
+\]
+canónicamente con la completación de
+$\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})$, con la notación de
+\sref{III.4.1.7}.
+
+El teorema de comparación \sref{III.4.1.10} muestra ahora, para todo
+$p\geq0$, que
+\[
+  \HH^p\bigl(\hat{X},
+    \shExt^q_{\sh{O}_{\hat{X}}}
+      (\hat{\sh{F}},\hat{\sh{G}})\bigr)
+\]
+se identifica canónicamente con la completación separada, para la
+topología $\mathfrak J$-preádica, de
+\[
+  \HH^p\bigl(X,\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})\bigr).
+\]
+
+\oldpage[III]{139}
+
+Denotemos por $\mathrm{E}(\hat{\sh{F}},\hat{\sh{G}})$ la sucesión
+espectral birregular de (T, 4.2) asociada a $\hat{\sh{F}}$ y
+$\hat{\sh{G}}$. Si $\hat{A}$ es la completación separada de $A$ para
+la topología $\mathfrak J$-preádica, entonces, salvo isomorfismo
+canónico,
+\[
+  \mathrm{E}_2^{pq}(\hat{\sh{F}},\hat{\sh{G}})
+  =
+  \mathrm{E}_2^{pq}(\sh{F},\sh{G})\otimes_A\hat{A}
+\]
+\sref[0]{0.7.3.3}.
+
+El morfismo plano $i$ define un homomorfismo canónico de sucesiones
+espectrales
+\[
+  \varphi:\mathrm{E}(\sh{F},\sh{G})
+  \longrightarrow
+  \mathrm{E}(\hat{\sh{F}},\hat{\sh{G}})
+  =
+  \mathrm{E}(i^*(\sh{F}),i^*(\sh{G})).
+\]
+Sobre los términos $\mathrm{E}_2$ y sobre el término límite,
+respectivamente, este es el homomorfismo
+\[
+  \varphi_2^{pq}:
+  \HH^p\bigl(X,\shExt^q_{\sh{O}_X}(\sh{F},\sh{G})\bigr)
+  \longrightarrow
+  \HH^p\bigl(\hat{X},
+    \shExt^q_{\sh{O}_{\hat{X}}}
+      (\hat{\sh{F}},\hat{\sh{G}})\bigr)
+\]
+y el homomorfismo
+\[
+  \varphi^n:
+  \Ext^n_{\sh{O}_X}(X;\sh{F},\sh{G})
+  \longrightarrow
+  \Ext^n_{\sh{O}_{\hat{X}}}
+    (\hat{X};\hat{\sh{F}},\hat{\sh{G}}),
+\]
+deducidos de $u_q$ y $u_0$, respectivamente, por funtorialidad
+\sref[0]{0.12.3.4}.
+
+Tras tensorizar con $\hat{A}$, los $\varphi_r^{pq}$ y
+$\varphi^n$ dan homomorfismos de $\hat{A}$-módulos
+\[
+  \psi_r^{pq}:
+  \mathrm{E}_r^{pq}(\sh{F},\sh{G})\otimes_A\hat{A}
+  \longrightarrow
+  \mathrm{E}_r^{pq}(\hat{\sh{F}},\hat{\sh{G}})
+\]
+y
+\[
+  \psi^n:
+  \Ext^n_{\sh{O}_X}(X;\sh{F},\sh{G})\otimes_A\hat{A}
+  \longrightarrow
+  \Ext^n_{\sh{O}_{\hat{X}}}
+    (\hat{X};\hat{\sh{F}},\hat{\sh{G}}).
+\]
+Como $\hat{A}$ es un $A$-módulo plano \sref[0]{0.7.3.3}, los
+$\hat{A}$-módulos
+\[
+  \mathrm{E}_r^{pq}(\sh{F},\sh{G})\otimes_A\hat{A}
+\]
+forman una sucesión espectral birregular cuyo término límite es
+\[
+  \Ext^n_{\sh{O}_X}(X;\sh{F},\sh{G})\otimes_A\hat{A},
+\]
+y los $\psi_r^{pq}$ y $\psi^n$ forman un morfismo de sucesiones
+espectrales. Como los $\psi_2^{pq}$ son isomorfismos, lo mismo ocurre
+con los $\psi^n$ \sref[0]{0.11.1.5}.
+\end{proof}
+
+\begin{corollary}[4.5.2]
+\label{III.4.5.2}
+Bajo las hipótesis de \sref{III.4.5.1}, supongamos además que $A$ es
+un anillo noetheriano $\mathfrak J$-ádico. Entonces, para todo entero
+$n\geq0$,
+\[
+  \Ext^n_{\sh{O}_X}(X;\sh{F},\sh{G})
+  \isoto
+  \Ext^n_{\sh{O}_{\hat{X}}}
+    (\hat{X};\hat{\sh{F}},\hat{\sh{G}})
+\]
+canónicamente.
+\end{corollary}
+
+\begin{proof}
+El $A$-módulo finito
+$\Ext^n_{\sh{O}_X}(X;\sh{F},\sh{G})$ está separado y completo para la
+topología $\mathfrak J$-preádica \sref[0]{0.7.3.6}.
+\end{proof}
+
+El caso particular $n=0$ de \sref{III.4.5.1} puede enunciarse como
+sigue.
+
+\begin{corollary}[4.5.3]
+\label{III.4.5.3}
+Bajo las hipótesis de \sref{III.4.5.1}, para todo homomorfismo
+$u:\sh{F}\to\sh{G}$, denotemos por
+$\hat{u}:\hat{\sh{F}}\to\hat{\sh{G}}$ el homomorfismo completado
+\sref[I]{I.10.8.4}. Existe un isomorfismo canónico
+\[
+\label{III.4.5.3.1}
+  \left(\Hom_{\sh{O}_X}(\sh{F},\sh{G})\right)^\wedge
+  \isoto
+  \Hom_{\sh{O}_{\hat{X}}}(\hat{\sh{F}},\hat{\sh{G}}),
+  \tag{4.5.3.1}
+\]
+donde el miembro izquierdo es la completación separada, para la
+topología $\mathfrak J$-preádica, del $A$-módulo
+$\Hom_{\sh{O}_X}(\sh{F},\sh{G})$. Este isomorfismo se obtiene pasando
+a las completaciones separadas en el homomorfismo
+$u\mapsto\hat{u}$.
+\end{corollary}
+
+
+\subsection{Relaciones entre morfismos formales y morfismos ordinarios}
+\label{subsection:III.4.6}
+
+\begin{proposition}[4.6.1]
+\label{III.4.6.1}
+Sean $Y$ un esquema localmente noetheriano, $f:X\to Y$ un
+morfismo propio, $\sh{F}$ un $\sh{O}_X$-módulo coherente que es
+plano sobre $Y$, e $y\in Y$. Supongamos que, para algún entero
+$n$,
+\[
+  \HH^n\bigl(f^{-1}(y),
+    \sh{F}\otimes_{\sh{O}_Y}\kres(y)\bigr)=0.
+\]
+Entonces existe un entorno $U$ de $y$ en $Y$ tal que
+\[
+  \RR^n f_*(\sh{F})|U=0,
+\]
+y, para todo entero $p\geq0$, el homomorfismo canónico
+\[
+  \bigl(\RR^{n-1}f_*(\sh{F})\bigr)_y
+  \longrightarrow
+  \HH^{n-1}\bigl(f^{-1}(y),
+    \sh{F}\otimes_{\sh{O}_Y}
+      (\sh{O}_y/\mathfrak m_y^{p+1})\bigr)
+\]
+\eqref{III.4.2.1.1} es sobreyectivo.
+\end{proposition}
+
+\begin{proof}
+El $\sh{O}_Y$-módulo $\RR^n f_*(\sh{F})$ es coherente
+\sref{III.3.2.1}; por tanto, la primera afirmación se seguirá una vez que probemos
+\[
+  \bigl(\RR^n f_*(\sh{F})\bigr)_y=0
+\]
+\sref[0]{0.5.2.2}. Por \sref{III.4.2.1}, basta probar que
+\[
+  \HH^n\bigl(f^{-1}(y),
+    \sh{F}\otimes_{\sh{O}_Y}
+      (\sh{O}_y/\mathfrak m_y^{p+1})\bigr)=0
+\]
+para todo $p$. Esto es cierto por hipótesis para $p=0$; procedemos por
+inducción sobre $p$.
+
+Pongamos
+\[
+  X_p=X\times_Y
+    \Spec(\sh{O}_y/\mathfrak m_y^{p+1}).
+\]
+Entonces $X_{p-1}$ es un subesquema cerrado de $X_p$ con el mismo
+espacio subyacente \sref[I]{I.3.6.1}. La hipótesis de inducción
+\[
+  \HH^n\bigl(X_{p-1},
+    \sh{F}\otimes_{\sh{O}_Y}
+      (\sh{O}_y/\mathfrak m_y^p)\bigr)=0
+\]
+da, por tanto,
+\[
+  \HH^n\bigl(X_p,
+    \sh{F}\otimes_{\sh{O}_Y}
+      (\sh{O}_y/\mathfrak m_y^p)\bigr)=0.
+\]
+Por otra parte, la sucesión exacta de $\sh{O}_{X_p}$-módulos
+\[
+  0\longrightarrow
+  \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}
+  \longrightarrow
+  \sh{F}/\mathfrak m_y^{p+1}\sh{F}
+  \longrightarrow
+  \sh{F}/\mathfrak m_y^p\sh{F}
+  \longrightarrow0
+\]
+da la sucesión exacta de cohomología
+\[
+  \HH^n\bigl(X_p,
+    \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}\bigr)
+  \longrightarrow
+  \HH^n\bigl(X_p,\sh{F}/\mathfrak m_y^{p+1}\sh{F}\bigr)
+  \longrightarrow
+  \HH^n\bigl(X_p,\sh{F}/\mathfrak m_y^p\sh{F}\bigr).
+\]
+Basta, pues, demostrar que
+\[
+\label{III.4.6.1.1}
+  \HH^n\bigl(X_p,
+    \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}\bigr)=0.
+  \tag{4.6.1.1}
+\]
+En efecto, el término central será entonces un submódulo del último término,
+que es cero por la hipótesis de inducción.
+
+\oldpage[III]{140}
+
+La fibra
+\[
+  Z=f^{-1}(y)=X\times_Y\Spec(\kres(y))
+\]
+es un subesquema cerrado de $X_p$, y
+$\mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}$ es anulado por
+$\mathfrak m_y$. Por tanto, puede considerarse como un
+$\sh{O}_Z$-módulo, y
+\[
+  \HH^n\bigl(Z,
+    \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}\bigr)
+  =
+  \HH^n\bigl(X_p,
+    \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}\bigr).
+\]
+Probaremos ahora que el $\sh{O}_Z$-homomorfismo canónico
+\[
+\label{III.4.6.1.2}
+  (\sh{F}/\mathfrak m_y\sh{F})
+    \otimes_{\kres(y)}
+      (\mathfrak m_y^p/\mathfrak m_y^{p+1})
+  \longrightarrow
+  \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}
+  \tag{4.6.1.2}
+\]
+es biyectivo. Una vez establecido esto, el hecho de que
+$\mathfrak m_y^p/\mathfrak m_y^{p+1}$ sea un
+$\kres(y)$-módulo libre da
+\[
+\begin{split}
+  \HH^n\bigl(Z,
+    \mathfrak m_y^p\sh{F}/\mathfrak m_y^{p+1}\sh{F}\bigr)
+  &=
+  \HH^n\bigl(Z,\sh{F}/\mathfrak m_y\sh{F}\bigr)
+    \otimes_{\kres(y)}
+      (\mathfrak m_y^p/\mathfrak m_y^{p+1})\\
+  &=0
+\end{split}
+\]
+\sref[0]{0.12.2.3}, puesto que
+$\HH^n(Z,\sh{F}/\mathfrak m_y\sh{F})=0$ por hipótesis. Esto prueba
+\eqref{III.4.6.1.1}.
+
+Para terminar la demostración de la primera afirmación, solo queda demostrar
+que \eqref{III.4.6.1.2} es biyectivo. La cuestión es puntual sobre
+$X$, y $\sh{F}_x$ es un $\sh{O}_y$-módulo plano por hipótesis para
+todo $x\in f^{-1}(y)$. Basta, pues, aplicar
+\sref[0]{0.10.2.1}, c), puesto que
+$\sh{F}_x/\mathfrak m_y\sh{F}_x$ es plano sobre el cuerpo
+$\kres(y)=\sh{O}_y/\mathfrak m_y$.
+
+Para la segunda afirmación de \sref{III.4.6.1}, nos reducimos de inmediato, como
+en \sref{III.4.2.1}, al caso en que $Y$ es afín e $y$ es
+cerrado. El mismo argumento demuestra, para todo $k>0$, que
+\[
+\label{III.4.6.1.3}
+  \HH^n\bigl(X_{k+1},
+    \mathfrak m_y^k\sh{F}/
+      \mathfrak m_y^{k+p+1}\sh{F}\bigr)=0.
+  \tag{4.6.1.3}
+\]
+
+\oldpage[III]{141}
+
+De \sref{III.4.2.1} se sigue que
+\[
+\label{III.4.6.1.4}
+  \bigl(\RR^n f_*(\mathfrak m_y^k\sh{F})\bigr)_y=0.
+  \tag{4.6.1.4}
+\]
+La sucesión exacta de cohomología da ahora la exactitud de
+\[
+  \bigl(\RR^{n-1}f_*(\sh{F})\bigr)_y
+  \longrightarrow
+  \bigl(\RR^{n-1}f_*
+    (\sh{F}/\mathfrak m_y^p\sh{F})\bigr)_y
+  \longrightarrow
+  \bigl(\RR^n f_*(\mathfrak m_y^p\sh{F})\bigr)_y=0.
+\]
+Como $y$ es cerrado e $Y$ es afín, tenemos
+\sref{III.1.4.11}
+\[
+  \RR^{n-1}f_*(\sh{F}/\mathfrak m_y^p\sh{F})
+  =
+  \bigl(\HH^{n-1}
+    (X,\sh{F}/\mathfrak m_y^p\sh{F})\bigr)^{\sim}
+  =
+  \bigl(\HH^{n-1}
+    (f^{-1}(y),\sh{F}/\mathfrak m_y^p\sh{F})\bigr)^{\sim}
+\]
+(G, II, 4.9.1). El módulo
+\[
+  \HH^{n-1}
+    (f^{-1}(y),\sh{F}/\mathfrak m_y^p\sh{F})
+\]
+es un $\sh{O}_y/\mathfrak m_y^p$-módulo, y por tanto
+\[
+  \bigl(\RR^{n-1}f_*
+    (\sh{F}/\mathfrak m_y^p\sh{F})\bigr)_y
+  =
+  \HH^{n-1}
+    (f^{-1}(y),\sh{F}/\mathfrak m_y^p\sh{F}).
+\]
+Esto termina la demostración.
+\end{proof}
+
+\begin{corollary}[4.6.2]
+\label{III.4.6.2}
+Sean $Y$ un esquema localmente noetheriano, $f:X\to Y$ un
+morfismo propio y plano, $\sh{F}$ y $\sh{G}$ dos
+$\sh{O}_X$-módulos localmente libres, e $y$ un punto de $Y$. Pongamos
+\[
+  X_y=f^{-1}(y)=X\times_Y\Spec(\kres(y)),\qquad
+  \sh{F}_y=\sh{F}\otimes_{\sh{O}_Y}\kres(y),\qquad
+  \sh{G}_y=\sh{G}\otimes_{\sh{O}_Y}\kres(y),
+\]
+y supongamos que
+\[
+\label{III.4.6.2.1}
+  \HH^1\bigl(
+    X_y,\shHom_{\sh{O}_{X_y}}(\sh{F}_y,\sh{G}_y)
+  \bigr)=0.
+  \tag{4.6.2.1}
+\]
+Entonces, para todo homomorfismo $u_0:\sh{F}_y\to\sh{G}_y$, existen
+un entorno abierto $U$ de $y$ en $Y$ y un homomorfismo
+\[
+  u:\sh{F}|_{f^{-1}(U)}\longrightarrow
+    \sh{G}|_{f^{-1}(U)}
+\]
+tal que $u_0=u\otimes1$.
+\end{corollary}
+
+\begin{proof}
+La hipótesis nos permite aplicar \sref{III.4.6.1}, con $n=1$
+y $p=0$, al $\sh{O}_X$-módulo coherente
+\[
+  \sh{H}=\shHom_{\sh{O}_X}(\sh{F},\sh{G}).
+\]
+En efecto, $\sh{H}$ es localmente libre y, por tanto, con mayor razón, plano sobre
+$Y$, mientras que el $\sh{O}_{X_y}$-módulo
+$\sh{H}\otimes_{\sh{O}_Y}\kres(y)$ se identifica con
+$\shHom_{\sh{O}_{X_y}}(\sh{F}_y,\sh{G}_y)$
+\sref[0]{0.6.2.2}. Podemos suponer que $Y=\Spec(A)$ es afín.
+Entonces \sref{III.1.4.11} da
+\[
+  \RR^0f_*(\sh{H})
+  =
+  \bigl(\Hom_{\sh{O}_X}(\sh{F},\sh{G})\bigr)^{\sim},
+\]
+y, en consecuencia,
+\[
+  \bigl(\RR^0f_*(\sh{H})\bigr)_y
+  =
+  \Hom_{\sh{O}_X}(\sh{F},\sh{G})
+    \otimes_A\sh{O}_y.
+\]
+Por \sref{III.4.6.1}, el homomorfismo canónico
+\[
+  \Hom_{\sh{O}_X}(\sh{F},\sh{G})
+    \otimes_A\sh{O}_y
+  \longrightarrow
+  \Hom_{\sh{O}_{X_y}}(\sh{F}_y,\sh{G}_y)
+\]
+es sobreyectivo. Esto prueba el corolario, puesto que todo elemento del
+módulo de la izquierda puede escribirse como $u\otimes(1/s)$, donde
+$s\in A\setminus\mathfrak m_y$.
+\end{proof}
+
+\begin{corollary}[4.6.3]
+\label{III.4.6.3}
+Bajo las hipótesis de \sref{III.4.6.2}, si $u_0$ es inyectivo
+(respectivamente sobreyectivo, biyectivo), se puede elegir $u$
+inyectivo (respectivamente sobreyectivo, biyectivo).
+\end{corollary}
+
+\begin{proof}
+Podemos restringirnos al caso $U=Y$. Basta probar
+que, si $u_0$ es inyectivo (respectivamente sobreyectivo), entonces
+\[
+  \Ker u_x=0
+  \quad\text{(respectivamente }\Coker u_x=0\text{)}
+\]
+para todo $x\in f^{-1}(y)$. En efecto, $\Ker u$ y $\Coker u$ son
+$\sh{O}_X$-módulos coherentes \sref[0]{0.5.3.4}; por tanto, existe un
+entorno $V$ de $f^{-1}(y)$ en $X$ sobre el cual la restricción de
+$\Ker u$ (respectivamente $\Coker u$) es cero \sref[0]{0.5.2.2}.
+Como $f$ es cerrado, existe un entorno abierto
+$U'\subset U$ de $y$ tal que $f^{-1}(U')\subset V$, lo que prueba
+la afirmación después de sustituir $U$ por $U'$.
+
+\oldpage[III]{142}
+
+Por hipótesis,
+\[
+  u_x\otimes1:
+  \sh{F}_x\otimes_{\sh{O}_y}\kres(y)
+  \longrightarrow
+  \sh{G}_x\otimes_{\sh{O}_y}\kres(y)
+\]
+es inyectivo (respectivamente sobreyectivo), $\sh{F}_x$ y $\sh{G}_x$
+son $\sh{O}_x$-módulos libres finitos, y $\sh{O}_x$ es plano sobre
+$\sh{O}_y$. Si $u_x\otimes1$ es inyectivo, la inyectividad de $u_x$
+se sigue de \sref[0]{0.10.2.4}. Si $u_x\otimes1$ es sobreyectivo,
+entonces, con mayor razón, el homomorfismo inducido
+\[
+  \sh{F}_x/\mathfrak m_x\sh{F}_x
+  \longrightarrow
+  \sh{G}_x/\mathfrak m_x\sh{G}_x
+\]
+es sobreyectivo. Como $\sh{G}_x$ es un $\sh{O}_x$-módulo finito y
+$\sh{O}_x$ es un anillo local de ideal maximal $\mathfrak m_x$, la
+conclusión se sigue del lema de Nakayama (Bourbaki,
+\emph{Alg\`ebre}, cap.~VIII, \S\,6, n.º~3, cor.~4 de la prop.~6).
+\end{proof}
+
+\begin{corollary}[4.6.4]
+\label{III.4.6.4}
+Sean $Y$ un esquema localmente noetheriano, $f:X\to Y$ un
+morfismo propio y plano, e $y$ un punto de $Y$, y pongamos
+$X_y=X\times_Y\Spec(\kres(y))$. Sea $\sh{E}_0$ un
+$\sh{O}_{X_y}$-módulo localmente libre tal que
+\[
+\label{III.4.6.4.1}
+  \HH^1\bigl(
+    X_y,\shHom_{\sh{O}_{X_y}}(\sh{E}_0,\sh{E}_0)
+  \bigr)=0.
+  \tag{4.6.4.1}
+\]
+Sean $\sh{F}$ y $\sh{G}$ dos $\sh{O}_X$-módulos localmente libres
+tales que $\sh{F}_y$ y $\sh{G}_y$, con la notación de
+\sref{III.4.6.2}, son isomorfos a $\sh{E}_0$. Entonces existe un
+entorno abierto $U$ de $y$ tal que
+$\sh{F}|_{f^{-1}(U)}$ y $\sh{G}|_{f^{-1}(U)}$ son isomorfos.
+\end{corollary}
+
+\begin{corollary}[4.6.5]
+\label{III.4.6.5}
+Bajo las hipótesis de \sref{III.4.6.4} sobre $f$, $X$ e $Y$,
+supongamos que
+\[
+  \HH^1(X_y,\sh{O}_{X_y})=0.
+\]
+Si $\sh{F}$ y $\sh{G}$ son dos $\sh{O}_X$-módulos invertibles tales
+que $\sh{F}_y$ y $\sh{G}_y$ son isomorfos, entonces existe un entorno
+abierto $U$ de $y$ tal que $\sh{F}|_{f^{-1}(U)}$ y
+$\sh{G}|_{f^{-1}(U)}$ son isomorfos.
+\end{corollary}
+
+\begin{proof}
+Basta aplicar \sref{III.4.6.4} a los módulos
+$\sh{F}^{-1}\otimes\sh{G}$ y $\sh{O}_X$.
+\end{proof}
+
+\begin{remarks}[4.6.6]
+\label{III.4.6.6}
+\begin{enumerate}
+\item[(i)] Utilizando \sref{III.4.6.5}, estableceremos en el capítulo~V
+  la clasificación de los haces invertibles sobre un fibrado proyectivo
+  anunciada en \sref[II]{II.4.2.7}.
+\item[(ii)] El resultado de \sref{III.4.6.1} aparecerá en \S\,7 como
+  consecuencia de proposiciones más generales.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[4.6.7]
+\label{III.4.6.7}
+Sea $Z$ un esquema localmente noetheriano, y sean $X$ e $Y$
+dos $Z$-esquemas cuyos morfismos estructurales
+\[
+  g:X\longrightarrow Z,\qquad h:Y\longrightarrow Z
+\]
+son propios. Sea $f:X\to Y$ un $Z$-morfismo, sea $z$ un punto
+de $Z$, y pongamos
+\[
+  f_z=f\times_Z1:
+  X\times_Z\Spec(\kres(z))
+  \longrightarrow
+  Y\times_Z\Spec(\kres(z)).
+\]
+\begin{enumerate}
+\item[(i)] Si $f_z$ es finito (respectivamente una inmersión cerrada),
+  existe un entorno abierto $U$ de $z$ tal que el morfismo
+  \[
+    g^{-1}(U)\longrightarrow h^{-1}(U)
+  \]
+  inducido por $f$ es finito (respectivamente una inmersión cerrada).
+\item[(ii)] Supongamos además que $g$ es plano. Si $f_z$ es un
+  isomorfismo, existe un entorno abierto $U$ de $z$ tal que
+  el morfismo $g^{-1}(U)\to h^{-1}(U)$ inducido por $f$ es un
+  isomorfismo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En ambos casos basta probar que, para todo
+$y\in h^{-1}(z)$, existe un entorno $V_y$ de $y$ tal que
+la restricción
+\[
+  f^{-1}(V_y)\longrightarrow V_y
+\]
+de $f$ es finita (respectivamente una inmersión cerrada, un isomorfismo).
+En efecto, si $V$ es la unión de los $V_y$, entonces
+$f^{-1}(V)\to V$ es finito (respectivamente una inmersión cerrada, un
+isomorfismo) \sref[II]{II.6.1.1}, \sref[I]{I.4.2.4}. Como $h$ es
+cerrado, existe un entorno abierto $U$ de $z$ tal que
+$h^{-1}(U)\subset V$, y la proposición se sigue.
+
+\noindent\textit{(i)} Obsérvese primero que $f$ es propio
+\sref[II]{II.5.4.3}. Si
+$f_z$ es finito, el entorno requerido $V_y$, para cada
+$y\in h^{-1}(z)$, existe por \sref{III.4.4.11}.
+
+\oldpage[III]{143}
+
+Para tratar el caso en que $f_z$ es una inmersión cerrada, podemos
+suponer ya, por tanto, que $f$ es finito. Así,
+$X=\Spec(\sh{B})$, donde $\sh{B}$ es una
+$\sh{O}_Y$-álgebra coherente, y $f$ corresponde \sref[II]{II.1.2.7} al
+homomorfismo canónico
+\[
+  u:\sh{O}_Y\longrightarrow\sh{B}.
+\]
+Si, para todo $y\in h^{-1}(z)$, el homomorfismo
+$u_y:\sh{O}_y\to\sh{B}_y$ es sobreyectivo, entonces $u$ es sobreyectivo en
+algún entorno $V_y$ de $y$, puesto que $\Coker u$ es coherente
+\sref[0]{0.5.3.4}, \sref[0]{0.5.2.2}. Ahora el morfismo finito
+$f_z$ corresponde a
+\[
+  v=u\otimes1:
+  \sh{O}_Y\otimes_{\sh{O}_Z}\kres(z)
+  \longrightarrow
+  \sh{B}\otimes_{\sh{O}_Z}\kres(z),
+\]
+y la hipótesis de que $f_z$ es una inmersión cerrada implica que
+\[
+  u_y\otimes1:
+  \sh{O}_y\otimes_{\sh{O}_z}\kres(z)
+  \longrightarrow
+  \sh{B}_y\otimes_{\sh{O}_z}\kres(z)
+\]
+es sobreyectivo. Como $\sh{B}_y$ es un $\sh{O}_y$-módulo finito y
+$\sh{O}_y$ es un anillo local noetheriano, la conclusión se sigue, como
+en \sref{III.4.6.3}, del lema de Nakayama.
+
+\noindent\textit{(ii)} El mismo razonamiento muestra que ahora
+basta probar
+que $u_y$ es biyectivo, sabiendo que $u_y\otimes1$ es biyectivo.
+La inyectividad requerida se sigue del lema siguiente; la sobreyectividad
+se sigue del argumento precedente.
+\end{proof}
+
+\begin{lemma}[4.6.7.1]
+\label{III.4.6.7.1}
+Sean $A$ y $B$ anillos locales noetherianos, sea
+$\rho:A\to B$ un homomorfismo local, y sea $u:N\to M$ un
+homomorfismo de $B$-módulos. Supongamos que $M$ es plano sobre $A$,
+que $N$ es un $B$-módulo finito, y que
+\[
+  u\otimes1:
+  N\otimes_A k\longrightarrow M\otimes_A k,
+\]
+donde $k$ es el cuerpo residual de $A$, es inyectivo. Entonces $N$ es
+plano sobre $A$ y $u$ es inyectivo.
+\end{lemma}
+
+\begin{proof}
+Para probar la primera afirmación, debemos demostrar que, para todo par de
+$A$-módulos finitos $P,Q$ y todo $A$-homomorfismo inyectivo
+$v:P\to Q$, el homomorfismo
+\[
+  1_N\otimes v:N\otimes_A P\longrightarrow N\otimes_A Q
+\]
+es inyectivo. Consideremos el diagrama conmutativo
+\[
+  \xymatrix{
+    N\otimes_A P
+      \ar[r]^-{1_N\otimes v}
+      \ar[d]_{u\otimes1_P}
+      &
+    N\otimes_A Q
+      \ar[d]^{u\otimes1_Q}
+    \\
+    M\otimes_A P
+      \ar[r]_{1_M\otimes v}
+      &
+    M\otimes_A Q .
+  }
+\]
+Como $1_M\otimes v$ es inyectivo por la planitud de $M$, basta
+probar que $u\otimes1_P$ es inyectivo.
+
+Sea $\mathfrak m$ el ideal maximal de $A$. La
+filtración $\mathfrak m$-ádica sobre el $A$-módulo $N\otimes_A P$ es
+también su filtración $\mathfrak mB$-ádica como $B$-módulo. La
+topología definida por esta filtración es separada: $B$ es
+noetheriano, $\mathfrak mB$ está contenido en el radical de $B$, y
+$N\otimes_A P$ es un $B$-módulo finito, puesto que $N$ es finito sobre $B$
+y $P$ es finito sobre $A$ \sref[0]{0.7.3.5}. Basta, por tanto,
+probar que
+\[
+  \operatorname{gr}(u\otimes1_P):
+  \operatorname{gr}_\bullet(N\otimes_A P)
+  \longrightarrow
+  \operatorname{gr}_\bullet(M\otimes_A P)
+\]
+es inyectivo, donde los módulos graduados asociados se toman con
+respecto a las filtraciones $\mathfrak m$-ádicas (Bourbaki,
+\emph{Alg\`ebre commutative}, cap.~III, \S\,2, n.º~8, cor.~1 del
+teor.~1).
+
+Como $M$ es plano sobre $A$, los homomorfismos
+\[
+  M\otimes_A(\mathfrak m^nP)
+  \longrightarrow
+  \mathfrak m^n(M\otimes_A P)
+\]
+son biyectivos. En consecuencia, el homomorfismo canónico
+\[
+  \vphi_M:
+  \operatorname{gr}_0(M)\otimes_A\operatorname{gr}_\bullet(P)
+  \longrightarrow
+  \operatorname{gr}_\bullet(M\otimes_A P)
+\]
+es biyectivo.
+
+\oldpage[III]{144}
+
+Tenemos el diagrama conmutativo
+\[
+  \xymatrix{
+    \operatorname{gr}_0(N)\otimes_A\operatorname{gr}_\bullet(P)
+      \ar[r]^-{\operatorname{gr}_0(u)\otimes1}
+      \ar[d]_{\vphi_N}
+      &
+    \operatorname{gr}_0(M)\otimes_A\operatorname{gr}_\bullet(P)
+      \ar[d]^{\vphi_M}
+    \\
+    \operatorname{gr}_\bullet(N\otimes_A P)
+      \ar[r]_{\operatorname{gr}(u\otimes1)}
+      &
+    \operatorname{gr}_\bullet(M\otimes_A P).
+  }
+\]
+Aquí $\vphi_M$ es biyectivo y $\vphi_N$ es sobreyectivo.
+Además, $\operatorname{gr}_0(u)$ es inyectivo por hipótesis, y
+\[
+\begin{split}
+  \operatorname{gr}_0(N)\otimes_A\operatorname{gr}_\bullet(P)
+    &=
+  \operatorname{gr}_0(N)\otimes_k\operatorname{gr}_\bullet(P),\\
+  \operatorname{gr}_0(M)\otimes_A\operatorname{gr}_\bullet(P)
+    &=
+  \operatorname{gr}_0(M)\otimes_k\operatorname{gr}_\bullet(P).
+\end{split}
+\]
+Así, $\operatorname{gr}_0(u)\otimes1$ también es inyectivo. Del
+diagrama se sigue que $\operatorname{gr}(u\otimes1_P)$ es
+inyectivo, lo que prueba la primera afirmación. La segunda se sigue del
+mismo argumento tomando $P=A$.
+\end{proof}
+
+\begin{proposition}[4.6.8]
+\label{III.4.6.8}
+Sea $Z$ un esquema localmente noetheriano, y sean $X$ e $Y$
+dos $Z$-esquemas cuyos morfismos estructurales
+$g:X\to Z$ y $h:Y\to Z$ son propios. Sea $Z'$ un subconjunto cerrado
+de $Z$, pongamos
+\[
+  X'=g^{-1}(Z'),\qquad Y'=h^{-1}(Z'),
+\]
+y denotemos por
+\[
+  \widehat X=X_{/X'},\qquad
+  \widehat Y=Y_{/Y'},\qquad
+  \widehat Z=Z_{/Z'}
+\]
+las completaciones formales a lo largo de estos subconjuntos cerrados. Sea $f:X\to Y$
+un $Z$-morfismo y sea
+$\widehat f:\widehat X\to\widehat Y$ su extensión a las completaciones
+formales. Para que $\widehat f$ sea un isomorfismo
+(respectivamente una inmersión cerrada), es necesario y suficiente
+que exista un entorno abierto $U$ de $Z'$ tal que el
+morfismo
+\[
+  g^{-1}(U)\longrightarrow h^{-1}(U)
+\]
+inducido por $f$ sea un isomorfismo (respectivamente una inmersión cerrada).
+\end{proposition}
+
+\begin{proof}
+La suficiencia de la condición es inmediata
+\sref[I]{I.10.14.7}. Para probar su necesidad, basta, por el
+mismo razonamiento que en \sref{III.4.6.7}, demostrar que para todo
+$y\in Y'$ existe un entorno abierto $V_y$ de $y$ tal que
+$f^{-1}(V_y)\to V_y$ sea un isomorfismo (respectivamente una
+inmersión cerrada). Quedamos así reducidos al caso
+\[
+  Y=Z=\Spec(A),
+\]
+donde $A$ es noetheriano.
+
+Por hipótesis \sref[I]{I.10.9.1}, \sref[I]{I.10.14.2}, la fibra
+$f^{-1}(y)$ consta de un único punto para todo $y\in Y'$. Como
+$f$ es propio \sref[II]{II.5.4.3}, \sref{III.4.4.11} da un entorno
+abierto $U$ de $y$ para el cual $f^{-1}(U)\to U$ es finito. Podemos,
+por tanto, suponer que $f$ es finito, de modo que
+\[
+  X=\Spec(B),
+\]
+donde $B$ es una $A$-álgebra finita.
+
+Si $Y'=V(\mathfrak J)$, entonces
+\[
+  \widehat Y=\Spf(\widehat A),
+  \qquad
+  \widehat X=\Spf(\widehat B),
+\]
+donde $\widehat A$ es la completación separada de $A$ para la
+topología $\mathfrak J$-ádica, y $\widehat B$ es la completación
+separada de $B$ para la topología $\mathfrak JB$-ádica, o,
+equivalentemente, la completación separada del $A$-módulo $B$ para
+la topología $\mathfrak J$-ádica. Además, $\widehat f$
+corresponde a la extensión continua
+\[
+  \widehat{\vphi}:\widehat A\longrightarrow\widehat B
+\]
+del homomorfismo canónico de anillos $\vphi:A\to B$, y la
+hipótesis es que $\widehat{\vphi}$ es sobreyectivo (respectivamente
+biyectivo) \sref[I]{I.10.14.2}. Pero $\widehat{\vphi}$ es también la
+extensión continua de $\vphi$ considerado como un homomorfismo de
+$A$-módulos. De \sref[I]{I.10.8.14} se sigue que existe un
+entorno abierto $U$ de $Y'$ tal que la restricción a $U$ del
+homomorfismo de $\sh{O}_Y$-módulos
+\[
+  \widetilde{\vphi}:\widetilde A\longrightarrow\widetilde B
+\]
+es sobreyectiva (respectivamente biyectiva), lo que termina la demostración.
+\end{proof}
+
+
+\subsection{Un criterio de amplitud}
+\label{subsection:III.4.7}
+
+\begin{theorem}[4.7.1]
+\label{III.4.7.1}
+Sean $Y$ un esquema localmente noetheriano, $f:X\to Y$ un
+morfismo propio, $\sh{L}$ un $\sh{O}_X$-módulo invertible,
+e $y$ un punto de $Y$. Pongamos
+\[
+  X_y=X\times_Y\Spec(\kres(y))=f^{-1}(y),
+\]
+y sea $g:X_y\to X$ el morfismo canónico. Si
+\[
+  \sh{L}_y=g^*(\sh{L})
+  =\sh{L}\otimes_{\sh{O}_Y}\kres(y)
+\]
+es amplio sobre $X_y$, entonces existe un entorno abierto $U$ de $y$
+en $Y$ tal que $\sh{L}|_{f^{-1}(U)}$ es amplio para la restricción
+de $f$ a $f^{-1}(U)$.
+\end{theorem}
+
+\begin{proof}
+\oldpage[III]{145}
+
+\noindent\textit{I)} Pongamos
+\[
+  Y'=\Spec(\sh{O}_y),\qquad
+  X'=X\times_Y Y',\qquad
+  \sh{L}'=\sh{L}\otimes_{\sh{O}_Y}\sh{O}_y.
+\]
+Probamos primero que $\sh{L}'$ es amplio para $f'=f_{(Y')}$. Tenemos
+el diagrama conmutativo
+\[
+  \xymatrix{
+    X\ar[d]_f
+      &
+    X'\ar[l]\ar[d]_{f'}
+      &
+    X_y\ar[l]\ar[d]_{f_y}
+    \\
+    Y
+      &
+    Y'\ar[l]
+      &
+    \Spec(\kres(y))\ar[l].
+  }
+\]
+Como $f'$ es propio \sref[II]{II.5.4.2}, (iii), y $\sh{O}_y$ es
+noetheriano, \sref[II]{II.4.6.6} muestra que podemos reducirnos al caso
+\[
+  Y=Y'=\Spec(\sh{O}_y),\qquad X=X',
+\]
+suponer que $\sh{L}_y$ es amplio para $f_y$, y probar que $\sh{L}$
+es amplio para $f$. Aplicamos el criterio
+\sref{III.2.6.1}, c), y probamos que para todo
+$\sh{O}_X$-módulo coherente $\sh{F}$ existe un entero $N$ tal que
+\[
+  \HH^1(X,\sh{F}(n))=0
+  \quad\text{para todo }n\geq N,
+  \qquad
+  \sh{F}(n)=\sh{F}\otimes\sh{L}^{\otimes n}.
+\]
+
+El punto $y$ es cerrado en $Y$ y corresponde al ideal maximal
+$\mathfrak m$ de $\sh{O}_y$. Por tanto, $X_y$ es el
+subesquema cerrado de $X$ definido por el ideal coherente
+\[
+  \sh{J}
+  =
+  f^*(\widetilde{\mathfrak m})\sh{O}_X
+  =
+  \mathfrak m\sh{O}_X
+\]
+\sref[I]{I.4.4.5}, y $g$ es su inyección canónica. Consideremos
+la $\kres(y)$-álgebra graduada
+\[
+  S=\operatorname{gr}(\sh{O}_y)
+   =\bigoplus_{j\geq0}
+      \mathfrak m^j/\mathfrak m^{j+1}.
+\]
+Es de tipo finito porque $\sh{O}_y$ es noetheriano. La
+$\sh{O}_X$-álgebra
+\[
+  \sh{S}=f^*(\widetilde S)
+\]
+es cuasicoherente y de tipo finito, y es anulada por
+$\sh{J}$. Así, si $\sh{S}_y=g^*(\sh{S})$, entonces $\sh{S}_y$ es una
+$\sh{O}_{X_y}$-álgebra cuasicoherente de tipo finito y
+\[
+  \sh{S}=g_*(\sh{S}_y).
+\]
+
+Pongamos
+\[
+  \sh{M}_j
+  =
+  \mathfrak m^j\sh{F}/\mathfrak m^{j+1}\sh{F},
+  \qquad
+  \sh{M}
+  =
+  \bigoplus_{j\geq0}\sh{M}_j
+  =
+  \operatorname{gr}(\sh{F}).
+\]
+Como $\sh{F}$ es coherente, $\sh{M}$ es un
+$\sh{S}$-módulo cuasicoherente de tipo finito \sref[0]{0.10.1.1}; también es
+anulado por $\sh{J}$. En consecuencia, si
+\[
+  \sh{M}'_j=g^*(\sh{M}_j),
+  \qquad
+  \sh{M}'=g^*(\sh{M})
+    =\bigoplus_{j\geq0}\sh{M}'_j,
+\]
+entonces $\sh{M}'$ es un $\sh{S}_y$-módulo graduado cuasicoherente de
+tipo finito y $\sh{M}=g_*(\sh{M}')$. Además, poniendo
+\[
+  \sh{M}'_j(n)
+  =
+  \sh{M}'_j\otimes\sh{L}_y^{\otimes n},
+\]
+tenemos $\sh{M}'_j(n)=g^*(\sh{M}_j(n))$.
+
+El morfismo $f_y$ es propio \sref[II]{II.5.4.2}, (iii), y
+$\sh{L}_y$ es amplio; por tanto, $f_y$ es proyectivo
+\sref[II]{II.5.5.4}, \sref[II]{II.4.6.11}. Podemos, pues, aplicar
+\sref{III.2.4.1}, (ii), a
+$\Spec(\kres(y))$, $f_y$, $\sh{S}_y$, $\sh{L}_y$ y $\sh{M}'$.
+Existe un entero $N$ tal que, para $n\geq N$,
+\[
+  \HH^q(X_y,\sh{M}'_j(n))=0
+\]
+para todo $q>0$ y todo $j$. Se sigue que
+\[
+  \HH^q(X,\sh{M}_j(n))=0
+\]
+para todo $q>0$ y todo $j$ (G, II, 4.9.1).
+
+Pongamos ahora
+\[
+  \sh{F}(n)_j
+  =
+  \sh{F}(n)/\mathfrak m^{j+1}\sh{F}(n).
+\]
+Para $j\geq1$ tenemos
+\[
+  \sh{F}(n)_{j-1}
+  =
+  \sh{F}(n)_j/\sh{M}_j(n),
+  \qquad
+  \sh{F}(n)_0=\sh{M}_0(n).
+\]
+Así, $\HH^1(X,\sh{F}(n)_0)=0$, y la sucesión exacta de cohomología
+da, para todo $j\geq1$,
+\[
+  \HH^1(X,\sh{F}(n)_j)
+  =
+  \HH^1(X,\sh{F}(n)_{j-1}).
+\]
+Por tanto, $\HH^1(X,\sh{F}(n)_j)=0$ para todo $j\geq0$. Por
+\sref{III.4.2.1}, se sigue que
+\[
+  \HH^1(X,\sh{F}(n))=0,
+\]
+lo que prueba la afirmación.
+
+\oldpage[III]{146}
+
+\noindent\textit{II)} Volvamos a la notación del comienzo de
+la demostración. Podemos suponer que $Y=\Spec(A)$ es afín. Como
+$f'$ es de tipo finito y $\sh{L}'$ es amplio para $f'$, existe un
+entero $m>0$ tal que $\sh{L}'^{\otimes m}$ es muy amplio para
+$f'$ \sref[II]{II.4.6.11}. Sustituyendo $\sh{L}$ por
+$\sh{L}^{\otimes m}$, basta considerar el caso en que
+$\sh{L}'$ es muy amplio para $f'$ y probar que
+$\sh{L}|_{f^{-1}(U)}$ es muy amplio para la restricción de $f$.
+
+Como $f'$ es propio, existe, para un entero adecuado $r>0$, una
+$Y'$-inmersión cerrada
+\[
+  j:X'\longrightarrow P=\bb{P}_{Y'}^r
+\]
+tal que $\sh{L}'\simeq j^*(\sh{O}_P(1))$
+\sref[II]{II.5.5.4}, (ii). Esta inmersión cerrada corresponde
+canónicamente a un $\sh{O}_{X'}$-homomorfismo sobreyectivo
+\[
+  u:\sh{O}_{X'}^{r+1}\longrightarrow\sh{L}'
+\]
+\sref[II]{II.4.2.3}, o equivalentemente \sref[0]{0.5.1.1} a
+$r+1$ secciones $s'_i$ $(0\leq i\leq r)$ de $\sh{L}'$ sobre $X'$
+que generan este $\sh{O}_{X'}$-módulo.
+
+Por definición, estas son también secciones de $f'_*(\sh{L}')$ sobre
+$Y'$, y
+\[
+  f'_*(\sh{L}')
+  =
+  f_*(\sh{L})\otimes_{\sh{O}_Y}\sh{O}_{Y'}
+\]
+\sref[0]{0.5.4.10}. Como $Y$ es afín y $\sh{O}_y$ es el
+anillo local de $A$ en el ideal primo $\mathfrak j_y$, cada $s'_i$
+tiene la forma
+\[
+  s'_i=s''_i/t_i,
+\]
+donde $s''_i$ es una sección de $f_*(\sh{L})$ sobre $Y$ y
+$t_i\in A\setminus\mathfrak j_y$. Se sigue que existen un
+entorno abierto $V$ de $y$ en $Y$ y secciones $s_i$ de
+$f_*(\sh{L})|_V$ tales que $s'_i=s_i/1$ (el espacio $Y'$ está
+contenido en $V$; véase \sref[I]{I.2.4.2}).
+
+Las secciones $s_i$ son secciones de $\sh{L}$ sobre $f^{-1}(V)$ y
+definen, por tanto, un homomorfismo
+\[
+  v:
+  \bigl(\sh{O}_X|_{f^{-1}(V)}\bigr)^{r+1}
+  \longrightarrow
+  \sh{L}|_{f^{-1}(V)}.
+\]
+Por construcción, es sobreyectivo en todo punto de $f^{-1}(y)$.
+Como $\Coker(v)$ es coherente \sref[0]{0.5.3.4}, su soporte es
+cerrado \sref[0]{0.5.2.2}; por tanto, existe un entorno abierto
+$W\subset f^{-1}(V)$ de $f^{-1}(y)$ sobre el cual $v$ es sobreyectivo.
+Como $f$ es cerrado, después de restringir alrededor de $y$ podemos elegir un
+entorno abierto $U\subset V$ con $f^{-1}(U)\subset W$.
+La conclusión se sigue ahora de \sref[II]{II.4.2.3}.
+\end{proof}
+
+
+\subsection{Morfismos finitos de esquemas formales}
+\label{subsection:III.4.8}
+
+\begin{proposition}[4.8.1]
+\label{III.4.8.1}
+Sea $\mathfrak{Y}$ un esquema formal localmente noetheriano,
+$\sh{K}$ un ideal de definición de $\mathfrak{Y}$, y
+$f:\mathfrak{X}\to\mathfrak{Y}$ un morfismo de esquemas formales.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm{a)}] $\mathfrak{X}$ es localmente noetheriano, $f$ es un
+    morfismo ádico \sref[I]{I.10.12.1}, y, si
+    $\sh{J}=f^*(\sh{K})\sh{O}_{\mathfrak{X}}$, el morfismo
+    \[
+      f_0:
+      (\mathfrak{X},\sh{O}_{\mathfrak{X}}/\sh{J})
+      \longrightarrow
+      (\mathfrak{Y},\sh{O}_{\mathfrak{Y}}/\sh{K})
+    \]
+    inducido por $f$ es finito.
+  \item[\rm{b)}] $\mathfrak{X}$ es localmente noetheriano y es el
+    límite inductivo de un sistema inductivo ádico de $(Y_n)$, $(X_n)$,
+    tal que el morfismo $X_0\to Y_0$ es finito.
+  \item[\rm{c)}] Todo punto de $\mathfrak{Y}$ posee un entorno abierto
+    formal afín noetheriano $V$ tal que $f^{-1}(V)$ es
+    un abierto formal afín y
+    $\Gamma(f^{-1}(V),\sh{O}_{\mathfrak{X}})$ es un
+    $\Gamma(V,\sh{O}_{\mathfrak{Y}})$-módulo de tipo finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+De \sref[I]{I.10.12.3} se sigue inmediatamente que \emph{a)} implica
+\emph{b)}. Para ver que \emph{b)} implica \emph{c)}, podemos suponer
+que
+\[
+  \mathfrak{Y}=\Spf(B),\qquad \mathfrak{X}=\Spf(A),
+\]
+donde $B$ es un anillo noetheriano ádico y $\mathfrak{R}$ es un ideal
+de definición de $B$. Por hipótesis, $X_0$ es un esquema afín
+cuyo anillo $A_0$ es un $B/\mathfrak{R}$-módulo de tipo finito
+\sref[II]{II.6.1.3}. Por \sref[I]{I.5.1.9}, cada $X_n$ es un esquema
+afín; si $A_n$ denota su anillo, la condición \emph{b)} implica que,
+para $m\leq n$,
+\[
+  A_m\simeq A_n/\mathfrak{R}^{m+1}A_n.
+\]
+Se sigue que $\mathfrak{X}\simeq\Spf(A)$, donde
+$A=\varprojlim A_n$, y la conclusión se sigue de
+\sref[0]{0.7.2.9}.
+
+Finalmente, para probar que \emph{c)} implica \emph{a)}, podemos restringirnos
+de nuevo al caso
+\[
+  \mathfrak{Y}=\Spf(B),\qquad \mathfrak{X}=\Spf(A),
+\]
+donde $A$ es una $B$-álgebra finita. Como
+$A/\mathfrak{R}A$ es entonces una
+$B/\mathfrak{R}$-álgebra finita, \sref[I]{I.10.10.9} muestra que se
+satisfacen las condiciones de \emph{a)}.
+\end{proof}
+
+\begin{definition}[4.8.2]
+\label{III.4.8.2}
+Cuando se satisfacen las condiciones equivalentes \emph{a)}, \emph{b)} y \emph{c)}
+de \sref{III.4.8.1}, se dice que el morfismo $f$ es
+\emph{finito}; también se dice que $\mathfrak{X}$ es un
+\emph{$\mathfrak{Y}$-esquema formal finito}, o un esquema
+formal \emph{finito sobre $\mathfrak{Y}$}.
+\end{definition}
+
+\begin{proposition}[4.8.3]
+\label{III.4.8.3}
+\begin{enumerate}
+  \item[\rm{(i)}] Una inmersión cerrada de esquemas formales localmente
+    noetherianos es un morfismo finito.
+  \item[\rm{(ii)}] El compuesto de dos morfismos finitos de esquemas formales
+    localmente noetherianos es un morfismo finito.
+  \item[\rm{(iii)}] Sean $\mathfrak{X}$, $\mathfrak{Y}$ y
+    $\mathfrak{S}$ esquemas formales localmente noetherianos,
+    $f:\mathfrak{X}\to\mathfrak{S}$ un morfismo finito, y
+    $g:\mathfrak{Y}\to\mathfrak{S}$ un morfismo. Entonces la proyección
+    \[
+      \mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}
+      \longrightarrow\mathfrak{Y}
+    \]
+    es finita.
+  \item[\rm{(iv)}] Sea $\mathfrak{S}$ un esquema formal localmente
+    noetheriano, y sean $\mathfrak{X}'$ y $\mathfrak{Y}'$
+    esquemas formales localmente noetherianos tales que
+    $\mathfrak{X}'\times_{\mathfrak{S}}\mathfrak{Y}'$ es localmente
+    noetheriano. Si $\mathfrak{X}$ y $\mathfrak{Y}$ son
+    $\mathfrak{S}$-esquemas formales localmente noetherianos y
+    \[
+      f:\mathfrak{X}\to\mathfrak{X}',\qquad
+      g:\mathfrak{Y}\to\mathfrak{Y}'
+    \]
+    son $\mathfrak{S}$-morfismos finitos, entonces
+    $f\times_{\mathfrak{S}}g$ es finito.
+  \item[\rm{(v)}] Sean
+    \[
+      f:\mathfrak{X}\to\mathfrak{Y},\qquad
+      g:\mathfrak{Y}\to\mathfrak{Z}
+    \]
+    morfismos de esquemas formales localmente noetherianos tales que
+    $g$ es de tipo finito y separado. Si $g\circ f$ es finito,
+    entonces $f$ es finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La afirmación \emph{(i)} es inmediata. Utilizando el criterio \emph{a)} de
+\sref{III.4.8.1}, las demás afirmaciones se reducen de inmediato a las
+proposiciones correspondientes para morfismos de esquemas ordinarios
+\sref[II]{II.6.1.5}. Dejamos los detalles al lector, siguiendo
+el modelo de \sref[I]{I.10.13.5}.
+\end{proof}
+
+\begin{corollary}[4.8.4]
+\label{III.4.8.4}
+Bajo las hipótesis de \sref[I]{I.10.9.9}, si $f$ es un morfismo
+finito, también lo es su extensión $\widehat{f}$ a las
+completaciones.
+\end{corollary}
+
+\begin{corollary}[4.8.5]
+\label{III.4.8.5}
+Sea $\mathfrak{X}$ un esquema formal finito sobre
+$\mathfrak{Y}$, y sea
+$f:\mathfrak{X}\to\mathfrak{Y}$ el morfismo estructural. Para
+todo subconjunto abierto $U\subset\mathfrak{Y}$, el esquema formal
+$f^{-1}(U)$ es finito sobre $U$.
+\end{corollary}
+
+\begin{proposition}[4.8.6]
+\label{III.4.8.6}
+Si $f:\mathfrak{X}\to\mathfrak{Y}$ es un morfismo finito de esquemas
+formales localmente noetherianos, entonces
+$f_*(\sh{O}_{\mathfrak{X}})$ es una
+$\sh{O}_{\mathfrak{Y}}$-álgebra coherente.
+\end{proposition}
+
+\begin{proof}
+Podemos considerar $f$ como el límite inductivo de un sistema inductivo
+$(f_n)$ de morfismos $f_n:X_n\to Y_n$. Demostremos que los
+$f_n$ son finitos y que $f_*(\sh{O}_{\mathfrak{X}})$ es
+isomorfo al límite proyectivo de los
+$(f_n)_*(\sh{O}_{X_n})$; esto probará la afirmación
+\sref[I]{I.10.10.5}. Basta restringirse al caso
+\[
+  \mathfrak{Y}=\Spf(B),\qquad \mathfrak{X}=\Spf(A),
+\]
+y observar que, si $\mathfrak{R}$ es un ideal de definición
+de $B$ y $A$ es un $B$-módulo de tipo finito, entonces
+$A/\mathfrak{R}^{n+1}A$ es un módulo de tipo finito sobre
+$B/\mathfrak{R}^{n+1}B$, y $A$ es el límite proyectivo de los
+$A/\mathfrak{R}^{n+1}A$.
+\end{proof}
+
+Recíprocamente:
+
+\begin{proposition}[4.8.7]
+\label{III.4.8.7}
+Sea $\mathfrak{Y}$ un esquema formal localmente noetheriano y
+$\sh{A}$ una $\sh{O}_{\mathfrak{Y}}$-álgebra coherente. Existe
+un esquema formal $\mathfrak{X}$ finito sobre $\mathfrak{Y}$,
+único salvo $\mathfrak{Y}$-isomorfismo único, tal que
+\[
+  f_*(\sh{O}_{\mathfrak{X}})=\sh{A},
+\]
+donde $f:\mathfrak{X}\to\mathfrak{Y}$ es el morfismo estructural.
+\end{proposition}
+
+\begin{proof}
+\oldpage[III]{148}
+Sea $\sh{K}$ un ideal de definición de $\mathfrak{Y}$, y pongamos
+\[
+  Y_n=(\mathfrak{Y},
+       \sh{O}_{\mathfrak{Y}}/\sh{K}^{n+1}),
+  \qquad
+  \sh{A}_n=\sh{A}/\sh{K}^{n+1}\sh{A}.
+\]
+Claramente, $\sh{A}_n$ es una $\sh{O}_{Y_n}$-álgebra finita y, por tanto,
+define un $Y_n$-esquema finito
+\[
+  X_n=\Spec(\sh{A}_n)
+\]
+\sref[II]{II.6.1.3}. Para $m\leq n$, el homomorfismo canónico
+sobreyectivo
+\[
+  h_{mn}:\sh{A}_n\longrightarrow\sh{A}_m
+\]
+define un morfismo $u_{mn}:X_m\to X_n$ para el cual el diagrama
+\[
+  \xymatrix{
+    X_n\ar[d]_{f_n} &
+    X_m\ar[l]_{u_{mn}}\ar[d]^{f_m}\\
+    Y_n &
+    Y_m\ar[l]
+  }
+\]
+es conmutativo, donde $f_n$ denota el morfismo estructural; además,
+identifica $X_m$ con
+$X_n\times_{Y_n}Y_m$, como se sigue de inmediato de
+\sref[II]{II.1.4.6}. El esquema formal $\mathfrak{X}$ obtenido
+como límite inductivo del sistema inductivo $(X_n)$ es, por tanto,
+localmente noetheriano, y su morfismo estructural
+\[
+  f:\mathfrak{X}\longrightarrow\mathfrak{Y},
+\]
+el límite inductivo del sistema $(f_n)$, es finito
+\sref{III.4.8.1} \sref[I]{I.10.12.3.1}. Además, la demostración de
+\sref{III.4.8.6} muestra que
+$f_*(\sh{O}_{\mathfrak{X}})$ es el límite proyectivo de las
+$\sh{A}_n$, y es, por tanto, igual a $\sh{A}$
+\sref[I]{I.10.10.6}. La afirmación de unicidad se sigue del
+resultado más general siguiente.
+\end{proof}
+
+\begin{proposition}[4.8.8]
+\label{III.4.8.8}
+Sea $\mathfrak{Y}$ un esquema formal localmente noetheriano, y
+sean $\mathfrak{X}$ y $\mathfrak{X}'$
+$\mathfrak{Y}$-esquemas formales finitos sobre $\mathfrak{Y}$, con
+morfismos estructurales
+\[
+  f:\mathfrak{X}\to\mathfrak{Y},\qquad
+  f':\mathfrak{X}'\to\mathfrak{Y}.
+\]
+Existe una biyección canónica
+\[
+  \Hom_{\mathfrak{Y}}(\mathfrak{X},\mathfrak{X}')
+  \xrightarrow{\ \sim\ }
+  \Hom_{\sh{O}_{\mathfrak{Y}}}
+  \bigl(f'_*(\sh{O}_{\mathfrak{X}'}),
+        f_*(\sh{O}_{\mathfrak{X}})\bigr)\footnotemark.
+\]
+\footnotetext{La última expresión denota el conjunto de homomorfismos de
+$\sh{O}_{\mathfrak{Y}}$-álgebras
+$f'_*(\sh{O}_{\mathfrak{X}'})\to f_*(\sh{O}_{\mathfrak{X}})$.}
+\end{proposition}
+
+\begin{proof}
+La aplicación $h\mapsto\sh{A}(h)$ se define como en
+\sref[II]{II.1.1.2}. Para probar que es biyectiva, nos reducimos de
+inmediato al caso en que
+$\mathfrak{Y}=\Spf(B)$ es un esquema formal afín noetheriano.
+Entonces
+\[
+  \mathfrak{X}=\Spf(A),\qquad
+  \mathfrak{X}'=\Spf(A'),
+\]
+donde $A$ y $A'$ son $B$-álgebras finitas, y
+\[
+  f_*(\sh{O}_{\mathfrak{X}})=A^\Delta,\qquad
+  f'_*(\sh{O}_{\mathfrak{X}'})=A'^\Delta.
+\]
+La conclusión se sigue de la correspondencia biyectiva entre
+$\mathfrak{Y}$-morfismos
+$\mathfrak{X}\to\mathfrak{X}'$ y homomorfismos continuos de
+$B$-álgebras $A'\to A$ \sref[I]{I.10.2.2}, junto con la
+correspondencia biyectiva entre homomorfismos de $B$-módulos
+$A'\to A$ y homomorfismos de
+$\sh{O}_{\mathfrak{Y}}$-módulos
+$A'^\Delta\to A^\Delta$ \sref[I]{I.10.10.2.3}.
+\end{proof}
+
+\begin{corollary}[4.8.9]
+\label{III.4.8.9}
+Bajo la biyección canónica de \sref{III.4.8.8}, las inmersiones
+cerradas $\mathfrak{X}\to\mathfrak{X}'$ corresponden a
+homomorfismos sobreyectivos de $\sh{O}_{\mathfrak{Y}}$-álgebras
+\[
+  f'_*(\sh{O}_{\mathfrak{X}'})
+  \longrightarrow
+  f_*(\sh{O}_{\mathfrak{X}}).
+\]
+\end{corollary}
+
+\begin{proof}
+La cuestión es local sobre $\mathfrak{Y}$ y, por tanto, se reduce a la
+definición de las inmersiones cerradas de esquemas formales localmente
+noetherianos \sref[I]{I.10.14.2}.
+\end{proof}
+
+\begin{corollary}[4.8.10]
+\label{III.4.8.10}
+Con la notación y las hipótesis de \sref{III.4.8.1}, un morfismo
+ádico $f$ es una inmersión cerrada si y solo si $f_0$ es una
+inmersión cerrada de esquemas ordinarios.
+\end{corollary}
+
+\begin{proof}
+Esto se sigue de inmediato de \sref{III.4.8.9} y del criterio de
+sobreyectividad para un homomorfismo de
+$\sh{O}_{\mathfrak{Y}}$-módulos coherentes \sref[I]{I.10.11.5}.
+\end{proof}
+
+\begin{proposition}[4.8.11]
+\label{III.4.8.11}
+Un morfismo $f:\mathfrak{X}\to\mathfrak{Y}$ de esquemas formales
+localmente noetherianos
+\oldpage[III]{149}
+es finito si y solo si es propio y todas sus fibras
+$f^{-1}(y)$, para $y\in\mathfrak{Y}$, son finitas.
+\end{proposition}
+
+\begin{proof}
+Por las definiciones \sref{III.3.4.1} y \sref{III.4.8.2}, la
+afirmación se reduce inmediatamente a la misma afirmación para $f_0$
+(con la notación de \sref{III.4.8.1}), que es precisamente
+\sref{III.4.4.2}.
+\end{proof}

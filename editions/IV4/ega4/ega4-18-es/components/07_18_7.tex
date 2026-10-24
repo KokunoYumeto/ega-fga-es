@@ -1,0 +1,69 @@
+\subsection{Henselización y anillos excelentes.}
+\label{subsection:IV.18.7}
+
+\begin{env}[18.7.1]
+\label{IV.18.7.1}
+En este número denotaremos por $\mathbf P(Z,k)$ una propiedad de la forma considerada en (7.3.1), suponiendo además que la propiedad $\mathbf Q(A,k)$ satisface la condición siguiente:
+
+Para toda extensión algebraica separable $k'$ de $k$, y toda $k'$-álgebra local noetheriana $A$, la propiedad $\mathbf Q(A,k)$ es \emph{equivalente} a $\mathbf Q(A,k')$.
+
+Es inmediato que todas las propiedades $\mathbf P$ consideradas en (7.3.8) verifican la condición anterior, habida cuenta de que, si $K$ es una extensión finita de $k$, $k'\otimes_k K$ es un producto directo de extensiones algebraicas separables de $K$.
+\end{env}
+
+\oldpage[IV-4]{143}
+
+\begin{proposition}[18.7.2]
+\label{IV.18.7.2}
+Sea $A$ un anillo local noetheriano. Para que ${}^h\!A$ sea un $\mathbf P$-anillo (7.3.13), es necesario y suficiente que $A$ lo sea.
+\end{proposition}
+
+En efecto, en virtud de (18.6.6, (iv)), el completado $\widehat A$ de $A$ es también el completado de ${}^h\!A$ y se tiene, por tanto, $A\subset{}^h\!A\subset\widehat A$. Según (18.6.9), para todo $x\in\Spec(A)$, la fibra en $x$ del morfismo $\Spec({}^h\!A)\to\Spec(A)$ es discreta y finita, y, en cada uno de los puntos $y_i$ de esta fibra, $k(y_i)$ es una extensión algebraica separable de $k(x)$. La fibra formal de $A$ en el punto $x$ es, por tanto, el preesquema \emph{suma} de las fibras formales de ${}^h\!A$ en los puntos $y_i$. La conclusión resulta entonces de la hipótesis formulada sobre $\mathbf P$ en (18.7.1).
+
+\begin{corollary}[18.7.3]
+\label{IV.18.7.3}
+Sea $A$ un anillo local noetheriano. Para que ${}^h\!A$ sea universalmente japonés, es necesario y suficiente que $A$ lo sea.
+\end{corollary}
+
+En efecto, para un anillo local noetheriano $B$, es equivalente decir que $B$ es universalmente japonés o que las fibras formales de $B$ son geométricamente reducidas (7.6.4 y 7.7.1); la conclusión resulta, pues, de (18.7.2).
+
+\begin{corollary}[18.7.4]
+\label{IV.18.7.4}
+Sea $A$ un anillo local noetheriano. Para que las fibras formales de ${}^h\!A$ sean geométricamente regulares, es necesario y suficiente que las de $A$ lo sean.
+\end{corollary}
+
+Es un caso particular de (18.7.2).
+
+\begin{proposition}[18.7.5]
+\label{IV.18.7.5}
+Sea $A$ un anillo local noetheriano. Si $A$ es universalmente catenario (5.6.2) (resp. formalmente catenario (7.1.9), resp. estrictamente formalmente catenario (7.2.6)), lo mismo sucede con ${}^h\!A$.
+\end{proposition}
+
+Con las notaciones de (18.6.4), si $A$ es universalmente catenario, lo mismo sucede con los $A_\alpha$, que son $A$-álgebras esencialmente de tipo finito (5.6.3). Para demostrar que, en este caso, ${}^h\!A$ es universalmente catenario, bastará, pues, establecer el lema siguiente:
+
+\begin{lemma}[18.7.5.1]
+\label{IV.18.7.5.1}
+Sea $(B_\alpha,\varphi_{\beta\alpha})$ un sistema inductivo de anillos noetherianos y supongamos que, para $\alpha\leq\beta$, $\varphi_{\beta\alpha}$ haga de $B_\beta$ un $B_\alpha$-módulo fielmente plano y que $B=\varinjlim B_\alpha$ sea noetheriano. Entonces, si los $B_\alpha$ son catenarios (resp. universalmente catenarios), lo mismo sucede con $B$.
+\end{lemma}
+
+Decir que $B$ es universalmente catenario equivale a decir que $B[T_1,\ldots,T_n]$ es catenario para todo $n$ (5.6.2), y es inmediato que el sistema inductivo $(B_\alpha[T_1,\ldots,T_n])$ verifica las mismas condiciones que $(B_\alpha)$; basta, pues, demostrar que, si los $B_\alpha$ son catenarios, lo mismo sucede con $B$. Si $\mathfrak p_0\supset\mathfrak p_1\supset\cdots\supset\mathfrak p_r$ es una cadena saturada de ideales primos de $B$, las imágenes inversas $\mathfrak p_{0\alpha}\supset\mathfrak p_{1\alpha}\supset\cdots\supset\mathfrak p_{r\alpha}$ de estos ideales en $B_\alpha$ forman una cadena de ideales primos, y basta demostrar que, para $\alpha$ suficientemente grande, esta cadena es saturada. Ahora bien, cada $\mathfrak p_i$ es un ideal de tipo finito, por lo que existe un $\lambda$ tal que, para $\alpha\geq\lambda$, se tenga $\mathfrak p_i=\mathfrak p_{i\alpha}.B$. Se tiene, pues,
+\[
+1=\operatorname{codim}(V(\mathfrak p_i),V(\mathfrak p_{i+1}))
+=\operatorname{codim}(V(\mathfrak p_{i\alpha}),V(\mathfrak p_{i+1,\alpha}))
+\]
+puesto que $B$ es un $B_\alpha$-módulo plano ((6.1.4) y ($0_{\mathrm I}$, 6.2.3)), lo que termina de demostrar el lema.
+
+Supongamos ahora que $A$ es formalmente catenario. Sean $\mathfrak p$ un ideal primo de ${}^h\!A$ y $\mathfrak q$ su imagen inversa en $A$, de modo que $\mathfrak q.{}^h\!A\subset\mathfrak p$, y, por consiguiente, ${}^h\!A/\mathfrak p$ es un anillo cociente de ${}^h\!A/\mathfrak q.{}^h\!A$. Basta, pues, demostrar que ${}^h\!A/\mathfrak q.{}^h\!A$ es formalmente catenario para todo ideal primo $\mathfrak q$ de $A$ (7.1.9), y, como ${}^h\!A/\mathfrak q.{}^h\!A={}^h(A/\mathfrak q)$ por (18.6.8), basta (7.1.11) comprobar que, si $A$ es \emph{íntegro y formalmente catenario}, ${}^h\!A$ es \emph{formalmente equidimensional}. Pero, como el completado de ${}^h\!A$ es igual a $\widehat A$, esto resulta de la hipótesis de que $A$ es formalmente catenario.
+
+\oldpage[IV-4]{144}
+
+Supongamos, por último, que $A$ es estrictamente formalmente catenario; acabamos de ver que ${}^h\!A$ es formalmente catenario, y queda por demostrar que las fibras del morfismo $\Spec(\widehat A)\to\Spec({}^h\!A)$ verifican la propiedad $(S_1)$ (7.2.5, $b)$). Pero esto resulta de la hipótesis sobre $A$ y de (18.7.2), aplicado al caso en que $\mathbf P(Z,k)$ es la propiedad $(S_1)$ para $Z$.
+
+\begin{corollary}[18.7.6]
+\label{IV.18.7.6}
+Si un anillo local noetheriano $A$ es excelente (7.8.2), lo mismo sucede con ${}^h\!A$.
+\end{corollary}
+
+\begin{remark}[18.7.7]
+\label{IV.18.7.7}
+Puede suceder que ${}^h\!A$ sea un anillo local excelente sin que $A$ sea universalmente catenario (ni, por consiguiente, excelente). Para verlo, retomemos el ejemplo del anillo $A$ de (5.6.11), con las mismas notaciones. El anillo $E$ construido en (5.6.11) es excelente cuando $k_0$ es de característica $0$ (7.8.3, (ii) y (iii)); consideremos dos anillos $E_1$, $E_2$ isomorfos a $E$, y «peguemos» $\Spec(E_1)$ y $\Spec(E_2)$ de modo que, si $\mathfrak m_i$ y $\mathfrak m'_i$ son los ideales maximales de $E_i$ ($i=1,2$) correspondientes a $\mathfrak m$ y $\mathfrak m'$, el punto $\mathfrak m_1$ quede «pegado» a $\mathfrak m'_2$ y el punto $\mathfrak m_2$ a $\mathfrak m'_1$; más precisamente, si $\varepsilon_i$ y $\varepsilon'_i$ son los homomorfismos canónicos de $E_i$ sobre $k(\mathfrak m_i)$ y $k(\mathfrak m'_i)$ ($i=1,2$), el esquema obtenido es $\Spec(R)$, donde $R$ es el subanillo de $E_1\times E_2$ formado por los pares $(x_1,x_2)$ tales que $\varepsilon'_2(x_2)=\sigma(\varepsilon_1(x_1))$ y $\varepsilon'_1(x_1)=\sigma(\varepsilon_2(x_2))$. Se comprueba fácilmente (por ejemplo, con ayuda de (17.6.3)) que $R$ es una $C$-álgebra finita y étale, y que hay dos ideales maximales $\mathfrak r_1$, $\mathfrak r_2$ de $R$ sobre el ideal maximal $\mathfrak n$ de $C$, siendo los completados de $R_{\mathfrak r_1}$ y $R_{\mathfrak r_2}$ canónicamente isomorfos al de $A=C_{\mathfrak n}$; $R_{\mathfrak r_1}$ es, pues, una $A$-álgebra estrictamente esencialmente étale y, por consiguiente, su henselizado es igual a ${}^h\!A$. Además, se ha visto (7.8.4, (ii)) que las fibras formales de $A$ son geométricamente regulares, por lo que lo mismo sucede con las de ${}^h\!A$ (18.7.2). Finalmente, el anillo $R$ es universalmente catenario, pues sus cocientes por sus dos ideales primos minimales son isomorfos a $E$, de donde se sigue la conclusión por (5.6.3, (iii)). El anillo $R_{\mathfrak r_1}$ es, pues, excelente y, por consiguiente, lo mismo sucede con ${}^h\!A$ (18.7.6), mientras que $A$ no es universalmente catenario.
+\end{remark}

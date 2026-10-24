@@ -1,0 +1,275 @@
+\subsection{Composición de los pseudomorfismos}
+\label{IV.20.3}
+
+\begin{env}[20.3.1]
+\label{IV.20.3.1}
+Sean $X$, $Y$, $Z$ tres preesquemas, $\omega$ un pseudomorfismo de $X$ en $Y$, y $f:Y\to Z$ un morfismo.
+Es claro que si $U'$, $U''$ son dos abiertos esquemáticamente densos en $X$, y $u':U'\to Y$, $u'':U''\to Y$ son dos morfismos de la clase $\omega$, los morfismos $f\circ u'$ y $f\circ u''$ son equivalentes (para la relación definida en \sref{IV.20.2.1}); por tanto, para todos los morfismos $u$ de la clase $\omega$, los morfismos $f\circ u$ pertenecen a una misma clase de equivalencia, que denotamos $f\circ\omega$ y llamamos el pseudomorfismo de $X$ en $Z$ \emph{compuesto de $f$ y de $\omega$}.
+Se tiene $\operatorname{dom}(f\circ\omega)=\operatorname{dom}(\omega)$.
+Si $g:Z\to T$ es un morfismo, es claro que $g\circ(f\circ\omega)=(g\circ f)\circ\omega$.
+\end{env}
+
+\begin{env}[20.3.2]
+\label{IV.20.3.2}
+Supongamos ahora dado un pseudomorfismo-$S$ $\omega$ de $X$ en $Y$, donde $Y$ es \emph{separado sobre $S$}, de modo que existe un $S$-morfismo $u:\operatorname{dom}_S(\omega)\to Y$ de la clase $\omega$ \sref{IV.20.2.4}.
+Sea $f:X'\to X$ un $S$-morfismo tal que el abierto $V'=f^{-1}(\operatorname{dom}_S(\omega))$ sea esquemáticamente denso en $X'$; entonces se dice que la clase (para la relación de equivalencia de \sref{IV.20.2.1}) del $S$-morfismo $u\circ(f|V')$\footnote{La transcripción francesa imprime $f|U'$, pero el abierto introducido en esta misma frase es $V'=f^{-1}(\operatorname{dom}_S(\omega))$; el testigo inglés mantenido restituye $f|V'$.} (clase que está definida en virtud de la hipótesis anterior) es el pseudomorfismo-$S$ \emph{compuesto de $\omega$ y de $f$}, y se denota $\omega\circ f$; es claro que se tiene
+\[
+\label{IV.20.3.2.1}
+  f^{-1}(\operatorname{dom}_S(\omega))\subset\operatorname{dom}_S(\omega\circ f)
+  \tag{20.3.2.1}
+\]
+
+Para $f:X'\to X$ dado, denotamos por $\operatorname{Ps.hom}_S(X,Y)^f$ el conjunto de los pseudomorfismos-$S$ $\omega$ de $X$ en $Y$ que satisfacen la condición anterior.
+Si $\omega$ es tal pseudomorfismo-$S$, es claro que para todo abierto $V$ de $X$,
+\[
+  f^{-1}(\operatorname{dom}_S(\omega|V))=f^{-1}(V\cap\operatorname{dom}_S(\omega))=f^{-1}(V)\cap f^{-1}(\operatorname{dom}_S(\omega))
+\]
+es esquemáticamente denso en $f^{-1}(V)$; por tanto, si $f^V:f^{-1}(V)\to V$ es la restricción de $f$, el compuesto $(\omega|V)\circ f^V$ está definido y es igual a $(\omega\circ f)|f^{-1}(V)$.
+Se define así una
+\oldpage[IV-4]{238}
+aplicación canónica de restricción $\operatorname{Ps.hom}_S(X,Y)^f\to\operatorname{Ps.hom}_S(V,Y)^{f^V}$, lo que permite definir un \emph{prehaz} de conjuntos $V\mapsto\operatorname{Ps.hom}_S(V,Y)^{f^V}$ sobre $X$, subprehaz de $V\mapsto\operatorname{Ps.hom}_S(V,Y)$, y por tanto un haz de conjuntos asociado que denotamos $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f$.
+Además, para todo abierto $V$ de $X$, se tiene una aplicación $\omega\mapsto\omega\circ f^V$ de $\operatorname{Ps.hom}_S(V,Y)^{f^V}$ en $\operatorname{Ps.hom}_S(f^{-1}(V),Y)$, que define por tanto un $f$-morfismo de haces de conjuntos
+\[
+  \mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f\to\mathscr{P}\!s.\!\operatorname{hom}_S(X',Y).
+\]
+\end{env}
+
+\begin{env}[20.3.3]
+\label{IV.20.3.3}
+Sea ahora $f':X''\to X'$ un $S$-morfismo tal que el abierto $f'^{-1}(f^{-1}(\operatorname{dom}_S(\omega)))$ sea esquemáticamente denso en $X''$; entonces $\omega\circ(f\circ f')$ está definido y $u\circ f\circ f'$ pertenece a este pseudomorfismo; además, en virtud de \sref{IV.20.3.2.1}, $f'^{-1}(\operatorname{dom}_S(\omega\circ f))$ es \emph{a fortiori} esquemáticamente denso en $X''$, de modo que $(\omega\circ f)\circ f'$ también está definido y $u\circ f\circ f'$ pertenece a este pseudomorfismo; por tanto $(\omega\circ f)\circ f'=\omega\circ(f\circ f')$.
+Por otra parte, para todo $S$-morfismo $g:Y\to Z$, se tiene $\operatorname{dom}_S(g\circ\omega)=\operatorname{dom}_S(\omega)$ \sref{IV.20.3.1}; por tanto $(g\circ\omega)\circ f$ está definido y $g\circ u\circ f$ pertenece a este pseudomorfismo, lo que muestra que $(g\circ\omega)\circ f=g\circ(\omega\circ f)$.
+\end{env}
+
+\begin{env}[20.3.4]
+\label{IV.20.3.4}
+El caso más importante en la definición \sref{IV.20.3.2} es aquel en que $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f=\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$: para ello basta que, para todo abierto $U$ de $X$ y todo abierto $V$ esquemáticamente denso en $U$, $f^{-1}(V)$ sea esquemáticamente denso en $f^{-1}(U)$; cuando esto ocurre, para \emph{todo} abierto $U$ de $X$ y \emph{todo} pseudomorfismo-$S$ $\omega:U\to Y$ se puede definir el compuesto $\omega\circ f^U$, \emph{incluso si $Y$ no es separado sobre $S$}.
+En efecto, si $u':U'\to Y$ y $u'':U''\to Y$ son dos morfismos de la clase $\omega$, coinciden en un abierto $U_0$ esquemáticamente denso en $U$; por tanto, los morfismos compuestos $f^{-1}(U')\to U'\xrightarrow{u'}Y$ y $f^{-1}(U'')\to U''\xrightarrow{u''}Y$ coinciden en $f^{-1}(U_0)$, que por hipótesis es esquemáticamente denso en $f^{-1}(U)$; así, se puede definir $\omega\circ f^U$ como la clase de cualquiera de los morfismos $f^{-1}(U')\to U'\xrightarrow{u'}Y$, donde $u'$ pertenece a $\omega$.
+\end{env}
+
+\begin{proposition}[20.3.5]
+\label{IV.20.3.5}
+Sean $X$, $X'$ dos preesquemas, y $f:X'\to X$ un morfismo.
+Entonces, en cada uno de los tres casos siguientes, para todo abierto $U$ de $X$ y todo abierto $V$ esquemáticamente denso en $U$, $f^{-1}(V)$ es esquemáticamente denso en $f^{-1}(U)$:
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item $f$ es plano y localmente de presentación finita.
+  \item $f$ es plano y el espacio subyacente a $X$ es localmente noetheriano.
+  \item $X'$ es reducido, el conjunto de las componentes irreducibles de $X$ es localmente finito, y toda componente irreducible de $X'$ domina una componente irreducible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La afirmación~(i) resulta de \sref{IV.11.10.5}[(ii), (b)]; la afirmación~(ii) resulta de \sref{IV.11.10.5}[(ii), (a)], pues entonces todo abierto $V$ en $U$ es retrocompacto, es decir, la inclusión canónica $j:V\to U$ es un morfismo cuasicompacto.
+Finalmente, para probar~(iii), observemos que, puesto que $X'$ es reducido, basta mostrar que para todo abierto $U$ de $X$ y todo abierto $V$ denso en $U$, $f^{-1}(V)$ es \emph{denso} en $f^{-1}(U)$.
+Ahora bien, para que $f^{-1}(V)$ sea denso en $f^{-1}(U)$, basta que $f^{-1}(V)$ contenga todos los puntos máximos de $X'$ que pertenecen a $f^{-1}(U)$; la conclusión resulta, pues, de la hipótesis de que la imagen por $f$ de todo punto
+\oldpage[IV-4]{239}
+máximo de $X'$ perteneciente a $f^{-1}(U)$ es un punto máximo de $X$ perteneciente a $U$, y por tanto a $V$, puesto que el conjunto de las componentes irreducibles de $X$ es localmente finito.
+\end{proof}
+
+\begin{env}[20.3.6]
+\label{IV.20.3.6}
+Sean $X$, $Y$ dos $S$-preesquemas; supongamos que $X$ satisface una de las dos hipótesis siguientes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $X$ es localmente noetheriano;
+  \item $X$ es reducido y el conjunto de sus componentes irreducibles es localmente finito.
+\end{enumerate}
+Entonces, para todo $x\in X$, el $S$-morfismo canónico $j:\Spec(\sh{O}_{X,x})\to X$ es plano y satisface la condición~(ii) de \sref{IV.20.3.5} en el caso~a), y la condición~(iii) de \sref{IV.20.3.5} en el caso~b).
+Para todo pseudomorfismo-$S$ $\omega$ de $X$ en $Y$, el compuesto $\omega\circ j$ está, pues, definido y es un pseudomorfismo-$S$ de $\Spec(\sh{O}_{X,x})$ en $Y$, llamado la \emph{restricción} de $\omega$ a $\Spec(\sh{O}_{X,x})$.
+Observemos ahora que si $X$ satisface la condición~a) (respectivamente b)) de \sref{IV.20.3.6}, lo mismo ocurre con todo preesquema inducido sobre un abierto $U$ de $X$ que contenga $x$.
+Por paso al límite inductivo, se deduce de las aplicaciones canónicas $\operatorname{Ps.hom}_S(U,Y)\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)$ así obtenidas una aplicación canónica
+\[
+\label{IV.20.3.6.1}
+  (\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y))_x\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)
+  \tag{20.3.6.1}
+\]
+donde el primer miembro es la fibra en el punto $x$ del haz $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$, conjunto de los gérmenes en $x$ de pseudomorfismos-$S$ de entornos abiertos de $x$ en $Y$.
+\end{env}
+
+\begin{proposition}[20.3.7]
+\label{IV.20.3.7}
+Bajo las hipótesis de \sref{IV.20.3.6}, la aplicación canónica \sref{IV.20.3.6.1} es inyectiva.
+Si además $Y$ es localmente de presentación finita sobre $S$, la aplicación \sref{IV.20.3.6.1} es biyectiva.
+\end{proposition}
+
+\begin{proof}
+Por aplicación del método de \sref{IV.8.1.2}[(a)], esta proposición será un caso particular de la siguiente:
+\end{proof}
+
+\begin{proposition}[20.3.8]
+\label{IV.20.3.8}
+Con las notaciones de \sref{IV.8.8.1}, supongamos que $X_\alpha$ sea cuasicompacto (respectivamente, cuasicompacto y cuasiseparado) y que $Y_\alpha$ sea localmente de tipo finito (respectivamente, localmente de presentación finita) sobre $S_\alpha$.
+Supongamos además que se verifique una de las condiciones siguientes:
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item Los morfismos de transición $S_\mu\to S_\lambda$ (para $\lambda\leq\mu$) son planos, y los $X_\lambda$ y $X$ son noetherianos.
+  \item Los $X_\lambda$ son reducidos, el conjunto de las componentes irreducibles de $X$ y de cada uno de los $X_\lambda$ es finito, y, para $\lambda\leq\mu$, toda componente irreducible de $X_\mu$ domina una componente irreducible de $X_\lambda$.
+\end{enumerate}
+Entonces, la aplicación canónica
+\[
+\label{IV.20.3.8.1}
+  \varinjlim\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)
+  \tag{20.3.8.1}
+\]
+es inyectiva (respectivamente, biyectiva).
+\end{proposition}
+
+\begin{proof}
+Observemos primero que, en el caso~(i), los morfismos $X_\mu\to X_\lambda$ (para $\lambda\leq\mu$) y $X\to X_\lambda$ son planos; por tanto, de \sref{IV.20.3.4} y \sref{IV.20.3.5} resulta que las aplicaciones canónicas
+\[
+  \operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_{S_\mu}(X_\mu,Y_\mu)
+\]
+\oldpage[IV-4]{240}
+para $\lambda\leq\mu$, y $\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)$ están definidas (sin hipótesis de separación sobre los $Y_\lambda$ ni sobre $Y$); por consiguiente, lo mismo ocurre con la aplicación \sref{IV.20.3.8.1}.
+La proposición se deducirá del lema siguiente:
+
+\begin{lemma}[20.3.8.2]
+\label{IV.20.3.8.2}
+Con las notaciones de \sref{IV.8.8.1}, supongamos que $X_\alpha$ sea cuasicompacto, y sea $U_\alpha$ un abierto de $X_\alpha$; sean $U_\lambda$ y $U$ sus imágenes recíprocas en $X_\lambda$ y $X$ para $\lambda\geq\alpha$.
+Supongamos que se verifica una de las condiciones~(i),~(ii) de \sref{IV.20.3.8}.
+Entonces, para que $U$ sea esquemáticamente denso en $X$, es necesario y suficiente que exista $\lambda\geq\alpha$ tal que $U_\lambda$ sea esquemáticamente denso en $X_\lambda$; en ese caso, $U_\mu$ es esquemáticamente denso en $X_\mu$ para $\mu\geq\lambda$.
+\end{lemma}
+
+Supongamos primero verificada la condición~(i); designemos por $j_\lambda:U_\lambda\to X_\lambda$ y $j:U\to X$ las inclusiones canónicas, y por $\sh{J}_\lambda$ el núcleo del homomorfismo canónico $\sh{O}_{X_\lambda}\to(j_\lambda)_*(\sh{O}_{U_\lambda})$.
+Como la inmersión $j_\lambda$ es cuasicompacta y cuasiseparada, $(j_\lambda)_*(\sh{O}_{U_\lambda})$ es un $\sh{O}_{X_\lambda}$-módulo cuasicoherente; por tanto $\sh{J}_\lambda$ es un ideal cuasicoherente de $\sh{O}_{X_\lambda}$, y puesto que $X_\lambda$ es noetheriano, $\sh{J}_\lambda$ es coherente y, por consiguiente, de tipo finito.
+Por otra parte, como el morfismo de transición $p_{\lambda\mu}:X_\mu\to X_\lambda$ (respectivamente $p_\lambda:X\to X_\lambda$) es plano, resulta de \sref{IV.2.3.1} que se puede identificar $(j_\mu)_*(\sh{O}_{U_\mu})$ con $p_{\lambda\mu}^*((j_\lambda)_*(\sh{O}_{U_\lambda}))$ (respectivamente, $j_*(\sh{O}_U)$ con $p_\lambda^*((j_\lambda)_*(\sh{O}_{U_\lambda}))$).
+La afirmación resulta entonces de la definición de abierto esquemáticamente denso y de \sref{IV.8.5.8}[(ii)].
+
+Para establecer \sref{IV.20.3.8.2} cuando se verifica la condición~(ii), probaremos primero dos lemas.
+
+\begin{lemma}[20.3.8.3]
+\label{IV.20.3.8.3}
+Bajo las hipótesis de \sref{IV.8.2.2}, sea $M_\lambda$ (respectivamente $M$) el conjunto de los puntos máximos de $S_\lambda$ (respectivamente $S$).
+Supongamos que para todo $\lambda$ el conjunto $M_\lambda$ sea finito, y que los $M_\lambda$ formen un sistema proyectivo de conjuntos.
+Entonces $M$ es el límite proyectivo del sistema de los $M_\lambda$.
+\end{lemma}
+
+Mostremos primero que un punto $s\in\varprojlim M_\lambda$ es máximo en $S$: en efecto, si $s'$ es una generalización de $s$, la imagen $s'_\lambda$ de $s'$ en $S_\lambda$ es una generalización de la imagen $s_\lambda$ de $s$, y por tanto es igual a $s_\lambda$ para todo $\lambda$; esto implica $s'=s$, puesto que el conjunto subyacente a $S$ es el límite proyectivo de los conjuntos subyacentes a los $S_\lambda$ \sref{IV.8.2.9}.
+Recíprocamente, sea $s$ un punto máximo de $S$ y probemos que pertenece a $\varprojlim M_\lambda$.
+Sean $s_\lambda$ la imagen de $s$ en $S_\lambda$, y $M'_\lambda$ el conjunto de los puntos máximos de $S_\lambda$ que son generalizaciones de $s_\lambda$; los $M'_\lambda$ son conjuntos finitos no vacíos que forman un sistema proyectivo, por tanto $M'=\varprojlim M'_\lambda$ no es vacío y la aplicación $M'\to M'_\lambda$ es sobreyectiva (Bourbaki, \emph{Ens.}, cap.~III, 2\textsuperscript{a} ed., \textsection~7, n\textsuperscript{o}~4, Ejemplo~I).
+Por otra parte, se tiene $\Spec(\sh{O}_{S,s})=\varprojlim\Spec(\sh{O}_{S_\lambda,s_\lambda})$ en virtud de \sref{IV.8.2.12} y \sref{IV.8.2.9}; por tanto, los puntos de $\varprojlim M'_\lambda$ son también puntos máximos de $\Spec(\sh{O}_{S,s})$, por la primera parte del razonamiento.
+Así, $M'=\varprojlim M'_\lambda$ se reduce necesariamente al punto $s$; se concluye que $M'_\lambda$ se reduce al punto $s_\lambda$ y, por consiguiente, los $s_\lambda$ son máximos en los $S_\lambda$, lo que termina la demostración del lema.
+
+\begin{lemma}[20.3.8.4]
+\label{IV.20.3.8.4}
+Siendo las hipótesis las de \sref{IV.20.3.8.3}, supongamos además que $S_\alpha$ sea cuasicompacto; sea $U_\alpha$ un conjunto abierto de $S_\alpha$, y sean $U_\lambda$ y $U$ sus imágenes recíprocas en $S_\lambda$ para $\lambda\geq\alpha$ y en $S$\footnote{La transcripción francesa introduce aquí $V_\alpha,V_\lambda,V$, pero el enunciado y toda la demostración emplean inmediatamente y de manera coherente $U_\alpha,U_\lambda,U$; el testigo inglés mantenido corrige la terna.}.
+Si $U_\alpha$ es denso en $S_\alpha$, $U_\lambda$ es denso en $S_\lambda$ para $\lambda\geq\alpha$ y $U$ es denso en $S$.
+Recíprocamente, si $U$ es denso en $S$ y además el conjunto $M$ de los puntos máximos de $S$ es finito, existe $\lambda\geq\alpha$ tal que $U_\lambda$ sea denso en $S_\lambda$.
+\end{lemma}
+
+En efecto, puesto que $M_\alpha$ es finito, la hipótesis de que $U_\alpha$ es denso en $S_\alpha$ implica que
+\oldpage[IV-4]{241}
+ $M_\alpha\subset U_\alpha$, luego $M_\lambda\subset U_\lambda$ para $\lambda\geq\alpha$ y $M\subset U$ en virtud de \sref{IV.20.3.8.3}, lo que prueba la primera afirmación.
+Recíprocamente, supongamos $M$ finito y $U$ denso en $S$, luego $M\subset U$; observemos que los $U_\lambda$ son abiertos, por tanto ind-constructibles, y los $M_\lambda$ son finitos, por tanto pro-constructibles \sref{IV.1.9.6}.
+La segunda afirmación resulta entonces de \sref{IV.8.3.2}.
+
+\phantomsection\label{IV.20.3.8.5}
+\emph{20.3.8.5. Fin de la demostración de \sref{IV.20.3.8.2}.}
+Supongamos verificada la condición~(ii), y observemos que entonces $X$ es \emph{reducido} en virtud de \sref{IV.8.7.1}; por tanto, es equivalente decir que $U_\lambda$ (respectivamente $U$) es esquemáticamente denso en $X_\lambda$ (respectivamente $X$) o que es denso en $X_\lambda$ (respectivamente $X$), y la conclusión resulta de \sref{IV.20.3.8.4} aplicado a los $X_\lambda$ y a $X$.
+
+\phantomsection\label{IV.20.3.8.6}
+\emph{20.3.8.6. Fin de la demostración de \sref{IV.20.3.8}.}
+Para mostrar que la aplicación \sref{IV.20.3.8.1} es inyectiva, consideremos dos morfismos $u'_\lambda$, $u''_\lambda$ de un abierto esquemáticamente denso $U_\lambda\subset X_\lambda$ en $Y_\lambda$, y supongamos que sus imágenes $u'$, $u''$, morfismos de $U$ en $Y$, coinciden en un abierto esquemáticamente denso $V$ de $U$.
+Además, bajo cualquiera de las hipótesis~(i),~(ii), podemos suponer que $V$ es \emph{cuasicompacto}; esto es evidente si $X$ es noetheriano; en caso contrario, como $X$ solo tiene un número finito de puntos máximos y es reducido, basta sustituir $V$ por la unión de un número finito de entornos abiertos afines de esos puntos máximos (contenidos en $V$ por hipótesis).
+Entonces existe un $\lambda\geq\alpha$ tal que $V$ sea la imagen recíproca de un abierto cuasicompacto $V_\lambda$ de $X_\lambda$ \sref{IV.8.2.11}, y resulta de \sref{IV.20.3.8.2} que, tomando $\lambda$ suficientemente grande, podemos suponer que $V_\lambda$ es esquemáticamente denso en $X_\lambda$.
+Resulta entonces de \sref{IV.8.8.2}[(i)] que, tomando $\lambda$ suficientemente grande, $u'_\lambda$ y $u''_\lambda$ coinciden en $V_\lambda$ y, por tanto, pertenecen al mismo pseudomorfismo.\footnote{La transcripción francesa dice aquí por única vez «pseudo-homomorfismo»; el objeto considerado es el pseudomorfismo definido en esta sección, como confirma el testigo inglés mantenido.}
+
+Probemos finalmente que la aplicación \sref{IV.20.3.8.1} es sobreyectiva.
+Consideremos ahora un morfismo $u$ de un abierto esquemáticamente denso $U$ de $X$ en $Y$; como arriba, podemos suponer que $U$ es cuasicompacto y cuasiseparado ($U$ puede sustituirse, en el caso~(ii), por una unión de un número finito de abiertos afines dos a dos disjuntos).
+Podemos, pues, suponer además que existe un $\lambda\geq\alpha$ tal que $U$ sea la imagen recíproca de un abierto cuasicompacto $U_\lambda$ de $X_\lambda$ \sref{IV.8.2.11}, automáticamente cuasiseparado, y por \sref{IV.20.3.8.2} podemos suponer además que $U_\lambda$ sea esquemáticamente denso en $X_\lambda$.
+Puesto que se supone que los $Y_\lambda$ son localmente de presentación finita, resulta de \sref{IV.8.8.2}[(i)] que existe un $\lambda$ tal que $u$ sea la imagen de un morfismo $u_\lambda:U_\lambda\to Y_\lambda$; de donde se sigue la conclusión.
+
+\begin{remarks}[20.3.8.7]
+\label{IV.20.3.8.7}
+\begin{enumerate}[label=(\roman*)]
+  \item Para probar que la aplicación \sref{IV.20.3.8.1} es \emph{inyectiva}, no es necesario, bajo la hipótesis~(i) de \sref{IV.20.3.8}, suponer que $X$ sea noetheriano.
+  En efecto, el lema \sref{IV.20.3.8.2} no utiliza esta hipótesis.
+  Con las notaciones de \sref{IV.20.3.8.6}, sea $Z_\lambda$ el subpreesquema de coincidencias de $u'_\lambda$ y $u''_\lambda$, y sea $Z$ el subpreesquema de coincidencias de $u'$ y $u''$; resulta de la definición \sref{IV.17.4.5} y de \sref[I]{I.3.3.10.1} que $Z$ es el límite proyectivo de los $Z_\mu$ para $\mu\geq\lambda$.
+  Ahora bien, por hipótesis, $Z$ contiene un abierto esquemáticamente denso en $X$; se deduce que $Z$ mismo es inducido sobre un abierto de $X$ en virtud del lema siguiente:
+
+\begin{lemma}[20.3.8.8]
+\label{IV.20.3.8.8}
+Sea $T$ un preesquema.
+Entonces todo subpreesquema $W$ de $T$ que contiene un abierto esquemáticamente denso $V$ de $T$ es inducido sobre un abierto (esquemáticamente denso) de $T$.
+\end{lemma}
+
+  En efecto, el subespacio de $T$ subyacente a $W$ es localmente cerrado, y por tanto abierto
+  \oldpage[IV-4]{242}
+  en su clausura, lo que prueba ya que el espacio subyacente a $W$ es abierto en $T$; la conclusión resulta entonces de \sref{IV.11.10.1}[(c)].
+
+  Establecido este lema, se concluye que para $\mu\geq\lambda$ suficientemente grande, $Z_\mu$ es inducido sobre un abierto de $X_\mu$ en virtud de \sref{IV.8.6.3}, pues $Z_\lambda$, como subpreesquema de un preesquema noetheriano, es de presentación finita sobre $X_\lambda$ \sref{IV.1.6.2}, y por tanto lo mismo ocurre con los $Z_\mu$ para $\mu\geq\lambda$ sobre $X_\mu$ y con $Z$ sobre $X$.
+  Podemos aplicar ahora \sref{IV.20.3.8.2}, que muestra que para $\mu\geq\lambda$ suficientemente grande, $Z_\mu$ es esquemáticamente denso en $X_\mu$, de donde se sigue la conclusión.
+
+  \item Si, en la hipótesis~(i) de \sref{IV.20.3.8}, se suprime la condición de que $X$ sea noetheriano, el razonamiento de \sref{IV.20.3.8.6} muestra todavía que la imagen de \sref{IV.20.3.8.1} está formada por los pseudomorfismos-$S$ que tienen un representante que es un $S$-morfismo $U\to Y$, donde $U$ es esquemáticamente denso en $X$ y \emph{cuasicompacto y cuasiseparado}.
+\end{enumerate}
+\end{remarks}
+\end{proof}
+
+\begin{corollary}[20.3.9]
+\label{IV.20.3.9}
+Supongamos verificada en $X$ una u otra de las hipótesis~a),~b) de \sref{IV.20.3.6}, y que $Y$ sea localmente de presentación finita sobre $S$.
+Entonces, para que un pseudomorfismo-$S$ $\omega$ de $X$ en $Y$ esté definido en el punto $x$ \sref{IV.20.2.3}, es necesario y suficiente que su restricción a $\Spec(\sh{O}_{X,x})$ esté definida en todas partes (es decir, sea un $S$-morfismo de $\Spec(\sh{O}_{X,x})$ en $Y$).
+\end{corollary}
+
+El resultado siguiente, que utilizaremos en la demostración de \sref{IV.20.3.11}, utiliza la teoría del descenso fielmente plano del cap.~VI.
+El lector podrá comprobar que los resultados de \sref{IV.20.3} no se utilizarán en esta teoría.
+
+\begin{lemma}[20.3.10]
+\label{IV.20.3.10}
+Sean $f:X'\to X$ un $S$-morfismo fielmente plano y cuasicompacto, $X''=X'\times_X X'$, $p_1$ y $p_2$ las proyecciones canónicas de $X''$ en $X'$, y $Y$ un preesquema separado sobre $S$.
+Sean $U$ un abierto de $X$, $U'=f^{-1}(U)$, $U''=p_1^{-1}(U')=p_2^{-1}(U')$, y supongamos que $U''$ sea esquemáticamente denso en $X''$.
+Sea $g:U\to Y$ un $S$-morfismo; entonces, si $g\circ(f|U')$ se prolonga a un $S$-morfismo $X'\to Y$, $g$ se prolonga a un $S$-morfismo $X\to Y$.
+\end{lemma}
+
+Obsérvese que las hipótesis implican que $U$ (respectivamente $U'$) es esquemáticamente denso en $X$ (respectivamente $X'$) \sref{IV.11.10.5}[(i)]; por tanto, también puede decirse que si $\omega$ denota el pseudomorfismo-$S$ clase de $g$, el enunciado de \sref{IV.20.3.10} significa que \emph{si $\omega\circ f$ está definido en todas partes, lo mismo ocurre con $\omega$}.
+
+\begin{proof}
+Para probar \sref{IV.20.3.10}, designemos por $g'$ un $S$-morfismo $X'\to Y$ que prolonga $g\circ(f|U')$, y pongamos $g''_i=g'\circ p_i:X''\to Y$ ($i=1,2$).
+Si ponemos $f''=f\circ p_1=f\circ p_2:X''\to X$, es claro que $g''_1$ y $g''_2$ coinciden en $U''$ con $g\circ(f''|U'')$.
+Pero como $Y$ es separado sobre $S$ y $U''$ es esquemáticamente denso en $X''$, se tiene $g''_1=g''_2$ \sref{IV.11.10.1}[(d)].
+Como $f$ es fielmente plano y cuasicompacto, resulta de la teoría del descenso (cap.~VI) que existe un único $S$-morfismo $h:X\to Y$ tal que $h\circ f=g'$; como la restricción $U'\to U$ de $f$ es un morfismo fielmente plano y cuasicompacto y $U''=U'\times_U U'$, el resultado de unicidad anterior, aplicado a $U$ en lugar de $X$, muestra que $h|U=g$, lo que prueba el lema.
+\end{proof}
+
+\begin{proposition}[20.3.11]
+\label{IV.20.3.11}
+Sean $Y$ un $S$-preesquema separado sobre $S$, $\omega$ un pseudomorfismo-$S$ de $X$ en $Y$, y $f:X'\to X$ un $S$-morfismo.
+Supongamos que $f$ sea plano y que se cumpla una de las condiciones siguientes:
+\begin{enumerate}[label=\emph{(\roman*)}]
+\oldpage[IV-4]{243}
+  \item $f$ es un morfismo abierto, o sobreyectivo y cuasicompacto, y $\operatorname{dom}_S(\omega)$ contiene un abierto $U$ esquemáticamente denso en $X$ y retrocompacto en $X$.
+  \item $f$ es localmente de presentación finita.
+  \item $Y$ es localmente de presentación finita sobre $S$, y $X$ satisface una de las condiciones~a),~b) de \sref{IV.20.3.6}.
+\end{enumerate}
+Entonces, $f^{-1}(\operatorname{dom}_S(\omega))$ es esquemáticamente denso en $X'$, de modo que $\omega\circ f$ está definido \sref{IV.20.3.2} y se tiene
+\[
+\label{IV.20.3.11.1}
+  \operatorname{dom}_S(\omega\circ f)=f^{-1}(\operatorname{dom}_S(\omega)).
+  \tag{20.3.11.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Probemos primero que $f^{-1}(\operatorname{dom}_S(\omega))$ es esquemáticamente denso en $X'$.
+Como la cuestión es local en $X$ y $X'$, podemos suponer que $X$ y $X'$ son afines, y puesto que $f$ es plano, basta ver, en virtud de \sref{IV.11.10.5}[(ii), (a)], que $\operatorname{dom}_S(\omega)$ contiene un conjunto abierto $U$ retrocompacto y esquemáticamente denso en $X$.
+Esto resulta de la hipótesis en el caso~(i), y de \sref{IV.20.2.12} en el caso~(iii), teniendo en cuenta que en un esquema afín todo abierto de la forma $\mathrm{D}(t)$ es retrocompacto; finalmente, en el caso~(ii), se ve directamente que $f^{-1}(\operatorname{dom}_S(\omega))$ es esquemáticamente denso en $X'$ aplicando \sref{IV.20.3.5}[(i)].
+
+Probemos ahora \sref{IV.20.3.11.1}, es decir, que para todo punto $x'\in\operatorname{dom}_S(\omega\circ f)$ se tiene $x=f(x')\in\operatorname{dom}_S(\omega)$.
+Observemos primero que podemos reducirnos al caso en que $f$ sea \emph{fielmente plano y cuasicompacto}.
+Esta es, en efecto, la hipótesis en el segundo caso de~(i); en los demás casos, la cuestión es local en $X'$, y podemos suponer ya que $X$ y $X'$ son afines, de modo que $f$ es cuasicompacto.
+En el primer caso de~(i) y en el caso~(ii), $f$ es un morfismo abierto \sref{IV.11.3.1}; por tanto, sustituyendo $X$ por el abierto $f(X')$, podemos suponer que $f$ es sobreyectivo y, por consiguiente, fielmente plano.
+En el caso~(iii), utilizando \sref{IV.20.3.9}, podemos limitarnos a probar que la restricción de $\omega$ a $\Spec(\sh{O}_{X,x})$ está definida en todas partes, y podemos sustituir $X$ por $\Spec(\sh{O}_{X,x})$, $X'$ por $X'\times_X\Spec(\sh{O}_{X,x})$ y $f$ por su restricción a este último preesquema, que es un morfismo sobreyectivo \sref{IV.2.3.4}, y por tanto fielmente plano.
+
+Supongamos, pues, que $f$ sea fielmente plano y cuasicompacto; con las notaciones del lema \sref{IV.20.3.10}, basta ver entonces que $U''$ es esquemáticamente denso en $X''$, tomando para $U$ un abierto esquemáticamente denso en $X$, contenido en $\operatorname{dom}_S(\omega)$; esto será así, en virtud de \sref{IV.11.10.5}[(ii), (a)], si $U$ se toma retrocompacto en $X$ (puesto que el morfismo $f'':X''\to X$ es plano).
+Ahora bien, la existencia de tal abierto $U$ forma parte de la hipótesis en el caso~(i); en el caso~(iii) resulta de \sref{IV.20.2.12} y del hecho de que en un esquema afín $\Spec(A)$ todo abierto de la forma $\mathrm{D}(t)$ es retrocompacto.
+Finalmente, en el caso~(ii), tomemos $U=\operatorname{dom}_S(\omega)$ y mostremos directamente que $U''$ es esquemáticamente denso en $X''$; para ello basta observar que $f'':X''\to X$ es plano y localmente de presentación finita, y aplicar \sref{IV.11.10.5}[(ii), (b)].
+\end{proof}
+
+\begin{corollary}[20.3.12]
+\label{IV.20.3.12}
+Sea $\vphi$ una pseudofunción sobre un preesquema $X$.
+Entonces, para todo morfismo plano y localmente de presentación finita $f:X'\to X$, la pseudofunción $\vphi\circ f$ está definida y se tiene $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$.
+\end{corollary}
+
+\begin{remark}[20.3.13]
+\label{IV.20.3.13}
+\oldpage[IV-4]{244}
+Cuando $X$ satisface una de las condiciones~a),~b) de \sref{IV.20.3.6}, vimos en \sref{IV.20.2.11} que las pseudofunciones sobre $X$ se identifican con las funciones meromorfas sobre $X$.
+En virtud de \sref{IV.20.1.12} y de \sref{IV.20.2.13}[(i)], si se supone solamente que el morfismo $f:X'\to X$ es \emph{plano}, entonces, para toda pseudofunción $\vphi$ sobre $X$, $\vphi\circ f$ está definida y se tiene $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$.
+\end{remark}

@@ -1,0 +1,864 @@
+\section{Sucesiones \texorpdfstring{$M$}{M}-regulares y sucesiones
+\texorpdfstring{$\mathscr F$}{F}-regulares}
+\label{section:0.15-es}
+
+\subsection{Sucesiones \texorpdfstring{$M$}{M}-regulares y sucesiones
+\texorpdfstring{$M$}{M}-cuasirregulares}
+\label{subsection:0.15.1-es}
+\label{0.15.1-es}
+
+\begin{env}[15.1.1]
+\label{0.15.1.1-es}
+\oldpage[0\textsubscript{IV-1}]{12}
+Sean $A$ un anillo y $N$ un $A$-módulo~; en lo que sigue, denotaremos
+abreviadamente por $N[T_1,\ldots,T_n]$ el $A$-módulo graduado
+$N\otimes_A A[T_1,\ldots,T_n]$ (siendo los $T_i$ indeterminadas), donde $N$
+lleva la graduación trivial y $A[T_1,\ldots,T_n]$ la graduación por el grado total.
+
+Sean $M$ un $A$-módulo y $f_i$ ($1\leq i\leq n$) elementos de $A$;
+sea $\mathfrak{J}=\sum_{i=1}^n f_iA$ el ideal de $A$ engendrado por los $f_i$,
+y dotemos a $M$ de la filtración $\mathfrak{J}$-preádica~; se define entonces un
+\emph{homomorfismo graduado sobreyectivo de $A$-módulos graduados}, de grado $0$,
+\[
+  \varphi : (\gr_0(M))[T_1,\ldots,T_n]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.1.1}\label{0.15.1.1.1-es}
+\]
+de la manera siguiente~: si $\xi\in\gr_0(M)$ es la clase módulo
+$\mathfrak{J}M$ de un elemento $x\in M$, al par formado por $\xi$ y un
+polinomio $P[T_1,\ldots,T_n]$ homogéneo de grado $k$ se le hace corresponder la
+clase módulo $\mathfrak{J}^{k+1}M$ de $P(f_1,\ldots,f_n)x$~; es inmediato
+que esta clase
+\oldpage[0\textsubscript{IV-1}]{13}
+solo depende de $\xi$ y de $P$, y, si $S_k$ es el conjunto de los polinomios
+homogéneos de grado $k$ de $A[T_1,\ldots,T_n]$, queda así definida una
+aplicación $A$-lineal
+\[
+  \varphi_k:\gr_0(M)\otimes_A S_k\longrightarrow\gr_k(M),
+\]
+que es sobreyectiva por la definición de $\mathfrak{J}^kM$.
+
+Diremos en lo que sigue que un elemento $f\in A$ es \emph{no divisor de
+cero en un $A$-módulo $M$} si la homotecia $f_M:x\mapsto fx$ de $M$ es
+\emph{inyectiva}.
+\end{env}
+
+\begin{lemma}[15.1.2]
+\label{0.15.1.2-es}
+Sean $M$ un $A$-módulo y $f$ un elemento de $A$, y dotemos a $M$ de la
+filtración $(fA)$-preádica. Si $f$ es no divisor de cero en $M$,
+el homomorfismo canónico definido en (15.1.1)~:
+\[
+  \varphi:(M/fM)[T]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.2.1}\label{0.15.1.2.1-es}
+\]
+es biyectivo. El recíproco es cierto si $M$ es separado para la topología
+$(fA)$-preádica.
+\end{lemma}
+
+\begin{proof}
+Se tiene aquí $\gr_k(M)=f^kM/f^{k+1}M$~; decir que $\varphi$ es inyectiva
+significa que, para todo $x\in M$ y todo $k$, la relación
+$f^kx\in f^{k+1}M$ implica $x\in fM$~; es claro que así ocurre si $f$ es no
+divisor de cero en $M$. Recíprocamente, obsérvese que la homotecia
+$f_M:x\mapsto fx$ define, por paso a los cocientes, homomorfismos
+$\gr_k(M)\to\gr_{k+1}(M)$, y, por tanto, un homomorfismo graduado $g$ de grado
+$1$ de $\gr_\bullet(M)$ en sí mismo~; decir que $\varphi$ es inyectivo expresa
+también que $g$ es inyectivo. Si se supone separada la filtración de $M$, de
+ello resulta que $f_M$ es inyectiva (Bourbaki, \emph{Alg.~comm.}, cap.~III,
+\S~2, núm.~8, cor.~1 del teorema~1).
+\end{proof}
+
+\begin{corollary}[15.1.3]
+\label{0.15.1.3-es}
+Sean $A$ un anillo noetheriano y $M$ un $A$-módulo de tipo finito. Para que
+$f$ sea no divisor de cero en $M$, es necesario y suficiente que $\varphi$ sea
+biyectivo.
+\end{corollary}
+
+\begin{proof}
+Solo hay que demostrar que la condición es suficiente~; para probar que $f_M$
+es inyectiva, basta mostrar que, para todo ideal primo $\mathfrak p$ de $A$,
+la homotecia de razón $f'=f/1\in A'=A_{\mathfrak p}$ en el
+$A_{\mathfrak p}$-módulo $M_{\mathfrak p}=M'$ es inyectiva (Bourbaki,
+\emph{Alg.~comm.}, cap.~II, \S~3, núm.~4, teorema~1). Ahora bien, se tiene
+$f'^kM'/f'^{k+1}M'=(f^kM/f^{k+1}M)\otimes_A A'$, y es inmediato que
+el homomorfismo canónico $\varphi':(M'/f'M')[T]\to\gr_\bullet(M')$ es igual a
+$\varphi\otimes 1_{A'}$~; si $\varphi$ es inyectivo, lo mismo vale, por tanto,
+para $\varphi'$ ($0_{\mathrm I}$, 1.3.2). Queda así reducido al caso en que $A$
+es un anillo noetheriano \emph{local}, cuyo ideal maximal denotaremos por
+$\mathfrak m$. Si $f\notin\mathfrak m$, entonces $f$ es invertible y no hay
+nada que demostrar. Si $f\in\mathfrak m$, se sabe que $M$ es separado para la
+topología $(fA)$-preádica ($0_{\mathrm I}$, 7.3.5), y basta, por tanto,
+aplicar (15.1.2).
+\end{proof}
+
+\begin{definition}[15.1.4]
+\label{0.15.1.4-es}
+Sean $A$ un anillo y $M$ un $A$-módulo. Se dice que un elemento $f\in A$ es
+\emph{$M$-regular} (resp. \emph{$M$-cuasirregular}) si $f$ es no divisor de
+cero en $M$ (resp. si el homomorfismo (15.1.2.1) es biyectivo).
+\end{definition}
+
+Acabamos, pues, de demostrar que todo elemento $M$-regular es
+$M$-cuasirregular, y que el recíproco es cierto si $A$ es noetheriano y $M$
+un $A$-módulo de tipo finito. Cuando ya no se supone que $M$ sea de tipo
+finito, este recíproco puede fallar~: por ejemplo, si $A$ es un anillo
+principal que no es un cuerpo, $K$ su cuerpo de fracciones y $M$ el
+$A$-módulo $K/A$, se tiene $fM=M$ para todo $f\neq0$ en $A$, por lo que los
+dos miembros de (15.1.2.1) se reducen a $0$, pero $f$ es entonces divisor de
+cero en $M$.
+
+\begin{env}[15.1.5]
+\label{0.15.1.5-es}
+\oldpage[0\textsubscript{IV-1}]{14}
+Supongamos ahora que $M$ está dotado de una \emph{filtración} $(M_k)$ tal que
+$M_0=M$, y denotemos por
+$\gr_\bullet(M)=\bigoplus_{k\geq0}M_k/M_{k+1}$ el $A$-módulo graduado asociado.
+Con las notaciones de (15.1.1), pongamos, para todo $k\geq0$,
+\[
+  M'_k=M_k+\mathfrak{J}M_{k-1}+\cdots+
+  \mathfrak{J}^{k-1}M_1+\mathfrak{J}^kM_0.
+  \tag{15.1.5.1}\label{0.15.1.5.1-es}
+\]
+Es claro que $(M'_k)$ es una filtración sobre $M$. Cuando
+$M_k=\mathfrak{Q}^kM$, donde $\mathfrak Q$ es un ideal de $A$, la filtración
+$(M'_k)$ no es otra que la filtración
+$(\mathfrak{J}+\mathfrak{Q})$-preádica. Denotaremos por
+$\gr'_\bullet(M)$ el $A$-módulo graduado asociado a $(M'_k)$. Denotemos asimismo
+\[
+  (\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))[T_1,\ldots,T_n]
+\]
+el producto tensorial de $A$-módulos graduados ($\mathrm{II}$, 2.1.2)
+\[
+  (\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))
+  \otimes_A A[T_1,\ldots,T_n].
+\]
+Se define un \emph{homomorfismo graduado sobreyectivo de $A$-módulos graduados},
+de grado $0$,
+\[
+  \psi:(\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))[T_1,\ldots,T_n]
+  \longrightarrow\gr'_\bullet(M)
+  \tag{15.1.5.2}\label{0.15.1.5.2-es}
+\]
+de la manera siguiente~: si $\alpha\in A/\mathfrak{J}$ es la clase de un
+elemento $a\in A$, $\xi\in M_k/M_{k+1}$ la clase de un elemento $x\in M_k$ y
+$P[T_1,\ldots,T_n]$ un polinomio homogéneo de grado $h$, se hace corresponder
+a la terna $(\alpha,\xi,P)$ la clase módulo $M'_{h+k+1}$ de
+$P(f_1,\ldots,f_n)ax$~; se comprueba de nuevo inmediatamente que este elemento
+solo depende de $\xi$, $\alpha$ y $P$, y esto define el homomorfismo graduado
+(15.1.5.2), que es sobreyectivo en virtud de la definición (15.1.5.1). Se
+recupera el homomorfismo (15.1.1.1) considerando la filtración sobre $M$ tal
+que $M_1=0$.
+\end{env}
+
+\begin{lemma}[15.1.6]
+\label{0.15.1.6-es}
+Se conservan las notaciones de (15.1.5) y se supone $n=1$, poniendo $f=f_1$.
+Si $f$ es $\gr_\bullet(M)$-regular, el homomorfismo (15.1.5.2) es biyectivo.
+\end{lemma}
+
+\begin{proof}
+Sea $Q_k$ (resp. $Q'_k$) el sub-$A$-módulo de los términos de grado $k$ en
+el primer (resp. segundo) miembro de (15.1.5.2). Dotemos a $Q_k$ de la filtración
+\[
+  (Q_k)_i=\sum_{j\leq k-i}
+  (\gr_{k-j}(M)\otimes_A(A/fA))T^j
+  \tag{15.1.6.1}\label{0.15.1.6.1-es}
+\]
+de modo que $(Q_k)_0=Q_k$ y $(Q_k)_{k+1}=0$, y, para esta filtración, se tiene
+\[
+  \gr_i(Q_k)=(\gr_i(M)\otimes_A(A/fA))T^{k-i}.
+\]
+Dotemos a $Q'_k$ de la filtración formada por los
+$\psi((Q_k)_i)=(Q'_k)_i$. Como estas filtraciones son \emph{finitas}, basta
+probar que los homomorfismos $\psi_{ki}:\gr_i(Q_k)\to\gr_i(Q'_k)$ deducidos de
+$\psi_k$ son inyectivos (Bourbaki, \emph{Alg.~comm.}, cap.~III, \S~3,
+núm.~8, cor.~1 del teorema~1). Ahora bien, se tiene
+\[
+  \gr_i(Q_k)=((M_i/M_{i+1})\otimes_A(A/fA))T^{k-i}~;
+\]
+por otro lado, $(Q'_k)_{i+1}$ es la imagen de
+\[
+  M_k+fM_{k-1}+\cdots+f^{k-i-1}M_{i+1}
+\]
+\oldpage[0\textsubscript{IV-1}]{15}
+en $M'_k/M'_{k+1}$. Nos reducimos, por tanto, a demostrar que, para $x\in M_i$,
+la relación
+\[
+  f^{k-i}x\in M_k+fM_{k-1}+\cdots+
+  f^{k-i-1}M_{i+1}+M'_{k+1}
+  \tag{15.1.6.2}\label{0.15.1.6.2-es}
+\]
+implica $x\in fM_i+M_{i+1}$. Ahora bien, el segundo miembro de (15.1.6.2) está
+contenido en $M_{i+1}+M'_{k+1}$, y, en virtud de (15.1.5.1), $M'_{k+1}$ está
+contenido en $M_{i+1}+f^{k+1-i}M$. La hipótesis sobre $f$ implica que $f$ es
+no divisor de cero en $M/M_h$ para todo $h$ (Bourbaki, \emph{loc.~cit.}). La
+relación $f^{k-i}x\in f^{k+1-i}M+M_{i+1}$ implica, pues (razonando en
+$M/M_{i+1}$), la existencia de un $y\in M$ tal que $x-fy\in M_{i+1}$, y como
+$x\in M_i$, se tiene $fy\in M_i$, de donde (razonando en $M/M_i$) se sigue
+$y\in M_i$, y finalmente $x\in fM_i+M_{i+1}$. C.Q.D.
+\end{proof}
+
+\begin{definition}[15.1.7]
+\label{0.15.1.7-es}
+Sea $(f_i)_{1\leq i\leq n}$ una sucesión de elementos de $A$. Se dice que es
+\emph{$M$-regular} si, para $1\leq i\leq n$, $f_i$ es
+$\left(M/(\sum_{1\leq j\leq i-1}f_jM)\right)$-regular. Se dice que la sucesión
+$(f_i)$ es \emph{$M$-cuasirregular} si el homomorfismo canónico $\varphi$
+definido en (15.1.1.1) es biyectivo.
+
+Cuando $M=A$, se dice simplemente «~sucesión regular~» y
+«~sucesión cuasirregular~».
+\end{definition}
+
+\begin{proposition}[15.1.8]
+\label{0.15.1.8-es}
+Con las notaciones de (15.1.5), se supone que la sucesión
+$(f_i)_{1\leq i\leq n}$ es $\gr_\bullet(M)$-regular. Entonces
+el homomorfismo canónico (15.1.5.2) es biyectivo.
+\end{proposition}
+
+\begin{proof}
+La proposición no es sino (15.1.6) para $n=1$~; razonemos por inducción sobre
+$n$. Pongamos
+\[
+  \mathfrak{J}''=\sum_{i=1}^{n-1}f_iA,
+\]
+de modo que $\mathfrak{J}=\mathfrak{J}''+f_nA$, y sea
+\[
+  M''_k=M_k+\mathfrak{J}''M_{k-1}+\cdots+
+  \mathfrak{J}''^{k-1}M_1+\mathfrak{J}''^kM_0~;
+\]
+se puede escribir, por tanto,
+\[
+  M'_k=M''_k+f_nM''_{k-1}+\cdots+f_n^{k-1}M''_1+f_n^kM''_0.
+\]
+Denotemos por $\gr''_\bullet(M)$ el $A$-módulo graduado asociado a la filtración
+$(M''_k)$ de $M$. Salvo isomorfismos canónicos, se puede escribir
+\[
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}))\otimes_A A[T_1,\ldots,T_n]
+  =
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}''))[T_1,\ldots,T_{n-1}]
+  \otimes(A/f_nA)\otimes_A A[T_n]
+\]
+y, por consiguiente, (15.1.5.2) se factoriza en
+\[
+  (\gr''_\bullet(M)\otimes(A/f_nA))[T_n]\longrightarrow\gr'_\bullet(M)
+  \tag{15.1.8.1}\label{0.15.1.8.1-es}
+\]
+y
+\[
+  ((\gr_\bullet(M)\otimes(A/\mathfrak{J}''))[T_1,\ldots,T_{n-1}])
+  \otimes(A/f_nA)\otimes_A A[T_n]
+  \xrightarrow{\psi'\otimes1}
+  \gr''_\bullet(M)\otimes(A/f_nA)\otimes_A A[T_n]
+\]
+donde $\psi'$ es la aplicación (15.1.5.2) en la que se reemplazan $n$ por
+$n-1$, $\mathfrak{J}$ por $\mathfrak{J}''$ y $\gr'_\bullet(M)$ por
+$\gr''_\bullet(M)$. La hipótesis de inducción implica que $\psi'$ es
+biyectiva, y queda, por tanto, comprobar que lo mismo vale para (15.1.8.1).
+Aplicando (15.1.6), basta mostrar que $f_n$ es
+$\gr''_\bullet(M)$-regular. Pero $\gr''_\bullet(M)$ se identifica con
+\[
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}''))
+  [T_1,\ldots,T_{n-1}]~;
+\]
+por hipótesis, la homotecia de razón $f_n$ en
+$\gr_\bullet(M)\otimes(A/\mathfrak{J}'')$ es biyectiva~; por consiguiente, lo
+mismo vale para la homotecia de razón $f_n$ en $\gr''_\bullet(M)$, puesto que
+$A[T_1,\ldots,T_{n-1}]$ es un $A$-módulo libre.
+\end{proof}
+\begin{proposition}[15.1.9]
+\label{0.15.1.9-es}
+Sean $M$ un $A$-módulo y $(f_i)_{1\leq i\leq n}$ una sucesión de elementos de
+$A$. Si la sucesión $(f_i)$ es $M$-regular, es $M$-cuasirregular. El recíproco
+es cierto cuando se supone además que los $A$-módulos
+\[
+  M,\quad M/f_1M,\quad\ldots,\quad
+  M/\left(\sum_{1\leq j\leq n-1}f_jM\right)
+\]
+son separados para la topología $\mathfrak{J}$-preádica (donde
+$\mathfrak{J}=\sum_{i=1}^n f_iA$).
+\end{proposition}
+
+\begin{proof}
+La primera afirmación resulta de (15.1.8), tomando $M_1=0$, y, por
+consiguiente, el homomorfismo (15.1.5.2) se reduce a (15.1.1.1).
+Recíprocamente, supongamos que el homomorfismo $\varphi$ de (15.1.1.1) es
+biyectivo. Obsérvese que, si se pone
+\[
+  \mathfrak{J}''=\sum_{i=1}^{n-1}f_iA,
+\]
+\oldpage[0\textsubscript{IV-1}]{16}
+y si se denota por $\gr''_\bullet(M)$ el $A$-módulo graduado asociado a $M$
+filtrado por la filtración $\mathfrak{J}''$-preádica, $\varphi$ se factoriza en
+\[
+  (\gr''_\bullet(M)\otimes(A/f_nA))[T_n]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.9.1}\label{0.15.1.9.1-es}
+\]
+y en $\varphi'\otimes1$, donde $\varphi'$ es el homomorfismo canónico
+\[
+  (\gr''_0(M))[T_1,\ldots,T_{n-1}]
+  \longrightarrow\gr''_\bullet(M).
+\]
+Como estos dos homomorfismos son sobreyectivos, son biyectivos si se supone que
+$\varphi$ es biyectivo; por tanto, $\varphi'$ es necesariamente inyectivo y,
+por consiguiente, biyectivo, puesto que es sobreyectivo. Se puede entonces
+razonar por recurrencia sobre $n$ (el caso $n=1$ resulta de (15.1.2)), pues
+sobre
+\[
+  M,\quad M/f_1M,\quad\ldots,\quad
+  M/\left(\sum_{j=1}^{n-2}f_jM\right)
+\]
+la topología $\mathfrak{J}''$-preádica es más fina que la topología
+$\mathfrak{J}$-preádica y, por consiguiente, es separada. Se ve, pues, que la
+sucesión $(f_i)_{1\leq i\leq n-1}$ es $M$-regular. Por otra parte, demostremos
+que la hipótesis implica que, si $y\in M/\mathfrak{J}''M$ es tal que
+\[
+  f_n^ky\in f_n^{k+1}(M/\mathfrak{J}''M),
+\]
+entonces $y\in f_n(M/\mathfrak{J}''M)$. En efecto, si $x$ es un representante
+de $y$, demostremos que $f_n^kx\in\mathfrak{J}^{k+1}M$; nuestra afirmación
+resultará entonces del hecho de que (15.1.9.1) es inyectivo. La hipótesis
+implica
+\[
+  f_n^kx\in f_n^{k+1}M+\mathfrak{J}''M\subset\mathfrak{J}M,
+\]
+de donde, como $\varphi$ es inyectivo,
+$f_n^{k-1}x\in\mathfrak{J}^kM$; por recurrencia se obtiene así
+$x\in\mathfrak{J}M$, y de ahí, finalmente,
+$f_n^kx\in\mathfrak{J}^{k+1}M$. Se termina el razonamiento como en
+(15.1.2): sobre $M/\mathfrak{J}''M$, la filtración
+$\mathfrak{J}$-preádica es idéntica a la filtración
+$(f_nA)$-preádica, luego es separada por hipótesis, y se concluye que la
+homotecia de razón $f_n$ en $M/\mathfrak{J}''M$ es inyectiva, lo que termina
+de demostrar que la sucesión $(f_i)_{1\leq i\leq n}$ es $M$-regular.
+\end{proof}
+
+\begin{corollary}[15.1.10]
+\label{0.15.1.10-es}
+Con las notaciones de (15.1.9), supongamos que, para todo $A$-módulo $N$ de
+tipo finito, $M\otimes_A N$ es separado para la topología
+$\mathfrak{J}$-preádica. Entonces, para que la sucesión $(f_i)$ sea
+$M$-regular, es necesario y suficiente que sea $M$-cuasirregular.
+\end{corollary}
+
+Obsérvese que la hipótesis de (15.1.10) implica que, si la sucesión
+$(f_i)_{1\leq i\leq n}$ es $M$-regular, también lo es la sucesión
+$(f_{\sigma(i)})$ para toda permutación $\sigma$ del intervalo $[1,n]$.
+
+\begin{corollary}[15.1.11]
+\label{0.15.1.11-es}
+Sean $A$ un anillo noetheriano, $M$ un $A$-módulo de tipo finito y
+$(f_i)_{1\leq i\leq n}$ una sucesión finita de elementos contenidos en el
+radical de $A$. Entonces, para que la sucesión $(f_i)$ sea $M$-regular, es
+necesario y suficiente que sea $M$-cuasirregular.
+\end{corollary}
+
+\begin{proof}
+Es un caso particular de (15.1.10), puesto que todo $A$-módulo de tipo finito
+es entonces separado para la topología $\mathfrak{J}$-preádica
+($0_{\mathrm I}$, 7.3.5).
+\end{proof}
+
+\begin{remarks}[15.1.12]
+\label{0.15.1.12-es}
+\mbox{}
+\begin{enumerate}
+  \item[(i)] Cuando $A$ es un anillo local noetheriano, $M$ un $A$-módulo de
+  tipo finito, y cuando los $f_i$ están contenidos en el ideal maximal de $A$,
+  la noción de sucesión $M$-regular fue introducida por J.-P.~Serre con el
+  nombre de $M$-\emph{sucesión} [17].
+  \item[(ii)] Incluso si $A$ es noetheriano y $M=A$, una sucesión $(f,g)$ de
+  dos elementos de $A$ que es cuasirregular no es necesariamente regular. Por
+  ejemplo, la sucesión $(0,1)$ es cuasirregular, puesto que entonces
+  $\mathfrak{J}=fA+gA=A$, luego $\gr_\bullet(A)=0$; pero, si $A\neq0$, no es
+  regular; obsérvese, no obstante, que en este caso la sucesión $(1,0)$ es
+  regular, pues $1$ no es divisor de $0$ en $A$, y como $A/A=0$, $0$ no es
+  divisor de cero en este módulo (cf. (15.1.1)).
+  \item[(iii)]
+  \oldpage[0\textsubscript{IV-1}]{17}
+  En (15.1.6), en general no se puede sustituir la hipótesis de que $f$ es
+  $\gr_\bullet(M)$-regular por la hipótesis de que es
+  $\gr_\bullet(M)$-cuasirregular. Para verlo, retomemos el ejemplo (15.1.4),
+  donde $A$ es un anillo principal de cuerpo de fracciones $K\neq A$, y
+  tomemos $M=K$, definiéndose la filtración $(M_k)$ de $M$ por
+  $M_0=M=K$, $M_1=A$, $M_k=0$ para $k\geq2$, de donde
+  $\gr_0(M)=K/A$, $\gr_1(M)=A$, $\gr_k(M)=0$ para $k\geq2$. Si $f\neq0$ en
+  $A$, se ha visto que $f$ no es $\gr_\bullet(M)$-regular, pero, como se tiene
+  \[
+    f^k\gr_\bullet(M)/f^{k+1}\gr_\bullet(M)=f^kA/f^{k+1}A,
+  \]
+  es inmediato que el homomorfismo (15.1.2.1) (donde $M$ se sustituye por
+  $\gr_\bullet(M)$) es inyectivo; por tanto, $f$ es
+  $\gr_\bullet(M)$-cuasirregular. Pero, con las notaciones de (15.1.6), se
+  tiene entonces $M'_k=K$ para todo $k\geq0$, luego
+  $\gr'_\bullet(M)=0$, mientras que el miembro izquierdo de (15.1.5.2) no se
+  reduce a $0$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[15.1.13]
+\label{0.15.1.13-es}
+Sean $A$ un anillo, $M$ y $N$ dos $A$-módulos, y
+$(f_i)_{1\leq i\leq n}$ una sucesión de elementos de $A$. Si la sucesión
+$(f_i)$ es $M$-regular y si $N$ es un $A$-módulo plano, entonces la sucesión
+$(f_i)$ es $M\otimes_A N$-regular. El recíproco es cierto si $N$ es un
+$A$-módulo fielmente plano.
+\end{proposition}
+
+\begin{proof}
+En efecto (sin hipótesis sobre $N$),
+\[
+  (M\otimes_A N)/
+  \left(\sum_{j=1}^{i-1}f_j(M\otimes_A N)\right)
+\]
+es isomorfo a
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A N~;
+\]
+basta entonces aplicar ($0_{\mathrm I}$, 6.1.1) y
+($0_{\mathrm I}$, 6.4.1) a la homotecia de razón $f_i$ en
+$M/(\sum_{j=1}^{i-1}f_jM)$.
+\end{proof}
+
+\begin{corollary}[15.1.14]
+\label{0.15.1.14-es}
+Sean $A$ un anillo, $M$ un $A$-módulo y $(f_i)_{1\leq i\leq n}$ una sucesión
+finita de elementos de $A$. Sean $\rho:A\to B$ un homomorfismo de anillos,
+$M'=M_{(B)}=M\otimes_A B$ y $f'_i=\rho(f_i)$ para $1\leq i\leq n$. Si $B$ es
+un $A$-módulo plano y si la sucesión $(f_i)$ es $M$-regular, entonces la
+sucesión $(f'_i)$ es $M'$-regular; el recíproco es cierto si $B$ es un
+$A$-módulo fielmente plano.
+\end{corollary}
+
+\begin{proof}
+En efecto,
+\[
+  M'/\left(\sum_{j=1}^{i-1}f'_jM'\right)
+\]
+se identifica con
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A B,
+\]
+y la homotecia de razón $f'_i$ en el $B$-módulo
+$M'/(\sum_{j=1}^{i-1}f'_jM')$ se identifica con la homotecia de razón $f_i$
+en el $A$-módulo
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A B~;
+\]
+la afirmación resulta, por tanto, de (15.1.13).
+\end{proof}
+
+\begin{proposition}[15.1.15]
+\label{0.15.1.15-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra conmutativa,
+$(f_i)_{1\leq i\leq n}$ una sucesión finita de elementos de $B$ y $M$ un
+$B$-módulo. Supongamos que la sucesión $(f_i)$ es $M$-regular y que cada uno
+de los $A$-módulos
+\[
+  M/\left(\sum_{j=1}^{i-1}f_jM\right)\quad(1\leq i\leq n)
+\]
+es plano. Entonces, para todo homomorfismo de anillos $\rho:A\to A'$, si se
+pone $B'=B\otimes_A A'$, $M'=M\otimes_A A'$ y $f'_i=f_i\otimes1$
+($1\leq i\leq n$), la sucesión $(f'_i)$ es $M'$-regular y los
+$A'$-módulos
+\[
+  M'/\left(\sum_{j=1}^{i-1}f'_jM'\right)\quad(1\leq i\leq n)
+\]
+son planos.
+\end{proposition}
+
+\begin{proof}
+Consideremos la sucesión (exacta por hipótesis)
+\[
+  0\longrightarrow M\xrightarrow{f_1}M\longrightarrow M/f_1M
+  \longrightarrow0
+\]
+(siendo la flecha $M\xrightarrow{f_1}M$ la homotecia de razón $f_1$ en
+$M$). La hipótesis de que $M/f_1M$ es $A$-plano implica que la sucesión
+\[
+  0\longrightarrow M\otimes_A A'
+  \xrightarrow{f_1\otimes1}M\otimes_A A'
+  \longrightarrow(M/f_1M)\otimes_A A'\longrightarrow0
+\]
+\oldpage[0\textsubscript{IV-1}]{18}
+es exacta ($0_{\mathrm I}$, 6.1.2). Esto muestra que la homotecia de razón
+$f'_1$ en $M'$ es inyectiva.
+
+Pongamos a continuación, para $1\leq i\leq n-1$,
+\[
+  M_i=M/\left(\sum_{j=1}^i f_jM\right),\qquad
+  M'_i=M'/\left(\sum_{j=1}^i f'_jM'\right)~;
+\]
+se tiene $M'_i=M_i\otimes_A A'$, $M_i/f_{i+1}M_i=M_{i+1}$,
+$M'_i/f'_{i+1}M'_i=M'_{i+1}$; basta sustituir en el razonamiento anterior
+$M$ y $f_1$ por $M_i$ y $f_{i+1}$ para concluir que la homotecia de razón
+$f'_{i+1}$ en $M'_i$ es inyectiva, en virtud de la planitud de
+$M_i/f_{i+1}M_i$. La última afirmación resulta de ($0_{\mathrm I}$, 6.2.1).
+\end{proof}
+\begin{proposition}[15.1.16]
+\label{0.15.1.16-es}
+Sean $A$, $B$ dos anillos locales noetherianos, $k$ el cuerpo residual de
+$A$, $\varphi:A\to B$ un homomorfismo local y $M$ un $B$-módulo de tipo finito.
+Sea $(f_i)_{1\leq i\leq n}$ una sucesión de elementos del ideal máximo de $B$
+y, para cada $i$, sea $g_i$ la imagen de $f_i$ en $B\otimes_A k$. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm(a)] La sucesión $(f_i)$ es $M$-regular y los cocientes
+  \[
+    M_i=M/\left(\sum_{j=1}^i f_jM\right)
+  \]
+  son $A$-módulos planos para $1\leq i\leq n$.
+  \item[\rm(b)] La sucesión $(f_i)$ es $M$-regular y el $A$-módulo $M_n$ es
+  plano.
+  \item[\rm(c)] El $A$-módulo $M$ es plano y la sucesión
+  $(g_i)_{1\leq i\leq n}$ es $(M\otimes_A k)$-regular.
+  \item[\rm(d)] El $A$-módulo $M$ es plano y, para todo homomorfismo de
+  anillos $\rho:A\to A'$, si se pone $B'=B\otimes_A A'$,
+  $M'=M\otimes_A A'$, $f'_i=f_i\otimes1$ ($1\leq i\leq n$), la sucesión
+  $(f'_i)$ es $M'$-regular.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Es claro que a) implica b); para demostrar que b) implica d), basta, en virtud
+de (15.1.15), demostrar que b) implica que los $M_i$ son $A$-módulos planos
+para $0\leq i\leq n-1$ (poniendo $M_0=M$). Como
+$M_{i+1}=M_i/f_{i+1}M_i$, por inducción descendente nos reducimos a probar que,
+si $h$ es un elemento del ideal máximo de $B$ tal que la multiplicación por
+$h$ en $M$ sea inyectiva y que $M/hM$ sea un $A$-módulo plano, entonces $M$
+es un $A$-módulo plano; pero esto no es sino
+($0_{\mathrm{III}}$, 10.2.7). Es claro que c) es el caso particular de d)
+obtenido tomando $A'=k$. Queda, pues, probar que c) implica a). Como $M$ es un
+$A$-módulo plano y un $B$-módulo de tipo finito, se deduce de c) y de
+($0_{\mathrm{III}}$, 10.2.4) que la multiplicación por $f_1$ en $M$ es
+inyectiva y que su conúcleo $M/f_1M=M_1$ es un $A$-módulo plano. Razonemos por
+inducción sobre $i$ y supongamos demostrado que $M_i$ es un $A$-módulo plano;
+como la multiplicación por $g_{i+1}$ en $M_i\otimes_A k$ es inyectiva por
+hipótesis, se deduce de nuevo de ($0_{\mathrm{III}}$, 10.2.4) que la
+multiplicación por $f_{i+1}$ en $M_i$ es inyectiva y que
+$M_i/f_{i+1}M_i=M_{i+1}$ es un $A$-módulo plano, lo que termina la
+demostración. Se observará que la demostración de que c) implica a) no utiliza
+el hecho de que los $f_i$ pertenezcan al ideal máximo de $B$.
+\end{proof}
+
+\begin{corollary}[15.1.17]
+\label{0.15.1.17-es}
+Bajo las hipótesis sobre $A$ y $B$ de (15.1.16), sean $M$ un $B$-módulo de
+tipo finito, plano sobre $A$, y $R$ un sub-$B$-módulo de $M$ tal que $N=M/R$
+sea un $A$-módulo plano. Sea $(f_i)_{1\leq i\leq n}$ una sucesión de elementos
+del ideal máximo de $B$ que tenga las propiedades siguientes:
+\begin{enumerate}
+  \item[(i)] $f_iM\subset R$ para $1\leq i\leq n$.
+  \item[(ii)] Si $g_i$ es la imagen de $f_i$ en $B\otimes_A k$, la sucesión
+  $(g_i)_{1\leq i\leq n}$ es $(M\otimes_A k)$-regular.
+  \item[(iii)] La suma de los sub-$(B\otimes_A k)$-módulos
+  $g_i(M\otimes_A k)$ de $M\otimes_A k$ es la imagen canónica de
+  $R\otimes_A k$ en $M\otimes_A k$ (igual al núcleo del homomorfismo canónico
+  $M\otimes_A k\to N\otimes_A k$).
+\end{enumerate}
+Entonces la sucesión $(f_i)$ es $M$-regular y se tiene
+$R=\sum_{i=1}^n f_iM$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{19}
+Como $N$ es un $A$-módulo plano, se deduce de la exactitud de la sucesión
+$0\to R\to M\to N\to0$ que la sucesión
+\[
+  0\longrightarrow R\otimes_A k\longrightarrow M\otimes_A k
+  \longrightarrow N\otimes_A k\longrightarrow0
+\]
+es exacta ($0_{\mathrm I}$, 6.1.2); se tiene, pues,
+$R\otimes_A k=\sum_i g_i(M\otimes_A k)$. Como $M$ es un $B$-módulo de tipo
+finito y $B$ es noetheriano, $R$ es también un $B$-módulo de tipo finito, de
+donde $R=\sum_i f_iM$ en virtud del lema de Nakayama, pues los $f_i$ pertenecen
+al ideal máximo de $B$.
+\end{proof}
+
+\begin{lemma}[15.1.18]
+\label{0.15.1.18-es}
+Sean $A$ un anillo, $M$ un $A$-módulo provisto de una filtración separada y
+exhaustiva $(M_k)_{k\geq0}$, y sea $f\in A$ un elemento
+$\gr_\bullet(M)$-regular. Entonces:
+\begin{enumerate}
+  \item[(i)] $f$ es $M$-regular.
+  \item[(ii)] Para todo $k$, se tiene $M_k\cap fM=fM_k$, y la imagen canónica
+  $M'_k$ de $M_k$ en $M'=M/fM$ es, por tanto, canónicamente isomorfa a
+  $M_k/fM_k$.
+  \item[(iii)] La sucesión
+  \[
+    0\longrightarrow M_{k+1}/fM_{k+1}\longrightarrow M_k/fM_k
+    \longrightarrow\gr_k(M)/f\cdot\gr_k(M)\longrightarrow0
+  \]
+  es exacta y, si se dota a $M'$ de la filtración cociente $(M'_k)$,
+  $\gr_\bullet(M')$ es, por tanto, canónicamente isomorfo a
+  $\gr_\bullet(M)/f\cdot\gr_\bullet(M)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+La afirmación (i) se deduce de la hipótesis sobre $f$ y de Bourbaki,
+\emph{Alg.~comm.}, cap.~III, \S~2, n.º~8, cor.~1 del teo.~1. Como
+$\gr_\bullet(M/M_k)$ es un sumando directo de $\gr_\bullet(M)$, $f$ es
+$\gr_\bullet(M/M_k)$-regular para todo $k$, luego $(M/M_k)$-regular por (i),
+lo que establece (ii). Para probar (iii), basta ver que la aplicación
+$M_{k+1}/fM_{k+1}\to M_k/fM_k$ es inyectiva: ahora bien, si
+$x\in M_{k+1}$ es tal que $x\in fM_k$, se deduce de (ii) que
+$x\in fM_{k+1}$, lo que termina de probar el lema.
+\end{proof}
+
+\begin{proposition}[15.1.19]
+\label{0.15.1.19-es}
+Sean $A$ un anillo, $M$ un $A$-módulo provisto de una filtración
+$(M_k)_{k\geq0}$ tal que $M_0=M$, y $(f_i)_{1\leq i\leq n}$ una sucesión
+$\gr_\bullet(M)$-regular de elementos de $A$. Supongamos además que, para
+$0\leq i\leq n-1$, la filtración cociente de $(M_k)$ sobre
+\[
+  M/\left(\sum_{j\leq i}f_jM\right)
+\]
+es separada. Entonces la sucesión $(f_i)$ es $M$-regular y, si se pone
+\[
+  M'=M/\left(\sum_{i\leq n}f_iM\right)
+\]
+y se dota a $M'$ de la filtración cociente de $(M_k)$,
+$\gr_\bullet(M')$ es canónicamente isomorfo a
+\[
+  \gr_\bullet(M)/
+  \left(\sum_{i\leq n}f_i\gr_\bullet(M)\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Para $n=1$, la proposición se deduce del lema (15.1.18). Razonemos por
+inducción sobre $n$, poniendo
+\[
+  N=M/\left(\sum_{i\leq n-1}f_iM\right)
+\]
+y denotando por $(N_k)$ la filtración cociente de $(M_k)$ sobre $N$, que es
+separada por hipótesis; además, $\gr_\bullet(N)$ es isomorfo a
+\[
+  \gr_\bullet(M)/
+  \left(\sum_{i\leq n-1}f_i\gr_\bullet(M)\right).
+\]
+Por hipótesis, $f_n$ es, pues, $\gr_\bullet(N)$-regular, y se deduce del lema
+(15.1.18), aplicado a $N$, que $f_n$ es $N$-regular y $\gr_\bullet(M')$ es
+isomorfo a $\gr_\bullet(N)/f_n\gr_\bullet(N)$, lo que demuestra la
+proposición.
+\end{proof}
+
+La proposición (15.1.19) se aplicará, en particular, a las filtraciones que
+verifiquen una u otra de las hipótesis siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] La filtración $(M_k)$ es finita y separada (pues esto
+  implica que $M_k=0$ para $k$ suficientemente grande);
+  \item[$2^\circ$] $A$ es un anillo noetheriano, $\mathfrak{J}$ un ideal
+  contenido en el radical de $A$, $M$ un $A$-módulo de tipo finito y $(M_k)$
+  la filtración $\mathfrak{J}$-preádica ($0_{\mathrm I}$, 7.3.5).
+\end{enumerate}
+
+\begin{corollary}[15.1.20]
+\label{0.15.1.20-es}
+\oldpage[0\textsubscript{IV-1}]{20}
+Sean $A$ un anillo, $M$ un $A$-módulo y $(f_i)_{1\leq i\leq n}$ una sucesión
+$M$-regular de elementos de $A$. Entonces, cualesquiera que sean los enteros
+$\nu_i\geq1$, la sucesión $(f_i^{\nu_i})$ es $M$-regular y
+$M/(\sum_{i\leq n}f_i^{\nu_i}M)$ posee una serie de composición cuyos
+cocientes son isomorfos a $M/(\sum_{i\leq n}f_iM)$.
+\end{corollary}
+
+\begin{proof}
+Razonemos por inducción sobre $n$; para $n=1$, las afirmaciones son inmediatas,
+pues $f^jM/f^{j+1}M$ es isomorfo a $M/fM$, ya que la multiplicación por $f$ en
+$M$ es inyectiva por hipótesis. Pongamos entonces
+\[
+  N=M/\left(\sum_{i\leq n-1}f_i^{\nu_i}M\right)~;
+\]
+por la hipótesis de inducción, $N$ admite una filtración finita $(N_k)$ para la
+cual los $\gr_k(N)$ son isomorfos a
+$M/(\sum_{i\leq n-1}f_iM)$; por hipótesis, $f_n$ es, pues,
+$\gr_\bullet(N)$-regular; se deduce entonces de (15.1.19) que $f_n$ es
+$N$-regular. Aplicando el caso $n=1$ demostrado al principio, se concluye que
+$f_n^{\nu_n}$ es $N$-regular y que $N/f_n^{\nu_n}N$ admite una serie de
+composición cuyos cocientes son isomorfos a $N/f_nN$; pero, para la filtración
+de $N/f_nN$ cociente de la filtración $(N_k)$,
+$\gr_k(N/f_nN)$ es isomorfo a $\gr_k(N)/f_n\gr_k(N)$ por (15.1.19) para todo
+$k$, luego a $M/(\sum_{i\leq n}f_iM)$, lo que prueba el corolario.
+\end{proof}
+
+\begin{proposition}[15.1.21]
+\label{0.15.1.21-es}
+Sean $A$, $B$ dos anillos locales noetherianos, $\varphi:A\to B$ un
+homomorfismo local, $M$ un $B$-módulo de tipo finito y
+$(f_i)_{1\leq i\leq n}$ una sucesión $A$-regular formada por elementos del
+ideal máximo de $A$. Las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $M$ es un $A$-módulo plano.
+  \item[b)] Si $\mathfrak{J}$ es el ideal $\sum_{i\leq n}f_iA$,
+  $M/\mathfrak{J}M$ es un $A/\mathfrak{J}$-módulo plano y la sucesión $(f_i)$
+  es $M$-regular.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+El hecho de que a) implica b) se deduce de (15.1.13) y de
+($0_{\mathrm{III}}$, 10.2.2). Recíprocamente, si la sucesión $(f_i)$ es
+$M$-regular, es $M$-cuasi-regular (15.1.9), luego el homomorfismo
+(15.1.1.1) es biyectivo. Pero, como también se supone que la sucesión
+$(f_i)_{1\leq i\leq n}$ es $A$-regular, es $A$-cuasi-regular (15.1.9), y el
+homomorfismo canónico (15.1.1.1) correspondiente
+$(A/\mathfrak{J})[T_1,\ldots,T_n]\to\gr_\bullet(A)$ es biyectivo. Se concluye
+que el homomorfismo canónico ($0_{\mathrm{III}}$, 10.1.1.2)
+\[
+  \gr_0(M)\otimes_{A/\mathfrak{J}}\gr_\bullet(A)
+  \longrightarrow\gr_\bullet(M)
+\]
+es biyectivo. La conclusión se deduce entonces de ($0_{\mathrm{III}}$,
+10.2.2), pues los $f_i$ están en el ideal máximo de $A$ y el homomorfismo
+$\varphi$ es local.
+\end{proof}
+
+\subsection{Sucesiones \texorpdfstring{$\mathscr{F}$}{F}-regulares}
+\label{subsection:0.15.2-es}
+
+\begin{env}[15.2.1]
+\label{0.15.2.1-es}
+Sean $X$ un espacio anillado, $\mathscr{F}$ un $\mathcal{O}_X$-Módulo,
+$f_i$ ($1\leq i\leq n$) una sucesión de secciones de $\mathcal{O}_X$ sobre
+$X$, y $\mathscr{J}$ el Ideal de $\mathcal{O}_X$ generado por los $f_i$
+(imagen de $\mathcal{O}_X^n$ por el homomorfismo
+$\mathcal{O}_X^n\to\mathcal{O}_X$ definido canónicamente por los $f_i$
+($0_{\mathrm I}$, 5.1.1)). Los sub-$\mathcal{O}_X$-Módulos
+$\mathscr{J}^k\mathscr{F}$ definen una filtración sobre $\mathscr{F}$, y
+se pone también
+$\gr_k(\mathscr{F})=\mathscr{J}^k\mathscr{F}/\mathscr{J}^{k+1}\mathscr{F}$~;
+si $S_k$ es el conjunto de los polinomios homogéneos de grado total $k$ en
+el anillo $\mathbb{Z}[T_1,\ldots,T_n]$, $S_k$ puede considerarse como un
+haz simple sobre $X$, y se define, como en (15.1.1), un homomorfismo
+canónico
+\[
+\label{0.15.2.1.1-es}
+  \varphi_k:\gr_0(\mathscr{F})\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\mathscr{F}).
+\tag{15.2.1.1}
+\]
+\oldpage[0\textsubscript{IV-1}]{21}
+de la manera siguiente: para todo abierto $U$ de $X$ (o de una base de la
+topología de $X$), se considera el homomorfismo (15.1.1.1)
+\[
+  \varphi_{k,U}:\gr_0(\Gamma(U,\mathscr{F}))\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\Gamma(U,\mathscr{F}))
+\]
+definido por las $n$ secciones $f_i|U\in\Gamma(U,\mathcal{O}_X)$, estando el
+$\Gamma(U,\mathcal{O}_X)$-módulo $\Gamma(U,\mathscr{F})$ filtrado por los
+submódulos $(\Gamma(U,\mathscr{J}))^k\Gamma(U,\mathscr{F})$. Como el
+$\mathcal{O}_X$-Módulo $\gr_k(\mathscr{F})$ está asociado al prehaz
+$U\mapsto\gr_k(\Gamma(U,\mathscr{F}))$ para todo $k$, los $\varphi_{k,U}$
+definen un homomorfismo de $\mathcal{O}_X$-Módulos (15.2.1.1). En virtud
+de las propiedades de exactitud de los límites inductivos de módulos y de su
+conmutación con los productos tensoriales, de lo anterior resulta que, para
+todo $x\in X$, el homomorfismo $(\varphi_k)_x$ de los tallos en el punto $x$
+de los dos miembros de (15.2.1.1) se identifica con el homomorfismo de (15.1.1)
+\[
+\label{0.15.2.1.2-es}
+  \gr_0(\mathscr{F}_x)\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\mathscr{F}_x)
+\tag{15.2.1.2}
+\]
+definido por la sucesión $((f_i)_x)_{1\leq i\leq n}$ de elementos de
+$\mathcal{O}_x$.
+\end{env}
+
+\begin{env}[15.2.2]
+\label{0.15.2.2-es}
+Con la notación de (15.2.1), diremos que la sucesión
+$(f_i)_{1\leq i\leq n}$ es $\mathscr{F}$-regular si, denotando por
+$f_j\mathscr{F}$ el sub-$\mathcal{O}_X$-Módulo de $\mathscr{F}$ imagen del
+endomorfismo de $\mathscr{F}$ definido por $f_j$, el endomorfismo de
+$\mathscr{F}/(\sum_{j=1}^{i-1}f_j\mathscr{F})$ definido por $f_i$ es inyectivo
+para $1\leq i\leq n$; diremos que la sucesión $(f_i)$ es
+$\mathscr{F}$-cuasirregular si los homomorfismos (15.2.1.1) son inyectivos.
+De estas definiciones y de las observaciones de (15.2.1) resulta que, para que
+la sucesión $(f_i)$ sea $\mathscr{F}$-regular (resp.
+$\mathscr{F}$-cuasirregular), es necesario y suficiente que, para todo
+$x\in X$, la sucesión $((f_i)_x)_{1\leq i\leq n}$ sea
+$\mathscr{F}_x$-regular (resp. $\mathscr{F}_x$-cuasirregular). Toda sucesión
+$\mathscr{F}$-regular es, pues, $\mathscr{F}$-cuasirregular (15.1.9); el
+recíproco es cierto si $\mathscr{F}$ es un $\mathcal{O}_X$-Módulo de tipo
+finito, si los $\mathcal{O}_x$ son anillos noetherianos para todo $x\in X$ y
+si, además, los $(f_i)_x$ pertenecen al radical de $\mathcal{O}_x$ para todo
+$x\in X$ (15.1.11).
+
+Si $X=\operatorname{Spec}(A)$ es un esquema afín, y
+$\mathscr{F}=\widetilde{M}$, resulta de (I, 1.3) que, para que la sucesión
+$(f_i)$ sea $\mathscr{F}$-regular (resp. $\mathscr{F}$-cuasirregular), es
+necesario y suficiente que sea $M$-regular (resp. $M$-cuasirregular).
+
+Cuando $\mathscr{F}=\mathcal{O}_X$, se omitirá la mención de $\mathscr{F}$ en
+las definiciones precedentes.
+\end{env}
+
+\begin{remark}[15.2.3]
+\label{0.15.2.3-es}
+Cuando $X=\operatorname{Spec}(A)$ y
+$\mathfrak{J}=\sum_{i=1}^n f_iA$, la sucesión $(f_j)$ es cuasirregular para
+todo $A$-módulo $M$ en todo abierto $U$ que no interseque
+$V(\mathfrak{J})$, pues en todo punto $x\in U$ se tiene
+$\mathfrak{J}_x=\mathcal{O}_x$ y los dos miembros de (15.2.1.2) son nulos. La
+noción de sucesión $\widetilde{M}$-regular solo tiene interés en un entorno de
+los puntos de $V(\mathfrak{J})$.
+\end{remark}
+
+\begin{proposition}[15.2.4]
+\label{0.15.2.4-es}
+Sean $X$ un espacio anillado, $\mathscr{F}$ un $\mathcal{O}_X$-Módulo
+coherente, $x$ un punto de $X$, y $(f_i)_{1\leq i\leq n}$ una sucesión de
+elementos de $\Gamma(X,\mathcal{O}_X)$. Si la sucesión
+$((f_i)_x)_{1\leq i\leq n}$ es $\mathscr{F}_x$-regular, existe un entorno
+abierto $U$ de $x$ tal que la sucesión $(f_i|U)_{1\leq i\leq n}$ sea
+$(\mathscr{F}|U)$-regular.
+\end{proposition}
+
+\begin{proof}
+En efecto, para $1\leq i\leq n$, el $\mathcal{O}_X$-Módulo
+$\mathscr{F}/(\sum_{j=1}^{i-1}f_j\mathscr{F})$ es coherente
+($0_{\mathrm I}$, 5.3.4), por lo que también lo es el núcleo del endomorfismo
+de este $\mathcal{O}_X$-Módulo definido por $f_i$
+($0_{\mathrm I}$, 5.3.4); como el tallo de este núcleo en el punto $x$ es
+nulo, lo mismo ocurre con su restricción a un entorno de $x$
+($0_{\mathrm I}$, 5.2.2).
+\end{proof}
+
+\begin{proposition}[15.2.5]
+\label{0.15.2.5-es}
+\oldpage[0\textsubscript{IV-1}]{22}
+Sea $u=(\psi,\theta):X\to Y$ un morfismo plano de espacios anillados
+($0_{\mathrm I}$, 6.7.1); sean $\mathscr{F}$ un
+$\mathcal{O}_Y$-Módulo, $\mathscr{G}=u^*(\mathscr{F})$,
+$(f_i)_{1\leq i\leq n}$ una sucesión de elementos de
+$\Gamma(Y,\mathcal{O}_Y)$, y $(g_i)_{1\leq i\leq n}$ la sucesión de sus
+imágenes
+$g_i=\theta(f_i)\in\Gamma(Y,u_*(\mathcal{O}_X))=\Gamma(X,\mathcal{O}_X)$. Si
+la sucesión $(f_i)$ es $\mathscr{F}$-regular, la sucesión $(g_i)$ es
+$\mathscr{G}$-regular. El recíproco es cierto si $u$ es un morfismo fielmente
+plano ($0_{\mathrm I}$, 6.7.8).
+\end{proposition}
+
+\begin{proof}
+Sean $x$ un punto de $X$ e $y=u(x)=\psi(x)$; se tiene
+\[
+  \mathscr{G}_x=\psi_x^*(\mathscr{F}_y)
+  \otimes_{\psi_x^*(\mathcal{O}_y)}\mathcal{O}_x,
+  \qquad\text{y}\qquad
+  (g_i)_x=\theta_x^\#(\psi_x^*((f_i)_y))~;
+\]
+como, por hipótesis,
+$\theta_x^\#:\psi_x^*(\mathcal{O}_y)\to\mathcal{O}_x$ hace de
+$\mathcal{O}_x$ un $\psi_x^*(\mathcal{O}_y)$-módulo plano, y como el funtor
+$\psi^*$ es exacto, la primera afirmación resulta de la afirmación
+correspondiente de (15.1.14); lo mismo ocurre con la segunda, teniendo en cuenta
+que la hipótesis de que $u$ es fielmente plano significa que $\psi$ es
+sobreyectivo y que $\theta_x^\#$ hace de $\mathcal{O}_x$ un
+$\psi_x^*(\mathcal{O}_y)$-módulo fielmente plano.
+\end{proof}

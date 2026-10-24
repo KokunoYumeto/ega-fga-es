@@ -1,0 +1,226 @@
+\subsection{Pseudo-morfismos y pseudo-funciones}
+\label{IV.20.2}
+
+Los únicos espacios anillados de los que se tratará en esta sección son los \emph{preesquemas}.
+
+\begin{env}[20.2.1]
+\label{IV.20.2.1}
+Recordemos \sref{IV.11.10.2} que en un preesquema $X$ se dice que un abierto $U$ es \emph{esquemáticamente denso} si, para todo abierto $V$ de $X$, el homomorfismo canónico $\Gamma(V,\sh{O}_X)\to\Gamma(V\cap U,\sh{O}_X)$ es \emph{inyectivo}.
+
+Consideremos dos preesquemas $X$, $Y$, dos abiertos \emph{esquemáticamente densos} $U$, $U'$ de $X$; decimos que dos morfismos $u:U\to Y$, $u':U'\to Y$ son \emph{equivalentes} si existe un abierto $U''\subset U\cap U'$, \emph{esquemáticamente denso} en $X$, tal que $u|U''=u'|U''$.
+Como se desprende inmediatamente de la definición de los abiertos esquemáticamente densos que la intersección de dos de tales abiertos es de nuevo uno de ellos, es inmediato que la relación precedente es efectivamente una relación de equivalencia.
+Una clase de equivalencia para esta relación se llama un \emph{pseudo-morfismo} de $X$ en $Y$, o una \emph{aplicación racional estricta} de $X$ en $Y$.
+
+Si $S$ es un preesquema y $X$, $Y$ dos $S$-preesquemas, llamamos \emph{pseudo-$S$-morfismo} a la clase de equivalencia (para la relación precedente) de un $S$-morfismo de un abierto esquemáticamente denso de $X$ en $Y$.
+Un pseudo-morfismo no es por tanto otra cosa que un pseudo-$S$-morfismo para $S=\Spec(\bb{Z})$.
+
+Denotamos por $\operatorname{Ps.hom}(X,Y)$ (resp.\ $\operatorname{Ps.hom}_S(X,Y)$) el conjunto de pseudo-morfismos (resp.\ pseudo-$S$-morfismos) de $X$ en $Y$.
+\end{env}
+
+\begin{env}[20.2.2]
+\label{IV.20.2.2}
+\oldpage[IV-4]{232}
+Se desprende de la definición recordada arriba que si $U$ es un abierto esquemáticamente denso en $X$, entonces, para todo abierto $V$ de $X$, $U\cap V$ es esquemáticamente denso en $V$.
+Si dos morfismos $u:U\to Y$, $u':U'\to Y$ de abiertos esquemáticamente densos de $X$ en $Y$ son equivalentes, se sigue que sus restricciones $u|(V\cap U)$ y $u'|(V\cap U')$ son también morfismos equivalentes (para el preesquema inducido en $V$); su clase se llama la \emph{restricción} a $V$ del pseudo-morfismo $\omega$, clase de $u$, y denotamos este pseudo-morfismo por $\omega|V$.
+Si $W\subset V$ es un abierto de $X$, es claro que $(\omega|V)|W=\omega|W$.
+Esto muestra que las aplicaciones de restricción definen un \emph{prehaz de conjuntos} $U\mapsto\operatorname{Ps.hom}(U,Y)$; obsérvese que este prehaz \emph{no es} en general un haz (cf.\ \sref{IV.20.2.16}); el haz asociado se denota por $\mathscr{P}\!s.\!\operatorname{hom}(X,Y)$.
+Para los pseudo-$S$-morfismos se ve del mismo modo que $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ es un prehaz de conjuntos, cuyo haz asociado denotamos por $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$.
+
+Si $V$ es un abierto \emph{esquemáticamente denso} en $X$, entonces, para todo abierto $U$ esquemáticamente denso en $X$, $U\cap V$ es también esquemáticamente denso en $X$, por lo que la aplicación $\omega\mapsto\omega|V$ es una \emph{biyección} del conjunto $\operatorname{Ps.hom}(X,Y)$ (resp.\ $\operatorname{Ps.hom}_S(X,Y)$) sobre $\operatorname{Ps.hom}(V,Y)$ (resp.\ $\operatorname{Ps.hom}_S(V,Y)$).
+\end{env}
+
+\begin{env}[20.2.3]
+\label{IV.20.2.3}
+Dado un pseudo-$S$-morfismo $\omega$ de $X$ en $Y$, decimos que está \emph{definido} en un punto $x\in X$ si existe un entorno abierto $V$ de $x$ en $X$, un abierto $U\subset V$ \emph{que contiene $x$ y es esquemáticamente denso en $V$}, y finalmente un morfismo $S$ $u:U\to Y$ cuya clase en $\operatorname{Ps.hom}_S(V,Y)$ sea igual a $\omega|V$ \sref{IV.20.2.2}; llamamos \emph{dominio de definición} de $\omega$ y denotamos por $\operatorname{dom}_S(\omega)$ (o simplemente por $\operatorname{dom}(\omega)$ si $S=\Spec(\bb{Z})$) al conjunto de los $x\in X$ donde $\omega$ está definido; es evidentemente un \emph{abierto} de $X$.
+Además, para todo abierto $W$ de $X$, se tiene
+\[
+\label{IV.20.2.3.1}
+  \operatorname{dom}_S(\omega|W)=(\operatorname{dom}_S(\omega))\cap W
+  \tag{20.2.3.1}
+\]
+en virtud de la propiedad de los abiertos esquemáticamente densos recordada en \sref{IV.20.2.2}.
+\end{env}
+
+\begin{proposition}[20.2.4]
+\label{IV.20.2.4}
+Supongamos que $X$, $Y$ sean $S$-preesquemas tales que el morfismo estructural $Y\to S$ sea separado; entonces, si $\omega$ es un pseudo-$S$-morfismo de $X$ en $Y$, $\operatorname{dom}_S(\omega)$ es el mayor de los abiertos esquemáticamente densos $U$ de $X$ tales que existe un morfismo $S$ $u:U\to Y$ perteneciente a la clase $\omega$.
+\end{proposition}
+
+\begin{proof}
+Basta evidentemente demostrar que si $U$, $U'$ son dos abiertos esquemáticamente densos en $X$ tales que dos morfismos $S$ $u:U\to Y$ y $u':U'\to Y$ sean equivalentes, entonces las restricciones de $u$ y $u'$ a $U\cap U'$ son iguales.
+Ahora bien, por hipótesis existe un abierto $U''\subset U\cap U'$, esquemáticamente denso en $X$ y en el que $u$ y $u'$ coinciden; como $U''$ es también esquemáticamente denso en $U\cap U'$, nuestra afirmación se deduce de \sref{IV.11.10.1}[(d)].
+\end{proof}
+
+\begin{corollary}[20.2.5]
+\label{IV.20.2.5}
+Sea $S$ un esquema sobre $S_0$, y sean $X$, $Y$ dos $S$-preesquemas tales que el morfismo compuesto $Y\to S\to S_0$ sea separado (lo que implica \sref[I]{I.5.5.1} que $Y\to S$ también lo es).
+Para todo pseudo-$S$-morfismo $\omega$ de $X$ en $Y$, se tiene entonces $\operatorname{dom}_S(\omega)=\operatorname{dom}_{S_0}(\omega)$.
+En particular, si $Y$ es un esquema, se tiene $\operatorname{dom}_S(\omega)=\operatorname{dom}(\omega)$.
+\end{corollary}
+
+\begin{proof}
+En efecto, es claro que $\operatorname{dom}_S(\omega)\subset\operatorname{dom}_{S_0}(\omega)$ sin hipótesis de separación; en virtud de \sref{IV.20.2.4}, basta demostrar que si un morfismo $S_0$ $u_0:U_0\to Y$ de un abierto
+\oldpage[IV-4]{233}
+esquemáticamente denso $U_0$ de $X$ en $Y$ es tal que el compuesto $v_0:U_0\xrightarrow{u_0}Y\to S$ coincide con la restricción del morfismo estructural $w_0:U_0\to S$ en un abierto $U\subset U_0$ esquemáticamente denso en $X$, entonces $v_0=w_0$.
+Pero en virtud de la hipótesis de que el morfismo $S\to S_0$ es separado, esto se deduce de nuevo de \sref{IV.11.10.1}[(d)].
+\end{proof}
+
+\begin{corollary}[20.2.6]
+\label{IV.20.2.6}
+Bajo las hipótesis de \sref{IV.20.2.4}, el prehaz $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ es un haz.
+\end{corollary}
+
+\begin{proof}
+En efecto, sean $U$ un abierto de $X$, $(U_\alpha)$ un recubrimiento de $U$ por abiertos de $U$; supongamos dado para cada $\alpha$ un pseudo-$S$-morfismo $\omega_\alpha$ de $U_\alpha$ en $Y$, de modo que para todo par de índices $\alpha$, $\beta$, las restricciones \sref{IV.20.2.2} de los pseudo-$S$-morfismos $\omega_\alpha$ y $\omega_\beta$ a $U_\alpha\cap U_\beta$ sean iguales; en virtud de \sref{IV.20.2.3.1}, esto implica que $\operatorname{dom}_S(\omega_\alpha)\cap U_\beta=\operatorname{dom}_S(\omega_\beta)\cap U_\alpha$.
+Sea entonces $W$ la unión de los abiertos $\operatorname{dom}_S(\omega_\alpha)$, y, para todo $\alpha$, sea $u_\alpha$ el único morfismo $S$ $\operatorname{dom}_S(\omega_\alpha)\to Y$ perteneciente a la clase $\omega_\alpha$ \sref{IV.20.2.4}; en virtud de la hipótesis y de \sref{IV.20.2.4}, las restricciones de $u_\alpha$ y $u_\beta$ a $\operatorname{dom}_S(\omega_\alpha)\cap\operatorname{dom}_S(\omega_\beta)$ son iguales, por lo que existe un morfismo $u:W\to Y$ cuya restricción a cada abierto $\operatorname{dom}_S(\omega_\alpha)$ es igual a $u_\alpha$; es claro que $W$ es esquemáticamente denso en $U$, por lo que define un pseudo-$S$-morfismo $\omega$ de $U$ en $Y$ cuyas restricciones a los $U_\alpha$ son los $\omega_\alpha$.
+\end{proof}
+
+\begin{remark}[20.2.7]
+\label{IV.20.2.7}
+Sabemos \sref{IV.11.10.4} que cuando $X$ es \emph{reducido}, equivale a decir que un abierto de $X$ es denso en $X$ o que es esquemáticamente denso en $X$; la noción de pseudo-morfismo (resp.\ pseudo-$S$-morfismo) de $X$ en $Y$ coincide entonces con la de \emph{aplicación racional} (resp.\ $S$-\emph{aplicación racional}) de $X$ en $Y$ \sref[I]{I.7.1.2}.
+En el caso general, la noción de pseudo-morfismo parece más útil que la de aplicación racional.
+\end{remark}
+
+\begin{env}[20.2.8]
+\label{IV.20.2.8}
+Llamamos \emph{pseudo-función} sobre $X$ a un pseudo-morfismo de $X$ en $\Spec(\bb{Z}[T])$ ($T$ indeterminada), o, lo que equivale a lo mismo, a un pseudo-morfismo $X$ de $X$ en $X\otimes_{\bb{Z}}\bb{Z}[T]$; equivale también \sref[I]{I.3.3.15} a decir que una pseudo-función sobre $X$ es una \emph{clase de equivalencia de secciones de $\sh{O}_X$ sobre abiertos esquemáticamente densos de $X$}, siendo equivalentes dos secciones $g\in\Gamma(U,\sh{O}_X)$, $g'\in\Gamma(U',\sh{O}_X)$ sobre tales abiertos si existe un abierto $U''\subset U\cap U'$, esquemáticamente denso en $X$, donde $g$ y $g'$ coinciden.
+Podemos aplicar aquí \sref{IV.20.2.4} con $S=X$ e $Y=X\otimes_{\bb{Z}}\bb{Z}[T]$; por tanto, para toda pseudo-función $\vphi$ sobre $X$, existe un abierto \emph{mayor} esquemáticamente denso $\operatorname{dom}(\vphi)$ en $X$ tal que hay una sección de $\sh{O}_X$ sobre $\operatorname{dom}(\vphi)$ perteneciente a la clase $\vphi$.
+Es claro que el haz $\mathscr{P}\!s.\!\operatorname{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T])$ es aquí un \emph{haz de anillos}, e incluso una $\sh{O}_X$-\emph{Álgebra}, que denotaremos por $\sh{M}'_X$; se deduce de \sref{IV.20.2.6} que, para todo abierto $U$ de $X$, $\Gamma(U,\sh{M}'_X)$ es igual al conjunto de pseudo-morfismos de $U$ en $\Spec(\bb{Z}[T])$; ponemos $M'(X)=\Gamma(X,\sh{M}'_X)$.
+Decir que una sección $\vphi$ de $\sh{M}'_X$ sobre $U$ es \emph{invertible} en el anillo $\Gamma(U,\sh{M}'_X)$ significa que existe un abierto $U'$ esquemáticamente denso en $\operatorname{dom}(\vphi)$, por tanto en $U$, tal que, si $g$ es la única sección de $\sh{O}_X$ sobre $\operatorname{dom}(\vphi)$ perteneciente a la clase $\vphi$, $g|U'$ sea \emph{invertible} en $\Gamma(U',\sh{O}_X)$.
+Se deduce de \sref[I]{I.3.3.15} que, en la correspondencia canónica entre $\Gamma(V,\sh{O}_X)$ y $\Hom(V,\bb{Z}[T])$ ($V$ abierto de $X$), los elementos invertibles de $\Gamma(V,\sh{O}_X)$ corresponden a los morfismos que se
+\oldpage[IV-4]{234}
+\emph{factorizan a través de} $V\to\Spec(\bb{Z}[T,T^{-1}])\to\Spec(\bb{Z}[T])$.
+Concluimos que el haz ${\sh{M}'}^*_X$ de gérmenes de secciones invertibles de $\sh{M}'_X$ se identifica canónicamente con el haz $\mathscr{P}\!s.\!\operatorname{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T,T^{-1}])$.
+\end{env}
+
+\begin{lemma}[20.2.9]
+\label{IV.20.2.9}
+Sean $U$ un abierto de $X$ y $s$ un elemento regular del anillo $\Gamma(U,\sh{O}_X)$; entonces el abierto $U_s$ de los $x\in U$ tales que $s(x)\neq0$ es esquemáticamente denso en $U$.
+\end{lemma}
+
+\begin{proof}
+En efecto, sean $V$ un abierto de $U$ y $t$ una sección de $\sh{O}_X$ sobre $V$ tal que $t|(V\cap U_s)=0$.
+Para todo abierto afín $W\subset V$, existe entonces un entero $n$ tal que $s^nt|W=0$ \sref[I]{I.1.4.1}; pero como $s$ es un elemento \emph{regular} de $\Gamma(U,\sh{O}_X)$, esto implica $t|W=0$, de donde $t=0$.
+\end{proof}
+
+\begin{env}[20.2.10]
+\label{IV.20.2.10}
+Consideremos una función meromorfa $f\in M(X)$ \sref{IV.20.1.4}; entonces $\operatorname{dom}(f)$ es \emph{esquemáticamente denso} en $X$: en efecto, todo punto de $X$ admite un entorno abierto $U$ tal que existe una sección $s\in\Gamma(U,\sh{O}_X)$ que es un elemento regular de este anillo y para la cual $s(f|U)\in\Gamma(U,\sh{O}_X)$; como $s|U_s$ es invertible, concluimos que $f|U_s\in\Gamma(U_s,\sh{O}_X)$, luego $U_s\subset\operatorname{dom}(f)$ por definición \sref{IV.20.1.4}, y nuestra afirmación se deduce por tanto del lema \sref{IV.20.2.9}.
+Podemos asociar así a $f$ la pseudo-función igual a la clase de la sección de $\sh{O}_X$ sobre $\operatorname{dom}(f)$, restricción de $f$; operando del mismo modo sustituyendo $X$ por un abierto cualquiera de $X$, obtenemos así un \emph{homomorfismo canónico de $\sh{O}_X$-Álgebras}
+\[
+\label{IV.20.2.10.1}
+  \sh{M}_X\to\sh{M}'_X
+  \tag{20.2.10.1}
+\]
+que, por restricción, da evidentemente un homomorfismo de haces de grupos abelianos
+\[
+\label{IV.20.2.10.2}
+  \sh{M}_X^*\to{\sh{M}'}^*_X
+  \tag{20.2.10.2}
+\]
+para los haces de gérmenes de secciones invertibles de $\sh{M}_X$ y $\sh{M}'_X$.
+\end{env}
+
+\begin{proposition}[20.2.11]
+\label{IV.20.2.11}
+\medskip
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item El homomorfismo canónico \emph{\sref{IV.20.2.10.1}} (y por consiguiente también \emph{\sref{IV.20.2.10.2}}) es \emph{inyectivo}.
+  \item Supongamos, bien que $X$ sea localmente noetheriano, bien que $X$ sea reducido y que el conjunto de sus componentes irreducibles sea localmente finito.
+  Entonces el homomorfismo canónico \emph{\sref{IV.20.2.10.1}} (y por consiguiente también \emph{\sref{IV.20.2.10.2}}) es \emph{biyectivo}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Las cuestiones consideradas son locales en $X$, por lo que podemos limitarnos al caso en que $X=\Spec(A)$ es afín, y demostrar entonces que el homomorfismo canónico $M(X)\to M'(X)$ es siempre inyectivo, y que es biyectivo en los casos considerados en~(ii).
+Teniendo en cuenta la definición del haz $\sh{M}_X$ \sref{IV.20.1.3}, podemos observar además que \sref{IV.20.2.10.1} proviene en realidad de un homomorfismo de \emph{prehaces}
+\[
+  \Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]\to\Gamma(U,\sh{M}'_X)
+\]
+y basta demostrar que, para $U$ afín, este último es inyectivo (resp.\ biyectivo bajo las hipótesis de~(ii)).
+Denotando por $S$ el conjunto de elementos regulares de $A$ (de modo que $S^{-1}A$ es el \emph{anillo total de fracciones} de $A$), debemos por tanto considerar el homomorfismo canónico
+\[
+\label{IV.20.2.11.1}
+  S^{-1}A\to M'(X)
+  \tag{20.2.11.1}
+\]
+\oldpage[IV-4]{235}
+y demostrar que es inyectivo (resp.\ biyectivo bajo las condiciones de~(ii)).
+Ahora bien, se puede escribir $S^{-1}A=\varinjlim A_t$, donde $t$ recorre el conjunto de elementos \emph{regulares} de $A$, ordenado según la relación «$t$ es un divisor de $t'$» \sref[0]{0.1.4.5}; también se puede escribir $A_t=\Gamma(\mathrm{D}(t),\sh{O}_X)$.
+Por otra parte, por definición $M'(X)=\varinjlim\Gamma(U,\sh{O}_X)$, donde $U$ recorre el conjunto de abiertos esquemáticamente densos de $X$ (ordenado por la relación $\supset$), y la aplicación \sref{IV.20.2.11.1} no es otra que la aplicación canónica que proviene del hecho de que los $\mathrm{D}(t)$ constituyen una parte del conjunto de abiertos esquemáticamente densos en $X$ \sref{IV.20.2.9}.
+Obsérvese que, por definición de abierto esquemáticamente denso, el homomorfismo $\Gamma(U,\sh{O}_X)\to\Gamma(U',\sh{O}_X)$ para dos abiertos de este tipo $U'\subset U$ es siempre \emph{inyectivo}, y por tanto lo mismo ocurre con los homomorfismos $\Gamma(U,\sh{O}_X)\to M'(X)$; concluimos que \sref{IV.20.2.11.1} es inyectivo.
+Para demostrar que \sref{IV.20.2.11.1} es biyectivo, basta demostrar que el conjunto de los $\mathrm{D}(t)$ es \emph{cofinal} en el conjunto de abiertos esquemáticamente densos, es decir, que para tal abierto $U$ existe un $t$ regular en $A$ tal que $\mathrm{D}(t)\subset U$.
+Ahora bien, cuando $X$ es reducido y las componentes irreducibles de $X$ forman un conjunto localmente finito, este conjunto es finito puesto que se ha supuesto que $X$ es afín, o sea, $A$ solo tiene un número finito de ideales primos mínimos $\mathfrak{p}_i$; como $A$ es reducido, la intersección de los $\mathfrak{p}_i$ se reduce a $0$, y decir que $t$ es regular equivale por tanto a decir que $t$ no pertenece a ninguno de los $\mathfrak{p}_i$; concluimos por el razonamiento de \sref[I]{I.7.1.9.1}.
+Cuando $A$ es noetheriano, decir que $U=X-Y$ (donde $Y=V(\mathfrak{J})$ es cerrado en $X$) es esquemáticamente denso significa \sref{IV.5.10.2} que $Y$ \emph{no corta} a $\operatorname{Ass}(\sh{O}_X)$, y en virtud de Bourbaki, \emph{Alg.~comm.}, cap.~IV, \textsection1, n\textsuperscript{o}~4, prop.~8, esto implica la existencia de un $t\in\mathfrak{J}$ tal que $t$ sea $A$-regular, por lo que $U\supset\mathrm{D}(t)$.
+
+Además, en el curso de esta demostración hemos demostrado el
+\end{proof}
+
+\begin{corollary}[20.2.12]
+\label{IV.20.2.12}
+Si $X=\Spec(A)$, donde $A$ es noetheriano, o reducido y con solo un número finito de ideales primos mínimos, los abiertos esquemáticamente densos en $X$ son aquellos que contienen un abierto de la forma $\mathrm{D}(t)$, donde $t$ es regular en $A$, y $M(X)=M'(X)$ es el anillo total de fracciones $S^{-1}A$, donde $S$ es el conjunto de elementos regulares de $A$\footnote{La transcripción francesa dice aquí «elementos regulares de $X$»; como $S\subset A$ y se forma $S^{-1}A$, debe decir «de $A$», como confirma el testigo inglés mantenido.}.
+\end{corollary}
+
+\begin{remarks}[20.2.13]
+\label{IV.20.2.13}
+\begin{enumerate}[label=(\roman*)]
+  \item Sea $\vphi$ un elemento de $M(X)$, $\vphi'$ su imagen en $M'(X)$; por definición (\sref{IV.20.1.4} y \sref{IV.20.2.8}) se tiene $\operatorname{dom}(\vphi)\subset\operatorname{dom}(\vphi')$; pero, de hecho, se tiene la igualdad $\operatorname{dom}(\vphi)=\operatorname{dom}(\vphi')$, pues existe una sección de $\sh{O}_X$ sobre $\operatorname{dom}(\vphi')$ perteneciente a la clase $\vphi'$, y la función meromorfa correspondiente es igual a $\vphi$ por \sref{IV.20.2.11}[(i)], por lo que $\operatorname{dom}(\vphi')\subset\operatorname{dom}(\vphi)$.
+
+  \item Ya se ha señalado que cuando $X$ es \emph{reducido}, se tiene $\sh{M}'_X=\sh{R}(X)$ (haz de funciones racionales sobre $X$ \sref[I]{I.7.3.2}); si además las componentes irreducibles de $X$ forman un conjunto localmente finito, se tiene $\sh{M}_X=\sh{M}'_X=\sh{R}(X)$.
+  En general, puesto que todo abierto esquemáticamente denso es denso, se tiene un homomorfismo canónico $\sh{M}'_X\to\sh{R}(X)$, pero incluso cuando $X$ es localmente noetheriano, este homomorfismo no es necesariamente inyectivo.
+  Por ejemplo, si $X=\Spec(A)$, donde $A$ es un anillo noetheriano tal que $\operatorname{Ass}(A)$ contiene ideales primos inmersos (lo que implica que $A$ no es reducido), se ha visto que $M(X)$ y $M'(X)$ se identifican con el anillo total de fracciones $S^{-1}A$,
+  \oldpage[IV-4]{236}
+  donde $S$ es el conjunto de elementos regulares de $A$, complemento de la unión de los ideales $\mathfrak{p}\in\operatorname{Ass}(A)$; por el contrario, $R(X)$ se identifica con $Q^{-1}A$, donde $Q$ es el complemento de la unión de los ideales primos \emph{mínimos} de $A$ \sref[I]{I.7.1.9}, y el homomorfismo canónico $A\to Q^{-1}A$ (y \emph{a fortiori} $S^{-1}A\to Q^{-1}A$) no es por tanto inyectivo, pues existen en $A-Q$ elementos $\neq0$ de $A$ anulados por elementos de $Q$ (Bourbaki, \emph{Alg.~comm.}, cap.~IV, \textsection1, n\textsuperscript{o}~1, cor.~2 de la prop.~1).
+
+  \item Obsérvese también que incluso cuando $X$ es localmente noetheriano, el $\sh{O}_X$-Módulo $\sh{M}'_X$ \emph{no es necesariamente cuasicoherente}.
+  Considérese por ejemplo un anillo local noetheriano $A$ de dimensión $\geq2$, cuyo ideal maximal $\mathfrak{m}$ satisface $\mathfrak{m}\in\operatorname{Ass}(A)$ y tal que, si se pone $X=\Spec(A)$, el esquema inducido en el abierto $U$ de $X$, complementario de $\{\mathfrak{m}\}$, sea \emph{íntegro}.
+  Los únicos elementos regulares de $A$ son entonces los elementos invertibles, por lo que $\Gamma(X,\sh{M}'_X)=M'(X)=A$; si $\sh{M}'_X$ fuese cuasicoherente, sería por tanto igual a $\sh{O}_X$; pero como $U$ es un esquema íntegro, $\sh{M}'_X|U=R(U)$ es un haz \emph{simple} \sref[I]{I.7.3.5}, mientras que $\sh{O}_U$ no es un haz simple puesto que $\dim(A)\geq2$.
+
+  Queda por dar un ejemplo de un anillo $A$ que tenga las propiedades precedentes.
+  Basta considerar un anillo local íntegro $B$ de dimensión $\geq2$ y de cuerpo residual $k$, y tomar $A=B\oplus k$ con la ley de multiplicación $(b,x)(b',x')=(bb',bx'+b'x)$.
+
+  \item Si $X$ es localmente noetheriano, se deduce de \sref{IV.5.10.2} que los abiertos esquemáticamente densos en $X$ son aquellos que \emph{contienen} el conjunto $\operatorname{Ass}(\sh{O}_X)$.
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[20.2.14]
+\label{IV.20.2.14}
+Sean $X$ un preesquema, $\sh{F}$ un $\sh{O}_X$-Módulo cuasicoherente y \emph{estrictamente sin torsión} \sref{IV.20.1.5}, de modo que $\sh{F}$ se identifica con un sub-$\sh{O}_X$-Módulo de $\sh{M}_X(\sh{F})$.
+Para toda sección meromorfa $u$ de $\sh{F}$ sobre $X$, llamamos el \emph{Ideal de los denominadores de $u$} al anulador $\sh{J}$ de la sección $\overline{u}$, imagen de $u$ en $\sh{M}_X(\sh{F})/\sh{F}$.
+El Ideal $\sh{J}$ es \emph{cuasicoherente}: en efecto, como la cuestión es local en $X$, podemos limitarnos al caso en que $X$ sea afín, y existe una sección $s\in\Gamma(X,\sh{S}(\sh{O}_X))$ tal que $v=su\in\Gamma(X,\sh{F})$.
+Decir que, para un abierto $U\subset X$, una sección $f\in\Gamma(U,\sh{O}_X)$ pertenece a $\Gamma(U,\sh{J})$ significa que $f(u|U)\in\Gamma(U,\sh{F})$, y puesto que $s|U$ es un elemento regular de $\Gamma(U,\sh{O}_X)$ y $\sh{F}$ es estrictamente sin torsión, la relación precedente equivale también a $f((su)|U)\in\Gamma(U,s\sh{F})$; si $\overline{v}$ es la sección de $\sh{F}/s\sh{F}$, imagen canónica de $v$, se ve por tanto que $\sh{J}$ es el núcleo del homomorfismo $\sh{O}_X\to\sh{F}/s\sh{F}$ obtenido por multiplicación por la sección $\overline{v}$.
+Como $\sh{F}/s\sh{F}$ es cuasicoherente, lo mismo ocurre con $\sh{J}$.
+
+Se deduce inmediatamente de la definición precedente que $\operatorname{dom}(u)$ es \emph{el abierto complementario del subpreesquema cerrado de $X$ definido por el Ideal de los denominadores de $u$}.
+\end{env}
+
+\begin{proposition}[20.2.15]
+\label{IV.20.2.15}
+Sean $f:X'\to X$ un morfismo, $\sh{F}$ un $\sh{O}_X$-Módulo cuasicoherente, $\vphi$ una sección de $\sh{M}_f(\sh{F})$ sobre $X$ \sref{IV.20.1.11}.
+Entonces $f^{-1}(\operatorname{dom}(\vphi))$ es esquemáticamente denso en $X'$.
+\end{proposition}
+
+\begin{proof}
+Como la cuestión es evidentemente local en $X$ y $X'$, podemos suponer $X=\Spec(A)$, $X'=\Spec(A')$ afines, $\sh{F}=\widetilde{M}$ y $\vphi=h\otimes(1/s)$, donde $h\in M$ y $s$ es un elemento regular de $A$ cuya imagen $s'$ en $A'$ es un elemento regular.
+Sabemos entonces \sref{IV.20.2.9} que $\mathrm{D}(s')$ es un abierto esquemáticamente denso en $X'$, y es la imagen inversa por $f$ de $\mathrm{D}(s)$, que está contenido en $\operatorname{dom}(\vphi)$.
+\end{proof}
+
+\begin{remark}[20.2.16]
+\label{IV.20.2.16}
+Cuando $Y$ no es separado, el prehaz $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ sobre $X$ no es necesariamente un haz, incluso cuando $X$ es noetheriano, como lo muestra el ejemplo siguiente.
+  Tomaremos para $X$ el espectro de un anillo semilocal noetheriano $A$ de dimensión $\geq2$, que tiene exactamente dos
+  \oldpage[IV-4]{237}
+  ideales máximos $\mathfrak{m}'$, $\mathfrak{m}''$ (de modo que $X$ tiene exactamente dos puntos cerrados $x'$, $x''$), de suerte que $\mathfrak{m}'$ y $\mathfrak{m}''$ pertenecen a $\operatorname{Ass}(A)$ y que el abierto $U=X-\{x',x''\}$ sea \emph{íntegro}.
+Sean $U'=X-\{x'\}$, $U''=X-\{x''\}$, de modo que $U=U'\cap U''$.
+Obsérvese que los únicos abiertos esquemáticamente densos en $X$ son los que contienen $x'$ y $x''$ \sref{IV.20.2.13}[(iv)], por lo que necesariamente son iguales a $X$.
+Para obtener un contraejemplo, basta definir dos morfismos $S$ $u':U'\to Y$, $u'':U''\to Y$ (con $S=X$) cuyas restricciones a $U$ pertenezcan al mismo pseudo-morfismo de $U$ en $Y$, pero tales que, para todo entorno $V'$ de $x''$ en $U'$ y todo entorno $V''$ de $x'$ en $U''$, las restricciones de $u'$ y $u''$ a $V'\cap V''$ sean distintas.
+Para ello, consideremos una parte cerrada irreducible $Z$ de $X$ que contiene $x'$ y $x''$, distinta de $X$; sea $Y$ el $X$-preesquema obtenido pegando dos preesquemas $Y'$, $Y''$ isomorfos a $X$ a lo largo del abierto por doquier denso $X-Z$ \sref[I]{I.2.3.1}.
+Tomaremos entonces para $u'$ y $u''$ las restricciones respectivas a $U'$ y $U''$ de los isomorfismos inversos de los isomorfismos estructurales $Y'\to X$, $Y''\to X$.
+Como $V'$ y $V''$ contienen el punto genérico de $Z$, las restricciones de $u'$ y $u''$ a $V'\cap V''$ son distintas, pero las restricciones de $u'$ y $u''$ a $U-(U\cap Z)$ son iguales, y $U-(U\cap Z)$ es un abierto denso en $U$, por tanto esquemáticamente denso puesto que $U$ es reducido.
+
+Solo queda definir $A$ y $Z$ de modo que tengan las propiedades precedentes.
+Sean $X_0=\Spec(B)$ un esquema afín íntegro (por ejemplo, el plano afín sobre un cuerpo $k$), $Y$ una parte cerrada irreducible de $X_0$ (por ejemplo, una recta afín) que contiene dos puntos cerrados distintos $x'$ y $x''$, correspondientes a los ideales máximos $\mathfrak{n}'$, $\mathfrak{n}''$ de $B$.
+Consideremos el anillo $C=B\oplus(B/\mathfrak{n}'\oplus B/\mathfrak{n}'')$ con la multiplicación $(b,z)(b',z')=(bb',bz'+b'z)$.
+Si $X_1=\Spec(C)$, se tiene $X_0=(X_1)_\mathrm{red}$ y $X_1$ es reducido salvo en los puntos $x'$, $x''$.
+Basta entonces tomar $A=R^{-1}C$, donde $R$ es el complemento de la unión de los ideales máximos de $C$ en los puntos $x'$, $x''$, y para $Z$ la traza de $Y$ sobre $X=\Spec(A)$.
+\end{remark}

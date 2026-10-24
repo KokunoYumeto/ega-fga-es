@@ -1,0 +1,834 @@
+\subsection{Aplicación a los morfismos propios: I. La propiedad de cambio de base}
+\label{subsection:III.7.7}
+\label{III.7.7}
+
+Los tres números que siguen son, en lo esencial, traducciones al lenguaje de
+los morfismos de preesquemas de los resultados de los números precedentes.
+
+\begin{env}[7.7.1]
+\label{III.7.7.1}
+Sea $f:X\to Y$ un morfismo cuasicompacto y separado de preesquemas, y sea
+$\mathscr P_\bullet$ un complejo de $\mathscr O_X$-módulos cuasicoherentes cuyo
+operador de derivación es de grado $-1$; supongamos además que los
+$\mathscr O_X$-módulos $\mathscr P_i$ son planos sobre $Y$
+\sref[0]{0.6.7.1}.
+
+\oldpage[III]{198}
+Consideraremos el $\partial$-funtor
+$\mathscr M\mapsto\mathscr T_\bullet(\mathscr M)$ (también denotado por
+$\mathscr T_\bullet(\mathscr P_\bullet,\mathscr M)$) de la categoría de los
+$\mathscr O_Y$-módulos cuasicoherentes en la categoría de los
+$\mathscr O_Y$-módulos cuasicoherentes, en virtud de \sref{III.6.2.3}, definido
+por
+\[
+  \mathscr T_n(\mathscr P_\bullet,\mathscr M)
+  =\mathscr T_n(\mathscr M)
+  =\mathscr H^{-n}
+    \bigl(f,\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M\bigr)
+  \qquad\text{para }n\in\mathbf Z,
+  \tag{7.7.1.1}\label{III.7.7.1.1}
+\]
+donde $\mathscr P^\bullet$ es el complejo cuyo término de grado $j$ es
+$\mathscr P_{-j}$, de modo que su operador de derivación es entonces de grado
+$+1$. El funtor $\mathscr T_\bullet$ así definido es un \emph{funtor
+homológico} en $\mathscr M$ \sref{III.6.2.6}.
+\end{env}
+
+\begin{env}[7.7.2]
+\label{III.7.7.2}
+Sea $g:Y'\to Y$ un morfismo, y pongamos
+\[
+  X'=X_{(Y')}=X\times_Y Y',
+  \qquad
+  f'=f_{(Y')}:X'\longrightarrow Y',
+\]
+que es un morfismo cuasicompacto y separado; pongamos además
+\[
+  \mathscr P'_\bullet
+  =\mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr O_{Y'}.
+\]
+Este es un complejo de $\mathscr O_{X'}$-módulos cuasicoherentes que son planos
+sobre $Y'$, en virtud de \sref[I]{I.9.1.12} y \sref[0]{0.6.2.1}. Pondremos,
+con las mismas convenciones sobre los grados,
+\[
+  \mathscr T^{Y'}_\bullet(\mathscr M')
+  =\mathscr H^\bullet
+    \bigl(f',\mathscr P'^\bullet\otimes_{\mathscr O_{Y'}}\mathscr M'\bigr)
+  =\mathscr H^\bullet
+    \bigl(f',\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M'\bigr)
+  \tag{7.7.2.1}\label{III.7.7.2.1}
+\]
+que es un funtor homológico en el $\mathscr O_{Y'}$-módulo cuasicoherente
+$\mathscr M'$. Cuando $Y'$ sea un esquema afín de anillo $A'$, escribiremos
+$\mathscr T^{A'}_\bullet$ en lugar de $\mathscr T^{Y'}_\bullet$; para todo
+$A'$-módulo $M'$ se tiene entonces
+\[
+  \mathscr T^{A'}_\bullet(\widetilde{M'})
+  =\bigl(\Gamma(Y',\mathscr T^{Y'}_\bullet(\widetilde{M'}))\bigr)^\sim.
+\]
+Pondremos
+\[
+  T^{A'}_\bullet(M')
+  =\Gamma(Y',\mathscr T^{Y'}_\bullet(\widetilde{M'})),
+\]
+que es un funtor homológico de $A'$-módulos con valores en la categoría de los
+$A'$-módulos.
+
+Obsérvese que, si $Y=\operatorname{Spec}(A)$ es también afín, el funtor de
+$A'$-módulos $T^{A'}_\bullet$ coincide con el funtor obtenido por extensión de
+escalares de $A$ a $A'$ a partir del funtor homológico de $A$-módulos
+$T^A_\bullet$ \sref{III.7.1.3}. En efecto, sea $g:Y'\to Y$ el morfismo
+correspondiente al homomorfismo de anillos $A\to A'$, y sea $g':X'\to X$ el
+morfismo correspondiente, que es afín \sref[II]{II.1.6.2}; si $\mathfrak U$ es
+un recubrimiento abierto afín de $X$, entonces
+$\mathfrak U'=g'^{-1}(\mathfrak U)$ es un recubrimiento abierto afín de $X'$.
+En virtud de \sref{III.6.2.2}, todo se reduce a ver que
+\[
+  C^\bullet
+    \bigl(\mathfrak U,
+      \mathscr P_\bullet\otimes_{\mathscr O_Y}g_*(\mathscr M')\bigr)
+  =C^\bullet
+    \bigl(\mathfrak U',
+      \mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr M'\bigr),
+\]
+y, finalmente, que para todo abierto afín $U$ de $X$, poniendo
+$U'=g'^{-1}(U)$, se tiene
+\[
+  \Gamma
+    \bigl(U,\mathscr P_\bullet\otimes_{\mathscr O_Y}g_*(\mathscr M')\bigr)
+  =\Gamma
+    \bigl(U',\mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr M'\bigr),
+\]
+lo cual es trivial \sref[I]{I.1.3}, \sref[I]{I.3.2}.
+
+En particular, si $U$ es un abierto de $Y$, para todo
+$\mathscr O_Y$-módulo cuasicoherente $\mathscr M$ se tiene
+\[
+  \mathscr T^U_\bullet(\mathscr M|U)
+  =\bigl(\mathscr T_\bullet(\mathscr M)\bigr)|U.
+  \tag{7.7.2.2}\label{III.7.7.2.2}
+\]
+\end{env}
+
+\begin{env}[7.7.3]
+\label{III.7.7.3}
+Para todo $\mathscr O_Y$-módulo cuasicoherente $\mathscr M$ existe un
+homomorfismo canónico, funtorial en $\mathscr M$,
+\[
+  \mathscr T_p(\mathscr O_Y)\otimes_{\mathscr O_Y}\mathscr M
+  \longrightarrow
+  \mathscr T_p(\mathscr M).
+  \tag{7.7.3.1}\label{III.7.7.3.1}
+\]
+En efecto, si $Y$ es afín, este homomorfismo se definió en
+\sref{III.7.2.2}; esta definición se extiende sin dificultad al caso general,
+observando que, si $U$ y $V$ son dos abiertos afines de $Y$ tales que
+$V\subset U$, el diagrama
+
+\oldpage[III]{199}
+\[
+\xymatrix@C=18pt@R=32pt{
+  {\begin{gathered}
+    \bigl(\mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr M\bigr)|U\\
+    =\mathscr T^U_p(\mathscr O_Y|U)
+      \otimes_{\mathscr O_Y|U}(\mathscr M|U)
+  \end{gathered}}
+  \ar[r]\ar[d]
+  &
+  {\begin{gathered}
+    \mathscr T^U_p(\mathscr M|U)\\
+    =\bigl(\mathscr T_p(\mathscr M)\bigr)|U
+  \end{gathered}}
+  \ar[d]
+  \\
+  {\begin{gathered}
+    \bigl(\mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr M\bigr)|V\\
+    =\mathscr T^V_p(\mathscr O_Y|V)
+      \otimes_{\mathscr O_Y|V}(\mathscr M|V)
+  \end{gathered}}
+  \ar[r]
+  &
+  {\begin{gathered}
+    \mathscr T^V_p(\mathscr M|V)\\
+    =\bigl(\mathscr T_p(\mathscr M)\bigr)|V
+  \end{gathered}}
+}
+\]
+es conmutativo por \sref{III.7.2.3.3}.
+
+Para todo morfismo $g:Y'\to Y$ existe un homomorfismo canónico
+\[
+  \mathscr T_p(\mathscr O_Y)\otimes_{\mathscr O_Y}\mathscr O_{Y'}
+  \longrightarrow
+  \mathscr T^{Y'}_p(\mathscr O_{Y'}),
+  \tag{7.7.3.2}\label{III.7.7.3.2}
+\]
+que no es sino el caso particular de \sref{III.6.7.11.2}, para los objetos
+límite, en el caso en que $S=Y$, $v_1=f$, $v_2=1_Y$ y
+$\mathscr P^{(2)}_\bullet$ se reduce al único término $\mathscr M$ de grado
+$0$.
+
+Cuando $Y=\operatorname{Spec}(A)$ e $Y'=\operatorname{Spec}(A')$ son afines,
+\eqref{III.7.7.3.2} no es sino el homomorfismo de haces correspondiente al
+homomorfismo canónico de $A'$-módulos definido en \sref{III.7.2.2},
+\[
+  T^A_p(A)\otimes_A A'
+  \longrightarrow
+  T^{A'}_p(A')=T^A_p(A'),
+\]
+como resulta fácilmente de \sref{III.6.7.11}, pues en el caso considerado se
+puede tomar $\mathfrak U'^{(i)}=u_i^{-1}(\mathfrak U^{(i)})$.
+\end{env}
+
+\begin{env}[7.7.4]
+\label{III.7.7.4}
+Cuando $f$ es un morfismo \emph{propio}, $Y=\operatorname{Spec}(A)$ es un
+esquema afín noetheriano y $\mathscr P_\bullet$ es un complejo acotado
+inferiormente de $\mathscr O_X$-módulos coherentes y planos sobre $Y$, vimos en
+\sref{III.6.10.5} que se puede escribir, salvo isomorfismo,
+\[
+  \mathscr T_p(\mathscr M)
+  =\mathscr H_p
+    \bigl(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M\bigr),
+  \qquad
+  \mathscr L_\bullet=\widetilde{L_\bullet},
+\]
+donde $L_\bullet$ es un complejo acotado inferiormente de $A$-módulos libres
+de tipo finito; por tanto, el funtor $\mathscr T_\bullet$ es del tipo estudiado
+en detalle en \sref{III.7.4} y \sref{III.7.6}. Traduciremos ahora los resultados
+de este estudio.
+\end{env}
+
+\begin{theorem}[7.7.5]
+\label{III.7.7.5}
+Sean $Y$ un preesquema localmente noetheriano, $(U_\alpha)$ un recubrimiento
+de $Y$ formado por abiertos afines, $f:X\to Y$ un morfismo propio y
+$\mathscr P_\bullet$ un complejo acotado inferiormente de
+$\mathscr O_X$-módulos coherentes y planos sobre $Y$. El funtor homológico
+$\mathscr T_\bullet(\mathscr M)$ definido por \eqref{III.7.7.1.1} posee
+entonces las propiedades siguientes:
+
+\medskip
+\noindent
+\textnormal{I) (La propiedad de semicontinuidad).}\footnote{Un caso particular
+de este teorema se encuentra ya en la nota [3] de Chow--Igusa. La propiedad de
+semicontinuidad fue descubierta, en el marco de los espacios analíticos y bajo
+hipótesis bastante particulares, por Kodaira--Spencer (``On the variations of
+almost-complex structures'', \emph{Algebraic Geometry and Topology, A Symposium
+in honor of S. Lefschetz}, Princeton Series n\textsuperscript{o} 12,
+p.~139--150, Princeton, 1957), y la versión general fue demostrada por Grauert
+[5].}
+\emph{La función}
+\[
+  y\longmapsto
+  d_p(y)
+  =
+  \operatorname{rank}_{\kres(y)}
+    \mathscr T_p^{\kres(y)}(\kres(y))
+  \tag{7.7.5.1}\label{III.7.7.5.1}
+\]
+\emph{es semicontinua superiormente.}
+
+\oldpage[III]{200}
+\medskip
+\noindent
+\textnormal{II) (La propiedad de cambio de base).}
+\emph{Para un entero $p$ dado, las condiciones siguientes son equivalentes:}
+\begin{enumerate}
+  \item[a)] $\mathscr T_p$ es exacto por la derecha.
+
+  \item[a$'$)] $\mathscr T_p(\mathscr M)$ es isomorfo a un funtor de la forma
+    $\mathscr N\otimes_{\mathscr O_Y}\mathscr M$, siendo $\mathscr N$
+    necesariamente isomorfo a
+    \[
+      \mathscr T_p(\mathscr O_Y)
+      =
+      \mathscr H^{-p}(f,\mathscr P^\bullet).
+    \]
+
+  \item[a$''$)] El homomorfismo canónico funtorial
+    \eqref{III.7.7.3.1} es un isomorfismo.
+
+  \item[b)] $\mathscr T_{p-1}$ es exacto por la izquierda.
+
+  \item[b$'$)] Existe un $\mathscr O_Y$-módulo $\mathscr Q$ (necesariamente
+    coherente y determinado salvo isomorfismo único) y un isomorfismo de
+    funtores
+    \[
+      \mathscr T_{p-1}(\mathscr M)
+      \xrightarrow{\sim}
+      \mathscr{H}\!om_{\mathscr O_Y}(\mathscr Q,\mathscr M).
+      \tag{7.7.5.2}\label{III.7.7.5.2}
+    \]
+
+  \item[c)] Denotando por $A_\alpha$ el anillo del abierto afín $U_\alpha$,
+    para todo índice $\alpha$ el funtor de $A_\alpha$-módulos
+    $T_p^{A_\alpha}$ es exacto por la derecha.
+
+  \item[d)] Para todo morfismo $g:Y'\to Y$, el homomorfismo canónico
+    \[
+      \mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr O_{Y'}
+      \longrightarrow
+      \mathscr T_p^{Y'}(\mathscr O_{Y'})
+      \tag{7.7.5.3}\label{III.7.7.5.3}
+    \]
+    es un isomorfismo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+La propiedad de semicontinuidad es local sobre $Y$ y resulta, por tanto, de
+\sref{III.7.7.4} y \sref{III.7.6.9}. Es claro que a$''$) implica a$'$) y que
+a$'$) implica a). La equivalencia de a), a$''$), b) y b$'$) se demostró en
+\sref{III.7.3.1} y \sref{III.7.4.6}, habida cuenta de
+\sref{III.7.7.4}, cuando $Y$ es afín.
+
+Para pasar al caso general, probemos primero que a) equivale a c), lo cual
+probará que la propiedad a) es local sobre $Y$; la demostración se aplica
+igualmente para probar el carácter local de a$''$) y b). Como es claro que c)
+implica a), todo se reduce a probar el recíproco. Basta evidentemente demostrar
+que, para todo abierto afín $U$ de $Y$ y toda sucesión exacta
+\[
+  0\longrightarrow\mathscr F'
+  \longrightarrow\mathscr F
+  \longrightarrow\mathscr F''
+  \longrightarrow0
+\]
+de $(\mathscr O_Y|U)$-módulos cuasicoherentes, existe una sucesión exacta
+\[
+  0\longrightarrow\mathscr G'
+  \longrightarrow\mathscr G
+  \longrightarrow\mathscr G''
+  \longrightarrow0
+\]
+de $\mathscr O_Y$-módulos cuasicoherentes tal que
+\[
+  \mathscr F'=\mathscr G'|U,
+  \qquad
+  \mathscr F=\mathscr G|U,
+  \qquad
+  \mathscr F''=\mathscr G''|U.
+\]
+Ahora bien, esto resulta inmediatamente de la hipótesis de que $Y$ es
+localmente noetheriano y de \sref[I]{I.9.4.2}: en efecto, se prolonga
+$\mathscr F$ a un $\mathscr O_Y$-módulo cuasicoherente $\mathscr G$,
+$\mathscr F'$ a un sub-$\mathscr O_Y$-módulo $\mathscr G'$ de $\mathscr G$, y
+basta tomar $\mathscr G''=\mathscr G/\mathscr G'$.
+
+Para demostrar la equivalencia de b) y b$'$) en el caso general, observemos que,
+cuando $Y$ es afín, sabemos que $\mathscr Q$ está determinado salvo isomorfismo
+único; si entonces $U$ es un abierto afín del esquema afín $Y$, se deduce que
+existe un isomorfismo funtorial
+\[
+  \mathscr T_{p-1}^{U}(\mathscr M|U)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y|U}
+    (\mathscr Q|U,\mathscr M|U).
+\]
+En el caso general, para todo abierto afín $U$ de $Y$ existe un
+$(\mathscr O_Y|U)$-módulo coherente $\mathscr Q_U$ y un isomorfismo funtorial
+\[
+  \mathscr T_{p-1}^{U}(\mathscr M|U)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y|U}
+    (\mathscr Q_U,\mathscr M|U).
+\]
+La observación precedente muestra que, si $V$ es un abierto afín contenido en
+$U$, se tiene $\mathscr Q_U|V=\mathscr Q_V$; de ahí la existencia y unicidad
+del $\mathscr O_Y$-módulo $\mathscr Q$ que verifica \eqref{III.7.7.5.2}.
+
+Queda por demostrar la equivalencia de a) y d). Es claro que d) es local sobre
+$Y$, y acabamos de ver que lo mismo ocurre con a); además, d) es también local
+sobre $Y'$. Ahora bien, cuando $Y=\operatorname{Spec}(A)$ e
+$Y'=\operatorname{Spec}(A')$, vimos que $T_\bullet^{A'}$ es el funtor obtenido
+\oldpage[III]{201}
+a partir de $T_\bullet^A$ por extensión de escalares a $A'$, y es claro entonces
+que a$'$) implica que \eqref{III.7.7.5.3} es un isomorfismo.
+Recíprocamente, supongamos todavía que $Y=\operatorname{Spec}(A)$ es afín y sea
+$A'$ la $A$-álgebra $A\oplus M$, donde $M$ es un $A$-módulo cualquiera y la
+multiplicación en $A'$ viene dada por
+\[
+  (a_1,m_1)(a_2,m_2)
+  =
+  (a_1a_2,a_1m_2+a_2m_1).
+\]
+Entonces
+\[
+  T_p^{A'}(A')
+  =
+  T_p(A\oplus M)
+  =
+  T_p(A)\oplus T_p(M).
+\]
+La hipótesis de que \eqref{III.7.7.5.3} sea biyectivo implica que lo mismo
+ocurre con la aplicación canónica
+\[
+  T_p(A)\otimes_A M\longrightarrow T_p(M).
+\]
+En otras palabras, d) implica a$''$), lo que termina la demostración.
+\end{proof}
+
+\begin{theorem}[7.7.6]
+\label{III.7.7.6}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo propio y
+$\mathscr F$ un $\mathscr O_X$-módulo coherente y plano sobre $Y$. Existe
+entonces un $\mathscr O_Y$-módulo coherente $\mathscr Q$ (determinado salvo
+isomorfismo único) y un isomorfismo de funtores en el
+$\mathscr O_Y$-módulo cuasicoherente $\mathscr M$,
+\[
+  f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr Q,\mathscr M).
+  \tag{7.7.6.1}\label{III.7.7.6.1}
+\]
+De ello se deduce un isomorfismo de funtores
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M).
+  \tag{7.7.6.2}\label{III.7.7.6.2}
+\]
+\end{theorem}
+
+\begin{proof}
+En efecto, como $\mathscr M\mapsto
+\mathscr F\otimes_{\mathscr O_Y}\mathscr M$ es exacto
+\sref[0]{0.6.7.4} y $f_*$ es exacto por la izquierda, el funtor
+\[
+  \mathscr M\longmapsto
+  f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+\]
+es exacto por la izquierda. Basta entonces aplicar la equivalencia de b) y
+b$'$) en \sref{III.7.7.5} para $p=1$.
+\end{proof}
+
+\begin{corollary}[7.7.7]
+\label{III.7.7.7}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo propio,
+$\mathscr F$ y $\mathscr F'$ dos $\mathscr O_X$-módulos coherentes y planos
+sobre $Y$, y $u:\mathscr F\to\mathscr F'$ un homomorfismo. Consideremos los
+dos funtores en el $\mathscr O_Y$-módulo cuasicoherente $\mathscr M$,
+\begin{align*}
+  \mathscr T(\mathscr M)
+  &=
+  \operatorname{Ker}
+  \bigl(
+    f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    f_*(\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr),\\
+  T(\mathscr M)
+  &=
+  \Gamma(Y,\mathscr T(\mathscr M))\\
+  &=
+  \operatorname{Ker}
+  \bigl(
+    \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr).
+\end{align*}
+Entonces existe un $\mathscr O_Y$-módulo coherente $\mathscr R$ (determinado
+salvo isomorfismo único) y existen isomorfismos de funtores
+\[
+  \mathscr T(\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr R,\mathscr M)
+  \tag{7.7.7.1}\label{III.7.7.7.1}
+\]
+\[
+  T(\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr R,\mathscr M).
+  \tag{7.7.7.2}\label{III.7.7.7.2}
+\]
+\end{corollary}
+
+\begin{proof}
+Basta demostrar \eqref{III.7.7.7.2}; en efecto, esto probará
+\eqref{III.7.7.7.1} en el caso en que $Y$ es afín, y de ahí se pasará al caso
+general razonando como en la demostración de la equivalencia de b) y b$'$) en
+\sref{III.7.7.5}, gracias a la unicidad salvo isomorfismo único de un
+representante de un funtor representable \sref[0]{0.8.1.8}. De
+\sref{III.7.7.6} resulta que existen dos $\mathscr O_Y$-módulos coherentes
+$\mathscr Q$, $\mathscr Q'$ que definen isomorfismos funtoriales
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M),
+  \qquad
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q',\mathscr M).
+\]
+Ahora bien, $u:\mathscr F\to\mathscr F'$ define canónicamente un morfismo de
+funtores
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \longrightarrow
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M).
+\]
+
+\oldpage[III]{202}
+A este último le corresponde un homomorfismo único
+$v:\mathscr Q'\to\mathscr Q$ de $\mathscr O_Y$-módulos tal que el diagrama
+\[
+\xymatrix@C=42pt@R=28pt{
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \ar[r]\ar[d]_-{\sim}
+  &
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+    \ar[d]^-{\sim}
+  \\
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M)
+    \ar[r]
+  &
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q',\mathscr M)
+}
+\]
+sea conmutativo \sref[0]{0.8.1.4}. Como el funtor contravariante
+$\mathscr N\mapsto
+\operatorname{Hom}_{\mathscr O_Y}(\mathscr N,\mathscr M)$ es exacto por la
+izquierda en la categoría de los $\mathscr O_Y$-módulos, basta tomar
+$\mathscr R=\operatorname{Coker}(v)$ para obtener el isomorfismo
+\eqref{III.7.7.7.2} buscado.
+\end{proof}
+
+\begin{corollary}[7.7.8]
+\label{III.7.7.8}
+Bajo las hipótesis de \sref{III.7.7.6} relativas a $X$, $Y$ y $f$, sean
+$\mathscr F$ y $\mathscr G$ dos $\mathscr O_X$-módulos coherentes que verifican
+las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $\mathscr F$ es plano sobre $Y$;
+  \item[(ii)] $\mathscr G$ es isomorfo al conúcleo de un homomorfismo
+    $\mathscr E_1\to\mathscr E_0$ de $\mathscr O_X$-módulos localmente libres
+    de tipo finito.
+\end{enumerate}
+Consideremos los dos funtores en el $\mathscr O_Y$-módulo cuasicoherente
+$\mathscr M$,
+\begin{align*}
+  \mathscr T(\mathscr M)
+  &=
+  f_*
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr),\\
+  T(\mathscr M)
+  &=
+  \Gamma(Y,\mathscr T(\mathscr M))
+  =
+  \operatorname{Hom}_{\mathscr O_X}
+    (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M).
+\end{align*}
+Entonces existe un $\mathscr O_Y$-módulo coherente $\mathscr N$ (determinado
+salvo isomorfismo único) y existen isomorfismos de funtores
+\[
+  \mathscr T(\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr N,\mathscr M)
+  \tag{7.7.8.1}\label{III.7.7.8.1}
+\]
+\[
+  T(\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr N,\mathscr M).
+  \tag{7.7.8.2}\label{III.7.7.8.2}
+\]
+\end{corollary}
+
+\begin{proof}
+En virtud del isomorfismo funtorial \sref[0]{0.5.4.2.1}, se tienen, de manera
+funtorial en $\mathscr M$, los isomorfismos
+\begin{align*}
+  \mathscr{H}\!om_{\mathscr O_X}
+    (\mathscr E_i,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  &\xrightarrow{\sim}
+  \check{\mathscr E}_i
+    \otimes_{\mathscr O_X}
+    (\mathscr F\otimes_{\mathscr O_Y}\mathscr M)\\
+  &\xrightarrow{\sim}
+  (\check{\mathscr E}_i\otimes_{\mathscr O_X}\mathscr F)
+    \otimes_{\mathscr O_Y}\mathscr M\\
+  &\xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_X}(\mathscr E_i,\mathscr F)
+    \otimes_{\mathscr O_Y}\mathscr M
+\end{align*}
+para $i=0,1$. Pongamos
+$\mathscr F_i=\mathscr{H}\!om_{\mathscr O_X}(\mathscr E_i,\mathscr F)$ para
+$i=0,1$; estos son $\mathscr O_X$-módulos coherentes
+\sref[0]{0.5.3.5} y planos sobre $Y$ \sref[0]{0.5.4.2}. Si
+$v:\mathscr E_1\to\mathscr E_0$ denota el homomorfismo dado, sea
+$u=\mathscr{H}\!om(v,1_{\mathscr F}):\mathscr F_0\to\mathscr F_1$. En virtud
+de la exactitud por la izquierda del funtor
+$\mathscr H\mapsto\mathscr{H}\!om_{\mathscr O_X}
+(\mathscr H,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$, se tienen
+isomorfismos funtoriales en $\mathscr M$,
+\begin{align*}
+  \mathscr{H}\!om_{\mathscr O_X}
+    (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  &\xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr E_0,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr E_1,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)\\
+  &\xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    \mathscr F_0\otimes_{\mathscr O_Y}\mathscr M
+    \longrightarrow
+    \mathscr F_1\otimes_{\mathscr O_Y}\mathscr M
+  \bigr).
+\end{align*}
+Puesto que $f_*$ es exacto por la izquierda, se deduce un isomorfismo funtorial
+\[
+  f_*
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)
+  \xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    f_*(\mathscr F_0\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    f_*(\mathscr F_1\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr),
+\]
+y basta entonces aplicar \sref{III.7.7.7}.
+\end{proof}
+
+\oldpage[III]{203}
+\begin{remarks}[7.7.9]
+\label{III.7.7.9}
+\textnormal{(i)} En \sref{III.7.7.6}, \sref{III.7.7.7} y
+\sref{III.7.7.8}, la formación de los $\mathscr O_Y$-módulos $\mathscr Q$,
+$\mathscr R$ y $\mathscr N$ \emph{conmuta con los cambios de base}. Por ejemplo,
+conservando las notaciones de \sref{III.7.7.2}, en el caso de
+\sref{III.7.7.6} se tiene, para todo $\mathscr O_{Y'}$-módulo cuasicoherente
+$\mathscr M'$, el isomorfismo
+\[
+  f'_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M')
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_{Y'}}(g^*(\mathscr Q),\mathscr M'),
+\]
+pues, en virtud de la observación hecha en \sref{III.7.7.2}, todo se reduce a
+ver que se tiene
+\[
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,g_*(\mathscr M'))
+  =
+  \operatorname{Hom}_{\mathscr O_{Y'}}(g^*(\mathscr Q),\mathscr M'),
+\]
+lo cual no es sino \sref[0]{0.4.4.3.1}. Del mismo modo, cuando en
+\sref{III.7.7.7} se sustituyen $Y$, $f$, $\mathscr M$, $\mathscr F$ y
+$\mathscr F'$ por $Y'$, $f'$, $\mathscr M'$,
+$\mathscr F\otimes_{\mathscr O_X}\mathscr O_{X'}$ y
+$\mathscr F'\otimes_{\mathscr O_X}\mathscr O_{X'}$, respectivamente, hay que
+sustituir $\mathscr R$ por $g^*(\mathscr R)$. Finalmente, en
+\sref{III.7.7.8}, cuando se sustituyen $X$, $Y$, $f$, $\mathscr M$ y
+$\mathscr F$ por $X'$, $Y'$, $f'$, $\mathscr M'$ y
+$\mathscr F\otimes_{\mathscr O_X}\mathscr O_{X'}$, y $\mathscr G$ por
+\[
+  \mathscr G'=\mathscr G\otimes_{\mathscr O_X}\mathscr O_{X'},
+\]
+hay que sustituir $\mathscr N$ por $g^*(\mathscr N)$. Esto resulta de que se
+tiene todavía una sucesión exacta
+\[
+  \mathscr E'_1\longrightarrow
+  \mathscr E'_0\longrightarrow
+  \mathscr G'\longrightarrow0
+  \qquad\text{con}\qquad
+  \mathscr E'_i=\mathscr E_i\otimes_{\mathscr O_X}\mathscr O_{X'},
+\]
+y de que
+\[
+  \check{\mathscr E}'_i
+  \otimes_{\mathscr O_{X'}}
+  (\mathscr F\otimes_{\mathscr O_Y}\mathscr M')
+  =
+  \check{\mathscr E}_i
+  \otimes_{\mathscr O_X}
+  (\mathscr F\otimes_{\mathscr O_Y}\mathscr M')
+  \qquad(i=0,1).
+\]
+
+\medskip
+\textnormal{(ii)} La condición (ii) del enunciado de \sref{III.7.7.8}
+relativa a $\mathscr G$ se satisface siempre para cualquier
+$\mathscr O_X$-módulo coherente $\mathscr G$ cuando existe un
+$\mathscr O_X$-módulo invertible $Y$-amplio, por ejemplo cuando $Y$ es afín y
+$f:X\to Y$ es un morfismo proyectivo. Basta observar, teniendo en cuenta
+\sref[II]{II.5.5.1}, que existe un $\mathscr O_X$-módulo localmente libre de
+tipo finito $\mathscr E_0$ tal que $\mathscr G$ es isomorfo a un cociente de
+$\mathscr E_0$ \sref[II]{II.2.7.10}. Como $\mathscr E_0$ y $\mathscr G$ son
+coherentes, también lo es el núcleo $\mathscr G_1$ de
+$\mathscr E_0\to\mathscr G$; aplicando el mismo resultado a $\mathscr G_1$, se
+obtiene una sucesión exacta
+\[
+  \mathscr E_1\longrightarrow
+  \mathscr E_0\longrightarrow
+  \mathscr G\longrightarrow0,
+\]
+donde $\mathscr E_0$ y $\mathscr E_1$ son localmente libres de tipo finito.
+
+\medskip
+\textnormal{(iii)} Demostraremos en el capítulo V que, en
+\sref{III.7.7.8}, la hipótesis restrictiva (ii) es \emph{superflua}.
+\end{remarks}
+
+\begin{proposition}[7.7.10]
+\label{III.7.7.10}
+\textnormal{(Criterios locales para la propiedad de cambio de base).} Bajo las
+condiciones generales de \sref{III.7.7.5}, sean $y$ un punto de $Y$ y $p$ un
+entero. Las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] El funtor $T_p^{\mathscr O_y}$ es exacto por la derecha.
+
+  \item[b)] El homomorfismo canónico
+    \[
+      T_p^{\mathscr O_y}(\mathscr O_y)
+      \longrightarrow
+      T_p^{\mathscr O_y}(\kres(y))
+    \]
+    es sobreyectivo.
+
+  \item[c)] Para todo entero $n$, el homomorfismo canónico
+    \[
+      T_p^{\mathscr O_y}
+      (\mathscr O_y/\mathfrak m_y^{n+1})
+      \longrightarrow
+      T_p^{\mathscr O_y}(\kres(y))
+    \]
+    es sobreyectivo.
+\end{enumerate}
+Además, el conjunto de los $y\in Y$ que verifican estas condiciones es el
+mayor abierto $U$ de $Y$ tal que $\mathscr T_p^U$ sea exacto por la derecha.
+\end{proposition}
+
+\begin{proof}
+Habida cuenta de \sref{III.7.7.4}, la equivalencia de a), b) y c) resulta de
+\sref{III.7.4.7} y \sref{III.7.5.2}. El hecho de que el conjunto $U$ donde
+$T_p^{\mathscr O_y}$ es exacto por la derecha sea abierto es también
+consecuencia de \sref{III.7.4.4}; recíprocamente, si $\mathscr T_p^V$ es exacto
+por la derecha, lo mismo ocurre con $T_p^{\mathscr O_y}$ para todo $y\in V$,
+por la condición c) de \sref{III.7.7.5} y \sref{III.7.6.1}.
+\end{proof}
+
+\begin{corollary}[7.7.11]
+\label{III.7.7.11}
+Si $\mathscr T_p$ es exacto por la derecha (respectivamente, por la izquierda),
+entonces, para todo morfismo $g:Y'\to Y$, $\mathscr T_p^{Y'}$ es exacto por la
+derecha (respectivamente, por la izquierda). El recíproco es cierto cuando el
+morfismo $g$ es fielmente plano.
+\end{corollary}
+
+\oldpage[III]{204}
+\begin{proof}
+La primera aserción es consecuencia inmediata de \sref{III.7.6.1} y del hecho
+de que la cuestión es local sobre $Y$ y $Y'$, por las condiciones c) y b) de
+\sref{III.7.7.5}. Para demostrar la segunda aserción basta ver, en virtud de
+\sref{III.7.7.10}, que para todo $y\in Y$, $T_p^{\mathscr O_y}$ es exacto por
+la derecha (respectivamente, por la izquierda). Pero, por hipótesis, existe
+$y'\in Y'$ tal que $g(y')=y$, y $\mathscr O_{y'}$ es un
+$\mathscr O_y$-módulo fielmente plano; la conclusión resulta entonces de la
+hipótesis y de \sref{III.7.6.1}.
+\end{proof}
+
+\begin{remarks}[7.7.12]
+\label{III.7.7.12}
+\textnormal{(i)} Bajo las hipótesis de \sref{III.7.7.4}, supongamos además que
+$\mathscr P_\bullet$ es un complejo \emph{finito}. Resulta entonces de
+\sref{III.7.7.1}, puesto que se puede tomar para $\mathfrak U$ un
+recubrimiento abierto afín \emph{finito} de $X$, que el bicomplejo
+$C^\bullet(\mathfrak U,
+\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M)$ es también finito y, más
+precisamente, que existe un conjunto finito $E$ de pares, \emph{independiente
+de $\mathscr M$}, tal que
+\[
+  C^h(\mathfrak U,\mathscr P^k\otimes_{\mathscr O_Y}\mathscr M)=0
+  \qquad\text{para todos los pares }(h,k)\notin E.
+\]
+Se concluye que existe $i_1$ tal que, para $i\geq i_1$, se tiene
+$\mathscr T_i(\mathscr M)=0$ para \emph{todo} $\mathscr O_Y$-módulo
+cuasicoherente $\mathscr M$. En particular, $\mathscr T_i$ es trivialmente un
+funtor exacto en $\mathscr M$ para estos valores de $i$ y, por consiguiente,
+por \sref{III.7.4.1}, $Z'_i(L_\bullet)$ es un $A$-módulo \emph{plano} de tipo
+finito (y, por tanto, \emph{proyectivo} de tipo finito, puesto que $A$ es
+noetheriano) para estos valores de $i$.
+
+Consideremos entonces el complejo $L'_\bullet$ de $A$-módulos tal que
+\[
+  L'_i=L_i\quad(i<i_1),
+  \qquad
+  L'_{i_1}=Z'_{i_1}(L_\bullet),
+  \qquad
+  L'_i=0\quad(i>i_1),
+\]
+y sea $\mathscr L'_\bullet=\widetilde{L'_\bullet}$. Es claro que
+\[
+  \mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+  =
+  \mathscr H_i(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+\]
+para $i<i_1-1$ y también para $i\geq i_1$ (siendo entonces nulos ambos
+miembros). Finalmente, como
+\[
+  \operatorname{Im}(Z'_{i_1}\otimes_A M)
+  =
+  \operatorname{Im}(L_{i_1}\otimes_A M)
+\]
+por definición, se tiene asimismo
+\[
+  \mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+  =
+  \mathscr H_i(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+\]
+para $i=i_1-1$. Se ve, pues, que se puede suponer en \sref{III.7.7.4} que
+$\mathscr L_\bullet$ es también un complejo \emph{finito}, a condición de
+exigir solamente que los $\mathscr L_i$ sean $\mathscr O_Y$-módulos
+\emph{localmente libres}, asociados a $A$-módulos proyectivos de tipo finito.
+
+Este razonamiento se aplica, en particular, al caso en que
+$\mathscr P_\bullet$ se reduce a \emph{un solo} término $\mathscr F\ne0$, de
+grado $0$ (en cuyo caso
+$\mathscr T_n(\mathscr M)=\mathrm R^{-n}f_*
+(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$). Se puede entonces suponer que
+los $\mathscr L_i$ son nulos para $i>0$; en este caso se utilizarán
+preferentemente las notaciones cohomológicas, escribiendo $\mathscr T^{-p}$ en
+lugar de $\mathscr T_p$.
+
+\medskip
+\textnormal{(ii)} Cuando en el enunciado de \sref{III.7.7.5} ya no se supone
+que los $\mathscr P_i$ sean planos sobre $Y$, las conclusiones siguen siendo
+válidas a condición de poner esta vez
+\[
+  \mathscr T_p(\mathscr M)
+  =
+  \operatorname{Tor}^Y_p
+    (f,1_Y;\mathscr P_\bullet,\mathscr M).
+  \tag{7.7.12.1}\label{III.7.7.12.1}
+\]
+En efecto,
+$\operatorname{Tor}^Y_n(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)$ es entonces un
+$\mathscr O_Y$-módulo \emph{coherente} en virtud de \sref{III.6.7.9}. La
+demostración de \sref{III.6.10.5} se aplica sin cambio, teniendo en cuenta
+\sref{III.6.10.1}, y muestra también que, cuando
+$Y=\operatorname{Spec}(A)$ es afín, se tiene
+\[
+  \mathscr T_p(\mathscr M)
+  =
+  \mathscr H_p(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M),
+  \qquad
+  \mathscr L_\bullet=\widetilde{L_\bullet},
+\]
+donde $L_\bullet$ es un complejo de $A$-módulos libres de tipo finito; esto
+prueba la aserción.
+\end{remarks}

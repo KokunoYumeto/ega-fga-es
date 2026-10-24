@@ -1,0 +1,741 @@
+\subsection{Las sucesiones espectrales de cambio de base en los hipertor
+globales.}
+\label{subsection:III.6.9}
+\label{III.6.9}
+
+\begin{env}[6.9.1]
+\label{III.6.9.1}
+Se mantienen las hipótesis y notaciones de \sref{III.6.7.11} (y, en
+particular, se supone que los $\mathscr P_\bullet^{(i)}$ están acotados
+inferiormente). Consideremos un morfismo $g:S'\to S$ de preesquemas, y
+pongamos
+$Y'^{(i)}=Y_{(S')}^{(i)}$, $X'^{(i)}=X_{(S')}^{(i)}$ y
+$\mathscr P_\bullet'^{(i)}=
+\mathscr P_\bullet^{(i)}\otimes_{\mathscr O_S}\mathscr O_{S'}$,
+de modo que $\mathscr P_\bullet'^{(i)}$ es un complejo de
+$\mathscr O_{X'^{(i)}}$-módulos cuasicoherentes; sea
+$f'_i=(f_i)_{(S')}:X'^{(i)}\to Y'^{(i)}$, que es un morfismo separado y
+cuasicompacto (\sref[I]{I.5.5.1} y \sref{III.6.6.4}). Nos proponemos
+estudiar las relaciones entre los $\mathscr O_{Y'}$-módulos cuasicoherentes
+$\mathfrak{Tor}_n^{S'}((f'_i)_{i\in I};
+(\mathscr P_\bullet'^{(i)})_{i\in I})$ y
+$\mathfrak{Tor}_n^S((f_i)_{i\in I};
+(\mathscr P_\bullet^{(i)})_{i\in I})
+\otimes_{\mathscr O_S}\mathscr O_{S'}$, donde
+$Y'=Y\times_S S'=Y_{(S')}$. Un caso particularmente sencillo es el
+siguiente, que se reduce a \sref[I]{I.1.4.15} cuando $I$ se reduce a un solo
+elemento y $\mathscr P_\bullet$ a un solo módulo:
+\end{env}
+
+\begin{proposition}[6.9.2]
+\label{III.6.9.2}
+Si el morfismo $g:S'\to S$ es plano, se tiene un isomorfismo canónico de
+$\partial$-funtores (en los $\mathscr P_\bullet^{(i)}$):
+\begin{env}[6.9.2.1]
+\label{III.6.9.2.1}
+\[
+  \mathfrak{Tor}_\bullet^S
+  ((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})
+  \otimes_{\mathscr O_S}\mathscr O_{S'}
+  \xrightarrow{\sim}
+  \mathfrak{Tor}_\bullet^{S'}
+  ((f'_i)_{i\in I};(\mathscr P_\bullet'^{(i)})_{i\in I}).
+  \tag{6.9.2.1}\label{III.6.9.2.1.eq}
+\]
+\end{env}
+\end{proposition}
+
+\begin{proof}
+Todavía se puede restringir al caso en que $S$, $S'$ y los $Y^{(i)}$ son
+afines, efectuándose el pegado mediante los métodos de \sref{III.6.7.1} y
+\sref{III.6.7.2}. Sean $S=\operatorname{Spec}(A)$,
+$S'=\operatorname{Spec}(A')$, y tomemos para cada $i$ un cubrimiento abierto
+afín $\mathfrak U^{(i)}$ de $X^{(i)}$; si
+$u_i:X'^{(i)}\to X^{(i)}$ es la proyección canónica,
+$u_i^{-1}(\mathfrak U^{(i)})$ es un cubrimiento abierto afín de
+$X'^{(i)}$ (\sref[II]{II.1.5.5}), que denotaremos por
+$\mathfrak U'^{(i)}$; está claro entonces que
+\[
+  C^\bullet(\mathfrak U'^{(i)},\mathscr P_\bullet'^{(i)})
+  =C^\bullet(\mathfrak U^{(i)},\mathscr P_\bullet^{(i)})\otimes_A A',
+\]
+y la existencia del isomorfismo \eqref{III.6.9.2.1.eq} es inmediata, pues si
+$M_{\bullet\bullet\bullet}^{(i)}$ es una resolución proyectiva de
+Cartan-Eilenberg de
+$L_{\bullet\bullet}^{(i)}=C^\bullet(\mathfrak U^{(i)},
+\mathscr P_\bullet^{(i)})$ en el sentido de \sref[0]{0.11.7.1}, formada por
+$A$-módulos, $M_{\bullet\bullet\bullet}^{(i)}\otimes_A A'$ es una resolución
+proyectiva de Cartan-Eilenberg (en el mismo sentido) de
+$L_{\bullet\bullet}^{(i)}\otimes_A A'$ formada por $A'$-módulos, en virtud
+de la hipótesis de que $A'$ es un $A$-módulo plano; esta misma hipótesis
+muestra además que
+\[
+  H_\bullet\left(
+    \bigotimes_{i=1}^m
+    (M_{\bullet\bullet\bullet}^{(i)}\otimes_A A')
+  \right)
+  =H_\bullet\left(
+    \bigotimes_{i=1}^m M_{\bullet\bullet\bullet}^{(i)}
+  \right)\otimes_A A'.
+\]
+\end{proof}
+
+\begin{env}[6.9.2.2]
+\label{III.6.9.2.2}
+Obsérvese que, cuando $I$ se reduce al único elemento $1$, la fórmula
+\eqref{III.6.9.2.1.eq} se deduce directamente de \sref{III.6.7.7}, aplicado
+tomando $Y_2=X_2=S'$, $f_2=1_{S'}$, y el complejo
+$\mathscr P_\bullet^{(2)}$ reducido a su término de grado $0$, igual a
+$\mathscr O_{S'}$; se sabe entonces que la hipercohomología
+$\mathscr H^n(1_{S'},\mathscr O_{S'})$ es nula para todo $n\ne0$ y se reduce
+a $\mathscr O_{S'}$ para $n=0$ (\sref{III.6.2.1}).
+\end{env}
+
+En el caso general, introduciremos, en lugar de $\mathscr O_{S'}$, un
+complejo $\mathscr Q'_\bullet$ de $\mathscr O_{S'}$-módulos cuasicoherentes
+acotado inferiormente, de modo que, si para simplificar se toma
+$I=\{1,2,\ldots,m\}$, se puede considerar el $\partial$-funtor
+\[
+  \mathfrak{Tor}_\bullet^S
+  (f_1,\ldots,f_m,1_{S'};
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)},
+   \mathscr Q'_\bullet).
+\]
+
+\begin{proposition}[6.9.3]
+\label{III.6.9.3}
+Existen tres funtores espectrales canónicos birregulares, denotados por
+\[
+{}^{(t)}\mathscr E(f_1,\ldots,f_m;
+\mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)},
+\mathscr Q'_\bullet)
+\qquad (t=e,\ f\text{ o }f'),
+\]
+que tienen por término límite común
+\[
+\mathfrak{Tor}_\bullet^S(f_1,\ldots,f_m,1_{S'};
+\mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)},
+\mathscr Q'_\bullet),
+\]
+y cuyos términos $E_2$ son respectivamente
+
+\oldpage[III]{167}
+\[
+\begin{split}
+  {}^{(e)}\mathscr E_{pq}^2
+  =\bigoplus_{q'+q''=q}
+  \mathscr{T}\!or_p^S\Bigl(
+  &\mathfrak{Tor}_{q'}^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)}),\\
+  &\mathscr H_{q''}(\mathscr Q'_\bullet)
+  \Bigr),
+\end{split}
+\]
+\[
+\begin{split}
+  {}^{(f)}\mathscr E_{pq}^2
+  =\bigoplus_{q_1+q_2+\cdots+q_{m+1}=q}
+  \mathscr{T}\!or_p^{S'}\Bigl(
+  &\mathfrak{Tor}_{q_1}^S
+  (f_1,1_{S'};\mathscr P_\bullet^{(1)},\mathscr O_{S'}),\ldots,\\
+  &\mathfrak{Tor}_{q_m}^S
+  (f_m,1_{S'};\mathscr P_\bullet^{(m)},\mathscr O_{S'}),
+  \mathscr H_{q_{m+1}}(\mathscr Q'_\bullet)
+  \Bigr),
+\end{split}
+\]
+\[
+\begin{split}
+  {}^{(f')}\mathscr E_{pq}^2
+  =\bigoplus_{q_1+\cdots+q_m=q}
+  \mathfrak{Tor}_p^{S'}\Bigl(
+  &f'_1,\ldots,f'_m,1_{S'};\\
+  &\mathscr{T}\!or_{q_1}^S
+  (\mathscr P_\bullet^{(1)},\mathscr O_{S'}),\ldots,
+  \mathscr{T}\!or_{q_m}^S
+  (\mathscr P_\bullet^{(m)},\mathscr O_{S'}),
+  \mathscr Q'_\bullet
+  \Bigr).
+\end{split}
+\]
+\end{proposition}
+
+\begin{proof}
+La sucesión $(e)$ no es otra que la sucesión de asociatividad de
+\sref{III.6.8.2} para $r=m$. Para definir las otras dos sucesiones
+espectrales, nos limitaremos una vez más al caso en que $S$, $S'$ y los
+$Y^{(i)}$ son afines; el paso al caso general se hace mediante los métodos de
+\sref{III.6.7.1} y \sref{III.6.7.2}, y se deja al lector. Por tanto, queda
+por demostrar el siguiente enunciado afín.
+\end{proof}
+
+\begin{corollary}[6.9.4]
+\label{III.6.9.4}
+Sean $A$ un anillo, $A'$ una $A$-álgebra,
+$S=\operatorname{Spec}(A)$, $S'=\operatorname{Spec}(A')$,
+$X^{(i)}$ ($1\leq i\leq m$) unos $S$-esquemas cuasicompactos y, para cada
+$i$, sea $X'^{(i)}=X_{(S')}^{(i)}$, que es un $S'$-esquema cuasicompacto.
+Para cada $i$, sea $\mathscr P_\bullet^{(i)}$ un complejo de
+$\mathscr O_{X^{(i)}}$-módulos cuasicoherentes; sea finalmente
+$Q'_\bullet$ un complejo de $A'$-módulos, estando estos complejos acotados
+inferiormente. Existen tres funtores espectrales birregulares en los
+$\mathscr P_\bullet^{(i)}$ y en $Q'_\bullet$, que tienen por término límite
+común
+\[
+  \mathbf{Tor}_\bullet^S
+  (X^{(1)},\ldots,X^{(m)},S';
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)},
+   \widetilde{Q'_\bullet})
+\]
+y cuyos términos $E_2$ son respectivamente
+\[
+\begin{split}
+  {}^{(e)}E_{pq}^2
+  =\bigoplus_{q'+q''=q}
+  \operatorname{Tor}_p^A\Bigl(
+  &\mathbf{Tor}_{q'}^S
+  (X^{(1)},\ldots,X^{(m)};
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)}),\\
+  &H_{q''}(Q'_\bullet)
+  \Bigr),
+\end{split}
+\]
+\[
+\begin{split}
+  {}^{(f)}E_{pq}^2
+  =\bigoplus_{q_1+q_2+\cdots+q_{m+1}=q}
+  \operatorname{Tor}_p^{A'}\Bigl(
+  &\mathbf{Tor}_{q_1}^S
+  (X^{(1)},S';\mathscr P_\bullet^{(1)},\mathscr O_{S'}),\ldots,\\
+  &\mathbf{Tor}_{q_m}^S
+  (X^{(m)},S';\mathscr P_\bullet^{(m)},\mathscr O_{S'}),
+  H_{q_{m+1}}(Q'_\bullet)
+  \Bigr),
+\end{split}
+\]
+\[
+\begin{split}
+  {}^{(f')}E_{pq}^2
+  =\bigoplus_{q_1+\cdots+q_m=q}
+  \mathbf{Tor}_p^{S'}\Bigl(
+  &X'^{(1)},\ldots,X'^{(m)},S';\\
+  &\mathscr{T}\!or_{q_1}^S
+  (\mathscr P_\bullet^{(1)},\mathscr O_{S'}),\ldots,
+  \mathscr{T}\!or_{q_m}^S
+  (\mathscr P_\bullet^{(m)},\mathscr O_{S'}),
+  \widetilde{Q'_\bullet}
+  \Bigr).
+\end{split}
+\]
+\end{corollary}
+
+\begin{proof}
+No volveremos sobre el primero de estos funtores espectrales, que fue tratado
+en \sref{III.6.8.3} y solo se incluye aquí como recordatorio. Para definir
+los otros, consideremos para cada $i$ un cubrimiento abierto afín finito
+$\mathfrak U^{(i)}$ de $X^{(i)}$ y, si
+$u_i:X'^{(i)}\to X^{(i)}$ es la proyección canónica, el cubrimiento abierto
+afín finito correspondiente
+$\mathfrak U'^{(i)}=u_i^{-1}(\mathfrak U^{(i)})$.
+
+En virtud de \sref{III.6.6.6},
+$\mathbf{Tor}_\bullet^S(X^{(1)},\ldots,X^{(m)},S';
+\mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)},
+\widetilde{Q'_\bullet})$ se obtiene tomando, para $1\leq i\leq m$, una
+resolución proyectiva de Cartan-Eilenberg
+$M_{\bullet\bullet\bullet}^{(i)}$ de
+$L_{\bullet\bullet}^{(i)}=C^\bullet(\mathfrak U^{(i)},
+\mathscr P_\bullet^{(i)})$ (en el sentido de \sref[0]{0.11.7.1}),
+considerando el tricomplejo
+\[
+  M_{\bullet\bullet\bullet}
+  =M_{\bullet\bullet\bullet}^{(1)}\otimes_A
+   M_{\bullet\bullet\bullet}^{(2)}\otimes_A\cdots\otimes_A
+   M_{\bullet\bullet\bullet}^{(m)}\otimes_A Q'_\bullet
+\]
+(donde $Q'_\bullet$ se considera como un tricomplejo cuyos dos últimos
+grados se reducen a $0$), y tomando su homología. Si se pone
+$M_{\bullet\bullet\bullet}'^{(i)}=
+M_{\bullet\bullet\bullet}^{(i)}\otimes_A A'$, se tiene (recordando que
+$Q'_\bullet$ es un complejo de $A'$-módulos)
+\[
+  M_{\bullet\bullet\bullet}
+  =M_{\bullet\bullet\bullet}'^{(1)}\otimes_{A'}
+   M_{\bullet\bullet\bullet}'^{(2)}\otimes_{A'}\cdots\otimes_{A'}
+   M_{\bullet\bullet\bullet}'^{(m)}\otimes_{A'} Q'_\bullet.
+\]
+Ahora bien, consideremos cada uno de los complejos
+$M_{\bullet\bullet\bullet}'^{(i)}$ como un complejo simple (para su grado
+total), y observemos que este complejo está formado por $A'$-módulos
+proyectivos; de \sref{III.6.3.7} (extendido a un número arbitrario de
+complejos) resulta que $H_\bullet(M_{\bullet\bullet\bullet})$ también es
+igual a
+\[
+  \operatorname{Tor}_\bullet^{A'}
+  (M_{\bullet\bullet\bullet}'^{(1)},\ldots,
+   M_{\bullet\bullet\bullet}'^{(m)},Q'_\bullet);
+\]
+es, por tanto, por \sref{III.6.5.15}, el término límite de una sucesión
+espectral que tiene las propiedades de regularidad requeridas (los tres
+grados de $M_{\bullet\bullet\bullet}^{(i)}$ están acotados inferiormente
+cuando $\mathscr P_\bullet^{(i)}$ está acotado inferiormente) y cuyo término
+$E_2$ viene dado por
+\[
+  E_{pq}^2
+  =\bigoplus_{q_1+\cdots+q_{m+1}=q}
+  \operatorname{Tor}_p^{A'}
+  (H_{q_1}(M_{\bullet\bullet\bullet}'^{(1)}),\ldots,
+   H_{q_m}(M_{\bullet\bullet\bullet}'^{(m)}),H_{q_{m+1}}(Q'_\bullet)).
+\]
+
+\oldpage[III]{168}
+Se tiene además
+\[
+  H_{q_i}(M_{\bullet\bullet\bullet}'^{(i)})
+  =H_{q_i}(M_{\bullet\bullet\bullet}^{(i)}\otimes_A A')
+  =\mathbf{Tor}_{q_i}^S
+  (X^{(i)},S';\mathscr P_\bullet^{(i)},\mathscr O_{S'})
+\]
+en virtud de la definición de los hipertor globales, lo que da la sucesión
+$(f)$ buscada. Por otra parte, se puede considerar
+$M_{\bullet\bullet\bullet}'^{(i)}$ como un bicomplejo en el cual el primer
+grado es la suma de los grados primero y segundo del tricomplejo
+$M_{\bullet\bullet\bullet}^{(i)}$, y el segundo grado es el tercer grado de
+este tricomplejo; como los módulos que forman los
+$M_{\bullet\bullet\bullet}'^{(i)}$ son $A'$-módulos proyectivos, la teoría
+general de la hiperhomología muestra que la homología del bicomplejo
+\[
+  M_{\bullet\bullet\bullet}'^{(1)}\otimes_{A'}
+  M_{\bullet\bullet\bullet}'^{(2)}\otimes_{A'}\cdots\otimes_{A'}
+  M_{\bullet\bullet\bullet}'^{(m)}\otimes_{A'} Q'_\bullet
+\]
+es canónicamente isomorfa a su hiperhomología \sref[0]{0.11.6.5}; por tanto,
+es el término límite de una sucesión espectral cuyo término $E_2$ es igual a
+\[
+  E_{pq}^2
+  =\bigoplus_{q_1+\cdots+q_{m+1}=q}
+  \operatorname{Tor}_p^{A'}
+  (H_{q_1}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(1)}),\ldots,
+   H_{q_m}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(m)}),
+   H_{q_{m+1}}^{\mathrm{II}}(Q'_\bullet)).
+\]
+Ahora bien, como el segundo grado de $Q'_\bullet$ se reduce a $0$, se tiene
+$H_n^{\mathrm{II}}(Q'_\bullet)=0$ para $n\ne0$ y
+$H_0^{\mathrm{II}}(Q'_\bullet)=Q'_\bullet$; la fórmula precedente también
+se escribe
+\[
+  E_{pq}^2
+  =\bigoplus_{q_1+\cdots+q_m=q}
+  \operatorname{Tor}_p^{A'}
+  (H_{q_1}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(1)}),\ldots,
+   H_{q_m}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(m)}),Q'_\bullet).
+\]
+Además, se tiene
+\[
+  H_{q_i}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(i)})
+  =H_{q_i}^{\mathrm{II}}(M_{\bullet\bullet\bullet}^{(i)}\otimes_A A')
+  =\operatorname{Tor}_{q_i}^A(L_{\bullet\bullet}^{(i)},A')
+\]
+en virtud de \sref{III.6.3.4}; pero
+$L_{-j,k}^{(i)}=C^j(\mathfrak U^{(i)},\mathscr P_k^{(i)})$, suma directa de
+los $\Gamma(V,\mathscr P_k^{(i)})$, donde $V$ recorre las intersecciones
+(afines) de $j+1$ conjuntos del cubrimiento $\mathfrak U^{(i)}$; si
+$V'=u_i^{-1}(V)$, $V'$ es afín en $X'^{(i)}$ y de
+\sref{III.6.4.1.1} resulta que se tiene
+\[
+  \Gamma\bigl(V',\mathscr{T}\!or_{q_i}^S
+  (\mathscr P_k^{(i)},\mathscr O_{S'})\bigr)
+  =\operatorname{Tor}_{q_i}^A(\Gamma(V,\mathscr P_k^{(i)}),A')
+\]
+de donde, para el bicomplejo
+$H_{q_i}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(i)})$, se obtiene la
+expresión
+\[
+  C^\bullet\bigl(\mathfrak U'^{(i)},
+  \mathscr{T}\!or_{q_i}^S(\mathscr P_\bullet^{(i)},\mathscr O_{S'})\bigr),
+\]
+lo que da finalmente la expresión buscada para el término $E_2$ de la
+sucesión $(f')$. El hecho de que esta sucesión sea birregular bajo las
+condiciones indicadas se comprueba como de costumbre, teniendo en cuenta que,
+si $\mathscr P_\bullet^{(i)}$ está acotado inferiormente, todos los grados de
+$M_{\bullet\bullet\bullet}'^{(i)}$ están acotados inferiormente.
+\end{proof}
+
+\begin{remark}[6.9.5]
+\label{III.6.9.5}
+Se ve, como en \sref{III.6.7.6}, que sustituir los
+$\mathscr P_\bullet^{(i)}$ y $\mathscr Q'_\bullet$ por complejos
+respectivamente homotópicos a ellos no cambia las sucesiones $(e)$, $(f)$ y
+$(f')$, salvo isomorfismo canónico. Además, para la sucesión $(f)$, unos
+homomorfismos
+$\mathscr P_\bullet^{(i)}\to\mathscr R_\bullet^{(i)}$,
+$\mathscr Q'_\bullet\to\mathscr T'_\bullet$ de complejos que inducen
+isomorfismos en homología
+$\mathscr H_\bullet(\mathscr P_\bullet^{(i)})\xrightarrow{\sim}
+\mathscr H_\bullet(\mathscr R_\bullet^{(i)})$,
+$\mathscr H_\bullet(\mathscr Q'_\bullet)\xrightarrow{\sim}
+\mathscr H_\bullet(\mathscr T'_\bullet)$ proporcionan un isomorfismo de
+sucesiones espectrales
+\[
+\begin{split}
+  {}^{(f)}\mathscr E
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)},
+   \mathscr Q'_\bullet)
+  \xrightarrow{\sim}\;&
+  {}^{(f)}\mathscr E
+  (f_1,\ldots,f_m;\\
+  &\mathscr R_\bullet^{(1)},\ldots,\mathscr R_\bullet^{(m)},
+   \mathscr T'_\bullet);
+\end{split}
+\]
+la demostración es la misma que la de \sref{III.6.7.6}, teniendo en cuenta
+el resultado de esa sección y la regularidad de la sucesión $(f)$.
+\end{remark}
+
+\begin{corollary}[6.9.6]
+\label{III.6.9.6}
+Bajo las condiciones de \sref{III.6.9.1}, supongamos que:
+\begin{enumerate}
+  \item[$1^\circ$] Los complejos $\mathscr P_\bullet^{(i)}$ están formados
+  por módulos planos sobre $S$, y los $\mathscr O_Y$-módulos
+  \[
+    \mathfrak{Tor}_n^S
+    (f_1,\ldots,f_m;
+     \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})
+  \]
+  son planos sobre $S$.
+  \item[$2^\circ$] Los $\mathscr P_\bullet^{(i)}$ y
+  $\mathscr Q'_\bullet$ están acotados inferiormente.
+\end{enumerate}
+
+\oldpage[III]{169}
+Se tienen entonces, poniendo
+$\mathscr P_\bullet'^{(i)}=
+\mathscr P_\bullet^{(i)}\otimes_{\mathscr O_S}\mathscr O_{S'}$,
+isomorfismos canónicos funtoriales
+\begin{env}[6.9.6.1]
+\label{III.6.9.6.1}
+\[
+\begin{split}
+  &\mathfrak{Tor}_n^{S'}
+  (f'_1,\ldots,f'_m,1_{S'};
+   \mathscr P_\bullet'^{(1)},\ldots,
+   \mathscr P_\bullet'^{(m)},\mathscr Q'_\bullet)
+  \xrightarrow{\sim}\\
+  &\qquad
+  \bigoplus_{n'+n''=n}
+  \mathfrak{Tor}_{n'}^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,
+   \mathscr P_\bullet^{(m)})
+  \otimes_{\mathscr O_S}\mathscr H_{n''}(\mathscr Q'_\bullet).
+\end{split}
+\tag{6.9.6.1}\label{III.6.9.6.1.eq}
+\]
+\end{env}
+En particular, para $\mathscr Q'_\bullet$ reducido a un solo término
+$\mathscr F'$ de grado $0$, se tienen isomorfismos canónicos funtoriales
+\begin{env}[6.9.6.2]
+\label{III.6.9.6.2}
+\[
+\begin{split}
+  &\mathfrak{Tor}_n^{S'}
+  (f'_1,\ldots,f'_m,1_{S'};
+   \mathscr P_\bullet'^{(1)},\ldots,
+   \mathscr P_\bullet'^{(m)},\mathscr F')
+  \xrightarrow{\sim}\\
+  &\qquad
+  \mathfrak{Tor}_n^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,
+   \mathscr P_\bullet^{(m)})
+  \otimes_{\mathscr O_S}\mathscr F'
+\end{split}
+\tag{6.9.6.2}\label{III.6.9.6.2.eq}
+\]
+\end{env}
+y, más particularmente, para $\mathscr F'=\mathscr O_{S'}$,
+\begin{env}[6.9.6.3]
+\label{III.6.9.6.3}
+\[
+\begin{split}
+  &\mathfrak{Tor}_n^{S'}
+  (f'_1,\ldots,f'_m;
+   \mathscr P_\bullet'^{(1)},\ldots,
+   \mathscr P_\bullet'^{(m)})
+  \xrightarrow{\sim}\\
+  &\qquad
+  \mathfrak{Tor}_n^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,
+   \mathscr P_\bullet^{(m)})
+  \otimes_{\mathscr O_S}\mathscr O_{S'}.
+\end{split}
+\tag{6.9.6.3}\label{III.6.9.6.3.eq}
+\]
+\end{env}
+\end{corollary}
+
+\begin{proof}
+La hipótesis de planitud sobre los módulos que componen los
+$\mathscr P_\bullet^{(i)}$ implica que los complejos
+$\mathscr{T}\!or_{q_i}^S(\mathscr P_\bullet^{(i)},\mathscr O_{S'})$ son nulos
+para $q_i\ne0$ por \sref{III.6.5.8}. La sucesión $(f')$ es, por tanto,
+degenerada; la hipótesis $2^\circ$ implica además que es birregular
+\sref{III.6.9.3}, de modo que el homomorfismo de borde
+\[
+\begin{split}
+  &\mathfrak{Tor}_n^S
+  (f_1,\ldots,f_m,1_{S'};
+   \mathscr P_\bullet^{(1)},\ldots,
+   \mathscr P_\bullet^{(m)},\mathscr Q'_\bullet)
+  \longrightarrow {}^{(f')}\mathscr E_{n0}^2\\
+  &\qquad=
+  \mathfrak{Tor}_n^{S'}
+  (f'_1,\ldots,f'_m,1_{S'};
+   \mathscr P_\bullet'^{(1)},\ldots,
+   \mathscr P_\bullet'^{(m)},\mathscr Q'_\bullet)
+\end{split}
+\tag{6.9.6.4}\label{III.6.9.6.4.eq}
+\]
+es biyectivo por \sref[0]{0.11.1.6}. La hipótesis de planitud sobre los
+módulos
+\[
+  \mathfrak{Tor}_n^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})
+\]
+implica que ${}^{(e)}\mathscr E_{pq}^2=0$ para $p\ne0$ por
+\sref{III.6.5.8}. La sucesión $(e)$ es, por tanto, también degenerada y, como
+es birregular, el homomorfismo de borde
+\[
+\begin{split}
+  &\mathfrak{Tor}_n^S
+  (f_1,\ldots,f_m,1_{S'};
+   \mathscr P_\bullet^{(1)},\ldots,
+   \mathscr P_\bullet^{(m)},\mathscr Q'_\bullet)
+  \longrightarrow {}^{(e)}\mathscr E_{0n}^2\\
+  &\qquad=
+  \bigoplus_{n'+n''=n}
+  \mathfrak{Tor}_{n'}^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,
+   \mathscr P_\bullet^{(m)})
+  \otimes_{\mathscr O_S}\mathscr H_{n''}(\mathscr Q'_\bullet)
+\end{split}
+\tag{6.9.6.5}\label{III.6.9.6.5.eq}
+\]
+es biyectivo; combinando los dos isomorfismos precedentes se obtiene el
+isomorfismo \sref{III.6.9.6.1}. El isomorfismo \sref{III.6.9.6.2} se deduce
+de este trivialmente, puesto que entonces se tiene
+$\mathscr H_q(\mathscr Q'_\bullet)=0$ si $q\ne0$ y
+$\mathscr H_0(\mathscr Q'_\bullet)=\mathscr F'$. Finalmente, el caso
+$\mathscr F'=\mathscr O_{S'}$ en \sref{III.6.9.6.2}, teniendo en cuenta
+\sref{III.6.7.12}, da el isomorfismo \sref{III.6.9.6.3}.
+\end{proof}
+
+\begin{corollary}[6.9.7]
+\label{III.6.9.7}
+Bajo las condiciones de \sref{III.6.9.1}, supongamos que $S$ y $S'$ son
+afines, y que para cada $i$ se ha dado un entero $d_i$
+($1\leq i\leq m$). Existe entonces un entero $N$ que solo depende de $S$, de
+los $X^{(i)}$ y de los $d_i$, y que tiene la propiedad siguiente: para todo
+entero $n_0$, se tienen los isomorfismos canónicos \sref{III.6.9.6.3} para
+$n\leq n_0$ y para todo sistema de complejos
+$\mathscr P_\bullet^{(i)}$ que satisfaga las condiciones siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] $\mathscr P_k^{(i)}=0$ para $k<d_i$;
+  \item[$2^\circ$] $\mathscr P_k^{(i)}$ es plano sobre $S$ para
+  $k<n_0+N$;
+  \item[$3^\circ$]
+  $\mathfrak{Tor}_q^S(f_1,\ldots,f_m;
+  \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})$ es plano sobre
+  $S$ para $q<n_0+N$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Supongamos que $\mathscr P_k^{(i)}$ es plano sobre $S$ para $k<r$; entonces
+$\mathscr{T}\!or_{q_i}^S(\mathscr P_k^{(i)},\mathscr O_{S'})=0$ para $k<r$
+y $q_i\ne0$; calculemos
+\[
+\begin{split}
+  \mathfrak{Tor}_p^{S'}\Bigl(
+  &f'_1,\ldots,f'_m;
+  \mathscr{T}\!or_{q_1}^S(\mathscr P_\bullet^{(1)},\mathscr O_{S'}),
+  \ldots,\\
+  &\mathscr{T}\!or_{q_m}^S(\mathscr P_\bullet^{(m)},\mathscr O_{S'})
+  \Bigr).
+\end{split}
+\tag{6.9.7.1}\label{III.6.9.7.1.eq}
+\]
+
+\oldpage[III]{170}
+por el método de \sref{III.6.6.2}, con ayuda de la imagen inversa de un
+cubrimiento afín fijo $\mathfrak U^{(i)}$ de $X^{(i)}$
+($1\leq i\leq m$) (independiente de $S'$ y de los
+$\mathscr P_\bullet^{(i)}$); los términos $L_{jk}^{(i)}$ son nulos para
+$j<-N_i$ (que solo depende de $\mathfrak U^{(i)}$); si alguno de los $q_i$
+no es nulo, el complejo simple cuya homología de grado $p$ es
+\eqref{III.6.9.7.1.eq} tiene términos nulos en todos los grados
+\[
+  <r+\sum_{j\ne i}d_j-\sum_{i=1}^m N_i,
+\]
+por lo que \eqref{III.6.9.7.1.eq} es nulo para $p<r-N$, designando por $N$
+el mayor de los números
+\[
+  \sum_{i=1}^m N_i-\sum_{j\ne i}d_j.
+\]
+Se concluye que ${}^{(f')}\mathscr E_{pq}^2=0$ para $q\ne0$ y $p<r-N$;
+como, por otra parte, ${}^{(f')}\mathscr E_{pq}^2=0$ para $q<0$, se ve que el
+homomorfismo de borde \eqref{III.6.9.6.4.eq} es biyectivo para $n<r-N$
+\emph{(M, XV, 5.6)} (para $\mathscr Q'_\bullet=\mathscr O_{S'}$). En segundo
+lugar, si
+\[
+  \mathfrak{Tor}_q^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})
+\]
+es plano sobre $S$ para $q<r$, se tiene
+${}^{(e)}\mathscr E_{pq}^2=0$ para $p\ne0$ y $q<r$; por otra parte,
+${}^{(e)}\mathscr E_{pq}^2=0$ para $p<0$, por lo que el homomorfismo de borde
+\eqref{III.6.9.6.5.eq} es biyectivo para $n<r$, lo que termina la
+demostración.
+\end{proof}
+
+El caso de \sref{III.6.9.3} más importante en las aplicaciones es aquel en
+que $m=1$, estando $\mathscr Q'_\bullet$ reducido a un solo término
+$\mathscr F'$ de grado $0$; volveremos a enunciarlo en este caso con vistas
+a referencias ulteriores\footnote{El caso tratado en \sref{III.6.9.8}, y en
+particular las sucesiones espectrales \sref{III.6.9.8.3} y
+\sref{III.6.9.8.4}, nos había sido señalado en 1957 por J.-P.~Serre.}:
+
+\begin{proposition}[6.9.8]
+\label{III.6.9.8}
+Sean $S$ un preesquema, $g:S'\to S$ un morfismo,
+$f:X\to Y$ un $S$-morfismo separado y cuasicompacto de $S$-preesquemas,
+$\mathscr P_\bullet$ un complejo de $\mathscr O_X$-módulos cuasicoherentes
+acotado inferiormente, y $\mathscr F'$ un $\mathscr O_{S'}$-módulo
+cuasicoherente. Existen dos funtores espectrales birregulares en
+$\mathscr P_\bullet$ y $\mathscr F'$, con valores en la categoría de los
+$\mathscr O_{Y_{(S')}}$-módulos cuasicoherentes, que tienen el mismo término
+límite $\mathfrak{Tor}_\bullet^S(f,1_{S'};
+\mathscr P_\bullet,\mathscr F')$, y cuyos términos $E_2$ son
+\begin{env}[6.9.8.1]
+\label{III.6.9.8.1}
+\[
+  {}'\mathscr E_{pq}^2
+  =\mathscr{T}\!or_p^S
+  (\mathscr H^{-q}(f,\mathscr P_\bullet),\mathscr F')
+  \tag{6.9.8.1}\label{III.6.9.8.1.eq}
+\]
+\end{env}
+y
+\begin{env}[6.9.8.2]
+\label{III.6.9.8.2}
+\[
+  {}''\mathscr E_{pq}^2
+  =\mathscr H^{-p}
+  (f',\mathscr{T}\!or_q^S(\mathscr P_\bullet,\mathscr F')),
+  \tag{6.9.8.2}\label{III.6.9.8.2.eq}
+\]
+\end{env}
+donde $f'=f_{(S')}:X_{(S')}\to Y_{(S')}$.
+\end{proposition}
+
+\begin{proof}
+Las sucesiones en cuestión también pueden obtenerse, no partiendo de
+\sref{III.6.9.3}, sino de las sucesiones $(a)$ y $(b')$ de
+\sref{III.6.7.3} para $X^{(1)}=X$, $Y^{(1)}=Y$,
+$X^{(2)}=Y^{(2)}=S'$, $f_1=f$, $f_2=1_{S'}$. Cuando $S=S'=Y$, siendo $Y$
+afín, se obtienen dos sucesiones espectrales cuyos términos $E_2$ son iguales
+a
+\[
+  {}'\mathscr E_{pq}^2
+  =\mathscr{T}\!or_p^Y
+  (\mathscr H^{-q}(f,\mathscr P_\bullet),\mathscr F)
+  \tag{6.9.8.3}\label{III.6.9.8.3}
+\]
+\[
+  {}''\mathscr E_{pq}^2
+  =\mathscr H^{-p}
+  (f,\mathscr{T}\!or_q^Y(\mathscr P_\bullet,\mathscr F))
+  \tag{6.9.8.4}\label{III.6.9.8.4}
+\]
+que convergen (en virtud de \sref{III.6.7.6}) a la hipercohomología
+$\mathscr H^\bullet(f,\mathscr P_\bullet\otimes_Y\mathscr F)$ del funtor
+$f_*$ con respecto al complejo
+$\mathscr P_\bullet\otimes_Y\mathscr F$ de $\mathscr O_X$-módulos, para todo
+$\mathscr O_Y$-módulo cuasicoherente y plano sobre $Y$, $\mathscr F$ (o para
+todo $\mathscr O_Y$-módulo cuasicoherente $\mathscr F$ cuando
+$\mathscr P_\bullet$ está formado por $\mathscr O_X$-módulos planos sobre
+$Y$), las cuales son distintas de las de \sref{III.6.2.1}.
+\end{proof}
+
+\begin{corollary}[6.9.9]
+\label{III.6.9.9}
+Bajo las condiciones de \sref{III.6.9.8}, supongamos que el complejo
+$\mathscr P_\bullet$ está acotado inferiormente, formado por módulos planos
+sobre $S$, y que los $\mathscr O_Y$-módulos
+$\mathscr H^n(f,\mathscr P_\bullet)$ son planos sobre $S$.
+
+\oldpage[III]{171}
+Se tienen entonces isomorfismos canónicos funtoriales
+\begin{env}[6.9.9.1]
+\label{III.6.9.9.1}
+\[
+  \mathfrak{Tor}_n^{S'}
+  (f',1_{S'};\mathscr P'_\bullet,\mathscr F')
+  \xrightarrow{\sim}
+  \mathscr H^{-n}(f,\mathscr P_\bullet)
+  \otimes_{\mathscr O_S}\mathscr F'
+  \tag{6.9.9.1}\label{III.6.9.9.1.eq}
+\]
+\end{env}
+donde
+$\mathscr P'_\bullet=\mathscr P_\bullet\otimes_{\mathscr O_S}
+\mathscr O_{S'}$; en particular, para $\mathscr F'=\mathscr O_{S'}$, se
+tienen isomorfismos canónicos funtoriales
+\begin{env}[6.9.9.2]
+\label{III.6.9.9.2}
+\[
+  \mathscr H^n(f',\mathscr P'_\bullet)
+  \xrightarrow{\sim}
+  \mathscr H^n(f,\mathscr P_\bullet)
+  \otimes_{\mathscr O_S}\mathscr O_{S'}.
+  \tag{6.9.9.2}\label{III.6.9.9.2.eq}
+\]
+\end{env}
+Este es el caso particular $m=1$ de \sref{III.6.9.6}. Más particularmente:
+\end{corollary}
+
+\begin{corollary}[6.9.10]
+\label{III.6.9.10}
+Sean $S$ un preesquema, $f:X\to Y$ un $S$-morfismo separado y cuasicompacto
+de $S$-preesquemas, y $\mathscr P_\bullet$ un complejo acotado
+inferiormente, formado por $\mathscr O_X$-módulos cuasicoherentes y planos
+sobre $S$. Se supone además que los $\mathscr O_Y$-módulos
+$\mathscr H^n(f,\mathscr P_\bullet)$ son planos sobre $S$. Para todo $s\in S$,
+denotemos por $X_s$ y $Y_s$ las fibras
+$X\otimes_S k(s)$, $Y\otimes_S k(s)$,
+por $f_s:X_s\to Y_s$ el morfismo $f\times_S1$, y por
+$\mathscr P_\bullet^s$ el complejo
+$\mathscr P_\bullet\otimes_{\mathscr O_S}k(s)$ de
+$\mathscr O_{X_s}$-módulos. Se tienen entonces isomorfismos canónicos
+funtoriales
+\begin{env}[6.9.10.1]
+\label{III.6.9.10.1}
+\[
+  \mathscr H^n(f_s,\mathscr P_\bullet^s)
+  \xrightarrow{\sim}
+  \mathscr H^n(f,\mathscr P_\bullet)\otimes_{\mathscr O_S}k(s).
+  \tag{6.9.10.1}\label{III.6.9.10.1.eq}
+\]
+\end{env}
+\end{corollary}
+
+Se tiene así, bajo hipótesis de planitud convenientes, un caso en el que la
+formación de los funtores derivados $R^nf_*(\mathscr F)$ «conmuta con el paso
+a las fibras», que volveremos a encontrar por otro método en el §~7.

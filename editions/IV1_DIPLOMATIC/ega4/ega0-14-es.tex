@@ -1,0 +1,610 @@
+\clearpage
+\thispagestyle{plain}
+\markboth{PRELIMINARES}{PRELIMINARES}
+\oldpage[IV-1]{5}
+\phantomsection
+\label{chapter:0IV1-es}
+
+\begin{center}
+{\large CAPÍTULO 0 (continuación)\footnotemark\par}
+\vspace{1.5em}
+{\Large\bfseries PRELIMINARES\par}
+\vspace{2em}
+{\large\bfseries Sumario\par}
+\end{center}
+
+\footnotetext{Recordemos que el símbolo $0_N$ (resp. $\operatorname{Err}_N$)
+remite a la parte del capítulo 0 (resp. a la lista de Erratas) adjunta al
+capítulo $N$.}
+
+\begin{center}
+\begin{tabular}{@{}r l@{}}
+\S~14. & Dimensión combinatoria de un espacio topológico.\\
+\S~15. & Sucesiones M-regulares y sucesiones $\mathscr F$-regulares.\\
+\S~16. & Dimensión y profundidad en los anillos locales noetherianos.\\
+\S~17. & Anillos regulares.\\
+\S~18. & Complementos sobre las extensiones de álgebras.\\
+\S~19. & Álgebras formalmente lisas y anillos de Cohen.\\
+\S~20. & Derivaciones y diferenciales.\\
+\S~21. & Diferenciales en los anillos de característica $p$.\\
+\S~22. & Criterios diferenciales de lisitud formal y de regularidad.\\
+\S~23. & Anillos japoneses.
+\end{tabular}
+\end{center}
+
+Casi la totalidad de los parágrafos precedentes está dedicada a la exposición
+de nociones de Álgebra conmutativa que se utilizarán a lo largo del capítulo
+IV. Aunque buena parte de estas nociones figura ya en varias obras ([1], [12],
+[13], [17], [30]), se ha considerado que sería más cómodo para el lector
+disponer de una exposición continua y aproximadamente independiente. Junto con
+los \S\S~5, 6 y 7 del capítulo IV (donde se utiliza el lenguaje de los
+esquemas), estos parágrafos constituyen, dentro de nuestro Tratado, un pequeño
+Tratado especial, aproximadamente independiente de los capítulos I a III, que
+pretende presentar de forma coherente las propiedades de los anillos que «~se
+comportan bien~» respecto de operaciones como la completación o la clausura
+integral, vinculando sistemáticamente estas propiedades con algunas
+concepciones generales\footnote{La mayoría de las propiedades de que se trata
+fueron descubiertas por Chevalley, Zariski, Nagata y Serre. El método utilizado
+aquí fue desarrollado por primera vez en el otoño de 1961, en un curso impartido
+en Harvard University por A.~Grothendieck.}.
+
+\setcounter{section}{13}
+\section{Dimensión combinatoria de un espacio topológico}
+\label{section:0.14-es}
+
+\setcounter{subsection}{0}
+\subsection{Dimensión combinatoria de un espacio topológico}
+\label{subsection:0.14.1-es}
+
+\oldpage[0\textsubscript{IV-1}]{6}
+\begin{env}[14.1.1]
+\label{0.14.1.1-es}
+Sea $I$ un conjunto ordenado; una \emph{cadena} de elementos de $I$ es, por
+definición, una sucesión finita estrictamente creciente
+$i_0<i_1<\cdots<i_n$ de elementos de $I$ ($n\geq 0$); por definición, la
+\emph{longitud} de esta cadena es $n$. Si $X$ es un espacio topológico, el
+conjunto de sus subconjuntos \emph{cerrados irreducibles} está ordenado por
+inclusión, de donde se obtiene la noción de \emph{cadena} de subconjuntos
+cerrados irreducibles de $X$.
+\end{env}
+
+\begin{definition}[14.1.2]
+\label{0.14.1.2-es}
+Sea $X$ un espacio topológico. Se llama \emph{dimensión combinatoria de $X$}
+(o simplemente \emph{dimensión de $X$}, si no puede haber confusión), y se
+denota por $\dim_c(X)$, o simplemente por $\dim(X)$, a la cota superior de las
+longitudes de las cadenas de subconjuntos cerrados irreducibles de $X$. Para
+todo $x\in X$, se llama \emph{dimensión combinatoria de $X$ en $x$} (o
+simplemente \emph{dimensión de $X$ en $x$}), y se denota por $\dim_x(X)$, al
+número $\inf_U(\dim(U))$, donde $U$ recorre el conjunto de los entornos
+abiertos de $x$ en $X$.
+\end{definition}
+
+De esta definición resulta que
+\[
+  \dim(\varnothing)=-\infty
+\]
+(la cota superior en $\overline{\mathbb R}$ del conjunto vacío es $-\infty$).
+Si $(X_\alpha)$ es la familia de las componentes irreducibles de $X$, se tiene
+\[
+  \dim(X)=\sup_\alpha\dim(X_\alpha)
+  \tag{14.1.2.1}\label{0.14.1.2.1-es}
+\]
+porque toda cadena de subconjuntos cerrados irreducibles de $X$ está, por
+definición, contenida en una componente irreducible de $X$ y, recíprocamente,
+estas componentes son cerradas en $X$, por lo que todo subconjunto cerrado
+irreducible de un $X_\alpha$ es un subconjunto cerrado irreducible de $X$.
+
+\begin{definition}[14.1.3]
+\label{0.14.1.3-es}
+Se dice que un espacio topológico $X$ es \emph{equidimensional} si todas sus
+componentes irreducibles tienen la misma dimensión (igual entonces a $\dim(X)$
+por (14.1.2.1)).
+\end{definition}
+
+\begin{proposition}[14.1.4]
+\label{0.14.1.4-es}
+\begin{enumerate}
+  \item[\rm(i)] Para todo subconjunto $Y$ de un espacio topológico $X$, se tiene
+  $\dim(Y)\leq\dim(X)$.
+  \item[\rm(ii)] Si un espacio topológico $X$ es unión finita de cerrados
+  $X_i$, se tiene $\dim(X)=\sup_i\dim(X_i)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Para todo subconjunto cerrado irreducible $Z$ de $Y$, la adherencia $\overline Z$
+de $Z$ en $X$ es irreducible ($0_{\mathrm I}$, 2.1.2) y
+$\overline Z\cap Y=Z$, de donde se sigue (i). Por otro lado, si
+$X=\bigcup_{i=1}^n X_i$, donde los $X_i$ son cerrados, todo subconjunto cerrado
+irreducible de $X$ está contenido en uno de los $X_i$ ($0_{\mathrm I}$, 2.1.1),
+y, por consiguiente, toda cadena de subconjuntos cerrados irreducibles de $X$
+está contenida en uno de los $X_i$~; de donde se sigue (ii).
+\end{proof}
+
+De (14.1.4, (i)) se deduce que, para todo $x\in X$, también se puede escribir
+\[
+  \dim_x(X)=\lim_U\dim(U)
+  \tag{14.1.4.1}\label{0.14.1.4.1-es}
+\]
+donde el límite se toma con respecto al conjunto filtrante decreciente de los
+entornos abiertos de $x$ en $X$.
+
+\oldpage[0\textsubscript{IV-1}]{7}
+\begin{corollary}[14.1.5]
+\label{0.14.1.5-es}
+Sean $X$ un espacio topológico, $x$ un punto de $X$, $U$ un entorno de
+$x$, e $Y_i$ ($1\leq i\leq n$) subconjuntos cerrados de $U$ tales que
+$x\in Y_i$ para todo $i$ y que $U$ sea la reunión de los $Y_i$. Entonces se tiene
+\[
+  \dim_x(X)=\sup_i\bigl(\dim_x(Y_i)\bigr).
+  \tag{14.1.5.1}\label{0.14.1.5.1-es}
+\]
+\end{corollary}
+
+\begin{proof}
+De (14.1.4, (ii)) resulta que
+$\dim_x(X)=\inf_V(\sup_i(\dim(Y_i\cap V)))$ cuando $V$ recorre el conjunto
+de los entornos abiertos de $x$ contenidos en $U$~; del mismo modo, se tiene
+$\dim_x(Y_i)=\inf_V(\dim(Y_i\cap V))$ para todo $i$. El corolario es, pues,
+evidente si
+\[
+  \sup_i\bigl(\dim_x(Y_i)\bigr)=+\infty~;
+\]
+en caso contrario, existe un entorno abierto $V_0\subset U$ de $x$ tal
+que $\dim(Y_i\cap V)=\dim_x(Y_i)$ para $1\leq i\leq n$ y para todo
+$V\subset V_0$, de donde se sigue la conclusión.
+\end{proof}
+
+\begin{proposition}[14.1.6]
+\label{0.14.1.6-es}
+Para todo espacio topológico $X$, se tiene
+$\dim(X)=\sup_{x\in X}\dim_x(X)$.
+\end{proposition}
+
+\begin{proof}
+De la definición (14.1.2) y de la prop. (14.1.4) resulta que
+$\dim_x(X)\leq\dim(X)$ para todo $x\in X$. Por otro lado, sea
+$Z_0\subset Z_1\subset\cdots\subset Z_n$ una cadena de subconjuntos cerrados
+irreducibles de $X$, y sea $x\in Z_0$~; para todo abierto $U\subset X$
+que contenga a $x$, $U\cap Z_i$ es irreducible ($0_{\mathrm I}$, 2.1.6) y
+cerrado en $U$, y como se tiene $\overline{U\cap Z_i}=Z_i$ en $X$, los
+$U\cap Z_i$ son distintos dos a dos~; por tanto, $\dim(U)\geq n$, lo que
+termina la demostración.
+\end{proof}
+
+\begin{corollary}[14.1.7]
+\label{0.14.1.7-es}
+Si $(X_\alpha)$ es un recubrimiento abierto de $X$, o un recubrimiento cerrado
+localmente finito de $X$, se tiene
+$\dim(X)=\sup_\alpha(\dim(X_\alpha))$.
+\end{corollary}
+
+\begin{proof}
+Si $X_\alpha$ es un entorno de $x\in X$, se tiene
+$\dim_x(X)\leq\dim(X_\alpha)$, de donde se sigue la primera afirmación. Por otro
+lado, si los $X_\alpha$ son cerrados y si $U$ es un entorno de $x\in X$ que
+solo interseca un número finito de conjuntos $X_\alpha$, se tiene
+\[
+  \dim_x(X)\leq\dim(U)=\sup_\alpha\bigl(\dim(U\cap X_\alpha)\bigr)
+  \leq\sup_\alpha\bigl(\dim(X_\alpha)\bigr)
+\]
+por (14.1.4), de donde se sigue la segunda afirmación.
+\end{proof}
+
+\begin{corollary}[14.1.8]
+\label{0.14.1.8-es}
+Sea $X$ un espacio de Kolmogórov ($0_{\mathrm I}$, 2.1.3) noetheriano, y
+sea $F$ el conjunto de los puntos cerrados de $X$. Entonces
+$\dim(X)=\sup_{x\in F}\dim_x(X)$.
+\end{corollary}
+
+\begin{proof}
+Con la notación de la demostración de (14.1.6), basta observar
+que existe en $Z_0$ un punto cerrado ($0_{\mathrm I}$, 2.1.3).
+\end{proof}
+
+\begin{proposition}[14.1.9]
+\label{0.14.1.9-es}
+Sea $X$ un espacio de Kolmogórov noetheriano no vacío. Para que
+$\dim(X)=0$, es necesario y suficiente que $X$ sea finito y discreto.
+\end{proposition}
+
+\begin{proof}
+Si un espacio $X$ es separado (y \emph{a fortiori} si $X$ es un espacio
+discreto), los únicos subconjuntos cerrados irreducibles de $X$ son los
+reducidos a un punto, por lo que $\dim(X)=0$. Recíprocamente, supongamos que
+$X$ es un espacio de Kolmogórov noetheriano tal que $\dim(X)=0$~; como toda
+componente irreducible de $X$ contiene un punto cerrado ($0_{\mathrm I}$, 2.1.3),
+ha de reducirse a dicho punto. Como $X$ solo tiene un número finito de
+componentes irreducibles, es finito y discreto.
+\end{proof}
+
+\begin{corollary}[14.1.10]
+\label{0.14.1.10-es}
+Sea $X$ un espacio de Kolmogórov noetheriano. Para que un punto $x\in X$ sea
+aislado, es necesario y suficiente que $\dim_x(X)=0$.
+\end{corollary}
+
+\begin{proof}
+La condición es evidentemente necesaria (sin hipótesis sobre $X$). También es
+suficiente,
+\oldpage[0\textsubscript{IV-1}]{8}
+pues de ella resulta que $\dim(U)=0$ para un entorno abierto $U$ de $x$, y
+como $U$ es un espacio de Kolmogórov noetheriano, $U$ es finito y discreto.
+\end{proof}
+
+\begin{proposition}[14.1.11]
+\label{0.14.1.11-es}
+La función $x\mapsto\dim_x(X)$ es semicontinua superiormente en $X$.
+\end{proposition}
+
+\begin{proof}
+Es claro que esta función es semicontinua superiormente en todo
+punto en el que vale $+\infty$. Supongamos, pues, que $\dim_x(X)=n<+\infty$~;
+entonces, la fórmula (14.1.4.1) muestra que existe un entorno abierto $U_0$ de
+$x$ tal que $\dim(U)=n$ para todo entorno abierto $U\subset U_0$ de $x$.
+Dicho esto, para todo $y\in U_0$ y todo entorno abierto $V\subset U_0$ de $y$,
+se tiene $\dim(V)\leq\dim(U_0)=n$ (14.1.4)~; se deduce, por tanto, de
+(14.1.4.1) que $\dim_y(X)\leq n$.
+\end{proof}
+
+\begin{remark}[14.1.12]
+\label{0.14.1.12-es}
+Si $X$ e $Y$ son dos espacios topológicos, y $f:X\to Y$ una aplicación
+continua, puede ocurrir que $\dim(f(X))>\dim(X)$~; se obtiene un ejemplo tomando
+como $X$ un espacio discreto de dos elementos $a$, $b$, y como $Y$ el conjunto
+$\{a,b\}$ dotado de la topología cuyos conjuntos cerrados son
+$\varnothing$, $\{a\}$ y $\{a,b\}$~; si $f:X\to Y$ es la aplicación
+identidad, se tiene $\dim(Y)=1$ y $\dim(X)=0$. Obsérvese que $Y$ es el espectro
+de un anillo de valoración discreta $A$; su único punto cerrado es $a$ y su
+punto genérico es $b$~; si $K$ y $k$ son, respectivamente, el cuerpo de
+fracciones y el cuerpo residual de $A$, $X$ es el espectro del anillo $k\times K$
+y $f$ la aplicación continua correspondiente al homomorfismo
+$(\varphi,\psi):A\to k\times K$, donde $\varphi:A\to k$ y $\psi:A\to K$ son
+los homomorfismos canónicos (cf. IV, 5.4.3).
+\end{remark}
+
+\subsection{Codimensión de una parte cerrada}
+\label{subsection:0.14.2-es}
+
+\begin{definition}[14.2.1]
+\label{0.14.2.1-es}
+Dada una parte cerrada irreducible $Y$ de un espacio topológico $X$, se llama
+\emph{codimensión combinatoria} (o simplemente \emph{codimensión}) de $Y$ en
+$X$, y se denota por $\operatorname{codim}(Y,X)$, al supremo de las longitudes
+de las cadenas de partes cerradas irreducibles de $X$ cuyo menor elemento es
+$Y$. Si $Y$ es una parte cerrada cualquiera de $X$, se llama
+\emph{codimensión de $Y$ en $X$}, y se denota asimismo por
+$\operatorname{codim}(Y,X)$, al ínfimo de las codimensiones en $X$ de las
+componentes irreducibles de $Y$. Se dice que $X$ es
+\emph{equicodimensional} si todas las partes cerradas irreducibles mínimas de
+$X$ tienen la misma codimensión en $X$.
+\end{definition}
+
+De esta definición resulta que
+$\operatorname{codim}(\varnothing,X)=+\infty$, pues el ínfimo de la parte vacía
+de $\overline{\mathbb R}$ es $+\infty$. Si $Y$ es cerrada en $X$ y si
+$(X_\alpha)$ (resp. $(Y_\beta)$) es la familia de las componentes irreducibles
+de $X$ (resp. de $Y$), todo $Y_\beta$ está contenido en algún $X_\alpha$ y,
+más generalmente, toda cadena de partes cerradas irreducibles de $X$ cuyo menor
+elemento es $Y_\beta$ está formada por partes de algún $X_\alpha$; por tanto,
+se tiene
+\[
+  \operatorname{codim}(Y,X)=
+  \inf_\beta\left(\sup_\alpha
+  \bigl(\operatorname{codim}(Y_\beta,X_\alpha)\bigr)\right)
+  \tag{14.2.1.1}\label{0.14.2.1.1-es}
+\]
+donde, para cada $\beta$, $\alpha$ recorre el conjunto de los índices tales que
+$Y_\beta\subset X_\alpha$.
+
+\begin{proposition}[14.2.2]
+\label{0.14.2.2-es}
+Sea $X$ un espacio topológico.
+\begin{enumerate}
+  \item[\rm(i)] Si $\Phi$ es el conjunto de las partes cerradas irreducibles de
+  $X$, se tiene
+  \[
+    \dim(X)=\sup_{Y\in\Phi}\bigl(\operatorname{codim}(Y,X)\bigr).
+    \tag{14.2.2.1}\label{0.14.2.2.1-es}
+  \]
+  \oldpage[0\textsubscript{IV-1}]{9}
+  \item[\rm(ii)] Para toda parte cerrada no vacía $Y$ de $X$, se tiene
+  \[
+    \dim(Y)+\operatorname{codim}(Y,X)\leq\dim(X).
+    \tag{14.2.2.2}\label{0.14.2.2.2-es}
+  \]
+  \item[\rm(iii)] Si $Y$, $Z$ y $T$ son tres partes cerradas de $X$ tales que
+  $Y\subset Z\subset T$, se tiene
+  \[
+    \operatorname{codim}(Y,Z)+\operatorname{codim}(Z,T)
+    \leq\operatorname{codim}(Y,T).
+    \tag{14.2.2.3}\label{0.14.2.2.3-es}
+  \]
+  \item[\rm(iv)] Para que una parte cerrada $Y$ de $X$ satisfaga
+  $\operatorname{codim}(Y,X)=0$, es necesario y suficiente que $Y$ contenga
+  una componente irreducible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Las afirmaciones (i) y (iv) son consecuencias inmediatas de la definición
+(14.2.1). Para demostrar (ii), puede uno reducirse al caso en que $Y$ es
+irreducible, y entonces la fórmula resulta de las definiciones (14.1.1) y
+(14.2.1). Por último, para demostrar (iii), puede uno, en virtud de la
+definición (14.2.1), reducirse primero al caso en que $Y$ es irreducible;
+entonces $\operatorname{codim}(Y,Z)=
+\sup_\alpha(\operatorname{codim}(Y,Z_\alpha))$ para las componentes
+irreducibles $Z_\alpha$ de $Z$ que contienen $Y$; está claro que
+$\operatorname{codim}(Y,T)\geq\operatorname{codim}(Y,Z)$, por lo que la
+desigualdad es cierta si $\operatorname{codim}(Y,Z)=+\infty$; en caso
+contrario, existe un $\alpha$ tal que
+$\operatorname{codim}(Y,Z)=\operatorname{codim}(Y,Z_\alpha)$ y, en virtud de
+(14.2.1), puede uno reducirse al caso en que $Z$ es también irreducible; pero
+entonces la desigualdad (14.2.2.3) es una consecuencia evidente de la
+definición (14.2.1).
+\end{proof}
+
+\begin{proposition}[14.2.3]
+\label{0.14.2.3-es}
+Sean $X$ un espacio topológico y $Y$ una parte cerrada de $X$. Para todo
+abierto $U$ de $X$, se tiene
+\[
+  \operatorname{codim}(Y\cap U,U)\geq\operatorname{codim}(Y,X).
+  \tag{14.2.3.1}\label{0.14.2.3.1-es}
+\]
+Además, para que los dos miembros de (14.2.3.1) sean iguales, es necesario y
+suficiente que, si $(Y_\alpha)$ es la familia de las componentes irreducibles
+de $Y$ que tienen intersección no vacía con $U$, se tenga
+$\operatorname{codim}(Y,X)=
+\inf_\alpha(\operatorname{codim}(Y_\alpha,X))$.
+\end{proposition}
+
+\begin{proof}
+Se sabe ($0_{\mathrm I}$, 2.1.6) que $Z\mapsto\overline Z$ es una biyección
+del conjunto de las partes cerradas irreducibles de $U$ sobre el conjunto de
+las partes cerradas irreducibles de $X$ que tienen intersección no vacía con
+$U$ y, en particular, hace corresponder a las componentes irreducibles de
+$Y\cap U$ las componentes irreducibles de $Y$ que tienen intersección no vacía
+con $U$; si $Y_\alpha$ es una de estas últimas,
+se tiene, por tanto,
+$\operatorname{codim}(Y_\alpha,X)=
+\operatorname{codim}(Y_\alpha\cap U,U)$, y la proposición resulta entonces de
+la definición (14.2.1).
+\end{proof}
+
+\begin{definition}[14.2.4]
+\label{0.14.2.4-es}
+Sean $X$ un espacio topológico, $Y$ una parte cerrada de $X$ y $x$ un punto de
+$X$. Se llama \emph{codimensión de $Y$ en $X$ en el punto $x$}, y se denota
+por $\operatorname{codim}_x(Y,X)$, al número
+$\sup_U(\operatorname{codim}(Y\cap U,U))$, donde $U$ recorre el conjunto de
+los entornos abiertos de $x$ en $X$.
+\end{definition}
+
+En virtud de (14.2.3), también puede escribirse
+\[
+  \operatorname{codim}_x(Y,X)=
+  \lim_U\bigl(\operatorname{codim}(Y\cap U,U)\bigr)
+  \tag{14.2.4.1}\label{0.14.2.4.1-es}
+\]
+donde el límite se toma sobre el conjunto filtrante decreciente de los
+entornos abiertos de $x$ en $X$. Obsérvese que se tiene
+\[
+  \operatorname{codim}_x(Y,X)=+\infty\quad\text{si}\quad x\in X-Y.
+\]
+
+\oldpage[0\textsubscript{IV-1}]{10}
+\begin{proposition}[14.2.5]
+\label{0.14.2.5-es}
+Si $(Y_i)_{1\leq i\leq n}$ es una familia finita de partes cerradas de un
+espacio topológico $X$, y $Y$ es la unión de esta familia, se tiene
+\[
+  \operatorname{codim}(Y,X)=
+  \inf_i\bigl(\operatorname{codim}(Y_i,X)\bigr).
+  \tag{14.2.5.1}\label{0.14.2.5.1-es}
+\]
+\end{proposition}
+
+\begin{proof}
+En efecto, toda componente irreducible de uno de los $Y_i$ está contenida en
+una componente irreducible de $Y$ y, recíprocamente, toda componente
+irreducible de $Y$ es también componente irreducible de uno de los $Y_i$
+($0_{\mathrm I}$, 2.1.1); la conclusión resulta, por tanto, de la definición
+(14.2.1) y de la desigualdad (14.2.2.3).
+\end{proof}
+
+\begin{corollary}[14.2.6]
+\label{0.14.2.6-es}
+Sean $X$ un espacio topológico y $Y$ un subespacio cerrado localmente
+noetheriano de $X$.
+\begin{enumerate}
+  \item[\rm(i)] Para todo $x\in X$, solo existe un número finito de
+  componentes irreducibles $Y_i$ ($1\leq i\leq n$) de $Y$ que contienen $x$,
+  y se tiene
+  $\operatorname{codim}_x(Y,X)=
+  \inf_i(\operatorname{codim}(Y_i,X))$.
+  \item[\rm(ii)] La función
+  $x\mapsto\operatorname{codim}_x(Y,X)$ es semicontinua inferiormente en $X$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+En efecto, por hipótesis existe un entorno abierto $U_0$ de $x$ en $X$ tal
+que $Y\cap U_0$ es noetheriano y, por tanto, solo tiene un número finito de
+componentes irreducibles, que son las trazas sobre $U_0$ de componentes
+irreducibles de $Y$; \emph{a fortiori}, solo existe un número finito de
+componentes irreducibles $Y_i$ ($1\leq i\leq n$) de $Y$ que contienen $x$, y
+se puede, sustituyendo $U_0$ por un entorno abierto $U\subset U_0$ de $x$ que
+no tenga intersección con ninguno de los $Y_j$ que no contienen $x$, suponer
+que los $Y_i\cap U$ son las componentes irreducibles de $Y\cap U$; para todo
+abierto $V\subset U$ de $x$ en $X$, los $Y_i\cap V$ son entonces las
+componentes irreducibles de $Y\cap V$, y (14.2.3) muestra entonces que
+$\operatorname{codim}(Y_i,X)=\operatorname{codim}(Y_i\cap V,V)$, lo que
+prueba (i). Además, para todo $x'\in U$, las componentes irreducibles de $Y$
+que contienen $x'$ son algunas de las $Y_i$, por lo que
+$\operatorname{codim}_{x'}(Y,X)\geq\operatorname{codim}_x(Y,X)$, lo que
+demuestra (ii).
+\end{proof}
+
+\subsection{La condición de las cadenas}
+\label{subsection:0.14.3-es}
+
+\begin{env}[14.3.1]
+\label{0.14.3.1-es}
+En un espacio topológico $X$, diremos que una cadena
+$Z_0\subset Z_1\subset\cdots\subset Z_n$ de subconjuntos cerrados irreducibles es
+\emph{saturada} si no existe ningún subconjunto cerrado irreducible $Z'$ distinto
+de los $Z_i$ y tal que $Z_k\subset Z'\subset Z_{k+1}$ para algún índice $k$.
+\end{env}
+
+\begin{proposition}[14.3.2]
+\label{0.14.3.2-es}
+Sea $X$ un espacio topológico tal que, para cualesquiera dos subconjuntos
+cerrados irreducibles $Y$, $Z$ de $X$ tales que $Y\subset Z$, se tenga
+$\operatorname{codim}(Y,Z)<+\infty$. Las dos condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[\rm(a)] Dos cadenas saturadas de subconjuntos cerrados irreducibles de $X$,
+  con los mismos extremos, tienen la misma longitud.
+  \item[\rm(b)] Si $Y$, $Z$, $T$ son tres subconjuntos cerrados irreducibles de
+  $X$ tales que $Y\subset Z\subset T$, se tiene
+  \[
+    \operatorname{codim}(Y,T)=
+    \operatorname{codim}(Y,Z)+\operatorname{codim}(Z,T).
+    \tag{14.3.2.1}\label{0.14.3.2.1-es}
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Es inmediato que a) implica b). Recíprocamente, supongamos que se verifica b) y
+demostremos que, si dos cadenas saturadas con los mismos extremos tienen
+longitudes $m$ y $n\leq m$, se tiene necesariamente $m=n$. Razonemos por
+inducción sobre $n$, siendo evidente la proposición para $n=1$. Supongamos,
+pues, que $n>1$, $n<m$, y sea $Z_0\subset Z_1\subset\cdots\subset Z_n$ una
+\oldpage[0\textsubscript{IV-1}]{11}
+cadena saturada tal que existe otra cadena saturada con extremos
+$Z_0$, $Z_n$ y de longitud $m$. Como
+$\operatorname{codim}(Z_0,Z_n)\geq m>n$ y
+$\operatorname{codim}(Z_0,Z_1)=1$, se deduce de b) que
+$\operatorname{codim}(Z_1,Z_n)=\operatorname{codim}(Z_0,Z_n)-1>n-1$, lo que
+contradice la hipótesis de inducción.
+\end{proof}
+
+Cuando se cumplen las condiciones de (14.3.2), se dice que $X$ satisface la
+\emph{condición de las cadenas}, o también que es un \emph{espacio catenario}.
+Es claro que todo subespacio cerrado de un espacio catenario es catenario.
+
+\begin{proposition}[14.3.3]
+\label{0.14.3.3-es}
+Sea $X$ un espacio de Kolmogórov noetheriano de dimensión finita. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm(a)] Dos cadenas maximales de subconjuntos cerrados irreducibles de
+  $X$ tienen la misma longitud.
+  \item[\rm(b)] $X$ es equidimensional, equicodimensional y catenario.
+  \item[\rm(c)] $X$ es equidimensional y, para dos subconjuntos cerrados
+  irreducibles $Y$, $Z$ de $X$ tales que $Y\subset Z$, se tiene
+  \[
+    \dim(Z)=\dim(Y)+\operatorname{codim}(Y,Z).
+    \tag{14.3.3.1}\label{0.14.3.3.1-es}
+  \]
+  \item[\rm(d)] $X$ es equicodimensional y, para dos subconjuntos cerrados
+  irreducibles $Y$, $Z$ de $X$ tales que $Y\subset Z$, se tiene
+  \[
+    \operatorname{codim}(Y,X)=
+    \operatorname{codim}(Y,Z)+\operatorname{codim}(Z,X).
+    \tag{14.3.3.2}\label{0.14.3.3.2-es}
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Las hipótesis sobre $X$ implican que los extremos de una cadena maximal de
+subconjuntos cerrados irreducibles de $X$ son necesariamente un punto cerrado y
+una componente irreducible de $X$ ($0_{\mathrm I}$, 2.1.3); además, toda
+cadena saturada con extremos $Y$, $Z$ (con $Y\subset Z$) está contenida en una
+cadena maximal cuyos elementos distintos de los de la cadena dada o bien están
+contenidos en $Y$, o bien contienen a $Z$. Estas observaciones establecen de
+inmediato la equivalencia de a) y b), y prueban también que, si se verifica a),
+se tiene, para todo subconjunto cerrado irreducible $Y$ de $X$,
+\[
+  \dim(Y)+\operatorname{codim}(Y,X)=\dim(X)~;
+  \tag{14.3.3.3}\label{0.14.3.3.3-es}
+\]
+como se cumple (14.3.2.1), se deducen inmediatamente (14.3.3.1) y (14.3.3.2)
+de (14.3.3.3). Recíprocamente, (14.3.3.1) implica (14.3.2.1), luego
+(14.3.3.1) implica la condición de las cadenas en virtud de (14.3.2); además,
+aplicando (14.3.3.1) al caso en que $Y$ se reduce a un punto cerrado $x$ de $X$
+y $Z$ a una componente irreducible de $X$, se obtiene
+$\operatorname{codim}(\{x\},X)=\dim(Z)$; se concluye que c) implica b).
+Análogamente, (14.3.3.2) implica (14.3.2.1), luego la condición de las cadenas;
+además, con la misma elección de $Y$ y $Z$ que antes, (14.3.3.2) implica
+también $\operatorname{codim}(\{x\},X)=\dim(Z)$; por tanto (toda componente
+irreducible de $X$ contiene un punto cerrado en virtud de ($0_{\mathrm I}$,
+2.1.3)), d) implica b).
+\end{proof}
+
+Se dice que un espacio de Kolmogórov noetheriano es \emph{biequidimensional}
+si es de \emph{dimensión finita} y verifica las condiciones equivalentes de
+(14.3.3).
+
+\begin{corollary}[14.3.4]
+\label{0.14.3.4-es}
+Sea $X$ un espacio de Kolmogórov noetheriano biequidimensional; entonces, para
+todo punto cerrado $x$ de $X$ y toda componente irreducible $Z$ de $X$, se tiene
+\[
+  \dim(X)=\dim(Z)=\operatorname{codim}(\{x\},X)=\dim_x(X).
+  \tag{14.3.4.1}\label{0.14.3.4.1-es}
+\]
+\end{corollary}
+
+\oldpage[0\textsubscript{IV-1}]{12}
+\begin{proof}
+La última igualdad se deduce del hecho de que, si
+$Y_0=\{x\}\subset Y_1\subset\cdots\subset Y_m$ es una cadena maximal de
+subconjuntos cerrados irreducibles de $X$ y $U$ un entorno abierto de $x$, los
+$U\cap Y_i$ son subconjuntos cerrados irreducibles de $U$ distintos dos a dos
+(pues $\overline{U\cap Y_i}=Y_i$), de donde
+$\dim(U)=\dim(X)$ en virtud de (14.1.4).
+\end{proof}
+
+\begin{corollary}[14.3.5]
+\label{0.14.3.5-es}
+Sea $X$ un espacio de Kolmogórov noetheriano; si $X$ es biequidimensional, lo
+mismo ocurre con toda unión de componentes irreducibles de $X$ y con todo
+subconjunto cerrado irreducible de $X$. Además, para todo subconjunto cerrado
+$Y$ de $X$, se tiene entonces
+\[
+  \dim(Y)+\operatorname{codim}(Y,X)=\dim(X).
+  \tag{14.3.5.1}\label{0.14.3.5.1-es}
+\]
+\end{corollary}
+
+\begin{proof}
+Como toda cadena de subconjuntos cerrados irreducibles de $X$ está contenida en
+una componente irreducible de $X$, la primera afirmación se deduce
+inmediatamente de (14.3.3). Además, si $X'$ es un subconjunto cerrado
+irreducible de $X$, $X'$ verifica trivialmente las condiciones (14.3.3, c)), de
+donde se sigue la segunda afirmación.
+
+Por último, para demostrar (14.3.5.1), observemos que se ha visto en la
+demostración de (14.3.3) que esta relación se verifica cuando $Y$ es
+irreducible; si $Y_i$ ($1\leq i\leq m$) son las componentes irreducibles de
+$Y$, aquella entre las $Y_i$ para la cual $\dim(Y_i)$ es mayor es también
+aquella para la cual $\operatorname{codim}(Y_i,X)$ es menor; por tanto,
+(14.3.5.1) se deduce de las definiciones de $\dim(Y)$ y de
+$\operatorname{codim}(Y,X)$.
+\end{proof}
+
+\begin{remark}[14.3.6]
+\label{0.14.3.6-es}
+El lector observará que la demostración de (14.3.2) se aplica a un conjunto
+ordenado cualquiera, pues el hecho de que se trate de subconjuntos cerrados
+irreducibles de un espacio topológico no interviene en esta demostración. Lo
+mismo ocurre con la demostración de (14.3.3) en un conjunto ordenado $E$ tal
+que, para todo $x\in E$, existe un $z\leq x$ que es \emph{minimal} en $E$, y en
+el que la longitud de las cadenas de elementos de $E$ está acotada.
+\end{remark}

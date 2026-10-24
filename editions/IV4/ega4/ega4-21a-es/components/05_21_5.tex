@@ -1,0 +1,175 @@
+\subsection{Imágenes directas de divisores}
+\label{subsection:IV.21.5}
+\label{IV.21.5}
+
+\begin{env}[21.5.1]
+\label{IV.21.5.1}
+Sean $X$, $X'$ dos preesquemas, y $f:X'\to X$ un morfismo.
+En este número daremos condiciones suficientes para que se pueda asociar a todo divisor $D'$ sobre $X'$ un divisor $D$ sobre $X$, \emph{imagen directa} de $D'$ por $f$.
+Nos limitaremos al caso en que $f$ sea un morfismo \emph{finito} (para condiciones más generales, véase el capítulo de este Tratado dedicado a la teoría de intersecciones).
+\end{env}
+
+\begin{lemma}[21.5.2]
+\label{IV.21.5.2}
+Sean $A$ un anillo y $E$ un $A$-módulo libre de rango finito.
+Para que un endomorfismo $u$ de $E$ sea inyectivo, es necesario y suficiente que $\det(u)$ sea un elemento regular de $A$.
+\end{lemma}
+
+\begin{proof}
+Esto se prueba en Bourbaki, \emph{Alg.}, cap.~III, 3\textsuperscript{a} ed., \textsection~8, n\textsuperscript{o}~2, prop.~3.
+\end{proof}
+
+\begin{env}[21.5.3]
+\label{IV.21.5.3}
+Supongamos ahora que el morfismo $f:X'\to X$ sea finito y que, además, $f$ satisfaga una de las dos propiedades siguientes:
+\begin{enumerate}[label=\Roman*)]
+  \item $f$ es un morfismo finito \emph{localmente libre}; en otras palabras, \sref{IV.18.2.7}, el $\sh{O}_X$-módulo cuasicoherente de tipo finito $f_*(\sh{O}_{X'})$ es localmente libre.
+  \item $X$ es un preesquema localmente noetheriano reducido, el $\sh{R}(X)$-módulo $f_*(\sh{O}_{X'})\otimes_{\sh{O}_X}\sh{R}(X)$ es localmente libre y, para toda sección $s'\in\Gamma(f^{-1}(U),\sh{O}_{X'})$ ($U$ abierto
+  \oldpage[IV-4]{268}
+  en $X$), $\mathrm{N}_{f_*(\sh{O}_{X'})|\sh{O}_X}(s')$ es una sección de $\sh{O}_X$ sobre $U$ (cf. (\textbf{II}, 6.5.1)).
+  (Se recuerda que la condición (II) se satisface para todo morfismo finito $f$ cuando $X$ es un preesquema localmente noetheriano normal (\emph{loc. cit.}).)
+\end{enumerate}
+
+Se sabe entonces (\textbf{II}, 6.5.5) que para todo $\sh{O}_{X'}$-módulo invertible $\sh{L}'$ se define la norma $\sh{L}=\mathrm{N}_{X'/X}(\sh{L}')$ (que escribiremos también $\mathrm{N}(\sh{L}')$), que es un $\sh{O}_X$-módulo invertible.
+Además, para todo abierto $U$ de $X$ y toda sección regular $s'\in\Gamma(f^{-1}(U),\sh{O}_{X'})$, la norma $\mathrm{N}_{X'/X}(s')=\mathrm{N}_{f_*(\sh{O}_{X'})|\sh{O}_X}(s')$ (que escribiremos también $\mathrm{N}(s')$) es un elemento regular de $\Gamma(U,\sh{O}_X)$;
+en efecto, se reduce inmediatamente al caso en que $U=X$ es afín, y entonces la conclusión resulta de \sref{IV.21.5.2} bajo la hipótesis (I);
+por otra parte, bajo la hipótesis (II), el hecho de que $\sh{R}(X)$ sea un $\sh{O}_X$-módulo plano implica que la sección $s'\otimes1$ de $\Gamma(U,f_*(\sh{O}_{X'})\otimes_{\sh{O}_X}\sh{R}(X))$ es también regular (\EGAReadLink{0.6.1.2}{$\mathbf{0}_{\mathrm I}$, 6.1.2}), y la conclusión resulta de nuevo de aplicar \sref{IV.21.5.2} al anillo $\Gamma(U,\sh{R}(X))$, teniendo en cuenta la definición de la norma de una sección (\textbf{II}, 6.5.3).
+Dicho esto, sea $u'$ una sección meromorfa de $\sh{L}'$ sobre $X'$;
+como el morfismo $f$ es afín, todo punto $x\in X$ admite un entorno abierto $U$ tal que $u'|f^{-1}(U)$ sea de la forma $t'/s'$, donde $t'\in\Gamma(f^{-1}(U),\sh{L}')$ y $s'$ es una sección regular en $\Gamma(f^{-1}(U),\sh{O}_{X'})$;
+el elemento $\mathrm{N}(t')/\mathrm{N}(s')$ (donde $\mathrm{N}(t')$ es la sección de $\sh{L}$ definida en (\textbf{II}, 6.5.3)) es entonces una sección meromorfa de $\sh{L}$ sobre $U$ en virtud de lo anterior, y de las propiedades multiplicativas de la norma (\textbf{II}, 6.5.3.1) resulta que esta sección solo depende de $u'|f^{-1}(U)$ y no de su escritura en la forma $t'/s'$;
+por la misma razón, al variar $U$, las secciones meromorfas de $\sh{L}$ sobre $U$ así definidas son las restricciones de una misma sección meromorfa de $\sh{L}$ sobre $X$, que se llama la \emph{norma} de $u'$ y se denota $\mathrm{N}_{X'/X}(u')$ (o simplemente $\mathrm{N}(u')$).
+La aplicación así definida
+\[
+\label{IV.21.5.3.1}
+  \mathrm{N}_{X'/X}:\Gamma(X',\sh{M}_{X'}(\sh{L}'))\to\Gamma(X,\sh{M}_X(\mathrm{N}_{X'/X}(\sh{L}')))
+  \tag{21.5.3.1}
+\]
+prolonga la norma definida en (\textbf{II}, 6.5.5.3);
+si $u'$ es una sección meromorfa regular de $\sh{L}'$ sobre $X'$, de lo anterior resulta inmediatamente que $\mathrm{N}(u')$ es una sección meromorfa regular de $\sh{L}$ sobre $X$, pues (con las mismas notaciones) $\mathrm{N}(t')$ es regular si $t'$ lo es.
+Finalmente, si $\sh{L}_1'$, $\sh{L}_2'$ son dos $\sh{O}_{X'}$-módulos invertibles, y $s_1'$ (respectivamente, $s_2'$) es una sección meromorfa regular de $\sh{L}_1'$ (respectivamente, $\sh{L}_2'$) sobre $X'$, se tiene, en virtud de lo anterior y de (\textbf{II}, 6.5.3.1),
+\[
+\label{IV.21.5.3.2}
+  \mathrm{N}(s_1'\otimes s_2')=\mathrm{N}(s_1')\otimes\mathrm{N}(s_2').
+  \tag{21.5.3.2}
+\]
+\end{env}
+
+\begin{env}[21.5.4]
+\label{IV.21.5.4}
+Supongamos siempre que $f$ satisface una de las hipótesis I), II) de \sref{IV.21.5.3}.
+Si $(\sh{L}_1',s_1')$, $(\sh{L}_2',s_2')$ son dos pares formados cada uno por un $\sh{O}_{X'}$-módulo invertible y una sección meromorfa regular de este módulo sobre $X'$, que además son equivalentes en el sentido de \sref{IV.21.2.10}, entonces los pares $(\mathrm{N}(\sh{L}_1'),\mathrm{N}(s_1'))$ y $(\mathrm{N}(\sh{L}_2'),\mathrm{N}(s_2'))$ son también equivalentes, pues la norma de un isomorfismo de $\sh{O}_{X'}$-módulos invertibles es un isomorfismo de sus normas (\textbf{II}, 6.5.3), y se ha visto anteriormente que $\mathrm{N}_{X'/X}$ transforma las secciones de $\Gamma(X',\sh{O}_{X'}^*)$ en secciones de $\Gamma(X,\sh{O}_X^*)$.
+Se puede, por tanto, dar la definición siguiente:
+\end{env}
+
+\oldpage[IV-4]{269}
+
+\begin{definition}[21.5.5]
+\label{IV.21.5.5}
+Dado un morfismo finito $f:X'\to X$ de preesquemas que satisfaga una de las condiciones I), II) de \sref{IV.21.5.3}, se llama \emph{imagen directa} (o \emph{norma}) de un divisor $D'$ sobre $X'$ por $f$, y se denota $f_*(D')$ (o $\mathrm{N}_{X'/X}(D')$), el divisor sobre $X$ que corresponde canónicamente \sref{IV.21.2.11} a la clase del par $(\mathrm{N}_{X'/X}(\sh{O}_{X'}(D')),\mathrm{N}_{X'/X}(s_{D'}))$.
+\end{definition}
+
+De esta definición resulta inmediatamente, teniendo en cuenta \sref{IV.21.2.9.4} y \sref{IV.21.5.3.2}, que si $D_1'$, $D_2'$, $D'$ son divisores sobre $X'$, se tiene
+\[
+\label{IV.21.5.5.1}
+  f_*(D_1'+D_2')=f_*(D_1')+f_*(D_2')
+  \tag{21.5.5.1}
+\]
+y $D'\geq0$ implica $f_*(D')\geq0$; en otras palabras, $D'\mapsto f_*(D')$ es un homomorfismo creciente del grupo ordenado $\operatorname{Div}(X')$ en el grupo ordenado $\operatorname{Div}(X)$.
+La definición \sref{IV.21.5.5} muestra además inmediatamente que para todo abierto $U$ de $X$ se tiene $f_*^U(D'|f^{-1}(U))=f_*(D')|U$ (siendo $f^U$ la restricción $f^{-1}(U)\to U$ de $f$), y los homomorfismos $f_*^U$, para $U$ variable, definen por tanto un homomorfismo de haces de grupos ordenados
+\[
+\label{IV.21.5.5.2}
+  \mathrm{N}_{X'/X}:f_*(\sh{D}iv_{X'})\to\sh{D}iv_X.
+  \tag{21.5.5.2}
+\]
+Además, para todo abierto $U$ de $X$, todo $\sh{O}_{X'}$-módulo invertible $\sh{L}'$ y toda sección meromorfa regular $s'$ de $\sh{L}'$ sobre $f^{-1}(U)$, se tiene, según las definiciones anteriores y \sref{IV.21.1.4},
+\[
+\label{IV.21.5.5.3}
+  \operatorname{div}_U(\mathrm{N}(s'))=f_*^U(\operatorname{div}_{f^{-1}(U)}(s')).
+  \tag{21.5.5.3}
+\]
+
+\begin{proposition}[21.5.6]
+\label{IV.21.5.6}
+Sea $f:X'\to X$ un morfismo finito localmente libre y supongamos que $f_*(\sh{O}_{X'})$ sea de rango constante $n$.
+Entonces, para todo divisor $D$ sobre $X$, $f^*(D)$ está definido\footnote{El texto francés impreso da $f_*(D)$; la fórmula siguiente y la demostración requieren $f^*(D)$.} y se tiene
+\[
+\label{IV.21.5.6.1}
+  f_*(f^*(D))=nD.
+  \tag{21.5.6.1}
+\]
+\end{proposition}
+
+\begin{proof}
+La primera afirmación resulta del hecho de que $f$ es plano \sref{IV.21.4.5}, y la segunda es consecuencia inmediata de las definiciones y de (\textbf{II}, 6.5.3.2).
+\end{proof}
+
+\begin{proposition}[21.5.7]
+\label{IV.21.5.7}
+Sean $f:X'\to X$ un morfismo finito que satisface una de las hipótesis I), II) de \sref{IV.21.5.3}, y $f':X''\to X'$ un morfismo finito localmente libre de rango constante $n$.
+Entonces $f''=f\circ f':X''\to X$ satisface la misma hipótesis que $f$, y para todo divisor $D''$ sobre $X''$ se tiene
+\[
+\label{IV.21.5.7.1}
+  f_*''(D'')=f_*(f_*'(D'')).
+  \tag{21.5.7.1}
+\]
+\end{proposition}
+
+Teniendo en cuenta la definición \sref{IV.21.5.5}, basta probar el resultado siguiente:
+
+\begin{lemma}[21.5.7.2]
+\label{IV.21.5.7.2}
+Bajo las hipótesis de \sref{IV.21.5.7}, se tiene un isomorfismo functorial
+\[
+\label{IV.21.5.7.3}
+  \mathrm{N}_{X''/X}(\sh{L}'')\xrightarrow{\sim}\mathrm{N}_{X'/X}(\mathrm{N}_{X''/X'}(\sh{L}''))
+  \tag{21.5.7.3}
+\]
+en la categoría de los $\sh{O}_X$-módulos invertibles.
+\end{lemma}
+
+En efecto, teniendo en cuenta la definición de la norma de una sección de $\sh{L}''$ (\textbf{II}, 6.5.3) y la definición \sref{IV.21.5.5}, se obtiene inmediatamente \sref{IV.21.5.7.1}.
+Para probar \sref{IV.21.5.7.2}, basta, teniendo en cuenta las definiciones de (\textbf{II}, 6.5.2 y 6.5.3), probar que para toda sección $s$ de $f_*''(\sh{O}_{X''})=f_*(f_*'(\sh{O}_{X''}))$ sobre un abierto $U$ de $X$, se tiene
+\[
+\label{IV.21.5.7.4}
+  \mathrm{N}_{f_*''(\sh{O}_{X''})|\sh{O}_X}(s)=\mathrm{N}_{f_*(\sh{O}_{X'})|\sh{O}_X}(\mathrm{N}_{f_*'(\sh{O}_{X''})|\sh{O}_{X'}}(s)).
+  \tag{21.5.7.4}
+\]
+
+\oldpage[IV-4]{270}
+
+La cuestión es evidentemente local sobre $X$, por lo que podemos limitarnos al caso en que $X=\operatorname{Spec}(A)$ sea afín;
+se tiene entonces $X'=\operatorname{Spec}(A')$ y $X''=\operatorname{Spec}(A'')$, y puede suponerse que $A''$ es un $A'$-módulo proyectivo de rango $n$.
+Cuando $f$ es localmente libre, puede suponerse que $A'$ es un $A$-módulo libre de rango $m$, y entonces $A''$ es un $A$-módulo proyectivo de rango $mn$; restringiendo $X$ a un abierto conveniente, puede suponerse que $A''$ es un $A$-módulo libre de rango $mn$;
+la fórmula \sref{IV.21.5.7.4} resulta entonces de la transitividad de la norma (Bourbaki, \emph{Alg.}, cap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7).
+Cuando $f$ satisface la hipótesis II), $A$ es noetheriano reducido y, si $R$ es su anillo total de fracciones, $A'\otimes_A R$ es un $R$-módulo libre de rango $m$; por tanto, $A''\otimes_A R=A''\otimes_{A'}(A'\otimes_A R)$ es un $R$-módulo proyectivo de rango $mn$, y como $R$ es entonces un anillo semilocal, este $R$-módulo es libre;
+la proposición resulta entonces de nuevo de la transitividad de las normas.
+
+\begin{proposition}[21.5.8]
+\label{IV.21.5.8}
+Sean $f:X'\to X$ un morfismo finito y $g:Y\to X$ un morfismo;
+se pone $Y'=X'\times_XY$, $f'=f_{(Y)}:Y'\to Y$, $g'=g_{(X')}:Y'\to X'$.
+Supongamos que se satisface una de las condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+  \item $f$ es localmente libre y $g$ es plano.
+  \item $f$ es localmente libre, $X$ e $Y$ son localmente noetherianos, $g(\operatorname{Ass}(\sh{O}_Y))\subset\operatorname{Ass}(\sh{O}_X)$ y $g'(\operatorname{Ass}(\sh{O}_{Y'}))\subset\operatorname{Ass}(\sh{O}_{X'})$.
+  \item $f$ satisface la hipótesis II) de \sref{IV.21.5.3}, $Y$ es localmente noetheriano, $Y$ e $Y'$ son reducidos y toda componente irreducible de $Y$ (respectivamente, $Y'$) domina una componente irreducible de $X$ (respectivamente, $X'$).
+\end{enumerate}
+Entonces, para todo divisor $D'$ sobre $X'$, $g'^*(D')$ está definido, $g^*(f_*(D'))$ está definido y se tiene
+\[
+\label{IV.21.5.8.1}
+  g^*(f_*(D'))=f_*'(g'^*(D')).
+  \tag{21.5.8.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En efecto, en todos los casos resulta de (\textbf{II}, 6.5.8) que se tiene un isomorfismo functorial
+\[
+  g^*(\mathrm{N}_{X'/X}(\sh{L}'))\xrightarrow{\sim}\mathrm{N}_{Y'/Y}(g'^*(\sh{L}'))
+\]
+en la categoría de los $\sh{O}_Y$-módulos invertibles;
+además (\textbf{II}, 6.5.4), si $s'$ es una sección de $\sh{O}_{X'}$ sobre $f^{-1}(U)$ y $s''$ la sección correspondiente de $\sh{O}_{Y'}$ sobre $g'^{-1}(f^{-1}(U))$ ($U$ abierto de $X$), $\mathrm{N}_{Y'/Y}(s'')$ es la sección de $\sh{O}_Y$ sobre $g^{-1}(U)$ que corresponde a la sección $\mathrm{N}_{X'/X}(s')$ de $\sh{O}_X$ sobre $U$.
+La fórmula \sref{IV.21.5.8.1} resultará, por tanto, de las definiciones si se prueba que $g'^*(D')$ y $g^*(D)$ están definidos, cualesquiera que sean los divisores $D'$ sobre $X'$ y $D$ sobre $X$.
+En lo que respecta a $D$, esto resulta de las hipótesis formuladas y de \sref{IV.21.4.5}.
+En lo que respecta a $D'$, en el caso~(i) $g'$ es plano, mientras que en los casos~(ii) y~(iii) se satisfacen las hipótesis correspondientes de \sref{IV.21.4.5}\footnote{El texto francés impreso omite esta cláusula y pasa directamente del caso~(i) a la conclusión para todos los casos.}; por tanto, en todos los casos $g'^*(D')$ está definido.
+\end{proof}

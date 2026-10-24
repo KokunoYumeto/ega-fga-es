@@ -1,0 +1,634 @@
+\subsection{El teorema de pureza de Van der Waerden para el conjunto de
+ramificación de un morfismo birracional}
+\label{subsection:IV.21.12}
+\label{IV.21.12}
+
+\begin{env}[21.12.1]
+\label{IV.21.12.1}
+Sean $X$ y $U$ dos preesquemas, y sea $f:U\to X$ un morfismo cuasicompacto y
+cuasiseparado, de modo que $f_*(\mathcal O_U)$ es una $\mathcal O_X$-álgebra
+cuasicoherente (1.7.4). Se llama \emph{envolvente afín} del $X$-preesquema $U$ al
+$X$-preesquema afín sobre $X$
+\[
+  U^0=\operatorname{Aff}(U/X)=\operatorname{Spec}(f_*(\mathcal O_U))
+  =\operatorname{Spec}(\mathscr A(U))\qquad(\mathbf{II}, 1.1.1).
+\]
+Si $f^0:U^0\to X$ es el morfismo estructural, se tiene, por definición,
+\[
+  \mathscr A(U^0)=f^0_*(\mathcal O_{U^0})=f_*(\mathcal O_U)=\mathscr A(U),
+\]
+y al isomorfismo identidad de $f_*(\mathcal O_U)$ le corresponde, por
+$(\mathbf{II}, 1.2.7)$, un $X$-morfismo canónico
+\[
+\label{IV.21.12.1.1}
+  i_U:U\to U^0.
+  \tag{21.12.1.1}
+\]
+
+Para que $i_U$ sea un \emph{isomorfismo}, es evidentemente necesario y suficiente que el
+morfismo $f:U\to X$ sea \emph{afín}. Para todo $X$-preesquema $V$ \emph{afín sobre
+$X$}, la aplicación $u\mapsto u\circ i_U$ es una \emph{biyección}
+\[
+  \operatorname{Hom}_X(U^0,V)\xrightarrow{\sim}\operatorname{Hom}_X(U,V)
+\]
+functorial en $V$: esto resulta de la existencia de las biyecciones canónicas
+\[
+  \operatorname{Hom}_X(U,V)\xrightarrow{\sim}
+  \operatorname{Hom}_{\mathcal O_X}(\mathscr A(V),\mathscr A(U))
+\]
+y
+$\operatorname{Hom}_X(U^0,V)\xrightarrow{\sim}
+\operatorname{Hom}_{\mathcal O_X}(\mathscr A(V),\mathscr A(U^0))$
+$(\mathbf{II}, 1.2.7)$.
+
+Se puede decir, pues, que $U^0$ \emph{representa} el funtor covariante
+$V\mapsto\operatorname{Hom}_X(U,V)$ en la categoría de los $X$-preesquemas afines sobre
+$X$ $(\mathbf 0_{\mathrm{III}}, 8.1.11)$. Se deduce de ello
+$(\mathbf 0_{\mathrm{III}}, 8.1.7)$ que, para $X$ fijo,
+$U\mapsto\operatorname{Aff}(U/X)$ es un funtor covariante de la categoría de los
+$X$-preesquemas cuasicompactos y cuasiseparados sobre $X$ en la categoría de los
+$X$-preesquemas afines sobre $X$; más precisamente, si $U_1$, $U_2$ son dos
+$X$-preesquemas cuasicompactos y cuasiseparados sobre $X$, a todo $X$-morfismo
+$g:U_1\to U_2$ le corresponde el único $X$-morfismo $g^0:U_1^0\to U_2^0$ que hace
+conmutativo el diagrama
+\[
+  \xymatrix{
+    U_1 \ar[r]^g \ar[d]_{i_{U_1}} & U_2 \ar[d]^{i_{U_2}} \\
+    U_1^0 \ar[r]_{g^0} & U_2^0.
+  }
+\]
+\end{env}
+
+\oldpage[IV-4]{305}
+Más generalmente, consideremos un diagrama conmutativo
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_f & U' \ar[d]^{f'} \\
+    X \ar[r]_u & X'
+  }
+\]
+donde los morfismos $f$, $f'$ son cuasicompactos y cuasiseparados y el morfismo $u$ es
+\emph{afín}. Si se pone $h=u\circ f$, se tiene
+$h_*(\mathcal O_U)=u_*(f_*(\mathcal O_U))=u_*(f^0_*(\mathcal O_{U^0}))$ y
+$u\circ f^0$ es un morfismo afín; se tiene, por consiguiente,
+$U^0=\operatorname{Aff}(U/X')$ (relativamente al morfismo $h$), de donde resulta un único
+$X'$-morfismo $v^0:U^0\to U'^0$ que hace conmutativo el diagrama
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_{i_U} & U' \ar[d]^{i_{U'}} \\
+    U^0 \ar[r]_{v^0} & U'^0.
+  }
+\]
+
+\begin{proposition}[21.12.2]
+\label{IV.21.12.2}
+Sean $f:U\to X$ un morfismo cuasicompacto y cuasiseparado y
+$h:X'\to X$ un morfismo plano; se pone $U'=U\times_X X'$,
+$f'=f_{\{X'\}}:U'\to X'$. Entonces se tiene un $X'$-isomorfismo canónico
+\[
+\label{IV.21.12.2.1}
+  \operatorname{Aff}(U'/X')\xrightarrow{\sim}
+  \operatorname{Aff}(U/X)\times_X X'.
+  \tag{21.12.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En efecto, se tiene
+$\operatorname{Aff}(U'/X')=\operatorname{Spec}(f'_*(\mathcal O_{U'}))$, y
+$\operatorname{Aff}(U/X)\times_X X'=\operatorname{Spec}(h^*(f_*(\mathcal O_U)))$
+$(\mathbf{II}, 1.5.1)$; el isomorfismo del enunciado procede del isomorfismo canónico
+$h^*(f_*(\mathcal O_U))\xrightarrow{\sim}f'_*(\mathcal O_{U'})$ (2.3.1).
+\end{proof}
+
+\begin{corollary}[21.12.3]
+\label{IV.21.12.3}
+Para todo morfismo cuasicompacto y cuasiseparado $f:U\to X$ y todo $x\in X$, se tiene,
+salvo isomorfismo canónico,
+\[
+  U^0\times_X\operatorname{Spec}(\mathcal O_{X,x})
+  =(U\times_X\operatorname{Spec}(\mathcal O_{X,x}))^0.
+\]
+\end{corollary}
+
+Resulta asimismo de (21.12.2) que se tiene, salvo isomorfismo canónico, para todo
+abierto $V$ de $X$,
+\[
+\label{IV.21.12.4}
+  (f^{-1}(V))^0=(f^0)^{-1}(V).
+  \tag{21.12.4}
+\]
+
+\begin{env}[21.12.5]
+\label{IV.21.12.5}
+Consideraremos, en particular, el caso en que $f:U\to X$ es una \emph{inmersión
+abierta}, identificándose así $U$ con un preesquema inducido sobre un abierto de $X$.
+Como el
+morfismo $f^{-1}(U)\to U$ es la identidad, resulta de (21.12.4) que el morfismo
+$(f^0)^{-1}(U)\to U$, restricción de $f^0$, es un isomorfismo, siendo entonces
+$i_U:U\to U^0$ una \emph{inmersión abierta} que permite identificar $U$ con un
+preesquema inducido sobre un abierto de $U^0$.
+
+Más generalmente, para un abierto $V$ de $X$, la restricción $(f^0)^{-1}(V)\to V$ de
+$f^0$ es un isomorfismo de $(f^0)^{-1}(V)$ sobre el preesquema inducido sobre el abierto
+$V\cap U$ si y solo si la inmersión abierta $U\cap V\to V$ es un morfismo
+\emph{afín}. Es claro $(\mathbf{II}, 1.2.1)$
+\oldpage[IV-4]{306}
+que la unión de estos abiertos $V$ es el \emph{mayor} de ellos, $U_1$, que
+contiene a $U$; en virtud de lo precedente, $U_1$ es también el mayor abierto que no
+interseca el conjunto
+\[
+  \operatorname{Daf}(U/X)=f^0(U^0)-U
+\]
+(«defecto de afinidad» del abierto $U$ relativamente a $X$, que es vacío si y solo
+si $U$ es afín sobre $X$); en otras palabras, el conjunto cerrado $Z=X-U_1$ es la
+\emph{adherencia} del conjunto $\operatorname{Daf}(U/X)$.
+
+Obsérvese que, para todo morfismo \emph{plano} $h:X'\to X$, si se pone
+$U'=h^{-1}(U)$, se tiene
+\[
+\label{IV.21.12.5.1}
+  \operatorname{Daf}(U'/X')=h^{-1}(\operatorname{Daf}(U/X))
+  \tag{21.12.5.1}
+\]
+como resulta inmediatamente de (21.12.2.1) y de $(\mathbf I, 3.4.8)$. En particular,
+para todo abierto $V$ de $X$, se tiene
+\[
+\label{IV.21.12.5.2}
+  \operatorname{Daf}((U\cap V)/V)=\operatorname{Daf}(U/X)\cap V
+  \tag{21.12.5.2}
+\]
+y, para todo $x\in X$,
+\[
+\label{IV.21.12.5.3}
+  \operatorname{Daf}((U\cap\operatorname{Spec}(\mathcal O_{X,x}))
+  /\operatorname{Spec}(\mathcal O_{X,x}))
+  =\operatorname{Daf}(U/X)\cap\operatorname{Spec}(\mathcal O_{X,x}).
+  \tag{21.12.5.3}
+\]
+\end{env}
+
+Cuando $X$ sea localmente noetheriano, precisaremos la naturaleza del conjunto
+$\operatorname{Daf}(U/X)$, lo cual mostrará, por ejemplo, que cuando $U$ es denso en
+todo $X$, $\operatorname{Daf}(U/X)$ no es un conjunto cerrado raro
+arbitrario:
+
+\begin{theorem}[21.12.6]
+\label{IV.21.12.6}
+Sean $X$ un preesquema localmente noetheriano, $U$ un abierto no vacío de $X$ y
+$f:U\to X$ la inyección canónica. Entonces:
+\begin{enumerate}[label=(\roman*)]
+  \item La adherencia $Z=X-U_1$ de $\operatorname{Daf}(U/X)$ es de codimensión
+  $\geq2$ en $X$.
+  \item Si $T=X-U\supset Z$ es de codimensión $\geq2$, el morfismo
+  $f^0:U^0\to X$ es sobreyectivo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Demostremos primero que, para todo punto $x\in\operatorname{Daf}(U/X)$, se tiene
+necesariamente $\dim(\mathcal O_{X,x})>1$. En efecto, $x$ evidentemente no puede ser un punto
+maximal de $X$, pues está contenido en $\overline U-U$; se trata, pues, de ver que no se
+puede tener $\dim(\mathcal O_{X,x})=1$. Ahora bien, esta relación implicaría, por (21.12.5.3),
+$x\in\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))$, donde
+$U^{(x)}=U\cap\operatorname{Spec}(\mathcal O_{X,x})$. Pero los únicos abiertos de
+$\operatorname{Spec}(\mathcal O_{X,x})$ son el propio $\operatorname{Spec}(\mathcal O_{X,x})$
+y los subconjuntos del conjunto (finito) de los puntos maximales de
+$\operatorname{Spec}(\mathcal O_{X,x})$. Ahora bien, el conjunto abierto reducido a un punto maximal
+de $\operatorname{Spec}(\mathcal O_{X,x})$ es afín, por definición de los preesquemas; se
+concluye de ello que \emph{todos} los conjuntos abiertos de
+$\operatorname{Spec}(\mathcal O_{X,x})$ son afines y, por tanto,
+$\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))=\varnothing$
+contrariamente a la hipótesis formulada.
+
+Para demostrar (i) hay que probar algo más, a saber, que si $x\in X$ es tal que
+$\dim(\mathcal O_{X,x})=1$, existe un entorno abierto $W$ de $x$ en $X$ tal que
+$W$ no interseca $\operatorname{Daf}(U/X)$, es decir, tal que la inyección
+canónica $f_W:U\cap W\to W$ sea afín. Pero, con las mismas notaciones anteriores,
+acabamos de ver que la inyección canónica
+$f^{(x)}:U^{(x)}\to\operatorname{Spec}(\mathcal O_{X,x})$ es afín. Evidentemente, se
+puede limitar al caso en que $X$ es noetheriano; como el morfismo $f$ es de
+presentación finita, la conclusión resulta de (8.10.5, (viii)), aplicado según el
+método de (8.1.2, a)).
+
+\oldpage[IV-4]{307}
+(ii) Se trata de demostrar que, para todo punto $x\in T$, se tiene $x\in f^0(U^0)$;
+demostraremos primero que se puede reducir al caso en que $X=\operatorname{Spec}(A)$, donde
+$A$ es un anillo local noetheriano \emph{completo}, y $x$ es el punto cerrado de $X$. Para
+ello basta efectuar el cambio de base
+$h:X'=\operatorname{Spec}(\widehat{\mathcal O}_{X,x})\to X$; si se pone
+$U'=h^{-1}(U)$; $f'=f_{\{X'\}}$ es la inyección canónica $U'\to X'$ y, puesto que el
+morfismo $h$ es plano, resulta de (21.12.2) que, si se demuestra que $x$ pertenece a
+$f^{\prime 0}(U^{\prime 0})$, se deducirá que $x\in f^0(U^0)$. En virtud de (6.1.1), se ha
+efectuado así la reducción buscada.
+
+Sea entonces $X_1$ un subpreesquema cerrado reducido de $X$ cuyo espacio subyacente
+sea una componente irreducible de $X$, de dimensión \emph{máxima} entre las que
+contienen una componente irreducible de $T$, y pongamos
+$U_1=U\cap X_1$, $T_1=T\cap X_1=X_1-U_1$; se tiene entonces
+$\operatorname{codim}(T_1,X_1)\geq2$ $(\mathbf 0, 14.2.1)$, y el par $(U_1,X_1)$
+satisface las mismas hipótesis que el par $(U,X)$ (pues $X_1$ es el espectro de un
+anillo cociente de $A$ y, por tanto, local noetheriano y completo). Se tiene, además, un
+diagrama conmutativo
+\[
+  \xymatrix{
+    U_1 \ar[r]^j \ar[d]_{f_1} & U \ar[d]^f \\
+    X_1 \ar[r]_i & X
+  }
+\]
+donde $i$ y $j$ son las inyecciones canónicas, siendo $i$, por tanto, un morfismo afín; se
+deduce de (21.12.1) la existencia de un morfismo $j^0:U_1^0\to U^0$ que hace conmutativo el
+diagrama
+\[
+  \xymatrix{
+    U_1^0 \ar[r]^{j^0} \ar[d]_{f_1^0} & U^0 \ar[d]^{f^0} \\
+    X_1 \ar[r]_i & X
+  }
+\]
+y, por consiguiente, para demostrar que $x\in f^0(U^0)$ basta demostrar que
+$x\in f_1^0(U_1^0)$. Se puede, pues, sustituir $X$ por $X_1$ y suponer, por consiguiente,
+que el anillo $A$ es además \emph{íntegro}. Pero $A$ es cociente de un
+anillo noetheriano regular en virtud del teorema de Cohen $(\mathbf 0, 19.8.8$, (i)) y,
+como es íntegro, se puede aplicar (5.11.1) con la familia $(x_\alpha)$ reducida al
+único punto maximal de $X$; como $\operatorname{codim}(T,X)\geq2$ por hipótesis, se
+ve que $f_*(\mathcal O_U)$ es un $\mathcal O_X$-módulo \emph{coherente}, de modo que el
+morfismo $f^0:U^0\to X$ es finito; como este morfismo es dominante (pues $U$ es denso en
+todas partes), es sobreyectivo $(\mathbf{II}, 6.1.10)$ y, por tanto, $x\in f^0(U^0)$. C.Q.D.
+\end{proof}
+
+\begin{corollary}[21.12.7]
+\label{IV.21.12.7}
+Sean $X$ un preesquema localmente noetheriano, $U$ un subpreesquema inducido sobre un
+abierto de $X$ y $j:U\to X$ la inmersión canónica; supongamos que $j$ sea un morfismo
+afín. Entonces toda componente irreducible de $T=X-U$ es de codimensión $\leq1$
+(y, por tanto, de codimensión $1$ si $U$ es denso en todas partes).
+\end{corollary}
+
+\begin{proof}
+Supongamos, en efecto, que una de las componentes irreducibles $T_1$ de $T$ sea de
+codimensión $\geq2$ en $X$. Sustituyendo, si es preciso, $X$ por un entorno abierto del
+punto genérico de $T_1$, se puede suponer que $T$ es irreducible y de codimensión $\geq2$.
+Pero entonces la hipótesis
+\oldpage[IV-4]{308}
+de que $j:U\to X$ es afín implica que $U^0$ se identifica con $U$ y $j^0$ con $j$,
+es decir, que $j^0(U^0)=U$; ahora bien, esto contradice la conclusión de (21.12.6), que,
+bajo la hipótesis de dimensión formulada, implica que $j^0$ debe ser sobreyectivo.
+\end{proof}
+
+\begin{env}[21.12.8]
+\label{IV.21.12.8}
+Sean $A$ un anillo local noetheriano, $Y=\operatorname{Spec}(A)$, $y$ el único punto
+cerrado de $Y$ y $Y'=Y-\{y\}$. Consideremos la condición siguiente:
+\begin{itemize}
+  \item[\textup{(W)}] \emph{Para todo abierto $U$ de $Y$ contenido en $Y'$, que no
+  contenga ninguna componente irreducible de $Y'$ y tal que la inmersión canónica
+  $U\to Y'$ sea afín, $U$ es a su vez un abierto afín.}
+\end{itemize}
+Esta condición se deduce de la siguiente:
+\begin{itemize}
+  \item[\textup{(W')}] \emph{Para toda parte cerrada $T$ de $Y$, cada una de cuyas componentes
+  irreducibles sea de codimensión $1$ en $Y$, y tal que para toda componente
+  irreducible $Y_i$ de $Y$ se tenga $Y_i\cap T\ne\{y\}$, el abierto $U=Y-T$ es afín.}
+\end{itemize}
+En efecto, si se satisface (W') y si el abierto $U$ de $Y$ satisface la hipótesis de (W),
+resulta de (21.12.7) que ninguna componente irreducible de $T=Y-U$ puede ser de
+codimensión $\geq2$; como, además, $U$ no contiene ninguna de las componentes
+irreducibles $Y_i-\{y\}$ de $Y'$, la condición (W') muestra que $U$ es afín.
+
+Obsérvese que la condición (W') se simplifica cuando $Y$ es \emph{irreducible} y es
+entonces equivalente a la siguiente:
+\begin{itemize}
+  \item[\textup{(W'')}] \emph{Para toda parte cerrada irreducible $T$ de $Y$, de
+  codimensión $1$ en $Y$, $Y-T$ es un abierto afín.}
+\end{itemize}
+En efecto, es claro que (W') implica (W'') cuando $Y$ es irreducible, y la
+recíproca es cierta considerando las componentes irreducibles de $T$ y observando
+que la intersección de un número finito de abiertos afines es un abierto afín
+$(\mathbf I, 5.5.6)$.
+\end{env}
+
+\begin{env}[21.12.9]
+\label{IV.21.12.9}
+\emph{Ejemplos}. ---
+Si $A$ es un anillo local noetheriano \emph{factorial}, satisface (W') (y
+\emph{a fortiori} (W)), puesto que todo ideal primo de altura $1$ es principal
+$(\mathbf I, 1.3.6)$. Pero existen anillos locales noetherianos no factoriales que
+satisfacen (W''), por ejemplo los de dimensión $\leq1$: en efecto, se observó en la
+demostración de (21.12.6, (i)) que \emph{todos} los abiertos de $Y$ son entonces afines.
+Por otra parte, utilizando la teoría de la dualidad local (cap.~III,
+3\textsuperscript{a} parte), se puede demostrar que todo anillo local noetheriano de dimensión $2$
+satisface (W').
+\end{env}
+
+El interés de la condición (W) reside en el resultado siguiente:
+
+\begin{proposition}[21.12.10]
+\label{IV.21.12.10}
+Sean $X$, $Y$ dos preesquemas localmente noetherianos, $g:X\to Y$ un morfismo,
+$y$ un punto cerrado de $Y$, $Y'=Y-\{y\}$ y $X'=g^{-1}(Y')$; supongamos que el morfismo
+$g':X'\to Y'$, restricción de $g$, sea una inmersión abierta, y que el anillo local
+$\mathcal O_{Y,y}$ satisfaga la condición (W) (21.12.8). Entonces, para toda componente
+irreducible $Z$ de $X_y=g^{-1}(y)$, o bien $Z$ es de codimensión $\leq1$ en $X$,
+o bien su punto genérico está aislado en $Z$. Si $Z$ es localmente de tipo finito sobre
+$k(y)$, la segunda alternativa implica que $Z$ está reducido a un solo punto.
+\end{proposition}
+
+\begin{proof}
+La última afirmación del enunciado resulta de que $Z$ es entonces un preesquema de
+Jacobson (10.4.7) y, como el conjunto de los puntos cerrados de $Z$ es entonces denso en
+$Z$, el punto genérico de $Z$ solo puede estar aislado en $Z$ si $Z$ está reducido a un
+solo punto.
+
+\oldpage[IV-4]{309}
+Supongamos que existe en $X_y$ una componente irreducible $Z$ cuyo punto
+genérico $z$ no está aislado en $Z$, y tal que $\operatorname{codim}(Z,X)\geq2$.
+Como la cuestión es local sobre $X$ y $Y$, puesto que $z$ no está aislado en $Z$, se puede,
+sustituyendo $X$ por un entorno abierto de $z$ en $X$, suponer que $X$ e $Y$ son afines,
+que $X_y=Z$ es irreducible, no está reducido a un punto y satisface
+$\operatorname{codim}(X_y,X)\geq2$. La imagen $g(X-X_y)=U$ es un abierto de $Y'$
+isomorfo a $X-X_y$ por hipótesis; demostremos que, sustituyendo si es preciso $X$ por un
+entorno abierto de $z$ en $X$, se puede suponer que $U$ no contiene ninguna de las
+componentes irreducibles de $Y'$ cuya adherencia contiene a $y$.
+
+En efecto, se puede suponer primero que todos los puntos maximales de $X$ son
+generalizaciones de $z$, pues el conjunto de estos puntos es finito; por tanto, el conjunto de los puntos
+maximales de $U$ es el conjunto de las imágenes $y_i$ por $g$ de los puntos maximales $x_i$ de
+$X$ (ya que, por hipótesis, ningún punto maximal de $X$ puede estar contenido en $X_y$,
+pues $\dim(\mathcal O_{X,z})\geq2$). Pongamos $X_i=\overline{\{x_i\}}$. Por
+hipótesis, se tiene $z\in X_i$ y, como $z$ no está aislado en $X_y$, existe en
+$X_y$ un punto $x\ne z$. Como $X_i\ne Z$, existe en $X_i$ un punto $t_i$ tal
+que, si se pone $T_i=\overline{\{t_i\}}$, se tenga $\dim(\mathcal O_{T_i,x})=1$
+(10.5.9); esto implica, por hipótesis, $t_i\notin Z$, de modo que $t_i$ no es una
+generalización de $z$. Sustituyendo $X$ por $X'=X-\bigcup_iT_i$, se ve que la imagen por
+$g$ de $X'-X_y$ no contiene las imágenes $g(t_i)$ y, por tanto, no contiene ninguna de las
+componentes irreducibles de $Y'$ cuya adherencia contiene a $y$.
+
+Hecho esto, como $X$ e $Y$ son afines, el morfismo $g:X\to Y$ es afín, y lo
+mismo sucede con la restricción $g':X'\to Y'$; puesto que $g'$ es una inmersión abierta,
+la inmersión canónica $U\to Y'$ es afín. Pongamos
+$Y_1=\operatorname{Spec}(\mathcal O_{Y,y})$, $Y'_1=Y_1-\{y\}=Y'\cap Y_1$,
+$U_1=U\cap Y_1$. Lo precedente demuestra que la inmersión canónica $U_1\to Y'_1$ es
+afín; por tanto, $U_1$ es un abierto afín de $Y_1$ en virtud de (W), es decir, la
+inmersión canónica $U_1\to Y_1$ es afín. Pero, como esta inmersión es de
+presentación finita (1.6.2), resulta de (8.10.5, (viii)), aplicado según el método de
+(8.1.2, a)), que, restringiendo si es preciso $Y$ a un entorno abierto afín de $y$, se puede
+suponer que la inmersión $U\to Y$ es afín. Se concluiría que el abierto $X-X_y$ de
+$X$, isomorfo a $U$, sería afín, lo que contradiría (21.12.7); queda así demostrada la
+proposición.
+\end{proof}
+
+\begin{corollary}[21.12.11]
+\label{IV.21.12.11}
+Sean $X$, $Y$ dos preesquemas localmente noetherianos, suponiéndose que $X$ es
+irreducible; sea $g:X\to Y$ un morfismo localmente de tipo finito, y sea $V$ el mayor
+abierto de $X$ tal que la restricción $g|V:V\to Y$ sea un isomorfismo local.
+Supongamos que, para todo punto $y\in Y$, el anillo local $\mathcal O_{Y,y}$ satisface la
+condición (W) (21.12.8). Entonces toda componente irreducible de $T=X-V$, o bien
+es de codimensión $\leq1$, o bien tiene su punto genérico $z$ aislado en
+$g^{-1}(g(z))$.
+\end{corollary}
+
+\begin{proof}
+Pongamos $g(z)=y$. Como la cuestión solo depende de la fibra $g^{-1}(y)$ y del anillo
+$\mathcal O_{Y,y}$, mediante un cambio de base se puede limitar al caso en que
+$Y=\operatorname{Spec}(\mathcal O_{Y,y})$ y $X$ es afín
+$((\mathbf I, 3.6.5)$ y $(\mathbf I, 4.5.5))$; sustituyendo eventualmente $X$ por un
+entorno abierto de $z$ en $X$, se puede suponer que $T$ es irreducible; además, se
+puede limitar al caso en que $V$ no es vacío. Se puede, pues, suponer que el morfismo $g$ es
+separado y que $y$ es cerrado en $Y$; puesto que la restricción $g|V:V\to Y$ es un isomorfismo
+local y el abierto no vacío $V$ de $X$ es irreducible, resulta de
+$(\mathbf I, 8.2.8)$ que $g|V:V\to Y$ es una inmersión abierta. La restricción
+$g|(V\cap X_y):V\cap X_y\to\{y\}=\operatorname{Spec}(k(y))$ es, por tanto, también una
+inmersión abierta, lo que demuestra que $V\cap X_y$ es, o bien vacío, o bien está reducido a un punto
+$x$ racional
+\oldpage[IV-4]{310}
+sobre $k(y)$ y, por tanto, cerrado en $X_y$ $(\mathbf I, 6.4.2)$. Sustituyendo nuevamente,
+si es preciso, $X$ por un entorno abierto más pequeño de $z$ en $X$, se puede, pues,
+limitar al caso en que $V\cap X_y=\varnothing$, es decir, $T\supset X_y$; como, además,
+$z\in X_y$ es el punto genérico de $T$, se tiene
+$g(T)\subset\overline{\{y\}}=\{y\}$, es decir, $T=X_y$. Se está entonces exactamente
+en las condiciones de aplicación de (21.12.10), de donde resulta la conclusión.
+\end{proof}
+
+\begin{theorem}[21.12.12]
+\label{IV.21.12.12}
+\textup{(van der Waerden)}. ---
+Sean $X$, $Y$ dos preesquemas localmente noetherianos íntegros, y sea $g:X\to Y$ un
+morfismo birracional y localmente de tipo finito. Se supone además que $Y$ es
+normal y que, para todo $y\in Y$, el anillo $\mathcal O_{Y,y}$ satisface la condición (W)
+de (21.12.8) (condiciones que se cumplen, en particular, cuando $Y$ es localmente factorial
+(21.12.9)). Si $V$ es el mayor abierto de $X$ tal que la restricción
+$g|V:V\to Y$ sea un isomorfismo local, todas las componentes irreducibles de
+$T=X-V$ son de codimensión $1$ en $X$.
+\end{theorem}
+
+\begin{proof}
+Obsérvese que, puesto que $g$ es birracional, el conjunto abierto $V$ no es vacío; basta,
+pues, demostrar que un punto maximal $z$ de $T$ no puede estar aislado en $X_y$,
+donde $y=g(z)$. Pero, restringiéndose a un entorno abierto de $z$, se puede
+limitar al caso en que $T=X_y$; entonces todas las fibras $g^{-1}(y')$ ($y'\in Y$) serían
+vacías o estarían reducidas a un punto, y resultaría del «Main theorem» (8.12.10) que $g$
+sería un isomorfismo local, contrariamente a la hipótesis $z\in T$.
+\end{proof}
+
+\begin{corollary}[21.12.13]
+\label{IV.21.12.13}
+Supongamos que se satisfacen las hipótesis de (21.12.12) y, además, que $g$ es
+cuasifinito en cada uno de los puntos de $X^{(1)}$ (se recuerda que estos son los puntos en los que
+$\dim(\mathcal O_{X,x})=1$); entonces $g$ es un isomorfismo local y, si además $g$ es
+separado, $g$ es una inmersión abierta.
+\end{corollary}
+
+\begin{proof}
+Basta demostrar la primera afirmación, pues la segunda es consecuencia de la
+primera y de $(\mathbf I, 8.2.8)$. Todo se reduce a demostrar, con las notaciones de
+(21.12.12), que $T=\varnothing$; en caso contrario, un punto genérico $z$ de una
+componente irreducible de $T$ pertenecería a $X^{(1)}$ en virtud de (21.12.12) y, por
+hipótesis, estaría aislado en $X_y$, donde $y=g(z)$; pero se ha visto en la demostración
+de (21.12.12) que esto no es posible.
+\end{proof}
+
+\begin{remarks}[21.12.14]
+\label{IV.21.12.14}
+(i) La conclusión de (21.12.12) se aplica cuando $Y$ es regular e íntegro y $X$ es
+íntegro, pues, en virtud del teorema de Auslander--Buchsbaum (21.11.1), $Y$ es entonces
+localmente factorial. En cambio, se conocen ejemplos en los que $X$ e $Y$ son esquemas
+algebraicos normales de dimensión $3$, sobre un cuerpo algebraicamente cerrado de
+característica arbitraria, y en los que la conclusión de (21.12.12) ya no es válida.
+
+(ii) El conjunto $T$ de (21.12.12) es también el conjunto de los puntos en los que $g$ está
+\emph{ramificado}. En efecto, si $g$ no está ramificado en un punto $x\in X$, tampoco lo está
+en un entorno abierto afín $U$ de $x$ (17.3.7), de modo que $g|U$ es un morfismo
+separado, cuasifinito y birracional (17.4.3). Puesto que $Y$ es normal, se concluye del «Main
+theorem» $(\mathbf{III}, 4.4.9)$ que $g$ es un isomorfismo local en el punto $x$ y, por tanto,
+$x\in X-T$. Recíprocamente, $g$ evidentemente no está ramificado en ningún punto en el que es un
+isomorfismo local. Esto justifica el título dado a esta sección.
+
+\oldpage[IV-4]{311}
+(iii) Sin suponer que $Y$ sea localmente factorial, pero suponiendo, en cambio, que
+$X$ es intersección completa relativamente a $Y$ (cap.~V), veremos en el cap.~V
+que se tiene un resultado más preciso que (21.12.12), expresando $T$ como ciclo
+1-codimensional de una sección de un $\mathcal O_X$-módulo invertible, canónicamente
+asociada a $g$. Esto se aplicará, en particular, cuando $X$ e $Y$ sean ambos regulares,
+o cuando $g$ sea un $S$-morfismo, siendo $X$ e $Y$ preesquemas lisos sobre $S$.
+
+(iv) Cabe preguntarse si (21.12.10) admite una recíproca; en otras palabras, dado un
+anillo local noetheriano $A$, si se pone $Y=\operatorname{Spec}(A)$, designando $y$
+el punto cerrado de $Y$, y si, para todo preesquema localmente noetheriano $X$ y
+todo morfismo $g:X\to Y$ tal que $g':X'\to Y'$ sea una inmersión abierta, toda
+componente irreducible de $X_y$ es de codimensión $\leq1$ en $X$ o está reducida a
+un punto, ¿es entonces cierto que $A$ satisface la condición (W) de (21.12.8)?
+
+(v) Sean $Y$ un preesquema íntegro \emph{regular}, $X$ un preesquema localmente
+noetheriano \emph{normal} y $g:X\to Y$ un morfismo localmente de tipo finito; supongamos
+además que, si $\eta$ es el punto genérico de $Y$, la fibra $X_\eta$ sea \emph{étale}
+sobre $k(\eta)$, y sea $T'$ el complementario del mayor abierto $V'$ de $X$ tal que
+$g|V':V'\to Y$ sea étale; ¿es cierto entonces que todas las componentes irreducibles de
+$T'$ sean de codimensión $1$? Así ocurre cuando se supone además que $g$
+es \emph{localmente cuasifinito} («teorema de pureza» de Zariski--Nagata). Se puede
+demostrar que la conjetura precedente sería consecuencia de la siguiente (y sería
+incluso equivalente a ella si se satisficiera la conjetura de (iv)): para un anillo local regular
+$A$ contenido en un anillo local íntegro e íntegramente cerrado $B$, tal que $B$ sea un
+$A$-módulo finito, el abierto $U$ de los puntos de $\operatorname{Spec}(B)$ en los que
+$\operatorname{Spec}(B)$ no está ramificado sobre $\operatorname{Spec}(A)$ (o, lo que
+equivale por (18.10.1), es étale sobre $\operatorname{Spec}(A)$) es afín.
+\end{remarks}
+
+\begin{proposition}[21.12.15]
+\label{IV.21.12.15}
+Sean $S$ un preesquema, $g:X\to S$ un morfismo plano y localmente de presentación
+finita, cuyas fibras $X_s=g^{-1}(s)$ son geométricamente irreducibles (4.5.2), y
+$h:Y\to S$ un morfismo liso; se denotan por $Y_s=h^{-1}(s)$ las fibras de este morfismo.
+Sea $f:X\to Y$ un $S$-morfismo propio tal que, para todo punto maximal $\eta$ de
+$S$, el morfismo $f_\eta:X_\eta\to Y_\eta$ sea un isomorfismo. Entonces $f$ es un
+isomorfismo.
+\end{proposition}
+
+\begin{proof}
+Puesto que $h$ es plano, todo punto maximal de $Y$ está sobre un punto maximal de $S$
+(2.3.4), de modo que la unión de los $Y_\eta$, cuando $\eta$ recorre el conjunto de los puntos
+maximales de $S$, es densa en $Y$; como los $f_\eta$ son isomorfismos, $f$
+es dominante y, por tanto, \emph{sobreyectivo}, puesto que es propio. Basta, pues, demostrar
+que $f$ es una \emph{inmersión abierta}. Teniendo en cuenta (17.9.5), basta probar
+que, para todo $s\in S$, $f_s:X_s\to Y_s$ es una inmersión abierta.
+
+Como todo $s\in S$ es una especialización de un punto maximal $\eta$\footnote{Corrección de fuente: el francés impreso y el inglés mantenido dicen que $s$ es una generalización de $\eta$. La construcción siguiente toma $s\in\overline{\{\eta\}}$, por lo que $s$ es una especialización de $\eta$, o equivalentemente $\eta$ una generalización de $s$.}, mediante el
+cambio de base $\operatorname{Spec}(\mathcal O_{S',s})\to S$, donde $S'$ es el
+subpreesquema reducido de $S$ cuyo espacio subyacente es $\overline{\{\eta\}}$,
+se puede reducir desde ahora al caso en que $S$ es un esquema local e íntegro de punto cerrado $s$:
+en efecto, las fibras en los puntos $\eta$ y $s$ no cambian y las propiedades de los
+morfismos $g$, $h$ y $f$ se conservan por cambio de base. Además, la cuestión
+es local sobre $Y$; sustituyendo $Y$ por un entorno abierto afín $U$ en $Y$ de un punto
+de $Y_s$, y $X$ por $f^{-1}(U)$, que es cuasicompacto puesto que $f$ es propio, se ve
+que se puede suponer, además, que $X$ e $Y$ son de presentación finita sobre $S$.
+
+Existen entonces un subanillo local noetheriano $A_0$ de
+$A=\mathcal O_{S,s}$ tal que $A_0\to A$ sea un homomorfismo local, dos morfismos
+de tipo finito $g_0:X_0\to S_0=\operatorname{Spec}(A_0)$,
+$h_0:Y_0\to S_0$ y un $S_0$-morfismo
+\oldpage[IV-4]{312}
+$f_0:X_0\to Y_0$ tales que $g$, $h$ y $f$ se deducen de $g_0$, $h_0$, $f_0$ por el
+cambio de base $S\to S_0$ ((8.9.1) y (5.13.3)); se puede, además, suponer que $g_0$ es
+plano (11.2.7), $h_0$ liso (17.7.9) y $f_0$ propio (8.10.5, (xii)). Por otra parte, la
+proyección sobre $S_0$ del punto genérico $\eta$ de $S$ es el punto genérico $\eta_0$ de
+$S_0$, y resulta de (2.7.1, (viii)) que el morfismo
+$(f_0)_{\eta_0}:(X_0)_{\eta_0}\to(Y_0)_{\eta_0}$ es un isomorfismo; por último, el punto
+cerrado $s$ de $S$ está sobre el punto cerrado $s_0$ de $S_0$, de modo que la fibra
+$(X_0)_{s_0}$ de $g_0$ es geométricamente irreducible (4.5.6).
+
+Se ve, pues, que se puede limitar al caso en que $S$ es el espectro de un anillo local íntegro
+noetheriano, de punto cerrado $s$, debilitar la hipótesis sobre las fibras suponiendo solamente
+que $X_s$ y $X_\eta$ son geométricamente irreducibles, y demostrar que, bajo estas
+hipótesis, $f_s$ es una inmersión abierta. Existe entonces un anillo de valoración discreta
+$A'$ y un morfismo $S'=\operatorname{Spec}(A')\to S$ que transforma el punto cerrado
+$a$ de $S'$ en $s$ y el punto genérico $b$ de $S'$ en $\eta$ $(\mathbf{II}, 7.1.9)$;
+sean $g':X'\to S'$, $h':Y'\to S'$, $f':X'\to Y'$ los morfismos deducidos de $g$,
+$h$, $f$ por el cambio de base $S'\to S$, que satisfacen de nuevo las hipótesis
+satisfechas por $g$, $h$ y $f$ en el enunciado (21.12.15); si se demuestra que
+$f'_a:X'_a\to Y'_a$ es una inmersión abierta, resultará de (2.7.1, (x)) que también
+lo es $f_s:X_s\to Y_s$. Se puede, pues, limitar finalmente al caso en que $S$ es
+el \emph{espectro de un anillo de valoración discreta}.
+
+Entonces, puesto que $h:Y\to S$ es liso, $Y$ es regular (17.5.8), y como la cuestión
+es local sobre $Y$, se puede limitar al caso en que $Y$ es íntegro. Como $g:X\to S$ es
+plano, los puntos maximales de $X$ están contenidos en $X_\eta$ (2.3.4) y, puesto que
+$f_\eta$ es un isomorfismo, $X$ es irreducible y el anillo local en su punto
+genérico es un cuerpo; además, por planitud (3.3.2), se ve que $X$ no tiene ciclos
+primos inmersos, de modo que $X$ es reducido (3.2.1), por tanto íntegro, y $f$ es un
+morfismo birracional y separado. Para demostrar que $f$ es una inmersión abierta, se puede
+aplicar, pues, el criterio (21.12.13); para ver que $f$ es cuasifinito en los puntos de
+$X^{(1)}$, se observa que la afirmación es evidente en aquellos de estos puntos que
+pertenecen a $X_\eta$; el único punto de $X^{(1)}$ que pertenece a $X_s$ es el punto
+genérico $x$ de $X_s$, en virtud de (6.1.1). Ahora bien, resulta de (2.4.6) y de (14.2.2)
+que los morfismos $g$ y $h$ son equidimensionales; como $X_\eta$ e $Y_\eta$ son
+isomorfos, las componentes irreducibles de $X_s$ y de $Y_s$ tienen todas la misma
+dimensión. Pero, por hipótesis, $X_s$ es irreducible y se ha visto que $f$ es sobreyectivo,
+por lo que también lo es $f_s:X_s\to Y_s$, lo cual implica que $Y_s$ es también
+irreducible; si $y$ es el punto genérico de $Y_s$, se tiene, pues, $f(x)=y$, y la relación
+$\dim(X_s)=\dim(Y_s)$ implica entonces, en virtud de (5.6.6), que
+$\dim(f_s^{-1}(y))=0$, es decir, $f_s$ (y, por tanto, también $f$) es efectivamente cuasifinito
+en el punto $x$, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[21.12.16]
+\label{IV.21.12.16}
+Sean $g:X\to S$ un morfismo propio, plano y de presentación finita, $h:Y\to S$ un
+morfismo liso, propio y de presentación finita, y $f:X\to Y$ un $S$-morfismo. Se
+supone que las fibras $X_s=g^{-1}(s)$ de $g$ son geométricamente irreducibles. Sea
+$U$ el conjunto de los $s\in S$ tales que $f_s:X_s\to Y_s$ sea un isomorfismo. Entonces
+$U$ es abierto y cerrado en $S$, y el morfismo $g^{-1}(U)\to h^{-1}(U)$,
+restricción de $f$, es un isomorfismo.
+\end{corollary}
+
+\begin{proof}
+La última afirmación resultará de la primera y de (17.9.5). Ya se sabe (9.6.1,
+(xi)) que $U$ es localmente constructible en $S$. En virtud de (1.10.1), basta
+demostrar que $U$ es estable por \emph{especialización} y por \emph{generalización}. Para
+demostrar estas afirmaciones se
+\oldpage[IV-4]{313}
+puede, mediante un cambio de base $\operatorname{Spec}(\mathcal O_{S,s})\to S$,
+reducir al caso en que $S$ es un esquema local de punto cerrado $s$ y punto genérico
+$\eta$, y hay que demostrar que, para que $f_s$ sea un isomorfismo, es necesario y suficiente
+que $f_\eta$ lo sea. Ahora bien, la suficiencia de esta condición resulta de (21.12.15). Para
+demostrar que es necesaria, se razona como en la demostración de (21.12.15)
+(observando, con las mismas notaciones, que la proyección del punto cerrado de $S$ es el
+punto cerrado de $S_0$) para reducir al caso en que, además, $S$ es \emph{noetheriano};
+pero entonces la conclusión resulta de $(\mathbf{III}, 4.6.7$, (ii)).
+\end{proof}
+
+\begin{remarks}[21.12.17]
+\label{IV.21.12.17}
+(i) La conclusión de la proposición (21.12.15) ya no es válida si se elimina
+la hipótesis de que las fibras $X_s$ son irreducibles. Tomemos, en efecto,
+$S=\operatorname{Spec}(A)$, donde $A$ es un anillo de valoración discreta, y
+$Y=\mathbb P^1_S$, que es propio y liso sobre $S$ (17.3.9). Denotemos nuevamente por $s$ y
+$\eta$ el punto cerrado y el punto genérico de $S$; sea $z$ un punto cerrado de $Y_s$,
+por ejemplo un punto racional sobre $k=k(s)$, y sea $X$ el $Y$-preesquema obtenido por
+explosión del punto $z$. Como el anillo de polinomios $A[T]$ es regular
+$(\mathbf 0, 17.3.7)$ y de dimensión $2$, se ve, como en la demostración de
+(15.1.1.6), que, si $f:X\to Y$ es el morfismo estructural, $f^{-1}(z)$ es isomorfo
+a $\mathbb P^1_k$ y, por otra parte, el complementario de $f^{-1}(z)$ en $X_s$ es
+isomorfo a $Y_s-\{z\}$; por tanto, $Z_1=f^{-1}(z)$ y $Z_2$, adherencia en $X_s$ del
+complementario de $Z_1$, son las dos componentes irreducibles de $X_s$. Por
+otra parte, $f$ es evidentemente propio y $g=h\circ f$ es plano, pues $X$ es íntegro
+$(\mathbf{II}, 8.1.4)$ y, para todo abierto afín $U$ de $X$, el homomorfismo
+$A\to\Gamma(U,\mathcal O_X)$ es inyectivo $(\mathbf I, 1.2.7)$, de modo que
+$\Gamma(U,\mathcal O_X)$ es un $A$-módulo sin torsión y, por tanto, plano, puesto que $A$
+es un anillo de valoración discreta $(\mathbf 0_{\mathrm I}, 6.3.4)$. Es claro que
+$f_\eta:X_\eta\to Y_\eta$ es un isomorfismo, aunque
+$f_s:X_s\to Y_s$ no lo sea.
+
+(ii) La conclusión de (21.12.15) también falla si, entre las hipótesis, se
+suprime la hipótesis de que $f$ es \emph{propio}. Para verlo, basta definir $S$ e
+$Y$ como en (i), pero sustituir $X$ por el complementario $X'$ de $Z_2$ en el
+preesquema $X$ definido en (i), y $f$ por la restricción $f':X'\to Y$ de $f$; el morfismo
+$g':X'\to S$, restricción de $g$, sigue siendo plano, y esta vez $X'_s$ es
+geométricamente irreducible; además, $X'_s$ es isomorfo al complementario de un
+punto cerrado en $\mathbb P^1_k$, por lo que es un esquema afín isomorfo a $\mathbb A^1_k$;
+como su imagen en $Y_s$ está reducida al punto cerrado $z$, $f'$ no es propio
+$(\mathbf{III}, 4.4.2)$ y $f'_s$ no es un isomorfismo, aunque $f'_\eta$ sí lo sea.
+
+(iii) Es posible que el enunciado de la proposición (21.12.15) siga siendo válido cuando se
+sustituya en él la palabra «isomorfismo» por «morfismo étale» (cf. (21.12.14, (v))). En
+tal caso, lo mismo seguirá siendo cierto para (21.12.16).
+\end{remarks}

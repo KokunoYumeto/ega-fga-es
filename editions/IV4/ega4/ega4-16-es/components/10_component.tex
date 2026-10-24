@@ -1,0 +1,151 @@
+\subsection{Morfismos diferencialmente lisos}
+\label{IV.16.10}
+
+\begin{definition}[16.10.1]
+\label{IV.16.10.1}
+Se dice que un morfismo de preesquemas $f:X\to S$ es
+\emph{diferencialmente liso} (o que $X$ es \emph{diferencialmente
+liso sobre $S$}) si satisface las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo localmente
+  proyectivo, es decir, todo punto de $X$ admite una vecindad abierta
+  afín $U$ tal que $\Gamma(U,\Omega_{X/S}^1)$ sea un
+  $\Gamma(U,\mathcal{O}_X)$-módulo proyectivo (no necesariamente de tipo
+  finito).
+  \item[(ii)] El homomorfismo canónico (16.3.1.1)
+  \[
+    \mathbf{S}_{\mathcal{O}_X}^{\bullet}(\Omega_{X/S}^1)
+    \longrightarrow\mathscr{G}r_{\bullet}(\mathscr{P}_{X/S})
+  \]
+  es biyectivo.
+\end{enumerate}
+En particular, si $\Omega_{X/S}^1$ es localmente libre de rango finito, los
+$\mathscr{P}_{X/S}^n$ son $\mathcal{O}_X$-módulos localmente libres de
+rango finito (por ser extensiones de tales módulos).
+\end{definition}
+
+Se dice que $f$ es \emph{diferencialmente liso en un punto $x\in X$} (o
+que $X$ es diferencialmente liso sobre $S$ en el punto $x$) si existe una
+vecindad abierta $U$ de $x$ en $X$ tal que $f|U$ sea diferencialmente
+liso.
+
+Veremos más adelante (17.12.4) que un morfismo liso es diferencialmente
+liso, lo que justifica la terminología; pero el recíproco es falso; en
+efecto, un \emph{monomorfismo} $f:X\to S$ es diferencialmente liso,
+puesto que $\Omega_{X/S}^1=0$ en virtud de (I, 5.3.8), y por consiguiente
+el homomorfismo sobreyectivo (16.3.1.1) es evidentemente biyectivo; ahora
+bien, un monomorfismo ni siquiera es necesariamente plano, ni \emph{a fortiori}
+liso. Limitémonos aquí a señalar la proposición siguiente:
+
+\begin{proposition}[16.10.2]
+\label{IV.16.10.2}
+Sean $A$ un anillo, $B$ una $A$-álgebra formalmente lisa para las
+topologías discretas (0, 19.3.1). Entonces $\operatorname{Spec}(B)$ es
+diferencialmente liso sobre $\operatorname{Spec}(A)$.
+\end{proposition}
+
+En efecto, $B\otimes_A B$ es entonces (para las topologías discretas) una
+$B$-álgebra formalmente lisa (para uno u otro de los homomorfismos
+canónicos $b\mapsto b\otimes1$, $b\mapsto1\otimes b$ de $B$
+\oldpage[IV-4]{52}
+en $B\otimes_A B$) (0, 19.3.5, (iii)); por tanto, $B\otimes_A B$ es también
+una $A$-álgebra formalmente lisa para las topologías discretas (0, 19.3.5,
+(ii)). Poniendo $\mathfrak{I}=\mathfrak{I}_{B/A}$, se deduce que
+$B\otimes_A B$ es también una $A$-álgebra formalmente lisa para la topología
+$\mathfrak{I}$-preádica (0, 19.3.8); como, por hipótesis,
+$B=(B\otimes_A B)/\mathfrak{I}$ es una $A$-álgebra formalmente lisa para
+las topologías discretas, la proposición resulta de la equivalencia entre a)
+y b) en (0, 19.5.4).
+
+\begin{proposition}[16.10.3]
+\label{IV.16.10.3}
+Para que un morfismo $f:X\to S$ sea diferencialmente liso, es necesario y
+suficiente que para todo $x\in X$ exista una vecindad abierta afín $U$ de
+$x$, de anillo $A$, tal que $\Gamma(U,\mathscr{P}_{X/S}^{\infty})$ sea una
+$A$-álgebra topológica aumentada isomorfa al álgebra completada $\widehat B$,
+donde $B=\mathbf{S}_A(V)$, siendo $V$ un $A$-módulo proyectivo y estando
+$B$ provista de la topología $B^+$-preádica (donde $B^+$ es el ideal de aumento). Si
+$\Omega_{X/S}^1$ es localmente libre de rango finito, se puede sustituir
+$\widehat B$ por el álgebra de series formales $A[[T_1,\ldots,T_n]]$.
+\end{proposition}
+
+La noción de morfismo diferencialmente liso es evidentemente local sobre
+$X$, por lo que podemos reducirnos al caso en que $S=\operatorname{Spec}(B)$,
+$X=\operatorname{Spec}(C)$. Consideremos $C\otimes_B C$ como una $C$-álgebra
+(para el primer factor); pongamos $\mathfrak{I}=\mathfrak{I}_{C/B}$ y
+dotemos $C\otimes_B C$ de la topología $\mathfrak{I}$-preádica; podemos
+aplicar a la $C$-álgebra topológica $C\otimes_B C$ y al ideal
+$\mathfrak{I}$ de $C\otimes_B C$ la equivalencia entre b) y c) en (0, 19.5.4),
+puesto que $(C\otimes_B C)/\mathfrak{I}=C$ es evidentemente una $C$-álgebra
+formalmente lisa para las topologías discretas. La topología sobre
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty})$ es evidentemente la topología de límite
+proyectivo de este anillo (16.1.11).
+
+Se observará que el entero $n$ del enunciado de (16.10.3) es el \emph{rango} de
+$\Omega_{X/S}^1$ en el punto $x$. Veremos más adelante (17.13.5) que cuando
+$f$ es diferencialmente liso y localmente de tipo finito, $n$ es también
+igual a la dimensión de la fibra $f^{-1}(f(x))$ en el punto $x$.
+
+\begin{proposition}[16.10.4]
+\label{IV.16.10.4}
+Sean $f:X\to S$, $g:S'\to S$ dos morfismos, y pongamos
+$X'=X\times_S S'$, $f'=f_{(S')}:X'\to S'$.
+\begin{enumerate}
+  \item[(i)] Si $f$ es diferencialmente liso, lo mismo ocurre con $f'$.
+  \item[(ii)] Recíprocamente, si $g$ es fielmente plano y cuasicompacto, y si
+  $f'$ es diferencialmente liso y $\Omega_{X'/S'}^1$ es un
+  $\mathcal{O}_{X'}$-módulo de tipo finito, $f$ es diferencialmente liso y
+  $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo de tipo finito.
+\end{enumerate}
+\end{proposition}
+
+En efecto, si $f$ es diferencialmente liso, los
+$\mathscr{G}r_n(\mathscr{P}_{X/S})$ son $\mathcal{O}_X$-módulos
+\emph{planos}; por consiguiente, en virtud de (16.4.6), el homomorfismo
+\[
+  \mathscr{G}r_n(\mathscr{P}_{X/S})\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\mathscr{G}r_n(\mathscr{P}_{X'/S'})
+\]
+es biyectivo para todo $n$, y en virtud de la conmutatividad del diagrama
+(16.2.1.3), se deduce de la definición (16.10.1) que $f'$ es
+diferencialmente liso. Por otra parte, si $g$ es fielmente plano y
+cuasicompacto, se deduce también de (16.4.6) que
+\[
+  \mathscr{G}r_n(\mathscr{P}_{X/S})\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\mathscr{G}r_n(\mathscr{P}_{X'/S'})
+\]
+es biyectivo para todo $n$. Supongamos entonces que $f'$ es diferencialmente liso y
+$\Omega_{X'/S'}^1$ tiene rango finito. Como la proyección canónica $X'\to X$ es
+un morfismo fielmente plano y cuasicompacto, se deduce primero de (2.5.2)
+que $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo localmente libre de rango
+finito, y luego de (2.2.7) que el homomorfismo canónico (16.3.1.1) es biyectivo,
+por lo que $f$ es diferencialmente liso.
+
+\begin{proposition}[16.10.5]
+\label{IV.16.10.5}
+Para que un morfismo localmente de tipo finito $f:X\to S$ sea
+diferencialmente liso, es necesario y suficiente que la inmersión diagonal
+$\Delta_f:X\to X\times_S X$ sea cuasirregular.
+\end{proposition}
+
+\oldpage[IV-4]{53}
+
+La cuestión es local, por lo que podemos reducirnos al caso en que $S$ y $X$
+son afines, y por consiguiente el subpreesquema diagonal de $X\times_S X$ es
+cerrado. La hipótesis de que $f$ es localmente de tipo finito implica que
+$\Delta_f$ es localmente de presentación finita (I, 4.3.1), por lo que el
+subpreesquema diagonal de $X\times_S X$ está definido por un ideal de tipo
+finito $\mathscr{I}$, y $\Omega_{X/S}^1=\mathscr{I}/\mathscr{I}^2$ es un
+$\mathcal{O}_X$-módulo de tipo finito. La proposición resulta entonces
+inmediatamente de la comparación de las condiciones en (16.10.1) y (16.9.4).
+
+\begin{remark}[16.10.6]
+\label{IV.16.10.6}
+Sea $f:X\to S$ un morfismo tal que el $\mathcal{O}_X$-módulo
+$\Omega_{X/S}^1$ sea localmente libre de rango finito. Se deduce entonces de
+(0, 20.4.7) que todo $x\in X$ posee una vecindad abierta $U$ tal que existe
+una familia finita $(z_\lambda)_{\lambda\in L}$ de secciones de
+$\mathcal{O}_X$ sobre $U$ para las cuales $(dz_\lambda)_{\lambda\in L}$
+forma una \emph{base} del $\Gamma(U,\mathcal{O}_X)$-módulo
+$\Gamma(U,\Omega_{X/S}^1)$.
+\end{remark}

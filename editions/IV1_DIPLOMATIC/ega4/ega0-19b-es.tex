@@ -1,0 +1,467 @@
+\oldpage[0\textsubscript{IV-1}]{111}
+
+\begin{definition}[19.8.4]
+\label{0.19.8.4-es}
+Sean $A$ un anillo local, $P\to A$ el único homomorfismo de un anillo local
+primo $P$ en $A$, y $p$ la característica de los cuerpos residuales de $P$ y
+$A$. Se dice que $A$ es un \emph{anillo de Cohen} si es una $P$-álgebra de
+Cohen, es decir (19.8.1), si:
+\begin{enumerate}
+  \item[$1^{\mathrm o}$] $A$ es noetheriano y completo.
+  \item[$2^{\mathrm o}$] $A$ es un $P$-módulo plano (lo que equivale también a
+  decir que $A$ es un $\widehat P$-módulo plano (Bourbaki, \emph{Alg. comm.},
+  cap.~III, §~5, n\textsuperscript{o}~4, prop.~4)).
+  \item[$3^{\mathrm o}$] $A/pA$ es un cuerpo (necesariamente separable sobre el
+  cuerpo residual de $P$, pues este cuerpo es primo).
+\end{enumerate}
+\end{definition}
+
+Si $p=0$, estas condiciones equivalen a decir que $A$ es un \emph{cuerpo de
+característica $0$}. Si $p>0$, se tiene necesariamente $pA\neq0$; la condición
+$3^{\mathrm o}$ significa que $pA$ es el ideal maximal $\mathfrak m$ de $A$;
+la condición $2^{\mathrm o}$ significa que $p$ es $A$-regular, puesto que $P$
+es un anillo de valoración discreta ($\mathbf 0_{\mathrm I}$, 6.3.4). Por tanto,
+$A$ es un anillo regular (17.1.1, $d)$) de dimensión $1$ y, en consecuencia, un
+anillo de valoración discreta, completo en virtud de $1^{\mathrm o}$; en suma:
+
+\begin{proposition}[19.8.5]
+\label{0.19.8.5-es}
+Los anillos de Cohen son los cuerpos de característica $0$ y los anillos de
+valoración discreta completos cuyo cuerpo residual tiene característica
+$p>0$ y cuyo ideal maximal está generado por $p\cdot1$ (siendo $1$ la unidad del
+anillo).
+\end{proposition}
+
+Obsérvese que, en el segundo caso, $p\cdot1\neq0$ porque $p$ es $A$-regular;
+por tanto, se puede identificar $p\cdot1$ con el entero $p$; el homomorfismo
+canónico $\mathbf Z_p\to A$ es inyectivo, y se identifica $p\cdot1$ con el
+elemento $p$ de $\mathbf Z_p$; en este caso se dice que $A$ es un
+\emph{$p$-anillo de Cohen}.
+
+\begin{theorem}[19.8.6]
+\label{0.19.8.6-es}
+\textup{(Cohen).} ---
+\begin{enumerate}
+  \item[(i)] Sean $W$ un anillo de Cohen, $C$ un anillo local noetheriano
+  completo y $\mathfrak J$ un ideal de $C$ distinto de $C$. Entonces todo
+  homomorfismo local $u:W\to C/\mathfrak J$ se factoriza como
+  $W\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un homomorfismo local.
+  \item[(ii)] Sea $K$ un cuerpo. Existe un anillo de Cohen $W$ cuyo cuerpo
+  residual es isomorfo a $K$. Si $W'$ es un segundo anillo de Cohen y $K'$ su
+  cuerpo residual, todo isomorfismo $u:K\xrightarrow{\sim}K'$ proviene, por
+  paso a los cocientes, de un isomorfismo $v:W\xrightarrow{\sim}W'$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Esto no es sino (19.8.2) aplicado al caso en que $A$ es un anillo local primo.
+\end{proof}
+
+\begin{remarks}[19.8.7]
+\label{0.19.8.7-es}
+\begin{enumerate}
+  \item[(i)] Cuando $K$ es de característica $0$, la parte (ii) de (19.8.6)
+  se vuelve trivial.
+  \item[(ii)] El homomorfismo $v$ de (19.8.6, (i)) \emph{no está
+  necesariamente determinado de manera única por $u$}, como muestra ya el
+  caso en que $W$ es un cuerpo de característica $0$, $\mathfrak J^2=0$ y $u$
+  es un isomorfismo (cf.~(21.5.5)). Del mismo modo, en (19.8.6, (ii)), el
+  isomorfismo $v$ \emph{no está necesariamente determinado de manera única
+  por $u$} (cf.~(21.5.5)).
+
+  Sin embargo, cuando $K$ es \emph{perfecto} y de característica $p>0$, se
+  verá en (21.5.5) que en (19.8.6, (ii)) el isomorfismo $v$ es único. Se verá
+  también más adelante que, en este caso, $W$ se identifica con el anillo
+  $W_\infty(K)$ de \emph{vectores de Witt de longitud infinita} sobre $K$.
+  \item[(iii)] En (19.8.6, (i)), se pueden debilitar las hipótesis sobre $C$
+  utilizando (19.3.10) y (19.3.12).
+\end{enumerate}
+\end{remarks}
+
+\begin{theorem}[19.8.8]
+\label{0.19.8.8-es}
+\textup{(Cohen).} --- Sean $A$ un anillo local noetheriano completo y $k$ su
+cuerpo residual.
+
+\oldpage[0\textsubscript{IV-1}]{112}
+
+\begin{enumerate}
+  \item[(i)] Existe un anillo de Cohen $W$ tal que $A$ es isomorfo a un anillo
+  cociente de un anillo de series formales $W[[T_1,\ldots,T_n]]$ (y, en
+  particular, $A$ es isomorfo a un cociente de un anillo local regular
+  completo (17.3.8)). Si $A$ contiene un cuerpo, es isomorfo a un anillo
+  cociente de $k[[T_1,\ldots,T_n]]$.
+  \item[(ii)] Supongamos además que $A$ es íntegro. Entonces existe un
+  subanillo $B$ de $A$ tal que: $1^{\mathrm o}$ $B$ es isomorfo a un anillo de
+  series formales sobre un anillo $C$ que es un cuerpo o un anillo de Cohen
+  (lo que implica que $B$ es un anillo local regular y completo (17.3.8));
+  $2^{\mathrm o}$ $B$ tiene el mismo cuerpo residual que $A$ y la inyección
+  $B\to A$ es un homomorfismo local; $3^{\mathrm o}$ $A$ es una $B$-álgebra
+  finita.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Sea $\mathfrak m$ el ideal maximal de $A$. Existe un anillo de Cohen $W$ cuyo
+cuerpo residual es isomorfo a $k$ (19.8.6, (ii)); se tiene, pues, un
+homomorfismo local $W\to A/\mathfrak m$, que se factoriza entonces como
+$W\xrightarrow{u}A\to A/\mathfrak m$, donde $u$ es un homomorfismo local
+(19.8.6, (i)). Para toda familia finita $(x_i)_{1\leq i\leq n}$ de elementos
+de $\mathfrak m$, existe entonces un homomorfismo local
+$v:W[[T_1,\ldots,T_n]]\to A$ que prolonga $u$ y tal que $v(T_i)=x_i$ para todo
+$i$ (Bourbaki, \emph{Alg. comm.}, cap.~III, §~4, n\textsuperscript{o}~5,
+prop.~6). Cuando $A$ contiene un cuerpo, contiene un cuerpo primo $P$, del cual
+$k$ es una extensión (necesariamente separable) y, por tanto, $A$ contiene un
+cuerpo isomorfo a $k$ (19.6.2); se puede entonces sustituir $W$ por $k$ en la
+definición anterior de $v$.
+
+\medskip
+\noindent(i)\enspace
+Tomemos primero como $x_i$ un sistema de generadores de $\mathfrak m$. Como
+$W$ tiene el mismo cuerpo residual que $A$, y como las clases de los $x_i$ en
+el anillo graduado $\gr_\bullet(A)$ generan $\gr_\bullet(A)$ como $k$-álgebra,
+$\gr(v):\gr_\bullet(W[[T_1,\ldots,T_n]])\to\gr_\bullet(A)$ es sobreyectivo;
+se deduce que $v$ es también sobreyectivo (Bourbaki, \emph{Alg. comm.},
+cap.~III, §~2, n\textsuperscript{o}~8, cor.~2 del teorema~1). Recordemos que el
+caso en que $A$ contiene un cuerpo ya se ha tratado y solo figura aquí como
+recordatorio (19.6.3).
+
+\medskip
+\noindent(ii)\enspace
+Si $A$ contiene un cuerpo, contiene un cuerpo $k'$ isomorfo a $k$, como se ha
+visto; se considera entonces un sistema de parámetros
+$(y_j)_{1\leq j\leq m}$ de $A$ (16.3.6), se toma
+$B=k[[T_1,\ldots,T_m]]$ y se considera el homomorfismo local $w:B\to A$ cuya
+restricción a $k$ es un isomorfismo $k\to k'$ y tal que
+$w(T_j)=y_j$ para $1\leq j\leq m$. Si $A$ no contiene ningún cuerpo, el único
+homomorfismo $\mathbf Z_{p\mathbf Z}\to A$ (19.8.3) es necesariamente
+inyectivo (de lo contrario, como $A$ es íntegro, su núcleo sería el ideal
+maximal de $\mathbf Z_{p\mathbf Z}$ y su imagen sería isomorfa a un cuerpo);
+además, se tiene entonces $p>0$ por hipótesis, pues
+$\mathbf Z_{p\mathbf Z}$ es un cuerpo si $p=0$. El elemento $p\cdot1$ de $A$
+(identificado con $p$) no es divisor de cero en $A$ y pertenece a
+$\mathfrak m$; por tanto, (16.3.4 y 16.3.7), existe una familia
+$(z_i)_{1\leq i\leq m-1}$ que, junto con $p$, forma un sistema de parámetros
+de $A$. El anillo de Cohen $W$ considerado al comienzo de la demostración es
+entonces un anillo de valoración discreta de cuerpo residual $k$, en el que
+$p$ genera el ideal maximal (19.8.5), y el homomorfismo único $u:W\to A$
+definido al comienzo envía $p$ a sí mismo. Se toma entonces
+$B=W[[T_1,\ldots,T_{m-1}]]$ y se considera el homomorfismo local $w:B\to A$
+que coincide con $u$ al restringirlo a $W$ y tal que $w(T_i)=z_i$ para
+$1\leq i\leq m-1$. En ambos casos, si $\mathfrak n$ es el ideal maximal de
+$B$, está claro que $\mathfrak nA$ es un ideal de definición de $A$; como,
+además, $B/\mathfrak n$ y $A/\mathfrak m$ son isomorfos, $A$ es un
+$B$-módulo cuasifinito ($\mathbf 0_{\mathrm I}$, 7.4.4), y, por tanto, un
+$A$-módulo de tipo finito, pues $B$ es completo y $A$ es
+separado para las topologías $\mathfrak n$-preádicas
+($\mathbf 0_{\mathrm I}$, 7.4.1). Por otra
+parte,
+
+\oldpage[0\textsubscript{IV-1}]{113}
+
+en ambos casos se tiene $\dim(B)=\dim(A)=m$; en el primer caso, esto resulta
+de (17.1.4, (iii)); en el segundo, se ve directamente que $p$ y los $T_i$
+($1\leq i\leq m-1$) forman una sucesión $B$-regular que genera $\mathfrak n$,
+o también se puede utilizar el hecho de que estos elementos generan
+$\mathfrak n$ y que se tiene $\dim(B)\geq\dim(A)$ por (16.3.10). Como $A$ y
+$B$ son íntegros, se deduce finalmente de (16.3.10) que $w$ es inyectivo, lo
+que termina la demostración.
+\end{proof}
+
+\begin{corollary}[19.8.9]
+\label{0.19.8.9-es}
+Sea $A$ un anillo local noetheriano íntegro completo que contiene un cuerpo
+$k_0$; sea $k$ el cuerpo residual de $A$, y supongamos que $k$ es finito sobre
+$k_0$. Entonces, en la conclusión de (19.8.8, (ii)), se pueden sustituir
+$1^{\mathrm o}$ y $2^{\mathrm o}$ por la condición de que $B$ sea de la forma
+$k_0[[T_1,\ldots,T_n]]$, siendo la inyección canónica $B\to A$ un
+$k_0$-homomorfismo local (para la estructura usual de $k_0$-álgebra de $B$).
+\end{corollary}
+
+\begin{proof}
+En efecto, retomando la demostración de (19.8.8, (ii)), se define esta vez
+$w:k_0[[T_1,\ldots,T_n]]\to A$ de modo que su restricción a $k_0$ sea la
+identidad y envíe $T_j$ a $y_j$ para $1\leq j\leq n$. La hipótesis de que $k$ es de
+grado finito sobre $k_0$ implica de nuevo que $A$ es un $B$-módulo cuasifinito,
+y, por tanto, de tipo finito por ($\mathbf 0_{\mathrm I}$, 7.4.1), y se
+concluye como en (19.8.8).
+\end{proof}
+
+\begin{corollary}[19.8.10]
+\label{0.19.8.10-es}
+Sea $A$ un anillo local artiniano cuyo ideal maximal $\mathfrak m$ es de
+cuadrado nulo; existe entonces un anillo local noetheriano regular $B$, de
+ideal maximal $\mathfrak n$, tal que $A$ es isomorfo a
+$B/\mathfrak n^2$.
+\end{corollary}
+
+\begin{proof}
+Sean $K$ el cuerpo residual $A/\mathfrak m$ de $A$ y $n$ el rango de
+$\mathfrak m/\mathfrak m^2=\mathfrak m$ sobre $K$. Si $A$ contiene un cuerpo,
+se deduce de (19.6.3) que $A$ es isomorfo a $B/\mathfrak b$, donde
+$B=K[[T_1,\ldots,T_n]]$ y $\mathfrak b$ está contenido en el cuadrado del
+ideal maximal $\mathfrak n$ de $B$; pero, como
+$\operatorname{long}(B/\mathfrak n^2)=n+1=\operatorname{long}(A)$, se tiene
+necesariamente $\mathfrak b=\mathfrak n^2$.
+
+Supongamos ahora que $A$ no contiene ningún cuerpo; esto implica que $K$ es
+de característica $p>0$ y que $p\cdot1\neq0$ en $A$ (19.6.3); por tanto,
+$p\cdot1$ es un elemento de $\mathfrak m$, y existen otros $n-1$ elementos
+$x_i$ ($2\leq i\leq n$) de $\mathfrak m$ que, junto con $p\cdot1$, forman una
+base de $\mathfrak m$ sobre $K$. Sea $W$ un anillo de Cohen cuyo cuerpo
+residual es isomorfo a $K$; $W$ es un anillo de valoración discreta cuyo ideal
+maximal está generado por $p$; se ha visto en la demostración de (19.8.8) que
+existe un homomorfismo $u:W\to A$ que envía $p$ a sí mismo y que, por paso
+a los cocientes, da la identidad sobre $K$. Se toma
+$B=W[[T_2,\ldots,T_n]]$ y se considera el homomorfismo local $w:B\to A$ que
+coincide con $u$ al restringirlo a $W$ y tal que $w(T_i)=x_i$ para $2\leq i\leq n$. Está
+claro que $w$ es sobreyectivo y que su núcleo $\mathfrak b$ está contenido en
+el cuadrado del ideal maximal $\mathfrak n=pB+BT_2+\cdots+BT_n$ de $B$; como
+$\operatorname{long}(B/\mathfrak n^2)=n+1=\operatorname{long}(A)$, se tiene
+de nuevo $\mathfrak b=\mathfrak n^2$.
+\end{proof}
+
+\begin{proposition}[19.8.11]
+\label{0.19.8.11-es}
+Sean $A$ un anillo local artiniano, $\mathfrak m$ su ideal maximal y $k$ su
+cuerpo residual. Para que $A$ sea isomorfo a un anillo cociente de un anillo
+de Cohen, es necesario y suficiente que $\mathfrak m$ esté generado por
+$p\cdot1$, donde $p$ es la característica de $k$.
+\end{proposition}
+
+\begin{proof}
+La condición es evidentemente necesaria (19.8.5). Para ver que es suficiente,
+se observa, como al comienzo de la demostración de (19.8.8), que existe un
+anillo de Cohen $W$ cuyo cuerpo residual es isomorfo a $k$ y un homomorfismo
+local $u:W\to A$. Además, si se considera el homomorfismo compuesto
+$\mathbf Z_{p\mathbf Z}\to W\xrightarrow{u}A$ (que es necesariamente el único
+homomorfismo de $\mathbf Z_{p\mathbf Z}$ en $A$), se ve que la imagen
+
+\oldpage[0\textsubscript{IV-1}]{114}
+
+por $u$ del elemento $p\cdot1$ de $W$ es el elemento $p\cdot1$ de $A$; como
+el elemento $p\cdot1$ de $W$ genera el ideal maximal de este anillo, se deduce
+inmediatamente de la hipótesis que
+$\gr(u):\gr_\bullet(W)\to\gr_\bullet(A)$ es sobreyectivo y, por tanto, también
+lo es $u$ (Bourbaki, \emph{Alg. comm.}, cap.~III, §~2,
+n\textsuperscript{o}~8, cor.~2 del teorema~1).
+\end{proof}
+\subsection{Álgebras relativamente formalmente lisas}
+\label{subsection:0.19.9-es}
+
+\begin{definition}[19.9.1]
+\label{0.19.9.1-es}
+Sean $\Lambda$ un anillo topológico, $A$ una $\Lambda$-álgebra topológica y
+$B$ una $A$-álgebra topológica. Se dice que $B$ es una $A$-álgebra
+\emph{formalmente lisa relativamente a $\Lambda$} si, para toda $A$-álgebra
+topológica discreta $C$ y todo ideal nilpotente $\mathfrak J$ de $C$, todo
+$A$-homomorfismo continuo $u_0:B\to C/\mathfrak J$ que se factoriza como
+$B\xrightarrow{u}C\to C/\mathfrak J$, donde $u$ es un $\Lambda$-homomorfismo
+continuo, se factoriza también como $B\xrightarrow{v}C\to C/\mathfrak J$, donde
+$v$ es un $A$-homomorfismo continuo.
+\end{definition}
+
+De esta definición resulta que, si $B$ es una $A$-álgebra \emph{formalmente
+lisa}, entonces $B$ es también \emph{formalmente lisa relativamente a
+$\Lambda$}, para toda estructura de $\Lambda$-álgebra topológica definida sobre
+$A$ (es decir, todo homomorfismo continuo de anillos $\Lambda\to A$).
+
+\begin{proposition}[19.9.2]
+\label{0.19.9.2-es}
+Sean $\Lambda$ un anillo topológico y $A$ una $\Lambda$-álgebra topológica.
+\begin{enumerate}
+  \item[(i)] $A$ es una $\Lambda$-álgebra formalmente lisa relativamente a
+  $\Lambda$.
+  \item[(ii)] Si $B$ es una $A$-álgebra formalmente lisa relativamente a
+  $\Lambda$ y $C$ una $B$-álgebra formalmente lisa relativamente a $\Lambda$,
+  entonces $C$ es una $A$-álgebra formalmente lisa relativamente a $\Lambda$.
+  \item[(iii)] Sean $B$ una $A$-álgebra formalmente lisa relativamente a
+  $\Lambda$ y $A'$ una $A$-álgebra topológica; entonces la $A'$-álgebra
+  topológica $B\otimes_A A'$ es formalmente lisa relativamente a $\Lambda$.
+  \item[(iv)] Sean $B$ una $A$-álgebra topológica y $S$ (resp. $T$) un
+  subconjunto multiplicativo de $A$ (resp. $B$) tal que la imagen canónica de
+  $S$ en $B$ esté contenida en $T$. Si $B$ es una $A$-álgebra formalmente lisa
+  relativamente a $\Lambda$, entonces $T^{-1}B$ es una $S^{-1}A$-álgebra
+  formalmente lisa relativamente a $\Lambda$.
+  \item[(v)] Sean $B_i$ ($1\leq i\leq n$) unas $A$-álgebras topológicas. Para
+  que $\prod_{i=1}^n B_i$ sea una $A$-álgebra formalmente lisa relativamente a
+  $\Lambda$, es necesario y suficiente que cada una de las $B_i$ lo sea.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La afirmación (i) es trivial, y la demostración de las demás sigue muy de cerca
+las demostraciones de (19.3.5); se deja, pues, al lector.
+\end{proof}
+
+\begin{corollary}[19.9.3]
+\label{0.19.9.3-es}
+Sean $A$ un anillo topológico, y $A'$ y $B$ dos $A$-álgebras topológicas.
+Entonces la $A$-álgebra topológica $B'=B\otimes_A A'$ es una $B$-álgebra
+formalmente lisa relativamente a $A$.
+\end{corollary}
+
+\begin{proof}
+Esto resulta de (19.9.2, (i) y (iii)).
+\end{proof}
+
+\begin{proposition}[19.9.4]
+\label{0.19.9.4-es}
+Sean $\Lambda$ un anillo topológico, $A$ una $\Lambda$-álgebra topológica y
+$B$ una $A$-álgebra topológica. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es una $A$-álgebra formalmente lisa relativamente a $\Lambda$.
+  \item[b)] $\widehat B$ es una $A$-álgebra formalmente lisa relativamente a
+  $\Lambda$.
+  \item[c)] $\widehat B$ es una $\widehat A$-álgebra formalmente lisa
+  relativamente a $\Lambda$.
+  \item[d)] $\widehat B$ es una $\widehat A$-álgebra formalmente lisa
+  relativamente a $\widehat\Lambda$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Se deja de nuevo al lector la demostración, calcada de la de (19.3.6).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{115}
+
+\begin{env}[19.9.5]
+\label{0.19.9.5-es}
+Del mismo modo, el enunciado (19.3.8) sigue siendo válido (con la misma
+demostración) cuando se sustituye «formalmente lisa» por «formalmente lisa
+relativamente a $\Lambda$». Si en el enunciado de (19.3.10) se sustituye
+«formalmente lisa» por «formalmente lisa relativamente a $\Lambda$», la
+conclusión se sustituye por la siguiente (permaneciendo la demostración
+esencialmente inalterada): \emph{todo $A$-homomorfismo continuo
+$u_0:B\to C/\mathfrak J$ que se factoriza como
+$B\xrightarrow{u}C\to C/\mathfrak J$, donde $u$ es un $\Lambda$-homomorfismo
+continuo, se factoriza también como $B\xrightarrow{v}C\to C/\mathfrak J$, donde
+$v$ es un $A$-homomorfismo continuo}.
+\end{env}
+
+\begin{env}[19.9.6]
+\label{0.19.9.6-es}
+Los criterios de lisura formal (19.4.1) y (19.4.2) son válidos cuando se
+sustituye en ellos «formalmente lisa» por «formalmente lisa relativamente a
+$\Lambda$», permaneciendo las demostraciones prácticamente inalteradas.
+\end{env}
+
+\begin{proposition}[19.9.7]
+\label{0.19.9.7-es}
+Sean $\Lambda$ un anillo topológico, $A$ una $\Lambda$-álgebra topológica y
+$B$ una $A$-álgebra topológica. Supongamos que, para toda $A$-álgebra discreta
+$C$ y todo ideal $\mathfrak J$ de $C$ tal que $\mathfrak J^2=0$, todo
+$A$-homomorfismo continuo $u_0:B\to C/\mathfrak J$ que se factoriza como
+$B\xrightarrow{u}C\to C/\mathfrak J$, donde $u$ es un $\Lambda$-homomorfismo
+continuo, se factoriza también como $B\xrightarrow{v}C\to C/\mathfrak J$, donde
+$v$ es un $A$-homomorfismo continuo. Entonces $B$ es una $A$-álgebra
+formalmente lisa relativamente a $\Lambda$.
+\end{proposition}
+
+\begin{proof}
+La demostración de (19.4.3) se transcribe inmediatamente.
+\end{proof}
+
+\begin{proposition}[19.9.8]
+\label{0.19.9.8-es}
+Sean $\Lambda$ un anillo topológico, $A$ una $\Lambda$-álgebra topológica y
+$B$ una $A$-álgebra topológica. Para que $B$ sea una $A$-álgebra formalmente
+lisa relativamente a $\Lambda$, es necesario y suficiente que, para todo
+$B$-módulo topológico discreto $L$, anulado por un ideal abierto de $B$, se
+tenga (cf.~18.4.2)
+\[
+  \operatorname{Exalcotop}_{A/\Lambda}(B,L)=0.
+\]
+\end{proposition}
+
+\begin{proof}
+Con las notaciones de la demostración de (19.4.4), basta observar aquí que se
+puede suponer que la extensión $E_\Lambda$ de $B_\Lambda$ es
+$\Lambda$-trivial; el resto de la demostración permanece entonces inalterado.
+\end{proof}
+
+Cuando $\Lambda$, $A$ y $B$ son anillos discretos, el criterio (19.9.8) se
+reduce a
+\begin{equation}
+\tag{19.9.8.1}
+\label{0.19.9.8.1-es}
+  \operatorname{Exalcom}_{A/\Lambda}(B,L)=0
+  \quad\text{para todo $B$-módulo $L$}~;
+\end{equation}
+es decir, \emph{toda $A$-extensión conmutativa de $B$ por un $B$-módulo, que es
+$\Lambda$-trivial, es también $A$-trivial}.
+
+\subsection{Álgebras formalmente no ramificadas y álgebras formalmente
+étales}
+\label{subsection:0.19.10-es}
+\label{0.19.10-es}
+
+\begin{env}[19.10.1]
+\label{0.19.10.1-es}
+También tendremos que utilizar dos nociones próximas a la noción de álgebra
+formalmente lisa.
+\end{env}
+
+\begin{definition}[19.10.2]
+\label{0.19.10.2-es}
+Sean $A$ un anillo topológico y $B$ una $A$-álgebra topológica. Se dice que
+$B$ es una $A$-álgebra \emph{formalmente no ramificada} si, para todo
+$A$-homomorfismo $p:E\to C$ de $A$-álgebras discretas cuyo núcleo es
+nilpotente, y todo $A$-homomorfismo continuo $u:B\to C$, existe \emph{a lo sumo
+un} $A$-homomorfismo continuo $v:B\to E$ tal que $u$ se factoriza como
+$B\xrightarrow{v}E\xrightarrow{p}C$. Se dice que $B$ es una $A$-álgebra
+\emph{formalmente étale} si es formalmente lisa y formalmente no ramificada, es
+decir, si, para todo $A$-homomorfismo sobreyectivo $p:E\to C$ de $A$-álgebras
+discretas cuyo núcleo es nilpotente, y para todo $A$-homomorfismo continuo
+$u:B\to C$, existe \emph{uno y solo un} $A$-homomorfismo continuo $v:B\to E$
+tal que $u$ se factoriza como $B\xrightarrow{v}E\xrightarrow{p}C$.
+\end{definition}
+
+\oldpage[0\textsubscript{IV-1}]{116}
+
+\begin{examples}[19.10.3]
+\label{0.19.10.3-es}
+Nos limitaremos a los anillos \emph{discretos}.
+\begin{enumerate}
+  \item[(i)] Si el homomorfismo estructural $\rho:A\to B$ es
+  \emph{sobreyectivo}, $B$ es una $A$-álgebra \emph{formalmente no ramificada},
+  pues, con las notaciones de (19.10.2), el homomorfismo compuesto
+  $A\xrightarrow{j}B\xrightarrow{v}E$ debe ser el homomorfismo estructural, por
+  lo que $v$ es único (si existe). En cambio, $B$ no es formalmente lisa salvo
+  que $\rho$ sea \emph{biyectivo}.
+  \item[(ii)] Sean $A$ un anillo y $S$ un subconjunto multiplicativo de $A$;
+  entonces $B=S^{-1}A$ es una $A$-álgebra \emph{formalmente étale}. En efecto,
+  sean $j:A\to B$ el homomorfismo canónico, $\rho:A\to E$ un homomorfismo de
+  anillos, $\mathfrak J$ un ideal nilpotente de $E$ y
+  $p:E\to C=E/\mathfrak J$ el homomorfismo canónico. Si $u:B\to C$ es un
+  $A$-homomorfismo, $u(s/1)$ es invertible en $C$ para $s\in S$, puesto que
+  $s/1$ es invertible en $B$; pero $u(s/1)=p(\rho(s))$, y, como $\mathfrak J$
+  es nilpotente, el hecho de que la imagen de $\rho(s)$ en $E/\mathfrak J$ sea
+  invertible implica que el propio $\rho(s)$ es invertible en $E$
+  ($\mathbf 0_{\mathrm I}$, 7.1.12); se concluye que $\rho$ se factoriza de una
+  sola manera como $A\xrightarrow{j}B\xrightarrow{v}E$, y se tiene
+  evidentemente $u\circ j=(p\circ v)\circ j$, de donde $u=p\circ v$, lo que
+  prueba nuestra afirmación.
+  \item[(iii)] Una extensión finita separable $k'$ de un cuerpo $k$ es una
+  $k$-álgebra formalmente lisa (19.6.1); veremos más adelante que, para que una
+  extensión de \emph{tipo finito} $K$ de un cuerpo $k$ sea una $k$-álgebra
+  formalmente étale, es necesario y suficiente que sea formalmente no
+  ramificada, y esto equivale también a que $K$ sea una extensión finita y
+  separable de $k$ (21.7.4).
+  \item[(iv)] Un álgebra de polinomios $A[X_\alpha]_{\alpha\in I}$ sobre un
+  anillo $A$ es \emph{formalmente lisa} sobre $A$ (19.3.3), pero \emph{no
+  formalmente étale} si $I$ no es vacío, como resulta inmediatamente de las
+  definiciones.
+\end{enumerate}
+\end{examples}
+
+\begin{remark}[19.10.4]
+\label{0.19.10.4-es}
+El mismo razonamiento que en (19.4.3) muestra que, para verificar que una
+$A$-álgebra topológica $B$ es formalmente no ramificada, se puede, en la
+definición (19.10.2), limitar al caso en que el núcleo de $p:E\to C$ es de
+\emph{cuadrado nulo}; se puede además limitar al caso en que $u(B)\subset p(E)$
+(pues de lo contrario no existe ningún $v$ que factorice $u$) y, sustituyendo
+$C$ por $u(B)$ y $E$ por $p^{-1}(u(B))$, suponer $u$ y $p$ sobreyectivos.
+\end{remark}

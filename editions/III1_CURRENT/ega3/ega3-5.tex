@@ -1,0 +1,1787 @@
+\section{Un teorema de existencia para los haces algebraicos coherentes}
+\label{section:III.5}
+
+
+\subsection{Enunciado del teorema}
+\label{subsection:III.5.1}
+
+\begin{env}[5.1.1]
+\label{III.5.1.1}
+Sea $A$ un anillo noetheriano ádico y sea $\mathfrak{J}$ un ideal de
+definición de $A$, de modo que $A$ sea separado y completo para la
+topología $\mathfrak{J}$-ádica. Si $Y=\Spec(A)$, el preesquema formal
+afín $\Spf(A)$ se identifica con la compleción
+$\widehat{Y}$ de $Y$ a lo largo del subconjunto cerrado
+$Y'=\mathrm{V}(\mathfrak{J})$ \sref[I]{I.10.10.1}. Sea $X$ un
+$Y$-preesquema ordinario de tipo finito, de morfismo estructural
+$f:X\to Y$. Denotemos por $\widehat{X}$ la compleción de $X$ a lo largo
+del subconjunto cerrado $X'=f^{-1}(Y')$, o, equivalentemente, el
+$\widehat{Y}$-preesquema formal $X\times_Y\widehat{Y}$, y por
+$\widehat{f}:\widehat{X}\to\widehat{Y}$ la extensión de $f$ a las
+compleciones. Finalmente, para todo $\sh{O}_X$-módulo coherente
+$\sh{F}$, denotemos por $\widehat{\sh{F}}$ su compleción
+$\sh{F}_{/X'}$, que es un
+$\sh{O}_{\widehat{X}}$-módulo coherente.
+\end{env}
+
+\begin{proposition}[5.1.2]
+\label{III.5.1.2}
+Con las hipótesis y la notación de \sref{III.5.1.1}, sea $\sh{F}$
+un $\sh{O}_X$-módulo coherente cuyo soporte es propio sobre $Y$
+\sref[II]{II.5.4.10}. Los homomorfismos canónicos
+\sref{III.4.1.4}
+\[
+  \rho_i:
+  \HH^i(X,\sh{F})
+  \longrightarrow
+  \HH^i(\widehat{X},\widehat{\sh{F}})
+\]
+son isomorfismos.
+\end{proposition}
+
+\begin{proof}
+El $A$-módulo $\HH^i(X,\sh{F})$ es de tipo finito
+\sref{III.3.2.4} y, por tanto, se identifica con su compleción
+separada para la topología $\mathfrak{J}$-preádica
+\sref[0]{0.7.3.6}. La proposición es, por consiguiente, un caso particular
+de \sref{III.4.1.10}.
+\end{proof}
+
+Recordemos que los isomorfismos canónicos $\rho_i$ conmutan con los
+homomorfismos de conexión asociados a toda sucesión exacta
+\[
+  0\longrightarrow\sh{F}'
+  \longrightarrow\sh{F}
+  \longrightarrow\sh{F}''
+  \longrightarrow0
+\]
+de $\sh{O}_X$-módulos coherentes
+\sref[0]{0.12.1.6} \sref[I]{I.10.8.9}.
+
+\begin{corollary}[5.1.3]
+\label{III.5.1.3}
+Sean $\sh{F}$ y $\sh{G}$ $\sh{O}_X$-módulos coherentes tales que
+la intersección de sus soportes sea propia sobre $Y$. El
+homomorfismo canónico
+\[
+  \Hom_{\sh{O}_X}(\sh{F},\sh{G})
+  \longrightarrow
+  \Hom_{\sh{O}_{\widehat{X}}}
+  (\widehat{\sh{F}},\widehat{\sh{G}})
+  \tag{5.1.3.1}
+  \label{III.5.1.3.1.eq}
+\]
+que envía un homomorfismo $u:\sh{F}\to\sh{G}$ a su compleción
+$\widehat{u}:\widehat{\sh{F}}\to\widehat{\sh{G}}$, es un
+isomorfismo. Además, cuando $f$ es cerrado,
+$\widehat{u}$ es inyectivo (respectivamente, sobreyectivo) si y solo
+si $u$ es inyectivo (respectivamente, sobreyectivo).
+\end{corollary}
+
+\begin{proof}
+La primera afirmación es un caso particular de \sref{III.4.5.3}; también
+se deduce de que la fuente de \eqref{III.5.1.3.1.eq} es
+un $A$-módulo de tipo finito y, por tanto, se identifica con su
+compleción separada. Para la segunda afirmación, observemos que, por
+\sref[I]{I.10.8.14}, $\widehat{u}$ es inyectivo (respectivamente,
+sobreyectivo) si y solo si existe un entorno de $X'$ en
+$X$ sobre el cual $u$ es inyectivo (respectivamente, sobreyectivo). La
+conclusión se deduce entonces del lema siguiente.
+\end{proof}
+
+\oldpage[III]{150}
+
+\begin{lemma}[5.1.3.1]
+\label{III.5.1.3.1}
+Bajo las hipótesis de \sref{III.5.1.1}, supongamos además que
+$f$ es cerrado. Todo entorno de $X'$ en $X$ es entonces igual
+a $X$.
+\end{lemma}
+
+\begin{proof}
+Nos reducimos primero al caso $f(X)=Y$. En efecto, por hipótesis,
+$f(X)$ es un subconjunto cerrado $Z$ de $Y$. Podemos sustituir $f$ por
+$f_{\mathrm{red}}$ \sref[I]{I.6.3.4} y suponer así que $X$
+e $Y$ son reducidos; podemos entonces sustituir $Y$ por el subpreesquema
+cerrado reducido cuyo espacio subyacente es $Z$
+\sref[I]{I.5.2.2}, pues todo ideal de $A$ es cerrado y todo
+anillo cociente de $A$ es, por tanto, ádico y noetheriano.
+
+Se tiene entonces $f(X')=Y'$. Si $V$ es un entorno abierto de $X'$
+en $X$, el conjunto $f(X-V)$ es cerrado en $Y$ y no corta a $Y'$.
+Esto es imposible salvo que $X-V$ sea vacío, pues $\mathfrak{J}$
+está contenido en el radical de $A$
+\sref[I]{I.1.1.15} \sref[0]{0.7.1.10}. Por tanto, $V=X$.
+\end{proof}
+
+Si nos restringimos a los $\sh{O}_X$-módulos coherentes cuyo
+soporte es propio sobre $Y$, \sref{III.5.1.3} afirma, en lenguaje
+categórico, que el funtor
+\[
+  \sh{F}\longmapsto\widehat{\sh{F}}
+\]
+es plenamente fiel de la categoría de tales $\sh{O}_X$-módulos en
+la categoría de los $\sh{O}_{\widehat{X}}$-módulos coherentes. Proporciona así
+una equivalencia de la primera categoría con una subcategoría plena
+de la segunda \sref[0]{0.8.1.6}. El teorema de existencia
+mostrará que, cuando $X$ es propio sobre $Y$, esta subcategoría es en
+realidad la categoría de todos los
+$\sh{O}_{\widehat{X}}$-módulos coherentes. Más precisamente:
+
+\begin{theorem}[5.1.4]
+\label{III.5.1.4}
+Sea $A$ un anillo noetheriano ádico, sea $Y=\Spec(A)$, sea
+$\mathfrak{J}$ un ideal de definición de $A$, y pongamos
+$Y'=\mathrm{V}(\mathfrak{J})$. Sea $f:X\to Y$ un morfismo separado
+de tipo finito y pongamos $X'=f^{-1}(Y')$. Sean
+\[
+  \widehat{Y}=Y_{/Y'}=\Spf(A),\qquad
+  \widehat{X}=X_{/X'}
+\]
+las compleciones de $Y$ y $X$ a lo largo de $Y'$ y $X'$, y sea
+$\widehat{f}:\widehat{X}\to\widehat{Y}$ la extensión de $f$ a
+las compleciones. Entonces el funtor
+\[
+  \sh{F}\longmapsto\sh{F}_{/X'}=\widehat{\sh{F}}
+\]
+es una equivalencia de la categoría de los
+$\sh{O}_X$-módulos coherentes cuyo soporte es propio sobre $\Spec(A)$ en la
+categoría de los $\sh{O}_{\widehat{X}}$-módulos coherentes cuyo soporte
+es propio sobre $\Spf(A)$.
+\end{theorem}
+
+En otras palabras, teniendo en cuenta \sref{III.5.1.3}:
+
+\begin{corollary}[5.1.5]
+\label{III.5.1.5}
+Un $\sh{O}_{\widehat{X}}$-módulo es isomorfo a la compleción de
+un $\sh{O}_X$-módulo coherente cuyo soporte es propio sobre
+$\Spec(A)$ si y solo si es coherente y su soporte es propio
+sobre $\Spf(A)$.
+\end{corollary}
+
+El caso más importante es el siguiente:
+
+\begin{corollary}[5.1.6]
+\label{III.5.1.6}
+Supongamos que $X$ es propio sobre $Y=\Spec(A)$. Entonces el funtor
+$\sh{F}\mapsto\widehat{\sh{F}}$ es una equivalencia entre la
+categoría de los $\sh{O}_X$-módulos coherentes y la categoría de los
+$\sh{O}_{\widehat{X}}$-módulos coherentes.
+\end{corollary}
+
+\begin{env}[5.1.7]
+\label{III.5.1.7}
+\emph{Escolio.}
+Teniendo en cuenta la caracterización de los haces coherentes sobre
+preesquemas formales \sref[I]{I.10.11.3}, vemos que, bajo las
+condiciones de \sref{III.5.1.1}, dar un
+$\sh{O}_X$-módulo coherente cuyo soporte es propio sobre $\Spec(A)$
+equivale---si
+\[
+  Y_n=\Spec(A/\mathfrak{J}^{n+1}),\qquad
+  X_n=X\times_Y Y_n
+\]
+---a dar un sistema proyectivo $(\sh{F}_n)$ de
+$\sh{O}_{X_n}$-módulos coherentes tal que, para $m\leq n$,
+\[
+  \sh{F}_m
+  =
+  \sh{F}_n\otimes_{\sh{O}_{Y_n}}\sh{O}_{Y_m},
+  \qquad\text{o equivalentemente}\qquad
+  \sh{F}_m
+  =
+  \sh{F}_n/\mathfrak{J}^{m+1}\sh{F}_n,
+\]
+y tal que el soporte de $\sh{F}_0$ sea un subconjunto de $X_0$
+propio sobre $Y_0$. Por \sref[I]{I.10.11.4}, los homomorfismos de
+$\sh{O}_X$-módulos coherentes se interpretan de modo análogo como
+homomorfismos de sistemas proyectivos de
+$\sh{O}_{X_n}$-módulos coherentes.
+
+\oldpage[III]{151}
+
+En todas las aplicaciones conocidas, $A$ es de hecho un anillo
+noetheriano ádico local. Así, los $Y_n$ son espectros de anillos
+artinianos locales, y los resultados de esta subsección y de las
+anteriores reducen, en gran medida, la geometría algebraica sobre un
+anillo noetheriano ádico local a la geometría algebraica sobre anillos
+artinianos locales.
+\end{env}
+
+\begin{corollary}[5.1.8]
+\label{III.5.1.8}
+Bajo las hipótesis de \sref{III.5.1.4}, la aplicación
+\[
+  Z\longmapsto\widehat{Z}=Z_{/(Z\cap X')}
+\]
+es una biyección del conjunto de los subpreesquemas cerrados $Z$ de $X$
+que son propios sobre $Y$ sobre el conjunto de los subpreesquemas
+formales cerrados de $\widehat{X}$ que son propios sobre
+$\widehat{Y}$.
+\end{corollary}
+
+\begin{proof}
+Un subpreesquema formal cerrado de $\widehat{X}$ es de la forma
+\[
+  \bigl(T,
+    (\sh{O}_{\widehat{X}}/\sh{A})|_T\bigr),
+\]
+donde $\sh{A}$ es un ideal coherente de
+$\sh{O}_{\widehat{X}}$ \sref[I]{I.10.14.2}. Si $T$ es propio sobre
+$\widehat{Y}$, \sref{III.5.1.4} muestra que
+$\sh{O}_{\widehat{X}}/\sh{A}$ es isomorfo a un
+$\sh{O}_{\widehat{X}}$-módulo de la forma
+$\widehat{\sh{F}}$, donde $\sh{F}$ es un
+$\sh{O}_X$-módulo coherente cuyo soporte es propio sobre $Y$. Además,
+\sref{III.5.1.3} muestra que el homomorfismo canónico
+\[
+  \sh{O}_{\widehat{X}}
+  \longrightarrow
+  \sh{O}_{\widehat{X}}/\sh{A}
+\]
+es de la forma $\widehat{u}$, donde
+$u:\sh{O}_X\to\sh{F}$ es un homomorfismo sobreyectivo de
+$\sh{O}_X$-módulos. Por consiguiente,
+$\sh{F}=\sh{O}_X/\sh{N}$ para un ideal coherente $\sh{N}$ de
+$\sh{O}_X$, y
+$\sh{A}=\widehat{\sh{N}}$ \sref[I]{I.10.8.8}. La conclusión se
+deduce ahora de \sref[I]{I.10.14.7}.
+\end{proof}
+
+
+\subsection{Demostración del teorema de existencia: caso proyectivo y cuasiproyectivo}
+\label{subsection:III.5.2}
+
+\begin{env}[5.2.1]
+\label{III.5.2.1}
+Bajo las condiciones de \sref{III.5.1.4}, diremos
+provisionalmente que un $\sh{O}_{\widehat{X}}$-módulo coherente es
+\emph{algebraizable} si es isomorfo a la compleción
+$\widehat{\sh{F}}$ de un $\sh{O}_X$-módulo coherente $\sh{F}$ cuyo
+soporte es propio sobre $Y$.
+\end{env}
+
+\begin{lemma}[5.2.2]
+\label{III.5.2.2}
+Sean $\sh{F}'$ y $\sh{G}'$ $\sh{O}_{\widehat{X}}$-módulos
+algebraizables. Para todo homomorfismo
+$u:\sh{F}'\to\sh{G}'$, los módulos
+$\Ker(u)$, $\Im(u)$ y $\Coker(u)$ son algebraizables.
+\end{lemma}
+
+\begin{proof}
+Escribamos
+\[
+  \sh{F}'=\widehat{\sh{F}},\qquad
+  \sh{G}'=\widehat{\sh{G}},
+\]
+donde $\sh{F}$ y $\sh{G}$ son $\sh{O}_X$-módulos coherentes cuyos
+soportes son propios sobre $Y$. Por \sref{III.5.1.3},
+$u=\widehat{v}$ para un homomorfismo
+$v:\sh{F}\to\sh{G}$. Como la compleción es exacta,
+$\Ker(\widehat{v})\simeq\widehat{\Ker(v)}$; y como el soporte
+de $\Ker(v)$ está contenido en el de $\sh{F}$, se deduce que
+$\Ker(u)$ es algebraizable. Los argumentos para $\Im(u)$ y
+$\Coker(u)$ son los mismos.
+\end{proof}
+
+\begin{proposition}[5.2.3]
+\label{III.5.2.3}
+Sea $A$ un anillo noetheriano ádico, sea $\mathfrak{J}$ un ideal de
+definición de $A$, sea $\mathfrak{Y}=\Spf(A)$, y sea
+$f:\mathfrak{X}\to\mathfrak{Y}$ un morfismo propio de preesquemas
+formales. Pongamos
+\[
+  Y_k=\Spec(A/\mathfrak{J}^{k+1}),\qquad
+  X_k=\mathfrak{X}\times_{\mathfrak{Y}}Y_k,
+\]
+y, para todo $\sh{O}_{\mathfrak{X}}$-módulo $\sh{F}$, pongamos
+\[
+  \sh{F}_k
+  =
+  \sh{F}\otimes_{\sh{O}_{\mathfrak{X}}}\sh{O}_{X_k}
+  =
+  \sh{F}/\mathfrak{J}^{k+1}\sh{F}.
+\]
+Sea $\sh{L}$ un $\sh{O}_{\mathfrak{X}}$-módulo invertible, y
+supongamos que
+$\sh{L}_0=\sh{L}/\mathfrak{J}\sh{L}$ es un
+$\sh{O}_{X_0}$-módulo amplio. Para todo
+$\sh{O}_{\mathfrak{X}}$-módulo $\sh{F}$ y todo entero $n$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes\sh{L}^{\otimes n}.
+\]
+Entonces, para todo $\sh{O}_{\mathfrak{X}}$-módulo coherente $\sh{F}$,
+existe un entero $n_0$ tal que, para todo $n\geq n_0$:
+\begin{enumerate}
+  \item[\rm{(i)}] el homomorfismo canónico
+    \[
+      \HH^0(\mathfrak{X},\sh{F}(n))
+      \longrightarrow
+      \HH^0(\mathfrak{X},\sh{F}_k(n))
+    \]
+    es sobreyectivo para todo $k\geq0$;
+  \item[\rm{(ii)}]
+    $\HH^q(\mathfrak{X},\sh{F}(n))=0$ para todo $q>0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Los espacios subyacentes a $\mathfrak{X}$ y $X_0$ son los mismos.
+Los haces
+\[
+  \sh{M}_k
+  =
+  \mathfrak{J}^k\sh{F}/\mathfrak{J}^{k+1}\sh{F},
+\]
+al ser anulados por $\mathfrak{J}$, pueden considerarse
+$\sh{O}_{X_0}$-módulos coherentes \sref[0]{0.5.3.10}. Además, si
+\[
+  \sh{M}_k(n)
+  =
+  \sh{M}_k\otimes_{\sh{O}_{X_0}}\sh{L}_0^{\otimes n},
+\]
+entonces
+\[
+  \sh{M}_k(n)
+  =
+  \mathfrak{J}^k\sh{F}(n)/
+  \mathfrak{J}^{k+1}\sh{F}(n).
+\]
+Como $\sh{L}_0$ es amplio para $f_0:X_0\to Y_0$ y $f_0$ es
+propio,
+\oldpage[III]{152}
+$f_0$ es proyectivo \sref[II]{II.5.5.4}. Sea
+\[
+  S=\bigoplus_{k\geq0}
+  \mathfrak{J}^k/\mathfrak{J}^{k+1}
+\]
+la $A$-álgebra graduada asociada a la
+filtración $\mathfrak{J}$-ádica de $A$. Es de tipo finito
+porque $A$ es noetheriano. Pongamos
+\[
+  \sh{S}'=f_0^*(\widetilde{S}),\qquad
+  \sh{M}=\bigoplus_{k\geq0}\sh{M}_k.
+\]
+Entonces $\sh{S}'$ es una $\sh{O}_{X_0}$-álgebra cuasi-coherente de
+tipo finito, y $\sh{M}$ es un $\sh{S}'$-módulo graduado
+cuasi-coherente de tipo finito, pues $\sh{F}_0$ es coherente y
+genera $\sh{M}$ como $\sh{S}'$-módulo. El Teorema
+\sref{III.2.4.1},~\emph{(ii)}, proporciona, por tanto, un entero $n_0$
+tal que, para $n\geq n_0$ y todo $k$,
+\[
+  \HH^q(X_0,\sh{M}_k(n))=0
+  \qquad(q>0).
+  \tag{5.2.3.1}
+  \label{III.5.2.3.1}
+\]
+Considerado ahora como $\sh{O}_{\mathfrak{X}}$-módulo,
+$\sh{M}_k(n)$ satisface, por consiguiente, también
+\[
+  \HH^q(\mathfrak{X},\sh{M}_k(n))=0
+  \qquad(q>0,\ n\geq n_0).
+\]
+
+Apliquemos la sucesión exacta de cohomología a
+\[
+  0\longrightarrow
+  \frac{\mathfrak{J}^k\sh{F}(n)}
+       {\mathfrak{J}^{k+1}\sh{F}(n)}
+  \longrightarrow
+  \frac{\mathfrak{J}^h\sh{F}(n)}
+       {\mathfrak{J}^{k+1}\sh{F}(n)}
+  \longrightarrow
+  \frac{\mathfrak{J}^h\sh{F}(n)}
+       {\mathfrak{J}^{k}\sh{F}(n)}
+  \longrightarrow0.
+\]
+Para $0\leq h<k$, $n\geq n_0$ y $q>0$, una inducción sobre $k-h$
+da
+\[
+  \HH^q\left(
+    \mathfrak{X},
+    \frac{\mathfrak{J}^h\sh{F}(n)}
+         {\mathfrak{J}^{k}\sh{F}(n)}
+  \right)=0,
+  \tag{5.2.3.2}
+  \label{III.5.2.3.2}
+\]
+y, en particular, para $h=0$,
+\[
+  \HH^q(\mathfrak{X},\sh{F}_k(n))=0
+  \qquad(n\geq n_0,\ k\geq0,\ q>0).
+  \tag{5.2.3.3}
+  \label{III.5.2.3.3}
+\]
+Otra parte de la sucesión exacta de cohomología, con $h=0$, da
+\[
+  \HH^0(\mathfrak{X},\sh{F}_{k+1}(n))
+  \longrightarrow
+  \HH^0(\mathfrak{X},\sh{F}_k(n))
+  \longrightarrow
+  \HH^1\left(
+    \mathfrak{X},
+    \frac{\mathfrak{J}^k\sh{F}(n)}
+         {\mathfrak{J}^{k+1}\sh{F}(n)}
+  \right)
+  =0.
+  \tag{5.2.3.4}
+  \label{III.5.2.3.4}
+\]
+Se deduce que, para $h\leq k$, la aplicación canónica
+\[
+  \HH^0(\mathfrak{X},\sh{F}_k(n))
+  \longrightarrow
+  \HH^0(\mathfrak{X},\sh{F}_h(n))
+  \tag{5.2.3.5}
+  \label{III.5.2.3.5}
+\]
+es sobreyectiva. Así, para todo $q$, el sistema proyectivo
+\[
+  \bigl(\HH^q(\mathfrak{X},\sh{F}_k(n))\bigr)_{k\geq0}
+\]
+satisface la condición (ML) cuando $n\geq n_0$.
+
+Además, todo abierto formal afín $U$ de $\mathfrak{X}$ es un
+abierto afín de cada $X_k$ \sref[I]{I.10.5.2}. Por tanto,
+$\HH^q(U,\sh{F}_k(n))=0$ para $q>0$ \sref[I]{I.1.3.1}, y
+\[
+  \HH^0(U,\sh{F}_k(n))
+  \longrightarrow
+  \HH^0(U,\sh{F}_h(n))
+\]
+es sobreyectivo para $h\leq k$ \sref[I]{I.1.3.9}. Por tanto, se satisfacen
+las hipótesis de \sref[0]{0.13.3.1}. Para $n\geq n_0$
+obtenemos:
+\begin{enumerate}
+  \item[$1^\circ$] para todo $q>0$, la aplicación
+    \[
+      \HH^q(\mathfrak{X},\sh{F}(n))
+      \longrightarrow
+      \varprojlim_k
+      \HH^q(\mathfrak{X},\sh{F}_k(n))
+    \]
+    es biyectiva; por tanto, por \eqref{III.5.2.3.3},
+    $\HH^q(\mathfrak{X},\sh{F}(n))=0$;
+  \item[$2^\circ$] el homomorfismo
+    \[
+      \HH^0(\mathfrak{X},\sh{F}(n))
+      \longrightarrow
+      \varprojlim_k
+      \HH^0(\mathfrak{X},\sh{F}_k(n))
+    \]
+    es biyectivo. Como los homomorfismos
+    \eqref{III.5.2.3.5} son sobreyectivos, también lo es cada homomorfismo
+    \[
+      \varprojlim_k
+      \HH^0(\mathfrak{X},\sh{F}_k(n))
+      \longrightarrow
+      \HH^0(\mathfrak{X},\sh{F}_h(n)).
+    \]
+\end{enumerate}
+Esto demuestra las dos afirmaciones.
+\end{proof}
+
+\begin{corollary}[5.2.4]
+\label{III.5.2.4}
+Bajo las hipótesis de \sref{III.5.2.3}, para todo
+$\sh{O}_{\mathfrak{X}}$-módulo coherente $\sh{F}$ existe un entero $N$
+tal que, para $n\geq N$, $\sh{F}(n)$ está generado por sus secciones
+sobre
+\oldpage[III]{153}
+$\mathfrak{X}$. Equivalentemente, $\sh{F}$ es isomorfo a un cociente
+de un $\sh{O}_{\mathfrak{X}}$-módulo de la forma
+$(\sh{O}_{\mathfrak{X}}(-n))^k$.
+\end{corollary}
+
+\begin{proof}
+Como $X_0$ es noetheriano, la hipótesis sobre $\sh{L}_0$ y
+\sref[II]{II.4.5.5} proporcionan un entero $n_0$ tal que
+$\sh{F}_0(n)$ está generado por sus secciones sobre $\mathfrak{X}$ para
+$n\geq n_0$. Podemos tomar $n_0$ suficientemente grande para que
+\[
+  \Gamma(\mathfrak{X},\sh{F}(n))
+  \longrightarrow
+  \Gamma(\mathfrak{X},\sh{F}_0(n))
+\]
+sea también sobreyectivo para $n\geq n_0$ \sref{III.5.2.3}. Existen,
+por tanto, un número finito de secciones
+$s_i\in\Gamma(\mathfrak{X},\sh{F}(n))$ cuyas imágenes generan
+$\sh{F}_0(n)$ \sref[0]{0.5.2.3}. Como $\mathfrak{J}$ está
+contenido en el ideal maximal del anillo local en todo punto
+de $\mathfrak{X}$, el lema de Nakayama aplicado a esos anillos locales
+muestra que los $s_i$ generan $\sh{F}(n)$
+\sref[0]{0.5.1.1}.
+\end{proof}
+
+\begin{env}[5.2.5]
+\label{III.5.2.5}
+\emph{Demostración del teorema de existencia: caso proyectivo.}
+Con la notación de \sref{III.5.1.4}, supongamos que $f$ es
+proyectivo, de modo que existe un $\sh{O}_X$-módulo amplio $\sh{L}$
+\sref[I]{I.5.5.4}. Por definición,
+\[
+  X_n=\widehat{X}\times_{\widehat{Y}}Y_n
+\]
+es el subpreesquema cerrado
+$X\times_Y Y_n=f^{-1}(Y_n)$ de $X$. Si
+\[
+  \sh{L}'=\sh{L}\otimes_{\sh{O}_X}\sh{O}_{\widehat{X}}
+\]
+es la compleción de $\sh{L}$, entonces
+$\sh{L}'_0=\sh{L}/\mathfrak{J}\sh{L}$, considerado como
+$\sh{O}_{X_0}$-módulo; este módulo es amplio
+\sref[II]{II.4.6.13}[(i~\emph{bis})].
+
+Podemos, por tanto, aplicar \sref{III.5.2.4} a $\sh{L}'$ y a todo
+$\sh{O}_{\widehat{X}}$-módulo coherente $\sh{F}$. Se deduce que
+$\sh{F}$ es isomorfo a un cociente de
+\[
+  \sh{G}=
+  \bigl(\sh{L}'^{\otimes(-n)}\bigr)^k
+\]
+para enteros adecuados $n>0$ y $k>0$. El módulo $\sh{G}$ es la
+compleción de $(\sh{L}^{\otimes(-n)})^k$
+\sref[I]{I.10.8.10} y, por tanto, es algebraizable. Sea
+$u:\sh{G}\to\sh{F}$ la sobreyección canónica, y pongamos
+$\sh{H}=\Ker(u)$; este es un
+$\sh{O}_{\widehat{X}}$-módulo coherente \sref[0]{0.5.3.4}. Aplicando el mismo
+argumento a $\sh{H}$, obtenemos un
+$\sh{O}_{\widehat{X}}$-módulo algebraizable $\sh{K}$ y un homomorfismo
+$v:\sh{K}\to\sh{G}$ tal que $\sh{H}=\Im(v)$. Así,
+$\sh{F}=\Coker(v)$, y $\sh{F}$ es algebraizable por
+\sref{III.5.2.2}.
+\end{env}
+
+\begin{env}[5.2.6]
+\label{III.5.2.6}
+\emph{Demostración del teorema de existencia: caso cuasiproyectivo.}
+Conservemos la notación de \sref{III.5.1.4} y supongamos ahora que $f$
+es cuasiproyectivo. Existe un morfismo proyectivo
+$g:Z\to Y$ tal que $X$ se identifica con el $Y$-preesquema
+inducido sobre un subconjunto abierto de $Z$ \sref[II]{II.5.3.2}. Si
+$Z'=g^{-1}(Y')$, entonces $X'=X\cap Z'$. Por consiguiente, la compleción
+$\widehat{X}=X_{/X'}$ se identifica con el preesquema formal
+inducido por $\widehat{Z}=Z_{/Z'}$ sobre el subconjunto abierto $X\cap Z'$ de
+$\widehat{Z}$ \sref[I]{I.10.8.5}.
+
+Sea $\sh{F}'$ un $\sh{O}_{\widehat{X}}$-módulo coherente cuyo
+soporte $T'$ sea propio sobre $\widehat{Y}$. Por definición, existe
+un subpreesquema cerrado de $X'$ de espacio subyacente
+$T'\subset X'$ tal que la restricción $T'\to Y'$ de $f$ es
+propia. Por tanto, $T'$ es propio sobre $Y$ y, en consecuencia, cerrado en
+$Z'$ \sref[II]{II.5.4.10}. Se deduce que $\sh{F}'$ es inducido
+sobre $\widehat{X}$ por el $\sh{O}_{\widehat{Z}}$-módulo $\sh{G}'$
+obtenido pegando $\sh{F}'$, sobre el abierto $\widehat{X}$, con el
+haz cero sobre el abierto $\widehat{Z}-T'$; ambos haces coinciden sobre
+su intersección $\widehat{X}-T'$.
+
+El módulo $\sh{G}'$ es coherente. Por \sref{III.5.2.5}, existe un
+$\sh{O}_Z$-módulo coherente $\sh{G}$ tal que
+$\sh{G}'=\widehat{\sh{G}}$. Sea $T$ el soporte de $\sh{G}$;
+entonces $T'=T\cap Z'$ \sref[I]{I.10.8.12}. Si $h$ es la restricción
+de $g$ al subpreesquema cerrado reducido de $Z$ cuyo espacio subyacente
+es $T$, entonces
+\[
+  T'=h^{-1}(Y')=T\cap g^{-1}(Y').
+\]
+Así, $X\cap T$ es un subconjunto abierto de $T$ que contiene a $T'$.
+
+\oldpage[III]{154}
+Como $h$ es propio \sref[II]{II.5.4.2}, y por tanto cerrado,
+\sref{III.5.1.3.1} da $X\cap T=T$. Así, $T\subset X$; y
+como $T$ es cerrado en $Z$, es propio sobre $Y$. Si $\sh{F}$ es
+el haz inducido sobre $X$ por $\sh{G}$, su compleción
+$\widehat{\sh{F}}$ es inducida sobre $\widehat{X}$ por
+$\widehat{\sh{G}}$ \sref[I]{I.10.8.4} y, por tanto, es igual a
+$\sh{F}'$. Esto termina la demostración.
+\end{env}
+
+
+\subsection{Demostración del teorema de existencia: caso general}
+\label{subsection:III.5.3}
+
+\begin{lemma}[5.3.1]
+\label{III.5.3.1}
+Bajo las condiciones de \sref{III.5.1.4}, sea
+\[
+  0\longrightarrow\sh{H}\longrightarrow\sh{F}
+  \longrightarrow\sh{G}\longrightarrow0
+\]
+una sucesión exacta de $\sh{O}_{\widehat{X}}$-módulos coherentes.
+Si $\sh{G}$ y $\sh{H}$ son algebraizables, entonces $\sh{F}$ es
+algebraizable.
+\end{lemma}
+
+\begin{proof}
+Supongamos que
+\[
+  \sh{G}=\widehat{\sh{B}},
+  \qquad
+  \sh{H}=\widehat{\sh{C}},
+\]
+donde $\sh{B}$ y $\sh{C}$ son $\sh{O}_X$-módulos coherentes cuyos
+soportes son propios sobre $Y$. El módulo $\sh{F}$ define canónicamente
+un elemento del $A$-módulo
+\[
+  \Ext^1_{\sh{O}_{\widehat{X}}}
+  (\widehat{X};\widehat{\sh{B}},\widehat{\sh{C}})
+\]
+\sref[0]{0.12.3.2}. Las hipótesis implican que este $A$-módulo es
+canónicamente isomorfo a
+\[
+  \Ext^1_{\sh{O}_X}(X;\sh{B},\sh{C})
+\]
+\sref{III.4.5.2}. Existe, por tanto, una sucesión exacta
+\[
+  0\longrightarrow\sh{C}\longrightarrow\sh{A}
+  \longrightarrow\sh{B}\longrightarrow0
+\]
+de $\sh{O}_X$-módulos coherentes cuya clase canónica se envía en la
+clase correspondiente a $\sh{F}$. Por definición, teniendo en cuenta
+\sref[I]{I.10.8.8}, (ii), esto significa que $\sh{F}$ es isomorfo a
+$\widehat{\sh{A}}$. El lema se deduce, pues
+$\Supp(\sh{A})$ está contenido en
+$\Supp(\sh{B})\cup\Supp(\sh{C})$ y es, por tanto, propio sobre $Y$.
+\end{proof}
+
+\begin{corollary}[5.3.2]
+\label{III.5.3.2}
+Bajo las condiciones de \sref{III.5.1.1}, sea
+$u:\sh{F}\to\sh{G}$ un homomorfismo de
+$\sh{O}_{\widehat{X}}$-módulos coherentes. Si $\sh{G}$, $\Ker(u)$ y
+$\Coker(u)$ son algebraizables, entonces $\sh{F}$ es algebraizable.
+\end{corollary}
+
+\begin{proof}
+El Lema \sref{III.5.2.2}, aplicado a
+$\sh{G}\to\Coker(u)$, muestra que $\Im(u)$ es algebraizable. Basta entonces
+aplicar el Lema \sref{III.5.3.1} a la sucesión exacta
+\[
+  0\longrightarrow\Ker(u)\longrightarrow\sh{F}
+  \longrightarrow\Im(u)\longrightarrow0.
+\]
+\end{proof}
+
+\begin{lemma}[5.3.3]
+\label{III.5.3.3}
+Bajo las condiciones de \sref{III.5.1.1}, sea $h:Z\to Y$ un
+morfismo de tipo finito, sea $\widehat{Z}$ la compleción de $Z$
+a lo largo de $Z'=h^{-1}(Y')$, sea $g:Z\to X$ un $Y$-morfismo propio,
+y sea $\widehat{g}:\widehat{Z}\to\widehat{X}$ su extensión a
+las compleciones. Para todo $\sh{O}_{\widehat{Z}}$-módulo
+algebraizable $\sh{F}'$, el módulo
+$\widehat{g}_*(\sh{F}')$ es un
+$\sh{O}_{\widehat{X}}$-módulo algebraizable.
+\end{lemma}
+
+\begin{proof}
+Si $\sh{F}$ es un $\sh{O}_Z$-módulo coherente tal que
+$\sh{F}'=\widehat{\sh{F}}$, el primer teorema de comparación
+\sref{III.4.1.5} identifica
+$\widehat{g}_*(\widehat{\sh{F}})$ con la compleción de
+$g_*(\sh{F})$.
+\end{proof}
+
+\begin{lemma}[5.3.4]
+\label{III.5.3.4}
+Sea $X$ un esquema ordinario noetheriano, sea $X'$ un subconjunto
+cerrado de $X$, sea $f:Z\to X$ un morfismo propio, y pongamos
+\[
+  Z'=f^{-1}(X'),\qquad
+  \widehat{X}=X_{/X'},\qquad
+  \widehat{Z}=Z_{/Z'}.
+\]
+Sea $\widehat{f}:\widehat{Z}\to\widehat{X}$ la extensión de $f$
+a las compleciones. Sea $\sh{M}$ un ideal coherente de
+$\sh{O}_X$ tal que, si
+\[
+  U=X-\Supp(\sh{O}_X/\sh{M}),
+\]
+la restricción $f^{-1}(U)\to U$ de $f$ es un isomorfismo. Entonces,
+para todo $\sh{O}_{\widehat{X}}$-módulo coherente $\sh{F}$, existe
+un entero $n>0$ tal que el núcleo y el conúcleo del homomorfismo
+canónico
+\[
+  \rho_{\sh{F}}:
+  \sh{F}\longrightarrow
+  \widehat{f}_*\bigl(\widehat{f}^{\,*}(\sh{F})\bigr)
+\]
+\sref[0]{0.4.4.3} son anulados por
+$\widehat{\sh{M}}^{\,n}$.
+\end{lemma}
+
+\begin{proof}
+Podemos restringirnos al caso $X=\Spec(B)$, donde $B$ es un
+anillo noetheriano; entonces $X'=\mathrm{V}(\mathfrak{K})$ para un ideal
+$\mathfrak{K}$ de $B$. Nos reducimos primero al caso en que $B$ es
+noetheriano ádico y $\mathfrak{K}$ es un ideal de definición.
+
+Sea $B_1$ la compleción separada de $B$ para la
+topología $\mathfrak{K}$-preádica.
+\oldpage[III]{155}
+Si $\mathfrak{K}_1=\mathfrak{K}B_1$, entonces $B_1$ es un anillo
+noetheriano ádico y $\mathfrak{K}_1$ es un ideal de definición.
+Pongamos $X_1=\Spec(B_1)$, y sea $h:X_1\to X$ el morfismo
+correspondiente al homomorfismo canónico $B\to B_1$. Si
+$X'_1=h^{-1}(X')$, entonces $X'_1=\mathrm{V}(\mathfrak{K}_1)$. Finalmente,
+pongamos
+\[
+  Z_1=Z\times_X X_1,\qquad f_1:Z_1\longrightarrow X_1.
+\]
+El morfismo $f_1$ es propio \sref[II]{II.5.4.2}. Denotemos por
+$\widehat{X}_1$ la compleción de $X_1$ a lo largo de $X'_1$, por
+\[
+  \widehat{Z}_1=
+  Z_1\times_{X_1}\widehat{X}_1
+\]
+la compleción de $Z_1$ a lo largo de
+$Z'_1=f_1^{-1}(X'_1)$, y por
+$\widehat{f}_1$ la extensión de $f_1$ a las compleciones.
+
+La extensión
+$\widehat{h}:\widehat{X}_1\to\widehat{X}$ corresponde a la
+aplicación identidad de $B_1$ y es, por tanto, un isomorfismo
+\sref[I]{I.10.9.1}. El morfismo correspondiente
+$\widehat{Z}_1\to\widehat{Z}$ es también, por consiguiente, un isomorfismo,
+y estos isomorfismos identifican $\widehat{f}_1$ con
+$\widehat{f}$. Además,
+$\sh{M}_1=h^*(\sh{M})$ es un ideal coherente de $\sh{O}_{X_1}$ y
+\[
+  \Supp(\sh{O}_{X_1}/\sh{M}_1)
+  =h^{-1}\bigl(\Supp(\sh{O}_X/\sh{M})\bigr)
+\]
+\sref[I]{I.9.1.13}. Así, si
+$U_1=X_1-\Supp(\sh{O}_{X_1}/\sh{M}_1)$, entonces
+$U_1=h^{-1}(U)$, y la restricción
+$f_1^{-1}(U_1)\to U_1$ es un isomorfismo
+\sref[I]{I.3.2.7}. Finalmente, $\widehat{\sh{M}}$ y
+$\widehat{\sh{M}}_1$ son identificados por $\widehat{h}$
+\sref[I]{I.10.9.5}. Todas las hipótesis del lema son, pues,
+satisfechas por $X_1$, $X'_1$, $f_1$ y $\sh{M}_1$; en lo sucesivo
+podemos suponer que $B$ es noetheriano ádico y que $\mathfrak{K}$ es
+un ideal de definición.
+
+Se tiene entonces $\widehat{X}=\Spf(B)$ y
+$\sh{F}=N^\Delta$, donde $N$ es un $B$-módulo de tipo finito. Así,
+$\sh{F}=\widehat{\sh{G}}$, donde $\sh{G}$ es el
+$\sh{O}_X$-módulo coherente $\widetilde{N}$ \sref[I]{I.10.10.5}, y
+\[
+  \widehat{f}^{\,*}(\sh{F})
+  =\widehat{f^*(\sh{G})}
+\]
+\sref[I]{I.10.9.5}. Por el primer teorema de comparación
+\sref{III.4.1.5},
+\[
+  \widehat{f}_*
+  \bigl(\widehat{f^*(\sh{G})}\bigr)
+  \simeq
+  \widehat{f_*\bigl(f^*(\sh{G})\bigr)},
+\]
+y, por \sref{III.5.1.3}, el homomorfismo canónico
+$\rho_{\sh{F}}$ es precisamente $\widehat{\rho}_{\sh{G}}$.
+
+El núcleo $\sh{P}$ y el conúcleo $\sh{R}$ de
+\[
+  \rho_{\sh{G}}:
+  \sh{G}\longrightarrow f_*\bigl(f^*(\sh{G})\bigr)
+\]
+son $\sh{O}_X$-módulos coherentes, y sus restricciones a $U$ son
+nulas. Existe, por tanto, un entero $n>0$ tal que
+\[
+  \sh{M}^n\sh{P}=\sh{M}^n\sh{R}=0
+\]
+\sref[I]{I.9.3.4}. Se deduce que
+\[
+  \widehat{\sh{M}}^{\,n}\widehat{\sh{P}}
+  =
+  \widehat{\sh{M}}^{\,n}\widehat{\sh{R}}
+  =0
+\]
+\sref[I]{I.10.8.8} \sref[I]{I.10.8.10}, lo que demuestra el lema.
+\end{proof}
+
+\begin{env}[5.3.5]
+\label{III.5.3.5}
+\emph{Fin de la demostración del teorema de existencia.}
+Conservemos las hipótesis de \sref{III.5.1.4}. Utilicemos la inducción
+noetheriana \sref[0]{0.2.2.2}, suponiendo conocido el teorema para todo
+subpreesquema cerrado $T$ de $X$ cuyo espacio subyacente es distinto
+de $X$; aquí $\widehat{T}$ denota la compleción de $T$ a lo largo de
+$T\cap X'$. Podemos suponer que $X$ no es vacío.
+
+Como $f$ es separado y de tipo finito, el lema de Chow
+\sref[II]{II.5.6.1} proporciona un $Y$-esquema $Z$ y un $Y$-morfismo
+$g:Z\to X$ tales que el morfismo estructural $h:Z\to Y$ es
+cuasiproyectivo, $g$ es proyectivo y sobreyectivo, y existe un
+subconjunto abierto no vacío $U$ de $X$ para el cual
+$g^{-1}(U)\to U$ es un isomorfismo. Sea $\sh{M}$ un ideal coherente
+de $\sh{O}_X$ que define un subpreesquema cerrado de espacio subyacente
+$X-U$ \sref[I]{I.5.2.2}, y sea $\sh{F}$ un
+$\sh{O}_{\widehat{X}}$-módulo coherente cuyo soporte $E$ es propio sobre $Y$.
+Denotemos por $\widehat{Z}$ la compleción de $Z$ a lo largo de
+$h^{-1}(Y')$, y por
+$\widehat{g}:\widehat{Z}\to\widehat{X}$ la extensión de $g$ a
+las compleciones.
+
+El módulo $\widehat{g}^{\,*}(\sh{F})$ es un
+$\sh{O}_{\widehat{Z}}$-módulo coherente cuyo soporte está contenido en
+$g^{-1}(E)$ y es, por tanto, propio sobre $Y$, pues $g$ es
+proyectivo y, por tanto, propio \sref[II]{II.5.4.6}. Como $h$ es
+cuasiproyectivo, $\widehat{g}^{\,*}(\sh{F})$ es algebraizable por
+\sref{III.5.2.6}.
+\oldpage[III]{156}
+Se deduce de \sref{III.5.3.3}, puesto que $g$ es propio, que
+\[
+  \widehat{g}_*
+  \bigl(\widehat{g}^{\,*}(\sh{F})\bigr)
+\]
+es un $\sh{O}_{\widehat{X}}$-módulo algebraizable.
+
+Apliquemos \sref{III.5.3.4} a $\sh{F}$ y $g$. El núcleo $\sh{P}$
+y el conúcleo $\sh{R}$ de
+\[
+  \rho_{\sh{F}}:
+  \sh{F}\longrightarrow
+  \widehat{g}_*\bigl(\widehat{g}^{\,*}(\sh{F})\bigr)
+\]
+son anulados por una potencia $\widehat{\sh{M}}^{\,n}$. Sea $T$
+el subpreesquema cerrado de $X$ definido por $\sh{M}^n$, cuyo
+espacio subyacente es $X-U$, y sea $j:T\to X$ la inmersión
+canónica. Su extensión
+$\widehat{j}:\widehat{T}\to\widehat{X}$ es la inmersión canónica
+\sref[I]{I.10.14.7}, y podemos escribir
+\[
+  \sh{P}=
+  \widehat{j}_*\bigl(\widehat{j}^{\,*}(\sh{P})\bigr),
+  \qquad
+  \sh{R}=
+  \widehat{j}_*\bigl(\widehat{j}^{\,*}(\sh{R})\bigr).
+\]
+Como $U$ no es vacío, la hipótesis de inducción muestra que
+$\widehat{j}^{\,*}(\sh{P})$ y
+$\widehat{j}^{\,*}(\sh{R})$ son $\sh{O}_{\widehat{T}}$-módulos
+algebraizables. El Lema \sref{III.5.3.3} muestra entonces
+que $\sh{P}$ y $\sh{R}$ son algebraizables, y
+\sref{III.5.3.2} demuestra finalmente que $\sh{F}$ es algebraizable.
+\end{env}
+
+
+\subsection{Aplicación: comparación entre morfismos de preesquemas ordinarios y morfismos de preesquemas formales. Preesquemas formales algebraizables}
+\label{subsection:III.5.4}
+
+\begin{theorem}[5.4.1]
+\label{III.5.4.1}
+Sea $A$ un anillo noetheriano ádico, sea $\mathfrak{J}$ un ideal
+de definición de $A$, y pongamos
+\[
+  S=\Spec(A),\qquad S'=\mathrm{V}(\mathfrak{J}).
+\]
+Sea $u:X\to S$ un morfismo propio y sea $v:Y\to S$ un
+morfismo separado de tipo finito. Sean
+$\widehat{S}$, $\widehat{X}$ y $\widehat{Y}$ las compleciones
+de $S$, $X$ e $Y$ a lo largo de $S'$, $u^{-1}(S')$ y $v^{-1}(S')$,
+respectivamente. Para todo $S$-morfismo $f:X\to Y$, sea
+$\widehat{f}:\widehat{X}\to\widehat{Y}$ su extensión a las
+compleciones. Entonces la aplicación $f\mapsto\widehat{f}$ es una biyección
+\[
+  \Hom_S(X,Y)
+  \xrightarrow{\ \sim\ }
+  \Hom_{\widehat{S}}(\widehat{X},\widehat{Y}).
+\]
+\end{theorem}
+
+\begin{proof}
+Demostremos primero la inyectividad. Supongamos que $f,g:X\to Y$ son
+$S$-morfismos tales que $\widehat{f}=\widehat{g}$. Existe entonces
+un entorno abierto $V$ de $X'=u^{-1}(S')$ sobre el cual $f$ y $g$
+coinciden \sref[I]{I.10.9.4}. Como $u$ es cerrado,
+\sref{III.5.1.3.1} da $V=X$, y por tanto $f=g$.
+
+Demostremos ahora la sobreyectividad. Sea
+$h:\widehat{X}\to\widehat{Y}$ un
+$\widehat{S}$-morfismo. Pongamos
+\[
+  Z=X\times_S Y,
+\]
+y denotemos las proyecciones canónicas por $p:Z\to X$ y
+$q:Z\to Y$. El preesquema $Z$ es de tipo finito sobre $S$
+\sref[I]{I.6.3.4} y, por tanto, noetheriano. Sea
+$\widehat{Z}$ su compleción a lo largo de
+\[
+  Z'=p^{-1}\bigl(u^{-1}(S')\bigr).
+\]
+El preesquema formal $\widehat{Z}$ se identifica canónicamente con
+$\widehat{X}\times_{\widehat{S}}\widehat{Y}$, y sus proyecciones
+sobre $\widehat{X}$ y $\widehat{Y}$ se identifican con
+$\widehat{p}$ y $\widehat{q}$ \sref[I]{I.10.9.7}.
+
+Como $Y$ es separado sobre $S$, $\widehat{Y}$ es separado sobre
+$\widehat{S}$ \sref[I]{I.10.15.7}. El morfismo grafo
+\[
+  \Gamma_h=(1_{\widehat{X}},h):
+  \widehat{X}\longrightarrow\widehat{Z}
+\]
+es, por consiguiente, una inmersión cerrada \sref[I]{I.10.15.4}. Sea
+$\mathfrak{T}$ el subpreesquema formal cerrado de
+$\widehat{Z}$ asociado a esta inmersión, y sea
+$j:\mathfrak{T}\to\widehat{Z}$ la inmersión canónica. Así,
+\[
+  \Gamma_h=j\circ w,
+\]
+donde $w:\widehat{X}\to\mathfrak{T}$ es un isomorfismo
+\sref[I]{I.10.14.3} cuyo inverso es
+$\widehat{p}\circ j$. Además, $\mathfrak{T}$ es propio sobre
+$\widehat{S}$ porque $\widehat{X}$ lo es. Se deduce de
+\sref{III.5.1.8} que existe un subpreesquema cerrado $T$ de $Z$
+tal que
+\[
+  \mathfrak{T}
+  =\widehat{T}
+  =T_{/(T\cap Z')},
+\]
+y que $j=\widehat{i}$, donde $i:T\to Z$ es la inmersión
+canónica \sref[I]{I.10.14.7}.
+
+El morfismo $p\circ i:T\to X$ es un isomorfismo: su extensión a
+las compleciones es el isomorfismo
+$\widehat{p}\circ\widehat{i}$, y basta aplicar
+\sref{III.4.6.8}, observando como antes que $S$ es el único
+entorno de $S'$ en $S$.
+\oldpage[III]{157}
+Sea $g:X\to T$ el inverso de $p\circ i$, y pongamos
+\[
+  f=q\circ i\circ g.
+\]
+Entonces $f:X\to Y$ tiene por grafo $\Gamma_f=i\circ g$. Como
+$\widehat{g}$ es el inverso de
+$\widehat{p\circ i}$, se tiene
+\[
+  \widehat{\Gamma_f}
+  =\widehat{i}\circ\widehat{g}
+  =j\circ w
+  =\Gamma_h.
+\]
+Pero $\widehat{\Gamma_f}=\Gamma_{\widehat{f}}$
+\sref[I]{I.10.9.8}; por tanto, $h=\widehat{f}$, lo que termina la
+demostración.
+\end{proof}
+
+En lenguaje categórico, el funtor
+$X\mapsto\widehat{X}$ es, por tanto, plenamente fiel
+\sref[0]{0.8.1.6} de la categoría de los preesquemas propios sobre
+$\Spec(A)$ en la categoría de los preesquemas formales propios sobre
+$\Spf(A)$, para todo anillo noetheriano ádico $A$. Proporciona, por
+consiguiente, una equivalencia entre la primera categoría y una
+subcategoría plena de la segunda. Los objetos de esta subcategoría se
+denominarán en lo sucesivo \emph{preesquemas formales algebraizables}.
+Para tal preesquema formal $\mathfrak{X}$, existe un preesquema
+ordinario $X$, propio sobre $\Spec(A)$ y determinado salvo isomorfismo
+único, tal que $\mathfrak{X}\simeq\widehat{X}$.
+
+\begin{env}[5.4.2]
+\label{III.5.4.2}
+\emph{Escolio.}
+Con la notación de \sref{III.5.4.1}, pongamos
+\[
+  S_n=\Spec(A/\mathfrak{J}^{n+1}),\qquad
+  X_n=X\times_S S_n,\qquad
+  Y_n=Y\times_S S_n.
+\]
+Se deduce de \sref{III.5.4.1} y \sref[I]{I.10.12.3} que
+dar un $S$-morfismo $f:X\to Y$ equivale a dar un sistema inductivo
+ádico $(S_n)$ \sref[I]{I.10.12.2} de
+$S_n$-morfismos $f_n:X_n\to Y_n$.
+\end{env}
+
+\begin{remark}[5.4.3]
+\label{III.5.4.3}
+Contrariamente a lo que podría sugerir el teorema de existencia
+\sref{III.5.1.6}, existen preesquemas formales propios sobre $\Spf(A)$
+que \emph{no son algebraizables}, así como existen espacios analíticos
+compactos que no proceden de variedades algebraicas complejas. Más
+adelante encontraremos tales preesquemas en la «teoría de moduli»,
+que, cuando el cuerpo base es $\mathbb{C}$, trata precisamente de las
+variaciones infinitesimales de la estructura compleja de una variedad
+algebraica completa; es bien sabido que tales variaciones pueden dar
+lugar a variedades analíticas que no son algebraicas.
+\end{remark}
+
+\begin{proposition}[5.4.4]
+\label{III.5.4.4}
+Sea $A$ un anillo noetheriano ádico, pongamos
+$\mathfrak{S}=\Spf(A)$, y sean
+\[
+  g:\mathfrak{X}\to\mathfrak{S},
+  \qquad
+  h:\mathfrak{Y}\to\mathfrak{S}
+\]
+dos morfismos propios de preesquemas formales. Sea
+$f:\mathfrak{X}\to\mathfrak{Y}$ un
+$\mathfrak{S}$-morfismo. Si $f$ es finito y
+$\mathfrak{Y}$ es algebraizable, entonces $\mathfrak{X}$ es
+algebraizable.
+\end{proposition}
+
+\begin{proof}
+Las hipótesis sobre $g$ y $h$ implican ya que $f$ es propio
+\sref{III.3.4.1}; para que $f$ sea finito, basta que la fibra
+$f^{-1}(y)$ sea finita para todo $y\in\mathfrak{Y}$
+\sref[0]{0.4.8.11}. Por hipótesis,
+\[
+  \sh{B}=f_*(\sh{O}_{\mathfrak{X}})
+\]
+es una $\sh{O}_{\mathfrak{Y}}$-álgebra coherente
+\sref[0]{0.4.8.6}. Escribamos
+$\mathfrak{Y}=\widehat{Y}$ y $h=\widehat{w}$, donde
+$w:Y\to\Spec(A)$ es un morfismo propio de preesquemas ordinarios. El
+teorema de existencia proporciona una $\sh{O}_Y$-álgebra coherente $\sh{C}$
+tal que $\sh{B}=\widehat{\sh{C}}$. Pongamos
+\[
+  X=\Spec(\sh{C}),
+\]
+y sea $u:X\to Y$ el morfismo estructural. La definición de
+$\mathfrak{X}$ a partir de $\sh{B}$ \sref[0]{0.4.8.7} muestra entonces que
+$\mathfrak{X}$ es canónicamente isomorfo a $\widehat{X}$ y
+que $f$ se identifica con $\widehat{u}$; basta comprobarlo
+cuando $Y$ es afín.
+\end{proof}
+
+La Proposición \sref{III.5.1.8} es un caso particular de
+\sref{III.5.4.4}.
+
+\begin{theorem}[5.4.5]
+\label{III.5.4.5}
+Sea $A$ un anillo noetheriano ádico, sea $\mathfrak{J}$ un ideal
+de definición de $A$, pongamos
+\[
+  S=\Spec(A),\qquad
+  \mathfrak{S}=\widehat{S}=\Spf(A),
+\]
+y sea $f:\mathfrak{X}\to\mathfrak{S}$ un morfismo propio de
+preesquemas formales. Pongamos
+\[
+  S_k=\Spec(A/\mathfrak{J}^{k+1}),\qquad
+  X_k=\mathfrak{X}\times_{\mathfrak{S}}S_k,
+\]
+y, para todo $\sh{O}_{\mathfrak{X}}$-módulo $\sh{F}$, pongamos
+\[
+  \sh{F}_k
+  =\sh{F}\otimes_{\sh{O}_{\mathfrak{X}}}\sh{O}_{X_k}
+  =\sh{F}/\mathfrak{J}^{k+1}\sh{F}.
+\]
+\oldpage[III]{158}
+Sea $\sh{L}$ un
+$\sh{O}_{\mathfrak{X}}$-módulo invertible, y supongamos que
+\[
+  \sh{L}_0=\sh{L}/\mathfrak{J}\sh{L}
+\]
+es un $\sh{O}_{X_0}$-módulo amplio. Entonces $\mathfrak{X}$ es
+algebraizable. Además, si $X$ es un $S$-preesquema propio tal
+que $\mathfrak{X}\simeq\widehat{X}$, existe un
+$\sh{O}_X$-módulo amplio $\sh{M}$ tal que
+$\sh{L}\simeq\widehat{\sh{M}}$; en particular, $X$ es proyectivo
+sobre $S$.
+\end{theorem}
+
+\begin{proof}
+Apliquemos \sref{III.5.2.3} con
+$\sh{F}=\sh{O}_{\mathfrak{X}}$. Existe un entero $n_0$ tal
+que, para $n\geq n_0$, el homomorfismo canónico
+\[
+  \Gamma(\mathfrak{X},\sh{L}^{\otimes n})
+  \longrightarrow
+  \Gamma(X_0,\sh{L}_0^{\otimes n})
+\]
+es sobreyectivo. Elijamos $n\geq n_0$ suficientemente grande para que
+$\sh{L}_0^{\otimes n}$ sea muy amplio para $S_0$
+\sref[II]{II.4.5.10}. Como
+$f_0:X_0\to S_0$ es propio,
+$\Gamma(X_0,\sh{L}_0^{\otimes n})$ es un $A$-módulo de tipo finito
+\sref{III.3.2.1}. Existe, por consiguiente, un
+$A$-submódulo de tipo finito
+\[
+  E\subset\Gamma(\mathfrak{X},\sh{L}^{\otimes n})
+\]
+cuya imagen en $\Gamma(X_0,\sh{L}_0^{\otimes n})$ es el módulo
+entero.
+
+Para todo $k\geq0$, consideremos el homomorfismo
+\[
+  u_k:
+  E/\mathfrak{J}^{k+1}E
+  \longrightarrow
+  \Gamma(X_k,\sh{L}_k^{\otimes n})
+\]
+inducido por la inyección canónica
+$E\to\Gamma(\mathfrak{X},\sh{L}^{\otimes n})$. El módulo
+$(f_k)_*(\sh{L}_k^{\otimes n})$ es cuasi-coherente, y
+\[
+  \Gamma\bigl(S_k,(f_k)_*(\sh{L}_k^{\otimes n})\bigr)
+  =
+  \Gamma(X_k,\sh{L}_k^{\otimes n}).
+\]
+Así, $u_k$ define un homomorfismo
+\[
+  \widetilde{u}_k:
+  \widetilde{E/\mathfrak{J}^{k+1}E}
+  \longrightarrow
+  (f_k)_*(\sh{L}_k^{\otimes n}),
+\]
+y, por tanto, por adjunción, un homomorfismo
+\[
+  \widetilde{u}_k^{\,\sharp}:
+  f_k^*\bigl(\widetilde{E/\mathfrak{J}^{k+1}E}\bigr)
+  \longrightarrow
+  \sh{L}_k^{\otimes n}.
+\]
+Pongamos
+\[
+  \sh{G}_k=
+  f_k^*\bigl(\widetilde{E/\mathfrak{J}^{k+1}E}\bigr).
+\]
+Se tiene
+$\sh{G}_0=\sh{G}_k/\mathfrak{J}\sh{G}_k$
+\sref[I]{I.9.1.5}, y
+\[
+  \widetilde{u}_0^{\,\sharp}:
+  \sh{G}_0/\mathfrak{J}\sh{G}_0
+  \longrightarrow
+  \sh{L}_0^{\otimes n}/
+  \mathfrak{J}\sh{L}_0^{\otimes n}
+\]
+se obtiene de $\widetilde{u}_k^{\,\sharp}$ pasando a los
+cocientes.
+
+Por la definición de $E$, $\widetilde{u}_0^{\,\sharp}$ es el
+homomorfismo canónico
+\[
+  \sigma:
+  f_0^*\bigl((f_0)_*(\sh{L}_0^{\otimes n})\bigr)
+  \longrightarrow
+  \sh{L}_0^{\otimes n}.
+\]
+Como $\sh{L}_0^{\otimes n}$ es muy amplio,
+$\widetilde{u}_0^{\,\sharp}$ es sobreyectivo
+\sref[II]{II.4.4.3}. El lema de Nakayama muestra entonces que todo
+$\widetilde{u}_k^{\,\sharp}$ es sobreyectivo.
+
+Cada $\widetilde{u}_k^{\,\sharp}$ define, por tanto,
+\sref[II]{II.4.2.2} un $S_k$-morfismo
+\[
+  g_k:X_k\longrightarrow
+  P_k=\mathbf{P}(E/\mathfrak{J}^{k+1}E).
+\]
+Para $h\leq k$,
+\[
+  P_h=P_k\times_{S_k}S_h
+\]
+por \sref[II]{II.4.1.3}. Las relaciones entre los
+$\widetilde{u}_k^{\,\sharp}$ y \sref[II]{II.4.2.10} muestran que
+$(g_k)$ es un sistema inductivo ádico $(S_k)$
+\sref[I]{I.10.12.2}. Los $g_k$ definen, por consiguiente, un
+$\mathfrak{S}$-morfismo de preesquemas formales
+\[
+  g:\mathfrak{X}\longrightarrow\mathfrak{P},
+\]
+donde $\mathfrak{P}$ es el límite inductivo del sistema $(P_k)$,
+o, equivalentemente, la compleción $\widehat{P}$ de
+$P=\mathbf{P}(E)$. El hecho de que
+$\sh{L}_0^{\otimes n}$ sea muy amplio implica que $g_0$ es una inmersión cerrada
+\sref[II]{II.4.4.3}. Por tanto, $g$ es una inmersión cerrada de
+preesquemas formales \sref[0]{0.4.8.10}, y $\mathfrak{X}$ es algebraizable
+por \sref{III.5.1.8}.
+
+El teorema de existencia \sref{III.5.1.6} muestra ahora que $\sh{L}$ es
+la compleción $\widehat{\sh{M}}$ de un
+$\sh{O}_X$-módulo invertible $\sh{M}$. Además,
+$\sh{L}^{\otimes n}$ es la compleción de
+$\sh{M}^{\otimes n}$ \sref[I]{I.10.8.10}, y los homomorfismos
+$\widetilde{u}_k^{\,\sharp}$ definen un único homomorfismo
+\[
+  v:f^*(\widetilde{E})
+  \longrightarrow
+  \sh{M}^{\otimes n}
+\]
+\sref{III.5.1.7}. Como los
+$\widetilde{u}_k^{\,\sharp}$ son sobreyectivos,
+$\widehat{v}$ es sobreyectivo \sref[I]{I.10.11.5}, y por tanto también
+lo es $v$ \sref{III.5.1.3}. Sea $r:X\to P$ el morfismo definido
+por $v$ \sref[II]{II.4.2.2}. Su extensión a las compleciones es
+$g$. Como $g$ es una inmersión cerrada, también lo es $r$, por
+\sref{III.5.1.8} y \sref{III.5.4.1}. Se deduce que
+$\sh{M}^{\otimes n}$ es muy amplio \sref[II]{II.4.4.6} y, por tanto,
+que $\sh{M}$ es amplio \sref[II]{II.4.5.10}.
+\end{proof}
+
+\begin{remark}[5.4.6]
+\label{III.5.4.6}
+Sea $A$ un anillo noetheriano ádico, pongamos
+$\mathfrak{S}=\Spf(A)$, y sea
+$f:\mathfrak{X}\to\mathfrak{S}$ un morfismo propio de preesquemas
+formales. Sea $\sh{N}$ el ideal coherente de
+$\sh{O}_{\mathfrak{X}}$ tal que, para todo subconjunto abierto
+formal afín $U$ de $\mathfrak{X}$,
+\[
+  \Gamma(U,\sh{N})
+\]
+es el nilradical de
+$\Gamma(U,\sh{O}_{\mathfrak{X}})$. La existencia de este ideal
+se deduce fácilmente de \sref[I]{I.10.10.2} y del hecho de que
+todo homomorfismo de anillos $B\to C$ envía el nilradical de $B$ en
+el de $C$. Sea $\mathfrak{X}'$ el subpreesquema formal cerrado de
+$\mathfrak{X}$ definido por $\sh{N}$
+\sref[I]{I.10.14.2}. Sería interesante saber si la
+algebraizabilidad de $\mathfrak{X}'$ implica la algebraizabilidad del
+propio $\mathfrak{X}$.
+
+Sin duda se llegaría a una solución de este problema si se supiera
+clasificar, por ejemplo mediante invariantes
+\oldpage[III]{159}
+de naturaleza cohomológica, las \emph{extensiones} de un haz estructural
+$\sh{O}_{\mathfrak{X}}$---para un preesquema ordinario o
+formal---por un ideal de cuadrado nulo. Equivalentemente, estas son las
+$\sh{O}_{\mathfrak{X}}$-álgebras $\sh{A}$ tales que
+$\sh{O}_{\mathfrak{X}}\simeq\sh{A}/\sh{J}$, donde $\sh{J}$ es un
+ideal de cuadrado nulo de $\sh{A}$.
+\end{remark}
+
+
+\subsection{Una descomposición de ciertos preesquemas}
+\label{subsection:III.5.5}
+
+\begin{proposition}[5.5.1]
+\label{III.5.5.1}
+Sea $A$ un anillo noetheriano ádico, sea $\mathfrak{J}$ un ideal
+de definición de $A$, y pongamos $Y=\Spec(A)$. Sea $f:X\to Y$ un
+morfismo separado de tipo finito, y pongamos
+\[
+  Y_0=\Spec(A/\mathfrak{J}),\qquad
+  X_0=X\times_Y Y_0=f^{-1}(Y_0).
+\]
+Sea $Z_0$ un subconjunto abierto de $X_0$ que es propio sobre $Y_0$.
+Entonces existe un subconjunto abierto y cerrado $Z$ de $X$, propio sobre
+$Y$, tal que
+\[
+  Z\cap X_0=Z_0.
+\]
+\end{proposition}
+
+\begin{proof}
+Por hipótesis, existe un subconjunto abierto $T$ de $X$ tal que
+$T\cap X_0=Z_0$. Sea $\widehat{T}$ la compleción a lo largo de $Z_0$
+del preesquema inducido por $X$ sobre $T$. El soporte de
+$\sh{O}_{\widehat{T}}$ es $Z_0$, que es propio sobre $Y_0$;
+por tanto, $\widehat{T}$ es propio sobre
+$\widehat{Y}=\Spf(A)$ \sref{III.3.4.1}.
+
+Se deduce de \sref{III.5.1.8} que existe un subpreesquema cerrado
+$Z$ de $T$, propio sobre $Y$, tal que, si
+$i:Z\to T$ es la inmersión canónica, entonces
+\[
+  \widehat{i}:\widehat{Z}\longrightarrow\widehat{T}
+\]
+es un isomorfismo; aquí $\widehat{Z}$ es la compleción de $Z$
+a lo largo de $Z_0$. Por \sref{III.4.6.8}, existe un entorno abierto
+$V$ de $Z_0$ en $T$ tal que
+$i^{-1}(V)\to V$ es un isomorfismo. Pero $i^{-1}(V)$ es un
+entorno de $Z_0$ en $Z$ y, por tanto, es igual a $Z$ por
+\sref{III.5.1.3.1}. Así, $Z$ es abierto en $T$, y por tanto en $X$.
+También es cerrado en $X$, pues $Z$ es propio sobre $Y$ y $X$ es
+separado sobre $Y$. Esto demuestra la proposición.
+\end{proof}
+
+\begin{corollary}[5.5.2]
+\label{III.5.5.2}
+Si $X_0$ es propio sobre $Y_0$, entonces $X$ es la unión de dos
+subconjuntos abiertos disjuntos $Z$ y $Z'$ tales que $Z$ es propio sobre
+$Y$ y contiene a $X_0$. Además, todo subconjunto cerrado $P$ de $X$
+que es propio sobre $Y$ está contenido en $Z$.
+\end{corollary}
+
+\begin{proof}
+Apliquemos \sref{III.5.5.1} con $Z_0=X_0$, y pongamos $Z'=X-Z$. Para la
+última afirmación, $P\cap Z'$ es cerrado en $P$ y, por tanto, propio
+sobre $Y$. Si no fuera vacío, $f(P\cap Z')$ sería un subconjunto cerrado
+no vacío de $Y$ y, por tanto, cortaría a $Y_0$
+\sref{III.5.1.3.1}. Esto contradice
+$Z'\cap X_0=\varnothing$ y demuestra que $P\subset Z$.
+\end{proof}
+
+\bigskip
+\noindent\emph{(Continuará.)}
+
+% La página impresa 504 está en blanco.
+\clearpage
+\thispagestyle{empty}
+\null
+\clearpage
+\thispagestyle{plain}
+
+\oldpage[III]{161}
+\section*{BIBLIOGRAFÍA (continuación)}
+
+\begin{flushleft}
+[27] P. Gabriel, \emph{Des catégories abéliennes}, tesis, París (1961).
+
+\medskip
+[28] J. E. Roos, \emph{Sur les foncteurs dérivés de $\varprojlim$.
+Applications}, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702--3704.
+
+\medskip
+[29] H. Cartan, \emph{Séminaire de l'École Normale Supérieure},
+13.er año (1960--1961), exposición n.º 11.
+\end{flushleft}
+
+\clearpage
+\oldpage[III]{162}
+\section*{ÍNDICE DE NOTACIONES}
+
+\begin{flushleft}
+$\Set$: 0, 8.1.1.
+
+$h_X(Y)$, $h_X(u)$ ($X$, $Y$ objetos de una categoría $\C$, $u$ un morfismo
+de $\C$): 0, 8.1.1.
+
+$h_w(Y)$ ($Y$ un objeto y $w$ un morfismo de $\C$): 0, 8.1.2.
+
+$Z_k(E_r^{pq})$, $B_k(E_r^{pq})$ ($k\geq r$): 0, 11.1.1.
+
+$Z_\infty(E_2^{pq})$, $B_\infty(E_2^{pq})$: 0, 11.1.1.
+
+$K^\bullet$, $K_\bullet$ (complejos): 0, 11.2.1.
+
+$K^{\bullet\bullet}$, $K_{\bullet\bullet}$ (bicomplejos): 0, 11.2.1.
+
+$B^i(K^\bullet)$, $Z^i(K^\bullet)$, $H^i(K^\bullet)$,
+$H^\bullet(K^\bullet)$: 0, 11.2.1.
+
+$B_i(K_\bullet)$, $Z_i(K_\bullet)$, $H_i(K_\bullet)$,
+$H_\bullet(K_\bullet)$: 0, 11.2.1.
+
+$T(K^\bullet)$, $T(K_\bullet)$ ($T$ un funtor): 0, 11.2.1.
+
+$E(K^\bullet)$ ($K^\bullet$ un complejo filtrado): 0, 11.2.2.
+
+$K^{i,\bullet}$, $K^{\bullet,j}$, $Z_{\mathrm{II}}^p(K^{i,\bullet})$,
+$B_{\mathrm{II}}^p(K^{i,\bullet})$, $H_{\mathrm{II}}^p(K^{i,\bullet})$,
+$Z_{\mathrm I}^p(K^{\bullet,j})$, $B_{\mathrm I}^p(K^{\bullet,j})$,
+$H_{\mathrm I}^p(K^{\bullet,j})$: 0, 11.3.1.
+
+$H_{\mathrm{II}}^p(K^{\bullet\bullet})$,
+$Z_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
+$B_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
+$H_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
+$H^n(K^{\bullet\bullet})$: 0, 11.3.1.
+
+$F_{\mathrm I}^p(K^{\bullet\bullet})$,
+$F_{\mathrm{II}}^p(K^{\bullet\bullet})$, ${}'E(K^{\bullet\bullet})$,
+${}''E(K^{\bullet\bullet})$: 0, 11.3.2.
+
+$K_{i,\bullet}$, $K_{\bullet,j}$, $H_p^{\mathrm{II}}(K_{i,\bullet})$,
+$H_p^{\mathrm I}(K_{\bullet,j})$, $H_p^{\mathrm{II}}(K_{\bullet\bullet})$,
+$H_p^{\mathrm I}(K_{\bullet\bullet})$,
+$H_q^{\mathrm I}(H_p^{\mathrm{II}}(K_{\bullet\bullet}))$,
+$H_q^{\mathrm{II}}(H_p^{\mathrm I}(K_{\bullet\bullet}))$,
+$H_n(K_{\bullet\bullet})$: 0, 11.3.5.
+
+$\RR^\bullet T(K^\bullet)$ ($T$ un funtor covariante aditivo): 0, 11.4.3.
+
+$\RR^\bullet T(K^\bullet,K'^{\bullet})$ ($T$ un bifuntor covariante
+aditivo): 0, 11.4.6.
+
+$\LL_\bullet T(K_\bullet)$ ($T$ un funtor covariante aditivo): 0, 11.6.2.
+
+$\LL_\bullet T(K_\bullet,K'_\bullet)$ ($T$ un bifuntor covariante
+aditivo): 0, 11.6.6.
+
+$\LL_\bullet T(K_{\bullet\bullet})$ ($T$ un funtor covariante aditivo):
+0, 11.7.2.
+
+$|\sigma|$, $\Sigma(A)$, $\mathrm C_\bullet(A)$, $\mathrm L_\bullet(A)$
+($A$ un conjunto finito, $\sigma$ un símplex de $A$): 0, 11.8.1.
+
+$\mathrm C^\bullet(A,B;\sh{S})$, $\mathrm L^\bullet(A,B;\sh{S})$
+($A$, $B$ conjuntos finitos, $\sh{S}$ un sistema de coeficientes): 0, 11.8.4.
+
+$\mathrm P^\bullet(A,B;\sh{S})$ ($A$, $B$ conjuntos finitos, $\sh{S}$ un
+sistema de coeficientes): 0, 11.8.6.
+
+$\mathrm C^\bullet(A,B;\sh{S}^\bullet)$,
+$\mathrm L^\bullet(A,B;\sh{S}^\bullet)$ ($A$, $B$ conjuntos finitos,
+$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): 0, 11.8.8.
+
+$\mathrm P^\bullet(A,B;\sh{S}^\bullet)$ ($A$, $B$ conjuntos finitos,
+$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): 0, 11.8.10.
+
+$\chi(M^\bullet)$ ($M^\bullet$ un complejo finito de módulos de longitud finita):
+0, 11.10.1.
+
+$\check C^\bullet(\mathfrak U,\sh{F})$ ($\sh{F}$ un haz de grupos abelianos
+sobre $X$, $\mathfrak U$ un recubrimiento abierto de $X$): 0, 12.1.2.
+
+$\RR^p f_*(\sh{F})$ ($f:X\to Y$ un morfismo de espacios anillados,
+$\sh{F}$ un haz de $\sh{O}_X$-módulos): 0, 12.2.1.
+
+$\sh{H}^p(f,\sh{K}^\bullet)$,
+$\sh{H}^p_f(\sh{K}^\bullet)$, ${}'E(f,\sh{K}^\bullet)$,
+${}''E(f,\sh{K}^\bullet)$ ($f:X\to Y$ un morfismo de espacios anillados,
+$\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos): 0, 12.4.1.
+
+$\mathbf H^\bullet(X,\sh{K}^\bullet)$,
+$\mathbf H^\bullet(V,\sh{K}^\bullet)$ ($X$ un espacio anillado,
+$\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos, $V$ abierto en $X$):
+0, 12.4.2.
+
+$\operatorname{gr}^\bullet(A)$ ($A$ un sistema proyectivo que satisface (ML)):
+0, 13.4.2.
+
+$E(A)$ ($A$ un objeto filtrado): 0, 13.6.4.
+
+$K_\bullet(\mathbf f)$, $i_{\mathbf f}$ ($\mathbf f$ una familia finita de
+elementos de un anillo): III, 1.1.1.
+
+$K^\bullet(\mathbf f,M)$, $K_\bullet(\mathbf f,M)$ ($\mathbf f$ una familia
+finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.2.
+
+$H^\bullet(\mathbf f,M)$, $H_\bullet(\mathbf f,M)$ ($\mathbf f$ una familia
+finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.3.
+
+$C^\bullet((\mathbf f),M)$, $H^\bullet((\mathbf f),M)$ ($\mathbf f$ una
+familia finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.6.
+
+$H^\bullet(U,\sh{F}^{(*)})$,
+$H^\bullet(\mathfrak U,\sh{F}^{(*)})$ ($\sh{F}$ un
+$\sh{O}_X$-módulo cuasi-coherente, $U$ abierto en $X$, $\mathfrak U$ un recubrimiento abierto de $X$):
+III, 2.1.1.
+\end{flushleft}
+
+\clearpage
+\oldpage[III]{163}
+\section*{ÍNDICE TERMINOLÓGICO}
+
+\begin{flushleft}
+Término de convergencia de una sucesión espectral: 0, 11.1.1.
+
+Algebraizable ($\sh{O}_X$-módulo): III, 5.2.1.
+
+Algebraizable (esquema formal): III, 5.4.2.
+
+Analíticamente íntegro (anillo): III, 4.3.6.
+
+Aplicación cuasicompacta: 0, 9.1.1.
+
+Aumentación de una resolución: 0, 11.4.1.
+
+Característica de Euler--Poincaré de un complejo: 0, 11.10.1.
+
+Característica de Euler--Poincaré de un $\sh{O}_X$-módulo coherente
+($X$ proyectivo sobre $\Spec(A)$, $A$ un anillo artiniano): III, 2.5.1.
+
+Cocadena bialternada: 0, 11.8.4.
+
+Complejo definido por un bicomplejo: 0, 11.3.1.
+
+Complejo de álgebra exterior: III, 1.1.1.
+
+Condición (ML): 0, 13.1.2.
+
+Constructible (subconjunto, conjunto): 0, 9.1.2.
+
+Constructible (función): 0, 9.3.1.
+
+Producto cup: 0, 12.1.2.
+
+Dihomomorfismo para estructuras algebraicas sobre categorías: 0, 8.2.1.
+
+Exacto (subconjunto) en una categoría abeliana: III, 3.1.1.
+
+Esencialmente constante (sistema proyectivo): 0, 13.4.2.
+
+Factorización de Stein: III, 4.3.3.
+
+Codiscreta, coseparada, discreta, exhaustiva, finita, separada
+(filtración): 0, 11.1.3.
+
+Final (objeto) de una categoría: 0, 8.1.10.
+
+Finito (morfismo) de preesquemas formales: III, 4.8.2.
+
+Finito (preesquema formal) sobre $\mathfrak Y$,
+$\mathfrak Y$-finito (preesquema formal): III, 4.8.2.
+
+Funtor covariante canónico $\C\to\CHom(\C\op,\Set)$: 0, 8.1.2.
+
+Género aritmético: III, 2.5.1.
+
+Geométricamente conexa (fibra): III, 4.3.4.
+
+Homomorfismo de estructuras algebraicas sobre categorías: 0, 8.2.1.
+
+Hipercohomología de un funtor respecto de un complejo $K^\bullet$:
+0, 11.4.3.
+
+Hipercohomología de un bifuntor respecto de dos complejos
+$K^\bullet$, $K'^{\bullet}$: 0, 11.4.6.
+
+Hiperhomología de un funtor respecto de un complejo $K_\bullet$:
+0, 11.6.2.
+
+Hiperhomología de un bifuntor respecto de dos complejos $K_\bullet$,
+$K'_\bullet$: 0, 11.6.6.
+
+Hiperhomología de un funtor respecto de un bicomplejo: 0, 11.7.2.
+
+Localmente constructible (conjunto): 0, 9.1.11.
+
+Ley de composición externa (interna) sobre los objetos de una categoría: 0, 8.2.1.
+
+\oldpage[III]{164}
+
+$S$-$\C$-módulo filtrado, $\operatorname{gr}^\bullet(S)$-$\C$-módulo graduado,
+$\operatorname{gr}^{\bullet\bullet}(S)$-$\C$-módulo bigraduado: 0, 13.6.6.
+
+Morfismo de sucesiones espectrales: 0, 11.1.2.
+
+Número geométrico de componentes conexas de una fibra: III, 4.3.4.
+
+Objeto grupo en $\C$, $\C$-grupo, $\C$-anillo, $\C$-módulo: 0, 8.2.3.
+
+Objeto de bordes, objeto de cobordes, objeto de cociclos, objeto de
+ciclos: 0, 11.2.1.
+
+Objeto de imágenes universales: 0, 13.1.1.
+
+Objeto graduado asociado a un sistema proyectivo que satisface (ML): 0, 13.4.2.
+
+Objeto graduado acotado inferiormente (superiormente): 0, 11.2.1.
+
+Subconjunto propio (sobre $\mathfrak Y$) de un preesquema formal: III, 3.4.1.
+
+Plena (subcategoría): 0, 8.1.5.
+
+Plenamente fiel (funtor): 0, 8.1.5.
+
+Polinomio de Hilbert: III, 2.5.3.
+
+Propio (morfismo) de preesquemas formales: III, 3.4.1.
+
+Representable (funtor): 0, 8.1.8.
+
+Cohomológica, derecha, izquierda, homológica, inyectiva, libre, plana, proyectiva
+(resolución): 0, 11.4.1.
+
+Resolución de Cartan--Eilenberg derecha, inyectiva: 0, 11.4.2.
+
+Resolución de Cartan--Eilenberg izquierda, proyectiva: 0, 11.6.1.
+
+Retrocompacto (conjunto): 0, 9.1.1.
+
+Estricto (sistema proyectivo): 0, 13.4.2.
+
+Sucesión espectral en una categoría abeliana: 0, 11.1.1.
+
+Débilmente convergente, regular, coregular, birregular (sucesión espectral):
+0, 11.1.3.
+
+Sucesión espectral degenerada: 0, 11.1.6.
+
+Sucesión espectral de un funtor relativa a un objeto filtrado: 0, 13.6.4.
+
+Sucesiones espectrales de un bicomplejo: 0, 11.3.2 y 11.3.5.
+
+Sucesiones espectrales de hipercohomología de un funtor respecto de un complejo:
+0, 11.4.3.
+
+Sucesiones espectrales de hiperhomología de un funtor respecto de un complejo:
+0, 11.6.2.
+
+Sucesiones espectrales de hiperhomología de un funtor respecto de un bicomplejo:
+0, 11.7.2.
+
+Sistema de coeficientes: 0, 11.8.4.
+
+Unirrama (anillo, punto): III, 4.3.6.
+
+Universalmente abierto (morfismo): III, 4.3.9.
+\end{flushleft}
+
+\clearpage
+\oldpage[III]{165}
+\section*{ÍNDICE GENERAL}
+
+\begin{flushleft}
+\textsc{Capítulo 0.} --- \textbf{Preliminares (continuación)} \dotfill 5
+
+\medskip
+\S~8. Funtores representables \dotfill 5
+
+8.1. Funtores representables \dotfill 5
+
+8.2. Estructuras algebraicas en categorías \dotfill 9
+
+\medskip
+\S~9. Conjuntos constructibles \dotfill 12
+
+9.1. Conjuntos constructibles \dotfill 12
+
+9.2. Subconjuntos constructibles de espacios noetherianos \dotfill 14
+
+9.3. Funciones constructibles \dotfill 16
+
+\medskip
+\S~10. Suplemento sobre los módulos planos \dotfill 17
+
+10.1. Relaciones entre módulos planos y módulos libres \dotfill 17
+
+10.2. Criterios locales de planitud \dotfill 18
+
+10.3. Existencia de extensiones planas de anillos locales \dotfill 20
+
+\medskip
+\S~11. Suplemento sobre álgebra homológica \dotfill 23
+
+11.1. Recordatorio sobre las sucesiones espectrales \dotfill 23
+
+11.2. La sucesión espectral de un complejo filtrado \dotfill 27
+
+11.3. Las sucesiones espectrales de un bicomplejo \dotfill 29
+
+11.4. Hipercohomología de un funtor respecto de un complejo $K^\bullet$
+\dotfill 32
+
+11.5. Paso al límite inductivo en hipercohomología \dotfill 35
+
+11.6. Hiperhomología de un funtor respecto de un complejo $K_\bullet$
+\dotfill 39
+
+11.7. Hiperhomología de un funtor respecto de un bicomplejo
+$K_{\bullet\bullet}$ \dotfill 41
+
+11.8. Suplemento sobre la cohomología de los complejos simpliciales \dotfill 43
+
+11.9. Un lema sobre complejos de tipo finito \dotfill 46
+
+11.10. Característica de Euler--Poincaré de un complejo de módulos de longitud finita
+\dotfill 48
+
+\medskip
+\S~12. Suplemento sobre la cohomología de haces \dotfill 49
+
+12.1. Cohomología de haces de módulos sobre espacios anillados \dotfill 49
+
+12.2. Imágenes directas superiores \dotfill 57
+
+12.3. Suplementos sobre los funtores Ext de haces \dotfill 60
+
+12.4. Hipercohomología del funtor de imagen directa \dotfill 62
+
+\oldpage[III]{166}
+
+\S~13. Límites proyectivos en álgebra homológica \dotfill 64
+
+13.1. La condición de Mittag--Leffler \dotfill 64
+
+13.2. La condición de Mittag--Leffler para grupos abelianos \dotfill 65
+
+13.3. Aplicación: cohomología de un límite proyectivo de haces \dotfill 68
+
+13.4. Condición de Mittag--Leffler y objetos graduados asociados a sistemas
+proyectivos \dotfill 69
+
+13.5. Límites proyectivos de sucesiones espectrales de complejos filtrados
+\dotfill 71
+
+13.6. Sucesión espectral de un funtor relativa a un objeto dotado de una
+filtración finita \dotfill 73
+
+13.7. Funtores derivados de un límite proyectivo de argumentos \dotfill 75
+
+\medskip
+\textsc{Capítulo III.} --- \textbf{Estudio cohomológico de los haces coherentes}
+\dotfill 81
+
+\medskip
+\S~1. Cohomología de los esquemas afines \dotfill 82
+
+1.1. Recordatorio sobre el complejo de álgebra exterior \dotfill 82
+
+1.2. Cohomología de \v Cech de un recubrimiento abierto \dotfill 85
+
+1.3. Cohomología de un esquema afín \dotfill 88
+
+1.4. Aplicación a la cohomología de preesquemas cualesquiera \dotfill 89
+
+\medskip
+\S~2. Estudio cohomológico de los morfismos proyectivos \dotfill 95
+
+2.1. Cálculos explícitos de ciertos grupos de cohomología \dotfill 95
+
+2.2. El teorema fundamental de los morfismos proyectivos \dotfill 100
+
+2.3. Aplicación a haces graduados de álgebras y módulos \dotfill 102
+
+2.4. Una generalización del teorema fundamental \dotfill 107
+
+2.5. Característica de Euler--Poincaré y polinomio de Hilbert \dotfill 109
+
+2.6. Aplicación: criterios de amplitud \dotfill 111
+
+\medskip
+\S~3. Teorema de finitud para los morfismos propios \dotfill 115
+
+3.1. El lema de dévissage \dotfill 115
+
+3.2. El teorema de finitud: caso de los esquemas ordinarios \dotfill 116
+
+3.3. Generalización del teorema de finitud (esquemas ordinarios) \dotfill 118
+
+3.4. Teorema de finitud: caso de los esquemas formales \dotfill 119
+
+\medskip
+\S~4. El teorema fundamental de los morfismos propios. Aplicaciones \dotfill 122
+
+4.1. El teorema fundamental \dotfill 122
+
+4.2. Casos particulares y variantes \dotfill 129
+
+4.3. Teorema de conexión de Zariski \dotfill 130
+
+4.4. «Teorema principal» de Zariski \dotfill 135
+
+4.5. Compleciones de módulos de homomorfismos \dotfill 138
+
+4.6. Relaciones entre morfismos formales y morfismos ordinarios \dotfill 139
+
+4.7. Un criterio de amplitud \dotfill 145
+
+4.8. Morfismos finitos de preesquemas formales \dotfill 146
+
+\oldpage[III]{167}
+
+\S~5. Un teorema de existencia para los haces algebraicos coherentes \dotfill 149
+
+5.1. Enunciado del teorema \dotfill 149
+
+5.2. Demostración del teorema de existencia: caso proyectivo y cuasiproyectivo
+\dotfill 151
+
+5.3. Demostración del teorema de existencia: caso general \dotfill 154
+
+5.4. Aplicación: comparación entre morfismos de preesquemas ordinarios y
+morfismos de preesquemas formales. Preesquemas formales algebraizables \dotfill 156
+
+5.5. Una descomposición de ciertos preesquemas \dotfill 159
+
+\medskip
+\textsc{Bibliografía (continuación)} \dotfill 161
+
+\textsc{Índice de notaciones} \dotfill 162
+
+\textsc{Índice terminológico} \dotfill 163
+
+\begin{flushright}
+\emph{Recibido el 28 de junio de 1961.}
+\end{flushright}
+\end{flushleft}

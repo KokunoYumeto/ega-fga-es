@@ -1,0 +1,477 @@
+\subsection{Inmersiones regulares y cuasirregulares.}
+\label{IV.16.9}
+
+\begin{definition}[16.9.1]
+\label{IV.16.9.1}
+Sea $X$ un espacio anillado. Se dice que un ideal $\mathscr{I}$ de
+$\mathcal{O}_X$ es \emph{regular} (resp. \emph{cuasirregular}) si, para todo
+punto $x\in\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$, existen una
+vecindad abierta $U$ de $x$ en $X$ y una sucesión regular (0, 15.2.2) (resp.
+cuasirregular (0, 15.2.2)) de elementos de $\Gamma(U,\mathcal{O}_X)$ que
+engendra $\mathscr{I}|U$.
+\end{definition}
+
+Se dirá que una sucesión regular (resp. cuasirregular) de secciones de
+$\mathcal{O}_X$ sobre $U$ que engendra $\mathscr{I}|U$ es un
+\emph{sistema regular} (resp. \emph{cuasirregular}) \emph{de generadores}
+de $\mathscr{I}|U$.
+
+\begin{definition}[16.9.2]
+\label{IV.16.9.2}
+Sea $j:Y\to X$ una inmersión de preesquemas y sea $U$ un abierto de $X$ tal
+que $j(Y)\subset U$ y que $j$ sea una inmersión cerrada de $Y$ en $U$. Se
+dice que $j$ es \emph{regular} (resp. \emph{cuasirregular}) si el
+subpreesquema cerrado $j(Y)$ de $U$ asociado a $j$ está definido por un ideal
+regular (resp. cuasirregular) de $\mathcal{O}_U$ (condición independiente del
+abierto $U$ elegido).
+\end{definition}
+
+Se dice que un subpreesquema $Y$ de un preesquema $X$ está \emph{inmerso
+regularmente} (resp. \emph{inmerso cuasirregularmente}) si la inyección
+canónica $j:Y\to X$ es una inmersión regular (resp. cuasirregular). Si $Y$ es
+un subpreesquema cerrado de $X$ y $\mathscr{I}$ el ideal de $\mathcal{O}_X$
+que define $Y$, esto equivale a decir que $\mathscr{I}$ es \emph{regular}
+(resp. \emph{cuasirregular}).
+
+Por ejemplo, si $A$ es un anillo \emph{íntegro} y $f$ un elemento $\neq0$ de
+$A$, el subpreesquema cerrado $V(f)$ de $\operatorname{Spec}(A)$ (isomorfo a
+$\operatorname{Spec}(A/fA)$) está \emph{inmerso regularmente} en
+$\operatorname{Spec}(A)$.
+
+Todo ideal regular es cuasirregular (0, 15.2.2); toda inmersión regular es
+cuasirregular (cf. (16.9.11) para un enunciado recíproco).
+
+\begin{proposition}[16.9.3]
+\label{IV.16.9.3}
+Sean $X$ un espacio anillado, $\mathscr{I}$ un ideal de $\mathcal{O}_X$ y
+$(f_i)_{1\leq i\leq m}$ una sucesión finita de secciones de $\mathcal{O}_X$
+sobre $X$ que engendra $\mathscr{I}$. Para que $(f_i)$ sea una sucesión
+cuasirregular (0, 15.2.2), es necesario y suficiente que se satisfagan las
+condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] Las imágenes canónicas de los $f_i$ en
+  $\mathscr{I}/\mathscr{I}^2$ forman una base de este
+  $\mathcal{O}_X/\mathscr{I}$-módulo.
+  \item[(ii)] El homomorfismo sobreyectivo canónico (16.1.2.2)
+  \[
+    \mathbf{S}_{\mathcal{O}_X/\mathscr{I}}^{\bullet}
+    (\mathscr{I}/\mathscr{I}^2)
+    \longrightarrow\mathscr{G}r_{\mathscr{I}}^{\bullet}(\mathcal{O}_X)
+  \]
+  es biyectivo.
+\end{enumerate}
+Además, si así ocurre, toda sucesión $(f'_i)_{1\leq i\leq m}$ de $m$
+secciones de $\mathscr{I}$ sobre $X$ que engendra $\mathscr{I}$ es
+cuasirregular.\footnote{El texto impreso usa $n$ en ambos lugares; debe ser
+$m$, el número de elementos de la base dada por $(f_i)_{1\leq i\leq m}$. La
+demostración exige que la nueva familia tenga el mismo número de elementos que
+una base de $\mathscr{I}/\mathscr{I}^2$.}
+\end{proposition}
+
+\oldpage[IV-4]{47}
+
+Las dos condiciones del enunciado no hacen sino expresar la definición dada
+en (0, 15.2.2), teniendo en cuenta la definición de los homomorfismos
+canónicos (0, 15.2.1.1). La última afirmación resulta de que, si un módulo $M$
+sobre un anillo conmutativo $A$ admite una base de $n$ elementos, todo sistema
+de generadores de $M$ que tenga $n$ elementos es una base de $M$ (Bourbaki,
+\emph{Alg. comm.}, cap.~II, §~3, cor.~5 del teorema~1).
+
+\begin{corollary}[16.9.4]
+\label{IV.16.9.4}
+Sean $X$ un espacio localmente anillado y $\mathscr{I}$ un ideal de
+$\mathcal{O}_X$. Para que $\mathscr{I}$ sea cuasirregular, es necesario y
+suficiente que satisfaga las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $\mathscr{I}$ es de tipo finito.
+  \item[(ii)] $\mathscr{I}/\mathscr{I}^2$ es un
+  $(\mathcal{O}_X/\mathscr{I})$-módulo localmente libre.
+  \item[(iii)] El homomorfismo canónico
+  \[
+    \mathbf{S}_{\mathcal{O}_X/\mathscr{I}}^{\bullet}
+    (\mathscr{I}/\mathscr{I}^2)
+    \longrightarrow\mathscr{G}r_{\mathscr{I}}^{\bullet}(\mathcal{O}_X)
+    \tag{16.9.4.1}
+    \label{IV.16.9.4.1}
+  \]
+  es biyectivo.
+\end{enumerate}
+\end{corollary}
+
+La necesidad de las condiciones resulta inmediatamente de (16.9.3). Para ver
+que son suficientes, hay que demostrar, en virtud de (16.9.3), que, si en un
+punto $x\in\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$ existen una
+vecindad abierta $U$ de $x$ en $X$ y $n$ secciones $f_i$
+($1\leq i\leq n$) de $\mathscr{I}$ sobre $U$ cuyas imágenes canónicas en
+$\mathscr{I}/\mathscr{I}^2$ forman una base de
+$(\mathscr{I}/\mathscr{I}^2)|U$ sobre
+$(\mathcal{O}_X/\mathscr{I})|U$, entonces existe una vecindad abierta
+$V\subset U$ de $x$ tal que los $f_i|V$ engendran $\mathscr{I}|V$. Ahora
+bien, por hipótesis, $\mathscr{I}_x\neq\mathcal{O}_x$, por lo que
+$\mathscr{I}_x$ está contenido en el ideal maximal de $\mathcal{O}_x$; como
+$\mathscr{I}_x$ es un $\mathcal{O}_x$-módulo de tipo finito y las clases de
+los $(f_i)_x$ en $\mathscr{I}_x/\mathscr{I}_x^2$ engendran este
+$(\mathcal{O}_x/\mathscr{I}_x)$-módulo, el lema de Nakayama muestra que los
+$(f_i)_x$ engendran $\mathscr{I}_x$. Como $\mathscr{I}$ es de tipo finito,
+se concluye por (0\textsubscript{I}, 5.2.2).
+
+\begin{corollary}[16.9.5]
+\label{IV.16.9.5}
+Sean $X$ un espacio localmente anillado, $\mathscr{I}$ un ideal cuasirregular
+de $\mathcal{O}_X$, $(f_i)_{1\leq i\leq n}$ una sucesión de secciones de
+$\mathscr{I}$ sobre $X$, y
+$x$ un punto de $\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] Existe una vecindad abierta $U$ de $x$ en $X$ tal que los
+  $f_i|U$ forman una sucesión cuasirregular de elementos de
+  $\Gamma(U,\mathcal{O}_X)$ que engendra $\mathscr{I}|U$.
+  \item[(b)] Los $(f_i)_x$ forman un sistema de generadores de
+  $\mathscr{I}_x$ cuyo número de elementos es el menor posible.
+  \item[(b')] Los $(f_i)_x$ forman un sistema minimal de generadores de
+  $\mathscr{I}_x$.
+  \item[(c)] Si $\bar f_i$ es la imagen canónica de $f_i$ en
+  $\Gamma(X,\mathscr{I}/\mathscr{I}^2)$, los $(\bar f_i)_x$ forman una base
+  del $(\mathcal{O}_x/\mathscr{I}_x)$-módulo
+  $\mathscr{I}_x/\mathscr{I}_x^2$.
+\end{enumerate}
+\end{corollary}
+
+Por hipótesis, $\mathcal{O}_x$ es un anillo local y $\mathscr{I}_x$ un ideal
+de tipo finito de $\mathcal{O}_x$ contenido en el ideal maximal de
+$\mathcal{O}_x$; la equivalencia entre b), b') y c) resulta, por tanto, del
+lema de Nakayama (Bourbaki, \emph{Alg. comm.}, cap.~II, §~3,
+n\textsuperscript{o}~2, prop.~5). Es claro que a) implica c) en virtud de
+(16.9.3); por otra parte, de (0\textsubscript{I}, 5.2.2) resulta que, si se
+satisface la condición c) (y, por tanto, también b)), existe una vecindad $U$
+de $x$ en $X$ tal que $(\mathscr{I}/\mathscr{I}^2)|U$ tiene rango constante
+igual a $n$, y que los $f_i|U$ engendran $\mathscr{I}|U$; basta, por tanto,
+aplicar en $U$ la última afirmación de (16.9.3).
+
+\begin{remarks}[16.9.6]
+\label{IV.16.9.6}
+\begin{enumerate}
+  \item[(i)] Bajo las hipótesis generales de (16.9.5), para que la sucesión
+  $(f_i)$ engendre $\mathscr{I}$ no basta con que los $(\bar f_i)_y$ formen
+  una base del $(\mathcal{O}_y/\mathscr{I}_y)$-módulo
+  $\mathscr{I}_y/\mathscr{I}_y^2$ para todo $y\in X$. Se obtiene un ejemplo
+  tomando
+\oldpage[IV-4]{48}
+  $X=\operatorname{Spec}(A)$, donde $A$ es un anillo de Dedekind, y
+  $\mathscr{I}=\widetilde{\mathfrak{I}}$, donde $\mathfrak{I}$ es un ideal
+  primo no principal de $A$; se tiene entonces, en efecto,
+  $\mathscr{I}_y/\mathscr{I}_y^2=0$ en todo punto $y$ distinto del punto
+  $x\in X$ correspondiente a $\mathfrak{I}$, y
+  $\mathscr{I}_x/\mathscr{I}_x^2$ es de rango $1$ sobre el cuerpo
+  $\mathcal{O}_x/\mathscr{I}_x$; además, $\mathscr{I}$ es evidentemente un
+  ideal regular.
+  \item[(ii)] En (16.9.5) no se puede sustituir «cuasirregular» por
+  «regular», ni siquiera cuando $X$ es un preesquema (cf. (16.9.12)). En
+  efecto, designemos por $B$ el anillo de los gérmenes de funciones
+  indefinidamente diferenciables en el punto $0$ de $\mathbb{R}$; tiene un
+  ideal maximal $\mathfrak{m}$ engendrado por el germen $t$ de la aplicación
+  identidad de $\mathbb{R}$ en el punto $0$, y la intersección $\mathfrak{n}$
+  de los $\mathfrak{m}^k$ para $k>0$ no se reduce a $0$. Sea ahora $A$ el
+  anillo cociente $B[T]/\mathfrak{n}TB[T]$, y sean $f_1,f_2$ las imágenes
+  canónicas en $A$ de los elementos $t$ y $T$ de $B[T]$. La sucesión
+  $(f_1,f_2)$ es regular en $A$: en efecto, $f_1$ no es divisor de $0$ en
+  $A$, pues la relación $tP[T]\in\mathfrak{n}TB[T]$, para un polinomio
+  $P\in B[T]$, implica que los productos de $t$ por los coeficientes de $P$
+  pertenecen al ideal $\mathfrak{n}$, de lo que resulta inmediatamente que
+  estos coeficientes están a su vez en $\mathfrak{n}$, y, por tanto,
+  $P[T]\in\mathfrak{n}TB[T]$. Como $B/tB$ es isomorfo a $\mathbb{R}$,
+  $A/f_1A$ es isomorfo al anillo de polinomios $\mathbb{R}[T]$, y, por tanto,
+  es íntegro; la imagen de $f_2$ en $A/f_1A$, al ser igual a $T$, no es, por
+  consiguiente, divisor de $0$, lo que demuestra la afirmación. Sin embargo,
+  $f_2$ es divisor de $0$ en $A$, pues para todo elemento no nulo
+  $x\in\mathfrak{n}$, la imagen de $x$ en $A$ es $\ne0$, mientras que la
+  imagen de $xT$ es nula. Se concluye que la sucesión $(f_2,f_1)$ no es
+  regular en $A$; por otra parte, el ideal $\mathfrak{I}=f_1A+f_2A$ es
+  distinto de $A$, por lo que las condiciones b), b') y c) de (16.9.5) no
+  implican la condición a) cuando en ella se sustituye «cuasirregular» por
+  «regular».
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[16.9.7]
+\label{IV.16.9.7}
+Si $X=\operatorname{Spec}(A)$ es un esquema afín, se dirá que un ideal
+$\mathfrak{I}$ de $A$ es regular (resp. cuasirregular) si el ideal
+$\mathscr{I}=\widetilde{\mathfrak{I}}$ de $\mathcal{O}_X$ es regular
+(resp. cuasirregular); obsérvese que esta noción es local y no implica en
+absoluto la existencia de un sistema de generadores de $\mathfrak{I}$ que
+forme en $A$ una sucesión regular (resp. cuasirregular), como muestra el
+ejemplo (16.9.6, (i)); sin embargo, así ocurre cuando $A$ es local (16.9.5).
+
+La proposición (16.9.4) se expresa en términos de inmersiones cuasirregulares
+de la manera siguiente:
+\end{env}
+
+\begin{proposition}[16.9.8]
+\label{IV.16.9.8}
+Sea $j:Y\to X$ un morfismo de preesquemas; para que $j$ sea una inmersión
+cuasirregular, es necesario y suficiente que $j$ satisfaga las condiciones
+siguientes:
+\begin{enumerate}
+  \item[(i)] $j$ es una inmersión localmente de presentación finita.
+  \item[(ii)] El haz conormal
+  $\operatorname{Gr}^1(j)=\mathcal{N}_{Y/X}$ (16.1.2) es un
+  $\mathcal{O}_Y$-módulo localmente libre.
+  \item[(iii)] El homomorfismo canónico
+  \[
+    \operatorname{S}_{\mathcal{O}_Y}^{\bullet}
+      (\operatorname{Gr}^1(j))\longrightarrow\operatorname{Gr}^{\bullet}(j)
+  \]
+  (16.1.2.2) es biyectivo.
+\end{enumerate}
+\end{proposition}
+
+Como la cuestión es local sobre $Y$, se puede reducir al caso en que $j$ es
+la inyección canónica de un subpreesquema cerrado $Y$ de $X$, y entonces la
+expresión de (16.9.4) en la forma (16.9.8) resulta de la explicitación de
+$\operatorname{Gr}^1(j)$ y $\operatorname{Gr}^{\bullet}(j)$ en términos del
+ideal $\mathscr{I}$ de $\mathcal{O}_X$ que define el subpreesquema $Y$
+(16.1.3, (ii)).
+
+\begin{corollary}[16.9.9]
+\label{IV.16.9.9}
+Sean $Y$ un preesquema, $X$ un $Y$-preesquema y $j:Y\to X$ una $Y$-sección
+de $X$, de modo que el $n$-ésimo invariante normal $\mathscr{A}^{(n)}$ de $j$
+(16.1.2) es una $\mathcal{O}_Y$-álgebra aumentada (16.1.7); pongamos
+$\mathscr{A}^{(\infty)}=\varprojlim\mathscr{A}^{(n)}$. Para que $j$ sea una
+inmersión cuasirregular, es necesario y suficiente que $j$ sea localmente de
+presentación finita y que todo $y\in Y$ admita una vecindad abierta afín $U$
+cuyo anillo es $C$ tal que $\mathscr{A}^{(\infty)}|U$ sea isomorfa, como
+$\mathcal{O}_U$-álgebra topológica aumentada, a
+$\mathcal{O}_U[[T_1,\ldots,T_n]]$.
+\end{corollary}
+
+Se puede reducir al caso en que $j$ es una inmersión cerrada restringiéndose
+a una vecindad suficientemente pequeña de $y$ (véase el razonamiento de
+(16.4.11)), y entonces $\mathcal{O}_Y$ se identifica con el álgebra cociente
+$\mathcal{O}_X/\mathscr{I}$ y el homomorfismo sobreyectivo canónico
+$\mathcal{O}_X\to\mathcal{O}_Y$ admite un
+\oldpage[IV-4]{49}
+inverso por la derecha (16.1.7). Se puede, por tanto, suponer que
+$X=\operatorname{Spec}(B)$ e $Y=\operatorname{Spec}(A)$ son afines, que $B$
+es una $A$-álgebra aumentada y que el ideal de aumento $\mathfrak{I}$ es de
+tipo finito. Como $\mathscr{A}^{(n)}$ se identifica entonces con
+$(B/\mathfrak{I}^{n+1})^{\sim}$, el corolario resulta de la equivalencia entre
+b) y c) en (0, 19.5.4), puesto que $B/\mathfrak{I}=A$.
+
+Obsérvese que, en el caso afín considerado, el hecho de que $j$ sea una
+inmersión cuasirregular equivale también, en virtud de (0, 19.5.4), a decir
+que $B$ es una $A$-álgebra formalmente lisa para la topología
+$\mathfrak{I}$-preádica.
+
+Obsérvese asimismo que la condición de que $j$ sea una inmersión localmente de
+presentación finita se satisface siempre cuando el morfismo $X\to Y$ es
+localmente de tipo finito (1.4.3, (v)).
+
+\begin{proposition}[16.9.10]
+\label{IV.16.9.10}
+Sean $X$ un preesquema localmente noetheriano, $Y$ un subpreesquema de $X$,
+$j:Y\to X$ la inyección canónica y $y$ un punto de $Y$.
+\begin{enumerate}
+  \item[(i)] Para que exista una vecindad abierta $U$ de $y$ en $X$ tal que
+  la restricción $Y\cap U\to U$ de $j$ sea una inmersión regular, es necesario
+  y suficiente que el núcleo $\mathscr{I}_y$ del homomorfismo sobreyectivo
+  $\mathcal{O}_{X,y}\to\mathcal{O}_{Y,y}$ esté engendrado por una sucesión
+  regular de elementos de $\mathcal{O}_{X,y}$.
+  \item[(ii)] Para que la inmersión $j$ sea regular, es necesario y suficiente
+  que sea cuasirregular.
+\end{enumerate}
+\end{proposition}
+
+\begin{enumerate}
+  \item[(i)] Se puede reducir al caso en que $Y$ es un subpreesquema cerrado
+  de $X$ definido por un ideal \emph{coherente} $\mathscr{I}$ de
+  $\mathcal{O}_X$. La condición es evidentemente necesaria. Recíprocamente,
+  si $\mathscr{I}_y$ está engendrado por una sucesión regular $(s_i)_y$, donde
+  los $s_i$ son secciones de $\mathscr{I}$ sobre una vecindad abierta $U$ de
+  $y$ en $X$, se puede suponer que los $s_i$ engendran $\mathscr{I}|U$
+  (0\textsubscript{I}, 5.2.2) y forman una sucesión regular (0, 15.2.4), de
+  donde se sigue la afirmación.
+  \item[(ii)] El hecho de que una inmersión cuasirregular sea regular resulta
+  de (i) y de la identidad entre las sucesiones cuasirregulares y las
+  sucesiones regulares de $\mathcal{O}_{X,y}$ formadas por elementos del ideal
+  maximal (0, 15.1.11).
+\end{enumerate}
+
+Cuando (sin hipótesis noetheriana sobre $X$) el núcleo $\mathscr{I}_y$ de
+$\mathcal{O}_{X,y}\to\mathcal{O}_{Y,y}$ está engendrado por una sucesión
+regular de elementos de $\mathcal{O}_{X,y}$, se dice que la inmersión $j$ es
+\emph{regular en el punto $y$}.
+
+\begin{corollary}[16.9.11]
+\label{IV.16.9.11}
+Sea $X$ un preesquema localmente noetheriano; entonces todo ideal
+cuasirregular de $\mathcal{O}_X$ es regular.
+\end{corollary}
+
+\begin{remarks}[16.9.12]
+\label{IV.16.9.12}
+\begin{enumerate}
+  \item[(i)] Obsérvese que una inmersión regular no es, en general, un
+  morfismo plano, ni \emph{a fortiori} un morfismo \emph{regular} en el sentido
+  de (6.8.1).
+  \item[(ii)] Sea $A$ un anillo local noetheriano; de (16.9.4) y (0, 17.1.1)
+  resulta inmediatamente que, para que $A$ sea \emph{regular}, es necesario y
+  suficiente que su ideal maximal $\mathfrak{m}$ sea \emph{cuasirregular}
+  (o \emph{regular}, lo que equivale a lo mismo puesto que $A$ es
+  noetheriano). Para que un esquema afín noetheriano $X$ sea \emph{regular},
+  es necesario y suficiente que, para todo punto cerrado $x\in X$, la
+  inyección canónica $\operatorname{Spec}(k(x))\to X$ sea una inmersión
+  \emph{regular}.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[16.9.13]
+\label{IV.16.9.13}
+Sean $X$ un preesquema localmente noetheriano, $Y$ un subpreesquema de $X$ e
+$Y'$ un subpreesquema de $Y$, tal que la inyección canónica $j:Y'\to Y$ sea
+regular. Entonces la sucesión de $\mathcal{O}_{Y'}$-módulos
+\[
+  \xymatrix{
+    0\ar[r] & j^*(\mathcal{N}_{Y/X})\ar[r]
+      & \mathcal{N}_{Y'/X}\ar[r] & \mathcal{N}_{Y'/Y}\ar[r] & 0
+  }
+  \tag{16.9.13.1}
+  \label{IV.16.9.13.1}
+\]
+\oldpage[IV-4]{50}
+es exacta; además, para todo $x\in X$, existe una vecindad abierta $U$ de $x$
+tal que las restricciones a $U$ de los homomorfismos de (16.9.13.1) forman
+una sucesión exacta y escindida.
+\end{proposition}
+
+Demostremos primero el lema siguiente:
+
+\begin{lemma}[16.9.13.2]
+\label{IV.16.9.13.2}
+Sean $A$ un anillo, $\mathfrak{I}$ un ideal de $A$,
+$A'=A/\mathfrak{I}$, $(f_i)_{1\leq i\leq r}$ una sucesión de elementos de
+$A$ que es $A'$-regular, $\mathfrak{K}=\sum_i f_iA$,
+$\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$ y
+$\mathfrak{K}'=\sum_i f_iA'$, de modo que $C=A/\mathfrak{L}$ es isomorfo a
+$A'/\mathfrak{K}'$. Entonces, para todo entero $n>0$ y todo entero $N\geq n$,
+se tiene la relación
+\[
+  \mathfrak{I}\cap\mathfrak{K}^n
+  =\mathfrak{I}\mathfrak{K}^n+(\mathfrak{I}\cap\mathfrak{K}^N).
+  \tag{16.9.13.3}
+  \label{IV.16.9.13.3}
+\]
+\end{lemma}
+
+Evidentemente, basta demostrar que todo elemento del primer miembro está
+contenido en el segundo y, por inducción sobre $N-n$,\footnote{El texto
+impreso atribuye la inducción a $n$; la iteración que reduce el enunciado al
+caso $N=n+1$ es una inducción sobre la diferencia $N-n$.} se reduce al caso en
+que $N=n+1$. Un elemento del primer miembro de (16.9.13.3), al pertenecer a
+$\mathfrak{K}^n$, se escribe $P(f_1,\ldots,f_r)$, donde
+$P\in A[T_1,\ldots,T_r]$ es homogéneo y de grado $n$. Si $f_i'$ es la imagen
+canónica de $f_i$ en $A'$, la hipótesis
+$P(f_1,\ldots,f_r)\in\mathfrak{I}$ significa que
+$P(f_1',\ldots,f_r')=0$. Pero
+$P(f_1',\ldots,f_r')\in\mathfrak{K}'^n$, por lo que la imagen canónica de
+$P(f_1',\ldots,f_r')$ en
+$\mathfrak{K}'^n/\mathfrak{K}'^{n+1}$ es nula. Ahora bien, la hipótesis de que
+la sucesión $(f_i)$ es $A'$-regular implica que el homomorfismo canónico
+\[
+  \mathbf{S}_C^n(\mathfrak{K}'/\mathfrak{K}'^2)
+  \longrightarrow\mathfrak{K}'^n/\mathfrak{K}'^{n+1}
+\]
+es biyectivo (0, 15.1.9); se concluye que los coeficientes de $P$ pertenecen
+a $\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$. De ello resulta inmediatamente
+que $P(f_1,\ldots,f_r)\in\mathfrak{I}\mathfrak{K}^n+\mathfrak{K}^{n+1}$, y,
+como $P(f_1,\ldots,f_r)\in\mathfrak{I}$, se tiene finalmente
+\[
+  P(f_1,\ldots,f_r)
+  \in\mathfrak{I}\mathfrak{K}^n
+    +(\mathfrak{I}\cap\mathfrak{K}^{n+1}),
+\]
+lo que demuestra el lema.
+
+Tomando los cocientes de ambos miembros de (16.9.13.3) por
+$\mathfrak{I}\mathfrak{K}^n$, se ve que las relaciones (16.9.13.3) para
+$N\geq n$ implican
+\[
+  (\mathfrak{I}\cap\mathfrak{K}^n)/\mathfrak{I}\mathfrak{K}^n
+  \subset\bigcap_{N\geq n}\mathfrak{K}^N
+    \cdot(A/(\mathfrak{I}\mathfrak{K}^n)).
+  \tag{16.9.13.4}
+  \label{IV.16.9.13.4}
+\]
+De ello se deduce el
+
+\begin{corollary}[16.9.13.5]
+\label{IV.16.9.13.5}
+Supongamos satisfechas las hipótesis de (16.9.13.2) y supongamos, además, que
+el anillo $A$ es noetheriano y que $\mathfrak{K}$ está contenido en el radical
+de $A$. Entonces, para todo entero $n>0$, se tiene
+\[
+  \mathfrak{I}\cap\mathfrak{K}^n=\mathfrak{I}\mathfrak{K}^n.
+  \tag{16.9.13.6}
+  \label{IV.16.9.13.6}
+\]
+\end{corollary}
+
+En efecto, el segundo miembro de (16.9.13.4) es entonces nulo, puesto que
+$A/\mathfrak{I}\mathfrak{K}^n$ es un $A$-módulo de tipo finito (Bourbaki,
+\emph{Alg. comm.}, cap.~III, §~3, n\textsuperscript{o}~3, prop.~6).
+
+Tomemos, en particular, $n=2$ en (16.9.13.6), y observemos que se tiene
+$\mathfrak{L}^2=\mathfrak{I}^2+\mathfrak{I}\mathfrak{K}+\mathfrak{K}^2
+=\mathfrak{I}\mathfrak{L}+\mathfrak{K}^2$; puesto que
+$\mathfrak{I}\mathfrak{L}\subset\mathfrak{L}^2$, se deduce que
+\[
+  \mathfrak{I}\cap\mathfrak{L}^2
+  =\mathfrak{I}\mathfrak{L}+(\mathfrak{I}\cap\mathfrak{K}^2)
+  =\mathfrak{I}\mathfrak{L}+\mathfrak{I}\mathfrak{K}^2
+  =\mathfrak{I}\mathfrak{L},
+\]
+es decir,
+\[
+  \mathfrak{I}\cap\mathfrak{L}^2=\mathfrak{I}\mathfrak{L},
+  \tag{16.9.13.7}
+  \label{IV.16.9.13.7}
+\]
+lo que también puede expresarse diciendo que el homomorfismo canónico
+\[
+  \mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow(\mathfrak{I}+\mathfrak{L}^2)/\mathfrak{L}^2
+\]
+es biyectivo.
+
+Demostrados estos lemas, demostremos la primera afirmación de (16.9.13): basta
+\oldpage[IV-4]{51}
+evidentemente demostrar que la sucesión de los tallos, en un punto $x\in Y'$,
+de los haces que figuran en (16.9.13.1) es exacta. Ahora bien, si se pone
+$A=\mathcal{O}_{X,x}$, se puede escribir
+$\mathcal{O}_{Y,x}=A'=A/\mathfrak{I}$, donde $\mathfrak{I}$ es un ideal
+contenido en el ideal maximal de $A$, y luego
+$\mathcal{O}_{Y',x}=A'/\mathfrak{K}'$, donde $\mathfrak{K}'$ está engendrado
+por una sucesión $A'$-regular de elementos de $A'$, que son a su vez imágenes
+de los elementos de una sucesión $A'$-regular de elementos de $A$
+pertenecientes al ideal maximal de $A$. Si $\mathfrak{K}$ es el ideal
+engendrado por estos últimos y $\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$, se
+tiene $\mathcal{O}_{Y',x}=A/\mathfrak{L}$ y, como se está en la situación de
+(16.9.13.5), el homomorfismo canónico
+\[
+  \mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow(\mathfrak{I}+\mathfrak{L}^2)/\mathfrak{L}^2
+\]
+es biyectivo. Pero esto muestra que la sucesión
+\[
+  0\longrightarrow\mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow\mathfrak{L}/\mathfrak{L}^2
+  \longrightarrow(\mathfrak{L}/\mathfrak{I})/
+    (\mathfrak{L}/\mathfrak{I})^2\longrightarrow0
+\]
+es exacta (véase la demostración de (16.2.7)), y los módulos que figuran en
+esta sucesión son precisamente los tallos en $x$ de los haces de (16.9.13.1).
+La segunda afirmación resulta de que $\mathcal{N}_{Y'/Y}$ es un
+$\mathcal{O}_{Y'}$-módulo localmente \emph{libre} (16.9.8) y de Bourbaki,
+\emph{Alg.}, cap.~II, 3\textsuperscript{a} ed., §~1, n\textsuperscript{o}~11,
+prop.~21.

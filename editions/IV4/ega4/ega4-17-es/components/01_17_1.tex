@@ -1,0 +1,96 @@
+\subsection{Morfismos formalmente lisos, morfismos formalmente no ramificados, morfismos formalmente étale}
+\label{subsection:IV.17.1}
+
+\begin{definition}[17.1.1]
+\label{IV.17.1.1}
+Sea $f:X\to Y$ un morfismo de preesquemas. Se dice que $f$ es \emph{formalmente liso} (resp. \emph{formalmente no ramificado} o \emph{formalmente neto}, resp. \emph{formalmente étale}) si, para todo esquema afín $Y'$, todo subesquema cerrado $Y'_0$ de $Y'$ definido por un ideal nilpotente $\sh{J}$ de $\sh{O}_{Y'}$, y todo morfismo $Y'\to Y$, la aplicación
+\[
+\label{IV.17.1.1.1}
+  \Hom_Y(Y',X)\longrightarrow\Hom_Y(Y'_0,X)
+  \tag{17.1.1.1}
+\]
+deducida de la inyección canónica $Y'_0\to Y'$, es \emph{sobreyectiva} (resp. \emph{inyectiva}, resp. \emph{biyectiva}).
+\end{definition}
+
+Se dice también entonces que $X$ es \emph{formalmente liso} (resp. \emph{formalmente no ramificado} o \emph{formalmente neto}, resp. \emph{formalmente étale}) sobre $Y$.
+
+Es claro que decir que $f$ es formalmente étale significa que es \emph{a la vez} formalmente liso y formalmente no ramificado.
+
+\begin{remarks}[17.1.2]
+\label{IV.17.1.2}
+\begin{enumerate}
+  \item[(i)] Supongamos que $Y=\Spec(A)$ y $X=\Spec(B)$ son afines, de modo que $f$ proviene de un homomorfismo de anillos $\varphi:A\to B$. En virtud de (0, 19.3.1 y 0, 19.10.1), decir que $f$ es formalmente liso (resp. formalmente no ramificado, resp. formalmente étale) significa que $\varphi$ hace de $B$ una $A$-álgebra \emph{formalmente lisa} (resp. \emph{formalmente no ramificada}, resp. \emph{formalmente étale}) para las topologías \emph{discretas} sobre $A$ y $B$.
+  \item[(ii)] Para comprobar que $f$ es formalmente liso (resp. formalmente no ramificado, resp. formalmente étale), se puede, en la definición (17.1.1), restringirse al caso en que $\sh{J}^2=0$. En efecto, si $f$ satisface la condición correspondiente de la definición (17.1.1) en este caso particular, y si se tiene $\sh{J}^n=0$, se considera el subesquema cerrado $Y'_j$ de $Y'$ definido por el ideal $\sh{J}^{j+1}$ para $0\leq j\leq n-1$, de modo que $Y'_j$ es un subesquema cerrado de $Y'_{j+1}$ definido por un ideal de cuadrado cero; la hipótesis implica que cada una de las aplicaciones
+  \[
+    \Hom_Y(Y'_{j+1},X)\longrightarrow\Hom_Y(Y'_j,X)qquad(0\leq j\leq n-1)
+  \]
+  \oldpage[IV-4]{57}
+  es sobreyectiva (resp. inyectiva, resp. biyectiva); por composición, se concluye que lo mismo ocurre con (17.1.1.1).
+  \item[(iii)] Obsérvese que las propiedades del morfismo $f$ definidas en (17.1.1) son propiedades del \emph{funtor representable} $(0_{\mathrm{III}}, 8.1.8)$
+  \[
+    Y'\longmapsto\Hom_Y(Y',X)
+  \]
+  de la categoría de los $Y$-preesquemas en la categoría de los conjuntos; siguen teniendo sentido para \emph{cualquier} funtor contravariante con las mismas categorías de partida y de llegada, representable o no.
+  \item[(iv)] Supongamos que el morfismo $f$ es formalmente no ramificado (resp. formalmente étale); consideremos un $Y$-preesquema \emph{cualquiera} $Z$ y un subpreesquema cerrado $Z_0$ de $Z$ definido por un ideal \emph{localmente nilpotente} $\sh{J}$ de $\sh{O}_Z$. Entonces la aplicación
+  \[
+  \label{IV.17.1.2.1}
+    \Hom_Y(Z,X)\longrightarrow\Hom_Y(Z_0,X)
+    \tag{17.1.2.1}
+  \]
+  deducida de la inyección canónica $Z_0\to Z$, sigue siendo inyectiva (resp. biyectiva). En efecto, sea $(U_\alpha)$ un recubrimiento abierto afín de $Z$ tal que los ideales $\sh{J}|U_\alpha$ sean nilpotentes, y para todo $\alpha$, sea $U^0_\alpha$ la imagen inversa de $U_\alpha$ en $Z_0$, que es el subesquema cerrado de $U_\alpha$ definido por $\sh{J}|U_\alpha$. Sea $f_0:Z_0\to X$ un $Y$-morfismo; por hipótesis, para todo $\alpha$, existe a lo sumo un (resp. uno y solo uno) $Y$-morfismo $f_\alpha:U_\alpha\to X$ cuya restricción a $U^0_\alpha$ sea igual a $f_0|U^0_\alpha$. Se concluye inmediatamente que, si $f_\alpha$ y $f_\beta$ están definidos, entonces, para todo abierto afín $V\subset U_\alpha\cap U_\beta$, se tiene $f_\alpha|V=f_\beta|V$, pues las restricciones de estos morfismos a la imagen inversa $V_0$ de $V$ en $Z_0$ coinciden. Por tanto, existe a lo sumo un (resp. uno y solo uno) $Y$-morfismo $f:Z\to X$ cuya restricción a $Z_0$ coincide con $f_0$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[17.1.3]
+\label{IV.17.1.3}
+\begin{enumerate}
+  \item[(i)] Un monomorfismo de preesquemas es formalmente no ramificado; una inmersión abierta es formalmente étale.
+  \item[(ii)] La composición de dos morfismos formalmente lisos (resp. formalmente no ramificados, resp. formalmente étale) es formalmente lisa (resp. formalmente no ramificada, resp. formalmente étale).
+  \item[(iii)] Si $f:X\to Y$ es un $S$-morfismo formalmente liso (resp. formalmente no ramificado, resp. formalmente étale), lo mismo ocurre con $f_{(S')}:X_{(S')}\to Y_{(S')}$ para todo cambio $S'\to S$ del preesquema de base.
+  \item[(iv)] Si $f:X\to X'$ y $g:Y\to Y'$ son dos $S$-morfismos formalmente lisos (resp. formalmente no ramificados, resp. formalmente étale), lo mismo ocurre con $f\times_S g:X\times_S Y\to X'\times_S Y'$.
+  \item[(v)] Sean $f:X\to Y$, $g:Y\to Z$ dos morfismos; si $g\circ f$ es formalmente no ramificado, lo mismo ocurre con $f$.
+  \item[(vi)] Si $f:X\to Y$ es un morfismo formalmente no ramificado, lo mismo ocurre con $f_{\mathrm{red}}:X_{\mathrm{red}}\to Y_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+En virtud de (I, 5.5.12), basta demostrar (i), (ii) y (iii). Las dos afirmaciones de (i) son triviales. Para demostrar (ii), consideremos dos morfismos $f:X\to Y$, $g:Y\to Z$, un esquema afín $Z'$, un subesquema cerrado $Z'_0$ de $Z'$ definido por un ideal nilpotente y un morfismo $Z'\to Z$. Supongamos que $f$ y $g$ son formalmente lisos, y consideremos un
+\oldpage[IV-4]{58}
+$Z$-morfismo $u_0:Z'_0\to X$; la hipótesis sobre $g$ implica que existe un $Z$-morfismo $v:Z'\to Y$ tal que $f\circ u_0=v\circ j$ (donde $j:Z'_0\to Z'$ es la inyección canónica); la hipótesis sobre $f$ implica entonces que existe un morfismo $u:Z'\to X$ tal que $f\circ u=v$ y $u\circ j=u_0$, por tanto $(g\circ f)\circ u$ es igual al morfismo dado $Z'\to Z$ y $u\circ j=u_0$, lo que demuestra que $g\circ f$ es formalmente liso; se razona del mismo modo cuando se supone que $f$ y $g$ son formalmente no ramificados.
+
+Por último, para demostrar (iii), pongamos $X'=X_{(S')}$, $Y'=Y_{(S')}$, $f'=f_{(S')}$; consideremos un esquema afín $Y''$, un subesquema cerrado $Y''_0$ de $Y''$ definido por un ideal nilpotente y un morfismo $g:Y''\to Y'$ que hace de $Y''$ un $Y'$-preesquema; se sabe entonces por (I, 3.3.8) que $\Hom_{Y'}(Y'',X')$ se identifica canónicamente con $\Hom_Y(Y'',X)$ y $\Hom_{Y'}(Y''_0,X')$ con $\Hom_Y(Y''_0,X)$, y la conclusión resulta entonces inmediatamente de la definición (17.1.1).
+
+Obsérvese que una \emph{inmersión cerrada} no es necesariamente un morfismo formalmente liso.
+
+\begin{proposition}[17.1.4]
+\label{IV.17.1.4}
+Sean $f:X\to Y$, $g:Y\to Z$ dos morfismos, y supongamos que $g$ es formalmente no ramificado. Entonces, si $g\circ f$ es formalmente liso (resp. formalmente étale), lo mismo ocurre con $f$.
+\end{proposition}
+
+En efecto, sean $Y'$ un esquema afín, $Y'_0$ un subesquema cerrado de $Y'$ definido por un ideal nilpotente, $h:Y'\to Y$ un morfismo, $j:Y'_0\to Y'$ la inyección canónica, $u_0:Y'_0\to X$ un $Y$-morfismo, de modo que $f\circ u_0=h\circ j$. Supongamos que $g\circ f$ es formalmente liso; entonces existe un morfismo $u:Y'\to X$ tal que $u\circ j=u_0$ y $(g\circ f)\circ u=g\circ h$. Pero estas relaciones implican que $f\circ u$ y $h$ son dos $Z$-morfismos de $Y'$ en $Y$ tales que $(f\circ u)\circ j=h\circ j$; en virtud de la hipótesis de que $g$ es formalmente no ramificado, se deduce que $f\circ u=h$, es decir, $u$ es un $Y$-morfismo; por tanto, $f$ es formalmente liso. Teniendo en cuenta (17.1.3, (v)), esto demuestra la proposición.
+
+\begin{corollary}[17.1.5]
+\label{IV.17.1.5}
+Supongamos que $g$ es formalmente étale; entonces, para que $g\circ f$ sea formalmente liso (resp. formalmente no ramificado, resp. formalmente étale), es necesario y suficiente que $f$ lo sea.
+\end{corollary}
+
+Esto resulta de (17.1.4) y de (17.1.3, (ii) y (v)).
+
+\begin{proposition}[17.1.6]
+\label{IV.17.1.6}
+Sea $f:X\to Y$ un morfismo de preesquemas.
+\begin{enumerate}
+  \item[(i)] Sea $(U_\alpha)$ un recubrimiento abierto de $X$ y, para todo $\alpha$, sea $i_\alpha:U_\alpha\to X$ la inyección canónica. Para que $f$ sea formalmente liso (resp. formalmente no ramificado, resp. formalmente étale), es necesario y suficiente que cada uno de los morfismos $f\circ i_\alpha$ lo sea.
+  \item[(ii)] Sea $(V_\lambda)$ un recubrimiento abierto de $Y$. Para que $f$ sea formalmente liso (resp. formalmente no ramificado, resp. formalmente étale), es necesario y suficiente que cada una de las restricciones $f^{-1}(V_\lambda)\to V_\lambda$ de $f$ lo sea.
+\end{enumerate}
+\end{proposition}
+
+Observemos primero que (ii) es consecuencia de (i): en efecto, si $j_\lambda:V_\lambda\to Y$ e $i_\lambda:f^{-1}(V_\lambda)\to X$ son las inyecciones canónicas, la restricción $f_\lambda:f^{-1}(V_\lambda)\to V_\lambda$ de $f$ es tal que $j_\lambda\circ f_\lambda=f\circ i_\lambda$; si $f$ es formalmente liso (resp. formalmente no ramificado), lo mismo ocurre con $f\circ i_\lambda$, pues $i_\lambda$ es formalmente étale (17.1.3); pero, como $j_\lambda$ es formalmente étale, esto implica que $f_\lambda$ es formalmente liso (resp. formalmente no ramificado) en virtud de (17.1.5). Recíprocamente, si todos los $f_\lambda$ son formalmente lisos (resp. formalmente no ramificados), lo mismo ocurre con los $j_\lambda\circ f_\lambda$ (17.1.3), y por tanto también con $f$ en virtud de (i).
+
+\oldpage[IV-4]{59}
+Teniendo en cuenta que los $i_\alpha$ son formalmente étale, todo se reduce, pues, a demostrar que si los $f\circ i_\alpha$ son formalmente lisos (resp. formalmente no ramificados), lo mismo ocurre con $f$.
+
+Sean, pues, $Y'$ un esquema afín, $Y'_0$ un subesquema cerrado de $Y'$ definido por un ideal nilpotente $\sh{J}$, que se puede suponer tal que $\sh{J}^2=0$ (17.1.2, (ii)), y finalmente sea $g:Y'\to Y$ un morfismo. Supongamos dado un $Y$-morfismo $u_0:Y'_0\to X$; designemos por $W_\alpha$ (resp. $W^0_\alpha$) el preesquema inducido por $Y'$ (resp. $Y'_0$) sobre el abierto $u_0^{-1}(U_\alpha)$ (recuérdese que $Y'$ e $Y'_0$ tienen \emph{el mismo espacio topológico subyacente}). Supongamos primero que los $f\circ i_\alpha$ son \emph{formalmente no ramificados}, y demostremos que, si $u'$ y $u''$ son dos $Y$-morfismos de $Y'$ en $X$ cuyas restricciones a $Y'_0$ coinciden, entonces se tiene $u'=u''$. En efecto, teniendo en cuenta (17.1.2, (iv)), la hipótesis de que los $f\circ i_\alpha$ son no ramificados implica que, para todo $\alpha$, se tiene $u'|W_\alpha=u''|W_\alpha$, pues las restricciones de estos dos $Y$-morfismos a $W^0_\alpha$ coinciden. De aquí se sigue la conclusión en este caso.
+
+Supongamos ahora que todos los $f\circ i_\alpha$ son \emph{formalmente lisos} y demostremos que existe un $Y$-morfismo $u:Y'\to X$ del cual $u_0$ es la restricción a $Y'_0$. Ahora bien, puesto que $Y'$ es un \emph{esquema afín}, se puede aplicar (16.5.17), cuyas hipótesis se satisfacen y cuya conclusión demuestra precisamente la existencia de $u$.
+
+Por tanto, se puede decir que las nociones introducidas en (17.1.1) son \emph{locales} sobre $X$ y sobre $Y$, lo que permite siempre, en virtud de (17.1.2, (i)), reducirse al estudio de las \emph{álgebras} formalmente lisas (resp. formalmente no ramificadas, resp. formalmente étale).

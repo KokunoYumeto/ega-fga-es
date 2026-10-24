@@ -1,0 +1,634 @@
+\subsection{Criterios de exactitud de los funtores homológicos de módulos}
+\label{subsection:III.7.3}
+
+\begin{proposition}[7.3.1]
+\label{III.7.3.1}
+Sea $A$ un anillo, no necesariamente conmutativo, y sea
+$T_\bullet$ un funtor homológico covariante
+\emph{(T, II, 2.1)} de $\cat{Ab}_A$ en $\cat{Ab}$ que
+conmuta con las sumas directas. Sea $p$ un entero tal que
+$T_p$ y $T_{p-1}$ estén definidos. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_p$ es exacto por la derecha;
+  \item[(b)] $T_{p-1}$ es exacto por la izquierda;
+
+\oldpage[III]{181}
+
+  \item[(c)] para todo $A$-módulo a izquierda $M$, el homomorfismo
+    canónico y funtorial \eqref{III.7.2.2.1.eq}
+    \[
+      T_p(A_s)\otimes_A M
+      \longrightarrow
+      T_p(M)
+      \tag{7.3.1.1}\label{III.7.3.1.1.eq}
+    \]
+    es un isomorfismo;
+  \item[(d)] para todo $A$-módulo a izquierda $M$, el homomorfismo
+    \eqref{III.7.3.1.1.eq} es un epimorfismo;
+  \item[(e)] $T_p$ es isomorfo a un funtor de la forma
+    \[
+      M\longmapsto N\otimes_A M,
+    \]
+    donde $N$ es un $A$-módulo a derecha.
+\end{enumerate}
+Si, además, se verifican las condiciones de \sref{III.7.2.7} sobre
+$A$ y $\mathfrak m$, las condiciones precedentes son también
+equivalentes a
+\begin{enumerate}
+  \item[(f)] el homomorfismo canónico
+    \[
+      T_p(\varepsilon):T_p(A_s)\longrightarrow T_p(k)
+    \]
+    es un epimorfismo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Por definición de funtor homológico, $T_i$ es semiexacto para todo
+$i$ para el cual esté definido; además, para toda sucesión exacta
+\[
+  0\longrightarrow M'
+  \xrightarrow{u}M
+  \xrightarrow{v}M''
+  \longrightarrow0,
+\]
+se tiene
+\[
+  \Ker\bigl(T_{i-1}(u)\bigr)
+  =
+  \Coker\bigl(T_i(v)\bigr).
+\]
+Por tanto, es claro que (a) y (b) son equivalentes, y las demás
+afirmaciones resultan inmediatamente de \sref{III.7.2.5} y
+\sref{III.7.2.7}.
+\end{proof}
+
+\begin{corollary}[7.3.2]
+\label{III.7.3.2}
+Sea $A$ un anillo conmutativo. Con las notaciones de
+\sref{III.7.3.1}, supongamos que $T_p$ es exacto por la derecha. Si
+$f\in A$ no pertenece al anulador de ningún elemento no nulo de un
+$A$-módulo $M$, entonces tampoco pertenece al anulador de ningún
+elemento no nulo de $T_{p-1}(M)$. En particular, si $A$ es un
+dominio entero, el $A$-módulo $T_{p-1}(A)$ es sin torsión.
+\end{corollary}
+
+\begin{proof}
+Si $h_f$ designa la homotecia $x\mapsto fx$ de $M$, la hipótesis
+significa que $h_f$ es inyectiva. La condición (b) de
+\sref{III.7.3.1} muestra entonces que $T_{p-1}(h_f)$ también es
+inyectiva.
+\end{proof}
+
+\begin{proposition}[7.3.3]
+\label{III.7.3.3}
+Sea $A$ un anillo, y sea $T_\bullet$ un funtor homológico
+covariante de $\cat{Ab}_A$ en $\cat{Ab}$ que conmuta con las
+sumas directas. Sea $p$ un entero tal que $T_{p-1}$, $T_p$ y
+$T_{p+1}$ estén definidos. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_p$ es exacto;
+  \item[(b)] $T_{p+1}$ y $T_p$ son exactos por la derecha;
+  \item[(c)] $T_p$ y $T_{p-1}$ son exactos por la izquierda;
+  \item[(d)] $T_{p+1}$ es exacto por la derecha y $T_{p-1}$ es
+    exacto por la izquierda;
+  \item[(e)] para todo $A$-módulo $M$, los homomorfismos canónicos
+    \[
+      T_i(A_s)\otimes_A M
+      \longrightarrow
+      T_i(M)
+      \tag{7.3.3.1}\label{III.7.3.3.1.eq}
+    \]
+    son isomorfismos para $i=p$ e $i=p+1$;
+  \item[($\mathrm{e}'$)] para todo $A$-módulo $M$, los
+    homomorfismos \eqref{III.7.3.3.1.eq} son epimorfismos para
+    $i=p$ e $i=p+1$;
+  \item[(f)] para todo $A$-módulo $M$, el homomorfismo
+    \eqref{III.7.3.3.1.eq} es un isomorfismo para $i=p$, y
+    $T_p(A_s)$ es plano como $A$-módulo a derecha;
+  \item[($\mathrm{f}'$)] para todo $A$-módulo $M$, el
+    homomorfismo \eqref{III.7.3.3.1.eq} es un epimorfismo para
+    $i=p$, y $T_p(A_s)$ es plano como $A$-módulo a derecha.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La equivalencia de (a), (b), (c) y (d) resulta de la equivalencia
+de las condiciones (a) y (b) de \sref{III.7.3.1}. La equivalencia
+de (b), (e) y ($\mathrm{e}'$) resulta de la equivalencia de (a),
+(c) y (d) en \sref{III.7.3.1}. Finalmente, decir que $T_p(A_s)$
+es plano significa que el funtor
+\[
+  M\longmapsto T_p(A_s)\otimes_A M
+\]
+es exacto por la izquierda; la equivalencia de (a), (f) y
+($\mathrm{f}'$) resulta de nuevo de la equivalencia de (a), (c) y
+(d) en \sref{III.7.3.1}.
+\end{proof}
+
+\oldpage[III]{182}
+
+\begin{corollary}[7.3.4]
+\label{III.7.3.4}
+Supongamos que $A$ es conmutativo, que $T_p$ es exacto y que
+$T_p(A)$ es un $A$-módulo de presentación finita. Entonces la
+función
+\[
+  x\longmapsto
+  \operatorname{rank}_{\kres(x)}
+  \bigl(T_p(\kres(x))\bigr)
+\]
+es localmente constante en $X=\Spec(A)$ y, por tanto, es constante
+si $\Spec(A)$ es conexo.
+\end{corollary}
+
+\begin{proof}
+Por la condición (f) de \sref{III.7.3.3}, $T_p(A)$ es un
+$A$-módulo plano. Por consiguiente, es proyectivo de tipo finito, de
+modo que $\widetilde{T_p(A)}$ es un $\sh O_X$-módulo localmente
+libre (Bourbaki, \emph{Alg\`ebre commutative}, chap.~II, \S~5,
+no.~2, th.~1). Además,
+\[
+  T_p(\kres(x))
+  =
+  T_p(A)\otimes_A\kres(x)
+\]
+por la condición (e) de \sref{III.7.3.3}, y se sabe que el rango en
+$x$ del $A$-módulo $T_p(A)$ es localmente constante
+\emph{(loc.\ cit.)}. Esto prueba el corolario.
+\end{proof}
+
+\begin{proposition}[7.3.5]
+\label{III.7.3.5}
+Supongamos que $A$ es un anillo artiniano a izquierda cuyo cociente
+por su radical $\mathfrak m$ es un cuerpo $k$. Las condiciones de
+\sref{III.7.3.3} son también equivalentes a cada una de las
+siguientes:
+\begin{enumerate}
+  \item[(g)] el homomorfismo canónico
+    \[
+      T_i(\varepsilon):T_i(A_s)\longrightarrow T_i(k)
+    \]
+    es un epimorfismo para $i=p$ e $i=p+1$;
+  \item[(h)] $T_p(\varepsilon)$ es un epimorfismo y
+    $T_p(A_s)$ es plano como $A$-módulo a derecha o,
+    equivalentemente, es un $A$-módulo libre a derecha (Bourbaki,
+    \emph{Alg\`ebre commutative}, chap.~II, \S~3, no.~2,
+    cor.~2 de la prop.~5).
+\end{enumerate}
+Supongamos además que $A$ es conmutativo y que el $A$-módulo
+$T_p(k)$ tiene longitud finita $d$. Las condiciones precedentes son
+entonces también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[(i)] para todo $A$-módulo $M$ de longitud finita,
+    \[
+      \operatorname{length}\bigl(T_p(M)\bigr)
+      =
+      d\,\operatorname{length}(M);
+      \tag{7.3.5.1}\label{III.7.3.5.1.eq}
+    \]
+  \item[(j)]
+    \[
+      \operatorname{length}\bigl(T_p(A)\bigr)
+      =
+      d\,\operatorname{length}(A).
+      \tag{7.3.5.2}\label{III.7.3.5.2.eq}
+    \]
+\end{enumerate}
+\end{proposition}
+
+La equivalencia de (g) y (h) con las condiciones de
+\sref{III.7.3.3} resulta inmediatamente de \sref{III.7.2.7}. Para
+las demás afirmaciones utilizaremos el lema siguiente.
+
+\begin{lemma}[7.3.5.3]
+\label{III.7.3.5.3}
+Sean $\cat{K}$ y $\cat{K}'$ dos categorías abelianas, y sea
+\[
+  F:\cat{K}\longrightarrow\cat{K}'
+\]
+un funtor covariante aditivo. Supongamos que $F$ es semiexacto y que
+$F(S)$ tiene longitud finita en $\cat{K}'$ para todo objeto simple
+$S$ de $\cat{K}$. Entonces $F(E)$ tiene longitud finita en
+$\cat{K}'$ para todo objeto $E$ de longitud finita en $\cat{K}$.
+Para toda sucesión exacta
+\[
+  0\longrightarrow E'
+  \xrightarrow{u}E
+  \xrightarrow{v}E''
+  \longrightarrow0
+\]
+de objetos de longitud finita de $\cat{K}$, se tiene
+\[
+  \operatorname{length}F(E)
+  \leq
+  \operatorname{length}F(E')
+  +
+  \operatorname{length}F(E''),
+  \tag{7.3.5.4}\label{III.7.3.5.4.eq}
+\]
+y se da la igualdad en \eqref{III.7.3.5.4.eq} si y solo si
+\[
+  0\longrightarrow F(E')
+  \longrightarrow F(E)
+  \longrightarrow F(E'')
+  \longrightarrow0
+\]
+es exacta.
+\end{lemma}
+
+\begin{proof}
+La sucesión
+\[
+  F(E')\xrightarrow{F(u)}F(E)\xrightarrow{F(v)}F(E'')
+\]
+es exacta por hipótesis. Si $F(E')$ y $F(E'')$ tienen longitud
+finita, también la tienen $\Im(F(u))$ y $\Im(F(v))$. Puesto que
+$\Ker(F(v))=\Im(F(u))$, el objeto $F(E)$ tiene longitud finita, y
+\[
+  \begin{split}
+  \operatorname{length}F(E)
+  &=
+  \operatorname{length}\Im(F(u))
+  +
+  \operatorname{length}\Im(F(v))
+  \\
+  &\leq
+  \operatorname{length}F(E')
+  +
+  \operatorname{length}F(E'').
+  \end{split}
+  \tag{7.3.5.5}\label{III.7.3.5.5.eq}
+\]
+
+\oldpage[III]{183}
+
+Una inducción sobre la longitud de $E$ prueba la primera
+afirmación. Además, la igualdad en \eqref{III.7.3.5.5.eq} solo
+puede darse cuando
+\[
+  \operatorname{length}\Im(F(u))
+  =
+  \operatorname{length}F(E')
+\]
+y
+\[
+  \operatorname{length}\Im(F(v))
+  =
+  \operatorname{length}F(E'').
+\]
+La primera igualdad equivale a
+$\operatorname{length}\Ker(F(u))=0$, y por tanto a $\Ker(F(u))=0$;
+la segunda equivale a $\operatorname{length}\Coker(F(v))=0$, y por
+tanto a $\Coker(F(v))=0$.
+\end{proof}
+
+Sea ahora $M$ un $A$-módulo de longitud finita, con $A$
+conmutativo. Los cocientes de una serie de Jordan--Hölder de $M$
+son necesariamente isomorfos al $A$-módulo $k$. Una inducción
+sobre la longitud de $M$, usando \eqref{III.7.3.5.4.eq}, da por
+tanto
+\[
+  \operatorname{length}T_p(M)
+  \leq
+  d\,\operatorname{length}(M).
+  \tag{7.3.5.6}\label{III.7.3.5.6.eq}
+\]
+Se sigue también de \sref{III.7.3.5.3} que, si $T_p$ es exacto,
+entonces se da la igualdad \eqref{III.7.3.5.1.eq}. Así, la condición
+(a) de \sref{III.7.3.3} implica (i), y (i) implica claramente (j).
+Queda por probar el lema siguiente.
+
+\begin{lemma}[7.3.5.7]
+\label{III.7.3.5.7}
+La igualdad
+\[
+  \operatorname{length}T_p(A)
+  =
+  d\,\operatorname{length}A
+\]
+implica que $T_p(\varepsilon)$ es un epimorfismo y que $T_p(A)$ es
+un $A$-módulo plano.
+\end{lemma}
+
+\begin{proof}
+Partiendo de la sucesión exacta
+\[
+  0\longrightarrow\mathfrak m
+  \longrightarrow A
+  \longrightarrow k
+  \longrightarrow0,
+\]
+las fórmulas \eqref{III.7.3.5.4.eq} y
+\eqref{III.7.3.5.6.eq} dan
+\[
+  \begin{split}
+  \operatorname{length}T_p(A)
+  &\leq
+  \operatorname{length}T_p(\mathfrak m)
+  +
+  \operatorname{length}T_p(k)
+  \\
+  &\leq
+  d\bigl(
+    \operatorname{length}\mathfrak m
+    +
+    \operatorname{length}k
+  \bigr)
+  =
+  d\,\operatorname{length}A.
+  \end{split}
+\]
+Por \sref{III.7.3.5.3}, la igualdad solo puede darse si
+\[
+  0\longrightarrow T_p(\mathfrak m)
+  \longrightarrow T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow0
+  \tag{7.3.5.8}\label{III.7.3.5.8.eq}
+\]
+es exacta. Por \sref{III.7.2.7} y \sref{III.7.2.5}, $T_p$ es
+isomorfo a un funtor
+\[
+  M\longmapsto N\otimes_A M.
+\]
+La exactitud de \eqref{III.7.3.5.8.eq}, junto con la sucesión exacta
+de $\Tor$, muestra que
+\[
+  \Tor^A_1(N,k)=0.
+\]
+Se sigue que $N=T_p(A)$ es un $A$-módulo plano
+\emph{(0, 10.1.3)}.
+\end{proof}
+
+\begin{lemma}[7.3.6]
+\label{III.7.3.6}
+Sea $A$ un anillo, y sea $T_\bullet$ un funtor homológico
+covariante de $\cat{Ab}_A$ en $\cat{Ab}$ que conmuta con las
+sumas directas. Supongamos que $T_p$ y $T_{p+1}$ están definidos y
+que $T_p$ es exacto por la izquierda. Entonces $T_{p+1}$ es exacto
+si y solo si $T_{p+1}(A_s)$ es plano como $A$-módulo a derecha.
+\end{lemma}
+
+\begin{proof}
+Por \sref{III.7.3.1}, el homomorfismo canónico
+\[
+  T_{p+1}(A_s)\otimes_A M
+  \longrightarrow
+  T_{p+1}(M)
+\]
+es un isomorfismo de funtores. Basta ahora aplicar la definición de
+$A$-módulo plano.
+\end{proof}
+
+\begin{proposition}[7.3.7]
+\label{III.7.3.7}
+Sea $A$ un anillo, y sea $T_\bullet$ un funtor homológico
+covariante de $\cat{Ab}_A$ en $\cat{Ab}$ que conmuta con las
+sumas directas. Supongamos que existe un $i_0$ tal que $T_i$ es
+exacto para $i\leq i_0$. Entonces, para todo entero $p>i_0$, las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_q$ es exacto para $q\leq p$;
+  \item[(b)] $T_q(A_s)$ es plano como $A$-módulo a derecha para
+    $q\leq p$;
+  \item[(c)] para todo $A$-módulo $M$, el homomorfismo canónico
+    \[
+      T_q(A_s)\otimes_A M
+      \longrightarrow
+      T_q(M)
+    \]
+    es sobreyectivo para $q\leq p+1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La equivalencia de (a) y (b) resulta por inducción sobre $q$ de
+\sref{III.7.3.6}, pues $T_{i_0}$ es exacto por hipótesis. La
+equivalencia de (a) y (c) resulta de la equivalencia de las
+condiciones (a) y ($\mathrm{e}'$) en \sref{III.7.3.3}.
+\end{proof}
+
+\oldpage[III]{184}
+
+\begin{env}[7.3.8]
+\label{III.7.3.8}
+Sea $A$ un anillo conmutativo, sea $B$ una $A$-álgebra, no
+necesariamente conmutativa, y sea $T_\bullet$ un funtor homológico
+covariante de $\cat{Ab}_A$ en $\cat{Ab}$. Se sigue de las
+definiciones de \sref{III.7.1.3} que el funtor de $\cat{Ab}_B$ en
+$\cat{Ab}$ obtenido por extensión de escalares de $A$ a $B$,
+denotado por
+\[
+  T_\bullet^{(B)}=\bigl(T_i^{(B)}\bigr),
+\]
+es también un funtor homológico.
+\end{env}
+
+\begin{corollary}[7.3.9]
+\label{III.7.3.9}
+Supongamos que $T_\bullet$ satisface las condiciones generales de
+\sref{III.7.3.7} y conmuta con los límites inductivos. Supongamos
+además que $A$ es un dominio entero y que cada $T_n(A)$ es un
+$A$-módulo de presentación finita. Entonces, para todo entero $N$,
+existe un $f\in A-\{0\}$ tal que
+\[
+  T_p^{(A_f)}:\cat{Ab}_{A_f}\longrightarrow\cat{Ab}
+\]
+es exacto para $p\leq N$.
+\end{corollary}
+
+\begin{proof}
+Por hipótesis, $T_i$ es exacto para $i\leq i_0$, de modo que
+$T_i(A)$ es plano para estos valores de $i$. Por la condición (b) de
+\sref{III.7.3.7}, basta elegir $f$ de modo que
+\[
+  T_p^{(A_f)}(A_f)=T_p(A_f)
+\]
+sea un $A_f$-módulo libre para $i_0<p\leq N$. Ahora bien,
+\[
+  T_p(A_f)=\bigl(T_p(A)\bigr)_f,
+\]
+pues $T_p$ conmuta con los límites inductivos \sref{III.7.1.4}. Si
+$x$ es el punto genérico de $\Spec(A)$, entonces
+$\bigl(T_p(A)\bigr)_x$ es un espacio vectorial de dimensión finita
+sobre el cuerpo de fracciones de $A$. Como cada $T_p(A)$ es de
+presentación finita, existe un $f$ con la propiedad deseada
+(Bourbaki, \emph{Alg\`ebre commutative}, chap.~II, \S~5,
+no.~1, cor.\ de la prop.~2).
+
+Si solo hay un número finito de índices $i$ tales que $T_i\neq0$,
+se puede elegir $f\in A-\{0\}$ de modo que todos los
+$T_p^{(A_f)}$ sean exactos.
+\end{proof}
+
+\begin{corollary}[7.3.10]
+\label{III.7.3.10}
+Supongamos que $T_\bullet$ satisface las condiciones generales de
+\sref{III.7.3.7} y conmuta con los límites inductivos, que $A$ es
+conmutativo y noetheriano, y que cada $T_n(A)$ es un $A$-módulo de
+tipo finito. Entonces, para todo entero $N$, existe un abierto denso
+$U$ de $\Spec(A)$ tal que, para todo entero $p\leq N$, la función
+\[
+  x\longmapsto
+  \operatorname{rank}_{\kres(x)}
+  \bigl(T_p(\kres(x))\bigr)
+\]
+es constante en $U$.
+\end{corollary}
+
+\begin{proof}
+Sea $\mathfrak p$ un ideal primo minimal de $A$. El anillo
+$B=A/\mathfrak p$ es un dominio entero, y $\Spec(B)$ se identifica
+con una componente irreducible del espacio topológico $\Spec(A)$.
+Probaremos por inducción sobre $p\leq N$ que existe un
+$f_p\in B-\{0\}$ tal que, si $B'=B_{f_p}$, entonces
+$T_i^{(B')}$ es exacto y $T_i(B')$ es un $B'$-módulo de tipo finito
+para $i\leq p$.
+
+La afirmación es cierta para $p\leq i_0$ por hipótesis, tomando
+$f_p=1$, de modo que $B'=B=A/\mathfrak p$. En efecto, $T_p$ es
+entonces exacto, y $T_p(B)$ es isomorfo a
+\[
+  T_p(A)/T_p(\mathfrak p);
+\]
+por tanto, es un $A$-módulo y, \emph{a fortiori}, un $B$-módulo de
+tipo finito.
+
+Para el paso de inducción, sea $f_p$ la imagen canónica en $B$ de un
+elemento $g_p\in A$, y pongamos $A'=A_{g_p}$. Entonces
+\[
+  B'=A'/\mathfrak p',
+\]
+donde $\mathfrak p'$ es el ideal primo minimal
+$\mathfrak pA_{g_p}$ de $A'$. Puesto que
+\[
+  T_i(A_{g_p})=\bigl(T_i(A)\bigr)_{g_p},
+\]
+los $T_i(A')$ son $A'$-módulos de tipo finito. Así,
+$T_\bullet^{(A')}$ satisface las mismas hipótesis que $T_\bullet$,
+con $i_0$ sustituido por $p$.
+
+Podemos, por tanto, reducirnos al caso $A'=A$, en el que $T_p$ es
+exacto. La sucesión exacta
+\[
+  0\longrightarrow\mathfrak p
+  \longrightarrow A
+  \longrightarrow A/\mathfrak p
+  \longrightarrow0
+\]
+da entonces una sucesión exacta
+\[
+  T_{p+1}(A)
+  \longrightarrow
+  T_{p+1}(A/\mathfrak p)
+  \xrightarrow{\partial}
+  T_p(\mathfrak p)
+  \longrightarrow
+  T_p(A).
+\]
+Como $T_p$ es exacto, la última flecha es inyectiva. Por
+consiguiente, $T_{p+1}(A/\mathfrak p)$ es un cociente de
+$T_{p+1}(A)$ y es, por tanto, de tipo finito.
+
+La demostración de \sref{III.7.3.9} solo ha utilizado la hipótesis
+de tipo finito sobre $T_i(A)$ para $i\leq N$. Podemos, por tanto,
+aplicar ese corolario al dominio entero $B$, al funtor
+$T_\bullet^{(B)}$ y a $N=p+1$, lo que completa la inducción. Existe,
+en consecuencia, un $f_N\in B-\{0\}$ tal que $\Spec(B_{f_N})$ es un
+abierto $V$, denso en $\Spec(B)$, que no interseca ninguna otra
+componente irreducible de $\Spec(A)$.
+
+\oldpage[III]{185}
+
+Si se ha probado la afirmación para $B_{f_N}$, existe un abierto
+denso $W$ de $V$ en el que las funciones del enunciado son
+constantes, pues
+\[
+  A_x=(B_{f_N})_x
+  \qquad(x\in W).
+\]
+Repitiendo el mismo razonamiento para cada componente irreducible de
+$\Spec(A)$ se prueba el corolario. Podemos, por tanto, reducirnos al
+caso en que $A$ es un dominio entero. El razonamiento de
+\sref{III.7.3.9} da entonces un $f\in A-\{0\}$ tal que los
+$T_p(A_f)$ son $A_f$-módulos libres de tipo finito para $p\leq N$.
+La conclusión resulta de \sref{III.7.3.4}.
+\end{proof}
+
+\begin{proposition}[7.3.11]
+\label{III.7.3.11}
+Sea $A$ un anillo local conmutativo de cuerpo residual $k$, y sea
+$T_\bullet$ un funtor homológico covariante de $\cat{Ab}_A$ en
+$\cat{Ab}$ que conmuta con las sumas directas. Supongamos que
+existe un $i_0$ tal que $T_i$ es exacto para $i\leq i_0$, y que cada
+$T_n(A)$ es un $A$-módulo de presentación finita. Las condiciones
+equivalentes (a), (b) y (c) de \sref{III.7.3.7} implican las dos
+condiciones siguientes, y son equivalentes a ellas cuando $A$ es
+además reducido:
+\begin{enumerate}
+  \item[(d)] para todo $x\in\Spec(A)$,
+    \[
+      \operatorname{rank}_{\kres(x)}
+      T_q(\kres(x))
+      =
+      \operatorname{rank}_k T_q(k)
+      \qquad(q\leq p);
+    \]
+  \item[($\mathrm{d}'$)] para todo punto genérico $x_j$ de una
+    componente irreducible de $\Spec(A)$,
+    \[
+      \operatorname{rank}_{\kres(x_j)}
+      T_q(\kres(x_j))
+      =
+      \operatorname{rank}_k T_q(k)
+      \qquad(q\leq p).
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Puesto que $T_q(A)$ es un $A$-módulo de presentación finita, la
+condición (b) de \sref{III.7.3.7} equivale a decir que $T_q(A)$ es
+libre para $q\leq p$ (Bourbaki, \emph{Alg\`ebre commutative},
+chap.~II, \S~3, no.~2, cor.~2 de la prop.~5). La condición (c)
+implica
+\[
+  T_q(\kres(x))
+  =
+  T_q(A)\otimes_A\kres(x)
+  \qquad(q\leq p).
+\]
+Así, las condiciones equivalentes de \sref{III.7.3.7} implican (d),
+y es inmediato que (d) implica ($\mathrm{d}'$).
+
+Queda por mostrar que ($\mathrm{d}'$) implica (a) cuando $A$ es
+reducido. Razonamos por inducción sobre $q\leq p$, pues $T_q$ es
+exacto para $q\leq i_0$. Supongamos que $T_k$ es exacto para
+$k\leq q<p$. Mostraremos que $T_{q+1}(A)$ es un $A$-módulo libre.
+Por la hipótesis de inducción, el homomorfismo canónico
+\[
+  T_{q+1}(A)\otimes_A M
+  \longrightarrow
+  T_{q+1}(M)
+\]
+es un isomorfismo para todo $A$-módulo $M$, por la condición (c) de
+\sref{III.7.3.7} y \sref{III.7.3.3}. Aplicando esto a
+$M=\kres(x_j)$ y $M=k$, la condición ($\mathrm{d}'$) da
+\[
+  \operatorname{rank}_{\kres(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\kres(x_j)\bigr)
+  =
+  \operatorname{rank}_k T_{q+1}(k)
+\]
+para todo $j$. Se sigue que $T_{q+1}(A)$ es libre (Bourbaki,
+\emph{Alg\`ebre commutative}, chap.~II, \S~3, no.~2, prop.~7), lo
+que completa la demostración.
+\end{proof}
+
+Los resultados precedentes se mejorarán considerablemente para los
+funtores homológicos del tipo particular que estudiaremos en
+\sref{III.7.4}: los criterios de exactitud así obtenidos solo hacen
+intervenir uno de los $T_p$.

@@ -1,0 +1,381 @@
+\subsection{Criterio de planitud normal de Hironaka.}
+\label{subsection:IV.19.7}
+\label{IV.19.7}
+
+\begin{theorem}[19.7.1]
+\label{IV.19.7.1}
+\textup{(Hironaka).} Sean $A$ un anillo, $\mathfrak R$ un ideal de $A$, $\mathbf f=(f_1,\ldots,f_n)$ una sucesión de elementos de $A$ que es $(A/\mathfrak R)$-regular, $\mathfrak J=f_1A+\cdots+f_nA$ el ideal engendrado por $\mathbf f$, $\mathfrak L=\mathfrak J+\mathfrak R$ y $M$ un $A$-módulo.
+
+En este caso se tiene
+\[
+  (\operatorname{gr}_{\mathfrak R}^*(M))\otimes_A(A/\mathfrak J)
+  =(\operatorname{gr}_{\mathfrak R}^*(M))\otimes_A(A/\mathfrak L)
+  =(\operatorname{gr}_{\mathfrak R}^*(M))\otimes_{A/\mathfrak R}(A/\mathfrak L),
+\]
+pues
+\[
+  (\mathfrak R^nM/\mathfrak R^{n+1}M)\otimes_A(A/\mathfrak J)
+  =\mathfrak R^nM/(\mathfrak R^{n+1}+\mathfrak J\mathfrak R^n)M
+  =\mathfrak R^nM/(\mathfrak R^{n+1}+\mathfrak L\mathfrak R^n)M,
+\]
+y la última igualdad resulta de Bourbaki, \emph{Alg.}, cap. II, 3\textsuperscript{a} ed., § 3, n\textsuperscript{o} 7, cor. 2 de la prop. 6.
+
+Consideremos las condiciones siguientes:
+\begin{enumerate}
+  \item[a)] $\operatorname{gr}_{\mathfrak R}^*(M)$ es un $(A/\mathfrak R)$-módulo plano.
+  \item[b)] $\operatorname{gr}_{\mathfrak L}^*(M)$ es un $(A/\mathfrak L)$-módulo plano y el homomorfismo canónico ($0$, 15.1.5.2)
+  \[
+    \psi_M:((\operatorname{gr}_{\mathfrak R}^*(M))\otimes_A(A/\mathfrak L))[T_1,\ldots,T_n]\longrightarrow\operatorname{gr}_{\mathfrak L}^*(M)
+  \]
+  es biyectivo.
+  \item[c)] $(\operatorname{gr}_{\mathfrak R}^*(M))\otimes_{A/\mathfrak R}(A/\mathfrak L)$ es un $(A/\mathfrak L)$-módulo plano y la sucesión $\mathbf f$ es $(\operatorname{gr}_{\mathfrak R}^*(M))$-regular.
+  \item[d)] $\operatorname{gr}_{\mathfrak L}^*(M)$ es un $(A/\mathfrak L)$-módulo plano y, para todo $\mathfrak p\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$, $(\operatorname{gr}_{\mathfrak R}^*(M))_{\mathfrak p}$ es un $(A/\mathfrak R)_{\mathfrak p}$-módulo plano.
+\end{enumerate}
+Se tienen entonces las implicaciones
+\[
+\xymatrix@C=3em@R=1.6em{
+  a) \ar@{=>}[r] \ar@{=>}[dr] & c) \ar@{=>}[r] & b) \\
+  & d)
+}
+\]
+Cuando todo cociente de un submódulo de algún $\operatorname{gr}_{\mathfrak R}^p(M)$ ($p\geq0$) es idealmente separado respecto de $\mathfrak J$ (Bourbaki, \emph{Alg. comm.}, cap. III, § 5, n\textsuperscript{o} 1), las condiciones $a)$, $b)$ y $c)$ son equivalentes.
+
+\oldpage[IV-4]{213}
+
+Por último, cuando $A$ es noetheriano, los $f_i$ pertenecen al radical de $A$, la sucesión $\mathbf f$ es $\operatorname{gr}_{\mathfrak R}^*(A)$-regular y $M$ es un $A$-módulo de tipo finito, las condiciones $a)$, $b)$, $c)$ y $d)$ son equivalentes.
+\end{theorem}
+
+La implicación $a)\Rightarrow c)$ es inmediata ($0$, 15.1.13). Si se cumple $c)$, resulta de (19.5.5) que $\psi_M$ es biyectivo; además, $\operatorname{gr}_{\mathfrak R}^*(M)\otimes_A(A/\mathfrak L)=\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak L)$ es un $(A/\mathfrak L)$-módulo plano, luego lo mismo ocurre con $(\operatorname{gr}_{\mathfrak R}^*(M)\otimes_A(A/\mathfrak L))[T_1,\ldots,T_n]$ y, por consiguiente, con $\operatorname{gr}_{\mathfrak L}^*(M)$, puesto que $\psi_M$ es un $(A/\mathfrak L)$-isomorfismo; por tanto, $c)$ implica $b)$. El hecho de que $a)$ implique $b)$ muestra inmediatamente que $a)$ implica también $d)$.
+
+Cuando todo cociente de un submódulo\footnote{El texto impreso dice solamente «tout quotient d'un $\operatorname{gr}_{\mathfrak R}^p(M)$»; para aplicar (19.5.5) se requiere, como en el enunciado precedente, todo cociente de un submódulo de $\operatorname{gr}_{\mathfrak R}^p(M)$.} de algún $\operatorname{gr}_{\mathfrak R}^p(M)$ es idealmente separado respecto de $\mathfrak J$, resulta de (19.5.5) que la condición $b)$ implica que $\mathbf f$ es $(\operatorname{gr}_{\mathfrak R}^*(M))$-regular; además, como $(\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak L))[T_1,\ldots,T_n]$, isomorfo a $\operatorname{gr}_{\mathfrak L}^*(M)$, es entonces un $(A/\mathfrak L)$-módulo plano, lo mismo ocurre con $\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak L)$, que es un factor directo suyo; esto demuestra, pues, que $b)$ implica entonces $c)$. Por otra parte, bajo la misma hipótesis, $c)$ implica $a)$ en virtud de ($0$, 15.1.21) (donde la hipótesis noetheriana puede sustituirse por la hipótesis de que $M$ es idealmente separado respecto de $\mathfrak J$, en virtud de ($0_{\mathrm{III}}$, 10.2.1)).
+
+Queda, pues, por demostrar que, cuando $A$ es noetheriano, $M$ es de tipo finito y los $f_i$ pertenecen al radical de $A$, $d)$ implica $a)$.
+
+Por hipótesis existe un $A$-módulo \emph{libre de tipo finito} $N$ y una sucesión exacta $0\to R\to N\to M\to0$. Basta demostrar que $d)$ implica $b)$, puesto que todo cociente de un submódulo de algún $\operatorname{gr}_{\mathfrak R}^p(M)$ es entonces idealmente separado respecto de $\mathfrak J$, en virtud de que $\operatorname{gr}_{\mathfrak R}^p(M)$ es un $A$-módulo de tipo finito, $\mathfrak J$ está contenido en el radical de $A$ y $A$ es noetheriano (Bourbaki, \emph{Alg. comm.}, cap. III, § 5, n\textsuperscript{o} 1); en otros términos, se trata de ver que $\psi_M$ es \emph{biyectivo}.
+
+Como, por hipótesis, la sucesión $\mathbf f$ es $\operatorname{gr}_{\mathfrak R}^*(A)$-regular, también es $\operatorname{gr}_{\mathfrak R}^*(N)$-regular; por consiguiente, se puede aplicar (19.6.3), pues todo módulo cociente de un submódulo de algún $\operatorname{gr}_{\mathfrak R}^k(M)$ es entonces separado para la topología $\mathfrak J$-preádica, ya que los $f_i$ pertenecen al radical de $A$ por hipótesis. El diagrama conmutativo (19.6.2.1) se escribe aquí
+\begin{equation}
+\xymatrix{
+  & 0 \ar[d] \\
+  (\operatorname{gr}_{\mathfrak R}^*(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L))[T_1,\ldots,T_n] \ar[r]^-{\psi_R'} \ar[d] & \operatorname{gr}_{\mathfrak L}^*(R,N) \ar[d] \\
+  (\operatorname{gr}_{\mathfrak R}^*(N)\otimes_{A/\mathfrak R}(A/\mathfrak L))[T_1,\ldots,T_n] \ar[r]^-{\psi_N} \ar[d] & \operatorname{gr}_{\mathfrak L}^*(N) \ar[d] \\
+  (\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak L))[T_1,\ldots,T_n] \ar[r]^-{\psi_M} \ar[d] & \operatorname{gr}_{\mathfrak L}^*(M) \ar[d] \\
+  0 & 0
+}
+\tag{19.7.1.1}\label{IV.19.7.1.1}
+\end{equation}
+donde $\operatorname{gr}_{\mathfrak R}^*(R,N)$ (resp. $\operatorname{gr}_{\mathfrak L}^*(R,N)$) es el graduado asociado a $R$ para la filtración por los $R\cap\mathfrak R^mN$ (resp. $R\cap\mathfrak L^mN$); recordemos que en este diagrama las columnas son exactas y que $\psi_N$
+
+\oldpage[IV-4]{214}
+
+es \emph{biyectivo}. Se trata, en virtud de (19.6.3), de demostrar que $\psi_R'$ es \emph{sobreyectivo}, lo que se hará en varias etapas.
+
+\begin{env}[19.7.1.2]
+\label{IV.19.7.1.2}
+Pongamos $B=\operatorname{gr}_{\mathfrak R}^*A\otimes_{A/\mathfrak R}(A/\mathfrak L)$, $P=\operatorname{gr}_{\mathfrak R}^*(N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$ y $Q=\operatorname{gr}_{\mathfrak L}^*(R,N)$; puesto que $\psi_N$ es biyectivo, $P[T_1,\ldots,T_n]$ se identifica con $\operatorname{gr}_{\mathfrak L}^*(N)$, y $Q$ con un $B[T_1,\ldots,T_n]$-submódulo de $P[T_1,\ldots,T_n]$; veamos primero que se tiene
+\end{env}
+
+\begin{env}[19.7.1.3]
+\label{IV.19.7.1.3}
+\[
+  Q=(Q\cap P)[T_1,\ldots,T_n].
+\]
+\end{env}
+
+Para ello, pongamos $Z=Q/((Q\cap P)[T_1,\ldots,T_n])$; es un $B[T_1,\ldots,T_n]$-submódulo de
+\[
+  P[T_1,\ldots,T_n]/((Q\cap P)[T_1,\ldots,T_n])=(P/(Q\cap P))[T_1,\ldots,T_n].
+\]
+Como $(A/\mathfrak L)$-módulo, es por tanto isomorfo a un submódulo de una suma directa de $(A/\mathfrak L)$-módulos isomorfos a $P/(Q\cap P)=(P+Q)/Q$. Pero $(P+Q)/Q$ es un $(A/\mathfrak L)$-módulo isomorfo a un submódulo de $P[T_1,\ldots,T_n]/Q$, que no es otro que $\operatorname{gr}_{\mathfrak L}^*(M)$ en virtud del diagrama (19.7.1.1). Por tanto,
+\begin{equation}
+  \operatorname{Ass}_{A/\mathfrak L}(Z)\subset\operatorname{Ass}_{A/\mathfrak L}(\operatorname{gr}_{\mathfrak L}^*(M)).
+  \tag{19.7.1.4}\label{IV.19.7.1.4}
+\end{equation}
+
+Pero cada $\operatorname{gr}_{\mathfrak L}^m(M)$ es, por hipótesis, un $(A/\mathfrak L)$-módulo \emph{plano} de tipo finito, y por tanto proyectivo, puesto que $A/\mathfrak L$ es noetheriano; se tiene, por consiguiente, $\operatorname{Ass}_{A/\mathfrak L}(\operatorname{gr}_{\mathfrak L}^*(M))\subset\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$. Para ver que $Z=0$, basta, pues, (Bourbaki, \emph{Alg. comm.}, cap. IV, § 1, n\textsuperscript{o} 1, cor. 1 de la prop. 2 y n\textsuperscript{o} 3, prop. 7) ver que, para todo $\mathfrak q\in\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$, se tiene $Z_{\mathfrak q}=0$. Ahora bien, los ideales de $\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$ son los ideales de la forma $\mathfrak p/(\mathfrak L/\mathfrak R)$, donde $\mathfrak p\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$, y equivale por tanto a ver que $Z_{\mathfrak p}=0$ para todo $\mathfrak p\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$. Si $\mathfrak p=\mathfrak r/\mathfrak R$, donde $\mathfrak r$ es un ideal primo de $A$, se tiene $(\operatorname{gr}_{\mathfrak R}^*(M))_{\mathfrak p}=\operatorname{gr}_{\mathfrak R_{\mathfrak r}}^*(M_{\mathfrak r})$ y $(A/\mathfrak L)_{\mathfrak p}=A_{\mathfrak r}/\mathfrak L_{\mathfrak r}$, y las imágenes de los $f_i$ en $A_{\mathfrak r}$ forman una sucesión $\operatorname{gr}_{\mathfrak R_{\mathfrak r}}^*(A_{\mathfrak r})$-regular ($0$, 15.1.14); aplicando a $A_{\mathfrak r}$, $\mathfrak R_{\mathfrak r}$ y $M_{\mathfrak r}$ la implicación $a)\Rightarrow b)$ del enunciado, se ve que la hipótesis $d)$ implica que $\psi_{M_{\mathfrak r}}$ es biyectivo, y por tanto también $\psi_{R_{\mathfrak r}}'$ en virtud de (19.6.3); en otros términos, $Q_{\mathfrak r}=Q_{\mathfrak r}'[T_1,\ldots,T_n]$, donde se ha puesto $Q'=\operatorname{gr}_{\mathfrak R}^*(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$, que es aquí un $B$-submódulo de $P$; en particular, $Q_{\mathfrak r}'=Q_{\mathfrak r}\cap P_{\mathfrak r}$, de modo que finalmente se tiene $Z_{\mathfrak r}=Z_{\mathfrak p}=0$, lo que termina de demostrar (19.7.1.3).
+
+\begin{env}[19.7.1.5]
+\label{IV.19.7.1.5}
+En virtud de (19.7.1.3), para demostrar que $\psi_R'$ es sobreyectivo, basta mostrar que todo elemento homogéneo de grado $m$ de $Q\cap P$ es la imagen de un elemento del mismo grado de $\operatorname{gr}_{\mathfrak R}^*(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$. Ahora bien, los elementos de grado $m$ de $P$ se identifican (por $\psi_N$) con los elementos de $\operatorname{gr}_{\mathfrak L}^m(N)$ que pertenecen a $(\mathfrak R^mN+\mathfrak L^{m+1}N)/\mathfrak L^{m+1}N$; los que son imágenes de elementos de $\operatorname{gr}_{\mathfrak R}^m(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$ se identifican con los elementos de $\operatorname{gr}_{\mathfrak L}^m(N)$ pertenecientes a $((R\cap\mathfrak R^mN)+\mathfrak L^{m+1}N)/\mathfrak L^{m+1}N$. Bastará, pues, demostrar finalmente, para todo entero $m>0$, la inclusión
+\[
+  ((R\cap\mathfrak L^mN)+\mathfrak L^{m+1}N)\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^mN)+\mathfrak L^{m+1}N.
+\]
+Como $\mathfrak R\subset\mathfrak L$, se comprueba inmediatamente que el primer miembro de esta relación es igual a $(R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N))+\mathfrak L^{m+1}N$, de modo que todo se reduce a demostrar
+\end{env}
+
+\begin{env}[19.7.1.6]
+\label{IV.19.7.1.6}
+\[
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^mN)+\mathfrak L^{m+1}N.
+\]
+\end{env}
+
+\oldpage[IV-4]{215}
+
+Procederemos por inducción sobre $m$, suponiendo, pues, que (19.7.1.6) se cumple cuando se sustituye $m$ por un entero $m'<m$. Consideraremos, por otra parte, para $m$ fijo y un entero $d\geq0$, la relación
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^dN\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$*_d$}
+\end{equation}
+
+Está claro que basta demostrar $(*_d)$ para $d=m$, y por otra parte $(*_0)$ es trivialmente verdadera. Demostraremos $(*_d)$ por inducción sobre $d$; en otros términos, suponemos, para un $d\geq0$ fijo (con $d<m$), que $(*_d)$ es verdadera, y queremos demostrar
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^{d+1}N\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$*_{d+1}$}
+\end{equation}
+
+Consideremos para ello, para un $h\geq0$, la relación
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$**_{d+1,h}$}
+\end{equation}
+
+La hipótesis $(*_d)$ implica que $(**_{d+1,0})$ es verdadera. Demostraremos por inducción sobre $h$ que $(**_{d+1,h})$ es verdadera para todo $h\geq0$. Pero se tiene el
+
+\begin{lemma}[19.7.1.7]
+\label{IV.19.7.1.7}
+Sean $A$ un anillo noetheriano, $N$ un $A$-módulo de tipo finito, $E$ y $F$ dos submódulos de $N$, y $\mathfrak L$ un ideal de $A$. Para todo $k>0$ existe $h>0$ tal que
+\[
+  E\cap(F+\mathfrak L^hN)\subset(E\cap F)+\mathfrak L^kN.
+\]
+\end{lemma}
+
+En efecto, sea $\varphi:N\to N/(E\cap F)=N_1$ el homomorfismo canónico, y pongamos $E_1=\varphi(E)$, $F_1=\varphi(F)$, de modo que $E_1\cap F_1=0$ y $\varphi(E\cap(F+\mathfrak L^hN))=E_1\cap(F_1+\mathfrak L^hN_1)$. Se sabe ($0_{\mathrm I}$, 7.3.2) que existe $h$ tal que $(E_1+F_1)\cap\mathfrak L^hN_1\subset\mathfrak L^k(E_1+F_1)$; si se elige así $h$ y $x_1\in E_1$ es tal que existe $y_1\in F_1$ para el cual $x_1-y_1\in\mathfrak L^hN_1$, se deduce de lo anterior que existen $u_1\in\mathfrak L^kE_1$ y $v_1\in\mathfrak L^kF_1$ tales que $x_1=u_1$ e $y_1=v_1$; por tanto, $E_1\cap(F_1+\mathfrak L^hN_1)\subset\mathfrak L^kN_1$, lo que demuestra el lema.
+
+Basta entonces aplicar este lema con $E=R\cap\mathfrak L^mN$, $F=\mathfrak R^{d+1}N$ y tomar $k=m+1$ para deducir que, con el valor correspondiente de $h$, $(**_{d+1,h})$ implica $(*_{d+1})$.
+
+Supondremos, pues, en todo lo que sigue que $(**_{d+1,h})$ se cumple.
+
+\begin{env}[19.7.1.8]
+\label{IV.19.7.1.8}
+Demostración de $(**_{d+1,h+1})$: Primer caso: $h\leq m-d$.
+\end{env}
+
+Partamos, pues, de un elemento
+\begin{env}[19.7.1.9]
+\label{IV.19.7.1.9}
+\[
+  g\in R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\cap\mathfrak L^mN
+\]
+\end{env}
+congruente módulo $\mathfrak L^{m+1}N$ con un elemento $g_1\in R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)$; se tiene entonces
+\begin{env}[19.7.1.10]
+\label{IV.19.7.1.10}
+\[
+  g\in\mathfrak R^mN+\mathfrak L^{m+1}N.
+\]
+\end{env}
+
+Bastará demostrar que $g$ es también congruente módulo $\mathfrak L^{m+1}N$ con un elemento $g_2\in R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^{h+1}N)$, pues esto implicará $g_2\in\mathfrak L^mN$, ya que se tendrá $g\in\mathfrak L^mN$ y $g_2-g\in\mathfrak L^{m+1}N$. En el caso $h\leq m-d$ que consideramos, basta demostrar la relación
+\begin{env}[19.7.1.11]
+\label{IV.19.7.1.11}
+\[
+  (\mathfrak R^mN+\mathfrak L^{m+1}N)\cap\mathfrak R^dN\subset\mathfrak L^{m-d+1}\mathfrak R^dN+\mathfrak R^{d+1}N.
+\]
+\end{env}
+
+\oldpage[IV-4]{216}
+
+pues las relaciones (19.7.1.9) y (19.7.1.10) implican que $g$ pertenece al primer miembro de (19.7.1.11), y como $h\leq m-d$, se tiene $\mathfrak L^{m-d+1}\subset\mathfrak L^{h+1}$, lo que establecerá $(**_{d+1,h+1})$. Por otra parte, se tiene $\mathfrak R^mN\subset\mathfrak R^dN$, y la relación
+\begin{env}[19.7.1.12]
+\label{IV.19.7.1.12}
+\[
+  \mathfrak L^{m+1}N\cap\mathfrak R^dN\subset\mathfrak L^{m-d+1}\mathfrak R^dN
+\]
+\end{env}
+implicará (19.7.1.11). Como $N$ es un $A$-módulo libre de tipo finito, se ve que basta demostrar
+\begin{env}[19.7.1.13]
+\label{IV.19.7.1.13}
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d.
+\]
+\end{env}
+
+Bastará demostrar que, en general, para $d<m$, se tiene
+\begin{env}[19.7.1.14]
+\label{IV.19.7.1.14}
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak R^{d+1}.
+\]
+\end{env}
+En efecto, como $\mathfrak R\subset\mathfrak L$, y por tanto $\mathfrak L^{m-d+1}\mathfrak R^d\subset\mathfrak L^{m+1}$, la relación precedente implicará
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak L^{m+1}\cap\mathfrak R^{d+1}
+\]
+y por inducción sobre $d\leq m$ se concluirá
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak R^{m+1}
+\]
+de donde resulta (19.7.1.13), puesto que $\mathfrak R^{m+1}\subset\mathfrak L^{m-d+1}\mathfrak R^d$.
+
+Como $\mathfrak L=\mathfrak J+\mathfrak R$, la relación (19.7.1.14) se escribe también
+\begin{env}[19.7.1.15]
+\label{IV.19.7.1.15}
+\[
+\begin{aligned}
+  &(\mathfrak J^{m+1}+\mathfrak J^m\mathfrak R+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1})\cap\mathfrak R^d\\
+  &\quad\subset\mathfrak J^{m-d+1}\mathfrak R^d+\mathfrak J^{m-d}\mathfrak R^{d+1}+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1}+\mathfrak R^{d+1}\\
+  &\quad=\mathfrak J^{m-d+1}\mathfrak R^d+\mathfrak R^{d+1}.
+\end{aligned}
+\]
+\end{env}
+
+Veamos que esta inclusión es a su vez consecuencia de
+\begin{env}[19.7.1.16]
+\label{IV.19.7.1.16}
+\[
+  \mathfrak R^a\mathfrak J^b\cap\mathfrak R^{a+1}\subset\mathfrak R^{a+1}\mathfrak J^{b-1}
+\]
+\end{env}
+válida para $a\geq0$, $b\geq1$. En efecto, para demostrar (19.7.1.15) basta mostrar que, para $0<q\leq d$, se tiene
+\begin{env}[19.7.1.17]
+\label{IV.19.7.1.17}
+\[
+\begin{aligned}
+  &(\mathfrak J^{m+1}+\mathfrak J^m\mathfrak R+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1})\cap\mathfrak R^d\\
+  &\quad\subset(\mathfrak J^{m+1-q}\mathfrak R^q+\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1})\cap\mathfrak R^d
+\end{aligned}
+\]
+\end{env}
+pues para $q=d$ esto implicará (19.7.1.15). Ahora bien, para demostrar (19.7.1.17), basta proceder por inducción sobre $q$, suponiendo verdadera la relación para $q<d$; por hipótesis, un elemento del primer miembro se escribe entonces $y+z$, con $y\in\mathfrak J^{m+1-q}\mathfrak R^q$ y $z\in\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1}$; como $y+z\in\mathfrak R^d\subset\mathfrak R^{q+1}$, se deduce $y\in\mathfrak R^{q+1}$, puesto que $z\in\mathfrak R^{q+1}$; teniendo en cuenta (19.7.1.16), se tiene $y\in\mathfrak J^{m-q}\mathfrak R^{q+1}$, y por tanto
+\[
+  y+z\in\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1},\qquad\text{et}\qquad y+z\in\mathfrak R^d
+\]
+por hipótesis, lo que demuestra (19.7.1.17) con $q$ sustituido por $q+1$.
+
+Queda por establecer (19.7.1.16). El caso $b=1$ es trivial; supongamos $b\geq2$. Un elemento del primer miembro se escribe $a_1f_1+\cdots+a_nf_n$, con $a_i\in\mathfrak R^a\mathfrak J^{b-1}$, y su imagen en $Q=\mathfrak R^a/\mathfrak R^{a+1}$ es nula. Como la sucesión $\mathbf f$ es $Q$-regular, las relaciones de Koszul permiten elegir $c_{ij}\in\mathfrak R^a\mathfrak J^{b-2}$, con $c_{ij}=-c_{ji}$ y $c_{ii}=0$, tales que $a_i-\sum_j c_{ij}f_j\in\mathfrak R^{a+1}$.\footnote{Nota de corrección. El control de la filtración necesario para esta elección se demuestra como sigue. Pongamos $I=\mathfrak J$, $s=b-1$ y $K_\bullet=K_\bullet(\mathbf f;Q)$, con diferencial $\delta$. Para $u\in I^sK_1$ tal que $\delta_1u=0$, la regularidad da $u=\delta_2C$. Por ($0$, 15.1.7 y 15.1.9), $\operatorname{gr}_I(Q)\simeq(Q/IQ)[T_1,\ldots,T_n]$; el complejo de Koszul de las indeterminadas sobre este módulo es exacto en grados positivos. Si $C\in I^dK_2$ con $d<s-1$, su clase de grado $d$ es un ciclo. Para $d=0$, esta clase es nula, pues una preimagen por $\delta_3$ tendría grado de coeficiente $-1$. Para $d\geq1$, es el borde de una clase de grado de coeficiente $d-1$; al levantar esta clase a $D\in I^{d-1}K_3$ y sustituir $C$ por $C-\delta_3D$, se obtiene $C\in I^{d+1}K_2$, sin modificar $\delta_2C$. Después de a lo sumo $s-1$ pasos, $C\in I^{s-1}K_2$. Al levantar sus coeficientes a $\mathfrak R^a\mathfrak J^{b-2}$, se obtienen los $c_{ij}$ requeridos. No es necesario pasar al completado. El texto impreso concluye erróneamente que los coeficientes elegidos inicialmente pertenecen necesariamente a $\mathfrak R^{a+1}$.} Sustituyamos los $a_i$ por estos nuevos coeficientes: los términos antisimétricos se cancelan, de modo que la suma $a_1f_1+\cdots+a_nf_n$ no cambia y todos sus coeficientes pertenecen a $\mathfrak R^a\mathfrak J^{b-1}\cap\mathfrak R^{a+1}$; basta ahora razonar por
+
+\oldpage[IV-4]{217}
+
+inducción sobre $b$ para $b\geq1$ (siendo trivial el caso $b=1$) para terminar de demostrar (19.7.1.16) y, por consiguiente, también $(**_{d+1,h+1})$ para $h\leq m-d$.
+
+\begin{env}[19.7.1.18]
+\label{IV.19.7.1.18}
+Demostración de $(**_{d+1,h+1})$; Segundo caso: $h>m-d$.
+\end{env}
+
+Demostremos primero que, para todo $h\geq0$, se tiene
+\begin{env}[19.7.1.19]
+\label{IV.19.7.1.19}
+\[
+  R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\subset\mathfrak J^h(R\cap\mathfrak R^dN)+\mathfrak L^{h+1}\mathfrak R^dN+\mathfrak R^{d+1}N.
+\]
+\end{env}
+
+Consideremos para ello un elemento $z$ del primer miembro de (19.7.1.19). Observemos que se tiene $\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN=\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak J^hN$, puesto que $\mathfrak L=\mathfrak R+\mathfrak J$; consideraremos la clase $\bar z$ de $z$ en $\operatorname{gr}_{\mathfrak J}^h(\operatorname{gr}_{\mathfrak R}^d(N))$, que, en virtud de (19.5.5) y de la hipótesis sobre $\mathbf f$, se identifica con un $(A/\mathfrak L)$-submódulo de $\operatorname{gr}_{\mathfrak L}^{h+d}(N)$. Del hecho de que $z\in R$ mostraremos que se tiene incluso (con la identificación precedente)
+\begin{env}[19.7.1.20]
+\label{IV.19.7.1.20}
+\[
+  \bar z\in\operatorname{gr}_{\mathfrak L}^{h+d}(R,N).
+\]
+\end{env}
+
+En efecto, se observó, en la demostración de (19.7.1.3), que, para todo ideal primo $\mathfrak r$ de $A$ tal que $\mathfrak p=\mathfrak r/\mathfrak R\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$, la aplicación $\psi_{R_{\mathfrak r}}'$ es biyectiva y, por consiguiente, la relación (19.7.1.6), sustituyendo todos los módulos por sus localizados en $\mathfrak r$, es verdadera. Como $z$ pertenece a $R\cap(\mathfrak R^dN+\mathfrak L^{d+1}N)$, su imagen $z/1$ en $R_{\mathfrak r}$ pertenece a $(R_{\mathfrak r}\cap\mathfrak R_{\mathfrak r}^dN_{\mathfrak r})+\mathfrak L_{\mathfrak r}^{d+1}N_{\mathfrak r}$; por tanto, la imagen $\bar z/1$ de $\bar z$ en $\operatorname{gr}_{\mathfrak L_{\mathfrak r}}^{h+d}(N_{\mathfrak r})$ pertenece a
+\[
+  \operatorname{gr}_{\mathfrak L_{\mathfrak r}}^{h+d}(R_{\mathfrak r},N_{\mathfrak r})
+  =(\operatorname{gr}_{\mathfrak L}^{h+d}(R,N))_{\mathfrak r}
+  =(\operatorname{gr}_{\mathfrak L}^{h+d}(R,N))_{\mathfrak q},
+\]
+donde $\mathfrak q=\mathfrak r/\mathfrak L$. En otros términos, la imagen de $\bar z$ por la aplicación canónica
+\[
+  (\operatorname{gr}_{\mathfrak L}^{h+d}(N))_{\mathfrak q}\longrightarrow(\operatorname{gr}_{\mathfrak L}^{h+d}(M))_{\mathfrak q}
+\]
+es nula para todo $\mathfrak q\in\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$. Como se vio en la demostración de (19.7.1.3) que
+\[
+  \operatorname{Ass}_{A/\mathfrak L}(\operatorname{gr}_{\mathfrak L}^{h+d}(M))\subset\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L),
+\]
+se deduce (Bourbaki, \emph{Alg. comm.}, cap. IV, § 1, n\textsuperscript{o} 1, cor. 1 de la prop. 2 y n\textsuperscript{o} 3, prop. 7) que la imagen de $\bar z$ por la aplicación canónica $\operatorname{gr}_{\mathfrak L}^{h+d}(N)\to\operatorname{gr}_{\mathfrak L}^{h+d}(M)$ es nula, es decir, que se tiene la relación (19.7.1.20).
+
+Sentado esto, por definición se puede escribir
+\begin{env}[19.7.1.21]
+\label{IV.19.7.1.21}
+\[
+  z\equiv\sum_{|\mathbf p|=h}c_{\mathbf p}\mathbf f^{\mathbf p}\pmod{\mathfrak R^{d+1}N}
+\]
+\end{env}
+donde se pone, como de costumbre, $\mathbf p=(p_1,\ldots,p_n)$, $\mathbf f^{\mathbf p}=f_1^{p_1}f_2^{p_2}\cdots f_n^{p_n}$, $|\mathbf p|=p_1+\cdots+p_n$, y donde $c_{\mathbf p}\in\mathfrak R^dN$. Además, como $\psi_N$ identifica $\operatorname{gr}_{\mathfrak L}^*(N)$ con $(\operatorname{gr}_{\mathfrak R}^*(N)\otimes_{A/\mathfrak R}(A/\mathfrak L))[T_1,\ldots,T_n]$, los $c_{\mathbf p}$ están determinados módulo $\mathfrak R^d\mathfrak LN$, y si $\bar c_{\mathbf p}$ es la clase de $c_{\mathbf p}$ módulo $\mathfrak R^d\mathfrak LN$, se tiene, por la identificación precedente,
+\begin{env}[19.7.1.22]
+\label{IV.19.7.1.22}
+\[
+  \bar z=\sum_{|\mathbf p|=h}\bar c_{\mathbf p}T^{\mathbf p}.
+\]
+\end{env}
+Utilizando (19.7.1.3), se deduce que necesariamente se tiene, para todo $\mathbf p$ tal que $|\mathbf p|=h$ (identificándose esta vez $\bar c_{\mathbf p}$ por $\psi_N$ con un elemento de $\operatorname{gr}_{\mathfrak R}^d(N)$),
+\begin{env}[19.7.1.23]
+\label{IV.19.7.1.23}
+\[
+  \bar c_{\mathbf p}\in\operatorname{gr}_{\mathfrak R}^d(R,N).
+\]
+\end{env}
+Pero, puesto que $d<m$, la hipótesis de que $(*_d)$ es verdadera implica que $\bar c_{\mathbf p}$ pertenece a la imagen de $\psi_R'$, y por tanto que se puede suponer que $c_{\mathbf p}\in(R\cap\mathfrak R^dN)+\mathfrak R^d\mathfrak LN$. La relación (19.7.1.21) da entonces
+\[
+  z\in\mathfrak J^h(R\cap\mathfrak R^dN)+\mathfrak J^h\mathfrak R^d\mathfrak LN+\mathfrak R^{d+1}N
+\]
+y, como $\mathfrak J\subset\mathfrak L$, esto demuestra (19.7.1.19).
+
+\oldpage[IV-4]{218}
+
+En particular, se puede escribir
+\[
+  g=t+g_2
+\]
+con $t\in\mathfrak J^h(R\cap\mathfrak R^dN)$ y $g_2\in\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN$; además, como $t\in R$ y $g\in R$, se tiene $g_2\in R$. Por otra parte, utilizando la hipótesis $h\geq m-d+1$, se ve que $t\in\mathfrak L^{m+1}N$. El elemento $g_2$ satisface, pues, todas las condiciones enunciadas al principio de (19.7.1.8), lo que termina la demostración de (19.7.1).
+
+\begin{remarks}[19.7.2]
+\label{IV.19.7.2}
+\begin{enumerate}
+  \item[(i)] Cuando se supone que $\operatorname{gr}_{\mathfrak R}^*(A)$ es un $(A/\mathfrak R)$-módulo \emph{plano}, la hipótesis de que la sucesión $\mathbf f$ es $(A/\mathfrak R)$-regular implica que también es $\operatorname{gr}_{\mathfrak R}^*(A)$-regular ($0$, 15.1.14). Obsérvese que este será el caso cuando $A$ y $A/\mathfrak R$ sean anillos regulares ($0$, 17.3.6): en efecto, $\mathfrak R$ es entonces un ideal regular de $A$ (19.1.2), y por tanto cuasirregular; localizando en los ideales maximales de $A$ que contienen $\mathfrak R$ y utilizando ($0$, 15.1.7), se ve que $\operatorname{gr}_{\mathfrak R}^*(A)$ es un $(A/\mathfrak R)$-módulo \emph{proyectivo}.
+  \item[(ii)] Sería interesante poder demostrar la última conclusión de (19.7.1) suponiendo solamente que existe una $A$-álgebra $B$ que es un anillo noetheriano, para el cual $\mathfrak JB$ está contenido en el radical de $B$, y que $M$ es un $B$-módulo de tipo finito.
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[19.7.3]
+\label{IV.19.7.3}
+Sean $A$ un anillo local noetheriano, $\mathfrak m$ su ideal maximal, $\mathfrak R$ un ideal de $A$ tal que el anillo $A/\mathfrak R$ sea regular y de dimensión $n$, y $M$ un $A$-módulo de tipo finito. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $\operatorname{gr}_{\mathfrak R}^*(M)$ es un $(A/\mathfrak R)$-módulo plano.
+  \item[b)] Si $P(T)$ y $Q(T)$ son las series de Poincaré de los $(A/\mathfrak m)$-módulos graduados $\operatorname{gr}_{\mathfrak m}^*(M)$ y $\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak m)$, se tiene
+\end{enumerate}
+\begin{equation}
+  Q(T)=P(T)(1-T)^n.
+  \tag{19.7.3.1}\label{IV.19.7.3.1}
+\end{equation}
+
+Sea $\mathbf f=(f_1,\ldots,f_n)$ una sucesión de elementos de $A$ tales que las imágenes de los $f_i$ en $A/\mathfrak R$ formen un sistema regular de parámetros de $A/\mathfrak R$ ($0$, 17.1.6), de modo que $\mathbf f$ es una sucesión $(A/\mathfrak R)$-regular; además, si $\mathfrak J$ es el ideal engendrado por $\mathbf f$, se tiene $\mathfrak J+\mathfrak R=\mathfrak m$, y como $A/\mathfrak m$ es un cuerpo, $\operatorname{gr}_{\mathfrak m}^*(M)$ es un $(A/\mathfrak m)$-módulo plano. Como $A$ es noetheriano y $M$ un $A$-módulo de tipo finito, se puede aplicar la equivalencia de $a)$ y $b)$ en (19.7.1). Además, como $A/\mathfrak m$ es un cuerpo y $\psi_M$ es sobreyectivo, el hecho de que $\psi_M$ sea biyectivo equivale a decir que, para todo $h\geq0$, $\operatorname{gr}_{\mathfrak m}^h(M)$ y el submódulo de los elementos de grado $h$ de $(\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak m))[T_1,\ldots,T_n]$ tienen el mismo rango sobre $A/\mathfrak m$; pero, para el segundo de estos módulos, el rango en cuestión es evidentemente igual a
+\[
+  \sum_{r=0}^h\binom{r+n-1}{n-1}\operatorname{rg}(\operatorname{gr}_{\mathfrak R}^{h-r}(M)\otimes_{A/\mathfrak R}(A/\mathfrak m)).
+\]
+Como
+\[
+  (1-T)^{-n}=\sum_{r=0}^{\infty}\binom{r+n-1}{n-1}T^r,
+\]
+esto demuestra que la relación (19.7.3.1) es necesaria y suficiente para que $\psi_M$ sea biyectivo.
+\end{corollary}
+
+\begin{corollary}[19.7.4]
+\label{IV.19.7.4}
+Sean $X$ un preesquema localmente noetheriano, $Y$ un subpreesquema cerrado de $X$, regular y conexo, y $\sh F$ un $\sh O_X$-módulo coherente normalmente plano (6.10.1) a lo largo de $Y$. Entonces existe una serie formal $R\in\mathbb{Q}[[T]]$ (independiente de $x\in Y$) tal que, para todo $x\in Y$, la serie de Poincaré de $\operatorname{gr}_{\mathfrak m_x}^*(\sh F_x)$ viene dada por la fórmula
+\begin{equation}
+  P_x(\sh F)(T)=R(T)(1-T)^{-n}\qquad\text{donde }n=\dim(\sh O_{Y,x}).
+  \tag{19.7.4.1}\label{IV.19.7.4.1}
+\end{equation}
+
+\oldpage[IV-4]{219}
+
+Sea $\sh J$ el ideal coherente de $\sh O_X$ que define $Y$; la hipótesis sobre $\sh F$ significa que $\operatorname{gr}_{\sh J}^*(\sh F)$ es un $\sh O_Y$-módulo plano. Para todo $x\in Y$ se puede, pues, aplicar (19.7.3) tomando $A=\sh O_{X,x}$, $\mathfrak R=\sh J_x$ y $M=\sh F_x$; cumpliéndose por hipótesis la condición $a)$, la serie de Poincaré $P_x(\sh F)(T)$ es entonces igual a $R_x(T)(1-T)^{-n}$, donde $R_x(T)$ es la serie de Poincaré de $\operatorname{gr}_{\sh J_x}^*(\sh F_x)\otimes_{\sh O_{Y,x}}k(x)$. Ahora bien, cada uno de los $\sh O_Y$-módulos $\sh J^h\sh F/\sh J^{h+1}\sh F$ es plano y coherente por hipótesis, y por tanto localmente libre (2.1.12); como se supone que $Y$ es conexo, cada uno de los $\sh J^h\sh F/\sh J^{h+1}\sh F$ tiene rango constante en $Y$, lo que demuestra que la serie de Poincaré $R_x(T)$ es independiente de $x\in Y$.
+\end{corollary}
+
+\begin{corollary}[19.7.5]
+\label{IV.19.7.5}
+Sean $X$ un preesquema localmente noetheriano, $Y$ un subpreesquema cerrado de $X$ y $Z$ un subpreesquema cerrado de $Y$; se supone que $Y$ y $Z$ son regulares. Sea $\sh F$ un $\sh O_X$-módulo coherente.
+\begin{enumerate}
+  \item[(i)] Si $\sh F$ es normalmente plano a lo largo de $Y$ en los puntos de $Z$ (cf. (11.3.4) para la definición de la planitud normal en un punto), entonces $\sh F$ es normalmente plano a lo largo de $Z$.
+  \item[(ii)] Supongamos además que $Z$ es conexo y que $\sh O_X$ es normalmente plano a lo largo de $Y$ en los puntos de $Z$ (lo que ocurre, en particular, si $X$ es regular en los puntos de $Z$). Si $\sh F$ es normalmente plano a lo largo de $Z$ y existe un punto $z\in Z$ tal que $\sh F$ es normalmente plano a lo largo de $Y$ en el punto $z$, entonces $\sh F$ es normalmente plano a lo largo de $Y$ en los puntos de $Z$.
+\end{enumerate}
+
+Sean $\sh K$ y $\sh L\supset\sh K$ los ideales coherentes de $\sh O_X$ que definen respectivamente $Y$ y $Z$. Para todo punto $z\in Z$, la inmersión canónica $Z\to Y$ es regular en el punto $z$, puesto que $Y$ y $Z$ son regulares en ese punto (19.1.1); en otros términos, existe una sucesión $(f_i)_{1\leq i\leq n}$ de elementos de $\sh O_{X,z}$ que es $\sh K_z$-regular y tal que $\sh L_z=\sh K_z+\sum_i f_i\sh O_{X,z}$.
+\begin{enumerate}
+  \item[(i)] La hipótesis significa que $\operatorname{gr}_{\sh K_z}^*(\sh F_z)$ es un $\sh O_{Y,z}$-módulo plano; implica, pues, que $\operatorname{gr}_{\sh L_z}^*(\sh F_z)$ es un $\sh O_{Z,z}$-módulo plano, en virtud de que en (19.7.1), $a)$ implica $b)$.
+  \item[(ii)] La hipótesis suplementaria sobre $X$ implica que la sucesión $(f_i)$ es $\operatorname{gr}_{\sh K_z}^*(\sh O_{X,z})$-regular\footnote{El texto impreso dice $\operatorname{gr}_{\sh K_z}^*(\sh F_z)$; (19.7.2) y la hipótesis suplementaria sobre $X$ se aplican a $\sh O_{X,z}$.} en todo punto $z\in Z$ (19.7.2). Por otra parte, como $Z$ es regular y conexo, es íntegro; si $\operatorname{gr}_{\sh K_z}^*(\sh F_z)$ es $\sh O_{Y,z}$-plano en un punto $z\in Z$, entonces, como el punto genérico $\zeta$ de $Z$ es una generalización de $z$, se concluye que $\operatorname{gr}_{\sh K_\zeta}^*(\sh F_\zeta)$ es $\sh O_{Y,\zeta}$-plano ($0_{\mathrm I}$, 6.3.1). Se deduce que, si en todo punto $z'$ de $Z$, $\operatorname{gr}_{\sh L_{z'}}^*(\sh F_{z'})$ es un $\sh O_{Z,z'}$-módulo plano, entonces $\operatorname{gr}_{\sh K_{z'}}^*(\sh F_{z'})$ es un $\sh O_{Y,z'}$-módulo plano, pues se puede aplicar la equivalencia de $a)$ y $d)$ en (19.7.1).
+\end{enumerate}
+\end{corollary}

@@ -1,0 +1,449 @@
+\subsection{Propiedades funtoriales de los invariantes normales de una inmersión}
+\label{IV.16.2}
+
+\begin{env}[16.2.1]
+\label{IV.16.2.1}
+Sean $f=(\psi,\theta):Y\to X$,
+$f'=(\psi',\theta'):Y'\to X'$ dos morfismos de espacios anillados tales que los
+homomorfismos $\theta^\#$ y $\theta'^\#$ sean sobreyectivos; consideremos un
+diagrama conmutativo de morfismos de espacios anillados
+\[
+  \xymatrix{
+    Y \ar[r]^f & X \\
+    Y' \ar[r]_{f'} \ar[u]^u & X' \ar[u]_v
+  }
+  \tag{16.2.1.1}
+  \label{IV.16.2.1.1}
+\]
+Pongamos $u=(\rho,\lambda)$, $v=(\sigma,\mu)$. Se tiene
+$\rho^*(\psi^*(\mathcal{O}_X))=
+\psi'^*(\sigma^*(\mathcal{O}_X))$ y, por consiguiente, un diagrama conmutativo
+de homomorfismos de haces de anillos sobre $Y'$
+\[
+  \xymatrix{
+    \rho^*(\psi^*(\mathcal{O}_X))
+      =\psi'^*(\sigma^*(\mathcal{O}_X))
+      \ar[r]^-{\psi'^*(\mu^\#)}
+      \ar[d]_{\rho^*(\theta^\#)}
+      & \psi'^*(\mathcal{O}_{X'}) \ar[d]^{\theta'^\#} \\
+    \rho^*(\mathcal{O}_Y) \ar[r]_-{\lambda^\#}
+      & \mathcal{O}_{Y'}
+  }
+\]
+de donde se concluye, si $\mathscr{I}$ y $\mathscr{I}'$ son los núcleos de
+$\theta^\#$ y $\theta'^\#$, que se tiene
+$\psi'^*(\mu^\#)(\rho^*(\mathscr{I}))\subset\mathscr{I}'$, teniendo en cuenta la
+exactitud del funtor $\rho^*$. Se deduce inmediatamente que, para todo entero
+$n$,
+$\psi'^*(\mu^\#)(\rho^*(\mathscr{I}^n))\subset\mathscr{I}'^n$, lo que muestra
+que $\psi'^*(\mu^\#)$ define, al pasar a los cocientes, un homomorfismo de
+haces de anillos
+\[
+  \nu_n:
+  \rho^*(\psi^*(\mathcal{O}_X)/\mathscr{I}^{n+1})
+  \longrightarrow
+  \psi'^*(\mathcal{O}_{X'})/\mathscr{I}'^{n+1}
+  \tag{16.2.1.2}
+  \label{IV.16.2.1.2}
+\]
+y, por consiguiente, un morfismo de espacios anillados
+$w_n=(\rho,\nu_n):Y'^{(n)}\to Y^{(n)}$ (que, para $n=0$, no es sino
+$u$). De esta definición se sigue inmediatamente que los diagramas
+\[
+  \xymatrix@R=1pc{
+    Y^{(n)} \ar[r]^-{h_{mn}} & Y^{(m)} \ar[r]^-{h_m} & X \\
+    & & & (n\leq m) \\
+    Y'^{(n)} \ar[r]_-{h'_{mn}} \ar[uu]^-{w_n}
+      & Y'^{(m)} \ar[r]_-{h'_m} \ar[uu]^-{w_m}
+      & X' \ar[uu]_-v
+  }
+\]
+(donde las flechas horizontales son los morfismos canónicos (16.1.2)) son
+conmutativos.
+
+Al pasar a los cocientes a partir de los homomorfismos (16.2.1.2), y teniendo en
+\oldpage[IV-4]{10}
+cuenta la exactitud del funtor $\rho^*$, se obtiene un dihomomorfismo
+de álgebras graduadas (relativo al homomorfismo
+$\lambda^\#:\rho^*(\mathcal{O}_Y)\to\mathcal{O}_{Y'}$)
+\[
+  \operatorname{gr}(u):
+  \rho^*(\mathscr{G}r_\bullet(f))
+  \longrightarrow\mathscr{G}r_\bullet(f')
+  \tag{16.2.1.3}
+  \label{IV.16.2.1.3}
+\]
+(o, si se prefiere, un $\rho$-morfismo (0\textsubscript{I}, 3.5.1)
+$\mathscr{G}r_\bullet(f)\to\mathscr{G}r_\bullet(f')$), y en particular un
+dihomomorfismo de los haces conormales
+\[
+  \operatorname{gr}_1(u):
+  \rho^*(\mathscr{G}r_1(f))\longrightarrow\mathscr{G}r_1(f').
+\]
+Es además inmediato que estos homomorfismos dan lugar a un diagrama
+conmutativo
+\[
+  \xymatrix{
+    \rho^*(\mathscr{S}_{\mathcal{O}_Y}^{\bullet}
+      (\mathscr{G}r_1(f)))
+      \ar[r] \ar[d]_-{\mathscr{S}(\operatorname{gr}_1(u))}
+      & \rho^*(\mathscr{G}r_\bullet(f))
+        \ar[d]^-{\operatorname{gr}(u)} \\
+    \mathscr{S}_{\mathcal{O}_{Y'}}^{\bullet}
+      (\mathscr{G}r_1(f'))
+      \ar[r]
+      & \mathscr{G}r_\bullet(f')
+  }
+  \tag{16.2.1.4}
+  \label{IV.16.2.1.4}
+\]
+donde las flechas horizontales son los homomorfismos canónicos (16.1.2.2).
+
+Finalmente, si se tiene un diagrama conmutativo de morfismos de espacios anillados
+\[
+  \xymatrix{
+    Y \ar[r]^f & X \\
+    Y' \ar[r]_{f'} \ar[u]^u & X' \ar[u]_v \\
+    Y'' \ar[r]_{f''} \ar[u]^{u'} & X'' \ar[u]_{v'}
+  }
+\]
+donde $f''=(\psi'',\theta'')$ es tal que $\theta''^\#$ es sobreyectivo, y si
+$w'_n$ y $w''_n$ se definen a partir de $u'$, $v'$, por una parte, y de
+$u''=u\circ u'$, $v''=v\circ v'$, por otra, entonces se tiene
+$w''_n=w_n\circ w'_n$, como se sigue inmediatamente de las definiciones y de
+(0\textsubscript{I}, 3.5.5); se tiene asimismo
+$\operatorname{gr}(u'')=
+\operatorname{gr}(u')\circ\rho'^*(\operatorname{gr}(u))$ si
+$u'=(\rho',\lambda')$. Se puede, por tanto, decir que los $Y^{(n)}$ y
+$\mathscr{G}r_\bullet(f)$ dependen funtorialmente de $f$.
+\end{env}
+
+\begin{proposition}[16.2.2]
+\label{IV.16.2.2}
+Con las notaciones e hipótesis de (16.2.1), supongamos además que $f$, $f'$,
+$u$ y $v$ son morfismos de preesquemas. Entonces:
+\begin{enumerate}
+\item[(i)] Los morfismos $w_n:Y'^{(n)}\to Y^{(n)}$ son morfismos de
+preesquemas.
+\item[(ii)] Si $Y'=Y\times_X X'$, siendo $u$ y $f'$ las proyecciones
+canónicas, y si $f$ es una inmersión o si $v$ es plano, se tiene
+$Y'^{(n)}=Y^{(n)}\times_X X'$.
+\item[(iii)] Si $Y'=Y\times_X X'$ y si $v$ es plano (resp. si $f$ es una
+inmersión), el homomorfismo
+\[
+  \operatorname{Gr}(u)=\operatorname{gr}(u)\otimes 1:
+  \mathscr{G}r_\bullet(f)\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow\mathscr{G}r_\bullet(f')
+\]
+es biyectivo (resp. sobreyectivo).
+\end{enumerate}
+\end{proposition}
+
+\noindent(i) Las hipótesis implican inmediatamente que, para todo $y'\in Y'$,
+$\rho_{y'}^*(\theta_{\psi'(y')}^\#)$ es un homomorfismo local (I, 1.6.2),
+por tanto $w_n$ es un morfismo de preesquemas (I, 2.2.1).
+
+\oldpage[IV-4]{11}
+\noindent(ii) y (iii) Si $f$ es una inmersión, basta considerar el caso en que
+$f$ es una inmersión cerrada, estando entonces $Y$ definido por el ideal
+cuasicoherente $\mathscr{I}$ de $\mathcal{O}_X$, y $Y^{(n)}$ por el ideal
+$\mathscr{I}^{n+1}$; las afirmaciones resultan entonces de (I, 4.4.5).
+
+Supongamos, en segundo lugar, que $v$ es plano; basta considerar el caso en que
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$,
+$X'=\operatorname{Spec}(A')$ son afines, siendo $A'$ un $A$-módulo plano;
+entonces $Y'=\operatorname{Spec}(B')$ con $B'=B\otimes_A A'$; además, si
+$\mathfrak{I}$ es el núcleo del homomorfismo $A\to B$, el núcleo
+$\mathfrak{I}'$ de $A'\to B'$ se identifica con $\mathfrak{I}\otimes_A A'$ por
+planitud, y
+\[
+  \mathfrak{I}'^n/\mathfrak{I}'^{n+1}
+  =(\mathfrak{I}^n/\mathfrak{I}^{n+1})\otimes_A A'.
+\]
+Se deduce inmediatamente, teniendo en cuenta (0\textsubscript{I}, 4.3.3), que el
+$\mathcal{O}_{Y'}$-módulo
+$\mathscr{I}'^n/\mathscr{I}'^{n+1}$ es igual a
+\begin{align*}
+&\psi'^*\!\left(\sigma^*
+  \left((\mathfrak{I}^n/\mathfrak{I}^{n+1})^{\sim}\right)\right)
+  \otimes_{\sigma^*(\mathcal{O}_X)}\mathcal{O}_{X'} \\
+={}&
+\psi'^*\!\left(\sigma^*
+  \left((\mathfrak{I}^n/\mathfrak{I}^{n+1})^{\sim}\right)\right)
+  \otimes_{\psi'^*(\sigma^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}) \\
+={}&
+\rho^*(\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\rho^*(\psi^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}),
+\end{align*}
+y como, en particular, para $n=0$, se tiene
+\[
+  \mathcal{O}_{Y'}=
+  \rho^*(\mathcal{O}_Y)
+  \otimes_{\rho^*(\psi^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}),
+\]
+se obtiene un isomorfismo canónico de
+$\mathscr{I}'^n/\mathscr{I}'^{n+1}$ con
+\[
+  \rho^*(\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\rho^*(\mathcal{O}_Y)}\mathcal{O}_{Y'}
+  =
+  (\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'},
+\]
+lo que prueba (iii). Pongamos ahora
+$C_n=\Gamma(Y,\mathcal{O}_{Y^{(n)}})$,
+$C'_n=\Gamma(Y',\mathcal{O}_{Y'^{(n)}})$. Puesto que $Y^{(n)}$ y
+$Y'^{(n)}$ son esquemas afines (16.1.5), el núcleo
+$\mathfrak{K}_n$ (resp. $\mathfrak{K}'_n$) del homomorfismo
+$C_n\to C_{n-1}$ (resp. $C'_n\to C'_{n-1}$) es
+$\Gamma(Y,\mathscr{I}^n/\mathscr{I}^{n+1})$ (resp.
+$\Gamma(Y',\mathscr{I}'^n/\mathscr{I}'^{n+1})$); por tanto, de lo que
+precede se deduce que $\mathfrak{K}'_n=\mathfrak{K}_n\otimes_A A'$. Ahora bien, se tiene un
+diagrama conmutativo
+\[
+  \xymatrix{
+    0 \ar[r] &
+    \mathfrak{K}_n\otimes_A A' \ar[r]\ar[d]^r &
+    C_n\otimes_A A' \ar[r]\ar[d]^{s_n} &
+    C_{n-1}\otimes_A A' \ar[r]\ar[d]^{s_{n-1}} & 0 \\
+    0 \ar[r] &
+    \mathfrak{K}'_n \ar[r] &
+    C'_n \ar[r] &
+    C'_{n-1} \ar[r] & 0
+  }
+\]
+donde la flecha vertical de la izquierda es biyectiva y las dos filas son exactas
+(siendo $A'$ un $A$-módulo plano). Se deduce por inducción que $s_n$ es
+biyectivo para todo $n$: esto es cierto por hipótesis para $n=0$, y el caso de un
+$n$ cualquiera se deduce aplicando el lema de los cinco. Esto prueba la segunda
+afirmación de (ii).
+
+\begin{corollary}[16.2.3]
+\label{IV.16.2.3}
+Sean $g:X\to Y$, $u:Y'\to Y$ dos morfismos de preesquemas,
+$X'=X\times_Y Y'$, $g':X'\to Y'$ y $v:X'\to X$ las proyecciones canónicas.
+Sea $f:Y\to X$ una sección sobre $Y$ de $X$ (por tanto, una inmersión),
+$f'=f_{(Y')}:Y'\to X'$ la sección sobre $Y'$ de $X'$ deducida de $f$ por el
+cambio de base $u$. Entonces:
+\begin{enumerate}
+\item[(i)] El morfismo
+$w_n:Y_{f'}'^{(n)}\to Y_f^{(n)}$ correspondiente a $f$, $f'$, $u$, $v$
+(16.2.1) y el morfismo canónico
+$h'_n:Y_{f'}'^{(n)}\to X'$ identifican $Y_{f'}'^{(n)}$ con el producto fibrado
+$Y_f^{(n)}\times_X X'$.
+\item[(ii)] Si se dota a $\mathcal{O}_{Y_f^{(n)}}$ (resp.
+$\mathcal{O}_{Y_{f'}'^{(n)}}$) de la estructura de $\mathcal{O}_Y$-álgebra
+definida por $g$ (resp. de la estructura de $\mathcal{O}_{Y'}$-álgebra definida
+por $g'$) (16.1.6), el homomorfismo de $\mathcal{O}_{Y'}$-álgebras
+\[
+  \rho^*(\mathcal{O}_{Y_f^{(n)}})
+  \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow
+  \mathcal{O}_{Y_{f'}'^{(n)}}
+  \tag{16.2.3.1}
+  \label{IV.16.2.3.1}
+\]
+\oldpage[IV-4]{12}
+deducido del homomorfismo $\nu_n$ (16.2.1.2) es biyectivo. Además,
+el homomorfismo de $\mathcal{O}_{Y'}$-módulos
+\[
+  \operatorname{Gr}_1(u):
+  \mathscr{G}r_1(f)\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow\mathscr{G}r_1(f')
+  \tag{16.2.3.2}
+  \label{IV.16.2.3.2}
+\]
+es biyectivo.
+\end{enumerate}
+\end{corollary}
+
+\noindent(i) Observemos primero que los morfismos $f':Y'\to X'$ y $u:Y'\to Y$
+identifican $Y'$ con el producto fibrado $Y\times_X X'$ (para los morfismos estructurales
+$f:Y\to X$ y $v:X'\to X$) (14.5.12.1). La conclusión de (i) resulta entonces de
+(16.2.2, (ii)), pues el morfismo $g$ es una inmersión.
+
+\noindent(ii) El diagrama conmutativo
+\[
+  \xymatrix{
+    Y_f^{(n)} \ar[d]^{h_n}
+      & Y_{f'}'^{(n)} \ar[d]^-{h'_n} \ar[l]^{w_n} \\
+    X \ar[d]^g
+      & X' \ar[d]^{g'} \ar[l]^v \\
+    Y
+      & Y' \ar[l]^u
+  }
+\]
+identifica $Y_{f'}'^{(n)}$ con el producto fibrado $Y_f^{(n)}\times_X X'$ y $X'$ con el producto fibrado
+$X\times_Y Y'$; por tanto, (I, 3.3.9) identifica (para los morfismos
+$g'\circ h'_n$ y $w_n$) $Y_{f'}'^{(n)}$ con el producto fibrado
+$Y_f^{(n)}\times_Y Y'$. Como $Y_f^{(n)}$ (resp. $Y_{f'}'^{(n)}$) es el
+preesquema afín sobre $Y$ (resp. $Y'$) asociado al
+$\mathcal{O}_Y$-álgebra $\mathcal{O}_{Y_f^{(n)}}$ (resp. al
+$\mathcal{O}_{Y'}$-álgebra $\mathcal{O}_{Y_{f'}'^{(n)}}$), la biyectividad del
+homomorfismo canónico (16.2.3.1) resulta de (II, 1.5.2).
+Finalmente, el homomorfismo canónico (16.2.3.1) es compatible con las
+aumentaciones
+$\mathcal{O}_{Y_f^{(n)}}\to\mathcal{O}_Y$ y
+$\mathcal{O}_{Y_{f'}'^{(n)}}\to\mathcal{O}_{Y'}$; como
+$\mathcal{O}_{Y_f^{(n)}}$ es suma directa (en tanto que
+$\mathcal{O}_Y$-módulo) de $\mathcal{O}_Y$ y del ideal de aumentación
+$\mathscr{I}/\mathscr{I}^{n+1}$, se ve por tanto que el homomorfismo canónico
+(16.2.3.1), restringido a
+$(\mathscr{I}/\mathscr{I}^{n+1})\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}$,
+es una biyección de este último sobre
+$\mathscr{I}'/\mathscr{I}'^{n+1}$. Para $n=1$, esto muestra que
+$\operatorname{Gr}_1(u)$ es biyectivo.
+
+Obsérvese que, bajo las hipótesis de (16.2.3), los homomorfismos
+$\operatorname{Gr}_n(u)$ son sobreyectivos en virtud de lo que precede, pero no
+son biyectivos en general para $n\geq 2$. Sin embargo:
+
+\begin{corollary}[16.2.4]
+\label{IV.16.2.4}
+Bajo las hipótesis de (16.2.3), supongamos que $u:Y'\to Y$ es un morfismo
+plano (resp. que los $\mathscr{G}r_n(f)$ son $\mathcal{O}_Y$-módulos
+planos para $n\leq m$). Entonces el homomorfismo
+\[
+  \operatorname{Gr}_n(u):
+  \mathscr{G}r_n(f)\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow\mathscr{G}r_n(f')
+\]
+es biyectivo para todo $n$ (resp. para $n\leq m$).
+\end{corollary}
+
+Si $u$ es plano, lo mismo ocurre con $v:X'\to X$, que se obtiene de él por
+cambio de base, y ya se sabe en este caso que $\operatorname{Gr}(u)$ es
+biyectivo (16.2.2, (iii)). Si los $\mathscr{G}r_n(f)$ son planos para
+$n\leq m$, se ve primero por inducción sobre $n$ que lo mismo ocurre con los
+$\mathscr{I}/\mathscr{I}^{n+1}$ para $n\leq m$, en virtud de las sucesiones exactas
+\[
+  0\longrightarrow\mathscr{I}^n/\mathscr{I}^{n+1}
+  \longrightarrow\mathscr{I}/\mathscr{I}^{n+1}
+  \longrightarrow\mathscr{I}/\mathscr{I}^n
+  \longrightarrow 0
+\]
+\oldpage[IV-4]{13}
+(0\textsubscript{I}, 6.1.2); además, se tienen entonces diagramas conmutativos
+\[
+  \xymatrix{
+    0 \ar[r] &
+    (\mathscr{I}^n/\mathscr{I}^{n+1})
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] &
+    (\mathscr{I}/\mathscr{I}^{n+1})
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] &
+    (\mathscr{I}/\mathscr{I}^n)
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] & 0 \\
+    0 \ar[r] &
+    \mathscr{I}'^n/\mathscr{I}'^{n+1}
+      \ar[r] &
+    \mathscr{I}'/\mathscr{I}'^{n+1}
+      \ar[r] &
+    \mathscr{I}'/\mathscr{I}'^n
+      \ar[r] & 0
+  }
+\]
+en los cuales las filas son exactas (la primera por planitud
+(0\textsubscript{I}, 6.1.2)) y las dos últimas flechas verticales son
+biyectivas en virtud de (16.2.3, (ii)); de donde se sigue la conclusión.
+
+\begin{remarks}[16.2.5]
+\label{IV.16.2.5}
+\begin{enumerate}
+\item[(i)] El razonamiento de (16.2.2, (i)) sigue siendo aplicable cuando en
+(16.2.1.1) se trata de morfismos de espacios localmente anillados
+($\mathbf{Err}_{\mathrm{II}}$, (1.8.2)).
+\item[(ii)] En (16.2.2, (ii)), la conclusión ya no es necesariamente válida
+cuando se supone solamente que $v$ y $f$ son morfismos de preesquemas
+($f$ satisface la condición de (16.1.1)). Por ejemplo (con las notaciones de la
+demostración de (16.2.2, (ii))), puede ocurrir que $\mathfrak{I}=0$ pero que
+el núcleo $\mathfrak{I}'$ de $A'\to B'=B\otimes_A A'$ no sea nulo y que
+$B'\neq 0$, en cuyo caso se tiene $Y^{(n)}=Y$ para todo $n$, pero
+$Y'^{(n)}\neq Y'$. Se obtiene un ejemplo de este hecho tomando
+$A=\mathbb{Z}$, $B=\mathbb{Q}$,
+$A'=\prod_{h=1}^{\infty}(\mathbb{Z}/m^h\mathbb{Z})$ donde $m>1$.
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[16.2.6]
+\label{IV.16.2.6}
+Consideremos el caso particular del diagrama (16.2.1.1) en que $X'=X$, $v$ es
+la identidad, $X$ es un preesquema, $Y$ un subpreesquema de $X$, $Y'$ un
+subpreesquema de $Y$, y $f$, $u$ y $f'=f\circ u$ las inyecciones canónicas; el
+dihomomorfismo (16.2.1.3) da, por tensorización con
+$\mathcal{O}_{Y'}$ sobre $\rho^*(\mathcal{O}_Y)$, un homomorfismo de
+$\mathcal{O}_{Y'}$-álgebras graduadas
+\[
+  u^*(\mathscr{G}r_\bullet(f))
+  \longrightarrow\mathscr{G}r_\bullet(f')
+  \tag{16.2.6.1}
+  \label{IV.16.2.6.1}
+\]
+Por otra parte, se identifica $\mathcal{O}_Y$ con
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f$, y $\mathcal{O}_{Y'}$ con
+$\rho^*(\mathcal{O}_Y)/\mathscr{I}_u$; como $\rho^*$ es un funtor exacto,
+se tiene
+$\rho^*(\mathcal{O}_Y)=
+\rho^*(\psi^*(\mathcal{O}_X))/\rho^*(\mathscr{I}_f)=
+\psi'^*(\mathcal{O}_X)/\rho^*(\mathscr{I}_f)$, y como
+$\mathcal{O}_{Y'}$ se identifica además con
+$\psi'^*(\mathcal{O}_X)/\mathscr{I}_{f'}$, se ve que se tiene
+$\mathscr{I}_u=\mathscr{I}_{f'}/\rho^*(\mathscr{I}_f)$. Se deduce para
+todo entero $n$ un homomorfismo canónico
+$\mathscr{I}_{f'}^n/\mathscr{I}_{f'}^{n+1}\to
+\mathscr{I}_u^n/\mathscr{I}_u^{n+1}$, de donde se obtiene un homomorfismo canónico de
+$\mathcal{O}_{Y'}$-álgebras graduadas
+\[
+  \mathscr{G}r_\bullet(f')
+  \longrightarrow\mathscr{G}r_\bullet(u).
+  \tag{16.2.6.2}
+  \label{IV.16.2.6.2}
+\]
+\end{env}
+
+\begin{proposition}[16.2.7]
+\label{IV.16.2.7}
+Sean $X$ un preesquema, $Y$ un subpreesquema de $X$, $Y'$ un
+subpreesquema de $Y$, $j:Y'\to Y$ la inyección canónica. Se tiene entonces una sucesión
+exacta de haces conormales ($\mathcal{O}_{Y'}$-módulos)
+\[
+  \xymatrix{
+    j^*(\mathscr{N}_{Y/X}) \ar[r] &
+    \mathscr{N}_{Y'/X} \ar[r] &
+    \mathscr{N}_{Y'/Y} \ar[r] & 0
+  }
+  \tag{16.2.7.1}
+  \label{IV.16.2.7.1}
+\]
+donde las flechas son las componentes de grado 1 de los homomorfismos canónicos
+(16.2.6.1) y (16.2.6.2).
+\end{proposition}
+
+Como la cuestión es local, basta considerar el caso en que
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(A/\mathfrak{I})$,
+$Y'=\operatorname{Spec}(A/\mathfrak{K})$, $\mathfrak{I}$ y $\mathfrak{K}$
+son dos ideales de $A$ tales que $\mathfrak{I}\subset\mathfrak{K}$; todo
+se reduce entonces a ver
+\oldpage[IV-4]{14}
+que la sucesión de homomorfismos canónicos
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}\to
+\mathfrak{K}/\mathfrak{K}^2\to
+(\mathfrak{K}/\mathfrak{I})/(\mathfrak{K}/\mathfrak{I})^2\to 0$
+es exacta, lo que es inmediato, puesto que la imagen de
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}$ en
+$\mathfrak{K}/\mathfrak{K}^2$ es
+$(\mathfrak{I}+\mathfrak{K}^2)/\mathfrak{K}^2$ y que
+$(\mathfrak{K}/\mathfrak{I})/(\mathfrak{K}/\mathfrak{I})^2$ se identifica con
+$\mathfrak{K}/(\mathfrak{I}+\mathfrak{K}^2)$.
+
+Es fácil dar ejemplos en los que la sucesión (16.2.7.1), prolongada a la izquierda
+por un 0, deja de ser exacta; con las notaciones precedentes, basta
+tomar $A=k[T]$, $\mathfrak{I}=AT^2$, $\mathfrak{K}=AT$, pues se tiene entonces
+$(\mathfrak{I}+\mathfrak{K}^2)/\mathfrak{K}^2=0$ y
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}\neq 0$. Véanse, sin embargo, (16.9.13) y
+(19.1.5) para casos útiles en los que la sucesión prolongada sigue siendo exacta.

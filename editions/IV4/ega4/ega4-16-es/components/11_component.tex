@@ -1,0 +1,213 @@
+\subsection{Operadores diferenciales sobre un $S$-preesquema diferencialmente
+liso}
+\label{IV.16.11}
+
+\begin{env}[16.11.1]
+\label{IV.16.11.1}
+Sean $f:X\to S$ un morfismo, $U$ un abierto de $X$,
+$(z_\lambda)_{\lambda\in L}$ una familia de secciones de $\mathcal{O}_X$
+sobre $U$ tal que los $dz_\lambda$ formen un sistema de generadores
+de $\Omega_{X/S}^1|U=\Omega_{U/S}^1$. Sea $m$ un entero o el símbolo
+$\infty$, y pongamos, para todo $\lambda$
+\[
+  \zeta_\lambda=\delta z_\lambda=d^m z_\lambda-z_\lambda
+  \in\Gamma(U,\mathscr{P}_{X/S}^m).
+  \tag{16.11.1.1}
+  \label{IV.16.11.1.1}
+\]
+
+Usaremos también las notaciones usuales del análisis; para todo
+$\mathbf{p}=(p_\lambda)\in\mathbb{N}^{(L)}$ (con $p_\lambda=0$ salvo para un
+número finito de índices), pondremos
+\[
+  |\mathbf{p}|=\sum_\lambda p_\lambda,
+  \qquad \mathbf{p}!=\prod_\lambda(p_\lambda!)
+  \tag{16.11.1.2}
+  \label{IV.16.11.1.2}
+\]
+\[
+  \binom{\mathbf{p}}{\mathbf{q}}
+  =\mathbf{p}!/(\mathbf{q}!(\mathbf{p}-\mathbf{q})!)
+  \quad\text{para $\mathbf{p},\mathbf{q}$ en $\mathbb{N}^{(L)}$,
+  $\mathbf{q}\leq\mathbf{p}$}
+  \tag{16.11.1.3}
+  \label{IV.16.11.1.3}
+\]
+y convenimos que $\binom{\mathbf{p}}{\mathbf{q}}=0$ si
+$\mathbf{q}\nleq\mathbf{p}$,
+\[
+  \mathbf{z}^{\mathbf{p}}=\prod_\lambda(z_\lambda)^{p_\lambda},
+  \qquad
+  \boldsymbol{\zeta}^{\mathbf{p}}=\prod_\lambda(\zeta_\lambda)^{p_\lambda}.
+  \tag{16.11.1.4}
+  \label{IV.16.11.1.4}
+\]
+
+Por tanto, con estas notaciones
+\[
+  d^m(\mathbf{z}^{\mathbf{p}})
+  =(d^m(\mathbf{z}))^{\mathbf{p}}
+  =(\boldsymbol{\zeta}+\mathbf{z})^{\mathbf{p}}
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}\boldsymbol{\zeta}^{\mathbf{q}}
+  \tag{16.11.1.5}
+  \label{IV.16.11.1.5}
+\]
+\[
+  \boldsymbol{\zeta}^{\mathbf{p}}
+  =(d^m\mathbf{z}-\mathbf{z})^{\mathbf{p}}
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    (-1)^{|\mathbf{p}-\mathbf{q}|}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}d^m(\mathbf{z}^{\mathbf{q}}).
+  \tag{16.11.1.6}
+  \label{IV.16.11.1.6}
+\]
+
+Como los $dz_\lambda$ generan $\Omega_{X/S}^1$ y son las imágenes de
+$\delta z_\lambda$, y puesto que el homomorfismo canónico (16.3.1.1) es
+sobreyectivo, se concluye que para $m$ finito los $\delta z_\lambda$ generan
+la $\mathcal{O}_U$-álgebra $\mathscr{P}_{U/S}^m$ (Bourbaki,
+\emph{Alg. comm.}, cap.~III, §~2, n\textsuperscript{o}~8, cor.~2 del teorema~1).
+Por tanto, los $\boldsymbol{\zeta}^{\mathbf{p}}$ (para $|\mathbf{p}|\leq m$)
+generan el $\mathcal{O}_U$-módulo $\mathscr{P}_{U/S}^m$. Un operador
+diferencial $D\in\operatorname{Diff}_{U/S}^m$ queda por consiguiente
+completamente determinado por los valores de
+$\langle\boldsymbol{\zeta}^{\mathbf{p}},D\rangle$ para
+$|\mathbf{p}|\leq m$, o, lo que es equivalente en virtud de
+(16.11.1.5) y (16.11.1.6), por los valores
+\oldpage[IV-4]{54}
+de $\langle d^m(\mathbf{z}^{\mathbf{p}}),D\rangle=D(\mathbf{z}^{\mathbf{p}})$
+para $|\mathbf{p}|\leq m$; más precisamente, se deduce de (16.11.1.5) que
+se tiene
+\[
+  D(\mathbf{z}^{\mathbf{p}})
+  =\langle d^m(\mathbf{z}^{\mathbf{p}}),D\rangle
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \langle\boldsymbol{\zeta}^{\mathbf{q}},D\rangle
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}.
+  \tag{16.11.1.7}
+  \label{IV.16.11.1.7}
+\]
+\end{env}
+
+\begin{theorem}[16.11.2]
+\label{IV.16.11.2}
+Sean $f:X\to S$ un morfismo, $U$ un abierto de $X$,
+$(z_\lambda)_{\lambda\in L}$ una familia de secciones de $\mathcal{O}_X$
+sobre $U$ tal que la familia $(dz_\lambda)_{\lambda\in L}$ genere
+$\Omega_{X/S}^1|U=\Omega_{U/S}^1$. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[a)] $f|U$ es diferencialmente liso y $(dz_\lambda)$ es una base
+  del $\mathcal{O}_U$-módulo $\Omega_{U/S}^1$.
+  \item[b)] Existe una familia
+  $(D_{\mathbf{p}})_{\mathbf{p}\in\mathbb{N}^{(L)}}$ de operadores
+  diferenciales de $\mathcal{O}_U$ en sí mismo que satisface las condiciones
+  \[
+    D_{\mathbf{p}}(\mathbf{z}^{\mathbf{q}})
+    =\binom{\mathbf{q}}{\mathbf{p}}
+      \mathbf{z}^{\mathbf{q}-\mathbf{p}}
+    \quad(\mathbf{p},\mathbf{q}\text{ en }\mathbb{N}^{(L)}).
+    \tag{16.11.2.1}
+    \label{IV.16.11.2.1}
+  \]
+\end{enumerate}
+Además, cuando estas condiciones se satisfacen, la familia
+$(D_{\mathbf{p}})$ queda determinada de forma única por las condiciones
+(16.11.2.1) y satisface las relaciones
+\[
+  D_{\mathbf{p}}\circ D_{\mathbf{q}}
+  =D_{\mathbf{q}}\circ D_{\mathbf{p}}
+  =\frac{(\mathbf{p}+\mathbf{q})!}{\mathbf{p}!\mathbf{q}!}
+    D_{\mathbf{p}+\mathbf{q}}
+  \quad(\mathbf{p},\mathbf{q}\text{ en }\mathbb{N}^{(L)}).
+  \tag{16.11.2.2}
+  \label{IV.16.11.2.2}
+\]
+Finalmente, si $L$ es finito, para todo entero $m$, los $D_{\mathbf{p}}$ tales que
+$|\mathbf{p}|\leq m$ forman una base del $\mathcal{O}_U$-módulo
+$\operatorname{Diff}_{U/S}^m$, es decir, todo operador diferencial
+de orden $\leq m$ sobre $U$ se escribe de una sola manera bajo la forma
+\[
+  D=\sum_{|\mathbf{p}|\leq m}a_{\mathbf{p}}D_{\mathbf{p}}
+\]
+donde los $a_{\mathbf{p}}$ son secciones de $\mathcal{O}_X$ sobre
+$U$.
+\end{theorem}
+
+Observemos primero que, en virtud de (16.11.1.6) y (16.11.1.5), se verifica
+inmediatamente que las condiciones (16.11.2.1) son equivalentes a
+\[
+  \langle\boldsymbol{\zeta}^{\mathbf{p}},D_{\mathbf{q}}\rangle
+  =\delta_{\mathbf{p}\mathbf{q}}
+  \quad\text{(índice de Kronecker)}.
+  \tag{16.11.2.3}
+  \label{IV.16.11.2.3}
+\]
+La existencia de la familia $(D_{\mathbf{p}})$ que satisface estas relaciones
+implica primero (tomando $|\mathbf{p}|=1$) que los $dz_\lambda$ son
+linealmente independientes y, por tanto, forman una \emph{base} del
+$\mathcal{O}_U$-módulo $\Omega_{U/S}^1$. Luego, para todo entero $m\geq1$, se
+deduce del mismo modo de (16.11.2.3) que los $\boldsymbol{\zeta}^{\mathbf{p}}$
+tales que $|\mathbf{p}|\leq m$ son linealmente independientes; por consiguiente
+el homomorfismo canónico (16.3.1.1) es inyectivo, luego biyectivo, y esto
+demuestra que b) implica a). La recíproca se deduce inmediatamente de la
+definición (16.10.1), pues el hecho de que los $\boldsymbol{\zeta}^{\mathbf{p}}$
+formen una base de $\mathscr{P}_{U/S}^m$ para $|\mathbf{p}|\leq m$ implica la
+existencia y unicidad de una familia de homomorfismos
+$u_{\mathbf{q},m}:\mathscr{P}_{U/S}^m\to\mathcal{O}_U$
+($|\mathbf{q}|\leq m$) tales que
+$\langle\boldsymbol{\zeta}^{\mathbf{p}},u_{\mathbf{q},m}\rangle
+=\delta_{\mathbf{p}\mathbf{q}}$ para $|\mathbf{p}|\leq m$,
+$|\mathbf{q}|\leq m$. Para un valor dado de $\mathbf{q}$, los operadores
+diferenciales correspondientes a los $u_{\mathbf{q},m}$ para
+$m\geq|\mathbf{q}|$ se identifican con un mismo operador $D_{\mathbf{q}}$.
+Esto demuestra, pues, que a) implica b), y además que la familia
+$(D_{\mathbf{p}})$ queda determinada de forma única y que, si $L$ es finito,
+para $|\mathbf{p}|\leq m$, los $D_{\mathbf{p}}$ forman una base del dual
+$\operatorname{Diff}_{U/S}^m$ de $\mathscr{P}_{U/S}^m$. Finalmente, las relaciones
+(16.11.2.2) se deducen inmediatamente de la expresión de los valores de los tres
+operadores considerados sobre los $\mathbf{z}^{\mathbf{r}}$, y del hecho de que
+los $\boldsymbol{\zeta}^{\mathbf{r}}$ para $|\mathbf{r}|\leq m$ generan
+$\mathscr{P}_{U/S}^m$.
+
+\oldpage[IV-4]{55}
+
+\begin{remarks}[16.11.3]
+\label{IV.16.11.3}
+\begin{enumerate}
+  \item[(i)] El hecho de que los $D_{\mathbf{p}}$ sean permutables dos a dos en
+  virtud de (16.11.2.2) no implica naturalmente que la
+  $\mathcal{O}_U$-álgebra $\operatorname{Diff}_{U/S}$ sea conmutativa, pues los
+  $D_{\mathbf{p}}$ no conmutan con la multiplicación por secciones de
+  $\mathcal{O}_U$ salvo si $\mathbf{p}=0$.\footnote{El texto impreso dice
+  $n=0$; debe ser $\mathbf{p}=0$, pues $D_{\mathbf{p}}$ es de orden
+  $|\mathbf{p}|$.}
+  \item[(ii)] Los índices $\mathbf{p}$ tales que $|\mathbf{p}|=1$ son los
+  $\boldsymbol{\varepsilon}_\lambda
+  =(\varepsilon_{\lambda\mu})_{\mu\in L}$ con
+  $\varepsilon_{\lambda\mu}=0$ si $\mu\neq\lambda$ y
+  $\varepsilon_{\lambda\lambda}=1$; cuando $L$ es finito, los operadores
+  $D_{\boldsymbol{\varepsilon}_\lambda}$ no son otros que las
+  $S$-derivaciones $D_i$ introducidas en (16.5.7). Obsérvese que, en general
+  (y contrariamente a lo que ocurre en el análisis clásico), no es cierto que
+  un operador diferencial de orden cualquiera pueda escribirse como combinación
+  lineal de potencias de los $D_i$ (cf. (16.12)).
+  \item[(iii)] Para todo entero $r\geq1$, se puede definir la noción de
+  morfismo \emph{diferencialmente liso hasta el orden $r$} sustituyendo
+  en (16.10.1) la condición (ii) por la condición de que los homomorfismos
+  \[
+    \mathbf{S}_{\mathcal{O}_X}^m(\Omega_{X/S}^1)
+    \longrightarrow\mathscr{G}r_m(\mathscr{P}_{X/S})
+  \]
+  sean biyectivos \emph{para todo $m\leq r$}. El razonamiento de (16.11.2)
+  demuestra entonces que si, en la condición a), se sustituye «diferencialmente
+  liso» por «diferencialmente liso hasta el orden $r$», esta condición es
+  equivalente a la condición b) en la que nos restringimos a los
+  $\mathbf{p}\in\mathbb{N}^{(L)}$, $\mathbf{q}\in\mathbb{N}^{(L)}$ tales que
+  $|\mathbf{p}|\leq r$, $|\mathbf{q}|\leq r$.
+\end{enumerate}
+\end{remarks}

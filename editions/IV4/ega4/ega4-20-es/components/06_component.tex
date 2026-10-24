@@ -1,0 +1,91 @@
+\subsection{Pseudomorfismos relativos}
+\label{IV.20.5}
+
+\begin{env}[20.5.1]
+\label{IV.20.5.1}
+Sean $X$, $Y$ dos preesquemas sobre $S$.
+Se deduce de las definiciones \sref{IV.11.10.8} que la intersección de dos abiertos $U$, $U'$ de $X$, \emph{universalmente esquemáticamente densos con respecto a $S$}, posee también esta propiedad.
+Definimos, pues, una relación de equivalencia entre los $S$-morfismos $u:U\to Y$ reemplazando en \sref{IV.20.2.1} «esquemáticamente denso» por «universalmente esquemáticamente denso con respecto a $S$».
+Una clase de equivalencia para esta relación se llama un \emph{pseudo-morfismo de $X$ en $Y$ relativamente a $S$}, y el conjunto de estas clases se denota $\operatorname{Ps.hom}_{X/S}(X,Y)$.
+\end{env}
+
+\begin{env}[20.5.2]
+\label{IV.20.5.2}
+Como todo abierto de $X$ universalmente esquemáticamente denso con respecto a $S$ es en particular esquemáticamente denso, los elementos de un pseudo-morfismo
+\oldpage[IV-4]{250}
+de $X$ en $Y$ relativamente a $S$ son equivalentes en el sentido de \sref{IV.20.2.1}, de donde una aplicación canónica
+\[
+\label{IV.20.5.2.1}
+  \operatorname{Ps.hom}_{X/S}(X,Y)\to\operatorname{Ps.hom}_S(X,Y).
+  \tag{20.5.2.1}
+\]
+\end{env}
+
+\begin{proposition}[20.5.3]
+\label{IV.20.5.3}
+Supongamos que $Y$ es separado sobre $S$.
+Entonces:
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item La aplicación \sref{IV.20.5.2.1} es inyectiva e identifica $\operatorname{Ps.hom}_{X/S}(X,Y)$ con el subconjunto de $\operatorname{Ps.hom}_S(X,Y)$ formado por los pseudo-$S$-morfismos $\omega$ tales que $\operatorname{dom}_S(\omega)$ sea universalmente esquemáticamente denso relativamente a $S$.
+  \item El prehaz $U\mapsto\operatorname{Ps.hom}_{U/S}(U,Y)$ sobre $X$ es un haz.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La afirmación~(i) es inmediata, pues decir que dos $S$-morfismos $u:U\to Y$, $u':U'\to Y$ son equivalentes en el sentido de \sref{IV.20.2.1} significa que son las restricciones de un mismo morfismo $\operatorname{dom}_S(\omega)\to Y$ \sref{IV.20.2.4}, y si $U$ y $U'$ son universalmente esquemáticamente densos con respecto a $S$, lo mismo ocurre \emph{a fortiori} con $\operatorname{dom}_S(\omega)$.
+Para demostrar~(ii), observemos que $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ es entonces un haz \sref{IV.20.2.6}; por otra parte, dado un recubrimiento abierto $(U_\alpha)$ de $U$ y un pseudo-$S$-morfismo $\omega$ de $U$ en $Y$, se deduce inmediatamente de las definiciones (cf.\ \sref{IV.20.2.1}) que $\operatorname{dom}_S(\omega)$ es universalmente esquemáticamente denso en $U$ relativamente a $S$ si y solo si cada uno de los conjuntos $\operatorname{dom}_S(\omega)\cap U_\alpha=\operatorname{dom}_S(\omega|U_\alpha)$ es universalmente esquemáticamente denso en $U_\alpha$ relativamente a $S$; de donde~(ii).
+\end{proof}
+
+Cuando $Y$ es separado, denotaremos por $\mathscr{P}\!s.\!\operatorname{hom}_{X/S}(X,Y)$ el subhaz
+\[
+  U\mapsto\operatorname{Ps.hom}_{U/S}(U,Y)
+\]
+de $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$.
+
+Cuando $X$ es \emph{plano y localmente de presentación finita} sobre $S$ y $Y$ separado sobre $S$, los pseudo-morfismos de $X$ en $Y$ relativamente a $S$ se identifican todavía con los pseudo-$S$-morfismos $\omega$ tales que, para toda fibra $X_s$ del morfismo $X\to S$, $\operatorname{dom}_S(\omega)\cap X_s$ sea \emph{esquemáticamente denso} en $X_s$ \sref{IV.11.10.10}.
+
+\begin{env}[20.5.4]
+\label{IV.20.5.4}
+Un caso particularmente importante en que $Y$ es separado sobre $S$ es el caso en que $Y=S[T]=S\otimes_{\bb{Z}}\Spec(\bb{Z}[T])$ ($T$ indeterminada).
+Hay entonces una correspondencia biyectiva entre los pseudo-$S$-morfismos de $X$ en $Y$ y las \emph{pseudo-funciones} sobre $X$ \sref{IV.20.2.8}, en virtud de la definición de un producto de preesquemas sobre $\bb{Z}$.
+Los pseudo-morfismos de $X$ en $Y$ relativamente a $S$ se identifican entonces, en virtud de \sref{IV.20.5.3}, con las \emph{pseudo-funciones $\varphi$ sobre $X$ tales que $\operatorname{dom}(\varphi)$ sea universalmente esquemáticamente denso relativamente a $S$}.
+El haz $\mathscr{P}\!s.\!\operatorname{hom}_{X/S}(X,Y)$ es un \emph{subhaz de anillos} de $\sh{M}'_X$, que denotamos $\sh{M}'_{X/S}$.
+
+Ponemos entonces $\operatorname{Ps.hom}_{X/S}(X,Y)=M'(X/S)$ y decimos que sus elementos son las \emph{pseudo-funciones sobre $X$ relativas a $S$}.
+\end{env}
+
+\begin{env}[20.5.5]
+\label{IV.20.5.5}
+Sean $X$, $Y$, $Z$ tres preesquemas sobre $S$, $f:Y\to Z$ un $S$-morfismo.
+En el razonamiento de \sref{IV.20.3.1}, podemos reemplazar en todas partes «esquemáticamente denso» por «universalmente esquemáticamente denso relativamente a $S$»; para todo pseudo-morfismo $\omega\in\operatorname{Ps.hom}_{X/S}(X,Y)$, los morfismos $f\circ u$, donde $u$ recorre $\omega$, pertenecen, pues, a una misma clase de equivalencia (para la relación definida en \sref{IV.20.5.1}), que llamamos el pseudo-morfismo de $X$ en $Z$, relativo a $S$, \emph{compuesto} de $f$ y de $\omega$, y denotamos $f\circ\omega$.
+\oldpage[IV-4]{251}
+Si $g:Z\to T$ es un morfismo, es inmediato que $g\circ(f\circ\omega)=(g\circ f)\circ\omega$.
+\end{env}
+
+\begin{env}[20.5.6]
+\label{IV.20.5.6}
+Supongamos que $Y$ sea \emph{separado} sobre $S$, y sea $\omega$ un pseudo-morfismo de $X$ en $Y$ relativamente a $S$.
+Si $f:X'\to X$ es un $S$-morfismo tal que $f^{-1}(\operatorname{dom}_S(\omega))$ sea \emph{universalmente esquemáticamente denso en $X'$ relativamente a $S$}, se deduce de \sref{IV.20.3.2} que el pseudo-$S$-morfismo $\omega\circ f$ tiene un dominio universalmente esquemáticamente denso relativamente a $S$, por lo que, en virtud de \sref{IV.20.5.3}\footnote{La transcripción francesa omite el sujeto $\omega\circ f$ y hace gramaticalmente de esta referencia el sujeto de «puede considerarse»; el testigo inglés mantenido restituye la construcción correcta.}, puede considerarse como un pseudo-morfismo \emph{relativo a $S$}.
+Cuando $X'$ es plano y localmente de presentación finita sobre $S$, la condición de que $f^{-1}(\operatorname{dom}_S(\omega))$ sea universalmente esquemáticamente denso relativamente a $S$ equivale también a decir que para todo $s\in S$, $(f^{-1}(\operatorname{dom}_S(\omega)))_s$ (notación de \sref{IV.11.10.10}) sea esquemáticamente denso en $X'_s$, o, denotando $f_s:X'_s\to X_s$ el morfismo deducido de $f$ por cambio de base, que la imagen recíproca por $f_s$ de $(\operatorname{dom}_S(\omega))_s$ sea esquemáticamente densa en $X'_s$.
+Esta última condición se cumplirá en particular si, para todo $s\in S$, $X_s$, $X'_s$ y $f_s$ verifican una de las tres condiciones~(i),~(ii),~(iii) de \sref{IV.20.3.5}.
+\end{env}
+
+\begin{env}[20.5.7]
+\label{IV.20.5.7}
+Supongamos ahora que $X$ y $X'$ sean ambos preesquemas sobre $S$ \emph{planos y localmente de presentación finita sobre $S$}, y que $f:X'\to X$ sea un $S$-morfismo \emph{plano} (o, lo que equivale a lo mismo \sref{IV.11.3.10}, que para todo $s\in S$, $f_s:X'_s\to X_s$ sea un morfismo plano).
+Entonces, para todo abierto $U$ de $X$ y todo abierto $V\subset U$ universalmente esquemáticamente denso en $U$ relativamente a $S$, se deduce de \sref{IV.11.10.5} y \sref{IV.11.10.9} que $f^{-1}(V)$ es universalmente esquemáticamente denso en $f^{-1}(U)$ relativamente a $S$.
+Para todo pseudo-morfismo $\omega$ de $X$ en $Y$ relativamente a $S$, se deduce de \sref{IV.20.3.4} que el pseudo-$S$-morfismo $\omega\circ f$ está definido y es un pseudo-morfismo de $X'$ en $Y$ relativamente a $S$, \emph{incluso cuando no se supone que $Y$ sea separado sobre $S$}.
+Se deduce de esto que en este caso, para todo $S$-morfismo $g:Y\to Z$, $(g\circ\omega)\circ f$ sigue estando definido y es igual a $g\circ(\omega\circ f)$ (con las definiciones de \sref{IV.20.5.1}), y es por tanto un pseudo-morfismo \emph{relativo} a $S$.
+\end{env}
+
+\begin{env}[20.5.8]
+\label{IV.20.5.8}
+Sea $X$ un preesquema sobre $S$, $S'\to S$ un morfismo cualquiera, $X'=X_{(S')}$, $g:X'\to X$ la proyección canónica.
+Entonces, para todo abierto $U$ de $X$ y todo abierto $V\subset U$ universalmente esquemáticamente denso en $U$ relativamente a $S$, $V'=g^{-1}(V)$ es universalmente esquemáticamente denso en $U'=g^{-1}(U)$ relativamente a $S'$ por definición \sref{IV.11.10.8}.
+Sea entonces $\omega$ un pseudo-morfismo de $X$ en un preesquema $Y$ sobre $S$ relativamente a $S$; si $u_1$, $u_2$ son $S$-morfismos de la clase $\omega$, definidos respectivamente en abiertos $U_1$, $U_2$ de $X$, universalmente esquemáticamente densos en $X$ relativamente a $S$, se deduce de lo anterior que los morfismos $u'_1=u_1\circ(g|g^{-1}(U_1))$ y $u'_2=u_2\circ(g|g^{-1}(U_2))$ coinciden en un abierto $U'_3$ universalmente esquemáticamente denso relativamente a $S'$.
+Ahora bien, si $Y'=Y_{(S')}$ y si $h:Y'\to Y$ es la proyección canónica, $u'_1$ y $u'_2$ se factorizan canónicamente como $u'_1=h\circ v_1$, $u'_2=h\circ v_2$, y $v_1$ y $v_2$ son dos $S'$-morfismos en $Y'$ que coinciden en $U'_3$.
+Se ve, pues, que cuando $u_1$ recorre la clase $\omega$, los $S'$-morfismos $v_1$ correspondientes pertenecen a un mismo pseudo-morfismo relativamente a $S'$, llamado \emph{imagen recíproca} de $\omega$ mediante el morfismo cambio de base $S'\to S$ y denotado $\omega_{(S')}$.
+Es claro que si $S''\to S'$ es un segundo morfismo, se tiene $(\omega_{(S')})_{(S'')}=\omega_{(S'')}$ (para el morfismo cambio de base compuesto $S''\to S'\to S$).
+\end{env}
+
+\oldpage[IV-4]{252}

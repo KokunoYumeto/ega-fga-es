@@ -1,0 +1,253 @@
+\subsection{Henselización.}
+\label{subsection:IV.18.6}
+
+\begin{env}[18.6.1]
+\label{IV.18.6.1}
+Dado un anillo local $A$, diremos que una $A$-álgebra local $B$ es \emph{esencialmente étale} si existen una $A$-álgebra étale $C$ y un ideal primo $\mathfrak n$ de $C$ tales que $B$ sea $A$-isomorfa a $C_{\mathfrak n}$ y que el homomorfismo compuesto $A\to C\to C_{\mathfrak n}$ sea \emph{local} (dicho de otro modo, que $\mathfrak n$ esté sobre el ideal maximal $\mathfrak m$ de $A$); esto implica (17.6.1) que $\mathfrak n$ es el \emph{único} ideal primo de $B$ sobre $\mathfrak m$, puesto que $B$ es un anillo local; por tanto, si $B$, $B'$ son dos $A$-álgebras locales esencialmente étales, todo $A$-homomorfismo $B\to B'$ es \emph{local}.
+
+Si $A'$ es una $A$-álgebra local esencialmente étale y $A''$ una $A'$-álgebra local esencialmente étale, entonces $A''$ es una $A$-álgebra local esencialmente étale. En efecto, se tiene por hipótesis $A'=B_{\mathfrak n}$, donde $B$ es una $A$-álgebra étale y $\mathfrak n$ un ideal primo de $B$ sobre el ideal maximal de $A$, y $A''=B'_{\mathfrak n'}$, donde $B'$ es una $A'$-álgebra étale y $\mathfrak n'$ un ideal primo de $B'$ sobre el ideal $\mathfrak nB_{\mathfrak n}$. Si se pone $S=B-\mathfrak n$, de modo que $A'=S^{-1}B$, $B'$ es de la forma $S^{-1}C$, donde $C$ es una $B$-álgebra de presentación finita. Por consiguiente, $C$ es una $A$-álgebra de presentación finita y $A''$ es de la forma $C_{\mathfrak r}$, donde $\mathfrak r$ es un ideal primo de $C$ sobre el ideal maximal de $A$. Como $A'$ es una $A$-álgebra formalmente étale y $A''$ una $A'$-álgebra formalmente étale, $A''$ es una $A$-álgebra formalmente
+
+\oldpage[IV-4]{136}
+
+étale (para las topologías discretas (17.1.3)); por tanto, el morfismo $\Spec(C)\to\Spec(A)$ es étale en el punto $\mathfrak r$ (17.6.1) y, por consiguiente, existe un elemento $g\in C$ tal que $C_g$ sea una $A$-álgebra étale, lo que demuestra que $A''$ es una $A$-álgebra esencialmente étale.
+
+Dado un anillo local $A$, existe un \emph{conjunto} $\mathfrak E$ de $A$-álgebras locales esencialmente étales tal que toda $A$-álgebra local esencialmente étale sea $A$-isomorfa a un álgebra perteneciente a $\mathfrak E$. Para verlo, basta evidentemente observar que existe un conjunto $\mathfrak F$ de $A$-álgebras de tipo finito tal que toda $A$-álgebra de tipo finito sea isomorfa a un álgebra perteneciente a $\mathfrak F$; puede tomarse $\mathfrak F$ igual al conjunto de los cocientes de las álgebras de polinomios $A[T_1,\ldots,T_n]$ ($n\in\mathbf N$).
+
+En lo que sigue, si $A$ y $B$ son dos anillos locales, denotaremos por $\Hom.\operatorname{loc}(A,B)$ el conjunto de los homomorfismos \emph{locales} de $A$ en $B$.
+\end{env}
+
+\begin{lemma}[18.6.2]
+\label{IV.18.6.2}
+Sean $A$, $A'$ dos anillos locales, $k$, $k'$ sus cuerpos residuales respectivos, $\varphi:A\to A'$ un homomorfismo (local) que hace de $A'$ una $A$-álgebra esencialmente étale (18.6.1) y tal que el homomorfismo correspondiente $k\to k'$ sea biyectivo. Entonces, para todo anillo local henseliano $B$, la aplicación canónica
+\[
+  \Hom(\varphi,1_B):\Hom.\operatorname{loc}(A',B)\longrightarrow\Hom.\operatorname{loc}(A,B)
+\]
+es biyectiva.
+\end{lemma}
+
+Pongamos $S=\Spec(A)$, $Y=\Spec(B)$, y sean $s$ e $y$ los puntos cerrados de $S$ e $Y$, respectivamente. Por hipótesis, $A'$ es isomorfa a un anillo local $\sh{O}_{X,x}$ de un $S$-esquema $X$ étale sobre $S$, en un punto $x\in X$ situado sobre $s$. Supongamos dado un homomorfismo local $\psi:A\to B$, que hace de $Y$ un $S$-esquema; se trata de ver que existe \emph{uno y solo un} $S$-morfismo $f:Y\to X$ tal que $f(y)=x$. Pongamos $X'=X\times_S Y$ y observemos que, puesto que $k(x)=k(s)$, existe un solo punto $x'\in X'$ situado sobre $x$ e $y$, y que $k(x')=k(y)$. Hay que demostrar que existe una única $Y$-sección $f'$ de $X'$ tal que $f'(y)=x'$. Ahora bien, el morfismo $g:X'\to Y$ es étale y separado, y la fibra $X'_0=g^{-1}(y)$ tiene por anillo local en el punto $x'$ el cuerpo $k(x')=k(y)$. Si se pone $Y_0=\Spec(k(y))$, existe entonces una única $Y_0$-sección $f'_0$ de $X'_0$ tal que $f'_0(y)=x'$, y la conclusión se deduce de que $B$ se supone henseliano y de (18.5.11, $b)$).
+
+Diremos que una $A$-álgebra local $A'$ que verifica las condiciones de (18.6.2) es \emph{estrictamente esencialmente étale}. Observemos que el criterio (18.5.11, $b)$) significa que, \emph{para que $A$ sea henseliano, es necesario y suficiente que toda $A$-álgebra estrictamente esencialmente étale sea $A$-isomorfa a $A$}.
+
+\begin{lemma}[18.6.3]
+\label{IV.18.6.3}
+Sean $A$ un anillo local y $A_1$, $A_2$ dos $A$-álgebras locales estrictamente esencialmente étales.
+\begin{enumerate}
+  \item[(i)] Existe a lo sumo un $A$-homomorfismo (necesariamente local) de $A_1$ en $A_2$.
+  \item[(ii)] Existe una $A$-álgebra local estrictamente esencialmente étale $A_3$ y dos $A$-homomorfismos $A_1\to A_3$, $A_2\to A_3$.
+\end{enumerate}
+\end{lemma}
+
+Pongamos $S=\Spec(A)$; por hipótesis hay dos $S$-esquemas étales sobre $S$, $X_1$, $X_2$, y dos puntos $x_1\in X_1$, $x_2\in X_2$ situados sobre el punto cerrado $s$ de $S$ y tales que $A_1=\sh{O}_{X_1,x_1}$, $A_2=\sh{O}_{X_2,x_2}$. Pongamos $X_3=X_1\times_S X_2$; las hipótesis $k(x_1)=k(x_2)=k(s)$ implican que existe un solo punto $x_3\in X_3$ situado sobre $x_1$ y $x_2$, y que $k(x_3)=k(s)$ (I, 3.4.9). Además, $X_3$ es étale sobre $S$ (17.3.3), por lo que $A_3=\sh{O}_{X_3,x_3}$ verifica las condiciones de (ii). Por otra parte,
+
+\oldpage[IV-4]{137}
+
+se ha visto que un $A$-homomorfismo de $A_1$ en $A_2$ es necesariamente local; corresponde a un $S$-morfismo $f$ de $X'_2=\Spec(A_2)$ en $X_1$ tal que $f(x_2)=x_1$, o también, poniendo $X'_3=X_1\times_S X'_2$, a una $X'_2$-sección $f'$ de $X'_3$ tal que $f'(x_2)=x_3$. Como $k(x_3)=k(x_2)$ y $X'_2$ es conexo, la unicidad de $f'$ se deduce de (17.4.9), de donde se sigue (i).
+
+\begin{env}[18.6.4]
+\label{IV.18.6.4}
+Denotemos por $\mathfrak S$ el subconjunto del conjunto $\mathfrak E$ definido en (18.6.1) formado por las $A$-álgebras estrictamente esencialmente étales pertenecientes a $\mathfrak E$. Se deduce de (18.6.3) que la relación «existe un $A$-homomorfismo de $A_1$ en $A_2$» es una relación de \emph{preorden} en $\mathfrak S$ y hace de $\mathfrak S$ un conjunto \emph{filtrante creciente}. Indexando $\mathfrak S$ por sí mismo mediante la aplicación identidad, se deduce de (18.6.3, (i)) que, si $\lambda\leq\mu$ en $\mathfrak S$, existe un $A$-homomorfismo \emph{único} $\varphi_{\mu\lambda}:A_\lambda\to A_\mu$ y $(A_\lambda,\varphi_{\mu\lambda})$ es evidentemente un \emph{sistema inductivo} de $A$-álgebras locales, siendo los $\varphi_{\mu\lambda}$ homomorfismos locales. Además, se deduce de (17.3.5) que, para $\lambda\leq\mu$, $A_\mu$ es una $A_\lambda$-álgebra estrictamente esencialmente étale.
+\end{env}
+
+\begin{definition}[18.6.5]
+\label{IV.18.6.5}
+Se llama \emph{henselizado} de un anillo local $A$, y se denota por ${}^h\!A$, a la $A$-álgebra que es el límite inductivo del sistema inductivo $(A_\lambda,\varphi_{\mu\lambda})$ definido en (18.6.4).
+\end{definition}
+
+Esta definición solo depende en apariencia de la elección de $\mathfrak E$; si $\mathfrak E'$ es otro conjunto de $A$-álgebras locales esencialmente étales que tiene la misma propiedad que $\mathfrak E$, y $\mathfrak S'$ el subconjunto de $\mathfrak E'$ formado por las $A$-álgebras estrictamente esencialmente étales, se deduce de (18.6.3, (ii)) que, para las relaciones de preorden consideradas, $\mathfrak S$ y $\mathfrak S'$ son \emph{cofinales} en $\mathfrak S''=\mathfrak S\cup\mathfrak S'$ y, por tanto, dan el mismo límite inductivo salvo isomorfismo. Veremos, por lo demás, más adelante (18.6.6, (i) y (ii)) que ${}^h\!A$ y el homomorfismo canónico $A\to{}^h\!A$ forman una solución de un problema universal y, por consiguiente, están determinados salvo isomorfismo único.
+
+Obsérvese que, si $A$ es un cuerpo, se tiene evidentemente ${}^h\!A=A$. En el caso general, ${}^h\!A$ es también el henselizado de todas las $A$-álgebras estrictamente esencialmente étales $A_\lambda$ ($\lambda\in\mathfrak S$), pues, si $B$ es una $A_\lambda$-álgebra estrictamente esencialmente étale, $B$ es también una $A$-álgebra estrictamente esencialmente étale (18.6.1), y por tanto (salvo un $A$-isomorfismo) una de las $A_\mu$ para $\mu\geq\lambda$, y las $A_\mu$ tales que $\mu\geq\lambda$ y que $A_\mu$ sea una $A_\lambda$-álgebra estrictamente esencialmente étale forman un conjunto cofinal en el conjunto preordenado de las $A_\lambda$, en virtud de (18.6.1) y (18.6.3).
+
+\begin{theorem}[18.6.6]
+\label{IV.18.6.6}
+Sean $A$ un anillo local y ${}^h\!A$ su henselizado.
+\begin{enumerate}
+  \item[(i)] ${}^h\!A$ es un anillo local henseliano y el homomorfismo estructural $A\to{}^h\!A$ es local.
+  \item[(ii)] Para todo anillo local henseliano $B$, la aplicación canónica
+  \[
+    \Hom.\operatorname{loc}({}^h\!A,B)\longrightarrow\Hom.\operatorname{loc}(A,B)
+  \]
+  es biyectiva.
+  \item[(iii)] ${}^h\!A$ es un $A$-módulo fielmente plano y, si $\mathfrak m$ es el ideal maximal de $A$, $\mathfrak m.{}^h\!A$ es el ideal maximal de ${}^h\!A$, y el homomorfismo $A/\mathfrak mA\to{}^h\!A/\mathfrak m.{}^h\!A$ de los cuerpos residuales es biyectivo.
+  \item[(iv)] Si $\widehat A$ y $({}^h\!A)\widehat{\phantom{x}}$ son los completados separados de los anillos locales $A$ y ${}^h\!A$, el homomorfismo $\widehat A\to({}^h\!A)\widehat{\phantom{x}}$ deducido del homomorfismo estructural $A\to{}^h\!A$ por compleción es biyectivo.
+  \item[(v)] Para que ${}^h\!A$ sea noetheriano, es necesario y suficiente que $A$ lo sea.
+  \item[(vi)] Si $A$ es henseliano, el homomorfismo canónico $A\to{}^h\!A$ es biyectivo.
+\end{enumerate}
+\end{theorem}
+
+\oldpage[IV-4]{138}
+
+Sea $\mathfrak m_\lambda$ el ideal maximal de $A_\lambda$; del hecho de que, en (17.6.1), $a)$ implica $c')$, se deduce que, para $\lambda\leq\mu$, se tiene $\mathfrak m_\mu=\mathfrak m_\lambda A_\mu$, que el homomorfismo $A_\lambda/\mathfrak m_\lambda\to A_\mu/\mathfrak m_\mu$ es biyectivo y que $A_\mu$ es un $A_\lambda$-módulo plano. El hecho de que ${}^h\!A$ sea local, de que el homomorfismo $A\to{}^h\!A$ sea local, la afirmación (iii) y la suficiencia de (v) se deducen entonces de ($0_{\mathrm{III}}$, 10.3.1.3); la necesidad de (v) se deduce de que ${}^h\!A$ es un $A$-módulo fielmente plano ($0_{\mathrm I}$, 6.5.2).
+
+Para demostrar que ${}^h\!A$ es henseliano, apliquemos el criterio (18.5.11, $b)$). Pongamos, pues, $S=\Spec({}^h\!A)$, $S_0=\Spec({}^h\!A/\mathfrak m.{}^h\!A)$, y sea $g:S'\to S$ un morfismo étale; pongamos $S'_0=g^{-1}(S_0)$, y sea $f_0:S_0\to S'_0$ una $S_0$-sección de $S'_0$. Razonando como en (18.5.4), puede suponerse que $g$ es de presentación finita. Se deduce entonces de (8.8.2) y (17.7.5) que existen un índice $\lambda\in\mathfrak S$, un morfismo étale $g_\lambda:S'^{(\lambda)}\to S^{(\lambda)}=\Spec(A_\lambda)$ y, si se pone $S_0^{(\lambda)}=\Spec(A_\lambda/\mathfrak mA_\lambda)$ y $S_0'^{(\lambda)}=g_\lambda^{-1}(S_0^{(\lambda)})$, una $S_0^{(\lambda)}$-sección $f_0^{(\lambda)}:S_0^{(\lambda)}\to S_0'^{(\lambda)}$ tales que
+\[
+  S'=S'^{(\lambda)}\times_{S^{(\lambda)}}S,\qquad
+  g=g_\lambda\times1,\qquad
+  f_0=f_0^{(\lambda)}\times1.
+\]
+Sean $s$ el punto cerrado de $S$, $x=f_0(s)$ y $x_\lambda$ la proyección de $x$ en $S'^{(\lambda)}$; como $x_\lambda$ está sobre el punto cerrado $s_\lambda$ de $S^{(\lambda)}$, el anillo local $C_\lambda$ de $S'^{(\lambda)}$ en el punto $x_\lambda$ es una $A_\lambda$-álgebra esencialmente étale; además, como $f_0^{(\lambda)}(s_\lambda)=x_\lambda$, se tiene $k(x_\lambda)=k(s_\lambda)$; dicho de otro modo, $C_\lambda$ es una $A_\lambda$-álgebra local estrictamente esencialmente étale y, por consiguiente, (18.6.1) es $A_\lambda$-isomorfa a una $A$-álgebra $A_\mu$ con $\mu\geq\lambda$. Existe entonces un $A_\lambda$-homomorfismo $C_\lambda\to{}^h\!A$, es decir, un $S^{(\lambda)}$-morfismo $h:S\to S'^{(\lambda)}$ tal que $h(s)=x_\lambda$ y, por consiguiente, existe efectivamente una $S$-sección $f$ de $S'$ tal que $f(s)=x$, lo que termina de demostrar (i).
+
+Para demostrar (ii), basta observar que se tiene
+\[
+  \Hom.\operatorname{loc}({}^h\!A,B)=\varprojlim_\lambda\Hom.\operatorname{loc}(A_\lambda,B)
+\]
+y que, por (18.6.2), los homomorfismos canónicos $\Hom.\operatorname{loc}(A_\lambda,B)\leftarrow\Hom.\operatorname{loc}(A,B)$ son biyectivos.
+
+Para demostrar (iv), observemos que, para todo $\lambda$ y todo entero $n>0$, $\mathfrak m_\lambda^n=\mathfrak m^nA_\lambda$, y
+\[
+  (\mathfrak m.{}^h\!A)^n=\mathfrak m^n.{}^h\!A=\varinjlim_\lambda\mathfrak m_\lambda^n.
+\]
+Se concluye, por la exactitud del funtor $\varinjlim$ en la categoría de los $A$-módulos, que
+\[
+  {}^h\!A/(\mathfrak m.{}^h\!A)^n=\varinjlim_\lambda(A_\lambda/\mathfrak m_\lambda^n),
+\]
+y, por consiguiente, basta demostrar que, para todo entero $n$ y todo índice $\lambda$, el homomorfismo $A/\mathfrak m^n\to A_\lambda/\mathfrak m_\lambda^n$ es biyectivo. Ahora bien, esto es cierto por hipótesis para $n=1$; por otra parte, puesto que $A_\lambda$ es un $A$-módulo plano, se tiene
+\[
+  \mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1}
+  =(\mathfrak m^n/\mathfrak m^{n+1})\otimes_A A_\lambda
+  =(\mathfrak m^n/\mathfrak m^{n+1})\otimes_{A/\mathfrak m}(A_\lambda/\mathfrak mA_\lambda)
+\]
+y, como $A/\mathfrak m\to A_\lambda/\mathfrak mA_\lambda=A_\lambda/\mathfrak m_\lambda$ es biyectivo, el homomorfismo $\mathfrak m^n/\mathfrak m^{n+1}\to\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1}$ es también biyectivo; la conclusión se deduce entonces de Bourbaki, \emph{Alg. comm.}, cap. III, \textsection~2, n.\textsuperscript{o}~8, cor. 3 del teor. 1.
+
+Por último, si $A$ es henseliano, se deduce de la observación que precede a (18.6.3) que los homomorfismos $A\to A_\lambda$ son biyectivos, lo que demuestra (vi) por definición de ${}^h\!A$.
+
+\begin{env}[18.6.7]
+\label{IV.18.6.7}
+Sea ahora $A$ un anillo semilocal y sean $\mathfrak m_i$ ($1\leq i\leq r$) sus ideales maximales. Se llama \emph{henselizado} de $A$, y se denota también por ${}^h\!A$, al anillo producto $\prod_{i=1}^r{}^h(A_{\mathfrak m_i})$ de los henselizados de los anillos locales $A_{\mathfrak m_i}$. Es un $A$-módulo fielmente plano y una $A$-álgebra semilocal, cuyos ideales maximales son los $\mathfrak m_i.{}^h\!A$ en virtud de (18.6.6, (iii)); además, si $\mathfrak r=\bigcap_i\mathfrak m_i$ es el radical de $A$, se deduce de lo anterior que $\mathfrak r.{}^h\!A$
+
+\oldpage[IV-4]{139}
+
+es el radical de ${}^h\!A$ y que la aplicación canónica $A/\mathfrak r\to{}^h\!A/\mathfrak r.{}^h\!A$ es biyectiva. Como el completado separado $\widehat A$ de $A$ para la topología $\mathfrak r$-preádica es el producto de los completados separados $\widehat A_{\mathfrak m_i}$ (Bourbaki, \emph{Alg. comm.}, cap. III, \textsection~2, n.\textsuperscript{o}~13, prop. 18), el homomorfismo canónico $\widehat A\to({}^h\!A)\widehat{\phantom{x}}$ es biyectivo por (18.6.6, (iv)), y está claro por (18.6.6, (v)) que, para que ${}^h\!A$ sea noetheriano, es necesario y suficiente que $A$ lo sea.
+
+Para obtener el análogo de la propiedad universal (18.6.6, (ii)), convengamos, cuando $A$ y $B$ son dos anillos semilocales de radicales respectivos $\mathfrak r$, $\mathfrak s$, en llamar \emph{homomorfismo semilocal} de $A$ en $B$ a todo homomorfismo $\varphi$ tal que $\varphi(\mathfrak r)\subset\mathfrak s$. En el caso particular en que $B$ es un \emph{producto} de anillos locales $B_j$ ($1\leq j\leq n$), el dato de tal homomorfismo equivale al de sus proyecciones $\varphi_j:A\to B_j$, que son homomorfismos sujetos a la única condición de que $\varphi_j(\mathfrak r)\subset\mathfrak n_j$, donde $\mathfrak n_j$ es el ideal maximal de $B_j$. Por otra parte, si $\mathfrak m_i$ ($1\leq i\leq m$) son los ideales maximales de $A$, el ideal primo $\varphi_j^{-1}(\mathfrak n_j)$ debe contener uno de los $\mathfrak m_i$, puesto que contiene su intersección $\mathfrak r$; por tanto, es igual a uno de los $\mathfrak m_i$ y $\varphi_j$ se factoriza como $A\to A_{\mathfrak m_i}\xrightarrow{\psi_{ij}}B_j$, donde $\psi_{ij}$ es un homomorfismo \emph{local}. Si $\Hom.\operatorname{sloc}(A,B)$ denota el conjunto de los homomorfismos semilocales de $A$ en $B$, puede identificarse entonces este conjunto con
+\[
+  \prod_j\left(\bigcup_i\Hom.\operatorname{loc}(A_{\mathfrak m_i},B_j)\right)
+\]
+en el caso considerado; como un anillo semilocal henseliano es producto directo de anillos locales henselianos, se ve que la propiedad universal (18.6.6, (ii)) sigue siendo válida para un anillo semilocal $A$ cuando se sustituyen en ella los homomorfismos locales por los homomorfismos semilocales.
+\end{env}
+
+\begin{proposition}[18.6.8]
+\label{IV.18.6.8}
+Sean $A$ un anillo semilocal y $B$ una $A$-álgebra semilocal y entera sobre $A$. Entonces $B\otimes_A({}^h\!A)$ es una $B$-álgebra semilocal isomorfa a ${}^h\!B$.
+\end{proposition}
+
+Como $B\otimes_A({}^h\!A)$ es entero sobre ${}^h\!A$, cada uno de sus ideales maximales está sobre uno de los ideales maximales de ${}^h\!A$, y por tanto sobre un ideal maximal de $A$; y, como $B$ es entera sobre $A$, los ideales primos de $B$ situados sobre un ideal maximal de $A$ son ideales maximales de $B$, de modo que, finalmente, un ideal maximal de $B\otimes_A({}^h\!A)$ tiene por proyecciones en $\Spec({}^h\!A)$ y $\Spec(B)$ ideales maximales; teniendo en cuenta (18.6.6, (iii)) y (I, 3.4.9), se concluye que el anillo $B\otimes_A({}^h\!A)$ es semilocal. Además, para todo anillo local henseliano $C$, $\Hom.\operatorname{sloc}(B\otimes_A({}^h\!A),C)$ está en correspondencia biunívoca con el conjunto de los pares $(\varphi,\psi)$ de homomorfismos semilocales $\varphi:B\to C$, $\psi:{}^h\!A\to C$ tales que los compuestos
+\[
+  A\longrightarrow B\xrightarrow{\varphi}C,\qquad
+  A\longrightarrow{}^h\!A\xrightarrow{\psi}C
+\]
+sean iguales. Pero, en virtud de la correspondencia biunívoca entre $\Hom.\operatorname{sloc}(A,C)$ y $\Hom.\operatorname{sloc}({}^h\!A,C)$, se ve que, para todo $\varphi\in\Hom.\operatorname{sloc}(B,C)$, existe uno y solo un $\psi$ que tiene la propiedad anterior; por tanto, la aplicación
+\[
+  \Hom.\operatorname{sloc}(B\otimes_A({}^h\!A),C)\longrightarrow\Hom.\operatorname{sloc}(B,C)
+\]
+es biyectiva, lo que demuestra la proposición en virtud de la unicidad de la solución de un problema universal.
+
+\begin{theorem}[18.6.9]
+\label{IV.18.6.9}
+Sea $A$ un anillo semilocal.
+\begin{enumerate}
+  \item[(i)] Para que ${}^h\!A$ sea reducido (resp. normal), es necesario y suficiente que $A$ lo sea.
+  \item[(ii)] Supongamos que $A$ es noetheriano. Entonces, para todo ideal primo $\mathfrak p$ de $A$, el anillo $({}^h\!A)_{\mathfrak p}/\mathfrak p.({}^h\!A)_{\mathfrak p}$ es producto directo de un número finito de extensiones algebraicas separables de $k(\mathfrak p)$ (lo que implica que las fibras del morfismo canónico $\Spec({}^h\!A)\to\Spec(A)$ son \emph{geométricamente regulares}).
+\end{enumerate}
+\end{theorem}
+
+\oldpage[IV-4]{140}
+
+(i) Como ${}^h\!A$ es un $A$-módulo fielmente plano, se deduce de (2.1.13) que, si ${}^h\!A$ es reducido (resp. normal), lo mismo sucede con $A$. Para demostrar el recíproco, puede uno limitarse al caso en que el anillo $A$ es local, de modo que, con las notaciones de (18.6.4), se tiene ${}^h\!A=\varinjlim A_\alpha$. Ahora bien, se deduce de la definición de los $A_\alpha$ y de (17.5.7) que, si $A$ es reducido (resp. íntegro e integralmente cerrado), lo mismo sucede con los $A_\alpha$; además, los homomorfismos $A_\alpha\to A_\beta$ para $\alpha\leq\beta$ son inyectivos en virtud de ($0_{\mathrm I}$, 6.5.1), puesto que $A_\beta$ es un $A_\alpha$-módulo fielmente plano; por tanto, los morfismos $\Spec(A_\beta)\to\Spec(A_\alpha)$ son dominantes, y se concluye de (5.13.2) (resp. (5.13.4)) que ${}^h\!A$ es reducido (resp. íntegro e integralmente cerrado).
+
+(ii) Puede uno limitarse al caso en que $A$ es local. En virtud del hecho de que el funtor $\varinjlim$ conmuta con el producto tensorial, la fibra del morfismo $\Spec({}^h\!A)\to\Spec(A)$ en un punto $\mathfrak p$ es límite inductivo de las fibras de los morfismos $\Spec(A_\alpha)\to\Spec(A)$ en dicho punto. Como ${}^h\!A$ es noetheriano, se ve, teniendo en cuenta (17.6.2), que la cuestión se reduce a demostrar el lema siguiente:
+
+\begin{lemma}[18.6.9.1]
+\label{IV.18.6.9.1}
+Sean $(B_\alpha)$ un sistema inductivo de anillos artinianos y $B=\varinjlim B_\alpha$ su límite inductivo. Si $B$ es noetheriano, entonces $B$ es artiniano; si además, para $\alpha\leq\beta$, los homomorfismos $\varphi_{\beta\alpha}:B_\alpha\to B_\beta$ son inyectivos, entonces existe $\lambda$ tal que, para $\alpha\geq\lambda$, el número de componentes locales $B_\alpha^{(i)}$ de $B_\alpha$ sea constante, que $\varphi_{\beta\alpha}(B_\alpha^{(i)})\subset B_\beta^{(i)}$ para todo $i$ y que los $B^{(i)}=\varinjlim B_\alpha^{(i)}$ sean las componentes locales de $B$.
+\end{lemma}
+
+Sean, en efecto, $Y_\alpha=\Spec(B_\alpha)$, $Y=\Spec(B)$, que, como espacio topológico, es igual a $\varprojlim Y_\alpha$ (8.2.10). Los espacios $Y_\alpha$ son finitos y discretos; además, si los $\varphi_{\beta\alpha}$ son inyectivos, los morfismos canónicos $Y_\beta\to Y_\alpha$ son dominantes y, por tanto, sobreyectivos. El lema se deducirá entonces del lema puramente topológico siguiente:
+
+\begin{lemma}[18.6.9.2]
+\label{IV.18.6.9.2}
+Sea $(Y_\alpha,\psi_{\alpha\beta})$ un sistema proyectivo de espacios topológicos finitos y discretos. Si $Y=\varprojlim Y_\alpha$ es noetheriano, $Y$ es finito y discreto. Si además los $\psi_{\alpha\beta}$ son sobreyectivos, existe $\lambda$ tal que, para $\alpha\geq\lambda$, el número de elementos de $Y_\alpha$ sea constante e igual al número de elementos de $Y$.
+\end{lemma}
+
+En efecto, al ser $Y$ compacto y noetheriano, toda parte de $Y$ es compacta y, por tanto, cerrada, lo que implica que $Y$ es discreto y, por tanto, finito puesto que es compacto. Si además los $\psi_{\alpha\beta}$ son sobreyectivos, lo mismo sucede con $\psi_\alpha:Y\to Y_\alpha$, por lo que $\operatorname{Card}(Y)\geq\operatorname{Card}(Y_\alpha)$; y, como $\operatorname{Card}(Y_\alpha)$ es función creciente de $\alpha$, existe $\lambda$ tal que, para $\alpha\geq\lambda$, $\operatorname{Card}(Y_\alpha)=\operatorname{Card}(Y_\lambda)$; los $\psi_{\alpha\beta}$ son entonces biyectivos para $\alpha\geq\lambda$, y se tiene por tanto $\operatorname{Card}(Y)=\operatorname{Card}(Y_\lambda)$.
+
+\begin{corollary}[18.6.10]
+\label{IV.18.6.10}
+Sea $A$ un anillo local noetheriano. Para que ${}^h\!A$ posea una de las propiedades siguientes:
+\begin{enumerate}
+  \item[$a)$] ser un anillo de Cohen-Macaulay (0, 16.5.3);
+  \item[$b)$] verificar la propiedad $(S_n)$ (5.7.3);
+  \item[$c)$] ser regular;
+  \item[$d)$] verificar la propiedad $(R_n)$ (5.8.2);
+\end{enumerate}
+es necesario y suficiente que $A$ posea esa misma propiedad.
+\end{corollary}
+
+\oldpage[IV-4]{141}
+
+Esto se deduce inmediatamente del hecho de que las fibras del morfismo $\Spec({}^h\!A)\to\Spec(A)$ son geométricamente regulares (18.6.9) y de (6.4.1), (6.5.1) y (6.5.3).
+
+\begin{corollary}[18.6.11]
+\label{IV.18.6.11}
+Sea $A$ un anillo semilocal noetheriano. Para que un ideal primo $\mathfrak p$ de ${}^h\!A$ pertenezca a $\operatorname{Ass}({}^h\!A)$, es necesario y suficiente que $\mathfrak p\cap A$ pertenezca a $\operatorname{Ass}(A)$.
+\end{corollary}
+
+Teniendo en cuenta la descripción de las fibras del morfismo $\Spec({}^h\!A)\to\Spec(A)$, esto se deduce inmediatamente de (3.3.1).
+
+\begin{proposition}[18.6.12]
+\label{IV.18.6.12}
+Sea $A$ un anillo local; las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $A$ es unirrama (0, 23.2.1) (resp. reducido y unirrama).
+  \item[$b)$] Para toda $A$-álgebra local estrictamente esencialmente étale $A'$, $\Spec(A')$ es irreducible (resp. íntegro).
+  \item[$c)$] $\Spec({}^h\!A)$ es irreducible (resp. íntegro).
+\end{enumerate}
+\end{proposition}
+
+Observemos primero que ${}^h(A_{\mathrm{red}})=({}^h\!A)_{\mathrm{red}}$, pues ${}^h(A_{\mathrm{red}})=({}^h\!A)\otimes_A A_{\mathrm{red}}$ (18.6.8) y, como ${}^h(A_{\mathrm{red}})$ es reducido (18.6.9), es igual a $({}^h\!A)_{\mathrm{red}}$. Esto permite considerar en la demostración únicamente el caso en que $A$ es reducido y, por tanto, también $A'$ (17.5.7) y ${}^h\!A$ (18.6.9).
+
+Con las notaciones de (18.6.4), la condición $b)$ significa que todos los $A_\alpha$ son íntegros; se concluye que ${}^h\!A=\varinjlim A_\alpha$ es íntegro (5.13.3), y por tanto $b)$ implica $c)$.
+
+Está claro que, si ${}^h\!A$ es íntegro, lo mismo sucede con los $A_\alpha\subset{}^h\!A$, y por tanto $c)$ implica $b)$.
+
+Demostremos que $c)$ implica $a)$. Observemos primero que $A\subset{}^h\!A$ es íntegro; sean $K$ y $L$ los cuerpos de fracciones de $A$ y ${}^h\!A$, respectivamente. Basta ver que, para toda $A$-álgebra \emph{finita} $B\subset K$, $B$ es un anillo local. Ahora bien, $B$ es un anillo semilocal, cuyo henselizado es entonces $B\otimes_A({}^h\!A)$ (18.6.8). Por planitud, $B\otimes_A({}^h\!A)$ se identifica con un subanillo de $K\otimes_A({}^h\!A)$ y este último con un subanillo de $L$; por tanto, ${}^h\!B$ es íntegro. Pero, como ${}^h\!B$ es un anillo semilocal henseliano, es producto directo de anillos locales (18.5.9), por lo que solo puede ser íntegro si es local, lo que implica efectivamente que $B$ es local.
+
+Demostremos por último que $a)$ implica $c)$. Sea $C$ la clausura integral del anillo íntegro $A$. Como $C$ es un anillo local por hipótesis, $C\otimes_A({}^h\!A)$ es el henselizado de $C$ (18.6.8), y por tanto es íntegro e integralmente cerrado (18.6.9). Como $A$ es un subanillo de $C$, ${}^h\!A$ se identifica por planitud con un subanillo de ${}^h\!C$ y, por tanto, es también íntegro, lo que termina la demostración.
+
+\begin{corollary}[18.6.13]
+\label{IV.18.6.13}
+Sea $A$ un anillo local henseliano. Entonces, para que $A$ sea unirrama, es necesario y suficiente que $A_{\mathrm{red}}$ sea íntegro.
+\end{corollary}
+
+\begin{proposition}[18.6.14]
+\label{IV.18.6.14}
+\begin{enumerate}
+  \item[(i)] Todo límite inductivo filtrante de anillos locales henselianos (donde los homomorfismos de transición son locales) es un anillo local henseliano.
+  \item[(ii)] El funtor $A\leadsto{}^h\!A$ en la categoría de los anillos locales (donde los morfismos son los homomorfismos locales) conmuta con los límites inductivos filtrantes.
+  \item[(iii)] Todo anillo local henseliano $A$ es límite inductivo de un sistema inductivo filtrante de anillos locales henselianos y noetherianos $A_\lambda$ (siendo locales los homomorfismos de transición $A_\lambda\to A_\mu$).
+\end{enumerate}
+\end{proposition}
+
+(i) Sea $(A_\lambda)$ un sistema inductivo filtrante de anillos locales henselianos, donde los homomorfismos de transición son locales. Demostremos que $A'=\varinjlim A_\lambda$, que es local ($0_{\mathrm{III}}$, 10.3.1.3), es henseliano. Ahora bien, sean $C$ una $A'$-álgebra étale y $\mathfrak n$ un ideal primo
+
+\oldpage[IV-4]{142}
+
+de $C$ sobre el ideal maximal $\mathfrak m'$ de $A'$, tal que $C_{\mathfrak n}$ sea estrictamente esencialmente étale sobre $A'$ (18.6.1), dicho de otro modo, que $k(\mathfrak m')\to k(\mathfrak n)$ sea un isomorfismo. En virtud de (8.8.2, (ii)) y de (17.7.8), existen un índice $\lambda$ y una $A_\lambda$-álgebra étale $C_\lambda$ tales que $C=C_\lambda\otimes_{A_\lambda}A'$ salvo isomorfismo; además, si $\mathfrak n_\lambda$ es la imagen inversa de $\mathfrak n$ en $C_\lambda$, y $\mathfrak m_\lambda$ el ideal maximal de $A_\lambda$, puede suponerse, en virtud de (8.8.2.4) y de la transitividad de las fibras (I, 3.6.4), que $(C_\lambda)_{\mathfrak n_\lambda}$ es estrictamente esencialmente étale sobre $A_\lambda$; puesto que $A_\lambda$ es henseliano, $(C_\lambda)_{\mathfrak n_\lambda}$ es necesariamente isomorfo a $A_\lambda$ (18.5.11, $b)$); existe por consiguiente una vecindad de $\mathfrak n_\lambda$ en $\Spec(C_\lambda)$ isomorfa a $\Spec(A_\lambda)$ (I, 6.5.4); se concluye que existe una vecindad de $\mathfrak n$ en $\Spec(C)$ isomorfa a $\Spec(A')$ y, por tanto, que $C_{\mathfrak n}$ es isomorfo a $A'$, lo que demuestra que $A'$ es henseliano (18.6.2) y termina la demostración.
+
+(ii) Supongamos que $B=\varinjlim B_\lambda$, donde los $B_\lambda$ son anillos locales y los homomorfismos de transición $B_\lambda\to B_\mu$ ($\lambda\leq\mu$) son locales. Pongamos $A_\lambda={}^h\!B_\lambda$; los $A_\lambda$ son anillos locales henselianos (18.6.6, (vi)) y, en virtud de (18.6.6, (ii)), los homomorfismos de transición $B_\lambda\to B_\mu$ determinan de manera única homomorfismos locales $A_\lambda\to A_\mu$, de modo que $(A_\lambda)$ es un sistema inductivo. Todo se reduce a ver que $A'=\varinjlim A_\lambda$ es canónicamente isomorfo a $A={}^h\!B$. En virtud de (18.6.6, (ii)) y de la definición de los límites inductivos, se tiene, para todo anillo local henseliano $E$,
+\[
+  \Hom.\operatorname{loc}(A',E)
+  =\varprojlim\Hom.\operatorname{loc}(A_\lambda,E)
+  =\varprojlim\Hom.\operatorname{loc}(B_\lambda,E)
+  =\Hom.\operatorname{loc}(B,E).
+\]
+Pero, como $A'$ es henseliano por (i), esto demuestra nuestra afirmación.
+
+(iii) El anillo $A$ es límite inductivo filtrante de sus subanillos locales noetherianos $B_\lambda$, siendo locales los homomorfismos de transición (5.13.3, (iii)). Como los ${}^h\!B_\lambda$ son anillos locales henselianos y noetherianos (18.6.6, (v)) y $A={}^h\!A$ (18.6.6, (vi)), basta aplicar (ii) al sistema inductivo $(B_\lambda)$.
+
+\begin{corollary}[18.6.15]
+\label{IV.18.6.15}
+Sean $A$ un anillo local henseliano y $X$ un $A$-preesquema de presentación finita sobre $A$. Existen entonces un anillo local noetheriano y henseliano $A_0$, un homomorfismo local $A_0\to A$, un preesquema $X_0$ de tipo finito sobre $A_0$ y un $A$-isomorfismo $X_0\otimes_{A_0}A\xrightarrow{\sim}X$.
+\end{corollary}
+
+Esto se deduce de (18.6.14) y de (8.8.2, (ii)).

@@ -1,0 +1,138 @@
+\PassOptionsToPackage{hyperfootnotes=false}{hyperref}
+\input{preamble}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=15\fi
+\setlength{\emergencystretch}{6em}
+
+\makeatletter
+\let\EGAReaderOriginalHyperref\hyperref
+\renewcommand{\hyperref}[2][]{%
+  \@ifundefined{r@#1}{#2}{\EGAReaderOriginalHyperref[#1]{#2}}}
+\makeatother
+
+\hypersetup{
+  pdftitle={Elementos de geometría algebraica III, primera parte — texto vigente},
+  pdfauthor={Alexandre Grothendieck y Jean Dieudonné; traducción española},
+  pdfsubject={Estudio cohomológico de los haces coherentes}
+}
+
+\begin{document}
+% BEGIN RIGHTS AND AI TRANSLATION NOTICE
+\begingroup
+\small
+
+% BEGIN INHERITED HUMAN SOURCE CREDIT
+\noindent\textbf{Fuentes y contribuciones}
+
+La obra original es de Alexandre Grothendieck, con la colaboración de Jean Dieudonné: Éléments de géométrie algébrique III, première partie, Publications Mathématiques de l’IHÉS 11 (1961).
+
+Las fuentes inglesas utilizadas en la preparación de esta traducción española incorporan la traducción humana de \href{https://github.com/ryankeleti/ega}{ryankeleti/ega}, versión \href{https://github.com/ryankeleti/ega/tree/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971}{3d7afe28}, en los §§ 8–10 y parte del § 11 del capítulo 0, y los §§ 1 y 3 del capítulo III. El proyecto nombra a Mateo Carmona, Tim Holzschuh, Tim Hosgood, Ryan Keleti, Thiago Solovera \& Nery y Wayne Yang como colaboradores; sus \href{https://github.com/ryankeleti/ega/blob/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971/README.md}{créditos por sección} y su \href{https://github.com/ryankeleti/ega/commits/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971}{historial de contribuciones} precisan la autoría.
+
+La traducción inglesa y la estructura TeX heredadas conservan esa procedencia. La traducción al español, las adiciones posteriores y las correcciones y composición producidas por IA se distinguen de esas contribuciones humanas. No se atribuye a los colaboradores de la traducción inglesa la traducción española ni el material posterior que no figura en su versión. La atribución no implica autorización ni aval.
+
+\par\medskip
+% END INHERITED HUMAN SOURCE CREDIT
+\noindent\textbf{Derechos, disponibilidad y autoría}
+
+Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Este proyecto no dedica esas obras o contribuciones al dominio público ni concede una licencia sobre ellas. Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
+
+Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en NUMDAM (www.numdam.org/). Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
+
+Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede abrir una incidencia en GitHub (github.com/KokunoYumeto/ega-fga-es/issues). El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
+
+La traducción al español está producida por IA. Las correcciones, la edición y la composición también están producidas por IA. El responsable de la publicación no tradujo el texto. Se conservan la autoría y las atribuciones de las obras originales y de las contribuciones heredadas; no se atribuyen a la IA. Los modelos documentados se identifican en cada edición.
+\par
+\endgroup
+\clearpage
+% END RIGHTS AND AI TRANSLATION NOTICE
+
+
+\title[EGA III-1 --- Estudio cohomológico --- Primera parte]{Elementos de geometría algebraica\\
+III. Estudio cohomológico de los haces coherentes\\
+Primera parte}
+\author{Alexandre Grothendieck y Jean Dieudonné}
+\date{}
+\maketitle
+
+\begin{center}
+\large Traducción española — edición actual
+\end{center}
+
+\begin{quote}\small
+Traducción, correcciones y composición producidas por IA: OpenAI Codex, GPT-5.6 Sol y GPT-6 Astra, esfuerzo Ultra.
+\end{quote}
+
+\phantomsection
+\label{section:ega0}
+\pdfbookmark[0]{Capítulo 0 (continuación)}{chapter.0.continued}
+\addcontentsline{toc}{part}{Capítulo 0 (continuación)}
+\section*{CAPÍTULO 0 (continuación)}
+\setcounter{section}{7}
+\setcounter{subsection}{0}
+\setcounter{equation}{0}
+
+\input{ega0/ega0-8}
+\input{ega0/ega0-9}
+\input{ega0/ega0-10}
+\input{ega0/ega0-11}
+\input{ega0/ega0-12}
+\input{ega0/ega0-13}
+
+\clearpage
+\phantomsection
+\label{section:ega3}
+\pdfbookmark[0]{Capítulo III}{chapter.III}
+\addcontentsline{toc}{part}{Capítulo III: Estudio cohomológico de los haces coherentes}
+\section*{CAPÍTULO III}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{equation}{0}
+\begin{center}
+\Large\bfseries ESTUDIO COHOMOLÓGICO DE LOS HACES COHERENTES
+\end{center}
+\oldpage[III]{81}
+
+\section*{Sumario}
+
+\begin{longtable}{@{}p{0.08\textwidth}p{0.86\textwidth}@{}}
+  \hyperref[section:III.1]{\textsection1}. & Cohomología de los esquemas afines.\\
+  \hyperref[section:III.2]{\textsection2}. & Estudio cohomológico de los morfismos proyectivos.\\
+  \hyperref[section:III.3]{\textsection3}. & Teorema de finitud para los morfismos propios.\\
+  \hyperref[section:III.4]{\textsection4}. & Teorema fundamental de los morfismos propios. Aplicaciones.\\
+  \hyperref[section:III.5]{\textsection5}. & Un teorema de existencia para los haces algebraicos coherentes.\\
+  \textsection8. & Teorema de dualidad para los fibrados proyectivos.\\
+  \textsection9. & Cohomología relativa y cohomología local; dualidad local.\\
+  \textsection10. & Relaciones entre la cohomología proyectiva y la cohomología local. Técnica de compleción formal a lo largo de un divisor.\\
+  \textsection11. & Grupos de Picard globales y locales.\footnotemark
+\end{longtable}
+\footnotetext{EGA IV no depende de los \textsection\textsection8--11 y probablemente se publicará antes que estos capítulos. \emph{[Trad.] Estos cuatro últimos capítulos nunca se publicaron.}}
+\bigskip
+
+Este capítulo presenta los teoremas fundamentales relativos a la cohomología de los haces algebraicos coherentes, con excepción de los teoremas que explican la teoría de residuos (teoremas de dualidad), que serán objeto de un capítulo posterior.
+Estos resultados resultarán ser herramientas esenciales en todo lo que sigue, incluso para cuestiones cuya naturaleza no es propiamente cohomológica;
+el lector verá los primeros ejemplos a partir del \hyperref[section:III.4]{\textsection4}.
+Finalmente, en los \textsection\textsection8--11 desarrollaremos ciertos resultados, vinculados con la dualidad de los haces coherentes, que son particularmente importantes para las aplicaciones y pueden exponerse incluso antes de introducir la teoría general completa de residuos.
+
+\oldpage[III]{82}
+El contenido de los \hyperref[section:III.1]{\textsection1} y \hyperref[section:III.2]{\textsection2} se debe a J.-P.~Serre, y el lector observará que no hemos tenido más que seguir (FAC).
+Los \textsection8 y 9 también se inspiran en (FAC) (aunque las modificaciones exigidas por los distintos contextos sean menos evidentes).
+Finalmente, como dijimos en la Introducción, el \hyperref[section:III.4]{\textsection4} debe considerarse como la formalización, en lenguaje moderno, del ``teorema de invariancia'' fundamental de la ``teoría de funciones holomorfas'' de Zariski.
+
+Llamamos la atención sobre el hecho de que los resultados del n.\textsuperscript{o}\hyperref[subsection:III.3.4]{3.4} (y las proposiciones preliminares de \sref[0]{0.13.4} a \sref[0]{0.13.7}) no se utilizarán en lo que sigue de este \hyperref[section:ega3]{Capítulo~III}, por lo que pueden omitirse en una primera lectura.
+\bigskip
+
+\input{ega3/ega3-1}
+\input{ega3/ega3-2}
+\input{ega3/ega3-3}
+\input{ega3/ega3-4}
+\input{ega3/ega3-5}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Referencias consolidadas de la edición}
+\section*{Referencias consolidadas de la edición}
+\bibliography{the}
+\bibliographystyle{amsalpha}
+
+\end{document}

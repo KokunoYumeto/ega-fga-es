@@ -1,0 +1,129 @@
+\subsection{Equivalencia lineal de los divisores}
+\label{subsection:IV.21.3}
+
+\begin{env}[21.3.1]
+\label{IV.21.3.1}
+Se dice que un divisor $D$ sobre $X$ es \emph{principal} si es de la forma $\operatorname{div}(f)$, donde $f$ es una función meromorfa regular sobre $X$;
+las funciones meromorfas regulares $f'$ tales que $\operatorname{div}(f')=D$ son entonces todas las de la forma $tf$, donde $t\in\Gamma(X,\sh{O}_X^*)$ \sref{IV.21.1.3.4}.
+El conjunto de los divisores principales es un subgrupo de $\operatorname{Div}(X)$, denotado por $\operatorname{Div.princ}(X)$, isomorfo a $\Gamma(X,\sh{M}_X^*)/\Gamma(X,\sh{O}_X^*)$.
+Dos divisores $D$, $D'$ se llaman \emph{linealmente equivalentes} si $D-D'$ es un divisor principal;
+los divisores principales son, por tanto, los divisores linealmente equivalentes a $0$.
+\end{env}
+
+\begin{env}[21.3.2]
+\label{IV.21.3.2}
+Recordemos (\EGAReadLink{0.5.4.7}{$\mathbf{0}_{\mathrm I}$, 5.4.7}) que se puede hablar del conjunto de las clases de equivalencia de los $\sh{O}_X$-módulos invertibles para la relación de isomorfismo;
+este conjunto se denota por $\operatorname{Pic}(X)$, y para todo $\sh{O}_X$-módulo invertible $\sh{L}$, se denota por $\operatorname{cl}(\sh{L})$ la clase de equivalencia de los $\sh{O}_X$-módulos isomorfos a $\sh{L}$;
+además, $\operatorname{Pic}(X)$ es un grupo conmutativo para la multiplicación definida por $\operatorname{cl}(\sh{L})\operatorname{cl}(\sh{L}')=\operatorname{cl}(\sh{L}\otimes\sh{L}')$.
+Está claro que la aplicación
+\[
+\label{IV.21.3.2.1}
+  r:\operatorname{cl}(\sh{L},s)\mapsto\operatorname{cl}(\sh{L})
+  \tag{21.3.2.1}
+\]
+es un homomorfismo del grupo $D(X)$ \sref{IV.21.2.10} en el grupo $\operatorname{Pic}(X)$.
+Por composición, se deduce, pues, un homomorfismo
+\[
+\label{IV.21.3.2.2}
+  l:\operatorname{Div}(X)\xrightarrow{\sim}D(X)\xrightarrow{r}\operatorname{Pic}(X)
+  \tag{21.3.2.2}
+\]
+(denotado también por $l_X$) tal que, para todo divisor $D$, se tiene
+\[
+\label{IV.21.3.2.3}
+  l(D)=\operatorname{cl}(\sh{O}_X(D)).
+  \tag{21.3.2.3}
+\]
+
+Observemos por último que, si $u:X'\to X$ es un morfismo de espacios anillados, y $\sh{L}_1$, $\sh{L}_2$ son dos $\sh{O}_X$-módulos invertibles isomorfos, los $\sh{O}_{X'}$-módulos invertibles $u^*(\sh{L}_1)$ y $u^*(\sh{L}_2)$ (\EGAReadLink{0.5.4.5}{$\mathbf{0}_{\mathrm I}$, 5.4.5}) son isomorfos;
+como, por otra parte, para dos $\sh{O}_X$-módulos invertibles cualesquiera $\sh{L}_1$, $\sh{L}_2$, se tiene $u^*(\sh{L}_1\otimes\sh{L}_2)=u^*(\sh{L}_1)\otimes u^*(\sh{L}_2)$ salvo isomorfismo canónico (\EGAReadLink{0.4.3.3}{$\mathbf{0}_{\mathrm I}$, 4.3.3}), se ve que el morfismo $u$ define canónicamente un homomorfismo de grupos conmutativos
+\[
+\label{IV.21.3.2.4}
+  \operatorname{Pic}(u):\operatorname{Pic}(X)\to\operatorname{Pic}(X').
+  \tag{21.3.2.4}
+\]
+\end{env}
+
+\begin{proposition}[21.3.3]
+\label{IV.21.3.3}
+\begin{enumerate}[label=(\roman*)]
+  \item El núcleo del homomorfismo canónico $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ es el subgrupo $\operatorname{Div.princ}(X)$; en otros términos, para que $\sh{O}_X(D)$ y $\sh{O}_X(D')$ sean isomorfos, es necesario y suficiente que $D$ y $D'$ sean linealmente equivalentes.
+  Se tiene, por tanto, un homomorfismo inyectivo canónico
+  \[
+  \label{IV.21.3.3.1}
+    \operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\operatorname{Pic}(X)
+    \tag{21.3.3.1}
+  \]
+  deducido de $l$.
+  \item Para que un $\sh{O}_X$-módulo invertible $\sh{L}$ sea tal que $\operatorname{cl}(\sh{L})$ sea de la forma $l(D)$, o también para que $\sh{L}$ sea isomorfo a un $\sh{O}_X$-módulo de la forma $\sh{O}_X(D)$, es necesario y suficiente que exista una sección meromorfa regular de $\sh{L}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-4]{264}
+La proposición se deduce inmediatamente de las definiciones y de \sref{IV.21.2.10}.
+\end{proof}
+
+\begin{proposition}[21.3.4]
+\label{IV.21.3.4}
+Sea $X$ un preesquema que satisface una de las dos hipótesis siguientes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $X$ es localmente noetheriano y $\operatorname{Ass}(\sh{O}_X)$ está contenido en un abierto afín de $X$.
+  \item $X$ es reducido y el conjunto de sus componentes irreducibles es localmente finito.
+\end{enumerate}
+Entonces el homomorfismo canónico $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ es sobreyectivo y, al pasar al cociente, da un isomorfismo
+\[
+  \operatorname{Div}(X)/\operatorname{Div.princ}(X)\xrightarrow{\sim}\operatorname{Pic}(X).
+\]
+\end{proposition}
+
+\begin{proof}
+Basta mostrar que todo $\sh{O}_X$-módulo invertible $\sh{L}$ admite una sección meromorfa regular sobre $X$ \sref{IV.21.3.3}.
+En ambos casos bastará, gracias a \sref{IV.20.2.11},~(ii), definir una sección $s$ de $(\sh{M}_X(\sh{L}))^*$ sobre un abierto esquemáticamente denso $U$ de $X$, o bien, en el caso a), sobre un abierto $U$ que contenga $\operatorname{Ass}(\sh{O}_X)$ \sref{IV.20.2.13},~(iv).
+En efecto, sea entonces $V$ un abierto cualquiera de $X$ tal que $\sh{L}|V$ sea isomorfo a $\sh{O}_V$, de modo que existe un isomorfismo de $\sh{M}_X(\sh{L})|V$ sobre $\sh{M}_X|V$ que transforma $s|(U\cap V)$ en una sección $f_V$ de $\sh{M}_X^*$ sobre $U\cap V$.
+Como $U\cap V$ es esquemáticamente denso en $V$, se deduce de \sref{IV.20.2.11} que existe una única función meromorfa regular $g_V$ en $V$ tal que $g_V|(U\cap V)=f_V$, y esta sección corresponde, por el isomorfismo considerado, a una sección meromorfa regular $u_V$ de $\sh{L}$ sobre $V$ tal que $u_V|(U\cap V)=s|(U\cap V)$.
+Además, si $V'$ es un segundo abierto de $X$ tal que $\sh{L}|V'$ sea isomorfo a $\sh{O}_{V'}$, las restricciones de $u_V$ y $u_{V'}$ a $V\cap V'$ son iguales, pues corresponden por isomorfismo a dos funciones meromorfas que coinciden en un abierto esquemáticamente denso $U\cap V\cap V'$, y se concluye de nuevo por \sref{IV.20.2.11};
+los $u_V$ son, por tanto, efectivamente las restricciones de una sección de $(\sh{M}_X(\sh{L}))^*$ sobre $X$.
+
+Dicho esto, en el caso b), para cada uno de los puntos maximales $x_\lambda$ de $X$ se toma un abierto $U_\lambda$ que contiene a $x_\lambda$, que no interseca ninguna componente irreducible de $X$ distinta de $\overline{\{x_\lambda\}}$ y tal que $\sh{L}|U_\lambda$ sea isomorfo a $\sh{O}_{U_\lambda}$;
+se tomará como $s$ la sección tal que $s|U_\lambda$ sea la sección de $\sh{L}|U_\lambda$ que corresponde, por el isomorfismo anterior, a la sección unidad de $\sh{O}_{U_\lambda}$.
+
+En el caso a), por hipótesis podemos tomar como $U$ un abierto afín (y por tanto noetheriano); en otros términos, podemos suponer que $X=\operatorname{Spec}(A)$, donde $A$ es noetheriano, y $\sh{L}=\widetilde{P}$, donde $P$ es un $A$-módulo proyectivo de rango $1$.
+Si $S$ es el conjunto de los elementos regulares de $A$, se tiene $\Gamma(X,\sh{M}_X)=S^{-1}A$ \sref{IV.20.2.12} y $\Gamma(X,\sh{M}_X(\sh{L}))=S^{-1}P$;
+ahora bien, $S$ es el conjunto de los elementos que no pertenecen a ninguno de los ideales asociados a $A$, por lo que $S^{-1}A$ es un anillo semilocal cuyos ideales maximales provienen de los elementos maximales de $\operatorname{Ass}(A)$, y $S^{-1}P$ es un $S^{-1}A$-módulo proyectivo de rango $1$, y por tanto es libre de rango $1$ (Bourbaki, \emph{Alg. comm.}, cap.~II, \textsection~5, n\textsuperscript{o}~3, prop.~5);
+un elemento que forme una base de este $S^{-1}A$-módulo es, por consiguiente, en virtud de \sref{IV.20.1.8}, una sección meromorfa regular de $\sh{L}$ sobre $X$.
+\end{proof}
+
+\begin{corollary}[21.3.5]
+\label{IV.21.3.5}
+Si $X$ es un preesquema noetheriano tal que existe un $\sh{O}_X$-módulo invertible amplio (\textbf{II}, 4.5.3) (por ejemplo, un preesquema cuasiproyectivo sobre un espectro de anillo noetheriano (\textbf{II}, 5.3.1 y 4.6.6)), el homomorfismo canónico $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ es sobreyectivo.
+\end{corollary}
+
+\begin{proof}
+\oldpage[IV-4]{265}
+En efecto (\textbf{II}, 4.5.4), existe entonces un entorno abierto afín del conjunto finito $\operatorname{Ass}(\sh{O}_X)$.
+\end{proof}
+
+\begin{remark}[21.3.6]
+\label{IV.21.3.6}
+Recordemos (\EGAReadLink{0.5.4.7}{$\mathbf{0}_{\mathrm I}$, 5.4.7}) que se tiene un isomorfismo canónico $\pi:\mathrm{H}^1(X,\sh{O}_X^*)\xrightarrow{\sim}\operatorname{Pic}(X)$ definido de la manera siguiente.
+Se parte de un $1$-cociclo $(c_{\alpha\beta})$ con valores en $\sh{O}_X^*$ correspondiente a un recubrimiento abierto $(U_\alpha)$ de $X$, siendo $c_{\alpha\beta}$ un elemento de $\Gamma(U_\alpha\cap U_\beta,\sh{O}_X^*)$, y se le asocia la clase del $\sh{O}_X$-módulo invertible obtenido pegando los $\sh{O}_{U_\alpha}$ según los isomorfismos $\sh{O}_{U_\alpha}|(U_\alpha\cap U_\beta)\xrightarrow{\sim}\sh{O}_{U_\beta}|(U_\alpha\cap U_\beta)$ definidos por la multiplicación por $c_{\alpha\beta}$.
+Por otra parte, de la sucesión exacta de haces de grupos conmutativos
+\[
+  1\to\sh{O}_X^*\to\sh{M}_X^*\to\sh{D}iv_X\to0
+\]
+se deduce el homomorfismo de borde de la sucesión exacta de cohomología
+\[
+\label{IV.21.3.6.1}
+  \partial:\operatorname{Div}(X)\to\mathrm{H}^1(X,\sh{O}_X^*).
+  \tag{21.3.6.1}
+\]
+Mostremos que el homomorfismo compuesto
+\[
+  \operatorname{Div}(X)\xrightarrow{\partial}\mathrm{H}^1(X,\sh{O}_X^*)\xrightarrow{\pi}\operatorname{Pic}(X)
+\]
+no es otro que el homomorfismo $l$ definido en \sref{IV.21.3.2.2}.
+En efecto, hay que partir de un divisor $D$ y de un recubrimiento abierto $(U_\alpha)$ de $X$ tal que $D|U_\alpha=\operatorname{div}_{U_\alpha}(g_\alpha)$, donde $g_\alpha$ es una función meromorfa regular sobre $U_\alpha$;
+$\partial(D)$ es la clase de cohomología del cociclo $(c_{\alpha\beta})$, donde $c_{\alpha\beta}=g_{\alpha|\beta}g_{\beta|\alpha}^{-1}$, designando $g_{\alpha|\beta}$ la restricción de $g_\alpha$ a $U_\alpha\cap U_\beta$.
+Está claro que la imagen por $\pi$ de esta clase de cohomología es la clase del ideal fraccionario invertible $\sh{L}$ tal que para todo $\alpha$, $\sh{L}|U_\alpha=\sh{O}_{U_\alpha}.g_\alpha^{-1}$, que por definición no es otro que $\sh{O}_X(D)$ \sref{IV.21.2.8}.
+\end{remark}

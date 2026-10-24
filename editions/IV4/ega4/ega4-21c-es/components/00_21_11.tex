@@ -1,0 +1,134 @@
+\subsection{Factorialidad de los anillos locales regulares}
+\label{subsection:IV.21.11}
+\label{IV.21.11}
+
+\begin{theorem}[21.11.1]
+\label{IV.21.11.1}
+\textup{(Auslander-Buchsbaum)} ---
+Un anillo local noetheriano regular es factorial.
+\end{theorem}
+
+\begin{proof}
+La demostración que sigue se debe a I.~Kaplansky.
+
+Sea $A$ un anillo local noetheriano regular de dimensión $n$; razonaremos
+por inducción sobre $n$. Para $n=0$, $A$ es un cuerpo y, para $n=1$, un anillo de
+valoración discreta, por tanto principal (y \emph{a fortiori} factorial). Supongamos, pues,
+$n\geq2$ y demostrado el teorema para los anillos regulares de dimensión $<n$.
+Pongamos $X=\operatorname{Spec}(A)$, denotemos por $a$ el punto cerrado de $X$ y pongamos
+$U=X-\{a\}$. En todo punto $y\in U$, se tiene
+$\dim(\mathcal O_{X,y})\leq n-1$ y, puesto que $A$ es regular, los anillos
+$\mathcal O_{X,y}$ también lo son $(\mathbf 0, 17.3.2)$; por tanto, la hipótesis de
+inducción implica que son factoriales. Además, se tiene
+$\operatorname{prof}(A)=\dim(A)\geq2$, ya que $A$ es regular y, por tanto, de
+Cohen--Macaulay $(\mathbf 0, 17.1.3)$.
+\oldpage[IV-4]{303}
+Utilizando (21.6.14), nos reducimos a demostrar que $\operatorname{Pic}(U)=0$.
+Consideremos, pues, un $\mathcal O_U$-módulo invertible $\mathscr L$, y demostremos que es
+isomorfo a $\mathcal O_U$. Resulta de $(\mathbf I, 9.4.5)$ que existe un
+$\mathcal O_X$-módulo \emph{coherente} $\mathscr F$ tal que
+$\mathscr F|U=\mathscr L$. Como $A$ es regular, y por tanto de dimensión cohomológica
+finita $(\mathbf 0, 17.3.1)$, existe una resolución libre por la izquierda \emph{finita} de
+$\mathscr F$:
+\[
+  0\leftarrow\mathscr F\leftarrow\mathcal O_X^{n_1}
+  \leftarrow\mathcal O_X^{n_2}\leftarrow\cdots
+  \leftarrow\mathcal O_X^{n_h}\leftarrow0
+\]
+$(\mathbf 0, 17.2.8$ y $\mathbf 0, 17.2.2$, (iii)). Por restricción a $U$, se tiene
+entonces una resolución finita
+\[
+\label{IV.21.11.1.1}
+  0\leftarrow\mathscr L\leftarrow\mathcal O_U^{n_1}
+  \leftarrow\mathcal O_U^{n_2}\leftarrow\cdots
+  \leftarrow\mathcal O_U^{n_h}\leftarrow0.
+  \tag{21.11.1.1}
+\]
+\end{proof}
+
+El teorema resultará entonces de las consideraciones generales siguientes. Sea,
+sobre un espacio anillado $X$, $\mathscr E$ un $\mathcal O_X$-módulo localmente libre de rango finito;
+denotaremos por $\Lambda^{\max}\mathscr E$ el $\mathcal O_X$-módulo invertible que,
+en un entorno de cada punto de $X$, es igual a $\Lambda^p\mathscr E$, donde
+$p$ denota el rango de $\mathscr E$ en este entorno (que puede variar con la componente
+conexa de $X$). Con esta notación, se tiene el
+
+\begin{lemma}[21.11.1.2]
+\label{IV.21.11.1.2}
+Sean $X$ un espacio anillado en anillos locales, y
+\[
+  0\leftarrow\mathscr E_0\xleftarrow{u_0}\mathscr E_1
+  \leftarrow\cdots\leftarrow\mathscr E_h\leftarrow0
+\]
+una sucesión exacta de $\mathcal O_X$-módulos localmente libres de rango finito; entonces el
+$\mathcal O_X$-módulo invertible
+\[
+  \bigotimes_{0\leq i\leq h}
+  (\Lambda^{\max}\mathscr E_i)^{\otimes(-1)^i}
+\]
+es isomorfo a $\mathcal O_X$.
+\end{lemma}
+
+\begin{proof}
+Demostremos cómo este lema permitirá concluir la demostración de (21.11.1). Para ello basta
+observar que, para todo entero $n$,
+$\Lambda^{\max}(\mathcal O_U^n)=\Lambda^n\mathcal O_U^n$ es isomorfo a
+$\mathcal O_U$, al igual que $\mathcal O_U^{\otimes(-1)}$. Como, por otra parte,
+$\Lambda^{\max}\mathscr L=\mathscr L$ para todo $\mathcal O_U$-módulo invertible
+$\mathscr L$, el lema (21.11.1.2), aplicado a la sucesión exacta (21.11.1.1), muestra
+que $\mathscr L$ es isomorfo a $\mathcal O_U$.
+
+Queda por demostrar (21.11.1.2); se procede por inducción sobre $h$, siendo trivial el lema
+para $h=1$. Para $h>1$, $\mathscr N=\operatorname{Ker}(u_0)$ es un
+$\mathcal O_X$-módulo localmente libre de rango finito $(\mathbf 0_{\mathrm I}, 5.5.5)$,
+y se tienen las dos sucesiones exactas
+\[
+  0\leftarrow\mathscr E_0\leftarrow\mathscr E_1
+  \leftarrow\mathscr N\leftarrow0
+\]
+\[
+  0\leftarrow\mathscr N\leftarrow\mathscr E_2
+  \leftarrow\cdots\leftarrow\mathscr E_h\leftarrow0.
+\]
+En virtud de la hipótesis de inducción,
+$(\Lambda^{\max}\mathscr N)\otimes
+(\bigotimes_{2\leq i\leq h}(\Lambda^{\max}\mathscr E_i)^{\otimes(-1)^{i-1}})$
+es isomorfo a $\mathcal O_X$; por tanto, bastará definir un isomorfismo canónico
+\[
+  (\Lambda^{\max}\mathscr N)\otimes(\Lambda^{\max}\mathscr E_0)
+  \xrightarrow{\sim}\Lambda^{\max}\mathscr E_1
+\]
+para terminar la demostración. Ahora bien, existe un recubrimiento abierto $(U_\alpha)$ de
+$X$ tal que, en todo $U_\alpha$, $\mathscr E_1|U_\alpha$ sea suma directa de
+$\mathscr N|U_\alpha$ y de un $\mathcal O_{U_\alpha}$-módulo localmente libre
+$\mathscr M_\alpha$ $(\mathbf 0_{\mathrm I}, 5.5.5)$, de donde resulta un isomorfismo canónico
+$v_\alpha:\mathscr M_\alpha\xrightarrow{\sim}\mathscr E_0|U_\alpha$.
+Como se tiene un isomorfismo canónico
+\[
+  r_\alpha:(\Lambda^{\max}\mathscr N|U_\alpha)
+  \otimes(\Lambda^{\max}\mathscr M_\alpha)
+  \xrightarrow{\sim}(\Lambda^{\max}\mathscr E_1)|U_\alpha,
+\]
+se deduce de él mediante $v_\alpha$ un isomorfismo
+\[
+  u_\alpha:(\Lambda^{\max}\mathscr N|U_\alpha)
+  \otimes(\Lambda^{\max}\mathscr E_0|U_\alpha)
+  \xrightarrow{\sim}\Lambda^{\max}\mathscr E_1|U_\alpha.
+\]
+\oldpage[IV-4]{304}
+Se trata de demostrar que $u_\alpha$ y $u_\beta$ coinciden en
+$U_\alpha\cap U_\beta$ para dos índices cualesquiera $\alpha$, $\beta$. Ahora bien, si
+$v'_\alpha$ y $v'_\beta$ son las restricciones a $U_\alpha\cap U_\beta$ de
+$v_\alpha$ y $v_\beta$ respectivamente, se tiene
+$v'_\alpha=v'_\beta\circ w_{\beta\alpha}$, donde
+\[
+  w_{\beta\alpha}:\mathscr M_\alpha|(U_\alpha\cap U_\beta)
+  \xrightarrow{\sim}\mathscr M_\beta|(U_\alpha\cap U_\beta)
+\]
+es la «proyección paralela a $\mathscr N$» tal que, para toda sección
+$s\in\Gamma(U_\alpha\cap U_\beta,\mathscr M_\alpha)$,
+$w_{\beta\alpha}(s)=s+t$, con
+$t\in\Gamma(U_\alpha\cap U_\beta,\mathscr N)$; la identidad de $u_\alpha$ y de
+$u_\beta$ resulta inmediatamente de este hecho y de la definición del isomorfismo canónico
+$r_\alpha$ (Bourbaki, \emph{Alg.}, cap.~III, 3\textsuperscript{a} ed.).
+\end{proof}

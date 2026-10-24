@@ -1,0 +1,143 @@
+\subsection{Funciones meromorfas relativas}
+\label{IV.20.6}
+
+\begin{env}[20.6.1]
+\label{IV.20.6.1}
+Sean $S$ un preesquema, $X$ un $S$-preesquema que es \emph{plano y localmente de presentación finita} sobre $S$; para todo $s\in S$, denotaremos por $X_s$ la fibra en el punto $s$ del morfismo estructural $X\to S$.
+En general, si $\varphi$ es una función meromorfa sobre $X$, no es posible asociarle de manera «natural», para cada $s\in S$, una función meromorfa «inducida» sobre $X_s$ \sref{IV.20.1.11}.
+Para todo abierto $U$ de $X$, denotemos por $T_{X/S}(U)$ el conjunto de las secciones $t\in\Gamma(U,\sh{O}_X)$ tales que, para todo $s\in S$, la imagen $t_s$ de $t$ por el homomorfismo canónico $\Gamma(U,\sh{O}_X)\to\Gamma(U\cap X_s,\sh{O}_{X_s})$ sea una sección \emph{regular}; esto implica además, por la equivalencia de a) y b) en \sref{IV.11.3.7}, que $t$ es ella misma una sección \emph{regular}.
+Está claro que $U\mapsto T_{X/S}(U)$ es un \emph{subhaz} del haz de conjuntos $\sh{S}=\sh{S}(\sh{O}_X)$ (notación de \sref{IV.20.1.3}), que se denota por $\sh{T}_{X/S}$; se pone
+\[
+\label{IV.20.6.1.1}
+  \sh{M}_{X/S}=\sh{O}_X[\sh{T}_{X/S}^{-1}]
+  \tag{20.6.1.1}
+\]
+(notación de \sref{IV.20.1.1}) y se dice que este haz de anillos es el \emph{haz de gérmenes de funciones meromorfas sobre $X$ relativas a $S$}; sus secciones sobre $X$ se llaman \emph{funciones meromorfas sobre $X$ relativas a $S$} y su conjunto se denota por $M(X/S)$.
+Está claro que $\sh{M}_{X/S}$ es un \emph{subhaz} de $\sh{M}_X=\sh{O}_X[\sh{S}^{-1}]$; para toda función meromorfa $\varphi\in M(X/S)$ y todo $s\in S$, queda entonces definida la imagen inversa de $\varphi$ por la inyección canónica $j_s:X_s\to X$ \sref{IV.20.1.11}, y se denota por $\varphi_s$.
+\end{env}
+
+\begin{env}[20.6.2]
+\label{IV.20.6.2}
+Sea ahora $\sh{F}$ un $\sh{O}_X$-módulo cuasicoherente; se pone
+\[
+\label{IV.20.6.2.1}
+  \sh{M}_{X/S}(\sh{F})=\sh{F}[\sh{T}_{X/S}^{-1}]=\sh{F}\otimes_{\sh{O}_X}\sh{M}_{X/S};
+  \tag{20.6.2.1}
+\]
+las secciones de $\sh{M}_{X/S}(\sh{F})$ se llaman \emph{secciones meromorfas de $\sh{F}$ sobre $X$, relativas a $S$} y su conjunto se denota por $M(X/S,F)$.
+El homomorfismo canónico $\sh{F}\to\sh{M}_{X/S}(\sh{F})$ no es necesariamente inyectivo; cuando lo es, se dice que $\sh{F}$ es \emph{sin torsión relativamente a $S$}: esto significa que para todo abierto $U$ de $X$ y toda sección $t\in T_{X/S}(U)$, $t$ es $(\sh{F}|U)$-regular; esta condición se cumple \emph{a fortiori} cuando $\sh{F}$ es \emph{estrictamente sin torsión} \sref{IV.20.1.5}.
+En este último caso, de las definiciones \sref{IV.20.1.2} se deduce inmediatamente que el homomorfismo canónico de $\sh{O}_X$-módulos
+\[
+\label{IV.20.6.2.2}
+  \sh{M}_{X/S}(\sh{F})\to\sh{M}_X(\sh{F})
+  \tag{20.6.2.2}
+\]
+es \emph{inyectivo}, de modo que las secciones meromorfas de $\sh{F}$ relativas a $S$ son secciones meromorfas de $\sh{F}$ en el sentido de \sref{IV.20.1.3}.
+\end{env}
+
+\begin{proposition}[20.6.3]
+\label{IV.20.6.3}
+La imagen por el homomorfismo inyectivo \sref{IV.20.2.10.1} del subhaz $\sh{M}_{X/S}$ de $\sh{M}_X$ es el subhaz $\sh{M}'_{X/S}$ de las pseudo-funciones sobre $X$ relativas a $S$ (es decir, de las pseudo-funciones cuyo dominio de definición es universalmente esquemáticamente denso relativamente a $S$ \sref{IV.20.5.4}).
+\end{proposition}
+
+\begin{proof}
+Evidentemente, podemos limitarnos a probar que la imagen de $M(X/S)$ por el homomorfismo canónico $M(X)\to M'(X)$ es igual a $M'(X/S)$; la proposición es entonces consecuencia de la proposición más general siguiente:
+\end{proof}
+
+\oldpage[IV-4]{253}
+\begin{proposition}[20.6.4]
+\label{IV.20.6.4}
+Sea $\sh{F}$ un $\sh{O}_X$-módulo cuasicoherente de presentación finita y estrictamente sin torsión.
+Entonces, para que una sección meromorfa $\varphi$ de $\sh{F}$ sobre $X$ sea una sección meromorfa relativa a $S$, es necesario y suficiente que $\operatorname{dom}(\varphi)$ sea universalmente esquemáticamente denso relativamente a $S$.
+\end{proposition}
+
+\begin{proof}
+La necesidad de la condición se deduce de \sref{IV.20.2.15} aplicado a cada inyección canónica $X_s\to X$ ($s\in S$), teniendo en cuenta \sref{IV.11.10.9}.
+Para ver que la condición es suficiente, hay que probar que para todo $x\in X$ existe un entorno abierto $U$ de $x$ en $X$ y una sección de $\sh{M}_{X/S}(\sh{F})$ sobre $U$ cuya restricción a $U\cap\operatorname{dom}(\varphi)$ coincida con $\varphi$ en un abierto esquemáticamente denso de $U\cap\operatorname{dom}(\varphi)$.
+Consideremos el ideal de los denominadores $\sh{J}$ de $\varphi$ \sref{IV.20.2.14}, que es cuasicoherente y define un subpreesquema cerrado de $X$ cuyo espacio subyacente es $X-\operatorname{dom}(\varphi)$.
+Por hipótesis, si $s$ es la imagen de $x$ en $S$, $\operatorname{dom}(\varphi)\cap X_s$ es esquemáticamente denso en el preesquema localmente noetheriano $X_s$, y por tanto, en virtud de \sref{IV.20.2.13}[(iv)], contiene a $\operatorname{Ass}(\sh{O}_{X_s})$; esto implica que la imagen del ideal $\sh{J}_x$ de $\sh{O}_{X,x}$ en $\sh{O}_{X_s,x}=\sh{O}_{X,x}\otimes_{\sh{O}_{S,s}}k(s)$ no está contenida en ninguno de los ideales primos $\mathfrak{p}_i\in\operatorname{Ass}(\sh{O}_{X_s,x})$ (que son finitos); por tanto (Bourbaki, \emph{Alg.~comm.}, cap.~II, \textsection1, n\textsuperscript{o}~1, prop.~2), existe un elemento $t_x\in\sh{J}_x$ cuya imagen en $\sh{O}_{X_s,x}$ no pertenece a ninguno de los $\mathfrak{p}_i$ y es, por consiguiente, regular en este anillo noetheriano.
+Sea $t$ una sección de $\sh{J}$ sobre un entorno abierto afín $U$ de $x$, cuyo germen en el punto $x$ sea $t_x$; puesto que $X$ es plano y localmente de presentación finita sobre $S$, podemos suponer \sref{IV.11.3.8} que $t$ es una sección \emph{regular} de $\sh{O}_X$ sobre $U$ y que, para todo $s'\in S$, la imagen de $t$ en $\Gamma(U\cap X_{s'},\sh{O}_{X_{s'}})$ es también \emph{regular}; en otros términos, se tiene $t\in T_{X/S}(U)$.
+Pero entonces, por definición de $\sh{J}$, como $\sh{F}$ es estrictamente sin torsión, $t(\varphi|(U\cap\operatorname{dom}(\varphi)))$ es una sección $u$ de $\sh{F}$ sobre $U\cap\operatorname{dom}(\varphi)$; por otra parte, $U\cap\operatorname{dom}(\varphi)$ contiene el conjunto abierto $U_t$ de los puntos $x'\in U$ en los que $t(x')\neq0$, y este último contiene a $x$ y es esquemáticamente denso en $U$ \sref{IV.20.2.9}.
+Se ve, pues, que en $U_t$, $\varphi$ coincide con la restricción a $U_t$ de la sección $u/t$ de $\sh{M}_{X/S}(\sh{F})$ sobre $U$.
+C.Q.F.D.
+\end{proof}
+
+\begin{remarks}[20.6.5]
+\label{IV.20.6.5}
+\begin{enumerate}[label=(\roman*)]
+  \item Sea $\varphi$ una función meromorfa sobre $X$ relativa a $S$, de modo que para todo $s\in S$, $\varphi_s$ es una función meromorfa sobre $X_s$ \sref{IV.20.6.1}; en virtud de \sref{IV.20.1.11.1}, se tiene
+  \[
+  \label{IV.20.6.5.1}
+    \operatorname{dom}(\varphi)\cap X_s\subset\operatorname{dom}(\varphi_s).
+    \tag{20.6.5.1}
+  \]
+  Pero conviene observar que, aun cuando $S$ sea el espectro de un anillo de valoración discreta $A$ y $X=S[T]$ ($T$ indeterminada), los dos miembros de \sref{IV.20.6.5.1} no son necesariamente iguales: por ejemplo, si $\pi$ es un uniformizante de $A$, es inmediato que $\varphi=\pi/T$ es una función meromorfa sobre $X$ relativa a $S$\footnote{La transcripción francesa dice aquí «sobre $S$», aunque $T$ es la indeterminada de $X=S[T]$; el testigo inglés mantenido restituye «sobre $X$».}, pues si $a$ y $b$ son el punto cerrado y el punto genérico de $S$, $T$ es regular en $\Gamma(X_a,\sh{O}_{X_a})=k[T]$ y en $\Gamma(X_b,\sh{O}_{X_b})=K[T]$, siendo $k$ y $K$ el cuerpo residual y el cuerpo de fracciones de $A$.
+  Se tiene $\operatorname{dom}(\varphi)=\mathrm{D}(T)$ en $X$, pero $\operatorname{dom}(\varphi_a)=X_a$ puesto que $\varphi_a=0$.
+
+  \item Para que una función meromorfa $\varphi$ relativa a $S$ sea \emph{invertible en el anillo} $M(X/S)$, es necesario y suficiente que, para todo $s\in S$, $\varphi_s$ sea invertible en $M(X_s)$ (en otros términos, que $\varphi_s$ sea una función meromorfa regular sobre $X_s$ \sref{IV.20.1.8}).
+  La condición es
+  \oldpage[IV-4]{254}
+  en efecto trivialmente necesaria.
+  Recíprocamente, si se cumple, y si $x$ es un punto cualquiera de $X$, $s$ su imagen en $S$, existen por hipótesis un entorno abierto $U$ de $x$ en $X$ y dos secciones $u$, $t$ de $\sh{O}_X$ sobre $U$ tales que $t\in T_{X/S}(U)$ y $\varphi|U=u/t$; la hipótesis implica que, si $u_s$ es la imagen de $u$ en $\Gamma(U\cap X_s,\sh{O}_{X_s})$, $u_s$ es regular en el punto $x$.
+  Restringiendo $U$, podemos suponer, por tanto, en virtud de \sref{IV.11.3.8}, que $u\in T_{X/S}(U)$, de donde la conclusión.
+
+  Cuando $\varphi$ es invertible en $M(X/S)$, se dice también que $\varphi$ es una \emph{función meromorfa regular relativa a $S$}.
+  Obsérvese que $\varphi\in M(X/S)$ puede ser invertible en $M(X)$ (en otros términos, ser \emph{regular} en el sentido de \sref{IV.20.1.8}) sin serlo en $M(X/S)$, como muestra inmediatamente el ejemplo de~(i).
+
+  \item Sea $\sh{L}$ un $\sh{O}_X$-módulo \emph{invertible}, y sea $\varphi$ una sección meromorfa \emph{regular} de $\sh{L}$ sobre $X$ \sref{IV.20.1.8}; se dice que $\varphi$ es \emph{regular relativamente a $S$} si, para todo abierto $U$ de $X$ tal que $\sh{L}|U$ sea isomorfo a $\sh{O}_U$, $\varphi|U$ corresponde a un elemento de $\Gamma(U,\sh{M}_X)$ que es \emph{regular relativamente a $S$}; en virtud de~(ii), es inmediato que para ello es necesario y suficiente que, para todo $s\in S$, $\varphi_s$ sea una sección meromorfa \emph{regular} \sref{IV.20.1.8} del $\sh{O}_{X_s}$-módulo invertible $\sh{L}_s=\sh{L}\otimes_{\sh{O}_X}k(s)$.
+  Si $\varphi'$ es la inversa de $\varphi$ en $\sh{L}^{-1}$ \sref{IV.20.1.10}, $\varphi'$ es también regular relativamente a $S$.
+  Si $\sh{L}_1$ es un segundo $\sh{O}_X$-módulo invertible, $\varphi_1$ una sección meromorfa de $\sh{L}_1$ sobre $X$, regular relativamente a $S$, entonces $\varphi\otimes\varphi_1$ es una sección meromorfa de $\sh{L}\otimes\sh{L}_1$ sobre $X$, regular relativamente a $S$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[20.6.6]
+\label{IV.20.6.6}
+Sean $X$ un $S$-preesquema plano y localmente de presentación finita sobre $S$, y $\sh{F}$ un $\sh{O}_X$-módulo localmente libre de tipo finito; para todo $s\in S$, se denota por $X_s$ la fibra en el punto $s$ del morfismo estructural $f:X\to S$.
+Sea $\varphi$ una sección meromorfa de $\sh{F}$ sobre $X$, relativa a $S$, y supongamos que $\varphi$ está definida en todos los puntos $x\in X$ tales que $\operatorname{prof}(\sh{O}_{X_{f(x)},x})=1$.
+Entonces $\varphi$ está definida en todas partes.
+\end{proposition}
+
+\begin{proof}
+Por hipótesis, $\operatorname{dom}(\varphi)\cap X_s$ es esquemáticamente denso en $X_s$ para todo $s\in S$, y por tanto contiene los puntos $x$ de $X_s$ tales que $\operatorname{prof}(\sh{O}_{X_s,x})=0$ \sref{IV.5.10.2}; la hipótesis significa, pues, que si se pone $Z=X-\operatorname{dom}(\varphi)$, se tiene $\operatorname{prof}(\sh{O}_{X_{f(x)},x})\geq2$ en todos los puntos de $Z$.
+Basta entonces aplicar \sref{IV.19.9.8}.
+\end{proof}
+
+\begin{env}[20.6.7]
+\label{IV.20.6.7}
+Sean $X$, $X'$ dos $S$-preesquemas planos y localmente de presentación finita sobre $S$, y $f=(\psi,\theta):X'\to X$ un $S$-morfismo.
+Para todo abierto $U$ de $X$, denotemos por $T_f(U)$ el conjunto de las secciones $t\in T_{X/S}(U)$ cuya imagen en $\Gamma(f^{-1}(U),\sh{O}_{X'})$ pertenezca a $T_{X'/S}(f^{-1}(U))$; es inmediato que $U\mapsto T_f(U)$ es un subhaz del haz de conjuntos $\sh{T}_{X/S}$, que se denota por $\sh{T}_f$.
+Se pone $\sh{M}_{X/S,f}=\sh{O}_X[\sh{T}_f^{-1}]$; es un subhaz de anillos de $\sh{M}_{X/S}$, y de $\theta^\#: \psi^*(\sh{O}_X)\to\sh{O}_{X'}$ se deduce canónicamente un homomorfismo de haces de anillos $\theta'^\#: \psi^*(\sh{M}_{X/S,f})\to\sh{M}_{X'/S}$ que prolonga $\theta^\#$.
+Si una función meromorfa $\varphi$ sobre $X$, relativa a $S$, es \emph{una sección de $\sh{M}_{X/S,f}$}, $\Gamma(\theta'^\#)(\varphi)$ es una función meromorfa sobre $X'$, llamada \emph{imagen inversa de $\varphi$ por $f$}, y se denota por $\varphi\circ f$ si ello no da lugar a confusión.
+Las definiciones de \sref{IV.20.1.11} relativas a los $\sh{O}_X$-módulos se extienden inmediatamente del mismo modo.
+\end{env}
+
+\begin{proposition}[20.6.8]
+\label{IV.20.6.8}
+Con las notaciones de \sref{IV.20.6.7}, si el $S$-morfismo $f:X'\to X$ es \emph{plano}, se tiene $\sh{M}_{X/S,f}=\sh{M}_{X/S}$, y el homomorfismo $\varphi\mapsto\varphi\circ f$ está definido en todo $M(X/S)$.
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-4]{255}
+En efecto, la hipótesis implica, en virtud de \sref{IV.11.3.10}, que para todo $s\in S$, $f_s:X'_s\to X_s$ es plano; por tanto, para toda sección $t\in T_{X/S}(U)$, si $t'$ es su imagen inversa en $\Gamma(f^{-1}(U),\sh{O}_{X'})$, $t'_{s}$, que es la imagen inversa de $t_s$, es una sección \emph{regular} de $\sh{O}_{X'_s}$ sobre $f^{-1}(U)\cap X'_s$, en virtud de \sref{IV.20.1.12}; se concluye que, por definición, $t'\in T_{X'/S}(f^{-1}(U))$, de donde la proposición.
+\end{proof}
+
+De aquí se deduce, como en \sref{IV.20.1.12}, un homomorfismo canónico de $\sh{O}_{X'}$-álgebras
+\[
+\label{IV.20.6.8.1}
+  f^*(\sh{M}_{X/S})\to\sh{M}_{X'/S}.
+  \tag{20.6.8.1}
+\]
+
+\begin{env}[20.6.9]
+\label{IV.20.6.9}
+Consideremos por último un morfismo \emph{arbitrario} $S'\to S$, y pongamos $X'=X\times_S S'$, que es plano y localmente de presentación finita sobre $S'$; sea $p:X'\to X$ la proyección canónica.
+Sean $U$ un abierto de $X$, $t$ una sección perteneciente a $T_{X/S}(U)$, y $t'$ su imagen en $\Gamma(p^{-1}(U),\sh{O}_{X'})$; para todo $s'\in S'$, si $s\in S$ es la imagen de $s'$, se tiene $X'_{s'}=X_s\otimes_{k(s)}k(s')$, por lo que el morfismo $X'_{s'}\to X_s$ es plano, y, por consiguiente, en virtud de \sref{IV.20.1.12}, la imagen inversa $t'_{s'}$ de $t_s$ en $\Gamma(p^{-1}(U)\cap X'_{s'},\sh{O}_{X'_{s'}})$ es regular; esto prueba que $t'\in T_{X'/S'}(p^{-1}(U))$.
+Esto permite definir canónicamente, como en \sref{IV.20.6.8}, un homomorfismo canónico de $\sh{O}_{X'}$-álgebras
+\[
+\label{IV.20.6.9.1}
+  p^*(\sh{M}_{X/S})\to\sh{M}_{X'/S'}.
+  \tag{20.6.9.1}
+\]
+
+Mediante la identificación permitida por \sref{IV.20.6.3}, esta noción de cambio de base para las funciones meromorfas relativas es un caso particular de la noción análoga para los pseudo-morfismos relativos \sref{IV.20.5.8}.
+\end{env}

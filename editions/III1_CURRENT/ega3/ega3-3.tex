@@ -1,0 +1,368 @@
+\section{Teorema de finitud para los morfismos propios}
+\label{section:III.3}
+
+\subsection{El lema de d\'evissage}
+\label{subsection:III.3.1}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1}
+Sea $\C$ una categoría abeliana.
+Diremos que un subconjunto $\C'$ del conjunto de objetos de $\C$ es \emph{exacto} si $0\in\C'$ y si, para toda sucesión exacta $0\to A'\to A\to A''\to 0$ en $\C$ tal que dos de los objetos $A$, $A'$, $A''$ pertenecen a $\C'$, el tercero pertenece también a $\C'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2}
+Sea $X$ un preesquema noetheriano; denotemos por $\C$ la categoría abeliana de los $\sh{O}_X$-módulos coherentes.
+Sea $\C'$ un subconjunto exacto de $\C$, y sea $X'$ un subconjunto cerrado del espacio subyacente a $X$.
+Supongamos que, para todo subconjunto cerrado irreducible $Y$ de $X'$, de punto genérico $y$, existe un $\sh{O}_X$-módulo $\sh{G}\in\C'$ de soporte $Y$ tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+Entonces todo $\sh{O}_X$-módulo coherente cuyo soporte esté contenido en $X'$ pertenece a $\C'$ (y, en particular, si $X'=X$, se tiene $\C'=\C$).
+\end{theorem}
+
+\begin{proof}
+Consideremos la siguiente propiedad $\textbf{P}(Y)$ de un subconjunto cerrado $Y$ de $X'$: todo $\sh{O}_X$-módulo coherente cuyo soporte esté contenido en $Y$ pertenece a $\C'$.
+En virtud del principio de inducción noetheriana \sref[0]{0.2.2.2}, vemos que basta demostrar que \emph{si $Y$ es un subconjunto cerrado de $X'$ tal que la propiedad $\textbf{P}(Y')$ es verdadera para todo subconjunto cerrado $Y'$ de $Y$, distinto de $Y$, entonces $\textbf{P}(Y)$ es verdadera}.
+
+Sea, pues, $\sh{F}\in\C$ de soporte contenido en $Y$, y demostremos que $\sh{F}\in\C'$.
+Denotemos también por $Y$ el subpreesquema cerrado reducido de $X$ cuyo espacio subyacente es $Y$ \sref[I]{I.5.2.1}; está definido por un haz coherente de ideales $\sh{J}$ de $\sh{O}_X$.
+Sabemos \sref[I]{I.9.3.4} que existe un entero $n>0$ tal que $\sh{J}^n\sh{F}=0$; para $1\leq k\leq n$ se tiene, por tanto, una sucesión exacta
+\[
+  0\to\sh{J}^{k-1}\sh{F}/\sh{J}^k\sh{F}\to\sh{F}/\sh{J}^k\sh{F}\to\sh{F}/\sh{J}^{k-1}\sh{F}\to 0
+\]
+ de $\sh{O}_X$-módulos coherentes (\sref[0]{0.5.3.6} y \sref[0]{0.5.3.3}); como $\C'$ es exacto, una inducción sobre $k$ muestra que basta probar que cada $\sh{F}_k=\sh{J}^{k-1}\sh{F}/\sh{J}^k\sh{F}$ pertenece a $\C'$.
+Nos reducimos así a probar que $\sh{F}\in\C'$ bajo la hipótesis adicional $\sh{J}\sh{F}=0$; esto equivale a decir que $\sh{F}=j_*(j^*(\sh{F}))$, donde $j$ es la inmersión canónica $Y\to X$.
+Consideremos ahora dos casos:
+\begin{enumerate}
+  \item[(a)] $Y$ es \emph{reducible}.
+    Escribamos $Y=Y'\cup Y''$, donde $Y'$ e $Y''$ son subconjuntos cerrados de $Y$, distintos de $Y$; denotemos también por $Y'$ e $Y''$ los subpreesquemas cerrados reducidos de $X$ cuyos espacios subyacentes son, respectivamente, $Y'$ e $Y''$, definidos respectivamente por los haces de ideales $\sh{J}'$ y $\sh{J}''$ de $\sh{O}_X$.
+    Pongamos $\sh{F}'=\sh{F}\otimes_{\sh{O}_X}(\sh{O}_X/\sh{J}')$ y $\sh{F}''=\sh{F}\otimes_{\sh{O}_X}(\sh{O}_X/\sh{J}'')$.
+    Los homomorfismos canónicos $\sh{F}\to\sh{F}'$ y $\sh{F}\to\sh{F}''$ definen así un homomorfismo $u:\sh{F}\to\sh{F}'\oplus\sh{F}''$.
+    Demostremos que, para todo $z\not\in Y'\cap Y''$, el homomorfismo $u_z:\sh{F}_z\to\sh{F}_z'\oplus\sh{F}_z''$ es \emph{biyectivo}.
+    En efecto, se tiene $\sh{J}'\cap\sh{J}''=\sh{J}$, pues la cuestión es local y
+\oldpage[III]{116}
+    la igualdad anterior se deduce de (\sref[I]{I.5.2.1} y \sref[I]{I.1.1.5}); si $z\not\in Y''$, se tiene $\sh{J}_z'=\sh{J}_z$, de donde $\sh{F}_z'=\sh{F}_z$ y $\sh{F}_z''=0$, lo que prueba nuestra afirmación en este caso; se razona del mismo modo si $z\not\in Y'$.
+    Por consiguiente, el núcleo y el conúcleo de $u$, que pertenecen a $\C$ \sref[0]{0.5.3.4}, tienen su soporte en $Y'\cap Y''$ y, por hipótesis, pertenecen a $\C'$; por la misma razón, $\sh{F}'$ y $\sh{F}''$ pertenecen a $\C'$, y por tanto también $\sh{F}'\oplus\sh{F}''$, pues $\C'$ es exacto.
+    La conclusión se obtiene entonces considerando las dos sucesiones exactas
+    \[
+      0\to\Im u\to\sh{F}'\oplus\sh{F}''\to\Coker u\to 0,
+    \]
+    \[
+      0\to\Ker u\to\sh{F}\to\Im u\to 0,
+    \]
+    y la hipótesis de que $\C'$ es exacto.
+  \item[(b)] $Y$ es irreducible y, por consiguiente, el subpreesquema $Y$ de $X$ es \emph{íntegro}.
+    Si $y$ es su punto genérico, se tiene $(\sh{O}_Y)_y=\kres(y)$ y, como $j^*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente, $\sh{F}_y=(j^*(\sh{F}))_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión finita~$m$.
+    Por hipótesis existe un $\sh{O}_X$-módulo coherente $\sh{G}\in\C'$ (necesariamente de soporte $Y$) tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+    Existe, por tanto, un $\kres(y)$-isomorfismo $(\sh{G}_y)^m\isoto\sh{F}_y$, que es también un $\sh{O}_Y$-isomorfismo; como $\sh{G}^m$ y $\sh{F}$ son coherentes, existe un entorno abierto $W$ de $y$ en $X$ y un isomorfismo $\sh{G}^m|W\isoto\sh{F}|W$ \sref[0]{0.5.2.7}.
+    Sea $\sh{H}$ el grafo de este isomorfismo, que es un $(\sh{O}_X|W)$-submódulo coherente de $(\sh{G}^m\oplus\sh{F})|W$, canónicamente isomorfo a $\sh{G}^m|W$ y a $\sh{F}|W$; existe entonces un $\sh{O}_X$-submódulo coherente $\sh{H}_0$ de $\sh{G}^m\oplus\sh{F}$ que induce $\sh{H}$ sobre $W$ y $0$ sobre $X\setmin Y$, puesto que $\sh{G}^m$ y $\sh{F}$ tienen soporte $Y$~\sref[I]{I.9.4.7}.
+    Las restricciones $v:\sh{H}_0\to\sh{G}^m$ y $w:\sh{H}_0\to\sh{F}$ de las proyecciones canónicas de $\sh{G}^m\oplus\sh{F}$ son entonces homomorfismos de $\sh{O}_X$-módulos coherentes que, sobre $W$ y sobre $X\setmin Y$, se reducen a isomorfismos; en otras palabras, los núcleos y conúcleos de $v$ y $w$ tienen su soporte en el cerrado $Y\setmin(Y\cap W)$, distinto de $Y$.
+    Pertenecen a $\C'$; por otra parte, $\sh{G}^m\in\C'$, pues $\sh{G}\in\C'$ y $\C'$ es exacto.
+    De la exactitud de $\C'$ concluimos sucesivamente que $\sh{H}_0\in\C'$ y luego que $\sh{F}\in\C'$.
+C.Q.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3}
+Supongamos además que el subconjunto exacto $\C'$ de $\C$ tiene la propiedad de que todo factor directo coherente de un $\sh{O}_X$-módulo coherente $\sh{M}\in\C'$ pertenece también a $\C'$.
+En este caso, la conclusión del Teorema~\sref{III.3.1.2} sigue siendo válida cuando la condición «$\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$» se sustituye por $\sh{G}_y\neq 0$ (lo que equivale a $\Supp(\sh{G})=Y$).
+\end{corollary}
+
+\begin{proof}
+El razonamiento del Teorema~\sref{III.3.1.2} solo debe modificarse en el caso~(b); ahora $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión $q>0$ y, por tanto, se tiene un $\sh{O}_Y$-isomorfismo $(\sh{G}_y)^m\isoto(\sh{F}_y)^q$; el final del razonamiento del Teorema~\sref{III.3.1.2} prueba entonces que $\sh{F}^q\in\C'$, y la hipótesis adicional sobre $\C'$ implica que $\sh{F}\in\C'$.
+\end{proof}
+
+\subsection{El teorema de finitud: caso de los esquemas ordinarios}
+\label{subsection:III.3.2}
+\label{III.3.2}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1}
+Sea $Y$ un preesquema localmente noetheriano y sea $f:X\to Y$ un morfismo propio.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\sh{O}_Y$-módulos $\RR^q f_*(\sh{F})$ son coherentes para $q\geq 0$.
+\end{theorem}
+
+\begin{proof}
+Como la cuestión es local sobre $Y$, podemos suponer que $Y$ es noetheriano, y por tanto que $X$ es noetheriano~\sref[I]{I.6.3.7}.
+Los $\sh{O}_X$-módulos coherentes $\sh{F}$ para los cuales es válida la conclusión del Teorema~\sref{III.3.2.1} forman un subconjunto \emph{exacto} $\C'$ de la categoría $\C$ de los $\sh{O}_X$-módulos coherentes.
+\oldpage[III]{117}
+En efecto, sea $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to 0$ una sucesión exacta de $\sh{O}_X$-módulos coherentes; supongamos, por ejemplo, que $\sh{F}'$ y $\sh{F}''$ pertenecen a $\C'$; se tiene la sucesión exacta larga de cohomología
+\[
+  \RR^{q-1}f_*(\sh{F}'')\xrightarrow{\partial}\RR^q f_*(\sh{F}')\to\RR^q f_*(\sh{F})\to\RR^q f_*(\sh{F}'')\xrightarrow{\partial}\RR^{q+1}f_*(\sh{F}'),
+\]
+en la que, por hipótesis, los cuatro términos exteriores son coherentes; lo mismo ocurre con el término central $\RR^q f_*(\sh{F})$ por (\sref[0]{0.5.3.4}~y~\sref[0]{0.5.3.3}).
+Se demuestra del mismo modo que, cuando $\sh{F}$ y $\sh{F}'$ (resp.~$\sh{F}$ y $\sh{F}''$) pertenecen a $\C'$, también pertenece $\sh{F}''$ (resp.~$\sh{F}'$).
+Además, todo \emph{factor directo} coherente $\sh{F}'$ de un $\sh{O}_X$-módulo $\sh{F}\in\C'$ pertenece a $\C'$: en efecto, $\RR^q f_*(\sh{F}')$ es entonces un factor directo de $\RR^q f_*(\sh{F})$~(G,~II,~4.4.4), por lo que es de tipo finito; como es cuasi-coherente~\sref{III.1.4.10}, es coherente, pues $Y$ es noetheriano.
+En virtud del Corolario~\sref{III.3.1.3}, nos reducimos a probar que, cuando $X$ es \emph{irreducible} de punto genérico $x$, existe \emph{un} $\sh{O}_X$-módulo coherente $\sh{F}$ perteneciente a $\C'$ tal que $\sh{F}_x\neq 0$: en efecto, una vez establecido este punto, puede aplicarse a cualquier subpreesquema cerrado irreducible $Y$ de $X$, pues si $j:Y\to X$ es la inmersión canónica, $f\circ j$ es propio~\sref[II]{II.5.4.2}, y si $\sh{G}$ es un $\sh{O}_Y$-módulo coherente de soporte $Y$, entonces $j_*(\sh{G})$ es un $\sh{O}_X$-módulo coherente tal que $\RR^q(f\circ j)_*(\sh{G})=\RR^q f_*(j_*(\sh{G}))$~(G,~II,~4.9.1); podemos, por tanto, aplicar el Corolario~\sref{III.3.1.3}.
+
+En virtud del lema de Chow~\sref[II]{II.5.6.2}, existen un preesquema irreducible $X'$ y un morfismo \emph{proyectivo} y sobreyectivo $g:X'\to X$ tales que $f\circ g:X'\to Y$ es \emph{proyectivo}.
+Existe un $\sh{O}_{X'}$-módulo $\sh{L}$ amplio para $g$~\sref[II]{II.5.3.1}; aplicamos el teorema fundamental de los morfismos proyectivos~\sref{III.2.2.1} a $g:X'\to X$ y a $\sh{L}$: existe entonces un entero $n$ tal que $\sh{F}=g_*(\sh{O}_{X'}(n))$ es un $\sh{O}_X$-módulo coherente y $\RR^q g_*(\sh{O}_{X'}(n))=0$ para todo $q>0$; además, como $g^*(g_*(\sh{O}_{X'}(n)))\to\sh{O}_{X'}(n)$ es sobreyectivo para $n$ suficientemente grande~\sref{III.2.2.1}, vemos que podemos suponer, en el punto genérico $x$ de $X$, que $\sh{F}_x\neq 0$~\sref[II]{II.3.4.7}.
+Por otra parte, como $f\circ g$ es proyectivo e $Y$ es noetheriano, los $\RR^q(f\circ g)_*(\sh{O}_{X'}(n))$ son \emph{coherentes}~\sref{III.2.2.1}.
+Ahora bien, $\RR^\bullet(f\circ g)_*(\sh{O}_{X'}(n))$ es la convergencia de una sucesión espectral de Leray cuyo término $E_2$ viene dado por $E_2^{pq}=\RR^p f_*(\RR^q g_*(\sh{O}_{X'}(n)))$; lo anterior muestra que esta sucesión espectral degenera, y sabemos entonces~\sref[0]{0.11.1.6} que $E_2^{p0}=\RR^p f_*(\sh{F})$ es isomorfo a $\RR^p(f\circ g)_*(\sh{O}_{X'}(n))$, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[3.2.2]
+\label{III.3.2.2}
+Sea $Y$ un preesquema localmente noetheriano.
+Para todo morfismo propio $f:X\to Y$, la imagen directa por $f$ de cualquier $\sh{O}_X$-módulo coherente es un $\sh{O}_Y$-módulo coherente.
+\end{corollary}
+
+\begin{corollary}[3.2.3]
+\label{III.3.2.3}
+Sea $A$ un anillo noetheriano y sea $X$ un esquema propio sobre $A$; para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\HH^p(X,\sh{F})$ son $A$-módulos de tipo finito, y existe un entero $r>0$ tal que, para todo $\sh{O}_X$-módulo coherente $\sh{F}$ y todo $p>r$, $\HH^p(X,\sh{F})=0$.
+\end{corollary}
+
+\begin{proof}
+La segunda afirmación ya se demostró en~\sref{III.1.4.12}; la primera se deduce del teorema de finitud~\sref{III.3.2.1}, teniendo en cuenta el Corolario~\sref{III.1.4.11}.
+\end{proof}
+
+En particular, si $X$ es un \emph{esquema algebraico propio} sobre un cuerpo $k$, entonces, para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\HH^p(X,\sh{F})$ son espacios vectoriales sobre $k$ de \emph{dimensión finita}.
+
+\begin{corollary}[3.2.4]
+\label{III.3.2.4}
+Sea $Y$ un preesquema localmente noetheriano y sea $f:X\to Y$ un morfismo de tipo finito.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$ cuyo soporte sea propio sobre $Y$~\sref[II]{II.5.4.10}, los $\sh{O}_Y$-módulos $\RR^q f_*(\sh{F})$ son coherentes.
+\end{corollary}
+
+\oldpage[III]{118}
+\begin{proof}
+Como la cuestión es local sobre $Y$, podemos suponer que $Y$ es noetheriano, y lo mismo ocurre entonces con $X$~\sref[I]{I.6.3.7}.
+Por hipótesis, todo subpreesquema cerrado $Z$ de $X$ cuyo espacio subyacente sea $\Supp(\sh{F})$ es propio sobre $Y$; en otras palabras, si $j:Z\to X$ es la inmersión canónica, entonces $f\circ j:Z\to Y$ es propio.
+Podemos suponer que $Z$ es tal que $\sh{F}=j_*(\sh{G})$, donde $\sh{G}=j^*(\sh{F})$ es un $\sh{O}_Z$-módulo coherente~\sref[I]{I.9.3.5}; como $\RR^q f_*(\sh{F})=\RR^q(f\circ j)_*(\sh{G})$ por el Corolario~\sref{III.1.3.4}, la conclusión se deduce inmediatamente del Teorema~\sref{III.3.2.1}.
+\end{proof}
+
+\subsection{Generalización del teorema de finitud (esquemas ordinarios)}
+\label{subsection:III.3.3}
+
+\begin{proposition}[3.3.1]
+\label{III.3.3.1}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasi-coherente de tipo finito, graduada en grados positivos, sea $Y'=\Proj(\sh{S})$, y sea $g:Y'\to Y$ el morfismo estructural.
+Sea $f:X\to Y$ un morfismo propio, sea $\sh{S}'=f^*(\sh{S})$, y sea $\sh{M}=\bigoplus_{k\in\bb{Z}}\sh{M}_k$ un $\sh{S}'$-módulo graduado cuasi-coherente de tipo finito.
+Entonces los $\RR^p f_*(\sh{M})=\bigoplus_{k\in\bb{Z}}\RR^p f_*(\sh{M}_k)$ son $\sh{S}$-módulos graduados de tipo finito para todo $p$.
+Supongamos además que $\sh{S}$ está generada por $\sh{S}_1$; entonces, para todo $p\in\bb{Z}$, existe un entero $k_p$ tal que, para todo $k\geq k_p$ y todo $r\geq 0$, se tiene
+\[
+\label{III.3.3.1.1}
+  \RR^p f_*(\sh{M}_{k+r})=\sh{S}_r\RR^p f_*(\sh{M}_k).
+  \tag{3.3.1.1}
+\] 
+\end{proposition}
+
+\begin{proof}
+La primera afirmación es idéntica al enunciado del Teorema~\sref{III.2.4.1}[i], en el que simplemente se sustituye «morfismo proyectivo» por «morfismo propio».
+En la demostración del Teorema~\sref{III.2.4.1}[i], la hipótesis sobre $f$ solo se utilizó para demostrar (con la notación de aquella demostración) que $\RR^p f_*'(\widetilde{\sh{M}})$ es un $\sh{O}_{Y'}$-módulo coherente.
+Bajo las hipótesis de la Proposición~\sref{III.3.3.1}, $f'$ es propio~\sref[II]{II.5.4.2}[iii], de modo que podemos retomar sin modificación la demostración del Teorema~\sref{III.2.4.1}[i], gracias al teorema de finitud~\sref{III.3.2.1}.
+
+Para la segunda afirmación, basta observar que existe un recubrimiento abierto afín finito $(U_i)$ de $Y$ tal que las restricciones a los $U_i$ de los dos miembros de~(\hyperref[III.3.3.1.1]{3.3.1.1}) son iguales para todo $k\geq k_{p,i}$~\sref[II]{II.2.1.6}[ii]; basta tomar como $k_p$ el mayor de los $k_{p,i}$.
+\end{proof}
+
+\begin{corollary}[3.3.2]
+\label{III.3.3.2}
+Sea $A$ un anillo noetheriano, sea $\mathfrak{m}$ un ideal de $A$, sea $X$ un $A$-esquema propio y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Entonces, para todo $p\geq 0$, la suma directa $\bigoplus_{k\geq 0}\HH^p(X,\mathfrak{m}^k\sh{F})$ es un módulo de tipo finito sobre el anillo $S=\bigoplus_{k\geq 0}\mathfrak{m}^k$; en particular, existe un entero $k_p\geq 0$ tal que, para todo $k\geq k_p$ y todo $r\geq 0$, se tiene
+\[
+\label{III.3.3.2.1}
+  \HH^p(X,\mathfrak{m}^{k+r}\sh{F})=\mathfrak{m}^r\HH^p(X,\mathfrak{m}^k\sh{F}).
+  \tag{3.3.2.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Basta aplicar la Proposición~\sref{III.3.3.1} con $Y=\Spec(A)$, $\sh{S}=\widetilde{S}$ y $\sh{M}_k=\mathfrak{m}^k\sh{F}$, teniendo en cuenta el Corolario~\sref{III.1.4.11}.
+\end{proof}
+
+Recordemos que la estructura de $S$-módulo sobre $\bigoplus_{k\geq 0}\HH^p(X,\mathfrak{m}^k\sh{F})$ se obtiene considerando, para todo $a\in\mathfrak{m}^r$, la aplicación $\HH^p(X,\mathfrak{m}^k\sh{F})\to\HH^p(X,\mathfrak{m}^{k+r}\sh{F})$ que procede del paso a cohomología de la aplicación de multiplicación $\mathfrak{m}^k\sh{F}\to\mathfrak{m}^{k+r}\sh{F}$ definida por $a$~\sref{III.2.4.1}.
+
+\subsection{Teorema de finitud: caso de los esquemas formales}
+\label{subsection:III.3.4}
+
+\oldpage[III]{119}
+Los resultados de esta sección (salvo la definición~\sref{III.3.4.1}) no se utilizarán en el resto de este capítulo.
+
+\begin{env}[3.4.1]
+\label{III.3.4.1}
+Sean $\mathfrak{X}$ y $\mathfrak{S}$ dos preesquemas formales localmente noetherianos~\sref[I]{I.10.4.2}, y sea $f:\mathfrak{X}\to\mathfrak{S}$ un morfismo de preesquemas formales.
+Diremos que $f$ es un morfismo \emph{propio} si satisface las condiciones siguientes:
+\begin{enumerate}
+  \item[1.º] \emph{$f$ es un morfismo de tipo finito~\sref[I]{I.10.13.3}}.
+  \item[2.º] \emph{Si $\sh{K}$ es un haz de ideales de definición de $\mathfrak{S}$ y se pone $\sh{J}=f^*(\sh{K})\sh{O}_\mathfrak{X}$, $X_0=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{J})$, $S_0=(\mathfrak{S},\sh{O}_\mathfrak{S}/\sh{K})$, entonces el morfismo $f_0:X_0\to S_0$ inducido por $f$~\sref[I]{I.10.5.6} es propio}.
+\end{enumerate}
+Es inmediato que esta definición no depende del haz de ideales de definición $\sh{K}$ de $\mathfrak{S}$ considerado; en efecto, si $\sh{K}'$ es un segundo haz de ideales de definición tal que $\sh{K}'\subset\sh{K}$, y si se pone $\sh{J}'=f^*(\sh{K}')\sh{O}_\mathfrak{X}$, $X_0'=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{J}')$, $S_0'=(\mathfrak{S},\sh{O}_\mathfrak{S}/\sh{K}')$, entonces el morfismo $f_0':X_0'\to S_0'$ inducido por $f$ es tal que el diagrama
+\[
+  \xymatrix{
+    X_0\ar[r]^{f_0}\ar[d]_i &
+    S_0\ar[d]^j\\
+    X_0'\ar[r]_{f_0'} &
+    S_0'
+  }
+\]
+es conmutativo, siendo $i$ y $j$ inmersiones sobreyectivas; en virtud de~\sref[II]{II.5.4.5}, es equivalente decir que $f_0$ o $f_0'$ es propio.
+
+Observemos que, para todo $n\geq 0$, si se pone $X_n=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{J}^{n+1})$, $S_n=(\mathfrak{S},\sh{O}_\mathfrak{S}/\sh{K}^{n+1})$, entonces el morfismo $f_n:X_n\to S_n$ inducido por $f$~\sref[I]{I.10.5.6} es propio para todo $n$ en cuanto lo es para $n=0$~\sref[II]{II.5.4.6}.
+
+Si $g:Y\to Z$ es un morfismo propio de preesquemas ordinarios localmente noetherianos, $Z'$ es un subconjunto cerrado de $Z$, e $Y'$ es un subconjunto cerrado de $Y$ tal que $g(Y')\subset Z'$, entonces la extensión $\widehat{g}:Y_{/Y'}\to Z_{/Z'}$ de $g$ a las compleciones~\sref[I]{I.10.9.1} es un morfismo propio de preesquemas formales, como se deduce de la definición y de~\sref[II]{II.5.4.5}.
+
+Sean $\mathfrak{X}$ y $\mathfrak{S}$ dos preesquemas formales localmente noetherianos y sea $f:\mathfrak{X}\to\mathfrak{S}$ un morfismo \emph{de tipo finito}~\sref[I]{I.10.13.3}; conservando la notación anterior, diremos que un subconjunto $Z$ del espacio subyacente a $\mathfrak{X}$ es \emph{propio} sobre $\mathfrak{S}$ (o propio para $f$) si, considerado como subconjunto de $X_0$, $Z$ es \emph{propio sobre $S_0$}~\sref[II]{II.5.4.10}.
+Todas las propiedades de los subconjuntos propios de preesquemas ordinarios enunciadas en~\sref[II]{II.5.4.10} siguen siendo válidas para los subconjuntos propios de preesquemas formales, como se deduce inmediatamente de las definiciones.
+\end{env}
+
+\begin{theorem}[3.4.2]
+\label{III.3.4.2}
+Sean $\mathfrak{X}$ y $\mathfrak{Y}$ preesquemas formales localmente noetherianos, y sea $f:\mathfrak{X}\to\mathfrak{Y}$ un morfismo propio.
+Para todo $\sh{O}_\mathfrak{X}$-módulo coherente $\sh{F}$, los $\sh{O}_\mathfrak{Y}$-módulos $\RR^q f_*(\sh{F})$ son coherentes para todo $q\geq 0$.
+\end{theorem}
+
+Sea $\sh{J}$ un haz de ideales de definición de $\mathfrak{Y}$, sea $\sh{K}=f^*(\sh{J})\sh{O}_\mathfrak{X}$, y consideremos los $\sh{O}_\mathfrak{X}$-módulos
+\[
+\label{III.3.4.2.1}
+  \sh{F}_k=\sh{F}\otimes_{\sh{O}_\mathfrak{Y}}(\sh{O}_\mathfrak{Y}/\sh{J}^{k+1})=\sh{F}/\sh{K}^{k+1}\sh{F}\quad(k\geq 0)
+  \tag{3.4.2.1}
+\]
+que forman evidentemente un \emph{sistema proyectivo} de $\sh{O}_\mathfrak{X}$-módulos topológicos, tal que
+\oldpage[III]{120}
+\[
+  \sh{F}=\varprojlim_k\sh{F}_k
+\]
+por \sref[I]{I.10.11.3}.
+Por otra parte, del Teorema~\sref{III.3.4.2} se deduce que cada $\RR^q f_*(\sh{F})$, por ser coherente, está dotado naturalmente de una estructura de $\sh{O}_\mathfrak{Y}$-módulo topológico~\sref[I]{I.10.11.6}, y lo mismo ocurre con los $\RR^q f_*(\sh{F}_k)$.
+A los homomorfismos canónicos $\sh{F}\to\sh{F}_k=\sh{F}/\sh{K}^{k+1}\sh{F}$ corresponden canónicamente homomorfismos
+\[
+  \RR^q f_*(\sh{F})\to\RR^q f_*(\sh{F}_k),
+\]
+que son necesariamente continuos para las estructuras de $\sh{O}_\mathfrak{Y}$-módulo topológico anteriores~\sref[I]{I.10.11.6} y forman un sistema proyectivo, dando en el límite un homomorfismo funtorial canónico
+\[
+\label{III.3.4.2.2}
+  \RR^q f_*(\sh{F})\to\varprojlim_k\RR^q f_*(\sh{F}_k),
+  \tag{3.4.2.2}
+\]
+que es un homomorfismo continuo de $\sh{O}_\mathfrak{Y}$-módulos topológicos.
+Junto con el Teorema~\sref{III.3.4.2}, demostraremos el
+\begin{corollary}[3.4.3]
+\label{III.3.4.3}
+Cada uno de los homomorfismos~(\hyperref[III.3.4.2.2]{3.4.2.2}) es un isomorfismo topológico.
+Además, si $\mathfrak{Y}$ es noetheriano, el sistema proyectivo $(\RR^q f_*(\sh{F}/\sh{K}^{k+1}\sh{F}))_{k\geq 0}$ satisface la condición \emph{(ML)}~\sref[0]{0.13.1.1}.
+\end{corollary}
+Comenzaremos estableciendo el Teorema~\sref{III.3.4.2} y el Corolario~\sref{III.3.4.3} cuando $\mathfrak{Y}$ es un esquema formal afín noetheriano~\sref[I]{I.10.4.1}:
+\begin{corollary}[3.4.4]
+\label{III.3.4.4}
+Bajo las hipótesis del Teorema~\sref{III.3.4.2}, supongamos además que $\mathfrak{Y}=\Spf(A)$, donde $A$ es un anillo ádico noetheriano.
+Sea $\mathfrak{J}$ un ideal de definición de $A$, y pongamos $\sh{F}_k=\sh{F}/\mathfrak{J}^{k+1}\sh{F}$ para $k\geq 0$.
+Entonces los $\HH^n(\mathfrak{X},\sh{F})$ son $A$-módulos de tipo finito; el sistema proyectivo $(\HH^n(\mathfrak{X},\sh{F}_k))_{k\geq 0}$ satisface la condición \emph{(ML)} para todo $n$; si se pone
+\[
+\label{III.3.4.4.1}
+  N_{n,k}=\Ker\big(\HH^n(\mathfrak{X},\sh{F})\to\HH^n(\mathfrak{X},\sh{F}_k)\big)
+  \tag{3.4.4.1}
+\]
+(igual también a $\Im(\HH^n(\mathfrak{X},\mathfrak{J}^{k+1}\sh{F})\to\HH^n(\mathfrak{X},\sh{F}))$ por la sucesión exacta de cohomología), entonces los $N_{n,k}$ definen sobre $\HH^n(\mathfrak{X},\sh{F})$ una filtración $\mathfrak{J}$-buena~\sref[0]{0.13.7.7}; finalmente, el homomorfismo canónico
+\[
+\label{III.3.4.4.2}
+  \HH^n(\mathfrak{X},\sh{F})\to\varprojlim_k\HH^n(\mathfrak{X},\sh{F}_k)
+  \tag{3.4.4.2}
+\]
+es un isomorfismo topológico para todo $n$ (el miembro izquierdo está dotado de la topología $\mathfrak{J}$-ádica y los $\HH^n(\mathfrak{X},\sh{F}_k)$ de la topología discreta).
+\end{corollary}
+
+Pongamos
+\[
+\label{III.3.4.4.3}
+  S=\gr(A)=\bigoplus_{k\geq 0}\mathfrak{J}^k/\mathfrak{J}^{k+1},\ \sh{M}=\gr(\sh{F})=\bigoplus_{k\geq 0}\mathfrak{J}^k\sh{F}/\mathfrak{J}^{k+1}\sh{F}. \tag{3.4.4.3}
+\]
+Sabemos que $\mathfrak{J}^\Delta$ es un haz de ideales de definición de $\mathfrak{Y}$~\sref[I]{I.10.3.1}; sean $\sh{K}=f^*(\mathfrak{J}^\Delta)\sh{O}_\mathfrak{X}$, $X_0=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{K})$, $Y_0=(\mathfrak{Y},\sh{O}_\mathfrak{Y}/\mathfrak{J}^\Delta)=\Spec(A_0)$, con $A_0=A/\mathfrak{J}$.
+Está claro que los $\sh{M}_k=\mathfrak{J}^k\sh{F}/\mathfrak{J}^{k+1}\sh{F}$ son $\sh{O}_{X_0}$-módulos coherentes~\sref[I]{I.10.11.3}.
+Consideremos, por otra parte, la $\sh{O}_{X_0}$-álgebra graduada cuasi-coherente
+\[
+\label{III.3.4.4.4}
+  \sh{S}=\sh{O}_{X_0}\otimes_{A_0}S.
+  \tag{3.4.4.4}
+\]
+La multiplicación define un homomorfismo sobreyectivo de álgebras graduadas
+\[
+  \sh{S}\longrightarrow\gr(\sh{O}_\mathfrak{X})
+  =\bigoplus_{k\geq 0}\sh{K}^k/\sh{K}^{k+1},
+\]
+por medio del cual $\sh{M}$ es un $\sh{S}$-módulo graduado.
+
+La hipótesis de que $\sh{F}$ es un $\sh{O}_\mathfrak{X}$-módulo de tipo finito implica primero que $\sh{M}$ es
+\oldpage[III]{121}
+un $\sh{S}$-módulo graduado \emph{de tipo finito}.
+En efecto, la cuestión es local sobre $\mathfrak{X}$, y podemos suponer que \mbox{$\mathfrak{X}=\Spf(B)$}, donde $B$ es un anillo ádico noetheriano, y que $\sh{F}=N^\Delta$, donde $N$ es un $B$-módulo de tipo finito~\sref[I]{I.10.10.5}.
+Pongamos $B_0=B/\mathfrak{J}B$ y $N_0=N/\mathfrak{J}N$.
+Entonces $X_0=\Spec(B_0)$, y los $\sh{O}_{X_0}$-módulos cuasi-coherentes $\sh{S}$ y $\sh{M}$ están asociados respectivamente a
+\[
+  S'=\bigoplus_{k\geq 0}((\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}B_0),\qquad
+  M'=\bigoplus_{k\geq 0}\mathfrak{J}^kN/\mathfrak{J}^{k+1}N.
+\]
+Para todo $k\geq 0$, la multiplicación induce una aplicación sobreyectiva
+\[
+  (\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}N_0
+  \longrightarrow\mathfrak{J}^kN/\mathfrak{J}^{k+1}N,
+  \qquad \overline a\otimes\overline n\longmapsto\overline{an}.
+\]
+Estas aplicaciones definen un homomorfismo sobreyectivo de $S'$-módulos graduados $S'\otimes_{B_0}N_0\longrightarrow M'$.
+Como $N_0$ es un $B_0$-módulo de tipo finito, $M'$ es, por tanto, un $S'$-módulo de tipo finito, lo que prueba nuestra afirmación~\sref[I]{I.1.3.13}.
+
+Como el morfismo $f_0:X_0\to Y_0$ es \emph{propio} por hipótesis, podemos aplicar la Proposición~\sref{III.3.3.1} a $\sh{S}$, $\sh{M}$ y al morfismo $f_0$: teniendo en cuenta el Corolario~\sref{III.1.4.11}, concluimos que, para \emph{todo $n\geq 0$}, $\bigoplus_{k\geq 0}\HH^n(X_0,\sh{M}_k)$ es un $S$-módulo graduado \emph{de tipo finito}.
+Esto prueba que la condición ($\text{F}_n$) de~\sref[0]{0.13.7.7} se satisface para \emph{todo $n\geq 0$}, cuando se considera el sistema proyectivo estricto $(\sh{F}/\mathfrak{J}^k\sh{F})_{k\geq 0}$ de haces de grupos abelianos sobre $X_0$, cada uno dotado de su estructura natural de «$A$-módulo filtrado».
+Podemos, pues, aplicar~\sref[0]{0.13.7.7}, que demuestra que:
+\begin{enumerate}
+  \item[1.º] El sistema proyectivo $(\HH^n(\mathfrak{X},\sh{F}_k))_{k\geq 0}$ satisface la condición (ML).
+  \item[2.º] Si $\HH^{\prime n}=\varprojlim_k\HH^n(\mathfrak{X},\sh{F}_k)$, entonces $\HH^{\prime n}$ es un $A$-módulo de tipo finito.
+  \item[3.º] La filtración definida sobre $\HH^{\prime n}$ por los núcleos de los homomorfismos canónicos $\HH^{\prime n}\to\HH^n(\mathfrak{X},\sh{F}_k)$ es $\mathfrak{J}$-buena.
+\end{enumerate}
+
+Observemos, por otra parte, que si se pone $X_k=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{K}^{k+1})$, entonces $\sh{F}_k$ es un $\sh{O}_{X_k}$-módulo coherente~\sref[I]{I.10.11.3}; y si $U$ es un abierto afín de $X_0$, entonces $U$ es también un abierto afín de cada $X_k$~\sref[I]{I.5.1.9}, de modo que $\HH^n(U,\sh{F}_k)=0$ para todo $n>0$ y todo $k$~\sref{III.1.3.1}, y $\HH^0(U,\sh{F}_k)\to\HH^0(U,\sh{F}_h)$ es sobreyectivo para $h\leq k$~\sref[I]{I.1.3.9}.
+Estamos, pues, en las condiciones de~\sref[0]{0.13.3.2}, y la aplicación de~\sref[0]{0.13.3.1} demuestra que $\HH^{\prime n}$ se identifica canónicamente con $\HH^n(\mathfrak{X},\varprojlim_k\sh{F}_k)=\HH^n(\mathfrak{X},\sh{F})$; esto termina la demostración del Corolario~\sref{III.3.4.4}.
+
+\begin{env}[3.4.5]
+\label{III.3.4.5}
+Volvamos a la demostración de~\sref{III.3.4.2} y~\sref{III.3.4.3}.
+Demostremos primero las proposiciones en el caso $\mathfrak{Y}=\Spf(A)$ considerado en~\sref{III.3.4.4}; para ello, para todo $g\in A$, apliquemos~\sref{III.3.4.4} al esquema formal afín noetheriano inducido sobre el abierto $\mathfrak{Y}_g=\mathfrak{D}(g)$ de $\mathfrak{Y}$, que es igual a $\Spf(A_{\{g\}})$, y al preesquema formal inducido por $\mathfrak{X}$ sobre $f^{-1}(\mathfrak{Y}_g)$; observemos que $\mathfrak{Y}_g$ es también un abierto afín del preesquema $Y_k=(\mathfrak{Y},\sh{O}_\mathfrak{Y}/(\mathfrak{J}^\Delta)^{k+1})$, y como $\sh{F}_k$ es un $\sh{O}_{X_k}$-módulo coherente, se tiene
+\[
+  \HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F}_k)=\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))
+\]
+para todo $k\geq 0$, en virtud del Corolario~\sref{III.1.4.11}.
+El homomorfismo canónico
+\[
+  \HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F})\to\varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))
+\]
+es un isomorfismo; pero se tiene~\sref[0]{0.3.2.6}
+\[
+  \varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))=\Gamma(\mathfrak{Y}_g,\varprojlim_k\RR^n f_*(\sh{F}_k)),
+\]
+\oldpage[III]{122}
+y como el haz $\RR^n f_*(\sh{F})$ es el haz asociado al prehaz $\mathfrak{Y}_g\mapsto\HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F})$ sobre los $\mathfrak{Y}_g$~\sref[0]{0.3.2.1}, hemos demostrado que el homomorfismo~(\hyperref[III.3.4.2.2]{3.4.2.2}) es \emph{biyectivo}.
+Demostremos ahora que $\RR^n f_*(\sh{F})$ es un $\sh{O}_\mathfrak{Y}$-módulo coherente y, más precisamente, que se tiene
+\[
+\label{III.3.4.5.1}
+  \RR^n f_*(\sh{F})=\big(\HH^n(\mathfrak{X},\sh{F})\big)^\Delta.
+  \tag{3.4.5.1}
+\]
+
+Con la notación anterior, como $\sh{F}_k$ es un $\sh{O}_{X_k}$-módulo coherente~\sref{III.1.4.13}, se tiene
+\[
+  \Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))=(\Gamma(\mathfrak{Y},\RR^n f_*(\sh{F}_k)))_g=(\HH^n(\mathfrak{X},\sh{F}_k))_g.
+\]
+
+Ahora bien, los $\HH^n(\mathfrak{X},\sh{F}_k)$ forman un sistema proyectivo que satisface (ML), y su límite proyectivo $\HH^n(\mathfrak{X},\sh{F})$ es un $A$-módulo de tipo finito.
+Concluimos~\sref[0]{0.13.7.8} que se tiene
+\[
+  \varprojlim_k\big((\HH^n(\mathfrak{X},\sh{F}_k))_g\big)=\HH^n(\mathfrak{X},\sh{F})\otimes_A A_{\{g\}}=\Gamma(\mathfrak{Y}_g,(\HH^n(\mathfrak{X},\sh{F}))^\Delta),
+\]
+teniendo en cuenta~\sref[I]{I.10.10.8} aplicado a $A$ y $A_{\{g\}}$; esto demuestra~(\hyperref[III.3.4.5.1]{3.4.5.1}), pues $\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}))=\varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))$.
+
+Como (\hyperref[III.3.4.2.2]{3.4.2.2}) es entonces un isomorfismo de $\sh{O}_\mathfrak{Y}$-módulos coherentes, es necesariamente un isomorfismo \emph{topológico}~\sref[I]{I.10.11.6}.
+Finalmente, de las relaciones $\RR^n f_*(\sh{F}_k)=(\HH^n(\mathfrak{X},\sh{F}_k))^\Delta$ se deduce que el sistema proyectivo $(\RR^n f_*(\sh{F}_k))_{k\geq 0}$ satisface (ML)~\sref[I]{I.10.10.2}.
+
+Una vez demostrados \sref{III.3.4.2} y \sref{III.3.4.3} en el caso en que el preesquema formal $\mathfrak{Y}$ es afín noetheriano, el paso al caso general es inmediato para~\sref{III.3.4.2} y para la primera afirmación de~\sref{III.3.4.3}, que son locales sobre $\mathfrak{Y}$.
+En cuanto a la segunda afirmación de~\sref{III.3.4.3}, como $\mathfrak{Y}$ es noetheriano, basta recubrirlo por un número finito de abiertos afines noetherianos $U_i$ y observar que las restricciones del sistema proyectivo $(\RR^q f_*(\sh{F}_k))$ a cada uno de los $U_i$ satisfacen (ML).
+\end{env}
+
+En el curso de la demostración hemos probado además:
+\begin{corollary}[3.4.6]
+\label{III.3.4.6}
+Bajo las hipótesis del Corolario~\sref{III.3.4.4}, el homomorfismo canónico
+\[
+\label{III.3.4.6.1}
+  \HH^q(\mathfrak{X},\sh{F})\to\Gamma(\mathfrak{Y},\RR^q f_*(\sh{F}))
+  \tag{3.4.6.1}
+\]
+es biyectivo.
+\end{corollary}

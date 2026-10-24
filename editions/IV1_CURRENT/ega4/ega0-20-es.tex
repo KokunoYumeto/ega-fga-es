@@ -1,0 +1,3240 @@
+\section{Derivaciones y diferenciales}
+\label{section:0.20-es}
+\label{0.20-es}
+
+Las nociones introducidas en este parágrafo se retomarán en forma
+geométrica en el capítulo~IV, §~16, y desempeñarán un papel importante en el
+estudio de los preesquemas. Su importancia en este capítulo se debe, en primer
+lugar, a sus relaciones con la noción de álgebra formalmente lisa y, en
+particular, a los teoremas (20.4.9), (20.5.7) y (20.5.12), que se traducirán al
+lenguaje geométrico en el parágrafo del capítulo~IV dedicado a los morfismos
+lisos y son de uso constante en las aplicaciones. Por otra parte, las nociones
+diferenciales servirán para demostrar en el §~22 importantes criterios de
+regularidad que desempeñarán un papel esencial en el estudio profundo de los
+anillos locales noetherianos realizado en el §~7 del capítulo~IV.
+
+\subsection{Derivaciones y extensiones de álgebras}
+\label{subsection:0.20.1-es}
+
+\oldpage[0\textsubscript{IV-1}]{117}
+\begin{proposition}[20.1.1]
+\label{0.20.1.1-es}
+Sean $A$ un anillo (no necesariamente conmutativo), $B$, $E$, $C$
+$A$-anillos, $p:E\to C$ un $A$-homomorfismo cuyo núcleo $\mathfrak{Q}$
+es de cuadrado nulo, $u:B\to C$ un $A$-homomorfismo. Supongamos que existe
+un $A$-homomorfismo $v_0:B\to E$ tal que $u$ se factoriza como
+$B\xrightarrow{v_0}E\xrightarrow{p}C$. Entonces el conjunto de los
+$A$-homomorfismos $v:B\to E$ tales que $u=p\circ v$ es idéntico al
+conjunto de las aplicaciones $v_0+D$, donde $D:B\to\mathfrak{Q}$ es una
+aplicación que verifica las dos condiciones siguientes:
+\begin{enumerate}
+  \item[\rm(i)] $D$ es un homomorfismo de $A$-bimódulos.
+  \item[\rm(ii)] Cualesquiera que sean $f$, $g$ en $B$, se tiene
+\end{enumerate}
+\begin{equation}
+\tag{20.1.1.1}
+\label{0.20.1.1.1-es}
+  D(fg)=f.D(g)+D(f).g.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Decir que $p(v(f))=p(v_0(f))$ para $f\in B$ significa que
+$D(f)=v(f)-v_0(f)$ pertenece a $\mathfrak{Q}$; al escribir que
+$v(fg)=v(f)v(g)$, se obtiene la relación \sref{0.20.1.1.1-es},
+puesto que $\mathfrak{Q}$ es de cuadrado nulo, y la condición (i) resulta de que
+$v$ y $v_0$ son $A$-homomorfismos.
+
+Si $\rho:A\to B$ es el homomorfismo estructural, se deduce de
+\sref{0.20.1.1.1-es} que se tiene
+$D(\rho(a)f)=\rho(a)D(f)+D(\rho(a))f$ para todo $a\in A$; pero se debe
+tener $D(\rho(a)f)=\rho(a)D(f)$ por (i), luego, tomando $f=1$, se
+obtiene
+\[
+  D(\rho(a))=0 \qquad\text{para}\quad a\in A\,;
+\]
+recíprocamente, si $D$ es nula en $\rho(A)$ y verifica
+\sref{0.20.1.1.1-es}, también verifica (i).
+\end{proof}
+
+\begin{definition}[20.1.2]
+\label{0.20.1.2-es}
+Dados un $A$-anillo $B$ y un $B$-bimódulo $L$, se llama
+\emph{$A$-derivación de $B$ en $L$} a una aplicación $D:B\to L$ que verifica
+las condiciones (i) y (ii) de \sref{0.20.1.1-es}.
+\end{definition}
+
+Se deduce de \sref{0.20.1.1-es} que el \emph{núcleo} de una $A$-derivación
+$D:B\to L$ es un sub-$A$-anillo de $B$.
+
+A veces se llama \emph{derivación} de $B$ en $L$ a una
+$\mathbf{Z}$-derivación, es decir, una aplicación \emph{aditiva} de $B$
+en $L$ que verifica \sref{0.20.1.1.1-es}; se tiene, por tanto, $D(1)=0$ para tal
+aplicación. Si $B$ es un álgebra sobre un \emph{cuerpo primo} $P$, toda
+$\mathbf{Z}$-derivación de $B$ es una $P$-derivación: esto es evidente por lo
+anterior si $P$ es de característica $>0$ y, en caso contrario,
+la relación $n.n^{-1}=1$ para $n\in\mathbf{Z}$ da
+\[
+  nD(n^{-1})=0
+\]
+luego $D(n^{-1})=0$, puesto que $P$ es de característica $0$.
+
+Se deduce inmediatamente de la definición \sref{0.20.1.2-es} que, si $D$, $D'$
+son dos $A$-derivaciones de $B$ en $L$, lo mismo ocurre con $D-D'$. En otras
+palabras, el conjunto de las $A$-derivaciones de $B$ en $L$ está provisto de una
+estructura de \emph{grupo aditivo}; este grupo se denota por
+$\operatorname{D\acute{e}r}_A(B,L)$. Si $A$ es \emph{conmutativo}, $B$ un
+$A$-\emph{álgebra conmutativa}, y $L$ un $B$-módulo, entonces, para toda
+$A$-derivación $D$ de $B$ en $L$ y todo $a\in A$, $aD$ sigue siendo una
+$A$-derivación de $B$ en $L$; en otras palabras, $\operatorname{D\acute{e}r}_A(B,L)$
+está entonces provisto de una estructura de $A$-\emph{módulo}.
+
+\oldpage[0\textsubscript{IV-1}]{118}
+La prop. \sref{0.20.1.1-es} se interpreta de la manera siguiente:
+
+\begin{corollary}[20.1.3]
+\label{0.20.1.3-es}
+Dados dos $A$-homomorfismos de $A$-anillos $p:E\to C$,
+$u:B\to C$, el primero de los cuales tiene un núcleo $\mathfrak{Q}$ de cuadrado
+nulo, el conjunto de los $A$-homomorfismos $v:B\to E$ tales que $u=p\circ v$
+es vacío o es un espacio homogéneo principal bajo el grupo
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{Q})$.
+\end{corollary}
+
+En particular:
+
+\begin{corollary}[20.1.4]
+\label{0.20.1.4-es}
+Sean $A$ un anillo, $C$ un $A$-anillo, $L$ un $C$-bimódulo, $E$ una
+$A$-extensión de $C$ por $L$, $p:E\to C$ la aumentación. La aplicación que
+asocia a toda derivación $D\in\operatorname{D\acute{e}r}_A(C,L)$ la aplicación
+$x\mapsto x+D(p(x))$ es un isomorfismo del grupo
+$\operatorname{D\acute{e}r}_A(C,L)$ sobre el grupo de las $A$-equivalencias de $E$
+sobre sí misma.
+\end{corollary}
+
+\begin{proof}
+Apliquemos \sref{0.20.1.1-es} para $B=E$, $v_0=\mathrm{I}_E$: el conjunto
+de los $A$-homomorfismos $v:E\to E$ tales que $p\circ v=p$ es idéntico al
+conjunto de las aplicaciones $v=\mathrm{I}_E+D'$, donde
+$D'\in\operatorname{D\acute{e}r}_A(E,L)$. Decir que tal $A$-homomorfismo $v$ es
+una $A$-equivalencia equivale a decir que la restricción de $v$ a $L$ es la
+inyección canónica, o también que $D'(x)=0$ en $L$; pero esto significa asimismo
+que $D'$ se factoriza como $E\xrightarrow{p}C\xrightarrow{D}L$, donde $D$ es una
+$A$-derivación. De donde resulta el corolario.
+\end{proof}
+
+Para las extensiones triviales, \sref{0.20.1.3-es} da:
+
+\begin{corollary}[20.1.5]
+\label{0.20.1.5-es}
+Sean $A$ un anillo, $B$, $C$ dos $A$-anillos, $L$ un $C$-bimódulo,
+$u:B\to C$ un $A$-homomorfismo; la aplicación que asocia a toda derivación
+$D\in\operatorname{D\acute{e}r}_A(B,L)$ la aplicación
+$\alpha:x\mapsto(u(x),D(x))$ es una biyección sobre el conjunto de los
+$A$-homomorfismos $v:B\to D_C(L)$ (cf. 18.2.3) tales que $u$ se factoriza como
+$B\xrightarrow{v}D_C(L)\to C$.
+\end{corollary}
+
+Más particularmente:
+
+\begin{corollary}[20.1.6]
+\label{0.20.1.6-es}
+Sean $A$ un anillo, $B$ un $A$-anillo, $L$ un $B$-bimódulo. Si a toda
+derivación $D\in\operatorname{D\acute{e}r}_A(B,L)$ se asocian: $1^\circ$ la
+$A$-equivalencia $(x,y)\mapsto(x,y+D(x))$ de la extensión $D_B(L)$ sobre
+sí misma; $2^\circ$ el $A$-homomorfismo $x\mapsto(x,D(x))$ de $B$ en
+$D_B(L)$, inverso por la derecha del homomorfismo de aumentación $D_B(L)\to B$,
+se definen correspondencias biunívocas canónicas entre:
+\begin{enumerate}
+  \item[\rm(i)] el conjunto $\operatorname{D\acute{e}r}_A(B,L)$;
+  \item[\rm(ii)] el conjunto de las $A$-equivalencias de $D_B(L)$ sobre sí misma;
+  \item[\rm(iii)] el conjunto de los $A$-homomorfismos inversos por la derecha del
+  homomorfismo de aumentación $D_B(L)\to B$.
+\end{enumerate}
+\end{corollary}
+
+Se observará que la correspondencia biunívoca así establecida entre (i) y (ii)
+respeta las estructuras de grupo, y que la que se deduce de ella entre (ii) y
+(iii) no es sino la correspondencia biunívoca ya definida en (18.3.8).
+
+\begin{corollary}[20.1.7]
+\label{0.20.1.7-es}
+Sean $A$ un anillo, $C$ un $A$-anillo, $L$ un $A$-bimódulo, $E$ una
+$A$-extensión trivial de $C$ por $L$, $p:E\to C$ la aumentación. El conjunto
+de las $A$-derivaciones $D$ de $E$ en $L$ tales que $D(x)=x$ en $L$ es
+idéntico al conjunto de las aplicaciones $x\mapsto x-w(p(x))$, donde $w$
+recorre el conjunto de los $A$-homomorfismos inversos por la derecha de $p$.
+\end{corollary}
+
+\begin{proof}
+Basta aplicar de nuevo \sref{0.20.1.1-es} para $B=E$,
+$v_0=\mathrm{I}_E$; si $v=\mathrm{I}_E-D$, la condición $D(x)=x$ para
+$x\in L$ equivale a $v(x)=0$ para $x\in L$, es decir, a $v=w\circ p$,
+donde $w:C\to E$ es un $A$-homomorfismo; además, la condición
+$p\circ v=p$ equivale a $p\circ w=\mathrm{I}_C$, en otras palabras, al hecho de
+que $w$ sea inverso por la derecha de $p$.
+\end{proof}
+
+\subsection{Propiedades funtoriales de las derivaciones}
+\label{subsection:0.20.2-es}
+
+\oldpage[0\textsubscript{IV-1}]{119}
+\begin{env}[20.2.1]
+\label{0.20.2.1-es}
+Sean $A$ un anillo, $B$ un $A$-anillo, $L$ un $B$-bimódulo; si $L'$ es
+un segundo $B$-bimódulo y $w:L\to L'$ un homomorfismo de $B$-bimódulos, es
+claro que la aplicación $D\mapsto w\circ D$ es un homomorfismo de
+grupos aditivos
+\begin{equation}
+\tag{20.2.1.1}
+\label{0.20.2.1.1-es}
+  w_0:\operatorname{D\acute{e}r}_A(B,L)\to\operatorname{D\acute{e}r}_A(B,L')
+\end{equation}
+y que, si $w':L'\to L''$ es un segundo homomorfismo de $B$-bimódulos, se tiene
+$(w'\circ w)_0=w'_0\circ w_0$. Cuando $A$ es conmutativo, $B$ un
+$A$-álgebra conmutativa y $L$ un $B$-módulo, \sref{0.20.2.1.1-es} es un
+homomorfismo de $A$-módulos.
+
+En segundo lugar, sean $B'$ un $A$-anillo, $v:B'\to B$ un
+$A$-homomorfismo que hace de $L$ un $B'$-bimódulo; entonces la aplicación
+$D\mapsto D\circ v$ es un homomorfismo de grupos aditivos,
+\begin{equation}
+\tag{20.2.1.2}
+\label{0.20.2.1.2-es}
+  v^0:\operatorname{D\acute{e}r}_A(B,L)\to\operatorname{D\acute{e}r}_A(B',L)
+\end{equation}
+como se deduce de \sref{0.20.1.1.1-es}; si $v':B''\to B'$ es un segundo
+$A$-homomorfismo, se tiene $(v\circ v')^0=v'^0\circ v^0$. Cuando $A$, $B$ y
+$B'$ son conmutativos y $L$ un $B$-módulo, \sref{0.20.2.1.2-es} es un
+homomorfismo de $A$-módulos.
+
+Finalmente, sea $u:A'\to A$ un homomorfismo de anillos que hace de $B$ un
+$A'$-anillo; toda $A$-derivación $D\in\operatorname{D\acute{e}r}_A(B,L)$ es también
+una $A'$-derivación, de donde resulta una inyección canónica de grupos conmutativos
+\begin{equation}
+\tag{20.2.1.3}
+\label{0.20.2.1.3-es}
+  u^0:\operatorname{D\acute{e}r}_A(B,L)\to\operatorname{D\acute{e}r}_{A'}(B,L)
+\end{equation}
+y, si $u':A''\to A'$ es un segundo homomorfismo de anillos, se tiene
+$(u\circ u')^0=u'^0\circ u^0$; cuando $A$, $A'$ y $B$ son conmutativos y
+$L$ un $B$-módulo, \sref{0.20.2.1.3-es} es un dihomomorfismo de módulos
+(relativo a $u$).
+
+También se puede decir que
+\[
+  (A,B,L)\leadsto\operatorname{D\acute{e}r}_A(B,L)
+\]
+es un \emph{funtor covariante} de la categoría $\boldsymbol{K}$ definida en
+(18.3.5) en la categoría $\boldsymbol{Ab}$ de los grupos conmutativos, haciendo
+corresponder a toda terna $(u,v,w)$ que constituye un morfismo de
+$\boldsymbol{K}$ el homomorfismo $w_0\circ v^0\circ u^0$; la verificación de
+la funtorialidad resulta de la conmutatividad de los diagramas
+\[
+\xymatrix{
+  \operatorname{D\acute{e}r}_A(B,L) \ar[r]^{v^0} \ar[d]_{w_0} &
+    \operatorname{D\acute{e}r}_A(B',L) \ar[d]^{w_0} \\
+  \operatorname{D\acute{e}r}_A(B,L') \ar[r]^{v^0} &
+    \operatorname{D\acute{e}r}_A(B',L')
+}
+\qquad
+\xymatrix{
+  \operatorname{D\acute{e}r}_A(B,L) \ar[r]^{u^0} \ar[d]_{w_0} &
+    \operatorname{D\acute{e}r}_{A'}(B,L) \ar[d]^{w_0} \\
+  \operatorname{D\acute{e}r}_A(B,L') \ar[r]^{u^0} &
+    \operatorname{D\acute{e}r}_{A'}(B,L')
+}
+\]
+para todo homomorfismo $w:L\to L'$ de $B$-bimódulos.
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{120}
+\begin{theorem}[20.2.2]
+\label{0.20.2.2-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos de anillos, $L$ un
+$C$-bimódulo. Se tiene una sucesión exacta canónica de grupos conmutativos
+\begin{align}
+\tag{20.2.2.1}
+\label{0.20.2.2.1-es}
+  0\to\operatorname{D\acute{e}r}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r}_A(C,L)&\xrightarrow{v^0}
+  \operatorname{D\acute{e}r}_A(B,L)\xrightarrow{\partial} \\
+  &\to\operatorname{Exan}_B(C,L)\xrightarrow{u^1}
+  \operatorname{Exan}_A(C,L)\xrightarrow{v^1}
+  \operatorname{Exan}_A(B,L) \notag
+\end{align}
+donde $u^0$, $v^0$ son los homomorfismos (20.2.1.3) y (20.2.1.2)
+respectivamente, $u^1$, $v^1$ los homomorfismos definidos en (18.3.4.1) y
+(18.3.3.1) respectivamente, y donde $\partial$ se define como sigue: para
+toda $A$-derivación $D$ de $B$ en $L$, $\partial(D)$ es la clase de la
+$B$-extensión de $C$ por $L$ definida sobre el anillo $D_C(L)$ por el
+$A$-homomorfismo $\alpha:x\mapsto(v(x),D(x))$ (cf.
+\sref{0.20.1.5-es}). Además, la sucesión exacta \sref{0.20.2.2.1-es} es
+funtorial en $L$ (para los homomorfismos definidos en (20.2.1.1) y
+(18.3.1.1) respectivamente).
+\end{theorem}
+
+\begin{proof}
+Como $D$ es una $A$-derivación (y \emph{a fortiori} una
+$\mathbf{Z}$-derivación) de $B$ en $L$, el $A$-homomorfismo
+$\alpha:x\mapsto(v(x),D(x))$ define efectivamente sobre $D_C(L)$ una estructura de
+$B$-extensión, por tanto $\partial(D)$ está bien definida \sref{0.20.1.5-es}. Hay
+que verificar la exactitud en $5$ lugares:
+
+\medskip
+\noindent 1)\enspace
+La exactitud en $\operatorname{D\acute{e}r}_B(C,L)$ es trivial (cf.
+\sref{0.20.2.1-es}).
+
+\medskip
+\noindent 2)\enspace
+Por definición \sref{0.20.2.1-es} el núcleo de $v^0$ es el conjunto de las
+$A$-derivaciones de $C$ en $L$ que se anulan en $v(B)$, es decir,
+las $A$-derivaciones que son también $B$-derivaciones
+\sref{0.20.1.1-es}; de donde resulta la exactitud en $\operatorname{D\acute{e}r}_A(C,L)$.
+
+\medskip
+\noindent 3)\enspace
+El núcleo de $\partial$ está formado por las derivaciones
+$D\in\operatorname{D\acute{e}r}_A(B,L)$ para las cuales la $B$-extensión definida por
+$\alpha:x\mapsto(v(x),D(x))$ es $B$-trivial; esto significa (18.2.3) que
+existe un $B$-homomorfismo $z\mapsto(z,w(z))$ de $C$ en $D_C(L)$ (estando la
+estructura de $B$-anillo de $D_C(L)$ definida por $\alpha$); pero un tal
+homomorfismo, al ser \emph{a fortiori} un $A$-homomorfismo, es de la forma
+$z\mapsto(z,D'(z))$ donde $D'\in\operatorname{D\acute{e}r}_A(C,L)$
+\sref{0.20.1.6-es}; y al escribir que es un $B$-homomorfismo, se obtiene
+\[
+  D(x)z+v(x)D'(z)=D'(v(x)z)=v(x)D'(z)+D'(v(x))z
+\]
+para $x\in B$, $z\in C$, lo que da $D'(v(x))=D(x)$; el núcleo de
+$\partial$ es por tanto la imagen de $v^0$.
+
+\medskip
+\noindent 4)\enspace
+El núcleo de $u^1$ es el conjunto de las clases de $B$-extensiones de $C$ por
+$L$ que son $A$-triviales (18.3.7), por tanto (salvo equivalencia) de la forma
+$D_C(L)$, donde la estructura de $A$-anillo está definida por el homomorfismo
+$t\mapsto(u(t),0)$. Ahora bien, toda estructura de $B$-extensión sobre $D_C(L)$ está
+definida por un homomorfismo $\alpha:x\mapsto(v(x),D(x))$, donde $D$ es una
+$\mathbf{Z}$-derivación de $B$ en $L$ \sref{0.20.1.5-es}; decir que la
+estructura de $A$-anillo de esta $B$-extensión se deduce de su estructura de
+$B$-anillo por medio de $u:A\to B$ significa que $D(u(t))=0$ para $t\in A$,
+por tanto que $D$ es una $A$-derivación o también que la clase de la $B$-extensión
+considerada es de la forma $\partial(D)$; de donde resulta la exactitud en
+$\operatorname{Exan}_B(C,L)$.
+
+\medskip
+\noindent 5)\enspace
+El núcleo de $v^1$ es el conjunto de las clases de las $A$-extensiones $E$ de $C$
+por $L$ que se trivializan sobre $v(B)$, es decir, para las cuales existe un
+$A$-homomorfismo $w:B\to E$ tal que $v$ se factoriza como
+$B\xrightarrow{w}E\to C$; ahora bien, un tal $A$-homomorfismo define sobre $E$ una
+estructura de $B$-extensión cuya clase tiene por imagen mediante $u^1$ la clase de
+la $A$-extensión dada; siendo trivial el recíproco, se ha probado
+la exactitud en $\operatorname{Exan}_A(C,L)$.
+
+Finalmente, la funtorialidad en $L$ se deduce trivialmente de las definiciones.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{121}
+\begin{corollary}[20.2.3]
+\label{0.20.2.3-es}
+Sean $A$, $B$, $C$ tres anillos conmutativos, $u:A\to B$, $v:B\to C$
+dos homomorfismos de anillos, $L$ un $C$-módulo. Se tiene una sucesión exacta
+canónica de $A$-módulos
+\begin{align}
+\tag{20.2.3.1}
+\label{0.20.2.3.1-es}
+  0\to\operatorname{D\acute{e}r}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r}_A(C,L)&\xrightarrow{v^0}
+  \operatorname{D\acute{e}r}_A(B,L)\xrightarrow{\partial} \\
+  &\to\operatorname{Exalcom}_B(C,L)\xrightarrow{u^1}
+  \operatorname{Exalcom}_A(C,L)\xrightarrow{v^1}
+  \operatorname{Exalcom}_A(B,L) \notag
+\end{align}
+funtorial en $L$.
+\end{corollary}
+
+\begin{proof}
+El razonamiento es el mismo que en \sref{0.20.2.2-es} una vez que se ha
+verificado que para toda derivación $D\in\operatorname{D\acute{e}r}_A(B,L)$,
+$\partial(D)$ es efectivamente la clase de una $B$-extensión de $C$ por $L$ que es
+una $B$-álgebra conmutativa; pero esto resulta inmediatamente de la conmutatividad
+de $C$ y del hecho de que $L$ es un $C$-módulo.
+\end{proof}
+
+\begin{corollary}[20.2.4]
+\label{0.20.2.4-es}
+Bajo las hipótesis de \sref{0.20.2.2-es} (resp.
+\sref{0.20.2.3-es}), se tiene una sucesión exacta canónica, funtorial en $L$,
+\begin{equation}
+\tag{20.2.4.1}
+\label{0.20.2.4.1-es}
+  0\to\operatorname{D\acute{e}r}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r}_A(C,L)\xrightarrow{v^0}
+  \operatorname{D\acute{e}r}_A(B,L)\xrightarrow{\partial}
+  \operatorname{Exan}_{B/A}(C,L)\to0
+\end{equation}
+(resp.
+\begin{equation}
+\tag{20.2.4.2}
+\label{0.20.2.4.2-es}
+  0\to\operatorname{D\acute{e}r}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r}_A(C,L)\xrightarrow{v^0}
+  \operatorname{D\acute{e}r}_A(B,L)\xrightarrow{\partial}
+  \operatorname{Exalcom}_{B/A}(C,L)\to0\text{).}
+\end{equation}
+Esto resulta de la definición de $\operatorname{Exan}_{B/A}(C,L)$ (resp.
+$\operatorname{Exalcom}_{B/A}(C,L)$) ((18.3.7) y (18.4.2)).
+\end{corollary}
+
+\begin{remark}[20.2.5]
+\label{0.20.2.5-es}
+Supongamos que se tiene un diagrama conmutativo de homomorfismos de anillos
+\[
+\xymatrix{
+  A \ar[r] & B \ar[r] & C \\
+  A' \ar[u] \ar[r] & B' \ar[u] \ar[r] & C' \ar[u]
+}
+\]
+Entonces se tiene un diagrama conmutativo
+\[
+\xymatrix@C=0.5em{
+  0 \ar[r] & \operatorname{D\acute{e}r}_B(C,L) \ar[r] \ar[d] &
+  \operatorname{D\acute{e}r}_A(C,L) \ar[r] \ar[d] &
+  \operatorname{D\acute{e}r}_A(B,L) \ar[r]^-\partial \ar[d] &
+  \operatorname{Exan}_B(C,L) \ar[r] \ar[d] &
+  \operatorname{Exan}_A(C,L) \ar[r] \ar[d] &
+  \operatorname{Exan}_A(B,L) \ar[d] \\
+  0 \ar[r] & \operatorname{D\acute{e}r}_{B'}(C',L) \ar[r] &
+  \operatorname{D\acute{e}r}_{A'}(C',L) \ar[r] &
+  \operatorname{D\acute{e}r}_{A'}(B',L) \ar[r]^-\partial &
+  \operatorname{Exan}_{B'}(C',L) \ar[r] &
+  \operatorname{Exan}_{A'}(C',L) \ar[r] &
+  \operatorname{Exan}_{A'}(B',L)
+}
+\]
+y del mismo modo para las sucesiones exactas \sref{0.20.2.3.1-es},
+\sref{0.20.2.4.1-es} y \sref{0.20.2.4.2-es}.
+\end{remark}
+
+\subsection{Derivaciones continuas en los anillos topológicos}
+\label{subsection:0.20.3-es}
+
+\begin{env}[20.3.1]
+\label{0.20.3.1-es}
+Dados dos anillos topológicos $A$, $B$ (linealmente topologizados
+como siempre), denotaremos por $\operatorname{Hom.\ cont}(A,B)$
+el conjunto de los homomorfismos continuos de $A$ en $B$. Dado un anillo
+topológico $A$, la categoría de los $A$-anillos topológicos se define como
+la de los $A$-anillos (18.1.4), sustituyendo en todas partes «anillo» por «anillo
+topológico» y «homomorfismo» por «homomorfismo continuo»; si $B$
+
+\oldpage[0\textsubscript{IV-1}]{122}
+y $C$ son dos $A$-anillos topológicos, se denotará por
+$\operatorname{Hom.\ cont}_A(B,C)$ el conjunto de los $A$-homomorfismos continuos
+de $B$ en $C$.
+
+Sean $A$ un anillo topológico, $B$ un $A$-anillo topológico, $L$ un
+$B$-bimódulo topológico; se denota por $\operatorname{D\acute{e}r.\ cont}_A(B,L)$
+el conjunto de las $A$-derivaciones \emph{continuas} de $B$ en $L$; está claro
+que es un \emph{subgrupo} de $\operatorname{D\acute{e}r}_A(B,L)$ (y un
+sub-$A$-módulo cuando $A$ y $B$ son conmutativos y $L$ un $B$-módulo).
+\end{env}
+
+\begin{env}[20.3.2]
+\label{0.20.3.2-es}
+Es inmediato que la prop. \sref{0.20.1.1-es} subsiste cuando se sustituye en ella
+«anillo» por «anillo topológico» y «homomorfismo» por
+«homomorfismo continuo». Del mismo modo, \sref{0.20.1.3-es} y
+\sref{0.20.1.4-es} siguen siendo válidos sustituyendo $\operatorname{D\acute{e}r}$ por
+$\operatorname{D\acute{e}r.\ cont}$, «anillo» (resp. «bimódulo») por «anillo
+topológico» (resp. «bimódulo topológico»), «homomorfismo» por
+«homomorfismo continuo»; naturalmente hay que suponer en
+\sref{0.20.1.4-es} que $p$ es continuo, y sustituir «$A$-equivalencias» por
+«$A$-equivalencias continuas». Se tienen los mismos resultados para
+\sref{0.20.1.5-es} y \sref{0.20.1.6-es}, a condición de tomar como
+topología sobre $D_C(L)$ (resp. $D_B(L)$) la topología \emph{producto} (sobre
+$C\times L$, resp. $B\times L$).
+\end{env}
+
+\begin{proposition}[20.3.3]
+\label{0.20.3.3-es}
+Sean $A$ un anillo topológico, $B$ un $A$-anillo topológico, $L$ un
+$B$-bimódulo topológico discreto anulado por un ideal bilateral abierto de $B$.
+Si en $B$ el cuadrado de todo ideal bilateral abierto es abierto, se tiene
+$\operatorname{D\acute{e}r.\ cont}_A(B,L)=\operatorname{D\acute{e}r}_A(B,L)$.
+\end{proposition}
+
+\begin{proof}
+En efecto, si $\mathfrak{R}$ es un ideal bilateral abierto de $B$ que anula a $L$,
+y $D$ una $A$-derivación de $B$ en $L$, se tiene
+$D(\mathfrak{R}^2)\subset\mathfrak{R}.D(\mathfrak{R})+
+D(\mathfrak{R}).\mathfrak{R}=0$ \sref{0.20.1.1.1-es}, por tanto $D$ es continua.
+\end{proof}
+
+\begin{env}[20.3.4]
+\label{0.20.3.4-es}
+Todos los resultados de \sref{0.20.2.1-es} siguen siendo válidos cuando se sustituye
+«anillo» por «anillo topológico», «bimódulo» por «bimódulo
+topológico», «homomorfismo» por «homomorfismo continuo» y
+$\operatorname{D\acute{e}r}$ por $\operatorname{D\acute{e}r.\ cont}$.
+\end{env}
+
+\begin{proposition}[20.3.5]
+\label{0.20.3.5-es}
+Sean $A$ un anillo topológico, $B$ un $A$-anillo topológico, $L$ un
+$B$-bimódulo topológico discreto anulado por un ideal bilateral abierto de $B$.
+Se tiene entonces un isomorfismo canónico
+\begin{equation}
+\tag{20.3.5.1}
+\label{0.20.3.5.1-es}
+  \varinjlim\operatorname{D\acute{e}r}_{A/\mathfrak{J}}
+  (B/\mathfrak{R},L)\xrightarrow{\sim}
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)
+\end{equation}
+donde en el primer miembro el límite inductivo se toma según el conjunto
+ordenado filtrante de los pares $(\mathfrak{J},\mathfrak{R})$ de ideales bilaterales
+tales que $\mathfrak{R}.L=L.\mathfrak{R}=0$,
+$\mathfrak{J}.B\subset\mathfrak{R}$,
+$B.\mathfrak{J}\subset\mathfrak{R}$.
+\end{proposition}
+
+\begin{proof}
+Como $A/\mathfrak{J}$ y $B/\mathfrak{R}$ son discretos, se tienen
+homomorfismos canónicos
+$w_{\mathfrak{J},\mathfrak{R}}:
+\operatorname{D\acute{e}r}_{A/\mathfrak{J}}(B/\mathfrak{R},L)\to
+\operatorname{D\acute{e}r.\ cont}_A(B,L)$ que forman un sistema inductivo
+\sref{0.20.3.4-es}, de donde se obtiene el homomorfismo \sref{0.20.3.5.1-es} por paso al
+límite inductivo. Como el homomorfismo
+$B/\mathfrak{R}'\to B/\mathfrak{R}$ es sobreyectivo para
+$\mathfrak{R}\supset\mathfrak{R}'$, resulta inmediatamente de la definición que
+el homomorfismo
+$\operatorname{D\acute{e}r}_{A/\mathfrak{J}}(B/\mathfrak{R},L)\to
+\operatorname{D\acute{e}r}_{A/\mathfrak{J}}(B/\mathfrak{R}',L)$ (con
+$\mathfrak{R}.L=L.\mathfrak{R}=0$,
+$\mathfrak{J}.B\subset\mathfrak{R}'$,
+$B.\mathfrak{J}\subset\mathfrak{R}'$) es inyectivo, y evidentemente ocurre
+lo mismo con el homomorfismo
+$\operatorname{D\acute{e}r}_{A/\mathfrak{J}}(B/\mathfrak{R},L)\to
+\operatorname{D\acute{e}r}_{A/\mathfrak{J}'}(B/\mathfrak{R},L)$ para
+$\mathfrak{J}'\subset\mathfrak{J}$ \sref{0.20.2.1-es}; se concluye que
+el homomorfismo \sref{0.20.3.5.1-es} es inyectivo. Por otra parte, si $D$ es
+una $A$-derivación continua de $B$ en $L$, su núcleo contiene un ideal
+bilateral abierto $\mathfrak{R}_0$ de $B$, y si $\mathfrak{J}_0$ es un ideal
+bilateral abierto de $A$ tal que $\mathfrak{J}_0B\subset\mathfrak{R}_0$ y
+$B\mathfrak{J}_0\subset\mathfrak{R}_0$, está claro que $D$ es la imagen
+canónica de una $(A/\mathfrak{J}_0)$-derivación de
+$B/\mathfrak{R}_0$ en $L$, luego \sref{0.20.3.5.1-es} es sobreyectivo.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{123}
+\begin{proposition}[20.3.6]
+\label{0.20.3.6-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos continuos de anillos
+topológicos, $L$ un $C$-bimódulo discreto anulado por un ideal bilateral abierto
+de $C$. Se tiene una sucesión exacta canónica
+\begin{align}
+\tag{20.3.6.1}
+\label{0.20.3.6.1-es}
+  0\to\operatorname{D\acute{e}r.\ cont}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r.\ cont}_A(C,L)&\xrightarrow{v^0}
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)\xrightarrow{\partial} \\
+  &\to\operatorname{Exantop}_B(C,L)\xrightarrow{u^1}
+  \operatorname{Exantop}_A(C,L)\xrightarrow{v^1}
+  \operatorname{Exantop}_A(B,L) \notag
+\end{align}
+donde $\partial$ se define por paso al límite inductivo a partir del
+homomorfismo $\partial$ de \sref{0.20.2.2.1-es}; esta sucesión exacta es
+funtorial en $L$ (en la categoría de los $C$-bimódulos discretos anulados por
+ideales bilaterales abiertos).
+\end{proposition}
+
+\begin{proof}
+Esto resulta de la exactitud del funtor $\varinjlim$, a partir de
+\sref{0.20.2.2-es}.
+\end{proof}
+
+\begin{corollary}[20.3.7]
+\label{0.20.3.7-es}
+Sean $A$, $B$, $C$ tres anillos topológicos conmutativos, $u:A\to B$,
+$v:B\to C$ dos homomorfismos continuos, $L$ un $C$-módulo discreto anulado
+por un ideal abierto de $C$. Se tiene una sucesión exacta canónica de $A$-módulos,
+funtorial en $L$,
+\begin{align}
+\tag{20.3.7.1}
+\label{0.20.3.7.1-es}
+  &0\to\operatorname{D\acute{e}r.\ cont}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r.\ cont}_A(C,L)\xrightarrow{v^0}
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)\xrightarrow{\partial} \\
+  &\to\operatorname{Exalcotop}_B(C,L)\xrightarrow{u^1}
+  \operatorname{Exalcotop}_A(C,L)\xrightarrow{v^1}
+  \operatorname{Exalcotop}_A(B,L). \notag
+\end{align}
+\end{corollary}
+
+\begin{corollary}[20.3.8]
+\label{0.20.3.8-es}
+Bajo las hipótesis de \sref{0.20.3.5-es} (resp.
+\sref{0.20.3.6-es}) se tiene una sucesión exacta canónica, funtorial en $L$
+\begin{equation}
+\tag{20.3.8.1}
+\label{0.20.3.8.1-es}
+  0\to\operatorname{D\acute{e}r.\ cont}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r.\ cont}_A(C,L)\xrightarrow{v^0}
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)\to
+  \operatorname{Exantop}_{B/A}(C,L)\to0
+\end{equation}
+(resp.
+\begin{equation}
+\tag{20.3.8.2}
+\label{0.20.3.8.2-es}
+  0\to\operatorname{D\acute{e}r.\ cont}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r.\ cont}_A(C,L)\xrightarrow{v^0}
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)\to
+  \operatorname{Exalcotop}_{B/A}(C,L)\to0\text{).}
+\end{equation}
+\end{corollary}
+
+Dejamos al lector la tarea de escribir los diagramas análogos a los de
+\sref{0.20.2.5-es}.
+
+\subsection{Partes principales y diferenciales}
+\label{subsection:0.20.4-es}
+
+En todo lo que sigue de este parágrafo y en los tres siguientes, todos los
+anillos se suponen \emph{conmutativos}.
+
+\begin{env}[20.4.1]
+\label{0.20.4.1-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica; la
+$A$-álgebra $B\otimes_A B$ estará provista de la topología \emph{producto
+tensorial}, que la convierte en una $A$-álgebra topológica; denotaremos por $p$
+(o $p_{B/A}$) el $A$-homomorfismo canónico sobreyectivo
+\begin{equation}
+\tag{20.4.1.1}
+\label{0.20.4.1.1-es}
+  p:B\otimes_A B\to B
+\end{equation}
+tal que $p(b\otimes b')=bb'$; es inmediato que $p$ es continuo. El
+\emph{núcleo} de $p$ se denotará por $\mathfrak{J}_{B/A}$ (o solamente
+$\mathfrak{J}$ si no hay confusión). Denotaremos por
+$j_1:B\to B\otimes_A B$ y $j_2:B\to B\otimes_A B$ los dos
+$A$-homomorfismos canónicos, tales que
+\[
+  j_1(b)=b\otimes1, \qquad j_2(b)=1\otimes b
+\]
+que son continuos.
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{124}
+\begin{definition}[20.4.2]
+\label{0.20.4.2-es}
+Se llama \emph{$B$-álgebra aumentada de partes principales de orden $1$ de
+$B$ respecto de $A$} y se denota por $\mathrm{P}^1_{B/A}$ la $A$-álgebra
+topológica cociente
+\begin{equation}
+\tag{20.4.2.1}
+\label{0.20.4.2.1-es}
+  \mathrm{P}^1_{B/A}=(B\otimes_A B)/\mathfrak{J}^2
+\end{equation}
+provista de la estructura de $B$-álgebra topológica definida por el homomorfismo
+$\bar{j}_1:B\to\mathrm{P}^1_{B/A}$ (deducido de $j_1$ por composición con
+el homomorfismo canónico $B\otimes_A B\to\mathrm{P}^1_{B/A}$), y de
+la aumentación de $B$-álgebra $\varepsilon:\mathrm{P}^1_{B/A}\to B$ (también
+denotada por $\varepsilon_{B/A}$) deducida de $p$ por paso al cociente.
+
+Como $p(b\otimes1)=b$ por definición, está claro que $\varepsilon$ es
+efectivamente una aumentación de $B$-álgebra.
+\end{definition}
+
+\begin{definition}[20.4.3]
+\label{0.20.4.3-es}
+El núcleo de la aumentación $\varepsilon:\mathrm{P}^1_{B/A}\to B$,
+\begin{equation}
+\tag{20.4.3.1}
+\label{0.20.4.3.1-es}
+  \Omega^1_{B/A}=\mathfrak{J}_{B/A}/(\mathfrak{J}_{B/A})^2
+\end{equation}
+provisto de la topología inducida por la de $\mathrm{P}^1_{B/A}$, que lo convierte
+en un $B$-módulo topológico, se llama el $B$-módulo de las
+\emph{$1$-diferenciales} (o simplemente de las \emph{diferenciales}) de $B$
+respecto de $A$.
+\end{definition}
+
+Obsérvese que la topología de $\Omega^1_{B/A}$ es también la topología cociente
+de la topología inducida sobre $\mathfrak{J}_{B/A}$ por la de
+$B\otimes_A B$ (Bourbaki, \emph{Top. gén.}, cap.~III, 3\textsuperscript{a}
+ed., §~2, n\textsuperscript{o}~7, prop.~20). Si $B$ es discreto, lo mismo ocurre
+con $\Omega^1_{B/A}$. Se denota por $\widehat{\Omega}^1_{B/A}$ el
+\emph{completado separado} del $B$-módulo topológico $\Omega^1_{B/A}$.
+
+Todo anillo topológico $B$ puede considerarse como una
+$\mathbf{Z}$-álgebra topológica (donde $\mathbf{Z}$ está provisto de la topología
+discreta), por lo que se puede definir el $B$-módulo topológico $\Omega^1_{B/\mathbf{Z}}$,
+que también se llama a veces el $B$-módulo de las \emph{diferenciales absolutas}
+sobre $B$ y se denota por $\Omega^1_B$. Si $B$ es un álgebra topológica sobre
+un cuerpo primo $P$ (discreto), se tiene
+$B\otimes_P B=B\otimes_{\mathbf{Z}}B$, luego
+$\Omega^1_{B/P}=\Omega^1_B$.
+
+\begin{lemma}[20.4.4]
+\label{0.20.4.4-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra. El ideal $\mathfrak{J}_{B/A}$ de
+$B\otimes_A B$ está generado por los elementos $1\otimes s-s\otimes1$, donde $s$
+recorre un conjunto de generadores de la $A$-álgebra $B$.
+\end{lemma}
+
+\begin{proof}
+Está claro que, para todo $x\in B$, se tiene
+$x\otimes1-1\otimes x\in\mathfrak{J}$; por otra parte, cualesquiera que sean $x$,
+$y$ en $B$, se tiene
+$x\otimes y=xy\otimes1+(x\otimes1)(1\otimes y-y\otimes1)$. Si
+$\sum_i(x_i\otimes y_i)\in\mathfrak{J}$, se tiene por definición
+$\sum_i x_i y_i=0$, luego
+\begin{equation}
+\tag{20.4.4.1}
+\label{0.20.4.4.1-es}
+  \sum_i(x_i\otimes y_i)=
+  \sum_i(x_i\otimes1)(1\otimes y_i-y_i\otimes1)
+\end{equation}
+lo que demuestra que $\mathfrak{J}$ es el ideal generado por los elementos
+$1\otimes x-x\otimes1$. Además, si $x=st$, se tiene
+\begin{equation}
+\tag{20.4.4.2}
+\label{0.20.4.4.2-es}
+  x\otimes1-1\otimes x=(s\otimes1)(t\otimes1-1\otimes t)
+  +(s\otimes1-1\otimes s)(1\otimes t)
+\end{equation}
+lo que concluye inmediatamente la demostración por recurrencia.
+\end{proof}
+
+\begin{proposition}[20.4.5]
+\label{0.20.4.5-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica. La
+topología de $\Omega^1_{B/A}$ es menos fina que la topología deducida de la
+de $B$ (19.0.2); si en $B$ el cuadrado de todo ideal abierto es abierto, estas
+dos topologías son idénticas.
+\end{proposition}
+
+\begin{proof}
+La primera aserción es trivial, pues la topología producto tensorial sobre
+$B\otimes_A B$ es menos fina que la topología deducida de la de $B$;
+\emph{a fortiori}, la topología inducida sobre
+$\mathfrak{J}=\mathfrak{J}_{B/A}$
+
+\oldpage[0\textsubscript{IV-1}]{125}
+por la de $B\otimes_A B$ es menos fina que la topología sobre $\mathfrak{J}$
+deducida de la de $B$. Para demostrar la segunda aserción, escribamos
+Denotemos por $M\otimes N$, por abuso de notación, el submódulo
+$\operatorname{Im}(M\otimes_A N)$, para dos sub-$A$-módulos $M$, $N$ de $B$.
+Utilizando la relación
+\[
+\begin{aligned}
+  (xy)\otimes z-x\otimes(yz)
+  &=(x\otimes1)(1\otimes z)(y\otimes1-1\otimes y)\\
+  &=xz.(y\otimes1-1\otimes y)
+    -x.(z\otimes1-1\otimes z)(y\otimes1-1\otimes y)
+\end{aligned}
+\]
+en el $B$-módulo $B\otimes_A B$ (definido por $j_1$), se ve inmediatamente,
+teniendo en cuenta \sref{0.20.4.4-es}, que, si $\mathfrak{R}$ es un ideal de
+$B$, se tiene
+\[
+  ((\mathfrak{R}^2\otimes B)+(B\otimes\mathfrak{R}^2))\cap\mathfrak{J}
+  \subset(\mathfrak{R}\otimes\mathfrak{R})\cap\mathfrak{J}
+  +\mathfrak{R}\mathfrak{J}+\mathfrak{J}^2
+\]
+y por otra parte, si $x_i$, $y_i$ son elementos de $\mathfrak{R}$ tales
+que $\sum_i(x_i\otimes y_i)\in\mathfrak{J}$, se deduce de
+\sref{0.20.4.4.1-es} que se tiene
+$\sum_i(x_i\otimes y_i)\in\mathfrak{R}\mathfrak{J}$, de modo que finalmente
+\begin{equation}
+\tag{20.4.5.1}
+\label{0.20.4.5.1-es}
+  (\mathfrak{R}^2\otimes B+B\otimes\mathfrak{R}^2)\cap\mathfrak{J}
+  \subset\mathfrak{R}\mathfrak{J}+\mathfrak{J}^2.
+\end{equation}
+Ahora bien, se obtiene un sistema fundamental de entornos de $0$ en $\mathfrak{J}$
+(para la topología inducida por la de $B\otimes_A B$) tomando como
+entornos de $0$ los conjuntos
+$(\mathfrak{R}\otimes B+B\otimes\mathfrak{R})\cap\mathfrak{J}$, donde
+$\mathfrak{R}$ recorre el conjunto de los ideales abiertos. Como la topología de
+$\Omega^1_{B/A}$ deducida de la de $B$ es también el cociente por
+$\mathfrak{J}^2$ de la topología de $\mathfrak{J}$ deducida de la de $B$,
+la hipótesis sobre los ideales abiertos de $B$ y la relación
+\sref{0.20.4.5.1-es} terminan de demostrar la segunda aserción.
+\end{proof}
+
+\begin{definition}[20.4.6]
+\label{0.20.4.6-es}
+Sean $p_1$ y $p_2$ las aplicaciones compuestas
+$B\xrightarrow{j_1}B\otimes_A B\to\mathrm{P}^1_{B/A}$,
+$B\xrightarrow{j_2}B\otimes_A B\to\mathrm{P}^1_{B/A}$, que son
+$A$-homomorfismos continuos tales que
+$\varepsilon\circ p_1=\varepsilon\circ p_2=\mathrm{I}_B$. El
+$A$-homomorfismo continuo de $A$-módulos
+\begin{equation}
+\tag{20.4.6.1}
+\label{0.20.4.6.1-es}
+  d_{B/A}=p_1-p_2:B\to\Omega^1_{B/A}
+\end{equation}
+se denomina la \emph{diferencial exterior de $B$ relativa a $A$}; para
+todo $x\in B$, $d_{B/A}(x)$ (denotado también $d(x)$ o $dx$) se denomina la
+\emph{diferencial de $x$} (relativa a $A$).
+\end{definition}
+
+Cuando $A=\mathbf{Z}$, se escribe $d_B$ en lugar de $d_{B/\mathbf{Z}}$; si $B$
+es un álgebra sobre un cuerpo primo $P$, se tiene $d_B=d_{B/P}$.
+
+\begin{proposition}[20.4.7]
+\label{0.20.4.7-es}
+El $B$-módulo $\Omega^1_{B/A}$ está generado por los elementos $d_{B/A}(x)$,
+donde $x$ recorre un sistema de generadores del $A$-álgebra $B$.
+\end{proposition}
+
+\begin{proof}
+Como $d_{B/A}(x)$ es la imagen canónica de $x\otimes1-1\otimes x$ en
+$\Omega^1_{B/A}$, la proposición es una consecuencia inmediata de
+\sref{0.20.4.4-es}.
+\end{proof}
+
+\begin{theorem}[20.4.8]
+\label{0.20.4.8-es}
+Sean $A$ un anillo topológico y $B$ un $A$-álgebra topológica.
+\begin{enumerate}
+  \item[\rm(i)] Existe un único isomorfismo de $B$-álgebras topológicas
+  aumentadas
+\begin{equation}
+\tag{20.4.8.1}
+\label{0.20.4.8.1-es}
+  \varphi:\mathrm{P}^1_{B/A}\xrightarrow{\sim}D_B(\Omega^1_{B/A})
+\end{equation}
+cuya restricción a $\Omega^1_{B/A}$ es la identidad.
+  \item[\rm(ii)] El homomorfismo $d_{B/A}$ es una $A$-derivación de $B$
+  en $\Omega^1_{B/A}$, con la siguiente propiedad universal: para todo
+  $B$-módulo topológico $L$, la aplicación $u\mapsto u\circ d_{B/A}$ es
+  un isomorfismo de $A$-módulos
+\begin{equation}
+\tag{20.4.8.2}
+\label{0.20.4.8.2-es}
+  \operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)
+  \xrightarrow{\sim}\operatorname{D\acute{e}r.\ cont}_A(B,L).
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{126}
+(i) Es inmediato que $\varphi$ (con las notaciones de
+\sref{0.20.4.6-es}) es necesariamente la aplicación
+$z\mapsto(\varepsilon(z),z-p_1(\varepsilon(z)))$, y el isomorfismo
+inverso la aplicación $(b,x)\mapsto p_1(b)+x$; como estas dos aplicaciones
+son continuas, esto demuestra la primera aserción. Obsérvese que esto
+implica que la topología de $B$ se identifica (mediante $p_1$) con el \emph{cociente}
+de la topología de $B\otimes_A B$ por $\mathfrak{J}_{B/A}$.
+
+(ii) El hecho de que $d_{B/A}$ sea una $A$-derivación de $B$ se deduce de la
+definición \sref{0.20.4.6-es} y de \sref{0.20.1.1-es}.
+
+Para demostrar la propiedad universal, recordemos que
+$\operatorname{D\acute{e}r.\ cont}_A(B,L)$ se identifica canónicamente con
+el conjunto $G$ de los homomorfismos continuos de $A$-álgebras
+$u:B\to D_B(L)$ tales que la composición
+$B\xrightarrow{u}D_B(L)\xrightarrow{q}B$ sea la identidad (donde $q(b,0)=b$ es
+la proyección; cf. \sref{0.20.1.6-es} y \sref{0.20.3.2-es}). Por otra parte,
+gracias al isomorfismo $\varphi$,
+$\operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)$ se identifica canónicamente con
+el conjunto de los homomorfismos continuos de $B$-álgebras
+$v:\mathrm{P}^1_{B/A}\to D_B(L)$ tales que la composición
+$\mathrm{P}^1_{B/A}\xrightarrow{v}D_B(L)\xrightarrow{q}B$ sea
+el aumento $\varepsilon$. Como por definición se tiene $p_2=p_1-d_{B/A}$,
+basta demostrar que todo $u\in G$ se factoriza como
+\[
+\xymatrix{
+  B \ar[r]^u \ar[d]_{p_2} & D_B(L) \\
+  \mathrm{P}^1_{B/A} \ar[ur]_v &
+}
+\]
+donde $v$ es un $B$-homomorfismo continuo. Ahora bien, ya se tiene un homomorfismo
+continuo de $A$-álgebras $j:b\mapsto(b,0)$ de $B$ en $D_B(L)$, que
+pertenece a $G$; por la definición del producto tensorial topológico
+de álgebras topológicas ($\mathbf{0_I}$, 7.7.6), existe por tanto un
+$A$-homomorfismo continuo de álgebras
+$w:B\otimes_A B\to D_B(L)$ que hace conmutativo el diagrama
+\[
+\xymatrix{
+  B\otimes_A B \ar[dr]^w & B \ar[l]_{j_1} \ar[d]^j \\
+  B \ar[u]^{j_2} \ar[r]_u & D_B(L)
+}
+\]
+Se tiene, pues, por definición
+$w(b\otimes1-1\otimes b)=j(b)-u(b)\in L$, y en virtud de
+\sref{0.20.4.4-es}, esto implica $w(\mathfrak{J})\subset L$ y por tanto
+$w(\mathfrak{J}^2)=0$; en consecuencia, $w$ se factoriza como
+\[
+  B\otimes_A B\to\mathrm{P}^1_{B/A}\xrightarrow{v}D_B(L)
+\]
+donde $v$ es un homomorfismo continuo de $A$-álgebras; además, como
+$v\circ p_1=j$ es un homomorfismo de $B$-álgebras, lo mismo ocurre con
+$v$ por definición de la estructura de $B$-álgebra de
+$\mathrm{P}^1_{B/A}$; como por definición se tiene $u=v\circ p_2$, esto
+termina la demostración.
+\end{proof}
+
+\begin{theorem}[20.4.9]
+\label{0.20.4.9-es}
+Supongamos que $B$ es un $A$-álgebra topológica formalmente lisa. Entonces
+el $B$-módulo topológico $\Omega^1_{B/A}$ es \emph{formalmente proyectivo}.
+\end{theorem}
+
+\begin{proof}
+En efecto, la hipótesis implica que $B\otimes_A B$ (dotado de la estructura de
+$B$-álgebra topológica definida por $j_1$) es un $B$-álgebra topológica
+formalmente lisa \sref{0.19.3.5-es}, (iii), y por consiguiente también un
+$A$-álgebra topológica formalmente lisa \sref{0.19.3.5-es}, (ii); como
+$B$ es topológicamente isomorfa al $A$-álgebra cociente
+$(B\otimes_A B)/\mathfrak{J}$ y es un $A$-álgebra formalmente lisa, la
+conclusión se deduce de \sref{0.19.5.3-es}.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{127}
+\begin{corollary}[20.4.10]
+\label{0.20.4.10-es}
+Supongamos además que en $B$ el cuadrado de todo ideal abierto es abierto;
+entonces, para todo ideal abierto $\mathfrak{R}$ de $B$,
+$\Omega^1_{B/A}\otimes_B(B/\mathfrak{R})
+=\Omega^1_{B/A}/\mathfrak{R}.\Omega^1_{B/A}$ es un
+$(B/\mathfrak{R})$-módulo proyectivo.
+\end{corollary}
+
+\begin{proof}
+En efecto, la topología de $\Omega^1_{B/A}$ es entonces la deducida de la de
+$B$ \sref{0.20.4.5-es}, y basta aplicar \sref{0.19.2.4-es}.
+\end{proof}
+
+\begin{corollary}[20.4.11]
+\label{0.20.4.11-es}
+Sean $A$, $B$ dos anillos locales noetherianos y $\rho:A\to B$ un
+homomorfismo local que hace de $B$ un $A$-álgebra topológica formalmente
+lisa (para las topologías preádicas). Entonces, para todo ideal de definición
+$\mathfrak{b}$ de $B$,
+$\Omega^1_{B/A}\otimes_B(B/\mathfrak{b})$ es un
+$(B/\mathfrak{b})$-módulo libre.
+\end{corollary}
+
+\begin{proof}
+En efecto, de \sref{0.20.4.10-es} se deduce que este módulo es proyectivo, y
+como $B/\mathfrak{b}$ es un anillo artiniano, todo
+$(B/\mathfrak{b})$-módulo proyectivo es libre
+($\mathbf{0_{III}}$, 10.1.3).
+\end{proof}
+
+\begin{proposition}[20.4.12]
+\label{0.20.4.12-es}
+Sean $A$ un anillo topológico y $B$ un $A$-álgebra topológica. Si
+el homomorfismo estructural $A\to B$ es sobreyectivo, se tiene
+$\Omega^1_{B/A}=0$.
+\end{proposition}
+
+\begin{proof}
+En efecto, se tiene $\operatorname{D\acute{e}r}_A(B,L)=0$ para todo $B$-módulo
+$L$ en virtud de \sref{0.20.1.1-es}, y la proposición se deduce inmediatamente
+de \sref{0.20.4.8-es}.
+\end{proof}
+
+\begin{examples}[20.4.13]
+\label{0.20.4.13-es}
+\begin{enumerate}
+  \item[\rm(i)] Sean $A$ un anillo y
+  $B=A[X_\alpha]_{\alpha\in I}$ un álgebra de polinomios sobre $A$. Entonces
+  $\Omega^1_{B/A}$ es un $B$-módulo libre, y los $dX_\alpha$ forman una
+  base. En efecto, los $dX_\alpha$ generan este $B$-módulo
+  \sref{0.20.4.7-es}. Por otra parte, si $L$ es un $B$-módulo libre, con
+  una base $(z_\alpha)_{\alpha\in I}$ cuyo conjunto de índices es $I$, existe
+  un $A$-homomorfismo $u$ de $B$ en $D_B(L)$ tal que
+  $u(X_\alpha)=(X_\alpha,z_\alpha)$, para todo $\alpha\in I$, y por tanto, por
+  \sref{0.20.1.5-es}, una $A$-derivación $D$ de $B$ en $L$ tal que
+  $D(X_\alpha)=z_\alpha$ para todo $\alpha$; en virtud de
+  \sref{0.20.4.8.1-es}, esto demuestra que los $dX_\alpha$ son linealmente
+  independientes.
+  \item[\rm(ii)] Sean $A$ un anillo, $L$ un $A$-módulo y $B$ la
+  $A$-álgebra $D_A(L)$; entonces el homomorfismo canónico
+  $x\mapsto d_{B/A}x$ de $L$ en $\Omega^1_{B/A}$ es \emph{biyectivo}, pues
+  es inmediato que las $B$-derivaciones de $B=D_A(L)$ en un $B$-módulo
+  $M$ son las aplicaciones de la forma $(b,x)\mapsto u(x)$, donde
+  $u\in\operatorname{Hom}_A(L,M)$; se concluye, pues, por
+  \sref{0.20.4.8-es}, (ii).
+  \item[\rm(iii)] Supongamos que $B$ es el producto de dos $A$-álgebras
+  topológicas $B_1$, $B_2$ (identificadas con ideales de $B$). Entonces las
+  imágenes de $B_1\otimes_A B_2$ y de $B_2\otimes_A B_1$ por el homomorfismo
+  $p$ \sref{0.20.4.1.1-es} son nulas, de donde se deduce inmediatamente que
+  $\mathrm{P}^1_{B/A}$ se identifica con el \emph{producto}
+  $\mathrm{P}^1_{B_1/A}\times\mathrm{P}^1_{B_2/A}$, y que el $B$-módulo
+  $\Omega^1_{B/A}$ es \emph{suma directa} (topológica) de los $B$-módulos
+  $\Omega^1_{B_1/A}$ y $\Omega^1_{B_2/A}$ (anulados respectivamente por
+  $B_2$ y $B_1$).
+  \item[\rm(iv)] Sean $A$, $B$ dos anillos íntegros tales que $A\subset
+  B$, que $A$ sea integralmente cerrado, $B$ entero sobre $A$, y que el cuerpo
+  de fracciones de $B$ sea una extensión separable del de $A$. Entonces
+  el $B$-módulo $\Omega^1_{B/A}$ es un \emph{módulo de torsión}. En efecto,
+  para todo $x\in B$, el polinomio minimal de $x$ respecto del cuerpo de
+  fracciones $K$ de $A$ es un polinomio $f(T)$ perteneciente a $A[T]$; como
+  $x$ es separable sobre $K$, se tiene $f'(x)\neq0$ y, por otra parte, de
+  la relación $f(x)=0$ se deduce que $f'(x)d_{B/A}x=0$, de donde se sigue
+  la aserción en virtud de \sref{0.20.4.7-es}.
+\end{enumerate}
+\end{examples}
+
+\begin{remarks}[20.4.14]
+\label{0.20.4.14-es}
+\begin{enumerate}
+  \item[\rm(i)] Obsérvese que el $B$-módulo $\Omega^1_{B/A}$, privado de su
+  topología, es independiente de las topologías de $A$ y de $B$.
+  \item[\rm(ii)] Introduciremos más adelante el «álgebra de partes
+  principales de orden $n$» de $B$ respecto de $A$,
+  $\mathrm{P}^n_{B/A}=(B\otimes_A B)/(\mathfrak{J}_{B/A})^{n+1}$, que constituye
+  la base del «cálculo diferencial de orden $n$».
+\end{enumerate}
+\end{remarks}
+
+\subsection{Propiedades funtoriales fundamentales de
+\texorpdfstring{$\Omega^1_{B/A}$}{Omega1(B/A)}}
+\label{subsection:0.20.5-es}
+
+\oldpage[0\textsubscript{IV-1}]{128}
+\begin{env}[20.5.1]
+\label{0.20.5.1-es}
+En todo este número y el siguiente, salvo mención expresa en contrario, se
+supone que los anillos y módulos considerados están provistos de la topología
+\emph{discreta}.
+\end{env}
+
+\begin{env}[20.5.2]
+\label{0.20.5.2-es}
+Sean $A$ un anillo, $B$, $C$ dos $A$-álgebras, $u:B\to C$ un
+$A$-homomorfismo; se tiene un diagrama conmutativo
+\[
+\xymatrix{
+  B\otimes_A B \ar[r]^{u\otimes u} \ar[d]_{p_{B/A}} &
+  C\otimes_A C \ar[d]^{p_{C/A}} \\
+  B \ar[r]^u & C
+}
+\tag{20.5.2.1}
+\label{0.20.5.2.1-es}
+\]
+de donde se obtiene, pasando a los cocientes, un $A$-homomorfismo de álgebras
+\begin{equation}
+\tag{20.5.2.2}
+\label{0.20.5.2.2-es}
+  u':\mathrm{P}^1_{B/A}\to\mathrm{P}^1_{C/A}
+\end{equation}
+tal que el diagrama
+\[
+\xymatrix{
+  \mathrm{P}^1_{B/A} \ar[r]^{u'} & \mathrm{P}^1_{C/A} \\
+  B \ar[u]^{p_1} \ar[r]^u & C \ar[u]_{p_1}
+}
+\]
+sea conmutativo; como $u\otimes u$ aplica $\mathfrak{J}_{B/A}$ en
+$\mathfrak{J}_{C/A}$, se obtiene, restringiendo $u'$ a
+$\Omega^1_{B/A}$, una aplicación
+\begin{equation}
+\tag{20.5.2.3}
+\label{0.20.5.2.3-es}
+  u'':\Omega^1_{B/A}\to\Omega^1_{C/A}
+\end{equation}
+tal que el par $(u'',u)$ sea un \emph{dihomomorfismo} para la
+estructura de $B$-módulo de $\Omega^1_{B/A}$ y la estructura de $C$-módulo de
+$\Omega^1_{C/A}$; este último hecho permite deducir de él canónicamente un
+\emph{homomorfismo de $C$-módulos}
+\begin{equation}
+\tag{20.5.2.4}
+\label{0.20.5.2.4-es}
+  u_{C/B/A}:\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}.
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{129}
+Además, como el diagrama
+\[
+\xymatrix{
+  \mathrm{P}^1_{B/A} \ar[r]^{u'} & \mathrm{P}^1_{C/A} \\
+  B \ar[u]^{p_2} \ar[r]^u & C \ar[u]_{p_2}
+}
+\tag{20.5.2.5}
+\label{0.20.5.2.5-es}
+\]
+es también conmutativo, se deduce que el diagrama
+\[
+\xymatrix{
+  \Omega^1_{B/A} \ar[r]^{u''} & \Omega^1_{C/A} \\
+  B \ar[u]^{d_{B/A}} \ar[r]^u & C \ar[u]_{d_{C/A}}
+}
+\tag{20.5.2.6}
+\label{0.20.5.2.6-es}
+\]
+es conmutativo.
+
+Por último, si $w:C\to D$ es un segundo homomorfismo de $A$-álgebras, se tiene la
+propiedad de transitividad
+\begin{equation}
+\tag{20.5.2.7}
+\label{0.20.5.2.7-es}
+  (w\circ u)_{D/B/A}
+  =w_{D/C/A}\circ(u_{C/B/A}\otimes\mathrm{I}_D)
+\end{equation}
+como resulta de la definición.
+\end{env}
+
+\begin{env}[20.5.3]
+\label{0.20.5.3-es}
+Sean ahora $A$, $B$ dos anillos, $v:A\to B$ un homomorfismo
+de anillos, $C$ una $B$-álgebra que se convierte en una $A$-álgebra mediante $v$;
+entonces la aplicación canónica $v_0:C\otimes_A C\to C\otimes_B C$ es un
+\emph{dihomomorfismo} sobreyectivo de álgebras (relativo a $v:A\to B$) tal que
+el diagrama
+\[
+\xymatrix{
+  C\otimes_A C \ar[r]^{v_0} \ar[d]_{p_{C/A}} &
+  C\otimes_B C \ar[d]^{p_{C/B}} \\
+  C \ar[r]^{\mathrm{I}_C} & C
+}
+\tag{20.5.3.1}
+\label{0.20.5.3.1-es}
+\]
+sea conmutativo; pasando a los cocientes, se deduce un
+dihomomorfismo de álgebras
+\begin{equation}
+\tag{20.5.3.2}
+\label{0.20.5.3.2-es}
+  v':\mathrm{P}^1_{C/A}\to\mathrm{P}^1_{C/B}
+\end{equation}
+tal que el diagrama
+\[
+\xymatrix{
+  \mathrm{P}^1_{C/A} \ar[r]^{v'} & \mathrm{P}^1_{C/B} \\
+  C \ar[u]^{p_1} \ar[r]^{\mathrm{I}_C} & C \ar[u]_{p_1}
+}
+\]
+sea conmutativo. Como $v_0$ aplica $\mathfrak{J}_{C/A}$ en
+$\mathfrak{J}_{C/B}$ se obtiene, restringiendo $v'$ a
+$\Omega^1_{C/A}$, una aplicación
+\begin{equation}
+\tag{20.5.3.3}
+\label{0.20.5.3.3-es}
+  v_{C/B/A}:\Omega^1_{C/A}\to\Omega^1_{C/B}
+\end{equation}
+que es un homomorfismo de $C$-módulos.
+
+\oldpage[0\textsubscript{IV-1}]{130}
+Además, como el diagrama
+\[
+\xymatrix{
+  \mathrm{P}^1_{C/A} \ar[r]^{v'} & \mathrm{P}^1_{C/B} \\
+  C \ar[u]^{p_2} \ar[r]^{\mathrm{I}_C} & C \ar[u]_{p_2}
+}
+\tag{20.5.3.4}
+\label{0.20.5.3.4-es}
+\]
+es también conmutativo, se deduce que el diagrama
+\[
+\xymatrix{
+  \Omega^1_{C/A} \ar[r]^{v_{C/B/A}} & \Omega^1_{C/B} \\
+  C \ar[u]^{d_{C/A}} \ar[r]^{\mathrm{I}_C} & C \ar[u]_{d_{C/B}}
+}
+\tag{20.5.3.5}
+\label{0.20.5.3.5-es}
+\]
+es conmutativo.
+
+Por último, si $s:A'\to A$ es un segundo homomorfismo de anillos, se tiene la
+propiedad de transitividad
+\begin{equation}
+\tag{20.5.3.6}
+\label{0.20.5.3.6-es}
+  (v\circ s)_{C/B/A'}=v_{C/B/A}\circ s_{C/A/A'}.
+\end{equation}
+\end{env}
+
+\begin{env}[20.5.4]
+\label{0.20.5.4-es}
+Si ahora se tiene un diagrama conmutativo de homomorfismos de anillos
+\[
+\xymatrix{
+  B \ar[r]^v & B' \\
+  A \ar[u]^f \ar[r]^u & A' \ar[u]_g
+}
+\]
+se deduce de \sref{0.20.5.2.4-es} y \sref{0.20.5.3.3-es}, por composición,
+un homomorfismo de $B'$-módulos
+\begin{equation}
+\tag{20.5.4.1}
+\label{0.20.5.4.1-es}
+  \Omega^1_{B/A}\otimes_B B'
+  \xrightarrow{v_{B'/B/A}}\Omega^1_{B'/A}
+  \xrightarrow{u_{B'/A'/A}}\Omega^1_{B'/A'}
+\end{equation}
+tal que el diagrama de $A'$-homomorfismos
+\[
+\xymatrix{
+  \Omega^1_{B/A}\otimes_B B' \ar[r] & \Omega^1_{B'/A'} \\
+  B' \ar[u]^{d_{B/A}\otimes1} \ar[r]^{\mathrm{I}_{B'}} &
+  B' \ar[u]_{d_{B'/A'}}
+}
+\tag{20.5.4.2}
+\label{0.20.5.4.2-es}
+\]
+sea conmutativo.
+
+El homomorfismo \sref{0.20.5.4.1-es} corresponde además a un
+dihomomorfismo de $B$-módulos
+\begin{equation}
+\tag{20.5.4.3}
+\label{0.20.5.4.3-es}
+  \Omega^1_{B/A}\to\Omega^1_{B'/A'}.
+\end{equation}
+\end{env}
+
+\begin{proposition}[20.5.5]
+\label{0.20.5.5-es}
+Si $A'$, $B$ son dos $A$-álgebras y $B'=B\otimes_A A'$,
+el homomorfismo canónico \sref{0.20.5.4.1-es}
+\begin{equation}
+\tag{20.5.5.1}
+\label{0.20.5.5.1-es}
+  \Omega^1_{B/A}\otimes_B B'\to\Omega^1_{B'/A'}
+\end{equation}
+es biyectivo.
+\end{proposition}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{131}
+El primer miembro de \sref{0.20.5.5.1-es} no es entonces otro que
+$\Omega^1_{B/A}\otimes_A A'$. Se puede escribir
+$B'\otimes_{A'}B'=(B\otimes_A B)\otimes_A A'$ salvo un isomorfismo canónico
+y $p_{B'/A'}$ se identifica entonces con
+$p_{B/A}\otimes\mathrm{I}_{A'}$; por consiguiente (como $p_{B/A}$ es sobreyectivo)
+$\mathfrak{J}_{B'/A'}=\operatorname{Im}(\mathfrak{J}_{B/A}\otimes_A A')$
+y
+$\mathfrak{J}^2_{B'/A'}
+=\operatorname{Im}(\mathfrak{J}^2_{B/A}\otimes_A A')$, de donde
+$\mathrm{P}^1_{B'/A'}=\mathrm{P}^1_{B/A}\otimes_A A'$ salvo un isomorfismo
+canónico, que hace corresponder entre sí los ideales de aumentación;
+como el $A$-módulo $\mathrm{P}^1_{B/A}$ se identifica canónicamente con la
+suma directa de $B$ y de $\Omega^1_{B/A}$, se tiene
+\begin{equation}
+\tag{20.5.5.2}
+\label{0.20.5.5.2-es}
+  \Omega^1_{B/A}\otimes_A A'=\Omega^1_{B'/A'}
+\end{equation}
+por el mismo isomorfismo, y se verifica inmediatamente que el compuesto de este
+isomorfismo y del isomorfismo canónico
+$\Omega^1_{B/A}\otimes_B B'\xrightarrow{\sim}
+\Omega^1_{B/A}\otimes_A A'$ no es otro que \sref{0.20.5.5.1-es}.
+\end{proof}
+
+\begin{env}[20.5.6]
+\label{0.20.5.6-es}
+Los homomorfismos canónicos \sref{0.20.5.2.4-es} y
+\sref{0.20.5.3.3-es} dan, por funtorialidad, para todo $C$-módulo $L$,
+homomorfismos canónicos
+\begin{align}
+\tag{20.5.6.1}
+\label{0.20.5.6.1-es}
+  &\operatorname{Hom}_C(\Omega^1_{C/A},L)
+  \to\operatorname{Hom}_C(\Omega^1_{B/A}\otimes_B C,L)
+  =\operatorname{Hom}_B(\Omega^1_{B/A},L) \\
+\tag{20.5.6.2}
+\label{0.20.5.6.2-es}
+  &\operatorname{Hom}_C(\Omega^1_{C/B},L)
+  \to\operatorname{Hom}_C(\Omega^1_{C/A},L).
+\end{align}
+Teniendo en cuenta \sref{0.20.4.8.2-es} y los diagramas conmutativos
+\sref{0.20.5.2.6-es} y \sref{0.20.5.3.5-es}, estos homomorfismos no son
+otros (salvo una identificación canónica) que los homomorfismos
+\sref{0.20.2.1.2-es} y \sref{0.20.2.1.3-es} respectivamente.
+\end{env}
+
+\begin{theorem}[20.5.7]
+\label{0.20.5.7-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos de anillos.
+\begin{enumerate}
+  \item[\rm(i)] La sucesión de $C$-módulos
+\begin{equation}
+\tag{20.5.7.1}
+\label{0.20.5.7.1-es}
+  \Omega^1_{B/A}\otimes_B C
+  \xrightarrow{v_{C/B/A}}\Omega^1_{C/A}
+  \xrightarrow{u_{C/B/A}}\Omega^1_{C/B}\to0
+\end{equation}
+es exacta.
+  \item[\rm(ii)] Para que $v_{C/B/A}$ sea invertible por la izquierda, es
+  necesario y suficiente que $C$ sea una $B$-álgebra formalmente lisa relativamente a
+  $A$ (para las topologías discretas (cf. \sref{0.19.9.1-es})); en
+  particular, basta para ello que $C$ sea una $B$-álgebra formalmente
+  lisa (para las topologías discretas).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) La exactitud de la sucesión \sref{0.20.2.4.2-es} muestra en primer lugar,
+teniendo en cuenta \sref{0.20.5.6-es}, que la sucesión
+\[
+  0\to\operatorname{Hom}_C(\Omega^1_{C/B},L)
+  \to\operatorname{Hom}_C(\Omega^1_{C/A},L)
+  \to\operatorname{Hom}_C(\Omega^1_{B/A}\otimes_B C,L)
+\]
+es exacta para todo $C$-módulo $L$. Se sabe que esto implica la exactitud
+de la sucesión \sref{0.20.5.7.1-es} (Bourbaki, \emph{Alg.}, cap.~II,
+3\textsuperscript{a} ed., §~2, n\textsuperscript{o}~1, teo.~1).
+
+(ii) En virtud de la exactitud de \sref{0.20.5.7.1-es}, decir que
+$v_{C/B/A}$ es invertible por la izquierda significa que la sucesión
+\begin{equation}
+\tag{20.5.7.2}
+\label{0.20.5.7.2-es}
+  0\to\Omega^1_{B/A}\otimes_B C
+  \xrightarrow{v_{C/B/A}}\Omega^1_{C/A}
+  \xrightarrow{u_{C/B/A}}\Omega^1_{C/B}\to0
+\end{equation}
+es \emph{exacta y escindida}; se sabe (Bourbaki, \emph{loc. cit.},
+n\textsuperscript{o}~1, prop.~1) que esto equivale a decir que para todo
+$C$-módulo $L$, la sucesión
+\[
+  0\to\operatorname{Hom}_C(\Omega^1_{C/B},L)
+  \to\operatorname{Hom}_C(\Omega^1_{C/A},L)
+  \to\operatorname{Hom}_C(\Omega^1_{B/A}\otimes_B C,L)\to0
+\]
+es exacta; teniendo en cuenta \sref{0.20.5.6-es} y
+\sref{0.20.2.4.2-es}, esta condición equivale a
+\[
+  \operatorname{Exalcom}_{B/A}(C,L)=0
+\]
+para todo $C$-módulo $L$, y la conclusión resulta por tanto de
+\sref{0.19.9.8.1-es}.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{132}
+Observemos además que si se tiene un diagrama conmutativo de homomorfismos
+de anillos
+\[
+\xymatrix{
+  A' \ar[r] & B' \ar[r] & C' \\
+  A \ar[u] \ar[r] & B \ar[u] \ar[r] & C \ar[u]
+}
+\]
+se deduce un diagrama conmutativo
+\[
+\xymatrix{
+  \Omega^1_{B/A}\otimes_B C \ar[r] \ar[d] &
+  \Omega^1_{C/A} \ar[r] \ar[d] &
+  \Omega^1_{C/B} \ar[r] \ar[d] & 0 \\
+  \Omega^1_{B'/A'}\otimes_{B'} C' \ar[r] &
+  \Omega^1_{C'/A'} \ar[r] &
+  \Omega^1_{C'/B'} \ar[r] & 0
+}
+\tag{20.5.7.3}
+\label{0.20.5.7.3-es}
+\]
+donde las flechas verticales provienen de los dihomomorfismos
+\sref{0.20.5.4.3-es}.
+
+\begin{corollary}[20.5.8]
+\label{0.20.5.8-es}
+Supongamos que el homomorfismo $v:B\to C$ haga de $C$ una $B$-álgebra
+formalmente étale (para las topologías discretas
+\sref{0.19.10.2-es}); entonces el homomorfismo \sref{0.20.5.3.3-es}
+\[
+  v_{C/B/A}:\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}
+\]
+es biyectivo.
+\end{corollary}
+
+\begin{proof}
+En efecto, si $C$ es una $B$-álgebra formalmente no ramificada para las
+topologías discretas, se deduce de \sref{0.19.10.4-es},
+\sref{0.20.4.8-es} y \sref{0.20.1.1-es} que se tiene
+$\operatorname{Hom}_C(\Omega^1_{C/B},L)=0$ para todo $C$-módulo $L$, por tanto
+$\Omega^1_{C/B}=0$ (cf. (20.7.4)); por otra parte, si $C$ es una
+$B$-álgebra formalmente lisa para las topologías discretas, la sucesión
+\sref{0.20.5.7.2-es} es exacta; de donde resulta el corolario.
+\end{proof}
+
+\begin{corollary}[20.5.9]
+\label{0.20.5.9-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $S$ un subconjunto multiplicativo de
+$B$; entonces el homomorfismo canónico
+\begin{equation}
+\tag{20.5.9.1}
+\label{0.20.5.9.1-es}
+  S^{-1}\Omega^1_{B/A}\to\Omega^1_{S^{-1}B/A}
+\end{equation}
+es biyectivo.
+\end{corollary}
+
+\begin{proof}
+Basta aplicar \sref{0.20.5.8-es} a $C=S^{-1}B$, que es una
+$B$-álgebra formalmente étale para las topologías discretas
+\sref{0.19.10.3-es}, (ii).
+\end{proof}
+
+Teniendo en cuenta \sref{0.20.5.5-es}, se puede por tanto escribir
+\begin{equation}
+\tag{20.5.9.2}
+\label{0.20.5.9.2-es}
+  \Omega^1_{S^{-1}B/S^{-1}A}
+  =S^{-1}\Omega^1_{B/A}
+  =\Omega^1_{S^{-1}B/A},
+\end{equation}
+salvo isomorfismos canónicos.
+
+\begin{corollary}[20.5.10]
+\label{0.20.5.10-es}
+Si $k$ es un cuerpo y $K=k(X_\alpha)_{\alpha\in I}$ una extensión puramente trascendente de
+$k$, los $dX_\alpha$ forman una base del $K$-espacio vectorial
+$\Omega^1_{K/k}$.
+\end{corollary}
+
+\begin{proof}
+Como $K$ es el cuerpo de fracciones del anillo de polinomios
+$k[X_\alpha]_{\alpha\in I}$, esto resulta de \sref{0.20.4.13-es}, (i) y de
+\sref{0.20.5.9-es}.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{133}
+\begin{env}[20.5.11]
+\label{0.20.5.11-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $\mathfrak{R}$ un ideal de $B$,
+$C$ la $A$-álgebra cociente $B/\mathfrak{R}$, y consideremos
+el homomorfismo compuesto de $A$-módulos
+\begin{equation}
+\tag{20.5.11.1}
+\label{0.20.5.11.1-es}
+  \delta:\mathfrak{R}\longrightarrow B\xrightarrow{d_{B/A}}\Omega^1_{B/A}
+\end{equation}
+donde la primera flecha es la inyección canónica; como
+$d(xy)=xdy+ydx$, se ve que se tiene
+$\delta(\mathfrak{R}^2)\subset\mathfrak{R}.\Omega^1_{B/A}$, de donde, por
+paso a los cocientes, un homomorfismo de $A$-módulos
+\begin{equation}
+\tag{20.5.11.2}
+\label{0.20.5.11.2-es}
+  \delta_{C/B/A}:\mathfrak{R}/\mathfrak{R}^2\longrightarrow
+  \Omega^1_{B/A}\otimes_B C=
+  \Omega^1_{B/A}/(\mathfrak{R}.\Omega^1_{B/A}).
+\end{equation}
+Pero de hecho, $\delta_{C/B/A}$ es un homomorfismo de $C$-módulos, pues
+para $x\in B$ e $y\in\mathfrak{R}$, se tiene
+$ydx\in\mathfrak{R}.\Omega^1_{B/A}$, por tanto
+$d(xy)\equiv xdy\pmod{\mathfrak{R}.\Omega^1_{B/A}}$, lo que prueba
+primero que (20.5.11.2) es un homomorfismo de $B$-módulos, y como
+$\mathfrak{R}$ anula los dos miembros, esto establece nuestra afirmación.
+
+Si $B'$ es una segunda $A$-álgebra, $u:B\to B'$ un $A$-homomorfismo,
+$\mathfrak{R}'$ un ideal de $B'$ tal que
+$u(\mathfrak{R})\subset\mathfrak{R}'$ y $C'=B'/\mathfrak{R}'$ el álgebra
+cociente, se tiene un diagrama conmutativo
+\begin{equation}
+\tag{20.5.11.3}
+\label{0.20.5.11.3-es}
+\xymatrix{
+  \mathfrak{R}/\mathfrak{R}^2 \ar[r]^-{\delta_{C/B/A}} \ar[d] &
+  \Omega^1_{B/A}\otimes_B C \ar[d] \\
+  \mathfrak{R}'/\mathfrak{R}'^2 \ar[r]_-{\delta_{C'/B'/A}} &
+  \Omega^1_{B'/A}\otimes_{B'} C'
+}
+\end{equation}
+donde las flechas verticales provienen de $u$ (20.5.2.4).
+\end{env}
+
+\begin{theorem}[20.5.12]
+\label{0.20.5.12-es}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $C$ la $A$-álgebra cociente
+$B/\mathfrak{R}$, $u:B\to C$ el homomorfismo canónico.
+\begin{enumerate}
+  \item[\rm(i)] Se tiene una sucesión exacta de $C$-módulos
+\begin{equation}
+\tag{20.5.12.1}
+\label{0.20.5.12.1-es}
+  \mathfrak{R}/\mathfrak{R}^2
+  \xrightarrow{\delta_{C/B/A}}\Omega^1_{B/A}\otimes_B C
+  \xrightarrow{u_{C/B/A}}\Omega^1_{C/A}\longrightarrow 0,
+\end{equation}
+donde $u_{C/B/A}$ y $\delta_{C/B/A}$ están definidos por (20.5.2.4) y
+(20.5.11.2) respectivamente.
+  \item[\rm(ii)] Si se pone $E=B/\mathfrak{R}^2$, el homomorfismo
+canónico (20.5.2.4)
+\[
+  \Omega^1_{B/A}\otimes_B C\longrightarrow
+  \Omega^1_{E/A}\otimes_E C
+\]
+es biyectivo.
+  \item[\rm(iii)] Las tres condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[\rm a)] $\delta_{C/B/A}$ es invertible por la izquierda.
+    \item[\rm b)] Toda $A$-extensión de $C$ por un $C$-módulo $L$, cuya
+imagen inversa por $u:B\to C$ es $A$-trivial, es ella misma
+$A$-trivial.
+    \item[\rm c)] La $A$-álgebra $E=B/\mathfrak{R}^2$ es una extensión
+$A$-trivial de $C$ por $\mathfrak{R}/\mathfrak{R}^2$.
+  \end{enumerate}
+  \item[\rm(iv)] Hay una correspondencia biunívoca canónica entre los
+inversos por la izquierda de $\delta_{C/B/A}$ y los inversos por la derecha del
+homomorfismo canónico $E\to C$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{134}
+(i) Como $u$ es sobreyectivo, se tiene $\operatorname{D\acute{e}r}_B(C,L)=0$ para todo $C$-módulo
+$L$ en virtud de (20.1.1). La sucesión exacta (20.2.3.1) se convierte por tanto en
+\begin{equation}
+\tag{20.5.12.2}
+\label{0.20.5.12.2-es}
+  0\longrightarrow\operatorname{D\acute{e}r}_A(C,L)\xrightarrow{v^0}\operatorname{D\acute{e}r}_A(B,L)
+  \xrightarrow{\partial}\operatorname{Exalcom}_B(C,L)
+  \xrightarrow{v^1}\operatorname{Exalcom}_A(C,L)
+  \xrightarrow{u^1}\operatorname{Exalcom}_A(B,L),
+\end{equation}
+donde $v$ es el homomorfismo $A\to B$. Recordemos, por otra parte, (18.3.8) que
+$\operatorname{Exalcom}_B(C,L)$ se identifica canónicamente con
+$\operatorname{Hom}_C(\mathfrak{R}/\mathfrak{R}^2,L)$; se deduce, pues, de (20.5.12.2)
+y (20.4.8) la sucesión exacta
+\begin{equation}
+\tag{20.5.12.3}
+\label{0.20.5.12.3-es}
+\begin{split}
+  0\longrightarrow\operatorname{Hom}_C(\Omega^1_{C/A},L)
+  \longrightarrow\operatorname{Hom}_C(\Omega^1_{B/A}\otimes_B C,L)
+  \xrightarrow{\varphi}\operatorname{Hom}_C(\mathfrak{R}/\mathfrak{R}^2,L)\\
+  \xrightarrow{\psi}\operatorname{Ker}(u^1)\longrightarrow 0
+\end{split}
+\end{equation}
+con $\varphi=\partial\circ\eta^{-1}$ y $\psi=v^1\circ\eta$. Volviendo
+a las definiciones de $\partial$ (20.2.2) y de $\eta$ (18.3.8), se comprueba
+inmediatamente que $\varphi$ es precisamente el homomorfismo
+$\operatorname{Hom}(\delta_{C/B/A},1_L)$. La existencia de la sucesión exacta formada por los
+4 primeros términos de (20.5.12.3) muestra, pues, que la sucesión (20.5.12.1)
+es exacta (Bourbaki, \emph{Álg.}, cap. II, 3\textsuperscript{a} ed.,
+\S~2, n\textsuperscript{o}~1, teorema~1).
+
+\medskip
+(ii) Apliquemos a $B$ y al ideal $\mathfrak{R}^2$ la sucesión exacta
+(20.5.12.1), lo que da
+\begin{equation}
+\tag{20.5.12.4}
+\label{0.20.5.12.4-es}
+  \mathfrak{R}^2/\mathfrak{R}^4\longrightarrow
+  \Omega^1_{B/A}\otimes_B E\longrightarrow\Omega^1_{E/A}\longrightarrow 0,
+\end{equation}
+de donde, tensorizando por $C$ (considerado como $E$-álgebra), se obtiene la sucesión
+exacta
+\[
+  \mathfrak{R}^2/\mathfrak{R}^4\otimes_E C\longrightarrow
+  \Omega^1_{B/A}\otimes_B C\longrightarrow
+  \Omega^1_{E/A}\otimes_E C\longrightarrow 0.
+\]
+Ahora bien, si $x,y$ son dos elementos de $\mathfrak{R}$, y $\zeta$ la clase
+de $xy$ mód. $\mathfrak{R}^4$, la imagen
+$\delta'(\zeta\otimes1)$ es, por definición,
+$d_{B/A}(xy)\otimes1=(xd_{B/A}(y)+yd_{B/A}(x))\otimes1$; pero, como las
+imágenes de $x$ y de $y$ en $C$ son nulas, se tiene también
+$d_{B/A}(xy)\otimes1=0$ en $\Omega^1_{B/A}\otimes_B C$, lo que demuestra
+la aserción.
+
+\medskip
+(iii) Decir que $\delta_{C/B/A}$ es invertible por la izquierda equivale, teniendo
+en cuenta la exactitud de (20.5.12.1), a decir que la sucesión
+\begin{equation}
+\tag{20.5.12.5}
+\label{0.20.5.12.5-es}
+  0\longrightarrow\mathfrak{R}/\mathfrak{R}^2
+  \xrightarrow{\delta_{C/B/A}}\Omega^1_{B/A}\otimes_B C
+  \xrightarrow{u_{C/B/A}}\Omega^1_{C/A}\longrightarrow0
+\end{equation}
+es \emph{exacta y escindida}, y equivale también (Bourbaki,
+\emph{loc. cit.}) a decir que $\operatorname{Ker}(u^1)=0$ en la sucesión exacta
+(20.5.12.3) para todo $L$, lo que muestra la equivalencia de las condiciones
+a) y b) (cf. (18.3.6.2)).
+
+El hecho de que b) implique c) proviene de que la imagen inversa por
+$u:B\to C$ de la $A$-extensión $E$ de $C$ por
+$\mathfrak{R}/\mathfrak{R}^2$ es $A$-trivial, pues $u$ es la composición de los
+homomorfismos canónicos $B\to E\to C$ (18.1.6). Recíprocamente, c)
+implica b), pues toda $B$-extensión de $C$ por $L$ es $B$-equivalente
+a $E\oplus_{\mathfrak{R}/\mathfrak{R}^2}L$ (18.3.8), es decir, su
+clase es la imagen de la clase de $E$ (considerada como $B$-extensión)
+por el homomorfismo
+
+\oldpage[0\textsubscript{IV-1}]{135}
+$w_*:\operatorname{Exan}_B(C,\mathfrak{R}/\mathfrak{R}^2)
+\to\operatorname{Exan}_B(C,L)$ correspondiente a un $B$-homomorfismo
+$w:\mathfrak{R}/\mathfrak{R}^2\to L$. El hecho de que c) implique b) se deduce
+entonces de la conmutatividad del diagrama (18.3.6.5)
+\[
+\xymatrix{
+  \operatorname{Exan}_B(C,\mathfrak{R}/\mathfrak{R}^2)
+    \ar[r]^{w_*} \ar[d]_{u^*} &
+  \operatorname{Exan}_B(C,L) \ar[d]^{u^*} \\
+  \operatorname{Exan}_A(C,\mathfrak{R}/\mathfrak{R}^2)
+    \ar[r]_{w_*} & \operatorname{Exan}_A(C,L).
+}
+\]
+
+\medskip
+(iv) Se ha visto (20.1.7) que los inversos por la derecha de $E\to C$
+corresponden canónica y biyectivamente al conjunto de los elementos
+$D\in\operatorname{D\acute{e}r}_A(E,\mathfrak{R}/\mathfrak{R}^2)$ tales que $D(x)=x$ en
+$\mathfrak{R}/\mathfrak{R}^2$, y por tanto también, por (20.4.8), al conjunto de los
+$E$-homomorfismos
+$h:\Omega^1_{E/A}\to\mathfrak{R}/\mathfrak{R}^2$ tales que la composición
+\[
+  \mathfrak{R}/\mathfrak{R}^2\xrightarrow{d_{E/A}}
+  \Omega^1_{E/A}\xrightarrow{h}\mathfrak{R}/\mathfrak{R}^2
+\]
+sea la identidad. Tensorizando con $C$, se deduce de ello (puesto que
+$\mathfrak{R}/\mathfrak{R}^2$ es un $C$-módulo) que la composición
+\[
+  \mathfrak{R}/\mathfrak{R}^2\xrightarrow{\delta_{C/E/A}}
+  \Omega^1_{E/A}\otimes_E C\xrightarrow{h\otimes1}
+  \mathfrak{R}/\mathfrak{R}^2
+\]
+es la identidad; ahora bien, puesto que $\mathfrak{R}/\mathfrak{R}^2$ es un
+$C$-módulo, $h\mapsto h\otimes1$ es un isomorfismo del conjunto
+$\operatorname{Hom}_E(\Omega^1_{E/A},\mathfrak{R}/\mathfrak{R}^2)$ sobre
+$\operatorname{Hom}_C(\Omega^1_{E/A}\otimes_E C,\mathfrak{R}/\mathfrak{R}^2)$; por
+otra parte, (ii) demuestra que se pueden identificar canónicamente
+$\Omega^1_{E/A}\otimes_E C$ y $\Omega^1_{B/A}\otimes_B C$,
+identificándose entonces $\delta_{C/E/A}$ con $\delta_{C/B/A}$. C.Q.D.
+\end{proof}
+
+\begin{example}[20.5.13]
+\label{0.20.5.13-es}
+Sean $B=A[X_\alpha]_{\alpha\in I}$ un álgebra de polinomios sobre $A$,
+$\mathfrak{R}$ un ideal de $B$, $(P_\lambda)$ un sistema de generadores
+de $\mathfrak{R}$ y $C=B/\mathfrak{R}$; se sabe que
+$\Omega^1_{B/A}$ es un $B$-módulo libre y que los $dX_\alpha$ forman una
+base (20.4.13, (i)); por tanto, los $dX_\alpha$ forman también una base del
+$C$-módulo libre $\Omega^1_{B/A}\otimes_B C$. Por otra parte, se deduce
+inmediatamente de la definición que la imagen de
+$\mathfrak{R}/\mathfrak{R}^2$ por $\delta_{C/B/A}$ es el sub-$C$-módulo
+generado por los
+\[
+  dP_\lambda=\sum_\alpha
+  \frac{\partial P_\lambda}{\partial X_\alpha}\,dX_\alpha.
+\]
+Se concluye que $\Omega^1_{C/A}$ es isomorfo al cociente del
+$C$-módulo libre que tiene los $dX_\alpha$ por base, por el sub-$C$-módulo
+generado por los $dP_\lambda$, lo que da una descripción de un módulo
+de diferenciales de un álgebra \emph{cualquiera}, pues toda $A$-álgebra
+$C$ puede obtenerse de la manera precedente.
+\end{example}
+
+\begin{corollary}[20.5.14]
+\label{0.20.5.14-es}
+Si $C$ es un $A$-álgebra formalmente lisa (para las topologías
+discretas), la sucesión
+\begin{equation}
+\tag{20.5.14.1}
+\label{0.20.5.14.1-es}
+  0\longrightarrow\mathfrak{R}/\mathfrak{R}^2
+  \xrightarrow{\delta_{C/B/A}}\Omega^1_{B/A}\otimes_B C
+  \xrightarrow{u_{C/B/A}}\Omega^1_{C/A}\longrightarrow0
+\end{equation}
+es exacta y escindida.
+\end{corollary}
+
+\begin{proof}
+En efecto, toda $A$-extensión de $C$ por un $C$-módulo es entonces trivial
+(19.4.4.1).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{136}
+\begin{remark}[20.5.15]
+\label{0.20.5.15-es}
+Sea $u:A\to B$ un homomorfismo \emph{sobreyectivo} de anillos; entonces, para
+todo homomorfismo de anillos $v:B\to C$, el homomorfismo canónico
+\begin{equation}
+\tag{20.5.15.1}
+\label{0.20.5.15.1-es}
+  u_{C/B/A}:\Omega^1_{C/A}\longrightarrow\Omega^1_{C/B}
+\end{equation}
+es \emph{biyectivo}; esto se deduce, en efecto, de la sucesión exacta (20.5.7.1),
+puesto que $\Omega^1_{B/A}=0$ (20.4.12).
+\end{remark}
+
+\subsection{Módulos de imperfección y homomorfismos característicos}
+\label{subsection:0.20.6-es}
+\label{0.20.6-es}
+
+\begin{definition}[20.6.1]
+\label{0.20.6.1-es}
+Dados dos homomorfismos de anillos $u:A\to B$, $v:B\to C$, se
+denomina \emph{módulo de imperfección del $B$-álgebra $C$ relativo a
+$A$}, y se denota $\Upsilon_{C/B/A}$, al $C$-módulo núcleo del
+homomorfismo
+$v_{C/B/A}:\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}$.
+Se tiene, pues, por definición (cf. (20.5.7)) la sucesión exacta
+\begin{equation}
+\tag{20.6.1.1}
+\label{0.20.6.1.1-es}
+  0\longrightarrow\Upsilon_{C/B/A}\longrightarrow
+  \Omega^1_{B/A}\otimes_B C\xrightarrow{v_{C/B/A}}
+  \Omega^1_{C/A}\xrightarrow{u_{C/B/A}}\Omega^1_{C/B}
+  \longrightarrow0.
+\end{equation}
+\end{definition}
+
+Cuando $A=\mathbb{Z}$ (siendo entonces los módulos $\Omega^1_{B/A}$ y $\Omega^1_{C/A}$
+los módulos de diferenciales «absolutas» $\Omega^1_B$ y
+$\Omega^1_C$), se escribe $\Upsilon_{C/B}$ en lugar de
+$\Upsilon_{C/B/\mathbb{Z}}$; cuando $B$ y $C$ son álgebras sobre un
+cuerpo primo $P$, se tiene $\Upsilon_{C/B/P}=\Upsilon_{C/B}$.
+
+Sean $R$, $S$ partes multiplicativas de $B$ y $C$, respectivamente,
+tales que la imagen de $R$ esté contenida en $S$. Se deduce entonces de la
+sucesión exacta (20.6.1.1) y de (20.5.9) que se tiene
+\begin{equation}
+\tag{20.6.1.2}
+\label{0.20.6.1.2-es}
+  \Upsilon_{S^{-1}C/R^{-1}B/A}=S^{-1}\Upsilon_{C/B/A}.
+\end{equation}
+
+\begin{proposition}[20.6.2]
+\label{0.20.6.2-es}
+Si $C$ es un $B$-álgebra formalmente lisa relativamente a $A$ (y, en
+particular, si $C$ es un $B$-álgebra formalmente lisa), se tiene
+$\Upsilon_{C/B/A}=0$.
+\end{proposition}
+
+\begin{proof}
+Esto se deduce de (20.5.7, (ii)).
+\end{proof}
+
+\begin{proposition}[20.6.3]
+\label{0.20.6.3-es}
+Sean $k$ un cuerpo y $K$ una extensión de $k$. Para que $K$ sea una
+extensión separable de $k$, es necesario y suficiente que $\Upsilon_{K/k}=0$
+(es decir, que el homomorfismo canónico
+$\Omega^1_k\otimes_k K\to\Omega^1_K$ sea inyectivo o también (20.4.8), que
+toda derivación de $k$ en $K$ se prolongue a una derivación de $K$
+en sí mismo).
+\end{proposition}
+
+\begin{proof}
+En efecto, equivale decir que $K$ es separable sobre $k$ o que es un
+$k$-álgebra formalmente lisa (19.6.1); por otra parte, si $P$ es el
+cuerpo primo de $k$, $K$ es separable sobre $P$, y por tanto un $P$-álgebra
+formalmente lisa, y equivale, pues, decir que $K$ es un
+$k$-álgebra formalmente lisa o un $k$-álgebra formalmente lisa
+relativamente a $P$. Finalmente, decir que $K$ es un $k$-álgebra formalmente
+lisa relativamente a $P$ equivale, según (20.5.7, (ii)), a decir que
+el homomorfismo
+$v_{K/k/P}:\Omega^1_k\otimes_k K\to\Omega^1_K$ es invertible por la izquierda;
+pero, como $K$ es un cuerpo, esta última condición equivale a decir
+que el núcleo de $v_{K/k/P}$, es decir, $\Upsilon_{K/k}$, es nulo.
+\end{proof}
+
+\begin{env}[20.6.4]
+\label{0.20.6.4-es}
+Consideremos un diagrama conmutativo
+\begin{equation}
+\tag{20.6.4.1}
+\label{0.20.6.4.1-es}
+\xymatrix{
+  A' \ar[r]^{u'} & B' \ar[r]^{v'} & C' \\
+  A \ar[u]^f \ar[r]_u & B \ar[u]^g \ar[r]_v & C \ar[u]^h
+}
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{137}
+de homomorfismos de anillos conmutativos. La conmutatividad del diagrama
+correspondiente (20.5.7.3) implica la existencia de un único
+$C$-homomorfismo
+\begin{equation}
+\tag{20.6.4.2}
+\label{0.20.6.4.2-es}
+  \Upsilon_{C/B/A}\longrightarrow\Upsilon_{C'/B'/A'}
+\end{equation}
+deducido canónicamente de (20.6.4.1) y que hace conmutativo el diagrama
+\begin{equation}
+\tag{20.6.4.3}
+\label{0.20.6.4.3-es}
+\xymatrix{
+  0 \ar[r] & \Upsilon_{C/B/A} \ar[r] \ar[d] &
+  \Omega^1_{B/A}\otimes_B C \ar[r]^{v_{C/B/A}} \ar[d] &
+  \Omega^1_{C/A} \ar[r]^{u_{C/B/A}} \ar[d] &
+  \Omega^1_{C/B} \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \Upsilon_{C'/B'/A'} \ar[r] &
+  \Omega^1_{B'/A'}\otimes_{B'} C' \ar[r]_{v_{C'/B'/A'}} &
+  \Omega^1_{C'/A'} \ar[r]_{u_{C'/B'/A'}} &
+  \Omega^1_{C'/B'} \ar[r] & 0
+}
+\end{equation}
+
+El dato del homomorfismo (20.6.4.2) equivale además al de un
+$C'$-homomorfismo
+\begin{equation}
+\tag{20.6.4.4}
+\label{0.20.6.4.4-es}
+  \Upsilon_{C/B/A}\otimes_C C'\longrightarrow\Upsilon_{C'/B'/A'}
+\end{equation}
+que, compuesto con el homomorfismo canónico
+$\Upsilon_{C/B/A}\to\Upsilon_{C/B/A}\otimes_C C'$, vuelve a dar (20.6.4.2).
+Está claro que (20.6.4.2) goza de una evidente propiedad de
+transitividad, lo que permite decir que $\Upsilon_{C/B/A}$ es un
+\emph{funtor} de la terna $(A,B,C)$.
+\end{env}
+
+\begin{env}[20.6.5]
+\label{0.20.6.5-es}
+Nos resultará conveniente para lo que sigue, bajo las condiciones de (20.6.1),
+introducir un \emph{complejo} (de cadenas) \emph{de $C$-módulos}
+$\mathrm{K}_\bullet(C/B/A)$ cuyos términos son nulos salvo en grados 0
+y 1, donde se toma
+\begin{equation}
+\tag{20.6.5.1}
+\label{0.20.6.5.1-es}
+\left\{
+\begin{aligned}
+  \mathrm{K}_0(C/B/A)&=\Omega^1_{C/A},\\
+  \mathrm{K}_1(C/B/A)&=\Omega^1_{B/A}\otimes_B C,
+\end{aligned}
+\right.
+\end{equation}
+siendo el operador diferencial $\mathrm{K}_1\to\mathrm{K}_0$
+$v_{C/B/A}$. Esto permite escribir (salvo isomorfismos canónicos)
+$\Omega^1_{C/B}$ y $\Upsilon_{C/B/A}$ como los \emph{módulos
+de homología} de este complejo:
+\begin{equation}
+\tag{20.6.5.2}
+\label{0.20.6.5.2-es}
+  \mathrm{H}_0(\mathrm{K}_\bullet(C/B/A))=\Omega^1_{C/B},\qquad
+  \mathrm{H}_1(\mathrm{K}_\bullet(C/B/A))=\Upsilon_{C/B/A}.
+\end{equation}
+\end{env}
+
+Del mismo modo:
+\begin{proposition}[20.6.6]
+\label{0.20.6.6-es}
+Bajo las hipótesis de (20.6.1), para todo $C$-módulo $L$, se tienen
+$C$-isomorfismos canónicos
+\begin{align}
+\tag{20.6.6.1}
+\label{0.20.6.6.1-es}
+  \mathrm{H}^0(\mathrm{K}_\bullet(C/B/A),L)&\simeq\operatorname{D\acute{e}r}_B(C,L),\\
+\tag{20.6.6.2}
+\label{0.20.6.6.2-es}
+  \mathrm{H}^1(\mathrm{K}_\bullet(C/B/A),L)&\simeq
+  \operatorname{Exalcom}_{B/A}(C,L).
+\end{align}
+\end{proposition}
+
+\begin{proof}
+En efecto, el complejo de cocadenas
+$\operatorname{Hom}_C(\mathrm{K}_\bullet(C/B/A),L)$ no es otro, en virtud de
+(20.4.8)
+y (20.5.6), que el complejo
+\[
+  \cdots\longrightarrow0\longrightarrow\operatorname{D\acute{e}r}_A(C,L)
+  \longrightarrow\operatorname{D\acute{e}r}_A(B,L)\longrightarrow0\longrightarrow\cdots
+\]
+\oldpage[0\textsubscript{IV-1}]{138}
+donde el operador diferencial es $v^0$ (con las notaciones de (20.2.1)).
+La proposición resulta entonces de la sucesión exacta (20.2.4.2) y de la
+definición de los módulos de cohomología
+\begin{equation}
+\tag{20.6.6.3}
+\label{0.20.6.6.3-es}
+  \mathrm{H}^i(\mathrm{K}_\bullet,L)=
+  \mathrm{H}^i(\operatorname{Hom}_C(\mathrm{K}_\bullet,L)).
+\end{equation}
+\end{proof}
+
+Si se tiene un diagrama conmutativo de homomorfismos de anillos
+\[
+\xymatrix{
+  A' \ar[r] & B' \ar[r] & C' \\
+  A \ar[u] \ar[r] & B \ar[u] \ar[r] & C \ar[u]
+}
+\]
+los dihomomorfismos (20.5.4.3) definen un dihomomorfismo de
+complejos de módulos
+\begin{equation}
+\tag{20.6.6.4}
+\label{0.20.6.6.4-es}
+  \mathrm{K}_\bullet(C/B/A)\longrightarrow
+  \mathrm{K}_\bullet(C'/B'/A')
+\end{equation}
+y los dihomomorfismos que de él se deducen para la homología o la
+cohomología se identifican, por las fórmulas (20.6.5.2), (20.6.6.1) y
+(20.6.6.2), con los dihomomorfismos ya definidos en (20.5.4.3),
+(20.6.4.2), (20.2.1) y (18.3.7.2) (teniendo en cuenta, para el último, la
+definición del operador $\partial$ en la sucesión exacta (20.2.4.2)).
+
+\begin{env}[20.6.7]
+\label{0.20.6.7-es}
+Se sabe que, para un complejo $\mathrm{K}_\bullet$ de $C$-módulos y un
+$C$-módulo $L$, se tienen homomorfismos canónicos
+\[
+  \alpha_i:\mathrm{H}^i(\mathrm{K}_\bullet,L)\longrightarrow
+  \operatorname{Hom}_C(\mathrm{H}_i(\mathrm{K}_\bullet),L)
+\]
+(M, IV, 6). Aquí, el homomorfismo canónico
+\[
+  \alpha_1:\mathrm{H}^1(\mathrm{K}_\bullet(C/B/A),L)
+  \longrightarrow
+  \operatorname{Hom}_C(\mathrm{H}_1(\mathrm{K}_\bullet(C/B/A)),L)
+\]
+se define inmediatamente haciendo pasar al cociente por la imagen
+de $\operatorname{Hom}_C(\mathrm{K}_0,L)$ el homomorfismo de restricción
+\[
+  \operatorname{Hom}_C(\mathrm{K}_1(C/B/A),L)\longrightarrow
+  \operatorname{Hom}_C(\mathrm{H}_1(\mathrm{K}_\bullet(C/B/A)),L)
+\]
+puesto que $\mathrm{H}_1(\mathrm{K}_\bullet(C/B/A))$ no es otro que el
+núcleo de $\mathrm{K}_1\to\mathrm{K}_0$; teniendo en cuenta (20.6.6.2) y
+(20.6.5.2), se obtiene, pues, un $C$-homomorfismo canónico
+\begin{equation}
+\tag{20.6.7.1}
+\label{0.20.6.7.1-es}
+  \operatorname{Exalcom}_{B/A}(C,L)\longrightarrow
+  \operatorname{Hom}_C(\Upsilon_{C/B/A},L)
+\end{equation}
+que se explicita de la manera siguiente: en virtud de (20.2.4.2), toda
+$B$-extensión de $C$ por $L$ que es $A$-trivial procede del dato
+de una $A$-derivación $D$ de $B$ en $L$, luego, por (20.4.8), de un
+$C$-homomorfismo $f$ de $\Omega^1_{B/A}\otimes_B C$ en $L$; se hace
+corresponder a la clase de esta extensión la \emph{restricción} de $f$
+a $\Upsilon_{C/B/A}$, que solo depende, en efecto, de esta clase y
+no de la elección de $D$.
+\end{env}
+
+\begin{definition}[20.6.8]
+\label{0.20.6.8-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos de anillos. Para toda
+$B$-extensión $E$ de $C$ por un $C$-módulo $L$, que sea $A$-trivial
+(18.3.7), se llama \emph{homomorfismo característico de $E$}, y se
+denota por $\chi_E$, al $C$-homomorfismo $\Upsilon_{C/B/A}\to L$, imagen de la
+clase de $E$ por el homomorfismo canónico (20.6.7.1).
+\end{definition}
+
+\oldpage[0\textsubscript{IV-1}]{139}
+Se puede definir el homomorfismo $\chi_E$ de otra manera:
+\begin{proposition}[20.6.9]
+\label{0.20.6.9-es}
+Sea $E$ una $B$-extensión de $C$ por un $C$-módulo $L$, que sea
+$A$-trivial (18.3.7); entonces el diagrama
+\begin{equation}
+\tag{20.6.9.1}
+\label{0.20.6.9.1-es}
+\xymatrix{
+  0 \ar[r] & \Upsilon_{C/B/A} \ar[r] \ar[d]^{\chi_E} &
+  \Omega^1_{B/A}\otimes_B C \ar[r]^{v_{C/B/A}}
+    \ar[d]^{q_{E/B/A}\otimes1_C} &
+  \Omega^1_{C/A} \ar[d]^{1} \\
+  0 \ar[r] & L \ar[r]_{\delta_{C/E/A}} &
+  \Omega^1_{E/A}\otimes_E C \ar[r]_{p_{C/E/A}} &
+  \Omega^1_{C/A} \ar[r] & 0
+}
+\end{equation}
+en el que $q:B\to E$ define la estructura de $B$-extensión de $E$ y
+$p:E\to C$ es el homomorfismo de aumentación, es conmutativo; sus
+filas son exactas.
+\end{proposition}
+
+\begin{proof}
+La fila inferior del diagrama es la sucesión (20.5.12.5) relativa a los
+dos homomorfismos $A\xrightarrow{q\circ u}E$ y
+$p:E\to C=E/L$; como $p$ es sobreyectivo y $E$ es una extensión
+$A$-trivial, esta sucesión es exacta y escindida en virtud de (20.5.12,
+(iii)). La conmutatividad del cuadrado derecho de (20.6.9.1) resulta de la
+relación $v=p\circ q$ (20.5.2.7); la imagen por
+$q_{E/B/A}\otimes1_C$ del núcleo $\Upsilon_{C/B/A}$ de $v_{C/B/A}$ está
+por tanto contenida en el núcleo $L$ de $p_{C/E/A}$. Por otra parte, sea
+$h:C\to E$ un $A$-homomorfismo inverso por la derecha de $p$, y sea
+$j:L\to E$ la inyección canónica, de modo que se tiene
+$q(b)=h(v(b))+j(D(b))$ para $b\in B$, donde $D$ es la $A$-derivación de
+$B$ en $L$ que define la $B$-extensión $E$; se puede escribir
+$D=f\circ d_{B/A}$, donde $f:\Omega^1_{B/A}\to L$ es un
+$B$-homomorfismo. En virtud de (20.5.2.6), se tiene
+\[
+  q_{E/B/A}(d_{B/A}(b))=d_{E/A}(q(b))
+  =d_{E/A}(h(v(b)))+d_{E/A}(j(f(d_{B/A}(b))))
+\]
+para $b\in B$. Sea entonces
+$z=\sum_i d_{B/A}(b_i)\otimes c_i$, donde $b_i\in B$ y $c_i\in C$, un
+elemento de $\Omega^1_{B/A}\otimes_B C$; se tiene
+\[
+  (q_{E/B/A}\otimes1_C)(z)=
+  \sum_i d_{E/A}(h(v(b_i)))\otimes c_i+
+  \sum_i d_{E/A}(j(f(d_{B/A}(b_i))))\otimes c_i.
+\]
+En la primera suma, se tiene
+$d_{E/A}(h(v(b_i)))=h_{E/C/A}(d_{C/A}(v(b_i)))$, luego esta suma es
+$(h_{E/C/A}\otimes1_C)(v_{C/B/A}(z))$ en virtud de (20.5.2.6). Si se
+toma $z\in\Upsilon_{C/B/A}$, esta suma es, por tanto, nula, y queda,
+por definición de $\delta_{C/E/A}$,
+\[
+  (q_{E/B/A}\otimes1_C)(z)=
+  \sum_i\delta_{C/E/A}(c_i f(d_{B/A}(b_i)))
+  =\delta_{C/E/A}(f(z)),
+\]
+lo que demuestra la conmutatividad del cuadrado izquierdo de (20.6.9.1).
+\end{proof}
+
+Obsérvese que, cuando solo se supone que $\delta_{C/E/A}$ es
+\emph{inyectivo} (y no necesariamente invertible por la izquierda), esta
+interpretación permitiría aún definir $\chi_E$ como la
+restricción de $q_{E/B/A}\otimes1_C$ a $\Upsilon_{C/B/A}$.
+
+\begin{corollary}[20.6.10]
+\label{0.20.6.10-es}
+Si $\mathfrak{R}$ es un ideal de $B$, $C=B/\mathfrak{R}$,
+$E=B/\mathfrak{R}^2$, y si $E$ es una $B$-extensión $A$-trivial
+(18.3.7) de $C$ por $\mathfrak{R}/\mathfrak{R}^2$, entonces
+el homomorfismo característico
+$\chi_E:\Upsilon_{C/B/A}\to\mathfrak{R}/\mathfrak{R}^2$ es biyectivo.
+\end{corollary}
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{140}
+En efecto, en el diagrama (20.6.9.1), las dos flechas verticales de la
+derecha son homomorfismos biyectivos (20.5.12, (ii)).
+\end{proof}
+
+\begin{theorem}[20.6.11]
+\label{0.20.6.11-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos de anillos, y $L$ un
+$C$-módulo. Supongamos verificada una de las condiciones siguientes:
+\begin{enumerate}
+  \item[\rm(i)] $L$ es un $C$-módulo inyectivo.
+  \item[\rm(ii)] $\Upsilon_{C/B/A}$ es factor directo del $C$-módulo
+$\Omega^1_{B/A}\otimes_B C$ y
+$u_{C/B/A}:\Omega^1_{C/A}\to\Omega^1_{C/B}$ es invertible por la derecha.
+\end{enumerate}
+Entonces el homomorfismo canónico (20.6.7.1)
+\[
+  \operatorname{Exalcom}_{B/A}(C,L)\longrightarrow
+  \operatorname{Hom}_C(\Upsilon_{C/B/A},L)
+\]
+es biyectivo.
+
+En particular, si $\Omega^1_{C/B}$ y $\Omega^1_{C/A}$ son
+$C$-módulos proyectivos, el homomorfismo canónico (20.6.7.1) es
+biyectivo.
+\end{theorem}
+
+\begin{proof}
+El hecho de que cada una de las condiciones (i), (ii) implique que (20.6.7.1) es
+biyectivo se sigue, en ambos casos, de la definición de $\alpha_1$. Señalemos
+además que la condición (ii) es \emph{necesaria y
+suficiente} para que el homomorfismo (20.6.7.1) sea biyectivo para
+\emph{todo} $C$-módulo $L$ (Bourbaki, \emph{Alg.}, cap. II,
+3\textsuperscript{a} ed., \S~2, n\textsuperscript{o}~1, prop.~1). Si se
+supone que $\Omega^1_{C/B}$ y $\Omega^1_{C/A}$ son $C$-módulos
+proyectivos, entonces, en la sucesión exacta (20.6.1.1),
+$\operatorname{Ker}(u_{C/B/A})$ es un $C$-módulo proyectivo, pues la sucesión exacta
+\[
+  0\longrightarrow\operatorname{Ker}(u_{C/B/A})\longrightarrow\Omega^1_{C/A}
+  \longrightarrow\Omega^1_{C/B}\longrightarrow0
+\]
+es escindida, ya que $\Omega^1_{C/B}$ es proyectivo; como
+$\operatorname{Ker}(u_{C/B/A})=\operatorname{Im}(v_{C/B/A})$, la sucesión exacta
+\[
+  0\longrightarrow\Upsilon_{C/B/A}\longrightarrow
+  \Omega^1_{B/A}\otimes_B C\longrightarrow
+  \operatorname{Im}(v_{C/B/A})\longrightarrow0
+\]
+es escindida.
+\end{proof}
+
+\begin{corollary}[20.6.12]
+\label{0.20.6.12-es}
+Supongamos que $C$ es una $A$-álgebra formalmente lisa. Existe entonces
+un homomorfismo canónico
+\begin{equation}
+\tag{20.6.12.1}
+\label{0.20.6.12.1-es}
+  \operatorname{Exalcom}_B(C,L)\longrightarrow
+  \operatorname{Hom}_C(\Upsilon_{C/B/A},L).
+\end{equation}
+Además, este homomorfismo es biyectivo si se verifica una de las condiciones (i),
+(ii) de (20.6.11).
+\end{corollary}
+
+\begin{proof}
+En efecto, se sigue de la hipótesis sobre $C$ que
+$\operatorname{Exalcom}_B(C,L)=\operatorname{Exalcom}_{B/A}(C,L)$, y
+el homomorfismo (20.6.12.1) no es otro que (20.6.7.1).
+\end{proof}
+
+\begin{corollary}[20.6.13]
+\label{0.20.6.13-es}
+Si $C$ es una $A$-álgebra formalmente lisa y si $\Omega^1_{C/B}$ es
+un $C$-módulo proyectivo, el homomorfismo (20.6.12.1) es biyectivo.
+\end{corollary}
+
+\begin{proof}
+En efecto, se sabe entonces que $\Omega^1_{C/A}$ es un $C$-módulo proyectivo
+(20.4.9), siendo discretas las topologías.
+\end{proof}
+
+\begin{env}[20.6.14]
+\label{0.20.6.14-es}
+Manteniendo las mismas notaciones, supongamos ahora además que $A$,
+$B$, $C$ son $\Lambda$-álgebras y que $u$, $v$ son
+$\Lambda$-homomorfismos, lo que equivale a darse tres homomorfismos
+de anillos
+\[
+  \Lambda\xrightarrow{s}A\xrightarrow{u}B\xrightarrow{v}C.
+\]
+
+\oldpage[0\textsubscript{IV-1}]{141}
+Se tienen, pues, además del módulo de imperfección $\Upsilon_{C/B/A}$, los
+módulos de imperfección $\Upsilon_{B/A/\Lambda}$,
+$\Upsilon_{C/A/\Lambda}$ y $\Upsilon_{C/B/\Lambda}$, y ya se han definido
+homomorfismos canónicos de $C$-módulos (20.6.4.2)
+\begin{align}
+\tag{20.6.14.1}
+\label{0.20.6.14.1-es}
+  u':\Upsilon_{C/A/\Lambda}&\longrightarrow\Upsilon_{C/B/\Lambda},\\
+\tag{20.6.14.2}
+\label{0.20.6.14.2-es}
+  s':\Upsilon_{C/B/\Lambda}&\longrightarrow\Upsilon_{C/B/A}.
+\end{align}
+
+Como en el diagrama conmutativo (20.5.7.3)
+\begin{equation}
+\tag{20.6.14.3}
+\label{0.20.6.14.3-es}
+\xymatrix{
+  \Omega^1_{A/\Lambda}\otimes_A B \ar[r] \ar[d] &
+  \Omega^1_{B/\Lambda} \ar[r] \ar[d] &
+  \Omega^1_{B/A} \ar[r] \ar[d] & 0 \\
+  \Omega^1_{A/\Lambda}\otimes_A C \ar[r] &
+  \Omega^1_{C/\Lambda} \ar[r] & \Omega^1_{C/A} \ar[r] & 0
+}
+\end{equation}
+la fila inferior está formada por $C$-módulos, se deduce por
+tensorización un diagrama conmutativo
+\begin{equation}
+\tag{20.6.14.4}
+\label{0.20.6.14.4-es}
+\xymatrix{
+  \Omega^1_{A/\Lambda}\otimes_A C \ar[r] \ar@{=}[d] &
+  \Omega^1_{B/\Lambda}\otimes_B C \ar[r] \ar[d] &
+  \Omega^1_{B/A}\otimes_B C \ar[r] \ar[d] & 0 \\
+  \Omega^1_{A/\Lambda}\otimes_A C \ar[r] &
+  \Omega^1_{C/\Lambda} \ar[r] & \Omega^1_{C/A} \ar[r] & 0
+}
+\end{equation}
+donde la primera fila sigue siendo exacta y la flecha vertical de la izquierda
+es la identidad; si se pone
+\begin{equation}
+\tag{20.6.14.5}
+\label{0.20.6.14.5-es}
+  \Upsilon^C_{B/A/\Lambda}=
+  \operatorname{Ker}(u_{B/A/\Lambda}\otimes1_C)=
+  \operatorname{Ker}(\Omega^1_{A/\Lambda}\otimes_A C\longrightarrow
+       \Omega^1_{B/\Lambda}\otimes_B C)
+\end{equation}
+se ve, teniendo en cuenta la definición de $\Upsilon_{C/A/\Lambda}$, que
+se tiene un único $C$-homomorfismo
+\begin{equation}
+\tag{20.6.14.6}
+\label{0.20.6.14.6-es}
+  v':\Upsilon^C_{B/A/\Lambda}\longrightarrow\Upsilon_{C/A/\Lambda}
+\end{equation}
+que hace conmutativo el diagrama
+\begin{equation}
+\tag{20.6.14.7}
+\label{0.20.6.14.7-es}
+\xymatrix{
+  0 \ar[r] & \Upsilon^C_{B/A/\Lambda} \ar[r] \ar[d]^{v'} &
+  \Omega^1_{A/\Lambda}\otimes_A C \ar[r] \ar@{=}[d] &
+  \Omega^1_{B/\Lambda}\otimes_B C \ar[r] \ar[d] &
+  \Omega^1_{B/A}\otimes_B C \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \Upsilon_{C/A/\Lambda} \ar[r] &
+  \Omega^1_{A/\Lambda}\otimes_A C \ar[r] &
+  \Omega^1_{C/\Lambda} \ar[r] & \Omega^1_{C/A} \ar[r] & 0
+}
+\end{equation}
+cuyas filas son exactas.
+
+Cuando $\Lambda=\mathbb{Z}$, escribiremos $\Upsilon^C_{B/A}$ en lugar de
+$\Upsilon^C_{B/A/\mathbb{Z}}$. Si $\Lambda$ es un cuerpo primo, se tiene
+$\Upsilon^C_{B/A/\Lambda}=\Upsilon^C_{B/A}$.
+\end{env}
+
+\begin{env}[20.6.15]
+\label{0.20.6.15-es}
+Para estudiar las relaciones entre los módulos anteriores, introduciremos
+por una parte el complejo de $B$-módulos
+$\mathrm{K}_\bullet(B/A/\Lambda)$, y por otra, los complejos
+\oldpage[0\textsubscript{IV-1}]{142}
+de $C$-módulos $\mathrm{K}_\bullet(C/A/\Lambda)$ y
+$\mathrm{K}_\bullet(C/B/\Lambda)$ (20.6.5), y además los complejos de
+$C$-módulos siguientes. Pondremos en primer lugar
+\begin{equation}
+\tag{20.6.15.1}
+\label{0.20.6.15.1-es}
+  \mathrm{K}^C_\bullet(B/A/\Lambda)=
+  \mathrm{K}_\bullet(B/A/\Lambda)\otimes_B C.
+\end{equation}
+Por otra parte, designaremos por $\mathrm{T}_\bullet(C/B/\Lambda)$ el
+complejo de $C$-módulos cuyos términos son nulos salvo en grados 0 y 1,
+y en el que
+\begin{equation}
+\tag{20.6.15.2}
+\label{0.20.6.15.2-es}
+  \mathrm{T}_0(C/B/\Lambda)=\mathrm{T}_1(C/B/\Lambda)=
+  \Omega^1_{B/\Lambda}\otimes_B C
+\end{equation}
+siendo el operador diferencial la identidad, de modo que este complejo es
+homotópico a 0; pongamos finalmente
+\begin{equation}
+\tag{20.6.15.3}
+\label{0.20.6.15.3-es}
+  \mathrm{K}'_\bullet(C/A/\Lambda)=
+  \mathrm{K}_\bullet(C/A/\Lambda)\oplus
+  \mathrm{T}_\bullet(C/B/\Lambda).
+\end{equation}
+En virtud del carácter trivial de $\mathrm{T}_\bullet$, está claro que
+se tiene
+\begin{equation}
+\tag{20.6.15.4}
+\label{0.20.6.15.4-es}
+  \mathrm{H}^i(\mathrm{K}'_\bullet,L)=
+  \mathrm{H}^i(\mathrm{K}_\bullet,L)
+  \quad\text{y}\quad
+  \mathrm{H}_i(\mathrm{K}'_\bullet,L)=
+  \mathrm{H}_i(\mathrm{K}_\bullet,L)
+\end{equation}
+para todo $C$-módulo $L$ y todo $i$.
+\end{env}
+\begin{env}[20.6.16]
+\label{0.20.6.16-es}
+Definamos ahora una sucesión exacta de complejos, \emph{escindida} en cada
+grado
+\begin{equation}
+\tag{20.6.16.1}
+\label{0.20.6.16.1-es}
+  0\to\mathrm{K}^C_\bullet(B/A/\Lambda)
+  \xrightarrow{j}\mathrm{K}'_\bullet(C/A/\Lambda)
+  \xrightarrow{p}\mathrm{K}_\bullet(C/B/\Lambda)\to0
+\end{equation}
+del modo siguiente: denotemos por un momento con
+\[
+  f:\Omega^1_{A/\Lambda}\otimes_A C\to
+    \Omega^1_{B/\Lambda}\otimes_B C,
+  \qquad
+  g:\Omega^1_{B/\Lambda}\otimes_B C\to\Omega^1_{C/\Lambda}
+\]
+los homomorfismos canónicos $u_{B/A/\Lambda}\otimes1_C$ y
+$v_{C/B/\Lambda}$ respectivamente, cuya composición es
+$g\circ f=(v\circ u)_{C/A/\Lambda}$ (cf.\ \sref{0.20.6.14.4-es}).
+Se tomarán $j_1(x)=(x,f(x))$, $p_1(y,z)=z-f(y)$,
+$j_0(x)=(g(x),x)$, $p_0(y,z)=g(z)-y$, de modo que
+$\operatorname{Im}(j_1)=\operatorname{Ker}(p_1)$ es el grafo de $f$,
+complementario de $\{0\}\oplus\mathrm{T}_1$, y
+$\operatorname{Im}(j_0)=\operatorname{Ker}(p_0)$ es el grafo de $g$,
+complementario de $\mathrm{K}_1(C/A/\Lambda)\oplus\{0\}$; la verificación
+de la conmutatividad del diagrama
+\[
+\xymatrix{
+  0 \ar[r] & \mathrm{K}^C_1(B/A/\Lambda) \ar[r]^{j_1} \ar[d] &
+  \mathrm{K}'_1(C/A/\Lambda) \ar[r]^{p_1} \ar[d] &
+  \mathrm{K}_1(C/B/\Lambda) \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \mathrm{K}^C_0(B/A/\Lambda) \ar[r]_{j_0} &
+  \mathrm{K}'_0(C/A/\Lambda) \ar[r]_{p_0} &
+  \mathrm{K}_0(C/B/\Lambda) \ar[r] & 0
+}
+\]
+donde las flechas verticales son los operadores diferenciales, es inmediata.
+\end{env}
+
+\begin{theorem}[20.6.17]
+\label{0.20.6.17-es}
+Se tiene una sucesión exacta de $C$-módulos
+\begin{equation}
+\tag{20.6.17.1}
+\label{0.20.6.17.1-es}
+  0\to\Upsilon^C_{B/A/\Lambda}\xrightarrow{v'}
+  \Upsilon_{C/A/\Lambda}\xrightarrow{u'}
+  \Upsilon_{C/B/\Lambda}\xrightarrow{\partial}
+  \Omega^1_{B/A}\otimes_B C\xrightarrow{v_{C/B/A}}
+  \Omega^1_{C/A}\xrightarrow{u_{C/B/A}}\Omega^1_{C/B}\to0
+\end{equation}
+\oldpage[0\textsubscript{IV-1}]{143}
+donde el operador de borde $\partial$ es la composición
+\begin{equation}
+\tag{20.6.17.2}
+\label{0.20.6.17.2-es}
+  \Upsilon_{C/B/\Lambda}\xrightarrow{s'}\Upsilon_{C/B/A}
+  \longrightarrow\Omega^1_{B/A}\otimes_B C
+\end{equation}
+siendo la segunda flecha la inyección canónica.
+\end{theorem}
+
+\begin{proof}
+Escribiendo la sucesión exacta de homología para la sucesión exacta de complejos
+\sref{0.20.6.16.1-es}, se obtiene \sref{0.20.6.17.1-es}, pues la homología es
+nula en grados distintos de 0 y de 1; el hecho de que los homomorfismos de
+esta sucesión exacta que provienen por funtorialidad de $j$ y de $p$ sean
+precisamente los del enunciado es inmediato. Queda por comprobar que $\partial$ es igual
+a \sref{0.20.6.17.2-es}; ahora bien, un elemento $z\in\Upsilon_{C/B/\Lambda}$ es
+la imagen por $p_1$ de $(0,z)$, de donde se deduce inmediatamente que $\partial(z)$ es
+la imagen de $z$ por el homomorfismo canónico
+\[
+  s_{B/A/\Lambda}\otimes1_C:
+  \Omega^1_{B/\Lambda}\otimes_B C\to\Omega^1_{B/A}\otimes_B C.
+\]
+La aserción se deduce de la conmutatividad del diagrama
+\begin{equation}
+\tag{20.6.17.3}
+\label{0.20.6.17.3-es}
+\xymatrix{
+  \Upsilon_{C/B/\Lambda} \ar[r]^{s'} \ar[dd] & \Upsilon_{C/B/A} \ar[dd] \\
+  & \\
+  \Omega^1_{B/\Lambda}\otimes_B C \ar[r] &
+  \Omega^1_{B/A}\otimes_B C
+}
+\end{equation}
+(cf.\ \sref{0.20.6.4.3-es}).
+\end{proof}
+
+\begin{corollary}[20.6.18]
+\label{0.20.6.18-es}
+\begin{enumerate}
+  \item[\rm(i)] La sucesión de $C$-módulos
+\begin{equation}
+\tag{20.6.18.1}
+\label{0.20.6.18.1-es}
+  0\to\Upsilon^C_{B/A/\Lambda}\xrightarrow{v'}
+  \Upsilon_{C/A/\Lambda}\xrightarrow{u'}
+  \Upsilon_{C/B/\Lambda}\xrightarrow{s'}\Upsilon_{C/B/A}\to0
+\end{equation}
+es exacta.
+  \item[\rm(ii)] Si $B$ es un $A$-álgebra formalmente lisa relativamente
+  a $\Lambda$, se tiene $\Upsilon^C_{B/A/\Lambda}=0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) En \sref{0.20.6.17.1-es}, la imagen de $\Upsilon_{C/B/\Lambda}$ por
+$\partial$ es el núcleo de $v_{C/B/A}$, es decir, $\Upsilon_{C/B/A}$ por
+definición.
+
+(ii) La hipótesis implica que la sucesión
+\[
+  0\to\Omega^1_{A/\Lambda}\otimes_A B\to
+  \Omega^1_{B/\Lambda}\to\Omega^1_{B/A}\to0
+\]
+es exacta y escindida \sref{0.20.5.7-es}; por tensorización con $C$, la
+sucesión
+\[
+  0\to\Omega^1_{A/\Lambda}\otimes_A C\to
+  \Omega^1_{B/\Lambda}\otimes_B C\to
+  \Omega^1_{B/A}\otimes_B C\to0
+\]
+permanece, pues, exacta, de donde se deduce la aserción.
+\end{proof}
+
+\begin{corollary}[20.6.19]
+\label{0.20.6.19-es}
+Sean $K$ un cuerpo y $E$, $F$ dos extensiones de $K$ tales que
+$K\subset E\subset F$.
+\begin{enumerate}
+  \item[\rm(i)] Si $F$ es una extensión separable de $E$, se tiene
+  $\Upsilon_{F/E/K}=0$ (es decir, el homomorfismo canónico
+  $\Omega^1_{E/K}\otimes_E F\to\Omega^1_{F/K}$ es inyectivo).
+  \item[\rm(ii)] Recíprocamente, si $F$ es una extensión separable de $K$ y
+  si se tiene $\Upsilon_{F/E/K}=0$, entonces $F$ es una extensión separable de
+  $E$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Si $P$ es el cuerpo primo de $K$, se tiene, en efecto, la sucesión exacta
+\sref{0.20.6.18-es}
+\[
+  \Upsilon_{F/K/P}\to\Upsilon_{F/E/P}\to\Upsilon_{F/E/K}\to0.
+\]
+Si $\Upsilon_{F/E/P}=\Upsilon_{F/E}=0$, se tiene, pues,
+$\Upsilon_{F/E/K}=0$, de donde (i) en virtud de \sref{0.20.6.3-es};
+recíprocamente, si $\Upsilon_{F/E/K}=0$ y
+$\Upsilon_{F/K/P}=\Upsilon_{F/K}=0$, se tiene
+$\Upsilon_{F/E/P}=0$, de donde (ii) en virtud de \sref{0.20.6.3-es}.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{144}
+\begin{corollary}[20.6.20]
+\label{0.20.6.20-es}
+\begin{enumerate}
+  \item[\rm(i)] Si $K$ es una extensión algebraica separable de $k$, se tiene
+  $\Omega^1_{K/k}=0$.
+  \item[\rm(ii)] Sean $k$ un cuerpo de característica 0 y $K$ una extensión
+  de $k$. Para que $\Omega^1_{K/k}=0$, es necesario y suficiente que $K$ sea una
+  extensión algebraica de $k$. En particular, para que un cuerpo $K$ de
+  característica 0 sea tal que $\Omega^1_K=0$, es necesario y suficiente que
+  $K$ sea una extensión algebraica de $\mathbb{Q}$ (cf.\ (21.4.4) y
+  (21.7.5)).
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) Para todo $x\in K$, sea $f$ el polinomio minimal de $x$ sobre $k$; como
+$f'(x)\ne0$ y $d_{K/k}(f(x))=f'(x)d_{K/k}(x)=0$, se tiene
+$d_{K/k}(x)=0$ y la aserción se deduce de \sref{0.20.4.7-es}.
+
+(ii) Existe una extensión puramente trascendente $L$ de $k$ tal que
+$k\subset L\subset K$ y que $K$ es una extensión algebraica de $L$.
+Como $K$ es separable sobre $L$, se deduce de \sref{0.20.6.19-es}, (i) que
+la sucesión \sref{0.20.5.7.2-es}
+\[
+  0\to\Omega^1_{L/k}\otimes_L K\to\Omega^1_{K/k}
+  \to\Omega^1_{K/L}\to0
+\]
+es exacta, y de (i) se deduce que $\Omega^1_{K/L}=0$. Por tanto, la relación
+$\Omega^1_{K/k}=0$ equivale a $\Omega^1_{L/k}=0$, y como
+$L$ es una extensión puramente trascendente de $k$, se deduce de \sref{0.20.5.10-es} que
+la relación $\Omega^1_{L/k}=0$ equivale a $L=k$.
+\end{proof}
+
+\begin{remarks}[20.6.21]
+\label{0.20.6.21-es}
+\begin{enumerate}
+  \item[\rm(i)] Como $\Upsilon_{B/A/\Lambda}$ es el núcleo de
+  \[
+    u_{B/A/\Lambda}:\Omega^1_{A/\Lambda}\otimes_A B
+    \to\Omega^1_{B/\Lambda}
+  \]
+  y $\Upsilon^C_{B/A/\Lambda}$ el núcleo de
+  $u_{B/A/\Lambda}\otimes1_C$, se tiene un homomorfismo canónico
+\begin{equation}
+\tag{20.6.21.1}
+\label{0.20.6.21.1-es}
+  \Upsilon_{B/A/\Lambda}\otimes_B C\to\Upsilon^C_{B/A/\Lambda}.
+\end{equation}
+Este homomorfismo es biyectivo cuando la sucesión
+\begin{equation}
+\tag{20.6.21.2}
+\label{0.20.6.21.2-es}
+  0\to\Upsilon_{B/A/\Lambda}\otimes_B C\to
+  \Omega^1_{A/\Lambda}\otimes_A C\to
+  \Omega^1_{B/\Lambda}\otimes_B C\to
+  \Omega^1_{B/A}\otimes_B C\to0
+\end{equation}
+es exacta, lo que ocurre en los casos siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] $C$ es un $B$-módulo \emph{plano}.
+  \item[$2^\circ$] Los $B$-módulos $\Omega^1_{B/\Lambda}$ y
+  $\Omega^1_{B/A}$ son \emph{planos}: en efecto, entonces ocurre lo mismo con
+  $\operatorname{Ker}(\Omega^1_{B/\Lambda}\to\Omega^1_{B/A})$
+  ($\mathbf{0_I}$, 6.1.2), y la sucesión \sref{0.20.6.21.2-es} es entonces
+  exacta en virtud de ($\mathbf{0_I}$, 6.1.2).
+\end{enumerate}
+  \item[\rm(ii)] Consideremos un diagrama conmutativo de homomorfismos
+  de anillos
+\[
+\xymatrix{
+  \Lambda' \ar[r] & A' \ar[r] & B' \ar[r] & C' \\
+  \Lambda \ar[u] \ar[r] & A \ar[u] \ar[r] & B \ar[u] \ar[r] & C \ar[u]
+}
+\]
+Entonces las definiciones de \sref{0.20.6.16-es} muestran que se tiene un
+diagrama conmutativo de complejos (donde las flechas verticales provienen de
+\sref{0.20.6.6.4-es})
+\[
+\xymatrix{
+  0 \ar[r] & \mathrm{K}^C_\bullet(B/A/\Lambda) \ar[r] \ar[d] &
+  \mathrm{K}'_\bullet(C/A/\Lambda) \ar[r] \ar[d] &
+  \mathrm{K}_\bullet(C/B/\Lambda) \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \mathrm{K}^{C'}_\bullet(B'/A'/\Lambda') \ar[r] &
+  \mathrm{K}'_\bullet(C'/A'/\Lambda') \ar[r] &
+  \mathrm{K}_\bullet(C'/B'/\Lambda') \ar[r] & 0
+}
+\]
+\oldpage[0\textsubscript{IV-1}]{145}
+de donde se obtiene, pasando a la homología, un \emph{diagrama conmutativo}
+\begin{equation}
+\tag{20.6.21.3}
+\label{0.20.6.21.3-es}
+\xymatrix@C=0.7em{
+  0 \ar[r] & \Upsilon^C_{B/A/\Lambda} \ar[r] \ar[d] &
+  \Upsilon_{C/A/\Lambda} \ar[r] \ar[d] &
+  \Upsilon_{C/B/\Lambda} \ar[r] \ar[d] &
+  \Omega^1_{B/A}\otimes_B C \ar[r] \ar[d] &
+  \Omega^1_{C/A} \ar[r] \ar[d] &
+  \Omega^1_{C/B} \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \Upsilon^{C'}_{B'/A'/\Lambda'} \ar[r] &
+  \Upsilon_{C'/A'/\Lambda'} \ar[r] &
+  \Upsilon_{C'/B'/\Lambda'} \ar[r] &
+  \Omega^1_{B'/A'}\otimes_{B'} C' \ar[r] &
+  \Omega^1_{C'/A'} \ar[r] & \Omega^1_{C'/B'} \ar[r] & 0
+}
+\end{equation}
+Se tiene un diagrama conmutativo análogo para \sref{0.20.6.18.1-es}.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[20.6.22]
+\label{0.20.6.22-es}
+Sean $s:\Lambda\to A$, $u:A\to B$ dos homomorfismos de anillos,
+$\mathfrak{R}$ un ideal de $B$ y $C$ el anillo cociente $B/\mathfrak{R}$.
+Supongamos que $E=B/\mathfrak{R}^2$ es una $B$-extensión
+$\Lambda$-trivial de $C$ por $\mathfrak{R}/\mathfrak{R}^2$. Se tiene entonces una
+sucesión exacta
+\begin{equation}
+\tag{20.6.22.1}
+\label{0.20.6.22.1-es}
+  0\to\Upsilon^C_{B/A/\Lambda}\xrightarrow{v'}
+  \Upsilon_{C/A/\Lambda}\xrightarrow{\chi_E}
+  \mathfrak{R}/\mathfrak{R}^2\xrightarrow{\delta_{C/B/A}}
+  \Omega^1_{B/A}\otimes_B C\xrightarrow{v_{C/B/A}}
+  \Omega^1_{C/A}\to0.
+\end{equation}
+\end{proposition}
+ 
+\begin{proof}
+En efecto, como $v:B\to C$ es sobreyectivo, se tiene $\Omega^1_{C/B}=0$
+\sref{0.20.4.12-es}. Además, resulta de \sref{0.20.6.10-es} que
+$\Upsilon_{C/B/\Lambda}$ se identifica canónicamente con
+$\mathfrak{R}/\mathfrak{R}^2$. Basta entonces aplicar las sucesiones exactas
+\sref{0.20.6.17.1-es} y \sref{0.20.6.18.1-es}, observando que se tiene un
+diagrama conmutativo
+\[
+\xymatrix{
+  \Upsilon_{C/A/\Lambda} \ar[r] \ar[d]_{\chi_E} &
+  \Omega^1_{A/\Lambda}\otimes_A C \ar[d] \\
+  \Upsilon_{C/E/\Lambda}=\Upsilon_{C/B/\Lambda}=\mathfrak{R}/\mathfrak{R}^2
+    \ar[r]^-{\delta_{C/B/A}} \ar[d]_{\ell} &
+  \Omega^1_{B/A}\otimes_B C=\Omega^1_{E/A}\otimes_E C \ar[d] \\
+  \mathfrak{R}/\mathfrak{R}^2 \ar[r]^{\delta_{C/B/A}} &
+  \Omega^1_{B/A}\otimes_B C
+}
+\]
+y utilizando la conmutatividad del diagrama \sref{0.20.6.17.3-es}.
+\end{proof}
+
+Así se ha precisado el \emph{núcleo} de $\delta_{C/B/A}$ en el caso en que
+existe un anillo $\Lambda$ tal que $A$ sea una $\Lambda$-álgebra y que
+$B/\mathfrak{R}^2$ sea $\Lambda$-trivial; obsérvese que este es el caso
+en particular cuando $C$ es una \emph{$\Lambda$-álgebra formalmente
+lisa} (para la topología discreta).
+
+Supongamos además que se tiene un diagrama conmutativo de homomorfismos
+de anillos
+\[
+\xymatrix{
+  \Lambda' \ar[r] & A' \ar[r] & B' \\
+  \Lambda \ar[u] \ar[r] & A \ar[u] \ar[r] & B \ar[u]^f
+}
+\]
+\oldpage[0\textsubscript{IV-1}]{146}
+que $\mathfrak{R}'$ es un ideal de $B'$ tal que
+$f(\mathfrak{R})\subset\mathfrak{R}'$, y que
+$E'=B'/\mathfrak{R}'^2$ sea una $B'$-extensión $\Lambda'$-trivial de
+$C'=B'/\mathfrak{R}'$ por $\mathfrak{R}'/\mathfrak{R}'^2$. Se tiene entonces un
+diagrama conmutativo
+\begin{equation}
+\tag{20.6.22.2}
+\label{0.20.6.22.2-es}
+\xymatrix@C=0.7em{
+  0 \ar[r] & \Upsilon^{C'}_{B'/A'/\Lambda'} \ar[r] &
+  \Upsilon_{C'/A'/\Lambda'} \ar[r] &
+  \mathfrak{R}'/\mathfrak{R}'^2 \ar[r] &
+  \Omega^1_{B'/A'}\otimes_{B'} C' \ar[r] &
+  \Omega^1_{C'/A'} \ar[r] & 0 \\
+  0 \ar[r] & \Upsilon^C_{B/A/\Lambda} \ar[r] \ar[u] &
+  \Upsilon_{C/A/\Lambda} \ar[r] \ar[u] &
+  \mathfrak{R}/\mathfrak{R}^2 \ar[r] \ar[u] &
+  \Omega^1_{B/A}\otimes_B C \ar[r] \ar[u] &
+  \Omega^1_{C/A} \ar[r] \ar[u] & 0
+}
+\end{equation}
+como resulta de \sref{0.20.6.21.3-es} y \sref{0.20.5.11.3-es}.
+
+\begin{corollary}[20.6.23]
+\label{0.20.6.23-es}
+Bajo las hipótesis de \sref{0.20.6.22-es}, supongamos además que $B$ sea
+una $A$-álgebra formalmente lisa. Se tiene entonces una sucesión exacta
+\begin{equation}
+\tag{20.6.23.1}
+\label{0.20.6.23.1-es}
+  0\to\Upsilon_{C/A/\Lambda}\xrightarrow{\chi_E}
+  \mathfrak{R}/\mathfrak{R}^2\xrightarrow{\delta_{C/B/A}}
+  \Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}\to0.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Esto resulta, en efecto, de \sref{0.20.6.18-es}, (ii).
+\end{proof}
+
+\begin{env}[20.6.24]
+\label{0.20.6.24-es}
+Cuando se satisfacen las hipótesis de \sref{0.20.6.22-es}, se dice también
+que el homomorfismo característico $\chi_E$ es el
+\emph{homomorfismo característico de la $A$-álgebra $B$, respecto de
+$\Lambda$ y del ideal $\mathfrak{R}$} (omitiéndose estas últimas
+precisiones cuando no haya riesgo de confusión); se denotará
+a veces por $\chi_B$ o $\chi_{B/A}$.
+\end{env}
+
+\begin{proposition}[20.6.25]
+\label{0.20.6.25-es}
+Sean $s:\Lambda\to A$, $u:A\to B$, $v:B\to C$ tres homomorfismos
+de anillos, $L$ un $C$-módulo. Se tiene entonces una sucesión exacta
+\begin{equation}
+\tag{20.6.25.1}
+\label{0.20.6.25.1-es}
+\begin{split}
+  0\to\operatorname{D\acute{e}r}_B(C,L)\xrightarrow{u^1}
+  \operatorname{D\acute{e}r}_A(C,L)\xrightarrow{v^1}
+  \operatorname{D\acute{e}r}_A(B,L)\xrightarrow{\partial} \\
+  \to\operatorname{Exalcom}_{B/\Lambda}(C,L)\xrightarrow{u^1}
+  \operatorname{Exalcom}_{A/\Lambda}(C,L)\xrightarrow{v^1}
+  \operatorname{Exalcom}_{A/\Lambda}(B,L)\to0
+\end{split}
+\end{equation}
+donde $u^1$, $v^1$ son los homomorfismos definidos en (18.3.6.4) y
+(18.3.6.2), y $\partial$ se define como en \sref{0.20.2.2-es}.
+\end{proposition}
+
+\begin{proof}
+En efecto, como la sucesión exacta \sref{0.20.6.16.1-es} es escindida, se
+deduce de ella una sucesión exacta
+\[
+  0\to\operatorname{Hom}_C(\mathrm{K}_\bullet(C/B/\Lambda),L)\to
+  \operatorname{Hom}_C(\mathrm{K}'_\bullet(C/A/\Lambda),L)\to
+  \operatorname{Hom}_C(\mathrm{K}^C_\bullet(B/A/\Lambda),L)\to0.
+\]
+Si se aplica a este complejo la sucesión exacta de cohomología, teniendo en cuenta
+\sref{0.20.6.15.4-es} y \sref{0.20.6.6-es}, se obtiene
+\sref{0.20.6.25.1-es}, pues se tiene
+\[
+  \operatorname{Hom}_C(\mathrm{K}^C_\bullet(B/A/\Lambda),L)
+  =\operatorname{Hom}_B(\mathrm{K}_\bullet(B/A/\Lambda),L)
+\]
+por definición; la identificación de $u^1$ y $v^1$ con los homomorfismos
+de (18.3.6.4) y (18.3.6.2), respectivamente, se deduce de
+\sref{0.20.6.6.4-es}.
+\end{proof}
+
+\begin{remark}[20.6.26]
+\label{0.20.6.26-es}
+En este número, los complejos $\mathrm{K}_\bullet(C/B/A)$ han aparecido como
+un artificio técnico destinado a simplificar la exposición de ciertos
+comportamientos funtoriales. En realidad, estos complejos, considerados como objetos
+de la categoría de los
+\oldpage[0\textsubscript{IV-1}]{147}
+complejos de $C$-módulos «salvo homotopía» (es decir, donde los morfismos
+son las clases de homomorfismos homotópicos), son invariantes notables,
+más finos que el par formado por $\Omega^1_{C/B}$ y
+$\Upsilon_{C/B/A}$. Cuando $k$ es un cuerpo primo, y $C$ una $k$-álgebra
+formalmente lisa (por ejemplo, un anillo regular de tipo finito sobre una
+extensión de $k$ (cf.\ ($\mathbf{IV}$, 6.8.6))), se puede demostrar que el
+complejo $\mathrm{K}_\bullet(C/A/k)$ puede describirse haciendo intervenir
+únicamente $C$ y $A$ (con exclusión de $k$): se expresa $C$ como cociente
+de un álgebra de polinomios $B$ sobre $A$ por un ideal $\mathfrak{Q}$, y se
+considera el complejo $\mathrm{F}_\bullet(C/A)$ de 2 términos no nulos
+\[
+  \cdots\to0\to\mathfrak{Q}/\mathfrak{Q}^2\to
+  \Omega^1_{B/A}\otimes_B C\to0\to\cdots
+\]
+(cuya homología coincide efectivamente con la de
+$\mathrm{K}_\bullet(C/A/k)$ en virtud de \sref{0.20.6.23.1-es}). Estos
+complejos $\mathrm{F}_\bullet(C/A)$, que desde el punto de vista del álgebra
+homológica desempeñan el papel de un fibrado conormal para $\operatorname{Spec}(C)$
+sobre $\operatorname{Spec}(A)$, ocuparán un lugar importante en
+los capítulos de esta obra dedicados a la dualidad de haces coherentes y
+al teorema de Riemann--Roch.
+\end{remark}
+
+\subsection{Generalizaciones a los anillos topológicos}
+\label{subsection:0.20.7-es}
+
+\begin{env}[20.7.1]
+\label{0.20.7.1-es}
+Resulta inmediatamente de las definiciones que, si en \sref{0.20.5.2-es} y
+\sref{0.20.5.3-es} se supone que los anillos $A$, $B$, $C$ son anillos
+topológicos y que los homomorfismos de anillos $u$, $v$ son continuos, entonces los
+homomorfismos $u_{C/B/A}$ y $v_{C/B/A}$ son \emph{continuos} (naturalmente,
+hay que tomar sobre $\Omega^1_{B/A}\otimes_B C$ la topología producto
+tensorial).
+
+Además, $u_{C/B/A}:\Omega^1_{C/A}\to\Omega^1_{C/B}$ es un
+\emph{morfismo estricto sobreyectivo} de $C$-módulos topológicos; en efecto, lo
+mismo ocurre con el homomorfismo canónico $C\otimes_A C\to C\otimes_B C$, teniendo
+en cuenta la definición de la topología producto tensorial; pasando a los
+cocientes se deduce que el homomorfismo correspondiente
+$\mathrm{P}^1_{C/A}\to\mathrm{P}^1_{C/B}$ es un morfismo estricto sobreyectivo,
+y $u_{C/B/A}$ es la restricción de este último a $\Omega^1_{C/A}$.
+
+En \sref{0.20.5.5-es}, si $A'$ y $B$ son $A$-álgebras topológicas,
+y si $B'$ y $\Omega^1_{B/A}\otimes_B B'$ están provistos de las topologías producto
+tensorial, el homomorfismo canónico \sref{0.20.5.5.1-es} es un isomorfismo
+topológico, teniendo en cuenta que $\mathrm{P}^1_{B/A}$ es suma directa
+topológica de $B$ y de $\Omega^1_{B/A}$ \sref{0.20.4.8-es}.
+\end{env}
+
+\begin{proposition}[20.7.2]
+\label{0.20.7.2-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos continuos de anillos
+topológicos. Para que el homomorfismo continuo
+$v_{C/B/A}:\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}$ sea formalmente
+invertible por la izquierda (cf.\ \sref{0.19.1.5-es}), es necesario y suficiente que $C$
+sea una $B$-álgebra formalmente lisa respecto de $A$
+\sref{0.19.9.1-es} (y \emph{a fortiori} basta que $C$ sea una
+$B$-álgebra formalmente lisa).
+\end{proposition}
+
+\begin{proof}
+Decir que $v_{C/B/A}$ es formalmente invertible por la izquierda significa, en efecto,
+puesto que las topologías de $\Omega^1_{C/A}$ y $\Omega^1_{B/A}\otimes_B C$
+son menos finas que las deducidas de la topología de $C$
+\sref{0.20.4.5-es}, que para todo $C$-módulo \emph{discreto} $L$, anulado por un
+ideal abierto de $C$, el homomorfismo canónico
+\[
+  \operatorname{Hom.\ cont}_C(\Omega^1_{C/A},L)\to
+  \operatorname{Hom.\ cont}_C(\Omega^1_{B/A}\otimes_B C,L)
+\]
+\oldpage[0\textsubscript{IV-1}]{148}
+es \emph{sobreyectivo} \sref{0.19.1.5-es}; como
+$\operatorname{Hom.\ cont}_C(\Omega^1_{B/A}\otimes_B C,L)=
+\operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)$ por definición de la topología
+producto tensorial, equivale, en virtud de \sref{0.20.4.8-es}, a decir
+que el homomorfismo canónico
+\[
+  \operatorname{D\acute{e}r.\ cont}_A(C,L)\to
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)
+\]
+es sobreyectivo. Pero la sucesión exacta \sref{0.20.3.8.2-es} muestra que esta
+condición equivale a $\operatorname{Exalcotop}_{B/A}(C,L)=0$, es decir,
+precisamente a que $C$ sea formalmente lisa respecto de $A$
+\sref{0.19.9.8-es}.
+\end{proof}
+
+\begin{corollary}[20.7.3]
+\label{0.20.7.3-es}
+Supongamos que, en $B$ y en $C$, el cuadrado de todo ideal abierto es abierto.
+Para que $C$ sea una $B$-álgebra formalmente lisa respecto de $A$, es
+necesario y suficiente que, si se denota por $(\mathfrak{R}_\lambda)$ un sistema
+fundamental de entornos de $0$ formado por ideales de $C$, entonces, para todo
+$\lambda$, el homomorfismo
+\begin{equation}
+\tag{20.7.3.1}
+\label{0.20.7.3.1-es}
+  v_{C/B/A}\otimes 1_{C/\mathfrak{R}_\lambda}:
+  \Omega^1_{B/A}\otimes_B(C/\mathfrak{R}_\lambda)\to
+  \Omega^1_{C/A}\otimes_C(C/\mathfrak{R}_\lambda)
+\end{equation}
+sea invertible por la izquierda.
+\end{corollary}
+
+\begin{proof}
+Se sabe, en efecto, que la topología de $\Omega^1_{B/A}$ (resp.\
+$\Omega^1_{C/A}$) se deduce de la de $B$ (resp.\ de $C$)
+\sref{0.20.4.5-es}; se concluye inmediatamente que la topología de
+$\Omega^1_{B/A}\otimes_B C$ se deduce también de la de $C$; el corolario
+resulta entonces de \sref{0.20.7.2-es} y \sref{0.19.1.7-es}.
+\end{proof}
+
+\begin{proposition}[20.7.4]
+\label{0.20.7.4-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica. Para que
+$B$ sea formalmente no ramificada \sref{0.19.10.2-es}, es necesario y suficiente
+que el completado separado $\widehat{\Omega}^1_{B/A}$ sea nulo.
+\end{proposition}
+
+\begin{proof}
+En efecto, se deduce inmediatamente de \sref{0.19.10.4-es} y
+\sref{0.20.1.1-es} que, para que $B$ sea formalmente no ramificada, es necesario y
+suficiente que, para todo ideal abierto $\mathfrak{R}$ de $B$, todo ideal abierto
+$\mathfrak{H}$ de $A$ tal que $\mathfrak{H}B\subset\mathfrak{R}$ y todo
+$(B/\mathfrak{R})$-módulo $L$, se tenga
+$\operatorname{D\acute{e}r}_{A/\mathfrak{H}}(B/\mathfrak{R},L)=0$,
+es decir, $\operatorname{D\acute{e}r.\ cont}_A(B,L)=0$ para todo
+$B$-módulo discreto $L$ anulado por un ideal abierto de $B$; en virtud de
+\sref{0.20.4.8-es}, esto equivale a
+$\operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)=0$ para tal $B$-módulo,
+de donde se sigue inmediatamente la proposición.
+
+Cuando $B$ es \emph{discreto}, la condición del enunciado de
+\sref{0.20.7.4-es} equivale por tanto a $\Omega^1_{B/A}=0$.
+\end{proof}
+
+\begin{corollary}[20.7.5]
+\label{0.20.7.5-es}
+Sean $A$ un anillo, $\mathfrak{m}$ un ideal de $A$, $B$ una $A$-álgebra;
+dotemos $A$ de la topología $\mathfrak{m}$-preádica, $B$ de la topología
+deducida de la de $A$, y pongamos $A_0=A/\mathfrak{m}$,
+$B_0=B/\mathfrak{m}B=B\otimes_A A_0$. Entonces, para que $B$ sea una
+$A$-álgebra formalmente no ramificada, es necesario y suficiente que
+$\Omega^1_{B_0/A_0}=0$ (o también que $B_0$ sea una $A_0$-álgebra
+formalmente no ramificada).
+\end{corollary}
+
+\begin{proof}
+En efecto, se tiene
+$\Omega^1_{B/A}\otimes_B B_0=\Omega^1_{B/A}/\mathfrak{m}.\Omega^1_{B/A}
+=\Omega^1_{B_0/A_0}$ en virtud de \sref{0.20.5.5-es}; escribir que todo
+submódulo abierto de $\Omega^1_{B/A}$ es igual a $\Omega^1_{B/A}$ equivale
+por \sref{0.20.4.5-es} a escribir que
+$\mathfrak{m}.\Omega^1_{B/A}=\Omega^1_{B/A}$, de donde se obtiene la conclusión.
+\end{proof}
+
+\begin{proposition}[20.7.6]
+\label{0.20.7.6-es}
+Sean $u:A\to B$, $v:B\to C$ dos homomorfismos continuos de anillos
+topológicos, y supongamos que $v$ haga de $C$ una $B$-álgebra formalmente
+étale; entonces $v_{C/B/A}:\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}$ es un
+bimorfismo formal \sref{0.19.1.2-es}.
+\end{proposition}
+
+\begin{proof}
+En efecto, para todo $C$-módulo discreto $L$ anulado por un ideal abierto de $C$,
+se tiene entonces por \sref{0.20.7.4-es}
+$\operatorname{D\acute{e}r.\ cont}_B(C,L)=0$ y, por consiguiente,
+\sref{0.20.3.6.1-es}, el homomorfismo canónico
+\oldpage[0\textsubscript{IV-1}]{149}
+$\operatorname{D\acute{e}r.\ cont}_A(C,L)\to
+\operatorname{D\acute{e}r.\ cont}_A(B,L)$ es inyectivo; además, es
+sobreyectivo en virtud de \sref{0.20.7.2-es}, por lo que es biyectivo; se deduce
+que la imagen de $v_{C/B/A}$ es necesariamente densa en $\Omega^1_{C/A}$,
+pues, de lo contrario, el cociente de $\Omega^1_{C/A}$ por la adherencia de
+$\operatorname{Im}(v_{C/B/A})$ sería separado y $\neq0$ y tendría por tanto un
+cociente discreto $L\neq0$, en contradicción con lo que acabamos de ver
+(teniendo en cuenta \sref{0.20.4.8-es}). Por consiguiente, $v_{C/B/A}$, que es un
+monomorfismo formal en virtud de \sref{0.20.7.2-es}, es también un epimorfismo formal
+\sref{0.19.1.2-es}, y por tanto un bimorfismo formal.
+\end{proof}
+
+\begin{corollary}[20.7.7]
+\label{0.20.7.7-es}
+Supongamos que en $B$ y en $C$ el cuadrado de todo ideal abierto sea abierto.
+Si $C$ es una $B$-álgebra formalmente étale, entonces, para todo ideal abierto
+$\mathfrak{R}_\lambda$ de $C$, el homomorfismo \sref{0.20.7.3.1-es} es
+biyectivo.
+\end{corollary}
+
+\begin{proof}
+En efecto, en virtud de \sref{0.19.1.1-es}, este homomorfismo es sobreyectivo, y
+es inyectivo por \sref{0.20.7.3-es}.
+\end{proof}
+
+\begin{proposition}[20.7.8]
+\label{0.20.7.8-es}
+Sean $u:A\to B$ un homomorfismo continuo de anillos topológicos,
+$\mathfrak{R}$ un ideal de $B$, $C$ el anillo topológico cociente
+$B/\mathfrak{R}$, $v:B\to C$ el homomorfismo canónico. Entonces:
+\begin{enumerate}
+  \item[\rm(i)] En la sucesión exacta \sref{0.20.5.12.1-es}
+\[
+  \mathfrak{R}/\mathfrak{R}^2\xrightarrow{\delta_{C/B/A}}
+  \Omega^1_{B/A}\otimes_B C\xrightarrow{v_{C/B/A}}\Omega^1_{C/A}\to0
+\]
+el homomorfismo $\delta_{C/B/A}$ es continuo y el homomorfismo $v_{C/B/A}$
+es un morfismo estricto de $C$-módulos topológicos.
+  \item[\rm(ii)] Para que $\delta_{C/B/A}$ sea formalmente invertible por la
+izquierda \sref{0.19.1.5-es}, es necesario y suficiente que, para todo $C$-módulo
+discreto $L$ anulado por un ideal abierto de $C$, el homomorfismo canónico
+\begin{equation}
+\tag{20.7.8.1}
+\label{0.20.7.8.1-es}
+  \operatorname{Exalcotop}_A(C,L)\to\operatorname{Exalcotop}_A(B,L)
+\end{equation}
+sea inyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) La primera afirmación es evidente. Por otra parte, el homomorfismo
+canónico $v\otimes v:B\otimes_A B\to C\otimes_A C$ es un morfismo estricto
+por definición de la topología producto tensorial, y se deduce inmediatamente
+(cf.\ \sref{0.20.5.2-es}) que lo mismo ocurre con $v_{C/B/A}$.
+
+(ii) Decir que $\delta_{C/B/A}$ es formalmente invertible por la izquierda significa
+que, para todo $C$-módulo discreto $L$ anulado por un ideal abierto de $C$,
+el homomorfismo canónico
+\[
+  \operatorname{Hom.\ cont}_C(\Omega^1_{B/A}\otimes_B C,L)\to
+  \operatorname{Hom.\ cont}_C(\mathfrak{R}/\mathfrak{R}^2,L)
+\]
+es sobreyectivo. Ahora bien, teniendo en cuenta \sref{0.18.4.3-es} y
+\sref{0.20.4.8-es}, esto equivale a decir que el homomorfismo canónico
+\[
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)\to
+  \operatorname{Exalcotop}_B(C,L)
+\]
+es sobreyectivo, y la conclusión se deduce entonces de la sucesión exacta
+\sref{0.20.3.6.1-es}.
+
+El hecho de que \sref{0.20.7.8.1-es} sea inyectivo se expresa aún de la manera
+siguiente, teniendo en cuenta la definición de ambos miembros
+\sref{0.18.4.1-es}: para todo ideal abierto $\mathfrak{M}$ de $A$, todo ideal
+abierto $\mathfrak{N}$ de $B$ tal que $\mathfrak{M}B\subset\mathfrak{N}$, y
+toda $(A/\mathfrak{M})$-extensión $E$ de
+$B/(\mathfrak{R}+\mathfrak{N})$ por un
+$(B/(\mathfrak{R}+\mathfrak{N}))$-módulo $L$, tal que la imagen recíproca de
+$E$ por el homomorfismo canónico
+$B/\mathfrak{N}\to B/(\mathfrak{R}+\mathfrak{N})$ sea
+$(A/\mathfrak{M})$-trivial, existe un ideal abierto
+$\mathfrak{M}'\subset\mathfrak{M}$ de $A$,
+\oldpage[0\textsubscript{IV-1}]{150}
+un ideal abierto $\mathfrak{N}'\subset\mathfrak{N}$ de $B$ tales que
+$\mathfrak{M}'B\subset\mathfrak{N}'$ y que la imagen recíproca de $E$ por
+el homomorfismo canónico
+$B/(\mathfrak{R}+\mathfrak{N}')\to B/(\mathfrak{R}+\mathfrak{N})$ sea
+$(A/\mathfrak{M}')$-trivial.
+\end{proof}
+
+\begin{corollary}[20.7.9]
+\label{0.20.7.9-es}
+Si la $A$-álgebra topológica $C=B/\mathfrak{R}$ es formalmente lisa,
+el homomorfismo canónico $\delta_{C/B/A}$ es formalmente invertible por la
+izquierda.
+\end{corollary}
+
+\begin{env}[20.7.10]
+\label{0.20.7.10-es}
+En \sref{0.20.6.1-es}, cuando $A$, $B$, $C$ son anillos topológicos,
+$u$ y $v$ homomorfismos continuos, se dota a $\Upsilon_{C/B/A}$ de la
+topología inducida por la de $\Omega^1_{B/A}\otimes_B C$; los
+homomorfismos \sref{0.20.6.4.2-es} y \sref{0.20.6.4.4-es} son entonces
+continuos siempre que también lo sean los del diagrama
+\sref{0.20.6.4.1-es}. Además, si, en \sref{0.20.6.7-es}, se supone que
+$L$ es un $C$-módulo discreto anulado por un ideal abierto de $C$, se deduce,
+por paso al límite inductivo, un $C$-homomorfismo canónico
+\begin{equation}
+\tag{20.7.10.1}
+\label{0.20.7.10.1-es}
+  \operatorname{Exalcotop}_{B/A}(C,L)\to
+  \operatorname{Hom.\ cont}_C(\Upsilon_{C/B/A},L)
+\end{equation}
+teniendo en cuenta \sref{0.18.5.3.1-es}: para todo ideal abierto
+$\mathfrak{M}$ de $A$, todo ideal abierto $\mathfrak{N}$ de $B$ tal que
+$\mathfrak{M}B\subset\mathfrak{N}$, todo ideal abierto $\mathfrak{P}$ de $C$
+tal que $\mathfrak{N}C\subset\mathfrak{P}$ y $\mathfrak{P}.L=0$, toda
+$(B/\mathfrak{N})$-extensión $E$ de $C/\mathfrak{P}$ por $L$ que sea
+$(A/\mathfrak{M})$-trivial procede de los datos de un $C$-homomorfismo
+continuo $f$ de $\Omega^1_{B/A}\otimes_B C$ en $L$, y el homomorfismo
+\sref{0.20.7.10.1-es} hace corresponder a la imagen en
+$\operatorname{Exalcotop}_{B/A}(C,L)$ de la clase de $E$, la restricción de
+$f$ a $\Upsilon_{C/B/A}$, llamado \emph{homomorfismo característico de $E$}
+y que también se denota $\chi_E$.
+\end{env}
+
+\begin{proposition}[20.7.11]
+\label{0.20.7.11-es}
+Supongamos que la topología de $C$ sea tal que el cuadrado de un ideal abierto
+sea abierto. Si $C$ es una $A$-álgebra topológica formalmente lisa y si
+$\Omega^1_{C/B}$ es un $C$-módulo formalmente proyectivo, se tiene un
+isomorfismo canónico
+\begin{equation}
+\tag{20.7.11.1}
+\label{0.20.7.11.1-es}
+  \operatorname{Exalcotop}_B(C,L)\xrightarrow{\sim}
+  \operatorname{Hom.\ cont}_C(\Upsilon_{C/B/A},L)
+\end{equation}
+para todo $C$-módulo discreto $L$ anulado por un ideal abierto de $C$.
+\end{proposition}
+
+\begin{proof}
+En efecto, en la sucesión exacta \sref{0.20.3.7.1-es},
+$\operatorname{Exalcotop}_A(C,L)=0$ \sref{0.19.4.4-es}, por lo que
+$\operatorname{Exalcotop}_B(C,L)=\operatorname{Exalcotop}_{B/A}(C,L)$ y
+el homomorfismo \sref{0.20.7.8.1-es} no es otro que
+\sref{0.20.7.10.1-es}; el hecho de que sea biyectivo se deduce de
+\sref{0.20.6.13-es} por paso al límite inductivo, teniendo en cuenta que
+la topología de $\Omega^1_{C/B}$ se deduce entonces de la de $C$
+\sref{0.20.4.5-es} y de \sref{0.19.2.4-es}.
+\end{proof}
+
+\begin{env}[20.7.12]
+\label{0.20.7.12-es}
+En \sref{0.20.6.14-es} se dota de nuevo a $\Upsilon^C_{B/A/\Lambda}$ de la
+topología inducida por la de $\Omega^1_{A/\Lambda}\otimes_A C$ y entonces
+el homomorfismo \sref{0.20.6.14.6-es} es continuo, cuando los anillos
+considerados son topológicos y los homomorfismos de anillos son continuos.
+\end{env}
+
+\begin{env}[20.7.13]
+\label{0.20.7.13-es}
+Si, en \sref{0.20.6.23-es}, se supone que los anillos $\Lambda$, $A$, $B$,
+$C$ son topológicos, los homomorfismos $s$, $u$, $v$ continuos y $L$ un
+$C$-módulo discreto anulado por un ideal abierto de $C$, entonces se puede pasar
+al límite inductivo como en \sref{0.20.3.6-es}, y se tiene una sucesión exacta
+\begin{equation}
+\tag{20.7.13.1}
+\label{0.20.7.13.1-es}
+\begin{split}
+  0\to\operatorname{D\acute{e}r.\ cont}_B(C,L)\to
+  \operatorname{D\acute{e}r.\ cont}_A(C,L)\to
+  \operatorname{D\acute{e}r.\ cont}_A(B,L)\to \\
+  \to\operatorname{Exalcotop}_{B/\Lambda}(C,L)\to
+  \operatorname{Exalcotop}_{A/\Lambda}(C,L)\to
+  \operatorname{Exalcotop}_{A/\Lambda}(B,L)\to0.
+\end{split}
+\end{equation}
+\end{env}
+
+\begin{env}[20.7.14]
+\label{0.20.7.14-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica,
+$\mathfrak{M}'$ un ideal abierto de $A$, $\mathfrak{N}'$ un ideal abierto de
+$B$ tales que $\mathfrak{M}'B\subset\mathfrak{N}'$; pongamos
+$A'=A/\mathfrak{M}'$,
+\oldpage[0\textsubscript{IV-1}]{151}
+$B'=B/\mathfrak{N}'$; el núcleo del homomorfismo
+$B\otimes_A B\to B'\otimes_{A'}B'$ es
+$\mathfrak{U}'=\operatorname{Im}(\mathfrak{N}'\otimes B+B\otimes\mathfrak{N}')$,
+de donde se deduce inmediatamente que el núcleo del homomorfismo
+\begin{equation}
+\tag{20.7.14.1}
+\label{0.20.7.14.1-es}
+  \varphi_{(\mathfrak{M}',\mathfrak{N}')}:
+  \Omega^1_{B/A}\to\Omega^1_{B'/A'}
+\end{equation}
+es $((\mathfrak{J}\cap\mathfrak{U}')+\mathfrak{J}^2)/\mathfrak{J}^2$ ; por
+otra parte, el homomorfismo \sref{0.20.7.14.1-es} es sobreyectivo, como se
+desprende de \sref{0.20.4.7-es}. Si $\mathfrak{M}''$ (resp.\
+$\mathfrak{N}''$) es un segundo ideal abierto de $A$ (resp.\ $B$) tal que
+$\mathfrak{M}''\subset\mathfrak{M}'$, $\mathfrak{N}''\subset\mathfrak{N}'$
+y $\mathfrak{M}''B\subset\mathfrak{N}''$, y si se pone
+$A''=A/\mathfrak{M}''$, $B''=B/\mathfrak{N}''$, se tiene de igual modo un
+homomorfismo sobreyectivo
+\[
+  \varphi_{(\mathfrak{M}'',\mathfrak{N}''),(\mathfrak{M}',\mathfrak{N}')}:
+  \Omega^1_{B''/A''}\to\Omega^1_{B'/A'}
+\]
+y estos homomorfismos forman evidentemente un \emph{sistema proyectivo}. Si
+se observa que los
+$((\mathfrak{J}\cap\mathfrak{U}')+\mathfrak{J}^2)/\mathfrak{J}^2$ forman
+un sistema fundamental de entornos de $0$ en $\Omega^1_{B/A}$, se ve
+entonces que el \emph{completado separado} $\widehat{\Omega}^1_{B/A}$ del
+módulo $B$-topológico $\Omega^1_{B/A}$ viene dado, salvo un isomorfismo
+canónico, por
+\begin{equation}
+\tag{20.7.14.2}
+\label{0.20.7.14.2-es}
+  \widehat{\Omega}^1_{B/A}=\varprojlim(\Omega^1_{B'/A'}).
+\end{equation}
+
+Además, el homomorfismo canónico
+$j:\Omega^1_{B/A}\to\widehat{\Omega}^1_{B/A}$ es el límite proyectivo del
+sistema proyectivo de los $\varphi_{(\mathfrak{M}',\mathfrak{N}')}$, por lo que
+$\varphi_{(\mathfrak{M}',\mathfrak{N}')}$ se factoriza como
+$\Omega^1_{B/A}\xrightarrow{j}\widehat{\Omega}^1_{B/A}\to
+\Omega^1_{B'/A'}$, y como es sobreyectivo se concluye que el homomorfismo
+canónico
+\begin{equation}
+\tag{20.7.14.3}
+\label{0.20.7.14.3-es}
+  \widehat{\Omega}^1_{B/A}\to\Omega^1_{B'/A'}
+\end{equation}
+es sobreyectivo para todo par $(\mathfrak{M}',\mathfrak{N}')$.
+
+Además, en lo anterior se puede reemplazar en todas partes $A'$ por $A$.
+
+Finalmente, si $L$ es un $B$-módulo topológico \emph{separado y completo}, todo
+$B$-homomorfismo continuo de $\Omega^1_{B/A}$ en $L$ se prolonga de forma
+única a un $\widehat B$-homomorfismo continuo de
+$\widehat{\Omega}^1_{B/A}$ en $L$, y recíprocamente un homomorfismo de este
+tipo vuelve a dar por composición con $\Omega^1_{B/A}\to\widehat{\Omega}^1_{B/A}$
+un $B$-homomorfismo continuo, por lo que se tiene un isomorfismo canónico
+\[
+  \operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)\xrightarrow{\sim}
+  \operatorname{Hom.\ cont}_{\widehat B}(\widehat{\Omega}^1_{B/A},L).
+\]
+En particular, si $L$ es un $B$-módulo discreto anulado por un ideal
+abierto de $B$, se ve que el isomorfismo canónico
+\sref{0.20.4.8.2-es} también puede escribirse
+\begin{equation}
+\tag{20.7.14.4}
+\label{0.20.7.14.4-es}
+  \operatorname{Hom.\ cont}_{\widehat B}(\widehat{\Omega}^1_{B/A},L)
+  \xrightarrow{\sim}\operatorname{D\acute{e}r.\ cont}_A(B,L).
+\end{equation}
+\end{env}
+
+\begin{proposition}[20.7.15]
+\label{0.20.7.15-es}
+Sean $A$ un anillo discreto, $B$ un $A$-álgebra topológica adica
+($\mathbf{0}_{\mathrm I}$, 7.1.9), $\mathfrak{n}$ un ideal de definición de
+$B$, $B_0=B/\mathfrak{n}$. Se supone que $\Omega^1_{B_0/A}$ y
+$\mathfrak{n}/\mathfrak{n}^2$ son módulos de tipo finito sobre $B_0$. Entonces
+$\widehat{\Omega}^1_{B/A}$ es un $\widehat B$-módulo de tipo finito.
+\end{proposition}
+
+\begin{proof}
+Como el cuadrado de todo ideal abierto de $B$ es abierto, la topología de
+$\Omega^1_{B/A}$ es la topología $\mathfrak{n}$-preádica
+\sref{0.20.4.5-es}. Teniendo en cuenta la hipótesis de que $B$ es un anillo adico,
+basta, por tanto, en virtud de ($\mathbf{0}_{\mathrm I}$, 7.2.7 y 7.2.9), demostrar
+\oldpage[0\textsubscript{IV-1}]{152}
+que $\Omega^1_{B/A}/\mathfrak{n}.\Omega^1_{B/A}=
+\Omega^1_{B/A}\otimes_B B_0$ es un $B_0$-módulo de tipo finito. Pero esto
+se deduce de la hipótesis y de la sucesión exacta \sref{0.20.5.12.1-es}
+\[
+  \mathfrak{n}/\mathfrak{n}^2\to
+  \Omega^1_{B/A}\otimes_B B_0\to\Omega^1_{B_0/A}\to0.
+\]
+\end{proof}
+
+\begin{env}[20.7.16]
+\label{0.20.7.16-es}
+La proposición \sref{0.20.7.15-es} se aplica, por ejemplo, cuando $A$ es un
+cuerpo $k$, $B=k'[[T_1,\ldots,T_n]]$ es un álgebra de series formales provista de
+su topología usual, y $k'$ es una extensión \emph{finita} de $k$ (cf.\
+\sref{0.21.9.2-es}). Se observará que el cuerpo de fracciones $K$ de $B$ tiene
+grado de trascendencia infinito sobre $k$; cuando $k$ tiene característica
+$0$, se deduce inmediatamente (con ayuda, en particular, de
+\sref{0.20.4.13-es}, (i), y de \sref{0.20.5.9-es}, usando también el hecho de
+que toda derivación de un cuerpo de característica $0$ se prolonga a toda
+extensión) que $\Omega^1_{B/k}$ \emph{no es un $B$-módulo de tipo finito}.
+\end{env}
+
+\begin{env}[20.7.17]
+\label{0.20.7.17-es}
+Sean $A$, $B$, $C$ tres anillos topológicos, y sean $u:A\to B$, $v:B\to C$
+dos homomorfismos continuos; reemplazando $A$, $B$, $C$ por cocientes por
+ideales abiertos $A'=A/\mathfrak{M}'$, $B'=B/\mathfrak{N}'$,
+$C'=C/\mathfrak{P}'$, con $u(\mathfrak{M}')\subset\mathfrak{N}'$,
+$v(\mathfrak{N}')\subset\mathfrak{P}'$, de modo que se tienen homomorfismos
+$u':A'\to B'$, $v':B'\to C'$, se obtienen homomorfismos canónicos
+$u'_{C'/B'/A'}$, $v'_{C'/B'/A'}$ que, en virtud de
+\sref{0.20.5.4-es}, forman sistemas proyectivos y dan por consiguiente,
+pasando al límite, homomorfismos canónicos, prolongaciones a los completados
+separados de los homomorfismos de la sucesión exacta
+\sref{0.20.5.7.1-es}
+\[
+  \Omega^1_{B/A}\otimes_B C\xrightarrow{v_{C/B/A}}\Omega^1_{C/A}
+  \xrightarrow{u_{C/B/A}}\Omega^1_{C/B}\to0:
+\]
+\begin{align}
+  \widehat v_{C/B/A}:\widehat{\Omega}^1_{B/A}
+  \widehat\otimes_{\widehat B}\widehat C&\to\widehat{\Omega}^1_{C/A},
+  \tag{20.7.17.1}\label{0.20.7.17.1-es}\\
+  \widehat u_{C/B/A}:\widehat{\Omega}^1_{C/A}&\to
+  \widehat{\Omega}^1_{C/B}. \tag{20.7.17.2}\label{0.20.7.17.2-es}
+\end{align}
+y en la sucesión
+\begin{equation}
+\tag{20.7.17.3}
+\label{0.20.7.17.3-es}
+  \widehat{\Omega}^1_{B/A}\widehat\otimes_{\widehat B}\widehat C
+  \xrightarrow{\widehat v_{C/B/A}}\widehat{\Omega}^1_{C/A}
+  \xrightarrow{\widehat u_{C/B/A}}\widehat{\Omega}^1_{C/B}\to0
+\end{equation}
+la composición de dos homomorfismos consecutivos es $0$, pero la sucesión
+\emph{no es necesariamente exacta}. Sin embargo, si $B$ y $C$ son
+\emph{metrizable}, el homomorfismo $\widehat u_{C/B/A}$ es \emph{sobreyectivo},
+y $\operatorname{Im}(\widehat v_{C/B/A})$ es \emph{densa} en
+$\operatorname{Ker}(\widehat u_{C/B/A})$: esto se deduce inmediatamente
+(cf.\ ($\mathbf{0}_{\mathrm I}$, 7.3.1)) del hecho de que, si
+$(\mathfrak{M}_k)$ (resp.\ $(\mathfrak{N}_k)$) es una sucesión decreciente
+de ideales de $B$ (resp.\ $C$), que forma un sistema fundamental de entornos
+de $0$, y si se ponen $B_k=B/\mathfrak{M}_k$, $C_k=C/\mathfrak{N}_k$, los
+homomorfismos de transición
+$\Omega^1_{C_{k+1}/B_{k+1}}\to\Omega^1_{C_k/B_k}$,
+$\Omega^1_{C_{k+1}/A}\to\Omega^1_{C_k/A}$ y
+$\Omega^1_{B_{k+1}/A}\to\Omega^1_{B_k/A}$ son sobreyectivos
+\sref{0.20.7.14-es}.
+\end{env}
+
+\begin{proposition}[20.7.18]
+\label{0.20.7.18-es}
+Sean $A$, $B$, $C$ tres anillos topológicos, y sean $u:A\to B$, $v:B\to C$
+dos homomorfismos continuos. Se supone que $B$ y $C$ son admisibles
+($\mathbf{0}_{\mathrm I}$, 7.1.2) y metrizables. Para que el homomorfismo
+canónico
+\[
+  \widehat v_{C/B/A}:\widehat{\Omega}^1_{B/A}
+  \widehat\otimes_{\widehat B}\widehat C\to\widehat{\Omega}^1_{C/A}
+\]
+admita una inversa por la izquierda que sea un $C$-homomorfismo continuo, es
+necesario y suficiente que $C$ sea una $B$-álgebra formalmente lisa respecto
+de $A$.
+\end{proposition}
+
+\begin{proof}
+La condición es necesaria en virtud de \sref{0.20.7.2-es} y
+\sref{0.19.1.6-es}. Para ver que es suficiente, obsérvese que el $C$-módulo
+topológico
+$L=\widehat{\Omega}^1_{B/A}\widehat\otimes_{\widehat B}\widehat C$ es
+metrizable y
+\oldpage[0\textsubscript{IV-1}]{153}
+completo en virtud de la hipótesis, por lo que
+$E=D_C(L)$, provisto de la topología producto, es metrizable y completo; es
+además admisible, pues si $\mathfrak{R}$ es un ideal de definición en $C$, la
+sucesión $(\mathfrak{R}\oplus L)^n=\mathfrak{R}^n\oplus\mathfrak{R}^{n-1}L$
+tiende a $0$. Como la aplicación compuesta
+\[
+  D:B\xrightarrow{d_{B/A}}\Omega^1_{B/A}\to
+  \widehat{\Omega}^1_{B/A}\widehat\otimes_{\widehat B}\widehat C=L
+\]
+es una $A$-derivación continua de $B$ en $L$, el $A$-homomorfismo continuo
+\[
+  f:x\longmapsto(v(x),D(x))
+\]
+de $B$ en $E$ define en $E$ una estructura de extensión de $B$. Como $L$ es
+un ideal cerrado en $E$, se deduce de \sref{0.19.9.5-es} y de la hipótesis que
+la aplicación identidad $C\to E/L$ (que es un $B$-homomorfismo) se factoriza
+como $C\xrightarrow{g}E\to E/L$, donde $g$ es un homomorfismo continuo tal
+que $g\circ v=f$; por consiguiente, según \sref{0.20.1.3-es}, $g$ es de la
+forma $y\mapsto(y,D'(y))$, donde $D'$ es una $B$-derivación continua de $C$ en
+$L$, es decir, $D'\circ v=D$. Teniendo en cuenta \sref{0.20.7.14.4-es}, se
+tiene $D'=h\circ\widehat d_{C/A}$, donde
+$h:\widehat{\Omega}^1_{C/A}\to L$ es un $C$-homomorfismo continuo; pero por
+definición, $\widehat d_{C/A}\circ v=\widehat v_{C/B/A}\circ D$, y como la
+imagen de $B$ por $D$ genera (topológicamente) el $C$-módulo $L$
+\sref{0.20.4.7-es}, la relación $D'\circ v=D$ da precisamente
+$h\circ\widehat v_{C/B/A}=1_L$.
+\end{proof}
+
+\begin{corollary}[20.7.19]
+\label{0.20.7.19-es}
+Bajo las hipótesis de \sref{0.20.7.18-es}, supongamos además que en $B$ y
+$C$ el cuadrado de todo ideal abierto sea abierto; entonces, para que $C$ sea
+una $B$-álgebra formalmente lisa respecto de $A$, es necesario y suficiente
+que $\widehat v_{C/B/A}$ sea invertible por la izquierda.
+\end{corollary}
+
+\begin{proof}
+En efecto, las topologías de
+$\widehat{\Omega}^1_{B/A}\widehat\otimes_{\widehat B}\widehat C$ y de
+$\widehat{\Omega}^1_{C/A}$ se deducen entonces de la de $C$
+\sref{0.20.4.5-es}, y todo $C$-homomorfismo de uno en el otro es
+necesariamente continuo.
+\end{proof}
+
+\begin{env}[20.7.20]
+\label{0.20.7.20-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica
+\emph{metrizable y completa}, $\mathfrak{R}$ un ideal \emph{cerrado} de $B$,
+$C=B/\mathfrak{R}$ el anillo topológico cociente, que es metrizable y
+completo. Sea $(\mathfrak{M}_k)$ un sistema fundamental decreciente de
+entornos de $0$ en $B$ formado por ideales, y pongamos
+$B_k=B/\mathfrak{M}_k$,
+$\mathfrak{R}_k=(\mathfrak{R}+\mathfrak{M}_k)/\mathfrak{M}_k$,
+$C_k=B_k/\mathfrak{R}_k$. Se tiene un sistema proyectivo de homomorfismos
+\[
+  \delta_{C_k/B_k/A}:\mathfrak{R}_k/\mathfrak{R}_k^2\to
+  \Omega^1_{B_k/A}\otimes_{B_k}C_k
+\]
+\sref{0.20.5.11.3-es}, de donde se deduce, pasando al límite, un
+homomorfismo canónico
+\[
+  \widehat\delta_{C/B/A}:\mathfrak{R}/\mathfrak{R}^2\to
+  \widehat{\Omega}^1_{B/A}\widehat\otimes_{\widehat B}\widehat C
+\]
+y, razonando como en \sref{0.20.7.17-es}, se ve que el homomorfismo canónico
+$\widehat u_{C/B/A}:\widehat{\Omega}^1_{B/A}
+\widehat\otimes_{\widehat B}\widehat C\to\widehat{\Omega}^1_{C/A}$ es
+\emph{sobreyectivo} y que $\operatorname{Im}(\widehat\delta_{C/B/A})$ es
+\emph{densa} en $\operatorname{Ker}(\widehat u_{C/B/A})$.
+\end{env}

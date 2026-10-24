@@ -1,0 +1,366 @@
+\subsection{Aplicación a las álgebras locales noetherianas completas sobre un cuerpo.}
+\label{subsection:IV.18.11}
+
+El lema siguiente generaliza (0, 21.9.1) y (0, 21.9.2):
+
+\begin{lemma}[18.11.1]
+\label{IV.18.11.1}
+Sean $k$ un cuerpo; $A$ un anillo local noetheriano completo que es una $k$-álgebra, y $K$ el cuerpo residual de $A$.
+\begin{enumerate}
+  \item[(i)] Si el espacio vectorial sobre $K$ $\Omega^1_{K/k}$ tiene rango finito, el $A$-módulo $\hat{\Omega}^1_{A/k}$ es de tipo finito.
+  \item[(ii)] Si además $A$ es una $k$-álgebra formalmente lisa (para la topología adica), $\hat{\Omega}^1_{A/k}$ es un $A$-módulo libre de rango igual a
+\[
+    \dim(A)+\operatorname{rg}_K(\Omega^1_{K/k})-\operatorname{rg}_K(\Upsilon_{K/k}).
+\]
+\end{enumerate}
+Además, para todo subcuerpo $k_0$ de $k$ tal que $\Omega^1_{k/k_0}$ sea un espacio vectorial sobre $k$ de rango finito, $\hat{\Omega}^1_{A/k_0}$ es un $A$-módulo libre de rango igual a
+\[
+  \dim(A)+\operatorname{rg}_K(\Omega^1_{K/k_0})-\operatorname{rg}_K(\Upsilon_{K/k_0})+\operatorname{rg}_k(\Omega^1_{k/k_0}).
+\]
+\end{lemma}
+
+La afirmación (i) se incluye solo como recuerdo, pues fue demostrada en (0, 20.7.15). Para probar (ii), observemos que esta afirmación ya quedó establecida de hecho por la demostración de (0, 21.9.2), cuyo enunciado es el único que utiliza la finitud del grado de trascendencia de $K$ sobre $k$ (por medio de la igualdad de Cartier (0, 21.7.1)).
+
+\begin{lemma}[18.11.2]
+\label{IV.18.11.2}
+Sean $k$ un cuerpo de característica $p>0$, $C$ una $k$-álgebra local noetheriana completa, cuyo cuerpo residual es una extensión finita de $k$, y que es íntegra; sean $n$ su dimensión y $L$ su cuerpo de fracciones. Entonces $\Omega^1_{L/k}$ y $\Upsilon_{L/k}$ son espacios vectoriales sobre $L$ de rango finito, y se tiene
+\begin{equation}
+\label{IV.18.11.2.1}
+\tag{18.11.2.1}
+  \operatorname{rg}_L(\Omega^1_{L/k})-\operatorname{rg}_L(\Upsilon_{L/k})\geq n.
+\end{equation}
+
+\oldpage[IV-4]{170}
+
+Supongamos además que $[k:k^p]<+\infty$. Entonces se tiene la igualdad
+\begin{equation}
+\label{IV.18.11.2.2}
+\tag{18.11.2.2}
+  \operatorname{rg}_L(\Omega^1_{L/k})-\operatorname{rg}_L(\Upsilon_{L/k})=n.
+\end{equation}
+Además, $\Omega^1_{C/k}$ es entonces isomorfo a $\hat{\Omega}^1_{C/k}$, y por tanto, por el lema (18.11.1), es un $C$-módulo de tipo finito.
+\end{lemma}
+
+En efecto, se sabe (0, 19.8.9) que existe una sub-$k$-álgebra $C_0$ de $C$ isomorfa a un álgebra de series formales $k[[T_1,\ldots,T_n]]$ y tal que $C$ sea una $C_0$-álgebra finita. Por consiguiente, $L$ es una extensión finita del cuerpo de fracciones $L_0=k((T_1,\ldots,T_n))$ de $C_0$. Ahora bien, se tiene la sucesión exacta de espacios vectoriales sobre $L$ obtenida aplicando (0, 20.6.17.1) al subcuerpo primo de $k$ y a los tres cuerpos $k\subset L_0\subset L$ (y teniendo en cuenta (0, 20.6.21, (i)))
+\[
+  0\to\Upsilon_{L_0/k}\otimes_{L_0}L\to\Upsilon_{L/k}\to\Upsilon_{L/L_0}
+  \to\Omega^1_{L_0/k}\otimes_{L_0}L\to\Omega^1_{L/k}\to\Omega^1_{L/L_0}\to0.
+\]
+Como $L$ es una extensión finita de $L_0$, $\Omega^1_{L/L_0}$ y $\Upsilon_{L/L_0}$ son espacios vectoriales sobre $L$ de rango finito y del mismo rango, en virtud de la igualdad de Cartier (0, 21.7.1). Como $L_0$ es separable sobre $k$ (0, 21.9.6.4), se tiene $\Upsilon_{L_0/k}=0$ (0, 20.6.3); de la sucesión exacta anterior se deduce ya que $\Upsilon_{L/k}$ tiene rango finito y que, en todos los casos, ($0_{\mathrm{III}}$, 11.10.2)
+\[
+  \operatorname{rg}_L(\Omega^1_{L/k})-\operatorname{rg}_L(\Upsilon_{L/k})
+  =\operatorname{rg}_{L_0}(\Omega^1_{L_0/k})-\operatorname{rg}_{L_0}(\Upsilon_{L_0/k}).
+\]
+
+Para demostrar (18.11.2.1) o (18.11.2.2), podemos por tanto limitarnos a demostrar estas relaciones reemplazando $C$ y $L$ por $C_0$ y $L_0$. Como $L_0$ es separable sobre $k$ (0, 21.9.6.4), se tiene $\Upsilon_{L_0/k}=0$ (0, 20.6.3); por otra parte, $\Omega^1_{L_0/k}=\Omega^1_{C_0/k}\otimes_{C_0}L_0$ (0, 20.5.9). Se sabe (0, 21.9.4) que si $C_1=k[[T_1^p,\ldots,T_n^p]]$, $\hat{\Omega}^1_{C_0/k}$ se identifica con $\Omega^1_{C_0/C_1}$; por otra parte, se tiene $\Omega^1_{C_0/k}=\Omega^1_{C_0/k[C_0^p]}$ (0, 21.1.5), y como $C_0^p=k^p[[T_1^p,\ldots,T_n^p]]$, se tiene $k[C_0^p]\subset C_1$, con igualdad cuando $[k:k^p]<+\infty$. Ahora bien, existe una sucesión exacta $\Omega^1_{C_0/k[C_0^p]}\to\Omega^1_{C_0/C_1}\to0$ (0, 20.5.7), de donde se obtiene una sucesión exacta $\Omega^1_{L_0/k}\to\hat{\Omega}^1_{C_0/k}\otimes_{C_0}L_0\to0$. Como $\hat{\Omega}^1_{C_0/k}$ es un $C_0$-módulo libre de rango $n$ (0, 21.9.3), se ve que en todos los casos $\operatorname{rg}_{L_0}(\Omega^1_{L_0/k})\geq n$, con igualdad cuando $[k:k^p]<+\infty$; esto demuestra ya (18.11.2.1) y (18.11.2.2).
+
+Finalmente, para ver que $\Omega^1_{C/k}$ es isomorfo a $\hat{\Omega}^1_{C/k}$ cuando $[k:k^p]<+\infty$, basta demostrar que $\Omega^1_{C/k}$ es un $C$-módulo de tipo finito, puesto que $C$ es un anillo local noetheriano completo ($0_{\mathrm I}$, 7.3.3). Como $\Omega^1_{C/k}$ es isomorfo a $\Omega^1_{C/k[C^p]}$ y $k[C_0^p]\subset k[C^p]$, todo se reduce a demostrar que $C$ es un $k[C_0^p]$-módulo de tipo finito (0, 20.4.7); pero esto se deduce de que $C$ es un $C_0$-módulo de tipo finito y $C_0$ un $k[C_0^p]$-módulo de tipo finito por la hipótesis $[k:k^p]<+\infty$.
+
+\begin{lemma}[18.11.3]
+\label{IV.18.11.3}
+Sean $k$ un cuerpo, $p$ su exponente característico, y supongamos que $[k:k^p]<+\infty$. Sea $A$ una $k$-álgebra local noetheriana completa, cuyo cuerpo residual es una extensión finita de $k$. Sea $\mathfrak p$ un ideal primo de $A$ tal que $A_{\mathfrak p}$ sea geométricamente regular sobre $k$ (6.7.6), de modo que existe un único ideal primo mínimo $\mathfrak q$ de $A$ contenido en $\mathfrak p$. Entonces $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es un $A_{\mathfrak p}$-módulo libre de rango igual a $\dim(A/\mathfrak q)$.
+\end{lemma}
+
+Como $A$ es noetheriano y $\Spec(A)$ es regular (y \,\emph{a fortiori} íntegro) en el punto $\mathfrak p$, $\mathfrak p$ pertenece a una sola componente irreducible de $\Spec(A)$, y por tanto no contiene
+
+\oldpage[IV-4]{171}
+
+un solo ideal mínimo $\mathfrak q$ de $A$, y además se tiene $\mathfrak q_{\mathfrak p}=0$. Si ponemos $B=A/\mathfrak q$, la sucesión (0, 20.7.20)
+\[
+  \mathfrak q/\mathfrak q^2\longrightarrow
+  \hat{\Omega}^1_{A/k}\widehat{\otimes}_A B
+  \longrightarrow\hat{\Omega}^1_{B/k}\longrightarrow0
+\]
+es exacta; en efecto, $\hat{\Omega}^1_{A/k}$ es un $A$-módulo de tipo finito (18.11.1), por lo que $\hat{\Omega}^1_{A/k}\widehat{\otimes}_A B=\hat{\Omega}^1_{A/k}\otimes_A B=\hat{\Omega}^1_{A/k}/\mathfrak q\hat{\Omega}^1_{A/k}$, y como este $B$-módulo es de tipo finito, todo sub-$B$-módulo suyo es cerrado ($0_{\mathrm I}$, 7.3.5), teniendo en cuenta (0, 20.4.5). Como la imagen de $\mathfrak q/\mathfrak q^2$ es densa en el núcleo del homomorfismo $\hat{\Omega}^1_{A/k}\widehat{\otimes}_A B\to\hat{\Omega}^1_{B/k}$ (0, 20.7.20), necesariamente es igual a dicho núcleo, de donde se obtiene nuestra afirmación. Al localizar en $\mathfrak p$ la sucesión exacta anterior, se ve además que el homomorfismo canónico $(\hat{\Omega}^1_{A/k})_{\mathfrak p}\to(\hat{\Omega}^1_{B/k})_{\mathfrak p/\mathfrak q}$ es biyectivo. Así, podemos limitarnos al caso $\mathfrak q=0$, es decir, al caso en que $A$ es íntegro. Distingamos entonces dos casos:
+
+\emph{I) $p>1$.} Entonces podemos aplicar (18.11.2) al álgebra cociente $C=A/\mathfrak p$, cuyo cuerpo de fracciones $K$ no es otro que el cuerpo residual de $A_{\mathfrak p}$; se obtiene por tanto
+\begin{equation}
+\label{IV.18.11.3.1}
+\tag{18.11.3.1}
+  \operatorname{rg}_K(\Omega^1_{K/k})-\operatorname{rg}_K(\Upsilon_{K/k})=\dim(A/\mathfrak p).
+\end{equation}
+
+Observemos ahora (0, 19.6.6) que $A_{\mathfrak p}$ es una $k$-álgebra formalmente lisa para su topología $\mathfrak pA_{\mathfrak p}$-preádica; por tanto, $\Omega^1_{A_{\mathfrak p}/k}$ es formalmente proyectivo (0, 20.4.9) para la topología $\mathfrak p$-preádica (0, 20.4.5); por otra parte, $\Omega^1_{A_{\mathfrak p}/k}=(\Omega^1_{A/k})_{\mathfrak p}$ (0, 20.5.9) es un $A_{\mathfrak p}$-módulo de tipo finito, en virtud de (18.11.2) aplicado a $A$. Para todo entero $j$, $\Omega^1_{A_{\mathfrak p}/k}/\mathfrak p^{j+1}\Omega^1_{A_{\mathfrak p}/k}$ es por tanto un $(A_{\mathfrak p}/\mathfrak p^{j+1}A_{\mathfrak p})$-módulo proyectivo de rango $m=\operatorname{rg}_K(\Omega^1_{A_{\mathfrak p}/k}\otimes_{A_{\mathfrak p}}K)$ (0, 19.2.4); se concluye entonces de ($0_{\mathrm{III}}$, 10.2.1 y 10.1.3) que $\hat{\Omega}^1_{A_{\mathfrak p}/k}$ es un $A_{\mathfrak p}$-módulo libre de rango $m$. Sea $A'=(A_{\mathfrak p})^\wedge$ el álgebra completada de $A_{\mathfrak p}$ para su topología $\mathfrak pA_{\mathfrak p}$-preádica; $A'$ es también una $k$-álgebra formalmente lisa (0, 19.3.6) para su topología adica, y se deduce de (0, 20.7.14) y (0, 20.4.5) que $\hat{\Omega}^1_{A'/k}=\hat{\Omega}^1_{A_{\mathfrak p}/k}$; concluimos que $\hat{\Omega}^1_{A'/k}$ es un $A'$-módulo libre de rango $m$. Pero de (18.11.1) y del hecho de que $\dim(A')=\dim(A_{\mathfrak p})$ (0, 16.2.4) se deduce que
+\begin{equation}
+\label{IV.18.11.3.2}
+\tag{18.11.3.2}
+  m=\dim(A_{\mathfrak p})+
+  \bigl(\operatorname{rg}_K(\Omega^1_{K/k})-\operatorname{rg}_K(\Upsilon_{K/k})\bigr),
+\end{equation}
+de donde, en virtud de (18.11.3.1),
+\[
+  m=\dim(A/\mathfrak p)+\dim(A_{\mathfrak p}).
+\]
+Pero como $A$ es un anillo local noetheriano completo, es un cociente de un anillo regular (0, 19.8.8), luego por (0, 16.5.12) se tiene $\dim(A)=\dim(A/\mathfrak p)+\dim(A_{\mathfrak p})$, lo que termina la demostración en este caso.
+
+\emph{II) $p=1$.} Como arriba, se tiene $\dim(A)=\dim(A/\mathfrak p)+\dim(A_{\mathfrak p})$; pongamos $n=\dim(A)$, $r=\dim(A/\mathfrak p)$, $s=\dim(A_{\mathfrak p})$; veremos que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es un $A_{\mathfrak p}$-módulo libre de rango $n$. Primero demostraremos el lema siguiente:
+
+\begin{lemma}[18.11.3.3]
+\label{IV.18.11.3.3}
+Sean $A$ un anillo local noetheriano, $\mathfrak p$ un ideal primo de $A$ tal que $A_{\mathfrak p}$ sea un anillo de Cohen-Macaulay. Para todo sistema de parámetros $(t_i)_{1\leq i\leq s}$ de $A_{\mathfrak p}$, existe una sucesión $(x_i)_{1\leq i\leq s}$ de elementos de $\mathfrak p$ tal que los $x_i$ formen parte de un sistema de parámetros de $A$
+
+\oldpage[IV-4]{172}
+
+y que, para todo $i$, $x_i/1$ sea congruente con $t_i$ módulo el ideal $t_1A_{\mathfrak p}+\cdots+t_{i-1}A_{\mathfrak p}$. En particular, si $A_{\mathfrak p}$ es regular y los $t_i$ forman un sistema regular de parámetros de $A_{\mathfrak p}$, lo mismo ocurre con los $x_i/1$.
+\end{lemma}
+
+Este lema será a su vez consecuencia del siguiente:
+
+\begin{lemma}[18.11.3.4]
+\label{IV.18.11.3.4}
+Sean $A$ un anillo local noetheriano, $\mathfrak p$ un ideal primo de $A$ y $x$ un elemento de $A$; entonces existe un elemento $x'\in A$ tal que $x'/1=x/1$ en $A_{\mathfrak p}$ y $x'$ no pertenezca a ninguno de los ideales primos mínimos de $A$ no contenidos en $\mathfrak p$.
+\end{lemma}
+
+Mostremos primero cómo (18.11.3.4) implica (18.11.3.3). Multiplicando, si es necesario, los $t_i$ por elementos invertibles de $A_{\mathfrak p}$, podemos suponer que son de la forma $x_i/1$, con $x_i\in\mathfrak p$ para $1\leq i\leq s$. Razonemos por inducción sobre $s$; como $t_1$ forma parte de un sistema de parámetros de $A_{\mathfrak p}$, no pertenece a ninguno de los ideales primos mínimos de $A_{\mathfrak p}$ (0, 16.5.5), de modo que ningún $x'_1\in A$ tal que $x'_1/1=t_1$ puede pertenecer a un ideal primo mínimo de $A$ contenido en $\mathfrak p$. En virtud de (18.11.3.4), podemos además escoger $x'_1$ tal que $x'_1/1=t_1$ (por tanto $x'_1\in\mathfrak p$) y $x'_1$ no pertenezca a ningún ideal primo mínimo de $A$, y por consiguiente forme parte de un sistema de parámetros de $A$ (0, 16.3.4 y 16.3.7). Se procede después por inducción, considerando el anillo $A'=A/x'_1A$ y el ideal primo $\mathfrak p'=\mathfrak p/x'_1A$ de este anillo; como $A'_{\mathfrak p'}=A_{\mathfrak p}/t_1A_{\mathfrak p}$, $A'_{\mathfrak p'}$ es también un anillo de Cohen-Macaulay (0, 16.5.5), y las imágenes $t'_i$ ($2\leq i\leq s$) de los $t_i$ en $A'_{\mathfrak p'}$ forman un sistema de parámetros de este anillo; basta aplicar a $A'$ y a los $t'_i$ ($2\leq i\leq s$) la hipótesis de inducción. La última afirmación de (18.11.3.3) resulta de que, en $A_{\mathfrak p}$, un sistema de parámetros que genera el ideal maximal es un sistema regular de parámetros (0, 17.1.1).
+
+Probemos, pues, (18.11.3.4). Sea $(\mathfrak p'_k)_{1\leq k\leq r}$ la sucesión de los ideales primos mínimos de $A$ no contenidos en $\mathfrak p$ y tales que $x\in\mathfrak p'_k$, y sea $(\mathfrak p_j)_{1\leq j\leq n}$ la sucesión de los ideales primos mínimos de $A$ distintos de los $\mathfrak p'_k$; podemos suponer que $r\geq1$. Como $\mathfrak p'_k$ no contiene $\bigcap_{1\leq j\leq n}\mathfrak p_j$, existe un elemento $y\in\bigcap_{1\leq j\leq n}\mathfrak p_j$ que no está contenido en ninguno de los $\mathfrak p'_k$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~1, n\textsuperscript{o}~1, prop. 2); además $y/1$ pertenece a todos los ideales primos mínimos de $A_{\mathfrak p}$, por lo que es nilpotente; si $(y/1)^h=0$, el elemento $x'=x+y^h$ satisface las condiciones del enunciado, pues, por una parte, $y^h\notin\mathfrak p'_k$ para $1\leq k\leq r$ y, por definición de los $\mathfrak p'_k$, se tiene $x'\notin\mathfrak p'_k$ para $1\leq k\leq r$; por otra parte, si $\mathfrak p_j$ es un ideal primo mínimo de $A$ no contenido en $\mathfrak p$ pero tal que $x\notin\mathfrak p_j$, también se tiene $x'\notin\mathfrak p_j$ puesto que $y\in\mathfrak p_j$.
+
+Volvamos a la demostración de (18.11.3) cuando $p=1$. En virtud de (18.11.3.3), existe un sistema regular de parámetros $(t_i)_{1\leq i\leq s}$ de $A_{\mathfrak p}$ tal que $t_i=x_i/1$, donde los $x_i$ ($1\leq i\leq s$) pertenecen a $\mathfrak p$ y forman parte de un sistema de parámetros $(x_j)_{1\leq j\leq n}$ de $A$. Pongamos $A_0=k[[T_1,\ldots,T_n]]$; como $A$ es una $k$-álgebra completa y los $x_j$ pertenecen al ideal maximal $\mathfrak m$ de $A$, existe un $k$-homomorfismo local $u:A_0\to A$ tal que $u(T_j)=x_j$ para $1\leq j\leq n$ (Bourbaki, \emph{Alg. comm.}, cap. III, \textsection~4, n\textsuperscript{o}~5, prop. 6); si $\mathfrak n$ es el ideal de $A$ generado por los $x_j$ ($1\leq j\leq n$), por hipótesis es un ideal de definición de $A$; se deduce entonces de ($0_{\mathrm I}$, 7.4.4 y 7.4.3) que $u$ hace de $A$ una $A_0$-álgebra finita.
+
+Pongamos $\mathfrak p_0=\sum_{j=1}^s A_0T_j$, $B_0=(A_0)_{\mathfrak p_0}$ y $B=A\otimes_{A_0}B_0$, de modo que $u_{\mathfrak p_0}:B_0\to B$ hace
+
+\oldpage[IV-4]{173}
+
+de $B$ una $B_0$-álgebra finita; además, si $\mathfrak p'$ es el ideal de $B$ generado por $\mathfrak p$, se tiene $B_{\mathfrak p'}=A_{\mathfrak p}$; como $\mathfrak p'$ contiene $\mathfrak p_0B$ por construcción, está sobre el ideal maximal $\mathfrak p_0B_0$ de $B_0$. Mostremos que el morfismo $\Spec(B)\to\Spec(B_0)$ no es ramificado en el punto $\mathfrak p'$: esto resulta, en efecto, de que $k(\mathfrak p')$ es una extensión finita del cuerpo $k(\mathfrak p_0)$ de característica 0, luego es necesariamente separable, y de que $B_{\mathfrak p'}/\mathfrak p_0B_{\mathfrak p'}=k(\mathfrak p')$ en virtud de la elección de los $x_j$ para $1\leq j\leq s$ (17.4.1).
+
+Anotemos ahora el lema siguiente:
+
+\begin{lemma}[18.11.3.5]
+\label{IV.18.11.3.5}
+Sean $k$ un cuerpo, $R$, $S$ dos $k$-álgebras locales noetherianas completas, tales que, si $K$ es el cuerpo residual de $S$, $\Omega^1_{K/k}$ tenga rango finito sobre $K$; sea $u:R\to S$ un $k$-homomorfismo que hace de $S$ una $R$-álgebra finita; entonces se tiene $\hat{\Omega}^1_{S/R}=\Omega^1_{S/R}$, y la sucesión
+\begin{equation}
+\label{IV.18.11.3.6}
+\tag{18.11.3.6}
+  \hat{\Omega}^1_{R/k}\otimes_R S\xrightarrow{v}\hat{\Omega}^1_{S/k}\xrightarrow{w}\Omega^1_{S/R}\to0
+\end{equation}
+(cf. (0, 20.7.17.3)) es exacta.
+\end{lemma}
+
+La primera afirmación resulta de que $\Omega^1_{S/R}$ es un $S$-módulo de tipo finito (0, 20.4.7) y de ($0_{\mathrm I}$, 7.3.6). Por otra parte, se sabe (0, 20.7.17.3) que la imagen de $v$ es densa en $\operatorname{Ker}(w)$ y que $w$ es sobreyectivo; pero de (18.11.1) resulta que $\hat{\Omega}^1_{S/k}$ es un $S$-módulo de tipo finito; concluimos que todo sub-$S$-módulo de $\hat{\Omega}^1_{S/k}$ es cerrado ($0_{\mathrm I}$, 7.3.5), de donde se sigue el lema.
+
+Apliquemos este lema al caso $R=A_0$, $S=A$, y observemos que $\hat{\Omega}^1_{A_0/k}$ es un $A_0$-módulo libre de rango $n$ (0, 21.9.3); por tanto $\hat{\Omega}^1_{A_0/k}\widehat{\otimes}_{A_0}A=\hat{\Omega}^1_{A_0/k}\otimes_{A_0}A$ y este $A$-módulo es libre de rango $n$. Puesto que $\Spec(B)$ no es ramificado sobre $\Spec(B_0)$ en el punto $\mathfrak p'$, se tiene $(\Omega^1_{A/A_0})_{\mathfrak p}=\Omega^1_{B_{\mathfrak p'}/B_0}=0$ (16.4.15 y 17.4.1). Si localizamos en $\mathfrak p$ la sucesión exacta (18.11.3.6) (aplicada a $A_0$ y $A$), obtenemos por tanto un homomorfismo sobreyectivo
+\[
+  (\hat{\Omega}^1_{A_0/k}\otimes_{A_0}A)_{\mathfrak p}\longrightarrow(\hat{\Omega}^1_{A/k})_{\mathfrak p},
+\]
+de donde se concluye que el $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ admite un sistema de $n$ generadores. Pero el $A$-módulo $\hat{\Omega}^1_{A/k}$ tiene rango $n$, en virtud de (0, 21.9.5), aplicable al anillo completo e íntegro $A$ por el teorema de Cohen (0, 19.8.8, (ii)) y por el hecho de que el cuerpo de fracciones de $A$ tiene característica 0. Por tanto, el $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ también tiene rango $n$, y como su cociente por su submódulo de torsión admite un sistema de $n$ generadores, dicho cociente es necesariamente libre; se deduce inmediatamente que los $n$ generadores de $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ obtenidos arriba forman un sistema libre, de donde se sigue la conclusión.
+
+\begin{lemma}[18.11.4]
+\label{IV.18.11.4}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana completa, cuyo cuerpo residual es una extensión finita de $k$. Sea $k'$ una extensión cualquiera de $k$, y pongamos $A'=A\widehat{\otimes}_k k'$. Entonces:
+\begin{enumerate}
+  \item[(i)] $A'$ es un anillo semilocal noetheriano completo, suma directa de anillos locales completos $A'_i$ ($1\leq i\leq r$) que son $A$-módulos fielmente planos y cuyos cuerpos residuales son extensiones finitas de $k'$; si $\mathfrak m$ es el ideal maximal de $A$, $\mathfrak mA'$ es un ideal de definición de $A'$; se tiene $\dim(A'_i)=\dim(A)$ para todo $i$.
+  \item[(ii)] Para todo $i$, $\hat{\Omega}^1_{A'_i/k'}$ es canónicamente isomorfo a $\hat{\Omega}^1_{A/k}\otimes_A A'_i$.
+\end{enumerate}
+\end{lemma}
+
+\oldpage[IV-4]{174}
+
+(i) Las primeras afirmaciones resultan inmediatamente de (7.5.5) y de ($0_{\mathrm I}$, 6.6.2); el hecho de que $\mathfrak mA'$ sea un ideal de definición de $A'$ resulta también de (7.5.5), pues si $K$ es el cuerpo residual de $A$, $K\otimes_k k'$ es una $k'$-álgebra finita. Finalmente, $A'_i/\mathfrak mA'_i$ es uno de los anillos locales artinianos componentes directos de $K\otimes_k k'$ (7.5.5), por tanto tiene dimensión 0; como $A'_i$ es un $A$-módulo plano, la igualdad de las dimensiones de $A$ y de $A'_i$ resulta de (6.1.2).
+
+(ii) Como $\hat{\Omega}^1_{A/k}$ es, en virtud de la hipótesis sobre $K$, un $A$-módulo de tipo finito (18.11.1), $\hat{\Omega}^1_{A/k}\otimes_A A'$ es completo y se identifica con el producto tensorial completado $\hat{\Omega}^1_{A/k}\widehat{\otimes}_A A'$; en virtud de la asociatividad del producto tensorial completado ($0_{\mathrm I}$, 7.7.4), $\hat{\Omega}^1_{A/k}\widehat{\otimes}_A A'=\hat{\Omega}^1_{A/k}\widehat{\otimes}_A(A\widehat{\otimes}_k k')$ se identifica con $\hat{\Omega}^1_{A/k}\widehat{\otimes}_k k'$. Pero $\Omega^1_{A/k}\otimes_k k'$ se identifica con $\Omega^1_{A''/k'}$, donde $A''=A\otimes_k k'$ (0, 20.5.5), y como $A'$ es por definición el completado separado de $A''$, el completado separado de $\Omega^1_{A''/k'}$ se identifica por construcción con el de $\Omega^1_{A'/k'}$ (0, 20.7.4); en otras palabras, se tiene un isomorfismo canónico
+\[
+  \hat{\Omega}^1_{A/k}\widehat{\otimes}_k k'\xrightarrow{\sim}\hat{\Omega}^1_{A'/k'}.
+\]
+La conclusión de (ii) resulta ahora de que $\Omega^1_{A'/k'}$ es suma directa de los $\Omega^1_{A'_i/k'}$ (0, 20.4.13), y si $\mathfrak r$ es el radical de $A'$, la topología $\mathfrak r$-preádica sobre $\Omega^1_{A'/k'}$ se identifica con el producto de las topologías $\mathfrak m'_i$-preádicas sobre los $\Omega^1_{A'_i/k'}$ (donde $\mathfrak m'_i$ es el ideal maximal de $A'_i$); finalmente, se deduce que el completado separado $\hat{\Omega}^1_{A'/k'}$ para la topología $\mathfrak r$-preádica se identifica con el producto de los completados separados $\hat{\Omega}^1_{A'_i/k'}$ para las topologías $\mathfrak m'_i$-preádicas, y basta utilizar (0, 20.4.5).
+
+\begin{proposition}[18.11.5]
+\label{IV.18.11.5}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana y completa cuyo cuerpo residual es una extensión finita de $k$, $\mathfrak p$ un ideal primo de $A$, distinto del ideal maximal $\mathfrak m$, tal que exista un ideal primo mínimo $\mathfrak q\subset\mathfrak p$ para el cual $\dim(A/\mathfrak q)=\dim(A)$ (lo que ocurre en particular cuando $A$ es equidimensional), y $m$ un entero $\geq0$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] El $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ admite un sistema de $m$ generadores.
+  \item[$b)$] Existe un $k$-homomorfismo local $u:B\to A$, donde $B=k[[T_1,\ldots,T_m]]$, que hace de $A$ una $B$-álgebra finita, y tal que el morfismo correspondiente $\Spec(A)\to\Spec(B)$ sea no ramificado en el punto $\mathfrak p$.
+\end{enumerate}
+\end{proposition}
+
+Para probar que $b)$ implica $a)$, observemos que, en virtud del lema (18.11.3.5), se tiene entonces la sucesión exacta
+\[
+  \hat{\Omega}^1_{B/k}\otimes_B A\longrightarrow\hat{\Omega}^1_{A/k}\longrightarrow\Omega^1_{A/B}\longrightarrow0
+\]
+puesto que $A$ es una $B$-álgebra finita; localizando en $\mathfrak p$ y observando que por hipótesis $(\Omega^1_{A/B})_{\mathfrak p}=0$ (17.4.1), obtenemos un homomorfismo sobreyectivo $(\hat{\Omega}^1_{B/k}\otimes_B A)_{\mathfrak p}\to(\hat{\Omega}^1_{A/k})_{\mathfrak p}$, y la conclusión resulta de que $\hat{\Omega}^1_{B/k}$ es un $B$-módulo libre de rango $m$ (0, 21.9.3).
+
+Para probar que $a)$ implica $b)$, probemos primero los lemas siguientes.
+
+\begin{lemma}[18.11.5.1]
+\label{IV.18.11.5.1}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana y completa, cuyo cuerpo residual es una extensión finita de $k$, $\mathfrak p$ un ideal primo de $A$, y $\mathfrak q$ un ideal mínimo de $A$ contenido en $\mathfrak p$. Entonces el número mínimo de generadores del $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es mayor o igual que $\dim(A/\mathfrak q)$.
+\end{lemma}
+
+\oldpage[IV-4]{175}
+
+Pongamos $n=\dim(A/\mathfrak q)$, y sea $m$ el número mínimo de generadores del $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$, que es igual a $\operatorname{rg}_{k(\mathfrak p)}((\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}k(\mathfrak p))$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~3, n\textsuperscript{o}~2, cor. 2 de la prop. 4). Observemos que $(\hat{\Omega}^1_{A/k})_{\mathfrak q}=(\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}A_{\mathfrak q}$, por tanto el número mínimo de generadores del $A_{\mathfrak q}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak q}$ es como máximo $m$. Basta, en consecuencia, considerar el caso en que $\mathfrak p=\mathfrak q$ es mínimo. En segundo lugar, mostremos que podemos reducirnos al caso en que $k$ es algebraicamente cerrado. En efecto, sea $k'$ una clausura algebraica de $k$, y pongamos $A'=A\widehat{\otimes}_k k'$, que es suma directa de $k'$-álgebras locales $A'_i$ ($1\leq i\leq r$), cuyos cuerpos residuales son isomorfos a $k'$, y que son $A$-módulos fielmente planos (18.11.4). Aplicando (2.3.4) y (6.1.1), se ve que, en un $A'_i$ dado, existe un ideal mínimo $\mathfrak q'_i$ sobre $\mathfrak q$ tal que $n'=\dim(A'_i/\mathfrak q'_i)\geq\dim(A/\mathfrak q)=n$. Por otra parte, por (18.11.4), se tiene $(\hat{\Omega}^1_{A'_i/k'})_{\mathfrak q'_i}=(\hat{\Omega}^1_{A/k})_{\mathfrak q}\otimes_{A_{\mathfrak q}}(A'_i)_{\mathfrak q'_i}$, por tanto el número mínimo $m'$ de generadores del $(A'_i)_{\mathfrak q'_i}$-módulo $(\hat{\Omega}^1_{A'_i/k'})_{\mathfrak q'_i}$ es como máximo $m$; de aquí se sigue nuestra afirmación.
+
+Supongamos, pues, que $k$ es algebraicamente cerrado, y mostremos además que podemos reducirnos al caso $\mathfrak q=0$. En efecto, se tiene $\Omega^1_{(A/\mathfrak q)/A}=0$ (0, 20.4.12), por lo que la sucesión exacta (18.11.3.6) proporciona un homomorfismo sobreyectivo $\hat{\Omega}^1_{A/k}\otimes_A(A/\mathfrak q)\to\hat{\Omega}^1_{(A/\mathfrak q)/k}$, de donde se deduce inmediatamente que el número mínimo de generadores del $K$-módulo $\hat{\Omega}^1_{(A/\mathfrak q)/k}\otimes_{A/\mathfrak q}K$, donde $K$ es el cuerpo de fracciones de $A/\mathfrak q$, es como máximo $m$.
+
+Pero si $A$ es íntegro y $K$ su cuerpo de fracciones, $K$ es separable sobre el cuerpo algebraicamente cerrado $k$, y por tanto una $k$-álgebra geométricamente regular (6.7.6); podemos aplicar entonces (18.11.3) para $\mathfrak p=0$, observando que $k=k^p$ puesto que $k$ es algebraicamente cerrado, y en este caso se tiene $m=n$.
+
+\begin{lemma}[18.11.5.2]
+\label{IV.18.11.5.2}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana completa, cuyo cuerpo residual es una extensión finita de $k$, $\mathfrak m$ su ideal maximal, $\mathfrak p\subset\mathfrak m$ un ideal primo de $A$. Sea $m$ el número mínimo de generadores del $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$, y sea $(x_i)_{1\leq i\leq m}$ una familia de elementos de $\mathfrak m$ que no pertenecen a $\mathfrak p$. Entonces existen $m$ elementos invertibles $u_i$ ($1\leq i\leq m$) de $A$ tales que, si ponemos $y_i=u_ix_i$, las imágenes canónicas de los $dy_i$ en $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ generan este $A_{\mathfrak p}$-módulo.
+\end{lemma}
+
+Para todo $x\in A$, designemos por $\delta(x)$ la imagen canónica de $dx$ ($=d_{A/k}x$) en $(\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}k(\mathfrak p)=\hat{\Omega}^1_{A/k}\otimes_A k(\mathfrak p)$; como este espacio vectorial sobre $k(\mathfrak p)$ tiene por hipótesis rango $m$, basta (en virtud del lema de Nakayama) probar que se pueden determinar los $u_i$ de modo que los $\delta(u_ix_i)$ formen un sistema libre. Razonemos por inducción y supongamos que, para un entero $r<m$, se han determinado los $u_i$ ($1\leq i\leq r$) de modo que los $\delta(u_ix_i)$ para $1\leq i\leq r$ sean linealmente independientes sobre $k(\mathfrak p)$; si $\delta(x_{r+1})$ no es combinación lineal de los $\delta(u_ix_i)$ para $1\leq i\leq r$, basta tomar $u_{r+1}=1$ para continuar la inducción. En caso contrario, observemos que, para $u\in A$, $\delta(ux_{r+1})$ es la imagen canónica de $(du)x_{r+1}+u(dx_{r+1})$; como la imagen canónica de $u(dx_{r+1})$ es combinación lineal de los $\delta(u_ix_i)$ para $1\leq i\leq r$, y, por otra parte, la imagen canónica de $x_{r+1}$ en $k(\mathfrak p)$ es $\neq0$, basta probar que existe un elemento invertible $u\in A$ tal que $\delta(u)$ no sea combinación lineal de los $\delta(u_ix_i)$ para $1\leq i\leq r$.
+
+\oldpage[IV-4]{176}
+
+Ahora bien, de (0, 20.7.15) y de ($0_{\mathrm I}$, 7.2.9) resulta que los $\delta(x)$ generan el espacio vectorial sobre $k(\mathfrak p)$ $\hat{\Omega}^1_{A/k}\otimes_A k(\mathfrak p)$; como por hipótesis $r<m$, existe por tanto $z\in A$ tal que $\delta(z)$ no sea combinación lineal de los $\delta(u_ix_i)$ para $1\leq i\leq r$. Si $z\notin\mathfrak m$, tomaremos $u=z$; en caso contrario, $1+z$ es invertible y $\delta(1+z)=\delta(z)$ puesto que $d(1+z)=dz$; tomaremos entonces $u=1+z$, lo que termina de demostrar (18.11.5.2).
+
+Volvamos ahora a la demostración de la implicación $a)\Rightarrow b)$ en (18.11.5). Observemos primero que, puesto que $\mathfrak p\neq\mathfrak m$, existe un sistema de parámetros $(x_i)_{1\leq i\leq n}$ de $A$ (con $n=\dim(A)$) tal que $x_i\notin\mathfrak p$ para $1\leq i\leq n$: en efecto, no puede ocurrir que $x_i\in\mathfrak p$ para todo $i$, pues entonces $A/\mathfrak p$ tendría longitud finita y $\mathfrak p$ sería maximal, contra la hipótesis. Pero si, por ejemplo, $x_1\notin\mathfrak p$, basta, para cada índice $i$ tal que $x_i\in\mathfrak p$, sustituir $x_i$ por $x_1+x_i$, para obtener un sistema de parámetros ninguno de cuyos elementos pertenece a $\mathfrak p$. La hipótesis $a)$ y la relación $\dim(A/\mathfrak q)=n$ implican, en virtud de (18.11.5.1), que $m\geq n$; podemos por tanto considerar una familia $(x_i)_{1\leq i\leq m}$ de elementos $x_i\notin\mathfrak p$, cuyos $n$ primeros forman un sistema de parámetros de $A$. Multiplicando además los $x_i$ por elementos invertibles $u_i$ de $A$, podemos, gracias a (18.11.5.2), suponer que las imágenes de los $dx_i$ ($1\leq i\leq m$) en $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ generan este $A_{\mathfrak p}$-módulo, y la multiplicación por los $u_i$ no ha alterado el hecho de que los $x_i$ para $1\leq i\leq n$ forman un sistema de parámetros.
+
+Consideremos entonces el $k$-homomorfismo local $u:B\to A$ tal que $u(T_i)=x_i$ para $1\leq i\leq m$ (Bourbaki, \emph{Alg. comm.}, cap. III, \textsection~4, n\textsuperscript{o}~5, prop. 6); como los $x_i$ generan un ideal de definición de $A$, se deduce de ($0_{\mathrm I}$, 7.4.4 y 7.4.3) que $u$ hace de $A$ una $B$-álgebra finita. Por tanto, por (18.11.3.5), se tiene la sucesión exacta
+\[
+  \hat{\Omega}^1_{B/k}\otimes_B A\xrightarrow{v}\hat{\Omega}^1_{A/k}\longrightarrow\Omega^1_{A/B}\longrightarrow0.
+\]
+Pero los $d_Ax_i$ son las imágenes canónicas por $v$ de los elementos $d_BT_i\otimes1$ (0, 20.5.2.6). Si localizamos en $\mathfrak p$ la sucesión exacta anterior, vemos por tanto que $v_{\mathfrak p}:(\hat{\Omega}^1_{B/k}\otimes_B A)_{\mathfrak p}\to(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es sobreyectivo, y por consiguiente $0=(\Omega^1_{A/B})_{\mathfrak p}=\Omega^1_{A_{\mathfrak p}/B_{\mathfrak r}}$ (donde $\mathfrak r$ es la imagen recíproca de $\mathfrak p$ en $B$, cf. (16.4.15)).\footnote{La transcripción francesa imprime «dans $A$»; el testigo inglés y la definición $\mathfrak r=u^{-1}(\mathfrak p)$ exigen «en $B$». Se conserva aquí la discrepancia de la fuente.} En virtud de (17.4.1), esto implica la propiedad $b)$ de (18.11.5). C.Q.F.D.
+
+\begin{remark}[18.11.6]
+\label{IV.18.11.6}
+En el enunciado de (18.11.5) no se puede suprimir la hipótesis $\mathfrak p\neq\mathfrak m$. En efecto, para todo $k$-homomorfismo local $u:B\to A$, donde $B=k[[T_1,\ldots,T_r]]$ ($r$ un entero cualquiera) que hace de $A$ una $B$-álgebra finita, $\mathfrak m$ es el único punto de $\Spec(A)$ sobre el ideal maximal $\mathfrak n$ de $B$; el morfismo $\Spec(A)\to\Spec(B)$ solo puede ser no ramificado en $\mathfrak m$ si $A/\mathfrak nA$ es un cuerpo, extensión separable de $k$ (17.4.1), lo que implica que el cuerpo residual $K$ de $A$ es una extensión separable de $k$. Si no se cumple esta condición, la conclusión de (18.11.5) nunca puede verificarse para $\mathfrak p=\mathfrak m$, cualquiera que sea el entero $m$.
+\end{remark}
+
+\begin{corollary}[18.11.7]
+\label{IV.18.11.7}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana completa equidimensional, cuyo cuerpo residual es una extensión finita de $k$, y $\mathfrak p$ un ideal primo de $A$. Entonces el número mínimo de generadores del $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es mayor o igual que $\dim(A)$.
+\end{corollary}
+
+Este es un caso particular de (18.11.5.1).
+
+Más particularmente:
+
+\oldpage[IV-4]{177}
+
+\begin{corollary}[18.11.8]
+\label{IV.18.11.8}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana completa íntegra, cuyo cuerpo residual es una extensión finita de $k$. Si $K$ es el cuerpo de fracciones de $A$, se tiene
+\[
+  \operatorname{rg}_K\bigl((\hat{\Omega}^1_{A/k})\otimes_A K\bigr)\geq\dim(A).
+\]
+\end{corollary}
+
+Basta tomar $\mathfrak p=0$ en (18.11.7).
+
+\begin{corollary}[18.11.9]
+\label{IV.18.11.9}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana completa de dimensión $n$, cuyo cuerpo residual es una extensión finita de $k$. Sea $\mathfrak p$ un ideal primo de $A$ distinto del ideal maximal y que contiene un ideal primo mínimo $\mathfrak q$ tal que $\dim(A/\mathfrak q)=n$. Supongamos que el $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ admite $n$ generadores. Entonces:
+\begin{enumerate}
+  \item[(i)] El $A_{\mathfrak p}$-módulo $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es libre de rango $n$.
+  \item[(ii)] Existe un $k$-homomorfismo local $u:B\to A$, donde $B=k[[T_1,\ldots,T_n]]$, que hace de $A$ una $B$-álgebra finita, y tal que el morfismo correspondiente $\Spec(A)\to\Spec(B)$ sea étale en el punto $\mathfrak p$.
+  \item[(iii)] La $k$-álgebra $A_{\mathfrak p}$ es geométricamente regular.
+\end{enumerate}
+\end{corollary}
+
+Probemos primero (ii); en virtud de (18.11.5), existe un homomorfismo local
+\[
+  u:B=k[[T_1,\ldots,T_n]]\longrightarrow A
+\]
+que hace de $A$ una $B$-álgebra finita, y tal que el morfismo correspondiente $\Spec(A)\to\Spec(B)$ sea no ramificado en el punto $\mathfrak p$; pongamos $\mathfrak r=u^{-1}(\mathfrak p)$. La hipótesis sobre $\mathfrak q\subset\mathfrak p$ y el hecho de que $A$ sea un cociente de un anillo regular (0, 19.8.8) implican que $\dim(A_{\mathfrak p})=n-\dim(A/\mathfrak p)$ (0, 16.5.12). Análogamente, $\dim(B_{\mathfrak r})=n-\dim(B/\mathfrak r)$. Finalmente, puesto que el morfismo $\Spec(A)\to\Spec(B)$ es no ramificado en el punto $\mathfrak p$, la fibra de este morfismo en el punto $\mathfrak r$ tiene dimensión 0, por lo que (0, 16.3.9) se tiene $\dim(A/\mathfrak p)\leq\dim(B/\mathfrak r)$ y, por consiguiente, $\dim(B_{\mathfrak r})\leq\dim(A_{\mathfrak p})$. Concluimos entonces de (18.10.1) que el morfismo $\Spec(A)\to\Spec(B)$ es étale en el punto $\mathfrak p$.
+
+La afirmación (iii) resulta de que $A_{\mathfrak p}$ es formalmente liso sobre $B_{\mathfrak r}$ y que $B_{\mathfrak r}$ es formalmente liso sobre $k$ (para las topologías preádicas) (0, 19.3.4 y 19.3.5); por tanto, $A_{\mathfrak p}$ es formalmente liso sobre $k$ para su topología preádica y, en consecuencia, geométricamente regular sobre $k$ (0, 22.5.8).
+
+Probemos finalmente (i). Sea $k'$ una extensión algebraicamente cerrada de $k$, y consideremos la $k'$-álgebra semilocal $A'=A\widehat{\otimes}_k k'$. Si consideramos $A$ como $B$-módulo de tipo finito mediante el homomorfismo $u$, podemos escribir, salvo isomorfismo canónico, $A'=A\otimes_B(B\widehat{\otimes}_k k')$ ((7.5.7.1), cuyo enunciado recuerda que no es necesario suponer que el cuerpo residual de $B$ sea una extensión finita de $k$). Pongamos $B'=B\widehat{\otimes}_k k'$, que se identifica canónicamente con el álgebra de series formales $k'[[T_1,\ldots,T_n]]$. Puesto que el morfismo $\Spec(A)\to\Spec(B)$ es finito y étale en el punto $\mathfrak p$, el morfismo $\Spec(A')\to\Spec(B')$ es finito y étale en todo punto $\mathfrak p'$ sobre $\mathfrak p$ (17.3.3); además, $A'$ es suma directa de anillos locales $A'_i$ de dimensión $n$ ($1\leq i\leq r$) (18.11.4) y $\mathfrak p'$ se identifica con un ideal primo $\mathfrak p'_i$ de uno de los $A'_i$. El mismo razonamiento que arriba prueba entonces que $(A'_i)_{\mathfrak p'_i}$ es geométricamente regular sobre $k'$, y como $k'$ es perfecto, resulta de (18.11.3) que $(\hat{\Omega}^1_{A'_i/k'})_{\mathfrak p'_i}$ es un $(A'_i)_{\mathfrak p'_i}$-módulo libre de tipo finito. Pero como $(\hat{\Omega}^1_{A'_i/k'})_{\mathfrak p'_i}$ es isomorfo a $(\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}(A'_i)_{\mathfrak p'_i}$ (18.11.4) y $(A'_i)_{\mathfrak p'_i}$ es un $A_{\mathfrak p}$-módulo fielmente plano, se ve que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es un $A_{\mathfrak p}$-módulo libre de tipo finito (2.5.2);
+
+\oldpage[IV-4]{178}
+
+además, en virtud de (18.11.5.1) y de la hipótesis $\dim(A/\mathfrak q)=n$, concluimos que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es un $A_{\mathfrak p}$-módulo libre de rango $n$. C.Q.F.D.
+
+\begin{theorem}[18.11.10]
+\label{IV.18.11.10}
+Sean $k$ un cuerpo de exponente característico $p$, $A$ una $k$-álgebra local noetheriana completa, cuyo cuerpo residual es una extensión finita de $k$, y $\mathfrak p$ un ideal primo de $A$ distinto del ideal maximal. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] Para toda extensión $k'$ de $k$ y todo ideal primo $\mathfrak p'$ de $A'=A\widehat{\otimes}_k k'$ sobre $\mathfrak p$, $A'_{\mathfrak p'}$ es un anillo regular.
+  \item[$a')$] Existe una extensión perfecta $k'$ de $k$ y un ideal primo $\mathfrak p'$ de $A'=A\widehat{\otimes}_k k'$ sobre $\mathfrak p$, tales que $A'_{\mathfrak p'}$ sea regular.
+  \item[$b)$] Sea $n$ la mayor de las dimensiones de las componentes irreducibles de $\Spec(A)$ a las que pertenece $\mathfrak p$; entonces $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es un $A_{\mathfrak p}$-módulo libre de rango $n$.
+\end{enumerate}
+Supongamos además que $n=\dim(A)$ (lo que ocurre si $A$ es equidimensional); entonces las condiciones anteriores son también equivalentes a:
+\begin{enumerate}
+  \item[$c)$] Existe un $k$-homomorfismo local $u:B\to A$, donde $B=k[[T_1,\ldots,T_n]]$, que hace de $A$ una $B$-álgebra finita, y tal que el morfismo correspondiente $\Spec(A)\to\Spec(B)$ sea étale en el punto $\mathfrak p$.
+\end{enumerate}
+Cada una de las condiciones $a)$, $a')$, $b)$ implica la siguiente:
+\begin{enumerate}
+  \item[$d)$] El anillo $A_{\mathfrak p}$ es geométricamente regular sobre $k$.
+\end{enumerate}
+Si además $[k:k^p]<+\infty$, la condición $d)$ es equivalente a $a)$, $a')$ y $b)$.
+\end{theorem}
+
+El hecho de que $d)$ implique $b)$ cuando $[k:k^p]<+\infty$ no es otro que (18.11.3). Es claro que $a)$ implica trivialmente $a')$; mostremos que $c)$ implica $a)$ cuando $\dim(A)=n$. Con las notaciones de $a)$, se tiene entonces
+\[
+  A'=A\otimes_B B',\qquad B'=B\widehat{\otimes}_k k'=k'[[T_1,\ldots,T_n]]
+\]
+(7.5.7.1). El morfismo $\Spec(A')\to\Spec(B')$ es entonces finito y étale en el punto $\mathfrak p'$, y el razonamiento que prueba (18.11.9, (iii)) muestra que $A'_{\mathfrak p'}$ es regular.
+
+El hecho de que $b)$ implique $c)$ cuando $\dim(A)=n$ resulta de (18.11.9). Mostremos que $a')$ implica $b)$ cuando $\dim(A)=n$. Se sabe que $A'$ es un $A$-módulo plano (18.11.4) y $\dim(A')=\dim(A)=n$; de (2.3.4) y (6.1.1) resulta que existe un ideal primo mínimo $\mathfrak q'$ de $A'$ contenido en $\mathfrak p'$, sobre $\mathfrak q$, tal que $\dim(A'/\mathfrak q')=\dim(A/\mathfrak q)=n$. Por otra parte, resulta de (18.11.4) que
+\[
+  (\hat{\Omega}^1_{A'/k'})_{\mathfrak p'}=(\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}A'_{\mathfrak p'};
+\]
+como $k'$ es perfecto, la hipótesis de que $A'_{\mathfrak p'}$ es regular implica que es geométricamente regular sobre $k'$ (6.7.7). Puesto que $k'^p=k'$, podemos aplicar a $A'$ y $\mathfrak p'$ el hecho de que $d)$ implica $b)$; por tanto $(\hat{\Omega}^1_{A'/k'})_{\mathfrak p'}$ es un $A'_{\mathfrak p'}$-módulo libre de rango $n$; por fidelidad plana (18.11.4 y 2.5.2), concluimos que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es un $A_{\mathfrak p}$-módulo libre de rango $n$.
+
+Esto demuestra la equivalencia de $a)$, $a')$, $b)$ y $c)$ cuando $\dim(A)=n$. Falta probar que $a)$, $a')$ y $b)$ siguen siendo equivalentes en el caso general. Sea $\mathfrak J$ el ideal de $A$, núcleo del homomorfismo canónico $A\to A_{\mathfrak p}$, y pongamos $A_1=A/\mathfrak J$; necesariamente $\mathfrak J\subset\mathfrak p$, y si ponemos $\mathfrak p_1=\mathfrak p/\mathfrak J$, el homomorfismo canónico $A_{\mathfrak p}\to(A_1)_{\mathfrak p_1}$ es biyectivo; se concluye (I, 6.5.4) que la inclusión canónica $\Spec(A_1)\to\Spec(A)$ es un isomorfismo local en el punto $\mathfrak p_1$, y se tiene $\mathfrak J_{\mathfrak p}=0$. Como en (18.11.3), se obtiene la sucesión exacta
+\[
+  \mathfrak J/\mathfrak J^2\longrightarrow\hat{\Omega}^1_{A/k}\otimes_A A_1\longrightarrow\hat{\Omega}^1_{A_1/k}\longrightarrow0.
+\]
+
+\oldpage[IV-4]{179}
+
+Y al localizar en $\mathfrak p$ se obtiene un isomorfismo
+\[
+  (\hat{\Omega}^1_{A/k})_{\mathfrak p}\xrightarrow{\sim}(\hat{\Omega}^1_{A_1/k})_{\mathfrak p_1}.
+\]
+Esto demuestra que la condición $b)$ para el anillo $A$ y el ideal $\mathfrak p$ es equivalente a la condición $b)$ para el anillo $A_1$ y el ideal $\mathfrak p_1$. Por otra parte, con las notaciones de $a)$, se tiene $A'_1=A_1\widehat{\otimes}_k k'=A'/\mathfrak JA'$ salvo isomorfismo ((7.5.7.1), donde la hipótesis sobre el cuerpo residual de $B$ es superflua); si $\mathfrak p'$ es un ideal primo de $A'$ sobre $\mathfrak p$, todo elemento de $\mathfrak JA'$ anula a un elemento de $A'-\mathfrak p'$, luego $\mathfrak JA'\subset\mathfrak p'$, y si ponemos $\mathfrak p'_1=\mathfrak p'/\mathfrak JA'$, $\mathfrak p'_1$ está sobre $\mathfrak p_1$ y $(A'_1)_{\mathfrak p'_1}$ se identifica canónicamente con $A'_{\mathfrak p'}$; esto muestra, pues, que la condición $a)$ (respectivamente $a')$) para el anillo $A$ y el ideal $\mathfrak p$ es equivalente a la condición $a)$ (respectivamente $a')$) para el anillo $A_1$ y el ideal $\mathfrak p_1$. Ahora bien, todos los ideales primos mínimos de $A$ contenidos en $\mathfrak p$ contienen $\mathfrak J$, puesto que $\Spec(A_1)\to\Spec(A)$ es un isomorfismo local en el punto $\mathfrak p_1$; por otra parte, los ideales de $\operatorname{Ass}_A(A/\mathfrak J)$ son los ideales de $\operatorname{Ass}(A)$ que están contenidos en $\mathfrak p$ (Bourbaki, \emph{Alg. comm.}, cap. IV, \textsection~1, n\textsuperscript{o}~2, prop. 6); por tanto, los ideales primos mínimos de $A_1$ están todos contenidos en $\mathfrak p_1$, y se tiene en consecuencia $\dim(A_1)=n$. Basta entonces aplicar a $A_1$ y a $\mathfrak p_1$ lo demostrado arriba.
+
+\begin{remarks}[18.11.11]
+\label{IV.18.11.11}
+\begin{enumerate}
+  \item[(i)] La equivalencia de las condiciones $d)$ y $b)$ en (18.11.10) ya no es válida si no se supone $[k:k^p]<+\infty$. En efecto, en el ejemplo de (0, 22.7.7, (ii)), el anillo $B=A/\mathfrak q$ es íntegro y de dimensión 1; por otra parte, la sucesión
+  \[
+    (\mathfrak q/\mathfrak q^2)\otimes_A L\xrightarrow{j}\hat{\Omega}^1_{A/k}\otimes_A L\longrightarrow\hat{\Omega}^1_{B/k}\otimes_B L\longrightarrow0
+  \]
+  es exacta (misma demostración que en (18.11.3)), y se sabe que $j$ no es inyectivo, luego $j=0$ puesto que $(\mathfrak q/\mathfrak q^2)\otimes_A L$ tiene rango 1. Concluimos que $\operatorname{rg}_L(\hat{\Omega}^1_{B/k}\otimes_B L)=2$. Como $B_{\mathfrak p}$ es una $k$-álgebra geométricamente regular, se ve que aquí la condición $d)$ no implica $b)$.
+  \item[(ii)] Con las notaciones de (18.11.10), supongamos que $n=\dim(A)$ y sea $(x_i)_{1\leq i\leq n}$ un sistema de parámetros de $A$ que no pertenece a $\mathfrak p$; de ello se deduce un $k$-homomorfismo local $u:B\to A$ tal que $u(T_i)=x_i$ para $1\leq i\leq n$, que hace de $A$ una $B$-álgebra finita. Para que el morfismo correspondiente $\Spec(A)\to\Spec(B)$ sea étale en el punto $\mathfrak p$, es necesario y suficiente que las imágenes de los $d_Ax_i$ en $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ formen un sistema de generadores de este $A_{\mathfrak p}$-módulo. En efecto, en la demostración de (18.11.5) vimos que, si el morfismo $\Spec(A)\to\Spec(B)$ es no ramificado en el punto $\mathfrak p$, el homomorfismo canónico $(\hat{\Omega}^1_{B/k}\otimes_B A)_{\mathfrak p}\to(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ es sobreyectivo y las imágenes de los elementos $d_BT_i\otimes1$, que generan $(\hat{\Omega}^1_{B/k}\otimes_B A)_{\mathfrak p}$, son los $d_Ax_i$; de aquí la necesidad de la condición. Recíprocamente, el mismo razonamiento muestra que si se cumple esta condición, el morfismo $\Spec(A)\to\Spec(B)$ es no ramificado en $\mathfrak p$, y el razonamiento de (18.11.9) prueba de hecho que este morfismo es étale en $\mathfrak p$.
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[18.11.12]
+\label{IV.18.11.12}
+Sean $k$ un cuerpo de exponente característico $p$ tal que $[k:k^p]<+\infty$, $A$ una $k$-álgebra local noetheriana completa e íntegra, que no es un cuerpo y cuyo cuerpo residual es una extensión finita de $k$. Existe entonces una extensión finita radicial $k'$ de $k$ tal que, poniendo $A'=A\otimes_k k'$, la $k'$-álgebra $A'_{\mathrm{red}}$ y el ideal primo $0$ de esta álgebra satisfacen las condiciones equivalentes $a)$, $a')$, $b)$, $c)$ y $d)$ de (18.11.10). En particular, si $n=\dim(A)=\dim(A')$,
+
+\oldpage[IV-4]{180}
+
+existe un $k'$-homomorfismo local $B'=k'[[T_1,\ldots,T_n]]\to A'_{\mathrm{red}}$ que hace de $A'_{\mathrm{red}}$ una $B'$-álgebra finita, y tal que el cuerpo de fracciones $K'$ de $A'_{\mathrm{red}}$ sea una extensión finita separable del cuerpo de fracciones $k'((T_1,\ldots,T_n))$ de $B'$.
+\end{corollary}
+
+Como el morfismo $\Spec(A')\to\Spec(A)$ es radicial y finito, $A'$ es un anillo local completo y su nilradical es el único ideal primo sobre el ideal $0$ de $A$; por planitud, $A'$ se identifica con un subanillo de $K\otimes_k k'$, que es además el anillo total de fracciones de $A'$; por tanto $K'=(K\otimes_k k')_{\mathrm{red}}$. Hay que probar, teniendo en cuenta la equivalencia $d)\Leftrightarrow c)$ de (18.11.10), que existe una extensión radicial finita $k'$ de $k$ tal que $(K\otimes_k k')_{\mathrm{red}}$ sea una extensión separable de $k'$ (6.7.6). Ahora bien, se sabe (0, 19.8.9) que bajo las hipótesis dadas existe una $k$-subálgebra $C=k[[T_1,\ldots,T_m]]$ de $A$ tal que $A$ sea una $C$-álgebra finita; por tanto $K$ es una extensión finita del cuerpo de fracciones $K_1=k((T_1,\ldots,T_m))$ de $C$, que es separable sobre $k$ (0, 21.9.6.4). Si $p$ es el exponente característico de $k$, podemos escribir entonces
+\[
+  K\otimes_k k^{p^{-\infty}}=K\otimes_{K_1}(K_1\otimes_k k^{p^{-\infty}})
+\]
+y $K_1\otimes_k k^{p^{-\infty}}$ es un cuerpo, extensión radicial de $K_1$; se concluye que $K\otimes_k k^{p^{-\infty}}$ es una álgebra finita sobre el cuerpo $K_1\otimes_k k^{p^{-\infty}}$, y por tanto un anillo artiniano. La conclusión resulta, pues, del lema más general siguiente:
+
+\begin{lemma}[18.11.12.1]
+\label{IV.18.11.12.1}
+Sean $k$ un cuerpo de característica $p>0$ y $K$ una extensión de $k$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] El anillo $K\otimes_k k^{p^{-\infty}}$ es artiniano.
+  \item[$b)$] Existe una extensión $k'$ de $k$ de tipo finito tal que $(K\otimes_k k')_{\mathrm{red}}$ sea una $k'$-álgebra separable.
+  \item[$c)$] Existe una extensión finita radicial $k'$ de $k$ tal que $(K\otimes_k k')_{\mathrm{red}}$ sea una extensión separable de $k'$.
+\end{enumerate}
+\end{lemma}
+
+Mostremos primero que $c)$ implica $a)$. El anillo $A=K\otimes_k k'$ es entonces un anillo artiniano local, y si $\mathfrak N$ es su nilradical, el cuerpo residual $L=A/\mathfrak N$ es separable sobre $k'$; por consiguiente $L\otimes_{k'}k^{p^{-\infty}}$ es un cuerpo, y como es igual a
+\[
+  (A\otimes_{k'}k^{p^{-\infty}})/(\mathfrak N\otimes_{k'}k^{p^{-\infty}}),
+\]
+se ve que $\mathfrak N\otimes_{k'}k^{p^{-\infty}}$ es el nilradical de $A\otimes_{k'}k^{p^{-\infty}}=K\otimes_k k^{p^{-\infty}}$; como $\mathfrak N$ es un ideal de tipo finito, el nilradical de $K\otimes_k k^{p^{-\infty}}$ es, pues, de tipo finito, lo que implica que el anillo $K\otimes_k k^{p^{-\infty}}$ es artiniano.
+
+Recíprocamente, probemos que $a)$ implica $c)$. Sea $\mathfrak N$ el nilradical del anillo local artiniano $B=K\otimes_k k^{p^{-\infty}}$, que por hipótesis está generado por un número finito de elementos de la forma
+\[
+  y_i=\sum_j x_{ij}\otimes\xi_{ij},\qquad x_{ij}\in K,\quad \xi_{ij}\in k^{p^{-\infty}}.
+\]
+Sean $k'$ la extensión radicial finita de $k$ generada por los $\xi_{ij}$, y $\mathfrak N_0$ el ideal de $B_0=K\otimes_k k'$ generado por los $y_i$; es claro que los $y_i$ son nilpotentes en $B_0$; por otra parte, $\mathfrak N_0\otimes_{k'}k^{p^{-\infty}}=\mathfrak N$, y por tanto $\mathfrak N\cap B_0=\mathfrak N_0$; $\mathfrak N_0$ contiene el nilradical de $B_0$, luego es igual a él. Como $B/\mathfrak N=(B_0/\mathfrak N_0)\otimes_{k'}k^{p^{-\infty}}$ es reducido, se concluye que $B_0/\mathfrak N_0=(K\otimes_k k')_{\mathrm{red}}$ es separable sobre $k'$ (4.6.1).\footnote{La transcripción francesa imprime «sobre $k$»; el testigo inglés y la extensión de escala indican «sobre $k'$». Se conserva aquí la discrepancia de la fuente.}
+
+Es claro que $c)$ implica $b)$. Recíprocamente, supongamos que se cumple $b)$, y observemos que existe una extensión separable $k_1$ de $k$ tal que $k'$ sea una extensión radicial finita de $k_1$; pongamos $K_1=K\otimes_k k_1$, que es un cuerpo. Aplicando la equivalencia de $a)$ y $c)$ a la extensión $K_1$ de $k_1$, se ve que $K_1\otimes_{k_1}k_1^{p^{-\infty}}$ es un anillo artiniano; pero este anillo es igual
+
+\oldpage[IV-4]{181}
+
+a
+\[
+  K\otimes_k k_1^{p^{-\infty}}=(K\otimes_k k^{p^{-\infty}})\otimes_{k^{p^{-\infty}}}k_1^{p^{-\infty}},
+\]
+por tanto $K\otimes_k k^{p^{-\infty}}$ también es artiniano (Bourbaki, \emph{Alg. comm.}, cap. I, \textsection~3, n\textsuperscript{o}~5, cor. de la prop. 8); así hemos probado que $b)$ implica $a)$, lo que termina la demostración de (18.11.12.1) y de (18.11.12).

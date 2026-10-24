@@ -1,0 +1,2153 @@
+\section{Estudio cohomológico de los morfismos proyectivos}
+\label{section:III.2}
+
+
+\subsection{Cálculos explícitos de ciertos grupos de cohomología}
+\label{subsection:III.2.1}
+
+\begin{env}[2.1.1]
+\label{III.2.1.1}
+\oldpage[III]{95}
+Sea $X$ un preesquema y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible; consideremos el anillo graduado \sref[0]{0.5.4.6}
+\[
+\label{III.2.1.1.1}
+  S = \Gamma_*(X,\sh{L}) = \bigoplus_{n\in\bb{Z}} \Gamma(X,\sh{L}^{\otimes n}).
+  \tag{2.1.1.1}
+\]
+
+Sea $(f_i)_{1\leq i\leq r}$ una familia finita de elementos \emph{homogéneos} de $S$, digamos $f_i\in S_{d_i}$; pongamos $U_i = X_{f_i}$, $U = \bigcup_i U_i$, y denotemos por $\mathfrak{U}$ el recubrimiento $(U_i)$ de $U$.
+Para todo $\sh{O}_X$-módulo cuasicoherente $\sh{F}$, ponemos
+\[
+\label{III.2.1.1.2}
+  \HH^\bullet(U,\sh{F}(*)) = \bigoplus_{n\in\bb{Z}} \HH^\bullet(U,\sh{F}\otimes\sh{L}^{\otimes n})
+  \tag{2.1.1.2}
+\]
+\[
+\label{III.2.1.1.3}
+  \HH^\bullet(\mathfrak{U},\sh{F}(*)) = \bigoplus_{n\in\bb{Z}} \HH^\bullet(\mathfrak{U},\sh{F}\otimes\sh{L}^{\otimes n}).
+  \tag{2.1.1.3}
+\]
+
+Los grupos abelianos (\hyperref[III.2.1.1.2]{2.1.1.2}) y (\hyperref[III.2.1.1.3]{2.1.1.3}) son \emph{bigraduados}, tomando
+\[
+  (\HH^\bullet(U,\sh{F}(*)))_{mn} = \HH^m(U,\sh{F}\otimes\sh{L}^{\otimes n})
+\]
+y una definición análoga para (\hyperref[III.2.1.1.3]{2.1.1.3}).
+Para la segunda graduación, está claro que estos grupos son $S$-módulos graduados, como se deduce, por ejemplo, del hecho de que $\sh{F}\mapsto\HH^m(U,\sh{F})$ y $\sh{F}\mapsto\HH^m(\mathfrak{U},\sh{F})$ son funtores.
+\end{env}
+
+\begin{env}[2.1.2]
+\label{III.2.1.2}
+Consideremos ahora el $S$-módulo graduado \sref[0]{0.5.4.6}
+\[
+\label{III.2.1.2.1}
+  M = \Gamma_*(\sh{L},\sh{F}) = \HH^0(X,\sh{F}(*)) = \bigoplus_{n\in\bb{Z}} \Gamma(X,\sh{F}\otimes\sh{L}^{\otimes n}).
+  \tag{2.1.2.1}
+\]
+
+\oldpage[III]{96}
+Si $X$ es un preesquema cuyo espacio subyacente es noetheriano, o un esquema cuasicompacto, se deduce de \sref[I]{I.9.3.1} que, poniendo como de costumbre $U_{i_0 i_1\cdots i_p} = \bigcap_{k=0}^p U_{i_k}$, se tiene, salvo isomorfismo canónico,
+\[
+  \Gamma(U_{i_0 i_1\cdots i_p},\sh{F}(*)) = \HH^0(U_{i_0 i_1\cdots i_p},\sh{F}(*)) = M_{f_{i_0}f_{i_1}\cdots f_{i_p}}.
+\]
+
+Además, con la notación de (\hyperref[III.1.2.2]{1.2.2}), podemos identificar $M_{f_{i_0}f_{i_1}\cdots f_{i_p}}$ con $\varinjlim_n M_{i_0 i_1\cdots i_p}^{(n)}$.
+Esta identificación es un isomorfismo de $S$-módulos \emph{graduados} si definimos el grado de un elemento homogéneo $z\in\varinjlim_n M_{i_0 i_1\cdots i_p}^{(n)}$ como sigue: $z$ es la imagen canónica de un elemento homogéneo $x\in M_{i_0 i_1\cdots i_p}^{(n)} = M$ de grado $m$, y tomamos como grado de $z$ el número $m-n(d_{i_0}+d_{i_1}+\cdots+d_{i_p})$.
+Teniendo en cuenta la definición de los homomorfismos $\vphi_{kh}:M_{i_0 i_1\cdots i_p}^{(h)}\to M_{i_0 i_1\cdots i_p}^{(k)}$ (\hyperref[III.1.2.2]{1.2.2}), se ve inmediatamente que esta definición no depende del ``representante'' $x$ de $z$ elegido.
+Denotando, como en (\hyperref[III.1.2.2]{1.2.2}), por $C_n^p(M)$ el conjunto de aplicaciones alternadas de $[1,r]^{p+1}$ en $M$ (para todo $n$), definimos de manera análoga una estructura de $S$-módulo graduado sobre $\varinjlim_n C_n^p(M)$; como en (\hyperref[III.1.2.2]{1.2.2}), se tiene entonces
+\[
+\label{III.2.1.2.2}
+  C^p(\mathfrak{U},\sh{F}(*)) = \varinjlim_n C_n^p(M)
+  \tag{2.1.2.2}
+\]
+donde el isomorfismo entre ambos miembros \emph{respeta los grados}.
+Se tiene también, como en (\hyperref[III.1.2.2]{1.2.2}),
+\[
+\label{III.2.1.2.3}
+  C^p(\mathfrak{U},\sh{F}(*)) = C^{p+1}((\mathbf{f}),M) = \varinjlim_n K^{p+1}(\mathbf{f}^n,M)
+  \tag{2.1.2.3}
+\]
+donde el isomorfismo \emph{conserva los grados}: el grado de un elemento de $\varinjlim_n K^{p+1}(\mathbf{f}^n,M)$ que sea la imagen canónica de una cocadena $g\in K^{p+1}(\mathbf{f}^n,M)$ cuyos valores $g(i_0,\dots,i_p)$ pertenezcan a una misma componente homogénea $M_m$ de $M$ es $m-n(d_{i_0}+\cdots+d_{i_p})$, independientemente de la elección de esta cocadena como representante del elemento considerado.
+
+Como los isomorfismos anteriores son compatibles con los operadores de coborde, se concluye, como en (\hyperref[III.1.2.2]{1.2.2}), que:
+\end{env}
+
+\begin{proposition}[2.1.3]
+\label{III.2.1.3}
+Sea $X$ un preesquema cuyo espacio subyacente es noetheriano, o un esquema cuasicompacto.
+Existe un isomorfismo canónico, funtorial en $\sh{F}$,
+\[
+\label{III.2.1.3.1}
+  \HH^p(\mathfrak{U},\sh{F}(*)) \simto \HH^{p+1}((\mathbf{f}),M)
+  \qquad\text{para todo } p\geq 1.
+  \tag{2.1.3.1}
+\]
+Además, existe una sucesión exacta, funtorial en $\sh{F}$,
+\[
+\label{III.2.1.3.2}
+  0 \to \HH^0((\mathbf{f}),M) \to M \to \HH^0(\mathfrak{U},\sh{F}(*)) \to \HH^1((\mathbf{f}),M) \to 0.
+  \tag{2.1.3.2}
+\]
+Todos los homomorfismos introducidos son de grado $0$ para las estructuras de $S$-módulo graduado, donde $S$ es el anillo (\hyperref[III.2.1.1.1]{2.1.1.1}).
+\end{proposition}
+
+\begin{corollary}[2.1.4]
+\label{III.2.1.4}
+\oldpage[III]{97}
+Si $X$ es un esquema cuasicompacto y los $U_i=X_{f_i}$ son afines, existe un isomorfismo canónico, funtorial en $\sh{F}$ y de grado $0$,
+\[
+\label{III.2.1.4.1}
+  \HH^p(U,\sh{F}(*)) \simto \HH^{p+1}((\mathbf{f}),M)
+  \qquad\text{para todo } p\geq 1,
+  \tag{2.1.4.1}
+\]
+y una sucesión exacta, funtorial en $\sh{F}$,
+\[
+\label{III.2.1.4.2}
+  0 \to \HH^0((\mathbf{f}),M) \to M \to \HH^0(U,\sh{F}(*)) \to \HH^1((\mathbf{f}),M) \to 0,
+  \tag{2.1.4.2}
+\]
+en la que todos los homomorfismos son de grado $0$.
+\end{corollary}
+
+\begin{proof}
+Basta aplicar \sref{III.1.4.1} al resultado de \sref{III.2.1.3}.
+\end{proof}
+
+La proposición ``local'' análoga a \sref{III.2.1.3} es la siguiente.
+
+\begin{proposition}[2.1.5]
+\label{III.2.1.5}
+Sea $S$ un anillo graduado positivamente, sean los $f_i$ ($1\leq i\leq r$) elementos homogéneos de $S_+$ de grados $d_i$, y sea $M$ un $S$-módulo graduado.
+Sea $X=\Proj(S)$ el espectro primo homogéneo de $S$, y pongamos $U_i=\mathrm{D}_+(f_i)$, $U=\bigcup_i U_i$ y $\HH^\bullet(U,\widetilde{M}(*))=\bigoplus_{n\in\bb{Z}}\HH^\bullet(U,(M(n))^\sim)$.
+Existen isomorfismos canónicos, funtoriales en $M$ y de grado $0$ para las estructuras de $S$-módulo graduado,
+\[
+\label{III.2.1.5.1}
+  \HH^p(U,\widetilde{M}(*)) \simto \HH^{p+1}((\mathbf{f}),M)
+  \qquad\text{para todo } p\geq 1,
+  \tag{2.1.5.1}
+\]
+y una sucesión exacta, funtorial en $M$,
+\[
+\label{III.2.1.5.2}
+  0 \to \HH^0((\mathbf{f}),M) \to M \to \HH^0(U,\widetilde{M}(*)) \to \HH^1((\mathbf{f}),M) \to 0,
+  \tag{2.1.5.2}
+\]
+en la que todos los homomorfismos son de grado $0$.
+\end{proposition}
+
+\begin{proof}
+En efecto, por definición \sref[II]{II.2.5.2},
+\[
+  \Gamma(U_{i_0i_1\cdots i_p},(M(n))^\sim)
+  =(M_{f_{i_0}\cdots f_{i_p}})_n,
+\]
+y, por tanto, $\Gamma(U_{i_0i_1\cdots i_p},\widetilde{M}(*))=M_{f_{i_0}\cdots f_{i_p}}$.
+El resto del razonamiento es el mismo que en la demostración de \sref{III.2.1.4}, teniendo en cuenta que $X$ es un esquema.
+\end{proof}
+
+\begin{env}[2.1.6]
+\label{III.2.1.6}
+\emph{Observaciones.} ---
+(i) Bajo las hipótesis de \sref{III.2.1.5}, los funtores $\Gamma(U_{i_0i_1\cdots i_p},\widetilde{M}(*))$ son exactos en $M$, por \sref[0]{0.1.3.2}.
+El mismo razonamiento que en (\hyperref[III.1.2.5]{1.2.5}) muestra, por tanto, que, si $0\to M'\to M\to M''\to0$ es una sucesión exacta de $S$-módulos graduados cuyos homomorfismos tienen grado $0$, entonces para todo $p\geq0$ existen diagramas conmutativos
+\[
+\label{III.2.1.6.1}
+  \xymatrix{
+    \HH^p(U,\widetilde{M''}(*)) \ar[r]^-\partial \ar[d] &
+    \HH^{p+1}(U,\widetilde{M'}(*)) \ar[d] \\
+    \HH^{p+1}((\mathbf{f}),M'') \ar[r]^-\partial &
+    \HH^{p+2}((\mathbf{f}),M')
+  }
+  \tag{2.1.6.1}
+\]
+
+(ii) La Proposición~\sref{III.2.1.5} es especialmente útil cuando $S$ es una $A$-álgebra engendrada por un número finito de elementos de grado $1$, con $A$ noetheriano; en ese caso, todo $\sh{O}_X$-módulo cuasicoherente es de la forma $\widetilde{M}$ \sref[II]{II.2.7.7}.
+\end{env}
+
+\begin{env}[2.1.7]
+\label{III.2.1.7}
+\oldpage[III]{98}
+Aplicamos ahora \sref{III.2.1.5} al caso $S=A[\mathrm{T}_0,\dots,\mathrm{T}_r]$, donde $A$ es un anillo arbitrario y las $\mathrm{T}_i$ son indeterminadas, tomando $M=S$ y $f_i=\mathrm{T}_i$.
+Quedamos así reducidos esencialmente a calcular $\HH^\bullet((\mathbf{T}),S)$, donde $\mathbf{T}=(\mathrm{T}_i)_{0\leq i\leq r}$.
+\end{env}
+
+\begin{lemma}[2.1.8]
+\label{III.2.1.8}
+Si $S=A[\mathrm{T}_0,\dots,\mathrm{T}_r]$, entonces, con $\mathbf{T}=(\mathrm{T}_i)_{0\leq i\leq r}$,
+\[
+\label{III.2.1.8.1}
+  \HH^i(\mathbf{T}^n,S)=0
+  \qquad\text{si }i\neq r+1,
+  \tag{2.1.8.1}
+\]
+\[
+\label{III.2.1.8.2}
+  \HH^{r+1}(\mathbf{T}^n,S)=S/(\mathbf{T}^n).
+  \tag{2.1.8.2}
+\]
+Por tanto, el $A$-módulo $\HH^{r+1}(\mathbf{T}^n,S)$ tiene una $A$-base formada por las clases módulo $(\mathbf{T}^n)$ de los monomios
+\[
+  \mathrm{T}_{\mathbf{p}}=\mathrm{T}_0^{p_0}\cdots\mathrm{T}_r^{p_r},
+  \qquad \mathbf{p}=(p_0,\dots,p_r),\quad 0\leq p_i<n\ \text{para todo }i.
+\]
+\end{lemma}
+
+\begin{proof}
+Esto se deduce inmediatamente de (\hyperref[III.1.1.3.5]{1.1.3.5}) y de la Proposición~\sref{III.1.1.4}, cuyas hipótesis se satisfacen trivialmente.
+\end{proof}
+
+\begin{env}[2.1.9]
+\label{III.2.1.9}
+Pasando al límite inductivo respecto de $n$, las relaciones (\hyperref[III.2.1.8.1]{2.1.8.1}) dan $\HH^i((\mathbf{T}),S)=0$ para $i\neq r+1$.
+Para $i=r+1$, el sistema inductivo consta de los módulos $S/(\mathbf{T}^n)$, siendo el homomorfismo
+\[
+  \vphi_{nm}:S/(\mathbf{T}^n)\longrightarrow S/(\mathbf{T}^m)
+  \qquad (0\leq n\leq m)
+\]
+la multiplicación por $(\mathrm{T}_0\cdots\mathrm{T}_r)^{m-n}$.
+Para $n\geq\sup(p_i)_{0\leq i\leq r}$, denotemos por $\xi_{\mathbf{p}}^{(n)}=\xi_{p_0,\dots,p_r}^{(n)}$ la clase de $\mathrm{T}_0^{n-p_0}\cdots\mathrm{T}_r^{n-p_r}$ módulo $(\mathbf{T}^n)$.
+Entonces $\vphi_{nm}(\xi_{\mathbf{p}}^{(n)})=\xi_{\mathbf{p}}^{(m)}$, de modo que estos elementos tienen la misma imagen canónica $\xi_{\mathbf{p}}=\xi_{p_0,\dots,p_r}$ en el límite inductivo $\HH^{r+1}((\mathbf{T}),S)$.
+Por la definición del grado en (\hyperref[III.2.1.2]{2.1.2}), el grado de $\xi_{\mathbf{p}}$ es $-|\mathbf{p}|=-(p_0+p_1+\cdots+p_r)$.
+Está claro que los $\xi_{\mathbf{p}}^{(n)}$ con $0<p_i\leq n$ para $0\leq i\leq r$ forman una base de $S/(\mathbf{T}^n)$.
+Se deduce, pues, inmediatamente de \sref{III.2.1.8}:
+\end{env}
+
+\begin{corollary}[2.1.10]
+\label{III.2.1.10}
+Con la notación de \sref{III.2.1.8},
+\[
+\label{III.2.1.10.1}
+  \HH^i((\mathbf{T}),S)=0
+  \qquad\text{para }i\neq r+1,
+  \tag{2.1.10.1}
+\]
+y $\HH^{r+1}((\mathbf{T}),S)$ es un $A$-módulo libre con base los elementos $\xi_{p_0,\dots,p_r}$ tales que $p_i>0$ para $0\leq i\leq r$.
+\end{corollary}
+
+\begin{env}[2.1.11]
+\label{III.2.1.11}
+\emph{Observación.} ---
+Sea $N$ un $A$-módulo cualquiera y sea $M=S\otimes_A N$.
+El razonamiento de \sref{III.2.1.8} muestra más generalmente que
+\[
+\label{III.2.1.11.1}
+  \HH^i(\mathbf{T}^n,M)=0
+  \qquad\text{si }i\neq r+1,
+  \tag{2.1.11.1}
+\]
+\[
+\label{III.2.1.11.2}
+  \HH^{r+1}(\mathbf{T}^n,M)=(S/(\mathbf{T}^n))\otimes_A N.
+  \tag{2.1.11.2}
+\]
+En efecto, esta última fórmula se deduce directamente de (\hyperref[III.1.1.3.5]{1.1.3.5}).
+Además, está claro que
+\[
+  M/(\mathrm{T}_0^nM+\cdots+\mathrm{T}_{i-1}^nM)
+  =\bigl(S/(\mathrm{T}_0^nS+\cdots+\mathrm{T}_{i-1}^nS)\bigr)\otimes_A N,
+\]
+puesto que el ideal $\mathrm{T}_0^nS+\cdots+\mathrm{T}_{i-1}^nS$ es un sumando directo del $A$-módulo $S$.
+Esto permite aplicar \sref{III.1.1.4} a $M$ y da (\hyperref[III.2.1.11.1]{2.1.11.1}).
+\end{env}
+
+Combinando \sref{III.2.1.10} y \sref{III.2.1.5}, se obtiene:
+
+\begin{proposition}[2.1.12]
+\label{III.2.1.12}
+Sea $A$ un anillo, sea $r$ un entero $>0$ y sea $X=\bb{P}_A^r$ \sref[II]{II.4.1.1}.
+Entonces:
+\begin{enumerate}
+  \item[{\rm(i)}] $\HH^i(X,\sh{O}_X(*))=0$ para $i\neq0,r$.
+  \item[{\rm(ii)}] El homomorfismo canónico $\alpha:S\to\HH^0(X,\sh{O}_X(*))$ \sref[II]{II.2.6.2} es biyectivo.
+\oldpage[III]{99}
+  \item[{\rm(iii)}] $\HH^r(X,\sh{O}_X(*))$ es un $A$-módulo libre con base los elementos $\xi_{p_0,\dots,p_r}$, donde $p_i>0$ para $0\leq i\leq r$; el elemento $\xi_{p_0,\dots,p_r}$ tiene grado $-|\mathbf{p}|=-(p_0+\cdots+p_r)$, y
+  \[
+    \mathrm{T}_i\xi_{p_0,\dots,p_r}
+    =\xi_{p_0,\dots,p_{i-1},p_i-1,p_{i+1},\dots,p_r}.
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En la sucesión exacta (\hyperref[III.2.1.5.2]{2.1.5.2}) aplicada a $M=S=A[\mathrm{T}_0,\dots,\mathrm{T}_r]$, se tiene $\HH^0((\mathbf{T}),S)=0$ y $\HH^1((\mathbf{T}),S)=0$ por \sref{III.2.1.10.1}; además, la Proposición~\sref{III.2.1.5} se aplica con $U=X$, puesto que $X$ es la unión de los $\mathrm{D}_+(\mathrm{T}_i)$ \sref[II]{II.2.3.14}.
+Queda identificar la aplicación $S\to\HH^0(X,\sh{O}_X(*))$ de (\hyperref[III.2.1.5.2]{2.1.5.2}) con la aplicación canónica $\alpha$.
+Esto se deduce de la identificación canónica de $\HH^0(U,\sh{O}_X(*))$ y $\HH^0(\mathfrak{U},\sh{O}_X(*))$.
+\end{proof}
+
+\begin{corollary}[2.1.13]
+\label{III.2.1.13}
+Los únicos pares $(i,n)$ para los cuales puede ocurrir que $\HH^i(X,\sh{O}_X(n))\neq0$ son $i=0$, $n\geq0$, e $i=r$, $n\leq-(r+1)$.
+\end{corollary}
+
+Si $A\neq0$, entonces se tiene efectivamente $\HH^i(X,\sh{O}_X(n))\neq0$ para todos los pares enumerados en \sref{III.2.1.13}.
+Esto se deduce de \sref{III.2.1.12}, puesto que $S_n\neq0$ para todo grado $n\geq0$.
+
+En las aplicaciones de este capítulo, utilizaremos principalmente el siguiente resultado menos preciso.
+
+\begin{corollary}[2.1.14]
+\label{III.2.1.14}
+Los $A$-módulos $\HH^i(X,\sh{O}_X(n))$ son libres de tipo finito; si $i>0$, se anulan para $n>0$.
+\end{corollary}
+
+\begin{proposition}[2.1.15]
+\label{III.2.1.15}
+Sea $Y$ un preesquema, sea $\sh{E}$ un $\sh{O}_Y$-módulo localmente libre de rango $r+1$, sea $X=\bb{P}(\sh{E})$ el fibrado proyectivo definido por $\sh{E}$, y sea $f:X\to Y$ el morfismo estructural.
+Los únicos valores de $i$ y $n$ para los cuales puede ocurrir que $\RR^if_*(\sh{O}_X(n))\neq0$ son $i=0$, $n\geq0$, e $i=r$, $n\leq-(r+1)$.
+Además, el homomorfismo canónico \sref[II]{II.3.3.2}
+\[
+  \alpha:\bb{S}_{\sh{O}_Y}(\sh{E})
+  \longrightarrow \Gamma_*(\sh{O}_X)
+  =\RR^0f_*(\sh{O}_X(*))
+  =\bigoplus_{n\in\bb{Z}}f_*(\sh{O}_X(n))
+\]
+es un isomorfismo.
+\end{proposition}
+
+\begin{proof}
+La cuestión es local sobre $Y$, por lo que podemos suponer que $Y$ es afín de anillo $A$ y que $\sh{E}=\widetilde{E}$, donde $E=A^{r+1}$.
+Quedamos entonces reducidos inmediatamente a \sref{III.2.1.12}, teniendo en cuenta \sref{III.1.4.11}.
+\end{proof}
+
+\begin{env}[2.1.16]
+\label{III.2.1.16}
+\emph{Observación.} ---
+Más adelante completaremos los resultados de \sref{III.2.1.15} demostrando las proposiciones siguientes.
+Pongamos
+\[
+  \boldsymbol{\omega}=f^*\bigl(\bigwedge^{r+1}\sh{E}\bigr)(-r-1),
+\]
+que es un $\sh{O}_X$-módulo invertible.
+Entonces:
+\begin{enumerate}
+  \item[{\rm(i)}] Existe un isomorfismo canónico
+  \[
+  \label{III.2.1.16.1}
+    \rho:\sh{O}_Y \simto \RR^rf_*(\boldsymbol{\omega}).
+    \tag{2.1.16.1}
+  \]
+  \item[{\rm(ii)}] El apareamiento dado por el producto cup \sref[0]{0.12.2.2}
+  \[
+  \label{III.2.1.16.2}
+    \RR^rf_*(\sh{O}_X(n))
+    \times \RR^0f_*(\boldsymbol{\omega}(-n))
+    \longrightarrow \RR^rf_*(\boldsymbol{\omega}),
+    \tag{2.1.16.2}
+  \]
+  compuesto con $\rho^{-1}$, define un \emph{isomorfismo} de $\RR^rf_*(\sh{O}_X(n))$ sobre el \emph{dual} del $\sh{O}_Y$-módulo localmente libre
+  \[
+    \RR^0f_*(\boldsymbol{\omega}(-n))
+    =\bigl(\bigwedge^{r+1}\sh{E}\bigr)
+      \otimes_{\sh{O}_Y}
+      \bigl(\bb{S}_{\sh{O}_Y}(\sh{E})\bigr)_{-n}.
+  \]
+\end{enumerate}
+\end{env}
+
+\subsection{El teorema fundamental de los morfismos proyectivos}
+\label{subsection:III.2.2}
+\oldpage[III]{100}
+
+\begin{theorem}[2.2.1]
+\label{III.2.2.1}
+(Serre).
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo propio y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible amplio respecto de $f$.
+Para todo $\sh{O}_X$-módulo $\sh{F}$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}
+  \qquad(n\in\bb{Z}).
+\]
+Entonces, para todo $\sh{O}_X$-módulo coherente $\sh{F}$:
+\begin{enumerate}
+  \item[{\rm(i)}] los $\sh{O}_Y$-módulos $\RR^qf_*(\sh{F})$ son coherentes;
+  \item[{\rm(ii)}] existe un entero $N$ tal que, para $n\geq N$,
+  \[
+    \RR^qf_*(\sh{F}(n))=0
+    \qquad\text{para todo }q>0;
+  \]
+  \item[{\rm(iii)}] existe un entero $N$ tal que, para $n\geq N$, el homomorfismo canónico
+  \[
+    f^*\bigl(f_*(\sh{F}(n))\bigr)\longrightarrow\sh{F}(n)
+  \]
+  es sobreyectivo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Observemos primero que, si el teorema es cierto tras sustituir $\sh{L}$ por $\sh{L}^{\otimes d}$, donde $d>0$, entonces es cierto en su forma original.
+En efecto, escribiendo
+\[
+  \sh{F}(n)
+  =\bigl(\sh{F}\otimes\sh{L}^{\otimes r}\bigr)
+   \otimes\sh{L}^{\otimes hd},
+   \qquad h>0,\quad 0\leq r<d,
+\]
+la hipótesis da, para cada $r$, un entero $N_r$ tal que (ii) y (iii) se cumplen para $\sh{F}\otimes\sh{L}^{\otimes r}$ siempre que $h\geq N_r$.
+Tomando para $N$ el mayor de los enteros $dN_r$, las afirmaciones (ii) y (iii) se cumplen, por tanto, para $n\geq N$.
+
+Podemos, por consiguiente, suponer que $\sh{L}$ es muy amplio respecto de $f$ \sref[II]{II.4.6.11}.
+Existe entonces una inmersión abierta dominante sobre $Y$
+\[
+  i:X\longrightarrow P,
+  \qquad P=\Proj(\sh{S}),
+\]
+donde $\sh{S}$ es una $\sh{O}_Y$-álgebra cuasicoherente graduada en grados positivos, $\sh{S}_1$ es de tipo finito y engendra $\sh{S}$, y $\sh{L}$ es isomorfo a $i^*(\sh{O}_P(1))$ \sref[II]{II.4.4.7}.
+Como $f$ es propio, $i$ también es propio \sref[II]{II.5.4.4} y, por tanto, es un isomorfismo $X\simto P$.
+Quedamos así reducidos al caso $X=\Proj(\sh{S})$ y $\sh{L}=\sh{O}_X(1)$.
+El teorema es entonces consecuencia de la proposición siguiente.
+\end{proof}
+
+\begin{proposition}[2.2.2]
+\label{III.2.2.2}
+Sea $A$ un anillo noetheriano y sea $S$ una $A$-álgebra graduada en grados positivos tal que el $A$-módulo $S_1$ posee un sistema de $r+1$ generadores y engendra el álgebra $S$.
+Pongamos $X=\Proj(S)$.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$:
+\begin{enumerate}
+  \item[{\rm(i)}] los $A$-módulos $\HH^q(X,\sh{F})$ son de tipo finito;
+  \item[{\rm(ii)}] $\HH^q(X,\sh{F})=0$ para $q>r$;
+  \item[{\rm(iii)}] existe un entero $N$ tal que, para $n\geq N$,
+  \[
+    \HH^q(X,\sh{F}(n))=0
+    \qquad\text{para todo }q>0;
+  \]
+  \item[{\rm(iv)}] existe un entero $N$ tal que, para $n\geq N$, $\sh{F}(n)$ está engendrado por sus secciones sobre $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Mostremos primero cómo \sref{III.2.2.2} implica \sref{III.2.2.1}.
+En el caso particular $X=\Proj(\sh{S})$ al que se redujo anteriormente \sref{III.2.2.1}, $Y$ es cuasicompacto.
+Puede, por tanto, recubrirse por un número finito de abiertos afines $U_\alpha$, de anillos noetherianos, tales que la restricción de $\sh{S}_1$ a cada $U_\alpha$ esté engendrada por un número finito de secciones sobre $U_\alpha$.
+Una vez conocida \sref{III.2.2.2}, basta tomar en las partes (ii) y (iii) de \sref{III.2.2.1} el mayor de los enteros correspondientes a los $U_\alpha$, teniendo en cuenta \sref{III.1.4.11} y \sref[II]{II.3.4.7}.
+
+Para demostrar \sref{III.2.2.2}, observemos que $X$ se identifica con un subpreesquema cerrado de $P=\bb{P}_A^r$ \sref[II]{II.3.6.2}.
+Además, si $j:X\to P$ es la inyección canónica, entonces $j_*(\sh{F})$ es un $\sh{O}_P$-módulo coherente y
+\[
+  j_*(\sh{F}(n))=(j_*\sh{F})(n)
+\]
+por \sref[II]{II.3.4.5} y \sref[II]{II.3.5.2}.
+En virtud de (G, II, Corolario del Teorema~4.9.1), quedamos, por tanto, reducidos a demostrar \sref{III.2.2.2} en el caso particular
+\[
+  X=\bb{P}_A^r,
+  \qquad S=A[T_0,\ldots,T_r].
+\]
+
+\oldpage[III]{101}
+
+Como $X$ está recubierto por los $r+1$ abiertos afines $D_+(T_i)$, la afirmación (ii) se deduce de \sref{III.1.4.12}.
+La afirmación (iv) ya fue demostrada en \sref[II]{II.2.7.9}.
+
+Demostremos ahora simultáneamente (i) y (iii).
+Se cumplen para $\sh{F}=\sh{O}_X(m)$ por \sref{III.2.1.13} y, por tanto, también cuando $\sh{F}$ es suma directa de un número finito de $\sh{O}_X$-módulos de la forma $\sh{O}_X(m_j)$.
+Son trivialmente ciertas para $q>r$ por (ii).
+Procedemos por inducción descendente sobre $q$.
+
+El haz $\sh{F}$ es isomorfo a un cociente de una suma directa $\sh{E}$ de un número finito de haces $\sh{O}_X(m_j)$ \sref[II]{II.2.7.10}.
+Existe, pues, una sucesión exacta
+\[
+  0\longrightarrow\sh{R}\longrightarrow\sh{E}
+   \longrightarrow\sh{F}\longrightarrow0,
+\]
+donde $\sh{R}$ es coherente \sref[0]{0.5.3.3} y $\sh{E}$ satisface (i) y (iii).
+Como el cambio de grado es exacto, para todo $n\in\bb{Z}$ se tiene también una sucesión exacta
+\[
+  0\longrightarrow\sh{R}(n)\longrightarrow\sh{E}(n)
+   \longrightarrow\sh{F}(n)\longrightarrow0,
+\]
+y, por tanto, una sucesión exacta de cohomología
+\[
+  \HH^{q-1}(X,\sh{E}(n))
+  \longrightarrow\HH^{q-1}(X,\sh{F}(n))
+  \longrightarrow\HH^q(X,\sh{R}(n)).
+\]
+Como $\sh{E}(n)$ es una suma directa de haces $\sh{O}_X(n+m_j)$ \sref[II]{II.2.5.14}, el módulo $\HH^{q-1}(X,\sh{E}(n))$ es de tipo finito.
+Análogamente, el módulo $\HH^q(X,\sh{R}(n))$ es de tipo finito por la hipótesis de inducción.
+Como $A$ es noetheriano, se deduce que $\HH^{q-1}(X,\sh{F}(n))$ es de tipo finito, lo que demuestra (i).
+
+Por la hipótesis de inducción podemos elegir $N$ de modo que $\HH^q(X,\sh{R}(n))=0$ para $n\geq N$.
+Podemos elegir asimismo $N$ de modo que $\HH^{q-1}(X,\sh{E}(n))=0$ para $n\geq N$, puesto que $\sh{E}$ satisface (iii).
+La sucesión exacta de cohomología da entonces
+\[
+  \HH^{q-1}(X,\sh{F}(n))=0
+  \qquad(n\geq N),
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[2.2.3]
+\label{III.2.2.3}
+Bajo las hipótesis de \sref{III.2.2.1}, sea
+\[
+  \sh{F}\longrightarrow\sh{G}\longrightarrow\sh{H}
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes.
+Existe un entero $N$ tal que, para $n\geq N$, la sucesión
+\[
+  f_*(\sh{F}(n))
+  \longrightarrow f_*(\sh{G}(n))
+  \longrightarrow f_*(\sh{H}(n))
+\]
+es exacta.
+\end{corollary}
+
+\begin{proof}
+Sean $\sh{F}'$, $\sh{G}'$ y $\sh{G}''$, respectivamente, el núcleo, la imagen y el conúcleo de $\sh{F}\to\sh{G}$.
+Entonces $\sh{G}'$ es el núcleo y $\sh{G}''$ la imagen de $\sh{G}\to\sh{H}$; sea $\sh{H}''$ el conúcleo de este último homomorfismo.
+Todos estos $\sh{O}_X$-módulos son coherentes \sref[0]{0.5.3.4}.
+Como el cambio de grado es exacto, basta demostrar que, para $n$ suficientemente grande, cada una de las sucesiones
+\begin{align*}
+  0&\longrightarrow f_*(\sh{F}'(n))
+    \longrightarrow f_*(\sh{F}(n))
+    \longrightarrow f_*(\sh{G}'(n))
+    \longrightarrow0,\\
+  0&\longrightarrow f_*(\sh{G}'(n))
+    \longrightarrow f_*(\sh{G}(n))
+    \longrightarrow f_*(\sh{G}''(n))
+    \longrightarrow0,\\
+  0&\longrightarrow f_*(\sh{G}''(n))
+    \longrightarrow f_*(\sh{H}(n))
+    \longrightarrow f_*(\sh{H}''(n))
+    \longrightarrow0
+\end{align*}
+es exacta.
+Por consiguiente, podemos suponer que
+\[
+  0\longrightarrow\sh{F}\longrightarrow\sh{G}
+   \longrightarrow\sh{H}\longrightarrow0
+\]
+es exacta.
+La sucesión de cohomología es entonces
+\[
+  0\longrightarrow f_*(\sh{F}(n))
+  \longrightarrow f_*(\sh{G}(n))
+  \longrightarrow f_*(\sh{H}(n))
+  \longrightarrow \RR^1f_*(\sh{F}(n))
+  \longrightarrow\cdots,
+\]
+y la conclusión se deduce de \sref{III.2.2.1}, (ii).
+\end{proof}
+
+\oldpage[III]{102}
+
+\begin{corollary}[2.2.4]
+\label{III.2.2.4}
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo de tipo finito y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible amplio respecto de $f$.
+Para todo $\sh{O}_X$-módulo $\sh{F}$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}
+  \qquad(n\in\bb{Z}).
+\]
+Sea
+\[
+  \sh{F}\longrightarrow\sh{G}\longrightarrow\sh{H}
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes tal que los soportes de $\sh{F}$ y $\sh{H}$ sean propios sobre $Y$ \sref[II]{II.5.4.10}.
+Entonces existe un entero $N$ tal que, para $n\geq N$, la sucesión
+\[
+  f_*(\sh{F}(n))
+  \longrightarrow f_*(\sh{G}(n))
+  \longrightarrow f_*(\sh{H}(n))
+\]
+es exacta.
+\end{corollary}
+
+\begin{proof}
+El razonamiento del comienzo de \sref{III.2.2.1} muestra que, si el corolario es cierto para $\sh{L}^{\otimes d}$, donde $d>0$, entonces es cierto para $\sh{L}$.
+Podemos, por tanto, suponer que $\sh{L}$ es muy amplio respecto de $f$ \sref[II]{II.4.6.11}.
+Podemos entonces identificar $X$ con un subconjunto abierto de un $Y$-preesquema
+\[
+  Z=\Proj(\sh{S}),
+\]
+donde $\sh{S}$ es una $\sh{O}_Y$-álgebra cuasicoherente graduada en grados positivos, $\sh{S}_1$ es de tipo finito y engendra $\sh{S}$, y
+\[
+  \sh{L}=i^*(\sh{O}_Z(1)),
+\]
+siendo $i:X\to Z$ la inmersión canónica \sref[II]{II.4.4.7}.
+
+Ahora $\Supp(\sh{G})$ es cerrado en $X$ y está contenido en
+\[
+  \Supp(\sh{F})\cap\Supp(\sh{H});
+\]
+por tanto, es propio sobre $Y$.
+En consecuencia, los soportes de $\sh{F}$, $\sh{G}$ y $\sh{H}$ son cerrados en $Z$ \sref[II]{II.5.4.10}.
+Así,
+\[
+  \sh{F}'=i_*(\sh{F}),\qquad
+  \sh{G}'=i_*(\sh{G}),\qquad
+  \sh{H}'=i_*(\sh{H})
+\]
+son $\sh{O}_Z$-módulos coherentes, y la sucesión
+\[
+  \sh{F}'\longrightarrow\sh{G}'\longrightarrow\sh{H}'
+\]
+es exacta.
+Si $g:Z\to Y$ es el morfismo estructural, entonces $f=g\circ i$, y claramente
+\[
+  \sh{F}'(n)=i_*(\sh{F}(n)),
+\]
+con identidades análogas para $\sh{G}'$ y $\sh{H}'$.
+La conclusión se deduce de \sref{III.2.2.3}, aplicado a $\sh{F}'$, $\sh{G}'$ y $\sh{H}'$.
+\end{proof}
+
+\begin{env}[2.2.5]
+\label{III.2.2.5}
+\emph{Observaciones.}
+
+(i) La afirmación (i) de \sref{III.2.2.1} sigue siendo cierta si solo se supone que $Y$ es \emph{localmente noetheriano}.
+En efecto, la propiedad es manifiestamente local sobre $Y$.
+Además, las hipótesis de \sref{III.2.2.1} implican que, para todo subconjunto abierto $U\subset Y$, la restricción de $f$ a $f^{-1}(U)$ es un morfismo proyectivo
+\[
+  f^{-1}(U)\longrightarrow U
+\]
+\sref[II]{II.5.5.5}[iii], y $\sh{L}|_{f^{-1}(U)}$ es amplio para este morfismo \sref[II]{II.4.6.4}.
+
+(ii) La afirmación (iii) de \sref{III.2.2.1} sigue siendo válida, como hemos visto, si solo se supone que $X$ es un esquema cuasicompacto, o un preesquema cuyo espacio subyacente es noetheriano, y que $f:X\to Y$ es cuasicompacto \sref[II]{II.4.6.8}.
+Conviene observar, sin embargo, que incluso cuando $Y$ es el \emph{espectro de un cuerpo} $K$ y $f$ es \emph{cuasiproyectivo}, la afirmación (ii) de \sref{III.2.2.1} puede dejar de cumplirse.
+
+Por ejemplo, sea
+\[
+  X'=\Spec(K[T_0,\ldots,T_r])
+\]
+y sea $X$ la unión de los subconjuntos abiertos afines $D(T_i)$ de $X'$, para $0\leq i\leq r$.
+Como la inmersión $X\to X'$ es cuasicompacta, el morfismo estructural $f:X\to Y$ es cuasiafín \sref[II]{II.5.1.10} y, por tanto, $\sh{O}_X$ es muy amplio respecto de $f$ \sref[II]{II.5.1.6}.
+Pero
+\[
+  \Gamma(X,\sh{O}_X)
+  =\bigcap_{i=0}^r(K[T_0,\ldots,T_r])_{T_i}
+  =K[T_0,\ldots,T_r]
+\]
+por \sref[I]{I.8.2.1.1}.
+Se deduce de \sref{III.1.4.3.1} y \sref{III.1.1.3.5} que
+\[
+  \HH^r(X,\sh{O}_X^{\otimes n})
+  =\HH^r(X,\sh{O}_X)
+  =A\neq0
+\]
+para todo $n$.
+\end{env}
+
+
+\subsection{Aplicación a los haces graduados de álgebras y de módulos}
+\label{subsection:III.2.3}
+
+\begin{theorem}[2.3.1]
+\label{III.2.3.1}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, graduada en grados positivos, sea
+\[
+  X=\Proj(\sh{S}),
+\]
+y sea $q:X\to Y$ el morfismo estructural.
+Sea $\sh{M}$ un $\sh{S}$-módulo graduado cuasicoherente que satisface la condición \textbf{(TF)}.
+Existe entonces un entero $N$ tal que, para $n\geq N$, el homomorfismo canónico \sref[II]{II.8.14.5.1}
+\[
+  \alpha_n:\sh{M}_n
+  \longrightarrow q_*\bigl(\shProj_0(\sh{M}(n))\bigr)
+  =q_*\bigl((\shProj(\sh{M}))_n\bigr)
+\]
+\oldpage[III]{103}
+es biyectivo.
+En otras palabras, el homomorfismo canónico
+\[
+  \alpha:\sh{M}\longrightarrow\bbGamma_*(\shProj(\sh{M}))
+\]
+es un \textbf{(TN)}-isomorfismo.
+\end{theorem}
+
+\begin{proof}
+Podemos restringirnos al caso en que $\sh{M}$ es un $\sh{S}$-módulo de tipo finito \sref[II]{II.3.4.2}.
+Como $Y$ es cuasicompacto, existe un entero $d>0$ tal que $\sh{S}^{(d)}$ está engendrada por el $\sh{O}_Y$-módulo cuasicoherente $\sh{S}_d$, que es de tipo finito \sref[II]{II.3.1.10} y, por tanto, coherente porque $Y$ es noetheriano.
+Ahora bien, $\sh{M}$ es la suma directa de los $\sh{M}^{(d,k)}$, para $0\leq k<d$, y cada $\sh{M}^{(d,k)}$ es un $\sh{S}^{(d)}$-módulo cuasicoherente de tipo finito, por \sref[II]{II.2.1.6}[iii].
+Como la cuestión es local sobre $Y$, basta manifiestamente demostrar que cada homomorfismo canónico
+\[
+  \alpha:\sh{M}^{(d,k)}
+  \longrightarrow
+  \bbGamma_*\bigl((\shProj(\sh{M}))^{(d,k)}\bigr)
+\]
+es un \textbf{(TN)}-isomorfismo.
+Teniendo en cuenta \sref[II]{II.8.14.13}, y en particular el diagrama \sref[II]{II.8.14.13.4}, quedamos así reducidos a demostrar el teorema cuando $\sh{S}$ está engendrada por $\sh{S}_1$ y $\sh{S}_1$ es un $\sh{O}_Y$-módulo coherente.
+
+Como $Y$ es noetheriano, el razonamiento utilizado al comienzo de la demostración de \sref{III.2.2.2} muestra que podemos reducirnos al caso
+\[
+  Y=\Spec(A),\qquad
+  \sh{S}=\widetilde{S},\qquad
+  \sh{M}=\widetilde{M},
+\]
+donde $A$ es un anillo noetheriano, $S_1$ es un $A$-módulo de tipo finito y $M$ es un $S$-módulo graduado de tipo finito.
+Mostraremos que basta entonces demostrar el teorema para $M=S$.
+En efecto, en el caso general existe una sucesión exacta
+\[
+  L'\longrightarrow L\longrightarrow M\longrightarrow0,
+\]
+donde $L$ y $L'$ son sumas directas de módulos graduados de la forma $S(m)$.
+Si el resultado se cumple para $M=S$, se cumple también para $M=S(m)$ y, por tanto, para $L$ y $L'$.
+Consideremos el diagrama conmutativo
+\[
+  \xymatrix{
+    \widetilde{L'_n}\ar[r]\ar[d]_{\alpha_n} &
+    \widetilde{L_n}\ar[r]\ar[d]^{\alpha_n} &
+    \widetilde{M_n}\ar[r]\ar[d]^{\alpha_n} &
+    0\\
+    q_*(\widetilde{L'}(n))\ar[r] &
+    q_*(\widetilde{L}(n))\ar[r] &
+    q_*(\widetilde{M}(n))\ar[r] &
+    0 .
+  }
+\]
+\oldpage[III]{104}
+La segunda fila es exacta por \sref{III.2.2.3} cuando $n$ es suficientemente grande.
+Lo mismo ocurre con la primera fila y, como las dos flechas verticales de la izquierda son isomorfismos, también lo es la tercera.
+
+Queda, pues, demostrar el teorema para $M=S$.
+Supongamos primero que
+\[
+  S=A[T_0,\ldots,T_r],
+\]
+donde los $T_i$ son indeterminadas.
+En este caso, la afirmación es precisamente \sref{III.2.1.11}[ii].
+En el caso general, $S$ se identifica con un cociente de un anillo
+\[
+  S'=A[T_0,\ldots,T_r]
+\]
+por un ideal graduado, de modo que $X$ es un subesquema cerrado de
+\[
+  X'=\bb{P}_A^r
+\]
+\sref[II]{II.2.9.2}.
+Si $j:X\to X'$ es la inyección canónica, entonces $j_*(\widetilde{S}(n))$ es el $\sh{O}_{X'}$-módulo
+\[
+  (\shProj(\widetilde{S}))(n),
+\]
+donde $S$ se considera como $S'$-módulo graduado; esto se deduce inmediatamente de \sref[II]{II.2.8.7}.
+Como $j_*(\widetilde{S}(n))$ es un $\sh{O}_{X'}$-módulo que satisface \textbf{(TF)}, el homomorfismo canónico
+\[
+  \alpha_n:S_n\longrightarrow
+  \Gamma\bigl(X',j_*(\widetilde{S}(n))\bigr)
+\]
+es biyectivo para todo $n$ suficientemente grande, por el caso polinómico que acabamos de demostrar.
+Esto termina la demostración, puesto que
+\[
+  \Gamma\bigl(X',j_*(\widetilde{S}(n))\bigr)
+  =\Gamma(X,\widetilde{S}(n)).
+\]
+\end{proof}
+
+\begin{corollary}[2.3.2]
+\label{III.2.3.2}
+Bajo las hipótesis de \sref{III.2.3.1}, sea
+\[
+  \sh{S}_X=\bigoplus_{n\in\bb{Z}}\sh{O}_X(n),
+\]
+y sea $\sh{F}$ un $\sh{S}_X$-módulo graduado cuasicoherente de tipo finito.
+Entonces $\bbGamma_*(\sh{F})$ satisface la condición \textbf{(TF)}.
+\end{corollary}
+
+\begin{proof}
+En la demostración de \sref{III.2.3.1} vimos que $X$, que es isomorfo a $\Proj(\sh{S}^{(d)})$ \sref[II]{II.3.1.8}, es de tipo finito sobre $Y$ \sref[II]{II.3.4.1}.
+Se deduce de \sref[II]{II.8.14.9} que $\sh{F}$ es isomorfo a un $\sh{S}_X$-módulo graduado de la forma $\shProj(\sh{M})$, donde $\sh{M}$ es un $\sh{S}$-módulo graduado cuasicoherente de tipo finito.
+Por \sref{III.2.3.1}, $\bbGamma_*(\sh{F})$ es \textbf{(TN)}-isomorfo a $\sh{M}$ y, por consiguiente, satisface \textbf{(TF)}.
+\end{proof}
+
+\begin{env}[2.3.3]
+\label{III.2.3.3}
+\emph{Escolio.}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra graduada que satisface las hipótesis de \sref{III.2.3.1}, y sea $X=\Proj(\sh{S})$.
+Sea $\cat{K}_{\sh{S}}$ la categoría abeliana de los $\sh{S}$-módulos graduados cuasicoherentes que satisfacen \textbf{(TF)}, y sea $\cat{K}'_{\sh{S}}$ la subcategoría de $\cat{K}_{\sh{S}}$ formada por los $\sh{S}$-módulos que satisfacen \textbf{(TN)}.
+Por último, sea $\cat{K}_X$ la categoría de los $\sh{S}_X$-módulos graduados cuasicoherentes $\sh{F}$ de tipo finito; como $\sh{S}_X$ es periódica \sref[II]{II.8.14.4} y \sref[II]{II.8.14.12}, esto equivale a exigir que los $\sh{F}_i$ sean $\sh{O}_X$-módulos coherentes.
+
+Por \sref[II]{II.8.14.8}, \sref[II]{II.8.14.10} y \sref{III.2.3.2}, los funtores
+\[
+  \sh{M}\longmapsto\shProj(\sh{M}),
+  \qquad
+  \sh{F}\longmapsto\bbGamma_*(\sh{F})
+\]
+definen una equivalencia (T, I, 1.2) entre la categoría cociente
+\[
+  \cat{K}_{\sh{S}}/\cat{K}'_{\sh{S}}
+\]
+(T, I, 1.11) y la categoría $\cat{K}_X$.
+Cuando $\sh{S}$ está engendrada por $\sh{S}_1$, la categoría $\cat{K}_X$ puede sustituirse por la categoría de los $\sh{O}_X$-módulos coherentes \sref[II]{II.8.14.12}.
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4}
+Sea $Y$ un preesquema noetheriano.
+
+(i) Sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, graduada en grados positivos.
+Pongamos
+\[
+  X=\Proj(\sh{S}),\qquad
+  \sh{S}_X=\shProj(\sh{S})
+  =\bigoplus_{n\in\bb{Z}}\sh{O}_X(n).
+\]
+Entonces $\sh{S}_X$ es una $\sh{O}_X$-álgebra graduada cuasicoherente periódica \sref[II]{II.8.14.12}, sus componentes homogéneas
+\[
+  (\sh{S}_X)_n=\sh{O}_X(n)
+\]
+son $\sh{O}_X$-módulos coherentes y, si $d>0$ es un período de $\sh{S}_X$, entonces
+\[
+  (\sh{S}_X)_d=\sh{O}_X(d)
+\]
+es $Y$-amplio como $\sh{O}_X$-módulo invertible.
+Además, el homomorfismo canónico
+\[
+  \alpha:\sh{S}\longrightarrow\bbGamma_*(\sh{S}_X)
+\]
+es un \textbf{(TN)}-isomorfismo.
+
+(ii) Recíprocamente, sea $q:X\to Y$ un morfismo proyectivo y sea $\sh{S}'$ una $\sh{O}_X$-álgebra graduada cuyas componentes homogéneas $\sh{S}'_n$, para $n\in\bb{Z}$, son $\sh{O}_X$-módulos coherentes.
+Supongamos que $\sh{S}'$ tiene un período $d>0$ tal que $\sh{S}'_d$ es un $\sh{O}_X$-módulo invertible amplio para $q$.
+Entonces
+\[
+  \sh{S}=\bigoplus_{n\geq0}q_*(\sh{S}'_n)
+\]
+es una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, graduada en grados positivos, y existe un $Y$-isomorfismo
+\[
+  r:X\simto\Proj(\sh{S})
+\]
+tal que $r^*(\shProj(\sh{S}))$ es isomorfo a $\sh{S}'$ como $\sh{O}_X$-álgebra graduada.
+\end{proposition}
+
+\begin{proof}
+(i) Casi todas las afirmaciones ya han sido demostradas; la última es un caso particular de \sref{III.2.3.2}.
+La periodicidad de $\sh{S}_X$ fue demostrada en \sref[II]{II.8.14.14}, y la afirmación de que existe un período $d>0$ para el cual $\sh{O}_X(d)$ es invertible y $Y$-amplio es precisamente \sref[II]{II.4.6.18}.
+Finalmente, para $0\leq k<d$, $(\sh{S}_X)^{(d,k)}$ es un $(\sh{S}_X)^{(d)}$-módulo de tipo finito \sref[II]{II.8.14.14}.
+Se deduce que cada $(\sh{S}_X)_n$ es un $\sh{O}_X$-módulo cuasicoherente de tipo finito \sref[II]{II.2.1.6}[ii]; como $\sh{O}_X$ es coherente, también lo es cada $(\sh{S}_X)_n$.
+
+(ii) Tras sustituir el período $d$ por uno de sus múltiplos, podemos suponer que
+\[
+  \sh{L}=\sh{S}'_d
+\]
+es muy amplio respecto de $q$ \sref[II]{II.4.6.11}.
+Por hipótesis,
+\[
+  \sh{S}'^{(d)}
+  =\bigoplus_{n\in\bb{Z}}\sh{L}^{\otimes n},
+\]
+y, por tanto,
+\[
+  \sh{S}^{(d)}
+  =\bigoplus_{n\geq0}q_*(\sh{L}^{\otimes n}).
+\]
+Por \sref[II]{II.3.1.8} y \sref[II]{II.3.2.9}, existe un $Y$-isomorfismo
+\[
+  s:X'=\Proj(\sh{S})\simto
+  X''=\Proj(\sh{S}^{(d)})
+\]
+tal que
+\oldpage[III]{105}
+\[
+  s^*(\sh{O}_{X''}(n))=\sh{O}_{X'}(nd)
+\]
+para todo $n$ \sref[II]{II.3.5.2}.
+Estableceremos, por tanto, la existencia de un $Y$-isomorfismo $X\simto X'$ demostrando la afirmación siguiente.
+
+\begin{env}[2.3.4.1]
+\label{III.2.3.4.1}
+Sea $Y$ un preesquema noetheriano, sea $q:X\to Y$ un morfismo proyectivo y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible muy amplio para $q$.
+Entonces
+\[
+  \sh{S}=\bigoplus_{n\geq0}q_*(\sh{L}^{\otimes n})
+\]
+es una $\sh{O}_Y$-álgebra graduada cuasicoherente de tipo finito tal que
+\[
+  \sh{S}_n=\sh{S}_1^n
+\]
+para todo $n$ suficientemente grande, y existe un $Y$-isomorfismo
+\[
+  r:X\simto P=\Proj(\sh{S})
+\]
+tal que
+\[
+  \sh{L}=r^*(\sh{O}_P(1)).
+\]
+\end{env}
+
+Como $q$ es proyectivo, se deduce de \sref[II]{II.5.4.4} y \sref[II]{II.4.4.7} que existe un $Y$-isomorfismo
+\[
+  r':X\simto P'=\Proj(\sh{T}),
+\]
+donde $\sh{T}$ es una $\sh{O}_Y$-álgebra cuasicoherente, $\sh{T}_1$ es de tipo finito y engendra $\sh{T}$, y
+\[
+  \sh{L}=r'^*(\sh{O}_{P'}(1)).
+\]
+Si $q':P'\to Y$ es el morfismo estructural, entonces
+\[
+  \sh{S}=\bigoplus_{n\geq0}q'_*(\sh{O}_{P'}(n)).
+\]
+Por \sref{III.2.3.1}, el homomorfismo canónico
+\[
+  \alpha_n:\sh{T}_n\longrightarrow
+  \sh{S}_n=q'_*(\sh{O}_{P'}(n))
+\]
+es biyectivo para todo $n$ suficientemente grande.
+Como $\sh{T}_n=\sh{T}_1^n$, se deduce \emph{a fortiori} que $\sh{S}_n=\sh{S}_1^n$ para todo $n$ suficientemente grande.
+
+El homomorfismo canónico $\alpha:\sh{T}\to\sh{S}$ de $\sh{O}_Y$-álgebras graduadas es un \textbf{(TN)}-isomorfismo.
+Por consiguiente,
+\phantomsection\label{III.2.3.5.1}
+\[
+  \Phi=\Proj(\alpha):\Proj(\sh{S})\longrightarrow\Proj(\sh{T})
+\]
+es un isomorfismo \sref[II]{II.3.6.1}.
+Además, \sref[II]{II.3.5.2} y el hecho de que los $\sh{T}$-módulos graduados obtenidos de $\sh{S}(n)$ por restricción de escalares son \textbf{(TN)}-isomorfos a $\sh{T}(n)$ dan
+\[
+  \Phi_*(\sh{O}_P(n))=\sh{O}_{P'}(n)
+\]
+para todo $n$ \sref[II]{II.3.4.2}.
+Solo queda mostrar que $\sh{S}$ es de tipo finito sobre $\sh{O}_Y$.
+Los módulos
+\[
+  \sh{S}_n=q'_*(\sh{O}_{P'}(n))
+\]
+son coherentes por \sref{III.2.2.1}; y si $\sh{S}_n=\sh{S}_1^n$ para $n\geq n_0$, entonces $\sh{S}$ está engendrada por el módulo coherente
+\[
+  \bigoplus_{i\leq n_0}\sh{S}_i.
+\]
+Esto demuestra la afirmación \sref[I]{I.9.6.2}.
+
+Volvamos a la demostración de \sref{III.2.3.4}, conservando su notación.
+Hemos demostrado que existe un $Y$-isomorfismo
+\[
+  r'':X\simto X''
+\]
+tal que
+\[
+  r''_*(\sh{L}^{\otimes n})=\sh{O}_{X''}(n)
+\]
+para todo $n\in\bb{Z}$.
+Sea $q'':X''\to Y$ el morfismo estructural.
+El álgebra $\sh{S}'$ es la suma directa de los $\sh{S}'^{(d)}$-módulos graduados $\sh{S}'^{(d,k)}$.
+Cada uno de ellos es un $\sh{S}'^{(d)}$-módulo cuasicoherente de tipo finito, por la periodicidad de $\sh{S}'$ y la hipótesis de que los $\sh{S}'_n$ son $\sh{O}_X$-módulos de tipo finito \sref[II]{II.8.14.12}.
+Pongamos
+\[
+  \sh{F}^{(k)}=r''_*(\sh{S}'^{(d,k)}),
+\]
+de modo que los $\sh{F}^{(k)}$ son $\sh{S}_{X''}$-módulos graduados cuasicoherentes de tipo finito.
+Por \sref[II]{II.8.14.8}, el homomorfismo canónico
+\[
+  \beta:\shProj\bigl(\bbGamma_*(\sh{F}^{(k)})\bigr)
+  \longrightarrow\sh{F}^{(k)}
+\]
+es un isomorfismo de $\sh{S}_{X''}$-módulos.
+Por otra parte,
+\[
+  q''_*\bigl((\sh{F}^{(k)})_n\bigr)
+  =q_*\bigl((\sh{S}'^{(d,k)})_n\bigr),
+\]
+y para $n\geq0$ el último $\sh{O}_Y$-módulo es, por definición, igual a $(\sh{S}^{(d,k)})_n$.
+En otras palabras, la inyección canónica
+\[
+  \sh{S}^{(d,k)}
+  \longrightarrow\bbGamma_*(\sh{F}^{(k)})
+\]
+es un \textbf{(TN)}-isomorfismo.
+Por tanto,
+\[
+  \shProj(\sh{S}^{(d,k)})
+  =\shProj\bigl(\bbGamma_*(\sh{F}^{(k)})\bigr),
+\]
+y, en consecuencia,
+\[
+  r''{}^*\bigl(\shProj(\sh{S}^{(d,k)})\bigr)
+  \simeq\sh{S}'^{(d,k)}.
+\]
+Queda observar que, salvo isomorfismo canónico,
+\[
+  \shProj(\sh{S}^{(d,k)})
+  =s_*\bigl((\shProj(\sh{S}))^{(d,k)}\bigr)
+\]
+\sref[II]{II.8.14.13.1}; esto demuestra que $r^*(\shProj(\sh{S}))$ es isomorfo a $\sh{S}'$.
+
+Finalmente, por \sref{III.2.3.2}, cada $\bbGamma_*(\sh{F}^{(k)})$ satisface la condición \textbf{(TF)} y, por tanto, también la satisface cada $\sh{S}^{(d,k)}$.
+Además, los $\sh{S}_n=q_*(\sh{S}'_n)$ son coherentes por \sref{III.2.2.1}, porque los $\sh{S}'_n$ son coherentes.
+Se deduce inmediatamente que los $\sh{S}^{(d,k)}$ son $\sh{S}^{(d)}$-módulos de tipo finito.
+Como \sref{III.2.3.4.1} muestra que $\sh{S}^{(d)}$ es una $\sh{O}_Y$-álgebra de tipo finito, $\sh{S}$ es asimismo una $\sh{O}_Y$-álgebra de tipo finito.
+\end{proof}
+
+\oldpage[III]{106}
+\begin{proposition}[2.3.5]
+\label{III.2.3.5}
+Sea $Y$ un preesquema noetheriano integral, sea $X$ un preesquema integral y sea
+\[
+  f:X\longrightarrow Y
+\]
+un morfismo proyectivo birracional.
+Existe entonces un ideal fraccionario coherente
+\[
+  \sh{J}\subset\sh{R}(Y)
+\]
+\sref[II]{II.8.1.2} tal que $X$ es $Y$-isomorfo al preesquema obtenido por explosión de $\sh{J}$ \sref[II]{II.8.1.3}.
+Además, existe un subconjunto abierto $U$ de $Y$ tal que la restricción de $f$ a $f^{-1}(U)$ es un isomorfismo de $f^{-1}(U)$ sobre $U$ (cf.\ \textbf{I}, 6.5.5), y tal que $\sh{J}|U$ es invertible.
+\end{proposition}
+
+\begin{proof}
+Existe un $\sh{O}_X$-módulo invertible $\sh{L}$ muy amplio para $f$ \sref[II]{II.4.4.2} y \sref[II]{II.5.3.2}.
+Aplicando \sref{III.2.3.4.1}, identificamos $X$ con $\Proj(\sh{S})$, donde
+\[
+  \sh{S}=\bigoplus_{n\geq0}f_*(\sh{L}^{\otimes n}).
+\]
+Los módulos $f_*(\sh{L}^{\otimes n})$ son sin torsión sobre $\sh{O}_Y$ \sref[I]{I.7.4.5}.
+Por tanto, $\sh{S}$ se identifica canónicamente con un sub-$\sh{O}_Y$-módulo de
+\[
+  \sh{S}\otimes_{\sh{O}_Y}\sh{R}(Y)
+\]
+\sref[I]{I.7.4.1}.
+Este último es un haz simple \sref[I]{I.7.3.6} y está, por tanto, determinado por su restricción a un subconjunto abierto no vacío.
+
+Elijamos un subconjunto abierto no vacío $U'\subset U$ sobre el cual $\sh{L}|f^{-1}(U')$ sea isomorfo a $\sh{O}_X|f^{-1}(U')$ y, por tanto, a $\sh{O}_Y|U'$.
+Las restricciones $f_*(\sh{L}^{\otimes n})|U'$ son entonces isomorfas a $\sh{O}_Y|U'$.
+Se sigue que
+\[
+  \sh{S}\otimes_{\sh{O}_Y}\sh{R}(Y)
+  \simeq\sh{R}(Y)[T],
+\]
+donde $T$ es una indeterminada.
+Por \sref{III.2.3.4.1}, $\sh{S}$ es \textbf{(TN)}-isomorfa a la sub-$\sh{O}_Y$-álgebra engendrada por la imagen canónica de $f_*(\sh{L})$ en esta álgebra de polinomios.
+Bajo la identificación mostrada, dicha imagen es $\sh{J}\cdot T$, donde $\sh{J}$ es un sub-$\sh{O}_Y$-módulo coherente de $\sh{R}(Y)$ \sref{III.2.2.1}.
+Su restricción a $U'$ es isomorfa a $\sh{O}_Y|U'$ y, reduciendo $U$ si es necesario, $\sh{J}|U$ es invertible.
+Por consiguiente,
+\[
+  \sh{S}\quad\text{es \textbf{(TN)}-isomorfa a}\quad
+  \bigoplus_{n\geq0}\sh{J}^n,
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[2.3.6]
+\label{III.2.3.6}
+Bajo las hipótesis de \sref{III.2.3.5}, supongamos además que para todo sub-$\sh{O}_Y$-módulo coherente no nulo
+\[
+  \sh{J}\subset\sh{R}(Y)
+\]
+existe un $\sh{O}_Y$-módulo invertible $\sh{L}$ tal que
+\[
+  \Gamma\bigl(Y,\sh{L}\otimes_{\sh{O}_Y}
+  \shHom(\sh{J},\sh{O}_Y)\bigr)\neq0.
+\]
+Entonces, en el enunciado de \sref{III.2.3.5}, puede tomarse $\sh{J}$ como un ideal de $\sh{O}_Y$.
+Esta condición adicional se satisface siempre si existe un $\sh{O}_Y$-módulo amplio.
+\end{corollary}
+
+\begin{proof}
+En efecto, por \sref[0]{0.5.4.2},
+\[
+  \sh{L}\otimes\shHom(\sh{J},\sh{O}_Y)
+  =\shHom\bigl(\sh{L}^{-1},\shHom(\sh{J},\sh{O}_Y)\bigr)
+  =\shHom(\sh{J}\otimes\sh{L}^{-1},\sh{O}_Y).
+\]
+La hipótesis dice, por tanto, que existe un homomorfismo no nulo
+\[
+  u:\sh{J}\otimes\sh{L}^{-1}\longrightarrow\sh{O}_Y.
+\]
+Para todo $y\in Y$, el módulo $(\sh{J}\otimes\sh{L}^{-1})_y$ se identifica con un sub-$\sh{O}_y$-módulo del cuerpo de fracciones $\sh{R}(Y)_y$ de $\sh{O}_y$ \sref[I]{I.7.1.5}.
+Así, $u_y$ es necesariamente inyectivo, y $u$ identifica $\sh{J}\otimes\sh{L}^{-1}$ con un ideal $\sh{J}'$ de $\sh{O}_Y$.
+Pero
+\[
+  \Proj\left(\bigoplus_{n\geq0}\sh{J}^n\right)
+  \quad\text{y}\quad
+  \Proj\left(\bigoplus_{n\geq0}
+  (\sh{J}\otimes\sh{L}^{-1})^n\right)
+\]
+son $Y$-isomorfos \sref[II]{II.3.1.8}; esto demuestra la primera aserción.
+
+Para la segunda, observemos que
+\[
+  \sh{F}=\shHom_{\sh{O}_Y}(\sh{J},\sh{O}_Y)
+\]
+es coherente y no nulo, pues existe un subconjunto abierto $U$ de $Y$ sobre el cual $\sh{J}|U$ es invertible.
+Si $\sh{L}$ es un $\sh{O}_Y$-módulo amplio, existe un entero $n$ tal que
+\[
+  \sh{F}(n)=\sh{F}\otimes\sh{L}^{\otimes n}
+\]
+está engendrado por sus secciones sobre $Y$ \sref[II]{II.4.5.5}.
+\emph{A fortiori},
+\[
+  \Gamma(Y,\sh{F}(n))\neq0,
+\]
+lo que demuestra la aserción.
+\end{proof}
+
+\begin{corollary}[2.3.7]
+\label{III.2.3.7}
+Sean $X$ e $Y$ esquemas integrales proyectivos sobre un cuerpo $k$, y sea
+\[
+  f:X\longrightarrow Y
+\]
+un $k$-morfismo birracional.
+Entonces $X$ es $k$-isomorfo a un $Y$-esquema obtenido por explosión de un subesquema cerrado $Y'$ de $Y$, no necesariamente reducido.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{107}
+En efecto, $f$ es proyectivo \sref[II]{II.5.5.5}[v], y como $Y$ es proyectivo sobre $k$, se satisface la condición adicional de \sref{III.2.3.6}.
+Basta, por tanto, tomar el subesquema cerrado $Y'$ de $Y$ definido por el ideal coherente $\sh{J}$ de \sref{III.2.3.6}.
+\end{proof}
+
+\begin{env}[2.3.8]
+\label{III.2.3.8}
+\emph{Observación.}
+En el Capítulo~IV, al estudiar la noción de divisor, veremos que si, en el enunciado de \sref{III.2.3.5}, se supone que los anillos locales $\sh{O}_y$, para $y\in Y$, son factoriales---como ocurre, por ejemplo, cuando $Y$ es no singular---, entonces $X$ puede obtenerse de $Y$ por explosión de un subpreesquema cerrado $Y'$ de $Y$ cuyo espacio subyacente está contenido en $Y-U$.
+\end{env}
+
+
+\subsection{Una generalización del teorema fundamental}
+\label{subsection:III.2.4}
+
+\begin{theorem}[2.4.1]
+\label{III.2.4.1}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, sea
+\[
+  f:X\longrightarrow Y
+\]
+un morfismo proyectivo, pongamos $\sh{S}'=f^*(\sh{S})$, y sea $\sh{M}$ un $\sh{S}'$-módulo cuasicoherente de tipo finito.
+Entonces:
+\begin{enumerate}
+  \item[(i)] Para todo $p\in\bb Z$, $\RR^p f_*(\sh{M})$ es un $\sh{S}$-módulo de tipo finito.
+
+  \item[(ii)] Supongamos además que $\sh{L}$ es un $\sh{O}_X$-módulo invertible amplio para $f$ y, para todo $n\in\bb Z$, pongamos
+  \[
+    \sh{M}(n)=\sh{M}\otimes\sh{L}^{\otimes n}.
+  \]
+  Existe un entero $N$ tal que, para $n\geq N$,
+  \[
+  \label{III.2.4.1.1}
+    \RR^p f_*(\sh{M}(n))=0
+    \tag{2.4.1.1}
+  \]
+  para todo $p>0$, y el homomorfismo canónico
+  \[
+    f^*\bigl(f_*(\sh{M}(n))\bigr)\longrightarrow\sh{M}(n)
+  \]
+  \sref[0]{0.4.4.3} es sobreyectivo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Pongamos
+\[
+  Y'=\Spec(\sh{S}),\qquad X'=\Spec(\sh{S}'),
+\]
+de modo que $X'=X\times_Y Y'$ \sref[II]{II.1.5.5}.
+Sean
+\[
+  g:Y'\longrightarrow Y,\qquad g':X'\longrightarrow X
+\]
+los morfismos estructurales, que son afines por definición, y sea
+\[
+  f'=f_{(Y')}:X'\longrightarrow Y'.
+\]
+Tenemos así un diagrama conmutativo
+\[
+  \xymatrix{
+    X\ar[d]_f &
+    X'\ar[l]_{g'}\ar[d]^{f'}\ar[dl]^{h}\\
+    Y &
+    Y'\ar[l]^{g},
+  }
+\]
+donde $f'$ es proyectivo \sref[II]{II.5.5.5}[iii] y
+\[
+  h=f\circ g'=g\circ f'.
+\]
+
+\emph{(i)} Sea $\widetilde{\sh{M}}$ el $\sh{O}_{X'}$-módulo asociado al $\sh{S}'$-módulo cuasicoherente $\sh{M}$ cuando se considera $X'$ como un $X$-esquema afín \sref[II]{II.1.4.3}; así,
+\[
+  \sh{M}=g'_*(\widetilde{\sh{M}}).
+\]
+Como $\sh{M}$ es un $\sh{S}'$-módulo de tipo finito, $\widetilde{\sh{M}}$ es un $\sh{O}_{X'}$-módulo de tipo finito \sref[II]{II.1.4.5}.
+Además, $h$ es de tipo finito, puesto que $g$ y $f'$ son de tipo finito \sref[II]{II.1.3.7} y \sref[I]{I.6.3.4}[ii].
+Por tanto, $X'$ es noetheriano \sref[I]{I.6.3.7}, y $\widetilde{\sh{M}}$ es, en consecuencia, coherente.
+
+Como $g'$ es afín, el homomorfismo canónico
+\[
+  \RR^p f_*(\sh{M})
+  \longrightarrow
+  \RR^p h_*(\widetilde{\sh{M}})
+\]
+es biyectivo \sref{III.1.3.4}.
+Es, además, un homomorfismo de $\sh{S}$-módulos.
+En efecto, el homomorfismo canónico
+\[
+\label{III.2.4.1.2}
+  g'_*(\sh{O}_{X'})
+  \otimes_{\sh{O}_X}
+  g'_*(\widetilde{\sh{M}})
+  \longrightarrow
+  g'_*(\widetilde{\sh{M}})
+  \tag{2.4.1.2}
+\]
+define la estructura de $\sh{S}'$-módulo sobre $\sh{M}$, puesto que
+\[
+  \sh{S}'=g'_*(\sh{O}_{X'}).
+\]
+Da lugar canónicamente a un homomorfismo
+\[
+  f_*\bigl(g'_*(\sh{O}_{X'})\bigr)
+  \otimes
+  \RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr)
+  \longrightarrow
+  \RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr).
+\]
+\oldpage[III]{108}
+Por \sref[0]{0.12.2.2}, y dado que \eqref{III.2.4.1.2} se obtiene a su vez, aplicando \sref[0]{0.4.2.2.1}, del homomorfismo
+\[
+  \sh{O}_{X'}\otimes\widetilde{\sh{M}}
+  \longrightarrow\widetilde{\sh{M}}
+\]
+que define la estructura de $\sh{O}_{X'}$-módulo sobre $\widetilde{\sh{M}}$, el diagrama
+\[
+  \xymatrix{
+    f_*\bigl(g'_*(\sh{O}_{X'})\bigr)
+    \otimes\RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr)
+    \ar[r]\ar[d] &
+    \RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr)\ar[d]\\
+    h_*(\sh{O}_{X'})
+    \otimes\RR^p h_*(\widetilde{\sh{M}})
+    \ar[r] &
+    \RR^p h_*(\widetilde{\sh{M}})
+  }
+\]
+es conmutativo \sref[0]{0.12.2.6}.
+Componiendo las flechas horizontales con el homomorfismo inducido por el homomorfismo canónico
+\[
+  \sh{S}
+  \longrightarrow f_*(f^*(\sh{S}))
+  =f_*(\sh{S}')
+  =f_*\bigl(g'_*(\sh{O}_{X'})\bigr)
+  =h_*(\sh{O}_{X'}),
+\]
+obtenemos la aserción.
+
+Por otra parte, como $g$ es afín y $f'$ es separado y cuasicompacto, el homomorfismo canónico
+\[
+  \RR^p h_*(\widetilde{\sh{M}})
+  \longrightarrow
+  g_*\bigl(\RR^p f'_*(\widetilde{\sh{M}})\bigr)
+\]
+es biyectivo \sref{III.1.4.14}.
+Como antes, es un isomorfismo de $\sh{S}$-módulos, esta vez utilizando la conmutatividad de \sref[0]{0.12.2.6.2}.
+Ahora bien, $f'$ es proyectivo y $\widetilde{\sh{M}}$ es coherente, por lo que $\RR^p f'_*(\widetilde{\sh{M}})$ es un $\sh{O}_{Y'}$-módulo coherente por \sref{III.2.2.1}.
+Se sigue que
+\[
+  g_*\bigl(\RR^p f'_*(\widetilde{\sh{M}})\bigr)
+\]
+es un $\sh{S}$-módulo de tipo finito \sref[II]{II.1.4.5}.
+
+\emph{(ii)} Pongamos
+\[
+  \sh{L}'=g'^*(\sh{L}),
+\]
+un $\sh{O}_{X'}$-módulo invertible.
+Para todo $n\in\bb Z$, salvo isomorfismo canónico,
+\[
+  g'_*\bigl(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}\bigr)
+  =
+  g'_*(\widetilde{\sh{M}})\otimes\sh{L}^{\otimes n}
+  =
+  \sh{M}(n)
+\]
+\sref[0]{0.5.4.10}.
+Aplicando el razonamiento de \emph{(i)} a
+\[
+  \widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}
+\]
+muestra que
+\[
+  \RR^p f_*
+  \bigl(g'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \simeq
+  g_*\bigl(\RR^p f'_*
+  (\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr).
+\]
+Ahora bien, $\sh{L}'$ es amplio para $f'$ \sref[II]{II.4.6.13}[iii].
+Se deduce de \sref{III.2.2.1} que existe un entero $N$ tal que
+\[
+  \RR^p f'_*
+  \bigl(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}\bigr)=0
+\]
+para todo $p$ y todo $n\geq N$.
+Esto demuestra \eqref{III.2.4.1.1}.
+
+Se deduce una vez más de \sref{III.2.2.1} que puede elegirse $N$ de modo que, para $n\geq N$, el homomorfismo canónico
+\[
+  f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \longrightarrow
+  \widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}
+\]
+sea sobreyectivo.
+Como $g'_*$ es exacto \sref[II]{II.1.4.4}, el homomorfismo correspondiente
+\[
+  g'_*\Bigl(
+    f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr)
+  \longrightarrow
+  g'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})
+  =\sh{M}(n)
+\]
+es sobreyectivo.
+Pero \sref[II]{II.1.5.2} da
+\[
+  g'_*\Bigl(
+    f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr)
+  =
+  f^*\Bigl(
+    g_*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr),
+\]
+y $g_*\circ f'_*=f_*\circ g'_*$.
+Por consiguiente,
+\[
+  g'_*\Bigl(
+    f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr)
+  =
+  f^*\bigl(f_*(\sh{M}(n))\bigr),
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{env}[2.4.2]
+\label{III.2.4.2}
+Aplicaremos \sref{III.2.4.1}, en particular, cuando $\sh{S}$ sea una $\sh{O}_Y$-álgebra graduada en grados positivos y
+\[
+  \sh{M}=\bigoplus_{k\in\bb Z}\sh{M}_k
+\]
+sea un $\sh{S}'$-módulo graduado.
+\oldpage[III]{109}
+Bajo las mismas hipótesis de finitud sobre $\sh{S}$ y $\sh{M}$, se deduce de \sref{III.2.4.1} que
+\[
+  \bigoplus_{k\in\bb Z}\RR^p f_*(\sh{M}_k)
+\]
+es un $\sh{S}$-módulo de tipo finito para todo $p$.
+Bajo las hipótesis adicionales de \sref{III.2.4.1}[ii], existe además un entero $N$ tal que, para $n\geq N$,
+\[
+  \RR^p f_*(\sh{M}_k(n))=0
+\]
+para todo $p>0$ y todo $k\in\bb Z$, y el homomorfismo canónico
+\[
+  f^*\bigl(f_*(\sh{M}_k(n))\bigr)
+  \longrightarrow
+  \sh{M}_k(n)
+\]
+es sobreyectivo para todo $k\in\bb Z$.
+\end{env}
+
+
+\subsection{Característica de Euler--Poincar\'e y polinomio de Hilbert}
+\label{subsection:III.2.5}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1}
+Sea $A$ un anillo artiniano y sea $X$ un $A$-esquema proyectivo sobre
+\[
+  Y=\Spec(A).
+\]
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $A$-módulos
+\[
+  \HH^i(X,\sh{F})\qquad(i\geq0)
+\]
+son de tipo finito \sref{III.2.2.1} y, por tanto, tienen longitud finita, puesto que $A$ es artiniano.
+Además, \sref{III.2.2.1} muestra que $\HH^i(X,\sh{F})=0$ salvo para un número finito de $i\geq0$.
+Así, el entero
+\[
+\label{III.2.5.1.1}
+  \chi_A(\sh{F})
+  =
+  \sum_{i=0}^{\infty}
+  (-1)^i\operatorname{length}_A\bigl(\HH^i(X,\sh{F})\bigr)
+  \tag{2.5.1.1}
+\]
+está definido para todo $\sh{O}_X$-módulo coherente $\sh{F}$.
+Cuando $A$ es un anillo local artiniano, $\chi_A(\sh{F})$ se llama la \emph{característica de Euler--Poincar\'e} de $\sh{F}$ con respecto a $A$.
+Para $\sh{F}=\sh{O}_X$, el entero $\chi_A(\sh{O}_X)$ se llama el \emph{género aritmético} de $X$ con respecto a $A$.
+\end{env}
+
+\begin{proposition}[2.5.2]
+\label{III.2.5.2}
+Sea
+\[
+  0\longrightarrow\sh{F}'
+  \longrightarrow\sh{F}
+  \longrightarrow\sh{F}''
+  \longrightarrow0
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes.
+Entonces
+\[
+\label{III.2.5.2.1}
+  \chi_A(\sh{F})
+  =
+  \chi_A(\sh{F}')+\chi_A(\sh{F}'').
+  \tag{2.5.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Los módulos de cohomología de $\sh{F}$, $\sh{F}'$ y $\sh{F}''$ se anulan en todos los grados suficientemente grandes.
+Existe, por tanto, un entero $r>0$ para el cual la sucesión exacta larga de cohomología tiene la forma
+\[
+  0\longrightarrow\HH^0(X,\sh{F}')
+  \longrightarrow\HH^0(X,\sh{F})
+  \longrightarrow\HH^0(X,\sh{F}'')
+  \longrightarrow\HH^1(X,\sh{F}')
+  \longrightarrow\cdots
+\]
+\[
+  \cdots\longrightarrow\HH^r(X,\sh{F}')
+  \longrightarrow\HH^r(X,\sh{F})
+  \longrightarrow\HH^r(X,\sh{F}'')
+  \longrightarrow0.
+\]
+En una sucesión exacta de $A$-módulos de longitud finita con términos nulos en ambos extremos, la suma alternada de las longitudes es nula \sref[0]{0.11.10.1}.
+La aplicación de este hecho da inmediatamente \eqref{III.2.5.2.1}.
+\end{proof}
+
+El resultado de \sref{III.2.5.2} se aplica siempre que $X$ sea un $A$-esquema cuasicompacto y que los $A$-módulos $\HH^i(X,\sh{F})$ sean de tipo finito para todo $\sh{O}_X$-módulo coherente $\sh{F}$ \sref{III.1.4.12}.
+
+\begin{theorem}[2.5.3]
+\label{III.2.5.3}
+Sea $A$ un anillo local artiniano, sea $X$ un esquema proyectivo sobre
+\[
+  Y=\Spec(A),
+\]
+sea $\sh{L}$ un $\sh{O}_X$-módulo invertible muy amplio relativo a $Y$, y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Para todo $n\in\bb Z$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}.
+\]
+\begin{enumerate}
+  \item[(i)] Existe un único polinomio $P\in\bb Q[T]$ tal que
+  \[
+    \chi_A(\sh{F}(n))=P(n)
+  \]
+  para todo $n\in\bb Z$.
+  El polinomio $P$ se llama el \emph{polinomio de Hilbert} de $\sh{F}$ con respecto a $A$.
+
+  \item[(ii)] Para todo $n$ suficientemente grande,
+  \[
+    \chi_A(\sh{F}(n))
+    =
+    \operatorname{length}_A\Gamma(X,\sh{F}(n)).
+  \]
+
+  \item[(iii)] El coeficiente del término de mayor grado de $\chi_A(\sh{F}(n))$ es no negativo.
+\end{enumerate}
+\end{theorem}
+
+Además, demostraremos en el Capítulo~IV, en la sección dedicada a la dimensión, que \emph{el grado de $\chi_A(\sh{F}(n))$ es igual a la dimensión del soporte de $\sh{F}$}.
+
+\begin{proof}
+Para todo $n$ suficientemente grande, se tiene
+\[
+  \HH^i(X,\sh{F}(n))=0
+\]
+para todo $i>0$ \sref{III.2.2.1}.
+\oldpage[III]{110}
+Por consiguiente,
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \operatorname{length}_A\HH^0(X,\sh{F}(n))
+  =
+  \operatorname{length}_A\Gamma(X,\sh{F}(n))
+\]
+para todo $n$ suficientemente grande, lo que demuestra \emph{(ii)}.
+Se sigue que $\chi_A(\sh{F}(n))\geq0$ para todo $n$ suficientemente grande y, por tanto, \emph{(iii)} se deduce de \emph{(i)}.
+La aserción de unicidad de \emph{(i)} es inmediata, por lo que queda demostrar la existencia de $P$.
+
+Mostremos primero que podemos suponer
+\[
+  \mathfrak{m}\sh{F}=0,
+\]
+donde $\mathfrak{m}$ es el ideal maximal de $A$.
+En efecto, existe un entero $s>0$ tal que $\mathfrak{m}^s=0$ y, por tanto, $\sh{F}(n)$ posee la filtración finita
+\[
+  \sh{F}(n)
+  \supset\mathfrak{m}\sh{F}(n)
+  \supset\cdots
+  \supset\mathfrak{m}^{s-1}\sh{F}(n)
+  \supset0.
+\]
+Una inducción que utiliza \sref{III.2.5.1} da
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \sum_{k=1}^{s}
+  \chi_A\left(
+    \mathfrak{m}^{k-1}\sh{F}(n)/
+    \mathfrak{m}^{k}\sh{F}(n)
+  \right).
+\]
+Pero
+\[
+  \mathfrak{m}^{k-1}\sh{F}(n)/
+  \mathfrak{m}^{k}\sh{F}(n)
+  =
+  \sh{F}'_k(n),
+  \qquad
+  \sh{F}'_k=
+  \mathfrak{m}^{k-1}\sh{F}/\mathfrak{m}^{k}\sh{F},
+\]
+lo que demuestra la reducción.
+
+Supongamos, pues, que $\mathfrak{m}\sh{F}=0$.
+Sea $X'$ el subesquema cerrado de $X$ obtenido como imagen inversa, por el morfismo estructural
+\[
+  X\longrightarrow\Spec(A),
+\]
+del único punto cerrado de $\Spec(A)$, y sea $j:X'\to X$ la inyección canónica.
+Entonces
+\[
+  \sh{F}=j_*(\sh{F}')
+\]
+para un $\sh{O}_{X'}$-módulo coherente $\sh{F}'$, y $X'$ es proyectivo sobre $\Spec(K)$, donde
+\[
+  K=A/\mathfrak{m}.
+\]
+Si $\sh{L}'=j^*(\sh{L})$, entonces $\sh{L}'$ es muy amplio relativo a $\Spec(K)$ \sref[II]{II.4.4.10}, y
+\[
+  \sh{F}(n)=j_*(\sh{F}'(n)),
+  \qquad
+  \sh{F}'(n)
+  =
+  \sh{F}'\otimes_{\sh{O}_{X'}}\sh{L}'^{\otimes n}
+\]
+\sref[0]{0.5.4.10}.
+Se sigue que
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \chi_K(\sh{F}'(n))
+\]
+(G, II, 4.9.1), y quedamos reducidos al caso en que $A$ es un cuerpo.
+
+Ahora puede considerarse $X$ como un subesquema cerrado de
+\[
+  P=\mathbf{P}_A^r
+\]
+para un $r$ conveniente \sref[II]{II.5.5.4}[ii].
+Si $i:X\to P$ es la inyección canónica, el mismo razonamiento da
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \chi_A\bigl(i_*(\sh{F})(n)\bigr).
+\]
+Podemos, por tanto, limitarnos al caso
+\[
+  X=\mathbf{P}_A^r=\Proj(S),
+  \qquad
+  S=A[T_0,\ldots,T_r],
+\]
+donde $A$ es un cuerpo.
+
+En este caso, $\sh{F}=\widetilde{M}$ para un $S$-módulo graduado $M$ de tipo finito \sref[II]{II.2.7.8}.
+Por el teorema de las sicigias de Hilbert (M, VIII, 6.5), $M$ posee una resolución finita por $S$-módulos libres graduados de tipo finito:
+\[
+  0\longrightarrow L_q
+  \longrightarrow L_{q-1}
+  \longrightarrow\cdots
+  \longrightarrow L_1
+  \longrightarrow M
+  \longrightarrow0.
+\]
+Como el funtor $M\mapsto\widetilde{M}$ es exacto \sref[II]{II.2.5.4}, obtenemos una sucesión exacta
+\[
+  0\longrightarrow\widetilde{L}_q
+  \longrightarrow\widetilde{L}_{q-1}
+  \longrightarrow\cdots
+  \longrightarrow\widetilde{L}_1
+  \longrightarrow\widetilde{M}
+  \longrightarrow0,
+\]
+y, por tanto, para todo $n\in\bb Z$, una sucesión exacta
+\[
+  0\longrightarrow\widetilde{L}_q(n)
+  \longrightarrow\widetilde{L}_{q-1}(n)
+  \longrightarrow\cdots
+  \longrightarrow\widetilde{L}_1(n)
+  \longrightarrow\widetilde{M}(n)
+  \longrightarrow0.
+\]
+Una inducción sobre $q$, utilizando \sref{III.2.5.1}, da
+\[
+  \chi_A(\widetilde{M}(n))
+  =
+  \sum_{j=1}^{q}
+  (-1)^{j+1}\chi_A(\widetilde{L}_j(n)).
+\]
+Para demostrar \emph{(i)}, quedamos, por tanto, reducidos al caso en que $M$ es graduado, libre y de tipo finito y, por consiguiente, al caso
+\[
+  M=S(h)
+\]
+para algún $h\in\bb Z$.
+Entonces
+\[
+  \widetilde{M}(n)
+  =
+  \widetilde{M(n)}
+  =
+  \widetilde{S(n+h)}
+\]
+\sref[II]{II.2.5.15}, de modo que el teorema se deduce del lema siguiente.
+\end{proof}
+
+\oldpage[III]{111}
+\begin{lemma}[2.5.3.1]
+\label{III.2.5.3.1}
+Sea $A$ un cuerpo, sea $r>0$ un entero y sea
+\[
+  X=\mathbf{P}_A^r.
+\]
+Entonces
+\[
+  \chi_A(\sh{O}_X(n))
+  =
+  \binom{n+r}{r}
+\]
+para todo $n\in\bb Z$.
+\end{lemma}
+
+\begin{proof}
+Para $n\geq0$,
+\[
+  \chi_A(\sh{O}_X(n))
+  =
+  \operatorname{length}_A\HH^0(X,\sh{O}_X(n)),
+\]
+que es el número de monomios en los $T_i$ de grado total $n$, a saber,
+\[
+  \binom{n+r}{r}
+\]
+\sref{III.2.1.12}.
+
+Para $n\leq-r-1$, se tiene análogamente
+\[
+  \chi_A(\sh{O}_X(n))
+  =
+  (-1)^r\operatorname{length}_A\HH^r(X,\sh{O}_X(n)).
+\]
+Escribiendo $n=-r-h$, la dimensión de $\HH^r(X,\sh{O}_X(n))$ sobre $A$ es el número de sucesiones
+\[
+  (p_i)_{0\leq i\leq r}
+\]
+de enteros positivos que satisfacen
+\[
+  \sum_{i=0}^{r}p_i=r+h
+\]
+\sref{III.2.1.12}.
+Equivalentemente, es el número de sucesiones de enteros no negativos
+\[
+  (q_i)_{0\leq i\leq r}
+\]
+tales que
+\[
+  \sum_{i=0}^{r}q_i=h-1.
+\]
+Este número es
+\[
+  \binom{h+r-1}{r}
+  =
+  (-1)^r\binom{n+r}{r}.
+\]
+Finalmente, si $-r\leq n<0$, entonces
+\[
+  \binom{n+r}{r}=0,
+\]
+y $\HH^i(X,\sh{O}_X(n))=0$ para todo $i\geq0$ \sref{III.2.1.12}.
+Esto demuestra el lema.
+\end{proof}
+
+\begin{corollary}[2.5.4]
+\label{III.2.5.4}
+Sea $A$ un anillo local artiniano, sea $S$ una $A$-álgebra graduada de tipo finito engendrada por $S_1$, sea $M$ un $S$-módulo graduado de tipo finito y sea
+\[
+  X=\Proj(S).
+\]
+Entonces, para todo $n$ suficientemente grande,
+\[
+  \chi_A(\widetilde{M}(n))
+  =
+  \operatorname{length}_A(M_n).
+\]
+\end{corollary}
+
+\begin{proof}
+Para todo $n$ suficientemente grande, los módulos
+\[
+  M_n
+  \quad\text{y}\quad
+  \Gamma(X,\widetilde{M}(n))
+\]
+son isomorfos \sref{III.2.3.1}.
+\end{proof}
+
+
+\subsection{Aplicación: criterios de amplitud}
+\label{subsection:III.2.6}
+
+\begin{proposition}[2.6.1]
+\label{III.2.6.1}
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo propio,
+y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] $\sh{L}$ es amplio para $f$.
+  \item[\emph{b)}] Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, existe
+  un entero $N$ tal que, para $n\geq N$,
+  \[
+    \RR^qf_*(\sh{F}\otimes\sh{L}^{\otimes n})=0
+  \]
+  para todo $q>0$.
+  \item[\emph{c)}] Para todo ideal coherente $\sh{J}$ de $\sh{O}_X$, existe
+  un entero $N$ tal que, para $n\geq N$,
+  \[
+    \RR^1f_*(\sh{J}\otimes\sh{L}^{\otimes n})=0.
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Hemos visto que \emph{a)} implica \emph{b)} \sref{III.2.2.1},~(iii).
+Es inmediato que \emph{b)} implica \emph{c)}, y queda demostrar
+que \emph{c)} implica \emph{a)}.
+Podemos limitarnos al caso en que $Y$ es afín \sref[II]{II.4.6.4}.
+Basta mostrar que, cuando $h$ recorre las secciones de
+$\sh{L}^{\otimes n}$ sobre $X$, con $n>0$, los subconjuntos abiertos afines $X_h$
+forman un recubrimiento de $X$ \sref[II]{II.4.5.2}.
+
+Para ello, sea $x$ un punto cerrado de $X$ y sea $U$ un entorno
+abierto afín de $x$.
+Encontraremos un entero $n$ y una sección
+\[
+  h\in\Gamma(X,\sh{L}^{\otimes n})
+\]
+tal que $x\in X_h\subset U$.
+El subconjunto abierto $X_h$ será entonces afín \sref[I]{I.1.3.6}.
+La unión de todos esos $X_h$ es un subconjunto abierto de $X$ que contiene todo
+punto cerrado y, por tanto, es todo $X$, puesto que $X$ es noetheriano
+\sref[I]{I.6.3.7} y \sref[0]{0.2.1.3}.
+
+Sean $\sh{J}$ y $\sh{J}'$, respectivamente, los ideales cuasicoherentes de
+$\sh{O}_X$ que definen los subpreesquemas cerrados reducidos cuyos espacios
+subyacentes son $X-U$ y $(X-U)\cup\{x\}$, respectivamente \sref[I]{I.5.2.1}.
+Los ideales $\sh{J}$ y $\sh{J}'$ son coherentes \sref[I]{I.6.1.1},
+$\sh{J}'\subset\sh{J}$, y
+\[
+  \sh{J}''=\sh{J}/\sh{J}'
+\]
+es un $\sh{O}_X$-módulo coherente \sref[0]{0.5.3.3}, con soporte
+$\{x\}$, y $\sh{J}''_x=\kres(x)$.
+Como $\sh{L}$ es localmente libre, la sucesión
+\[
+  0\longrightarrow
+  \sh{J}'\otimes\sh{L}^{\otimes n}
+  \longrightarrow
+  \sh{J}\otimes\sh{L}^{\otimes n}
+  \longrightarrow
+  \sh{J}''\otimes\sh{L}^{\otimes n}
+  \longrightarrow0
+\]
+es exacta para todo $n$.
+Por hipótesis, para todo $n$ suficientemente grande,
+\[
+  \HH^1(X,\sh{J}'\otimes\sh{L}^{\otimes n})=0.
+\]
+
+\oldpage[III]{112}
+
+La sucesión exacta de cohomología muestra, por tanto, que
+\[
+  \Gamma(X,\sh{J}\otimes\sh{L}^{\otimes n})
+  \longrightarrow
+  \Gamma(X,\sh{J}''\otimes\sh{L}^{\otimes n})
+\]
+es sobreyectivo.
+Una sección $g$ de $\sh{J}''\otimes\sh{L}^{\otimes n}$ sobre $X$ tal que
+$g(x)\neq0$ es, por consiguiente, la imagen de una sección
+\[
+  h\in\Gamma(X,\sh{J}\otimes\sh{L}^{\otimes n})
+  \subset\Gamma(X,\sh{L}^{\otimes n});
+\]
+la inclusión se deduce de \sref[0]{0.5.4.1}.
+Por construcción, $h(x)\neq0$, mientras que $h(z)=0$ para todo $z\notin U$.
+Así, $x\in X_h\subset U$, lo que demuestra la aserción.
+\end{proof}
+
+\begin{proposition}[2.6.2]
+\label{III.2.6.2}
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo de
+tipo finito, sea $g:X'\to X$ un morfismo finito sobreyectivo, sea
+$\sh{L}$ un $\sh{O}_X$-módulo invertible, y pongamos
+\[
+  \sh{L}'=g^*(\sh{L}).
+\]
+Supongamos que existe un subconjunto $Z$ de $X$, propio sobre $Y$
+\sref[II]{II.5.4.10}, tal que, para todo $x\in X-Z$, o bien $X$ es
+normal en $x$, o bien
+\[
+  \bigl(g_*(\sh{O}_{X'})\bigr)_x
+\]
+es un $\sh{O}_{X,x}$-módulo libre.
+Entonces $\sh{L}$ es amplio para $f$ si y solo si $\sh{L}'$ es amplio para
+$f\circ g$.
+\end{proposition}
+
+\begin{proof}
+\begin{env}[2.6.2.1]
+\label{III.2.6.2.1}
+Como $g$ es afín, la condición es necesaria \sref[II]{II.5.1.12}.
+Para demostrar que es suficiente, podemos suponer que $Y$ es afín
+\sref[II]{II.4.6.4}.
+Mostremos primero que también podemos limitarnos al caso en que $X$ es
+reducido.
+
+Sea $j:X_{\mathrm{red}}\to X$ la inmersión canónica, y pongamos
+\[
+  X_1=X_{\mathrm{red}},
+  \qquad
+  X'_1=X'\times_X X_1.
+\]
+Tenemos entonces el diagrama conmutativo
+\[
+  \xymatrix{
+    X'\ar[d]_g &
+    X'_1\ar[l]_{j'}\ar[d]^{g_1}\\
+    X &
+    X_1\ar[l]^{j}
+  }
+  \label{III.2.6.2.2}\tag{2.6.2.2}
+\]
+El morfismo $f\circ j$ es de tipo finito \sref[I]{I.6.3.4}, y
+$g_1$ es finito \sref[II]{II.6.1.5},~(iii).
+Si $\sh{L}'$ es amplio para $f\circ g$, entonces
+$j'^*(\sh{L}')$ es amplio para $f\circ g\circ j'$, porque $j'$ es una
+inmersión cerrada \sref[II]{II.5.1.12} y \sref[I]{I.4.3.2}.
+Si $Z_1=j^{-1}(Z)$, entonces $Z_1$ es propio sobre $Y$
+\sref[II]{II.5.4.10}.
+Además, si $X$ es normal en un punto $x$, también lo es $X_{\mathrm{red}}$
+en ese punto; y si
+$\bigl(g_*(\sh{O}_{X'})\bigr)_x$ es un $\sh{O}_{X,x}$-módulo libre,
+entonces \sref[II]{II.1.5.2} muestra que
+\[
+  \bigl((g_1)_*(\sh{O}_{X'_1})\bigr)_x
+\]
+es un $\sh{O}_{X_1,x}$-módulo libre.
+Finalmente, como $X$ es noetheriano \sref[I]{I.6.3.7}, la amplitud de
+$j^*(\sh{L})$ implica la de $\sh{L}$ \sref[II]{II.4.5.14}.
+Como
+\[
+  j'^*(\sh{L}')=g_1^*(j^*(\sh{L})),
+\]
+esto demuestra la reducción anunciada.
+En lo sucesivo suponemos que $Y$ es afín y que $X$ es reducido.
+\end{env}
+
+Se satisfacen ahora las hipótesis de \sref[II]{II.6.6.11}.
+Existen un $Y$-preesquema reducido $X_2$ y un
+$Y$-morfismo finito birracional
+\[
+  h:X_2\to X
+\]
+cuya restricción a $h^{-1}(X-Z)$ es un isomorfismo sobre $X-Z$, y
+tal que $h^*(\sh{L})$ es amplio.
+Reemplazando $X'$ por $X_2$, quedamos reducidos a demostrar la proposición bajo
+la hipótesis adicional de que $g$ posee las propiedades que acabamos de enumerar para
+$h$.
+Seguimos denotando por $Z$ un subpreesquema cerrado de $X$, propio sobre
+$Y$ \sref[II]{II.5.4.10}, cuyo espacio subyacente es el subconjunto dado
+$Z$.
+
+\begin{env}[2.6.2.3]
+\label{III.2.6.2.3}
+Sea $X_1$ un subpreesquema cerrado de $X$, sea $j:X_1\to X$ la
+inmersión canónica, y sea
+\[
+  X'_1=g^{-1}(X_1)=X'\times_X X_1,
+\]
+con inmersión canónica $j':X'_1\to X'$.
+El cuadrado correspondiente es de nuevo \eqref{III.2.6.2.2}.
+Pongamos
+\[
+  \sh{L}_1=j^*(\sh{L}),
+  \qquad
+  \sh{L}'_1=j'^*(\sh{L}')=g_1^*(\sh{L}_1).
+\]
+Entonces $\sh{L}'_1$ es amplio para $f\circ g\circ j'$
+\sref[II]{II.5.1.12}.
+Si $Z_1=j^{-1}(Z)$, el subpreesquema cerrado $Z_1$ de $X_1$ es propio
+sobre $Y$ \sref[II]{II.5.4.2},~(ii).
+En otras palabras, las hipótesis de \sref{III.2.6.2} se cumplen para
+$X_1$, $\sh{L}_1$, $g_1$ y $Z_1$.
+\end{env}
+
+\oldpage[III]{113}
+
+Esto nos permite demostrar \sref{III.2.6.2} por inducción noetheriana
+\sref[0]{0.2.2.2} cuando la restricción de $g$ a $g^{-1}(X-Z)$ es un
+isomorfismo sobre $X-Z$; como se vio en \sref{III.2.6.2.1}, ese caso es
+suficiente.
+Basta mostrar que, si la conclusión de \sref{III.2.6.2} se cumple
+para $\sh{L}_1$ sobre todo subpreesquema cerrado $X_1$ de $X$ cuyo
+espacio subyacente no es $X$, entonces también se cumple para $\sh{L}$.
+
+\begin{env}[2.6.2.4]
+\label{III.2.6.2.4}
+Pongamos
+\[
+  \sh{A}=\sh{O}_X,
+  \qquad
+  \sh{B}=g_*(\sh{O}_{X'}).
+\]
+Como $g$ es birracional y $X$ es reducido, $\sh{B}$ es una
+sub-$\sh{A}$-álgebra del haz $\sh{R}(X)$ de anillos totales de fracciones,
+y es un $\sh{A}$-módulo coherente.
+Además,
+\[
+  \sh{B}|_{X-Z}=\sh{A}|_{X-Z}.
+\]
+Sea $\sh{K}$ el conductor de $\sh{B}$ sobre $\sh{A}$, es decir, el mayor
+sub-$\sh{A}$-módulo cuasicoherente de $\sh{A}$ tal que
+\[
+  \sh{B}\sh{K}\subset\sh{A}.
+\]
+Equivalentemente, $\sh{K}$ es el anulador del
+$\sh{A}$-módulo $\sh{B}/\sh{A}$ \sref[0]{0.5.3.7}.
+Se sigue que
+\[
+  \sh{B}\sh{K}=\sh{K}.
+\]
+Está claro que $\sh{K}_x=\sh{A}_x$ en todo punto que admite un entorno
+$W_x$ sobre el cual $g:g^{-1}(W_x)\to W_x$ es un isomorfismo.
+Esto ocurre, en particular, en todo punto de $X-Z$, y en un
+entorno de todo punto genérico de una componente irreducible de
+$X$.
+
+Sea
+\[
+  Z_1=\Spec(\sh{A}/\sh{K})
+\]
+el subpreesquema cerrado de $X$ definido por $\sh{K}$.
+Es propio sobre $Y$, porque su espacio subyacente es cerrado en $Z$
+\sref[II]{II.5.4.10}.
+La definición de $\sh{K}$ da también
+\[
+  \sh{B}|_{X-Z_1}=\sh{A}|_{X-Z_1}.
+\]
+Podemos, por tanto, reducirnos al caso
+\[
+  Z=\Spec(\sh{A}/\sh{K}).
+\]
+Como $X-Z_1$ es un subconjunto abierto no vacío de $X$, podemos además
+suponer que el espacio subyacente de $Z$ es distinto de $X$.
+\end{env}
+
+\begin{env}[2.6.2.5]
+\label{III.2.6.2.5}
+Consideremos $X'$ como $\Spec(\sh{B})$, puesto que $g$ es afín, y sea
+\[
+  \sh{K}'=\widetilde{\sh{K}}.
+\]
+Este es un ideal coherente de $\sh{O}_{X'}$ que satisface
+$g_*(\sh{K}')=\sh{K}$ \sref[II]{II.1.4.1}.
+El subpreesquema cerrado
+\[
+  Z'=g^{-1}(Z)=Z\times_X X'
+\]
+de $X'$ está definido por $\sh{K}'$ y es igual a
+\[
+  \Spec(\sh{B}/\sh{K})
+\]
+\sref[II]{II.1.4.10}.
+El morfismo $h:Z'\to Z$ es finito \sref[II]{II.6.1.5},~(iii);
+por consiguiente, $Z'$ es propio sobre $Y$ \sref[II]{II.6.1.11} y
+\sref[II]{II.5.4.2},~(ii).
+
+Debemos demostrar que, para todo $x\in X$ y todo entorno abierto $U$
+de $x$, existen un entero $n>0$ y una sección $s$ de
+$\sh{L}^{\otimes n}$ sobre $X$ tales que
+\[
+  x\in X_s\subset U
+\]
+\sref[II]{II.4.5.2}.
+Distinguimos dos casos.
+
+\smallskip
+\noindent
+$1^\circ$ Supongamos primero que $x\in X-Z$.
+Podemos suponer evidentemente que $U\subset X-Z$, de modo que
+$U'=g^{-1}(U)$ no corta a $Z'$.
+Como $\sh{L}'$ es amplio, existen $n>0$ y una sección $s'$ de
+$\sh{L}'^{\otimes n}$ sobre $X'$ tales que
+\[
+  x'=g^{-1}(x)\in X'_{s'}\subset g^{-1}(U)
+\]
+\sref[II]{II.4.5.2}.
+También podemos suponer que
+$\sh{K}'\otimes\sh{L}'^{\otimes n}$ está engendrado por sus secciones globales
+\sref[II]{II.4.5.5}.
+Como $\sh{K}'_{x'}=\sh{O}_{X',x'}$, una de estas secciones, digamos $s''$, es
+no nula en $x'$.
+Multiplicándola por $s'$ y reemplazando así $n$ por $2n$, podemos conseguir
+que
+\[
+  x'\in X'_{s''}\subset g^{-1}(U).
+\]
+Por \sref[0]{0.5.4.10}, existe un isomorfismo canónico
+\[
+  \Gamma(X,\sh{K}\otimes\sh{L}^{\otimes n})
+  \xrightarrow{\sim}
+  \Gamma(X',\sh{K}'\otimes\sh{L}'^{\otimes n}).
+\]
+La sección $s$ de $\sh{K}\otimes\sh{L}^{\otimes n}$ correspondiente a
+$s''$ posee manifiestamente las propiedades requeridas.
+
+\smallskip
+\noindent
+$2^\circ$ Supongamos ahora que $x\in Z$.
+Sea $\sh{J}$ el ideal coherente de $\sh{O}_X$ que define el
+subpreesquema cerrado reducido cuyo espacio subyacente es $X-U$, y consideremos en
+$\sh{B}$ los ideales coherentes
+
+\oldpage[III]{114}
+
+\[
+  \sh{J}\sh{B}
+  \qquad\text{y}\qquad
+  \sh{J}\sh{K}
+  =
+  \sh{J}(\sh{K}\sh{B})
+  =
+  \sh{K}(\sh{J}\sh{B}).
+\]
+Tenemos el diagrama de inclusiones
+\[
+  \xymatrix@R=1.5em{
+    \sh{J}\sh{B}\ar@{^{(}->}[r] &
+    \sh{B}\\
+    \sh{J}\ar@{^{(}->}[r]\ar@{^{(}->}[u] &
+    \sh{A}\ar@{^{(}->}[u]\\
+    \sh{J}\sh{K}\sh{B}=\sh{J}\sh{K}
+      \ar@{^{(}->}[r]\ar@{^{(}->}[u] &
+    \sh{K}\ar@{^{(}->}[u]
+  }
+  \label{III.2.6.2.6}\tag{2.6.2.6}
+\]
+Sea $\sh{J}'=(\sh{J}\sh{B})^\sim$ el ideal coherente de
+$\sh{O}_{X'}$ tal que
+\[
+  g_*(\sh{J}')=\sh{J}\sh{B}.
+\]
+Entonces
+\[
+  \sh{J}'\sh{K}'=(\sh{J}\sh{K}\sh{B})^\sim,
+  \qquad
+  \sh{J}'/\sh{J}'\sh{K}'
+  =
+  (\sh{J}\sh{B}/\sh{J}\sh{K}\sh{B})^\sim
+\]
+\sref[II]{II.1.4.4}.
+Como $\sh{J}|_V=\sh{J}\sh{K}|_V$ sobre todo subconjunto abierto $V$ disjunto
+de $Z$, el soporte de $\sh{J}'/\sh{J}'\sh{K}'$ está contenido en
+$Z'$.
+Como $Z'$ es propio sobre $Y$, \sref{III.2.2.4} muestra que, para todo
+$n$ suficientemente grande, la aplicación canónica
+\[
+  \Gamma(X',\sh{J}'\otimes\sh{L}'^{\otimes n})
+  \longrightarrow
+  \Gamma\bigl(
+    X',
+    (\sh{J}'/\sh{J}'\sh{K}')\otimes\sh{L}'^{\otimes n}
+  \bigr)
+\]
+es sobreyectiva.
+Por \sref[0]{0.5.4.10}, se sigue que la aplicación canónica
+\[
+  \Gamma(X,\sh{J}\sh{B}\otimes\sh{L}^{\otimes n})
+  \longrightarrow
+  \Gamma\bigl(
+    X,
+    (\sh{J}\sh{B}/\sh{J}\sh{K}\sh{B})
+      \otimes\sh{L}^{\otimes n}
+  \bigr)
+\]
+es sobreyectiva.
+
+Sean $i:Z\to X$ e $i':Z'\to X'$ las inmersiones canónicas.
+Forman parte del diagrama conmutativo
+\[
+  \xymatrix{
+    X'\ar[d]_g &
+    Z'\ar[l]_{i'}\ar[d]^h\\
+    X &
+    Z\ar[l]^{i}
+  }
+\]
+Pongamos
+\[
+  \sh{M}=i^*(\sh{L}),
+  \qquad
+  \sh{M}'=i'^*(\sh{L}').
+\]
+Como $\sh{L}'$ es amplio, $\sh{M}'$ es amplio
+\sref[II]{II.5.1.12}, y
+\[
+  \sh{M}'=h^*(\sh{M}).
+\]
+La hipótesis de inducción noetheriana, aplicada puesto que $Z\neq X$, muestra ahora
+que $\sh{M}$ es amplio.
+Por consiguiente, para todo $n$ suficientemente grande,
+\[
+  i^*(\sh{J}/\sh{J}\sh{K})\otimes\sh{M}^{\otimes n}
+\]
+está engendrado por sus secciones sobre $Z$ \sref[II]{II.4.5.5}.
+Como
+\[
+  \sh{J}/\sh{J}\sh{K}
+  =
+  i_*\bigl(i^*(\sh{J}/\sh{J}\sh{K})\bigr),
+\]
+\sref[0]{0.5.4.10} da una sección $s$ de
+\[
+  (\sh{J}/\sh{J}\sh{K})\otimes\sh{L}^{\otimes n}
+\]
+sobre $X$, para algún $n$ suficientemente grande, tal que $s(x)\neq0$.
+En efecto, $\sh{J}_x=\sh{A}_x$ por la definición de $\sh{J}$, mientras que
+$\sh{K}_x\neq\sh{A}_x$ por hipótesis.
+
+El diagrama \eqref{III.2.6.2.6} muestra que $s$ es también una sección de
+\[
+  (\sh{J}\sh{B}/\sh{J}\sh{K}\sh{B})
+  \otimes\sh{L}^{\otimes n}
+\]
+sobre $X$.
+Es, por tanto, la imagen canónica de una sección
+\[
+  t\in\Gamma(X,\sh{J}\sh{B}\otimes\sh{L}^{\otimes n}).
+\]
+Por definición, la imagen de $t$ módulo
+$\sh{J}\sh{K}\sh{B}\otimes\sh{L}^{\otimes n}$ pertenece a
+\[
+  \frac{\sh{J}\otimes\sh{L}^{\otimes n}}
+       {\sh{J}\sh{K}\sh{B}\otimes\sh{L}^{\otimes n}}.
+\]
+El diagrama \eqref{III.2.6.2.6} implica, por tanto, que $t$ es una sección
+de $\sh{J}\otimes\sh{L}^{\otimes n}$ y, en particular, una sección de
+$\sh{L}^{\otimes n}$.
+Se tiene $t(x)\neq0$, luego $x\in X_t$.
+Por la definición de $\sh{J}$, la sección $t$ se anula sobre $X-U$, el
+soporte de $\sh{O}_X/\sh{J}$.
+Así, $X_t\subset U$, y la demostración está terminada.
+\end{env}
+\end{proof}
+
+\oldpage[III]{115}
+
+\begin{env}[2.6.3]
+\label{III.2.6.3}
+\emph{Observación.}
+Cuando $X$ es propio sobre $Y$, la Proposición~\sref{III.2.6.2} puede demostrarse
+más sencillamente razonando como en el teorema de Chevalley
+\sref[II]{II.6.7.1}, con ayuda de la Proposición~\sref{III.2.6.1} y
+del lema \sref[II]{II.6.7.1.1}.
+\end{env}

@@ -1,0 +1,193 @@
+\subsection{Divisores sobre un espacio anillado}
+\label{subsection:IV.21.1}
+\label{IV.21.1}
+
+\begin{env}[21.1.1]
+\label{IV.21.1.1}
+Sean $(X,\sh{O}_X)$ un espacio anillado, $\sh{M}_X$ el haz de gérmenes de funciones meromorfas sobre $X$ \sref{IV.20.1.3}, y $\sh{M}_X^*$ el haz (de grupos multiplicativos) de gérmenes de funciones meromorfas regulares sobre $X$ \sref{IV.20.1.8}.
+Es claro que el haz (de grupos multiplicativos) $\sh{O}_X^*$ de gérmenes de secciones invertibles de $\sh{O}_X$ se identifica canónicamente con un subhaz (de grupos multiplicativos) de $\sh{M}_X^*$.
+\end{env}
+
+\begin{definition}[21.1.2]
+\label{IV.21.1.2}
+Se llama \emph{haz de divisores sobre $X$} y se denota $\sh{D}iv_X$ el haz cociente (de grupos conmutativos) $\sh{M}_X^*/\sh{O}_X^*$;
+las secciones de este haz sobre $X$ se llaman los \emph{divisores sobre $X$}; forman un grupo conmutativo denotado $\operatorname{Div}(X)$.
+Para toda sección $f$ de $\sh{M}_X^*$ sobre $X$ (es decir, toda función meromorfa regular sobre $X$ \sref{IV.20.1.8}), se llama \emph{divisor de $f$} y se denota $\operatorname{div}(f)$ (o $\operatorname{div}_X(f)$) el divisor sobre $X$ imagen de $f$ mediante el homomorfismo canónico
+\[
+  \Gamma(X,\sh{M}_X^*)\longrightarrow\Gamma(X,\sh{D}iv_X).
+\]
+\end{definition}
+
+\oldpage[IV-4]{256}
+
+El \emph{soporte} de un divisor $D$ es el conjunto cerrado de los $x\in X$ tales que $D_x\neq0$.
+Se denota $\operatorname{Supp}(D)$.
+
+Para todo abierto $U$ de $X$, se tiene evidentemente $\sh{M}_X^*|U=\sh{M}_U^*$, $\sh{O}_X^*|U=\sh{O}_U^*$, por tanto $\sh{D}iv_X|U=\sh{D}iv_U$, y en consecuencia el haz $\sh{D}iv_X$ es igual al prehaz $U\mapsto\operatorname{Div}(U)$.
+
+Cuando $X=\operatorname{Spec}(A)$ es afín, se escribe $\operatorname{Div}(A)$ en lugar de $\operatorname{Div}(\operatorname{Spec}(A))$.
+
+\begin{env}[21.1.3]
+\label{IV.21.1.3}
+Denotaremos siempre \emph{aditivamente} el grupo $\operatorname{Div}(X)$ de divisores sobre $X$.
+Para dos funciones meromorfas regulares $f$, $g$ sobre $X$, se tiene, pues,
+\[
+\label{IV.21.1.3.1}
+  \operatorname{div}(fg)=\operatorname{div}(f)+\operatorname{div}(g),
+  \tag{21.1.3.1}
+\]
+\[
+\label{IV.21.1.3.2}
+  \operatorname{div}(f^{-1})=-\operatorname{div}(f).
+  \tag{21.1.3.2}
+\]
+Por definición, para toda función meromorfa regular $f$ sobre $X$, se tiene la equivalencia
+\[
+\label{IV.21.1.3.3}
+  \operatorname{div}(f)=0 \iff f\in\Gamma(X,\sh{O}_X^*),
+  \tag{21.1.3.3}
+\]
+de donde, para dos funciones meromorfas regulares $f$, $g$ sobre $X$,
+\[
+\label{IV.21.1.3.4}
+  \operatorname{div}(f)=\operatorname{div}(g) \iff fg^{-1}\in\Gamma(X,\sh{O}_X^*).
+  \tag{21.1.3.4}
+\]
+\end{env}
+
+\begin{env}[21.1.4]
+\label{IV.21.1.4}
+Sea ahora $\sh{L}$ un $\sh{O}_X$-Módulo invertible, y sea $s$ una \emph{sección meromorfa regular} \sref{IV.20.1.8} de $\sh{L}$ sobre $X$.
+Todo $x\in X$ posee un entorno abierto $U$ tal que $\sh{L}|U$ sea isomorfo a $\sh{O}_U$, y por tanto $\sh{M}_X(\sh{L})|U$ sea isomorfo a $\sh{M}_X|U$;
+mediante uno de estos isomorfismos, $s|U$ corresponde a una sección $f\in\Gamma(U,\sh{M}_X^*)$, y como dos isomorfismos de $\sh{L}|U$ sobre $\sh{O}_U$ solo difieren por la multiplicación por un elemento de $\Gamma(U,\sh{O}_X^*)$ (\EGAReadLink{0.5.4.3}{$\mathbf{0}_{\mathrm I}$, 5.4.3}), el elemento $\operatorname{div}_U(f)$ de $\Gamma(U,\sh{D}iv_X)$ es \emph{independiente} del isomorfismo elegido;
+es claro que estos elementos (para $U$ variable) son las restricciones de una sección de $\sh{D}iv_X$ sobre $X$, que se llama el \emph{divisor de $s$} y se denota $\operatorname{div}(s)$ (tal divisor no es necesariamente de la forma $\operatorname{div}(g)$ para una función meromorfa regular $g$ sobre $X$; véase \sref{IV.21.2.9}).
+Para $\sh{L}=\sh{O}_X$, la definición de $\operatorname{div}(s)$ coincide con la de \sref{IV.21.1.2}.
+Si $\sh{L}$, $\sh{L}'$ son dos $\sh{O}_X$-Módulos invertibles, y $s$ (resp. $s'$) es una sección meromorfa regular de $\sh{L}$ (resp. $\sh{L}'$) sobre $X$, se tiene inmediatamente
+\[
+\label{IV.21.1.4.1}
+  \operatorname{div}(s\otimes s')=\operatorname{div}(s)+\operatorname{div}(s')
+  \tag{21.1.4.1}
+\]
+\[
+\label{IV.21.1.4.2}
+  \operatorname{div}(s^{\otimes n})=n.\operatorname{div}(s) \quad\text{para todo}\quad n\in\mathbf{Z}
+  \tag{21.1.4.2}
+\]
+(siendo $s^{-1}$ la sección meromorfa regular de $\sh{L}^{-1}$ sobre $X$ definida en \sref{IV.20.1.10})
+y, para dos secciones meromorfas regulares $s$, $s'$ de $\sh{L}$ sobre $X$, se tiene la relación
+\[
+\label{IV.21.1.4.3}
+  \operatorname{div}(s)=\operatorname{div}(s') \iff s'=ts \quad\text{con}\quad t\in\Gamma(X,\sh{O}_X^*).
+  \tag{21.1.4.3}
+\]
+\end{env}
+
+\begin{env}[21.1.5]
+\label{IV.21.1.5}
+El haz $\sh{S}(\sh{O}_X)$ \sref{IV.20.1.3}, cuyas secciones sobre un abierto $U$ de $X$ son los elementos regulares de $\Gamma(U,\sh{O}_X)$, es un \emph{subhaz de monoides} de $\sh{M}_X^*$; se puede escribir
+\[
+\label{IV.21.1.5.1}
+  \sh{S}(\sh{O}_X)=\sh{O}_X\cap\sh{M}_X^*.
+  \tag{21.1.5.1}
+\]
+\end{env}
+
+\oldpage[IV-4]{257}
+
+Si se denota por $\sh{S}(\sh{O}_X)^{-1}$ el haz cuyas secciones sobre $U$ son los inversos en $\Gamma(U,\sh{M}_X^*)$ de los elementos de $\Gamma(U,\sh{S}(\sh{O}_X))$, es claro que se tiene $\Gamma(U,\sh{S}(\sh{O}_X))\cap\Gamma(U,\sh{S}(\sh{O}_X)^{-1})=\Gamma(U,\sh{O}_X^*)$, y por tanto
+\[
+\label{IV.21.1.5.2}
+  \sh{S}(\sh{O}_X)\cap\sh{S}(\sh{O}_X)^{-1}=\sh{O}_X^*.
+  \tag{21.1.5.2}
+\]
+
+\begin{definition}[21.1.6]
+\label{IV.21.1.6}
+El subhaz de conjuntos de $\sh{D}iv_X$, imagen canónica del subhaz $\sh{S}(\sh{O}_X)$ de $\sh{M}_X^*$, se denota $\sh{D}iv_X^+$; sus secciones sobre $X$ se llaman \emph{divisores positivos sobre $X$}, y su conjunto se denota $\operatorname{Div}^+(X)$.
+\end{definition}
+
+Puesto que $\sh{S}(\sh{O}_X)$ es un haz de monoides (multiplicativos), se tiene
+\[
+\label{IV.21.1.6.1}
+  \operatorname{Div}^+(X)+\operatorname{Div}^+(X)\subset\operatorname{Div}^+(X)
+  \tag{21.1.6.1}
+\]
+y, por otra parte, en virtud de \sref{IV.21.1.5.2} y \sref{IV.21.1.3.3},
+\[
+\label{IV.21.1.6.2}
+  \operatorname{Div}^+(X)\cap(-\operatorname{Div}^+(X))=\{0\}.
+  \tag{21.1.6.2}
+\]
+Estas dos relaciones muestran que $\operatorname{Div}^+(X)$ es el conjunto de los elementos positivos para una \emph{estructura de orden} sobre el grupo $\operatorname{Div}(X)$, compatible con esta estructura de grupo; esta relación de orden se denota $D\leq D'$; es decir, se tiene
+\[
+\label{IV.21.1.6.3}
+  D\geq0 \iff D\in\operatorname{Div}^+(X).
+  \tag{21.1.6.3}
+\]
+
+En lo que sigue supondremos siempre que $\operatorname{Div}(X)$ está provisto de esta estructura de orden;
+es claro que $\sh{D}iv_X^+|U=\sh{D}iv_U^+$, por tanto $\Gamma(U,\sh{D}iv_X^+)=\operatorname{Div}^+(U)$, y se puede decir que $\sh{D}iv_X^+$ define sobre $\sh{D}iv_X$ una estructura de haz de grupos ordenados.
+La fibra $(\sh{D}iv_X^+)_x$ en un punto $x$ del haz $\sh{D}iv_X^+$ es un submonoide del grupo $(\sh{D}iv_X)_x$, constituido por los elementos $\geq0$ para una estructura de orden compatible con la estructura de grupo;
+para un divisor $D$ sobre $X$, decir que $D\geq0$ equivale a decir que $D_x\geq0$ para todo $x\in X$.
+
+Por definición, para toda función meromorfa regular $f$ sobre $X$, se tiene la relación
+\[
+\label{IV.21.1.6.4}
+  \operatorname{div}(f)\geq0 \iff f\in\Gamma(X,\sh{S}(\sh{O}_X))
+  \tag{21.1.6.4}
+\]
+es decir, $\operatorname{div}(f)\geq0$ significa que $f$ es una \emph{sección regular} de $\sh{O}_X$, o también una sección de $\sh{O}_X$ \emph{invertible en} $M(X)$.
+
+Más generalmente, dado un divisor $D$ sobre $X$, la relación $\operatorname{div}(f)\geq D$ equivale a la siguiente: para todo abierto $U$ de $X$ tal que $D|U=\operatorname{div}(g)$, donde $g\in\Gamma(U,\sh{M}_X^*)$, existe un elemento regular $t$ de $\Gamma(U,\sh{O}_X)$ tal que $f|U=tg$.
+
+\begin{env}[21.1.7]
+\label{IV.21.1.7}
+Sean $\sh{L}$ un $\sh{O}_X$-Módulo invertible y $s$ una sección meromorfa regular de $\sh{L}$ sobre $X$; se tiene la relación
+\[
+\label{IV.21.1.7.1}
+  \operatorname{div}(s)\geq0 \iff s\in\Gamma(X,\sh{L})\cap\Gamma(X,(\sh{M}_X(\sh{L}))^*)
+  \tag{21.1.7.1}
+\]
+como se deduce inmediatamente de las definiciones \sref{IV.21.1.4} y \sref{IV.21.1.6}.
+\end{env}
+
+\begin{proposition}[21.1.8]
+\label{IV.21.1.8}
+Sean $X$ un preesquema localmente noetheriano y $D$ un divisor sobre $X$.
+Supongamos que para todo $x\in X$ tal que $\operatorname{prof}(\sh{O}_{X,x})=1$ se tenga $D_x\geq0$ (resp. $D_x=0$).
+Entonces se tiene $D\geq0$ (resp. $D=0$).
+\end{proposition}
+
+\begin{proof}
+Como la cuestión es local sobre $X$, se puede suponer que $D=\operatorname{div}(f)$, siendo $f$ una
+\oldpage[IV-4]{258}
+función meromorfa regular sobre $X$;
+la relación $D_x\geq0$ equivale a $x\in\operatorname{dom}(f)$, por lo que la hipótesis significa que, si $T=X-\operatorname{dom}(f)$, se tiene $\operatorname{prof}(\sh{O}_{X,x})\geq2$ para todo $x\in T$ (pues $\operatorname{dom}(f)$ contiene los puntos maximales de $X$).
+Por consiguiente, de \sref{IV.5.10.5} se deduce que el homomorfismo de restricción $\Gamma(X,\sh{O}_X)\to\Gamma(X-T,\sh{O}_X)$ es biyectivo, lo que muestra que existe una sección $s$ de $\sh{O}_X$ sobre $X$ tal que $f=s|(X-T)$.
+Pero, por definición de $T$, esto implica $T=\varnothing$, y por tanto $f=s$ y $D\geq0$.
+La afirmación relativa a la relación $D_x=0$ se deduce inmediatamente aplicando lo anterior a $-D$, en virtud de \sref{IV.21.1.6.2}.
+\end{proof}
+
+
+\begin{corollary}[21.1.9]
+\label{IV.21.1.9}
+Sean $X$ un preesquema localmente noetheriano y $D$ un divisor sobre $X$.
+Sea $S$ el soporte de $D$.
+Entonces, para todo punto maximal $x$ de $S$, se tiene $\operatorname{prof}(\sh{O}_{X,x})=1$.
+\end{corollary}
+
+\begin{proof}
+Pongamos, en efecto, $X_1=\operatorname{Spec}(\sh{O}_{X,x})$;
+teniendo en cuenta \sref{IV.20.2.11} y \sref{IV.20.3.6}, el haz $\sh{M}_{X_1}^*$ es inducido sobre $X_1$ por $\sh{M}_X^*$, por lo que podemos limitarnos al caso en que $X=X_1$; en este caso, como $x\in S$ y $x$ es un punto maximal de $S$, se tiene necesariamente $S=\{x\}$.
+Si se tuviera entonces $\operatorname{prof}(\sh{O}_{X,x})\neq1$, se concluiría, en virtud de \sref{IV.21.1.8}, que $D=0$, lo que contradice la definición de $S$.
+\end{proof}
+
+\begin{proposition}[21.1.10]
+\label{IV.21.1.10}
+Sea $A$ un anillo local noetheriano;
+para que $\operatorname{Div}(A)=0$, es necesario y suficiente que $\operatorname{prof}(A)=0$ (es decir, que el ideal maximal $\mathfrak{m}$ de $A$ esté asociado a $A$ (\EGAReadLink{0.16.4.6}{$\mathbf{0}$, 16.4.6})).
+\end{proposition}
+
+\begin{proof}
+En efecto, decir que $\operatorname{Div}(A)=0$ significa que en $A$ todo elemento regular es invertible, o también que todos los elementos de $\mathfrak{m}$ son divisores de cero, lo que significa que $\mathfrak{m}\in\operatorname{Ass}(A)$ (Bourbaki, \emph{Alg. comm.}, cap.~IV, \textsection~1, n\textsuperscript{o}~1, cor.~3 de la prop.~2).
+\end{proof}

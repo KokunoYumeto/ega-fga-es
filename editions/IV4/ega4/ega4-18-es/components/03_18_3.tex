@@ -1,0 +1,102 @@
+\subsection{Álgebras finitas y étales.}
+\label{subsection:IV.18.3}
+
+\begin{proposition}[18.3.1]
+\label{IV.18.3.1}
+Sean $A$ un anillo y $B$ una $A$-álgebra de presentación finita.
+\begin{enumerate}
+  \item[(i)] Para que $B$ sea una $A$-álgebra no ramificada, es necesario y suficiente que $B$ sea un $(B\otimes_A B)$-módulo proyectivo.
+  \item[(ii)] Supongamos además que $B$ es una $A$-álgebra finita. Para que $B$ sea una $A$-álgebra étale, es necesario y suficiente que $B$ sea un $A$-módulo proyectivo y un $(B\otimes_A B)$-módulo proyectivo.
+\end{enumerate}
+\end{proposition}
+
+Por supuesto, la estructura de $(B\otimes_A B)$-módulo sobre $B$ es la que proviene de la estructura de $(B\otimes_A B)$-álgebra sobre $B$ correspondiente al $A$-homomorfismo canónico de anillos $B\otimes_A B\to B$, que es sobreyectivo y tiene núcleo $\mathfrak J_{B/A}$ (0, 20.4.1).
+
+(i) Decir que el morfismo $\Spec(B)\to\Spec(A)$ es localmente de presentación finita equivale a decir que $B$ es una $A$-álgebra de presentación finita (1.4.6). Decir
+
+\oldpage[IV-4]{115}
+
+que $B$ es una $A$-álgebra no ramificada significa entonces (17.4.2) que $\Spec((B\otimes_A B)/\mathfrak J_{B/A})$ es un subesquema inducido sobre un subconjunto \emph{abierto y cerrado} de $\Spec(B\otimes_A B)$, y se sabe que, para que esto ocurra, es necesario y suficiente que $\mathfrak J_{B/A}$ sea un ideal \emph{factor directo} de $B\otimes_A B$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~4, n.\textsuperscript{o}~3, prop. 15); pero equivale a decir que el $(B\otimes_A B)$-módulo cociente $(B\otimes_A B)/\mathfrak J_{B/A}$ es proyectivo (Bourbaki, \emph{Alg.}, cap. II, 3.\textsuperscript{a} ed., \textsection~2, n.\textsuperscript{o}~2, prop. 4).
+
+(ii) Si se recuerda que un $A$-módulo plano de presentación finita es proyectivo y recíprocamente (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~5, n.\textsuperscript{o}~2, cor. 2 del th. 1), la afirmación de (ii) se sigue de la de (i) y de (17.6.2).
+
+\begin{proposition}[18.3.2]
+\label{IV.18.3.2}
+Sean $A$ un anillo y $\mathfrak J$ un ideal de $A$ tal que, para la topología $\mathfrak J$-preádica, $A$ sea separado y completo; pongamos $A_0=A/\mathfrak J$. Entonces el funtor
+\[
+  B\longmapsto B\otimes_A A_0
+\]
+es una equivalencia de la categoría de las $A$-álgebras finitas y étales con la categoría de las $A_0$-álgebras finitas y étales.
+\end{proposition}
+
+Demostraremos primero el lema siguiente:
+
+\begin{lemma}[18.3.2.1]
+\label{IV.18.3.2.1}
+Sean $A$ un anillo y $\mathfrak J$ un ideal de $A$ tal que, para la topología $\mathfrak J$-preádica, $A$ sea separado y completo.
+\begin{enumerate}
+  \item[(i)] Todo $A$-módulo proyectivo de tipo finito $M$ es separado y completo para la topología $\mathfrak J$-preádica y, por tanto, límite proyectivo de los $(A/\mathfrak J^{n+1})$-módulos proyectivos $M/\mathfrak J^{n+1}M$.
+  \item[(ii)] Recíprocamente, pongamos $A_n=A/\mathfrak J^{n+1}$, y sea $(M_n)$ un sistema proyectivo de $A_n$-módulos tal que, para todo $n$, el homomorfismo $M_{n+1}\otimes_{A_{n+1}}A_n\to M_n$ deducido del homomorfismo de transición $M_{n+1}\to M_n$ sea biyectivo. Supongamos además que los $M_n$ son proyectivos y que $M_0$ es de tipo finito. Entonces $M=\varprojlim M_n$ es un $A$-módulo proyectivo de tipo finito tal que el homomorfismo canónico $M\otimes_A A_0\to M_0$ es biyectivo.
+\end{enumerate}
+\end{lemma}
+
+(i) Existe un $A$-módulo libre de tipo finito $L$ tal que $M$ es isomorfo a un sumando directo de $L$; como $L$ es separado para la topología $\mathfrak J$-preádica, lo mismo ocurre con todo submódulo $N$ de $L$, puesto que $\mathfrak J^{n+1}N\subset\mathfrak J^{n+1}L$; en particular, $M$ es separado para esta topología y, como el homomorfismo sobreyectivo $f:L\to M$ es continuo para la topología $\mathfrak J$-preádica, su núcleo $N$ es cerrado para la topología inducida por la de $L$; puesto que $L$ es completo y $f$ un morfismo estricto, se concluye que $M$ es completo (Bourbaki, \emph{Top. gén.}, cap. IX, 2.\textsuperscript{a} ed., \textsection~3, n.\textsuperscript{o}~1, prop. 4).
+
+(ii) Se sigue del lema de Nakayama que, si $M_0$ está generado por una familia finita $(x_{i0})$ de $r$ elementos y si, para todo $n\geq 1$, $x_{in}$ es un elemento de $M_n$ del que $x_{i,n-1}$ es la imagen en $M_{n-1}$, entonces $(x_{in})$ $(1\leq i\leq r)$ es un sistema de generadores de $M_n$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~3, cor. 2 de la prop. 4). Dicho esto, para todo $n$, pongamos $L_n=A_n^r$; si $(e_{in})_{1\leq i\leq r}$ es la base canónica de $L_n$, sea $u_n:L_n\to M_n$ la aplicación $A_n$-lineal tal que $u_n(e_{in})=x_{in}$ para todo $i$. Por hipótesis, se tiene una sucesión exacta escindida
+\[
+  0\longrightarrow N_n\xrightarrow{v_n}L_n\xrightarrow{u_n}M_n\longrightarrow 0
+\]
+
+\oldpage[IV-4]{116}
+
+y, como $L_n=L_{n+1}/\mathfrak J^{n+1}L_{n+1}$ y $M_n=M_{n+1}/\mathfrak J^{n+1}M_{n+1}$, las flechas verticales del diagrama conmutativo
+\[
+\xymatrix{
+0\ar[r] & N_{n+1}\ar[r]^{v_{n+1}}\ar[d] & L_{n+1}\ar[r]^{u_{n+1}}\ar[d] & M_{n+1}\ar[r]\ar[d] & 0\\
+0\ar[r] & N_n\ar[r]_{v_n} & L_n\ar[r]_{u_n} & M_n\ar[r] & 0
+}
+\]
+son las tres sobreyectivas. Ahora bien, se tiene $M=\varprojlim M_n$ y $L=A^r=\varprojlim L_n$; si se pone $N=\varprojlim N_n$, $u=\varprojlim u_n$, $v=\varprojlim v_n$, se tiene, en virtud de ($0_{\mathrm{III}}$, 13.2.2), la sucesión exacta
+\begin{equation}
+  0\longrightarrow N\xrightarrow{v}L\xrightarrow{u}M\longrightarrow 0.
+  \tag{18.3.2.2}\label{IV.18.3.2.2}
+\end{equation}
+Además, como para todo $n$, $v_n$ es invertible por la izquierda y $M_n$ es un $A_n$-módulo proyectivo, se sigue de (0, 19.1.8) que la sucesión exacta (18.3.2.2) es escindida, lo que demuestra el lema.
+
+Dicho esto, demostremos primero que el funtor del enunciado de (18.3.2) es \emph{plenamente fiel}. Pongamos, como en el lema, $A_n=A/\mathfrak J^{n+1}$; sean $B$, $C$ dos $A$-álgebras finitas y étales, y pongamos, para todo $n$, $B_n=B\otimes_A A_n$, $C_n=C\otimes_A A_n$; en virtud de (18.3.1) y (18.3.2.1), $B$ y $C$ son separadas y completas para la topología $\mathfrak J$-preádica, y se tiene $B=\varprojlim B_n$, $C=\varprojlim C_n$; además, todo homomorfismo de $A$-álgebras $u:B\to C$ es continuo para las topologías $\mathfrak J$-preádicas y proporciona, por tanto, un sistema proyectivo de homomorfismos de $A_n$-álgebras $u_n=u\otimes 1:B_n\to C_n$, del que es el límite proyectivo; siendo evidente la recíproca, se tiene así una biyección canónica
+\[
+  \Hom_{A\text{-alg.}}(B,C)\xrightarrow{\sim}\varprojlim\Hom_{A_n\text{-alg.}}(B_n,C_n).
+\]
+Pero como $B$ y $C$ son $A$-álgebras étales, se sigue también de inmediato de (18.1.2) que la aplicación canónica
+\[
+  \Hom_{A_{n+1}\text{-alg.}}(B_{n+1},C_{n+1})\longrightarrow\Hom_{A_n\text{-alg.}}(B_n,C_n)
+\]
+es biyectiva para $n\geq 0$, lo que termina de demostrar que la aplicación canónica
+\[
+  \Hom_{A\text{-alg.}}(B,C)\longrightarrow\Hom_{A_0\text{-alg.}}(B_0,C_0)
+\]
+es biyectiva.
+
+Para terminar de demostrar (18.3.2), basta ver que para toda $A_0$-álgebra finita y étale $B_0$, existe una $A$-álgebra finita y étale $B$ y un $A_0$-isomorfismo $B_0\xrightarrow{\sim}B\otimes_A A_0$. Ahora bien, se sigue de (18.1.2) que existe un sistema proyectivo $(B_n)$ tal que $B_n$ es una $A_n$-álgebra étale y los homomorfismos $B_{n+1}\otimes_{A_{n+1}}A_n\to B_n$ son biyectivos. Se sigue de (18.3.1) y (18.3.2.1) que la $A$-álgebra $B=\varprojlim B_n$ es un $A$-módulo proyectivo de tipo finito y que $B_0$ es isomorfa a $B\otimes_A A_0$. Para demostrar que $B$ es una $A$-álgebra étale, basta, en virtud de (18.2.5), mostrar que para todo ideal maximal $\mathfrak m$ de $A$, $B_{\mathfrak m}/\mathfrak mB_{\mathfrak m}$ es una $(A/\mathfrak m)$-álgebra separable. Ahora bien, como $\mathfrak J$ está contenido en el radical de $A$ ($0_{\mathrm I}$, 7.1.10),
+
+\oldpage[IV-4]{117}
+
+se tiene $\mathfrak J\subset\mathfrak m$ y, si $\mathfrak m_0=\mathfrak m/\mathfrak J$, se tiene $A_0/\mathfrak m_0=A/\mathfrak m$ y $B_{\mathfrak m}/\mathfrak mB_{\mathfrak m}=(B_0)_{\mathfrak m_0}/\mathfrak m_0(B_0)_{\mathfrak m_0}$; la conclusión se sigue, por tanto, del hecho de que $B_0$ es una $A_0$-álgebra étale (18.2.5).
+
+\begin{env}[18.3.3]
+\label{IV.18.3.3}
+\emph{Ejemplo.} --- La prop. (18.3.2) se aplica, en particular, cuando $A$ es un \emph{anillo local} separado y completo, siendo $\mathfrak J$ el ideal maximal de $A$, de modo que $A_0$ es un \emph{cuerpo} y la categoría de las $A_0$-álgebras finitas y étales es idéntica a la de las $A_0$-álgebras finitas y separables, que son, por tanto, isomorfas a productos directos de cuerpos, extensiones separables y finitas de $A_0$. En particular, si el cuerpo $A_0$ es \emph{separablemente cerrado}, estas extensiones son todas idénticas a $A_0$ y, por consiguiente, todo recubrimiento étale de $\Spec(A)$ es \emph{trivial} (18.2.7) en virtud de (18.3.2).
+\end{env}
+
+\begin{theorem}[18.3.4]
+\label{IV.18.3.4}
+Sean $A$ un anillo noetheriano y $\mathfrak J$ un ideal de $A$ tal que $A$ sea separado y completo para la topología $\mathfrak J$-preádica, $A_0=A/\mathfrak J$. Pongamos $S=\Spec(A)$, $S_0=\Spec(A_0)$. Sea $X$ un $S$-esquema propio sobre $S$, y pongamos $X_0=X\times_S S_0$. Entonces el funtor
+\[
+  Z\longmapsto Z\times_X X_0
+\]
+de la categoría de los $X$-esquemas finitos y étales sobre $X$ a la categoría de los $X_0$-esquemas finitos y étales sobre $X_0$ es una equivalencia de categorías.
+\end{theorem}
+
+Demostremos primero que este funtor es \emph{plenamente fiel}. Sean, pues, $Z'$ y $Z''$ dos $X$-esquemas finitos y étales sobre $X$. Pongamos $S_n=\Spec(A/\mathfrak J^{n+1})$, $X_n=X\times_S S_n$, $Z'_n=Z'\times_S S_n$, $Z''_n=Z''\times_S S_n$ para todo $n\geq 0$. Se sigue de (III, 5.4.1) que se tiene una biyección canónica $\Hom_X(Z',Z'')\xrightarrow{\sim}\varprojlim\Hom_{X_n}(Z'_n,Z''_n)$. Ahora bien, en virtud de (18.1.2), la aplicación canónica $\Hom_{X_{n+1}}(Z'_{n+1},Z''_{n+1})\to\Hom_{X_n}(Z'_n,Z''_n)$ es biyectiva, lo que termina de demostrar nuestra afirmación.
+
+Queda por demostrar que, si $\sh{B}_0$ es una $\sh{O}_{X_0}$-álgebra finita y étale, existe una $\sh{O}_X$-álgebra finita y étale $\sh{B}$ y un isomorfismo $\sh{B}_0\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_0}$. Se sigue de (18.1.2) que existe un sistema proyectivo $(\sh{B}_n)$, donde $\sh{B}_n$ es una $\sh{O}_{X_n}$-álgebra finita y étale, y el segundo teorema de comparación (III, 5.1.4) demuestra la existencia de un $\sh{O}_X$-módulo coherente $\sh{B}$ y de un sistema proyectivo de isomorfismos $\sh{B}_n\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_n}$. El dato de una estructura de álgebra sobre un módulo $\sh{F}$ equivale al de un homomorfismo $\sh{O}_X\to\sh{F}$ que define la unidad y de un homomorfismo de multiplicación $\sh{F}\otimes_{\sh{O}_X}\sh{F}\to\sh{F}$ que hacen conmutar los diagramas de unidad, asociatividad y conmutatividad en los que solo intervienen potencias tensoriales de $\sh{F}$; se sigue de (III, 5.1.3), (I, 10.11.4) y (I, 10.11.7) que $\sh{B}$ está dotada de manera natural de una estructura de $\sh{O}_X$-álgebra para la cual el isomorfismo $\sh{B}_0\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_0}$ es un isomorfismo de álgebras. Además, $\sh{B}$ es un $\sh{O}_X$-módulo \emph{localmente libre}; esto se sigue también de (III, 5.1.3), (I, 10.11.4), (I, 10.11.7) y del hecho de que, en la categoría de los $\sh{O}_X$-módulos coherentes, los $\sh{O}_X$-módulos localmente libres $\sh{F}$ pueden definirse como aquellos para los que el funtor $\sh{G}\mapsto\mathscr{H}\!om_{\sh{O}_X}(\sh{F},\sh{G})$ es \emph{exacto}. Finalmente, para ver que $\sh{B}$ es una $\sh{O}_X$-álgebra étale, basta (18.2.5) mostrar que, para todo punto \emph{cerrado} $x\in X$, $\sh{B}_x\otimes_{\sh{O}_{X,x}}\kappa(x)$ es una $\kappa(x)$-álgebra separable. Pero como el morfismo estructural $f:X\to S$ es \emph{propio}, $f(x)$ es un punto cerrado de $S$ y, por tanto, pertenece a $S_0$, ya que $\mathfrak J$ está contenido en el radical de $A$ ($0_{\mathrm I}$, 7.1.10); la conclusión se sigue, por tanto, de que $X_0=f^{-1}(S_0)$ y de que $\sh{B}_0$ es una $\sh{O}_{X_0}$-álgebra finita y étale.

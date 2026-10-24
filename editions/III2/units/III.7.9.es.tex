@@ -1,0 +1,541 @@
+\subsection{Aplicación a los morfismos propios: III. Invariancia de la
+característica de Euler-Poincaré y del polinomio de Hilbert}
+\label{subsection:III.7.9}
+\label{III.7.9}
+
+\begin{env}[7.9.1]
+\label{III.7.9.1}
+Sean $A$ un anillo y $M$ un $A$-módulo proyectivo de tipo finito.
+Recordemos (Bourbaki, \emph{Alg.~comm.}, cap.~II, \S5, n.\textsuperscript{o}~2)
+que esto equivale a decir que el $\mathscr O_X$-módulo $\widetilde M$
+asociado a $M$ sobre $X=\Spec(A)$ es localmente libre de tipo finito.
+Para todo $\mathfrak p\in\Spec(A)$, se llama \emph{rango de $M$ en
+$\mathfrak p$}, y se denota por $\operatorname{rank}_{\mathfrak p}(M)$,
+al rango del $A_{\mathfrak p}$-módulo libre $M_{\mathfrak p}$ (o,
+equivalentemente, al rango en $\mathfrak p$ del $\mathscr O_X$-módulo
+localmente libre $\widetilde M$). Por tanto,
+\[
+  \operatorname{rank}_{\mathfrak p}M
+  =
+  \operatorname{rank}_{\mathfrak p}(M_{\mathfrak p})
+  =
+  \operatorname{rank}_{\kres(\mathfrak p)}
+    \bigl(M\otimes_A\kres(\mathfrak p)\bigr).
+  \tag{7.9.1.1}\label{III.7.9.1.1}
+\]
+\end{env}
+
+\begin{proposition}[7.9.2]
+\label{III.7.9.2}
+Sea $P_\bullet$ un complejo finito de $A$-módulos proyectivos de
+tipo finito y, para todo $A$-módulo $M$, pongamos
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M).
+\]
+Entonces, para todo $\mathfrak p\in\Spec(A)$, se tiene
+\[
+  \sum_i(-1)^i
+    \operatorname{rank}_{\kres(\mathfrak p)}
+      T_i\bigl(\kres(\mathfrak p)\bigr)
+  =
+  \sum_i(-1)^i\operatorname{rank}_{\mathfrak p}(P_i).
+  \tag{7.9.2.1}\label{III.7.9.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En efecto, por definición,
+$T_i(\kres(\mathfrak p))
+ =H_i(P_\bullet\otimes_A\kres(\mathfrak p))$.
+Teniendo en cuenta \eqref{III.7.9.1.1}, la fórmula
+\eqref{III.7.9.2.1} no es sino la invariancia de la característica
+de Euler-Poincaré de un complejo finito de espacios vectoriales de
+dimensión finita al pasar a la homología
+\sref[0]{0.11.10.2}.
+\end{proof}
+
+\begin{corollary}[7.9.3]
+\label{III.7.9.3}
+La función
+\[
+  \mathfrak p\longmapsto
+  \sum_i(-1)^i
+    \operatorname{rank}_{\kres(\mathfrak p)}
+      T_i\bigl(\kres(\mathfrak p)\bigr)
+\]
+es localmente constante en $\Spec(A)$.
+\end{corollary}
+
+\begin{theorem}[7.9.4]
+\label{III.7.9.4}
+Sean $Y$ un preesquema localmente noetheriano,
+$f:X\to Y$ un morfismo propio y $\mathscr P_\bullet$ un complejo
+finito de $\mathscr O_X$-módulos coherentes y planos sobre $Y$.
+Si se pone
+\[
+  \mathscr T_\bullet(\mathscr M)
+  =
+  \mathscr H^{-\bullet}
+    \bigl(f,\mathscr P^\bullet
+      \otimes_{\mathscr O_Y}\mathscr M\bigr)
+  \qquad\text{(cf.~\eqref{III.7.7.1.1})},
+\]
+entonces la función
+
+\oldpage[III]{209}
+\[
+  y\longmapsto
+  \sum_i(-1)^i
+    \operatorname{rank}_{\kres(y)}
+      \mathscr T_i\bigl(\kres(y)\bigr)
+  \tag{7.9.4.1}\label{III.7.9.4.1}
+\]
+es localmente constante en $Y$.
+\end{theorem}
+
+\begin{proof}
+Podemos limitarnos al caso en que $Y=\Spec(A)$ es afín y $A$ es
+noetheriano. Como el complejo $\mathscr P_\bullet$ es finito,
+\sref{III.7.7.12}{(i)} muestra que
+\[
+  \mathscr T_p(\mathscr M)
+  =
+  \mathscr H_p(\mathscr L_\bullet
+    \otimes_{\mathscr O_Y}\mathscr M),
+\]
+donde $\mathscr L_\bullet=\widetilde{L}_\bullet$ y
+$L_\bullet$ es un complejo finito de $A$-módulos proyectivos de
+tipo finito. El teorema se deduce entonces de
+\sref{III.7.9.3}.
+\end{proof}
+
+\begin{env}[7.9.5]
+\label{III.7.9.5}
+Bajo las hipótesis de \sref{III.7.9.4}, la función
+\eqref{III.7.9.4.1} es \emph{constante} cuando $Y$ es
+\emph{conexo}. Cuando $Y$ es conexo y no vacío, su único valor
+(entero) se denota por
+\[
+  \operatorname{EP}(f,\mathscr P_\bullet),\qquad
+  \operatorname{EP}(Y,\mathscr P_\bullet),
+  \qquad\text{o simplemente}\qquad
+  \operatorname{EP}(\mathscr P_\bullet)
+\]
+cuando no haya riesgo de confusión, y se dice que este entero es la
+\emph{característica de Euler-Poincaré de $\mathscr P_\bullet$}
+relativa a $f$ (o a $Y$). En general, se escribe asimismo
+\[
+  \operatorname{EP}(f,\mathscr P_\bullet;y),\qquad
+  \operatorname{EP}(Y,\mathscr P_\bullet;y),\qquad
+  \operatorname{EP}(\mathscr P_\bullet;y)
+\]
+para el segundo miembro de \eqref{III.7.9.4.1}.
+\end{env}
+
+\begin{env}[7.9.6]
+\label{III.7.9.6}
+Bajo las hipótesis de \sref{III.7.9.4} relativas a
+$X$, $Y$ y $f$, sea
+\[
+  0\longrightarrow\mathscr P'_\bullet
+    \xrightarrow{u}\mathscr P_\bullet
+    \xrightarrow{v}\mathscr P''_\bullet
+    \longrightarrow 0
+\]
+una sucesión exacta de complejos finitos de $\mathscr O_X$-módulos
+coherentes y planos sobre $Y$, donde los homomorfismos $u$ y $v$
+son de grados pares $2d$ y $2d'$, respectivamente.
+Como $\mathscr T_\bullet$ es un funtor homológico
+\sref{III.7.7.1}, se tiene una sucesión exacta de homología
+\[
+  \cdots\longrightarrow
+  \mathscr T_i(\mathscr P'_\bullet,\kres(y))
+  \longrightarrow
+  \mathscr T_{i+2d}(\mathscr P_\bullet,\kres(y))
+  \longrightarrow
+  \mathscr T_{i+2d+2d'}(\mathscr P''_\bullet,\kres(y))
+  \longrightarrow
+  \mathscr T_{i-1}(\mathscr P'_\bullet,\kres(y))
+  \longrightarrow\cdots ,
+\]
+que, además, solo tiene un número finito de términos. Al escribir
+que la característica de Euler-Poincaré de este complejo es nula
+\sref[0]{0.11.10.1}, se obtiene inmediatamente
+\[
+  \operatorname{EP}(\mathscr P_\bullet;y)
+  =
+  \operatorname{EP}(\mathscr P'_\bullet;y)
+  +
+  \operatorname{EP}(\mathscr P''_\bullet;y)
+  \tag{7.9.6.1}\label{III.7.9.6.1}
+\]
+para todo $y\in Y$.
+
+Supongamos, por ejemplo, que
+$\mathscr P_\bullet=(\mathscr P_i)$ y que $\mathscr P_i=0$ para
+$i<0$. Se tiene entonces la sucesión exacta de complejos
+\[
+\xymatrix@C=2.4em{
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r] & 0 \ar[r]
+    & 0 \ar[r] & 0 \ar[r] & \cdots
+}
+\]
+cuyas flechas verticales no nulas son los automorfismos identidad.
+Aplicando \eqref{III.7.9.6.1} a esta sucesión exacta y razonando por
+inducción sobre la longitud de $\mathscr P_\bullet$, se obtiene
+\[
+  \operatorname{EP}(\mathscr P_\bullet;y)
+  =
+  \sum_i(-1)^i\operatorname{EP}(\mathscr P_i;y).
+  \tag{7.9.6.2}\label{III.7.9.6.2}
+\]
+
+\oldpage[III]{210}
+Aquí, para todo $\mathscr O_X$-módulo coherente $\mathscr F$ plano
+sobre $Y$, la notación $\operatorname{EP}(\mathscr F;y)$ (o
+$\operatorname{EP}(f,\mathscr F;y)$, o
+$\operatorname{EP}(Y,\mathscr F;y)$) significa
+$\operatorname{EP}(\mathscr Q_\bullet;y)$ (con la notación relativa
+correspondiente) para el complejo $\mathscr Q_\bullet$ cuyo único
+término no nulo es $\mathscr F$ en grado $0$. Por tanto, el estudio
+de las características de Euler-Poincaré de los complejos se reduce
+al de los complejos con un solo término.
+\end{env}
+
+\begin{proposition}[7.9.7]
+\label{III.7.9.7}
+Bajo las hipótesis de \sref{III.7.9.4}, sean $Y'$ un preesquema
+localmente noetheriano y $g:Y'\to Y$ un morfismo, pongamos
+\[
+  X'=X\times_Y Y',\qquad
+  f'=f_{(Y')}:X'\longrightarrow Y',
+\]
+y sea
+\[
+  \mathscr P'_\bullet
+  =
+  \mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr O_{Y'}
+\]
+el complejo finito de $\mathscr O_{X'}$-módulos así obtenido.
+Entonces $\mathscr P'_\bullet$ está formado por
+$\mathscr O_{X'}$-módulos coherentes y planos sobre $Y'$, y, para
+todo $y'\in Y'$, se tiene
+\[
+  \operatorname{EP}(\mathscr P'_\bullet;y')
+  =
+  \operatorname{EP}(\mathscr P_\bullet;g(y')).
+  \tag{7.9.7.1}\label{III.7.9.7.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Los $\mathscr O_{X'}$-módulos $\mathscr P'_i$, al ser imágenes
+inversas de los $\mathscr P_i$ por la proyección $X'\to X$, son
+coherentes. Son planos sobre $Y'$ en virtud de
+\sref[0]{0.6.2.1} y \sref[I]{I.4.14.5}, pues la cuestión es local
+en $X$, $Y$ e $Y'$. Por último, $f'$ es propio por
+\sref[II]{II.5.4.2}, de modo que el primer miembro de
+\eqref{III.7.9.7.1} está definido. La fórmula
+\eqref{III.7.9.7.1} se deduce entonces de
+\textup{(6.10.4.2)}, \sref{III.7.7.2} y
+\sref{III.7.6.7}, reduciéndose, como siempre se puede hacer, al
+caso en que $Y$ e $Y'$ son afines.
+\end{proof}
+
+\begin{proposition}[7.9.8]
+\label{III.7.9.8}
+Supongamos que se cumplen las hipótesis de \sref{III.7.9.4} y,
+además, que existe un entero $i_0$ tal que
+\[
+  \mathscr T_i(\kres(y))=0
+  \qquad\text{para $i\neq i_0$ y todo $y\in Y$.}
+\]
+Entonces
+\[
+  \mathscr T_{i_0}(\mathscr O_Y)
+  =
+  \mathscr H^{-i_0}(f,\mathscr P^\bullet)
+\]
+es un $\mathscr O_Y$-módulo localmente libre, cuyo rango en
+$y\in Y$ es
+\[
+  (-1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y).
+\]
+\end{proposition}
+
+\begin{proof}
+Observemos primero que los funtores
+$\mathscr T_i^{\mathscr O_y}$ cumplen las hipótesis de
+\sref{III.7.4.4}, por lo que \sref{III.7.4.7} les es aplicable.
+La hipótesis y \sref{III.7.5.3} implican que
+$\mathscr T_i^{\mathscr O_y}$ es nulo para $i\neq i_0$.
+En consecuencia, $\mathscr T_{i_0}$ es exacto por
+\sref{III.7.3.3}, y \sref{III.7.8.4} muestra que
+$\mathscr H^{-i_0}(f,\mathscr P^\bullet)$ es localmente libre.
+Su rango en $y\in Y$ es
+\[
+  \operatorname{rank}_{\kres(y)}
+    \mathscr T_{i_0}(\kres(y))
+  =
+  (-1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y),
+\]
+por definición, ya que $\mathscr T_i(\kres(y))=0$ para
+$i\neq i_0$.
+\end{proof}
+
+\begin{corollary}[7.9.9]
+\label{III.7.9.9}
+Sean $Y$ un preesquema localmente noetheriano,
+$f:X\to Y$ un morfismo propio y $\mathscr F$ un
+$\mathscr O_X$-módulo coherente y plano sobre $Y$. Supongamos que
+existe un entero $i_0$ tal que
+\[
+  H^i\bigl(f^{-1}(y),
+    \mathscr F\otimes_{\mathscr O_Y}\kres(y)\bigr)=0
+\]
+para todo $i\neq i_0$ y todo $y\in Y$. Entonces
+$R^{i_0}f_*(\mathscr F)$ es un $\mathscr O_Y$-módulo localmente
+libre, cuyo rango en $y$ es
+$(-1)^{i_0}\operatorname{EP}(f,\mathscr F;y)$.
+\end{corollary}
+
+En particular:
+
+\begin{corollary}[7.9.10]
+\label{III.7.9.10}
+Bajo las hipótesis preliminares de \sref{III.7.9.9} relativas a
+$X$, $Y$ y $\mathscr F$, supongamos que
+$R^if_*(\mathscr F)=0$ para todo $i>0$. Entonces
+$f_*(\mathscr F)$ es un $\mathscr O_Y$-módulo localmente libre,
+cuyo rango en $y$ es $\operatorname{EP}(f,\mathscr F;y)$.
+\end{corollary}
+
+\begin{proof}
+En virtud de \sref{III.7.9.9}, basta demostrar el lema siguiente.
+\end{proof}
+
+\begin{lemma}[7.9.10.1]
+\label{III.7.9.10.1}
+Bajo las hipótesis de \sref{III.7.9.10}, se tiene
+\[
+  H^i\bigl(f^{-1}(y),
+    \mathscr F\otimes_{\mathscr O_Y}\kres(y)\bigr)=0
+\]
+para todo $i>0$ y todo $y\in Y$.
+\end{lemma}
+
+\begin{proof}
+Podemos limitarnos al caso en que $Y=\Spec(A)$ es afín.
+Con las notaciones de \sref{III.7.9.4}, y estando
+$\mathscr P_\bullet$ reducido a su único término no nulo
+$\mathscr F$ en grado $0$, la hipótesis da
+$\mathscr T_p(\mathscr O_Y)=0$ para $p<0$. Se deduce de
+\sref{III.7.3.7} que $\mathscr T_p$ es exacto para $p<0$, y el
+lema resulta entonces de la equivalencia de las condiciones a) y
+d) de \sref{III.7.7.5}.
+\end{proof}
+
+\oldpage[III]{211}
+\begin{proposition}[7.9.11]
+\label{III.7.9.11}
+Bajo las hipótesis de \sref{III.7.9.4}, sea $\mathscr L$ un
+$\mathscr O_X$-módulo inversible muy amplio sobre $Y$ y, para todo
+$n\in\bb Z$, pongamos
+\[
+  \mathscr P_\bullet(n)
+  =
+  \mathscr P_\bullet
+    \otimes_{\mathscr O_X}\mathscr L^{\otimes n}.
+\]
+Entonces, para todo $y\in Y$, la función
+\[
+  n\longmapsto
+  \operatorname{EP}(f,\mathscr P_\bullet(n);y)
+  \tag{7.9.11.1}\label{III.7.9.11.1}
+\]
+es un polinomio con coeficientes racionales, y es el mismo para
+todos los puntos de una misma componente conexa de $Y$.
+\end{proposition}
+
+\begin{proof}
+Es claro que $\mathscr P_\bullet(n)$ es un complejo de
+$\mathscr O_X$-módulos planos sobre $Y$. En virtud de
+\eqref{III.7.9.6.2}, podemos reducirnos al caso en que
+$\mathscr P_\bullet$ tiene un único término no nulo
+$\mathscr F\neq0$ en grado $0$. Como se trata de cuestiones
+locales sobre $Y$, podemos suponer además que $Y$ es afín y que
+$f$ es proyectivo \sref[II]{II.5.5.3}. Pongamos
+\[
+  X_y=f^{-1}(y),\qquad
+  \mathscr L_y=\mathscr L\otimes_{\mathscr O_Y}\kres(y);
+\]
+entonces $\mathscr L_y$ es un $\mathscr O_{X_y}$-módulo muy amplio
+\sref[II]{II.4.4.10}. Por \sref{III.7.7.2}, para el funtor
+$\mathscr T_\bullet$ asociado a $\mathscr P_\bullet(n)$ se tiene
+\[
+  \mathscr T_i(\kres(y))
+  =
+  H^{-i}\bigl(
+    X_y,\mathscr F_y\otimes\mathscr L_y^{\otimes n}\bigr),
+  \qquad
+  \mathscr F_y=\mathscr F\otimes_{\mathscr O_Y}\kres(y).
+\]
+Por consiguiente, $\operatorname{EP}(f,\mathscr F(n);y)$ no es
+sino la característica de Euler-Poincaré
+$\chi_{\kres(y)}(\mathscr F_y(n))$ definida en
+\sref{III.2.5.1}. De \sref{III.2.5.3} se deduce que
+\eqref{III.7.9.11.1} es un polinomio. Además, para cada $n$ fijo,
+su valor es constante en cada componente conexa de $Y$ por
+\sref{III.7.9.4}; esto termina la demostración.
+\end{proof}
+
+\begin{env}[7.9.12]
+\label{III.7.9.12}
+El polinomio \eqref{III.7.9.11.1}, con coeficientes racionales, se
+denotará por
+\[
+  \operatorname{PH}(f,\mathscr P_\bullet;y)
+  \qquad\text{o}\qquad
+  \operatorname{PH}(\mathscr P_\bullet;y),
+\]
+y se llamará \emph{polinomio de Hilbert en $y$} relativo a
+$\mathscr P_\bullet$, $f$ y $\mathscr L$ (o simplemente
+\emph{polinomio de Hilbert en $y$} de $\mathscr P_\bullet$, o de
+$f$, cuando no haya riesgo de confusión). Cuando $Y$ es conexo y
+no vacío, se suprime la referencia a $y$ en la notación y la
+terminología. Este invariante desempeñará un papel esencial en el
+capítulo~V, en la teoría de los «móduli» de los haces cociente
+coherentes de un haz coherente dado.
+
+Con las notaciones de \sref{III.7.9.6} y
+\sref{III.7.9.11}, se tiene
+\[
+  \operatorname{PH}(\mathscr P_\bullet;y)
+  =
+  \operatorname{PH}(\mathscr P'_\bullet;y)
+  +
+  \operatorname{PH}(\mathscr P''_\bullet;y),
+  \tag{7.9.12.1}\label{III.7.9.12.1}
+\]
+y, en particular,
+\[
+  \operatorname{PH}(\mathscr P_\bullet;y)
+  =
+  \sum_i(-1)^i\operatorname{PH}(\mathscr P_i;y).
+  \tag{7.9.12.2}\label{III.7.9.12.2}
+\]
+Estas fórmulas se deducen inmediatamente de
+\eqref{III.7.9.6.1} y \eqref{III.7.9.6.2}. Asimismo, con las
+notaciones e hipótesis de \sref{III.7.9.7}, se tiene
+\[
+  \operatorname{PH}(\mathscr P'_\bullet;y')
+  =
+  \operatorname{PH}(\mathscr P_\bullet;g(y')).
+  \tag{7.9.12.3}\label{III.7.9.12.3}
+\]
+\end{env}
+
+La fórmula \eqref{III.7.9.12.2} reduce el estudio de los
+polinomios de Hilbert de un complejo al de los polinomios de
+Hilbert de un solo $\mathscr O_X$-módulo plano sobre $Y$.
+Estos últimos admiten la siguiente interpretación notable,
+independiente de consideraciones homológicas.
+
+\begin{corollary}[7.9.13]
+\label{III.7.9.13}
+Sean $Y$ un preesquema noetheriano, $f:X\to Y$ un morfismo propio,
+$\mathscr L$ un $\mathscr O_X$-módulo inversible muy amplio sobre
+$Y$ y $\mathscr F$ un $\mathscr O_X$-módulo coherente y plano
+sobre $Y$. Existe un entero $n_0$ tal que, para $n\geq n_0$,
+$f_*(\mathscr F(n))$ es un $\mathscr O_Y$-módulo localmente libre
+cuyo rango en $y\in Y$ es
+\[
+  \operatorname{PH}(f,\mathscr F;y)(n).
+\]
+\end{corollary}
+
+\begin{proof}
+Como $f$ es proyectivo \sref[II]{II.5.5.3}, existe un entero $n_0$
+tal que, para $n\geq n_0$,
+
+\oldpage[III]{212}
+\[
+  R^if_*(\mathscr F(n))=0
+  \qquad\text{para todo $i>0$}
+\]
+por \sref{III.2.2.1}. La conclusión se deduce entonces de
+\sref{III.7.9.10}.
+\end{proof}
+
+El criterio de planitud siguiente será importante en el
+capítulo~V, en la teoría de los «móduli» de los haces coherentes.
+
+\begin{proposition}[7.9.14]
+\label{III.7.9.14}
+Sean $Y$ un preesquema noetheriano, $f:X\to Y$ un morfismo
+proyectivo y $\mathscr L$ un $\mathscr O_X$-módulo inversible
+amplio para $f$. Para todo $\mathscr O_X$-módulo $\mathscr F$ y
+todo $n\in\bb Z$, pongamos
+\[
+  \mathscr F(n)=\mathscr F\otimes\mathscr L^{\otimes n}.
+\]
+Para que un $\mathscr O_X$-módulo coherente $\mathscr F$ sea plano
+sobre $Y$, es necesario y suficiente que exista un entero $n_0$
+tal que, para todo $n\geq n_0$, $f_*(\mathscr F(n))$ sea un
+$\mathscr O_Y$-módulo localmente libre.
+\end{proposition}
+
+\begin{proof}
+La necesidad de la condición se demuestra como en
+\sref{III.7.9.13}; el resultado de \sref{III.2.2.1} se aplica a un
+haz amplio porque $f$ es proyectivo.
+
+Recíprocamente, podemos reducirnos al caso en que
+$Y=\Spec(A)$ es afín. En virtud de la hipótesis y de
+\sref{III.2.2.2}{(i)}, los $A$-módulos
+$\Gamma(X,\mathscr F(n))$ son proyectivos y de tipo finito
+(Bourbaki, \emph{Alg.~comm.}, cap.~II, \S5,
+n.\textsuperscript{o}~2, teorema~1). Sea
+\[
+  S=\bigoplus_{n\geq0}\Gamma(X,\mathscr L^{\otimes n})
+\]
+el anillo graduado asociado. Se sabe que $X$ se identifica
+canónicamente con $\Proj(S)$ por
+\sref[II]{II.4.5.2}{(b)} y \sref[II]{II.5.4.4}. Sea
+\[
+  M=\bigoplus_{n\geq n_0}\Gamma(X,\mathscr F(n)).
+\]
+Sustituyendo, si es preciso, $\mathscr L$ por una potencia
+$\mathscr L^{\otimes d}$, podemos suponer que $S$ está generado por
+un número finito de elementos de grado $1$
+\sref{III.2.3.5.1}; se deduce entonces de
+\sref[II]{II.2.7.5} y \sref[II]{II.2.7.2} que $\mathscr F$ se
+identifica con $\mathscr P\!roj_0(M)$.
+
+Para todo elemento homogéneo $g\in S$ de grado positivo, se tiene,
+por tanto,
+\[
+  \Gamma(X_g,\mathscr F)=M_{(g)}.
+\]
+Ahora bien, $M$, al ser una suma directa de $A$-módulos
+proyectivos, es un $A$-módulo plano. Por consiguiente, $M_g$ es
+plano por \sref[0]{0.6.3.2}, y también lo es $M_{(g)}$, que es un
+factor directo de $M_g$ por \sref[0]{0.6.1.2}. Se concluye de
+\sref[I]{I.4.14.5} que $\mathscr F$ es plano sobre $Y$ en todo
+punto de $X_g$. Como los abiertos $X_g$ recubren $X$, queda
+demostrada la proposición.
+\end{proof}
+
+\bigskip
+\noindent\emph{(Continuará.)}
+
+\clearpage
+\oldpage[III]{213}

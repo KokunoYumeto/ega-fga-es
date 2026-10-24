@@ -1,0 +1,424 @@
+\subsection{El teorema de Ramanujam--Samuel}
+\label{subsection:IV.21.14}
+\label{IV.21.14}
+
+\begin{theorem}[21.14.1]
+\label{IV.21.14.1}
+\textup{(Ramanujam--Samuel)}. ---
+Sea $A$ un anillo local noetheriano con ideal maximal $\mathfrak m$, tal que su completado
+$\widehat A$ sea íntegro e integralmente cerrado. Sean $B$ un anillo local noetheriano
+tal que $\dim(B)\geq\dim(A)$ y $\rho:A\to B$ un homomorfismo local que hace de $B$
+una $A$-álgebra formalmente lisa (para las topologías preádicas
+$(\mathbf 0, 19.3.1)$), y tal que el cuerpo residual de $B$ sea finito sobre el de $A$.
+Entonces todo ciclo $1$-codimensional sobre $\operatorname{Spec}(B)$ que sea principal en el
+punto $\mathfrak p=\mathfrak mB$ es un ciclo $1$-codimensional principal.
+\end{theorem}
+
+\begin{proof}
+Si $k=A/\mathfrak m$ es el cuerpo residual de $A$, $B/\mathfrak mB$ es una
+$k$-álgebra formalmente lisa (para su topología preádica) $(\mathbf 0, 19.3.5)$,
+\oldpage[IV-4]{324}
+por tanto regular y, en particular, íntegra; en otras palabras,
+$\mathfrak p=\mathfrak mB$ es efectivamente un ideal primo de $B$, lo que justifica
+el enunciado. Basta evidentemente probar que todo ideal primo $\mathfrak q$ de altura $1$\footnote{Corrección de fuente: el francés impreso y el inglés mantenido omiten «de altura $1$». La conclusión concierne a los ciclos de codimensión $1$, y un ideal primo principal no nulo tiene altura $1$.} de
+$B$ no contenido en $\mathfrak p$ es \emph{principal}.
+
+Sean $\widehat A$ y $\widehat B$ los completados de $A$ y $B$, respectivamente, de
+modo que el ideal maximal de $\widehat A$ es $\mathfrak m\widehat A$; se sabe
+$(\mathbf 0, 19.3.6)$ que $\widehat B$ es una $\widehat A$-álgebra formalmente
+lisa para las topologías ádicas. Sea $k'$ el cuerpo residual de $\widehat B$,
+extensión finita de $k$; existe un homomorfismo local $\widehat A\to C$, donde $C$
+es un anillo local noetheriano que es un $\widehat A$-módulo \emph{finito} y
+\emph{plano} (por tanto libre), y tal que $C/\mathfrak mC$ es isomorfo a $k'$
+$(\mathbf 0_{\mathrm{III}}, 10.3.1)$; de ello se deduce que $C$ es \emph{completo}, y
+resulta entonces de (7.5.1), (7.5.3) y (6.5.4, (ii)) que $C$ es \emph{íntegro e
+integralmente cerrado}. Además,
+\[
+  D=\widehat B\widehat\otimes_{\widehat A}C
+\]
+es un anillo semilocal completo, producto directo de anillos locales completos, uno de los cuales,
+$D_0$, tiene por cuerpo residual $k'$ (puesto que $k'\otimes_k k'$ es producto directo
+de anillos locales, uno de los cuales es isomorfo a $k'$). Como $D$ es una $C$-álgebra formalmente lisa,
+lo mismo ocurre con $D_0$; por consiguiente, $D_0/\mathfrak mD_0$ es una
+$k'$-álgebra formalmente lisa, con cuerpo residual $k'$, lo que implica que es
+$k'$-isomorfa a un álgebra de series formales
+$k'[[T_1,\ldots,T_n]]$ $(\mathbf 0, 19.6.4)$; se concluye, por
+$(\mathbf 0, 19.7.1.5)$, que $D_0$ es $C$-isomorfo a
+$C[[T_1,\ldots,T_n]]$ y, por tanto, \emph{íntegro e integralmente cerrado} (Bourbaki,
+\emph{Alg. comm.}, cap.~V, \S1, n\textsuperscript{o}~4, prop.~14). Como los
+morfismos $\operatorname{Spec}(D_0)\to\operatorname{Spec}(\widehat B)$ y
+$\operatorname{Spec}(D_0)\to\operatorname{Spec}(B)$ son fielmente planos, se
+deduce que $B$ y $\widehat B$ son también \emph{íntegros e integralmente cerrados}
+(2.1.13). Esto prueba que el ideal $\mathfrak qD_0$ es divisorial (Bourbaki,
+\emph{Alg. comm.}, cap.~VII, \S1, n\textsuperscript{o}~10, prop.~15) y no está contenido
+en $\mathfrak mD_0$, pues de lo contrario se tendría
+\[
+  \mathfrak q=(\mathfrak qD_0)\cap B
+  \subset(\mathfrak mD_0)\cap B=\mathfrak mB=\mathfrak p
+\]
+por planitud fiel $(\mathbf 0_{\mathrm I}, 6.5.1)$. Se concluye que ninguno de los
+ideales primos $\mathfrak r_h$ de altura $1$ de $D_0$ que contienen
+$\mathfrak qD_0$ puede estar contenido en $\mathfrak mD_0$; si se prueba que estos
+ideales son principales, resultará que $\mathfrak qD_0$ es principal, pues los
+divisores (en el sentido de Bourbaki) de $\mathfrak qD_0$ y de un producto de potencias de los
+$\mathfrak r_h$ son iguales (Bourbaki, \emph{Alg. comm.}, cap.~VII, \S1,
+n\textsuperscript{o}~4, prop.~5). Como $\mathfrak qD_0\cap B=\mathfrak q$, se
+deduce por planitud fiel que $\mathfrak q$ es principal (2.5.2), utilizando el
+hecho de que $B$ es un anillo local.
+
+Quedamos así reducidos a probar el teorema en el caso particular en que $A$ es
+\emph{completo} y $B=A[[T_1,\ldots,T_n]]$. Probemos primero que se puede reducir al
+caso en que $n=1$. En efecto, procedamos por inducción sobre $n$ y sea
+$f\in\mathfrak q$ un elemento que no pertenece a $\mathfrak p=\mathfrak mB$; bastará
+probar que existe un $A$-automorfismo $\sigma$ de $B$ tal que
+$\sigma(f)$ no pertenece al ideal
+\[
+  \mathfrak p'=\mathfrak p+BT_1+\cdots+BT_{n-1};
+\]
+en efecto, si $B'=A[[T_1,\ldots,T_{n-1}]]$, $B'$ es completo y tiene por ideal maximal
+$\mathfrak mB'+B'T_1+\cdots+B'T_{n-1}=\mathfrak m'$. Como
+$B=B'[[T_n]]$ y $\mathfrak p'=\mathfrak m'B$, resultará de la hipótesis de
+inducción (teniendo en cuenta que $B'$ es íntegro e integralmente cerrado) que el ideal
+$\sigma(\mathfrak q)$ es principal en $B$, y por tanto también $\mathfrak q$. Ahora bien, si
+$\overline f\in k[[T_1,\ldots,T_n]]$ es la imagen de $f$ («serie reducida» de $f$),
+se sabe (Bourbaki, \emph{Alg. comm.}, cap.~VII, \S3, n\textsuperscript{o}~7,
+lema~3) que existe un $A$-automorfismo $\sigma$ de $B$ tal que
+$(\overline{\sigma(f)})(0,\ldots,0,T_n)\neq0$, lo que implica evidentemente
+$\sigma(f)\notin\mathfrak p'$.
+
+Supongamos, pues, que $n=1$ y escribamos $T$ en lugar de $T_1$, de modo que $B=A[[T]]$.
+Basta probar que, en el anillo de polinomios $A[T]$, el ideal
+$\mathfrak q\cap A[T]$ es principal;
+\oldpage[IV-4]{325}
+en efecto, sea $f_0$ un elemento de $\mathfrak q$ que no pertenece a $\mathfrak mB$;
+es una serie formal cuya serie reducida $\overline f_0$ no es nula; por tanto,
+en virtud del teorema de preparación (Bourbaki, \emph{Alg. comm.}, cap.~VII, \S3,
+n\textsuperscript{o}~8, prop.~5), para todo $f\in\mathfrak q$ existen $g\in B$ y
+un polinomio $r\in A[T]$ tales que $f=gf_0+r$, y se tiene entonces
+$r\in\mathfrak q\cap A[T]$; por otra parte (\emph{loc. cit.}, prop.~6), existen un
+polinomio distinguido no constante $F_0\in A[T]$ y un elemento invertible $u\in B$ tales
+que $f_0=uF_0$, por lo que también se tiene $F_0\in\mathfrak q\cap A[T]$, lo que prueba que
+$\mathfrak q$ está generado por $\mathfrak q\cap A[T]=\mathfrak q_1$. Puesto que $B$
+es plano sobre $A[T]$ $(\mathbf 0_{\mathrm I}, 7.3.3)$, resulta de Bourbaki,
+\emph{Alg. comm.}, cap.~VII, \S1, n\textsuperscript{o}~10, prop.~15, que
+$\mathfrak q_1$ es un ideal primo de altura $1$ en $A[T]$.
+
+Además, se tiene necesariamente $\mathfrak q_1\cap A=0$; de lo contrario,
+$\mathfrak q_1\cap A$ tendría necesariamente altura $\geq1$, y resultaría de
+(5.5.3) que $\mathfrak q_1=(\mathfrak q_1\cap A)A[T]$. Pero entonces,
+puesto que $\mathfrak q_1\cap A\subset\mathfrak m$, se tendría
+$\mathfrak q_1\subset\mathfrak mA[T]$, en contradicción con la hipótesis sobre
+$\mathfrak q$. Si $K$ es el cuerpo de fracciones de $A$, $\mathfrak q_1K[T]$ es
+entonces un ideal primo distinto de $0$ y de $K[T]$ en $K[T]$, y por tanto de la forma
+$hK[T]$, donde
+\[
+  h(T)=T^m+a_1T^{m-1}+\cdots+a_m,
+  \qquad m\geq1,
+\]
+con $a_i\in K$, siendo $h$ irreducible en $K[T]$. Pero se ha visto más arriba que
+$\mathfrak q_1$ contiene un polinomio distinguido no constante $F_0\in A[T]$. Si $t$
+es la clase de $T$ en $K[T]/\mathfrak q_1K[T]$, $t$ es, pues, raíz del polinomio
+$F_0$ en una extensión de $K$ y, por consiguiente, $h$ divide a $F_0$ en $K[T]$; pero,
+puesto que $h$ y $F_0$ son mónicos, ello implica que los coeficientes $a_i$ de $h$
+son enteros sobre $A$ (Bourbaki, \emph{Alg. comm.}, cap.~V, \S1,
+n\textsuperscript{o}~3, prop.~11), por lo que pertenecen a $A$, ya que $A$ es
+integralmente cerrado. En otras palabras, se tiene
+\[
+  h\in A[T]\cap\mathfrak q_1K[T]=\mathfrak q_1
+\]
+(Bourbaki, \emph{Alg. comm.}, cap.~II, \S1, n\textsuperscript{o}~5, prop.~11);
+como todo polinomio $g\in\mathfrak q_1$ es divisible por $h$ en $K[T]$ y $h$
+es mónico, los coeficientes de $g/h$ pertenecen a $A$, por lo que
+$\mathfrak q_1=hA[T]$. C.Q.D.
+\end{proof}
+
+El enunciado (21.14.1) es \emph{equivalente} al siguiente:
+
+\begin{corollary}[21.14.2]
+\label{IV.21.14.2}
+Bajo las hipótesis de (21.14.1) sobre $A$, $B$ y $\rho$, para todo ideal primo
+$\mathfrak q$ de $B$ no contenido en $\mathfrak p=\mathfrak mB$ y tal que
+$\dim(B_\mathfrak q)\geq2$, el anillo $B_\mathfrak q$ es parafactorial. En
+particular, si $\dim(B\otimes_A k)>0$ (\emph{i.e.} $\dim B>\dim A$
+$((\mathbf 0, 19.7.1)$ y $(\mathbf 0, 6.1.1)))$, el anillo $B$ es parafactorial.
+\end{corollary}
+
+\begin{proof}
+En efecto, se ha visto en la demostración de (21.14.1) que las condiciones del enunciado
+implican que $B$ es íntegro e integralmente cerrado; la equivalencia de los enunciados
+(21.14.1) y (21.14.2) resulta entonces de (21.13.15), aplicado a
+$X=\operatorname{Spec}(B)$ y $S=\{\mathfrak p\}$.
+\end{proof}
+
+\begin{proposition}[21.14.3]
+\label{IV.21.14.3}
+Sean $S$ un preesquema normal y $f:X\to S$ un morfismo liso.
+\begin{enumerate}[label=(\roman*)]
+  \item Si $S$ es localmente noetheriano (y por tanto también $X$), entonces, para todo $x\in X$
+  tal que $\dim(\mathcal O_{X,x})\geq2$ y que $x$ no sea punto maximal de su
+  fibra $f^{-1}(f(x))$, el anillo $\mathcal O_{X,x}$ es parafactorial. Todo ciclo
+  $1$-codimensional $Z$ sobre $X$ tal que $\operatorname{Supp}(Z)$ no contenga ninguna
+  componente irreducible de una fibra $f^{-1}(s)=X_s$ es localmente principal.
+  \item Sea $Y$ un subconjunto cerrado de $X$ que no contenga ninguna componente irreducible
+  de una fibra $X_s$, y tal que, para todo punto maximal $\eta$ de $S$,
+  $Y_\eta=Y\cap X_\eta$ sea de codimensión $\geq2$ en $X_\eta$. Entonces el par
+  $(X,Y)$ es parafactorial.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Obsérvese que las condiciones de (ii) se cumplen si $Y$ es un subconjunto cerrado de $X$
+tal que, para todo $s\in S$, $Y_s=Y\cap X_s$ sea de codimensión $\geq2$ en
+$X_s$.
+
+Para probar (21.14.3), observemos primero que, bajo las hipótesis de (i), si se pone
+$Y=\overline{\{x\}}$, existe un entorno abierto $V$ de $x$ en $X$ tal que
+$Y\cap V$ y $V$ satisfacen las condiciones de (ii): en efecto, resulta de la hipótesis
+y de (9.5.3) que se puede tomar $V$ de modo que $V\cap Y$ no contenga ninguna
+componente irreducible de un $X_s$; por otra parte, para todo punto maximal $\eta$ de
+$S$ tal que $Y\cap X_\eta\neq\varnothing$, los puntos de $Y\cap X_\eta$ son
+especializaciones de $x$, por lo que en un punto tal $z$ se tiene
+$\dim(\mathcal O_{X,z})\geq2$ y, como
+$\mathcal O_{X,z}=\mathcal O_{X_\eta,z}$ ($S$ es reducido en el punto $\eta$ en virtud
+de (2.1.13)), $Y\cap X_\eta$ es efectivamente de codimensión $\geq2$ en $X_\eta$. Como el
+par $(V,Y\cap V)$ es entonces parafactorial en virtud de (ii), se concluye de (21.13.10)
+que el anillo $\mathcal O_{X,x}$ es parafactorial, es decir, la primera afirmación
+de (i). Para probar la segunda, se puede reducir al caso en que
+$Z=\overline{\{z\}}$, donde $z\in X^{(1)}$; como $\mathcal O_{X,z}$ es un anillo local
+integralmente cerrado y de dimensión $1$, es un anillo de valoración discreta y $Z$
+es, por tanto, principal en el punto $z$; para todo otro punto $x$ de
+$\operatorname{Supp}(Z)$, se tiene entonces $\dim(\mathcal O_{X,x})\geq2$ y, por hipótesis, $x$ no es
+punto maximal de su fibra, por lo que $\mathcal O_{X,x}$ es parafactorial.
+Apliquemos entonces (21.13.15), tomando como $S$ el conjunto formado por $z$ y los puntos
+maximales de las fibras de $f$; es claro que $Z$ es principal en los puntos de $S$
+puesto que $z$ es el único punto de $S$ que pertenece a $\operatorname{Supp}(Z)$; como,
+por otra parte, la condición $b)$ de (21.13.15) se cumple evidentemente, se concluye que
+$Z$ es localmente principal.
+
+Quedamos, pues, reducidos a probar (ii). Pongamos $U=X-Y$ y sea $j:U\to X$ la inyección
+canónica.
+\oldpage[IV-4]{326}
+Como las hipótesis y la conclusión son locales sobre $S$ y sobre $X$ en virtud de
+(21.13.6, (i)), se puede reducir al caso en que $S$ y $X$ son afines, siendo entonces $f$ de
+presentación finita. Puesto que las fibras de $f$ son regulares, la hipótesis sobre $Y$
+implica que, para todo punto $x\in Y$, se tiene
+\[
+  \operatorname{prof}(\mathcal O_{X_{f(x)},x})
+  =\dim(\mathcal O_{X_{f(x)},x})\geq1;
+\]
+resulta de (19.9.8) que el homomorfismo canónico
+$\mathcal O_X\to j_*(\mathcal O_U)$ es \emph{inyectivo}. Además, sustituyendo $Y$ por
+un subconjunto cerrado mayor según el método de la demostración de (19.9.8), y
+utilizando (21.13.6, (ii)), se puede suponer que $Y$ está definido por un ideal \emph{de
+tipo finito} del anillo de $X$; por tanto, el abierto $U=X-Y$ es \emph{cuasicompacto y
+cuasiseparado} y el conjunto cerrado $Y$ es \emph{constructible}.
+
+Para probar (ii), basta, dados un $\mathcal O_U$-módulo invertible $\mathscr L$
+y un punto $x\in Y$, establecer la existencia de un entorno abierto $V$ de $x$
+en $X$ tal que: $1^{\mathrm o}$ el homomorfismo canónico
+$\mathcal O_V\to(j_V)_*(\mathcal O_{U\cap V})$ sea sobreyectivo;
+$2^{\mathrm o}$ exista un $\mathcal O_V$-módulo invertible $\mathscr L'_V$ tal que
+$\mathscr L'_V|(U\cap V)=\mathscr L|(U\cap V)$ ((21.13.5) y (21.13.3)).
+
+Pongamos $s=f(x)$; veremos que se puede reducir al caso en que
+$S=S_0=\operatorname{Spec}(\mathcal O_{S,s})$. Sea, en efecto, $(S_\nu)$ un sistema
+fundamental de entornos abiertos afines de $s$ en $S$, y pongamos
+$X_\nu=f^{-1}(S_\nu)$, $Y_\nu=Y\cap X_\nu$, $U_\nu=X_\nu-Y_\nu$,
+siendo $j_\nu:U_\nu\to X_\nu$ la inyección canónica; $X_0=X\times_S S_0$ es entonces
+límite proyectivo de los $X_\nu$ (8.1.2, $a$)); supongamos verdadera la proposición para el
+morfismo $f_0:X_0\to S_0$ y para $Y_0=Y\cap X_0$, y pongamos $U_0=X_0-Y_0$,
+siendo $j_0:U_0\to X_0$ la inyección canónica. Como la proyección
+$p_\nu:X_0\to X_\nu$ es un morfismo afín, se tiene
+\[
+  (j_0)_*(\mathcal O_{U_0})
+  =p_\nu^*((j_\nu)_*(\mathcal O_{U_\nu}))
+  \qquad(\mathbf{II}, 1.5.2)
+\]
+y el homomorfismo canónico
+$\rho_0:\mathcal O_{X_0}\to(j_0)_*(\mathcal O_{U_0})$ no es otro que
+$p_\nu^*(\rho_\nu)$, donde
+$\rho_\nu:\mathcal O_{X_\nu}\to(j_\nu)_*(\mathcal O_{U_\nu})$ es el homomorfismo
+canónico; como, por hipótesis, $\rho_0$ es sobreyectivo, lo mismo ocurre con $\rho_\nu$
+para $\nu$ suficientemente grande (8.5.7). Sea, por otra parte, $\mathscr L_0$ el
+$\mathcal O_{U_0}$-módulo invertible obtenido por restricción de $\mathscr L$, y observemos que los
+$X_\nu$ son afines, y por tanto cuasicompactos y cuasiseparados; puesto que, por hipótesis,
+existe un $\mathcal O_{X_0}$-módulo invertible $\mathscr L'_0$ tal que
+$\mathscr L'_0|U_0=\mathscr L_0$, existen un $\nu$ suficientemente grande y un
+$\mathcal O_{X_\nu}$-módulo cuasicoherente $\mathscr L'_\nu$ de presentación finita
+tales que $\mathscr L'_0$ sea isomorfo a $p_\nu^*(\mathscr L'_\nu)$ (8.5.2, (ii));
+además, por (8.5.5), se puede suponer que $\mathscr L'_\nu$ es invertible. Finalmente, como
+los $U_\nu$ son cuasicompactos y cuasiseparados y
+$\mathscr L'_0|U_0=\mathscr L_0$, existe un $\nu$ suficientemente grande tal que
+$\mathscr L'_\nu|U_\nu$ y $\mathscr L|U_\nu$ sean isomorfos (8.5.2.5).
+
+\oldpage[IV-4]{327}
+Quedamos así reducidos al caso en que $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(B)$, donde $A$ es un anillo \emph{local}; puesto que $X$ es
+normal y $f$ liso, $S$ es normal (17.5.7), y por tanto $A$ es \emph{íntegro e
+integralmente cerrado}. Consideremos entonces $A$ como límite inductivo de sus
+\emph{sub-$\mathbb Z$-álgebras de tipo finito}; como la clausura integral de una
+sub-$\mathbb Z$-álgebra de este tipo es un subanillo de $A$ y es también una
+$\mathbb Z$-álgebra de tipo finito (7.8.3, (ii), (iii) y (vi)), $A$ es límite inductivo
+filtrante de las sub-$\mathbb Z$-álgebras de tipo finito $A_\lambda$ de $A$ que son
+anillos \emph{integralmente cerrados}. En virtud de (1.8.4.2), existen un índice
+$\lambda$ y una $A_\lambda$-álgebra de tipo finito $B_\lambda$ tales que
+\[
+  B=B_\lambda\otimes_{A_\lambda}A
+\]
+salvo $A$-isomorfismo. Pongamos $S_\lambda=\operatorname{Spec}(A_\lambda)$,
+$X_\lambda=\operatorname{Spec}(B_\lambda)$; si $p_\lambda:X\to X_\lambda$ es la
+proyección canónica, se puede además suponer (puesto que $Y$ es
+\emph{constructible}) que $Y=p_\lambda^{-1}(Y_\lambda)$, donde $Y_\lambda$ es un
+subconjunto cerrado de $X_\lambda$ (8.3.11). Sea $f_\lambda$ el morfismo
+$X_\lambda\to S_\lambda$; en virtud de la transitividad de las fibras y de (4.2.6),
+$Y_\lambda$ no contiene ninguna componente irreducible de las fibras
+$f_\lambda^{-1}(s_\lambda)$ para ningún $s_\lambda\in S_\lambda$. Puesto que $f$ es
+liso, se puede también suponer que $f_\lambda$ es liso (17.7.8); finalmente, la imagen del
+punto genérico $\eta$ de $S$ en $S_\lambda$ es el punto genérico $\eta_\lambda$
+de $S_\lambda$, y se tiene
+\[
+  \operatorname{codim}((Y_\lambda)_{\eta_\lambda},
+  (X_\lambda)_{\eta_\lambda})
+  =\operatorname{codim}(Y_\eta,X_\eta)\geq2
+\]
+en virtud de (6.1.4). Se ve, pues, que $S_\lambda$, $X_\lambda$ y $Y_\lambda$
+satisfacen todas las hipótesis de (ii), y, poniendo
+$X_\mu=X_\lambda\times_{S_\lambda}S_\mu$ para $\lambda\leq\mu$, lo mismo ocurre con
+$S_\mu$, $X_\mu$ y $Y_\mu$. Probemos que, si se demuestra que el par
+$(X_\mu,Y_\mu)$ es parafactorial para todo $\mu\gg\lambda$, lo mismo ocurre con
+$(X,Y)$. En efecto, sean $U=X-Y$, $U_\mu=X_\mu-Y_\mu$, y sean $j:U\to X$ y
+$j_\mu:U_\mu\to X_\mu$ las inyecciones canónicas; como la proyección
+$p_\mu:X\to X_\mu$ es un morfismo afín, se tiene
+\[
+  j_*(\mathcal O_U)=p_\mu^*((j_\mu)_*(\mathcal O_{U_\mu}))
+  \qquad(\mathbf{II}, 1.5.2),
+\]
+y por consiguiente el homomorfismo canónico
+$\rho:\mathcal O_X\to j_*(\mathcal O_U)$ no es otro que $p_\mu^*(\rho_\mu)$, donde
+$\rho_\mu:\mathcal O_{X_\mu}\to(j_\mu)_*(\mathcal O_{U_\mu})$ es el homomorfismo
+canónico; como este último es biyectivo por hipótesis, lo mismo ocurre con $\rho$.
+Por otra parte, para todo $\mathcal O_U$-módulo invertible $\mathscr L$, existen un
+$\mu\gg\lambda$ y un $\mathcal O_{U_\mu}$-módulo invertible $\mathscr L_\mu$ tales
+que $\mathscr L=p_\mu'^*(\mathscr L_\mu)$ (denotando por
+$p_\mu':U\to U_\mu$ la restricción de $p_\mu$) (8.5.2 y 8.5.5), pues $U_\lambda$ es
+cuasicompacto ya que $X_\lambda$ es noetheriano. Por hipótesis, existe un
+$\mathcal O_{X_\mu}$-módulo invertible $\mathscr L'_\mu$ tal que
+$\mathscr L'_\mu|U_\mu$ sea isomorfo a $\mathscr L_\mu$;
+$\mathscr L'=p_\mu^*(\mathscr L'_\mu)$ es entonces un $\mathcal O_X$-módulo
+invertible tal que $\mathscr L'|U$ sea isomorfo a $\mathscr L$, lo que prueba nuestra
+afirmación.
+
+Quedamos así reducidos a probar (ii) cuando el anillo $A$ es una
+$\mathbb Z$-álgebra de tipo finito integralmente cerrada; como los anillos locales
+$\mathcal O_{S,s}$ de $S$ son entonces anillos excelentes integralmente cerrados, sus
+\emph{completados} son también integralmente cerrados (7.8.3, (ii), (iii) y (vii)). Para
+probar que el par $(X,Y)$ es parafactorial, basta mostrar que, para todo
+$x\in Y$, el anillo $\mathcal O_{X,x}$ es parafactorial (21.13.10). Sea $y$ un punto
+cerrado de $Y_{f(x)}$ que sea especialización de $x$ (5.1.11); si se pone
+$s=f(x)=f(y)$, $\mathcal O_{S,s}$ tiene un
+\oldpage[IV-4]{328}
+completado integralmente cerrado, y $\mathcal O_{X,y}$ es una
+$\mathcal O_{S,s}$-álgebra formalmente lisa para las topologías preádicas
+(17.5.3); puesto que $Y$ no contiene ninguna componente irreducible de $X_s$, se tiene
+$\dim(\mathcal O_{X,y})>\dim(\mathcal O_{S,s})$ (17.5.8). Si $s\neq\eta$, se tiene
+$\dim(\mathcal O_{S,s})\geq1$; si, por el contrario, $s=\eta$, se tiene por hipótesis
+$\dim(\mathcal O_{X,x})\geq2$; por tanto, en todos los casos,
+$\dim(\mathcal O_{X,y})\geq2$. Además, el ideal primo de $\mathcal O_{X,y}$
+correspondiente al punto $x$ no está contenido en
+$\mathfrak m_s\mathcal O_{X,y}$, puesto que $Y$ no contiene ninguna componente
+irreducible de $X_s$. Finalmente, puesto que $y$ es cerrado en $X_s$, $k(y)$ es una extensión
+finita de $k(s)$ $(\mathbf I, 6.4.2)$. En todos los casos, se puede aplicar a
+$A=\mathcal O_{S,s}$, $B=\mathcal O_{X,y}$ y
+$B_\mathfrak q=\mathcal O_{X,x}$ el resultado de (21.14.2), lo que termina la
+demostración.
+\end{proof}
+
+\begin{env}[21.14.4]
+\label{IV.21.14.4}
+\emph{Observaciones}. ---
+
+(i) Es posible que los enunciados (21.14.1) y (21.14.2) sigan siendo válidos \emph{sin
+hipótesis} sobre el cuerpo residual de $B$. Formulado con esta generalidad, el resultado
+sería equivalente, en virtud de (21.13.15) y (21.13.12.1), al siguiente: sean $A$ un
+anillo local noetheriano completo, íntegro e integralmente cerrado, y $B$ un anillo local
+noetheriano que sea una $A$-álgebra formalmente lisa, tal que
+$\dim(B)>\dim(A)$; entonces $B$ es parafactorial.
+
+(ii) Veremos en el cap.~VI, empleando una técnica de «descenso finito»
+aplicada al morfismo $Y'\to Y=\operatorname{Spec}(A)$, donde $Y'$ es la normalización de
+$Y$, que la conclusión de (21.14.1) (o de (21.14.2)) sigue siendo válida si se sustituye
+la hipótesis de que $\widehat A$ es integralmente cerrado por la hipótesis de que
+$\widehat A$ es \emph{reducido}, siempre que $\dim B\geq\dim A+2$. Si se sustituye esta
+última condición por $\dim B\geq\dim A+3$, se puede incluso suprimir la hipótesis de que
+$\widehat A$ es reducido. Del mismo modo, la conclusión de (21.14.3) sigue siendo válida si se
+sustituye la hipótesis de que $X$ es normal por la hipótesis de que $X$ es reducido, siempre
+que $\dim(\mathcal O_{X,x})\geq\dim(\mathcal O_{S,f(x)})+2$.
+
+(iii) En el cap.~III, 3\textsuperscript{a} parte, se prueba que, si $f:X\to S$ es un
+morfismo liso y $Y$ es un subconjunto cerrado localmente constructible de $X$ tal que,
+para todo $s\in S$, se tenga (con las notaciones de (21.14.3))
+$\operatorname{codim}(Y_s,X_s)\geq3$, entonces el par $(X,Y)$ es parafactorial
+([41], XII, 4.8). Esta conclusión deja de ser válida cuando solo se supone que
+$\operatorname{codim}(Y_s,X_s)\geq2$ para todo $s\in S$ y ya no se supone que
+$X$ sea reducido. Por ejemplo, sean $k$ un cuerpo y $A=k[T]/(T^2)$, el álgebra de los números
+duales sobre $k$, $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(A[T_1,T_2])$ ($T_1$, $T_2$ indeterminadas), de modo que
+$X=\mathbb V_S^2$, siendo $Y$ la «sección nula» de este fibrado; si $s$ es el único
+punto cerrado de $S$, se tiene $X_s=\mathbb V_k^2$ y $Y_s$ es la «sección nula» de
+$X_s$. Para ver que el par $(X,Y)$ no es parafactorial, basta probar
+que el anillo $B=A[T_1,T_2]_\mathfrak m$, donde $\mathfrak m$ es el ideal
+$(T_1)+(T_2)$ que define $Y$, no es parafactorial (21.13.10). Sea
+$B_0=B_{\mathrm{red}}$, y denotemos por $U$ y $U_0$ los complementos del punto cerrado
+en $\operatorname{Spec}(B)$ y $\operatorname{Spec}(B_0)$; razonando como
+en (21.13.9), se tiene la sucesión exacta, extensión de (21.13.9.1),
+\[
+  \Gamma(U,\mathcal O_U)^*\longrightarrow\Gamma(U_0,\mathcal O_{U_0})^*
+  \longrightarrow\mathrm H^1(U_0,\mathcal O_{U_0})
+  \longrightarrow\operatorname{Pic}(U)\longrightarrow\operatorname{Pic}(U_0).
+\]
+Ahora bien, se tiene $\Gamma(U,\mathcal O_U)=B$, $\Gamma(U_0,\mathcal O_{U_0})=B_0$ puesto que
+$\operatorname{prof}(B)=\operatorname{prof}(B_0)=2$ (5.10.5). Por otra parte,
+$\operatorname{Pic}(U_0)=0$ puesto que $B_0$ es factorial, y
+$\mathrm H^1(U_0,\mathcal O_{U_0})\neq0$ [41, 3, Ejemplo III-1]; como
+el homomorfismo $B^*\to B_0^*$ es sobreyectivo, se concluye que
+$\operatorname{Pic}(U)\neq0$, y por tanto que $B$ no es parafactorial.
+\oldpage[IV-4]{329}
+(iv) El resultado (21.14.3) fue demostrado por primera vez por C.~Seshadri [44] en el caso
+particular en que $S$ es un esquema algebraico normal sobre un cuerpo algebraicamente cerrado
+$k$ y $X=S\times_k T$, donde $T$ es un $k$-preesquema algebraico liso sobre $k$. La
+demostración de Seshadri [44, p.~188--189] es de naturaleza global y utiliza la
+teoría de los esquemas de Picard. Proporciona además (\emph{loc. cit.}) resultados
+como el siguiente (para el que actualmente no se dispone de una demostración
+por métodos locales). Sean $S$ y $T$ dos preesquemas localmente de tipo finito sobre un
+cuerpo $k$, $X=S\times_k T$, y $Z$ un ciclo $1$-codimensional sobre $X$ (considerado como
+$S$-preesquema); supongamos que se cumplen las condiciones siguientes:
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item $S$ y $T$ son geométricamente normales sobre $k$ (6.7.6);
+  \item Para todo punto maximal $\eta$ de $S$, el ciclo $1$-codimensional $Z_\eta$
+  sobre la fibra $X_\eta$, que tiene la misma multiplicidad que $Z$ en todo punto de
+  $X^{(1)}\cap X_\eta$, es localmente principal (en otras palabras, es la imagen de un
+  divisor de $X_\eta$, puesto que $X_\eta$ es normal);
+  \item Para todo $s\in S$, $Z$ es principal en los puntos maximales de la fibra $X_s$.
+\end{enumerate}
+Entonces $Z$ es localmente principal. En otras palabras, como $X$ es normal (6.14.1),
+para todo $x\in X$ que no sea maximal en su fibra $X_s$ y que no pertenezca a
+ninguna de las «fibras genéricas» $X_\eta$ (lo que implica
+$\dim(\mathcal O_{X,x})\geq2$ en virtud de (6.1.1)), el anillo local
+$\mathcal O_{X,x}$ es parafactorial, en virtud de (21.13.15)\footnote{Corrección de referencia: el francés impreso y el inglés mantenido dan (21.12.15), que trata de un criterio de isomorfía para un morfismo propio; el criterio de parafactorialidad pertinente es (21.13.15).}.
+\footnote{En realidad, en el artículo citado, Seshadri supone que $k$ es algebraicamente
+cerrado, que $T$ es separado y «semicompleto» (i.e.\ tal que
+$\Gamma(T,\mathcal O_T)$ sea $k$-isomorfo a $k$), y sustituye la hipótesis
+$3^{\mathrm o}$ por la hipótesis más fuerte de que $\operatorname{Supp}(Z)$ no contiene
+ninguna de las fibras $X_s$ para $s\in S$. Pero, como el enunciado es local sobre $S$, se
+concluye inmediatamente que basta formular la hipótesis $3^{\mathrm o}$, y esto prueba que
+la conclusión (interpretada como antes en términos de la propiedad de parafactorialidad
+de los anillos $\mathcal O_{X,x}$) es local sobre $S$ y sobre $T$, lo que permite
+eliminar por completo la hipótesis de que $T$ es «semicompleto» y de que $k$ es
+algebraicamente cerrado, puesto que (después de pasar, si es necesario, a la clausura algebraica de $k$)
+se puede suponer inicialmente que $T$ es afín, lo que permite sumergirlo como abierto de un
+esquema proyectivo y normal sobre $k$, al que se aplica el resultado de Seshadri. Obsérvese
+también que, gracias a esta reducción, basta hacer la demostración de Seshadri en
+el caso en que $T$ es \emph{proyectivo} (y no solo «semicompleto»), caso en el que la
+teoría del esquema de Picard utilizada por Seshadri está contenida en la que se
+desarrollará en el cap.~VI de nuestro Tratado.}
+\end{env}

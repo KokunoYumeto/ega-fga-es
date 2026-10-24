@@ -1,0 +1,217 @@
+\subsection{Aplicaciones de la localización étale a los morfismos cuasi-finitos (generalizaciones de resultados anteriores)}
+\label{subsection:IV.18.12}
+
+Los resultados de este número nos fueron comunicados por P.~Deligne.
+
+\begin{theorem}[18.12.1]
+\label{IV.18.12.1}
+Sean $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Supongamos que $x$ sea un punto aislado del espacio $f^{-1}(y)$. Entonces, existe un morfismo étale $Y'\to Y$, un punto $x'$ de $X'=X\times_Y Y'$ por encima de $x$ y un entorno abierto $V'$ de $x'$ en $X'$ tal que, si $f'=f_{(Y')}:X'\to Y'$, $f'|V'$ sea un morfismo finito. Si además $f$ es separado, $V'$ es a la vez abierto y cerrado, y $X'$ es por tanto suma de dos subpreesquemas inducidos sobre abiertos de $X'$, uno de los cuales es finito sobre $Y'$ y contiene $x'$.
+\end{theorem}
+
+La última afirmación se deduce de que, si $f$ es separado, lo mismo ocurre con $f'$; por tanto, si $j':V'\to X'$ es la inyección canónica, el hecho de que el morfismo $f'|V'=f'\circ j'$ sea finito implica que lo mismo ocurre con $j'$ (II, 6.1.5), y en consecuencia $V'=j'(V')$ es cerrado en $X'$ (II, 6.1.10).
+
+La cuestión es local en $X$, por lo que podemos suponer $Y=\Spec(A)$ y $X=\Spec(B)$ afines, siendo $B$ una $A$-álgebra de tipo finito, por tanto de la forma $C/\mathfrak J$, donde $C=A[T_1,\ldots,T_r]$ y $\mathfrak J$ es un ideal de $C$; $f$ es entonces separado, y podemos además suponer que $f^{-1}(y)=\{x\}$. Sea $(\mathfrak J_\lambda)$ la familia de los ideales de tipo finito de $C$ contenidos en $\mathfrak J$, de modo que $\mathfrak J$ es la unión filtrante de los $\mathfrak J_\lambda$. Si $X$ y los $X_\lambda=\Spec(C/\mathfrak J_\lambda)$ se consideran como subpreesquemas cerrados de $Z=\Spec(C)$, se tiene por tanto, para los espacios subyacentes, $X=\bigcap_\lambda X_\lambda$; si $f_\lambda:X_\lambda\to Y$ es el morfismo estructural, se deduce que
+\[
+  f^{-1}(y)=\bigcap_\lambda f_\lambda^{-1}(y),
+\]
+y como los conjuntos $f_\lambda^{-1}(y)$ son cerrados en el espacio noetheriano $Z_y=\Spec(k(y)[T_1,\ldots,T_r])$, existe un índice $\lambda$ tal que $f_\lambda^{-1}(y)=f^{-1}(y)=\{x\}$. Podemos, pues, suponer que los $X_\lambda$ verifican la misma condición que $X$ en el punto $x$; si se demuestra la proposición para tal $X_\lambda$, se deduce para $X$, pues si $x'$ es un punto por encima de $x$ en $Z'=Z\times_Y Y'$, $X'_\lambda=p^{-1}(X_\lambda)$, donde $p:Z'\to Z$ es la proyección (de modo que también se tiene $X'=p^{-1}(X)$), si existe un entorno abierto $V'_\lambda$ de $x'$ en $X'_\lambda$ que sea finito sobre $Y'$, \emph{a fortiori} la restricción de $f'_\lambda$ al subpreesquema cerrado $X'\cap V'_\lambda$ de $V'_\lambda$ será un morfismo finito. Nos reducimos, pues, al caso en que $f$ es de presentación finita.
+
+Observemos además que el conjunto de puntos de $X$ aislados en su fibra es abierto en $X$ (13.1.4), por lo que $f$ es cuasi-finito en el punto $x$, y podemos restringirnos por tanto al caso en que $f$ es cuasi-finito. Sea $A''$ el anillo local henselizado de $\sh{O}_{Y,y}$, y pongamos $Y''=\Spec(A'')$. Si $X''=X\times_Y Y''$, $f''=f_{(Y'')}:X''\to Y''$ es separado, cuasi-finito y de presentación finita; como $A''$ es henseliano, para todo $x''\in X''$ por encima de $x$ hay un entorno abierto y cerrado $V''$ de $x''$ en $X''$ que es finito sobre $Y''$ (18.5.11, c)); como la inmersión $V''\to X''$ es abierta y cerrada, es cuasi-compacta, por tanto de presentación finita (1.6.2), y en consecuencia $f''|V''$ es de presentación finita.
+
+Dicho esto, por definición, $A''$ es límite inductivo de una familia filtrante $(A_\lambda)$ de $\sh{O}_{Y,y}$-álgebras estrictamente esencialmente étale (18.6.5); cada $A_\lambda$ es a su vez límite inductivo de una familia filtrante $(B_{\lambda\mu})$ de $\sh{O}_{Y,y}$-álgebras étale ((18.6.1) y (8.1.2, a)). Finalmente, como se puede suponer que $B_{\lambda\mu}$ es una $\sh{O}_{Y,y}$-álgebra de presentación finita, se deduce también de (8.1.2, a)) y de (17.7.8) que $B_{\lambda\mu}$ es límite inductivo de una familia filtrante $(C_{\lambda\mu\nu})$ de $A$-álgebras étale. Finalmente, se ve, usando el teorema de la doble límite inductiva, que $Y''$ es límite proyectivo de una familia filtrante $(Y'_\alpha)$ de esquemas afines étale sobre $Y$. Si $x'_\alpha$ es la proyección de $x''$ sobre $X'_\alpha=X\times_Y Y'_\alpha$, podemos suponer que el entorno $V''$, que es cuasi-compacto, es de la forma $V'_\alpha\times_{Y'_\alpha}Y''$ donde $V'_\alpha$ es un entorno abierto de $x'_\alpha$ en $X'_\alpha$ (8.2.11). Finalmente, puesto que $V''$ es de presentación finita sobre $Y''$, se concluye de (8.10.5, (x)) que para un $\alpha$ adecuado, $V'_\alpha$ es finito sobre $Y'_\alpha$. C.Q.F.D.
+
+\begin{remark}[18.12.2]
+\label{IV.18.12.2}
+En la demostración anterior se ve (teniendo en cuenta (18.6.2)) que hemos construido un $Y'$ que responde a la cuestión, y además que, si $y'=f'(x')$, el homomorfismo $k(y)\to k(y')$ es biyectivo.\footnote{La transcripción francesa imprime «$f'(X')$»; el testigo inglés mantenido y la notación del punto del teorema requieren «$f'(x')$». Se conserva aquí la discrepancia de la fuente.}
+\end{remark}
+
+\begin{corollary}[18.12.3]
+\label{IV.18.12.3}
+Sean $f:X\to Y$ un morfismo localmente de tipo finito y separado, $y$ un punto de $Y$ tal que el subespacio $f^{-1}(y)$ sea finito y discreto. Existe entonces un morfismo étale $Y'\to Y$, un punto $y'\in Y'$ por encima de $y$, tal que $k(y')=k(y)$, y una descomposición de $X'$ en suma de dos subpreesquemas $X'_1$, $X'_2$, inducidos sobre abiertos de $X'$, tales que la restricción de $f'=f_{(Y')}:X'\to Y'$ a $X'_1$ sea un morfismo finito y se tenga $X'_2\cap f'^{-1}(y')=\varnothing$.
+\end{corollary}
+
+Si $n$ es el número de puntos de $f^{-1}(y)$, razonamos por inducción sobre $n$, siendo el corolario trivial para $n=0$. Sea $x$ un punto de $f^{-1}(y)$; en virtud de (18.12.1) y (18.12.2) hay un morfismo étale $Y_1\to Y$, un punto $y_1$ de $Y_1$ por encima de $y$ tal que $k(y_1)=k(y)$ y, si ponemos $S_1=X\times_Y Y_1$, $f_1=f_{(Y_1)}:S_1\to Y_1$, existe un punto $x_1$ de $f_1^{-1}(y_1)$ tal que $S_1$ es suma de dos abiertos $V_1$, $X_1$, siendo $V_1$ finito sobre $Y_1$ y un entorno de $x_1$.\footnote{La transcripción francesa imprime «$f_{(S_1)}$»; el testigo inglés mantenido y la notación del cambio de base requieren «$f_{(Y_1)}$». Se conserva aquí la discrepancia de la fuente.}
+
+\oldpage[IV-4]{182}
+
+En virtud de la igualdad $k(y_1)=k(y)$, la fibra $f_1^{-1}(y_1)$ en $S_1$ es isomorfa a $f^{-1}(y)$, por lo que $X_1\cap f_1^{-1}(y_1)$ es finito, discreto y tiene $n-1$ puntos. Como $f_1|X_1$ es localmente de tipo finito y separado, aplicamos la hipótesis de inducción a este morfismo: hay un morfismo étale $Y'\to Y_1$, un punto $y'\in Y'$ por encima de $y_1$ tal que $k(y')=k(y_1)$, y, si $X'=X\times_Y Y'$ y $p:X'\to S_1$ es la proyección canónica, se tiene una descomposición de $p^{-1}(X_1)$ en suma de dos subpreesquemas $U'$ y $X'_2$ inducidos sobre abiertos de $X'$ tales que $X'_2\cap f'^{-1}(y')=\varnothing$ y $U'$ sea finito sobre $Y'$. Por otra parte, $V'=p^{-1}(V_1)$ es finito sobre $Y'$ y $X'$ es suma de $U'$, $V'$ y $X'_2$; responderemos, pues, a la cuestión tomando $X'_1$ como suma de $U'$ y $V'$.
+
+El corolario siguiente mejora (8.11.1):
+
+\begin{corollary}[18.12.4]
+\label{IV.18.12.4}
+Para que un morfismo $f:X\to Y$ sea finito, es necesario y suficiente que sea separado, universalmente cerrado, localmente de tipo finito y que, para todo $y\in Y$, $f^{-1}(y)$ sea un espacio finito discreto; en particular, un morfismo propio y cuasi-finito es finito.
+\end{corollary}
+
+En efecto, se puede aplicar el corolario (18.12.3) a un punto cualquiera $y$ de $Y$. Con las notaciones de este corolario, $f'$ es un morfismo cerrado, por lo que, puesto que $X'_2$ es cerrado en $X'$, $f'(X'_2)$ es cerrado en $Y'$ y no contiene a $y'$; existe por consiguiente un entorno abierto $U'$ de $y'$ en $Y'$ tal que $U'\to Y$ sea de tipo finito y $f'^{-1}(U')=X\times_Y U'$ sea finito sobre $U'$. Sea $U$ la imagen de $U'$ en $Y$, que es un abierto de $Y$ en virtud de (II, 3.1), puesto que el morfismo $Y'\to Y$ es étale, por tanto plano y localmente de presentación finita; se tiene evidentemente todavía $X\times_Y U'=X\times_U U'=f^{-1}(U)\times_U U'$. Puesto que ahora el morfismo $U'\to U$ es fielmente plano y cuasi-compacto, se deduce de (2.7.1, (xv)) que el morfismo $f^{-1}(U)\to U$, restricción de $f$, es finito, lo que demuestra el corolario.
+
+\begin{remark}[18.12.5]
+\label{IV.18.12.5}
+Obsérvese que en la demostración de (18.12.4) no se utilizó la hipótesis de que $f$ sea universalmente cerrado bajo su forma general, sino solamente que $f_{(Y')}$ sea un morfismo cerrado para todo morfismo étale $Y'\to Y$.
+\end{remark}
+
+\begin{corollary}[18.12.6]
+\label{IV.18.12.6}
+Sea $f:X\to Y$ un morfismo de preesquemas. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $f$ es una inmersión cerrada.
+  \item[$b)$] $f$ es un monomorfismo propio.
+  \item[$c)$] $f$ es propio y, para todo $y\in Y$, el $k(y)$-preesquema $X_y=f^{-1}(y)$ es radicial y geométricamente reducido sobre $k(y)$ (es decir, vacío o $k(y)$-isomorfo a $\Spec(k(y))$).
+\end{enumerate}
+\end{corollary}
+
+Esto se deduce de (18.12.4) del mismo modo que (8.11.5) se deduce de (8.11.1).
+
+\begin{proposition}[18.12.7]
+\label{IV.18.12.7}
+Sean $f:X\to Y$ un morfismo localmente de tipo finito, $y$ un punto de $Y$. Para que exista un entorno abierto $U$ de $y$ tal que la restricción $f^{-1}(U)\to U$ de $f$ sea una inmersión cerrada, es necesario y suficiente que $X_y$ sea un $k(y)$-preesquema radicial y geométricamente reducido sobre $k(y)$ (es decir, vacío o $k(y)$-isomorfo a $\Spec(k(y))$) y que exista un entorno abierto $V$ de $y$ tal que la restricción $f^{-1}(V)\to V$ de $f$ sea un morfismo universalmente cerrado.
+\end{proposition}
+
+Las condiciones son evidentemente necesarias; probemos que son suficientes. Podemos restringirnos al caso en que $X_y\neq\varnothing$. En virtud de la segunda condición, ya podemos suponer que $f$ es universalmente cerrado. Mostremos además que podemos suponer que $f$ es afín, por tanto separado; esto se deduce del lema siguiente:
+
+\begin{lemma}[18.12.7.1]
+\label{IV.18.12.7.1}
+Sean $f:X\to Y$ un morfismo cerrado, $y\in Y$ un punto tal que todo entorno de $X_y$ contenga un entorno afín de $X_y$ (condición siempre satisfecha cuando $X_y$ es vacío o se reduce a un solo punto). Entonces existe un entorno abierto afín $U$ de $y$ tal que la restricción $f^{-1}(U)\to U$ de $f$ sea un morfismo afín.
+\end{lemma}
+
+En efecto, sea $U_0$ un entorno abierto afín de $y$ en $Y$ y sea $V$ un entorno abierto afín de $X_y$ contenido en $f^{-1}(U_0)$. Puesto que $f$ es cerrado, existe un entorno abierto afín $U\subset U_0$ de $y$ tal que $f^{-1}(U)\subset V$. Como la restricción $g:V\to U_0$ de $f$ es un morfismo afín, lo mismo ocurre con su restricción $f^{-1}(U)\to U$ (II, 1.2.5).
+
+Supongamos, pues, $f$ afín y universalmente cerrado, y mostremos que existe un entorno abierto $U$ de $y$ tal que la restricción $f^{-1}(U)\to U$ sea un morfismo finito; como podemos suponer $Y$ y $X$ afines, podemos suponer $f$ de tipo finito, por tanto propio, y basta demostrar que existe un entorno $U$ de $y$ tal que $f^{-1}(U)\to U$ sea un morfismo cuasi-finito (18.12.4). Pero existe un entorno $V$ del conjunto $X_y$ (reducido a un solo punto) tal que $f|V$ sea cuasi-finito (13.1.4), y como $f$ es cerrado existe un entorno $U$ de $y$ tal que $f^{-1}(U)\subset V$, lo que concluye la demostración, teniendo en cuenta (18.12.6).
+
+\begin{proposition}[18.12.8]
+\label{IV.18.12.8}
+Sea $f:X\to Y$ un morfismo de preesquemas. Para que $f$ sea entero, es necesario y suficiente que $f$ sea afín y universalmente cerrado.
+\end{proposition}
+
+Las condiciones son necesarias (II, 6.1.10); probemos que son suficientes. Podemos suponer $Y=\Spec(A)$ afín, por tanto también $X=\Spec(B)$, y hay que demostrar que todo elemento $b\in B$ es entero sobre $A$ (II, 6.1.1). Sea $B'$ la sub-$A$-álgebra de $B$ generada por $b$, que es una $A$-álgebra de tipo finito; pongamos $X'=\Spec(B')$, de modo que $f:X\to Y$ se factoriza como
+\[
+  X\xrightarrow{g}X'\xrightarrow{h}Y,
+\]
+donde $h$ es de tipo finito, y $g$ es dominante puesto que el homomorfismo $B'\to B$ es inyectivo (I, 1.2.7). Como $h$ es separado y $h\circ g$ universalmente cerrado, $g$ es universalmente cerrado (II, 5.4.3 y
+
+\oldpage[IV-4]{183}
+
+5.4.9), por tanto sobreyectivo puesto que es dominante; se concluye (II, 5.4.3 y 5.4.9) que $h$ también es universalmente cerrado, por tanto propio puesto que es de tipo finito y separado. Pero entonces, para todo $y\in Y$, el morfismo $h^{-1}(y)\to\Spec(k(y))$ inducido por $h$ es propio y afín, por tanto finito (III, 4.4.2), es decir, $h$ es cuasi-finito; se deduce, pues, de (18.12.4) que $h$ es finito, lo que prueba que $B'$ es una $A$-álgebra finita y, en consecuencia, que $b$ es entero sobre $A$. C.Q.F.D.
+
+\begin{remark}[18.12.9]
+\label{IV.18.12.9}
+Puede ocurrir que un morfismo $f:X\to Y$ sea entero cuando se lo supone solamente separado, universalmente cerrado y tal que para todo $y\in Y$, el morfismo $f^{-1}(y)\to\Spec(k(y))$ inducido por $f$ sea entero. Para ello habría que demostrar que estas condiciones implican que $f$ es afín, o equivalentemente que toda fibra $X_y$ está contenida en un entorno abierto afín.
+\end{remark}
+
+\begin{corollary}[18.12.10]
+\label{IV.18.12.10}
+Un morfismo $f:X\to Y$ que es inyectivo y universalmente cerrado es entero.
+\end{corollary}
+
+Basta, por (18.12.8), demostrar que $f$ es afín, lo que se deduce del lema (18.12.7.1) y de la hipótesis.
+
+\begin{corollary}[18.12.11]
+\label{IV.18.12.11}
+Sea $f:X\to Y$ un morfismo de preesquemas (resp. un morfismo localmente de tipo finito). Para que $f$ sea un homeomorfismo universal (2.4.2), es necesario y suficiente que $f$ sea entero (resp. finito), radicial y sobreyectivo.
+\end{corollary}
+
+Se sabe que las condiciones son suficientes (2.4.5); son necesarias en virtud de (18.12.10) y (18.12.4).
+
+La proposición siguiente mejora (8.11.2):
+
+\begin{proposition}[18.12.12]
+\label{IV.18.12.12}
+Todo morfismo $f:X\to Y$ que sea cuasi-finito y separado es cuasi-afín.
+\end{proposition}
+
+Pongamos $\mathscr A=f_*(\sh{O}_X)$, que es una $\sh{O}_Y$-álgebra cuasi-coherente puesto que $f$ es cuasi-compacto y separado (1.7.4); sea $Z=\Spec(\mathscr A)$ (II, 1.3.1), de modo que $f$ se factoriza canónicamente como
+\[
+  X\xrightarrow{g}Z\xrightarrow{h}Y,
+\]
+siendo $h$ afín y correspondiendo $g$ al automorfismo identidad de $\mathscr A$ (II, 1.2.7); bastará demostrar que $g$ es una inmersión abierta, o, lo que equivale a lo mismo (17.9.1), que $g$ es étale y radicial. Evidentemente bastará demostrar que, para todo $y\in Y$, el morfismo $g$ es étale y radicial en cada punto de $f^{-1}(y)$. Ahora bien, para todo $y\in Y$, podemos aplicar a $f$ el resultado de (18.12.3), conservando sus notaciones; puesto que el morfismo $Y'\to Y$ es plano, y que $f$ es cuasi-compacto y separado, se tiene, salvo un isomorfismo canónico,
+\[
+  f'_*(\sh{O}_{X'})=\mathscr A\otimes_{\sh{O}_Y}\sh{O}_{Y'}=\mathscr A'
+\]
+(2.3.1), por tanto $Z'=Z\times_Y Y'$ se identifica con $\Spec(f'_*(\sh{O}_{X'}))$, y en la factorización canónica
+\[
+  X'\xrightarrow{g'}Z'\xrightarrow{h'}Y'
+\]
+de $f'$ (II, 1.2.7), se tiene $h'=h_{(Y')}$ y $g'=g_{(Y')}$. Dicho esto, la descomposición de $X'$ en suma de dos subpreesquemas $X'_1$, $X'_2$ induce la descomposición de $\mathscr A'$ en producto directo de las dos $\sh{O}_{Y'}$-álgebras cuasi-coherentes $\mathscr A'_1$, $\mathscr A'_2$, imágenes directas respectivas de $\sh{O}_{X'_1}$ y $\sh{O}_{X'_2}$, de modo que $Z'$ se identifica con la suma $Z'_1\amalg Z'_2$, donde $Z'_i=\Spec(\mathscr A'_i)$ y $g'(X'_i)\subset Z'_i$ para $i=1,2$. Como $X'_1$ es finito sobre $Y'$, $g'_1=g'|X'_1$ es un isomorfismo de $X'_1$ sobre $Z'_1$, puesto que $f'|X'_1$ es afín; como $X'_2\cap f'^{-1}(y')=\varnothing$, se ve que $g'$ es étale y radicial en cada punto de $f'^{-1}(y')$. Puesto que el morfismo $Y'\to Y$ es plano y localmente de presentación finita, se deduce primero de (17.7.4) que $g$ es étale en todos los puntos de $X$ que son proyecciones de puntos de $f'^{-1}(y')$, es decir, en todos los puntos de $f^{-1}(y)$ (I, 3.5.2). Por otra parte, el morfismo
+\[
+  g'_{y'}:f'^{-1}(y')\longrightarrow h'^{-1}(y')
+\]
+inducido por $g'$ es radicial; como $k(y')=k(y)$, el morfismo $g_y:f^{-1}(y)\to h^{-1}(y)$ también es radicial, es decir, $g$ es radicial en cada punto de $f^{-1}(y)$, lo que concluye la demostración de la proposición.
+
+El enunciado siguiente mejora igualmente (8.12.6):
+
+\begin{corollary}[18.12.13]
+\label{IV.18.12.13}
+("Main Theorem" de Zariski). Sean $Y$ un preesquema cuasi-compacto y cuasi-separado, $f:X\to Y$ un morfismo cuasi-finito y separado. Entonces existe una factorización de $f$
+\[
+  X\xrightarrow{g}Z\xrightarrow{u}Y
+\]
+donde $g$ es una inmersión abierta (necesariamente cuasi-compacta) y $u$ un morfismo finito.
+\end{corollary}
+
+En efecto, se deduce de (18.12.12) que $f$ es cuasi-afín, por tanto cuasi-proyectivo. Se puede entonces aplicar (8.12.8), donde la hipótesis de existencia de un $\sh{O}_Y$-Módulo amplio puede de hecho reemplazarse por la sola hipótesis de que $Y$ es cuasi-compacto y cuasi-separado: en efecto, se deduce de (8.12.3) que la existencia de la factorización anunciada en (8.12.8) es una propiedad local sobre $Y$, y basta, pues, demostrarla cuando $Y$ es afín.
+
+\begin{remark}[18.12.14]
+\label{IV.18.12.14}
+Se puede dar de (18.12.13) una demostración análoga a la de (18.12.12) que no utiliza (8.12.8) (pero utiliza (18.12.3), por tanto (18.5.11), que a su vez se sirve del «Main Theorem» en su forma local (8.12.9)). Conservemos, en efecto, las notaciones de la demostración de (18.12.12), y sea $\mathscr B$ la $\sh{O}_Y$-álgebra cuasi-coherente, clausura entera de $\sh{O}_Y$ en $\mathscr A$ (II, 6.3.2). Si ponemos $T=\Spec(\mathscr B)$, basta, en virtud de (8.12.3), demostrar que el $Y$-morfismo $g:X\to T$ correspondiente a la inyección canónica $\mathscr B\to\mathscr A$ es una inmersión, y para ello basta demostrar (17.9.1) que $g$ es étale y radicial. Con las notaciones de (18.12.12), podemos suponer que $Y=\Spec(C)$ y $Y'=\Spec(C')$ son afines, siendo $C'$ una $C$-álgebra étale (17.3.2); por tanto $\mathscr A=\widetilde A$, donde $A$ es una $C$-álgebra, $\mathscr A'=\widetilde{A'}$ con $A'=A\otimes_C C'$, y $\mathscr B=\widetilde B$, donde $B$ es la clausura entera de $C$ en $A$. El álgebra $A'$ es isomorfa al producto $A'_1\times A'_2$, donde $A'_1$ es una $C'$-álgebra finita. Bastará demostrar que $B'=B\otimes_C C'$, que
+
+\oldpage[IV-4]{184}
+
+se identifica por planitud con una sub-$C'$-álgebra de $A'$ y contiene $A'_1$; en efecto, $B'$ se descompondrá entonces en producto $A'_1\times A''_2$, donde $A''_2$ es una sub-$C'$-álgebra de $A'_2$, y si ponemos $T''_2=\Spec(A''_2)$, $T'=T\times_Y Y'$ será suma de $Z'_1=\Spec(A'_1)$ y de $T''_2$, y $g'|X'_1$ será un isomorfismo de $X'_1$ sobre $Z'_1$, lo que permitirá concluir como en (18.12.12).
+
+Para demostrar que $B'$ contiene $A'_1$, basta evidentemente demostrar la proposición siguiente, que extiende parcialmente (6.14.4) cuando ya no se hacen hipótesis noetherianas:
+\end{remark}
+
+\begin{proposition}[18.12.15]
+\label{IV.18.12.15}
+Sean $C$ un anillo, $C'$ una $C$-álgebra étale, $A$ una $C$-álgebra, $B$ la clausura entera de $C$ en $A$; pongamos $A'=A\otimes_C C'$, $B'=B\otimes_C C'$, identificándose $B'$ con una subálgebra de $A'$; entonces $B'$ es la clausura entera de $C'$ en $A'$.
+\end{proposition}
+
+Considerando la familia filtrante creciente de las sub-$C$-álgebras de tipo finito de $A$ y razonando como en (6.14.4, II), podemos suponer primero que $A$ es una $C$-álgebra de tipo finito, por tanto de la forma $E/\mathfrak J$, donde $E=C[T_1,\ldots,T_r]$ y $\mathfrak J$ es un ideal de $E$; entonces se tiene $A'=E'/\mathfrak JE'$, donde $E'=C'[T_1,\ldots,T_r]$. Sea $(\mathfrak J_\lambda)$ la familia filtrante creciente de los ideales de tipo finito de $E$ contenidos en $\mathfrak J$, de modo que $A$ es límite inductivo de los $E/\mathfrak J_\lambda$; si $B_\lambda$ es la clausura entera de $C$ en $E/\mathfrak J_\lambda$, $B$ es límite inductivo de los $B_\lambda$, como muestra el razonamiento de (5.13.4). Del mismo modo, la clausura entera de $C'$ en $E'/\mathfrak JE'$ es límite inductivo de las clausuras enteras de $C'$ en $E'/\mathfrak J_\lambda E'$; si se demuestra que esta última es igual a $B_\lambda\otimes_C C'$, se deduce que
+\[
+  B'=\varinjlim_\lambda(B_\lambda\otimes_C C')
+\]
+será la clausura entera de $C'$ en $A'$. Nos reducimos así a demostrar la proposición cuando $A$ es una $C$-álgebra de presentación finita.
+
+Mostremos a continuación que podemos reducirnos al caso en que $C$ es noetheriano. En efecto, $C$ es unión filtrante de sus subálgebras de tipo finito sobre $\mathbf Z$, que denotamos $C_\alpha$, por lo que se deduce de (17.7.8) que existe un índice $\alpha$ y una $C_\alpha$-álgebra étale $C'_\alpha$ tales que $C'=C'_\alpha\otimes_{C_\alpha}C$; además, $C'$ es límite inductivo de los $C'_\beta=C'_\alpha\otimes_{C_\alpha}C_\beta$ para $\beta\geq\alpha$. Podemos además suponer, puesto que $A$ es una $C$-álgebra de presentación finita, que $A=A_\alpha\otimes_{C_\alpha}C$, donde $A_\alpha$ es una $C_\alpha$-álgebra de tipo finito, y $A$ es límite inductivo de los $A_\beta=A_\alpha\otimes_{C_\alpha}C_\beta$ para $\beta\geq\alpha$ (8.9.1). El razonamiento de (5.13.4) muestra entonces que $B$ es el límite inductivo de las clausuras enteras $B_\beta$ de $C_\beta$ en $A_\beta$. Del mismo modo, $A'$ es límite inductivo de los
+\[
+  A'_\beta=A_\beta\otimes_{C_\beta}C'_\beta=A_\alpha\otimes_{C_\alpha}C'_\beta
+\]
+para $\beta\geq\alpha$, por lo que el mismo razonamiento que antes muestra que bastará demostrar que $B'_\alpha=B_\alpha\otimes_{C_\alpha}C'_\alpha$ es la clausura entera de $C'_\alpha$ en $A'_\alpha$.
+
+Una vez reducido al caso en que $C$ es noetheriano, la proposición es un caso particular de (6.14.4). Sin embargo, hay que observar que, cuando se supone que $C'$ es étale sobre el anillo noetheriano $C$, la demostración de (6.14.4) ya no exige el delicado teorema (6.14.1). En efecto, las reducciones sucesivas de la demostración de (6.14.4) conducen, sin utilizar (6.14.1), al caso en que $C$ es íntegro y $A$ es el cuerpo de fracciones de $C$. Como entonces $B$ es un anillo normal y el morfismo $\Spec(B')\to\Spec(B)$ es étale, se deduce de (17.5.7) que $B'$ es un anillo normal; el razonamiento termina recurriendo solamente al lema elemental (6.14.1.1), pero no a la parte difícil de la demostración de (6.14.1).
+
+\begin{proposition}[18.12.16]
+\label{IV.18.12.16}
+Sean $g:Y\to S$ un morfismo cuasi-compacto, $f:X\to Y$ un morfismo separado y cuasi-finito. Para todo $\sh{O}_Y$-Módulo invertible $\mathscr L$, amplio relativamente a $S$ (II, 4.6.1), el $\sh{O}_X$-Módulo $f^*(\mathscr L)$ es amplio relativamente a $S$.
+\end{proposition}
+
+En efecto, en virtud de (18.12.12), el morfismo $f$ es cuasi-afín, por tanto (II, 5.1.6) el $\sh{O}_X$-Módulo $\sh{O}_X$ es amplio para $f$. Se deduce de (II, 4.6.13, (ii)) que
+\[
+  \sh{O}_X\otimes_{\sh{O}_X}f^*(\mathscr L^{\otimes n})=f^*(\mathscr L^{\otimes n})
+\]
+es amplio relativamente a $S$ para un $n$ suficientemente grande. Pero como $f^*(\mathscr L^{\otimes n})=(f^*(\mathscr L))^{\otimes n}$, esto implica que $f^*(\mathscr L)$ es amplio relativamente a $S$ (II, 4.6.9, (i)).
+
+\begin{corollary}[18.12.17]
+\label{IV.18.12.17}
+Sean $Z$ un esquema afín, $h:X\to Z$ un morfismo de tipo finito, $\mathscr L$ un $\sh{O}_X$-Módulo invertible. Con las notaciones de (II, 4.5.2), las condiciones de (II, 4.5.2) (que equivalen al hecho de que $\mathscr L$ es amplio) son también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[$b'')$] $h$ es separado, se tiene $G(\varepsilon)=X$ y el morfismo canónico $u:G(\varepsilon)\to\operatorname{Proj}(S)$ tiene fibras finitas y discretas.
+  \item[$b''')$] Se tiene $G(\varepsilon)=X$ y el morfismo canónico $u$ es radicial.
+\end{enumerate}
+\end{corollary}
+
+Si $Z=\Spec(A)$, el anillo $S$ está provisto canónicamente de una estructura de $A$-álgebra graduada, por lo que se tiene un morfismo estructural $g:\operatorname{Proj}(S)\to Z$ que es separado (II, 2.4.2), y se tiene $h=g\circ u$. Como todo morfismo radicial es separado (I, 1.8.7.1), $b''')$ implica que $h$ es separado, por lo que implica $b'')$. Como la condición $b)$ de (II, 4.5.2) implica evidentemente $b''')$, queda por ver que $b'')$ implica que $\mathscr L$ es amplio. Puesto que $h=g\circ u$ es de tipo finito por hipótesis y que $g$ es separado, $u$ es también de tipo finito (I, 6.3.4), por lo que la hipótesis $b'')$ implica que $u$ es cuasi-finito y separado (I, 5.5.1). Para demostrar que $\mathscr L$ es amplio, aplicaremos (18.12.16). Pongamos $Y=\operatorname{Proj}(S)$. Como $X$ es cuasi-compacto, existe un entero $n>0$ y un número finito de elementos $f_j\in S_n$ tales que las imágenes recíprocas $u^{-1}(D_+(f_j))$ recubren $X$; podemos, pues, considerar $u$ como un morfismo cuasi-finito y separado de $X$ en el abierto
+\[
+  Y'=\bigcup_j D_+(f_j)
+\]
+de $Y$. Consideremos entonces el $\sh{O}_{Y'}$-Módulo invertible
+\[
+  \mathscr L'=\sh{O}_Y(n)|Y'
+\]
+(II, 2.5.8); es muy amplio relativamente a $Z$ (II, 4.4.3), y $u^*(\mathscr L')$ no es otra cosa, por definición, que $\mathscr L^{\otimes n}$
+
+\oldpage[IV-4]{185}
+
+(II, 3.7.9, (ii)). En virtud de (18.12.16), $\mathscr L^{\otimes n}$ es, pues, amplio relativamente a $Z$ (lo que equivale a decir que es amplio (II, 4.6.6)), y por consiguiente lo mismo ocurre con $\mathscr L$ (II, 4.5.6, (i)).
+
+Dejamos al lector el cuidado de enunciar del mismo modo condiciones equivalentes a las de (II, 4.6.3) para los $\sh{O}_X$-Módulos relativamente amplios.

@@ -1,0 +1,206 @@
+\subsection{Sucesiones espectrales de asociatividad de los hipertor globales}
+\label{subsection:III.6.8}
+\label{III.6.8}
+
+\begin{env}[6.8.1]
+\label{III.6.8.1}
+Mantengamos las hipótesis y notaciones de \sref{III.6.7.11}; en
+particular, los complejos $\sh P_\bullet^{(i)}$ están acotados
+inferiormente. Sea $(I_j)_{j\in J}$ una partición del conjunto de
+índices $I$. Buscamos una relación de «asociatividad» entre
+\[
+  \mathfrak{Tor}_n^S
+  \bigl(
+    (f_i)_{i\in I};
+    (\sh P_\bullet^{(i)})_{i\in I}
+  \bigr)
+\]
+y los hipertor «parciales»
+\[
+  \mathcal T_{\bullet j}
+  =
+  \mathfrak{Tor}_\bullet^S
+  \bigl(
+    (f_i)_{i\in I_j};
+    (\sh P_\bullet^{(i)})_{i\in I_j}
+  \bigr).
+\]
+\oldpage[III]{165}
+
+Para simplificar la notación, nos limitaremos al caso en que $I$
+es el intervalo $1\leq i\leq m$ y la partición consta de los dos
+intervalos
+\[
+  \{1,2,\ldots,r\}
+  \qquad\hbox{y}\qquad
+  \{r+1,\ldots,m\}.
+\]
+\end{env}
+
+\begin{proposition}[6.8.2]
+\label{III.6.8.2}
+Existe un funtor espectral canónico birregular, denominado
+\emph{funtor espectral de asociatividad}, que se denota por
+\[
+  {}^{(e)}\sh E^S
+  \bigl(
+    f_1,\ldots,f_m;
+    \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(m)}
+  \bigr),
+\]
+o simplemente por ${}^{(e)}\sh E$ con los mismos argumentos, que
+converge a
+\[
+  \mathfrak{Tor}_\bullet^S
+  \bigl(
+    f_1,\ldots,f_m;
+    \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(m)}
+  \bigr)
+\]
+y cuyo término $E_2$ es
+\[
+\begin{split}
+  {}^{(e)}\sh E_{pq}^2
+  =
+  \bigoplus_{q_1+q_2=q}
+  \shTor_p^S
+  \Bigl(
+    &
+    \mathfrak{Tor}_{q_1}^S
+    \bigl(
+      f_1,\ldots,f_r;
+      \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(r)}
+    \bigr),
+    \\
+    &
+    \mathfrak{Tor}_{q_2}^S
+    \bigl(
+      f_{r+1},\ldots,f_m;
+      \sh P_\bullet^{(r+1)},\ldots,\sh P_\bullet^{(m)}
+    \bigr)
+  \Bigr).
+\end{split}
+\]
+\end{proposition}
+
+\begin{proof}
+Aquí se identifica canónicamente $Y$ con
+$Z^{(1)}\times_SZ^{(2)}$, donde
+\[
+  Z^{(1)}
+  =
+  Y^{(1)}\times_S\cdots\times_SY^{(r)}
+  \quad\hbox{y}\quad
+  Z^{(2)}
+  =
+  Y^{(r+1)}\times_S\cdots\times_SY^{(m)}.
+\]
+Basta tratar el caso en que $S$ y todos los $Y^{(i)}$ son afines.
+El paso de este caso al caso general utiliza los métodos de
+\sref{III.6.7.1} y \sref{III.6.7.2}; dejamos los detalles al
+lector. Basta, pues, demostrar el siguiente enunciado afín.
+\end{proof}
+
+\begin{corollary}[6.8.3]
+\label{III.6.8.3}
+Sea $A$ un anillo, sea $S=\Spec(A)$ y sean $X^{(i)}$,
+$1\leq i\leq m$, $S$-esquemas cuasicompactos. Para cada $i$, sea
+$\sh P_\bullet^{(i)}$ un complejo acotado inferiormente de
+$\sh O_{X^{(i)}}$-módulos cuasicoherentes. Existe un funtor
+espectral canónico birregular que converge a
+\[
+  \mathbf{Tor}_\bullet^S
+  \bigl(
+    X^{(1)},\ldots,X^{(m)};
+    \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(m)}
+  \bigr)
+\]
+y cuyo término $E_2$ es
+\[
+\begin{split}
+  {}^{(e)}E_{pq}^2
+  =
+  \bigoplus_{q_1+q_2=q}
+  \Tor_p^A
+  \Bigl(
+    &
+    \mathbf{Tor}_{q_1}^S
+    \bigl(
+      X^{(1)},\ldots,X^{(r)};
+      \sh P_\bullet^{(1)},\ldots,\sh P_\bullet^{(r)}
+    \bigr),
+    \\
+    &
+    \mathbf{Tor}_{q_2}^S
+    \bigl(
+      X^{(r+1)},\ldots,X^{(m)};
+      \sh P_\bullet^{(r+1)},\ldots,\sh P_\bullet^{(m)}
+    \bigr)
+  \Bigr).
+\end{split}
+\]
+\end{corollary}
+
+\begin{proof}
+Siguiendo la definición de \sref{III.6.6.2}, elijamos para cada
+$i$ un recubrimiento abierto afín finito $\mathfrak U^{(i)}$ de
+$X^{(i)}$, formemos el bicomplejo
+\[
+  L_{\bullet\bullet}^{(i)}
+  =
+  C^\bullet
+  \bigl(
+    \mathfrak U^{(i)},\sh P_\bullet^{(i)}
+  \bigr),
+\]
+y elijamos una resolución proyectiva de Cartan--Eilenberg
+$M_{\bullet\bullet\bullet}^{(i)}$ de este bicomplejo en el sentido
+de \sref[0]{0.11.7.1}. El hipertor considerado es la homología del
+producto tensorial
+\[
+  M_{\bullet\bullet\bullet}
+  =
+  \bigotimes_{i=1}^{m}
+  M_{\bullet\bullet\bullet}^{(i)}.
+\]
+Consideremos $M_{\bullet\bullet\bullet}$ como un complejo simple
+$N_\bullet$, producto tensorial de los dos complejos simples
+\[
+  N_\bullet'
+  =
+  \bigotimes_{i=1}^{r}
+  M_{\bullet\bullet\bullet}^{(i)},
+  \qquad
+  N_\bullet''
+  =
+  \bigotimes_{i=r+1}^{m}
+  M_{\bullet\bullet\bullet}^{(i)},
+\]
+donde $N_\bullet'$ y $N_\bullet''$ están graduados por las sumas
+de los grados totales de los $M_{\bullet\bullet\bullet}^{(i)}$.
+
+Los $A$-módulos que forman $N_\bullet'$ y $N_\bullet''$ son
+proyectivos. Por tanto, \sref{III.6.5.9} da
+\[
+  H_\bullet(M_{\bullet\bullet\bullet})
+  =
+  \mathbf{Tor}_\bullet^A(N_\bullet',N_\bullet'').
+\]
+La sucesión espectral buscada es, pues, precisamente
+\sref{III.6.3.2.2} aplicada a $N_\bullet'$ y $N_\bullet''$, con
+la interpretación precedente de sus módulos de homología para los
+dos productos parciales
+\[
+  X^{(1)}\times_S\cdots\times_SX^{(r)}
+  \quad\hbox{y}\quad
+  X^{(r+1)}\times_S\cdots\times_SX^{(m)}.
+\]
+Finalmente, las afirmaciones de regularidad se deducen de
+\sref{III.6.3.2}. En efecto, como los
+$\sh P_\bullet^{(i)}$ están acotados inferiormente, también lo
+están los $M_{\bullet\bullet\bullet}^{(i)}$ y, por consiguiente,
+$N_\bullet'$ y $N_\bullet''$.
+\end{proof}
+
+\oldpage[III]{166}
+

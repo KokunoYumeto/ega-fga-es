@@ -1,0 +1,99 @@
+\subsection{Caracterizaciones de los morfismos lisos}
+\label{subsection:IV.17.5}
+
+\begin{theorem}[17.5.1]
+\label{IV.17.5.1}
+Sean $f:X\to Y$ un morfismo localmente de presentación finita, $x$ un punto de $X$, $y=f(x)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es liso en el punto $x$.
+  \item[b)] $f$ es plano en el punto $x$ y el $k(y)$-preesquema $f^{-1}(y)$ es liso sobre $k(y)$ en el punto $x$.
+  \item[b')] $f$ es regular en el punto $x$ (6.8.1).
+  \item[c)] El anillo $\sh{O}_{X,x}$ es una $\sh{O}_{Y,y}$-álgebra formalmente lisa para las topologías discretas.
+\end{enumerate}
+\end{theorem}
+
+Se puede restringir al caso en que $Y=\Spec(A)$, $X=\Spec(C)$, donde $C=B/\mathfrak{J}$, siendo $B=A[T_1,\ldots,T_n]$ un álgebra de polinomios y $\mathfrak{J}$ un ideal de $B$ de tipo finito. La equivalencia de a) y c) resulta entonces de la equivalencia de a) y c) en (0, 22.6.4). Por otra parte, aplicando este resultado al morfismo localmente de tipo finito $f^{-1}(y)\to\Spec(k(y))$, se ve que la equivalencia de b) y b') resulta de la equivalencia de a) y b) en (6.8.6). Resta, pues, demostrar la equivalencia de a) y b).
+
+Demostremos primero que a) implica b); denotemos por $\mathfrak p$ el ideal primo $\mathfrak i_x$ en $C$, y por $\mathfrak r$ el ideal primo $\mathfrak i_y$ en $A$; se tiene $\mathfrak p=\mathfrak q/\mathfrak J$, donde $\mathfrak q$ es un ideal primo de $B$ y $\mathfrak r$ es la imagen inversa de $\mathfrak q$ en $A$. La hipótesis a) implica primero que $f^{-1}(y)$ es liso sobre $k(y)$ en el punto $x$ por (17.3.3), y se trata de demostrar además que $C_{\mathfrak p}=\sh{O}_{X,x}$ es un $A_{\mathfrak r}$-módulo \emph{plano}. Como $C_{\mathfrak p}$ es una $A_{\mathfrak r}$-álgebra formalmente lisa y $B$ es una $A$-álgebra formalmente lisa (para las topologías discretas), el criterio jacobiano (0, 22.6.4), unido a (0, 19.1.12), implica que existe en $\mathfrak J$ un sistema de $r$ polinomios $u_i$ ($1\leq i\leq r$) y $r$ índices $j_i$ ($1\leq i\leq r$) tales que las imágenes de los $u_i$ en $\mathfrak J_{\mathfrak q}/\mathfrak J_{\mathfrak q}^2$ generan este $B_{\mathfrak q}$-módulo y que se tiene
+\[
+\label{IV.17.5.1.1}
+\det(\partial u_i/\partial T_{j_k})\notin\mathfrak q.
+\tag{17.5.1.1}
+\]
+
+\oldpage[IV-4]{68}
+Observemos ahora que, si $g:\Spec(B)\to\Spec(A)$ es el morfismo estructural, la fibra $g^{-1}(y)$ es el espectro del anillo regular $k(y)[T_1,\ldots,T_n]$ (0, 17.3.7), por lo que el anillo local noetheriano $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ en un punto de esta fibra es regular. Ahora bien, la condición (17.5.1.1) implica que las imágenes canónicas $v_i$ de los $u_i$ en el ideal maximal $\mathfrak m$ de $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ son \emph{linealmente independientes} módulo $\mathfrak m^2$: en caso contrario, existirían, en efecto, polinomios $w_i\in B$ ($1\leq i\leq r$), no todos pertenecientes a $\mathfrak q$, tales que $\sum_{i=1}^r w_i u_i\in\mathfrak q^2$. Derivando respecto de los $T_{j_k}$, se concluiría que $\sum_{i=1}^r w_i(\partial u_i/\partial T_{j_k})\in\mathfrak q$ para $1\leq k\leq r$, lo que contradiría (17.5.1.1), puesto que $\mathfrak q$ es primo. Se concluye, pues, de (0, 17.1.7) que $(v_i)$ es una \emph{sucesión regular} en $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$. Pero como el morfismo $g$ es localmente de presentación finita y $B$ es un $A$-módulo plano, de (11.3.8) resulta que las imágenes canónicas $u'_i$ de los $u_i$ en $B_{\mathfrak q}$ forman también una \emph{sucesión regular} y que $B_{\mathfrak q}/(\sum_i u'_iB_{\mathfrak q})$ es un $A_{\mathfrak r}$-módulo \emph{plano}. Como las imágenes de los $u'_i$ en $\mathfrak J_{\mathfrak q}/\mathfrak J_{\mathfrak q}^2$ generan este $B_{\mathfrak q}$-módulo, del lema de Nakayama resulta que se tiene $\sum_i u'_iB_{\mathfrak q}=\mathfrak J_{\mathfrak q}$, y $C_{\mathfrak p}=B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ es, por tanto, efectivamente un $A_{\mathfrak r}$-módulo plano.
+
+Demostremos finalmente que b) implica a). Con las mismas notaciones, la hipótesis de que $B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ es un $A_{\mathfrak r}$-módulo plano implica que el homomorfismo canónico $\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q}\to B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ es \emph{inyectivo} ($0_{\mathrm I}$, 6.1.2), de modo que $\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q}$ se identifica con un ideal de $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$. Como $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ es una $A_{\mathfrak r}$-álgebra formalmente lisa para las topologías discretas, se puede aplicar a $C_{\mathfrak p}=(B_{\mathfrak q}/\mathfrak rB_{\mathfrak q})/(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})$ el criterio jacobiano (0, 22.6.4); unido a (0, 19.1.12), este último demuestra, en virtud de la hipótesis b), la existencia de $r$ polinomios $v_i\in k(y)[T_1,\ldots,T_n]$ tales que sus imágenes en $(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})/(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})^2$ generan este $(B_{\mathfrak q}/\mathfrak rB_{\mathfrak q})$-módulo y que se tiene
+\[
+\label{IV.17.5.1.2}
+\det(\partial v_i/\partial T_{j_k})\notin\mathfrak qB_{\mathfrak q}/\mathfrak rB_{\mathfrak q}.
+\tag{17.5.1.2}
+\]
+Si, para todo $i$, se designa entonces por $u_i$ un elemento de $\mathfrak J$ cuya imagen canónica es $v_i$, de (17.5.1.2) resulta que los $u_i$ satisfacen la condición (17.5.1.1); por otra parte, en virtud del lema de Nakayama, las imágenes $u'_i$ de los $u_i$ en $\mathfrak J_{\mathfrak q}$ generan este $B_{\mathfrak q}$-módulo. El criterio jacobiano (0, 22.6.4), unido a (0, 19.1.12), demuestra entonces que $C_{\mathfrak p}=B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ es una $A_{\mathfrak r}$-álgebra formalmente lisa para las topologías discretas. C.Q.D.
+
+\begin{corollary}[17.5.2]
+\label{IV.17.5.2}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita. Para que $f$ sea liso (en el sentido de (17.3.1)), es necesario y suficiente que $f$ sea regular (6.8.1), es decir, que $f$ sea plano y que, para todo $y\in Y$, $f^{-1}(y)$ sea un $k(y)$-preesquema geométricamente regular (6.7.6).
+\end{corollary}
+
+Se ha establecido así la equivalencia de las dos definiciones de «morfismo liso» dadas en (6.8.1) y (17.3.1).
+
+\begin{proposition}[17.5.3]
+\label{IV.17.5.3}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Pongamos $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, que son anillos locales noetherianos. Entonces las condiciones equivalentes a) a c) de (17.5.1) son también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[d)] $B$ es una $A$-álgebra formalmente lisa para las topologías preádicas.
+  \item[d')] $\widehat B$ es una $\widehat A$-álgebra formalmente lisa para las topologías ádicas.
+\end{enumerate}
+Si además $k(x)=k(y)$, estas condiciones también equivalen a:
+\begin{enumerate}
+  \item[d'')] $\widehat B$ es una $\widehat A$-álgebra isomorfa a un álgebra de series formales $\widehat A[[T_1,\ldots,T_n]]$.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-4]{69}
+La equivalencia de la condición c) de (17.5.1) y de d) resulta de la equivalencia de a) y d) en el criterio jacobiano (0, 22.6.4), y la equivalencia de d) y d') resulta de (0, 19.3.6). Por otra parte, d'') implica d') sin hipótesis sobre los cuerpos residuales (0, 19.3.4). Finalmente, si $\mathfrak m$ denota el ideal maximal de $\widehat A$, la hipótesis d') implica que $\widehat B/\mathfrak m\widehat B$ es una $k(y)$-álgebra local noetheriana completa, formalmente lisa para su topología ádica (0, 19.3.5); la hipótesis $k(y)=k(x)$ implica, pues, que $\widehat B/\mathfrak m\widehat B$ es $k(y)$-isomorfa a un álgebra de series formales $k(y)[[T_1,\ldots,T_n]]$ (0, 19.6.4). Como, por otra parte, $\widehat A[[T_1,\ldots,T_n]]$ es un $\widehat A$-módulo plano y una $\widehat A$-álgebra local noetheriana completa, se concluye de (0, 19.7.1.5) que esta álgebra es isomorfa a $\widehat B$. Por tanto, d') implica d'') bajo la hipótesis adicional $k(x)=k(y)$.
+
+\begin{remark}[17.5.4]
+\label{IV.17.5.4}
+Supongamos que $Y$ es un preesquema localmente noetheriano, y $f:X\to Y$ un morfismo localmente de tipo finito. El criterio (17.5.3, d)), unido a (0, 22.1.4), muestra que para demostrar que $f$ es liso se puede aplicar la definición (17.1.1), restringiéndose al caso en que el esquema afín $Y'$ es el espectro de un anillo local artiniano.
+\end{remark}
+
+\begin{proposition}[17.5.5]
+\label{IV.17.5.5}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Supongamos que $Y$ sea reducido en el punto $y$. Entonces, para que $f$ sea liso en el punto $x$, es necesario y suficiente que $f$ sea universalmente abierto en una vecindad de $x$ en $f^{-1}(y)$ y que $f^{-1}(y)$ sea un $k(y)$-preesquema geométricamente regular en el punto $x$.
+\end{proposition}
+
+Teniendo en cuenta (17.5.1), todo se reduce a ver que, si $f^{-1}(y)$ es un $k(y)$-preesquema geométricamente regular en el punto $x$, equivale a decir que $f$ es plano en el punto $x$ o universalmente abierto en una vecindad de $x$ en $f^{-1}(y)$. Ahora bien, si $f$ es plano en el punto $x$, lo es en una vecindad de $x$ en $X$ (11.1.1) y, por tanto, es universalmente abierto en esta vecindad (2.4.6). Recíprocamente, la hipótesis de que $f$ es universalmente abierto en una vecindad de $x$ en $f^{-1}(y)$ y de que $f^{-1}(y)$ es un $k(y)$-preesquema geométricamente regular en el punto $x$ implica que $f$ es plano en el punto $x$, puesto que $\sh{O}_{Y,y}$ es reducido (15.2.2).
+
+\begin{corollary}[17.5.6]
+\label{IV.17.5.6}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Se supone que $Y$ es reducido y geométricamente unirrama (6.15.1) en el punto $y$. Entonces, para que $f$ sea liso en el punto $x$, es necesario y suficiente que $f$ sea equidimensional en el punto $x$ y que $f^{-1}(y)$ sea un $k(y)$-preesquema geométricamente regular en el punto $x$.
+\end{corollary}
+
+Observando que el conjunto de los puntos donde $f$ es equidimensional es abierto (13.3.2), se ve que el corolario resulta de (17.5.5) y del criterio de Chevalley (14.4.4).
+
+El hecho de que $f$ sea un morfismo liso en un punto implica, en particular, que $f$ satisface
+
+\oldpage[IV-4]{70}
+en ese punto todas las propiedades definidas en (6.8.1). Se tienen, pues, las propiedades siguientes, que recordamos para facilitar las referencias:
+
+\begin{proposition}[17.5.7]
+\label{IV.17.5.7}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita, liso en un punto $x\in X$; pongamos $y=f(x)$. Entonces, para que el anillo $\sh{O}_{X,x}$ sea reducido (resp. íntegramente cerrado, resp. geométricamente unirrama), es necesario y suficiente que $\sh{O}_{Y,y}$ lo sea.
+\end{proposition}
+
+Esto se ha demostrado, en efecto, en (11.3.13) y en (11.3.14), este último completado por Err$_{\mathrm{IV}}$, 30.
+
+\begin{proposition}[17.5.8]
+\label{IV.17.5.8}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, liso en un punto $x\in X$; pongamos $y=f(x)$. Entonces:
+\begin{enumerate}
+  \item[(i)] Se tiene $\dim(\sh{O}_{X,x})=\dim(\sh{O}_{Y,y})+\dim(\sh{O}_{X,x}\otimes_{\sh{O}_{Y,y}}k(y))$.
+  \item[(ii)] Se tiene $\operatorname{coprof}(\sh{O}_{X,x})=\operatorname{coprof}(\sh{O}_{Y,y})$.
+  \item[(iii)] Para que el anillo $\sh{O}_{X,x}$ posea la propiedad $(S_n)$ (5.7.2) (resp. $(R_n)$ (5.8.2)), es necesario y suficiente que el anillo $\sh{O}_{Y,y}$ la posea. En particular, para que $\sh{O}_{X,x}$ sea regular, es necesario y suficiente que $\sh{O}_{Y,y}$ lo sea.
+\end{enumerate}
+\end{proposition}
+
+Se trata de casos particulares de (6.1.2), (6.3.2), (6.4.1) y (6.5.3).

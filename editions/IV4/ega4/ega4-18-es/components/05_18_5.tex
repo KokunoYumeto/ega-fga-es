@@ -1,0 +1,293 @@
+\subsection{Anillos locales henselianos\texorpdfstring{\protect\footnotemark}{}.}
+\footnotetext{La noción de anillo local henseliano se debe a Azumaya, y la de henselización a Nagata, a quien se deben también los principales resultados de esta teoría.}
+\label{subsection:IV.18.5}
+
+\begingroup
+\newcommand{\shHom}{\mathscr{H}\!om}
+\begin{env}[18.5.1]
+\label{IV.18.5.1}
+Sean $X$ un preesquema y $\sh{E}$ un $\sh{O}_X$-módulo \emph{localmente libre} de rango finito; el dual $\check{\sh{E}}=\shHom_{\sh{O}_X}(\sh{E},\sh{O}_X)$ es entonces un $\sh{O}_X$-módulo localmente libre cuyo rango en todo punto de $X$ es igual al de $\sh{E}$ en dicho punto, y el homomorfismo canónico $\sh{E}\to\shHom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)=(\check{\sh{E}})^\vee$ es \emph{biyectivo}. Para todo morfismo $X'\to X$, pongamos $\sh{E}_{(X')}=\sh{E}\otimes_{\sh{O}_X}\sh{O}_{X'}$, que es un $\sh{O}_{X'}$-módulo localmente libre, y consideremos el \emph{conjunto} $\Gamma(X',\sh{E}_{(X')})$ de las secciones de este $\sh{O}_{X'}$-módulo sobre $X'$. Vamos a ver que se define así un \emph{funtor contravariante representable}
+\begin{equation}
+  {}^t\!\mathbf V_{\sh{E}}:X'\longmapsto\Gamma(X',\sh{E}_{(X')})
+  \tag{18.5.1.1}\label{IV.18.5.1.1}
+\end{equation}
+de la categoría de los $X$-preesquemas en la de los \emph{conjuntos} ($0_{\mathrm{III}}$, 8.1.8).
+
+En primer lugar, se ha definido efectivamente un funtor, pues si $f:X''\to X'$ es un $X$-morfismo de $X$-preesquemas, se tiene $\sh{E}_{(X'')}=f^*(\sh{E}_{(X')})$, de donde ($0_{\mathrm I}$, 4.4.3.2) se obtiene una aplicación $\Gamma(X',\sh{E}_{(X')})\to\Gamma(X'',f_*(\sh{E}_{(X'')}))=\Gamma(X'',\sh{E}_{(X'')})$ que termina de definir el funtor ${}^t\!\mathbf V$. Demostremos a continuación que el $X$-preesquema $\mathbf V(\check{\sh{E}})$ (II, 1.7.8) \emph{representa} el funtor ${}^t\!\mathbf V$. En efecto, es inmediato que se tiene $(\sh{E}_{(X')})^\vee=(\check{\sh{E}})_{(X')}$, y por tanto $\mathbf V(\check{\sh{E}})\times_X X'=\mathbf V((\check{\sh{E}})_{(X')})$; teniendo en cuenta (I, 3.3.14), la cuestión se reduce a definir una biyección $\Gamma(\mathbf V(\check{\sh{E}})/X)\to\Gamma(X,\sh{E})$ y a verificar que la biyección $\Gamma(\mathbf V((\check{\sh{E}})_{(X')})/X')\to\Gamma(X',\sh{E}_{(X')})$ es funtorial en $X'$. Ahora bien, se tiene una biyección canónica de $\Gamma(\mathbf V(\check{\sh{E}})/X)$ sobre $\Hom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)$ (II, 1.7.8), y la transposición $u\mapsto{}^t u$ es una biyección canónica de $\Hom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)$ sobre $\Hom_{\sh{O}_X}(\sh{O}_X,\sh{E})=\Gamma(X,\sh{E})$, en virtud de la identificación de $(\check{\sh{E}})^\vee$ con $\sh{E}$. La verificación de la propiedad funtorial es inmediata.
+\end{env}
+\endgroup
+
+\oldpage[IV-4]{126}
+
+Observemos además que, de conformidad con la teoría general ($0_{\mathrm{III}}$, 8.1.6), el automorfismo identidad de $\mathbf V(\check{\sh{E}})$ corresponde canónicamente a una sección $c$ de $\sh{E}_{(\mathbf V(\check{\sh{E}}))}$ sobre $\mathbf V(\check{\sh{E}})$, es decir (II, 1.4.1), a un homomorfismo de $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$-módulos
+\[
+  u:\mathbf S_{\sh{O}_X}(\check{\sh{E}})\longrightarrow
+  \mathbf S_{\sh{O}_X}(\check{\sh{E}})\otimes_{\sh{O}_X}\sh{E};
+\]
+para todo abierto afín $W$ de $X$, si se pone $\Gamma(W,\sh{O}_X)=A$, si se identifica $\Gamma(W,\mathbf S_{\sh{O}_X}(\check{\sh{E}}))$ con un álgebra de polinomios $C=A[T_1,\ldots,T_n]$, de modo que los $T_i$ formen una base de $\Gamma(W,\check{\sh{E}})$, y si, por último, se denota por $(e_i)$ la base dual de $(T_i)$ en $\Gamma(W,\sh{E})=\Gamma(W,\check{\sh{E}})^\vee$, se ve inmediatamente que $u$ corresponde al homomorfismo de $C$-módulos tal que
+\[
+  u(1)=\sum_{i=1}^n T_i\otimes e_i.
+\]
+Si $X'=\Spec(A)$ es afín y tal que $\sh{E}_{(X')}$ sea isomorfo a $\sh{O}_{X'}^n$, $\Gamma(X',\sh{E}_{(X')})$ es un $A$-módulo libre de rango $n$; de manera figurada, puede decirse que el objeto $\mathbf V(\check{\sh{E}})$ representa «el conjunto de puntos del espacio afín torcido sobre $X$ definido por $\sh{E}$».
+
+\begin{env}[18.5.2]
+\label{IV.18.5.2}
+Recordemos (II, 1.7.8) que, por definición, se tiene $\mathbf V(\check{\sh{E}})=\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}}))$. Sea $\mathscr J$ un ideal cuasicoherente de $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$, de modo que $\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}})/\mathscr J)$ sea un subpreesquema cerrado de $\mathbf V(\check{\sh{E}})$; vamos a interpretarlo como \emph{representante de un funtor} de la categoría de los $X$-preesquemas en la de los conjuntos. Observemos para ello que una sección $u\in\Gamma(X,\sh{E})$ se identifica canónicamente con un $\sh{O}_X$-homomorfismo $u:\sh{O}_X\to\sh{E}$, al cual corresponde por transposición un $\sh{O}_X$-homomorfismo ${}^t u:\check{\sh{E}}\to\sh{O}_X$ y, por consiguiente, un homomorfismo de $\sh{O}_X$-álgebras $v:\mathbf S_{\sh{O}_X}(\check{\sh{E}})\to\sh{O}_X$. Sea $\operatorname{Al}(X,\sh{E},\mathscr J)$ el conjunto de los $u\in\Gamma(X,\sh{E})$ tales que $\mathscr J$ esté \emph{contenido en el núcleo} de $v$; de estas definiciones resulta inmediatamente que
+\[
+  X'\longmapsto\operatorname{Al}(X',\sh{E}_{(X')},\mathscr J\otimes_{\sh{O}_X}\sh{O}_{X'})
+\]
+es un funtor representado por $\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}})/\mathscr J)$. Si $X'=\Spec(A)$ es afín y tal que $\sh{E}_{(X')}$ sea isomorfo a $\sh{O}_{X'}^n$, $\Gamma(X',\sh{E}_{(X')})$ puede identificarse con el conjunto $A^n$, y $\mathscr J\otimes_{\sh{O}_X}\sh{O}_{X'}$ con un $\sh{O}_{X'}$-módulo de la forma $\widetilde{\mathfrak J}$, donde $\mathfrak J$ es un ideal del anillo de polinomios $A[T_1,\ldots,T_n]$; el conjunto $\operatorname{Al}(X',\sh{E}_{(X')},\mathscr J\otimes_{\sh{O}_X}\sh{O}_{X'})$ se identifica entonces con la parte de $A^n$ formada por los puntos $(t_1,\ldots,t_n)$ tales que $P(t_1,\ldots,t_n)=0$ para todos los polinomios $P\in\mathfrak J$; de manera figurada, puede decirse por tanto que el objeto $\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}})/\mathscr J)$ representa «el subconjunto algebraico del espacio afín torcido $\Gamma(X,\sh{E})$ formado por los puntos que anulan el ideal $\Gamma(X,\mathscr J)$». Este $X$-preesquema se denota también por $\mathbf{Al}(\sh{E},\mathscr J)$. Obsérvese que, si $\mathscr J$ es un ideal de tipo finito de $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$, $\mathbf{Al}(\sh{E},\mathscr J)$ es un $X$-preesquema \emph{de presentación finita}, puesto que $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$ es una $\sh{O}_X$-álgebra de presentación finita.
+\end{env}
+
+\begin{lemma}[18.5.3]
+\label{IV.18.5.3}
+Sean $S$ un preesquema y $f:X\to S$ un morfismo finito y localmente libre (18.2.7). Consideremos el funtor contravariante de la categoría de los $S$-preesquemas en la categoría de los conjuntos
+\begin{equation}
+  S'\longmapsto\operatorname{Of}(X\times_S S')
+  \tag{18.5.3.1}\label{IV.18.5.3.1}
+\end{equation}
+donde $\operatorname{Of}(X\times_S S')$ es el conjunto de las partes a la vez abiertas y cerradas del espacio subyacente a $X\times_S S'$. Entonces este funtor es representable por un $S$-preesquema $\mathbf{Of}(X)$, que es afín, étale y de presentación finita sobre $S$.
+\end{lemma}
+
+\oldpage[IV-4]{127}
+
+Por hipótesis se tiene $X=\Spec(\mathscr B)$, donde $\mathscr B=f_*(\sh{O}_X)$ es una $\sh{O}_S$-álgebra finita y localmente libre. Pongamos $X'=X\times_S S'$, $f'=f_{(S')}$, $\mathscr B'=\mathscr B\otimes_{\sh{O}_S}\sh{O}_{S'}=f'_*(\sh{O}_{X'})$, de modo que $X'=\Spec(\mathscr B')$; existe entonces una biyección canónica, funtorial en $S'$, del conjunto $\operatorname{Of}(X')$ sobre el conjunto $\operatorname{Id}(\mathscr B')$ de los \emph{idempotentes} del anillo $\Gamma(S',\mathscr B')=\Gamma(X',\sh{O}_{X'})$. En efecto, en virtud de la \emph{equivalencia} entre la categoría de los $S'$-esquemas afines sobre $S'$ y la categoría opuesta de la categoría de las $\sh{O}_{S'}$-álgebras cuasicoherentes (II, 1.2.7 y 1.3.1), existe una correspondencia biunívoca canónica entre las descomposiciones de $X'$ en \emph{suma} $X'_1\amalg X'_2$ de dos subpreesquemas inducidos sobre abiertos de $X'$ y las descomposiciones de $\mathscr B'$ en \emph{suma directa} de dos ideales $\mathscr B'_1$, $\mathscr B'_2$; estas últimas, a su vez, forman un conjunto en correspondencia biunívoca canónica (y funtorial en $S'$) con $\operatorname{Id}(\mathscr B')$. Basta, pues, demostrar el lema para el funtor $S'\longmapsto\operatorname{Id}(\mathscr B')$.
+
+Para ello, vamos a demostrar que existe un ideal de tipo finito $\mathscr J$ de $\mathbf S_{\sh{O}_S}(\check{\mathscr B})$ tal que $\operatorname{Id}(\mathscr B')$ sea de la forma $\operatorname{Al}(S',\mathscr B',\mathscr J\otimes_{\sh{O}_S}\sh{O}_{S'})$ (18.5.2). Observemos a este efecto que, puesto que $\mathscr B$ es una $\sh{O}_S$-álgebra, su imagen inversa $\mathscr B_{(\mathbf V(\check{\mathscr B}))}$ es una $\sh{O}_{(\mathbf V(\check{\mathscr B}))}$-álgebra, y puede formarse entonces en esta álgebra el \emph{cuadrado} $c^2$ de la sección canónica $c$ (18.5.1); este corresponde canónicamente a un homomorfismo $u^{(2)}:\mathbf S_{\sh{O}_S}(\check{\mathscr B})\to\mathbf S_{\sh{O}_S}(\check{\mathscr B})\otimes_{\sh{O}_S}\mathscr B$ de $\mathbf S_{\sh{O}_S}(\check{\mathscr B})$-módulos, y se verifica inmediatamente que, para un abierto afín $W$ de $S$, con las notaciones de (18.5.1), $u^{(2)}$ corresponde al homomorfismo de $C$-módulos tal que
+\[
+  u^{(2)}(1)=\sum_k\Bigl(\sum_{i,j}c_{ijk}T_iT_j\Bigr)\otimes e_k,
+\]
+donde $(c_{ijk})$ es la tabla de multiplicación del álgebra $\Gamma(W,\mathscr B)$. Demostremos que el ideal $\mathscr J$ de $\mathbf S_{\sh{O}_S}(\check{\mathscr B})$ engendrado por el \emph{núcleo} del homomorfismo $u-u^{(2)}$ responde a la cuestión. Basta, en efecto, observar que el ideal $\Gamma(W,\mathscr J)$ de $C$ está engendrado por los polinomios $P_k(T_1,\ldots,T_n)=T_k-\sum_{i,j}c_{ijk}T_iT_j$ y que los idempotentes de $\Gamma(W,\mathscr B)$ son precisamente los elementos $\sum_i t_i e_i$ de esta álgebra tales que $(t_1,\ldots,t_n)$ anula todos los polinomios $P_k$ ($1\leq i\leq n$). Se deduce entonces de (18.5.2) que el $S$-preesquema afín de presentación finita $\mathbf{Of}(X)=\mathbf{Al}(\mathscr B,\mathscr J)$ representa efectivamente el funtor (18.5.3.1). Queda por demostrar que $\mathbf{Of}(X)$ es étale sobre $S$ o, lo que es equivalente, que es \emph{formalmente étale} sobre $S$. Pero si $S'$ es un $S$-preesquema y $S'_0$ un subpreesquema cerrado de $S'$ definido por un ideal localmente nilpotente de $\sh{O}_{S'}$ (y que tiene, por tanto, el mismo espacio subyacente que $S'$), está claro que $X'=X\times_S S'$ y $X'_0=X\times_S S'_0$ tienen el mismo espacio subyacente; por tanto, la aplicación canónica $\operatorname{Of}(X')\to\operatorname{Of}(X'_0)$ es \emph{biyectiva}, lo que termina la demostración (17.1.1).
+
+\begin{proposition}[18.5.4]
+\label{IV.18.5.4}
+Sean $S$ un preesquema y $S_0$ un subpreesquema cerrado de $S$; consideremos las propiedades siguientes:
+\begin{enumerate}
+  \item[a)] Para todo morfismo finito $g:S'\to S$, la aplicación canónica
+  \begin{equation}
+    \operatorname{Of}(S')\longrightarrow\operatorname{Of}(S'\times_S S_0)
+    \tag{18.5.4.1}\label{IV.18.5.4.1}
+  \end{equation}
+  (cf. (18.5.3)) es biyectiva.
+  \item[a')] Para todo morfismo finito y localmente libre $g:S'\to S$, la aplicación (18.5.4.1) es biyectiva.
+
+\oldpage[IV-4]{128}
+
+  \item[b)] Para todo morfismo étale y separado $g:S'\to S$, la aplicación canónica
+  \begin{equation}
+    \Gamma(S'/S)\longrightarrow\Gamma(S'\times_S S_0/S_0)
+    \tag{18.5.4.2}\label{IV.18.5.4.2}
+  \end{equation}
+  es biyectiva.
+\end{enumerate}
+La condición $b)$ implica $a')$; si además $S$ es cuasicompacto y cuasiseparado, la condición $a)$ implica $b)$.
+\end{proposition}
+
+Demostremos primero que $b)$ implica $a')$. Supongamos, pues, verificada $b)$, y sea $g:S'\to S$ un morfismo finito y localmente libre; pongamos $S'_0=S'\times_S S_0$, de modo que $g_0=g_{(S_0)}:S'_0\to S_0$ es finito y localmente libre. Entonces se deduce de (18.5.3) que $P=\mathbf{Of}(S')$ es un $S$-preesquema \emph{étale y separado}; además, la definición del funtor $\operatorname{Of}$ muestra inmediatamente que, si se pone $P_0=\mathbf{Of}(S'_0)$ (para la categoría de los $S_0$-preesquemas), se tiene $P_0=P\times_S S_0$. Dicho esto, se tiene por definición el diagrama conmutativo
+\[
+\xymatrix{
+  \Gamma(P/S)\ar[r]\ar[d]^{\sim} & \Gamma(P_0/S_0)\ar[d]^{\sim}\\
+  \operatorname{Of}(S')\ar[r] & \operatorname{Of}(S'_0)
+}
+\]
+donde las flechas verticales son las biyecciones canónicas. Como la hipótesis $b)$, aplicada al morfismo $P\to S$, implica que la primera fila es una biyección, lo mismo ocurre con la segunda, lo que demuestra nuestra afirmación.
+
+Antes de demostrar que $a)$ implica $b)$ cuando $S$ es cuasicompacto y cuasiseparado, estableceremos el
+
+\begin{lemma}[18.5.4.3]
+\label{IV.18.5.4.3}
+Si $S$ y $S_0$ verifican la condición $a)$ de (18.5.4), entonces, para todo morfismo finito $g:S'\to S$, $S'$ es la única vecindad de $S'_0=g^{-1}(S_0)=S'\times_S S_0$ en $S'$.
+\end{lemma}
+
+En efecto, equivale a decir que, si $T'$ es una parte cerrada de $S'$ tal que $T'\cap S'_0=\varnothing$, entonces $T'=\varnothing$. Ahora bien, si se denota también por $T'$ un subpreesquema cerrado de $S'$ cuyo espacio subyacente es $T'$, el morfismo compuesto $h:T'\to S'\xrightarrow{g}S$ es finito y $h^{-1}(S_0)$ es vacío; la condición $a)$ aplicada al morfismo $h$ implica necesariamente que $T'$ es vacío.
+
+Demostrado este lema, probemos primero que, bajo la hipótesis $a)$, la aplicación (18.5.4.2) es \emph{inyectiva}. En efecto, si $u'$, $u''$ son dos $S$-secciones de $S'$, el hecho de que el morfismo $S'\to S$ sea no ramificado implica que el preesquema de coincidencias de $u'$ y $u''$ está inducido sobre un abierto $U$ de $S$ (17.4.6). Si las restricciones a $S_0$ de $u'$ y $u''$ son iguales, el hecho de que $u'$ y $u''$ sean inmersiones abiertas (17.4.1) implica que $U$ contiene a $S_0$ y, por tanto, es igual a $S$ en virtud del lema (18.5.4.3), aplicado al caso en que $S'=S$.
+
+\oldpage[IV-4]{129}
+
+Queda por demostrar que, bajo la hipótesis $a)$, la aplicación (18.5.4.2) es \emph{sobreyectiva} (siendo $S$ cuasicompacto y cuasiseparado). Sea, pues, $u_0:S_0\to S'_0$ una $S_0$-sección de $S'_0$; como $u_0(S_0)$ es cuasicompacto en $S'$, puede recubrirse por un número finito de abiertos afines $V_i$ tales que la restricción $g|V_i$ sea un morfismo de tipo finito; si $V$ es la unión de los $V_i$, se concluye que $g|V:V\to S$ es un morfismo \emph{de presentación finita}, pues es separado y localmente de presentación finita por hipótesis (1.6.1). Sustituyendo $S'$ por $V$, puede suponerse entonces que $g$ es de presentación finita. Como $S$ es cuasicompacto y cuasiseparado y $g$ es cuasifinito y separado (17.6.1), se deduce del «Main theorem» (8.12.6) que $g$ se factoriza como $S'\xrightarrow{j}S''\xrightarrow{f}S$, donde $j$ es una inmersión abierta y $f$ un morfismo \emph{finito}. Pongamos $S''_0=S''\times_S S_0$, $j_0=j_{(S_0)}:S'_0\to S''_0$, que es una inmersión abierta, y $f_0=f_{(S_0)}:S''_0\to S_0$, que es un morfismo finito. Entonces $u_0$ es también una $S_0$-sección de $S''_0$. Como $g_0:S'_0\to S_0$ es étale, $u_0$ es una inmersión abierta de $S_0$ en $S'_0$ (17.4.1), por lo que $u_0(S_0)$ es abierto en $S'_0$ y \emph{a fortiori} en $S''_0$; pero, por otra parte, como $f_0$ es un morfismo finito, y por tanto separado, $u_0$ es una inmersión cerrada de $S_0$ en $S''_0$ (I, 5.4.6), de modo que $X_0=u_0(S_0)$ es \emph{a la vez abierto y cerrado} en $S''_0$. En virtud de la hipótesis $a)$, existe un subconjunto a la vez abierto y cerrado $X$ de $S''$ tal que $X\cap S''_0=X_0$. Demostremos primero que el morfismo $f:S''\to S$ es \emph{étale en los puntos de $X$}: en efecto, el conjunto $U$ de los puntos de $X$ en los que $f|X$ es étale es abierto y contiene por hipótesis a $X_0\subset S'_0$. Pero el lema (18.5.4.3), aplicado al morfismo finito $f|X$, demuestra que $U=X$. Por otra parte, $S'\cap X$ es abierto en $X$ y contiene a $X_0$ por hipótesis; por tanto, el mismo razonamiento demuestra que $S'\cap X=X$, es decir, $X\subset S'$. Queda por demostrar que, para todo $s\in S$, el número geométrico $n(s)$ de puntos de $X\cap f^{-1}(s)$ es igual a $1$, pues de ello se seguirá que $f|X$ es radicial y sobreyectivo, y, como $f|X$ es étale, se habrá demostrado (17.9.1) que $f|X$ es un isomorfismo del abierto $X\subset S'$ sobre $S$, cuyo isomorfismo inverso $u$ será la $S$-sección buscada que prolonga $u_0$. Pero, como $f|X$ es étale y \emph{finito}, $s\mapsto n(s)$ es continua en $S$ (18.2.8), y, como $X\cap S''_0=X_0$, se tiene $n(s)=1$ en $S_0$; el conjunto de los puntos $s\in S$ tales que $n(s)=1$, al ser abierto en $S$ y contener a $S_0$, es igual a $S$ por (18.5.4.3). c.q.d.
+
+\begin{remark}[18.5.4.4]
+\label{IV.18.5.4.4}
+Puede demostrarse que el enunciado (18.5.4) sigue siendo válido cuando, en la condición $b)$, se supone únicamente que el morfismo $g$ es étale (pero no necesariamente separado) [43, exp. XII].
+\end{remark}
+
+\begin{definition}[18.5.5]
+\label{IV.18.5.5}
+Se dice que un preesquema $S$ y un subpreesquema cerrado $S_0$ de $S$ forman un \emph{par henseliano} si verifican la condición $a)$ de (18.5.4).
+\end{definition}
+
+Teniendo en cuenta (I, 5.1.8), equivale a decir que $(S,S_0)$ es un par henseliano o que $(S_{\mathrm{red}},(S_0)_{\mathrm{red}})$ lo es.
+
+\begin{proposition}[18.5.6]
+\label{IV.18.5.6}
+\begin{enumerate}
+  \item[(i)] Si $(S,S_0)$ es un par henseliano, entonces, para todo morfismo finito $f:S'\to S$, si $S'_0$ es el subpreesquema $f^{-1}(S_0)$ de $S'$, el par $(S',S'_0)$ es henseliano.
+  \item[(ii)] Sean $S=\coprod_\alpha S^{(\alpha)}$ una suma de preesquemas y $S_0$ un subpreesquema cerrado de $S$, suma de los subpreesquemas cerrados $S_0^{(\alpha)}$ de los $S^{(\alpha)}$. Para que el par $(S,S_0)$ sea henseliano, es necesario y suficiente que lo sea cada uno de los pares $(S^{(\alpha)},S_0^{(\alpha)})$.
+\end{enumerate}
+\end{proposition}
+
+La afirmación (i) es consecuencia inmediata de la definición, puesto que, para todo morfismo finito $g:S''\to S'$, $f\circ g:S''\to S$ es un morfismo finito. Del mismo modo, bajo las condiciones de (ii), para que un morfismo $g:S'\to S$ sea finito, es necesario y suficiente que cada una
+
+\oldpage[IV-4]{130}
+
+de sus restricciones $g^{(\alpha)}:S'^{(\alpha)}=g^{-1}(S^{(\alpha)})\to S^{(\alpha)}$ lo sea, y, si se pone $S'_0=g^{-1}(S_0)$, $S'^{(\alpha)}_0=(g^{(\alpha)})^{-1}(S^{(\alpha)}_0)$, existe una correspondencia biunívoca entre las partes abiertas y cerradas $U$ (resp. $U_0$) de $S'$ (resp. $S'_0$) y las familias $(U^{(\alpha)})$ (resp. $U^{(\alpha)}_0$), donde $U^{(\alpha)}$ (resp. $U^{(\alpha)}_0$) es una parte abierta y cerrada de $S'^{(\alpha)}$ (resp. $S'^{(\alpha)}_0$), de donde se sigue la afirmación (ii).
+
+\begin{remark}[18.5.7]
+\label{IV.18.5.7}
+Sean $S=\Spec(A)$ un esquema afín y $S_0$ un subesquema cerrado de $S$ definido por un ideal $\mathfrak J$ de $A$. Entonces, si el par $(S,S_0)$ es henseliano, el ideal $\mathfrak J$ está necesariamente contenido en el \emph{radical} de $A$. En efecto, si $\mathfrak m$ es un ideal maximal de $A$, $\mathfrak m$ debe pertenecer a $V(\mathfrak J)=S_0$, en virtud de (18.5.4.3); dicho de otro modo, debe tenerse $\mathfrak J\subset\mathfrak m$, de donde se sigue la conclusión. En particular, supongamos que $S_0$ se \emph{reduce a un punto}, es decir, que el ideal $\mathfrak J$ es \emph{maximal}; entonces $\mathfrak J$ debe ser el radical de $A$, dicho de otro modo, $A$ debe ser un anillo \emph{local}, y $S_0$ el único punto cerrado de $\Spec(A)$.
+\end{remark}
+
+\begin{definition}[18.5.8]
+\label{IV.18.5.8}
+Se dice que un anillo $A$ es \emph{henseliano} si es semilocal y si, denotando por $\mathfrak r$ el radical de $A$, el par $(\Spec(A),\Spec(A/\mathfrak r))$ es henseliano. Se llama \emph{esquema local henseliano} a un esquema isomorfo al espectro de un anillo local henseliano.
+\end{definition}
+
+\begin{proposition}[18.5.9]
+\label{IV.18.5.9}
+\begin{enumerate}
+  \item[(i)] Para que un anillo semilocal $A$ sea henseliano, es necesario y suficiente que sea un producto directo de anillos locales henselianos.
+  \item[(ii)] Para que un anillo local $A$ sea henseliano, es necesario y suficiente que toda $A$-álgebra finita $B$ sea isomorfa a un producto de anillos locales.
+\end{enumerate}
+\end{proposition}
+
+(i) En efecto, la definición, aplicada a $S=\Spec(A)$ y $S_0=\Spec(A/\mathfrak r)$, muestra, puesto que $S_0$ es un conjunto finito discreto y cerrado en $S$, que $S$ es reunión de un número finito de partes abiertas y cerradas $S_i$ ($1\leq i\leq n$) disjuntas dos a dos, cada una de las cuales contiene exactamente uno de los ideales maximales $\mathfrak m_i$ de $A$; la conclusión se deduce de (18.5.6, (ii)) y de la observación (18.5.7).
+
+(ii) Todo morfismo finito $S'\to\Spec(A)$ es de la forma $\Spec(B)\to\Spec(A)$, donde $B$ es una $A$-álgebra finita. Si $k$ es el cuerpo residual de $A$, $\Spec(B\otimes_A k)$ es el espectro de un anillo artiniano, y por tanto finito y discreto. Decir que el par $(\Spec(A),\Spec(k))$ es henseliano significa entonces que $B$ es un producto directo de anillos $A_i$ tales que $\Spec(A_i\otimes_A k)$ se reduce a un punto, es decir, que $A_i$ (que es una $A$-álgebra \emph{finita}) no debe tener más que un solo ideal maximal (Bourbaki, \emph{Alg. comm.}, cap. V, \textsection~2, n.\textsuperscript{o}~1, prop. 1).
+
+El estudio de los anillos henselianos se reduce así esencialmente al de los anillos henselianos \emph{locales}.
+
+\begin{proposition}[18.5.10]
+\label{IV.18.5.10}
+Si $A$ es un anillo henseliano, toda $A$-álgebra finita $B$ es un anillo henseliano (y, por tanto, un producto directo de anillos locales henselianos (18.5.9)).
+\end{proposition}
+
+En efecto, si $\mathfrak r'$ es el radical de $B$, la imagen inversa de $\mathfrak r'$ en $A$ es el radical $\mathfrak r$ de $A$, y todo ideal de $B$ situado sobre un ideal maximal de $A$ es un ideal maximal de $B$; por tanto, el conjunto $V(\mathfrak r')$ en $\Spec(B)$ es la imagen inversa del conjunto $V(\mathfrak r)$ en $\Spec(A)$. La proposición es entonces consecuencia de (18.5.6, (i)).
+
+\begin{theorem}[18.5.11]
+\label{IV.18.5.11}
+Sean $A$ un anillo local y $\mathfrak m$ su ideal maximal. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $A$ es henseliano; dicho de otro modo, toda $A$-álgebra finita $B$ es isomorfa a un producto de anillos locales.
+
+\oldpage[IV-4]{131}
+
+  \item[a')] La condición $a)$ se satisface para todas las $A$-álgebras $B$ de la forma $A[T]/F.A[T]$, donde $F\in A[T]$ es un polinomio mónico.
+  \item[b)] Sean $S=\Spec(A)$, $S_0=\Spec(k)$. Para todo morfismo étale $g:S'\to S$, si se pone $S'_0=S'\otimes_A k$, toda $S_0$-sección $u_0$ de $S'_0$ es la restricción de una $S$-sección $u$ de $S'$.
+  \item[c)] Para todo morfismo $f:X\to S$, separado y localmente de tipo finito, y todo punto $x\in X$ tal que $f(x)$ sea igual al punto cerrado $s$ de $S$ y que $f$ sea cuasifinito en el punto $x$ (Err$_{\mathrm{III}}$, 20), $X$ es suma de dos preesquemas $X'$, $X''$ tales que $X'=\Spec(\sh{O}_{X,x})$ y que $f|X':X'\to S$ sea un morfismo finito.
+  \item[c')] Para todo morfismo localmente de tipo finito $f:X\to S$, y todo punto $x\in X$ tal que $f$ sea cuasifinito en el punto $x$ y que $f(x)$ sea igual al punto cerrado $s$ de $S$, $\sh{O}_{X,x}$ es un álgebra finita sobre $\sh{O}_{S,s}=A$.
+  \item[c'')] Para todo morfismo localmente de presentación finita $f:X\to S$, y todo punto $x\in X$ tal que $f$ sea cuasifinito en el punto $x$ y que $f(x)$ sea igual al punto cerrado $s$ de $S$, $\sh{O}_{X,x}$ es un álgebra finita y de presentación finita sobre $\sh{O}_{S,s}=A$.
+\end{enumerate}
+\end{theorem}
+
+Observemos primero que la condición $c')$ (resp. $c'')$ es equivalente a la misma condición en la que se supone además que $f$ es \emph{separado}, pues la cuestión es local sobre $X$. Del mismo modo, la condición $b)$ es equivalente a la misma condición en la que se supone además que $g$ es \emph{separado}: en efecto, basta aplicar esta última a la restricción de $g$ a una vecindad abierta afín del punto $u_0(S_0)$ en $S'$. Nos limitaremos, pues, de ahora en adelante al caso en que, en $b)$, $c')$ y $c'')$, los morfismos dados son \emph{separados}.
+
+El hecho de que $a)$ implique $b)$ y de que $b)$ implique $a')$ es un caso particular de (18.5.4). Demostremos además que $a')$ implica $a)$. Se trata de probar que, si $e_0$ es un idempotente de $C=B\otimes_A k$, existe un idempotente $e\in B$ cuya imagen canónica es $e_0$. Si $b$ es un elemento de $B$ cuya imagen en $C$ es $e_0$, la sub-$A$-álgebra $A[b]=B'$ de $B$ es finita, y la imagen canónica $C'$ de $B'\otimes_A k$ en $C$ contiene a $e_0$. Ahora bien, $B'\otimes_A k$ es una $k$-álgebra finita, y por tanto un producto directo de $k$-álgebras locales finitas; por consiguiente, $e_0$ es la imagen en $C'$ de un idempotente $e'_0$ de $B'\otimes_A k$. La cuestión se reduce así al caso en que $B$ es monógena y, por tanto, isomorfa a una $A$-álgebra cociente de un álgebra de la forma $A[T]/F.A[T]$, donde $F$ es un polinomio mónico. Ahora bien, en virtud de $a')$, $A[T]/F.A[T]$ es un producto directo de anillos locales; lo mismo sucede entonces con todas sus álgebras cocientes, lo que termina de demostrar la existencia del idempotente $e$.
+
+Es inmediato que $c)$ implica $a)$, como se ve razonando por inducción sobre el número de ideales maximales del anillo semilocal $B$. Para ver que $a)$ implica $c)$, puede uno limitarse, en virtud de (13.1.4), al caso en que $f$ es un morfismo afín y cuasifinito. Entonces, aplicando el «Main theorem» (8.12.8), $f$ puede escribirse como un morfismo compuesto
+\[
+  X\xrightarrow{j}Y\xrightarrow{g}S,
+\]
+donde $g$ es un morfismo finito y $j$ una inmersión abierta. Como $Y=\Spec(B)$, donde $B$ es una $A$-álgebra finita, se deduce de $a)$ que $B$ es un producto directo de anillos locales, que son evidentemente $A$-álgebras finitas, y $\sh{O}_{X,x}$ se identifica con uno de estos anillos locales puesto que $f(x)=s$; además, todo abierto de $Y$ que contiene a $x$ contiene necesariamente a $\Spec(\sh{O}_{X,x})$.
+
+Es trivial que $c)$ implica $c')$, en virtud de la observación inicial. Demostremos que $c')$ implica $c'')$. Supongamos, en efecto, verificada $c')$, y probemos que, bajo las condiciones
+
+\oldpage[IV-4]{132}
+
+de $c'')$, el conjunto $Z=\Spec(\sh{O}_{X,x})$ se identifica entonces con una parte \emph{abierta y cerrada} de $X$, lo que establecerá $c'')$ (I, 2.4.2). En primer lugar, el morfismo compuesto $Z\xrightarrow{j}X\xrightarrow{f}S$, donde $j$ es el morfismo canónico (I, 2.4.1), es finito y de presentación finita por hipótesis, y, como $f$ es separado y localmente de presentación finita, $j$ es también un morfismo finito y de presentación finita ((II, 6.1.5) y (I, 4.3)); por consiguiente, $j$ es un morfismo cerrado (II, 6.1.10), lo que demuestra que $Z$ es cerrado en $X$. Se deduce entonces de (I, 2.4.2) y (I, 4.2.2) que $j$ es una inmersión cerrada. Pero si $\mathscr J$ es el ideal de $\sh{O}_X$ que define $Z$, se tiene por hipótesis $\mathscr J_x=0$ y, por tanto, también $\mathscr J_z=0$ en todo punto $z$ de una vecindad abierta $V$ de $x$ en $X$, puesto que, por hipótesis, $\mathscr J$ es un $\sh{O}_X$-módulo cuasicoherente de tipo finito ((1.4.7) y ($0_{\mathrm I}$, 5.2.2)). Ahora bien, una vecindad tal contiene a $Z$, por lo que $Z$ es abierto en $X$, puesto que $\mathscr J|V=0$.
+
+Por último, $c'')$ implica $a')$: en efecto, si $B=A[T]/F.A[T]$, el morfismo $X=\Spec(B)\to\Spec(A)=Y$ es finito y de presentación finita, y la demostración anterior muestra que $B$ es el producto directo de las $A$-álgebras finitas $\sh{O}_{X,x_i}$, donde los $x_i$ son los puntos de la fibra del punto cerrado de $Y$.
+
+\begin{corollary}[18.5.12]
+\label{IV.18.5.12}
+Sean $A$ un anillo semilocal y $\mathfrak r$ su radical; pongamos $S=\Spec(A)$, $S_0=\Spec(A/\mathfrak r)$. Para que $A$ sea henseliano, es necesario y suficiente que, para todo morfismo finito $f:X\to S$ y todo morfismo étale y separado $g:Y\to S$, si se pone $X_0=X\times_S S_0$ y $Y_0=Y\times_S S_0$, la aplicación canónica
+\[
+  \Hom_S(X,Y)\longrightarrow\Hom_{S_0}(X_0,Y_0)
+\]
+sea biyectiva.
+\end{corollary}
+
+La suficiencia de la condición se deduce de la equivalencia de $a)$ y $b)$ en (18.5.11), aplicando esta condición al caso en que $f=1_S$. Para ver que la condición es necesaria, observemos que, si $A$ es henseliano, el par $(X,X_0)$ es henseliano por (18.5.6, (i)); además, $\Hom_S(X,Y)=\Gamma(X\times_S Y/X)$ y $\Hom_{S_0}(X_0,Y_0)=\Gamma(X_0\times_{S_0}Y_0/X_0)$; como $X\times_S Y$ es étale y separado sobre $X$, la conclusión se deduce del hecho de que $a)$ implica $b)$ en (18.5.4).
+
+\begin{remark}[18.5.13]
+\label{IV.18.5.13}
+Las condiciones equivalentes $a)$, $a')$, $b)$ del teorema (18.5.11) son también equivalentes a la siguiente («lema de Hensel»):
+\begin{enumerate}
+  \item[a'')] Para todo polinomio mónico $F\in A[T]$, de imagen canónica $F_0\in k[T]$, y toda descomposición $F_0=G_0H_0$ de $F_0$ en un producto de dos polinomios mónicos primos entre sí $G_0$, $H_0$ de $k[T]$, existe un único par $(G,H)$ de polinomios mónicos de $A[T]$ que posee las propiedades siguientes: $G_0$ y $H_0$ son las imágenes canónicas respectivas de $G$ y $H$, se tiene $F=GH$, y el ideal de $A[T]$ engendrado por $G$ y $H$ es igual a $A[T]$.
+\end{enumerate}
+\end{remark}
+
+Estableceremos primero el lema siguiente:
+
+\begin{lemma}[18.5.13.1]
+\label{IV.18.5.13.1}
+Sean $A$ un anillo local de cuerpo residual $k$, $F\in A[T]$ un polinomio mónico y $B$ la $A$-álgebra $A[T]/F.A[T]$. Existe una correspondencia canónica entre las descomposiciones de $B$ en producto directo de dos $A$-álgebras cocientes $B'$, $B''$ y las descomposiciones $F=GH$ de $F$ en producto de dos polinomios mónicos $G$, $H$ de $A[T]$, tales que el ideal engendrado por $G$ y $H$ sea igual a $A[T]$; las álgebras cocientes $B'$, $B''$ correspondientes a tal par de polinomios $G$, $H$ son respectivamente $A[T]/H.A[T]$ y $A[T]/G.A[T]$.
+\end{lemma}
+
+\oldpage[IV-4]{133}
+
+Si $F=GH$ y si $G$ y $H$ engendran el ideal $A[T]$, existen dos polinomios $P$, $Q$ de $A[T]$ tales que $1=PG+QH$. Se deduce que la intersección de los ideales principales $\mathfrak a=G.A[T]$ y $\mathfrak b=H.A[T]$ es igual a $\mathfrak c=F.A[T]$: en efecto, si $R\in G.A[T]\cap H.A[T]$, puede escribirse $R=PRG+QRH$; ahora bien, $RH$ (resp. $RG$) es un múltiplo de $F$, puesto que $R$ es un múltiplo de $G$ (resp. $H$), y por tanto $R\in F.A[T]$. Como $A[T]=\mathfrak a+\mathfrak b$, $A[T]/\mathfrak c$ es suma directa de los ideales $\mathfrak a/(\mathfrak a\cap\mathfrak b)$ y $\mathfrak b/(\mathfrak a\cap\mathfrak b)$, canónicamente isomorfos, respectivamente, a $A[T]/\mathfrak b$ y $A[T]/\mathfrak a$.
+
+Recíprocamente, supongamos dada una descomposición de $B$ en producto directo de dos $A$-álgebras $B'$, $B''$, que se identifican canónicamente con dos ideales $e'B$, $e''B$ de $B$, correspondientes a una descomposición $1=e'+e''$ de $1$ en idempotentes ortogonales $e'$, $e''$ de $B$. Pongamos también $B_0=B\otimes_A k=k[T]/F_0.k[T]$, donde $F_0$ es la imagen canónica de $F$ en $k[T]$, del mismo grado $n$ que $F$; si $e'_0$, $e''_0$ son las imágenes canónicas de $e'$, $e''$ en $B_0$, son dos idempotentes ortogonales tales que $1=e'_0+e''_0$, y $B_0$ es, por tanto, producto directo de $B'_0=e'_0B_0$ y $B''_0=e''_0B_0$. Sean $t$ y $t_0$ las imágenes canónicas de $T$ en $B$ y $B_0$; como $B'_0$ (resp. $B''_0$) es una $k$-álgebra finita engendrada por $t'_0=e'_0t_0$ (resp. $t''_0=e''_0t_0$), admite una base de la forma $\{e'_0,t'_0,t_0'{}^2,\ldots,t_0'{}^{s-1}\}$ (resp. $\{e''_0,t''_0,t_0''{}^2,\ldots,t_0''{}^{r-1}\}$), con $r+s=n$. Por otra parte, al ser $B$ un $A$-módulo libre (de base $\{1,t,\ldots,t^{n-1}\}$), $B'$ y $B''$ son $A$-módulos proyectivos, y por tanto libres puesto que $A$ es un anillo local (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~5, n.\textsuperscript{o}~3, cor. de la prop. 5); se deduce entonces de lo anterior y de Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~3, n.\textsuperscript{o}~3, prop. 5, que, si se pone $t'=e't$, $t''=e''t$, $\{e',t',\ldots,t'^{s-1}\}$ (resp. $\{e'',t'',\ldots,t''^{r-1}\}$) es una base del $A$-módulo $B'$ (resp. $B''$). Existe entonces un polinomio mónico $H$ (resp. $G$) de grado $s$ (resp. $r$) de $A[T]$ tal que $e'H(t')=0$ y $e''G(t'')=0$; como $t^h=t'^h+t''^h$ para todo entero $h\geq1$, y $t'^h=e't'^h$, $t''^h=e''t''^h$, se tiene también $G(t)=e'G(t')$ y $H(t)=e''H(t'')$, de donde $G(t)H(t)=0$; se concluye que el polinomio $G(T)H(T)$ es divisible por $F(T)$; pero, como los grados de estos dos polinomios mónicos son iguales, se tiene $GH=F$. Además, $B'$ (resp. $B''$) es isomorfa a $A[T]/H.A[T]$ (resp. $A[T]/G.A[T]$). Por último, existen dos polinomios $R$, $S$ de $A[T]$ tales que $e'=R(t)$ y $e''=S(t)$; como $R(t)=e'R(t')+e''R(t'')$, se tiene necesariamente $e''R(t'')=0$, y del mismo modo $e'S(t')=0$, de suerte que, por definición de $G$ y $H$, $R=QH$ y $S=PG$, donde $P$, $Q$ pertenecen a $A[T]$; la relación $1=R(t)+S(t)$ en $B$ da entonces, por definición, $PG+QH=1+LF$ para cierto polinomio $L\in A[T]$, y, como $F=GH$, esto demuestra que el ideal engendrado por $G$ y $H$ es $A[T]$ y termina la demostración del lema.
+
+Establecido este lema, basta aplicarlo, por una parte, al anillo local $A$ y, por otra, al cuerpo $k$, para ver inmediatamente que las condiciones $a')$ y $a'')$ son equivalentes.
+
+\begin{proposition}[18.5.14]
+\label{IV.18.5.14}
+Todo anillo semilocal $A$, separado y completo para la topología $\mathfrak r$-preádica (donde $\mathfrak r$ es el radical de $A$), es henseliano.
+\end{proposition}
+
+En efecto, $A$ es un producto directo de anillos locales separados y completos (Bourbaki, \emph{Alg. comm.}, cap. III, \textsection~2, n.\textsuperscript{o}~13, cor. de la prop. 19), por lo que la cuestión se reduce al caso en que $A$ es un anillo local. Verifiquemos el criterio $a')$ de (18.5.11). Como $B$ es un $A$-módulo libre de tipo finito, es evidentemente separado y completo para la topología $\mathfrak r$-preádica,
+
+\oldpage[IV-4]{134}
+
+que es también la topología $\mathfrak s$-preádica, donde $\mathfrak s$ es el radical del anillo semilocal $B$, pues $B/\mathfrak rB$ es un anillo artiniano de radical $\mathfrak s/\mathfrak rB$. Se sabe entonces (Bourbaki, \emph{Alg. comm.}, cap. III, \textsection~2, n.\textsuperscript{o}~13, cor. de la prop. 19) que $B$ es un producto directo de anillos locales.
+
+\begin{proposition}[18.5.15]
+\label{IV.18.5.15}
+Sean $A$ un anillo henseliano y $\mathfrak r$ su radical. Entonces el funtor $B\longmapsto B/\mathfrak rB$ es una equivalencia de la categoría de las $A$-álgebras finitas y étales con la categoría de las $(A/\mathfrak r)$-álgebras finitas y étales.
+\end{proposition}
+
+El hecho de que el funtor del enunciado sea plenamente fiel es un caso particular de (18.5.12). Para demostrar que este funtor es una equivalencia de categorías, puede uno limitarse al caso en que $A$ es local; basta entonces aplicar (18.1.1) (para los morfismos étales) a $S=\Spec(A)$ y $S_0=\Spec(A/\mathfrak r)$, reducido a un solo punto.
+
+\begin{remarks}[18.5.16]
+\label{IV.18.5.16}
+\begin{enumerate}
+  \item[(i)] Ignoramos si la proposición (18.5.15) se generaliza a un par henseliano $(S,S_0)$, incluso cuando $S$ es afín y noetheriano.
+  \item[(ii)] Sean $A$ un anillo noetheriano y $\mathfrak J$ un ideal de $A$ tal que $A$ sea \emph{separado y completo} para la topología $\mathfrak J$-preádica. Entonces el par $(\Spec(A),\Spec(A/\mathfrak J))$ es henseliano: en efecto, para toda $A$-álgebra finita $B$, el anillo $B$ es separado y completo para la topología $\mathfrak J$-preádica ($0_{\mathrm I}$, 7.3.6). Sustituyendo $B$ por $A$ y $\mathfrak J B$ por $\mathfrak J$, todo se reduce entonces a ver que la aplicación que a todo idempotente de $A$ hace corresponder su clase mód. $\mathfrak J$ es \emph{biyectiva}. Ahora bien, se tiene $A=\varprojlim (A/\mathfrak J^n)$. Denotemos por $\operatorname{Idem}(A)$ el conjunto de los idempotentes de $A$ y, para todo homomorfismo de anillos $\varphi:A\to B$, sea $\operatorname{Idem}(\varphi)$ la aplicación de $\operatorname{Idem}(A)$ en $\operatorname{Idem}(B)$ que es la restricción de $\varphi$; de la definición del límite proyectivo se deduce que se tiene
+  \[
+    \operatorname{Idem}(A)=\varprojlim_n\operatorname{Idem}(A/\mathfrak J^n)
+  \]
+  para las aplicaciones $\psi_{nm}:\operatorname{Idem}(A/\mathfrak J^m)\to\operatorname{Idem}(A/\mathfrak J^n)$ que son las restricciones de las aplicaciones canónicas $A/\mathfrak J^m\to A/\mathfrak J^n$. Pero, puesto que $\Spec(A/\mathfrak J^n)\to\Spec(A/\mathfrak J^m)$ es un homeomorfismo, las $\psi_{nm}$ son biyecciones (como se ha visto en la demostración de (18.5.3)); esto demuestra nuestra afirmación.
+\end{enumerate}
+\end{remarks}
+
+\begin{theorem}[18.5.17]
+\label{IV.18.5.17}
+Sean $A$ un anillo local henseliano, $S=\Spec(A)$ y $s$ el punto cerrado de $S$. Para todo morfismo liso $f:X\to S$, la aplicación canónica
+\[
+  \Gamma(X/S)\longrightarrow\Gamma(X_s/k(s))
+\]
+(donde $X_s=f^{-1}(s)$) es sobreyectiva.
+\end{theorem}
+
+El dato de una $k(s)$-sección de $X_s$ equivale al de un punto $x\in X$ situado sobre $s$ y racional sobre $k(s)$, y se trata de demostrar que existe una $S$-sección $u:S\to X$ tal que $u(s)=x$. Teniendo en cuenta (17.16.3, (i)), puede suponerse que $f$ es étale. La conclusión se deduce entonces del criterio (18.5.11, $b)$). (El lector observará que, en virtud de este criterio, la validez de (18.5.17) para un anillo local dado $A$ es necesaria y suficiente para que $A$ sea henseliano).
+
+\begin{remark}[18.5.18]
+\label{IV.18.5.18}
+Las condiciones de (18.5.11) son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[d)] Para todo morfismo localmente de tipo finito $f:X\to S$ y todo punto $x\in X$ tal que $f(x)$ sea el punto cerrado $s$ de $S$ y que $\sh{O}_{X,x}/\mathfrak m_s\sh{O}_{X,x}$ sea un cuerpo canónicamente isomorfo a $k(s)=k$, existe una vecindad abierta $U$ de $x$ en $X$ tal que $f|U$ sea una inmersión cerrada.
+\end{enumerate}
+\end{remark}
+
+\oldpage[IV-4]{135}
+
+Es inmediato que $d)$ implica la condición $b)$ de (18.5.11), pues una inmersión cerrada étale es una inmersión abierta (18.9.1). Recíprocamente, supongamos verificadas las condiciones de (18.5.11) y demostremos $d)$. La hipótesis de $d)$ implica que $f$ es cuasifinito en el punto $x$ (Err$_{\mathrm{III}}$, 20), en virtud de (13.1.4). Por tanto, en virtud de la condición $c)$ de (18.5.11), $\sh{O}_{X,x}$ es una $A$-álgebra finita y $\Spec(\sh{O}_{X,x})$ una vecindad abierta $U$ de $x$ en $X$. Además, como $\sh{O}_{X,x}/\mathfrak m_s\sh{O}_{X,x}$ es isomorfo a $k=A/\mathfrak m_s$, el lema de Nakayama demuestra que el homomorfismo $A\to\sh{O}_{X,x}$ es sobreyectivo y, por tanto, que $f|U$ es una inmersión cerrada.
+
+\begin{proposition}[18.5.19]
+\label{IV.18.5.19}
+Sean $A$ un anillo local noetheriano y henseliano, $S=\Spec(A)$, $s$ el punto cerrado de $S$ y $f:X\to S$ un morfismo propio; pongamos $X_s=f^{-1}(s)$. Entonces la aplicación $Y\longmapsto Y\cap X_s$ es una biyección del conjunto de las componentes conexas de $X$ sobre el conjunto de las componentes conexas de $X_s$.
+\end{proposition}
+
+Considerando un subpreesquema cerrado de $X$ cuyo espacio subyacente es una componente conexa de $X$, la cuestión se reduce a demostrar que, si $X$ es \emph{conexo y no vacío}, entonces $X_s$ es \emph{conexo y no vacío}. El hecho de que $X_s$ no sea vacío se deduce de (II, 7.2.1); para demostrar que $X_s$ es conexo, razonemos por reducción al absurdo, considerando la factorización de Stein $f:X\xrightarrow{f'}S'\xrightarrow{g}S$ del morfismo propio $f$ (III, 4.3.3); por hipótesis, el conjunto discreto finito $g^{-1}(s)$ contendría al menos dos puntos. Puesto que $A$ es henseliano y $g$ separado y de tipo finito, se deduciría entonces de (18.5.11, $c)$ que $S'$ sería suma de dos preesquemas no vacíos $S'_1$, $S'_2$ (pues la intersección de uno de ellos con $g^{-1}(s)$ se reduce a un solo punto). Puesto que $f'$ es sobreyectivo (III, 4.3.1), se concluiría que $X$ es suma de dos preesquemas no vacíos, contrariamente a la hipótesis.

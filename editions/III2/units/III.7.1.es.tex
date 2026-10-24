@@ -1,0 +1,209 @@
+\section{Estudio del cambio de base en los funtores homológicos covariantes de módulos}
+\label{section:III.7}
+
+\subsection{Funtores de $A$-módulos}
+\label{subsection:III.7.1}
+
+\begin{env}[7.1.1]
+\label{III.7.1.1}
+Dado un anillo $A$, no necesariamente conmutativo, denotemos por
+$\cat{Ab}_A$ la categoría de los $A$-módulos a izquierda, y
+simplemente por $\cat{Ab}$ la categoría de los $\bb Z$-módulos,
+que es la categoría de los grupos abelianos. Sea
+\[
+  T:\cat{Ab}_A\longrightarrow\cat{Ab}
+\]
+un funtor covariante aditivo, y sea $M$ un $(A,A)$-bimódulo.
+Entonces $T(M)$ está dotado de manera natural de una estructura de
+$A$-módulo a derecha.
+
+En efecto, para cada $a\in A$, denotemos por $h_{a,M}$, o
+simplemente por $h_a$, el endomorfismo
+\[
+  x\longmapsto xa
+\]
+del $A$-módulo a izquierda $M$. Por hipótesis, $T(h_a)$ es un
+endomorfismo del $\bb Z$-módulo $T(M)$. Como $T$ es covariante y
+aditivo, para $a,b\in A$ se tiene
+\[
+  T(h_{ab})
+  =
+  T(h_b\circ h_a)
+  =
+  T(h_b)\circ T(h_a)
+\]
+y
+\[
+  T(h_{a+b})
+  =
+  T(h_a+h_b)
+  =
+  T(h_a)+T(h_b).
+\]
+Por tanto,
+\[
+  (y,a)\longmapsto T(h_a)(y)
+\]
+define una multiplicación escalar de $A$-módulo a derecha sobre
+$T(M)$. En particular, $T(A_s)$ es un $A$-módulo a derecha.
+\end{env}
+
+\begin{env}[7.1.2]
+\label{III.7.1.2}
+Supongamos que $A$ es conmutativo. De \sref{III.7.1.1} se deduce
+que, para todo $A$-módulo $M$, el grupo $T(M)$ es naturalmente un
+$A$-módulo. Además, si $u:M\to N$ es un homomorfismo
+$A$-lineal, entonces, para todo $a\in A$,
+\[
+  u\circ h_{a,M}=h_{a,N}\circ u,
+\]
+y, por consiguiente,
+\[
+  T(u)\circ T(h_{a,M})
+  =
+  T(h_{a,N})\circ T(u).
+\]
+Así, $T(u):T(M)\to T(N)$ es $A$-lineal, y $T$ puede considerarse
+como un funtor covariante aditivo de $\cat{Ab}_A$ en sí misma.
+
+Más precisamente, esto define una equivalencia canónica entre la
+categoría de los funtores covariantes aditivos
+\[
+  \cat{Ab}_A\longrightarrow\cat{Ab}
+\]
+y la categoría de los funtores covariantes $A$-lineales
+\[
+  T:\cat{Ab}_A\longrightarrow\cat{Ab}_A,
+\]
+es decir, de los funtores que satisfacen
+\[
+  T(h_{a,M})=h_{a,T(M)}
+  \qquad(a\in A).
+\]
+El funtor de olvido
+\[
+  I:\cat{Ab}_A\longrightarrow\cat{Ab},
+\]
+que asocia a un $A$-módulo su $\bb Z$-módulo subyacente, es exacto
+y fiel. Por tanto, los dos funtores correspondientes bajo la
+equivalencia precedente tienen las mismas propiedades de exactitud.
+\end{env}
+
+\begin{env}[7.1.3]
+\label{III.7.1.3}
+Sigamos suponiendo que $A$ es conmutativo. Sea $B$ una
+$A$-álgebra, no necesariamente conmutativa, y sea
+\[
+  \rho:A\longrightarrow B
+\]
+el homomorfismo de anillos que define la estructura de álgebra.
+Este define un
+\oldpage[III]{176}
+funtor covariante aditivo
+\[
+  \rho_*:M\longmapsto M_{[\rho]}
+\]
+de la categoría $\cat{Ab}_B$ de los $B$-módulos a izquierda a
+$\cat{Ab}_A$. Por composición se obtiene el funtor covariante
+aditivo
+\[
+  T_{(B)}:
+  \cat{Ab}_B
+  \xrightarrow{\rho_*}
+  \cat{Ab}_A
+  \xrightarrow{T}
+  \cat{Ab}.
+\]
+Por razones tipográficas, este funtor se denota también por
+$T^{(B)}$ o por $T\otimes_AB$, y se dice que se obtiene de $T$ por
+extensión de escalares de $A$ a $B$.
+
+Si $B$ es conmutativa, $T_{(B)}$ puede considerarse, por supuesto,
+como un funtor de $\cat{Ab}_B$ en sí misma
+\sref{III.7.1.2}. Si $B$ es conmutativa y $C$ es una $B$-álgebra,
+entonces
+\[
+  T_{(C)}=(T_{(B)})_{(C)}.
+\]
+La extensión de escalares es manifiestamente funtorial y aditiva
+en $T$. Además, si $T$ conmuta con los límites inductivos o con las
+sumas directas, lo mismo ocurre con $T_{(B)}$; y si $T$ es exacto
+por la izquierda, exacto por la derecha o exacto,
+respectivamente, lo mismo vale para $T_{(B)}$. En efecto,
+$\rho_*$ es exacto y conmuta con los límites inductivos y las sumas
+directas.
+\end{env}
+
+\begin{env}[7.1.4]
+\label{III.7.1.4}
+Supongamos de nuevo que $A$ es conmutativo, y sea
+\[
+  T:\cat{Ab}_A\longrightarrow\cat{Ab}_A
+\]
+un funtor covariante aditivo $A$-lineal que conmuta con los
+límites inductivos. Para toda parte multiplicativa $S$ de $A$ y
+todo $A$-módulo $M$, existe un isomorfismo canónico funtorial de
+$A$-módulos
+\begin{env}[7.1.4.1]
+\label{III.7.1.4.1}
+\[
+  T(S^{-1}M)
+  \xrightarrow{\sim}
+  S^{-1}T(M).
+  \tag{7.1.4.1}\label{III.7.1.4.1.eq}
+\]
+\end{env}
+
+Supongamos primero que $S$ es el conjunto de las potencias $f^n$,
+$n\geq0$, de un elemento $f\in A$. Entonces
+\[
+  M_f=\varinjlim M_n,
+\]
+donde $(M_n,\vphi_{nm})$ es el sistema inductivo de $A$-módulos
+con $M_n=M$ y
+\[
+  \vphi_{nm}:z\longmapsto f^{\,n-m}z
+  \qquad\text{\sref[0]{0.1.6.1}}.
+\]
+La fórmula \eqref{III.7.1.4.1.eq} se deduce en este caso de la
+hipótesis sobre $T$. Para $S$ arbitraria, el módulo $S^{-1}M$ es
+el límite inductivo de los $M_f$, para $f\in S$
+\sref[0]{0.1.4.5}, y se aplica el mismo razonamiento.
+
+La funtorialidad de \eqref{III.7.1.4.1.eq} muestra además que se
+trata de un isomorfismo de $S^{-1}A$-módulos. Así, salvo
+isomorfismo canónico, se puede escribir
+\begin{env}[7.1.4.2]
+\label{III.7.1.4.2}
+\[
+  T_{(S^{-1}A)}(S^{-1}M)
+  =
+  S^{-1}T(M)
+  =
+  T(S^{-1}M).
+  \tag{7.1.4.2}\label{III.7.1.4.2.eq}
+\]
+\end{env}
+Si $S=A-\mathfrak p$ es el complementario de un ideal primo
+$\mathfrak p$ de $A$, se escribe $T_{\mathfrak p}$ en lugar de
+$T_{(A_{\mathfrak p})}$.
+\end{env}
+
+\begin{proposition}[7.1.5]
+\label{III.7.1.5}
+Bajo las hipótesis de \sref{III.7.1.4}, supongamos que
+$T_{\mathfrak m}$ es exacto por la izquierda, respectivamente
+exacto por la derecha o exacto, para todo ideal maximal
+$\mathfrak m$ de $A$. Entonces $T$ es exacto por la izquierda,
+respectivamente exacto por la derecha o exacto.
+\end{proposition}
+
+\begin{proof}
+Si dos submódulos $N$ y $P$ de un $A$-módulo $M$ satisfacen
+\[
+  N_{\mathfrak m}=P_{\mathfrak m}
+\]
+para todo ideal maximal $\mathfrak m$ de $A$, entonces $N=P$
+(Bourbaki, \emph{Algèbre commutative}, cap.~II, \S~3,
+n.º~3, teo.~1).
+\end{proof}

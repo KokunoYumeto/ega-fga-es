@@ -1,0 +1,59 @@
+\subsection{Caracterizaciones de los morfismos étale}
+\label{subsection:IV.17.6}
+
+\begin{theorem}[17.6.1]
+\label{IV.17.6.1}
+Sean $f:X\to Y$ un morfismo localmente de presentación finita, $x$ un punto de $X$, $y=f(x)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es étale en el punto $x$.
+  \item[a')] $f$ es liso en el punto $x$ y no ramificado en el punto $x$.
+  \item[b)] $f$ es liso en el punto $x$ y cuasifinito en el punto $x$ (Err$_{\mathrm{III}}$, 20).
+  \item[c)] $f$ es plano en el punto $x$ y no ramificado en el punto $x$.
+  \item[c')] $f$ es plano en el punto $x$ y el anillo $\sh{O}_{X,x}/\mathfrak m_y\sh{O}_{X,x}$ es un cuerpo, extensión finita separable de $k(y)$.
+  \item[d)] El anillo $\sh{O}_{X,x}$ es una $\sh{O}_{Y,y}$-álgebra formalmente étale para las topologías discretas.
+\end{enumerate}
+\end{theorem}
+
+La equivalencia de a) y a') resulta inmediatamente de las definiciones; la de a) y d) resulta de la equivalencia de a) y e) en (17.4.1) y de la equivalencia de a) y d) en (17.5.1). La equivalencia de c) y c') resulta de la equivalencia de a) y d') en (17.4.1). El hecho de que a') implique c') se deduce de (17.5.1); recíprocamente, si se verifica c'), $f$ es regular (por tanto liso por (17.5.1)) en el punto $x$, pues si $K$ es una extensión finita separable de un cuerpo $k$, entonces, para toda extensión $k'$ de $k$, $\Spec(K\otimes_k k')$ es regular, ya que es suma de un número finito de espectros de cuerpos. El hecho de que a') implique b) resulta de (17.4.1, d')) y de (17.5.1, b)). Resta, pues, ver que b) implica c), y como ya se sabe que $f$ es plano en el punto $x$ por (17.5.1), basta demostrar que $f^{-1}(y)$ es un $k(y)$-preesquema no ramificado sobre $k(y)$; es decir, se reduce a demostrar que b) implica c) cuando $Y=\Spec(k)$ es el espectro de un cuerpo $k$. Como la cuestión es local sobre $X$, se puede restringir al caso en que $X=\Spec(A)$, donde $A$ es una $k$-álgebra finita y local ($0_{\mathrm I}$, 7.4.1). En virtud de la hipótesis b), $A$ es una $k$-álgebra formalmente lisa para las topologías discretas, que aquí coinciden con las topologías preádicas; por tanto (0, 19.6.5), $A$ es un anillo local regular, y así
+
+\oldpage[IV-4]{71}
+un cuerpo, puesto que es artiniano, y resulta entonces de (0, 19.6.5.1) que $A$ debe ser una extensión finita y separable de $k$, lo que concluye la demostración (17.4.1).
+
+\begin{corollary}[17.6.2]
+\label{IV.17.6.2}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es étale.
+  \item[a')] $f$ es liso y no ramificado.
+  \item[b)] $f$ es liso y localmente cuasifinito (Err$_{\mathrm{III}}$, 20).
+  \item[c)] $f$ es plano y no ramificado.
+  \item[c')] $f$ es plano, y toda fibra $f^{-1}(y)$ es un $k(y)$-esquema que es suma de espectros de cuerpos, extensiones finitas y separables de $k(y)$.
+  \item[c'')] $f$ es plano, y para todo $y\in Y$ y toda extensión algebraicamente cerrada $k'$ de $k(y)$, la «fibra geométrica» $f^{-1}(y)\otimes_{k(y)}k'$ es suma de espectros de cuerpos isomorfos a $k'$.
+\end{enumerate}
+\end{corollary}
+
+El único punto que queda por demostrar es la equivalencia de c') y c''). Es claro que c') implica c'') por cambio de base (17.3.3). Por otra parte, como el morfismo de proyección $f^{-1}(y)\otimes_{k(y)}k'\to f^{-1}(y)$ es abierto (2.4.10), la hipótesis c'') implica que el espacio $f^{-1}(y)$ es discreto; por tanto, para todo punto $x\in X_y=f^{-1}(y)$, el anillo local $\sh{O}_{X_y,x}=A$ es una $k(y)$-álgebra finita y, por tanto, un anillo local artiniano; además, de c'') resulta que $\Spec(A\otimes_{k(y)}k')$ es suma de espectros de cuerpos isomorfos a $k'$, lo cual solo es posible si $A$ es un cuerpo, extensión finita separable de $k(y)$ (4.6.1).
+
+\begin{proposition}[17.6.3]
+\label{IV.17.6.3}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Pongamos $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, que son anillos locales noetherianos, y sea $k$ el cuerpo residual de $A$. Entonces las condiciones equivalentes a) a d) de (17.6.1) son también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[e)] $\widehat B$ es una $\widehat A$-álgebra formalmente étale para las topologías ádicas.
+  \item[e')] $\widehat B$ es un $\widehat A$-módulo libre y $\widehat B\otimes_{\widehat A}k$ es un cuerpo, extensión finita y separable de $k$ (lo que implica que $\widehat B$ es una $\widehat A$-álgebra finita).
+\end{enumerate}
+Si además $k(x)=k(y)$, o si $k$ es separablemente cerrado, estas condiciones también equivalen a:
+\begin{enumerate}
+  \item[e'')] El homomorfismo canónico $\widehat A\to\widehat B$ es biyectivo.
+\end{enumerate}
+\end{proposition}
+
+La equivalencia de e) y de cada una de las condiciones de (17.6.1) resulta inmediatamente de (17.4.4, f')) y (17.5.3, d')). El hecho de que e) implique e') resulta de (17.4.4, f)) y de (0, 19.7.1), teniendo en cuenta que $\widehat B$ es entonces una $\widehat A$-álgebra finita (17.4.4) y que, por tanto, equivale a decir que $\widehat B$ es un $\widehat A$-módulo plano o un $\widehat A$-módulo libre ($0_{\mathrm{III}}$, 10.1.3). Recíprocamente, el hecho de que e') implique e) resulta de (17.4.4) y de (0, 19.7.1). Finalmente, e') implica que el homomorfismo $\widehat A\to\widehat B$ es inyectivo, y si $k(x)=k(y)$ o si $k$ es separablemente cerrado, este homomorfismo es sobreyectivo por (17.4.4). El recíproco es inmediato.
+
+\begin{proposition}[17.6.4]
+\label{IV.17.6.4}
+Bajo las hipótesis de (17.6.3), si $f$ es étale en el punto $x$, se tiene $\dim(\sh{O}_{X,x})=\dim(\sh{O}_{Y,y})$.
+\end{proposition}
+
+Es un caso particular de (17.5.8, (i)), puesto que $x$ está aislado en su fibra $f^{-1}(y)$.
+
+\oldpage[IV-4]{72}

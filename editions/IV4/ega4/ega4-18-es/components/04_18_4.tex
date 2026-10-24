@@ -1,0 +1,198 @@
+\subsection{Estructura local de los morfismos no ramificados y de los morfismos étales.}
+\label{subsection:IV.18.4}
+
+\oldpage[IV-4]{118}
+
+\begin{lemma}[18.4.1]
+\label{IV.18.4.1}
+Sean $A$ un anillo, $B$ una $A$-álgebra finita monógena, $u$ un generador de la $A$-álgebra $B$, $F\in A[T]$ un polinomio tal que $F(u)=0$, y $F'$ el polinomio derivado; pongamos $u'=F'(u)$. Entonces el ideal de $B$ que anula $\Omega^1_{B/A}$ contiene $u'B$; es igual a $u'B$ si el ideal $\mathfrak J$ de $A[T]$ formado por los polinomios $G$ tales que $G(u)=0$ está generado por $F$, es decir, si el homomorfismo canónico sobreyectivo $\varphi:A[T]/F.A[T]\to B$ que envía la imagen de $T$ a $u$ es biyectivo.
+\end{lemma}
+
+Pongamos $C=A[T]$, de modo que $B=C/\mathfrak J$. Se tiene la sucesión exacta (0, 20.5.12.1)
+\[
+  \mathfrak J/\mathfrak J^2\longrightarrow\Omega^1_{C/A}\otimes_C B\longrightarrow\Omega^1_{B/A}\longrightarrow 0
+\]
+y $\Omega^1_{B/A}$ se identifica, por tanto, con el cociente $B/\mathfrak J'$, siendo $\mathfrak J'$ el ideal generado por los elementos $G'(u)$, donde $G$ recorre un sistema de generadores del ideal $\mathfrak J$ (0, 20.5.13); de aquí se sigue inmediatamente el lema.
+
+\begin{proposition}[18.4.2]
+\label{IV.18.4.2}
+Con las notaciones de (18.4.1), sea $\mathfrak q$ un ideal primo de $B$. Entonces:
+\begin{enumerate}
+  \item[(i)] Si $\mathfrak q$ no contiene a $u'$, $B_{\mathfrak q}$ es una $A_{\mathfrak p}$-álgebra formalmente no ramificada (siendo $\mathfrak p$ la imagen inversa de $\mathfrak q$ en $A$); en otras palabras, $\Spec(B_{u'})$ es formalmente no ramificado sobre $\Spec(A)$.
+  \item[(ii)] Supongamos además que $F$ es mónico y genera $\mathfrak J$. Entonces, para que $\Spec(B)$ sea étale sobre $\Spec(A)$ en el punto $\mathfrak q$, es necesario y suficiente que $u'\notin\mathfrak q$.
+\end{enumerate}
+\end{proposition}
+
+La hipótesis $u'\notin\mathfrak q$ implica que $\Omega^1_{B_{\mathfrak q}/A_{\mathfrak p}}=0$ (0, 20.5.9), por lo que (i) se sigue de (17.2.1). Además, bajo las hipótesis de (ii), $B$ es un $A$-módulo libre en virtud de la división euclídea; como el anulador $\mathfrak J'$ de $\Omega^1_{B/A}$ es entonces igual a $u'B$ en virtud de (18.4.1) y $\Omega^1_{B/A}$ es un $B$-módulo de presentación finita (16.4.22), el anulador de $\Omega^1_{B_{\mathfrak q}/A_{\mathfrak p}}$ es igual a $u'B_{\mathfrak q}$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~2, n.\textsuperscript{o}~4, fórmula (9)), y (ii) se sigue, por tanto, de (i) y de la implicación $c)\Rightarrow a)$ en (17.6.1).
+
+\begin{corollary}[18.4.3]
+\label{IV.18.4.3}
+Con las notaciones de (18.4.2), supongamos que $F$ es mónico y genera $\mathfrak J$. Entonces, para que $B$ sea una $A$-álgebra étale, es necesario y suficiente que $u'$ sea invertible en $B$ (o, lo que equivale a lo mismo, que el ideal de $A[T]$ generado por $F$ y $F'$ sea igual a $A[T]$).
+\end{corollary}
+
+Habida cuenta de (18.4.2), (ii), decir que $\Spec(B)$ es étale sobre $\Spec(A)$ significa, en efecto, que $u'$ no pertenece a ningún ideal primo de $B$, es decir, que es invertible en $B$.
+
+Se dice que un polinomio mónico $F\in A[T]$ tal que el ideal de $A[T]$ generado por $F$ y $F'$ sea igual al propio $A[T]$ es \emph{separable}; es inmediato que esta definición coincide con la definición usual (Bourbaki, \emph{Alg.}, cap. V, \textsection~7, n.\textsuperscript{o}~6) cuando $A$ es un cuerpo.
+
+\begin{lemma}[18.4.4]
+\label{IV.18.4.4}
+Sean $A$ un anillo local, $B$ una $A$-álgebra finita monógena y $u$ un generador de la $A$-álgebra $B$. Sean $\mathfrak n_i$ ($1\leq i\leq r$) ideales maximales de $B$ tales que $\Spec(B)$ sea formalmente no ramificado sobre $\Spec(A)$ en los puntos $\mathfrak n_i$. Entonces existe un polinomio mónico $F\in A[T]$ tal que $F(u)=0$ y $F'(u)\notin\mathfrak n_i$ para todo índice $i$ ($1\leq i\leq r$). Además, si $k$ es el cuerpo
+
+\oldpage[IV-4]{119}
+
+residual de $A$, $f\in k[T]$ el polinomio minimal de la imagen de $u$ en $B\otimes_A k$, existe un $F\in A[T]$ cuya imagen canónica es $f$ y tal que $F(u)=0$; tal polinomio $F$ satisface las condiciones $F'(u)\notin\mathfrak n_i$ para $1\leq i\leq r$.
+\end{lemma}
+
+El ideal maximal $\mathfrak m$ de $A$ es la imagen inversa de cada uno de los $\mathfrak n_i$ (II, 6.1.10); sea $L=B\otimes_A k$, que es una $k$-álgebra finita. Sea $\xi$ la imagen de $u$ en $L$, y sea $n$ el rango de $L$ sobre $k$; el polinomio minimal $f\in k[T]$ de $\xi$ sobre $k$ es, por tanto, de grado $n$, y $L$ es isomorfa a $k[T]/f.k[T]$. Si $\mathfrak n'_i=\mathfrak n_i/\mathfrak mB$, la hipótesis implica que $\Spec(L)$ es étale sobre $k$ en los puntos $\mathfrak n'_i$ ($1\leq i\leq r$) en virtud de (17.6.1, $c)$), y por tanto $f'(\xi)\notin\mathfrak n'_i$ en virtud de (18.4.2, (ii)). Observemos ahora que $\mathfrak mB$ está contenido en el radical de $B$; como $1,\xi,\ldots,\xi^{n-1}$ forman una base de $L$ sobre $k$, se sigue del lema de Nakayama que $1,u,\ldots,u^{n-1}$ generan el $A$-módulo $B$ y, por consiguiente, existe un polinomio mónico $F\in A[T]$ de grado $n$ tal que $F(u)=0$; además, como $\xi$ es raíz de la imagen canónica de $F$ en $k[T]$, esta imagen es necesariamente igual a $f$. Pero entonces la imagen de $F'(u)$ en $L$ es $f'(\xi)$ y, como $f'(\xi)\notin\mathfrak n'_i$, se tiene $F'(u)\notin\mathfrak n_i$ para todo $i$.
+
+\begin{proposition}[18.4.5]
+\label{IV.18.4.5}
+Sean $A$ un anillo local, $k$ su cuerpo residual y $B$ una $A$-álgebra finita (resp. finita y de presentación finita). Se supone además, o bien que el cuerpo $k$ es infinito, o bien que $B$ es un anillo local. Sea $n$ el rango de $L=B\otimes_A k$ sobre $k$. Para que $B$ sea una $A$-álgebra formalmente no ramificada (resp. étale), es necesario y suficiente que exista un polinomio mónico separable $F\in A[T]$ (18.4.3) tal que $B$ sea isomorfa a un cociente de $A[T]/F.A[T]$ (resp. isomorfa a $A[T]/F.A[T]$). Además, se puede suponer que $F$ es de grado $n$ (resp. $F$ es necesariamente de grado $n$).
+\end{proposition}
+
+Las condiciones son suficientes en virtud de (18.4.2), sin suponer que $k$ sea infinito ni que $B$ sea local. Para ver que las condiciones son necesarias, observemos que, si $B$ es una $A$-álgebra formalmente no ramificada, $L$ es un álgebra finita y separable sobre $k$, y por tanto un producto directo de un número finito de extensiones finitas y separables $k_j$ de $k$ ($1\leq j\leq r$), siendo $k_j$ generada por un elemento $\xi_j$, de polinomio minimal $f_j$ ($1\leq j\leq r$) (Bourbaki, \emph{Alg.}, cap. V, \textsection~11, n.\textsuperscript{o}~4, prop. 4). Demostremos que, en virtud de las hipótesis formuladas sobre $k$ o $B$, existe un elemento $\xi$ de $L$ que genera la $k$-álgebra $L$. Esto es inmediato si $B$ es local, pues entonces $r=1$. En caso contrario, como $k$ se supone infinito, se puede suponer que los polinomios irreducibles $f_j\in k[T]$ son todos \emph{distintos} (sustituyendo, si es preciso, cada $\xi_j$ por $\xi_j+a_j$, para un elemento adecuado $a_j\in k$); si se pone $f=f_1f_2\cdots f_r$, es claro que $L$ es isomorfa a $k[T]/f.k[T]$ en los dos casos considerados y, por tanto, está generada por un elemento $\xi$ de polinomio minimal $f\in k[T]$ de grado $n$. Si $u\in B$ es un elemento de imagen $\xi$ en $L$, el lema de Nakayama muestra que los elementos $1,u,\ldots,u^{n-1}$ generan el $A$-módulo $B$; esto muestra ya que existe un polinomio mónico $F\in A[T]$ de grado $n$ tal que $F(u)=0$, y $u$ genera la $A$-álgebra $B$, que es, por consiguiente, isomorfa a un álgebra cociente de $A[T]/F.A[T]$; además, $B$ es un anillo semilocal y, en cada uno de sus ideales maximales $\mathfrak n_i$, se tiene $F'(u)\notin\mathfrak n_i$ por (18.4.4), lo que demuestra que $F'(u)$ es invertible en $B$ y, por tanto, que $F$ es un polinomio \emph{separable}. Finalmente, si $B$ es una $A$-álgebra étale, como $B$ es un $A$-módulo plano de presentación finita (1.4.7), es un $A$-módulo libre, y $1,u,\ldots,u^{n-1}$ forman una base del $A$-módulo $B$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~3, n.\textsuperscript{o}~2, prop. 5); en otras palabras, la $A$-álgebra $B$ es
+
+\oldpage[IV-4]{120}
+
+isomorfa a $A[T]/F.A[T]$, y para todo otro polinomio mónico $G\in A[T]$ tal que $B$ sea isomorfa a $A[T]/G.A[T]$, $G$ es necesariamente de grado $n$.
+
+\begin{theorem}[18.4.6]
+\label{IV.18.4.6}
+(Chevalley). ---
+\begin{enumerate}
+  \item[(i)] Sean $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$, y pongamos $A=\sh{O}_{Y,y}$. Para que $\sh{O}_{X,x}$ sea una $A$-álgebra formalmente étale (resp. formalmente no ramificada), es necesario y suficiente que existan un polinomio mónico $F\in A[T]$ y un ideal maximal $\mathfrak n$ de $B=A[T]/F.A[T]$ (resp. de un álgebra cociente $B$ de $A[T]/F.A[T]$) tales que $\sh{O}_{X,x}$ sea $A$-isomorfa a $B_{\mathfrak n}$ y que, si $u$ es la imagen de $T$ en $B$, se tenga $F'(u)\notin\mathfrak n$.
+  \item[(ii)] Supongamos además que $f$ sea localmente de presentación finita. Entonces, para que $f$ sea étale en el punto $x$, es necesario y suficiente, además, que se pueda tomar $B=A[T]/F.A[T]$.
+\end{enumerate}
+\end{theorem}
+
+Las condiciones son suficientes en virtud de (18.4.2). Para ver que son necesarias, se puede evidentemente reducir al caso en que $X$ e $Y$ son afines y, habida cuenta de la observación (17.4.1.2), al caso en que $f$ es formalmente no ramificado y cuasifinito. Como $f$ es afín, se sigue de (8.12.8) que existen una $A$-álgebra finita $C$ y un ideal maximal $\mathfrak r$ de $C$ (necesariamente sobre el ideal maximal $\mathfrak m$ de $A$) tales que $\sh{O}_{X,x}$ sea $A$-isomorfa a $C_{\mathfrak r}$. Además (17.4.1.2), el cuerpo residual $C/\mathfrak r=C_{\mathfrak r}/\mathfrak rC_{\mathfrak r}$ es una extensión finita separable de $k=A/\mathfrak m$, y por tanto de la forma $k[v]$, donde $v$ es \emph{separable} sobre $k$. Sean $\mathfrak r_i$ ($1\leq i\leq h$) los ideales maximales del anillo semilocal $C$ \emph{distintos} de $\mathfrak r$; existe un elemento $u\in C$ perteneciente a todos los $\mathfrak r_i$ y tal que su imagen en $C/\mathfrak r$ sea igual a $v$ (Bourbaki, \emph{Alg. comm.}, cap. II, \textsection~1, n.\textsuperscript{o}~2, prop. 5). Vamos a demostrar que la sub-$A$-álgebra $B=A[u]$ de $C$ y el ideal (necesariamente maximal puesto que $C$ es finita sobre $B$) $\mathfrak n=\mathfrak r\cap B$ de $B$ satisfacen lo requerido.
+
+Para tratar el caso en que $\sh{O}_{X,x}$ es una $A$-álgebra formalmente no ramificada, bastará demostrar que $B_{\mathfrak n}$ es isomorfa a $C_{\mathfrak r}$; en efecto, $B_{\mathfrak n}$ será entonces formalmente no ramificada sobre $A$ y la existencia del polinomio $F\in A[T]$ que tiene las propiedades del enunciado se seguirá de (18.4.4). Observemos ahora que, puesto que $f$ es formalmente no ramificado, $C/\mathfrak r$ es isomorfa a la $A$-álgebra $C_{\mathfrak r}/\mathfrak mC_{\mathfrak r}$ (17.4.1.2). La cuestión queda así reducida a demostrar el lema siguiente:
+
+\begin{lemma}[18.4.6.1]
+\label{IV.18.4.6.1}
+Sean $A$ un anillo local, $\mathfrak m$ su ideal maximal, $C$ una $A$-álgebra finita y $\mathfrak r$ un ideal maximal de $C$. Sea $u$ un elemento de $C$ que pertenece a todos los ideales maximales de $C$ distintos de $\mathfrak r$, que no pertenece a $\mathfrak r$, y tal que $C_{\mathfrak r}/\mathfrak mC_{\mathfrak r}$ sea un álgebra monógena sobre $k=A/\mathfrak m$, generada por la imagen de $u$ en $C_{\mathfrak r}/\mathfrak mC_{\mathfrak r}$. Pongamos $B=A[u]$, $\mathfrak n=\mathfrak r\cap B$. Entonces el homomorfismo canónico $B_{\mathfrak n}\to C_{\mathfrak r}$ es un isomorfismo.
+\end{lemma}
+
+Pongamos $R=B-\mathfrak n$, $S=C-\mathfrak r$, de modo que $B_{\mathfrak n}=R^{-1}B$ y $C_{\mathfrak r}=S^{-1}C$; el homomorfismo canónico $B_{\mathfrak n}\to C_{\mathfrak r}$ puede escribirse como el compuesto
+\[
+  R^{-1}B\xrightarrow{g}R^{-1}C\xrightarrow{h}S^{-1}C
+\]
+y basta demostrar que cada uno de estos dos homomorfismos es biyectivo.
+
+Demostremos primero que $h:R^{-1}C\to S^{-1}C=C_{\mathfrak r}$ es biyectivo; basta ver que las imágenes en $R^{-1}C$ de los elementos de $S$ son invertibles, o también que todo ideal maximal $\mathfrak p$ de $R^{-1}C$ tiene una imagen inversa en $C$ disjunta de $S$ y, por tanto, necesariamente igual a $\mathfrak r$. Ahora bien, como $R^{-1}C$ es una $(R^{-1}B)$-álgebra finita, la imagen inversa de $\mathfrak p$ en
+
+\oldpage[IV-4]{121}
+
+$R^{-1}B=B_{\mathfrak n}$ es el único ideal maximal $\mathfrak nB_{\mathfrak n}$ de este anillo, de modo que la imagen inversa de $\mathfrak p$ en $B$ es igual a $\mathfrak n$. Por otra parte, si $\mathfrak q$ es la imagen inversa de $\mathfrak p$ en $C$, se tiene $\mathfrak q\cap B=\mathfrak n$, y como $\mathfrak n$ es maximal en $B$ y $C$ una $B$-álgebra finita, $\mathfrak q$ es necesariamente uno de los ideales maximales de $C$; además, se tiene $u\notin\mathfrak q$ puesto que $u\notin\mathfrak r$ y $u\in B$, por lo que, por hipótesis, se tiene necesariamente $\mathfrak q=\mathfrak r$.
+
+Por otra parte, como $B\subset C$, el homomorfismo $g:R^{-1}B\to R^{-1}C$ es inyectivo ($0_{\mathrm I}$, 1.3.2); para ver que es sobreyectivo, observemos que $R^{-1}C$ es un $(R^{-1}B)$-módulo de tipo finito y, por otra parte, que $\mathfrak mR^{-1}B$ está contenido en el ideal maximal del anillo local $R^{-1}B$; en virtud del lema de Nakayama, basta demostrar que el homomorfismo
+\[
+  R^{-1}B/\mathfrak mR^{-1}B\longrightarrow R^{-1}C/\mathfrak mR^{-1}C
+\]
+es sobreyectivo. Pero, en virtud de la primera parte de la demostración, $R^{-1}C/\mathfrak mR^{-1}C$ se identifica con $C_{\mathfrak r}/\mathfrak mC_{\mathfrak r}$; por hipótesis, esta $k$-álgebra está generada por la imagen de $u$ y, \emph{a fortiori}, es igual a la imagen de $R^{-1}B/\mathfrak mR^{-1}B$.
+
+Consideremos en segundo lugar el caso en que $f$ es étale en el punto $x$. Sustituyendo $X$ por un entorno de $x$, se puede suponer que $X$ es un entorno de $\mathfrak n$ en $\Spec(B)$ (I, 7.2). Pongamos $B'=A[T]/F.A[T]$ y sea $\mathfrak n'$ la imagen inversa de $\mathfrak n$ en $B'$; como la imagen de $F'(T)$ en $B'$ no pertenece a $\mathfrak n'$ por hipótesis, el morfismo $\Spec(B')\to\Spec(A)$ es étale en el punto $\mathfrak n'$ por (18.4.2, (ii)). Como, por hipótesis, $\Spec(B)\to\Spec(A)$ es étale en el punto $\mathfrak n$, se concluye (17.3.4) que $\Spec(B)\to\Spec(B')$ es étale en el punto $\mathfrak n$; pero como este morfismo es una inmersión, solo puede ser étale en un punto si es un isomorfismo local en dicho punto (17.9.1), por lo que $B_{\mathfrak n}$ y $B'_{\mathfrak n'}$ son isomorfos.
+
+Finalmente, supongamos que $\sh{O}_{X,x}$ es una $A$-álgebra formalmente étale; con las notaciones anteriores, se sigue de (17.1.5) que $B_{\mathfrak n}$ es una $B'_{\mathfrak n'}$-álgebra formalmente étale; pero, como el homomorfismo $B'_{\mathfrak n'}\to B_{\mathfrak n}$ es sobreyectivo, esto solo puede ocurrir si dicho homomorfismo es \emph{biyectivo} (0, 19.10.3, (i)). Esto termina la demostración de (18.4.6).
+
+\begin{corollary}[18.4.7]
+\label{IV.18.4.7}
+Sean $f:X\to Y$ un morfismo localmente de tipo finito y $x$ un punto de $X$. Para que $f$ sea formalmente no ramificado en el punto $x$, es necesario y suficiente que exista un entorno abierto $U$ de $x$ tal que $f|U$ se factorice como $U\xrightarrow{j}X'\xrightarrow{h}Y$, donde $h$ es un morfismo étale y $j$ una inmersión cerrada.
+\end{corollary}
+
+Se puede evidentemente reducir al caso en que $Y=\Spec(R)$ es afín y $f$ de tipo finito. Si $A=\sh{O}_{Y,y}$, con $y=f(x)$, la condición para que $f$ sea formalmente no ramificado en el punto $x$ equivale, en virtud de (17.4.1.2), a decir que $\sh{O}_{X,x}$ es una $A$-álgebra formalmente no ramificada. Si así ocurre, se puede aplicar (18.4.6, (i)); sustituyendo, si es preciso, $Y$ por un entorno afín de $y$, se puede suponer (con las notaciones de (18.4.6)) que el polinomio $F$ es la imagen en $A[T]$ de un polinomio mónico $G\in R[T]$. Pongamos entonces $X'=\Spec(R[T]/G.R[T])$; sea $x'$ la imagen del punto $\mathfrak n$ de $\Spec(B)$ por el morfismo correspondiente al homomorfismo compuesto $R[T]/G.R[T]\to A[T]/F.A[T]\to B$. Se sigue de (18.4.2) que el morfismo $h:X'\to Y$ correspondiente al homomorfismo canónico $R\to R[T]/G.R[T]$ es étale en el punto $x'$, de modo que, restringiendo si es preciso $X'$ e $Y$ a entornos abiertos de $x'$ e $y$, respectivamente, se puede suponer que $h$ es étale. Por otra parte, en virtud de (I, 6.5.1, (ii)) y de (I, 7.2), del hecho de que se tiene un homomorfismo local $\varphi:\sh{O}_{X',x'}\to\sh{O}_{X,x}$ se sigue que este homomorfismo corresponde a un morfismo
+
+\oldpage[IV-4]{122}
+
+$j:U\to X'$ de un entorno abierto $U$ de $x$ en $X$; restringiendo, si es preciso, $U$, se puede, aplicando (I, 6.5.1, (i)), suponer que $h\circ j=f|U$, de modo que $j$ es de tipo finito (I, 6.3.4, (v)); finalmente, el homomorfismo $\varphi$ es sobreyectivo por (18.4.6, (i)), por lo que se sigue de (I, 6.5.4, (i)) que se puede, restringiendo aún más $U$ y $X'$, suponer que $j$ es una inmersión cerrada. Esto demuestra la necesidad de la condición enunciada; su suficiencia es inmediata (17.1.3, (i) y (ii)).
+
+\begin{corollary}[18.4.8]
+\label{IV.18.4.8}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita. Para que $f$ sea no ramificado (resp. étale), es necesario y suficiente que exista una familia de morfismos planos $g_\alpha:Y'_\alpha\to Y$ y, para cada $\alpha$, un abierto $U_\alpha$ en $X'_\alpha=X\times_Y Y'_\alpha$, tales que, si $g'_\alpha:X'_\alpha\to X$ y $f'_\alpha:X'_\alpha\to Y'_\alpha$ son las proyecciones canónicas, los $g'_\alpha(U_\alpha)$ formen un recubrimiento de $X$, y que cada uno de los morfismos compuestos $U_\alpha\to X'_\alpha\xrightarrow{f'_\alpha}Y'_\alpha$ sea una inmersión cerrada (resp. abierta). Se pueden tomar además los $g_\alpha$ étales.
+\end{corollary}
+
+La necesidad de la condición para los morfismos étales es trivial, tomando un único $Y'_\alpha$ igual a $X$, siendo el morfismo $g_\alpha$ correspondiente igual a $f$, y el abierto $U\subset X\times_Y X$ la diagonal. Cuando $f$ es no ramificado, la necesidad de la condición se sigue de (18.4.7); se toma un recubrimiento abierto $(V_\alpha)$ de $X$ tal que, para cada $\alpha$, $f|V_\alpha$ se factorice como $V_\alpha\xrightarrow{j_\alpha}Y'_\alpha\xrightarrow{g_\alpha}Y$, donde $j_\alpha$ es una inmersión cerrada y $g_\alpha$ un morfismo étale. Entonces $j_\alpha:V_\alpha\to Y'_\alpha$ se factoriza como $V_\alpha\xrightarrow{s_\alpha}X'_\alpha\xrightarrow{f'_\alpha}Y'_\alpha$, donde $s_\alpha$ es una $V_\alpha$-sección de $X'_\alpha$, y como el morfismo $g'_\alpha:X'_\alpha\to X$ es étale, $s_\alpha$ es una inmersión abierta (17.4.1), y basta tomar $U_\alpha=s_\alpha(V_\alpha)$ para obtener lo requerido.
+
+La suficiencia de las condiciones se sigue de (17.7.1); se concluye que $f$ es no ramificado (resp. étale) en cada punto de $g'_\alpha(U_\alpha)$ y, por tanto, en todo $X$, puesto que los $g'_\alpha(U_\alpha)$ recubren $X$.
+
+\begin{proposition}[18.4.9]
+\label{IV.18.4.9}
+Sean $S$ un preesquema, $f:X\to S$ un morfismo, $h:Y\to S$ un morfismo localmente de presentación finita, $g:X\to Y$ un $S$-morfismo, $x$ un punto de $X$, y $y=g(x)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $h$ es étale en el punto $y$ y $g$ es plano en el punto $x$.
+  \item[b)] $h$ es no ramificado en el punto $y$ y $f$ es plano en el punto $x$.
+\end{enumerate}
+\end{proposition}
+
+Como $f=h\circ g$, $a)$ implica que $f$ es plano en el punto $x$ (2.1.6), y evidentemente que $h$ es no ramificado en el punto $y$, por lo que $a)$ implica $b)$.
+
+Para demostrar que $b)$ implica $a)$, se puede suponer primero que $h$ es no ramificado (sustituyendo $Y$ por un entorno de $y$); después, sustituyendo $S$ por un entorno abierto de $s=h(y)=f(x)$, se puede suponer que existen un morfismo étale $u:S'\to S$, un punto $y'$ de $Y'=Y_{(S')}$ sobre $y$ y un entorno abierto $V$ de $y'$ en $Y'$ tal que, si $h'=h_{(S')}:Y'\to S'$, la restricción de $h'$ a $V$ sea una inmersión cerrada (18.4.8). Si se demuestra entonces que $h'$ es étale en el punto $y'$, se seguirá que $h$ es étale en el punto $y$ (17.7.1, (ii)); además, $f'=f_{(S')}:X_{(S')}\to S'$ es plano en todo punto $x'$ sobre $x$. Como las proyecciones $v:Y'\to Y$, $w:X'\to X$ son morfismos étales (y por tanto planos), si se demuestra que $g'=g_{(S')}:X_{(S')}\to Y_{(S')}$ es plano en el punto $x'$, se seguirá de (2.2.11, (iv)) que $g$ será plano en el punto $x$. Se puede, por tanto, reducir al caso en que $h$ es una \emph{inmersión cerrada}
+
+\oldpage[IV-4]{123}
+
+de presentación finita, suponiéndose que $f$ es plano en el punto $x$. Sea $\mathscr J$ el ideal cuasicoherente de tipo finito de $\sh{O}_S$ que define el subpreesquema cerrado $Y$ de $S$. La hipótesis de que $f$ es plano en el punto $x$ implica que el homomorfismo $\sh{O}_{S,s}\to\sh{O}_{X,x}$ es inyectivo ($0_{\mathrm I}$, 6.5.1); \emph{a fortiori}, el homomorfismo $\sh{O}_{S,s}\to\sh{O}_{Y,y}$ es inyectivo, lo que significa que $\mathscr J_s=0$, puesto que es el núcleo del homomorfismo anterior. Como $\mathscr J$ es de tipo finito, existe un entorno abierto $U$ de $s$ en $S$ tal que $\mathscr J|U=0$ ($0_{\mathrm I}$, 5.2.2). Se puede, por tanto, suponer que $h$ es una inmersión abierta, y entonces es claro que $g$ es plano en el punto $x$.
+
+\begin{proposition}[18.4.10]
+\label{IV.18.4.10}
+Designemos por $\mathbf P(f,x)$ una propiedad que satisface las condiciones siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] Para todo morfismo $f:X\to Y$ y todo isomorfismo local $h:Y\to Z$, $\mathbf P(f,x)$ equivale a $\mathbf P(h\circ f,x)$ para $x\in X$.
+  \item[$2^\circ$] Para todo morfismo $f:X\to Y$, todo morfismo étale $g:Y'\to Y$, todo punto $x\in X$, si se pone $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$ y si $x'\in X'$ está sobre $x$, las propiedades $\mathbf P(f,x)$ y $\mathbf P(f',x')$ son equivalentes («invariancia por cambio de base étale»).
+\end{enumerate}
+Sean entonces $S$ un preesquema, $f:X\to S$ y $h:Y\to S$ dos morfismos, $g:X\to Y$ un $S$-morfismo, $x$ un punto de $X$, $y=g(x)$, y supongamos que $h$ es étale en el punto $y$. Entonces las propiedades $\mathbf P(f,x)$ y $\mathbf P(g,x)$ son equivalentes.
+\end{proposition}
+
+Con las mismas notaciones que en la demostración de (18.4.9) y sustituyendo $S$ (resp. $Y$) por un entorno de $s=h(y)$ (resp. de $y$), se puede aquí, en virtud de (18.4.8), encontrar un morfismo étale $u:S'\to S$ tal que $h'$ sea una inmersión abierta; si $x'\in X'$ está sobre $x$, $\mathbf P(f',x')$ (resp. $\mathbf P(g',x')$) es entonces, por hipótesis, equivalente a $\mathbf P(f,x)$ (resp. $\mathbf P(g,x)$). Se puede, por tanto, reducir al caso en que $h$ es una inmersión abierta. Como la hipótesis implica que $\mathbf P(g,x)$ es entonces equivalente a $\mathbf P(h\circ g,x)$, se deduce la conclusión.
+
+\begin{env}[18.4.11]
+\label{IV.18.4.11}
+\emph{Ejemplos.} --- Se puede tomar como propiedad $\mathbf P(f,x)$ cualquiera de las siguientes, habida cuenta de (17.7.4, (ii)):
+\begin{enumerate}
+  \item[(i)] $f$ es plano en el punto $x$ (2.2.11, (iv));
+  \item[(ii)] $f$ es localmente de presentación finita y de coprofundidad $\leq n$ en el punto $x$ (6.8.1 y 6.7.8);
+  \item[(iii)] $f$ es localmente de presentación finita y de Cohen-Macaulay en el punto $x$ (6.8.1 y 6.7.8);
+  \item[(iv)] $f$ es localmente de presentación finita y posee la propiedad $(S_n)$ en el punto $x$ (6.8.1 y 6.7.8);
+  \item[(v)] $f$ es localmente de presentación finita y posee la propiedad $(R_n)$ en el punto $x$ (6.8.1 y 6.7.8);
+  \item[(vi)] $f$ es localmente de presentación finita y normal en el punto $x$ (6.8.1 y 6.7.8);
+  \item[(vii)] $f$ es localmente de presentación finita y reducido en el punto $x$ (6.8.1 y 6.7.8);
+  \item[(viii)] $f$ es no ramificado en el punto $x$ (17.7.4);
+  \item[(ix)] $f$ es liso en el punto $x$ (17.7.4);
+  \item[(x)] $f$ es étale en el punto $x$ (17.7.4).
+\end{enumerate}
+\end{env}
+
+\oldpage[IV-4]{124}
+
+\begin{corollary}[18.4.12]
+\label{IV.18.4.12}
+\begin{enumerate}
+  \item[(i)] Sean $f:X\to Y$ un morfismo localmente de tipo finito y $x$ un punto de $X$. Si $f$ es plano y formalmente no ramificado en el punto $x$, entonces, en toda factorización $f|U:U\xrightarrow{j}X'\xrightarrow{h}Y$, donde $U$ es un entorno abierto de $x$, $j$ una inmersión cerrada y $h$ un morfismo étale (18.4.7), el homomorfismo $\sh{O}_{X',j(x)}\to\sh{O}_{X,x}$ correspondiente a $j$ es biyectivo (en particular, $\sh{O}_{X,x}$ es una $\sh{O}_{Y,f(x)}$-álgebra \emph{esencialmente étale} (18.6.1)).
+  \item[(ii)] Para que un morfismo $f:X\to Y$ sea étale, es necesario y suficiente que sea localmente de tipo finito, formalmente no ramificado y plano.
+\end{enumerate}
+\end{corollary}
+
+(i) Como el homomorfismo $\sh{O}_{X',j(x)}\to\sh{O}_{X,x}$ es sobreyectivo, basta demostrar que es inyectivo y, para ello, que hace de $\sh{O}_{X,x}$ un $\sh{O}_{X',j(x)}$-módulo \emph{fielmente plano}, o solamente \emph{plano} ($0_{\mathrm I}$, 6.5.1 y 6.6.2); en otras palabras, se trata de demostrar que $j$ es un morfismo \emph{plano en el punto} $x$; pero, puesto que $h\circ j=f$ es, por hipótesis, plano en el punto $x$ y que $h$ es étale, esto se sigue de (18.4.10) y (18.4.11, (i)).
+
+(ii) Solo hay que demostrar la suficiencia de las condiciones enunciadas. Para todo $x\in X$, se tiene, por tanto, en un entorno abierto $U$ de $x$ una factorización de $f|U$ con las propiedades consideradas en (i). Como, por hipótesis, $f$ es plano y formalmente no ramificado en \emph{todos} los puntos de $U$, el resultado de (i) se aplica no solo a $x$ sino a todos los puntos de $U$; esto significa que, si $\mathscr J$ es el ideal cuasicoherente de $\sh{O}_{X'}$ correspondiente al subpreesquema cerrado de $X'$ asociado a $j$, se tiene $\mathscr J_{j(z)}=0$ para todo $z\in U$, por lo que $j$ es una inmersión abierta, y $f$ es, por consiguiente, étale en todo punto de $U$, y por tanto en todo punto de $X$.
+
+\begin{corollary}[18.4.13]
+\label{IV.18.4.13}
+Sean $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, y $y=f(x)$. Supongamos que $y$ admite un entorno abierto que es un preesquema reducido y solo tiene un número finito de componentes irreducibles. Entonces, para que $f$ sea étale en el punto $x$, es necesario y suficiente que $f$ sea plano y formalmente no ramificado en el punto $x$.
+\end{corollary}
+
+Solo hay que demostrar la suficiencia de la condición. Como la cuestión es local sobre $X$ e $Y$, se puede suponer (18.4.7) que $f$ se factoriza como $X\xrightarrow{j}X'\xrightarrow{h}Y$, donde $h$ es étale y $j$ una inmersión cerrada, y además que $Y$ es reducido y solo tiene un número finito de componentes irreducibles. Entonces $X'$ es reducido (17.5.7) y, sustituyendo si es preciso $X'$ por un entorno abierto de $j(x)$, se puede suponer que $X'$ solo tiene un número finito de componentes irreducibles: en efecto, se puede suponer que $h$ es cuasifinito (17.6.1) y, como los puntos maximales de $X'$ están sobre los puntos maximales de $Y$ (2.3.4), su número es finito. Todo se reduce a demostrar, con las notaciones de la demostración de (18.4.12), que se tiene $\mathscr J_{x'}=0$ para todos los puntos $x'$ de un entorno de $j(x)$ en $X'$, sabiendo que $\mathscr J_{j(x)}=0$. Ahora bien, sustituyendo $X'$ por un entorno afín de $j(x)$, se puede suponer que todas las componentes irreducibles de $X'$ contienen a $j(x)$; si $X'=\Spec(A')$, y si $\mathfrak p'$ es el ideal primo de $A'$ correspondiente al punto $j(x)$, el morfismo $\Spec(A'_{\mathfrak p'})\to\Spec(A')$ es dominante, por lo que el homomorfismo correspondiente $A'\to A'_{\mathfrak p'}$ es \emph{inyectivo}, puesto que $A'$ es reducido (I, 1.2.7). Si $\mathscr J=\widetilde{\mathfrak J}$, donde $\mathfrak J$ es un ideal de $A'$, $\mathfrak J$ se identifica, por tanto, con un subconjunto de $\mathfrak J_{\mathfrak p'}$, y la hipótesis $\mathfrak J_{\mathfrak p'}=0$ implica, por tanto, $\mathfrak J=0$.
+
+\begin{corollary}[18.4.14]
+\label{IV.18.4.14}
+Sean $A$ un anillo local de ideal maximal $\mathfrak m$, de cuerpo residual $k$, y $B$ una $A$-álgebra finita.
+
+\oldpage[IV-4]{125}
+
+\begin{enumerate}
+  \item[(i)] Para que $B$ sea una $A$-álgebra formalmente no ramificada, es necesario y suficiente que $B\otimes_A k$ sea una $k$-álgebra étale.
+  \item[(ii)] Para que $B$ sea una $A$-álgebra étale, es necesario y suficiente que $B\otimes_A k$ sea una $k$-álgebra étale y que $B$ sea un $A$-módulo plano (lo que equivale a decir ($0_{\mathrm I}$, 6.3.3) que, para todo ideal maximal $\mathfrak n$ de $B$ (necesariamente sobre $\mathfrak m$), $B_{\mathfrak n}$ es un $A$-módulo plano).
+\end{enumerate}
+\end{corollary}
+
+Evidentemente, solo hay que demostrar la suficiencia de las condiciones enunciadas. Es claro que (ii) se sigue de (i) y de (18.4.12, (ii)), habida cuenta de (17.1.2, (i)). Para demostrar (i), observemos que, si $B\otimes_A k$ es una $k$-álgebra étale, se tiene $\Omega^1_{(B\otimes_A k)/k}=0$ (17.2.1). Ahora bien, se tiene $\Omega^1_{(B\otimes_A k)/k}=\Omega^1_{B/A}\otimes_B(B\otimes_A k)$ (0, 20.5.5) y, puesto que $B$ es una $A$-álgebra de tipo finito, $\Omega^1_{B/A}$ es un $B$-módulo de tipo finito (0, 20.4.7). Pero como $B$ es una $A$-álgebra finita, $\mathfrak mB$ está contenido en el radical de $B$ (Bourbaki, \emph{Alg. comm.}, cap. V, \textsection~2, n.\textsuperscript{o}~1, prop. 1), por lo que el lema de Nakayama demuestra que $\Omega^1_{B/A}=0$ y, por consiguiente, $B$ es una $A$-álgebra formalmente no ramificada (17.2.1).

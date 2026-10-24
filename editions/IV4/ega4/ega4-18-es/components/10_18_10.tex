@@ -1,0 +1,280 @@
+\subsection{Preesquemas étales sobre un preesquema geométricamente unirrama o normal}
+\label{subsection:IV.18.10}
+
+\begin{theorem}[18.10.1]
+\label{IV.18.10.1}
+Sean $f:X\to Y$ un morfismo localmente de presentación finita, $x$ un punto de $X$, $y=f(x)$. Supongamos que $Y$ sea íntegro y geométricamente unirrama en el punto $y$. Entonces, para que $f$ sea étale en el punto $x$, es necesario y suficiente que se verifiquen las dos condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $f$ es no ramificado en el punto $x$;
+  \item[(ii)] el homomorfismo $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ es inyectivo.
+\end{enumerate}
+Además, si así sucede, $X$ es íntegro y geométricamente unirrama en el punto $x$.
+
+Finalmente, si $\sh{O}_{Y,y}$ es noetheriano, en el criterio anterior se puede reemplazar la condición (ii) por la condición
+
+\emph{(ii bis)} Se tiene $\dim\sh{O}_{Y,y}\leq\dim\sh{O}_{X,x}$.
+\end{theorem}
+
+El hecho de que, si $f$ es étale, $X$ sea íntegro y geométricamente unirrama en el punto $x$ es un caso particular de (17.5.7). Por otra parte, es claro que las condiciones (i) y (ii) son necesarias para que $f$ sea étale en el punto $x$, pues $\sh{O}_{X,x}$ es entonces un $\sh{O}_{Y,y}$-módulo fielmente plano (17.6.1). Probemos que estas condiciones son suficientes.
+
+Pongamos $A=\sh{O}_{Y,y}$, $A'={}^{hs}\!A$ (18.8.7), $Y'=\Spec(A')$, $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Sean $y'$ el punto cerrado de $Y'$ y $x'$ un punto de $X'$ situado sobre $x$ y sobre $y'$; puesto que el morfismo $g:Y'\to Y$ es plano (18.8.8), todo se reduce a ver que $f'$ es étale en el punto $x'$ (17.7.1, (iii)). La hipótesis (ii) implica que el morfismo $\Spec(\sh{O}_{X,x})\to\Spec(\sh{O}_{Y,y})$ es dominante (I, 1.2.7); como $\sh{O}_{Y,y}$ es íntegro, $\Spec(\sh{O}_{Y,y})$ tiene un único punto genérico $y_1$, y por tanto existe una generalización $x_1$ de $x$ en $X$ situada sobre $y_1$. Puesto que el morfismo proyección $X'\to X$ es plano, existe una generalización $x'_1$ de $x'$ situada sobre $x_1$ (2.3.4); pongamos $y'_1=f'(x'_1)$; se tiene entonces $g(y'_1)=y_1$. Ahora bien, la hipótesis sobre $y$ implica que $A'$ es íntegro (18.8.15), de modo que $Y'$ tiene un único punto genérico $\eta$, necesariamente situado sobre $y_1$, puesto que $g$
+
+\oldpage[IV-4]{158}
+
+es plano (2.3.4); por otra parte, $\eta$ es también el punto genérico de $g^{-1}(y_1)$ ($0_{\mathrm I}$, 2.1.8), y se sabe además que las fibras de $g$ son espacios discretos (18.8.12), luego $g^{-1}(y_1)=\{\eta\}$ y, por consiguiente, $y'_1=\eta$. Por tanto, el morfismo $\Spec(\sh{O}_{X',x'})\to\Spec(\sh{O}_{Y',y'})$, restricción de $f'$, es dominante, y como $\sh{O}_{Y',y'}=A'$ es íntegro, el homomorfismo correspondiente $\sh{O}_{Y',y'}\to\sh{O}_{X',x'}$ es inyectivo (I, 1.2.7). Por otra parte, $f'$ es no ramificado en el punto $x'$; por (18.8.3, $d$), existe un entorno $U$ de $x'$ en $X'$ tal que $f'|U$ sea una inmersión cerrada de $U$ en $Y'$; \emph{a fortiori}, el homomorfismo $\sh{O}_{Y',y'}\to\sh{O}_{X',x'}$ es sobreyectivo y, puesto que es inyectivo, es biyectivo. Pero entonces $\sh{O}_{X',x'}$ es un $\sh{O}_{Y',y'}$-módulo plano, y por tanto $f'$ es étale en el punto $x'$ (17.6.1).
+
+Finalmente, cuando $\sh{O}_{Y,y}$ es noetheriano, sabemos que si $f$ es étale en el punto $x$, se tiene $\dim\sh{O}_{Y,y}=\dim\sh{O}_{X,x}$ (17.6.4). Recíprocamente, supongamos verificadas las condiciones (i) y (ii \emph{bis}), y demostremos que implican (ii). Sea $\mathfrak J$ el núcleo del homomorfismo canónico $\sh{O}_{Y,y}\to\sh{O}_{X,x}$; restringiendo $Y$ a un entorno de $y$ si es necesario, podemos suponer que $\mathfrak J=\mathscr{J}_y$, donde $\mathscr{J}$ es un ideal de $\sh{O}_Y$; si $Y_1$ es el subpreesquema cerrado de $Y$ definido por $\mathscr{J}$, restringiendo aún más $X$ e $Y$ a entornos de $x$ y $y$, respectivamente, podemos suponer que $f$ se factoriza como $X\xrightarrow{f_1}Y_1\to Y$ (I, 6.5.1). Es claro que $f_1$ sigue siendo no ramificado en el punto $x$, luego es cuasi-finito en ese punto por (17.4.1); la demostración de (5.4.1, (i)) prueba entonces que $\dim(\sh{O}_{X,x})\leq\dim(\sh{O}_{Y,y}/\mathfrak J)$. Pero si $\mathfrak J\neq0$, se deduciría que $\dim(\sh{O}_{Y,y}/\mathfrak J)<\dim(\sh{O}_{Y,y})$, puesto que $Y$ es íntegro ($0$, 16.1.2.2); se tendría por tanto $\dim\sh{O}_{X,x}<\dim\sh{O}_{Y,y}$, en contradicción con la hipótesis, lo que demuestra (ii).
+
+\begin{remark}[18.10.2]
+\label{IV.18.10.2}
+\begin{enumerate}
+  \item[(i)] Cuando $A=\sh{O}_{Y,y}$ es noetheriano y se sabe que su completado $\widehat A$ es íntegro (por ejemplo, si $A$ es regular), en la demostración anterior se puede reemplazar $A'$ por $\widehat A$.
+  \item[(ii)] Cuando $Y$ es localmente noetheriano, se puede dar de (18.10.1) una demostración más rápida, que no utiliza la henselización estricta, pero que hace intervenir los resultados bastante delicados de las \textsection\textsection~14 y 15. Como $f$ es cuasi-finito en el punto $x$ por hipótesis (17.4.1), reemplazando $X$ por un entorno abierto de $x$ podemos suponer que $f^{-1}(y)=\{x\}$. La hipótesis (ii) implica, como hemos visto, que existe una componente irreducible $Z$ de $X$ que contiene a $x$ y domina la única componente irreducible $Y_0$ de $Y$ que contiene a $y$. Puesto que el morfismo $f|Z$ es cuasi-finito en el punto $x$, y por tanto equidimensional en ese punto (13.2.2), se deduce de la hipótesis sobre $Y$ y del criterio de Chevalley (14.4.4) que $g=f|Z$ es universalmente abierto en el punto $x$. Además, como $f$ (y por tanto también $g$) es no ramificado en el punto $x$, $g^{-1}(y)$ es geométricamente reducido sobre $k(y)$ (17.4.1); como $\sh{O}_{Y,y}$ es íntegro, se concluye de (15.2.3) que $g$ es plano en el punto $x$, y por tanto $f$ es étale en ese punto (18.4.9).
+  \item[(iii)] Si las notaciones y las hipótesis sobre $Y$ son las de (18.10.1), supongamos solamente que $f$ sea localmente de tipo finito (y no necesariamente localmente de presentación finita). Entonces, para que $\sh{O}_{X,x}$ sea una $\sh{O}_{Y,y}$-álgebra esencialmente étale (18.6.1), es necesario y suficiente que $f$ satisfaga las dos condiciones siguientes:
+
+\oldpage[IV-4]{159}
+
+\begin{enumerate}
+  \item[$1^\circ$] $f$ es formalmente no ramificado en el punto $x$;
+  \item[$2^\circ$] el homomorfismo $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ es inyectivo.
+\end{enumerate}
+
+Solo queda por demostrar la suficiencia de estas condiciones. Teniendo en cuenta (18.4.12), basta demostrar que $f$ es plano en el punto $x$. Ahora bien, retomando la demostración de (18.10.1) y las notaciones utilizadas en ella, basta demostrar que $f'$ es plano en el punto $x'$ (2.5.1); por otra parte, $f'$ es formalmente no ramificado en el punto $x'$ (17.1.3). Por tanto, podemos limitar la demostración al caso en que $Y=\Spec(A)$, donde $A$ es estrictamente local y $y=f(x)$ es el punto cerrado de $Y$. Usando entonces (18.8.3), vemos que el homomorfismo $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ es sobreyectivo, luego biyectivo por la hipótesis, y esto basta para demostrar que $f$ es plano en el punto $x$.
+
+Supongamos además que $Y$ sea localmente íntegro en el punto $y$ (I, 2.1.8). Entonces las condiciones $1^\circ$ y $2^\circ$ anteriores (junto con el hecho de que $Y$ sea geométricamente unirrama en el punto $y$ y que $f$ sea localmente de tipo finito) ya implican que $f$ es étale en el punto $x$. En efecto, esto se deduce de lo anterior y de (18.4.13).
+\end{enumerate}
+\end{remark}
+
+\begin{corollary}[18.10.3]
+\label{IV.18.10.3}
+Sean $Y$ un preesquema íntegro y geométricamente unirrama, $\eta$ su punto genérico, $X$ un preesquema conexo, $f:X\to Y$ un morfismo localmente de tipo finito y tal que $f^{-1}(\eta)$ no sea vacío. Entonces, si $f$ es formalmente no ramificado, $f$ es étale y $X$ es íntegro y geométricamente unirrama.
+\end{corollary}
+
+De la hipótesis y de (18.4.13) se deduce que $f$ es étale en todos los puntos donde es plano, y en particular en los puntos de $f^{-1}(\eta)$, puesto que $\sh{O}_{Y,\eta}=k(\eta)$ es un cuerpo. Por tanto, el conjunto abierto $U$ de los puntos de $X$ donde $f$ es étale no es vacío. Mostremos, por otra parte, que para todo $x\in\overline U$, el homomorfismo $\sh{O}_{Y,f(x)}\to\sh{O}_{X,x}$ es inyectivo. Sea, en efecto, $s$ una sección de $\sh{O}_Y$ sobre un entorno abierto de $f(x)$, que siempre podemos suponer que es el propio $Y$ (la cuestión es local en $X$ e $Y$), y supongamos que su imagen $t\in\Gamma(Y,f_*(\sh{O}_X))=\Gamma(X,\sh{O}_X)$ tenga germen nulo en el punto $x$, de modo que se anula en un entorno abierto $V$ de $x$; entonces la restricción de $t$ al abierto $U\cap V\neq\varnothing$ es nula. Pero la restricción $f|(U\cap V)$ es étale, luego $W=f(U\cap V)$ es abierto en $Y$ y contiene por consiguiente el punto genérico $\eta$. Como el homomorfismo $\sh{O}_{Y,\eta}\to\sh{O}_{X,z}$ es inyectivo para todo punto $z\in f^{-1}(\eta)$, la hipótesis $t|(U\cap V)=0$ implica que $s_\eta=0$; y como $Y$ es íntegro, esto implica $s=0$, lo que prueba nuestra afirmación. Aplicando ahora (18.10.2, (iii)), concluimos que $f$ es plano en el punto $x$, es decir, $x\in U$, y por tanto $U$ es a la vez abierto y cerrado en $X$; como no es vacío y $X$ es conexo, se tiene $U=X$.
+
+Observemos ahora que, puesto que $f$ es étale, luego localmente cuasi-finito, y $Y$ es irreducible, los puntos máximos de $X$ pertenecen a $f^{-1}(\eta)$ (2.3.4), y para todo $x\in X$ existe un entorno de $x$ que contiene solamente un número finito de esos puntos máximos; en otras palabras, el conjunto de las componentes irreducibles de $X$ es localmente finito. Pero por (18.10.1), $X$ es íntegro y geométricamente unirrama en todo punto; por tanto, cada punto de $X$ pertenece a una sola componente irreducible y, puesto que estas forman una familia localmente finita, son abiertas (y cerradas) en $X$; como $X$ es conexo, es íntegro.
+
+\oldpage[IV-4]{160}
+
+\begin{remark}[18.10.3.1]
+\label{IV.18.10.3.1}
+Si $f:X\to Y$ es localmente de presentación finita, dominante y cuasicompacto, la fibra $f^{-1}(\eta)$ no es vacía por (I, 1.1.5). En cambio, si no suponemos que $f$ sea cuasicompacto, $f$ puede ser no ramificado y dominante sin que $f$ sea étale (manteniéndose siempre las hipótesis de (18.10.3) para $X$ e $Y$). Esto es lo que muestra el ejemplo siguiente: tomemos para $Y$ el plano afín $\Spec(\mathbf C[T,U])$; consideremos por otra parte una familia $(X_j)_{j\in\mathbf Z}$ de preesquemas isomorfos a la recta afín $\Spec(\mathbf C[T])$, y formemos el preesquema obtenido «pegando» $X_{2j}$ y $X_{2j+1}$ en el punto $-1$, y $X_{2j+1}$ y $X_{2j+2}$ en el punto $+1$. Definamos además $f:X\to Y$ como igual, sobre $X_{2j}$, a la inmersión cerrada cuya imagen es la recta de ecuación $y=2j$, que transforma el punto $-1$ en $(2j-1,2j)$ y el punto $+1$ en $(2j+1,2j)$; sobre $X_{2j+1}$, $f_j$ es la inmersión cerrada cuya imagen es la recta de ecuación $x=2j+1$, que transforma el punto $-1$ en $(2j+1,2j)$ y el punto $+1$ en $(2j+1,2j+2)$.\footnote{La transcripción francesa imprime aquí $-1$ en la segunda aparición; el testigo inglés mantenido y el pegado de las fibras requieren $+1$.}
+Es claro que $f$ es una inmersión local (por tanto, no ramificada) y es dominante, pero la fibra del punto genérico de $Y$ es vacía y $f$ no es étale.
+\end{remark}
+
+\begin{corollary}[18.10.4]
+\label{IV.18.10.4}
+Sean $g:Y\to S$, $h:X\to S$ dos morfismos localmente de presentación finita, $f:X\to Y$ un $S$-morfismo, $x$ un punto de $X$, $y=f(x)$, $s=g(y)=h(x)$. Supongamos que $h$ sea plano en el punto $x$ y que $g^{-1}(s)$ sea normal en el punto $y$. Entonces, para que $f$ sea étale en el punto $x$, es necesario y suficiente que $f$ sea no ramificado en el punto $x$ y que $\dim_xh^{-1}(s)=\dim_yg^{-1}(s)$.
+\end{corollary}
+
+Las condiciones son necesarias por el hecho de que si $f$ es étale en el punto $x$, lo mismo ocurre con $f_s:h^{-1}(s)\to g^{-1}(s)$, y la conclusión se deduce entonces de que $f_s$ es plano y cuasi-finito en el punto $x$ (6.1.2). Recíprocamente, si se verifican las condiciones del enunciado, para ver que $f$ es étale en el punto $x$ basta, en virtud de (17.8.3), ver que lo es $f_s$. Por tanto, podemos limitarnos al caso en que $S$ es el espectro de un cuerpo. De la hipótesis $\dim_xX=\dim_yY$ y del hecho de que $f$ es no ramificado en el punto $x$ se deduce entonces (por (5.2.3) y (17.4.1)) que $\dim\sh{O}_{X,x}=\dim\sh{O}_{Y,y}$; puesto que $f$ es cuasi-finito en el punto $x$ y $\sh{O}_{Y,y}$ es íntegro, de ($0_{\mathrm I}$, 7.4.4) y ($0$, 16.3.10) se deduce que el homomorfismo $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ es inyectivo; basta entonces aplicar (18.10.1) para concluir.
+
+\begin{corollary}[18.10.5]
+\label{IV.18.10.5}
+Con las notaciones de (18.10.4), supongamos que $h$ sea plano y que $g^{-1}(s)$ sea normal para todo $s\in S$ (lo que, por ejemplo, sucede si $g$ es liso). Para que $f$ sea una inmersión abierta, es necesario y suficiente que $f$ sea un monomorfismo y que, para todo $x\in X$, se tenga $\dim_xh^{-1}(s)=\dim_yg^{-1}(s)$, donde $y=f(x)$ y $s=g(y)=h(x)$.
+\end{corollary}
+
+Solo hay que demostrar la suficiencia de las condiciones; ahora bien, de (17.1.3) se deduce que un monomorfismo localmente de presentación finita es no ramificado, de modo que las hipótesis implican que $f$ es étale (18.10.4); se concluye entonces por (17.9.1).
+
+\begin{lemma}[18.10.6]
+\label{IV.18.10.6}
+Sea $f:X\to Y$ un morfismo plano y localmente cuasi-finito ($\mathrm{Err}_{\mathrm{III}}$, 20).
+\begin{enumerate}
+  \item[(i)] El conjunto $\operatorname{Max}(X)$ de los puntos máximos de $X$ está en correspondencia biyectiva canónica con el conjunto $\coprod_{y\in\operatorname{Max}(Y)}f^{-1}(y)$.
+  \item[(ii)] Si $Y$ es irreducible y tiene punto genérico $\eta$, el conjunto de las componentes irreducibles de $X$ está en correspondencia biyectiva canónica con $f^{-1}(\eta)$ y, en particular, es finito si y solo si $f^{-1}(\eta)$ es finito.
+
+\oldpage[IV-4]{161}
+
+  \item[(iii)] Si el conjunto de las componentes irreducibles de $Y$ es localmente finito, lo mismo sucede con el conjunto de las componentes irreducibles de $X$ y, en particular, $X$ es localmente conexo.
+\end{enumerate}
+\end{lemma}
+
+La afirmación (i) se deduce inmediatamente de (2.3.4) y ($0_{\mathrm I}$, 2.1.6), y del hecho de que las fibras $f^{-1}(y)$ son conjuntos discretos. Es claro que (ii) es un caso particular de (i). Finalmente, para demostrar (iii), en virtud de (i) podemos limitarnos al caso en que $f$ es cuasi-finito y $Y$ es irreducible ($0_{\mathrm I}$, 2.1.6); la conclusión se deduce entonces de (ii) y del hecho de que las fibras de $f$ son conjuntos finitos (II, 6.2.2).
+
+\begin{proposition}[18.10.7]
+\label{IV.18.10.7}
+Sean $Y$ un preesquema geométricamente unirrama e irreducible (resp. íntegro), $f:X\to Y$ un morfismo étale. Entonces $X$ es isomorfo a una suma de preesquemas irreducibles (resp. íntegros) $X_\lambda$, donde $\lambda$ recorre la fibra $f^{-1}(\eta)$ del punto genérico $\eta$ de $Y$. Los $X_\lambda$ son geométricamente unirrama; si $Y$ es normal, los $X_\lambda$ son normales.
+\end{proposition}
+
+En efecto, $X$ es geométricamente unirrama (17.5.7), por lo que cada punto de $X$ pertenece a una sola componente irreducible; además, en virtud de (18.10.6) y (17.6.1), el conjunto de las componentes irreducibles de $X$ es localmente finito, luego ($0_{\mathrm I}$, 2.1.6) son las componentes conexas $X_\lambda$ de $X$ ($\lambda\in f^{-1}(\eta)$), y $X$ es la suma de los $X_\lambda$; por (17.5.7), si $Y$ es íntegro (resp. normal), los $X_\lambda$ son íntegros (resp. normales).
+
+\begin{proposition}[18.10.8]
+\label{IV.18.10.8}
+Sean $Y$ un preesquema normal e íntegro, de punto genérico $\eta$, $K=k(\eta)$ su cuerpo de funciones racionales, y $f:X\to Y$ un morfismo étale. Supongamos que $f^{-1}(\eta)$ sea finita y no vacía, de modo que el $K$-esquema $f^{-1}(\eta)$ sea el espectro de una $K$-álgebra finita separable $L$, producto directo de un número finito de cuerpos $K_i$ ($1\leq i\leq n$), extensiones finitas separables de $K$ (17.6.2). Sea $Y'$ la clausura integral de $Y$ en $L$, isomorfa a la suma de las clausuras integrales $Y_i$ de $Y$ en los $K_i$ (II, 6.3.6). Entonces el morfismo $f$ se factoriza de una única manera como $f:X\xrightarrow{f'}Y'\xrightarrow{g}Y$, de modo que la restricción $f'_\eta:f^{-1}(\eta)\to g^{-1}(\eta)$ sea el isomorfismo canónico. Además, $f'$ es un isomorfismo local; para que $f'$ sea una inmersión abierta, es necesario y suficiente que $f$ sea separado.
+\end{proposition}
+
+En virtud de (18.10.7), podemos limitarnos al caso en que $X$ sea íntegro y normal, $L$ su cuerpo de funciones racionales y $f$ dominante. La existencia y unicidad de la factorización considerada de $f$ se deducen entonces de (II, 6.3.9). Como $f'$ es birracional y localmente cuasi-finito, las últimas afirmaciones se deducen de (8.12.10).
+
+\begin{corollary}[18.10.9]
+\label{IV.18.10.9}
+Bajo las hipótesis de (18.10.8), para que $f$ sea un morfismo finito (es decir, para que $X$ sea un recubrimiento étale de $Y$), es necesario y suficiente que $X$ sea isomorfo a la clausura integral $Y'$ de $Y$ en $L$.
+\end{corollary}
+
+Si $f$ es finito, la inyección canónica $j:X\to Y'$ (que es una inmersión abierta) es también un morfismo finito (II, 6.1.5, (v)), luego un morfismo cerrado (II, 6.1.10), y como $j(X)$ es denso en $Y'$ por (18.10.8), se tiene $j(X)=Y'$. Recíprocamente, como $Y$ es normal y $L$ es un producto directo de extensiones finitas separables de $K$, $Y'$ es finito sobre $Y$ (Bourbaki, \emph{Alg. comm.}, cap.~V, \textsection~1, n\textsuperscript{o}~6, cor.~1 de la prop.~18), de donde se sigue el corolario.
+
+\begin{env}[18.10.10]
+\label{IV.18.10.10}
+Sea $Y$ un preesquema normal e íntegro, $K=R(Y)$ su cuerpo de funciones racionales. Diremos que una $K$-álgebra $L$ de rango finito es no ramificada sobre $Y$ si: $1^\circ$ $L$ es una $K$-álgebra separable, es decir, un producto directo de extensiones finitas separables $K_i$ de $K$ ($1\leq i\leq n$); $2^\circ$ la clausura integral $Y'$ de $Y$ en $L$ (suma de los preesquemas clausuras integrales de $Y$ en los $K_i$) es no ramificada sobre $Y$ (lo que, por (18.10.3),
+
+\oldpage[IV-4]{162}
+
+equivale a decir que $Y'$ es étale sobre $Y$). Cuando $Y=\Spec(A)$, donde $A$ es un anillo íntegro e integralmente cerrado y $K$ su cuerpo de fracciones, diremos también (por abuso de lenguaje, y cuando no haya riesgo de confusión con la terminología de (17.3.2, (ii))) que $L$ es no ramificada sobre $A$ en lugar de «no ramificada sobre $Y$».
+\end{env}
+
+\begin{remark}[18.10.11]
+\label{IV.18.10.11}
+En lugar de decir que $L$ es no ramificada sobre $Y$, algunos autores dicen también que $L$ es «no ramificada sobre $K$»; nos abstendremos de seguir este uso, que da lugar a confusiones.
+\end{remark}
+
+Se puede entonces expresar (18.10.9) de la forma siguiente:
+
+\begin{corollary}[18.10.12]
+\label{IV.18.10.12}
+Sean $Y$ un preesquema normal e íntegro, $K=R(Y)$ su cuerpo de funciones racionales. Entonces el functor $X\rightsquigarrow R(X)$ es una equivalencia entre la categoría de los recubrimientos étales de $Y$ y la categoría de las $K$-álgebras finitas étales no ramificadas sobre $Y$. Se obtiene un functor cuasi-inverso haciendo corresponder a toda $K$-álgebra finita étale $L$, no ramificada sobre $Y$, la clausura integral $Y'$ de $Y$ en $L$.
+\end{corollary}
+
+\begin{proposition}[18.10.13]
+\label{IV.18.10.13}
+Sean $Y$ un preesquema normal e íntegro, $K=R(Y)$ su cuerpo de funciones racionales.
+\begin{enumerate}
+  \item[(i)] El cuerpo $K$ es una $K$-álgebra no ramificada sobre $Y$.
+  \item[(ii)] Sea $L$ una extensión finita de $K$, no ramificada sobre $Y$, y sea $Z$ la clausura integral de $Y$ en $L$. Entonces, si $M$ es una $L$-álgebra no ramificada sobre $Z$, $M$ es también una $K$-álgebra no ramificada sobre $Y$ («transitividad» de la no ramificación).
+  \item[(iii)] Sean $Y'$ un preesquema normal e íntegro, $K'$ su cuerpo de funciones racionales, y $g:Y'\to Y$ un morfismo dominante. Si $L$ es una $K$-álgebra no ramificada sobre $Y$, entonces $L\otimes_K K'$ es una $K'$-álgebra no ramificada sobre $Y'$ (propiedad de «traslación»). Además, si $Y=\Spec(A)$ y $Y'=\Spec(A')$ son afines, y $C$ es la clausura integral de $A$ en $L$, entonces $C'=C\otimes_A A'$ es la clausura integral de $A'$ en $L\otimes_K K'$.
+\end{enumerate}
+\end{proposition}
+
+La afirmación (i) es inmediata, pues $Y$ es por hipótesis su propia normalización en $K$. Para demostrar (ii), sea $Z'$ la clausura integral de $Z$ en $M$, que por hipótesis es un recubrimiento étale de $Z$. Como $Z$ es étale y separado sobre $Y$, lo mismo sucede con $Z'$ (17.3.3), que evidentemente es la clausura integral de $Y$ en $M$. Como $M$ es una $K$-álgebra finita y separable, se deduce de (18.10.10) que $M$ es no ramificada sobre $Y$. Finalmente, para demostrar (iii), observemos que si $Z$ es la clausura integral de $Y$ en $L$, entonces $Z\times_Y Y'$ es étale y separado sobre $Y'$ (17.3.3), finito sobre $Y'$ porque $Z$ es finito sobre $Y$, y tiene como anillo de funciones racionales $L\otimes_K K'$ (I, 3.4.9); como $Y'$ es normal, lo mismo sucede con $Z\times_Y Y'$ (17.5.7), que es por tanto la clausura integral de $Y'$ en $L\otimes_K K'$, lo que termina la demostración.
+
+\begin{corollary}[18.10.14]
+\label{IV.18.10.14}
+Sean $Y$ y $Y'$ dos preesquemas normales e íntegros, $K$, $K'$ sus respectivos cuerpos de funciones racionales, y $g:Y'\to Y$ un morfismo dominante, de modo que $K'$ es una extensión de $K$. Sean $L$ una extensión finita de $K$ no ramificada sobre $Y$, y $L_1$ una extensión compuesta (Bourbaki, \emph{Alg.}, cap.~VIII, \textsection~8, def.~1) de $L$ y $K'$. Entonces $L_1$ es una extensión de $K'$ no ramificada sobre $Y'$. Además, si $Y=\Spec(A)$, $Y'=\Spec(A')$ son afines, y $C$ es la clausura integral de $A$ en $L$, entonces el subanillo $C_1=A[C,A']$ de $L_1$ es la clausura integral de $A'$ en $L_1$.
+\end{corollary}
+
+En efecto, $L\otimes_K K'$ es un producto directo de extensiones finitas separables de $K'$, y $L_1$
+
+\oldpage[IV-4]{163}
+
+es una de estas extensiones; por tanto, la clausura integral de $Y'$ en $L\otimes_K K'$ es una suma de preesquemas, uno de los cuales es la clausura integral de $Y'$ en $L_1$. El corolario se deduce inmediatamente de (18.10.13).
+
+Cuando, por ejemplo, $A$ es el anillo de los enteros de un cuerpo de números algebraicos $K$, y $K'$ y $L$ son extensiones algebraicas de $K$, hay ejemplos clásicos que muestran que la relación $C_1=A[C,A']$ falla cuando $L$ no es no ramificada sobre $A$ [\ ].
+
+\begin{env}[18.10.15]
+\label{IV.18.10.15}
+Supongamos que $Y=\Spec(A)$ sea afín, que $A$ sea íntegro e integralmente cerrado; sean $K$ su cuerpo de fracciones, $L$ una extensión finita separable de $K$, y supongamos que la clausura integral $C$ de $A$ en $L$ sea un $A$-módulo proyectivo de tipo finito (lo que, por ejemplo, ocurre si $A$ es un anillo de Dedekind (Bourbaki, \emph{Alg. comm.}, cap.~VII, \textsection~4, n\textsuperscript{o}~10, prop.~22)). Decir que $L$ es no ramificada sobre $A$ significa que $C$ es étale (18.10.10) y, en virtud de (18.2.7, (ii)), esto equivale a decir que el discriminante $d_{C/A}$ de $\Spec(C)$ sobre $\Spec(A)$ es invertible en $A$. En el caso particular en que $C$ es un $A$-módulo libre y $(x_i)_{1\leq i\leq n}$ es una base de $C$ sobre $A$, esto significa que $\det(\operatorname{Tr}_{C/A}(x_ix_j))$ es invertible en $A$.
+\end{env}
+
+\begin{theorem}[18.10.16]
+\label{IV.18.10.16}
+Sean $Y$ un preesquema íntegro, $\eta$ su punto genérico, $f:X\to Y$ un morfismo separado y localmente de tipo finito. Supongamos que toda componente irreducible de $X$ domina $Y$ y que la fibra genérica $X_\eta=f^{-1}(\eta)$ es un preesquema finito sobre $K=k(\eta)$, de modo que $(X_\eta)_{\mathrm{red}}$ es igual a $\Spec(L)$, donde $L=\prod_iL_i$ es un producto de extensiones finitas $L_i$ de $K$. Pongamos
+\[
+  n=[L:K]=\sum_i[L_i:K],\qquad n_s=\sum_i[L_i:K]_s \quad\text{(suma de los grados separables de los $L_i$)}.
+\]
+Sea $y$ un punto geométricamente unirrama de $Y$, y designemos por $n(y)$ la suma de los grados separables sobre $k(y)$ de los cuerpos residuales de los puntos aislados de $f^{-1}(y)$. Entonces:
+\begin{enumerate}
+  \item[(i)] Se tiene $n(y)\leq n_s\leq n$.
+  \item[(ii)] Supongamos que $X$ sea reducido y que el punto $y$ sea normal en $Y$. Para que $n(y)=n$, es necesario y suficiente que exista un entorno abierto $U$ de $y$ en $Y$ tal que la restricción $f^{-1}(U)\to U$ de $f$ sea un morfismo étale y finito.
+\end{enumerate}
+\end{theorem}
+
+\emph{A) Reducción al caso en que $f$ es cuasi-finito.} --- Se sabe (13.1.4) que el conjunto $Z$ de los puntos $x\in X$ aislados en $f^{-1}(f(x))$ es abierto en $X$ y, por hipótesis, $Z$ contiene a $f^{-1}(\eta)$. Como $f^{-1}(\eta)$ es finita, $Z$ es la unión filtrante creciente de abiertos cuasicompactos $V_\lambda$ que contienen $f^{-1}(\eta)$ (y por tanto son densos en $X$ por hipótesis). Si $n_\lambda(y)$ es la suma de los grados separables sobre $k(y)$ de los cuerpos residuales de los puntos de $V_\lambda\cap f^{-1}(y)$, se tiene $n(y)=\sup_\lambda n_\lambda(y)$; para demostrar (i), bastará mostrar que $n_\lambda(y)\leq n_s$. Por otra parte, si $n(y)=n$, existe un índice $\lambda$ tal que $n_\lambda(y)=n$. Supongamos demostrado que entonces existe un entorno abierto $U$ de $y$ en $Y$ tal que la restricción $V_\lambda\cap f^{-1}(U)\to U$ de $f$ sea un morfismo étale y finito. Como $f$ es separado, la inyección canónica $V_\lambda\cap f^{-1}(U)\to f^{-1}(U)$ es también un morfismo finito (II, 6.1.5, (v)), de modo que $V_\lambda\cap f^{-1}(U)$ es cerrado en $f^{-1}(U)$ (II, 6.1.10); pero, al ser denso en todo $f^{-1}(U)$, necesariamente coincide con él.
+
+\emph{B) Reducción al caso en que $X$ es reducido, $f$ finito y $Y=\Spec(\sh{O}_{Y,y})$.} --- Observemos que la hipótesis sobre $f$ implica que también se verifica para $f_{\mathrm{red}}$ y que la conclusión de (i) solo concierne a $f_{\mathrm{red}}$. Por tanto, podemos reemplazar en todas partes $f$ por $f_{\mathrm{red}}$ y suponer que $X$ es reducido.
+
+\oldpage[IV-4]{164}
+
+Por otra parte, en virtud de (18.12.13)\footnote{El lector comprobará que (18.10.16) no se utiliza en la demostración de (18.12.13). Si se supone que $f$ es localmente de presentación finita (resp. cuasi-proyectivo), se puede reemplazar (18.12.13) por (8.12.8) (resp. (8.12.6)).}, se puede (después de reemplazar $Y$ por un entorno abierto afín $V$ de $y$ y $f$ por su restricción $f^{-1}(V)\to V$) factorizar $f$ como $X\xrightarrow{j}X'\xrightarrow{g}Y$, donde $g$ es finito y $j$ una inmersión abierta. Como $X$ es reducido, podemos reemplazar $X'$ por el subpreesquema cerrado reducido cuyo espacio subyacente es $\overline{j(X)}$ (I, 5.2.2), y suponer así que $X'$ es reducido y que toda componente irreducible de $X'$ domina $Y$. Además, $j(X)$ es un abierto denso de $X'$ y, por hipótesis, tiene solo un número finito de componentes irreducibles; por tanto, ($0_{\mathrm I}$, 1.2.7), las componentes irreducibles de $X'$ son las clausuras de las de $j(X)$, y la fibra $g^{-1}(\eta)$ se identifica con $f^{-1}(\eta)$. Si suponemos demostrado el teorema cuando además $f$ es un morfismo finito, podremos aplicarlo a $g$, y como $f^{-1}(y)$ se identifica con un subpreesquema de $g^{-1}(y)$, la relación (i) para $g$ implica la misma relación para $f$. Supongamos, por otra parte, que $n(y)=n$; entonces, por lo anterior, podemos aplicar la conclusión de (ii) al morfismo $g$ y, reemplazando $Y$ por un entorno abierto de $y$ si es necesario, suponer que $g$ es étale, y por tanto también $f$; además, se tiene entonces $f^{-1}(y)=g^{-1}(y)$. Como el morfismo $g$ es cerrado y $j(X)$ es abierto en $X'$, existe un entorno $U$ de $y$ en $Y$ tal que $j(X)\cap g^{-1}(U)=j(f^{-1}(U))$, lo que demuestra que (ii) también es cierta para $f$.
+
+Así, nos reducimos al caso en que $f$ es además un morfismo finito. Es inmediato que, para demostrar (i), podemos limitarnos al caso $Y=\Spec(\sh{O}_{Y,y})$. Mostremos que lo mismo vale para demostrar (ii). En efecto, supongamos probado que la condición $n(y)=n$ implica que $X\times_Y\Spec(\sh{O}_{Y,y})$ es étale y finito sobre $\Spec(\sh{O}_{Y,y})$; como esto implica que $f$ es plano y formalmente no ramificado en los puntos de $f^{-1}(y)$, y $Y$ es íntegro, se concluye de (18.4.13) que $f$ es étale en los puntos de $f^{-1}(y)$, y por tanto también en un entorno abierto $V$ de $f^{-1}(y)$ en $X$; pero como $f$ es un morfismo finito, luego cerrado, $V$ contiene un abierto de la forma $f^{-1}(U)$, donde $U$ es un entorno abierto de $y$ en $Y$.
+
+\emph{C) Reducción al caso en que $Y=\Spec(\sh{O}_{Y,y})$ y $\sh{O}_{Y,y}$ es estrictamente local.} --- Pongamos $A=\sh{O}_{Y,y}$, y sea $A'={}^{hs}\!A$ la henselización estricta de $A$ (18.8.7), que es un anillo local íntegro y geométricamente unirrama (18.8.16). Sea $Y'=\Spec(A')$, y sean $y'$ el punto cerrado y $\eta'$ el punto genérico de $Y'$; $y'$ está sobre $y$ y, puesto que el morfismo $g:Y'\to Y$ es plano (18.8.8), $\eta'$ está sobre $\eta$ (2.3.4). Pongamos $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$; $f'$ es finito y, como $g$ es plano, toda componente irreducible de $X'$ domina $Y'$ (2.3.7).
+
+Si $n'(y')$, $n'$ y $n'_s$ son los números definidos para $f'$ de la misma manera que $n(y)$, $n$ y $n_s$ para $f$, se tiene $n'_s=n_s$ y $n'(y')=n(y)$ (I, 6.4.8), y por tanto es equivalente demostrar la afirmación (i) del enunciado para $f$ o para $f'$. Además, si $X$ es reducido y $y$ un punto normal de $Y$ (luego $A$ integralmente cerrado), entonces $A'$ es integralmente cerrado (18.8.12). Por otra parte, se deduce de la definición (18.8.7), de la observación (8.1.2, $a$)) y del teorema del doble límite inductivo que $A'$ es un límite inductivo de anillos $A_\alpha$ tales que los morfismos $\Spec(A_\alpha)\to\Spec(A)=Y$ son étales; por consiguiente, $X'$ es el límite proyectivo de los $X_\alpha=X\otimes_A A_\alpha$, que son étales sobre $X$, y por tanto reducidos puesto que $X$ lo es (17.5.7); pasando al límite,
+
+\oldpage[IV-4]{165}
+
+se deduce que $X'$ es reducido (8.7.1). Ahora bien, si $n(y)=n$, se tiene $n_s=n$ y, por consiguiente, los cuerpos residuales en los puntos de $X_\eta$ son necesariamente separables sobre $k(\eta)$; los cuerpos residuales en los puntos de $X'_{\eta'}$ son por tanto algebraicos y separables sobre $k(\eta')$ (4.6.1), es decir, $n'_s=n'=n$, y por lo anterior $n'(y')=n'$. El morfismo $f'$ tiene así las mismas propiedades que $f$, y si demostramos que $f'$ es étale, se deducirá que $f$ es étale por (17.7.1).
+
+\emph{D) Fin de la demostración.} --- Supongamos por tanto que $A$ sea estrictamente local. Como $A$ es henseliano y el morfismo $f$ es finito, se deduce de (18.5.11) que si $x_j$ ($1\leq j\leq m$) son los puntos distintos de $f^{-1}(y)$, $X$ es la suma de los subpreesquemas abiertos $\Spec(\sh{O}_{X,x_j})=X_j$, que son por tanto las componentes conexas de $X$. Por hipótesis, cada uno de ellos domina $Y$, luego encuentra a $f^{-1}(\eta)$, y por consiguiente el número de puntos de $f^{-1}(\eta)$ es $\geq m$; \emph{a fortiori} se tiene $n_s\geq m$. Pero como $k(y)$ es separablemente cerrado y los $k(x_j)$ son algebraicos sobre $k(y)$, son necesariamente extensiones radiciales de $k(y)$, luego $m=n(y)$, lo que demuestra (i). Supongamos ahora verificadas las hipótesis de (ii); las relaciones $n(y)=n_s=n$ implican, en primer lugar, puesto que toda componente irreducible de $X$ domina $Y$, que cada $X_j$ es irreducible; además, como los $X_j$ son reducidos, son íntegros; finalmente, las relaciones $m=n_s=n$ implican que para el punto genérico $\xi_j$ de $X_j$, $k(\xi_j)$ es una extensión separable de $k(\eta)$ de grado 1, y por tanto isomorfa a $k(\eta)$; en otras palabras, la restricción $f|X_j:X_j\to Y$ de $f$ es un morfismo finito y birracional; además, $X_j$ es íntegro y, por hipótesis, $Y$ es normal; por tanto, (8.12.10.1) $f|X_j$ es un isomorfismo, lo que demuestra que $f$ es étale y termina la demostración de (18.10.16).
+
+\begin{remark}[18.10.17]
+\label{IV.18.10.17}
+El método de «localización étale» utilizado en la demostración de (18.10.16) permite también mejorar los resultados de (15.5.1), eliminando la hipótesis noetheriana. Tenemos primero el resultado siguiente, que generaliza (15.5.2):
+\end{remark}
+
+\begin{env}[18.10.17.1]
+\label{IV.18.10.17.1}
+Sean $f:X\to Y$ un morfismo separado y cuasi-finito, $y$ un punto de $Y$ tal que $f$ sea universalmente abierto en los puntos de $f^{-1}(y)$. Entonces, para toda generalización $y'$ de $y$, se tiene $n(y)\leq n(y')$.
+\end{env}
+
+Se puede reemplazar $Y$ por el subpreesquema cerrado reducido $Z$ cuyo espacio subyacente es $\overline{\{y'\}}$ y $X$ por $f^{-1}(Z)$, y suponer así que $Y$ es íntegro con punto genérico $y'$. Usando (18.12.13) como en (18.10.16, B)), podemos suponer que $X$ es un abierto denso de un preesquema $X'$ y que $f$ es la restricción a $X$ de un morfismo finito $g:X'\to Y$. Mostremos que $g^{-1}(y')=f^{-1}(y')$. En efecto, sea $i:g^{-1}(y')\to X'$ la inyección canónica, que es un morfismo plano porque $y'$ es el punto genérico de $Y$ (I, 3.6.5); se puede escribir $f^{-1}(y')=i^{-1}(X)$. Por otra parte, la inyección canónica $j:X\to X'$ es un morfismo de tipo finito, ya que el compuesto $g\circ j=f$ es de tipo finito y $g$ es separado (1.5.4); por tanto, $X$ es un abierto retrocompacto de $X'$ y, en consecuencia, es proconstructible en $X'$ (1.9.5, (v)). Se deduce entonces de (2.3.10) que $i^{-1}(\overline{X})=\overline{i^{-1}(X)}$, es decir, $f^{-1}(y')$ es denso en $g^{-1}(y')$; pero como $g^{-1}(y')$ es discreto, necesariamente $f^{-1}(y')=g^{-1}(y')$.
+
+Así, nos reducimos a demostrar que la suma de los números $[k(x):k(y)]_s$, donde $x$ recorre el conjunto de los puntos de $g^{-1}(y)$ en los que $g$ es universalmente abierto, es a lo sumo igual
+
+\oldpage[IV-4]{166}
+
+al número $n(y')$ (para el morfismo $g$). Usando después el hecho de que la propiedad de ser universalmente abierto en un punto se conserva por cambio de base, se muestra, como en (18.10.16, C)), que podemos reducirnos al caso $Y=\Spec(\sh{O}_{Y,y})$, con $\sh{O}_{Y,y}$ estrictamente local. Entonces, con las notaciones de (18.10.16, D)), $X$ es la suma de los subpreesquemas abiertos $X_j=\Spec(\sh{O}_{X,x_j})$, donde $x_j$ recorre $g^{-1}(y)$; la hipótesis de que $g$ sea abierto en uno de estos puntos $x_j$ implica que el subpreesquema $X_j$ correspondiente domina $Y$ (I, 10.3); se termina como en (18.10.16, D)).
+
+\emph{Se deduce entonces de (18.10.17.1) que las conclusiones de (15.5.1) siguen siendo válidas cuando ya no se supone que $Y$ sea localmente noetheriano, sino solamente que $f$ sea separado, cuasi-finito y de presentación finita.}
+
+En efecto, para demostrar la afirmación (i) de (15.5.1), se observa que, como $f$ es de presentación finita, el conjunto $E$ de los puntos $y'\in Y$ tales que $n(y')\geq n(y)$ es localmente constructible (9.7.9); para mostrar que $y$ es interior a $E$, basta, en virtud de (I, 10.1), ver que toda generalización $y'$ de $y$ pertenece a $E$, lo que no es otra cosa que (18.10.17.1).
+
+Para demostrar la afirmación (ii) de (15.5.1), como $f$ es de presentación finita, se puede usar (8.10.5, (xii)) aplicado según el método de (8.1.2, a)), y por tanto suponer ya que $Y=\Spec(\sh{O}_{Y,y})$. Aplicando después (2.7.1, (vii)), se ve que mediante el cambio de base fielmente plano $Y'\to Y$, donde $Y'=\Spec({}^{hs}\!\sh{O}_{Y,y})$, podemos suponer que el anillo $\sh{O}_{Y,y}$ es estrictamente local. Aplicando (18.5.11, c)), vemos entonces que si $x_j$ ($1\leq j\leq n$) son los puntos de $f^{-1}(y)$, $X$ es la suma de $n$ subpreesquemas abiertos $X_j=\Spec(\sh{O}_{X,x_j})$ que son finitos sobre $Y$, y de un preesquema abierto $X''$. Si demostramos que $X''=\varnothing$, habremos demostrado que $f$ es finito y, por tanto, propio. Ahora bien, como los cuerpos $k(x_j)$ son extensiones algebraicas de $k(y)$, son radiciales, y por consiguiente $n(y)=n$; como $f$ es abierto en cada uno de los puntos $x_j$, $X_j$ domina $Y$ (I, 10.3), y la restricción de $f$ a $X_j$, al ser un morfismo finito, es sobreyectiva (II, 6.1.10). La hipótesis de que $z\mapsto n(z)$ es constante en $Y$ implica por tanto que $X''\cap f^{-1}(y')=\varnothing$ para todo $y'\in Y$, es decir, $X''=\varnothing$.
+
+Finalmente, la demostración de (iii) reproduce sin cambios la dada en (15.5.1).
+
+\begin{env}[18.10.17.2]
+\label{IV.18.10.17.2}
+Mediante métodos análogos que utilizan la henselización estricta, en la mayoría de los resultados de las \textsection\textsection~14 y 15 se pueden eliminar las hipótesis noetherianas.
+\end{env}
+
+\begin{lemma}[18.10.18]
+\label{IV.18.10.18}
+Sean $X$, $Y$ dos preesquemas, $f:X\to Y$ un morfismo birracional\footnote{Entendemos por esto la noción definida en (6.15.4), pero sin suponer que $X$ e $Y$ sean reducidos.}, $x$ un punto de $X$. Para que $f$ sea un isomorfismo local en el punto $x$, es necesario y suficiente que $f$ sea étale en el punto $x$. Para que $f$ sea una inmersión abierta, es necesario y suficiente que $f$ sea étale y separado.
+\end{lemma}
+
+Las condiciones enunciadas son trivialmente necesarias; todo se reduce a ver que son suficientes. Para la primera afirmación, la cuestión es local en $X$ e $Y$, de modo que podemos suponer que $f$ es étale y que $X$ e $Y$ son afines, con $f$ separado, y nos reducimos a demostrar la segunda afirmación. En virtud de (17.9.1), hay que demostrar que $f$ es radicial. Sea pues $y\in Y$ y demostremos que $f^{-1}(y)$ es radicial sobre $k(y)$. El cambio de base $\Spec(\sh{O}_{Y,y})\to Y$ no cambia el hecho de que $f$ sea étale, separado y birracional, por lo que podemos limitarnos al caso $Y=\Spec(A)$, con $A=\sh{O}_{Y,y}$.
+
+\oldpage[IV-4]{167}
+
+Sea entonces $A'={}^{hs}\!A$, que es un anillo local y un $A$-módulo fielmente plano (18.8.8), siendo local el homomorfismo $A\to A'$. Pongamos $Y'=\Spec(A')$, $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$, de modo que $f'$ es étale y separado; además, como el morfismo $Y'\to Y$ es plano, el razonamiento de (6.15.4.1) muestra que $f'$ es también birracional. Si $y'$ es el punto cerrado de $Y'$, bastará, en virtud de (2.6.1, (v)), demostrar que $f'^{-1}(y')$ es radicial sobre $k(y')$; puesto que $f'$ es étale, bastará demostrar que $f'^{-1}(y')$ contiene a lo sumo un punto (17.6.1, c')).
+
+Supongamos, pues, que $Y=\Spec(A)$, que $A$ es estrictamente local, y que $f$ es separado, étale y birracional, y demostremos que $f^{-1}(y)$ no puede contener más de un punto. En efecto, si en $f^{-1}(y)$ existieran dos puntos distintos $x_1$, $x_2$, existirían dos $Y$-secciones $u_1$, $u_2$ de $f$ tales que $u_1(y)=x_1$ y $u_2(y)=x_2$ (18.8.1); pero, como $f$ es étale y separado, $u_1$ y $u_2$ serían isomorfismos de $Y$ sobre dos componentes conexas (abiertas) de $X$ (17.9.4), y habría por tanto al menos dos puntos máximos de $X$ sobre todo punto máximo de $Y$, lo que contradice la hipótesis de que $f$ es birracional.
+
+\begin{proposition}[18.10.19]
+\label{IV.18.10.19}
+Sea $Y$ un preesquema reducido cuyo conjunto de componentes irreducibles es localmente finito, $f:X\to Y$ un morfismo separado, localmente de tipo finito y formalmente no ramificado, $g$ una $Y$-sección racional de $f$ (es decir, una $Y$-aplicación racional de $Y$ en $X$), $U$ el dominio de definición de $g$ (I, 7.2.1), y sea $Z$ la clausura de $g(U)$ en $X$. Entonces, para todo punto $y\in Y-U$ tal que $Y$ sea geométricamente unirrama en el punto $y$, se tiene $Z_y=Z\cap f^{-1}(y)=\varnothing$. En particular, si $Y$ es geométricamente unirrama, $g(U)$ es una parte a la vez abierta y cerrada de $X$. Si, para toda parte cerrada irreducible $T$ de $X$, $f(T)$ es cerrada en $Y$, $g$ está definida en todo punto geométricamente unirrama de $Y$.
+\end{proposition}
+
+Como $Y$ es reducido y $f$ separado, se deduce de (I, 7.2.2) que existe una $U$-sección $u$ de $f^{-1}(U)$ perteneciente a la clase $g$; además, por (17.4.1.2), puesto que $f$ es formalmente no ramificado, $u$ es un isomorfismo de $U$ sobre el preesquema inducido en el abierto $u(U)$ de $X$. Si seguimos denotando por $Z$ el subpreesquema reducido de $X$ cuyo espacio subyacente es $Z$, $Z|_U=u(U)$, al ser reducido, también está inducido por $Z$; por tanto, la restricción $f'=f|_Z$ de $f$ es un morfismo birracional de $Z$ en $Y$, y además formalmente no ramificado, pues así lo es $f$ (17.1.3). Como la cuestión es local en $Y$, y $Y$ es reducido y geométricamente unirrama (luego íntegro) en el punto $y$, podemos limitarnos (reemplazando $Y$ por un entorno abierto de $y$) al caso en que $Y$ sea íntegro; entonces $u(U)$ es irreducible, y también $Z$, por lo que $Z$ es asimismo íntegro. Por (I, 8.2.7), como $f'$ es dominante, el homomorfismo $\sh{O}_{Y,f(x)}\to\sh{O}_{Z,x}$ es inyectivo para todo $x\in Z_y$, y se concluye de (18.10.2, (iii)) que $f'$ es un morfismo étale; al ser separado y birracional, es un isomorfismo local en el punto $x$ en virtud de (18.10.18); pero esto implicaría que la $U$-sección $u$ se puede prolongar a un abierto estrictamente mayor que $U$, en contradicción con la definición de este último. Por tanto, necesariamente $Z_y=\varnothing$, lo que establece la primera afirmación; la segunda es una consecuencia evidente. Además, bajo las hipótesis de la última afirmación del enunciado, como $Z$ es cerrado e irreducible, $f(Z)$ es cerrado en $Y$ y, por tanto, igual a $Y$, es decir, $Z_y\ne\varnothing$ para todo $y\in Y$, lo que termina la demostración.
+
+\begin{remark}[18.10.20]
+\label{IV.18.10.20}
+Sea $Y$ un preesquema localmente noetheriano. Se dice que un morfismo $f:X\to Y$ es esencialmente propio si es localmente de tipo finito y si, para todo $Y$-esquema de la forma $Y'=\Spec(A)$, donde $A$ es un anillo de valoración discreta, la aplicación canónica (II, 7.3.2.2) relativa al $Y'$-preesquema $X\times_Y Y'$ es biyectiva.
+
+\oldpage[IV-4]{168}
+
+El razonamiento de (II, 7.3.8) prueba que esto equivale a decir que $f$ (supuesto localmente de tipo finito) es separado y que, para todo cambio de base $Y''\to Y$, donde $Y''$ es localmente noetheriano, la imagen por $f_{(Y'')}:X_{(Y'')}\to Y''$ de toda parte cerrada irreducible de $X''$ es cerrada. Decir que $f$ es propio (para $Y$ localmente noetheriano) significa por tanto que $f$ es esencialmente propio y de tipo finito (II, 7.3.8); pero se encuentran ejemplos importantes de morfismos esencialmente propios que no son de tipo finito (por ejemplo, ciertos «preesquemas de Picard» o ciertos «preesquemas de Néron-Severi» (cap. VI)). Se deduce evidentemente de (18.10.19) que si $Y$ es localmente noetheriano, reducido y geométricamente unirrama, y si el morfismo $f:X\to Y$ es esencialmente propio y no ramificado, entonces toda $Y$-sección racional de $f$ está definida en todas partes.
+\end{remark}
+
+\begin{proposition}[18.10.21]
+\label{IV.18.10.21}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita, $x$ un punto de $X$, $y=f(x)$, y supongamos que el anillo $\sh{O}_{Y,y}$ sea íntegro y geométricamente unirrama. Sea $r$ el número mínimo de generadores del $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/Y})_x$ (igual al rango del espacio vectorial sobre $k(x)$ $(\Omega^1_{X/Y})_x\otimes_{\sh{O}_{X,x}}k(x))$. Entonces, para que $f$ sea liso en el punto $x$, es necesario y suficiente que, si $y'$ es el punto genérico de la única componente irreducible de $Y$ que contiene a $y$, exista una generalización $x'$ de $x$ tal que $f(x')=y'$ y $\dim_{x'}f^{-1}(y')\geq r$.
+\end{proposition}
+
+Si $f$ es liso en el punto $x$, también lo es en un entorno abierto $U$ de $x$, y por tanto en toda generalización $x'$ de $x$, y $\dim_{x'}(f^{-1}(f(x')))=r$ en cada uno de esos puntos, en virtud de (17.10.2). Como además $f$ es plano en $U$, existe una generalización de $x$ situada sobre toda generalización de $y$ (2.3.4), lo que demuestra que la condición es necesaria. Para demostrar que es suficiente, observemos primero que por (17.5.1) basta demostrar que el morfismo obtenido de $f$ mediante el cambio de base $\Spec(\sh{O}_{Y,y})\to Y$ es liso en el punto $x$; por tanto, podemos suponer que $Y=\Spec(\sh{O}_{Y,y})$.
+
+La cuestión es local en $X$, por lo que (por (16.4.22) y ($0_{\mathrm I}$, 5.2.2)) podemos suponer que $X$ es afín y que existen $r$ secciones $t_i$ ($1\leq i\leq r$) de $\sh{O}_X$ sobre $X$ tales que las secciones $d_{X/Y}t_i$ generan $\Omega^1_{X/Y}$. Sea
+\[
+  g:X\to Z=Y[T_1,\ldots,T_r]=\mathbf V^r_Y
+\]
+el $Y$-morfismo correspondiente al homomorfismo $\sh{O}_Y^r\to f_*(\sh{O}_X)$ de $\sh{O}_Y$-módulos definido por las $t_i$ (consideradas como secciones de $f_*(\sh{O}_X)$ sobre $Y$) (II, 1.2.7). Se tiene la sucesión exacta (16.4.19)
+\[
+  g^*(\Omega^1_{Z/Y})\longrightarrow\Omega^1_{X/Y}\longrightarrow\Omega^1_{X/Z}\longrightarrow0.
+\]
+Como los $dT_i$ ($1\leq i\leq r$) generan $\Omega^1_{Z/Y}$, se deduce de la definición de $g$ que el homomorfismo $g^*(\Omega^1_{Z/Y})\to\Omega^1_{X/Y}$ es sobreyectivo, luego $\Omega^1_{X/Z}=0$ y, por tanto, $g$ es no ramificado (17.4.1). Vamos a demostrar que $g$ es étale en el punto $x$, y teniendo en cuenta (17.3.8), esto probará que $f$ es liso en el punto $x$. Como se supone que $\sh{O}_{Y,y}$ es íntegro y geométricamente
+
+\oldpage[IV-4]{169}
+
+unirrama, lo mismo ocurre con $\sh{O}_{Z,z}$, donde $z=g(x)$, pues el morfismo estructural $Z\to Y$ es liso (17.3.8). En virtud de (18.10.1), basta demostrar que el homomorfismo $\sh{O}_{Z,z}\to\sh{O}_{X,x}$ es inyectivo; equivale a ver que el morfismo correspondiente $\Spec(\sh{O}_{X,x})\to\Spec(\sh{O}_{Z,z})$ es dominante, puesto que $\sh{O}_{Z,z}$ es íntegro (I, 1.2.7).
+
+Sea $y'$ el punto genérico de $Y=\Spec(\sh{O}_{Y,y})$ y sea $z'$ el punto genérico de $Z=\Spec(\sh{O}_{Y,y}[T_1,\ldots,T_r])$, que es íntegro; si $h:Z\to Y$ es el morfismo estructural, se tiene $h(z')=y'$. Basta demostrar que existe en $f^{-1}(y')$ una generalización $x'$ de $x$ tal que la imagen de $x'$ por el morfismo $g_{y'}:f^{-1}(y')\to h^{-1}(y')$ sea igual a $z'$. Además, $z'$ es también el punto genérico de $h^{-1}(y')=\Spec(k(y')[T_1,\ldots,T_r])$; como el morfismo $g_{y'}$ es no ramificado, luego cuasi-finito (17.4.2), lo mismo vale para su restricción a toda componente irreducible de $f^{-1}(y')$; como $f^{-1}(y')$ y $h^{-1}(y')$ son localmente noetherianos y $\dim(h^{-1}(y'))=r$, se deduce de (5.4.1) que la restricción de $g_{y'}$ a toda componente irreducible de dimensión $\geq r$ de $f^{-1}(y')$ es un morfismo dominante. Ahora bien, por hipótesis existe una componente de ese tipo que contiene una generalización $x'$ de $x$; \emph{a fortiori}, su punto genérico es una generalización de $x$, de donde se sigue la conclusión.

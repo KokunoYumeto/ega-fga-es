@@ -1,0 +1,244 @@
+\subsection{Divisores sobre los preesquemas de dimensión 1}
+\label{subsection:IV.21.9}
+\label{IV.21.9}
+
+\begin{env}[21.9.1]
+\label{IV.21.9.1}
+Sean $X$ un espacio topológico, $x$ un punto de $X$, $i_x:\{x\}\to X$ la inyección canónica.
+Si $A(x)$ es un grupo conmutativo, se lo puede considerar como un haz de grupos conmutativos sobre el espacio $\{x\}$ reducido a un solo punto, y tomar su imagen directa $(i_x)_*(A(x))$, que es un haz de grupos conmutativos sobre $X$ \sref[0]{0.3.4.1};
+de las definiciones resulta inmediatamente que, para todo abierto $U$ de $X$, $\Gamma(U,(i_x)_*(A(x)))=A(x)$ si $x\in U$, y se reduce a $0$ en caso contrario;
+por tanto, para $y\in\overline{\{x\}}$ se tiene $((i_x)_*(A(x)))_y=A(x)$, y para $y\notin\overline{\{x\}}$, $((i_x)_*(A(x)))_y=0$.
+
+Si ahora $\sh{F}$ es un haz de grupos conmutativos sobre $X$ e $Y$ un subconjunto de $X$, para todo abierto $U$ de $X$ se tiene un homomorfismo canónico
+\[
+\label{IV.21.9.1.1}
+  \Gamma(U,\sh{F})\to\prod_{x\in U\cap Y}\sh{F}_x
+  =\prod_{x\in Y}\Gamma(U,(i_x)_*(\sh{F}_x))
+  \tag{21.9.1.1}
+\]
+y, como estos homomorfismos conmutan con las aplicaciones de restricción, definen un homomorfismo canónico de \emph{haces}
+\[
+\label{IV.21.9.1.2}
+  j_Y:\sh{F}\to\prod_{x\in Y}(i_x)_*(\sh{F}_x).
+  \tag{21.9.1.2}
+\]
+\end{env}
+
+\begin{lemma}[21.9.2]
+\label{IV.21.9.2}
+Sean $X$ un espacio topológico localmente noetheriano, $X_0$ el conjunto de sus puntos cerrados y $\sh{F}$ un haz de grupos conmutativos sobre $X$.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item El homomorfismo canónico $j_{X_0}:\sh{F}\to\prod_{x\in X_0}(i_x)_*(\sh{F}_x)$ es inyectivo y tiene por imagen $\bigoplus_{x\in X_0}(i_x)_*(\sh{F}_x)$.
+  \item[\rm a$'$)] Existe una familia de grupos conmutativos $(A(x))_{x\in X_0}$ tal que $\sh{F}$ sea isomorfo a $\bigoplus_{x\in X_0}(i_x)_*(A(x))$.
+  \item Toda sección de $\sh{F}$ sobre un abierto $U$ de $X$ tiene un soporte discreto contenido en $X_0$.
+\end{enumerate}
+Cuando esto ocurre, para todo $x\in X_0$ el grupo $A(x)$ está determinado salvo isomorfismo único y es isomorfo a $\sh{F}_x$.
+Además, el haz $\sh{F}$ es entonces flácido.
+\end{lemma}
+
+\begin{proof}
+\oldpage[IV-4]{285}
+Como los puntos de $X_0$ son cerrados en $X$, se tiene $((i_x)_*(A(x)))_y=0$ para todo $y\neq x\in X_0$;
+esta observación prueba la afirmación de unicidad relativa a los grupos $A(x)$, y por otra parte es claro que \emph{a)} implica \emph{a$'$)}.
+Para ver que \emph{a$'$)} implica \emph{b)}, podemos limitarnos al caso en que $U$ sea noetheriano;
+entonces (G, II, 3.10) se tiene
+\[
+  \Gamma(U,\bigoplus_{x\in X_0}(i_x)_*(A(x)))
+  =\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(A(x))),
+\]
+por lo que toda sección $s$ de $\sh{F}$ sobre $U$ es suma directa de un número \emph{finito} de secciones $s_k\in\Gamma(U,(i_{x_k})_*(A(x_k)))$ ($1\leq k\leq n$), con $x_k\in X_0$.
+Pero, como $x_k$ es cerrado en $X$, el soporte de $s_k$ se reduce a $\{x_k\}$; por tanto, el soporte de $s$ está contenido en el conjunto finito de los $x_k$, que es evidentemente discreto puesto que los puntos $x_k$ son cerrados en $X$.
+Demostremos finalmente que \emph{b)} implica \emph{a)};
+para todo abierto noetheriano $U$, todo soporte de una sección de $\sh{F}$ sobre $U$, por ser discreto y cuasicompacto, es \emph{finito}.
+Se deduce, pues, de la hipótesis \emph{b)} que, para todo abierto noetheriano $U$, la imagen del homomorfismo \sref{IV.21.9.1.1} (para $Y=X_0$) está contenida en $\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(\sh{F}_x))$ y que este homomorfismo es inyectivo, lo que establece \emph{a)}.
+
+Por último, para demostrar que $\sh{F}$ es flácido, consideremos una sección $s$ de $\sh{F}$ sobre un abierto $U$ de $X$;
+como el soporte de $s$ es un subespacio discreto y cerrado de $X$, se prolonga $s$ a una sección $s'$ de $\sh{F}$ sobre $X$ poniendo $s'_x=0$ en $X-U$.
+\end{proof}
+
+\begin{remark}[21.9.3]
+\label{IV.21.9.3}
+\begin{enumerate}[label=(\roman*)]
+  \item En la condición \emph{b)} de \sref{IV.21.9.2}, no basta suponer que el soporte de toda sección de $\sh{F}$ sobre un abierto cualquiera de $X$ sea \emph{discreto};
+así lo muestra el ejemplo en que se toma como $X$ el espectro de un anillo de valoración discreta, con un punto cerrado $b$ y un punto genérico $a$, y como $\sh{F}$ el haz de grupos conmutativos tal que $\sh{F}_b=0$ y $\sh{F}_a=\bb{Z}$.
+
+  \item Supuestas satisfechas las condiciones de \sref{IV.21.9.2}, sea $E$ un subconjunto discreto de $X_0$ y, para todo $x\in E$, sea $a(x)$ un elemento de $A(x)$.
+Existe entonces una sección única $t$ de $\bigoplus_{x\in X_0}(i_x)_*(A(x))$ sobre $X$ tal que $t_x=a(x)$ para todo $x\in E$ y que el soporte de $t$ esté contenido en $E$.
+En efecto, para todo abierto noetheriano $U$, $E\cap U$ es finito, y basta tomar como $t$ la sección de $\bigoplus_{x\in E}(i_x)_*(A(x))$ cuya restricción a cada abierto noetheriano $U$ sea la suma de los $a(x)$ para $x\in E\cap U$.
+\end{enumerate}
+\end{remark}
+
+\begin{proposition}[21.9.4]
+\label{IV.21.9.4}
+Sean $X$ un preesquema localmente noetheriano de dimensión $\leq1$ y $X^{(1)}$ el conjunto de los puntos $x\in X$ tales que $\dim(\sh{O}_{X,x})=1$.
+Se tiene entonces un isomorfismo canónico
+\[
+\label{IV.21.9.4.1}
+  \sh{D}iv_X\simto\bigoplus_{x\in X^{(1)}}(i_x)_*(\operatorname{Div}(\sh{O}_{X,x}))
+  \tag{21.9.4.1}
+\]
+y $\sh{D}iv_X$ es flácido.
+\end{proposition}
+
+\begin{proof}
+Teniendo en cuenta el isomorfismo \sref{IV.21.4.6.1}, el homomorfismo \sref{IV.21.9.4.1} está definido por \sref{IV.21.9.1.2}:
+demostremos que es una biyección.
+Como $\dim(X)\leq1$, los puntos de $X^{(1)}$ son los \emph{puntos cerrados no aislados} de $X$.
+Nos reducimos a demostrar que:
+1\textsuperscript{o} $\sh{D}iv_X$ satisface la condición \emph{b)} de \sref{IV.21.9.2};
+2\textsuperscript{o} para todo punto aislado $x\in X$, se tiene $(\sh{D}iv_X)_x=0$.
+El segundo punto resulta de que $\sh{O}_{X,x}$ es entonces un anillo artiniano y de que todo elemento regular de $\sh{O}_{X,x}$ es, por tanto, invertible.
+\oldpage[IV-4]{286}
+Para 1\textsuperscript{o}, basta observar que, para todo abierto $U$ de $X$ y todo divisor $D\in\operatorname{Div}(U)$, los puntos maximales del soporte $S$ de $D$ son tales que $\operatorname{prof}(\sh{O}_{X,x})=1$ \sref{IV.21.1.9}, y por tanto, \emph{a fortiori}, pertenecen a $X^{(1)}\cap U$;
+puesto que $\dim(X)\leq1$, el conjunto de estos puntos es igual a $S$, y $S$ es, por consiguiente, discreto, ya que el conjunto de las componentes irreducibles de $S$ es localmente finito.
+\end{proof}
+
+\begin{corollary}[21.9.5]
+\label{IV.21.9.5}
+Sea $X$ un preesquema localmente noetheriano de dimensión $\leq1$.
+Para todo subconjunto discreto $E\subset X^{(1)}$ y toda familia $(D(x))_{x\in E}$ con $D(x)\in\operatorname{Div}(\sh{O}_{X,x})$, existe un divisor $D$ sobre $X$, y solo uno, tal que el soporte de $D$ esté contenido en $E$ y que $D_x=D(x)$ para todo $x\in E$.
+\end{corollary}
+
+\begin{proof}
+Esto resulta de \sref{IV.21.9.4} y de \sref{IV.21.9.3}, (ii).
+\end{proof}
+
+\begin{corollary}[21.9.6]
+\label{IV.21.9.6}
+Sea $X$ un preesquema localmente noetheriano de dimensión $\leq1$;
+todo divisor $D$ sobre $X$ es de la forma $D'-D''$, donde $D'$ y $D''$ son dos divisores $\geq0$ cuyos soportes están contenidos en el de $D$.
+\end{corollary}
+
+\begin{proof}
+En virtud de \sref{IV.21.9.5}, nos reducimos inmediatamente al caso en que $X=\Spec(A)$, donde $A$ es un anillo local noetheriano;
+basta entonces observar que $M(X)$ es el anillo total de fracciones de $A$, y que una sección de $\sh{M}^*_X$ sobre $X$ se escribe, por definición, como cociente $b/a$ de dos elementos regulares de $A$.
+\end{proof}
+
+\begin{corollary}[21.9.7]
+\label{IV.21.9.7}
+Sean $X$ un preesquema localmente noetheriano de dimensión $\leq1$, sin puntos aislados, y $U$ un abierto denso de $X$.
+Existe entonces un divisor $D\geq0$ sobre $X$, cuyo soporte está contenido en $U$ y que corta cada una de las componentes irreducibles de $X$.
+\end{corollary}
+
+\begin{proof}
+Podemos suponer que $U$ es unión de abiertos disjuntos no vacíos $U_\alpha$, cada uno de los cuales está contenido en una sola componente irreducible de $X$;
+basta entonces tomar en cada $U_\alpha$ un punto $x_\alpha$ cerrado en $X$ (existe uno, pues el único punto genérico de $U_\alpha$ no puede ser aislado por hipótesis), y aplicar \sref{IV.21.9.5} al conjunto discreto de los $x_\alpha$.
+\end{proof}
+
+El interés de este corolario es que permitirá demostrar que una curva algebraica separada $X$ sobre un cuerpo $k$ es cuasiproyectiva, pues el divisor $D\geq0$ definido en \sref{IV.21.9.7} es entonces necesariamente \emph{amplio} en virtud del teorema de Riemann--Roch para las curvas (cap.~V).
+
+\begin{env}[21.9.8]
+\label{IV.21.9.8}
+Para los preesquemas localmente noetherianos $X$ de dimensión $\leq1$, la proposición \sref{IV.21.9.4} reduce la determinación de $\sh{D}iv_X$ al caso en que $X=\Spec(A)$, siendo $A$ un anillo local noetheriano de dimensión $1$.
+
+Cuando $A$ es un anillo local regular de dimensión $1$ (es decir, un anillo de valoración discreta), el grupo $\operatorname{Div}(A)$ se identifica canónicamente con $\bb{Z}$ \sref{IV.21.6.8};
+por tanto, en virtud de \sref{IV.21.9.2}:
+\end{env}
+
+\begin{proposition}[21.9.9]
+\label{IV.21.9.9}
+Sea $X$ un preesquema localmente noetheriano regular de dimensión $\leq1$.
+Entonces el haz $\sh{D}iv_X$ es canónicamente isomorfo a $\bigoplus_{x\in X^{(1)}}(i_x)_*(\bb{Z}(x))$, donde $\bb{Z}(x)$ es el grupo aditivo $\bb{Z}$ considerado como haz de grupos sobre el espacio $\{x\}$.
+\end{proposition}
+
+\begin{env}[21.9.10]
+\label{IV.21.9.10}
+Supongamos solamente que el anillo local noetheriano $A$ de dimensión $1$ sea \emph{reducido};
+entonces, si $A'$ es el \emph{normalizado} de $A$ (la clausura integral de $A$ en su anillo total de fracciones), $A'$ es noetheriano en virtud del teorema de Krull--Akizuki (Bourbaki, \emph{Alg.\ comm.}, cap.~VII, \textsection~2, n\textsuperscript{o}~5, prop.~5), y se ha visto en \sref{IV.21.8.6} cómo
+\oldpage[IV-4]{287}
+$\operatorname{Div}(A)$ puede obtenerse como \emph{extensión} de $\operatorname{Div}(A')$, siendo este último grupo de la forma $\bb{Z}^r$.
+\end{env}
+
+\begin{proposition}[21.9.11]
+\label{IV.21.9.11}
+Sean $X$ un preesquema noetheriano y $X_0$ un subpreesquema cerrado de $X$ que tenga las propiedades siguientes:
+\begin{enumerate}
+  \item[\rm 1\textsuperscript{o}] $\dim(X_0)\leq1$.
+  \item[\rm 2\textsuperscript{o}] Para todo subconjunto localmente cerrado $Y$ de $X$ tal que $Y\cap X_0$ sea discreto, existe un subconjunto $Y'$ de $Y$, cerrado en $X$ y abierto en $Y$, que contiene a $Y\cap X_0$.
+\end{enumerate}
+En estas condiciones:
+\begin{enumerate}[label=(\roman*)]
+  \item Sea $Z_0$ la unión de los conjuntos $\overline{\{x\}}\cap X_0$ cuando $x$ recorre el subconjunto de $\operatorname{Ass}(\sh{O}_X)$ formado por los puntos tales que $\overline{\{x\}}\cap X_0$ sea finito.
+Entonces, para todo divisor $D_0$ sobre $X_0$ cuyo soporte no corte a $Z_0$, existe un divisor $D$ sobre $X$ cuya imagen inversa por la inyección canónica $X_0\to X$ existe \sref{IV.21.4} y es igual a $D_0$;
+si además $D_0\geq0$, se puede suponer $D\geq0$.
+
+  \item Supongamos además que existe en $X_0$ un abierto afín $U_0$ que contiene a $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ (condición que se verifica automáticamente cuando existe un $\sh{O}_{X_0}$-módulo amplio \sref[II]{II.4.5.4}).
+Entonces el homomorfismo canónico \sref{IV.21.3.2.4} $\operatorname{Pic}(X)\to\operatorname{Pic}(X_0)$ es sobreyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Teniendo en cuenta \sref{IV.21.9.6}, podemos limitarnos a demostrar la afirmación relativa a los divisores $D_0\geq0$;
+en virtud de \sref{IV.21.9.4}, el soporte $T$ de $D_0$ es un conjunto discreto y cerrado en $X_0$.
+Podemos suponer $D_0\neq0$, es decir, $T\neq\emp$, pues de lo contrario no hay nada que demostrar.
+Para todo $x\in T$, existe un elemento $s_x\in\sh{O}_{X_0,x}$ que no es divisor de cero en este anillo, pertenece a su ideal maximal y cuya imagen en $(\sh{D}iv_{X_0})_x$ es $(D_0)_x$.
+Existe un entorno abierto afín $U^{(x)}$ de $x$ en $X$ y una sección $g^{(x)}$ de $\sh{O}_X$ sobre $U^{(x)}$ tales que $s_x$ sea la imagen en $\sh{O}_{X_0,x}$ del germen $(g^{(x)})_x\in\sh{O}_{X,x}$;
+veremos que, tomando $U^{(x)}$ suficientemente pequeño, se puede conseguir que $g^{(x)}$ no sea divisor de cero en $\Gamma(U^{(x)},\sh{O}_X)$, es decir, \sref{IV.3.1.9}, que, si $V^{(x)}$ denota el subconjunto cerrado de $U^{(x)}$ formado por los $y$ tales que $g^{(x)}(y)=0$, se tenga $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
+
+Ahora bien, si $z\in\operatorname{Ass}(\sh{O}_X)$, la hipótesis $x\notin Z_0$ implica que, o bien $x\notin\overline{\{z\}}$, o bien $x$ no está aislado en $\overline{\{z\}}\cap X_0$.
+Reemplazando $U^{(x)}$ por un abierto más pequeño, se puede suponer que el segundo caso es el que se produce para todo $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$.
+$V^{(x)}$ contendría entonces una componente irreducible de dimensión $1$ de $X_0\cap U^{(x)}$ que contiene a $x$;
+pero esto significaría que la imagen $\overline{g}^{(x)}$ de $g^{(x)}$ en $\Gamma(U^{(x)}\cap X_0,\sh{O}_{X_0})$ estaría en el nilradical de este anillo y, por consiguiente, $s_x$ pertenecería al nilradical de $\sh{O}_{X_0,x}$, lo que es absurdo.
+Se tiene, pues, $x\notin\overline{\{z\}}$ para todo punto $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$ y, como este conjunto es finito, se puede suponer, reemplazando $U^{(x)}$ por un entorno abierto más pequeño de $x$, que $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
+
+En virtud de la elección de $U^{(x)}$, se puede definir un divisor $D'^{(x)}$ sobre $U^{(x)}$ mediante $D'^{(x)}=\operatorname{div}(g^{(x)})$;
+por otra parte, se ha visto más arriba que $x$ está necesariamente aislado en $V^{(x)}\cap X_0$, por lo que, reemplazando de nuevo $U^{(x)}$ por un entorno abierto más pequeño de $x$, se puede suponer que $V^{(x)}\cap X_0$ se reduce al punto $x$.
+Pero existe entonces, en virtud de la condición 2\textsuperscript{o}, un subconjunto $W^{(x)}$ de $V^{(x)}$, cerrado en $X$ y abierto en $V^{(x)}$, tal que $W^{(x)}\cap X_0=\{x\}$.
+Reemplazando de nuevo $U^{(x)}$ por un entorno abierto más pequeño de $x$, se puede suponer
+\oldpage[IV-4]{288}
+que $W^{(x)}=V^{(x)}$, es decir, que $V^{(x)}$ es cerrado en $X$.
+Se puede definir entonces un divisor $D^{(x)}$ sobre $X$ mediante la condición de que $D^{(x)}|U^{(x)}=D'^{(x)}$ y $D^{(x)}|(X-V^{(x)})=0$, lo que tiene sentido porque, en $U^{(x)}\cap(X-V^{(x)})$, la restricción de $g^{(x)}$ es una sección invertible, por lo que las restricciones a este abierto de los dos divisores considerados sobre $U^{(x)}$ y $X-V^{(x)}$ son iguales.
+Basta entonces, para responder a la cuestión, tomar $D=\sum_{x\in T}D^{(x)}$, lo que tiene sentido puesto que $T$ es finito.
+
+  \item Teniendo en cuenta el diagrama conmutativo \sref{IV.21.4.2.1}, la conclusión resultará de (i) si se demuestra que todo $\sh{O}_{X_0}$-módulo invertible $\sh{L}_0$ es isomorfo a un $\sh{O}_{X_0}$-módulo de la forma $\sh{O}_{X_0}(D_0)$ \sref{IV.21.2.8}, donde $D_0$ es un divisor sobre $X_0$ cuyo soporte no corta a $Z_0$.
+Ahora bien, como $U_0$ es esquemáticamente denso en $X_0$ \sref{IV.20.2.13}, (iv), basta para ello demostrar que existe una sección $t\in\Gamma(U_0,\sh{L}_0)$ tal que $t(z_0)\neq0$ en los puntos de $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ \sref{IV.3.1.9}.
+Podemos, pues, limitarnos al caso en que $X_0=\Spec(A_0)$ sea afín;
+pero entonces $\sh{L}_0$ es amplio \sref[II]{II.5.1.4} y, como el conjunto $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ es finito, la conclusión resulta de \sref[II]{II.4.5.4}.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[21.9.12]
+\label{IV.21.9.12}
+Sean $A$ un anillo local henseliano \sref{IV.18.5.8}, $S=\Spec(A)$, $s_0$ el punto cerrado de $S$, $f:X\to S$ un morfismo separado de presentación finita, y supongamos que el conjunto $X_0=f^{-1}(s_0)$ sea de dimensión $\leq1$.
+Entonces, para todo subesquema cerrado $X'_0$ de $X$, que tenga a $X_0$ como conjunto subyacente y sea de presentación finita sobre $S$, el homomorfismo canónico \sref{IV.21.3.2.4} $\operatorname{Pic}(X)\to\operatorname{Pic}(X'_0)$ es sobreyectivo.
+\end{corollary}
+
+\begin{proof}
+Demostremos primero que basta probar el corolario cuando el anillo local henseliano $A$ sea además noetheriano.
+En efecto, se sabe \sref{IV.18.6.15} que se puede escribir $A=\varinjlim A_\lambda$, donde los $A_\lambda$ son anillos locales noetherianos y henselianos, siendo locales los homomorfismos $A_\lambda\to A$;
+existe además un índice $\alpha$ y un morfismo separado de presentación finita $f_\alpha:X_\alpha\to S_\alpha=\Spec(A_\alpha)$ tales que $X$ y $f$ se deduzcan de $X_\alpha$ y $f_\alpha$ por el cambio de base $S\to S_\alpha$ \sref{IV.8.10.5}, (v);
+con las notaciones habituales \sref{IV.8.8.1}, los morfismos $f_\lambda:X_\lambda\to S_\lambda$ serán separados para $\lambda\geq\alpha$ y se tendrá $X=X_\lambda\times_{S_\lambda}S$.
+Además, se puede suponer que, si $s_{0\alpha}$ es el único punto cerrado de $S_\alpha$, existe un subesquema cerrado $X'_{0\alpha}$ de $X_\alpha$, que tiene el mismo conjunto subyacente que $f_\alpha^{-1}(s_{0\alpha})$, tal que $X'_0=X'_{0\alpha}\times_{S_\alpha}S$ \sref{IV.8.6.3};
+para $\lambda\geq\alpha$, pongamos $X'_{0\lambda}=X'_{0\alpha}\times_{S_\alpha}S_\lambda$;
+se tiene $\dim(X'_{0\lambda})=\dim(X'_0)\leq1$ por transitividad de las fibras y \sref{IV.4.1.4}.
+Se trata de ver que, si se ha demostrado que el homomorfismo $\operatorname{Pic}(X_\lambda)\to\operatorname{Pic}(X'_{0\lambda})$ es sobreyectivo para todo $\lambda\geq\alpha$, lo mismo ocurre con $\operatorname{Pic}(X)\to\operatorname{Pic}(X'_0)$.
+Se tiene evidentemente el diagrama conmutativo de homomorfismos canónicos
+\[
+  \xymatrix{
+    \operatorname{Pic}(X_\lambda) \ar[r] \ar[d] & \operatorname{Pic}(X) \ar[d]\\
+    \operatorname{Pic}(X'_{0\lambda}) \ar[r] & \operatorname{Pic}(X'_0)
+  }
+\]
+Para todo $\sh{O}_{X'_0}$-módulo invertible $\sh{L}'_0$, existe un $\lambda\geq\alpha$ y un $\sh{O}_{X'_{0\lambda}}$-módulo invertible $\sh{L}'_{0\lambda}$ tal que $\sh{L}'_0$ se deduzca de él por el cambio de base $S\to S_\lambda$ \sref{IV.8.5.2} y \sref{IV.8.5.5};
+basta considerar un $\sh{O}_{X_\lambda}$-módulo invertible $\sh{L}_\lambda$ tal que $\operatorname{cl}(\sh{L}'_{0\lambda})$ sea la imagen de $\operatorname{cl}(\sh{L}_\lambda)$ en $\operatorname{Pic}(X'_{0\lambda})$, y tomar luego el $\sh{O}_X$-módulo invertible $\sh{L}$ deducido de $\sh{L}_\lambda$ por cambio de base;
+en virtud de la conmutatividad del diagrama anterior, $\operatorname{cl}(\sh{L}'_0)$ será la imagen de $\operatorname{cl}(\sh{L})$.
+
+Supongamos, pues, que $A$ es noetheriano, y por tanto también $X$, y comprobemos que $X$ y $X'_0$ satisfacen las condiciones de \sref{IV.21.9.11}, (ii).
+Por hipótesis, se tiene $\dim(X'_0)\leq1$;
+por otra parte, para verificar la condición 2\textsuperscript{o} de \sref{IV.21.9.11}, consideremos el subpreesquema reducido $Y$ de $X$ que tenga el subconjunto localmente cerrado $Y$ como espacio subyacente;
+como el morfismo $g:Y\to S$, restricción de $f$, es cuasifinito en cada uno de los puntos $x_i$ de $Y\cap X_0$ ($1\leq i\leq n$), se puede aplicar \sref{IV.18.5.11}, c), y se ve que $Y$ es suma de los subpreesquemas abiertos $Y_i=\Spec(\sh{O}_{Y,x_i})$ ($1\leq i\leq n$) y de un preesquema $Y''$ tal que $Y''\cap X_0=\emp$, y además que las inyecciones canónicas $j_i:Y_i\to X$ son tales que $f\circ j_i$ sea un morfismo finito.
+Como $f$ es separado, $j_i$ es también un morfismo finito, por lo que $Y_i$ es cerrado en $X$;
+se responde, pues, a la cuestión tomando $Y'=\bigcup_{1\leq i\leq n}Y_i$.
+
+Queda por verificar la hipótesis suplementaria de \sref{IV.21.9.11}, (ii).
+Ahora bien, como $X'_0$ es una curva separada sobre el cuerpo $\boldsymbol{k}(s_0)$, es un $\boldsymbol{k}(s_0)$-esquema cuasiproyectivo (cap.~V)\footnote{El lector comprobará que \sref{IV.21.9.12} no se utiliza para demostrar esta propiedad en el cap.~V.}, por lo que existe un $\sh{O}_{X'_0}$-módulo amplio \sref[II]{II.5.3.1}, y esto termina la demostración.
+\end{proof}
+
+\begin{remark}[21.9.13]
+\label{IV.21.9.13}
+Bajo las condiciones de \sref{IV.21.9.12}, suponiendo además que $f$ sea propio, el morfismo $f$ es incluso \emph{proyectivo}:
+en efecto, si $\sh{L}_0$ es un $\sh{O}_{X'_0}$-módulo amplio, existe, en virtud de \sref{IV.21.9.12}, un $\sh{O}_X$-módulo invertible $\sh{L}$ cuya imagen inversa en $X'_0$ es isomorfa a $\sh{L}_0$, y por tanto es amplia.
+Como todo entorno de $s_0$ en $S$ coincide necesariamente con $S$, se deduce entonces de \sref{IV.9.6.4} que $\sh{L}$ es un $\sh{O}_X$-módulo amplio, de donde resulta la conclusión (\sref[II]{II.5.3.1} y \sref[II]{II.5.5.3}).
+\end{remark}

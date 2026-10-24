@@ -1,0 +1,113 @@
+\subsection{Subpreesquemas lisos de un preesquema liso. Morfismos lisos y morfismos diferencialmente lisos}
+\label{subsection:IV.17.12}
+
+\begin{theorem}[17.12.1]
+\label{IV.17.12.1}
+Sean $f:X\to S$, $h:Y\to S$ dos morfismos localmente de presentación finita, $j:Y\to X$ una inmersión, $y$ un punto de $Y$, $x=j(y)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $h$ es liso en el punto $y$ y $f$ es liso en el punto $x$.
+  \item[b)] $f$ es liso en el punto $x$, y el homomorfismo canónico (16.4.21)
+  \[
+  (\sh{N}_{Y/X})_y\to(j^*(\Omega^1_{X/S}))_y
+  \]
+  admite un inverso por la izquierda.
+  \item[c)] $h$ es liso en el punto $y$ y existe una vecindad abierta $U$ de $y$ en $Y$ tal que $j|U:U\to X$ sea una inmersión regular (16.9.2).
+
+\oldpage[IV-4]{86}
+
+  \item[c')] $h$ es liso en el punto $y$ y existe una vecindad abierta $U$ de $y$ en $Y$ tal que $j|U:U\to X$ sea una inmersión cuasi-regular (es decir (16.9.8), existe una vecindad $U$ de $y$ en $Y$ en la que $\sh{N}_{Y/X}$ es un $\sh{O}_Y$-módulo localmente libre y el homomorfismo canónico
+  \[
+  \mathbf{S}_{\sh{O}_Y}(\sh{N}_{Y/X})\to\operatorname{gr}^{\bullet}(j)
+  \]
+  es biyectivo).
+\end{enumerate}
+\end{theorem}
+
+Para demostrar la equivalencia de a) y b), podemos reducirnos al caso en que $S=\Spec(A)$ y $X=\Spec(B)$ son afines, con $Y=\Spec(B/\mathfrak J)$, donde $\mathfrak J$ es un ideal de tipo finito de $B$, y $B$ es una $A$-álgebra lisa (17.3.2, (ii)). Basta entonces aplicar el criterio jacobiano (0, 22.6.1), así como (0, 19.1.14), teniendo en cuenta que $\Omega^1_{X/S}$ es un $\sh{O}_X$-módulo localmente libre en una vecindad de $x$ y $\sh{N}_{Y/X}$ un $\sh{O}_Y$-módulo de tipo finito (16.1.6).
+
+En segundo lugar, probemos que a) implica c'). Podemos reducirnos nuevamente al caso en que $S$, $X$, $Y$ son afines, $B$ y $B/\mathfrak J$ son $A$-álgebras lisas, y resulta entonces de (17.7.9) y (8.10.5, (iv)) que existen un subanillo noetheriano $A'$ de $A$, una $A'$-álgebra de tipo finito $B'$ y un ideal $\mathfrak J'$ de $B'$ tales que $B=B'\otimes_{A'}A$, $\mathfrak J=\mathfrak J'B$ y que $B'$ y $B'/\mathfrak J'$ son $A'$-álgebras lisas. Observemos que, según (0, 19.3.8), $B'$ sigue siendo una $A'$-álgebra formalmente lisa cuando se dota a $A'$ de la topología discreta y a $B'$ de la topología $\mathfrak J'$-preádica. Por consiguiente (0, 19.5.4), $\mathfrak J'/\mathfrak J'^2$ es un $(B'/\mathfrak J')$-módulo proyectivo y el homomorfismo canónico
+\[
+\mathbf{S}_{B'/\mathfrak J'}(\mathfrak J'/\mathfrak J'^2)\to\operatorname{gr}_{\mathfrak J'}^{\bullet}(B')
+\]
+es biyectivo. En otros términos (16.9.8), la inmersión $\Spec(B'/\mathfrak J')\to\Spec(B')$ es cuasi-regular, por tanto regular puesto que $B'$ es noetheriano (16.9.10). Pero, como por hipótesis $B'/\mathfrak J'$ es un $A'$-módulo plano (17.5.1) y $B'$ una $A'$-álgebra de presentación finita, podemos aplicar (11.3.8) reemplazando $\sh{F}$ por $\widetilde{\mathfrak J'}$, y vemos así (por cambio de base) que $j$ es una inmersión regular, y \emph{a fortiori} cuasi-regular. El hecho de que $B$ sea una $A$-álgebra de presentación finita y un $A$-módulo plano muestra además, en virtud de (11.3.8), que las condiciones c') y c) son equivalentes, y son estables por cambio de base.
+
+Demostremos finalmente que c) implica a). Del hecho de que, en (11.3.8), la condición b) implica c), se ve ya que, si c) se cumple, $f$ es \emph{plano} en el punto $x$; en virtud de (17.5.1), todo se reduce, pues, a ver que, bajo la hipótesis c), $f^{-1}(s)$ es liso sobre $k(s)$ en el punto $x$, poniendo $s=h(x)$; como se ha observado que la condición c) es estable por cambio de base, vemos que nos reducimos al caso en que $S=\Spec(k)$ es el espectro de un cuerpo, y teniendo en cuenta (17.7.1, (ii)) podemos suponer que $k$ es \emph{algebraicamente cerrado}. Basta entonces probar que $\sh{O}_{X,x}$ es un anillo \emph{regular} (17.5.1). Ahora bien, por hipótesis se tiene $\sh{O}_{Y,y}=\sh{O}_{X,x}/\mathfrak J_x$, donde $\mathfrak J_x$ es un ideal engendrado por una sucesión $\sh{O}_{X,x}$-regular $(t_i)$, y $\sh{O}_{Y,y}$ es un anillo regular; como los $t_i$ forman parte de un sistema de parámetros para $\sh{O}_{X,x}$ (0, 16.4.1), la conclusión resulta de (0, 17.1.7).
+
+\begin{corollary}[17.12.2]
+\label{IV.17.12.2}
+Con las notaciones de (17.12.1), supongamos que $f$ es liso en el punto $x$, y sea $Y$ un subpreesquema cerrado de $X$ definido por un ideal $\sh{J}$ de $\sh{O}_X$, y liso sobre $S$ en el punto $x$. Sean $(g_i)_{1\leq i\leq r}$ secciones de $\sh{J}$ sobre $X$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] Los $(g_i)_x$ forman un sistema de generadores del $\sh{O}_{X,x}$-módulo $\sh{J}_x$ cuyo número de elementos es el menor posible.
+  \item[b)] Si $g_i'$ es la imagen canónica de $g_i$ en $\Gamma(X,\sh{J}/\sh{J}^2)$, los $(g_i')_x$ forman una base del $(\sh{O}_{X,x}/\sh{J}_x)$-módulo $\sh{J}_x/\sh{J}_x^2$.
+
+\oldpage[IV-4]{87}
+
+  \item[c)] Las imágenes de los $d_{X/S}g_i$ en $(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)$ son elementos linealmente independientes sobre $k(x)$, y los $(g_i)_x$ engendran $\sh{J}_x$.
+  \item[d)] Existe una vecindad abierta $U$ de $x$ en $X$ y secciones $g_j$ ($r+1\leq j\leq n$) de $\sh{O}_X$ sobre $U$ tales que el $S$-morfismo $u:U\to S[T_1,\ldots,T_n]$ correspondiente al homomorfismo $\sh{O}_S^n\to f_*(\sh{O}_U)$ definido por las secciones $g_i|U$ ($1\leq i\leq r$) y $g_j$ ($r+1\leq j\leq n$) (II, 1.2.7) sea un morfismo étale, y que la imagen inversa del subpreesquema $Y'=S[T_{r+1},\ldots,T_n]$ por este morfismo sea el preesquema inducido por $j(Y)$ sobre el abierto $U\cap j(Y)$.
+\end{enumerate}
+\end{corollary}
+
+Como $(g_i')_x$ es la imagen canónica de $(g_i)_x$, la equivalencia de a) y b) resulta del lema de Nakayama, pues $\sh{J}_x$ es de tipo finito y $\sh{J}_x/\sh{J}_x^2$ un $(\sh{O}_{X,x}/\sh{J}_x)$-módulo libre (17.10.4) (Bourbaki, \emph{Alg. comm.}, cap. II, § 3, n\textsuperscript{o} 2, prop. 5). En virtud de (17.12.1, b)), $\sh{J}_x/\sh{J}_x^2$ se identifica canónicamente con un factor directo del $(\sh{O}_{X,x}/\sh{J}_x)$-módulo libre de rango $n$, $(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}(\sh{O}_{X,x}/\sh{J}_x)$, y la equivalencia de b) y c) resulta de Bourbaki, \emph{loc. cit.} Además, si a) se cumple, $(g_i')_x$ se identifica así con $(d_{X/S}g_i)_x\otimes1$ para $1\leq i\leq r$; como el $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/S})_x$ es libre de rango $n$, resulta nuevamente de Bourbaki, \emph{loc. cit.}, que, reemplazando si es preciso $X$ por una vecindad abierta de $x$, se puede suponer que existen $n-r$ secciones $g_i$ ($r+1\leq i\leq n$) de $\sh{O}_X$ sobre $X$, tales que los $(d_{X/S}g_i)_x$ para $1\leq i\leq n$ forman una base de $(\Omega^1_{X/S})_x$; el hecho de que el morfismo correspondiente $u$ sea étale en el punto $x$ resulta entonces de (17.11.3); por la misma razón, el morfismo $u^{-1}(Y')\to Y'$, restricción de $u$, es étale en el punto $x$; reemplazando $X$ por una vecindad de $x$, se puede suponer que ambos morfismos son étale. Además, es inmediato que $Y$ (identificado, para simplificar, con el subpreesquema cerrado $j(Y)$ de $X$) es un subpreesquema cerrado de $u^{-1}(Y')$, y, en virtud de la elección de los $g_i$ para $i>r$ y de (17.2.5) y (17.11.2), se puede suponer también que la restricción a $Y$ de $u$ es étale. Se deduce que, para todo $y'\in Y'$, la inmersión $Y\cap u^{-1}(y')\to u^{-1}(y')$ es abierta, de donde se concluye, con ayuda de (17.9.6), que $Y\to u^{-1}(Y')$ es una inmersión abierta; esto prueba que a) implica d). El recíproco se deduce inmediatamente de (17.11.3).
+
+\begin{corollary}[17.12.3]
+\label{IV.17.12.3}
+Sean $f:X\to S$ un morfismo localmente de presentación finita, $u:S\to X$ una $S$-sección de $X$. Para que $f$ sea liso en un punto $x\in X$, es necesario y suficiente que $u$ sea una inmersión cuasi-regular en una vecindad de $s=f(x)$.
+\end{corollary}
+
+La conclusión resulta de (17.12.1), puesto que $f\circ u=1_S$ es liso.
+
+\begin{proposition}[17.12.4]
+\label{IV.17.12.4}
+Todo morfismo liso $f:X\to S$ es diferencialmente liso (es decir (16.10.5), $\Delta_f:X\to X\times_SX$ es una inmersión cuasi-regular). \emph{En particular, los $\sh{P}_f^n=\sh{P}_{X/S}^n$ y los $\operatorname{gr}_n(\sh{P}_{X/S})$ son $\sh{O}_X$-módulos localmente libres de tipo finito.}
+\end{proposition}
+
+Basta observar que el morfismo estructural $p_1:X\times_SX\to X$ es liso (17.3.3, (iii)) y que $\Delta_f$ es una $X$-sección de $p_1$; la conclusión resulta de (17.12.3).
+
+\begin{proposition}[17.12.5]
+\label{IV.17.12.5}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es diferencialmente liso.
+  \item[b)] Para todo morfismo $g:Y'\to Y$, si se pone $X'=X\times_Y Y'$ y $f'=f_{(Y')}:X'\to Y'$, entonces, para toda $Y'$-sección $s'$ de $X'$, $f'$ es liso en todos los puntos de $s'(Y')$.
+  \item[c)] La segunda proyección $p_2:X\times_YX\to X$ es lisa en todos los puntos de la diagonal $\Delta_f(X)$.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-4]{88}
+
+La condición c) es un caso particular de b): basta, en efecto, tomar $Y'=X$ y $g=f$ en b), pues entonces $f'$ no es sino la segunda proyección $p_2$, y $\Delta_f$ es una $X$-sección de $X\times_YX$. En segundo lugar, c) implica a), pues $p_2$ es un morfismo localmente de presentación finita, y si $p_2$ es liso en los puntos de $\Delta_f(X)$, $\Delta_f$ es una inmersión cuasi-regular (17.12.3), por tanto $f$ es diferencialmente liso. Finalmente, demostremos que a) implica b); si $\Delta_f$ es una inmersión cuasi-regular, $p_2$ es liso en todos los puntos de $\Delta_f(X)$ (17.12.3).
+
+Ahora bien, si $g':X'\to X$ es la proyección canónica, y $v=(g',g')_Y:X'\to X\times_YX$, se comprueba inmediatamente que el diagrama
+\[
+\xymatrix{
+  X\times_Y X \ar[d]_{p_2} & X' \ar[l]_-v \ar[d]^{f'}\\
+  X & Y' \ar[l]^{h=g'\circ s'}
+}
+\]
+es conmutativo e identifica $X'$ con el producto $(X\times_YX)\times_XY'$ (I, 3.3.9); teniendo en cuenta que el diagrama (17.4.1.1) identifica $Y'$ con el producto de los $(X\times_YX)$-preesquemas $X$ y $X'$, se concluye, del hecho de que $p_2$ es liso en todo punto de $\Delta_f(X)$, que $f'$ es liso en todo punto de $s'(Y')$ (17.3.3, (iii)).
+
+\begin{corollary}[17.12.6]
+\label{IV.17.12.6}
+Con las notaciones de (8.8.1), se supone $X_\alpha$ cuasicompacto, y $f_\alpha:X_\alpha\to S_\alpha$ localmente de presentación finita. Para que $f:X\to S$ sea diferencialmente liso, es necesario y suficiente que exista $\lambda\geq\alpha$ tal que $f_\lambda:X_\lambda\to S_\lambda$ sea diferencialmente liso (en cuyo caso $f_\mu:X_\mu\to S_\mu$ es diferencialmente liso para $\mu\geq\lambda$).
+\end{corollary}
+
+La suficiencia de la condición y la última afirmación resultan de (16.10.4). Para probar que la condición es necesaria, observemos que $\Delta_f:X\to X\times_SX$ y $p_2:X\times_SX\to X$ se deducen por cambio de base de $\Delta_{f_\lambda}:X_\lambda\to X_\lambda\times_{S_\lambda}X_\lambda$ y $p_{2,\lambda}:X_\lambda\times_{S_\lambda}X_\lambda\to X_\lambda$. En virtud de (17.12.5), para todo $z\in\Delta_f(X)$, existe una vecindad abierta afín $U(z)$ de $z$ en $X\times_SX$ tal que $p_2$ sea liso en $U(z)$; en virtud de (8.2.11) y (17.7.8), existen un índice $\lambda(z)$ y una vecindad $U_{\lambda(z)}$ de la proyección de $z$ en $X_{\lambda(z)}\times_{S_{\lambda(z)}}X_{\lambda(z)}$ tales que $U(z)$ sea la imagen inversa de $U_{\lambda(z)}$, y que $p_{2,\lambda(z)}$ sea liso en $U_{\lambda(z)}$. Como $X$ es cuasicompacto, se puede recubrir $\Delta_f(X)$ por un número finito de vecindades $U(z_i)$; en virtud de (8.3.4), existe un $\lambda$ superior a todos los $\lambda(z_i)$ tal que las imágenes inversas de los $U_{\lambda(z_i)}$ en $X_\lambda\times_{S_\lambda}X_\lambda$ forman un recubrimiento de $\Delta_{f_\lambda}(X_\lambda)$; resulta entonces de (17.12.5) que este índice $\lambda$ cumple lo requerido.
+
+\begin{examples}[17.12.7]
+\label{IV.17.12.7}
+Sean $S$ un preesquema, $G$ un $S$-\emph{preesquema en grupos}, localmente de presentación finita sobre $S$. Entonces, para que $G$ sea diferencialmente liso, es necesario y suficiente que $G$ sea liso sobre $S$ en los puntos de la «sección unidad» $e$ de $G$. La condición es, en efecto, necesaria por (17.12.5). Recíprocamente, supongamos que se cumple; para todo morfismo $S'\to S$, $G'=G\times_SS'$ es entonces un $S'$-preesquema en grupos localmente de presentación finita sobre $S'$; podemos, por tanto, en virtud de (17.12.5), reducirnos a probar que, para toda $S$-sección $s$ de $G$, $f$ es liso en los puntos de $s(S)$. Ahora bien, si $m:G\times_SG\to G$ es el morfismo que define la estructura de preesquema en grupos de $G$, $m\circ(s\times1_G):S\times_SG\to G\times_SG\to G$ es un
+
+\oldpage[IV-4]{89}
+
+$S$-isomorfismo del preesquema $G$, la «traslación por la izquierda» $\tau_s$, que transforma los puntos de la sección unidad de $G$ en los puntos de $s(S)$; se concluye que $G$ es liso sobre $S$ en los puntos de $s(S)$.
+\end{examples}
+
+\begin{remark}[17.12.8]
+\label{IV.17.12.8}
+Un $S$-preesquema en grupos $G$, de tipo finito (e incluso finito) sobre un preesquema localmente noetheriano $S$, puede ser diferencialmente liso sobre $S$ sin ser liso (ni siquiera \emph{plano}) sobre $S$. Tomemos, por ejemplo, como $S$ el espectro del álgebra de números duales $D=k[T]/T^2k[T]$ sobre un cuerpo $k$, y como $G$ el espectro de la $D$-álgebra producto directo $E=D\oplus k$. Se define en $G$ una estructura de $S$-esquema en grupos definiendo una «aplicación diagonal» $\delta$, homomorfismo de $E$ en $E\otimes_DE$: si $e'$, $e''$ son los idempotentes, imágenes canónicas de la unidad $1$ de $D$ en los factores $D$ y $k$ de $E$, se comprueba fácilmente que se obtiene una aplicación diagonal de este tipo tomando
+\[
+\delta(e')=e'\otimes e'+e''\otimes e'',\qquad
+\delta(e'')=e'\otimes e''+e''\otimes e'.
+\]
+La sección unidad del esquema en grupos $G$ corresponde al homomorfismo $E\to D$ que es la identidad en $D$ y $0$ en $k$; es un isomorfismo de $S$ sobre una componente conexa de $G$, y \emph{a fortiori} $G$ es diferencialmente liso sobre $S$ (17.12.6), pero está claro que $G$ no es $S$-plano.
+\end{remark}

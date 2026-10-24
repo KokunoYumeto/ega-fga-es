@@ -1,0 +1,142 @@
+\subsection{Caracterizaciones de los morfismos no ramificados}
+\label{subsection:IV.17.4}
+
+\begin{theorem}[17.4.1]
+\label{IV.17.4.1}
+Sean $f:X\to Y$ un morfismo localmente de presentación finita y $x$ un punto de $X$. Las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es no ramificado en el punto $x$.
+  \item[b)] El morfismo diagonal $\Delta_f:X\to X\times_Y X$ es un isomorfismo local en el punto $x$.
+  \item[b')] Si se pone $\Delta_f=(\psi,\theta)$, $Z=X\times_Y X$ y $z=\psi(x)$, el homomorfismo $\theta_z^\#:\sh{O}_{Z,z}\to\sh{O}_{X,x}$ es biyectivo.
+  \item[b'')] Para todo morfismo $g:Y'\to Y$, y todo punto $y'\in Y'$ situado sobre $y=f(x)$, toda $Y'$-sección $s'$ de $X'=X\times_Y Y'$ tal que $x'=s'(y')$ esté situado sobre $x$ es un isomorfismo local en el punto $y'$.
+  \item[c)] Se tiene $(\Omega^1_{X/Y})_x=0$.
+  \item[d)] El $k(y)$-preesquema $f^{-1}(y)$ es no ramificado sobre $k(y)$ en el punto $x$.
+  \item[d')] El punto $x$ está aislado en $X_y=f^{-1}(y)$ (es decir (Err$_{\mathrm{III}}$, 20), el morfismo $f$ es cuasifinito en el punto $x$) y el anillo $\sh{O}_{X_y,x}$ es un cuerpo, extensión separable de $k(y)$.
+  \item[d'')] El anillo $\sh{O}_{X_y,x}=\sh{O}_{X,x}/\mathfrak{m}_y\sh{O}_{X,x}$ es un cuerpo, extensión finita separable de $k(y)$.
+  \item[e)] El anillo $\sh{O}_{X,x}$ es una $\sh{O}_{Y,y}$-álgebra formalmente no ramificada para las topologías discretas.
+\end{enumerate}
+\end{theorem}
+
+Como $f$ es localmente de tipo finito, el $\sh{O}_X$-módulo $\Omega^1_{X/Y}$ es de tipo finito (16.3.9), por lo que equivale a decir que $(\Omega^1_{X/Y})_x=0$ o que existe una vecindad abierta $U$ de $x$ tal que $\Omega^1_{X/Y}|U=0$. Teniendo en cuenta (17.2.1), esto demuestra la equivalencia de a) y c). Por otra parte, si se pone $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, se tiene $(\Omega^1_{X/Y})_x=\Omega^1_{B/A}$ (16.4.15), y la equivalencia de c) y e) resulta, pues, de (0, 20.7.4).
+
+Como d') solo concierne a propiedades del morfismo $X_y\to\Spec(k(y))$, la equivalencia de a) y d') implicará \emph{ipso facto} la de d) y d'). Por otra parte, d') y d'') son equivalentes, pues equivale a decir que $\sh{O}_{X_y,x}$ es una $k(y)$-álgebra \emph{finita} o que $x$ es un punto aislado de $X_y$, ya que $X_y$ es un $k(y)$-preesquema localmente de tipo finito (I, 6.4.4).
+
+Demostremos ahora la equivalencia de b) y b'). Se puede restringir al caso en que $Y=\Spec(R)$ y $X=\Spec(S)$ son afines y $f$ es de presentación finita; entonces se tiene $Z=\Spec(S\otimes_R S)$ y $\Delta_f$ corresponde al homomorfismo canónico sobreyectivo $S\otimes_R S\to S$, cuyo núcleo $\mathfrak{J}$ es, como se sabe, un ideal de tipo finito (0, 20.4.4). Si se pone $\sh{J}=\widetilde{\mathfrak{J}}$, el $\sh{O}_Z$-módulo $\psi_*(\sh{O}_X)=\sh{O}_Z/\sh{J}$ es, por tanto, de presentación finita, y la hipótesis de que el homomorfismo $\theta_z^\#: \sh{O}_{Z,z}\to(\psi_*(\sh{O}_X))_z$ es biyectivo implica que, reemplazando si es preciso $X$ por una vecindad abierta de $x$, el propio homomorfismo $\theta:\sh{O}_Z\to\psi_*(\sh{O}_X)$ es biyectivo ($0_{\mathrm I}$, 5.2.7). Esto demuestra que b') implica b); el recíproco es evidente.
+
+Por otra parte, la equivalencia de b) y b'') resulta de (I, 5.3.7) sin hipótesis de finitud sobre $f$: dar una $Y'$-sección $s':Y'\to X'$ equivale, en efecto, a dar un
+
+\oldpage[IV-4]{64}
+$Y$-morfismo $h=g'\circ s':Y'\to X$ (donde $g':X'\to X$ es la proyección canónica), de modo que $s'=(1_{Y'},h)_X$, y entonces el diagrama
+\[
+\tag{17.4.1.1}
+\label{IV.17.4.1.1}
+\xymatrix{
+Y' \ar[r]^{s'} \ar[d]_h & X'=Y'\times_Y X \ar[d]^{h\times 1_X}\\
+X \ar[r]_{\Delta_f} & X\times_Y X
+}
+\]
+identifica $Y'$ con el producto de los $(X\times_Y X)$-preesquemas $X$ y $X'$. Por consiguiente (I, 4.3.2), si $\Delta_f$ es un isomorfismo local en el punto $x$, $s'$ es un isomorfismo local en el punto $y'$ (pues $x=h(y')$), lo que demuestra que b) implica b''). El recíproco se obtiene aplicando b'') al caso en que se toman $Y'=X$, $y'=x$, $g=f$ y $s'=\Delta_f$.
+
+Para terminar la demostración de (17.4.1), basta probar las implicaciones
+\[
+d'')\Rightarrow c)\Rightarrow b)\Rightarrow d'').
+\]
+
+$d'')\Rightarrow c)$: Como $\Omega^1_{X/Y}$ es un $\sh{O}_X$-módulo de tipo finito, del lema de Nakayama resulta que la condición c) equivale a $(\Omega^1_{X/Y})_x/\mathfrak{m}_y(\Omega^1_{X/Y})_x=0$, es decir (16.4.5), a $(\Omega^1_{X_y/\Spec(k(y))})_x=0$. Se reduce, pues, al caso en que $Y$ es el espectro de un cuerpo $k$ y $X$ un $k$-preesquema algebraico. La hipótesis de que $\sh{O}_{X,x}$ es un cuerpo $k'$, extensión finita de $k$, implica primero que $x$ es \emph{cerrado} en $X$ (I, 6.4.2), y después que $x$ es un punto \emph{maximal} del preesquema noetheriano $X$, por lo que es un punto aislado de $X$. Reemplazando $X$ por el abierto $\{x\}$ de $X$, se puede suponer que $X=\Spec(k')$; pero entonces la hipótesis de que $k'$ es una extensión \emph{finita separable} de $k$ implica $\Omega^1_{k'/k}=0$ (0, 20.6.20), lo que demuestra c).
+
+$c)\Rightarrow b)$: Se ha visto más arriba que entonces se tiene $\Omega^1_{X/Y}|U=0$ para una vecindad abierta $U$ de $x$ en $X$; la afirmación b) resulta entonces de la definición de $\Omega^1_{X/Y}$ (16.3.1) y de (16.1.9).
+
+$b)\Rightarrow d'')$: Reemplazando $X$ por una vecindad abierta de $x$, se puede suponer que $\Delta_f$ es una inmersión abierta; si se designa por $f_y:X_y\to\Spec(k(y))$ el morfismo deducido de $f$ por cambio de base, $\Delta_{f_y}$ también es entonces una inmersión abierta (I, 5.3.4), y como la condición d'') solo concierne al preesquema $X_y$, se ve que se puede restringir al caso en que $Y$ es el espectro de un cuerpo $k$, $X$ el espectro de una $k$-álgebra $A$ de tipo finito; la propiedad d'') quedará establecida si se demuestra que $A$ es una $k$-álgebra \emph{finita y separable}, pues tal álgebra es un producto directo de extensiones finitas separables de $k$. Si $K$ es una extensión algebraicamente cerrada de $k$, equivale a decir que $A\otimes_k K$ es una $K$-álgebra finita y separable (4.6.1), por lo que se ve que se puede restringir al caso en que $k$ es algebraicamente cerrado. Demostremos primero que $A$ es una $k$-álgebra \emph{finita}: bastará demostrar que todo punto \emph{cerrado} $x$ de $X$ está aislado, pues entonces el conjunto de estos puntos es abierto en $X$ y discreto, y por tanto finito, ya que es cuasicompacto ($X$ es noetheriano), lo que establecerá nuestra afirmación en virtud de (I, 6.4.4). Ahora bien, se tiene entonces $k(x)=k$ porque $k$ es algebraicamente cerrado (I, 6.4.3), por lo que existe una $Y$-sección $s$ de $X$ tal que $s(Y)=\{x\}$, y en virtud de (17.4.1.1), $\{x\}$ es la imagen inversa de la diagonal $\Delta_X(X)$ por un morfismo $X\to X\times_Y X$; por tanto, $\{x\}$ es abierto en $X$ en virtud de la hipótesis b). Se ha demostrado así que $A$ es una
+
+\oldpage[IV-4]{65}
+$k$-álgebra \emph{finita}, producto directo de $k$-álgebras finitas locales. Para expresar que $\Delta_f$ es una inmersión abierta, se puede, pues, restringir al caso en que $A$ es una $k$-álgebra local finita, de modo que $X=\Spec(A)$ está reducido a un solo punto; el cuerpo residual de $A$, al ser una extensión finita de $k$, es necesariamente idéntico a $k$, y por consiguiente (I, 3.4.9) $X\times_k X$ está reducido a un solo punto y $\Delta_f$ es necesariamente un \emph{isomorfismo}. Ahora bien, puesto que $A$ es una $k$-álgebra, el homomorfismo canónico $A\otimes_k A\to A$ solo puede ser biyectivo si $A=k$. C.Q.D.
+
+\begin{remark}[17.4.1.2]
+\label{IV.17.4.1.2}
+Supongamos únicamente que $f$ sea \emph{localmente de tipo finito}. Entonces $\Omega^1_{X/Y}$ sigue siendo un $\sh{O}_X$-módulo de tipo finito (16.3.9), y $\Delta_f$ un morfismo localmente de presentación finita (I, 4.3.1). Toda la demostración de (17.4.1) es, por tanto, válida, con la condición de reemplazar a) por: \emph{la restricción de $f$ a una vecindad adecuada de $x$ es un morfismo formalmente no ramificado}. Se ve además que en este caso la restricción de $f$ a una vecindad adecuada de $x$ es un morfismo \emph{localmente cuasifinito}.
+\end{remark}
+
+\begin{corollary}[17.4.2]
+\label{IV.17.4.2}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita. Las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es no ramificado.
+  \item[b)] El morfismo diagonal $\Delta_f:X\to X\times_Y X$ es una inmersión abierta.
+  \item[b')] Para todo morfismo $Y'\to Y$, toda $Y'$-sección de $X'=X\times_Y Y'$ es una inmersión abierta.
+  \item[c)] Se tiene $\Omega^1_{X/Y}=0$.
+  \item[d)] Para todo $y\in Y$, el $k(y)$-preesquema $f^{-1}(y)$ es no ramificado sobre $k(y)$.
+  \item[d')] Para todo $y\in Y$, el $k(y)$-preesquema $f^{-1}(y)$ es isomorfo a un preesquema de la forma $\coprod_{\lambda\in L}\Spec(K_\lambda)$, donde, para todo $\lambda\in L$, $K_\lambda$ es una extensión finita y separable de $k(y)$.
+  \item[e)] Para todo $x\in X$, el anillo $\sh{O}_{X,x}$ es una $\sh{O}_{Y,f(x)}$-álgebra formalmente no ramificada para las topologías discretas.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}[17.4.3]
+\label{IV.17.4.3}
+Si $f:X\to Y$ es no ramificado, entonces $f$ es localmente cuasifinito (Err$_{\mathrm{III}}$, 20).
+\end{corollary}
+
+\begin{proposition}[17.4.4]
+\label{IV.17.4.4}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Pongamos $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, que son anillos locales noetherianos, y sea $k$ el cuerpo residual de $A$. Entonces las condiciones equivalentes a) a e) del teorema (17.4.1) son también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[f)] $\widehat{B}\otimes_{\widehat{A}}k$ es un cuerpo, extensión finita separable de $k$ (lo que implica que $\widehat{B}$ es una $\widehat{A}$-álgebra finita).
+  \item[f')] $\widehat{B}$ es una $\widehat{A}$-álgebra formalmente no ramificada para las topologías ádicas.
+\end{enumerate}
+Si además $k(x)=k(y)$, o si $k$ es separablemente cerrado, estas condiciones también equivalen a:
+\begin{enumerate}
+  \item[f'')] El homomorfismo $\widehat{A}\to\widehat{B}$ es sobreyectivo.
+\end{enumerate}
+\end{proposition}
+
+Observemos primero, mediante el mismo razonamiento que en (0, 19.3.6), que equivale a decir que $B$ es una $A$-álgebra formalmente no ramificada para las topologías preádicas, o que $\widehat{B}$ es una $\widehat{A}$-álgebra formalmente no ramificada para las topologías ádicas. Por otra parte, la hipótesis de que $f$ es localmente de tipo finito implica que $\Omega^1_{B/A}$
+
+\oldpage[IV-4]{66}
+es un $B$-módulo de tipo finito (16.3.9), por tanto \emph{separado} para la topología $\mathfrak n$-preádica (donde $\mathfrak n$ es el ideal maximal de $B$) ($0_{\mathrm I}$, 7.3.5); por consiguiente, equivale a decir que $\Omega^1_{B/A}=0$ o que $\widehat{\Omega}^1_{B/A}=0$; así pues (0, 20.7.4), equivale a decir que $B$ es una $A$-álgebra formalmente no ramificada para las topologías \emph{discretas}, o para las topologías \emph{preádicas}. Esto demuestra la equivalencia de las condiciones e) y f'). Si $\mathfrak m$ es el ideal maximal de $A$, se tiene
+\[
+k=A/\mathfrak m=\widehat A/\mathfrak m\widehat A,
+\qquad
+\widehat B\otimes_{\widehat A}k=\widehat B/\mathfrak m\widehat B
+=\widehat B\otimes_B(B/\mathfrak m B),
+\]
+y por tanto ($0_{\mathrm I}$, 7.3.5), $\widehat B/\mathfrak m\widehat B$ es la completación de $B/\mathfrak m B=B\otimes_A k$ para la topología $\mathfrak n$-preádica; esto demuestra la equivalencia de d'') y f). Finalmente, cuando $k(x)=k(y)$ o cuando $k$ es separablemente cerrado, la condición f) implica que el homomorfismo $\widehat A/\mathfrak m\widehat A\to\widehat B/\mathfrak m\widehat B$ es biyectivo; por otra parte, la condición f) implica que $\widehat B$ es una $\widehat A$-álgebra \emph{cuasifinita} ($0_{\mathrm I}$, 7.4.4), por tanto \emph{finita}, ya que $\widehat A$ es completo y $\widehat B$ está separado para la topología $\mathfrak m$-preádica, siendo $\mathfrak m\widehat B$ un ideal de definición de $\widehat B$ ($0_{\mathrm I}$, 7.4.1). El homomorfismo $\widehat A\to\widehat B$ es, pues, sobreyectivo en virtud del lema de Nakayama. Por tanto, f) implica f''), y el recíproco es evidente.
+
+\begin{env}[17.4.5]
+\label{IV.17.4.5}
+Dados un $S$-preesquema $Y$ y dos $S$-morfismos $f:X\to Y$, $g:X\to Y$, se deduce canónicamente un $S$-morfismo $(f,g)_S:X\to Y\times_S Y$. Llamaremos \emph{preesquema de coincidencias} de $f$ y $g$ a la imagen inversa por $(f,g)_S$ de la diagonal $\Delta_{Y|S}$; es, por tanto, un subpreesquema de $X$, que es \emph{cerrado} cuando $Y$ es un $S$-esquema (I, 5.4.1).
+\end{env}
+
+\begin{proposition}[17.4.6]
+\label{IV.17.4.6}
+Sean $h:Y\to S$ un morfismo no ramificado, y sean $f:X\to Y$, $g:X\to Y$ dos $S$-morfismos. Entonces el preesquema $C$ de coincidencias de $f$ y $g$ es un subpreesquema inducido sobre un abierto de $X$; si además $Y$ es un $S$-esquema (I, 5.4.1), $C$ es un subpreesquema cerrado de $X$.
+\end{proposition}
+
+En efecto, puesto que $\Delta_h:Y\to Y\times_S Y$ es una inmersión abierta (17.4.2), la imagen inversa por $(f,g)_S$ de $\Delta_{Y|S}$ es un subpreesquema inducido sobre un abierto de $X$ (I, 4.4.1). La última afirmación resulta de (17.4.5).
+
+\begin{corollary}[17.4.7]
+\label{IV.17.4.7}
+Bajo las hipótesis de (17.4.6), sea $x$ un punto de $X$ tal que los dos morfismos compuestos $\Spec(k(x))\to X\xrightarrow{f}Y$ y $\Spec(k(x))\to X\xrightarrow{g}Y$ sean iguales. Entonces existe una vecindad abierta $U$ de $x$ tal que $f|U=g|U$. Si además $Y$ es un $S$-esquema, existe una vecindad abierta y cerrada $X'$ de $x$ en $X$ tal que $f|X'=g|X'$. Si finalmente se supone además que $X$ es conexo, se tiene $f=g$.
+\end{corollary}
+
+Esto resulta de (17.4.6) y de (I, 5.3.17).
+
+\begin{corollary}[17.4.8]
+\label{IV.17.4.8}
+Bajo las hipótesis de (17.4.6), supongamos que el morfismo estructural $\varphi=h\circ f=h\circ g$ de $X$ en $S$ sea cerrado. Sea $s$ un punto de $S$; sea $X_s$ el $k(s)$-preesquema $\varphi^{-1}(s)$ y supongamos que los dos morfismos compuestos $X_s\to X\xrightarrow{f}Y$ y $X_s\to X\xrightarrow{g}Y$ sean iguales. Entonces existe una vecindad abierta $V$ de $s$ en $S$ tal que $f|\varphi^{-1}(V)=g|\varphi^{-1}(V)$. Si además $Y$ es un $S$-esquema y si $\varphi$ es abierto, se puede tomar $V$ abierto y cerrado. Si finalmente se supone además que $S$ es conexo, se tiene $f=g$.
+\end{corollary}
+
+De (17.4.7) resulta que el preesquema $C$ de coincidencias de $f$ y $g$ está inducido sobre un abierto de $X$ y contiene $X_s$. Como $\varphi$ es cerrado, existe una vecindad abierta $V$ de $s$ tal que $\varphi^{-1}(V)\subset C$. Si además $Y$ es un $S$-esquema, $C$ es cerrado, por lo que $\varphi(X-C)$ es a la
+
+\oldpage[IV-4]{67}
+vez abierto y cerrado en $S$, y su complemento $V$ en $S$ es, por tanto, una vecindad abierta y cerrada de $s$ tal que $\varphi^{-1}(V)\subset C$.
+
+\begin{proposition}[17.4.9]
+\label{IV.17.4.9}
+Sean $Y$ un preesquema conexo y $f:X\to Y$ un morfismo no ramificado y separado. Entonces toda $Y$-sección $g$ de $X$ es un isomorfismo de $Y$ sobre una componente conexa abierta de $X$, y la aplicación $g\mapsto g(Y)$ es una biyección de $\Gamma(X/Y)$ sobre el conjunto de las componentes conexas $Z$ de $X$ (necesariamente abiertas en $X$) tales que la restricción de $f$ a $Z$ sea un isomorfismo de $Z$ sobre $Y$. En particular, si $g'$ y $g''$ son dos $Y$-secciones de $X$ tales que $g'(y)=g''(y)$ para un $y\in Y$, se tiene $g'=g''$.
+\end{proposition}
+
+En efecto, de (17.4.1, b'')) resulta que una $Y$-sección $s$ de $X$ es una inmersión abierta, y como $X$ es un $Y$-esquema, $s$ es también una inmersión cerrada (I, 5.4.7); de ello resulta que $s$ es un isomorfismo de $Y$ sobre un subpreesquema de $X$ inducido sobre una parte abierta y cerrada de $X$, y como $s(Y)$ es conexo, se trata necesariamente de una componente conexa de $X$. El resto de la proposición es inmediato.
+
+\begin{remark}[17.4.10]
+\label{IV.17.4.10}
+Teniendo en cuenta la observación (17.4.1.2), se ve que, en los enunciados (17.4.6) a (17.4.9), se pueden reemplazar en todas partes las palabras «no ramificado» por «formalmente no ramificado y localmente de tipo finito».
+\end{remark}

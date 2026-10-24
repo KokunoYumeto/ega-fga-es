@@ -1,0 +1,263 @@
+\section{Conjuntos construibles}
+\label{section:0.9}
+
+\subsection{Conjuntos construibles}
+\label{subsection:0.9.1}
+
+\begin{definition}[9.1.1]
+\label{0.9.1.1}
+Decimos que una aplicación continua $f:X\to Y$ es \emph{cuasicompacta} si, para todo subconjunto abierto cuasicompacto $U$ de $Y$, $f^{-1}(U)$ es cuasicompacto.
+Decimos que un subconjunto $Z$ de un espacio topológico $X$ es \emph{retrocompacto} en $X$ si la inyección canónica $Z\to X$ es cuasicompacta; en otros términos, si para todo subconjunto abierto cuasicompacto $U$ de $X$, $U\cap Z$ es cuasicompacto.
+\end{definition}
+
+Un subconjunto \emph{cerrado} de $X$ es retrocompacto en $X$, pero un subconjunto cuasicompacto de $X$ no es necesariamente retrocompacto en $X$.
+Si $X$ es cuasicompacto, todo subconjunto abierto retrocompacto de $X$ es cuasicompacto.
+Está claro que toda unión \emph{finita} de conjuntos retrocompactos en $X$ es retrocompacta en $X$, pues toda unión finita de conjuntos cuasicompactos es cuasicompacta.
+Toda intersección finita de abiertos retrocompactos de $X$ es un abierto retrocompacto de $X$.
+En un espacio \emph{localmente noetheriano} $X$, todo conjunto cuasicompacto es un subespacio noetheriano y, en consecuencia, \emph{todo subconjunto} de $X$ es retrocompacto en $X$.
+
+\begin{definition}[9.1.2]
+\label{0.9.1.2}
+Dado un espacio topológico $X$, decimos que un subconjunto de $X$ es \emph{construible} si pertenece al menor conjunto de subconjuntos $\mathfrak{F}$ de $X$ que contiene todos los subconjuntos abiertos retrocompactos de $X$ y es estable por intersecciones finitas y complementarios (lo que implica que $\mathfrak{F}$ también es estable por uniones finitas).
+\end{definition}
+
+\begin{proposition}[9.1.3]
+\label{0.9.1.3}
+Para que un subconjunto de $X$ sea construible, es necesario y suficiente que sea una unión finita de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$.
+\end{proposition}
+
+\begin{proof}
+Está claro que la condición es suficiente.
+Para ver que es necesaria, consideremos el conjunto $\mathfrak{G}$ de las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$; basta ver que el complementario de todo conjunto de $\mathfrak{G}$ pertenece a $\mathfrak{G}$.
+Sea $Z=\bigcup_{i\in I}(U_i\cap\complement{V_i})$, donde $I$ es finito y los $U_i$ y $V_i$ son abiertos retrocompactos de $X$; tenemos
+$\complement{Z}=\bigcap_{i\in I}(V_i\cup\complement{U_i})$, de modo que $\complement{Z}$ es una unión finita de conjuntos que son intersecciones de cierto número de los $V_i$ y de cierto número de los $\complement{U_i}$, por tanto de la forma
+\oldpage[0\textsubscript{III}]{13}
+$V\cap\complement{U}$, donde $U$ es la unión de cierto número de los $U_i$ y $V$ es la intersección de cierto número de los $V_i$; pero hemos observado antes que las uniones e intersecciones finitas de abiertos retrocompactos de $X$ son abiertos retrocompactos de $X$, de donde se sigue la conclusión.
+\end{proof}
+
+\begin{corollary}[9.1.4]
+\label{0.9.1.4}
+Todo subconjunto construible de $X$ es retrocompacto en $X$.
+\end{corollary}
+
+\begin{proof}
+Basta demostrar que, si $U$ y $V$ son abiertos retrocompactos de $X$, entonces $U\cap\complement{V}$ es retrocompacto en $X$; si $W$ es un abierto cuasicompacto de $X$, entonces $W\cap U\cap\complement{V}$ es cerrado en el espacio cuasicompacto $W\cap U$ y, por tanto, es cuasicompacto.
+\end{proof}
+
+En particular:
+\begin{corollary}[9.1.5]
+\label{0.9.1.5}
+Para que un subconjunto abierto $U$ de $X$ sea construible, es necesario y suficiente que sea retrocompacto en $X$.
+Para que un subconjunto cerrado $F$ de $X$ sea construible, es necesario y suficiente que el abierto $\complement{F}$ sea retrocompacto.
+\end{corollary}
+
+\begin{env}[9.1.6]
+\label{0.9.1.6}
+Un caso importante es aquel en que todo subconjunto abierto cuasicompacto de $X$ es retrocompacto; en otros términos, aquel en que la intersección de dos subconjuntos abiertos cuasicompactos de $X$ es cuasicompacta (cf.~\sref[I]{I.5.5.6}).
+Cuando $X$ es además cuasicompacto, esto implica que los subconjuntos abiertos retrocompactos de $X$ coinciden con los subconjuntos abiertos cuasicompactos de $X$, y que los subconjuntos construibles de $X$ son las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos cuasicompactos.
+\end{env}
+
+\begin{corollary}[9.1.7]
+\label{0.9.1.7}
+Para que un subconjunto de un espacio noetheriano $X$ sea construible, es necesario y suficiente que sea una unión finita de subconjuntos localmente cerrados de $X$.
+\end{corollary}
+
+\begin{proposition}[9.1.8]
+\label{0.9.1.8}
+Sea $X$ un espacio topológico y $U$ un subconjunto abierto de $X$.
+\begin{enumerate}
+  \item[{\rm(i)}] Si $T$ es un subconjunto construible de $X$, entonces $T\cap U$ es un subconjunto construible de $U$.
+  \item[{\rm(ii)}] Supongamos, además, que $U$ es retrocompacto en $X$. Para que un subconjunto $Z$ de $U$ sea construible en $X$, es necesario y suficiente que sea construible en $U$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[(i)] Mediante la Proposición \sref{0.9.1.3}, nos reducimos a demostrar que, si $T$ es un abierto retrocompacto de $X$, entonces $T\cap U$ es un abierto retrocompacto de $U$; en otros términos, para todo abierto cuasicompacto $W\subset U$, $T\cap U\cap W=T\cap W$ es cuasicompacto, lo que se sigue inmediatamente de la hipótesis.
+  \item[(ii)] La condición es necesaria por (i), por lo que queda demostrar que es suficiente.
+    Por la Proposición \sref{0.9.1.3}, basta considerar el caso en que $Z$ es un abierto retrocompacto \emph{en $U$}, pues entonces se seguirá que $U\setmin Z$ es construible en $X$, y si $Z$ y $Z'$ son dos abiertos retrocompactos \emph{en $U$}, entonces $Z\cap(U\setmin Z')$ será construible en $X$.
+    Si $W$ es un abierto cuasicompacto de $X$ y $Z$ un abierto retrocompacto de $U$, tenemos $Z\cap W=Z\cap(W\cap U)$, y por hipótesis $W\cap U$ es un abierto cuasicompacto de $U$; por tanto, $W\cap Z$ es cuasicompacto y, en consecuencia, $Z$ es un abierto retrocompacto de $X$, y \emph{a fortiori} construible en $X$.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[9.1.9]
+\label{0.9.1.9}
+Sea $X$ un espacio topológico y $(U_i)_{i\in I}$ un recubrimiento finito de $X$ por abiertos retrocompactos de $X$.
+Para que un subconjunto $Z$ de $X$ sea construible en $X$, es necesario y suficiente que $Z\cap U_i$ sea construible en $U_i$ para todo $i\in I$.
+\end{corollary}
+
+\begin{env}[9.1.10]
+\label{0.9.1.10}
+Supongamos, en particular, que $X$ es cuasicompacto y que todo punto
+\oldpage[0\textsubscript{III}]{14}
+de $X$ admite un sistema fundamental de entornos abiertos retrocompactos en $X$ (y \emph{a fortiori} cuasicompactos); entonces la condición para que un subconjunto $Z$ de $X$ sea construible en $X$ es de naturaleza \emph{local}; en otros términos, es necesario y suficiente que, para todo $x\in X$, exista un entorno abierto $V$ de $x$ tal que $V\cap Z$ sea construible en $V$.
+En efecto, si se satisface esta condición, entonces para todo $x\in X$ existe un entorno abierto $V$ de $x$ que es \emph{retrocompacto en $X$} y tal que $V\cap Z$ es construible en $V$, por las hipótesis sobre $X$ y por la Proposición \sref{0.9.1.8}[i]; basta entonces recubrir $X$ por un número finito de estos entornos y aplicar el Corolario \sref{0.9.1.9}.
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11}
+Sea $X$ un espacio topológico.
+Decimos que un subconjunto $T$ de $X$ es \emph{localmente construible} en $X$ si, para todo $x\in X$, existe un entorno abierto $V$ de $x$ tal que $T\cap V$ es construible en $V$.
+\end{definition}
+
+De la Proposición \sref{0.9.1.8}[i] se sigue que, si $V$ es tal que $V\cap T$ es construible en $V$, entonces para todo abierto $W\subset V$, $W\cap T$ es construible en $W$.
+Si $T$ es localmente construible en $X$, entonces, para todo abierto $U$ de $X$, $T\cap U$ es localmente construible en $U$, en virtud de la observación anterior.
+La misma observación muestra que el conjunto de subconjuntos localmente construibles de $X$ es estable por uniones finitas e intersecciones finitas; por otra parte, está claro que también es estable por paso al complementario.
+
+\begin{proposition}[9.1.12]
+\label{0.9.1.12}
+Sea $X$ un espacio topológico.
+Todo conjunto construible en $X$ es localmente construible en $X$.
+El recíproco es cierto si $X$ es cuasicompacto y si su topología admite una base formada por los conjuntos retrocompactos de $X$.
+\end{proposition}
+
+\begin{proof}
+La primera afirmación se sigue de la Definición \sref{0.9.1.11}, y la segunda de \sref{0.9.1.10}.
+\end{proof}
+
+\begin{corollary}[9.1.13]
+\label{0.9.1.13}
+Sea $X$ un espacio topológico cuya topología admite una base formada por los conjuntos retrocompactos de $X$.
+Entonces todo subconjunto $T$ localmente construible de $X$ es retrocompacto en $X$.
+\end{corollary}
+
+\begin{proof}
+Sea $U$ un abierto cuasicompacto de $X$; $T\cap U$ es localmente construible en $U$, luego construible en $U$ por la Proposición~\sref{0.9.1.12} y, en consecuencia, cuasicompacto por el Corolario \sref{0.9.1.4}.
+\end{proof}
+
+\subsection{Subconjuntos construibles de espacios noetherianos}
+\label{subsection:0.9.2}
+
+\begin{env}[9.2.1]
+\label{0.9.2.1}
+Hemos visto \sref{0.9.1.7} que, en un espacio noetheriano $X$, los subconjuntos construibles de $X$ son las \emph{uniones finitas de subconjuntos localmente cerrados de $X$}.
+
+La imagen inversa de un conjunto construible de $X$ por una aplicación continua de un espacio noetheriano $X'$ en $X$ es construible en $X'$.
+Si $Y$ es un subconjunto construible de un espacio noetheriano $X$, entonces los subconjuntos de $Y$ que son construibles como subespacios de $Y$ coinciden con los que son construibles como subespacios de $X$.
+\end{env}
+
+\begin{proposition}[9.2.2]
+\label{0.9.2.2}
+Sea $X$ un espacio noetheriano irreducible, y sea $E$ un subconjunto construible de $X$.
+Para que $E$ sea denso en todas partes en $X$, es necesario y suficiente que $E$ contenga un subconjunto abierto no vacío de $X$.
+\end{proposition}
+
+\begin{proof}
+\oldpage[0\textsubscript{III}]{15}
+La condición es evidentemente suficiente, pues todo abierto no vacío es denso en $X$.
+Recíprocamente, sea $E=\bigcup_{i=1}^n(U_i\cap F_i)$ un subconjunto construible de $X$, siendo los $U_i$ abiertos no vacíos y los $F_i$ cerrados en $X$; tenemos entonces $\overline{E}\subset\bigcup_i F_i$.
+En consecuencia, si $\overline{E}=X$, entonces $X$ es igual a uno de los $F_i$, luego $E\supset U_i$, lo que termina la demostración.
+\end{proof}
+
+Cuando $X$ admite un punto genérico $x$ \sref[0]{0.2.1.2}, la condición de la Proposición \sref{0.9.2.2} equivale a la relación $x\in E$.
+
+\begin{proposition}[9.2.3]
+\label{0.9.2.3}
+Sea $X$ un espacio noetheriano.
+Para que un subconjunto $E$ de $X$ sea construible, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$, $E\cap Y$ sea raro en $Y$ o contenga un subconjunto abierto no vacío de $Y$.
+\end{proposition}
+
+\begin{proof}
+La necesidad de la condición se sigue de que $E\cap Y$ debe ser un subconjunto construible de $Y$ y de la Proposición \sref{0.9.2.2}, pues un subconjunto no denso de $Y$ es necesariamente raro en el espacio irreducible $Y$ \sref[0]{0.2.1.1}.
+Para demostrar que la condición es suficiente, apliquemos el principio de inducción noetheriana \sref[0]{0.2.2.2} al conjunto $\mathfrak{F}$ de subconjuntos cerrados $Y$ de $X$ tales que $Y\cap E$ es construible (respecto de $Y$ o respecto de $X$, lo que es equivalente): podemos suponer así que, para todo subconjunto cerrado $Y\neq X$ de $X$, $E\cap Y$ es construible.
+Supongamos primero que $X$ no es irreducible, y sean $X_i$ ($1\leq i\leq m$) sus componentes irreducibles, necesariamente en número finito \sref[0]{0.2.2.5}; por hipótesis, los $E\cap X_i$ son construibles, luego también lo es su unión $E$.
+Supongamos ahora que $X$ es irreducible; entonces, por hipótesis, si $E$ es raro, se tiene $\overline{E}\neq X$ y $E=E\cap\overline{E}$ es construible; si $E$ contiene un subconjunto abierto no vacío $U$ de $X$, es la unión de $U$ y $E\cap(X\setmin U)$; pero $X\setmin U$ es un conjunto cerrado distinto de $X$, por lo que $E\cap(X\setmin U)$ es construible; en consecuencia, $E$ mismo es construible, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[9.2.4]
+\label{0.9.2.4}
+Sea $X$ un espacio noetheriano y $(E_\alpha)$ una familia filtrante creciente de subconjuntos construibles de $X$, tal que
+\begin{enumerate}
+  \item[\emph{(1.o)}] $X$ es la unión de la familia $(E_\alpha)$.
+  \item[\emph{(2.o)}] Todo subconjunto cerrado irreducible de $X$ está contenido en la adherencia de uno de los $E_\alpha$.
+\end{enumerate}
+
+Entonces existe un índice $\alpha$ tal que $X=E_\alpha$.
+
+Cuando todo subconjunto cerrado irreducible de $X$ admite un punto genérico, puede omitirse la hipótesis \emph{(2.o)}.
+\end{corollary}
+
+\begin{proof}
+Apliquemos el principio de inducción noetheriana \sref[0]{0.2.2.2} al conjunto $\mathfrak{M}$ de subconjuntos cerrados de $X$ contenidos en al menos uno de los $E_\alpha$; podemos suponer así que todo subconjunto cerrado $Y\neq X$ de $X$ está contenido en uno de los $E_\alpha$.
+La proposición es evidente si $X$ no es irreducible, porque cada una de las componentes irreducibles $X_i$ de $X$ ($1\leq i\leq m$) está contenida en un $E_{\alpha_i}$, y existe un $E_\alpha$ que contiene todos los $E_{\alpha_i}$.
+Supongamos ahora que $X$ es irreducible.
+Por hipótesis, existe un $\beta$ tal que $X=\overline{E_\beta}$, de modo que \sref{0.9.2.2} $E_\beta$ contiene un subconjunto abierto no vacío $U$ de $X$.
+Pero entonces el conjunto cerrado $X\setmin U$ está contenido en un $E_\gamma$, y basta tomar un $E_\alpha$ que contenga $E_\beta$ y $E_\gamma$.
+Cuando todo subconjunto cerrado irreducible $Y$ de $X$
+\oldpage[0\textsubscript{III}]{16}
+admite un punto genérico $y$, existe $\alpha$ tal que $y\in E_\alpha$, de modo que $Y=\overline{\{y\}}\subset\overline{E_\alpha}$, y la condición (2.o) es, por tanto, consecuencia de (1.o).
+\end{proof}
+
+\begin{proposition}[9.2.5]
+\label{0.9.2.5}
+Sea $X$ un espacio noetheriano, sea $x$ un punto de $X$ y sea $E$ un subconjunto construible de $X$.
+Para que $E$ sea un entorno de $x$, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$ que contenga $x$, $E\cap Y$ sea denso en $Y$ (si existe un punto genérico $y$ de $Y$, esto significa también \sref{0.9.2.2} que $y\in E$).
+\end{proposition}
+
+\begin{proof}
+La condición es evidentemente necesaria; demostraremos que es suficiente.
+Aplicando el principio de inducción noetheriana al conjunto $\mathfrak{M}$ de subconjuntos cerrados $Y$ de $X$ que contienen $x$ y tales que $E\cap Y$ es un entorno de $x$ en $Y$, podemos suponer que todo subconjunto cerrado $Y\neq X$ de $X$ que contiene $x$ pertenece a $\mathfrak{M}$.
+Si $X$ no es irreducible, cada una de las componentes irreducibles $X_i$ de $X$ que contienen $x$ es distinta de $X$, luego $E\cap X_i$ es un entorno de $x$ respecto de $X_i$; en consecuencia, $E$ es un entorno de $x$ en la unión de las componentes irreducibles de $X$ que contienen $x$, y como esta unión es un entorno de $x$ en $X$, también lo es $E$.
+Si $X$ es irreducible, $E$ es denso en $X$ por hipótesis, por lo que contiene un subconjunto abierto no vacío $U$ de $X$ \sref{0.9.2.2}; la proposición es entonces evidente si $x\in U$; en caso contrario, por hipótesis, $x$ es un punto interior de $E\cap(X\setmin U)$ relativo a $X\setmin U$, de modo que la adherencia de $X\setmin E$ en $X$ no contiene $x$, y el complementario de esta adherencia es un entorno de $x$ contenido en $E$, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[9.2.6]
+\label{0.9.2.6}
+Sea $X$ un espacio noetheriano y sea $E$ un subconjunto de $X$.
+Para que $E$ sea un abierto de $X$, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$ que interseca $E$, $E\cap Y$ contenga un subconjunto abierto no vacío de $Y$.
+\end{corollary}
+
+\begin{proof}
+La condición es evidentemente necesaria; recíprocamente, si se satisface, implica que $E$ es construible por la Proposición \sref{0.9.2.3}.
+Además, la Proposición \sref{0.9.2.5} muestra que $E$ es entonces un entorno de cada uno de sus puntos, de donde se sigue la conclusión.
+\end{proof}
+
+\subsection{Funciones construibles}
+\label{subsection:0.9.3}
+
+\begin{definition}[9.3.1]
+\label{0.9.3.1}
+Sea $h$ una aplicación de un espacio topológico $X$ en un conjunto $T$.
+Decimos que $h$ es \emph{construible} si $h^{-1}(t)$ es construible para todo $t\in T$, y vacío salvo para un número finito de valores de $t$; entonces, para todo subconjunto $S$ de $T$, $h^{-1}(S)$ es construible.
+Decimos que $h$ es \emph{localmente construible} si todo $x\in X$ posee un entorno abierto $V$ tal que $h|V$ es construible.
+\end{definition}
+
+Toda función construible es localmente construible; el recíproco es cierto cuando $X$ es cuasicompacto y admite una base formada por los abiertos retrocompactos de $X$ (en particular, cuando $X$ es noetheriano).
+
+\begin{proposition}[9.3.2]
+\label{0.9.3.2}
+Sea $h$ una aplicación de un espacio noetheriano $X$ en un conjunto $T$.
+Para que $h$ sea construible, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$, exista un subconjunto no vacío $U$ de $Y$, abierto respecto de $Y$, sobre el cual $h$ sea constante.
+\end{proposition}
+
+\begin{proof}
+La condición es necesaria: en efecto, por hipótesis, $h$ solo toma un número finito de valores $t_i$ sobre $Y$, y cada uno de los conjuntos $h^{-1}(t_i)\cap Y$ es construible en $Y$ \sref{0.9.2.1}; como no pueden ser todos subconjuntos raros del espacio $Y$, al menos uno de ellos contiene un abierto no vacío \sref{0.9.2.3}.
+
+\oldpage[0\textsubscript{III}]{17}
+Para ver que la condición es suficiente, aplicamos el principio de inducción noetheriana al conjunto $\mathfrak{M}$ de subconjuntos cerrados $Y$ de $X$ tales que la restricción $h|Y$ es construible; podemos suponer así que, para todo subconjunto cerrado $Y\neq X$ de $X$,
+$h|Y$ es construible.
+Si $X$ no es irreducible, la restricción de $h$ a cada una de las componentes irreducibles (en número finito) $X_i$ de $X$ es construible, y se sigue entonces inmediatamente de la Definición \sref{0.9.3.1} que $h$ es construible.
+Si $X$ es irreducible, existe por hipótesis un subconjunto abierto no vacío $U$ de $X$ sobre el cual $h$ es constante; por otra parte, la restricción de $h$ a $X\setmin U$ es construible por hipótesis, y se sigue inmediatamente que $h$ es construible.
+\end{proof}
+
+\begin{corollary}[9.3.3]
+\label{0.9.3.3}
+Sea $X$ un espacio noetheriano en el que todo subconjunto cerrado irreducible admite un punto genérico.
+Si $h$ es una aplicación de $X$ en un conjunto $T$ tal que, para todo $t\in T$, $h^{-1}(t)$ es construible, entonces $h$ es construible.
+\end{corollary}
+
+\begin{proof}
+Si $Y$ es un subconjunto cerrado irreducible de $X$ e $y$ su punto genérico, entonces $Y\cap h^{-1}(h(y))$ es construible y contiene $y$; por tanto, \sref{0.9.2.2} este conjunto contiene un subconjunto abierto no vacío de $Y$, y basta aplicar la Proposición \sref{0.9.3.2}.
+\end{proof}
+
+\begin{proposition}[9.3.4]
+\label{0.9.3.4}
+Sea $X$ un espacio noetheriano en el que todo subconjunto cerrado irreducible admite un punto genérico, y sea $h$ una aplicación construible de $X$ en un conjunto ordenado.
+Para que $h$ sea semicontinua superiormente sobre $X$, es necesario y suficiente que, para todo $x\in X$ y toda generalización \sref[0]{0.2.1.2} $x'$ de $x$, se tenga $h(x')\leq h(x)$.
+\end{proposition}
+
+\begin{proof}
+La función $h$ solo toma un número finito de valores; por tanto, decir que es semicontinua superiormente significa que, para todo $x\in X$, el conjunto $E$ de los $y\in X$ tales que $h(y)\leq h(x)$ es un entorno de $x$.
+Por hipótesis, $E$ es un subconjunto construible de $X$; por otra parte, decir que un subconjunto cerrado irreducible $Y$ de $X$ contiene $x$ significa que su punto genérico $y$ es una generalización de $x$; la conclusión se sigue entonces de la Proposición \sref{0.9.2.5}.
+\end{proof}

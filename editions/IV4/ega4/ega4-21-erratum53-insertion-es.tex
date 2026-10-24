@@ -1,0 +1,268 @@
+% EGA IV, Errata y Addenda, lista 3, n.º 53.
+% Este componente se inserta después de 21.4.8 en el texto de lectura corregido
+% y se repite literalmente bajo Err_IV, 53 en el apéndice de erratas impreso.
+
+La proposición siguiente y sus corolarios nos fueron señalados por
+M.~Raynaud.
+
+\begin{proposition}[21.4.9]
+\ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.9}\fi
+Sean $X$ e $Y$ dos preesquemas localmente noetherianos, y sea
+$f:X\to Y$ un morfismo fielmente plano. Supongamos además que $f$ es
+cuasicompacto o que $f$ es abierto. Un divisor $D'$ sobre $X$ es de la
+forma $f^*(D)$, con $D$ un divisor sobre $Y$, si y solo si se cumple la
+condición siguiente: para todo $y\in Y$ tal que
+$\operatorname{prof}(\sh{O}_{Y,y})\leq 1$, pongamos
+\[
+ Y_1=\operatorname{Spec}(\sh{O}_{Y,y}),\qquad
+ X_1=X\times_Y Y_1,
+ \qquad f_1=f_{(Y_1)}:X_1\to Y_1;
+\]
+entonces la imagen recíproca $D_1'$ de $D'$ sobre $X_1$ es de la forma
+$f_1^*(D_1)$ para algún $D_1\in\operatorname{Div}(Y_1)$.
+\end{proposition}
+
+\oldpage[IV]{359}
+\begin{proof}
+La necesidad de la condición resulta inmediatamente de la transitividad de las
+imágenes recíprocas de divisores, pues todos los morfismos considerados son planos
+{\EGAReadLink{IV.21.4.4}{(21.4.4)}}. Para todo abierto $U$ de $Y$, denotemos por $f_U$ la
+restricción $f^{-1}(U)\to U$ de $f$. Por {\EGAReadLink{IV.21.4.8}{(21.4.8)}}, la aplicación
+\[
+ D_U\longmapsto f_U^*(D_U)
+\]
+de $\operatorname{Div}(U)$ en
+$\operatorname{Div}(f^{-1}(U))$ es inyectiva. Así, si $U_1,U_2$ son
+dos abiertos de $Y$ y
+\[
+ D'|f^{-1}(U_1)=f_{U_1}^*(D_1),\qquad
+ D'|f^{-1}(U_2)=f_{U_2}^*(D_2),
+\]
+entonces necesariamente
+$D_1|U_1\cap U_2=D_2|U_1\cap U_2$. Se sigue inmediatamente que existe un
+mayor abierto $U\subset Y$ para el cual
+\[
+ D'|f^{-1}(U)=f_U^*(D_U)
+ \quad\text{con}\quad D_U\in\operatorname{Div}(U).
+\]
+Debemos demostrar que $U=Y$. Supongamos lo contrario, y sea $y$ un punto
+maximal de $Y\setminus U$. Encontraremos un entorno abierto $V$ de
+$y$ en $Y$ tal que
+  $D'|f^{-1}(V)=f_V^*(D_V)$ para algún
+$D_V\in\operatorname{Div}(V)$, contradiciendo la maximalidad de $U$.
+
+\textup{I) Caso en que $f$ es cuasicompacto.}
+Utilizando la cuasicompacidad de $f$ y {\EGAReadLink{IV.20.3.8}{(20.3.8)}}, por el método de
+({\EGAReadLink{IV.8.1.2}{8.1.2}}, a), nos reducimos a demostrar ---con las notaciones del
+enunciado, pero sin imponer inicialmente una cota a
+$\operatorname{prof}(\sh{O}_{Y,y})$--- que $D_1'$ es de la forma
+$f_1^*(D_1)$. Si $\operatorname{prof}(\sh{O}_{Y,y})\leq 1$, esto es
+precisamente la hipótesis. Supongamos, pues, que
+$\operatorname{prof}(\sh{O}_{Y,y})\geq 2$. Como $y$ es un punto
+maximal de $Y\setminus U$, el abierto $W=Y_1\cap U$ de $Y_1$ es
+$Y_1\setminus\{y\}$. Podemos, por tanto, limitarnos al caso
+$Y=Y_1$ y $U=Y\setminus\{y\}$.
+
+Por hipótesis existe un divisor $D_U\in\operatorname{Div}(U)$ tal
+que $f_U^*(D_U)=D'|f^{-1}(U)$. El divisor $D_U$ es la clase de
+equivalencia de un par $(\sh{L}_U,s)$, donde $\sh{L}_U$ es un
+$\sh{O}_U$-módulo invertible y $s$ una sección meromorfa regular de
+$\sh{L}_U$ sobre $U$ {\EGAReadLink{IV.21.2.11}{(21.2.11)}}. Por tanto, en virtud de
+{\EGAReadLink{IV.21.4.1}{(21.4.1)}}, $D'|f^{-1}(U)$ es la clase de equivalencia de
+$(\sh{L}'_U,s')$, donde
+\[
+ \sh{L}'_U=f_U^*(\sh{L}_U),\qquad s'=s\circ f_U.
+\]
+Sean $i:U\to Y$ y $j:f^{-1}(U)\to X$ las inmersiones canónicas,
+y pongamos
+\[
+ \sh{L}=i_*(\sh{L}_U),\qquad
+ \sh{L}'=j_*(\sh{L}'_U).
+\]
+Como $f$ es plano, $f^*(\sh{L})$ es canónicamente isomorfo a
+$\sh{L}'$ {\EGAReadLink{IV.2.3.1}{(2.3.1)}}. Además, la planitud y la desigualdad
+$\operatorname{prof}(\sh{O}_{Y,y})\geq 2$ implican
+$\operatorname{prof}(\sh{O}_{X,x})\geq 2$ para todo
+$x\in f^{-1}(y)$ {\EGAReadLink{IV.6.3.1}{(6.3.1)}}.
+
+El divisor $D'$ es la clase de equivalencia de un par
+$(\sh{L}'',s'')$, donde $\sh{L}''$ es un $\sh{O}_X$-módulo invertible
+y $s''$ una sección meromorfa regular de $\sh{L}''$ sobre $X$.
+Por consiguiente, $\sh{L}'_U$ es isomorfo a
+$\sh{L}''|f^{-1}(U)$, y las observaciones precedentes, junto con
+{\EGAReadLink{IV.5.9.8}{(5.9.8)}} y {\EGAReadLink{IV.5.10.5}{(5.10.5)}}, muestran que $\sh{L}'$ es un
+$\sh{O}_X$-módulo invertible isomorfo a $\sh{L}''$. Como $f$ es
+fielmente plano y cuasicompacto, se sigue que $\sh{L}$ es un
+$\sh{O}_Y$-módulo invertible {\EGAReadLink{IV.2.5.2}{(2.5.2)}} y, por tanto, isomorfo a $\sh{O}_Y$, pues
+$Y$ es un esquema local.
+
+Además, como $\operatorname{prof}(\sh{O}_{Y,y})\geq 1$, el abierto
+$U=Y\setminus\{y\}$ es esquemáticamente denso en $Y$
+({\EGAReadLink{IV.20.2.13}{20.2.13}}, (iv)). La sección meromorfa regular $s$ de $\sh{L}_U$
+sobre $U$ se prolonga, por tanto, a una sección meromorfa regular $s_0$ de
+$\sh{L}$ sobre $Y$ {\EGAReadLink{IV.20.2.11}{(20.2.11)}}. La clase de equivalencia de
+$(\sh{L},s_0)$ es así un divisor $D$ sobre $Y$. Evidentemente, $f^*(D)$ y
+$D'$ inducen el mismo divisor sobre
+$f^{-1}(U)=X\setminus f^{-1}(y)$; y, como
+$\operatorname{prof}(\sh{O}_{X,x})\geq 2$ para todo
+$x\in f^{-1}(y)$, {\EGAReadLink{IV.21.1.8}{(21.1.8)}} da $D'=f^*(D)$. Esto prueba el caso I.
+
+\textup{II) Caso en que $f$ es abierto.}
+Se trata de encontrar un entorno abierto $V$ de $y$ en $Y$ tal
+que $D'|f^{-1}(V)=f_V^*(D_V)$ para algún
+$D_V\in\operatorname{Div}(V)$, por lo que podemos suponer primero que $Y$ es afín.
+Como $f$ es abierto, las imágenes $f(W)$, cuando $W$ recorre los
+abiertos afines de $X$, forman un recubrimiento abierto de $Y$. Como $Y$
+es cuasicompacto, existe un abierto cuasicompacto $T\subset X$
+tal que $f(T)=Y$, y $f|T$ es cuasicompacto (I, 1.1.1). Con mayor razón,
+para todo abierto cuasicompacto $T_\alpha\supset T$ de $X$,
+\oldpage[IV]{360}
+se tiene
+$f(T_\alpha)=Y$ y $f|T_\alpha$ es cuasicompacto.
+
+Aplicando el caso I a $f|T_\alpha$, obtenemos un divisor $D_\alpha$ sobre
+$Y$ tal que
+\[
+ (f|T_\alpha)^*(D_\alpha)=D'|T_\alpha.
+\]
+Por transitividad de las imágenes recíprocas de divisores por morfismos planos
+{\EGAReadLink{IV.21.4.4}{(21.4.4)}}, también se tiene
+$(f|T)^*(D_\alpha)=D'|T$. Por tanto, para cualesquiera $\alpha,\beta$,
+\[
+ (f|T)^*(D_\alpha)=(f|T)^*(D_\beta),
+\]
+y {\EGAReadLink{IV.21.4.8}{(21.4.8)}} da $D_\alpha=D_\beta$. Si $D$ denota su valor
+común, entonces $f^*(D)|T_\alpha=D'|T_\alpha$ para todo $\alpha$, y
+por consiguiente $f^*(D)=D'$.
+\end{proof}
+
+\begin{corollary}[21.4.10]
+\ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.10}\fi
+Supongamos las hipótesis generales de {\EGAReadLink{IV.21.4.9}{(21.4.9)}} y, además, que
+$Y$ es normal y que, para todo $y\in Y$ con
+$\dim(\sh{O}_{Y,y})=1$, la fibra $X_y=f^{-1}(y)$ no tiene ningún
+ciclo primo asociado inmerso. Un divisor $D'$ sobre $X$ es de la forma $f^*(D)$,
+con $D\in\operatorname{Div}(Y)$, si y solo si se cumplen las dos
+condiciones siguientes:
+\begin{enumerate}[label=\textup{\arabic*\textdegree}]
+\item para todo punto maximal $y$ de $Y$, la imagen recíproca de $D'$ en
+$\operatorname{Div}(X_y)$ es cero;
+\item para todo $y\in Y$ tal que $\dim(\sh{O}_{Y,y})=1$, existe un
+entero $n_y$ tal que, para todo punto maximal $x$ de $X_y$, la
+imagen recíproca de $D'$ en
+$\operatorname{Div}(\operatorname{Spec}(\sh{O}_{X,x}))$ es igual a
+$\operatorname{div}(t_y^{n_y})$, donde $t_y$ es la imagen por
+$\sh{O}_{Y,y}\to\sh{O}_{X,x}$ de un uniformizante del anillo de
+valoración discreta $\sh{O}_{Y,y}$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Aplicamos el criterio {\EGAReadLink{IV.21.4.9}{(21.4.9)}}. En un punto maximal $y$ de $Y$,
+$\operatorname{Div}(Y_1)=0$ porque $\sh{O}_{Y,y}$ es artiniano;
+la condición 1\textdegree{} es, por tanto, equivalente al criterio de
+{\EGAReadLink{IV.21.4.9}{(21.4.9)}} en tal punto. Queda por demostrar que las condiciones
+1\textdegree{} y 2\textdegree{} implican asimismo el criterio en un
+punto $y\in Y$ con $\operatorname{prof}(\sh{O}_{Y,y})=1$. Como $Y$
+es normal, estos son precisamente los puntos para los cuales
+$\dim(\sh{O}_{Y,y})=1$, equivalentemente, aquellos para los cuales
+$\sh{O}_{Y,y}$ es un anillo de valoración discreta {\EGAReadLink{IV.5.8.6}{(5.8.6)}}.
+
+Podemos, pues, limitarnos a $Y=\operatorname{Spec}(\sh{O}_{Y,y})$. Si $t$
+es un uniformizante de $\sh{O}_{Y,y}$, la aplicación
+$n\mapsto\operatorname{div}(t^n)$ es un isomorfismo de $\mathbb Z$
+sobre $\operatorname{Div}(Y)$. La condición de {\EGAReadLink{IV.21.4.9}{(21.4.9)}} dice que
+$D'$ es de la forma $\operatorname{div}(t^n\circ f)$ para algún
+$n\in\mathbb Z$, e implica evidentemente la condición 2\textdegree{}.
+Recíprocamente, supongamos que se cumple 2\textdegree{}, así como 1\textdegree{}, y
+escribamos $n=n_y$. Queda por demostrar
+$D'=\operatorname{div}(t^n\circ f)$. Si $\eta$ es el punto genérico de
+$Y$, los gérmenes de estos dos divisores en todo punto de $X_\eta$ son
+cero por la condición 1\textdegree{}. Sus gérmenes en todo punto maximal
+de $X_y$ son iguales por la condición 2\textdegree{}. En un punto no maximal
+$x\in X_y$, se tiene
+$\operatorname{prof}(\sh{O}_{X_y,x})\geq 1$, porque $X_y$ no tiene
+ciclo primo asociado inmerso y, por tanto,
+$\operatorname{prof}(\sh{O}_{X,x})\geq 2$ por {\EGAReadLink{IV.6.3.1}{(6.3.1)}}. La
+igualdad buscada resulta de {\EGAReadLink{IV.21.1.8}{(21.1.8)}}.
+\end{proof}
+
+\begin{corollary}[21.4.11]
+\ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.11}\fi
+Supongamos las hipótesis generales de {\EGAReadLink{IV.21.4.9}{(21.4.9)}} y, además, que
+$Y$ es normal y que, para todo $y\in Y$ con
+$\dim(\sh{O}_{Y,y})=1$, la fibra $X_y$ es íntegra. Un divisor $D'$ es
+de la forma $f^*(D)$, con $D\in\operatorname{Div}(Y)$, si y solo si,
+para todo punto maximal $y$ de $Y$, la imagen recíproca de $D'$ en
+$\operatorname{Div}(X_y)$ es cero.
+\end{corollary}
+
+\begin{proof}
+Es suficiente comprobar que la condición 2\textdegree{} de {\EGAReadLink{IV.21.4.10}{(21.4.10)}} es entonces
+automática. Si $\dim(\sh{O}_{Y,y})=1$ y $X_y$ es íntegra, entonces en
+el único punto maximal $x$ de $X_y$ se tiene
+$\dim(\sh{O}_{X,x})=1$ por {\EGAReadLink{IV.6.1.3}{(6.1.3)}}. Además,
+$\sh{O}_{Y,y}$ es regular y $\sh{O}_{X_y,x}$ es un cuerpo, por lo que
+$\sh{O}_{X,x}$ es regular {\EGAReadLink{IV.6.5.1}{(6.5.1)}} y, por tanto, un anillo de valoración discreta.
+Si $t$ es un uniformizante de $\sh{O}_{Y,y}$, su imagen $t_y$ en
+$\sh{O}_{X,x}$ es un uniformizante de $\sh{O}_{X,x}$
+($0$, 17.3.3). La imagen recíproca de $D'$ en
+$\operatorname{Div}(\operatorname{Spec}(\sh{O}_{X,x}))$ es, por tanto,
+\oldpage[IV]{361}
+de la forma $\operatorname{div}(t_y^n)$, lo que es exactamente la condición
+2\textdegree{} de {\EGAReadLink{IV.21.4.10}{(21.4.10)}}, puesto que $X_y$ solo tiene un punto maximal.
+\end{proof}
+
+\begin{remark}[21.4.12]
+\ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.12}\fi
+Si en {\EGAReadLink{IV.21.4.11}{(21.4.11)}} se supone solamente que los $X_y$ son reducidos, hay que
+añadir a la condición del enunciado que las imágenes recíprocas de $D'$
+en cada uno de los grupos
+$\operatorname{Div}(\operatorname{Spec}(\sh{O}_{X,x}))$, cuando $x$
+recorre los puntos maximales de $X_y$, sean todas de la forma
+$\operatorname{div}((t_x')^n)$, donde $t_x'$ es un uniformizante de
+$\sh{O}_{X,x}$ y el entero $n$ es el mismo para todos estos puntos.
+\end{remark}
+
+\begin{corollary}[21.4.13]
+\ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.13}\fi
+Supongamos las hipótesis de {\EGAReadLink{IV.21.4.11}{(21.4.11)}}. Para todo
+$\sh{O}_X$-módulo invertible $\sh{L}$ tal que, para todo punto maximal $\eta$ de
+$Y$, la imagen recíproca
+\[
+ \sh{L}_\eta
+ =\sh{L}\otimes_{\sh{O}_X}\sh{O}_{X_\eta}
+\]
+sea isomorfa a $\sh{O}_{X_\eta}$, existen un
+$\sh{O}_Y$-módulo invertible $\sh{M}$ y un isomorfismo
+$f^*(\sh{M})\simeq\sh{L}$.
+\end{corollary}
+
+\begin{proof}
+Basta encontrar una sección meromorfa regular $s$ de $\sh{L}$ sobre
+$X$ tal que el divisor $D'$ correspondiente a $(\sh{L},s)$ tenga
+$D'_x=0$ en todo punto $x$ de una fibra $X_\eta$ sobre un punto maximal
+$\eta$ de $Y$. Aplicando entonces {\EGAReadLink{IV.21.4.11}{(21.4.11)}} a $D'$, se obtiene el resultado por
+{\EGAReadLink{IV.21.4.2}{(21.4.2)}}.
+
+Los puntos de $\operatorname{Ass}(\sh{O}_X)$ están sobre los puntos
+maximales de $Y$ {\EGAReadLink{IV.3.3.1}{(3.3.1)}}. Como $Y$ es reducido y localmente noetheriano,
+existe un abierto denso $V$ de $Y$ que es la unión de una
+familia disjunta de abiertos afines, cada uno de los cuales contiene exactamente un
+punto maximal de $Y$; y $f^{-1}(V)$ es esquemáticamente denso en $X$
+{\EGAReadLink{IV.5.10.2}{(5.10.2)}}. Podemos, por tanto, limitarnos al caso en que $Y$ es
+afín e íntegro.
+
+Para el único punto maximal $\eta$ de $Y$, la fibra $X_\eta$ es entonces
+íntegra, de modo que $\operatorname{Ass}(\sh{O}_X)$ consta de un solo punto
+$z$, el punto genérico de $X$. Sea $s_\eta$ la sección de
+$\sh{L}_\eta$ sobre $X_\eta$ que corresponde, mediante un isomorfismo,
+a la sección unidad de $\sh{O}_{X_\eta}$. Sea $U$ un entorno abierto
+afín en $X$ de un punto $x\in X_\eta$, y sea $s$ una sección
+de $\sh{L}$ sobre $U$ con el mismo germen en $x$ que $s_\eta$. Como $U$
+es esquemáticamente denso en $X$ ({\EGAReadLink{IV.20.2.13}{20.2.13}}, (iv)), $s$ se identifica con una
+sección meromorfa regular unívocamente determinada de $\sh{L}$ sobre $X$.
+Resulta claramente de {\EGAReadLink{IV.20.2.11}{(20.2.11)}} y {\EGAReadLink{IV.20.3.5}{(20.3.5)}} que esta sección induce sobre
+$X_\eta$ una sección meromorfa regular de $\sh{L}_\eta$ igual a
+$s_\eta$ y, por tanto, tiene la propiedad requerida.
+\end{proof}

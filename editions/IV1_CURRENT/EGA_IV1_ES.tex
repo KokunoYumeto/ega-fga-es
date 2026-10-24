@@ -1,0 +1,98 @@
+\documentclass[10pt,oneside]{book}
+\pdftrailerid{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage[all]{xy}
+\usepackage[a4paper,margin=22mm]{geometry}
+\setlength{\emergencystretch}{2em}
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue,
+  hypertexnames=false,
+  unicode=true,
+  pdfencoding=auto
+]{hyperref}
+\hypersetup{
+  pdftitle={Elementos de geometría algebraica IV-1 -- Capítulo 0 -- edición española actual},
+  pdfauthor={Alexander Grothendieck y Jean Dieudonné},
+  pdfsubject={Capítulo 0: preliminares de EGA IV-1, secciones 14 a 23}
+}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\sref}[1]{(\ref{#1})}
+\makeatletter
+\newcommand{\setmanualcurrentlabel}[1]{\def\@currentlabel{#1}}
+\makeatother
+\newcommand{\oldpage}[2][]{%
+  \setcounter{footnote}{0}%
+  \marginpar{\scriptsize\textbf{#1}~|~#2}\ignorespaces}
+\newenvironment{env}[1][]{\setmanualcurrentlabel{#1}\par\medskip\noindent\textbf{(#1)}\ }{\par}
+\newenvironment{definition}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Definición (#1). ---\ }{\par}
+\newenvironment{proposition}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Proposición (#1). ---\ }{\par}
+\newenvironment{theorem}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Teorema (#1). ---\ }{\par}
+\newenvironment{corollary}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Corolario (#1). ---\ }{\par}
+\newenvironment{remark}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Observación (#1). ---\ }{\par}
+\newenvironment{remarks}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Observaciones (#1). ---\ }{\par}
+\newenvironment{lemma}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\itshape Lema (#1). ---\ }{\par}
+\newenvironment{example}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\textit{Ejemplo (#1). ---}\ }{\par}
+\newenvironment{examples}[1][]{%
+  \setmanualcurrentlabel{#1}\par\medskip\noindent\textit{Ejemplos (#1). ---}\ }{\par}
+\newenvironment{proof}{%
+  \par\medskip\noindent\textit{Demostración. ---\ }}{\par}
+
+\setlength{\emergencystretch}{6em}
+\begin{document}
+% BEGIN RIGHTS AND AI TRANSLATION NOTICE
+\begingroup
+\small
+
+% BEGIN INHERITED HUMAN SOURCE CREDIT
+\noindent\textbf{Fuentes y contribuciones}
+
+La obra original es de Alexandre Grothendieck, con la colaboración de Jean Dieudonné: Éléments de géométrie algébrique IV, première partie, capítulo 0, §§ 14–23, Publications Mathématiques de l’IHÉS 20 (1964).
+
+Las fuentes inglesas utilizadas en la preparación de esta traducción española incorporan la traducción humana de \href{https://github.com/ryankeleti/ega}{ryankeleti/ega}, versión \href{https://github.com/ryankeleti/ega/tree/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971}{3d7afe28}, en el § 14 del capítulo 0. El proyecto nombra a Mateo Carmona, Tim Holzschuh, Tim Hosgood, Ryan Keleti, Thiago Solovera \& Nery y Wayne Yang como colaboradores; sus \href{https://github.com/ryankeleti/ega/blob/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971/README.md}{créditos por sección} y su \href{https://github.com/ryankeleti/ega/commits/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971}{historial de contribuciones} precisan la autoría.
+
+La traducción inglesa y la estructura TeX heredadas conservan esa procedencia. La traducción al español, las adiciones posteriores y las correcciones y composición producidas por IA se distinguen de esas contribuciones humanas. No se atribuye a los colaboradores de la traducción inglesa la traducción española ni el material posterior que no figura en su versión. La atribución no implica autorización ni aval.
+
+\par\medskip
+% END INHERITED HUMAN SOURCE CREDIT
+\noindent\textbf{Derechos, disponibilidad y autoría}
+
+Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Este proyecto no dedica esas obras o contribuciones al dominio público ni concede una licencia sobre ellas. Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
+
+Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en NUMDAM (www.numdam.org/). Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
+
+Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede abrir una incidencia en GitHub (github.com/KokunoYumeto/ega-fga-es/issues). El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
+
+La traducción al español está producida por IA. Las correcciones, la edición y la composición también están producidas por IA. El responsable de la publicación no tradujo el texto. Se conservan la autoría y las atribuciones de las obras originales y de las contribuciones heredadas; no se atribuyen a la IA. Los modelos documentados se identifican en cada edición.
+\par
+\endgroup
+\clearpage
+% END RIGHTS AND AI TRANSLATION NOTICE
+
+\input{ega4/ega0-14-es.tex}
+\input{ega4/ega0-15-es.tex}
+\input{ega4/ega0-16-es.tex}
+\input{ega4/ega0-17-es.tex}
+\input{ega4/ega0-18-es.tex}
+\input{ega4/ega0-19-es.tex}
+\input{ega4/ega0-19b-es.tex}
+\input{ega4/ega0-20-es.tex}
+\input{ega4/ega0-21-es.tex}
+\input{ega4/ega0-22-es.tex}
+\input{ega4/ega0-23-es.tex}
+\end{document}

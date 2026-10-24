@@ -1,0 +1,403 @@
+\subsection{Aplicación a los morfismos propios: II. Criterios de planitud cohomológica}
+\label{subsection:III.7.8}
+\label{III.7.8}
+
+\begin{definition}[7.8.1]
+\label{III.7.8.1}
+Sean $X$ e $Y$ dos preesquemas, sea $f:X\to Y$ un morfismo
+cuasicompacto y separado, sea $\mathscr P_\bullet$ un complejo de
+$\mathscr O_X$-módulos cuasicoherentes y planos sobre $Y$, y sea
+$\mathscr T_\bullet$ el funtor homológico de $\mathscr O_Y$-módulos
+cuasicoherentes definido por \eqref{III.7.7.1.1}. Sea $y$ un punto
+de $Y$.
+
+Se dice que $\mathscr P_\bullet$ es
+\oldpage[III]{205}
+\emph{homológicamente plano sobre
+$Y$ en el punto $y$, en dimensión $p$} (o \emph{cohomológicamente
+plano sobre $Y$ en el punto $y$, en dimensión $-p$}) si existe un
+entorno abierto $U$ de $y$ en $Y$ tal que
+\[
+  \mathscr T_p^U=\mathscr T_U^{-p}
+\]
+es exacto.
+
+Se dice que $\mathscr P_\bullet$ es \emph{homológicamente plano en
+dimensión $p$ sobre $Y$} (o \emph{cohomológicamente plano en
+dimensión $-p$ sobre $Y$}) si es homológicamente plano sobre $Y$ en
+todo punto $y\in Y$, en dimensión $p$.
+
+Cuando $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+(respectivamente, sobre $Y$ en el punto $y$) en \emph{toda}
+dimensión $p$, se dice simplemente que $\mathscr P_\bullet$ es
+\emph{homológicamente plano sobre $Y$} (respectivamente, sobre $Y$
+en el punto $y$), o \emph{cohomológicamente plano sobre $Y$}
+(respectivamente, sobre $Y$ en el punto $y$).
+\end{definition}
+
+\begin{env}[7.8.2]
+\label{III.7.8.2}
+Por definición, la noción de planitud homológica sobre $Y$ es
+\emph{local sobre $Y$}.
+
+Si $Y$ es localmente noetheriano, o si $Y$ es un esquema, para que
+$\mathscr P_\bullet$ sea homológicamente plano sobre $Y$ en
+dimensión $p$, es necesario y suficiente que el funtor
+$\mathscr T_p$ sea exacto. La demostración para $Y$ localmente
+noetheriano se dio durante la demostración de \sref{III.7.7.5};
+cuando $Y$ es un esquema, el razonamiento es el mismo, basado en
+\sref[I]{I.9.4.2} aplicado a un abierto afín de un esquema
+cuasicompacto.
+\end{env}
+
+\begin{proposition}[7.8.3]
+\label{III.7.8.3}
+Con las notaciones e hipótesis de \sref{III.7.8.1}, las condiciones
+siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+    en el punto $y$, en dimensión $p$.
+  \item[b)] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
+    $\mathscr T_p^U$ y $\mathscr T_{p+1}^U$ son exactos por la
+    derecha.
+  \item[c)] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
+    $\mathscr T_p^U$ y $\mathscr T_{p-1}^U$ son exactos por la
+    izquierda.
+  \item[d)] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
+    $\mathscr T_{p+1}^U$ es exacto por la derecha y
+    $\mathscr T_{p-1}^U$ es exacto por la izquierda.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Teniendo en cuenta la interpretación de $\mathscr T_p$ cuando $Y$
+es afín, esto no es más que una traducción de una parte de
+\sref{III.7.3.3}.
+\end{proof}
+
+\begin{proposition}[7.8.4]
+\label{III.7.8.4}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un
+morfismo propio, $\mathscr P_\bullet$ un complejo acotado
+inferiormente de $\mathscr O_X$-módulos coherentes y planos sobre
+$Y$, y $\mathscr T_\bullet$ el funtor definido por
+\eqref{III.7.7.1.1}. Para todo $y\in Y$, las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+    en $y$, en dimensión $p$.
+  \item[b)] El funtor $\mathscr T_p^{\mathscr O_y}$ es exacto.
+  \item[c)] Existe un entero $n_0$ tal que, para $n\geq n_0$,
+    \[
+      \operatorname{length}
+        \mathscr T_p^{\mathscr O_y}
+          \bigl(\mathscr O_y/\mathfrak m_y^{\,n+1}\bigr)
+      =
+      \operatorname{length}
+        \mathscr T_p^{\mathscr O_y}\bigl(\kres(y)\bigr)
+      \cdot
+      \operatorname{length}
+        \bigl(\mathscr O_y/\mathfrak m_y^{\,n+1}\bigr).
+      \tag{7.8.4.1}\label{III.7.8.4.1}
+    \]
+    Aquí todas las longitudes son longitudes de
+    $\mathscr O_y$-módulos.
+  \item[d)] Existe un entorno abierto $U$ de $y$ tal que
+    \[
+      \mathscr H^{-p}(f,\mathscr P^\bullet)|U
+    \]
+    es isomorfo a un $(\mathscr O_Y|U)$-módulo de la forma
+    $(\mathscr O_Y|U)^m$ y, para todo $(\mathscr O_Y|U)$-módulo
+    cuasicoherente $\mathscr M$, el homomorfismo canónico
+    \[
+      \mathscr H^{-p}(f,\mathscr P^\bullet)|U
+        \otimes_{\mathscr O_Y|U}\mathscr M
+      \longrightarrow
+      \mathscr H^{-p}
+        \bigl(f,(\mathscr P^\bullet|U)
+          \otimes_{\mathscr O_Y|U}\mathscr M\bigr)
+      \tag{7.8.4.2}\label{III.7.8.4.2}
+    \]
+    es biyectivo.
+\end{enumerate}
+Cuando se cumplen estas condiciones, se tiene además:
+\begin{enumerate}
+  \item[e)] Existe un entorno de $y$ en el cual la función
+    $z\mapsto d_p(z)$, definida en \eqref{III.7.7.5.1}, es
+    constante.
+\end{enumerate}
+Además, si $Y$ es reducido en $y$ \sref[0]{0.4.1.4}, la condición
+e) es equivalente a las demás condiciones.
+\end{proposition}
+
+\oldpage[III]{206}
+\begin{proof}
+En efecto, la condición b) equivale a decir que
+$\mathscr T_p^{\mathscr O_y}$ y $\mathscr T_{p+1}^{\mathscr O_y}$
+son exactos por la derecha \sref{III.7.3.3}. La equivalencia de a)
+y b) resulta entonces de \sref{III.7.7.10} y \sref{III.7.8.3}.
+
+Como $\mathscr O_y/\mathfrak m_y^{\,n+1}$ es artiniano, y
+\[
+  \mathscr T_p^{\mathscr O_y}
+    \bigl(\mathscr O_y/\mathfrak m_y^{\,n+1}\bigr)
+  \quad\hbox{y}\quad
+  \mathscr T_p^{\mathscr O_y}\bigl(\kres(y)\bigr)
+\]
+son $(\mathscr O_y/\mathfrak m_y^{\,n+1})$-módulos de tipo finito
+\sref{III.7.7.4}, y por tanto de longitud finita, la equivalencia de
+b) y c) resulta nuevamente de \sref{III.7.7.10} y
+\sref{III.7.3.5.7}.
+
+Que a) implica e), y que a) y e) son equivalentes cuando
+$\mathscr O_y$ es reducido, resulta de \sref{III.7.6.9}.
+Finalmente, a) implica que \eqref{III.7.8.4.2} es biyectivo, por la
+definición \sref{III.7.8.1} y \sref{III.7.7.5}. También implica que
+\[
+  \bigl(\mathscr H^{-p}(f,\mathscr P^\bullet)\bigr)_y
+\]
+es un $\mathscr O_y$-módulo plano por la condición (f) de
+\sref{III.7.3.3}, y por tanto un $\mathscr O_y$-módulo libre de
+tipo finito \sref[0]{0.10.1.3}, pues es de tipo finito por
+\sref{III.7.7.4}. Como $\mathscr H^{-p}(f,\mathscr P^\bullet)$ es
+un $\mathscr O_Y$-módulo coherente \sref{III.7.7.4}, es localmente
+libre en un entorno de $y$ \sref[0]{0.5.2.7}. Recíprocamente, d)
+implica claramente a), por la definición del funtor
+$\mathscr T_p^U$ \eqref{III.7.7.2.2}.
+\end{proof}
+
+\begin{proposition}[7.8.5]
+\label{III.7.8.5}
+Bajo las hipótesis de \sref{III.7.8.4}, las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+    en toda dimensión $i\leq p$.
+  \item[b)] Para $i\leq p+1$, los funtores $\mathscr T_i$ son
+    exactos por la derecha.
+  \item[c)] Para $i\geq-p$, los $\mathscr O_Y$-módulos
+    $\mathscr H^i(f,\mathscr P^\bullet)$ son localmente libres.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La equivalencia de a) y b) es inmediata por \sref{III.7.8.3}, y a)
+implica c) por \sref{III.7.8.4}.
+
+Recíprocamente, supongamos que se cumple c). Recordemos también que
+$\mathscr L_i=0$ para $i<i_0$ \sref{III.7.7.4}, y por tanto
+$\mathscr T_i=0$ para $i\leq i_0$. Todo punto $y\in Y$ tiene, pues,
+un entorno afín $U=\Spec(A)$ tal que $T_i^A(A)$ es un $A$-módulo
+libre para $i\leq p$. De \sref{III.7.3.7} se deduce que
+$\mathscr T_i^U=T_i^A$ es exacto para $i\leq p$.
+\end{proof}
+
+Aplicaremos principalmente los criterios de planitud cohomológica al
+caso en que el complejo $\mathscr P_\bullet$ está concentrado en un
+\emph{solo} $\mathscr O_X$-módulo coherente $\mathscr F$, plano
+sobre $Y$, tomado como $\mathscr P_0$. Recordemos que en este caso
+\[
+  \mathscr T_p(\mathscr M)
+  =R^{-p}f_*
+    \bigl(\mathscr F\otimes_{\mathscr O_Y}\mathscr M\bigr).
+\]
+
+\begin{proposition}[7.8.6]
+\label{III.7.8.6}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un
+morfismo propio y plano, y $y$ un punto de $Y$. Denotemos por $X_y$
+la fibra $f^{-1}(y)=X\otimes_Y\kres(y)$. Supongamos que
+\[
+  \Gamma(X_y,\mathscr O_{X_y})=R
+\]
+es una $\kres(y)$-álgebra separable (Bourbaki,
+\emph{Algèbre}, cap.~VIII, \S~7, n\textsuperscript{o}~5), es decir,
+un producto directo de un número finito de extensiones separables de
+grado finito de $\kres(y)$. Entonces $\mathscr O_X$ es
+cohomológicamente plano sobre $Y$ en el punto $y$, en dimensión $0$.
+\end{proposition}
+
+\begin{proof}
+Por \sref{III.7.8.4}, podemos restringirnos al caso en que $Y$ es
+el espectro del anillo local $A=\mathscr O_y$. La planitud de $f$
+implica $\mathscr T_{-1}=0$, de modo que $T_0^A$ ya es exacto por la
+izquierda y solo queda probar que es exacto por la derecha. Por la
+condición c) de \sref{III.7.7.10}, podemos reducirnos incluso al
+caso en que $A=\mathscr O_y$ es artiniano.
+
+Sea $k'$ una extensión finita de $\kres(y)$ que descomponga $R$, de
+modo que
+\[
+  R\otimes_{\kres(y)}k'
+\]
+es un producto directo de un número finito de cuerpos isomorfos a
+$k'$. Existe un homomorfismo local de $A$ en un anillo local $A'$
+tal que $A'$ es una $A$-álgebra libre finita y su cuerpo residual es
+isomorfo a $k'$ \sref[0]{0.10.3.2}. Por \sref{III.7.6.1}, basta,
+pues, probar que $T_0^{A'}$ es exacto por la derecha; en otras
+palabras, podemos suponer que $R$ es un producto directo de $m$
+cuerpos isomorfos a $\kres(y)$.
+
+Utilizaremos el siguiente lema elemental.
+
+\begin{lemma}[7.8.6.1]
+\label{III.7.8.6.1}
+Sea $Z$ un espacio localmente anillado. Para que $Z$ sea conexo,
+\oldpage[III]{207}
+es necesario y suficiente que el anillo $\Gamma(Z,\mathscr O_Z)$
+no sea producto de dos anillos no nulos.
+\end{lemma}
+
+\begin{proof}
+Es claro que, si $Z$ es la unión de dos abiertos no vacíos y
+disjuntos $Z_1$ y $Z_2$, entonces $\Gamma(Z,\mathscr O_Z)$ es
+isomorfo al producto de los dos anillos no nulos
+$\Gamma(Z_1,\mathscr O_Z)$ y $\Gamma(Z_2,\mathscr O_Z)$.
+
+Recíprocamente, decir que $\Gamma(Z,\mathscr O_Z)$ es tal producto
+equivale a decir que contiene un idempotente $s$ distinto de $0$ y
+de $1$. Para todo $z\in Z$, el germen $s_z$ es entonces un
+idempotente del anillo local $\mathscr O_z$, y por tanto es igual a
+$0$ o a $1$. El conjunto de los $z$ tales que $s_z=0$ es abierto.
+Por otra parte, $s_z=1$ implica por definición que $s(z)\ne0$, y el
+conjunto de los $z$ tales que $s_z=1$ es también abierto
+\sref[0]{0.5.5.2}. De aquí se sigue la conclusión.
+\end{proof}
+
+Del lema se deduce que $X_y$ tiene exactamente $m$ componentes
+conexas $X_i'$ y que
+\[
+  \Gamma(X_i',\mathscr O_{X_i'})=\kres(y)
+\]
+para todo $i$. Como $A$ es local y artiniano, su espectro consta de
+un solo punto y, por consiguiente, $X$ y $X_y$ tienen el mismo
+espacio subyacente. Así, $X$ tiene $m$ componentes conexas $X_i$
+tales que
+\[
+  X_i'=X_i\otimes_Y\kres(y).
+\]
+Quedamos finalmente reducidos al caso $R=\kres(y)$. Por la
+condición b) de \sref{III.7.7.10}, queda probar que el homomorfismo
+canónico
+\[
+  \Gamma(X,\mathscr O_X)\longrightarrow
+  \Gamma(X_y,\mathscr O_{X_y})
+\]
+es sobreyectivo. Esto es inmediato, pues el compuesto
+\[
+  \Gamma(Y,\mathscr O_Y)=A
+  \longrightarrow\Gamma(X,\mathscr O_X)
+  \longrightarrow\Gamma(X_y,\mathscr O_{X_y})=\kres(y)
+\]
+ya es sobreyectivo.
+\end{proof}
+
+\begin{corollary}[7.8.7]
+\label{III.7.8.7}
+Bajo las hipótesis de \sref{III.7.8.6}, existe un entorno abierto
+$U$ de $y$ tal que:
+\begin{enumerate}
+  \item[(i)] $f_*(\mathscr O_X)|U$ es isomorfo a un
+    $(\mathscr O_Y|U)$-módulo de la forma $(\mathscr O_Y|U)^m$;
+  \item[(ii)] para todo $z\in U$, el homomorfismo canónico
+    \[
+      \bigl(f_*(\mathscr O_X)\bigr)_z
+        \otimes_{\mathscr O_z}\kres(z)
+      \longrightarrow
+      \Gamma(X_z,\mathscr O_{X_z})
+    \]
+    es biyectivo.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La aserción (i) resulta de \sref{III.7.8.6} y \sref{III.7.8.4}.
+La aserción (ii) resulta de la exactitud de $\mathscr T_0^U$, para
+una elección adecuada de $U$, y de \eqref{III.7.7.5.3}.
+\end{proof}
+
+\begin{corollary}[7.8.8]
+\label{III.7.8.8}
+Supongamos que se cumplen las hipótesis de \sref{III.7.8.6} y,
+además, que
+\[
+  \Gamma(X_y,\mathscr O_{X_y})=\kres(y).
+\]
+Entonces existe un entorno abierto $U$ de $y$ tal que el
+homomorfismo canónico
+\[
+  \mathscr O_Y|U\longrightarrow f_*(\mathscr O_X)|U
+\]
+es biyectivo.
+\end{corollary}
+
+\begin{proof}
+En efecto, de la aserción (ii) de \sref{III.7.8.7} se deduce que el
+entero $m$ que figura en la aserción (i) de ese corolario es
+necesariamente igual a $1$.
+\end{proof}
+
+\begin{corollary}[7.8.9]
+\label{III.7.8.9}
+Bajo las hipótesis de \sref{III.7.8.6}, existen un entorno abierto
+$U$ de $y$, un $\mathscr O_U$-módulo coherente $\mathscr Q$,
+determinado salvo isomorfismo único, y un isomorfismo de funtores en
+el $\mathscr O_U$-módulo cuasicoherente $\mathscr M$,
+\[
+  R^1f_*\bigl(f^*(\mathscr M)\bigr)
+  \xrightarrow{\sim}
+  \mathscr Hom_{\mathscr O_U}(\mathscr Q,\mathscr M).
+  \tag{7.8.9.1}\label{III.7.8.9.1}
+\]
+\end{corollary}
+
+\begin{proof}
+La hipótesis implica que $\mathscr T_0^U$ es exacto para un $U$
+adecuado. Basta, por tanto, aplicar la equivalencia de las
+condiciones a) y b') de \sref{III.7.7.5}, con $p=0$ y tomando como
+$\mathscr P_\bullet$ el complejo concentrado en grado $0$ cuyo
+término es $\mathscr O_X$.
+\end{proof}
+
+\begin{remarks}[7.8.10]
+\label{III.7.8.10}
+\textnormal{(i)}
+Bajo las hipótesis de \sref{III.7.8.6}, consideremos la
+factorización de Stein de $f$ \sref{III.4.3.3},
+\[
+  \xymatrix{
+    X \ar[r]^{f'} & Y' \ar[r]^{g} & Y .
+  }
+\]
+\oldpage[III]{208}
+Aquí
+\[
+  Y'=\Spec\bigl(f_*(\mathscr O_X)\bigr).
+\]
+El morfismo finito $g$ es tal que
+\[
+  g_*(\mathscr O_{Y'})=f_*(\mathscr O_X)
+\]
+es localmente libre cerca de $y$, y su fibra sobre $y$ es el
+espectro de una álgebra separable sobre $\kres(y)$
+\sref[II]{II.1.5.1}. Deduciremos en el capítulo~IV que existe un
+entorno abierto $U$ de $y$ en $Y$ tal que, para la restricción
+$g^{-1}(U)\to U$ de $g$, \emph{toda} fibra $g^{-1}(z)$, con
+$z\in U$, es el espectro de una álgebra separable sobre $\kres(z)$.
+Esto es lo que llamaremos un \emph{revestimiento étale} de $U$. Se
+deducirá entonces de la aserción (ii) de \sref{III.7.8.7} que la
+hipótesis sobre el punto $y$ en \sref{III.7.8.6} se cumple también
+en todo punto de un entorno de $y$.
+
+\medskip
+\textnormal{(ii)}
+Veremos en el capítulo~V que, incluso si $X$ es proyectivo sobre $Y$
+(e incluso si además es ``simple'' sobre $Y$, propiedad que se
+definirá en el capítulo~IV), el $\mathscr O_U$-módulo $\mathscr Q$
+de \sref{III.7.8.9} no es necesariamente localmente libre. En otras
+palabras, bajo estas hipótesis $\mathscr O_X$ no es necesariamente
+cohomológicamente plano en \emph{dimensión $1$} sobre $Y$ en el
+punto $y$. En el capítulo~V interpretaremos $\mathscr Q$ como el haz
+de $1$-formas diferenciales del esquema de Picard de $X$ relativo a
+$Y$, a lo largo de la sección unidad.
+\end{remarks}

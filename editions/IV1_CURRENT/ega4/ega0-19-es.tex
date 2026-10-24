@@ -1,0 +1,3644 @@
+\section{Álgebras formalmente lisas y anillos de Cohen}
+\label{section:0.19-es}
+\label{0.19-es}
+
+\setcounter{subsection}{-1}
+\subsection{Introducción}
+\label{subsection:0.19.0-es}
+\label{0.19.0-es}
+
+\oldpage[0\textsubscript{IV-1}]{69}
+
+\begin{env}[19.0.1]
+\label{0.19.0.1-es}
+En el capítulo IV, introduciremos y estudiaremos, entre otras, una clase
+importante de morfismos de preesquemas, los morfismos \emph{lisos}\footnote{Llamados
+también morfismos \emph{simples} en algunos trabajos recientes (inspirándose
+en la terminología clásica de «~punto simple~»); esta terminología se presta,
+sin embargo, a confusión, especialmente en teoría de grupos algebraicos.}. Una de
+sus propiedades fundamentales (y que, junto con una condición de finitud, los
+caracteriza) es una propiedad de \emph{levantamiento de los morfismos}: si
+$f:X\to Y$ es un morfismo liso, $g:Y'\to Y$ un morfismo, entonces para todo
+morfismo $h:Y''\to Y'$ que haga de $Y''$ un preesquema «~poco diferente~» de
+$Y'$, \emph{todo $Y$-morfismo $Y''\to X$ se factoriza} como
+$Y''\xrightarrow{h}Y'\to X$. Precisamente, limitémonos al caso en que
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$ son \emph{afines};
+$B$ se llama entonces una $A$-álgebra \emph{formalmente lisa} si, para toda
+$A$-álgebra $C$ y todo ideal \emph{nilpotente} $\mathfrak J$ de $C$, todo
+$A$-homomorfismo $B\to C/\mathfrak J$ \emph{se levanta} a
+$B\to C\to C/\mathfrak J$. En otros términos, la aplicación
+\[
+  \operatorname{Hom}_A(B,C)\longrightarrow
+  \operatorname{Hom}_A(B,C/\mathfrak J)
+\]
+es \emph{sobreyectiva}. En muchas aplicaciones, $X$ aparecerá como objeto
+que representa un \emph{funtor contravariante representable} $Y'\mapsto F(Y')$
+de la categoría de los $Y$-preesquemas en la de los conjuntos, de modo
+($\mathbf{0}_{\mathrm{III}}$, 8.1.8) que se tendrá
+$F(Y')=\operatorname{Hom}_Y(Y',X)$. En el caso afín, si se pone
+$F^0(C)=F(\operatorname{Spec}(C))$, la comprobación de que, en las
+condiciones anteriores, $F^0(C)\to F^0(C/\mathfrak J)$ es \emph{sobreyectiva}
+(que puede hacerse incluso \emph{sin saber} que $F$ es representable) establecerá
+que $f$ es liso, siempre que la condición adicional de finitud
+se cumpla.
+\end{env}
+
+\begin{env}[19.0.2]
+\label{0.19.0.2-es}
+Para las \emph{álgebras topológicas} sobre un anillo topológico $A$, hay una
+noción análoga de álgebra \emph{formalmente lisa} que no precisaremos
+aquí (cf.~19.3.1). El estudio de estas nociones se hace primero desde un punto de vista
+elemental en el §~19; luego, con ayuda de las propiedades de los diferenciales que
+se desarrollarán en los §§~20 y 21, se demostrarán teoremas más delicados
+en el §~22. Resumamos aquí los principales resultados sobre las álgebras formalmente
+lisas:
+
+\medskip\noindent\textbf{I.} --- Sean $A$, $B$ dos anillos locales
+noetherianos, $\varphi:A\to B$ un homomorfismo local, $k$ el cuerpo residual de
+$A$, y sea $B_0=B\otimes_A k$; se dota a $A$, $B$ y $B_0$ de sus
+topologías preádicas y a $k$ de la topología discreta. Entonces, para que $B$ sea
+una $A$-álgebra formalmente lisa, es necesario y suficiente que $B$ sea un
+$A$-módulo \emph{plano} y que $B_0$ sea una $k$-álgebra \emph{formalmente
+lisa} (19.7.1). Este teorema reduce, pues, la lisura formal, para los anillos
+locales noetherianos, a la misma cuestión para los anillos locales noetherianos que
+son álgebras sobre un \emph{cuerpo}.
+
+\medskip\noindent\textbf{II.} --- Sean $k$ un cuerpo, $A$ un anillo local
+noetheriano que es una $k$-álgebra. Para que $A$ sea formalmente liso, es
+necesario y suficiente que $A$ sea \emph{geométricamente regular} sobre $k$,
+es decir, que para toda extensión \emph{finita} $k'$ de $k$, el anillo
+semilocal $A\otimes_k k'$ sea
+
+\oldpage[0\textsubscript{IV-1}]{70}
+
+\noindent regular (22.5.8); el \emph{completado} $\widehat A$ de $A$ es entonces
+un anillo isomorfo a un anillo de series formales
+$K[[T_1,\ldots,T_n]]$ (19.6.5). Además, la estructura de $k$-álgebra de $A$,
+cuando se supone que $A$ es \emph{completo} y formalmente liso sobre $k$, está
+enteramente determinada por el cuerpo residual $K$ de $A$ y la \emph{dimensión}
+de $A$; esta puede, por lo demás, ser arbitraria con tal de satisfacer la
+desigualdad
+\[
+  \dim(A)\geq \operatorname{rg}_k(\Gamma_{K/k}),
+\]
+donde $\Gamma_{K/k}$ es el «~módulo de imperfección~» de $K$ (22.2.6).
+
+En particular, para que una \emph{extensión} $K$ de $k$ sea formalmente
+lisa, es necesario y suficiente que $K$ sea una extensión \emph{separable} de $k$
+(19.6.1).
+
+\medskip\noindent\textbf{III.} --- Sean $A$ un anillo local noetheriano,
+$\mathfrak J$ un ideal de $A$ distinto de $A$, $A_0=A/\mathfrak J$, $B_0$ un
+anillo local noetheriano \emph{completo}, $A_0\to B_0$ un homomorfismo local
+que hace de $B_0$ una $A_0$-álgebra formalmente lisa. Entonces existe un
+anillo local noetheriano \emph{completo} $B$, un homomorfismo local $A\to B$
+que hace de $B$ un $A$-módulo plano, y un $A_0$-\emph{isomorfismo}
+\[
+  B\otimes_A A_0\xrightarrow{\sim}B_0
+\]
+(de modo que, por I), $B$ es una $A$-álgebra \emph{formalmente lisa}); además,
+$B$ está determinado por estas propiedades salvo isomorfismo (19.7.2). Este
+teorema contiene en particular los \emph{teoremas de Cohen} sobre la estructura
+de los anillos locales noetherianos \emph{completos} (19.8), que desempeñarán un papel
+importante en los §§~6 y 7 del capítulo IV.
+
+\medskip\noindent\textbf{IV.} --- El interés del estudio de los anillos locales
+noetherianos formalmente lisos sobre otro proviene de la siguiente caracterización
+«~puntual~» de los morfismos lisos: si $X$ e $Y$ son
+preesquemas localmente noetherianos, $f:X\to Y$ un morfismo localmente de tipo
+finito, entonces, para que $f$ sea liso, es necesario y suficiente que para todo
+$x\in X$, el anillo $\mathcal O_x$ sea formalmente liso sobre
+$\mathcal O_{f(x)}$. En particular, si $Y=\operatorname{Spec}(k)$, donde $k$ es
+un cuerpo perfecto, decir que $f$ es liso equivale a decir que $X$ es un
+preesquema \emph{regular}.
+
+\medskip\noindent\textbf{V.} --- Finalmente, veremos en los §§~20, 21 y 22 que
+la noción de álgebra formalmente lisa se introduce de modo natural en la
+teoría de los \emph{diferenciales de Kähler}, esclareciéndose ambas teorías
+mutuamente.
+\end{env}
+
+\begin{env}[19.0.3]
+\label{0.19.0.3-es}
+En todo este parágrafo y los siguientes, se supondrá que los anillos y módulos topológicos
+están \emph{linealmente topologizados} ($\mathbf{0}_{\mathrm I}$,
+7.1.1); se supondrá que los anillos topológicos considerados son \emph{conmutativos},
+salvo mención expresa de lo contrario. Recordemos que, si $A$ y $B$ son dos
+anillos topológicos, $\rho:A\to B$ un homomorfismo de anillos que define sobre
+$B$ una estructura de $A$-álgebra, se dice que $B$ es una \emph{$A$-álgebra
+topológica} si $\rho$ es \emph{continuo} para las topologías consideradas.
+
+Para abreviar, en un anillo topológico $A$ (resp. un $A$-módulo topológico
+$M$), diremos «~\emph{sistema fundamental de ideales} (resp.
+\emph{submódulos}) \emph{abiertos}~» en lugar de «~sistema fundamental de
+entornos de 0 formado por ideales (resp. submódulos)~».
+
+Dados un anillo topológico $A$ y un $A$-módulo $M$, los conjuntos
+$\mathfrak J M$, donde $\mathfrak J$ recorre un sistema fundamental de ideales
+abiertos, forman un sistema fundamental de submódulos abiertos de una topología
+sobre $M$ que hace de $M$ un $A$-módulo topológico, y que se llama \emph{inducida}
+por la topología de $A$.
+
+Sea $M$ un $A$-módulo topológico cuya topología es \emph{menos fina} que
+la topología inducida por la de $A$; entonces, si $N$ es un submódulo
+\emph{abierto} de $M$, el $A$-módulo \emph{discreto} $M/N$ está \emph{anulado por
+un ideal abierto} de $A$, pues por hipótesis existe tal ideal $\mathfrak R$
+tal que $\mathfrak R.M\subset N$.
+
+\oldpage[0\textsubscript{IV-1}]{71}
+
+Si $M$ y $N$ son dos $A$-módulos topológicos cuyas topologías son ambas
+inducidas por la de $A$, entonces \emph{todo} $A$-homomorfismo $u:M\to N$
+es \emph{continuo}, pues para todo entorno $V$ de 0 en $N$ existe por
+hipótesis un ideal abierto $\mathfrak J$ de $A$ tal que $\mathfrak JN\subset V$,
+y se tiene, por tanto, $u(\mathfrak JM)\subset\mathfrak JN\subset V$.
+
+Cuando $B$ es una $A$-álgebra topológica, la topología sobre $B$ \emph{inducida}
+por la de $A$ es \emph{más fina} que la topología dada, pues para todo
+ideal abierto $\mathfrak R$ de $B$, hay por hipótesis un ideal abierto
+$\mathfrak J$ de $A$ tal que $\mathfrak JB\subset\mathfrak R$.
+\end{env}
+
+\subsection{Epimorfismos y monomorfismos formales}
+\label{subsection:0.19.1-es}
+
+\begin{proposition}[19.1.1]
+\label{0.19.1.1-es}
+Sean $A$ un anillo topológico, $M$, $N$ dos $A$-módulos topológicos,
+$(W_\lambda)$ un sistema fundamental de submódulos abiertos en $N$,
+$u:M\to N$ un $A$-homomorfismo continuo, $\widehat M$, $\widehat N$ los
+completados separados de $M$ y $N$, $\widehat u:\widehat M\to\widehat N$ la
+extensión continua de $u$ a los completados separados.
+\begin{enumerate}
+  \item[(i)] Las condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[a)] $u(M)$ es \emph{denso} en $N$.
+    \item[a$'$)] $\widehat u(\widehat M)$ es \emph{denso} en $\widehat N$.
+    \item[a$''$)] Para todo $\lambda$, el homomorfismo compuesto
+    $M\xrightarrow{u}N\to N/W_\lambda$ es \emph{sobreyectivo}.
+  \end{enumerate}
+  \item[(ii)] Las condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[b)] La imagen inversa por $u$ de la topología de $N$ es igual a la
+    topología de $M$.
+    \item[b$'$)] $\widehat u$ es un \emph{isomorfismo} del $\widehat A$-módulo
+    topológico $\widehat M$ sobre el sub-$\widehat A$-módulo topológico
+    $\widehat u(\widehat M)$ de $\widehat N$ (que es necesariamente
+    \emph{cerrado}).
+    \item[b$''$)] Los $u^{-1}(W_\lambda)$ forman un sistema fundamental de
+    entornos de 0 en $M$.
+  \end{enumerate}
+\end{enumerate}
+Esto resulta inmediatamente de la definición de los completados separados y del hecho
+de que $N/W_\lambda$ es discreto.
+\end{proposition}
+
+\begin{env}[19.1.2]
+\label{0.19.1.2-es}
+Cuando se cumplen las condiciones equivalentes de (i) (resp. (ii)) de (19.1.1),
+se dice que $u$ es un \emph{epimorfismo formal} (resp. un
+\emph{monomorfismo formal}). Se dice que $u$ es un \emph{bimorfismo formal}
+si es a la vez un monomorfismo formal y un epimorfismo formal; en
+virtud de (19.1.1), equivale a decir que $\widehat u$ es un
+\emph{isomorfismo} del $\widehat A$-módulo topológico $\widehat M$ sobre el
+$\widehat A$-módulo topológico $\widehat N$.
+\end{env}
+
+\begin{proposition}[19.1.3]
+\label{0.19.1.3-es}
+Sean $A$ un anillo topológico, $M$, $N$ dos $A$-módulos topológicos,
+$u:M\to N$ un $A$-homomorfismo continuo. Se supone que existen dos sistemas
+fundamentales de submódulos abiertos, $(V_\lambda)$, $(W_\lambda)$ en $M$ y
+$N$ respectivamente, con el mismo conjunto de índices y tales que
+$u(V_\lambda)\subset W_\lambda$ para todo $\lambda$; sea
+$u_\lambda:M/V_\lambda\to N/W_\lambda$ el homomorfismo inducido por $u$ al
+pasar a los cocientes. Entonces:
+\begin{enumerate}
+  \item[(i)] Para que $u$ sea un epimorfismo formal, es necesario y suficiente que,
+  para todo $\lambda$, $u_\lambda$ sea sobreyectivo.
+  \item[(ii)] Para que $u$ sea un monomorfismo formal, es necesario y suficiente
+  que, para todo $\lambda$, exista un $\mu$ tal que
+  $V_\mu\subset V_\lambda$ y que $\operatorname{Ker}(u_\mu)$ esté contenido
+  en el núcleo $V_\lambda/V_\mu$ de la aplicación canónica
+  $M/V_\mu\to M/V_\lambda$.
+  \item[(iii)] Para que $u$ sea un bimorfismo formal, es necesario y suficiente
+  que, para todo $\lambda$, $u_\lambda$ sea sobreyectivo y que exista un
+  $\mu$ tal que $V_\mu\subset V_\lambda$ y que el homomorfismo canónico
+  $M/V_\mu\to M/V_\lambda$
+
+  \oldpage[0\textsubscript{IV-1}]{72}
+
+  \noindent se factorice como
+  $M/V_\mu\xrightarrow{u_\mu}N/W_\mu\to M/V_\lambda$ (donde
+  el homomorfismo $N/W_\mu\to M/V_\lambda$ es necesariamente único).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La afirmación (i) es inmediata; por otra parte,
+$\operatorname{Ker}(u_\mu)=u^{-1}(W_\mu)/V_\mu$, y el núcleo de la aplicación
+canónica $M/V_\mu\to M/V_\lambda$ es $V_\lambda/V_\mu$; la condición de
+(ii) equivale, por tanto, a decir que $u^{-1}(W_\mu)\subset V_\lambda$, y la afirmación
+(ii) se deduce de ello inmediatamente; finalmente, cuando $u_\mu$ es sobreyectivo, da lo mismo
+decir que $\operatorname{Ker}(u_\mu)$ está contenido en
+$V_\lambda/V_\mu$, o a decir que $M/V_\mu\to M/V_\lambda$ se factoriza como
+$v\circ u_\mu$, donde $v$ es un homomorfismo
+$N/W_\mu\to M/V_\lambda$, ya que $N/W_\mu$ se identifica entonces con
+$(M/V_\mu)/\operatorname{Ker}(u_\mu)$.
+\end{proof}
+
+\begin{corollary}[19.1.4]
+\label{0.19.1.4-es}
+Sean $A$ un anillo topológico y $M$, $N$ dos $A$-módulos topológicos cuyas
+topologías se deducen de la de $A$, y sea $u:M\to N$ un epimorfismo
+formal. Sea $(\mathfrak J_\lambda)$ un sistema fundamental de ideales abiertos
+en $A$. Para que $u$ sea un bimorfismo formal, es necesario y suficiente que para
+todo $\lambda$, el homomorfismo
+$u_\lambda:M/\mathfrak J_\lambda M\to N/\mathfrak J_\lambda N$ deducido de $u$
+pasando a los cocientes sea biyectivo.
+\end{corollary}
+
+\begin{proof}
+En efecto, se tiene $u(\mathfrak J_\lambda M)\subset\mathfrak J_\lambda N$ y se
+puede aplicar el criterio (19.1.3, (iii)); pero, si se tiene una factorización
+\[
+  M/\mathfrak J_\mu M\xrightarrow{u_\mu}
+  N/\mathfrak J_\mu N\xrightarrow{v}M/\mathfrak J_\lambda M,
+\]
+la imagen de $\mathfrak J_\lambda M/\mathfrak J_\mu M$ por $u_\mu$ es
+$\mathfrak J_\lambda N/\mathfrak J_\mu N$, luego la imagen de
+$\mathfrak J_\lambda N/\mathfrak J_\mu N$ por $v$ es 0 y $v$ se factoriza en
+\[
+  N/\mathfrak J_\mu N\longrightarrow N/\mathfrak J_\lambda N
+  \xrightarrow{v'}M/\mathfrak J_\lambda M~;
+\]
+pero entonces el automorfismo identidad de $M/\mathfrak J_\lambda M$ se factoriza
+en
+\[
+  M/\mathfrak J_\lambda M\xrightarrow{u_\lambda}
+  N/\mathfrak J_\lambda N\xrightarrow{v'}M/\mathfrak J_\lambda M,
+\]
+lo que muestra que $u_\lambda$ es inyectivo y, como ya se sabe que es
+sobreyectivo, esto prueba el corolario.
+\end{proof}
+
+\begin{proposition}[19.1.5]
+\label{0.19.1.5-es}
+Sean $A$ un anillo topológico, $M$, $N$ dos $A$-módulos topológicos y
+$u:M\to N$ un $A$-homomorfismo continuo. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[a)] Para todo $A$-módulo topológico discreto $E$ y todo
+  $A$-homomorfismo continuo $v:M\to E$, existe un $A$-homomorfismo continuo
+  $w:N\to E$ tal que $v=w\circ u$.
+  \item[b)] Para todo submódulo abierto $V'$ de $M$, existen un submódulo
+  abierto $W''$ de $N$, un submódulo abierto
+  $V''\subset V'\cap u^{-1}(W'')$ y un homomorfismo
+  $h:N/W''\to M/V'$ tales que el homomorfismo canónico
+  $M/V''\to M/V'$ se factoriza en
+  \[
+    M/V''\xrightarrow{u''}N/W''\xrightarrow{h}M/V',
+  \]
+  donde $u''$ se deduce de $u$ pasando a los cocientes.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Para ver que a) implica b), basta aplicar a) a $E=M/V'$ y al
+homomorfismo canónico $v:M\to M/V'$; entonces $W''=w^{-1}(0)$ es un
+submódulo abierto de $N$ y $V''=u^{-1}(W'')$ un submódulo abierto de $M$
+contenido en $V'$; estos submódulos y el homomorfismo
+$h:N/W''\to M/V'$ deducido de $w$ pasando al cociente satisfacen lo
+requerido. Recíprocamente, para mostrar que b) implica a), puede uno limitarse al
+caso en que $v$ es sobreyectivo, reemplazando $E$ por $v(M)$; entonces
+$V'=\operatorname{Ker}(v)$ es un submódulo abierto de $M$, por lo que $E$ es
+isomorfo al $A$-módulo discreto $M/V'$, y aplicando b), se obtiene
+
+\oldpage[0\textsubscript{IV-1}]{73}
+
+el $A$-homomorfismo continuo $w$ buscado tomando el compuesto
+$N\to N/W''\xrightarrow{h}M/V'$, siendo el diagrama
+\[
+  \xymatrix{
+    M\ar[r]^u\ar[d] & N\ar[d]\\
+    M/V''\ar[r]_{u''} & N/W''
+  }
+\]
+conmutativo.
+\end{proof}
+
+Cuando se satisfacen las condiciones equivalentes de (19.1.5), diremos que
+$u$ es \emph{formalmente invertible por la izquierda}; como la condición b) de
+(19.1.5) implica que $u^{-1}(W'')\subset V'$, $u$ es entonces un monomorfismo
+formal. La terminología queda además justificada por los corolarios siguientes:
+
+\begin{corollary}[19.1.6]
+\label{0.19.1.6-es}
+Si existe un $\widehat A$-homomorfismo continuo
+$s:\widehat N\to\widehat M$ tal que
+$s\circ\widehat u=1_{\widehat M}$, entonces $u$ es formalmente invertible por la
+izquierda.
+\end{corollary}
+
+Se observará que $\widehat u$ es entonces un isomorfismo topológico de
+$\widehat M$ sobre un \emph{factor directo topológico} de $\widehat N$. Para
+probar (19.1.6), basta observar que, con la notación de (19.1.5, a)),
+$v:M\to E$ se prolonga a un $\widehat A$-homomorfismo continuo
+$\widehat v:\widehat M\to E$ puesto que $E$ es discreto; sean
+$j:M\to\widehat M$ y $j':N\to\widehat N$ los homomorfismos canónicos;
+entonces, poniendo $w=\widehat v\circ s\circ j'$, se tiene
+$w\circ u=\widehat v\circ s\circ\widehat u\circ j=\widehat v\circ j=v$.
+
+\begin{corollary}[19.1.7]
+\label{0.19.1.7-es}
+Supongamos que las topologías de $M$ y de $N$ se deducen de la de $A$,
+y sea $(\mathfrak J_\lambda)$ un sistema fundamental de ideales abiertos en
+$A$. Para que $u$ sea formalmente invertible por la izquierda, es necesario y suficiente
+que, para todo $\lambda$, el homomorfismo
+$u_\lambda:M/\mathfrak J_\lambda M\to N/\mathfrak J_\lambda N$, deducido de
+$u$ pasando a los cocientes, sea invertible por la izquierda (dicho de otro modo, sea
+un isomorfismo de $M/\mathfrak J_\lambda M$ sobre un factor directo de
+$N/\mathfrak J_\lambda N$).
+\end{corollary}
+
+En efecto, la condición es suficiente, pues, para
+$V'=\mathfrak J_\lambda M$ en la condición b) de (19.1.5), se satisface lo
+requerido tomando $W''=\mathfrak J_\lambda N$, $V''=V'$ y $h$ tal que
+$h\circ u_\lambda$ sea la identidad en $M/\mathfrak J_\lambda M$.
+Recíprocamente, si $u$ es formalmente invertible por la izquierda, entonces, para todo
+$\lambda$, existen, en virtud de (19.1.5, b)), un $\mu$ tal que
+$\mathfrak J_\mu\subset\mathfrak J_\lambda$ y un homomorfismo
+$h:N/\mathfrak J_\mu N\to M/\mathfrak J_\lambda M$ tales que el homomorfismo
+canónico $M/\mathfrak J_\mu M\to M/\mathfrak J_\lambda M$ se factoriza en
+\[
+  M/\mathfrak J_\mu M\xrightarrow{u_\mu}N/\mathfrak J_\mu N
+  \xrightarrow{h}M/\mathfrak J_\lambda M~;
+\]
+pero, como
+$h(\mathfrak J_\lambda(N/\mathfrak J_\mu N))
+\subset\mathfrak J_\lambda(M/\mathfrak J_\lambda M)=0$, $h$ se factoriza
+canónicamente en
+\[
+  N/\mathfrak J_\mu N\longrightarrow N/\mathfrak J_\lambda N
+  \xrightarrow{s}M/\mathfrak J_\lambda M,
+\]
+y es inmediato que $s$ es inverso por la izquierda de $u_\lambda$.
+
+\begin{proposition}[19.1.8]
+\label{0.19.1.8-es}
+Sea $A$ un anillo topológico que admite un sistema fundamental numerable
+decreciente $(\mathfrak J_n)$ de ideales abiertos. Sean $M$, $N$ dos
+$A$-módulos topológicos cuyas topologías se deducen de la de $A$,
+y sea $u:M\to N$ un $A$-homomorfismo. Pongamos
+$M_n=M/\mathfrak J_nM$, $N_n=N/\mathfrak J_nN$ y sea
+$u_n:M_n\to N_n$ el $(A/\mathfrak J_n)$-homomorfismo deducido de $u$
+pasando a los cocientes. Supongamos que, para todo $n$,
+$P_n=\operatorname{Coker}(u_n)$ es un $(A/\mathfrak J_n)$-módulo proyectivo
+y que $M$ es separado y completo. Entonces, para que $u$ sea formalmente
+invertible por la izquierda, es necesario y suficiente que $u$ sea invertible por la izquierda (y
+$u$ es entonces un isomorfismo topológico de $M$ sobre un factor directo
+topológico de $N$).
+\end{proposition}
+
+\oldpage[0\textsubscript{IV-1}]{74}
+
+\begin{proof}
+En virtud de (19.1.7), se tienen diagramas conmutativos
+\[
+  \xymatrix{
+    0\ar[r] & M_n\ar[r]^{u_n} & N_n\ar[r]^{p_n} & P_n\ar[r] & 0\\
+    0\ar[r] & M_{n+1}\ar[u]^f\ar[r]_{u_{n+1}} &
+      N_{n+1}\ar[u]^g\ar[r]_{p_{n+1}} & P_{n+1}\ar[u]^h\ar[r] & 0
+  }
+\]
+cuyas filas son sucesiones exactas \emph{escindidas}, es decir, existe
+para cada $n$ un homomorfismo $s_n:P_n\to N_n$ tal que
+$p_n\circ s_n=1_{P_n}$. Vamos a mostrar que se puede, por inducción sobre
+$n$, definir un homomorfismo $s'_n:P_n\to N_n$ tal que
+$p_n\circ s'_n=1_{P_n}$ y que los diagramas
+\[
+  \xymatrix{
+    P_n\ar[r]^{s'_n} & N_n\\
+    P_{n+1}\ar[u]^h\ar[r]_{s'_{n+1}} & N_{n+1}\ar[u]^g
+  }
+\]
+sean conmutativos. En efecto, $g\circ s_{n+1}-s'_n\circ h$ es un
+homomorfismo de $P_{n+1}$ en
+\[
+  u_n(M_n)=u_{n+1}(M_{n+1})/
+  \mathfrak J_nu_{n+1}(M_{n+1})~;
+\]
+como $P_{n+1}$ es un $(A/\mathfrak J_{n+1})$-módulo \emph{proyectivo}, este
+homomorfismo se factoriza en
+\[
+  P_{n+1}\xrightarrow{t_{n+1}}u_{n+1}(M_{n+1})
+  \longrightarrow
+  u_{n+1}(M_{n+1})/\mathfrak J_nu_{n+1}(M_{n+1}),
+\]
+de donde se concluye inmediatamente que $s'_{n+1}=s_{n+1}-t_{n+1}$ satisface lo
+requerido. Dicho esto, de la descomposición de $N_n$ en suma directa de
+$u_n(M_n)$ y de $s'_n(P_n)$, se deduce inmediatamente un homomorfismo
+$w_n:N_n\to M_n$ inverso por la izquierda de $u_n$ y tal que los diagramas
+\[
+  \xymatrix{
+    N_n\ar[r]^{w_n} & M_n\\
+    N_{n+1}\ar[u]^g\ar[r]_{w_{n+1}} & M_{n+1}\ar[u]^f
+  }
+\]
+sean conmutativos. El sistema proyectivo $(w_n)$ admite entonces un límite
+proyectivo $\widehat w:\widehat N\to\widehat M=M$, de donde se obtiene, por composición con
+el homomorfismo canónico $N\to\widehat N$, un homomorfismo $w:N\to M$ tal
+que, para todo $n$, el endomorfismo $(w\circ u)_n$ de
+$M_n=M/\mathfrak J_nM$ deducido de $w\circ u$ pasando a los cocientes sea
+la identidad; esto implica que $w\circ u=1_M$ puesto que $M$ es separado y
+completo.
+\end{proof}
+
+\begin{proposition}[19.1.9]
+\label{0.19.1.9-es}
+Sean $A$ un anillo topológico preadmisible ($\mathbf{0}_{\mathrm I}$,
+7.1.2), $\mathfrak Q$ un ideal de definición de $A$ y
+$(\mathfrak J_\lambda)$ un sistema fundamental de ideales abiertos de $A$.
+Sean $M$, $N$ dos $A$-módulos topológicos cuyas topologías se deducen
+de la de $A$, y tales que para todo $\lambda$,
+$N/\mathfrak J_\lambda N$ es un $(A/\mathfrak J_\lambda)$-módulo proyectivo
+(cf. (19.2.3)). Sea $u:M\to N$ un $A$-homomorfismo. Entonces las condiciones
+siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $u$ es formalmente invertible por la izquierda.
+
+  \oldpage[0\textsubscript{IV-1}]{75}
+
+  \item[b)] El homomorfismo
+  $u_0:M/\mathfrak QM\to N/\mathfrak QN$ deducido de $u$ pasando a los
+  cocientes es invertible por la izquierda.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Se ha visto (19.1.7) que la condición a) equivale a decir que $u_\lambda$ es
+invertible por la izquierda para todo $\lambda$; como $\mathfrak Q$ es un ideal
+abierto y, por tanto, contiene un $\mathfrak J_\lambda$, se deduce inmediatamente que
+$u_0$ es invertible por la izquierda. Para mostrar recíprocamente que b) implica a),
+observemos que, para todo $\lambda$, $\mathfrak Q/\mathfrak J_\lambda$ es por
+hipótesis un ideal nilpotente de $A/\mathfrak J_\lambda$. Nuestra afirmación
+resultará de la proposición siguiente.
+\end{proof}
+
+\begin{proposition}[19.1.10]
+\label{0.19.1.10-es}
+Sean $A$ un anillo, $M$, $N$ dos $A$-módulos, siendo $N$ proyectivo, y
+$u:M\to N$ un $A$-homomorfismo. Sea $\mathfrak J$ un ideal de $A$; se
+supone que se satisface una de las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $\mathfrak J$ es nilpotente.
+  \item[(ii)] $\mathfrak J$ está contenido en el radical de $A$ y $M$ es de
+  tipo finito.
+\end{enumerate}
+Entonces, para que $u$ sea invertible por la izquierda, es necesario y suficiente que
+el homomorfismo
+$u_0:M/\mathfrak JM\to N/\mathfrak JN$ de $(A/\mathfrak J)$-módulos, deducido
+de $u$ por paso a los cocientes sea invertible por la izquierda.
+\end{proposition}
+
+\begin{proof}
+Como la condición es evidentemente necesaria, probemos que es suficiente. Sea
+$v_0$ un inverso por la izquierda de $u_0$; el homomorfismo compuesto
+$N\to N/\mathfrak JN\xrightarrow{v_0}M/\mathfrak JM$ se factoriza como
+$N\xrightarrow{v}M\to M/\mathfrak JM$, puesto que $N$ es proyectivo; entonces
+$w=v\circ u$ es un endomorfismo de $M$ tal que el endomorfismo $w_0$ de
+$M/\mathfrak JM$ deducido por paso a los cocientes es la identidad, y basta
+probar que el propio $w$ es biyectivo (pues entonces $w^{-1}\circ v$ será una
+inverso por la izquierda de $u$). Distingamos ahora los dos casos.
+
+(i) Para todo $n$ se tiene el diagrama conmutativo
+\[
+  \xymatrix{
+    (\mathfrak J^n/\mathfrak J^{n+1})\otimes_{A/\mathfrak J}
+      (M/\mathfrak JM)\ar[r]\ar[d]_{1\otimes\operatorname{gr}^0(w)} &
+      \mathfrak J^nM/\mathfrak J^{n+1}M\ar[d]^{\operatorname{gr}^n(w)}\\
+    (\mathfrak J^n/\mathfrak J^{n+1})\otimes_{A/\mathfrak J}
+      (M/\mathfrak JM)\ar[r] & \mathfrak J^nM/\mathfrak J^{n+1}M
+  }
+\]
+donde las flechas horizontales son \emph{sobreyectivas}, y como
+$\operatorname{gr}^0(w)=w_0$ es la identidad, lo mismo ocurre con
+$\operatorname{gr}^n(w)$, que, \emph{a fortiori}, es biyectivo. Como la
+filtración $\mathfrak J$-preádica sobre $M$ es finita, puesto que $\mathfrak J$
+es nilpotente, se concluye que $w$ es biyectivo (Bourbaki,
+\emph{Alg. comm.}, cap.~III, §~2, n\textsuperscript{o}~8, cor.~3 del teorema~1).
+
+(ii) Basta demostrar que, para todo ideal máximo $\mathfrak m$ de $A$, el
+endomorfismo $w_{\mathfrak m}$ de $M_{\mathfrak m}$ es biyectivo (Bourbaki,
+\emph{Alg. comm.}, cap.~II, §~3, n\textsuperscript{o}~3, teorema~1), y como
+$\mathfrak JA_{\mathfrak m}\subset\mathfrak mA_{\mathfrak m}$ y
+$A_{\mathfrak m}/\mathfrak JA_{\mathfrak m}=(A/\mathfrak J)_{\mathfrak m}$,
+se reduce a probar la proposición cuando $A$ es un anillo local. Además, se
+puede suponer que $\mathfrak J$ es el ideal máximo $\mathfrak J_0$ de $A$, pues
+si $u_0$ es invertible
+
+\oldpage[0\textsubscript{IV-1}]{76}
+
+por la izquierda, también lo es
+$u_{00}:M/\mathfrak J_0M\to N/\mathfrak J_0N$, obtenido tensorizando $u_0$ con
+$1_{A/\mathfrak J_0}$, puesto que se tiene
+\[
+  M/\mathfrak J_0M=(M/\mathfrak JM)\otimes_{A/\mathfrak J}(A/\mathfrak J_0).
+\]
+Supongamos, pues, que $\mathfrak J$ es máximo, de modo que $A/\mathfrak J$ es
+un cuerpo. Es evidentemente suficiente demostrar que $M$ es un $A$-módulo
+\emph{libre} bajo las condiciones del enunciado: en efecto, $\det(w_0)$ es
+entonces la imagen canónica de $\det(w)$ en $A/\mathfrak J$, luego $\det(w)$
+no pertenece al ideal $\mathfrak J$ y es, por tanto, invertible. Ahora bien,
+como el $(A/\mathfrak J)$-espacio vectorial $M/\mathfrak JM$ es libre de tipo
+finito, existe un $A$-módulo libre de tipo finito $L$ y un $A$-homomorfismo $f:L\to M$
+tal que el homomorfismo $f_0:L/\mathfrak JL\to M/\mathfrak JM$ deducido de $f$
+por paso a los cocientes es biyectivo. Como $M$ es de tipo finito, se concluye
+primero que $f$ es sobreyectivo por el lema de Nakayama (Bourbaki,
+\emph{Alg. comm.}, cap.~II, §~3, n\textsuperscript{o}~2, cor.~1 de la
+prop.~4); además, si $g=u\circ f$, el homomorfismo
+$g_0:L/\mathfrak JL\to N/\mathfrak JN$ deducido por paso a los cocientes es
+invertible por la izquierda, y como aquí $L$ es libre, la observación del
+comienzo prueba que el propio $g$ es invertible por la izquierda; ahora bien,
+esto implica evidentemente que $f$ es \emph{inyectivo}, lo que termina la demostración.
+\end{proof}
+
+Mencionemos de paso los siguientes corolarios de (19.1.10):
+
+\begin{corollary}[19.1.11]
+\label{0.19.1.11-es}
+Sean $A$ un anillo local, $k$ su cuerpo residual, $M$ un $A$-módulo de tipo
+finito, $N$ un $A$-módulo proyectivo y $u:M\to N$ un homomorfismo. Para que
+$u$ sea invertible por la izquierda, es necesario y suficiente que exista un
+sistema de generadores $(x_i)_{1\leq i\leq m}$ de $M$ tal que las imágenes por
+$u\otimes 1:M\otimes_Ak\to N\otimes_Ak$ de los $x_i\otimes1$ sean linealmente
+independientes en $N\otimes_Ak$; los $x_i$ forman entonces una base de $M$.
+\end{corollary}
+
+La condición es evidentemente necesaria, pues si $u$ es invertible por la
+izquierda, $M$ es un $A$-módulo proyectivo de tipo finito, y por tanto libre.
+Recíprocamente, si se satisface la condición, es claro que los $x_i\otimes1$
+forman una base de $M\otimes_Ak$ y que $u\otimes1$ es invertible por la
+izquierda; basta, pues, aplicar (19.1.10) al ideal máximo $\mathfrak J$ de $A$.
+
+\begin{corollary}[19.1.12]
+\label{0.19.1.12-es}
+Sean $A$ un anillo, $M$ un $A$-módulo de tipo finito, $N$ un $A$-módulo
+proyectivo y $u:M\to N$ un homomorfismo. Para todo ideal primo
+$\mathfrak p\in\operatorname{Spec}(A)$, las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[a)] El homomorfismo
+  $u_{\mathfrak p}:M_{\mathfrak p}\to N_{\mathfrak p}$ es invertible por la
+  izquierda.
+  \item[b)] El homomorfismo
+  $u\otimes1:M\otimes_Ak(\mathfrak p)\to N\otimes_Ak(\mathfrak p)$ es
+  inyectivo (se recuerda que $k(\mathfrak p)$ designa el cuerpo residual de $A$
+  en $\mathfrak p$).
+  \item[c)] Existe un sistema finito de elementos $x_i\in M$
+  $(1\leq i\leq m)$ tal que las imágenes de los $x_i$ en $M_{\mathfrak p}$
+  generan $M_{\mathfrak p}$, y un sistema de $m$ formas lineales
+  $y_i^*$ sobre $N$ $(1\leq i\leq m)$ tal que
+  $\det(\langle y_i^*,u(x_j)\rangle)\notin\mathfrak p$.
+  \item[d)] Existe $f\in A-\mathfrak p$ tal que el homomorfismo
+  $u_f:M_f\to N_f$ sea invertible por la izquierda.
+\end{enumerate}
+Además, el conjunto de los $\mathfrak p\in\operatorname{Spec}(A)$ que verifican
+estas condiciones es abierto en $\operatorname{Spec}(A)$.
+\end{corollary}
+
+La última afirmación es consecuencia trivial de d). Como $N$ es proyectivo, es
+sumando directo de un $A$-módulo libre $A^{(I)}$; además, como $M$ es de tipo
+finito, $u(M)$ está contenido en un submódulo de $A^{(I)}$ de la forma $A^n$
+para $n$ finito; como cada uno de los enunciados a), b), c), d) es equivalente
+al enunciado correspondiente en el que se reemplaza $N$ por $N\oplus P$
+(suponiéndose siempre que $u$ aplica $M$ en $N$), se reduce al caso en que $N$
+es \emph{libre de tipo finito}. Es trivial que d) implica a), y a) y b) son
+equivalentes en virtud de (19.1.11); además, a) implica que
+$M_{\mathfrak p}$ es libre (19.1.11), luego a) implica c), tomando como $x_i$
+una familia cuyas imágenes en $M_{\mathfrak p}$ forman una base de este
+
+\oldpage[0\textsubscript{IV-1}]{77}
+
+$A_{\mathfrak p}$-módulo y observando que (puesto que $N$ es libre de tipo
+finito) toda forma lineal sobre el $A_{\mathfrak p}$-módulo
+$N_{\mathfrak p}$ se escribe $u=v/f$, donde $f\in A-\mathfrak p$ y $v$ es una
+forma lineal sobre el $A$-módulo $N$. Es claro que c) implica b), y queda, por
+tanto, ver que a) implica d). Ahora bien, como $N$ es de presentación finita,
+$(\operatorname{Hom}_A(N,M))_{\mathfrak p}$ se identifica canónicamente con
+$\operatorname{Hom}_{A_{\mathfrak p}}(N_{\mathfrak p},M_{\mathfrak p})$
+(Bourbaki, \emph{Alg. comm.}, cap.~II, §~2, n\textsuperscript{o}~7,
+prop.~19). Si $w_{\mathfrak p}$ es inverso por la izquierda de $u_{\mathfrak p}$,
+existen, por tanto, un homomorfismo $w:N\to M$ y un elemento $f\in A-\mathfrak p$ tales que
+$w_{\mathfrak p}=w\otimes(1/f)1_{A_{\mathfrak p}}$. La relación
+$w_{\mathfrak p}\circ u_{\mathfrak p}=1_{M_{\mathfrak p}}$ se escribe también
+$(w\circ u)\otimes1_{A_{\mathfrak p}}=f.1_{M_{\mathfrak p}}$. Pero como $M$
+es un $A$-módulo de tipo finito, existe $g\in A-\mathfrak p$ tal que el
+endomorfismo $g((w\circ u)-f.1_M)$ se anula en todos los generadores de $M$, y
+es, por tanto, nulo. Si se pone $h=fg$, y
+$u_h=u\otimes1_{A_h}$, $w_h=w\otimes1_{A_h}$, se tiene entonces
+$w_h(u_h(z))=(f/1)z$ para todo $z\in M_h$; pero como $h/1$ es invertible en
+$A_h$, también lo es $f/1=f'$, y $f'^{-1}w_h$ es, por tanto, inverso por la
+izquierda de $u_h$, lo que termina la demostración.
+
+\begin{proposition}[19.1.13]
+\label{0.19.1.13-es}
+Supongamos verificadas las hipótesis de (19.1.9) y supongamos además que
+$(\mathfrak J_\lambda)$ es una sucesión decreciente $(\mathfrak J_n)$ y que $M$
+es separado y completo. Entonces las condiciones a) y b) de (19.1.9) son
+también equivalentes a:
+\begin{enumerate}
+  \item[c)] $u$ es invertible por la izquierda.
+\end{enumerate}
+\end{proposition}
+
+Ya se sabe que c) implica a) (19.1.6). Recíprocamente, si se verifica a), se
+sabe (con las notaciones de (19.1.8)) que $M_n$ es sumando directo del
+$(A/\mathfrak J_n)$-módulo proyectivo $N_n$, luego $P_n$ también es isomorfo a
+un sumando directo de $N_n$ y es, por tanto, proyectivo; basta entonces aplicar
+(19.1.8).
+
+Señalemos, por último, la proposición siguiente:
+
+\begin{proposition}[19.1.14]
+\label{0.19.1.14-es}
+Sean $A$ un anillo, $M$ un $A$-módulo de tipo finito, $N$ un $A$-módulo
+proyectivo y $u:M\to N$ un $A$-homomorfismo.
+\begin{enumerate}
+  \item[(i)] Para que $u$ sea invertible por la izquierda, es necesario y
+  suficiente que, para todo ideal máximo $\mathfrak m$ de $A$,
+  $u_{\mathfrak m}:M_{\mathfrak m}\to N_{\mathfrak m}$ sea invertible por la
+  izquierda.
+  \item[(ii)] Sea $A'$ una $A$-álgebra que sea un $A$-módulo fielmente plano.
+  Para que $u$ sea invertible por la izquierda, es necesario y suficiente que
+  $u\otimes1:M\otimes_AA'\to N\otimes_AA'$ sea invertible por la izquierda.
+\end{enumerate}
+\end{proposition}
+
+Como en (19.1.12), se puede limitar al caso en que $N$ es libre de tipo finito;
+decir que $u$ es invertible por la izquierda significa entonces que $u$ es
+inyectivo y que el módulo cociente $P=N/u(M)$ es \emph{proyectivo}, pues
+$u(M)$ será entonces sumando directo de $N$. Señalemos además que, como $M$ es
+de tipo finito, $P$ es de \emph{presentación finita}. Sentado esto:
+
+(i) La condición es evidentemente necesaria. Recíprocamente, si se satisface,
+se sabe que $u$ es inyectivo (Bourbaki, \emph{Alg. comm.}, cap.~II, §~3,
+n\textsuperscript{o}~3, teorema~1), y como
+$P_{\mathfrak m}=N_{\mathfrak m}/u_{\mathfrak m}(M_{\mathfrak m})$ es
+proyectivo para todo $\mathfrak m$, se sabe que esto implica que $P$ es
+proyectivo (\emph{loc. cit.}, §~5, n\textsuperscript{o}~2, teorema~1).
+
+(ii) También aquí la condición es trivialmente necesaria. Recíprocamente, si
+se cumple, se sabe que $u$ es inyectivo ($\mathbf{0}_{\mathrm I}$, 6.4.1), y
+como $P\otimes_AA'=\operatorname{Coker}(u\otimes1)$ es proyectivo, y por tanto
+plano, se deduce que $P$ es un $A$-módulo plano
+($\mathbf{0}_{\mathrm I}$, 6.6.3), y por tanto proyectivo, puesto que es de
+presentación finita (Bourbaki, \emph{Alg. comm.}, cap.~II, §~5,
+n\textsuperscript{o}~2, cor.~2 del teorema~1).
+
+\oldpage[0\textsubscript{IV-1}]{78}
+
+\begin{remark}[19.1.15]
+\label{0.19.1.15-es}
+La noción «dual» a la de homomorfismo formalmente invertible por la izquierda
+es la de homomorfismo \emph{formalmente invertible por la derecha}; tal
+$A$-homomorfismo continuo $u:M\to N$ verifica, por definición, la condición
+siguiente: para todo submódulo abierto $W'$ de $N$, existen un submódulo
+abierto $V'\subset u^{-1}(W')$ de $M$, un submódulo abierto $W''\subset W'$ de
+$N$ y un homomorfismo $h:N/W''\to M/V'$ tales que el homomorfismo canónico
+$N/W''\to N/W'$ se factoriza como
+\[
+  N/W''\xrightarrow{h}M/V'\xrightarrow{u'}N/W',
+\]
+donde $u'$ se deduce de $u$ por paso a los cocientes. Esto implica que $u$ es
+un epimorfismo formal; si existe un $\widehat A$-homomorfismo continuo
+$r:\widehat N\to\widehat M$ tal que $\widehat u\circ r=1_{\widehat N}$, se
+comprueba inmediatamente que $u$ es formalmente invertible por la derecha. Si
+se cumplen las condiciones de (19.1.7), para que $u$ sea formalmente invertible
+por la derecha es necesario y suficiente que los $u_\lambda$ sean invertibles
+por la derecha (es decir, que el núcleo de $u_\lambda$ sea sumando directo de
+$M/\mathfrak J_\lambda M$ y que $u_\lambda$ sea un isomorfismo de un
+complementario de $\operatorname{Ker}(u_\lambda)$ sobre
+$N/\mathfrak J_\lambda N$). Dejamos al lector el cuidado de enunciar y
+demostrar las proposiciones correspondientes a (19.1.8) y (19.1.9) (en el
+análogo de (19.1.8), se debe suponer que $M$ es separado y completo y que $M_n$
+es un $(A/\mathfrak J_n)$-módulo proyectivo; en el análogo de (19.1.9), se debe
+suprimir la hipótesis sobre los $N/\mathfrak J_\lambda N$, pero suponer, en
+cambio, que, para todo $\lambda$, $M/\mathfrak J_\lambda M$ es un
+$(A/\mathfrak J_\lambda)$-módulo proyectivo).
+\end{remark}
+
+\subsection{Módulos formalmente proyectivos}
+\label{subsection:0.19.2-es}
+
+\begin{definition}[19.2.1]
+\label{0.19.2.1-es}
+Sea $A$ un anillo topológico. Se dice que un $A$-módulo topológico $M$ es
+\emph{formalmente proyectivo} si verifica la condición siguiente: para todo
+ideal abierto $\mathfrak J$ de $A$, todo par de $(A/\mathfrak J)$-módulos
+(discretos) $P$, $Q$, todo $A$-homomorfismo sobreyectivo $u:P\to Q$ y todo
+$A$-homomorfismo continuo $v:M\to Q$, existe un $A$-homomorfismo continuo
+$w:M\to P$ tal que $v=u\circ w$.
+\end{definition}
+
+\begin{env}[19.2.2]
+\label{0.19.2.2-es}
+Para verificar la condición de (19.2.1), es evidente que se puede limitar
+(reemplazando $Q$ por $v(M)$ y $P$ por $u^{-1}(v(M))$) al caso en que el propio
+$v$ es sobreyectivo; entonces $Q$ es isomorfo a $M/V$, donde $V$ es un
+submódulo abierto de $M$ tal que $\mathfrak JM\subset V$; la condición de
+(19.2.1) equivale entonces a decir que, para todo $(A/\mathfrak J)$-módulo discreto
+$P$ y todo $A$-homomorfismo sobreyectivo $u:P\to M/V$, existe un submódulo
+abierto $V'\subset V$ de $M$ y un $A$-homomorfismo $w:M/V'\to P$, tales que
+el homomorfismo canónico $M/V'\to M/V$ se factoriza en
+\[
+  M/V'\xrightarrow{w}P\xrightarrow{u}M/V.
+\]
+Se observará que basta verificar esta condición cuando $\mathfrak J$
+recorre un sistema fundamental de vecindades de 0 en $A$ formado por ideales.
+\end{env}
+
+\begin{env}[19.2.3]
+\label{0.19.2.3-es}
+Supongamos que existe un sistema fundamental $(\mathfrak J_\lambda)$ de ideales
+abiertos de $A$ y un sistema fundamental $(V_\lambda)$ de submódulos
+abiertos de $M$, con el \emph{mismo} conjunto de índices que
+$(\mathfrak J_\lambda)$ y tal que, para todo $\lambda$, $M/V_\lambda$ sea un
+$(A/\mathfrak J_\lambda)$-módulo \emph{proyectivo}. Entonces $M$ es formalmente
+proyectivo: en efecto, con las notaciones de (19.2.2), basta tomar
+$\lambda$ tal que $\mathfrak J_\lambda\subset\mathfrak J$ y
+$V_\lambda\subset V$; como $P$ es también un
+$(A/\mathfrak J_\lambda)$-módulo, la factorización del homomorfismo canónico
+$M/V_\lambda\to M/V$ en $M/V_\lambda\to P\to M/V$ resulta de que se trata
+de un $(A/\mathfrak J_\lambda)$-homomorfismo y de que se supone que
+$M/V_\lambda$ es un $(A/\mathfrak J_\lambda)$-módulo proyectivo.
+
+Cuando se satisface la condición más estricta de este número, se dice que $M$
+es \emph{estrictamente formalmente proyectivo}.
+\end{env}
+
+\begin{proposition}[19.2.4]
+\label{0.19.2.4-es}
+Sean $A$ un anillo topológico y $M$ un $A$-módulo topológico cuya
+topología se deduce de la de $A$. Para que $M$ sea formalmente
+proyectivo, es necesario y suficiente que sea estrictamente formalmente proyectivo.
+\end{proposition}
+
+\oldpage[0\textsubscript{IV-1}]{79}
+
+\begin{proof}
+Acabamos de ver que la condición es suficiente. Recíprocamente, supongamos $M$
+formalmente proyectivo y sea $(\mathfrak J_\lambda)$ un sistema fundamental
+de ideales abiertos de $A$. Para todo $\lambda$, sean $P$ un
+$(A/\mathfrak J_\lambda)$-módulo libre y
+$u:P\to M/\mathfrak J_\lambda M$ un
+$(A/\mathfrak J_\lambda)$-homomorfismo sobreyectivo. Existe, pues, un
+$\mathfrak J_\mu\subset\mathfrak J_\lambda$ tal que el homomorfismo canónico
+$M/\mathfrak J_\mu M\to M/\mathfrak J_\lambda M$ se factoriza en
+\[
+  M/\mathfrak J_\mu M\xrightarrow{w}P\xrightarrow{u}M/\mathfrak J_\lambda M;
+\]
+pero, como
+$w(\mathfrak J_\lambda(M/\mathfrak J_\mu M))\subset\mathfrak J_\lambda P=0$,
+$w$ se factoriza en $M/\mathfrak J_\lambda M\xrightarrow{v}P$, y está
+claro que $u\circ v$ es la identidad en $M/\mathfrak J_\lambda M$, lo que
+prueba que este $(A/\mathfrak J_\lambda)$-módulo es proyectivo.
+\end{proof}
+
+\begin{proposition}[19.2.5]
+\label{0.19.2.5-es}
+Sean $A$ un anillo topológico y $M$ un $A$-módulo topológico.
+\begin{enumerate}
+  \item[(i)] Para que $M$ sea formalmente proyectivo (resp. estrictamente
+  formalmente proyectivo), es necesario y suficiente que lo sea el
+  $\hat A$-módulo topológico $\hat M$.
+  \item[(ii)] Sea $A'$ una $A$-álgebra topológica. Si $M$ es formalmente
+  proyectivo (resp. estrictamente formalmente proyectivo), entonces
+  $M\otimes_A A'$ (provisto de la topología producto tensorial) es un
+  $A'$-módulo topológico formalmente proyectivo (resp. estrictamente formalmente
+  proyectivo).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Basta observar que cuando $\mathfrak J$ (resp. $V$)
+  recorre el conjunto de los ideales abiertos de $A$ (resp. el conjunto de los
+  submódulos abiertos de $M$), el completado separado $\hat{\mathfrak J}$
+  (resp. $\hat V$) recorre el conjunto de los ideales abiertos de $\hat A$
+  (resp. el conjunto de los submódulos abiertos de $\hat M$), y
+  $\hat A/\hat{\mathfrak J}=A/\mathfrak J$ (resp.
+  $\hat M/\hat V=M/V$) salvo isomorfismo canónico; como la noción
+  de módulo formalmente proyectivo (resp. estrictamente formalmente proyectivo)
+  solo hace intervenir los $A/\mathfrak J$ y los $M/V$, se deduce
+  inmediatamente (i).
+  \item[(ii)] Supongamos primero que $M$ es formalmente proyectivo y pongamos
+  $M'=M\otimes_A A'$; sean $\mathfrak J'$ un ideal abierto de $A'$, $P'$,
+  $Q'$ dos $(A'/\mathfrak J')$-módulos discretos, $u':P'\to Q'$ un
+  $A'$-homomorfismo sobreyectivo y $v':M'\to Q'$ un $A'$-homomorfismo continuo.
+  Hay un ideal abierto $\mathfrak J$ de $A$ tal que
+  $\mathfrak JA'\subset\mathfrak J'$, por tanto $P'$ y $Q'$ son también
+  $(A/\mathfrak J)$-módulos discretos. Si se considera el
+  $A$-homomorfismo compuesto $v:M\xrightarrow{j}M'\xrightarrow{v'}Q'$, que es
+  continuo, la hipótesis implica que existe un $A$-homomorfismo continuo
+  $w:M\to P'$ tal que $v=u'\circ w$; pero, como $P'$ es un $A'$-módulo
+  topológico, $w$ se factoriza en
+  $M\xrightarrow{j}M'\xrightarrow{w'}P'$, donde $w'$ es un $A'$-homomorfismo
+  continuo, y como $v'\circ j=(u'\circ w')\circ j$, se concluye que
+  $v'=u'\circ w'$.
+
+  Supongamos ahora que $M$ es estrictamente formalmente proyectivo; sea
+  $(\mathfrak J_\lambda)$ (resp. $(V_\lambda)$) un sistema fundamental
+  de ideales abiertos (resp. de submódulos abiertos) en $A$ (resp. $M$) tal
+  que $(M/V_\lambda)$ sea un $(A/\mathfrak J_\lambda)$-módulo proyectivo,
+  y sea $(\mathfrak J'_\mu)$ un sistema fundamental de ideales abiertos de
+  $A'$. Se obtiene un sistema fundamental de vecindades de $0$ en $M'$ tomando
+  los submódulos
+  \[
+    \operatorname{Im}(M\otimes_A\mathfrak J'_\mu)
+    +\operatorname{Im}(V_\lambda\otimes_A A')=W_{\lambda\mu},
+  \]
+  donde $\lambda$ y $\mu$ son tales que
+  $\mathfrak J_\lambda A'\subset\mathfrak J'_\mu$. Como
+  \[
+    (M\otimes_A A')/W_{\lambda\mu}
+    =(M/V_\lambda)\otimes_{A/\mathfrak J_\lambda}
+      (A'/\mathfrak J'_\mu)
+  \]
+  y como $(M/V_\lambda)$ es un
+  $(A/\mathfrak J_\lambda)$-módulo proyectivo, $M'/W_{\lambda\mu}$
+  es un $(A'/\mathfrak J'_\mu)$-módulo proyectivo.
+\end{enumerate}
+\end{proof}
+
+\subsection{Álgebras formalmente lisas}
+\label{subsection:0.19.3-es}
+
+\begin{definition}[19.3.1]
+\label{0.19.3.1-es}
+Sean $A$ un anillo topológico y $B$ una $A$-álgebra topológica. Se dice que
+$B$ es una $A$-álgebra \emph{formalmente lisa} si, para toda
+$A$-álgebra topológica discreta $C$ y todo ideal nilpotente $\mathfrak J$ de
+$C$, todo $A$-homomorfismo continuo $u:B\to C/\mathfrak J$ se factoriza en
+\[
+  B\xrightarrow{v}C\xrightarrow{\varphi}C/\mathfrak J,
+\]
+donde $v$ es un homomorfismo continuo y $\varphi$ el homomorfismo canónico.
+\end{definition}
+
+\oldpage[0\textsubscript{IV-1}]{80}
+
+La definición (19.3.1) equivale a decir que se cumple la propiedad siguiente:
+\begin{enumerate}
+  \item[(P)] Para todo ideal abierto $\mathfrak R$ de la $A$-álgebra $B$ y
+  todo $A$-homomorfismo $u':B/\mathfrak R\to C/\mathfrak J$, hay un
+  ideal abierto $\mathfrak R'\subset\mathfrak R$ de $B$ tal que
+  el homomorfismo
+  $B\to B/\mathfrak R\xrightarrow{u'}C/\mathfrak J$ se factoriza en
+  \[
+    B\to B/\mathfrak R'\xrightarrow{v'}C\to C/\mathfrak J,
+  \]
+  donde $v'$ es un $A$-homomorfismo.
+\end{enumerate}
+En efecto, si $u:B\to C/\mathfrak J$ es un $A$-homomorfismo continuo, tiene
+por núcleo $\mathfrak R$, un ideal abierto de $B$, por tanto $u$ se factoriza en
+$B\to B/\mathfrak R\xrightarrow{u'}C/\mathfrak J$, y si se
+verifica (P), basta aplicarla a $u'$ y tomar como $v$ el compuesto
+$B\to B/\mathfrak R'\xrightarrow{v'}C$ para satisfacer las condiciones de
+(19.3.1). Recíprocamente, supongamos que $B$ es una $A$-álgebra formalmente
+lisa; démonos un ideal abierto $\mathfrak R$ de $B$ y un
+$A$-homomorfismo $u':B/\mathfrak R\to C/\mathfrak J$, y apliquemos la
+definición (19.3.1) a
+$u:B\to B/\mathfrak R\xrightarrow{u'}C/\mathfrak J$; si
+$v:B\to C$ es un $A$-homomorfismo continuo tal que $u$ se factoriza en
+$B\xrightarrow{v}C\to C/\mathfrak J$, el ideal
+$\mathfrak R'=\operatorname{Ker}(v)\cap\mathfrak R$ de $B$ es abierto y
+está contenido en $\mathfrak R$; por consiguiente, $v$ se factoriza en
+$B\to B/\mathfrak R'\xrightarrow{v'}C$, y $v'$ verifica ciertamente la condición
+(P).
+
+\begin{proposition}[19.3.2]
+\label{0.19.3.2-es}
+Sean $A$ un anillo discreto y $V$ un $A$-módulo proyectivo; el álgebra
+simétrica $B=\mathbf S_A^\bullet(V)$, provista de la topología discreta, es una
+$A$-álgebra formalmente lisa.
+\end{proposition}
+
+\begin{proof}
+En efecto, teniendo las notaciones $C$ y $\mathfrak J$ el mismo significado que en
+(19.3.1), sea $u:B\to C/\mathfrak J$ un homomorfismo de $A$-álgebras, que
+por restricción a $V=\mathbf S_A^1(V)$ da un homomorfismo de $A$-módulos
+$u_1:V\to C/\mathfrak J$; como $V$ es proyectivo, $u_1$ se factoriza en
+$V\xrightarrow{v_1}C\xrightarrow{\varphi}C/\mathfrak J$, y $v_1$ se
+prolonga a un homomorfismo de $A$-álgebras
+$v:\mathbf S_A^\bullet(V)\to C$, tal que el compuesto
+$\varphi\circ v$ coincide con $u$ en $V$, luego
+$\varphi\circ v=u$, lo que demuestra la proposición.
+\end{proof}
+
+\begin{corollary}[19.3.3]
+\label{0.19.3.3-es}
+Si $A$ es un anillo discreto, toda álgebra de polinomios
+$B=A[T_\alpha]_{\alpha\in I}$, provista de la topología discreta, es una
+$A$-álgebra formalmente lisa.
+\end{corollary}
+
+\begin{proposition}[19.3.4]
+\label{0.19.3.4-es}
+Sea $A$ un anillo topológico, y sea
+$B=A[[T_\alpha]]_{\alpha\in I}$ un anillo de series formales
+$\sum_{\lambda\in\mathbb{N}^{(I)}}c_\lambda T^\lambda$ (álgebra amplia sobre
+$A$ del monoide $\mathbb{N}^{(I)}$, identificada como $A$-módulo con el producto
+$A^{\mathbb{N}^{(I)}}$). Si se dota $B$ de la topología producto, $B$ es una
+$A$-álgebra formalmente lisa.
+\end{proposition}
+
+Sea $(\mathfrak L_\mu)_{\mu\in M}$ un sistema fundamental de ideales abiertos
+de $A$. Para todo subconjunto finito $H$ de $I$, todo $\mu\in M$ y todo entero
+$n$, designemos por $\mathfrak K_{H,\mu,n}$ la vecindad de $0$ en $B$ formada
+por los $(c_\lambda)$ tales que, para todo
+$\lambda=(\lambda_\alpha)_{\alpha\in I}$ tal que
+$\lambda_\alpha=0$ para $\alpha\notin H$ y
+$\sum_{\alpha\in H}\lambda_\alpha\leq n$, se tenga
+$c_\lambda\in\mathfrak L_\mu$. Se verifica inmediatamente que los
+$\mathfrak K_{H,\mu,n}$ forman un sistema fundamental de vecindades de $0$
+en $B$ y son ideales de $B$, luego la topología producto es compatible
+con la estructura de $A$-álgebra de $B$.
+
+Observemos primero, con las mismas notaciones, el
+\begin{lemma}[19.3.4.1]
+\label{0.19.3.4.1-es}
+Sea $E$ una $A$-álgebra discreta.
+\begin{enumerate}
+  \item[(i)] Si $f:B\to E$ es un $A$-homomorfismo continuo, existe un
+  subconjunto finito $H$ de $I$ tal que $f(T_\alpha)=0$ para $\alpha\notin H$,
+  y $f(T_\alpha)$ es nilpotente en $E$ para todo $\alpha\in H$.
+  \item[(ii)] Recíprocamente, sean $H$ un subconjunto finito de $I$ y
+  $(z_\alpha)_{\alpha\in H}$ una familia de elementos nilpotentes de $E$.
+  Existe un único $A$-homomorfismo continuo $g:B\to E$ tal que
+  $g(T_\alpha)=z_\alpha$ para $\alpha\in H$ y
+  $g(T_\alpha)=0$ para $\alpha\notin H$.
+\end{enumerate}
+\end{lemma}
+
+\oldpage[0\textsubscript{IV-1}]{81}
+
+\begin{proof}
+(i) resulta inmediatamente de que $f^{-1}(0)$ es una vecindad de $0$ en el
+$A$-módulo producto $A^{\mathbb{N}^{(I)}}$, de donde $f(T^\lambda)=0$ salvo para un
+número finito de valores de $\lambda\in\mathbb{N}^{(I)}$. Para probar (ii),
+basta observar que el anillo de polinomios
+$B'=A[T_\alpha]_{\alpha\in I}$ es denso en $B$; la existencia y
+la unicidad de la restricción $g|B'$ son triviales y su continuidad resulta de
+la hipótesis de que los $f(T_\alpha)$ para $\alpha\in H$ son nilpotentes,
+pues si $(f(T_\alpha))^n=0$ para todo $\alpha\in H$, se tiene
+$g(T^\lambda)=0$ para todo $\lambda=(\lambda_\alpha)_{\alpha\in I}$ de
+soporte finito salvo aquellos tales que $\lambda_\alpha=0$ para
+$\alpha\notin H$ y $\lambda_\alpha\leq n$ para
+$\alpha\in H$, es decir, salvo para un número finito de valores de
+$\lambda$.
+\end{proof}
+
+\begin{proof}[Demostración de la proposición~{\rm(19.3.4)}]
+Establecido este lema, y con las notaciones $C$ y $\mathfrak J$ en el mismo
+sentido que en (19.3.1), se tiene $u(T_\alpha)=0$ salvo para
+$\alpha\in H$, siendo $H$ una parte finita de $I$, y los
+$z_\alpha=u(T_\alpha)$ para $\alpha\in H$ son nilpotentes en
+$C/\mathfrak J$; como $\mathfrak J$ es nilpotente, existe una familia
+$(x_\alpha)_{\alpha\in H}$ de elementos nilpotentes de $C$ cuyas imágenes
+canónicas en $C/\mathfrak J$ son los $z_\alpha$; si $v$ es el
+$A$-homomorfismo continuo de $B$ en $C$ tal que
+$v(T_\alpha)=0$ para $\alpha\notin H$, $v(T_\alpha)=x_\alpha$ para
+$\alpha\in H$, está claro que $u$ se factoriza como
+$B\xrightarrow{v}C\to C/\mathfrak J$.
+\end{proof}
+
+\begin{proposition}[19.3.5]
+\label{0.19.3.5-es}
+Sea $A$ un anillo topológico.
+\begin{enumerate}
+  \item[(i)] $A$ es una $A$-álgebra formalmente lisa.
+  \item[(ii)] Si $B$ es una $A$-álgebra formalmente lisa y $C$ una
+  $B$-álgebra formalmente lisa, entonces $C$ es una $A$-álgebra formalmente
+  lisa.
+  \item[(iii)] Sean $B$ una $A$-álgebra formalmente lisa, $A'$ una
+  $A$-álgebra topológica; entonces la $A'$-álgebra topológica
+  $B\otimes_A A'$ ($\mathbf 0_{\rm I}$, 7.7.5 y 7.7.6) es formalmente
+  lisa.
+  \item[(iv)] Sean $B$ una $A$-álgebra topológica, $S$ (resp. $T$) un
+  subconjunto multiplicativo de $A$ (resp. $B$) tal que la imagen canónica de $S$
+  en $B$ esté contenida en $T$. Si $B$ es una $A$-álgebra formalmente
+  lisa, entonces $T^{-1}B$ es una $S^{-1}A$-álgebra formalmente lisa.
+  \item[(v)] Sean $B_i$ ($1\leq i\leq n$) unas álgebras topológicas sobre $A$.
+  Para que $\prod_{i=1}^n B_i$ sea una $A$-álgebra formalmente lisa, es
+  necesario y suficiente que cada una de las $B_i$ lo sea.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[0\textsubscript{IV-1}]{82}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Si $C$ es una $A$-álgebra discreta,
+  $\varphi:C\to C/\mathfrak J$ el homomorfismo canónico de $C$ sobre un
+  $A$-álgebra cociente cualquiera de $C$, el \emph{único} $A$-homomorfismo
+  de $A$ en $C/\mathfrak J$ es el homomorfismo compuesto
+  $A\xrightarrow{\psi}C\xrightarrow{\varphi}C/\mathfrak J$, donde
+  $\psi$ es el homomorfismo que define la estructura de $A$-álgebra de
+  $C$; como $\psi$ es continuo, la condición de (19.3.1) se verifica
+  trivialmente.
+  \item[(ii)] Sean $\alpha:A\to B$, $\beta:B\to C$ los homomorfismos
+  continuos que definen respectivamente la estructura de $A$-álgebra sobre $B$ y
+  la de $B$-álgebra sobre $C$, de modo que $\beta\circ\alpha$ define la
+  estructura de $A$-álgebra sobre $C$. Sean $E$ una $A$-álgebra discreta,
+  $\mathfrak L$ un ideal nilpotente de $E$, $u:C\to E/\mathfrak L$ un
+  $A$-homomorfismo continuo, de modo que $u\circ\beta\circ\alpha$ es
+  el homomorfismo que define la estructura de $A$-álgebra de
+  $E/\mathfrak L$. Como $B$ es una $A$-álgebra formalmente lisa, el
+  $A$-homomorfismo continuo $u\circ\beta:B\to E/\mathfrak L$ se
+  factoriza como $B\xrightarrow{v}E\to E/\mathfrak L$, donde $v$ es un
+  $A$-homomorfismo continuo; $v$ y $u\circ\beta$ definen entonces sobre
+  $E$ y $E/\mathfrak L$ respectivamente unas estructuras de $B$-álgebra
+  topológica, para las cuales $E/\mathfrak L$ sigue siendo el álgebra cociente
+  (discreta) de la $B$-álgebra $E$. Además, $u$ es un $B$-homomorfismo
+  continuo, por lo que se factoriza como $C\xrightarrow{w}E\to E/\mathfrak L$,
+  donde $w$ es un $B$-homomorfismo continuo; como
+  $v\circ\alpha$ es el $A$-homomorfismo que define la estructura de
+  $A$-álgebra sobre $E$, $w$ es efectivamente un $A$-homomorfismo continuo, de donde nuestra
+  afirmación.
+  \item[(iii)] Sean $C$ una $A'$-álgebra topológica discreta,
+  $\mathfrak J$ un ideal nilpotente de $C$,
+  $u:B\otimes_A A'\to C/\mathfrak J$ un $A'$-homomorfismo continuo. Si se
+  compone $u$ con el homomorfismo canónico
+  $\rho:B\to B\otimes_A A'$, se obtiene (puesto que
+  $A\to B\xrightarrow{\rho}B\otimes_A A'$ es igual al compuesto
+  $A\to A'\xrightarrow{\sigma}B\otimes_A A'$) un $A$-homomorfismo
+  continuo que, por hipótesis, se factoriza, por tanto, como
+  $B\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un $A$-homomorfismo
+  continuo. La igualdad de los compuestos $A\to B\xrightarrow{v}C$ y
+  $A\to A'\xrightarrow{w}C$ implica, pues, la existencia de un homomorfismo
+  continuo de anillos $f:B\otimes_A A'\to C$ tal que
+  $v=f\circ\rho$ y $w=f\circ\sigma$ ($\mathbf 0_{\rm I}$, 7.7.6);
+  como los homomorfismos compuestos
+  $B\xrightarrow{\rho}B\otimes_A A'\xrightarrow{f}C\to C/\mathfrak J$
+  y
+  $B\xrightarrow{\rho}B\otimes_A A'\xrightarrow{u}C/\mathfrak J$
+  (resp.
+  $A'\xrightarrow{\sigma}B\otimes_A A'\xrightarrow{f}C\to C/\mathfrak J$
+  y
+  $A'\xrightarrow{\sigma}B\otimes_A A'\xrightarrow{u}C/\mathfrak J$)
+  son iguales, se tiene efectivamente la factorización
+  $u:B\otimes_A A'\xrightarrow{f}C\to C/\mathfrak J$, lo que demuestra
+  (iii).
+  \item[(iv)] La topología considerada sobre $S^{-1}A$ (resp. $T^{-1}B$) es
+  naturalmente aquella para la cual un sistema fundamental de entornos de
+  $0$ está formado por los $S^{-1}\mathfrak J$ (resp. $T^{-1}\mathfrak R$), donde
+  $\mathfrak J$ (resp. $\mathfrak R$) recorre un sistema fundamental
+  de ideales abiertos en $A$ (resp. $B$) ($\mathbf 0_{\rm I}$, 7.6.1). Si
+  $\alpha:A\to B$ es el homomorfismo canónico, está claro que
+  el homomorfismo canónico $\alpha':S^{-1}A\to T^{-1}B$ inducido por
+  $\alpha$ es continuo. Sean entonces $C$ una $S^{-1}A$-álgebra topológica
+  discreta, $\mathfrak J$ un ideal nilpotente de esta álgebra,
+  $u:T^{-1}B\to C/\mathfrak J$ un $S^{-1}A$-homomorfismo continuo; entonces
+  el compuesto $B\to T^{-1}B\xrightarrow{u}C/\mathfrak J$ es un
+  $A$-homomorfismo continuo que, por hipótesis, se factoriza como
+  $B\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un $A$-homomorfismo
+  continuo. Como para todo $t\in T$, $t/1$ es invertible en $T^{-1}B$,
+  $u(t/1)$ es invertible en $C/\mathfrak J$. Como $\mathfrak J$ es
+  nilpotente, todo representante de la clase $u(t/1)$ en $C$, y en particular
+  $v(t)$, es invertible en $C$ ($\mathbf 0_{\rm I}$, 7.1.12), y por consiguiente
+  $v$ se factoriza como $B\to T^{-1}B\xrightarrow{w}C$; como $v$ es
+  continuo, lo mismo ocurre con $w$ ($\mathbf 0_{\rm I}$, 7.6.6), y este es
+  un $S^{-1}A$-homomorfismo porque el compuesto
+  $A\to B\to T^{-1}B\xrightarrow{w}C$ es igual a
+  \[
+    A\to S^{-1}A\xrightarrow{\alpha'}T^{-1}B\xrightarrow{w}C,
+  \]
+  por lo que $S^{-1}A\xrightarrow{\alpha'}T^{-1}B\xrightarrow{w}C$ es
+  el homomorfismo canónico que define sobre $C$ la estructura de
+  $S^{-1}A$-álgebra. Finalmente, al ser iguales los homomorfismos compuestos
+  $B\to T^{-1}B\xrightarrow{w}C\to C/\mathfrak J$ y
+  $B\to T^{-1}B\xrightarrow{u}C/\mathfrak J$, el mismo
+  razonamiento muestra que $u$ es efectivamente igual al compuesto
+  $T^{-1}B\xrightarrow{w}C\to C/\mathfrak J$, de donde (iv).
+  \item[(v)] Finalmente, (v) es inmediato, pues el dato de un $A$-homomorfismo
+  continuo de $B=\prod_{i=1}^n B_i$ en $C$ (resp. $C/\mathfrak J$)
+  equivale al de $n$ $A$-homomorfismos continuos $B_i\to C$
+  (resp. $B_i\to C/\mathfrak J$), y todo $A$-homomorfismo continuo
+  $B_j\to C$ (resp. $B_j\to C/\mathfrak J$) da por composición un
+  $A$-homomorfismo continuo $B\to B_j\to C$
+  (resp. $B\to B_j\to C/\mathfrak J$).
+\end{enumerate}
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{83}
+
+\begin{proposition}[19.3.6]
+\label{0.19.3.6-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica, $\hat A$
+y $\hat B$ los respectivos completados separados de $A$ y $B$, de modo que
+$\hat B$ es una $\hat A$-álgebra topológica. Las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es una $A$-álgebra formalmente lisa.
+  \item[b)] $\hat B$ es una $A$-álgebra formalmente lisa.
+  \item[c)] $\hat B$ es una $\hat A$-álgebra formalmente lisa.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Por supuesto, la estructura de $\hat A$-álgebra sobre $\hat B$ está definida
+por el homomorfismo $\hat\varphi$, si $\varphi:A\to B$ es
+el homomorfismo que define la estructura de $A$-álgebra sobre $B$. Como toda
+$A$-álgebra discreta $C$ es separada y completa, también es una
+$\hat A$-álgebra (por prolongación canónica del homomorfismo de $A$ en
+$C$), y un $A$-homomorfismo continuo de $B$ en $C$ da por prolongación
+canónica un $\hat A$-homomorfismo (y \emph{a fortiori} un
+$A$-homomorfismo) de $\hat B$ en $C$ (en otros términos, todo
+$A$-homomorfismo continuo $B\to C$ se factoriza como $B\to\hat B\to C$ de manera
+única). Estas observaciones y la definición (19.3.1) implican inmediatamente la
+proposición.
+\end{proof}
+
+\begin{corollary}[19.3.7]
+\label{0.19.3.7-es}
+Bajo las hipótesis de (19.3.5), (iv), la $A\{S^{-1}\}$-álgebra topológica
+$B\{T^{-1}\}$ es formalmente lisa.
+\end{corollary}
+
+Esto resulta de las definiciones ($\mathbf 0_{\rm I}$, 7.6.1 y 7.6.7) y de
+(19.3.5), (iv) y (19.3.6).
+
+\begin{proposition}[19.3.8]
+\label{0.19.3.8-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica, y supongamos
+que para todo ideal abierto $\mathfrak R$ de $B$, $\mathfrak R^2$ sea también
+abierto. Sean $A'$, $B'$ los anillos topológicos obtenidos dotando a $A$ y
+$B$ de topologías más finas que las topologías iniciales, y supongamos que
+el homomorfismo canónico $\varphi:A\to B$ siga siendo un homomorfismo
+continuo de $A'$ en $B'$. Entonces, si $B'$ es una $A'$-álgebra formalmente
+lisa, $B$ es una $A$-álgebra formalmente lisa.
+\end{proposition}
+
+Basta aplicar el lema siguiente:
+
+\begin{lemma}[19.3.8.1]
+\label{0.19.3.8.1-es}
+Sean $C$ una $A$-álgebra discreta, $\mathfrak J$ un ideal nilpotente de $C$.
+Supongamos que el cuadrado de todo ideal abierto de $B$ sea abierto. Entonces, si un
+homomorfismo compuesto
+$v:B\xrightarrow{u}C\to C/\mathfrak J$ es continuo, el homomorfismo $u$
+es continuo.
+\end{lemma}
+
+\begin{proof}
+En efecto, $\mathfrak R=u^{-1}(\mathfrak J)$ es el núcleo de $v$ y es
+abierto por hipótesis; como existe un entero $n$ tal que
+$\mathfrak J^n=0$, $\mathfrak R^n$ está contenido en
+$\operatorname{Ker}(u)$; pero, por inducción sobre $h$, se deduce de
+la hipótesis que $\mathfrak R^{2^h}$ es abierto, por lo que también lo es
+$\mathfrak R^n$ para todo $n$, y por consiguiente $\operatorname{Ker}(u)$ es
+asimismo abierto, lo que demuestra nuestra afirmación.
+\end{proof}
+
+Se observará que la hipótesis sobre $B$ significa que la topología de $B$ es el
+supremo de las topologías $\mathfrak R$-preádicas, donde $\mathfrak R$ recorre
+el conjunto de los ideales abiertos de $B$. Si $B$ es un anillo preádico
+($\mathbf 0_{\rm I}$, 7.1.9), esta condición se verifica siempre.
+
+\begin{env}[19.3.9]
+\label{0.19.3.9-es}
+Vamos a ver ahora que la propiedad de ser formalmente lisa
+implica propiedades de «~levantamiento~» de homomorfismos bajo condiciones
+más generales que las de la definición (19.3.1).
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{84}
+
+\begin{proposition}[19.3.10]
+\label{0.19.3.10-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra formalmente lisa.
+Sean $C$ una $A$-álgebra topológica, $\mathfrak J$ un ideal de $C$,
+que verifican las condiciones siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] $C$ es metrizable y completo.
+  \item[$2^\circ$] $\mathfrak J$ es cerrado y la sucesión
+  $(\mathfrak J^n)$ tiende a $0$.
+\end{enumerate}
+Entonces, todo $A$-homomorfismo continuo $u:B\to C/\mathfrak J$ se factoriza como
+$B\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un
+$A$-homomorfismo continuo.
+\end{proposition}
+
+\begin{proof}
+Sea $(\mathfrak Q_n)$ una sucesión decreciente de ideales de $C$ que forma un
+sistema fundamental de entornos de $0$. Para todo $n$, consideremos el
+$A$-álgebra discreta $C/\mathfrak Q_n$ y el ideal
+$(\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n$ de esta álgebra; como
+existe $k$ tal que $\mathfrak J^k\subset\mathfrak Q_n$,
+$(\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n$ es nilpotente. Para todo
+$n$, sea $u_n$ el homomorfismo continuo
+\[
+  B\xrightarrow{u}C/\mathfrak J\to C/(\mathfrak J+\mathfrak Q_n)
+  =(C/\mathfrak Q_n)/((\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n)~;
+\]
+por hipótesis $u_n$ se factoriza como
+\[
+  B\xrightarrow{v_n}C/\mathfrak Q_n
+  \xrightarrow{\varphi_n}C/(\mathfrak J+\mathfrak Q_n),
+\]
+donde $v_n$ es un $A$-homomorfismo continuo. Mostremos que se pueden elegir de
+manera sucesiva los $v_n$ de modo que $v_n$ se factorice como
+\[
+  B\xrightarrow{v_{n+1}}C/\mathfrak Q_{n+1}\to C/\mathfrak Q_n
+\]
+para todo $n$ (es decir, que los $v_n$ formen un \emph{sistema
+proyectivo} de homomorfismos). Esto resultará del lema siguiente.
+\end{proof}
+
+\begin{lemma}[19.3.10.1]
+\label{0.19.3.10.1-es}
+Sean $B$ una $A$-álgebra formalmente lisa, $E$, $E'$ dos $A$-álgebras
+topológicas discretas, $\mathfrak R$ (resp. $\mathfrak R'$) un ideal
+nilpotente de $E$ (resp. $E'$), $f:E\to E'$ un $A$-homomorfismo sobreyectivo tal
+que $f(\mathfrak R)\subset\mathfrak R'$, $f':E/\mathfrak R\to
+E'/\mathfrak R'$ el homomorfismo deducido de $f$ por paso a los cocientes.
+Sean $u:B\to E/\mathfrak R$ un $A$-homomorfismo continuo, $u'$ el
+homomorfismo compuesto
+$B\xrightarrow{u}E/\mathfrak R\xrightarrow{f'}E'/\mathfrak R'$, y sea
+$v':B\to E'$ un $A$-homomorfismo continuo tal que $u'$ se factorice como
+$B\xrightarrow{v'}E'\to E'/\mathfrak R'$. Entonces existe un
+$A$-homomorfismo continuo $v:B\to E$ tal que $v'$ se factorice como
+$B\xrightarrow{v}E\xrightarrow{f}E'$.
+\end{lemma}
+
+En el diagrama conmutativo
+\[
+\xymatrix{
+  E \ar[r]^f \ar[d] & E' \ar[d] \\
+  E/\mathfrak R \ar[r]_{f'} & E'/\mathfrak R'
+}
+\]
+todos los homomorfismos son sobreyectivos; si $\mathfrak L$ es el núcleo de
+$f$, $E'$ se identifica con $E/\mathfrak L$ y $\mathfrak R'$ con
+$(\mathfrak R+\mathfrak L)/\mathfrak L$. Utilicemos ahora el lema
+elemental siguiente.
+
+\begin{lemma}[19.3.10.2]
+\label{0.19.3.10.2-es}
+Sean $F$ un anillo (no necesariamente conmutativo), $\mathfrak a$,
+$\mathfrak b$ dos ideales bilaterales de $F$; entonces el producto fibrado
+\[
+  (F/\mathfrak a)\times_{F/(\mathfrak a+\mathfrak b)}(F/\mathfrak b)
+\]
+se identifica canónicamente con $F/(\mathfrak a\cap\mathfrak b)$.
+\end{lemma}
+
+\begin{proof}
+No es sino una aplicación particular de (18.1.7), donde, en el
+diagrama (18.1.7.1), se reemplaza $G$ por
+$F/(\mathfrak a\cap\mathfrak b)$, $\mathfrak J'$ por
+$\mathfrak b/(\mathfrak a\cap\mathfrak b)$, $F$ por
+$F/\mathfrak b$, $\mathfrak R$ por
+$(\mathfrak a+\mathfrak b)/\mathfrak b$, $B$ por
+$F/(\mathfrak a+\mathfrak b)$ y $\theta$ por el $F$-homomorfismo
+biyectivo canónico
+$(\mathfrak a+\mathfrak b)/\mathfrak b\to
+\mathfrak a/(\mathfrak a\cap\mathfrak b)$.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{85}
+
+\begin{proof}[Continuación de la demostración del lema~{\rm(19.3.10.1)}]
+Aplicando este lema a la situación de (19.3.10.1), la conmutatividad del
+diagrama
+\[
+\xymatrix{
+  B \ar[r]^{v'} \ar[d]_u & E'=E/\mathfrak L \ar[d] \\
+  E/\mathfrak R \ar[r]_{f'} & E'/\mathfrak R'
+}
+\]
+muestra la existencia de un homomorfismo
+$w:B\to E/(\mathfrak R\cap\mathfrak L)$ tal que $v'$ y $u$ se
+factorizan como
+$B\xrightarrow{w}E/(\mathfrak R\cap\mathfrak L)\to E/\mathfrak L$
+y
+$B\xrightarrow{w}E/(\mathfrak R\cap\mathfrak L)\to E/\mathfrak R$
+respectivamente; como el núcleo de $w$ contiene la intersección de los de
+$v'$ y $u$, es abierto en $B$ y $w$ es continuo. Finalmente, es claro
+que $\mathfrak R\cap\mathfrak L$ es nilpotente, luego $w$ se factoriza como
+$B\xrightarrow{v}E\to E/(\mathfrak R\cap\mathfrak L)$, donde $v$ es
+un $A$-homomorfismo continuo que satisface lo requerido.
+\end{proof}
+
+\begin{proof}[Continuación de la demostración de la proposición~{\rm(19.3.10)}]
+La existencia de $v_{n+1}$ resulta del lema (19.3.10.1) aplicado reemplazando
+$E$, $E'$, $\mathfrak R$, $\mathfrak R'$ por
+$C/\mathfrak Q_{n+1}$, $C/\mathfrak Q_n$,
+$(\mathfrak J+\mathfrak Q_{n+1})/\mathfrak Q_{n+1}$ y
+$(\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n$ respectivamente, $u$, $u'$
+y $v'$ por $u_{n+1}$, $u_n$ y $v_n$ respectivamente. Observemos que, como $C$
+es separado y completo, es igual a $\varprojlim_n(C/\mathfrak Q_n)$, y
+$v=\varprojlim_n v_n$ es un $A$-homomorfismo continuo de $B$ en $C$.
+Como $\mathfrak J$ está cerrado en $C$, se tiene
+$\mathfrak J=\bigcap_n(\mathfrak J+\mathfrak Q_n)$; como
+$C/\mathfrak J$ es metrizable y completo y los
+$(\mathfrak J+\mathfrak Q_n)/\mathfrak J$ forman un sistema fundamental
+de entornos de $0$ en $C/\mathfrak J$, se tiene
+\[
+  C/\mathfrak J=\varprojlim_n C/(\mathfrak J+\mathfrak Q_n)
+\]
+y $\varprojlim_n\varphi_n$ es la aplicación canónica
+$\varphi:C\to C/\mathfrak J$. Como $\varprojlim_n u_n=u$, se tiene en efecto
+$u=v\circ\varphi$, C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[19.3.11]
+\label{0.19.3.11-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra formalmente lisa,
+$C$ un anillo local noetheriano completo, $\mathfrak J$ un ideal propio de
+$C$, $\varphi:A\to C$ un homomorfismo continuo que hace de $C$ una
+$A$-álgebra topológica. Entonces todo $A$-homomorfismo continuo
+$u_0:B\to C_0=C/\mathfrak J$ se factoriza como
+$B\xrightarrow{u}C\to C/\mathfrak J$, donde $u$ es un $A$-homomorfismo
+continuo.
+\end{corollary}
+
+En efecto, se cumplen todas las condiciones de (19.3.10)
+($\mathbf 0_{\rm I}$, 7.3.5).
+
+\begin{proposition}[19.3.12]
+\label{0.19.3.12-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra formalmente lisa,
+$C$ una $A$-álgebra topológica, $\mathfrak J$ un ideal de $C$; supongamos que se verifican las
+condiciones siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] Existe un sistema fundamental de ideales abiertos
+  $\mathfrak Q_\lambda$ de $C$, tales que los
+  $C_\lambda=C/\mathfrak Q_\lambda$ sean anillos artinianos y que
+  el homomorfismo canónico $C\to\varprojlim_\lambda C_\lambda$ sea un
+  isomorfismo de anillos topológicos.
+  \item[$2^\circ$] El ideal $\mathfrak J$ está cerrado en $C$ y es
+  topológicamente nilpotente.
+  \item[$3^\circ$] El cuadrado de todo ideal abierto de $B$ es abierto.
+\end{enumerate}
+En estas condiciones, todo $A$-homomorfismo continuo
+$u:B\to C/\mathfrak J$ se factoriza como
+$B\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un $A$-homomorfismo
+continuo.
+\end{proposition}
+
+\begin{proof}
+Sea $\mathfrak J_\lambda=(\mathfrak J+\mathfrak Q_\lambda)/\mathfrak Q_\lambda$
+la imagen canónica de $\mathfrak J$ en $C_\lambda$, que es un ideal
+nilpotente, y sea $u_\lambda$ el homomorfismo compuesto
+$B\xrightarrow{u}C/\mathfrak J\to C_\lambda/\mathfrak J_\lambda
+=C/(\mathfrak J+\mathfrak Q_\lambda)$. Mostremos que todo
+$A$-homomorfismo $w:B\to C$ tal que $u$ se factorice como
+$B\xrightarrow{w}C\to C/\mathfrak J$ es necesariamente continuo; en
+efecto, para todo $\lambda$, existe un ideal abierto $\mathfrak R$ de $B$
+tal que $u(\mathfrak R)\subset
+(\mathfrak J+\mathfrak Q_\lambda)/\mathfrak J$, de donde
+$w(\mathfrak R)\subset\mathfrak J+\mathfrak Q_\lambda$, luego existe
+una potencia $\mathfrak R^{2^m}$ de $\mathfrak R$ tal que
+$w(\mathfrak R^{2^m})\subset\mathfrak Q_\lambda$, lo que demuestra
+nuestra afirmación, puesto que $\mathfrak R^{2^m}$ es abierto en $B$. Se puede
+por tanto limitar a encontrar un $A$-homomorfismo $w$ con la propiedad anterior
+sin preocuparse de sus propiedades de continuidad. Ahora bien, el conjunto
+$\operatorname{Hom}(B,C)$ de todos los $A$-homomorfismos de álgebras de $B$
+en $C$ es igual a
+$\varprojlim_\lambda\operatorname{Hom}(B,C_\lambda)$, y este último es
+\emph{cerrado} en el $C_\lambda$-módulo $C_\lambda^B$, provisto de la topología
+producto, para la cual es \emph{linealmente compacto}, puesto que
+  $C_\lambda$ es artiniano. Para todo $\lambda$, sea $W_\lambda$
+
+\oldpage[0\textsubscript{IV-1}]{86}
+
+el conjunto de los $w_\lambda\in\operatorname{Hom}(B,C_\lambda)$ tales que
+$u_\lambda$ se factorice como
+$B\xrightarrow{w_\lambda}C_\lambda\to
+C_\lambda/\mathfrak J_\lambda$; $W_\lambda$ es una variedad
+lineal cerrada en el $C_\lambda$-módulo
+  $\operatorname{Hom}(B,C_\lambda)$, no vacía puesto que $B$ es formalmente
+  lisa. En el producto
+$\prod_{\mu\leq\lambda}\operatorname{Hom}(B,C_\mu)=E_\lambda$,
+consideremos la subvariedad lineal $U_\lambda$ formada por los
+$(w_\mu)_{\mu\leq\lambda}$ tales que
+$w_\mu=\varphi_{\mu\lambda}\circ w_\lambda$ para
+$\mu\leq\lambda$ y $w_\lambda\in W_\lambda$, donde
+$\varphi_{\mu\lambda}:C_\lambda\to C_\mu$ es
+el homomorfismo canónico; esta subvariedad también es cerrada. Finalmente, sea $V_\lambda$
+la variedad lineal en el producto
+$\prod_\mu\operatorname{Hom}(B,C_\mu)$, producto de $U_\lambda$
+y de los $\operatorname{Hom}(B,C_\mu)$ para
+$\mu\not\leq\lambda$, que sigue siendo cerrada. Todo se reduce a ver que
+la intersección de los $V_\lambda$ es \emph{no vacía}, pues un elemento $w$ de
+esta intersección pertenecerá a
+$\varprojlim_\lambda\operatorname{Hom}(B,C_\lambda)$ por definición.
+Además, como $\mathfrak J$ está cerrado y
+$C=\varprojlim_\lambda C_\lambda$ es linealmente compacto,
+$C/\mathfrak J$ se identifica con
+$\varprojlim_\lambda C_\lambda/\mathfrak J_\lambda$ y
+la aplicación canónica $\psi:C\to C/\mathfrak J$ con
+$\varprojlim_\lambda\psi_\lambda$, donde $\psi_\lambda$ es
+la aplicación canónica
+$C_\lambda\to C_\lambda/\mathfrak J_\lambda$. Se concluye, por tanto,
+como en (19.3.10), que $\psi\circ w=u$.
+\end{proof}
+
+\subsection{Primeros criterios de lisura formal}
+\label{subsection:0.19.4-es}
+
+\begin{proposition}[19.4.1]
+\label{0.19.4.1-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica; supongamos
+que existen dos familias filtrantes decrecientes
+$(\mathfrak J_\alpha)_{\alpha\in I}$,
+$(\mathfrak R_\alpha)_{\alpha\in I}$ de ideales de $A$ y $B$
+respectivamente, tales que:
+\begin{enumerate}
+  \item[$1^\circ$] $(\mathfrak J_\alpha)$ tiende a $0$ en $A$ y
+  $(\mathfrak R_\alpha)$ tiende a $0$ en $B$;
+  \item[$2^\circ$] para todo $\alpha\in I$ se tiene
+  $\mathfrak J_\alpha B\subset\mathfrak R_\alpha$ (de modo que
+  $B/\mathfrak R_\alpha$ es una
+  $(A/\mathfrak J_\alpha)$-álgebra topológica);
+  \item[$3^\circ$] para todo $\alpha\in I$,
+  $B/\mathfrak R_\alpha$ es una
+  $(A/\mathfrak J_\alpha)$-álgebra formalmente lisa.
+\end{enumerate}
+Entonces $B$ es una $A$-álgebra formalmente lisa.
+\end{proposition}
+
+\begin{proof}
+En efecto, sean $C$ una $A$-álgebra discreta, $\mathfrak L$ un ideal
+nilpotente de $C$, $\mathfrak R$ un ideal abierto de $B$; por hipótesis existe
+un $\alpha\in I$ tal que
+$\mathfrak R_\alpha\subset\mathfrak R$, luego $B/\mathfrak R$ es
+cociente de $B/\mathfrak R_\alpha$ por un ideal abierto. Todo
+$A$-homomorfismo $u':B/\mathfrak R\to C/\mathfrak L$ es también un
+$(A/\mathfrak J_\alpha)$-homomorfismo, luego existe un ideal abierto
+$\mathfrak R'$ de $B$ tal que
+$\mathfrak R_\alpha\subset\mathfrak R'\subset\mathfrak R$ y que
+$B/\mathfrak R_\alpha\to B/\mathfrak R\xrightarrow{u'}C/\mathfrak L$
+se factorice como
+$B/\mathfrak R_\alpha\to B/\mathfrak R'\to C\to C/\mathfrak L$,
+donde el segundo homomorfismo es un
+$(A/\mathfrak J_\alpha)$-homomorfismo; de donde la conclusión, en virtud de
+la observación que sigue a (19.3.1).
+\end{proof}
+
+\begin{corollary}[19.4.2]
+\label{0.19.4.2-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica,
+$(\mathfrak J_\alpha)_{\alpha\in I}$ una familia filtrante decreciente
+de ideales de $A$ que tiende a $0$. Para que $B$ sea una $A$-álgebra
+formalmente lisa, es necesario y suficiente que, para todo $\alpha\in I$, si
+se pone $A_\alpha=A/\mathfrak J_\alpha$,
+$B_\alpha=B/\mathfrak J_\alpha B$, $B_\alpha$ sea una
+$A_\alpha$-álgebra formalmente lisa.
+\end{corollary}
+
+La condición es suficiente por (19.4.1), y también es necesaria por
+(19.3.5), (iii).
+
+\begin{proposition}[19.4.3]
+\label{0.19.4.3-es}
+Sean $A$ un anillo topológico y $B$ una $A$-álgebra topológica. Supongamos
+que, para toda $A$-álgebra discreta $C$ y todo ideal $\mathfrak J$ de $C$
+tal que $\mathfrak J^2=0$, todo $A$-homomorfismo continuo
+$u:B\to C/\mathfrak J$ se factoriza en
+$B\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un $A$-homomorfismo
+continuo. Entonces $B$ es una $A$-álgebra formalmente lisa.
+\end{proposition}
+
+\begin{proof}
+En efecto, con las mismas notaciones, sea $\mathfrak R$ un ideal nilpotente
+cualquiera de $C$, y consideremos un $A$-homomorfismo continuo
+$u':B\to C/\mathfrak R$. Supongamos que $\mathfrak R^m=0$, y pongamos
+$C_i=C/\mathfrak R^i$ para $1\leq i\leq m$, de modo que $C_m=C$, que
+$\mathfrak R^{i-1}/\mathfrak R^i$ es un ideal de cuadrado nulo
+$\mathfrak J_i$ en $C_i$, y $C_i=C_{i+1}/\mathfrak J_{i+1}$;
+la hipótesis implica entonces, por recurrencia sobre $i$, la existencia de
+$A$-homomorfismos continuos $u_i:B\to C_i$ tales que $u_1=u$ y que $u_i$
+se factoriza en
+$B\xrightarrow{u_{i+1}}C_{i+1}\to C_{i+1}/\mathfrak J_{i+1}=C_i$;
+de donde se sigue la conclusión.
+\end{proof}
+
+\begin{proposition}[19.4.4]
+\label{0.19.4.4-es}
+Sean $A$ un anillo topológico y $B$ una $A$-álgebra topológica
+(conmutativa). Para que $B$ sea una $A$-álgebra formalmente lisa, es necesario y
+suficiente que para
+
+\oldpage[0\textsubscript{IV-1}]{87}
+
+todo $B$-módulo topológico discreto $L$, anulado por un ideal abierto de $B$, se
+tenga (cf. (18.5.1))
+\[
+  \operatorname{Exalcotop}_A(B,L)=0.
+\]
+\end{proposition}
+
+\begin{proof}
+Sea $(\mathfrak R_\lambda)$ un sistema fundamental decreciente de ideales
+abiertos de $B$ y pongamos $B_\lambda=B/\mathfrak R_\lambda$.
+Consideremos una $A$-álgebra topológica discreta $C$ y un ideal
+$\mathfrak J$ de $C$ tal que $\mathfrak J^2=0$, de modo que $C$ es una
+$A$-extensión de $C/\mathfrak J$ por $\mathfrak J$; supongamos dado un
+$A$-homomorfismo $u:B_\lambda\to C/\mathfrak J$ y formemos la
+$A$-extensión $E_\lambda$ de $B_\lambda$ por $\mathfrak J$, imagen
+inversa de $C$ por el homomorfismo $u$ (18.2.5); es una $A$-álgebra
+topológica para la topología discreta. Si
+$\operatorname{Exalcotop}_A(B,\mathfrak J)=0$, existe por definición (18.5.1) un
+$\mu$ tal que $\mathfrak R_\mu\subset\mathfrak R_\lambda$ y que
+la extensión imagen inversa $E_\mu$ sea $A$-trivial; pero esto significa
+(18.1.6) que existe un $A$-homomorfismo continuo
+$v:B_\mu\to E_\lambda$ tal que el homomorfismo canónico
+$B_\mu\to B_\lambda$ se factoriza en
+$B_\mu\xrightarrow{v}E_\lambda\to B_\lambda$; se concluye
+inmediatamente que $B_\mu\to B_\lambda\xrightarrow{u}C/\mathfrak J$ se
+factoriza en
+$B_\mu\xrightarrow{v}E_\lambda\to C\to C/\mathfrak J$, y esto
+prueba, en virtud de (19.3.1) y (19.4.3), que $B$ es una $A$-álgebra
+formalmente lisa. El recíproco es inmediato, aplicando (19.3.1) al caso
+en que $C$ es una $A$-álgebra topológica que es una $A$-extensión de
+$B_\lambda$ por $L$, y al homomorfismo identidad
+$B_\lambda\to B_\lambda=C/L$.
+\end{proof}
+
+Cuando $A$ y $B$ son anillos discretos, el criterio de lisura formal
+(19.4.4) se reduce a
+\begin{equation}
+\tag{19.4.4.1}
+\label{0.19.4.4.1-es}
+\operatorname{Exalcom}_A(B,L)=0\qquad\text{para todo $B$-módulo $L$};
+\end{equation}
+en otras palabras, \emph{toda $A$-extensión conmutativa de $B$ por un
+$B$-módulo debe ser $A$-trivial}.
+
+\begin{corollary}[19.4.5]
+\label{0.19.4.5-es}
+Sean $A$ un anillo topológico y $B$ una $A$-álgebra topológica
+(conmutativa).
+\begin{enumerate}
+  \item[(i)] Supongamos que $B$ es una $A$-álgebra formalmente lisa.
+  Entonces, para todo ideal abierto $\mathfrak R$ de $B$, todo
+  $(B/\mathfrak R)$-módulo $L$ y todo $2$-cociclo de Hochschild
+  $A$-bilineal y simétrico $f$ de
+  $(B/\mathfrak R)\times(B/\mathfrak R)$ en $L$ (18.4.3), existe un
+  ideal abierto $\mathfrak R'\subset\mathfrak R$ tal que, si
+  $\varphi:B/\mathfrak R'\to B/\mathfrak R$ es el homomorfismo
+  canónico, $f\circ(\varphi\times\varphi)$ sea un $2$-coborde de
+  Hochschild $A$-bilineal de
+  $(B/\mathfrak R')\times(B/\mathfrak R')$ en $L$.
+  \item[(ii)] Si $B$ es un $A$-módulo formalmente proyectivo (19.2.1) y si
+  se verifica la condición de (i), $B$ es una $A$-álgebra formalmente
+  lisa.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] El $2$-cociclo $f$ define una $A$-extensión de Hochschild $C$
+  de $B/\mathfrak R$ por $L$ (18.4.3). Aplicando (19.3.1) a $C$, al ideal
+  de cuadrado nulo $L$ de $C$ y al homomorfismo identidad
+  $B/\mathfrak R\to B/\mathfrak R=C/L$, se deduce la condición (i) en
+  virtud de (18.4.3).
+  \item[(ii)] Apliquemos el criterio (19.4.3), considerando un ideal abierto
+  $\mathfrak R$ de $B$, un ideal abierto $\mathfrak J$ de $A$ tal que
+  $\mathfrak JB\subset\mathfrak R$, y una $(A/\mathfrak J)$-extensión $E$
+  de $B/\mathfrak R$ por $L$. Como $B$ es un $A$-módulo formalmente
+  proyectivo, la aplicación $A$-lineal continua canónica
+  $\rho:B\to B/\mathfrak R$ se factoriza en
+  $B\xrightarrow{w}E\to B/\mathfrak R$, donde $w$ es una aplicación
+  $A$-lineal continua (19.2.1), que se factoriza a su vez en
+  $B\to B/\mathfrak R'\xrightarrow{w'}E$, donde $\mathfrak R'$ es un ideal
+  abierto de $B$ contenido en $\mathfrak R$; reemplazando $\mathfrak J$ por
+  un ideal más pequeño, se puede suponer que
+  $\mathfrak JB\subset\mathfrak R'$. Entonces la imagen inversa por
+  el homomorfismo canónico $B/\mathfrak R'\to B/\mathfrak R$ de
+  la extensión $E$ de $B/\mathfrak R$ por $L$ es una
+  $(A/\mathfrak J)$-extensión \emph{de Hochschild} $E'$ de
+  $B/\mathfrak R'$ por $L$;
+
+  \oldpage[0\textsubscript{IV-1}]{88}
+
+  aplicando (i) a un cociclo que define esta extensión (18.4.3), se
+  concluye que hay un ideal abierto
+  $\mathfrak R''\subset\mathfrak R'$ de $B$ tal que la imagen inversa
+  $E''$ de $E$ por $B/\mathfrak R''\to B/\mathfrak R$ sea
+  $A$-trivial, C.Q.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[19.4.6]
+\label{0.19.4.6-es}
+Sean $A$ un anillo topológico y $B$ una $A$-álgebra topológica que sea un
+$A$-módulo formalmente proyectivo. Sea $A'$ una $A$-álgebra \emph{provista de
+la topología inducida por la de $A$}. Supongamos además que $A'$ es un
+$A$-módulo fielmente plano, y que se cumple una de las condiciones
+siguientes:
+\begin{enumerate}
+  \item[$1^\circ$] Existe un sistema fundamental
+  $(\mathfrak J_\lambda)$ de ideales abiertos de $A$ y un sistema fundamental
+  $(\mathfrak M_\lambda)$ de ideales abiertos de $B$, con el mismo conjunto
+  de índices y tales que, para todo $\lambda$, se tenga
+  $\mathfrak J_\lambda B\subset\mathfrak M_\lambda$ y que
+  $B/\mathfrak M_\lambda$ sea un
+  $(A/\mathfrak J_\lambda)$-módulo proyectivo de tipo finito.
+  \item[$2^\circ$] $A'$ es un $A$-módulo proyectivo de tipo finito.
+\end{enumerate}
+Entonces, para que $B'=B\otimes_A A'$ (provisto de la topología producto tensorial)
+sea una $A'$-álgebra formalmente lisa, es necesario y suficiente que $B$ sea una
+$A$-álgebra formalmente lisa.
+\end{corollary}
+
+\begin{proof}
+La suficiencia de la condición está contenida en (19.3.5), (iii), sin ninguna
+hipótesis adicional sobre $B$ ni $A'$. Para demostrar el recíproco,
+aplicaremos el criterio (19.4.5); bajo la hipótesis $2^\circ$,
+seguiremos denotando por $(\mathfrak M_\lambda)$ un sistema fundamental
+de ideales abiertos de $B$, y, para todo $\lambda$, por
+$\mathfrak J_\lambda$ un ideal abierto de $A$ tal que
+$\mathfrak J_\lambda B\subset\mathfrak M_\lambda$; en ambos
+casos, pondremos
+$A_\lambda=A/\mathfrak J_\lambda$,
+$B_\lambda=B/\mathfrak M_\lambda$,
+$A'_\lambda=A_\lambda\otimes_A A'$,
+$B'_\lambda=B_\lambda\otimes_A A'$. Sea $f$ un $2$-cociclo de
+Hochschild $A_\lambda$-bilineal simétrico de
+$B_\lambda\times B_\lambda$ en un $B_\lambda$-módulo $L$; por
+extensión de escalares, se deduce un $2$-cociclo de Hochschild
+$f'=f\otimes1$, $A'_\lambda$-bilineal simétrico, de
+$B'_\lambda\times B'_\lambda$ en $L'=L\otimes_A A'$. Como por
+hipótesis $B'$ es una $A'$-álgebra formalmente lisa, existe, por (19.4.5),
+(i), un índice $\mu$ tal que
+$\mathfrak M_\mu\subset\mathfrak M_\lambda$, y tal que, si
+$\varphi':B'_\mu\to B'_\lambda$ es la aplicación canónica,
+$f'\circ(\varphi'\times\varphi')$ sea un $2$-coborde de Hochschild de
+$B'_\mu\times B'_\mu$ en $L'$; en otras palabras, su imagen $c'$ en el
+grupo de Hochschild
+$\mathrm H^2_{A'_\mu}(B'_\mu,L')^s$ es nula; está claro que si
+$\varphi:B_\mu\to B_\lambda$ es el homomorfismo canónico, y $c$ la
+clase de $f\circ(\varphi\times\varphi)$ en el grupo de Hochschild
+$\mathrm H^2_{A_\mu}(B_\mu,L)^s$, $c'$ es la imagen canónica de $c$.
+Ahora bien, si $P_\bullet$ es el complejo relativo a los anillos $A_\mu$ y
+$B_\mu$ definido en (18.4.5), utilizado para calcular
+$\mathrm H^2_{A_\mu}(B_\mu,L)^s$, el complejo análogo relativo a los
+anillos $A'_\mu$ y $B'_\mu$ es evidentemente
+$P_\bullet\otimes_A A'$; bajo la hipótesis $1^\circ$, la construcción de
+$P_\bullet$ muestra que es un $A_\mu$-módulo proyectivo de tipo finito.
+Se concluye, pues, de Bourbaki, \emph{Alg.}, cap.~II, 3\textsuperscript{a} ed., §~5,
+n\textsuperscript{o}~3, prop.~7 que, bajo ambas hipótesis, se tiene
+\[
+  \operatorname{Hom}_{A'_\mu}(P_\bullet\otimes_A A',L\otimes_A A')
+  =\operatorname{Hom}_{A_\mu}(P_\bullet,L)\otimes_A A'
+\]
+salvo isomorfismo canónico; como $A'$ es un $A$-módulo plano, se tiene por
+tanto (18.4.5)
+\[
+  \mathrm H^2_{A'_\mu}(B'_\mu,L')^s
+  =\mathrm H^2_{A_\mu}(B_\mu,L)^s\otimes_A A'
+\]
+y, por tanto, se puede escribir $c'=c\otimes1$; pero, como $A'$ es un $A$-módulo
+fielmente plano, la hipótesis $c'=0$ implica $c=0$, lo que termina la
+demostración.
+\end{proof}
+
+\begin{proposition}[19.4.7]
+\label{0.19.4.7-es}
+Sean $A$ un anillo topológico preadmisible y $\mathfrak J$ un ideal de
+definición de $A$ ($\mathbf 0_{\rm I}$, 7.1.2), y sea $B$ una $A$-álgebra
+topológica que sea un $A$-módulo formalmente proyectivo. Consideremos los
+anillos topológicos cocientes $A_0=A/\mathfrak J$,
+$B_0=B/\mathfrak JB$; entonces, para que $B$ sea una $A$-álgebra formalmente
+lisa, es necesario y suficiente que $B_0$ sea una $A_0$-álgebra formalmente
+lisa.
+\end{proposition}
+
+\oldpage[0\textsubscript{IV-1}]{89}
+
+\begin{proof}
+La necesidad de la condición resulta de (19.4.2). Para ver que es
+suficiente, observemos primero que, considerando un sistema fundamental de
+vecindades abiertas de $0$ en $A$ formadas por ideales
+$\mathfrak J_\alpha$ contenidos en $\mathfrak J$, se puede, en virtud de
+(19.4.2), reducir al caso en que $A$ es discreto, puesto que
+$B/\mathfrak J_\alpha B$ es un
+$(A/\mathfrak J_\alpha)$-módulo formalmente proyectivo (19.2.5); por
+definición de un anillo preadmisible, $\mathfrak J$ es entonces
+\emph{nilpotente}. Basta además demostrar la proposición cuando
+$\mathfrak J^2=0$, pues si $\mathfrak J^m=0$, se aplicará sucesivamente
+a los anillos $A_k=A/\mathfrak J^k$ y $B_k=B/\mathfrak J^kB$ y al ideal
+$\mathfrak J^{k-1}/\mathfrak J^k$ de $A_k$ para $k=2,3,\ldots,m$,
+observando por (19.2.5) que $B_k=B\otimes_A A_k$ es un $A_k$-módulo formalmente
+proyectivo. Apliquemos el criterio (19.4.5), (ii), considerando un ideal abierto
+$\mathfrak R$ de $B$ y un $2$-cociclo de Hochschild $A$-bilineal
+simétrico $f$ de $(B/\mathfrak R)\times(B/\mathfrak R)$ en un
+$(B/\mathfrak R)$-módulo $L$. Consideremos primero el caso particular en que
+$\mathfrak JL=0$, de modo que $L$ también se puede considerar como un
+$(B_0/\mathfrak RB_0)$-módulo, y $f$ se factoriza en
+\[
+  (B/\mathfrak R)\times(B/\mathfrak R)\to
+  (B_0/\mathfrak RB_0)\times(B_0/\mathfrak RB_0)
+  \xrightarrow{f_0}L,
+\]
+donde $f_0$ es un $2$-cociclo de Hochschild bilineal simétrico. En virtud de
+la hipótesis, existe, pues, un ideal abierto
+$\mathfrak R'\subset\mathfrak R$ en $B$ y una aplicación
+$A_0$-lineal $g_0:B_0/\mathfrak R'B_0\to L$ tal que
+\[
+  f_0(\varphi_0(x),\varphi_0(y))
+  =xg_0(y)-g_0(xy)+g_0(x)y
+\]
+para $x,y$ en $B_0/\mathfrak R'B_0$, siendo $\varphi_0$
+el homomorfismo canónico
+$B_0/\mathfrak R'B_0\to B_0/\mathfrak RB_0$. Se concluye inmediatamente que
+la aplicación $A$-lineal compuesta
+$g:B/\mathfrak R'\to B_0/\mathfrak R'B_0\xrightarrow{g_0}L$ es tal
+que $dg=f\circ(\varphi\times\varphi)$, donde
+$\varphi:B/\mathfrak R'\to B/\mathfrak R$ es el homomorfismo
+canónico.
+
+Pasemos ahora al caso general, y consideremos primero el
+$(B/\mathfrak R)$-módulo $L/\mathfrak JL=L'$, para el cual se tiene
+$\mathfrak JL'=0$; si $f'$ es la aplicación $A$-bilineal compuesta
+$(B/\mathfrak R)\times(B/\mathfrak R)\xrightarrow{f}L\to L'$, $f'$ sigue
+siendo un $2$-cociclo de Hochschild simétrico, y en virtud de lo anterior,
+existen un ideal abierto $\mathfrak R'\subset\mathfrak R$ en $B$ y
+una aplicación $A$-lineal $g':B/\mathfrak R'\to L'$ que verifica
+$dg'=f'\circ(\varphi'\times\varphi')$ para la aplicación canónica
+$\varphi':B/\mathfrak R'\to B/\mathfrak R$. Como $B$ es un
+$A$-módulo formalmente proyectivo, existen un ideal abierto
+$\mathfrak R'_1\subset\mathfrak R'$ y una aplicación $A$-lineal
+$g_1:B/\mathfrak R'_1\to L$ tales que el homomorfismo
+$B/\mathfrak R'_1\to B/\mathfrak R'\xrightarrow{g'}L'$ se factoriza como
+$B/\mathfrak R'_1\xrightarrow{g_1}L\to L'$. Consideremos entonces el
+$2$-cociclo de Hochschild
+\[
+  f_1(x,y)=f(\varphi_1(x),\varphi_1(y))-xg_1(y)+g_1(xy)-g_1(x)y,
+\]
+aplicación $A$-bilineal simétrica de
+$(B/\mathfrak R'_1)\times(B/\mathfrak R'_1)$ en $L$. La elección de
+$g_1$ implica que $f_1$ toma sus valores en $\mathfrak JL$. Como
+$\mathfrak J(\mathfrak JL)=0$, se puede aplicar de nuevo el primer caso,
+y existe, por tanto, un ideal abierto
+$\mathfrak R''\subset\mathfrak R'_1$ y una aplicación $A$-lineal
+$g_2:B/\mathfrak R''\to\mathfrak JL$ tal que
+\[
+  f_1(\varphi_2(x),\varphi_2(y))=xg_2(y)-g_2(xy)+g_2(x)y
+\]
+en $(B/\mathfrak R'')\times(B/\mathfrak R'')$,
+siendo $\varphi_2:B/\mathfrak R''\to B/\mathfrak R'_1$ la aplicación
+canónica; la aplicación $A$-lineal
+$g=g_2+g_1\circ\varphi_2:B/\mathfrak R''\to L$ verifica, por tanto,
+$dg=f\circ(\varphi\times\varphi)$ para la aplicación canónica
+$\varphi:B/\mathfrak R''\to B/\mathfrak R$. c.q.d.
+\end{proof}
+
+\subsection{Lisura formal y anillos graduados asociados}
+\label{subsection:0.19.5-es}
+
+\begin{env}[19.5.1]
+\label{0.19.5.1-es}
+\oldpage[0\textsubscript{IV-1}]{90}
+Sean $C$ un anillo topológico (conmutativo), $V$ un $C$-módulo topológico,
+y consideremos el álgebra simétrica
+$\mathbf S_C^*(V)=\bigoplus_{n\geq0}\mathbf S_C^n(V)$, que dotaremos
+canónicamente de una \emph{topología lineal}, compatible con su estructura de
+$C$-álgebra. Para ello, consideremos un submódulo abierto $U$ de $V$, y
+el \emph{ideal graduado} $U.\mathbf S_C^*(V)$ que genera en
+$\mathbf S_C^*(V)$; tomaremos como sistema fundamental de entornos de
+$0$ en $\mathbf S_C^*(V)$ el conjunto de las sumas
+$\mathfrak a.\mathbf S_C^*(V)+U.\mathbf S_C^*(V)$, donde $\mathfrak a$ (resp.
+$U$) recorre un sistema fundamental de ideales abiertos (resp. de submódulos
+abiertos) de $C$ (resp. $V$). Se observará que, si la topología de $V$ es menos
+fina que la topología inducida por la de $C$, podemos limitarnos a los pares
+$(\mathfrak a,U)$ tales que $\mathfrak aV\subset U$, por tanto
+$\mathfrak a.\mathbf S_C^*(V)+U.\mathbf S_C^*(V)
+=\mathfrak a.1_C+U.\mathbf S_C^*(V)$; en este caso, la topología inducida sobre
+cada uno de los $\mathbf S_C^n(V)$ para $n\geq1$ tiene como sistema fundamental de
+entornos de $0$ los $U.\mathbf S_C^{n-1}(V)$, donde $U$ recorre los
+submódulos abiertos de $V$; en particular, sobre $V=\mathbf S_C^1(V)$, esta
+coincide con la topología dada (en general, es menos fina que esta
+última). Además, en todos los casos, el \emph{álgebra topológica}
+$\mathbf S_C^*(V)$ así definida es, para las categorías de los $C$-módulos
+topológicos y de las $C$-álgebras topológicas, la solución del mismo problema
+universal que para las categorías de los $C$-módulos y de las $C$-álgebras. En efecto,
+sea $E$ una $C$-álgebra topológica, $u:V\to E$ un homomorfismo de
+$C$-módulos, $\mathbf S(u)=\widetilde u$ su extensión canónica a
+$\mathbf S_C^*(V)$. Supongamos que $u$ es continuo; entonces, si $\mathfrak b$ es un
+ideal abierto de $E$, su imagen inversa $U=u^{-1}(\mathfrak b)$ es un
+sub-$C$-módulo abierto de $V$, y la imagen por $\widetilde u$ de
+$U.\mathbf S_C^*(V)$ está, por tanto, contenida en $\mathfrak b$; como, por otra parte,
+existe un ideal abierto $\mathfrak a$ de $C$ tal que
+$\mathfrak a.E\subset\mathfrak b$, y por tanto
+$\widetilde u(\mathfrak a.\mathbf S_C^*(V))\subset\mathfrak b$, esto demuestra
+que $\widetilde u$ es continuo. Recíprocamente, si $\widetilde u$ es continuo,
+y si $\mathfrak b$ es un ideal abierto de $E$, existe un submódulo abierto
+$U$ de $V$ tal que $\widetilde u(U.\mathbf S_C^*(V))\subset\mathfrak b$, y en
+particular $\widetilde u(U.1_C)\subset\mathfrak b$, es decir,
+$u(U)\subset\mathfrak b$, por lo que $u$ es continuo. Recordemos además que se tiene
+un isomorfismo canónico de $C$-módulos topológicos (discretos)
+\begin{equation}
+\label{0.19.5.1.1-es}
+  \mathbf S_C^n(V)/U.\mathbf S_C^{n-1}(V)
+  \xrightarrow{\sim}\mathbf S_C^n(V/U).
+  \tag{19.5.1.1}
+\end{equation}
+\end{env}
+
+\begin{env}[19.5.2]
+\label{0.19.5.2-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica
+(conmutativa), $\mathfrak J$ un ideal de $B$ (no necesariamente abierto ni
+cerrado); en todo lo que sigue, se dota a $\mathfrak J$ y a los
+$\mathfrak J^n$ ($n\geq2$) de la topología \emph{inducida} por la de $B$,
+a los cocientes $C=B/\mathfrak J$,
+$\mathfrak J^n/\mathfrak J^{n+1}=\gr_{\mathfrak J}^n(B)$ de la topología
+\emph{cociente}, de modo que los $\mathfrak J^n/\mathfrak J^{n+1}$ son
+$C$-módulos topológicos; la inyección canónica
+$\mathfrak J/\mathfrak J^2\to\gr_{\mathfrak J}^*(B)$ se prolonga a un
+homomorfismo (inicialmente no topológico) de $C$-álgebras
+\[
+  \varphi:\mathbf S_C^*(\mathfrak J/\mathfrak J^2)
+  \longrightarrow\gr_{\mathfrak J}^*(B)
+\]
+que para cada $n$ da un homomorfismo \emph{sobreyectivo} de $C$-módulos
+\begin{equation}
+\label{0.19.5.2.1-es}
+  \varphi_n:\mathbf S_C^n(\mathfrak J/\mathfrak J^2)
+  \longrightarrow\mathfrak J^n/\mathfrak J^{n+1}
+  =\gr_{\mathfrak J}^n(B).
+  \tag{19.5.2.1}
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{91}
+
+Cuando $\mathbf S_C^n(\mathfrak J/\mathfrak J^2)$ está dotado de la topología
+definida en (19.5.1), los homomorfismos $\varphi_n$ son continuos, en virtud
+de la propiedad universal (19.5.1) de
+$\mathbf S_C^*(\mathfrak J/\mathfrak J^2)$ aplicada a la $C$-álgebra
+topológica $E=\gr_{\mathfrak J/\mathfrak J^n}(B/\mathfrak J^n)$ dotada de la
+topología producto de las topologías de los $\mathfrak J^k/\mathfrak J^{k+1}$, y a
+la inyección canónica $\mathfrak J/\mathfrak J^2\to E$. Nótese que aquí la
+topología de $\mathfrak J/\mathfrak J^2$ es menos fina que la topología
+inducida por la de $C$ (siendo también esta última topología sobre
+$\mathfrak J/\mathfrak J^2$ la topología inducida por la de $B$).
+\end{env}
+
+\begin{theorem}[19.5.3]
+\label{0.19.5.3-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica,
+$\mathfrak J$ un ideal de $B$, $C=B/\mathfrak J$ la $A$-álgebra topológica
+cociente. Se supone que la $A$-álgebra discreta $C$ es formalmente lisa.
+Entonces:
+\begin{enumerate}
+  \item[\rm(i)] Si $B$ es una $A$-álgebra formalmente lisa,
+  $\mathfrak J/\mathfrak J^2$ es un $C$-módulo topológico formalmente
+  proyectivo (19.2.1).
+  \item[\rm(ii)] Si $B$ es una $A$-álgebra formalmente lisa y un anillo
+  preadmisible ($\mathbf 0_{\rm I}$, 7.1.2), los homomorfismos $\varphi_n$
+  (19.5.2) son bimorfismos formales (19.1.2).
+  \item[\rm(iii)] Recíprocamente, supongamos que $B$ sea preadmisible, que la
+  sucesión $(\mathfrak J^n)$ tienda a $0$ en $B$, que
+  $\mathfrak J/\mathfrak J^2$ sea un $C$-módulo formalmente proyectivo y que
+  los $\varphi_n$ sean bimorfismos formales. Entonces $B$ es una
+  $A$-álgebra formalmente lisa.
+\end{enumerate}
+\end{theorem}
+
+La demostración de este teorema es larga y está recargada de detalles técnicos;
+por ello, comenzaremos por demostrar un corolario más sencillo, en el que
+aparecen con mayor claridad las ideas directrices; este corolario es, por lo demás,
+el caso particular del teorema (19.5.3) que se empleará con mayor frecuencia
+en lo sucesivo.
+
+\begin{corollary}[19.5.4]
+\label{0.19.5.4-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica,
+$\mathfrak J$ un ideal de $B$ tal que la topología de $B$ sea la topología
+$\mathfrak J$-preádica. Se supone que la $A$-álgebra discreta
+$C=B/\mathfrak J$ es formalmente lisa. Entonces las tres condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es una $A$-álgebra formalmente lisa.
+  \item[b)] $\mathfrak J/\mathfrak J^2$ es un $C$-módulo proyectivo y
+  el homomorfismo canónico
+  \[
+    \varphi:\mathbf S_C^*(\mathfrak J/\mathfrak J^2)
+    \longrightarrow\gr_{\mathfrak J}^*(B)
+  \]
+  es biyectivo.
+  \item[c)] El completado separado $\widehat B$ de $B$ es una
+  $\widehat A$-álgebra topológica isomorfa a una $\widehat A$-álgebra de la
+  forma $\widehat{B'}$, donde $B'=\mathbf S_C^*(V)$, siendo $V$ un $C$-módulo
+  proyectivo y estando $B'$ dotado de la topología ${B'}^+$-preádica, donde
+  ${B'}^+$ es el ideal de aumentación.
+\end{enumerate}
+\end{corollary}
+
+\begin{env}[19.5.4.1]
+\label{0.19.5.4.1-es}
+Demostremos primero que $a)$ implica que $\mathfrak J/\mathfrak J^2$ es un
+$C$-módulo proyectivo. Sean, pues, $P$ y $Q$ dos $C$-módulos,
+$u:P\to Q$ un $C$-homomorfismo sobreyectivo, y
+$v:\mathfrak J/\mathfrak J^2\to Q$ un $C$-homomorfismo. Considerando el anillo
+$B/\mathfrak J^2$ como una $B$-extensión de $C$ por
+$\mathfrak J/\mathfrak J^2$, se deduce de ella mediante $v$ una $B$-extensión
+$E=(B/\mathfrak J^2)\oplus_{(\mathfrak J/\mathfrak J^2)}Q$ de $C$ por $Q$
+(18.2.8). Como $C$ es una $A$-álgebra discreta formalmente lisa,
+la extensión $E$ es $A$-\emph{trivial} (19.4.4) y puede, por tanto, identificarse con
+$\mathrm D_C(Q)$ (18.2.3). El homomorfismo sobreyectivo $u:P\to Q$ define entonces
+canónicamente un $A$-homomorfismo sobreyectivo
+$\psi:\mathrm D_C(P)\to\mathrm D_C(Q)$ (18.2.9) cuyo núcleo es un ideal
+$\mathfrak L$ de la extensión $E'=\mathrm D_C(P)$, contenido en $P$, y
+\emph{a fortiori} de cuadrado nulo. Sea $f:B\to E=E'/\mathfrak L$
+el homomorfismo que define la estructura de $B$-álgebra de $E$: como
+$\mathfrak L$ es de cuadrado nulo, y $B$ es una $A$-álgebra formalmente
+lisa, $f$ se factoriza como $B\xrightarrow{g}E'\to E'/\mathfrak L$, donde $g$ es
+un $A$-homomorfismo continuo.
+
+\oldpage[0\textsubscript{IV-1}]{92}
+
+El diagrama
+\[
+  \xymatrix{
+    E' \ar[r]^{\psi} & E \\
+    B \ar[u]^{g} \ar[r]_{\theta} & B/\mathfrak J^2 \ar[u]_{v'}
+  }
+\]
+donde $v'$ se deduce de $v$ (18.2.8), es conmutativo. Además, la imagen de
+$\mathfrak J$ por $\psi\circ g$ está contenida en $Q$, por tanto la imagen de
+$\mathfrak J$ por $g$ está contenida en $P+\mathfrak L=P$, y la imagen de
+$\mathfrak J^2$ por $g$ es nula. Restringiendo $g$ y $\theta$ a
+$\mathfrak J$, se obtiene un diagrama conmutativo
+\[
+  \xymatrix{
+    P \ar[r]^{u} & Q \\
+    \mathfrak J/\mathfrak J^2 \ar[u]^{w} \ar[ur]_{v}
+  }
+\]
+lo que demuestra que el $C$-módulo $\mathfrak J/\mathfrak J^2$ es proyectivo.
+\end{env}
+
+\begin{env}[19.5.4.2]
+\label{0.19.5.4.2-es}
+Demostremos en segundo lugar que $a)$ implica que $\varphi$ es biyectivo, lo que
+acabará de demostrar que $a)$ implica $b)$. Pongamos
+$E_n=B/\mathfrak J^{n+1}$, y denotemos por $F_n$ el cociente de
+$\mathbf S_C^*(\mathfrak J/\mathfrak J^2)$ por la potencia $(n+1)$-ésima de
+su ideal de aumentación. Como $\mathfrak J/\mathfrak J^{n+1}$ es nilpotente
+en $E_n$ y $C$ es una $A$-álgebra discreta formalmente lisa,
+el automorfismo identidad de $C$ se factoriza como
+$C\xrightarrow{f}E_n\to C=E_n/(\mathfrak J/\mathfrak J^{n+1})$, donde $f$ es un
+$A$-homomorfismo; por otra parte, como $\mathfrak J/\mathfrak J^2$ es un
+$C$-módulo proyectivo según (19.5.4.1), el automorfismo identidad de
+$\mathfrak J/\mathfrak J^2$ se factoriza como
+$\mathfrak J/\mathfrak J^2\xrightarrow{g}\mathfrak J/\mathfrak J^{n+1}
+\to\mathfrak J/\mathfrak J^2$, donde $g$ es una aplicación $C$-lineal; a
+partir de $f$ y $g$ se obtiene canónicamente un homomorfismo de $C$-álgebras
+$\mathbf S_C^*(\mathfrak J/\mathfrak J^2)\to E_n$, que además (por
+definición de $g$) se anula sobre la potencia $(n+1)$-ésima del ideal
+de aumentación de $\mathbf S_C^*(\mathfrak J/\mathfrak J^2)$, de donde, al
+pasar al cociente, se obtiene un $A$-homomorfismo sobreyectivo de álgebras
+$v:F_n\to E_n$ tal que $\gr^0(v)$ y $\gr^1(v)$ sean los automorfismos
+identidad de $C$ y de $\mathfrak J/\mathfrak J^2$. Por definición del
+homomorfismo canónico $\varphi$, se ve que $\gr^j(v)=\varphi_j$ para todo
+$j\leq n$. Observemos ahora que el núcleo $\mathfrak R$ de $v$ es un ideal
+nilpotente de $F_n$, de modo que $E_n$ se identifica con $F_n/\mathfrak R$. Como
+$B$ es una $A$-álgebra formalmente lisa, el $A$-homomorfismo canónico
+$p_n:B\to E_n=B/\mathfrak J^{n+1}$, que es continuo, se factoriza en
+$B\xrightarrow{w}F_n\xrightarrow{v}E_n$, donde $w$ es un $A$-homomorfismo
+continuo; como $\gr^0(v)$ es la identidad, $w(\mathfrak J)$ está contenido en
+el ideal de aumentación de $F_n$, de donde $w(\mathfrak J^{n+1})=0$, por lo que
+$w$ se factoriza en
+$B\xrightarrow{p_n}B/\mathfrak J^n=E_n\xrightarrow{w'}F_n$, y el compuesto
+$E_n\xrightarrow{w'}F_n\xrightarrow{v}E_n$ es la identidad. Además, como
+$\gr^0(v)$ y $\gr^1(v)$ son los automorfismos identidad de $C$ y de
+$\mathfrak J/\mathfrak J^2$, lo mismo ocurre con $\gr^0(w')$ y con
+$\gr^1(w')$. Como $\gr^*(E_n)$ está engendrado por $\gr^1(E_n)$, el
+homomorfismo compuesto
+\[
+  \gr^j(F_n)\xrightarrow{\varphi_j}\gr^j(E_n)
+  \xrightarrow{\gr^j(w')}\gr^j(F_n)
+\]
+es la identidad para todo $j\leq n$, puesto que lo es para $j=0$ y $j=1$;
+tomando $j=n$, se prueba así que $\varphi_n$ es inyectivo, lo que termina de
+mostrar que $a)$ implica $b)$.
+\end{env}
+
+\begin{env}[19.5.4.3]
+\label{0.19.5.4.3-es}
+\oldpage[0\textsubscript{IV-1}]{93}
+Probemos ahora que $b)$ implica $a)$. El mismo razonamiento que al comienzo de
+(19.5.4.2) prueba la existencia de un $A$-homomorfismo sobreyectivo de álgebras
+$v:F_n\to E_n$ tal que $\gr^j(v)=\varphi_j$ para todo $j$; como $\varphi_j$
+es biyectivo para todo $j$ y las filtraciones de $F_n$ y $E_n$ son
+finitas, se concluye que $v$ es \emph{biyectivo} (Bourbaki,
+\emph{Alg. conm.}, cap.~III, §~2, n\textsuperscript{o}~8, cor.~3 del teo.~1).
+Sean ahora $G$ una $A$-álgebra topológica discreta, $\mathfrak R$ un
+ideal de cuadrado nulo en $G$ y $f:B\to G/\mathfrak R$ un $A$-homomorfismo
+continuo de álgebras. Como $G$ es discreta, existe un entero $m$ tal que
+$f$ se anula sobre $\mathfrak J^m$, por tanto $f$ se factoriza en
+$B\to E_n\xrightarrow{f_n}G/\mathfrak R$, donde se toma $n=2m$. Se obtiene así por
+composición un $A$-homomorfismo continuo de álgebras
+$r:C\to F_n\xrightarrow{v}E_n\xrightarrow{f_n}G/\mathfrak R$, y como $C$
+es una $A$-álgebra formalmente lisa discreta, $r$ se factoriza en
+$C\xrightarrow{r'}G\to G/\mathfrak R$, de modo que $G$ queda dotada por $r'$ de una
+estructura de $C$-álgebra. Por otra parte, la restricción a
+$\mathfrak J/\mathfrak J^2$ del homomorfismo
+$f'_n:F_n\xrightarrow{v}E_n\xrightarrow{f_n}G/\mathfrak R$ es una aplicación
+$C$-lineal $g:\mathfrak J/\mathfrak J^2\to G/\mathfrak R$. Puesto que
+$\mathfrak J/\mathfrak J^2$ es un $C$-módulo proyectivo, $g$ se factoriza en
+$\mathfrak J/\mathfrak J^2\xrightarrow{h}G\to G/\mathfrak R$, donde $h$ es una
+aplicación $C$-lineal; por prolongación, se deduce un homomorfismo de
+$C$-álgebras $w:\mathbf S_C^*(\mathfrak J/\mathfrak J^2)\to G$, y por
+construcción todo elemento de grado $m$ tiene por imagen mediante $w$ un elemento de
+$\mathfrak R$, por tanto todo elemento de grado $n=2m$ tiene imagen nula, puesto que
+$\mathfrak R^2=0$; en otras palabras, $w$ se factoriza en
+$\mathbf S_C^*(\mathfrak J/\mathfrak J^2)\to F_n\xrightarrow{w'}G$. Por
+construcción, el compuesto $F_n\xrightarrow{w'}G\xrightarrow{\theta}G/\mathfrak R$
+coincide con $f'_n$ en $C$ y en $\mathfrak J/\mathfrak J^2$, luego es
+igual a $f'_n$. Finalmente, como el compuesto
+$B\to E_n\xrightarrow{v^{-1}}F_n\xrightarrow{w'}G\to G/\mathfrak R$ es
+igual a $f$, se ve que $B$ es una $A$-álgebra formalmente lisa.
+\end{env}
+
+\begin{env}[19.5.4.4]
+\label{0.19.5.4.4-es}
+Queda por probar la equivalencia de $a)$ y $c)$. En primer lugar, $c)$ implica
+$a)$: en efecto, $B'$ es una $C$-álgebra formalmente lisa para la topología
+discreta (19.3.2), luego también para la topología ${B'}^+$-preádica (19.3.8);
+como $C$ es una $A$-álgebra formalmente lisa, $B'$ es también una
+$A$-álgebra formalmente lisa (19.3.5, (ii)) y finalmente $\widehat{B'}$ es
+una $\widehat A$-álgebra formalmente lisa (19.3.6), luego $B$ es una
+$A$-álgebra formalmente lisa (19.3.6). Queda por ver que $a)$ implica $c)$.
+Observemos primero que, puesto que $C$ es una $A$-álgebra formalmente lisa,
+el homomorfismo identidad $C\to B/\mathfrak J$ se factoriza en
+$C\to\widehat B\to B/\mathfrak J$, donde $C\to\widehat B$ es un
+$A$-homomorfismo (19.3.10); $\widehat B$, y por tanto todos los
+$B/\mathfrak J^{n+1}$, quedan así dotados de estructuras de $C$-álgebras. Por otra
+parte, como $\mathfrak J/\mathfrak J^2$ es un $C$-módulo proyectivo por $b)$,
+la inyección canónica $\mathfrak J/\mathfrak J^2\to B/\mathfrak J^2$ permite
+formar un sistema proyectivo de $C$-homomorfismos
+$u_n:\mathfrak J/\mathfrak J^2\to B/\mathfrak J^{n+1}$ para $n\geq1$, y por
+tanto también (por la propiedad universal del álgebra simétrica) un sistema
+proyectivo de homomorfismos de $C$-álgebras
+$v_n:\mathbf S_C^*(\mathfrak J/\mathfrak J^2)=B'\to B/\mathfrak J^{n+1}$;
+además, está claro que $v_n$ se anula sobre $({B'}^+)^{n+1}$ y, como
+$\gr^0(v_n)=\varphi_0$ y $\gr^1(v_n)=\varphi_1$, se tiene
+$\gr^j(v_n)=\varphi_j$ para $0\leq j\leq n$. Como las $\varphi_j$ son
+isomorfismos por $b)$, y las filtraciones de
+$B'/({B'}^+)^{n+1}$ y de $B/\mathfrak J^{n+1}$ son finitas, se concluye que
+$v_n$ es \emph{biyectivo} para
+
+\oldpage[0\textsubscript{IV-1}]{94}
+
+todo $n$ (Bourbaki, \emph{Alg. conm.}, cap.~III, §~2,
+n\textsuperscript{o}~8, cor.~3 del teo.~1); de donde se sigue $c)$ pasando al límite
+proyectivo.
+\end{env}
+
+\begin{remark}[19.5.5]
+\label{0.19.5.5-es}
+Bajo las hipótesis generales de (19.5.4), supongamos además que
+$\mathfrak J$ es un ideal \emph{maximal} de $B$, de modo que
+$C=B/\mathfrak J$ es un cuerpo, y que $\mathfrak J/\mathfrak J^2$ es un
+$C$-espacio vectorial de dimensión \emph{finita}. Entonces las condiciones $a)$,
+$b)$ y $c)$ de (19.5.4) siguen siendo equivalentes a la siguiente:
+\begin{enumerate}
+  \item[d)] \emph{Dada un álgebra de polinomios}
+  $E=C[T_1,\ldots,T_n]$ \emph{sobre el cuerpo} $C$, \emph{y denotando por}
+  $\mathfrak n$ \emph{el ideal maximal de} $E$ \emph{engendrado por los} $T_i$
+  $(1\leq i\leq n)$, \emph{entonces, para todo ideal} $\mathfrak b$ \emph{de}
+  $E$ \emph{que contiene una potencia} $\mathfrak n^k$, \emph{todo
+  homomorfismo} $v:B\to E/\mathfrak b$ \emph{de} $A$-\emph{álgebras}
+  $C$-\emph{aumentadas se factoriza en}
+  $B\xrightarrow{w}E/\mathfrak n^k\to E/\mathfrak b$, \emph{donde} $w$ \emph{es
+  un} $A$-\emph{homomorfismo}.
+\end{enumerate}
+En efecto, como $\mathfrak J/\mathfrak J^2$ es aquí un $C$-módulo libre, basta
+verificar que la condición $d)$ implica que el homomorfismo canónico
+$\varphi:\mathbf S_C^*(\mathfrak J/\mathfrak J^2)\to\gr_{\mathfrak J}^*(B)$
+es biyectivo. Ahora bien, aquí $\mathbf S_C^*(\mathfrak J/\mathfrak J^2)$ se identifica con
+el álgebra de polinomios $E=C[T_1,\ldots,T_n]$, donde
+$n=\operatorname{rg}_C(\mathfrak J/\mathfrak J^2)$, y el ideal de aumentación
+de $E$ es el ideal $\mathfrak n$ engendrado por los $T_i$. Para todo entero
+$k\geq0$, la hipótesis de que $C$ es una $A$-álgebra discreta formalmente lisa
+implica, como en (19.5.4.2), la existencia de un $A$-homomorfismo sobreyectivo
+$f:E/\mathfrak n^{k+1}\to B/\mathfrak J^{k+1}$, tal que
+$\gr^j(f)=\varphi_j$ para todo $j\leq k$. Si
+$\mathfrak b/\mathfrak n^{k+1}=\operatorname{Ker}(f)$,
+$B/\mathfrak J^{k+1}$ se identifica, pues, con $E/\mathfrak b$, y la hipótesis $d)$
+permite factorizar el homomorfismo canónico $B\to B/\mathfrak J^{k+1}$ en
+$B\xrightarrow{w}E/\mathfrak n^{k+1}\xrightarrow{f}B/\mathfrak J^{k+1}$;
+como $\gr^0(f)$ es la identidad, se tiene
+$w(\mathfrak J)\subset\mathfrak n/\mathfrak n^{k+1}$, por tanto
+$w(\mathfrak J^{k+1})=0$; se concluye como en (19.5.4.2) que $\varphi_k$
+es inyectivo para todo $k$, lo que termina de probar nuestra afirmación.
+\end{remark}
+
+\begin{env}[19.5.6]
+\label{0.19.5.6-es}
+\emph{Demostración del teorema} (19.5.3). --- Sea
+$(\mathfrak b_\alpha)$ un sistema fundamental decreciente de ideales abiertos de
+$B$. Pondremos
+\[
+  B_\alpha=B/\mathfrak b_\alpha,\qquad
+  C_\alpha=B/(\mathfrak b_\alpha+\mathfrak J),\qquad
+  \mathfrak J_\alpha=(\mathfrak b_\alpha+\mathfrak J)/\mathfrak b_\alpha,
+\]
+de modo que
+\[
+  C_\alpha=B_\alpha/\mathfrak J_\alpha\qquad\text{y}\qquad
+  \mathfrak J_\alpha^n/\mathfrak J_\alpha^{n+1}
+  =(\mathfrak b_\alpha+\mathfrak J^n)/(\mathfrak b_\alpha+\mathfrak J^{n+1}).
+\]
+Los $C$-módulos
+$((\mathfrak b_\alpha\cap\mathfrak J^n)+\mathfrak J^{n+1})/
+\mathfrak J^{n+1}$ de $\mathfrak J^n/\mathfrak J^{n+1}$ forman un sistema
+fundamental de submódulos abiertos del $C$-módulo topológico
+$\mathfrak J^n/\mathfrak J^{n+1}$; como
+$(\mathfrak b_\alpha\cap\mathfrak J^n)+\mathfrak J^{n+1}
+=\mathfrak J^n\cap(\mathfrak b_\alpha+\mathfrak J^{n+1})$, se tiene
+\[
+  \mathfrak J^n/((\mathfrak b_\alpha\cap\mathfrak J^n)+\mathfrak J^{n+1})
+  =\mathfrak J^n/(\mathfrak J^n\cap(\mathfrak b_\alpha+\mathfrak J^{n+1}))
+  =(\mathfrak b_\alpha+\mathfrak J^n)/(\mathfrak b_\alpha+\mathfrak J^{n+1})
+  =\mathfrak J_\alpha^n/\mathfrak J_\alpha^{n+1}.
+\]
+\end{env}
+
+\begin{env}[19.5.6.1]
+\label{0.19.5.6.1-es}
+Sean $P$, $Q$ dos $C_\alpha$-módulos discretos,
+$u:P\to Q$ un $C_\alpha$-homomorfismo sobreyectivo. El anillo discreto
+$B/(\mathfrak b_\alpha+\mathfrak J^2)$ es una $B$-extensión de $C_\alpha$ por
+el ideal de cuadrado nulo $\mathfrak J_\alpha/\mathfrak J_\alpha^2$. Sea
+$v:\mathfrak J/\mathfrak J^2\to Q$ un $C$-homomorfismo continuo; reemplazando
+si es necesario $\mathfrak b_\alpha$ por un ideal abierto más pequeño de $B$, se puede
+suponer que el núcleo de $v$ contiene el sub-$C$-módulo abierto
+$((\mathfrak b_\alpha\cap\mathfrak J)+\mathfrak J^2)/\mathfrak J^2$;
+pasando al cociente, se deduce un $C_\alpha$-homomorfismo de módulos
+discretos $v':\mathfrak J_\alpha/\mathfrak J_\alpha^2\to Q$; sea
+$E_\alpha$ la $B_\alpha$-extensión de $C_\alpha$ por $Q$ deducida de
+$B/(\mathfrak b_\alpha+\mathfrak J^2)$ mediante $v'$, y sea
+$v'_*:B/(\mathfrak b_\alpha+\mathfrak J^2)\to E_\alpha$ el
+$B_\alpha$-homomorfismo correspondiente (18.2.8); $E_\alpha$ es una
+$A$-álgebra topológica discreta, y el isomorfismo canónico
+$C_\alpha\xrightarrow{\sim}E_\alpha/Q$ da por composición un
+$A$-homomorfismo continuo $f:C\to C_\alpha\to E_\alpha/Q$. Pero como $Q$ es
+de cuadrado nulo en $E_\alpha$ y $C$ es una $A$-álgebra formalmente
+lisa, $f$ se factoriza en $C\xrightarrow{g}E_\alpha\to E_\alpha/Q$, donde $g$
+es un $A$-homomorfismo continuo. Como $g$ es continuo y $E_\alpha$ discreta,
+existe un $\beta\geq\alpha$ tal que $g$ se factoriza en
+$C\to C_\beta\xrightarrow{g'}E_\alpha$. Por otra parte, sea $E_\beta$ la
+$A$-extensión de $C_\beta$ por $Q$, imagen inversa de $E_\alpha$ por
+el homomorfismo canónico $C_\beta\to C_\alpha$; la existencia de $g'$ (tal que
+el compuesto $C_\beta\to E_\alpha\to C_\alpha$ sea el homomorfismo canónico)
+equivale a que $E_\beta$ sea una extensión $A$-\emph{trivial}, y puede
+por tanto identificarse con $\mathrm D_{C_\beta}(Q)$. Dicho esto, el homomorfismo
+sobreyectivo $u:P\to Q$ define canónicamente un homomorfismo sobreyectivo
+$\mathrm D_{C_\beta}(P)\to\mathrm D_{C_\beta}(Q)$ (18.2.9), cuyo núcleo es
+un ideal $\mathfrak L$ de la extensión $E'_\beta=\mathrm D_{C_\beta}(P)$
+contenido en $P$, y \emph{a fortiori} de cuadrado nulo. Sea
+$f':B\to E_\beta=E'_\beta/\mathfrak L$ el $A$-homomorfismo continuo que define
+la estructura de $B$-álgebra topológica de $E_\beta$; como $\mathfrak L$ es
+de cuadrado nulo y $B$ es una $A$-álgebra formalmente lisa, $f'$ se
+factoriza en $B\xrightarrow{h'}E'_\beta\to E'_\beta/\mathfrak L$, donde $h'$ es
+un $A$-homomorfismo continuo. La construcción de $E'_\beta$ da por
+composición un $A$-homomorfismo $\psi:E'_\beta\to E_\beta\to E_\alpha$, y
+está claro que el diagrama
+\[
+  \xymatrix{
+    E'_\beta \ar[r]^{\psi} & E_\alpha \\
+    B \ar[u]^{h'} \ar[r]_{\theta} &
+    B/(\mathfrak b_\alpha+\mathfrak J^2) \ar[u]_{v'_*}
+  }
+\]
+es conmutativo. Además, la imagen por $\psi\circ h'$ de $\mathfrak J$ está
+contenida en $Q$, por tanto la imagen por $h'$ de $\mathfrak J$ está contenida en
+$P$, y la imagen de $\mathfrak J^2$ por $h'$ es nula. Restringiendo $h'$ y
+$\theta$ a $\mathfrak J$, se obtiene un diagrama conmutativo
+\[
+  \xymatrix{
+    P \ar[r]^{u} & Q \\
+    \mathfrak J/\mathfrak J^2 \ar[u]^{w} \ar[ur]_{v}
+  }
+\]
+donde $w$ es continuo, lo que prueba que
+$\mathfrak J/\mathfrak J^2$ es un $C$-módulo formalmente proyectivo.
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{95}
+
+\begin{env}[19.5.6.2]
+\label{0.19.5.6.2-es}
+Para todo entero $n\geq0$, pondremos
+\[
+  E_n=B/\mathfrak J^{n+1},
+  \qquad\text{de modo que}\qquad E_0=C~;
+\]
+los ideales $(\mathfrak b_\alpha+\mathfrak J^{n+1})/\mathfrak J^{n+1}$ forman
+un sistema fundamental de ideales abiertos de $E_n$, y pondremos
+\[
+  E_{\alpha,n}=B/(\mathfrak b_\alpha+\mathfrak J^{n+1})
+  =B_\alpha/\mathfrak J_\alpha^{n+1},
+\]
+anillo cociente discreto. Del mismo modo, en
+$\gr_{\mathfrak J}^n(B)=\mathfrak J^n/\mathfrak J^{n+1}$, hemos visto que los
+$((\mathfrak b_\alpha\cap\mathfrak J^n)+\mathfrak J^{n+1})/
+\mathfrak J^{n+1}$ forman un sistema fundamental de entornos de $0$, y el
+cociente de $\mathfrak J^n/\mathfrak J^{n+1}$ por este submódulo se identifica
+canónicamente con $\mathfrak J_\alpha^n/\mathfrak J_\alpha^{n+1}$. Consideremos
+el álgebra simétrica
+$\mathbf S_{C_\alpha}^*(\mathfrak J_\alpha/\mathfrak J_\alpha^2)$; denotaremos
+por $F_{\alpha,n}$ el cociente de
+$\mathbf S_{C_\alpha}^*(\mathfrak J_\alpha/\mathfrak J_\alpha^2)$ por la
+potencia $(n+1)$-ésima de su ideal de aumentación. Para un $n\geq1$ fijo, se
+deduce de (19.5.1.1) que los
+$\mathbf S_{C_\alpha}^n(\mathfrak J_\alpha/\mathfrak J_\alpha^2)$ son los
+cocientes de $\mathbf S_C^n(\mathfrak J/\mathfrak J^2)$ por un sistema
+fundamental de submódulos abiertos en este $C$-módulo topológico.
+
+Para abreviar, diremos que, para $\alpha\leq\beta$, los homomorfismos canónicos
+$B_\beta\to B_\alpha$, $C_\beta\to C_\alpha$,
+$\mathfrak J_\beta/\mathfrak J_\beta^2\to
+\mathfrak J_\alpha/\mathfrak J_\alpha^2$, $E_{\beta,n}\to E_{\alpha,n}$,
+$F_{\beta,n}\to F_{\alpha,n}$, etc., son los \emph{homomorfismos de
+transición}.
+\end{env}
+
+\begin{lemma}[19.5.6.3]
+\label{0.19.5.6.3-es}
+Supongamos que la $A$-álgebra $C$ es formalmente lisa, el anillo $B$
+preadmisible y el $C$-módulo $\mathfrak J/\mathfrak J^2$ formalmente
+proyectivo. Entonces:
+\begin{enumerate}
+  \item[\rm(i)] Para todo $\alpha$, existen $\beta\geq\alpha$ y un
+  $A$-homomorfismo sobreyectivo de álgebras
+  \[
+    v_{\alpha\beta}:F_{\beta,n}\longrightarrow E_{\alpha,n}
+  \]
+  tales que $\gr^0(v_{\alpha\beta}):C_\beta\to C_\alpha$ y
+  $\gr^1(v_{\alpha\beta}):\mathfrak J_\beta/\mathfrak J_\beta^2
+  \to\mathfrak J_\alpha/\mathfrak J_\alpha^2$ sean los homomorfismos de
+  transición.
+  \item[\rm(ii)] Si $\beta$ y $v_{\alpha\beta}$ verifican las condiciones de
+  \emph{(i)}, entonces, para todo $\gamma\geq\beta$, existen
+  $\delta\geq\gamma$ y un $A$-homomorfismo sobreyectivo de álgebras
+  $v_{\gamma\delta}:F_{\delta,n}\to E_{\gamma,n}$ que verifica las condiciones de
+  \emph{(i)} (para $\gamma$ y $\delta$) y hace conmutativo el diagrama
+  \begin{equation}
+  \label{0.19.5.6.4-es}
+  \xymatrix@C=3em{
+    F_{\beta,n} \ar[r]^{v_{\alpha\beta}} & E_{\alpha,n} \\
+    F_{\delta,n} \ar[u] \ar[r]_{v_{\gamma\delta}} & E_{\gamma,n} \ar[u]
+  }
+  \tag{19.5.6.4}
+  \end{equation}
+  donde las flechas verticales son los homomorfismos de transición.
+\end{enumerate}
+\end{lemma}
+
+\begin{env}[19.5.6.4]
+\label{0.19.5.6.4-proof-es}
+\begin{enumerate}
+  \item[\rm(i)] En la $A$-álgebra topológica discreta $E_{\alpha,n}$,
+  el ideal $\mathfrak J_\alpha/\mathfrak J_\alpha^{n+1}$ es nilpotente, y
+  el isomorfismo identidad
+  $C_\alpha\xrightarrow{\sim}
+  E_{\alpha,n}/(\mathfrak J_\alpha/\mathfrak J_\alpha^{n+1})$ da por
+  composición un $A$-homomorfismo continuo
+  $C\to C_\alpha\to
+  E_{\alpha,n}/(\mathfrak J_\alpha/\mathfrak J_\alpha^{n+1})$;
+
+\oldpage[0\textsubscript{IV-1}]{96}
+
+  como $C$ es una $A$-álgebra formalmente lisa, este homomorfismo se
+  factoriza como
+  $C\xrightarrow{f_\alpha}E_{\alpha,n}\to
+  E_{\alpha,n}/(\mathfrak J_\alpha/\mathfrak J_\alpha^{n+1})$, donde $f_\alpha$
+  es un $A$-homomorfismo continuo; por tanto,
+  $\mathfrak J_\alpha/\mathfrak J_\alpha^{n+1}$ se convierte, mediante
+  $f_\alpha$, en un $C$-módulo topológico discreto anulado por un ideal abierto de
+  $C$. La hipótesis de que $\mathfrak J/\mathfrak J^2$ es un $C$-módulo
+  formalmente proyectivo implica entonces la existencia de una aplicación
+  $C$-lineal continua
+  $g_\alpha:\mathfrak J/\mathfrak J^2\to
+  \mathfrak J_\alpha/\mathfrak J_\alpha^{n+1}$ que hace conmutativo el diagrama
+  \[
+    \xymatrix{
+      \mathfrak J_\alpha/\mathfrak J_\alpha^{n+1} \ar[r] &
+      \mathfrak J_\alpha/\mathfrak J_\alpha^2 \\
+      & \mathfrak J/\mathfrak J^2 \ar[ul]^{g_\alpha} \ar[u]
+    }
+  \]
+  Como $f_\alpha$ y $g_\alpha$ son continuos, existe un
+  $\beta\geq\alpha$ tal que estos homomorfismos se factoricen respectivamente como
+  \[
+    C\to C_\beta\xrightarrow{f'_{\alpha\beta}}E_{\alpha,n},
+  \]
+  \[
+    \mathfrak J/\mathfrak J^2\to
+    \mathfrak J_\beta/\mathfrak J_\beta^2
+    \xrightarrow{g'_{\alpha\beta}}
+    \mathfrak J_\alpha/\mathfrak J_\alpha^{n+1}
+  \]
+  y, a partir de $f'_{\alpha\beta}$ y $g'_{\alpha\beta}$, se obtiene, pues,
+  canónicamente un homomorfismo de $C_\beta$-álgebras
+  \[
+    \mathbf S_{C_\beta}^*(\mathfrak J_\beta/\mathfrak J_\beta^2)
+    \longrightarrow E_{\alpha,n}
+  \]
+  que además (por definición de $g'_{\alpha\beta}$) se anula sobre la
+  potencia $(n+1)$-ésima del ideal de aumentación de
+  $\mathbf S_{C_\beta}^*(\mathfrak J_\beta/\mathfrak J_\beta^2)$; pasando al
+  cociente por esta potencia $(n+1)$-ésima, se obtiene el homomorfismo
+  $v_{\alpha\beta}$ buscado, teniendo en cuenta las definiciones de $f_\alpha$ y
+  $g_\alpha$; la sobreyectividad de $v_{\alpha\beta}$ resulta, en efecto, de la
+  de los dos homomorfismos $\gr^0(v_{\alpha\beta})$ y
+  $\gr^1(v_{\alpha\beta})$, puesto que esto implica que
+  $\gr(v_{\alpha\beta})$ es sobreyectivo (el álgebra
+  $\gr^*(E_{\alpha,n})$ está engendrada por $\gr^0(E_{\alpha,n})$ y
+  $\gr^1(E_{\alpha,n})$), y, como las filtraciones consideradas son finitas, se
+  puede aplicar Bourbaki, \emph{Alg. comm.}, cap.~III, §~2,
+  n\textsuperscript{o}~8, cor.~3 del teorema~1.
+
+  \item[\rm(ii)] La hipótesis de que $B$ es \emph{preadmisible} significa que
+  se pueden suponer todos los $\mathfrak b_\alpha$ contenidos en un mismo
+  $\mathfrak b_{\alpha_0}$ cuyas potencias \emph{tienden a} $0$. Esto
+  implica, en particular, que el núcleo del homomorfismo de transición
+  $E_{\gamma,n}\to E_{\alpha,n}$, igual a
+  $(\mathfrak b_\alpha+\mathfrak J^{n+1})/
+  (\mathfrak b_\gamma+\mathfrak J^{n+1})$, es \emph{nilpotente}; aplicando el
+  lema (19.3.10.1), se ve que se puede suponer elegido $f_\gamma$ de modo que
+  el diagrama
+  \[
+    \xymatrix{
+      & E_{\alpha,n} \\
+      C \ar[ur]^{f_\alpha} \ar[r]_{f_\gamma} & E_{\gamma,n} \ar[u]
+    }
+  \]
+  (donde la flecha vertical es el homomorfismo de transición) sea conmutativo.
+  La hipótesis de que $\mathfrak J/\mathfrak J^2$ es un $C$-módulo formalmente
+  proyectivo permite, por otra parte, elegir
+  $g_\gamma:\mathfrak J/\mathfrak J^2\to
+  \mathfrak J_\gamma/\mathfrak J_\gamma^{n+1}$ de modo que el diagrama
+  \[
+    \xymatrix@C=5em@R=3em{
+      \mathfrak J_\alpha/\mathfrak J_\alpha^{n+1} \ar[r] &
+      \mathfrak J_\alpha/\mathfrak J_\alpha^2 \\
+      \mathfrak J_\gamma/\mathfrak J_\gamma^{n+1} \ar[u] \ar[r] &
+      \mathfrak J_\gamma/\mathfrak J_\gamma^2 \ar[u] \\
+      & \mathfrak J/\mathfrak J^2
+        \ar[ul]_{g_\gamma} \ar[u]_{p_\gamma} \ar[uul]^{g_\alpha}
+    }
+  \]
+  sea conmutativo (basta observar que la imagen por $(g_\alpha,p_\gamma)$
+  de $\mathfrak J/\mathfrak J^2$ en el módulo producto
+  $(\mathfrak J_\alpha/\mathfrak J_\alpha^{n+1})
+  \times(\mathfrak J_\gamma/\mathfrak J_\gamma^2)$ está contenida (en vista de la
+  definición de $g_\alpha$ y de la relación $\beta\leq\gamma$) en la imagen
+  canónica $Q$ en este módulo producto del módulo
+  $P=\mathfrak J_\gamma/\mathfrak J_\gamma^{n+1}$, y aplicar la definición
+  (19.2.1) al homomorfismo \emph{sobreyectivo} $P\to Q$ y al homomorfismo
+  $(g_\alpha,p_\gamma)$ de $\mathfrak J/\mathfrak J^2$ en $Q$). Esta elección de
+  $f_\gamma$ y $g_\gamma$ permite entonces, construyendo
+  $v_{\gamma\delta}$ como en \emph{(i)}, obtener además la conmutatividad
+  del diagrama (19.5.6.4).
+\end{enumerate}
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{97}
+
+\begin{lemma}[19.5.6.5]
+\label{0.19.5.6.5-es}
+Supongamos que las $A$-álgebras $B$ y $C$ son formalmente lisas y que
+$B$ es preadmisible (de modo que, en virtud de (19.5.6.1), se satisfacen las
+condiciones de (19.5.6.3)). Para todo sistema de dos índices
+$\alpha\leq\beta$ y de un homomorfismo $v_{\alpha\beta}$ que verifica las
+condiciones de (19.5.6.3, (i)), existen un índice $\lambda\geq\beta$ y un
+$A$-homomorfismo de álgebras
+\[
+  w_{\beta\lambda}:E_{\lambda,n}\longrightarrow F_{\beta,n}
+\]
+tales que: $1^\circ$ $\gr^0(w_{\beta\lambda}):C_\lambda\to C_\beta$ y
+$\gr^1(w_{\beta\lambda}):
+\mathfrak J_\lambda/\mathfrak J_\lambda^2\to
+\mathfrak J_\beta/\mathfrak J_\beta^2$ sean los homomorfismos de
+transición; $2^\circ$ el compuesto
+$E_{\lambda,n}\xrightarrow{w_{\beta\lambda}}F_{\beta,n}
+\xrightarrow{v_{\alpha\beta}}E_{\alpha,n}$ sea el homomorfismo de transición.
+\end{lemma}
+
+\begin{proof}
+Apliquemos el lema (19.5.6.3, (ii)) con $\gamma=\beta$, lo que da un
+$\delta\geq\beta$ y un
+$v_{\beta\delta}:F_{\delta,n}\to E_{\beta,n}$. Recordemos que
+$v_{\beta\delta}$ es sobreyectivo; por otra parte, su núcleo $\mathfrak R$ es
+\emph{nilpotente}: en efecto, el ideal de aumentación $F_{\delta,n}^+$ de
+$F_{\delta,n}$ es nilpotente por definición, y el núcleo de
+$\gr^0(v_{\beta\delta}):C_\delta\to C_\beta$ también es nilpotente en virtud de
+la hipótesis de que $B$ es preadmisible. Se ve, por tanto, que $E_{\beta,n}$
+se identifica con $F_{\delta,n}/\mathfrak R$. Como $B$ es una $A$-álgebra
+formalmente lisa, el $A$-homomorfismo canónico
+$p_{\beta,n}:B\to E_{\beta,n}$, que es continuo, se factoriza como
+$B\xrightarrow{w}F_{\delta,n}\xrightarrow{v_{\beta\delta}}E_{\beta,n}$, donde
+$w$ es un $A$-homomorfismo continuo. Como $F_{\delta,n}$ es discreto, existe
+$\lambda\geq\delta$ tal que $w$ se anule en $\mathfrak b_\lambda$, luego $w$
+se factoriza como
+$B\to B/\mathfrak b_\lambda\xrightarrow{w'_\lambda}F_{\delta,n}$. Consideremos
+el homomorfismo compuesto
+$B/\mathfrak b_\lambda\xrightarrow{w'_\lambda}F_{\delta,n}
+\xrightarrow{q_{\beta\delta}}F_{\beta,n}$, donde $q_{\beta\delta}$ es
+el homomorfismo de transición; observemos que
+$\gr^0(q_{\beta\delta})=\gr^0(v_{\beta\delta}):C_\delta\to C_\beta$ es
+el homomorfismo de transición; como el compuesto
+$v_{\alpha\beta}\circ q_{\beta\delta}\circ w'_\lambda$ es el homomorfismo
+canónico $B/\mathfrak b_\lambda\to
+B/(\mathfrak b_\alpha+\mathfrak J^{n+1})$, esto muestra que la imagen de
+$\mathfrak J_\lambda=(\mathfrak b_\lambda+\mathfrak J)/\mathfrak b_\lambda$
+por $q_{\beta\delta}\circ w'_\lambda$ está contenida en el ideal de aumentación
+$F_{\beta,n}^+$, y, por tanto, la imagen de
+$\mathfrak J_\lambda^{n+1}=(\mathfrak b_\lambda+\mathfrak J^{n+1})/
+\mathfrak b_\lambda$ es nula. En otras palabras,
+$q_{\beta\delta}\circ w'_\lambda$ se factoriza como
+\[
+  B/\mathfrak b_\lambda\to
+  B/(\mathfrak b_\lambda+\mathfrak J^{n+1})=E_{\lambda,n}
+  \xrightarrow{w_{\beta\lambda}}F_{\beta,n}
+\]
+de modo que el compuesto
+$E_{\lambda,n}\xrightarrow{w_{\beta\lambda}}F_{\beta,n}
+\xrightarrow{v_{\alpha\beta}}E_{\alpha,n}$ sea el homomorfismo de transición.
+El razonamiento anterior muestra también que $\gr^0(w_{\beta\lambda})$, que es
+el compuesto
+$B/(\mathfrak b_\lambda+\mathfrak J)\to\gr^0(F_{\delta,n})
+\xrightarrow{\gr^0(q_{\beta\delta})}\gr^0(F_{\beta,n})$, es el homomorfismo
+de transición $C_\lambda\to C_\beta$, puesto que
+$v_{\beta\delta}\circ w$ es el homomorfismo canónico. Además, se tiene también
+$\gr^1(q_{\beta\delta})=\gr^1(v_{\beta\delta})$ (19.5.6.3), luego el mismo
+razonamiento prueba que $\gr^1(w_{\beta\lambda})$ es el homomorfismo de
+transición.
+\end{proof}
+
+\begin{env}[19.5.6.6]
+\label{0.19.5.6.6-es}
+\emph{Demostración de} (19.5.3, (ii)). --- Para demostrar que $\varphi_n$ es un
+bimorfismo formal, vamos a aplicar el criterio de (19.1.3, (iii)). Puesto que
+las condiciones del lema (19.5.6.5) se satisfacen por hipótesis, determinemos,
+para todo índice $\alpha$, $v_{\alpha\beta}$ y $w_{\beta\lambda}$ que verifican
+las conclusiones de este lema. El homomorfismo
+\[
+  \gr^n(v_{\alpha\beta}):\gr^n(F_{\beta,n})
+  \longrightarrow\gr^n(E_{\alpha,n})
+\]
+no es sino el homomorfismo
+\[
+  \varphi_{\alpha\beta,n}:
+  \mathbf S_{C_\beta}^n(\mathfrak J_\beta/\mathfrak J_\beta^2)
+  \longrightarrow\mathfrak J_\alpha^n/\mathfrak J_\alpha^{n+1}
+\]
+deducido del homomorfismo canónico $\varphi_n$ (19.5.2.1) por paso a los
+cocientes; en efecto, de (19.5.6.3) resulta que $\gr^0(v_{\alpha\beta})$ y
+$\gr^1(v_{\alpha\beta})$ coinciden respectivamente con
+$\varphi_{\alpha\beta,0}$ y $\varphi_{\alpha\beta,1}$, y la definición del
+homomorfismo canónico $\varphi$ muestra entonces, por recurrencia sobre $j\leq n$,
+que $\gr^j(v_{\alpha\beta})$ y $\varphi_{\alpha\beta,j}$ son iguales para todo
+$j$. Dicho esto, como $\varphi_n$ es sobreyectivo, es \emph{a fortiori} un
+epimorfismo formal; además, para $j\leq n$, el homomorfismo compuesto
+\[
+  \gr^j(F_{\lambda,n})\xrightarrow{\varphi_{\lambda\lambda,j}}
+  \gr^j(E_{\lambda,n})\xrightarrow{\gr^j(w_{\beta\lambda})}
+  \gr^j(F_{\beta,n})
+\]
+es el homomorfismo de transición, pues esto es cierto para $j=0$ y $j=1$ en
+virtud de (19.5.6.5), y como $\gr^*(E_{\lambda,n})$ está engendrado por
+$\gr^1(E_{\lambda,n})$, esto demuestra la afirmación por recurrencia sobre $j$.
+Componiendo con el homomorfismo de transición
+$\gr^j(F_{\beta,n})\to\gr^j(F_{\alpha,n})$, se ve, pues, para $j=n$, que
+se ha factorizado el homomorfismo de transición
+$\gr^n(F_{\lambda,n})\to\gr^n(F_{\alpha,n})$ en
+\[
+  \gr^n(F_{\lambda,n})\xrightarrow{\varphi_{\lambda\lambda,n}}
+  \gr^n(E_{\lambda,n})\longrightarrow\gr^n(F_{\alpha,n}),
+\]
+lo que es la condición del criterio (19.1.3) para que $\varphi_n$ sea un
+bimorfismo formal.
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{98}
+
+\begin{lemma}[19.5.6.7]
+\label{0.19.5.6.7-es}
+Supongamos que $B$ es preadmisible, que $\mathfrak J/\mathfrak J^2$ es un
+$C$-módulo formalmente proyectivo, que $C$ es una $A$-álgebra formalmente
+lisa y que los $\varphi_n$ son bimorfismos formales. Entonces, para todo
+par de índices $\alpha$, $\beta$ tal que $\alpha\leq\beta$ y todo
+homomorfismo $v_{\alpha\beta}:F_{\beta,n}\to E_{\alpha,n}$ que verifica las
+condiciones de (19.5.6.3, (i)), existe un índice $\gamma\geq\beta$ tal que,
+para todo índice $\mu\geq\gamma$, haya un diagrama conmutativo de
+$A$-homomorfismos
+\[
+\xymatrix@C=4em@R=3em{
+  F_{\beta,n}\ar[r]^{v_{\alpha\beta}} & E_{\alpha,n} \\
+  & E_{\mu,n}\ar[ul]_{u_{\beta\mu}}\ar[u]_{p_{\alpha\mu}}
+}
+\]
+donde $p_{\alpha\mu}$ es el homomorfismo de transición.
+\end{lemma}
+
+\begin{proof}
+Aplicando el criterio (19.1.3) a cada uno de los $\varphi_j$ para $0\leq j\leq n$,
+se ve que existe un índice $\gamma\geq\beta$ y homomorfismos
+unívocamente determinados (y sobreyectivos) de $C_\gamma$-módulos
+\[
+  w_{\beta\gamma}^j:\gr^j(E_{\gamma,n})\longrightarrow
+  \gr^j(F_{\beta,n})
+\]
+tales que los compuestos
+\[
+  \gr^j(F_{\gamma,n})
+  \xrightarrow{\varphi_{\gamma\gamma,j}}\gr^j(E_{\gamma,n})
+  \xrightarrow{w_{\beta\gamma}^j}\gr^j(F_{\beta,n})
+\]
+sean los homomorfismos de transición (el hecho de que se pueda elegir el mismo
+índice $\gamma$ para todos los $\varphi_j$ resulta de que son en número
+finito). Además, la unicidad de los $w_{\beta\gamma}^j$ prueba (puesto que $\varphi$ es
+un homomorfismo de álgebras graduadas) que
+$w_{\beta\gamma}=(w_{\beta\gamma}^j)_{0\leq j\leq n}$ es un homomorfismo de
+$C_\gamma$-álgebras graduadas
+\[
+  \gr^*(E_{\gamma,n})\longrightarrow
+  \gr^*(F_{\beta,n})=F_{\beta,n}.
+\]
+Además, como $\varphi_{\gamma\gamma,0}$ y $\varphi_{\gamma\gamma,1}$ son
+los homomorfismos identidad,
+$w_{\beta\gamma}^0:C_\gamma\to C_\beta$ y
+$w_{\beta\gamma}^1:\mathfrak J_\gamma/\mathfrak J_\gamma^2
+\to\mathfrak J_\beta/\mathfrak J_\beta^2$ son los homomorfismos de
+transición, y lo mismo ocurre, por tanto, con
+$\gr^0(v_{\alpha\beta}\circ w_{\beta\gamma})$ y
+$\gr^1(v_{\alpha\beta}\circ w_{\beta\gamma})$; como
+$\gr^*(E_{\gamma,n})$ está engendrado por $\gr^1(E_{\gamma,n})$, se concluye que
+$\gr^j(v_{\alpha\beta}\circ w_{\beta\gamma})$ es también el homomorfismo de
+transición para $0\leq j\leq n$.
+
+Apliquemos ahora a $\alpha$, $\beta$ y $\gamma$ el lema (19.5.6.3,
+(ii)), lo que da el diagrama (19.5.6.4) con $\delta\geq\gamma$; después
+repitamos el razonamiento del comienzo reemplazando $\alpha$ y $\beta$ por
+$\gamma$ y $\delta$. Se obtiene así un índice $\lambda\geq\delta$ y un
+diagrama conmutativo de homomorfismos
+\[
+\xymatrix@C=4em@R=4em{
+  \gr^*(E_{\gamma,n})\ar[r]^{w_{\beta\gamma}} &
+  F_{\beta,n}\ar[r]^{v_{\alpha\beta}} & E_{\alpha,n} \\
+  \gr^*(E_{\lambda,n})\ar[u]_{\gr^*(p_{\gamma\lambda})}
+    \ar[r]_{w_{\delta\lambda}} &
+  F_{\delta,n}\ar[u]_{q_{\beta\delta}}\ar[r]_{v_{\gamma\delta}} &
+  E_{\gamma,n}\ar[u]_{p_{\alpha\gamma}}
+    \ar@{-->}[ul]_{u_{\beta\gamma}}
+}
+\]
+donde las flechas verticales son los homomorfismos de transición. Basta
+probar la existencia del homomorfismo $u_{\beta\gamma}$ que hace
+conmutativo el diagrama, y para ello basta evidentemente mostrar que se tiene
+\[
+  \operatorname{Ker}(v_{\gamma\delta})
+  \subset\operatorname{Ker}(q_{\beta\delta}),
+\]
+siendo $v_{\gamma\delta}$ y $q_{\beta\delta}$ sobreyectivos. Como
+$w_{\delta\lambda}$ es sobreyectivo, esta última relación equivale a
+\[
+\begin{split}
+  \operatorname{Ker}(v_{\gamma\delta}\circ w_{\delta\lambda})
+  &\subset\operatorname{Ker}(q_{\beta\delta}\circ w_{\delta\lambda})\\
+  &=\operatorname{Ker}\bigl(w_{\beta\gamma}\circ
+  (\gr(p_{\gamma\lambda}))\bigr).
+\end{split}
+\]
+Pero se ha visto más arriba que
+$\gr(p_{\gamma\lambda})=\gr(v_{\gamma\delta}\circ w_{\delta\lambda})$ y está
+claro que
+\[
+\begin{split}
+  \operatorname{Ker}(v_{\gamma\delta}\circ w_{\delta\lambda})
+  &\subset\operatorname{Ker}\bigl(\gr(v_{\gamma\delta}\circ
+  w_{\delta\lambda})\bigr)\\
+  &=\operatorname{Ker}(\gr(p_{\gamma\lambda}))
+  \subset\operatorname{Ker}\bigl(w_{\beta\gamma}\circ
+  (\gr(p_{\gamma\lambda}))\bigr),
+\end{split}
+\]
+lo que termina la demostración del lema, pues para todo $\mu\geq\gamma$ bastará
+definir $u_{\beta\mu}$ como el compuesto
+\[
+  E_{\mu,n}\xrightarrow{p_{\gamma\mu}}E_{\gamma,n}
+  \xrightarrow{u_{\beta\gamma}}F_{\beta,n}.
+\]
+\end{proof}
+
+\begin{env}[19.5.6.8]
+\label{0.19.5.6.8-es}
+\emph{Demostración de} (19.5.3, (iii)). --- Sean $G$ una $A$-álgebra
+topológica discreta, $\mathfrak R$ un ideal de cuadrado nulo en $G$ y
+$f:B\to G/\mathfrak R$ un $A$-homomorfismo continuo de álgebras. Como
+$G/\mathfrak R$ es discreta, hay un índice $\alpha$ tal que $f$ se anula
+sobre $\mathfrak b_\alpha$; por hipótesis, existe un entero $m$ tal que
+$\mathfrak J^m\subset\mathfrak b_\alpha$, por tanto $f$ se factoriza en
+\[
+  B\xrightarrow{p_\alpha}E_{\alpha,n}
+  \xrightarrow{f_{\alpha,n}}G/\mathfrak R,
+\]
+donde se toma $n=2m$. Como se satisfacen las hipótesis del lema (19.5.6.3), se
+obtiene primero un $\beta\geq\alpha$ y un $A$-homomorfismo compuesto
+\begin{equation}
+\label{0.19.5.6.9-es}
+  f_{\alpha,n}\circ v_{\alpha\beta}:F_{\beta,n}
+  \xrightarrow{v_{\alpha\beta}}E_{\alpha,n}
+  \xrightarrow{f_{\alpha,n}}G/\mathfrak R.
+  \tag{19.5.6.9}
+\end{equation}
+Como $F_{\beta,n}$ es una $C_\beta$-álgebra, y por tanto \emph{a fortiori} una
+$C$-álgebra topológica (discreta), esto da por composición un
+$A$-homomorfismo continuo
+$r:C\to F_{\beta,n}\to G/\mathfrak R$. Como, por otra parte, $C$ es una
+$A$-álgebra formalmente lisa,
+
+\oldpage[0\textsubscript{IV-1}]{99}
+
+este homomorfismo se factoriza en
+$r:C\xrightarrow{r'}G\to G/\mathfrak R$, donde $r'$ es un
+$A$-homomorfismo continuo, de modo que $G$ queda dotada así de una estructura de
+$C$-álgebra topológica (discreta). Por otra parte, por composición con
+el homomorfismo canónico
+\[
+  \mathfrak J/\mathfrak J^2\longrightarrow
+  \mathfrak J_\beta/\mathfrak J_\beta^2\longrightarrow F_{\beta,n},
+\]
+se deduce de (19.5.6.9) un $C$-homomorfismo continuo
+$g:\mathfrak J/\mathfrak J^2\to G/\mathfrak R$. Como
+$\mathfrak J/\mathfrak J^2$ es un $C$-módulo formalmente proyectivo, $g$ se
+factoriza en
+\[
+  \mathfrak J/\mathfrak J^2\xrightarrow{h}G\longrightarrow G/\mathfrak R,
+\]
+donde $h$ es un $C$-homomorfismo continuo. Como $G$ es discreta, existe un
+índice $\gamma\geq\beta$ tal que la imagen por $h$ de
+$((\mathfrak b_\gamma\cap\mathfrak J)+\mathfrak J^2)/\mathfrak J^2$ sea
+nula, así como la imagen por $r'$ de
+$(\mathfrak b_\gamma+\mathfrak J)/\mathfrak J$, de modo que $h$ se factoriza
+en
+\[
+  \mathfrak J/\mathfrak J^2\longrightarrow
+  \mathfrak J_\gamma/\mathfrak J_\gamma^2
+  \xrightarrow{h'}G,
+\]
+donde $h'$ es un $C_\gamma$-homomorfismo. Por prolongación, se deduce, pues, de
+$h'$ un homomorfismo de $C_\gamma$-álgebras
+\[
+  w:\mathbf S_{C_\gamma}^*(\mathfrak J_\gamma/\mathfrak J_\gamma^2)
+  \longrightarrow G
+\]
+y, por construcción, todo elemento de grado $m$ tiene por imagen mediante $w$ un elemento
+de $\mathfrak R$, por tanto todo elemento de grado $n=2m$ tiene imagen nula, puesto que
+$\mathfrak R^2=0$; en otras palabras, $w$ se factoriza en
+\[
+  \mathbf S_{C_\gamma}^*(\mathfrak J_\gamma/\mathfrak J_\gamma^2)
+  \longrightarrow F_{\gamma,n}\xrightarrow{w'_\gamma}G.
+\]
+Apliquemos ahora a
+\[
+  v_{\alpha\gamma}:F_{\gamma,n}
+  \xrightarrow{q_{\beta\gamma}}F_{\beta,n}
+  \xrightarrow{v_{\alpha\beta}}E_{\alpha,n}
+\]
+el lema (19.5.6.7), cuyas hipótesis se verifican; existe, pues, un
+$\delta\geq\gamma$ y un homomorfismo
+$u_{\gamma\delta}:E_{\delta,n}\to F_{\gamma,n}$ tal que el compuesto
+$v_{\alpha\gamma}\circ u_{\gamma\delta}$ sea el homomorfismo de transición
+$p_{\alpha\delta}:E_{\delta,n}\to E_{\alpha,n}$. Se obtiene así finalmente un
+diagrama conmutativo de $A$-homomorfismos continuos
+\[
+\xymatrix@C=3em@R=2.5em{
+  && E_{\alpha,n}\ar[r]^{f_{\alpha,n}} & G/\mathfrak R \\
+  && F_{\beta,n}\ar[u]_{v_{\alpha\beta}} & \\
+  B\ar[r]_{p_\delta} & E_{\delta,n}\ar[uur]^{p_{\alpha\delta}}
+    \ar[r]_{u_{\gamma\delta}} &
+  F_{\gamma,n}\ar[u]_{q_{\beta\gamma}}\ar[r]^{w'_\gamma} & G\ar[uu]
+}
+\]
+y el compuesto $f':B\to G$ de los homomorfismos de la línea inferior es, pues,
+tal que $f$ se factoriza en $B\xrightarrow{f'}G\to G/\mathfrak R$, lo que
+prueba que $B$ es una $A$-álgebra formalmente lisa.
+
+La demostración del teo.~(19.5.3) queda así terminada.
+\end{env}
+
+\begin{corollary}[19.5.7]
+\label{0.19.5.7-es}
+Sean $A$ un anillo topológico, $B$ una $A$-álgebra topológica,
+$(\mathfrak b_\lambda)$ un sistema fundamental de ideales abiertos de $B$,
+$\mathfrak J$ un ideal de $B$ y $C=B/\mathfrak J$ la $A$-álgebra topológica
+cociente. Se pone $C_\lambda=B/(\mathfrak b_\lambda+\mathfrak J)$. Se supone
+que: $1^\circ$ para todo $n$, la topología inducida sobre $\mathfrak J^n$ por
+la de $B$ es también la topología del $B$-módulo $\mathfrak J^n$ deducida de
+la topología de $B$ (19.0.2) (esta condición se satisfará en particular si
+$B$ es noetheriano y su topología es preádica ($\mathbf 0_{\mathrm I}$,
+7.3.2))~; $2^\circ$ $C$ es una $A$-álgebra formalmente lisa. En estas
+condiciones~:
+\begin{enumerate}
+  \item[\rm(i)] Si $B$ es una $A$-álgebra formalmente lisa, entonces, para todo
+  $\lambda$, $(\mathfrak J/\mathfrak J^2)\otimes_C C_\lambda$ es un
+  $C_\lambda$-módulo proyectivo.
+  \item[\rm(ii)] Si $B$ es una $A$-álgebra formalmente lisa y un anillo
+  preadmisible, entonces para todo $\lambda$, el homomorfismo canónico
+  \begin{equation}
+  \label{0.19.5.7.1-es}
+    \varphi_\lambda=\varphi\otimes 1_{C_\lambda}:
+    \mathbf S_{C_\lambda}^*((\mathfrak J/\mathfrak J^2)\otimes_C C_\lambda)
+    \longrightarrow\gr_{\mathfrak J}^*(B)\otimes_C C_\lambda
+    \tag{19.5.7.1}
+  \end{equation}
+  es biyectivo.
+
+  \oldpage[0\textsubscript{IV-1}]{100}
+
+  \item[\rm(iii)] Recíprocamente, supongamos que $B$ sea preadmisible, que la
+  sucesión $(\mathfrak J^n)$ tienda a $0$, y que, para todo $\lambda$,
+  $(\mathfrak J/\mathfrak J^2)\otimes_C C_\lambda$ sea un $C_\lambda$-módulo
+  proyectivo y el homomorfismo (19.5.4.1) sea biyectivo. Entonces $B$ es una
+  $A$-álgebra formalmente lisa.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+En efecto, la topología de $\mathfrak J/\mathfrak J^2$ y las de los
+$\mathbf S_C^n(\mathfrak J/\mathfrak J^2)$ son entonces también inducidas por la
+de $B$ (19.5.1)~; las conclusiones son entonces consecuencias inmediatas de
+(19.5.3) y de los criterios de (19.1.4) y (19.2.4) especiales para este tipo de
+topologías.
+\end{proof}
+
+\begin{remark}[19.5.8]
+\label{0.19.5.8-es}
+Supongamos que $\mathfrak J/\mathfrak J^2$ sea un $C$-módulo de tipo finito y
+que, para la topología cociente de la de $B$, $C$ sea un anillo de Zariski~;
+sea $\mathfrak r$ un ideal de definición de $C$, de modo que los
+$\mathfrak r^n$ formen un sistema fundamental de entornos de $0$ en $C$.
+Entonces las conclusiones de (i) y (ii) en (19.5.7) pueden sustituirse por
+las siguientes~:
+\begin{enumerate}
+  \item[\rm(i')] $\mathfrak J/\mathfrak J^2$ es un $C$-módulo proyectivo.
+  \item[\rm(ii')] El homomorfismo canónico
+  $\varphi:\mathbf S_C^*(\mathfrak J/\mathfrak J^2)
+  \to\gr_{\mathfrak J}^*(B)$ es biyectivo.
+\end{enumerate}
+En efecto, está claro que (i') implica la conclusión de (i) en (19.5.7).
+Recíprocamente, si $(\mathfrak J/\mathfrak J^2)\otimes_C C_\lambda$ es un
+$C_\lambda$-módulo proyectivo para todo $\lambda$, entonces
+$(\mathfrak J/\mathfrak J^2)\otimes_C(C/\mathfrak r^n)$ es un
+$(C/\mathfrak r^n)$-módulo proyectivo (por tanto plano) para todo $n$~; se concluye
+que $\mathfrak J/\mathfrak J^2$ es un $C$-módulo plano
+($\mathbf 0_{\mathrm{III}}$, 10.2.2), por tanto proyectivo puesto que es de
+presentación finita (Bourbaki, \emph{Alg. comm.}, cap.~II, \textsection5,
+n\textsuperscript{o}~2, cor.~2 del teo.~1). Por otra parte, los $C$-módulos
+$\mathbf S_C^n(\mathfrak J/\mathfrak J^2)$ y $\gr_{\mathfrak J}^n(B)$ son
+de tipo finito, y se sabe que cuando $C$ es un anillo de Zariski, equivale
+entonces decir que $\varphi_n$ es biyectivo o que
+$\widehat\varphi_n$ es biyectivo (Bourbaki, \emph{Alg. comm.}, cap.~III,
+\textsection3, n\textsuperscript{o}~5, prop.~9), por tanto (ii) equivale a
+(ii').
+\end{remark}
+
+\subsection{Caso de las álgebras sobre un cuerpo}
+\label{subsection:0.19.6-es}
+
+\begin{theorem}[19.6.1) (Cohen]
+\label{0.19.6.1-es}
+Sean $k$ un cuerpo, $K$ una extensión de $k$, estando $k$ y $K$
+provistos de las topologías discretas. Para que $K$ sea una $k$-álgebra
+formalmente lisa, es necesario y suficiente que $K$ sea una extensión separable
+de $k$.
+\end{theorem}
+
+\begin{proof}
+La necesidad de la condición se establecerá en (19.6.5.1) (y naturalmente no
+se utilizará hasta entonces)~; nos limitaremos aquí a probar que la
+condición es \emph{suficiente}. Distingamos dos casos~:
+
+\emph{I. --- $K$ es una extensión separable de tipo finito de $k$.} Se sabe
+entonces (Bourbaki, \emph{Alg.}, cap.~V, \textsection9,
+n\textsuperscript{o}~3, teo.~2) que existe una subextensión puramente trascendente
+$K'=k(T_1,\ldots,T_n)$ de $K$ tal que $K$ es una extensión algebraica
+finita separable de $K'$. Teniendo en cuenta (19.3.5, (iii)), se puede por tanto
+reducir, bien al caso en que $K=K'$, bien al caso en que $K$ es una extensión algebraica finita de $k$.
+En el primer caso, se sabe que $A=k[T_1,\ldots,T_n]$ es una $k$-álgebra
+formalmente lisa (19.3.3), por tanto ocurre lo mismo con
+$k(T_1,\ldots,T_n)=S^{-1}A$, donde $S=A-\{0\}$ (19.3.5, (iv)). En el segundo
+caso, \emph{todos} los grupos de cohomología de Hochschild
+$\mathrm H_k^n(K,L)$, para un $(K,K)$-bimódulo cualquiera $L$, son nulos~: en
+efecto, si se considera la $k$-álgebra producto tensorial $C=K\otimes_k K$,
+$L$ es un $C$-módulo izquierdo y el grupo de cohomología
+$\mathrm H_k^n(K,L)$ es igual a $\operatorname{Ext}_C^n(K,L)$, donde $K$ es
+considerado también como $(K,K)$-bimódulo,
+
+\oldpage[0\textsubscript{IV-1}]{101}
+
+por tanto como $C$-módulo izquierdo (M, IX, 4). Ahora bien, como $K$ es una extensión
+finita separable de $k$, se sabe que $K\otimes_k K$ es producto directo
+de extensiones de $k$, una de las cuales es el propio $K$ (Bourbaki, \emph{Alg.},
+cap.~VIII, \textsection8, prop.~3)~; esto implica por tanto que $K$ es un
+$C$-módulo \emph{proyectivo}, de donde nuestra afirmación. Toda $k$-extensión de $K$
+de núcleo $L$ es, pues, $k$-trivial, y \emph{a fortiori} también lo son las
+$k$-extensiones conmutativas, de donde resulta el teorema en este caso (19.4.4).
+
+\emph{II. --- Caso general.} --- Con las notaciones de (18.4.5), se trata de
+probar que $\operatorname{Hom}_K(\mathrm H_2(P'_\bullet),L)=0$ para
+\emph{todo} $K$-espacio vectorial $L$, lo que significa evidentemente que
+$\mathrm H_2(P'_\bullet)=0$. Si $K$ es unión de una familia filtrante de
+subextensiones $K^{(\alpha)}$ de $k$, $P'_\bullet$ es \emph{límite
+inductivo} de los complejos correspondientes $P'^{(\alpha)}_\bullet$, puesto que el
+funtor $\varinjlim$ conmuta con el producto tensorial en la categoría de los
+$k$-módulos~; por la exactitud del funtor $\varinjlim$ en esta categoría,
+se tiene por tanto
+$\mathrm H_2(P'_\bullet)=\varinjlim\mathrm H_2(P'^{(\alpha)}_\bullet)$.
+Como la hipótesis de que $K$ es separable implica que lo mismo ocurre con toda
+subextensión de $K$ y que $K$ es unión de las subextensiones de tipo finito,
+la primera parte de la demostración implica efectivamente que $K$ es una
+$k$-álgebra formalmente lisa. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[19.6.2]
+\label{0.19.6.2-es}
+Sean $A$ un anillo local separado y completo, $K$ su cuerpo residual, $k$ un
+subcuerpo de $K$ tal que $K$ sea una extensión separable de $k$. Entonces
+existe un subcuerpo $K'$ de $A$ que contiene a $k$, tal que la restricción a $K'$
+del homomorfismo canónico $A\to K$ sea un isomorfismo de $K'$ sobre $K$.
+\end{corollary}
+
+\begin{proof}
+Sea $\mathfrak m$ el ideal maximal de $A$. En virtud de la hipótesis y de
+(19.6.1), $K$ es una $k$-álgebra formalmente lisa~; aplicando (19.3.10) y
+sustituyendo $C$ por $A$ y $\mathfrak J$ por $\mathfrak m$, se ve que
+el automorfismo identidad de $K=A/\mathfrak m$ se factoriza como
+$K\xrightarrow{u}A\to A/\mathfrak m$, donde $u$ es un $k$-homomorfismo, por tanto
+necesariamente un $k$-isomorfismo de $K$ sobre un subcuerpo $K'$ que contiene a
+$k$.
+\end{proof}
+
+\begin{corollary}[19.6.3]
+\label{0.19.6.3-es}
+Sean $A$ un anillo local noetheriano completo, $\mathfrak m$ su ideal maximal,
+$k$ su cuerpo residual. Las condiciones siguientes son equivalentes~:
+\begin{enumerate}
+  \item[a)] $A$ contiene un subcuerpo.
+  \item[b)] Si $p$ es la característica de $k$, se tiene $pA=0$.
+  \item[c)] Existe un cuerpo $K$ tal que $A$ es isomorfo a un anillo
+  cociente de un anillo de series formales $B=K[[T_1,\ldots,T_n]]$.
+\end{enumerate}
+Cuando esto ocurre, se puede suponer que $A$ es isomorfo a $B/\mathfrak b$,
+donde $\mathfrak b$ está contenido en el cuadrado del ideal maximal de $B$.
+\end{corollary}
+
+\begin{proof}
+Es inmediato que $c)$ implica $a)$, pues $A$ es $\neq0$ puesto que es un
+anillo local~; como $K$ es un cuerpo y el homomorfismo compuesto
+$K\xrightarrow{\varphi}B\to A$ (donde $\varphi$ es la inyección canónica) no es
+nulo, es inyectivo. Para ver que $a)$ implica $b)$, basta
+observar que si $K$ es un subcuerpo de $A$, $K$ es isomorfo a un
+subcuerpo de $k$ y tiene por consiguiente la misma característica $p$~; como $p.1=0$ en
+$K$, y por tanto en $A$, se tiene $pA=0$. Recíprocamente, $b)$ implica $a)$, pues el
+compuesto de los homomorfismos canónicos
+$\mathbf Z\xrightarrow{j}A\to k$ tiene por núcleo $p\mathbf Z$, y se tiene
+$j(p\mathbf Z)=0$, por tanto $\operatorname{Ker}(j)=p\mathbf Z$ y $A$ contiene un
+anillo $A'$ isomorfo a $\mathbf Z/p\mathbf Z$ y que no interseca a
+$\mathfrak m$~; si $p>0$, $A'$ es un cuerpo~; en caso contrario, puesto que todo
+
+\oldpage[0\textsubscript{IV-1}]{102}
+
+elemento de $A'$ es invertible en $A$, el cuerpo de fracciones de $A'$
+(isomorfo a $\mathbf Q$) está también contenido en $A$.
+
+Probemos finalmente que $a)$ implica $c)$~; la condición $a)$ implica que $A$
+contiene un subcuerpo primo $k_0$, isomorfo al subcuerpo primo de $k$,
+y del cual $k$ es por consiguiente una extensión separable. Aplicando (19.6.2), se ve
+primero que existe un isomorfismo $f$ de $k$ sobre un subcuerpo $K$ de $A$.
+Por otra parte, sea $(x_i)_{1\leq i\leq n}$ un sistema de elementos de
+$\mathfrak m$ tal que las clases mód.~$\mathfrak m^2$ de los $x_i$ formen una
+base (sobre $k$) de $\mathfrak m/\mathfrak m^2$. Puesto que $A$ es completo, existe
+entonces un homomorfismo continuo de anillos
+$u:k[[T_1,\ldots,T_n]]\to A$ tal que $u$ sea igual a $f$ en $k$ y que
+$u(T_i)=x_i$ para todo $i$, y este homomorfismo es sobreyectivo en virtud de la
+elección de los $x_i$ (Bourbaki, \emph{Alg. comm.}, cap.~III, \textsection2,
+n\textsuperscript{o}~9, prop.~11).
+\end{proof}
+
+\begin{theorem}[19.6.4]
+\label{0.19.6.4-es}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana, $\mathfrak m$ su
+ideal maximal, $K=A/\mathfrak m$ su cuerpo residual, estando $A$ provista de la
+topología $\mathfrak m$-preádica. Se supone que $K$ sea una extensión
+separable de $k$. Entonces las condiciones siguientes son equivalentes~:
+\begin{enumerate}
+  \item[a)] $A$ es una $k$-álgebra formalmente lisa.
+  \item[b)] El completado $\widehat A$ de $A$ es $k$-isomorfo a un anillo de
+  series formales $K[[T_1,\ldots,T_n]]$ (cuya estructura de $k$-álgebra está
+  definida por el homomorfismo compuesto
+  \[
+    k\xrightarrow{\varphi}K\xrightarrow{\psi}K[[T_1,\ldots,T_n]],
+  \]
+  donde $\psi$ es la inyección canónica y $\varphi$ el homomorfismo que define
+  la estructura de extensión de $K$).
+  \item[b')] $\widehat A$ es un anillo isomorfo a un anillo de series
+  formales $K[[T_1,\ldots,T_n]]$.
+  \item[c)] $A$ es un anillo local regular.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+El hecho de que $a)$ implica $b)$ es el caso particular de ((19.5.4),
+equivalencia de $a)$ y $c)$), aplicado sustituyendo allí $A$ por $k$, $B$ por
+$A$ y $\mathfrak J$ por $\mathfrak m$, teniendo en cuenta (19.6.1). Está claro
+que $b)$ implica $b')$ y $b')$ implica $c)$ por (17.1.1). Por último, si $c)$ se
+verifica, se deduce de (17.1.1, $a)$) y de ((19.5.4), equivalencia de $b)$ y
+$a)$), aplicado a $K=A/\mathfrak m$ sustituyendo a $C$, que $A$ es una
+$k$-álgebra formalmente lisa.
+\end{proof}
+
+\begin{corollary}[19.6.5]
+\label{0.19.6.5-es}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana, $\mathfrak m$ su
+ideal maximal, estando $A$ provista de la topología $\mathfrak m$-preádica.
+Supongamos que $A$ sea una $k$-álgebra formalmente lisa~; entonces $A$ es
+geométricamente regular sobre $k$, es decir (cf.~$\mathbf{IV}$, 6.7.6),
+para toda extensión finita $k'$ de $k$, el anillo semilocal
+$A'=A\otimes_k k'$ es regular (17.3.6). Además, si $K$ es el cuerpo
+residual de $A$, $\widehat A$ es isomorfo a un anillo de series formales
+$K[[T_1,\ldots,T_n]]$.
+\end{corollary}
+
+\begin{proof}
+Como $\widehat A'=\widehat A\otimes_k k'$, se deduce de (19.3.6) y de
+(17.1.5) (aplicado a los anillos locales de $A'$ en sus ideales maximales) que se
+puede reducir al caso en que $A$ es completo~; entonces $A'$ es una $k'$-álgebra
+formalmente lisa (19.3.5, (iii)) y por otra parte es producto directo de
+$k'$-álgebras locales, que también son formalmente lisas (19.3.5, (v)). Se
+reduce por tanto a probar que $A$ es \emph{regular}. Sea $k_0$ el subcuerpo
+primo de $k$~; como $k$ es una extensión separable de $k_0$, es una
+$k_0$-álgebra formalmente lisa (19.6.1) y en virtud de la hipótesis, ocurre lo
+mismo con $A$ (19.3.5, (ii)). Como el cuerpo residual $K$ de $A$ es una
+extensión separable de $k_0$, se puede entonces aplicar (19.6.4) a $A$ y $k_0$,
+de donde resulta la conclusión.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{103}
+ 
+\begin{corollary}[19.6.5.1]
+\label{0.19.6.5.1-es}
+Sean $A$ un anillo local noetheriano, $k$ un subcuerpo de $A$ tal que $A$
+sea una $k$-álgebra formalmente lisa (para su topología preádica). Entonces
+todo cuerpo $K$ tal que $k\subset K\subset A$ es una extensión separable de
+$k$.
+\end{corollary}
+
+\begin{proof}
+En efecto, para toda extensión finita $k'$ de $k$, el anillo $K\otimes_k k'$
+se identifica con un subanillo de $A'=A\otimes_k k'$; como $A'$ es un anillo
+regular, es reducido, luego lo mismo ocurre con $K\otimes_k k'$, lo que prueba que $K$
+es una extensión separable de $k$ (Bourbaki, \emph{Alg.}, cap.~VIII,
+\textsection7, n\textsuperscript{o}~3, teorema~1).
+\end{proof}
+
+Se observará que esto demuestra que la condición del enunciado de (19.6.1) es
+\emph{necesaria}.
+
+\begin{remark}[19.6.5.2]
+\label{0.19.6.5.2-es}
+Si $K$ es una extensión \emph{no separable} de $k$, el anillo de series
+formales $K[[T_1,\ldots,T_n]]$ \emph{no es, por tanto}, una $k$-álgebra
+formalmente lisa (para la estructura de $k$-álgebra usual recordada en
+(19.6.4)). Por otra parte, existen $k$-álgebras formalmente lisas $A$ que
+son anillos locales noetherianos completos cuyo cuerpo residual $K$ es una
+extensión \emph{no separable} de $k$ (por ejemplo, los completados de las
+localizaciones de $B=k[T_1,\ldots,T_n]$ en ideales maximales $\mathfrak n$ tales
+que $B/\mathfrak n$ sea una extensión algebraica finita no separable de $k$);
+tal anillo no puede, pues, ser $k$-isomorfo a $K[[T_1,\ldots,T_n]]$, aunque
+sea isomorfo a él en virtud de (19.6.5).
+
+En ciertos casos se puede precisar el corolario (19.6.5):
+\end{remark}
+
+\begin{proposition}[19.6.6]
+\label{0.19.6.6-es}
+Sean $k$ un cuerpo, $A$ una $k$-álgebra local noetheriana, $\mathfrak m$ su
+ideal maximal, estando $A$ provista de la topología $\mathfrak m$-preádica.
+Supongamos que el cuerpo residual $K=A/\mathfrak m$ de $A$ sea tal que exista
+una extensión radicial finita $k_0$ de $k$ para la cual el cuerpo residual del
+anillo local $K\otimes_k k_0$ sea una extensión separable de $k_0$ (más
+adelante expresaremos esta propiedad diciendo que $K$ es de
+\emph{multiplicidad radicial finita} sobre $k$ ($\mathbf{IV}$, 4.7.4), y
+veremos que esta condición se satisface siempre cuando $K$ es una
+\emph{extensión de tipo finito} de $k$). Entonces las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[a)] $A$ es una $k$-álgebra formalmente lisa.
+  \item[b)] Existe una extensión radicial finita $k'$ de $k$ tal que
+  $\widehat A\otimes_k k'$ sea $k'$-isomorfa a un álgebra de series
+  formales $K'[[T_1,\ldots,T_n]]$, donde $K'$ es una extensión separable de
+  $k'$.
+  \item[b')] Existe una extensión finita $k'$ de $k$ tal que el anillo
+  semilocal $\widehat A\otimes_k k'$ tenga al menos un componente local
+  que sea $k'$-isomorfo a un álgebra de series formales
+  $K'[[T_1,\ldots,T_n]]$, donde $K'$ es una extensión separable de $k'$.
+  \item[c)] $A$ es geométricamente regular sobre $k$ (19.6.5).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Observemos primero que, si $k'$ es una extensión radicial de $k$, solo hay un
+ideal de $A'=A\otimes_k k'$ sobre $\mathfrak m$, formado por los elementos
+cuya potencia $p^h$-ésima ($p$ es el exponente característico de $k$) pertenece a
+$\mathfrak m$ para un $h$ conveniente (Bourbaki, \emph{Alg. comm.}, cap.~V,
+\textsection2, n\textsuperscript{o}~3, lema~4); $A'$ es, por tanto, un anillo
+local, y lo mismo ocurre con
+$K\otimes_k k'=(A\otimes_k k')/(\mathfrak m\otimes_k k')$; además, los cuerpos
+residuales de estos dos anillos son idénticos. Recordemos, por otra parte, que,
+si $K$ es una extensión separable de $k$, entonces, para toda extensión finita
+$k''$ de $k$, $K\otimes_k k''$ es producto directo de cuerpos (Bourbaki,
+\emph{Alg.}, cap.~VIII, \textsection7, n\textsuperscript{o}~3, cor.~1 del
+teorema~1), y, por consiguiente, $\mathfrak m\otimes_k k''$ es el radical de
+$A\otimes_k k''$, y los cuerpos componentes de $K\otimes_k k''$ son los cuerpos
+residuales en los ideales maximales de $A\otimes_k k''$; además,
+
+\oldpage[0\textsubscript{IV-1}]{104}
+
+estos cuerpos son extensiones separables de $k''$, puesto que, para toda
+extensión $k_1$ de $k''$,
+$K\otimes_k k_1=(K\otimes_k k'')\otimes_{k''}k_1$ es reducido
+(\emph{loc. cit.}, teorema~1). Si se aplican estas observaciones al cuerpo $K$ de
+multiplicidad radicial finita sobre $k$, se ve que, para \emph{toda} extensión
+finita $k''$ de $k_0$, $(K\otimes_k k'')_{\mathrm{red}}$ es separable sobre
+$k''$.
+
+Pasemos a la demostración de (19.6.6). Es trivial que $b)$ implica
+$b')$. Demostremos que $b')$ implica $a)$. Si se pone
+$B'=K'[[T_1,\ldots,T_n]]$, la hipótesis de que $K'$ es separable sobre $k'$
+implica, por las observaciones iniciales, que, para toda extensión finita $k''$ de
+$k'$, los componentes del anillo semilocal completo $B'\otimes_{k'}k''$
+(igual al anillo de series formales
+$(K'\otimes_{k'}k'')[[T_1,\ldots,T_n]]$) son los anillos
+$K_i''[[T_1,\ldots,T_n]]$, donde los $K_i''$ son los cuerpos componentes de
+$K'\otimes_{k'}k''$. Como los componentes locales de $B'\otimes_{k'}k''$ son
+también componentes locales de
+\[
+  \widehat A\otimes_k k''
+  =(\widehat A\otimes_k k')\otimes_{k'}k'',
+\]
+se ve que la hipótesis $b')$ sigue verificándose cuando se reemplaza $k'$ por
+cualquiera de sus extensiones finitas. En particular, se puede suponer que
+$k'$ es \emph{cuasi-galoisiana}, luego extensión galoisiana de una extensión
+radicial $k'_0$ de $k$; $A'=\widehat A\otimes_k k'$ puede escribirse entonces
+$A'_0\otimes_{k'_0}k'$, donde $A'_0=\widehat A\otimes_k k'_0$ es un anillo
+local completo. Se sabe entonces (Bourbaki, \emph{Alg.}, cap.~VIII,
+\textsection8, prop.~4) que $A'$ es producto directo de anillos locales
+\emph{isomorfos} a $A'_0$ como $k'_0$-álgebras. Ahora bien, uno de estos anillos
+es, por hipótesis, $k'$-isomorfo a un anillo de series formales
+$K'[[T_1,\ldots,T_n]]$, donde $K'$ es una extensión separable de $k'$, y, por
+tanto, \emph{también} una extensión separable de $k'_0$; teniendo en cuenta
+(19.6.4), $A'_0$ es, pues, una $k'_0$-álgebra formalmente lisa. Pero como
+$k'_0$ es un $k$-módulo fielmente plano, proyectivo y de tipo finito, se deduce
+de (19.4.7) que $\widehat A$ es una $k$-álgebra formalmente lisa.
+
+Ya se ha visto (19.6.5) que $a)$ implica $c)$; queda, pues, verificar que
+$c)$ implica $b)$. Ahora bien, si se verifica $c)$, entonces, para toda
+extensión radicial finita $k'$ de $k$ que contenga $k_0$, $A\otimes_k k'$ es
+un anillo local regular cuyo cuerpo residual $K'$ es una extensión separable de
+$k'$; se deduce, por tanto, de (19.6.4) que su completado
+$\widehat A\otimes_k k'$ es $k'$-isomorfo a un anillo de series formales
+$K'[[T_1,\ldots,T_n]]$.
+\end{proof}
+
+\begin{remarks}[19.6.7]
+\label{0.19.6.7-es}
+\begin{enumerate}
+  \item[\rm(i)] Se observará que la hipótesis de que $K$ es de multiplicidad
+  radicial finita sobre $k$ solo se ha utilizado en la demostración de la
+  implicación $b')\Rightarrow a)$.
+  \item[\rm(ii)] Probaremos más adelante (22.5.8) que $a)$ y $c)$ son
+  equivalentes, \emph{sin hipótesis} sobre la extensión $K$ de $k$.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Caso de los homomorfismos locales; teoremas de existencia y
+unicidad}
+\label{subsection:0.19.7-es}
+
+En este número, cuando un anillo semilocal se considera como anillo
+topológico, siempre se sobreentiende que se trata de su topología
+$\mathfrak r$-preádica, donde $\mathfrak r$ es su radical. Todo homomorfismo
+local de anillos locales es, por tanto, automáticamente \emph{continuo}.
+
+\begin{theorem}[19.7.1]
+\label{0.19.7.1-es}
+Sean $A$, $B$ dos anillos locales noetherianos, $\mathfrak m$, $\mathfrak n$
+sus ideales maximales respectivos, $k=A/\mathfrak m$ el cuerpo residual de $A$;
+se suponen $A$ y $B$ provistos respectivamente de las topologías
+$\mathfrak m$-preádica y $\mathfrak n$-preádica. Sea
+$\varphi:A\to B$ un homomorfismo local, y pongamos $B_0=B\otimes_A k$.
+Las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es una $A$-álgebra \emph{formalmente lisa}.
+
+\oldpage[0\textsubscript{IV-1}]{105}
+
+  \item[b)] $B$ es un $A$-módulo \emph{plano} y
+  $B_0=B/\mathfrak mB$ (provisto de la topología cociente) es una $k$-álgebra
+  \emph{formalmente lisa}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+La demostración se realiza en varias etapas.
+
+\medskip
+\noindent\phantomsection\label{0.19.7.1.1-es}\textbf{(19.7.1.1)}\enspace
+Demostremos primero que $b)$ implica $a)$; vamos a aplicar el criterio
+(19.4.7), con $\mathfrak J=\mathfrak m$; en virtud de la segunda hipótesis
+de $b)$, todo se reduce a demostrar que $B$ es un $A$-módulo
+\emph{formalmente proyectivo}. La hipótesis implica que, para todo $h>0$,
+$B/\mathfrak m^hB$ es un $(A/\mathfrak m^h)$-módulo plano
+($\mathbf 0_{\mathrm{III}}$, 10.2.1); como los $\mathfrak m^h$ forman un
+sistema fundamental de entornos de 0 en $A$ y
+$(B/\mathfrak m^hB)\otimes_{A/\mathfrak m^h}k=B_0$, se pueden reemplazar $A$ y
+$B$ por $A/\mathfrak m^h$ y $B/\mathfrak m^hB$ respectivamente y, por tanto,
+suponer $A$ \emph{artiniano} (luego discreto). Como $B_0$ es una $k$-álgebra
+formalmente lisa, es un anillo \emph{regular} (19.6.5); sea
+$(x_i^0)_{1\leq i\leq n}$ un sistema regular de parámetros para $B_0$
+(17.1.6), y, para todo $i$, sea $x_i\in B$ tal que $x_i^0$ sea su imagen
+en $B_0=B/\mathfrak mB$; como los $x_i^0$ engendran el ideal maximal
+$\mathfrak n_0=\mathfrak n/\mathfrak mB$ de $B_0$, los ideales
+\[
+  \mathfrak Q_m=\sum_{i=1}^n(x_i^0)^mB_0 \qquad (m>0)
+\]
+forman un sistema fundamental de entornos de 0 en $B_0$, pues
+$\mathfrak Q_m$ está evidentemente contenido en $\mathfrak n_0^m$ y, por otra
+parte, contiene $\mathfrak n_0^{mn}$. Pongamos
+$\mathfrak J_m=\sum_{i=1}^n x_i^mB$ para todo $m>0$; es claro que
+$\mathfrak n=\mathfrak J_1+\mathfrak mB$; como existe un $h>0$ tal que
+$\mathfrak m^h=0$, se tiene
+$\mathfrak n^m\subset\mathfrak J_1^{m-h}\subset\mathfrak n^{m-h}$ para
+$m>h$, y, como se ha visto que $\mathfrak J_m\supset\mathfrak J_1^{mn}$, se ve
+que los $\mathfrak J_m$ forman un sistema fundamental de entornos de 0 en
+$B$. Todo se reduce, por tanto, a probar que los $B/\mathfrak J_m$ son
+$A$-módulos \emph{libres}, y es lo mismo ver que son
+$A$-módulos \emph{planos} ($\mathbf 0_{\mathrm{III}}$, 10.1.3). Ahora bien,
+la hipótesis de que $(x_i^0)$ es una sucesión $B_0$-regular de elementos del ideal
+maximal de $B_0$ implica la misma propiedad para la sucesión de los $(x_i^0)^m$
+($1\leq i\leq n$) para todo $m>0$ (15.1.20); la conclusión resulta, por tanto, de
+(15.1.16, $b)$ y $c)$).
+\end{proof}
+
+\begin{lemma}[19.7.1.2]
+\label{0.19.7.1.2-es}
+Sean $A$ un anillo topológico, $B$, $C$ dos $A$-álgebras topológicas que
+son anillos locales noetherianos. Se supone además que $C$ es completo
+y que el cuerpo residual $B/\mathfrak m$ de $B$ es un $A$-módulo de tipo finito.
+Sea $E$ el producto tensorial completado $B\widehat\otimes_A C$. Entonces:
+\begin{enumerate}
+  \item[(i)] $E$ es un anillo semilocal noetheriano completo.
+  \item[(ii)] El ideal $\mathfrak mE$ está contenido en el radical de $E$, y
+  para todo $h>0$, $E/\mathfrak m^hE$ es isomorfo a
+  $(B/\mathfrak m^h)\otimes_A C$.
+  \item[(iii)] Si $C$ es un $A$-módulo plano, $E$ es un $B$-módulo plano.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Por definición, $E$ es el completado separado del producto tensorial $B\otimes_A C$
+para la topología definida por los ideales
+$\operatorname{Im}(\mathfrak m^i\otimes_A C)+
+\operatorname{Im}(B\otimes_A\mathfrak n'{}^j)$
+($\mathbf 0_{\mathrm I}$, 7.7.5). Si se pone
+\[
+  \mathfrak r=\operatorname{Im}(\mathfrak m\otimes_A C)+
+  \operatorname{Im}(B\otimes_A\mathfrak n'),
+\]
+se tiene
+$\mathfrak r^{2i}\subset
+\operatorname{Im}(\mathfrak m^i\otimes_A C)+
+\operatorname{Im}(B\otimes_A\mathfrak n'{}^i)\subset\mathfrak r^i$, luego $E$
+es también el completado separado de $B\otimes_A C$ para la topología
+$\mathfrak r$-preádica. Por hipótesis,
+$(B\otimes_A C)/\mathfrak r=(B/\mathfrak m)\otimes_A(C/\mathfrak n')$ es un
+$(C/\mathfrak n')$-módulo de tipo finito, luego un anillo artiniano; además,
+$\mathfrak r/\mathfrak r^2$, al ser cociente de
+\[
+  ((\mathfrak m/\mathfrak m^2)\otimes_A C)
+  \oplus(B\otimes_A(\mathfrak n'/\mathfrak n'{}^2)),
+\]
+es un $(B\otimes_A C)$-módulo de tipo finito; aplicando
+($\mathbf 0_{\mathrm I}$, 7.2.11), se ve, por tanto, que $E$ es un anillo
+\emph{noetheriano}; además, como $E/\mathfrak rE$, isomorfo a
+$(B\otimes_A C)/\mathfrak r$, es artiniano, $E$ es \emph{semilocal}.
+Observemos ahora que $E$, que es isomorfo a
+\[
+  \varprojlim_{i,j}((B/\mathfrak m^i)\otimes_A(C/\mathfrak n'{}^j)),
+\]
+es también isomorfo, por el teorema del doble límite proyectivo, a
+\[
+  \varprojlim_i\left(\varprojlim_j
+  ((B/\mathfrak m^i)\otimes_A(C/\mathfrak n'{}^j))\right)~;
+\]
+
+\oldpage[0\textsubscript{IV-1}]{106}
+
+pero $\varprojlim_j((B/\mathfrak m^i)\otimes_A(C/\mathfrak n'{}^j))$ es el
+completado separado de $(B/\mathfrak m^i)\otimes_A C$, y como $C$ es completo,
+no es sino el propio $(B/\mathfrak m^i)\otimes_A C$,
+siendo $B/\mathfrak m^i$ un $A$-módulo de tipo finito, puesto que
+$\mathfrak m/\mathfrak m^i$ es un $(B/\mathfrak m)$-módulo de tipo finito
+($\mathbf 0_{\mathrm I}$, 7.3.6). Se tiene, pues,
+\[
+  E=\varprojlim_i((B/\mathfrak m^i)\otimes_A C).
+\]
+Para todo entero $h>0$, $\mathfrak m^hE$, al ser un ideal de $E$, es cerrado
+en $E$ ($\mathbf 0_{\mathrm I}$, 7.3.5), luego completo, y por otra parte es
+evidentemente denso en
+\[
+  \varprojlim_i
+  (\operatorname{Im}(\mathfrak m^h/\mathfrak m^{h+i})\otimes_A C),
+\]
+luego igual a este último límite proyectivo. Además, todos los sistemas
+proyectivos considerados están definidos por homomorfismos \emph{sobreyectivos};
+resulta, pues, de ($\mathbf 0_{\mathrm{III}}$, 13.2.2) que
+$E/\mathfrak m^hE$ es isomorfo a
+\[
+  (B/\mathfrak m^h)\otimes_A C
+  =(B\otimes_A C)/\operatorname{Im}(\mathfrak m^h\otimes_A C).
+\]
+En particular, como
+$\operatorname{Im}(\mathfrak m\otimes_A C)\subset\mathfrak r$, esto muestra
+que $\mathfrak mE$ está contenido en $\mathfrak rE$, y por tanto en el radical de
+$E$. Finalmente, la hipótesis de que $C$ es un $A$-módulo plano implica que
+$(B/\mathfrak m^h)\otimes_A C=E/\mathfrak m^hE$ es un
+$(B/\mathfrak m^h)$-módulo plano para todo $h>0$: como $B$ y $E$ son
+noetherianos y $\mathfrak mE$ está contenido en el radical de $E$,
+resulta de ($\mathbf 0_{\mathrm{III}}$, 10.2.2) que $E$ es un $B$-módulo
+plano.
+\end{proof}
+
+\begin{lemma}[19.7.1.3]
+\label{0.19.7.1.3-es}
+Sean $A$ un anillo local noetheriano, $\mathfrak m$ su ideal maximal, $k$ su
+cuerpo residual y $B_0$ una $k$-álgebra; se supone que $B_0$ es un anillo
+local noetheriano, completo y regular. Entonces existe una $A$-álgebra
+topológica $B$ que es un anillo local noetheriano completo, un $A$-módulo plano,
+y tal que $B_0$ sea $k$-isomorfo a
+$B\otimes_A k=B/\mathfrak mB$.
+\end{lemma}
+
+\begin{proof}
+Como $\widehat A$ es plano sobre $A$ y tiene el mismo cuerpo residual, podemos limitarnos
+al caso en que $A$ es \emph{completo}.
+
+Sea $K$ el cuerpo residual de $B_0$, y distingamos dos casos:
+
+\medskip
+\noindent I) $K$ es una extensión \emph{separable} de $k$. En virtud de
+(19.6.4), $B_0$ es $k$-isomorfo a un anillo de series formales
+$K[[T_1,\ldots,T_n]]$. Cuando $B_0=K$, el lema ya ha sido demostrado
+($\mathbf 0_{\mathrm{III}}$, 10.3.1); sea $C$ un anillo local noetheriano
+completo que es un $A$-módulo plano y tal que $C\otimes_A k$ sea isomorfo a
+$K$. Para $n\geq1$, basta tomar (con la notación precedente)
+$B=C[[T_1,\ldots,T_n]]$; se sabe, en efecto (Bourbaki,
+\emph{Alg. conm.}, cap.~III, §~3, n\textsuperscript{o}~4, cor.~3 del teo.~1),
+que $B$ es un $C$-módulo plano, luego también un $A$-módulo plano, y por otra parte,
+es inmediato que $C[[T_1,\ldots,T_n]]\otimes_A k$ es isomorfo a
+$(C/\mathfrak mC)[[T_1,\ldots,T_n]]=B_0$.
+
+\medskip
+\noindent II) $K$ es de \emph{característica} $p>0$, y por consiguiente lo mismo
+ocurre con $k$. Denotemos por $P$ el cuerpo primo $\mathbf F_p$, y por $W(P)$ el anillo
+local completo de los números $p$-ádicos $\mathbf Z_p$, que es un anillo de
+valoración discreta (por tanto \emph{regular}), y tiene a $P$ como cuerpo residual.
+Mostremos primero que existe un homomorfismo continuo de anillos $W(P)\to A$
+que hace así de $A$ una $W(P)$-\emph{álgebra topológica}. En efecto, si
+$j:\mathbf Z\to A$ es el homomorfismo canónico, se tiene
+$j(p\mathbf Z)\subset\mathfrak m$ por hipótesis, de donde
+$j^{-1}(\mathfrak m)=p\mathbf Z$, y por consiguiente $j$ se factoriza en
+$\mathbf Z\to\mathbf Z_{p\mathbf Z}\xrightarrow{f}A$, donde $f$ es un
+homomorfismo local, por tanto continuo, que (puesto que $A$ es completo) se prolonga
+por continuidad al homomorfismo $W(P)\to A$ buscado.
+
+Como $k$ es una extensión separable de $P$, el caso I) muestra que hay un
+homomorfismo local $W(P)\to W(k)$, donde $W(k)$ es un anillo local noetheriano
+completo y un $W(P)$-módulo plano, tal que $W(k)\otimes_{W(P)}P$ sea isomorfo
+a $k$. Además, como el uniformizante $p$ de $W(P)$ es un elemento
+$W(k)$-regular por planitud ($\mathbf 0_{\mathrm I}$, 6.3.4) y como
+
+\oldpage[0\textsubscript{IV-1}]{107}
+
+$W(k)/pW(k)=k$, $pW(k)$ es el ideal maximal de $W(k)$, lo que implica que este
+último anillo es un \emph{anillo completo de valoración discreta} (Bourbaki,
+\emph{Alg. conm.}, cap.~VI, §~3, n\textsuperscript{o}~5, prop.~9). Por
+(19.7.1.1) se ve además (puesto que $k$ es separable sobre $P$, y por tanto una
+$P$-álgebra formalmente lisa (19.6.1)) que $W(k)$ es una $W(P)$-álgebra
+\emph{formalmente lisa}. El $W(P)$-homomorfismo continuo $W(k)\to k$ se
+factoriza, pues, en $W(k)\to A\to k$ (19.3.11), lo que permite considerar $A$
+como una $W(k)$-álgebra topológica. Aplicando ahora el caso I) a $B_0$
+considerado como $P$-álgebra y a $W(P)$, se ve que existe una
+$W(P)$-álgebra $B_P$ que es un anillo local noetheriano completo, un
+$W(P)$-módulo plano, y tal que $B_P\otimes_{W(P)}P$ sea $P$-isomorfo a
+$B_0$. Utilizando de nuevo el hecho de que $W(k)$ es una $W(P)$-álgebra
+formalmente lisa, se ve por (19.3.11) que el homomorfismo compuesto
+$W(k)\to k\to B_0$ se factoriza en $W(k)\to B_P\to B_0$; además, como
+$k=W(k)/pW(k)$, se tiene
+$B_P\otimes_{W(k)}k=B_P/pB_P=B_P\otimes_{W(P)}P=B_0$. Mostremos que $B_P$ es
+un $W(k)$-módulo \emph{plano}; como $W(k)$ es un anillo de valoración discreta
+cuyo uniformizante es $p$, basta verificar que $B_P$ es un
+$W(k)$-módulo \emph{sin torsión} ($\mathbf 0_{\mathrm I}$, 6.3.4), o también
+que $p$ es un elemento $B_P$-regular, lo que resulta de que $B_P$ es un
+$W(P)$-módulo plano ($\mathbf 0_{\mathrm I}$, 6.3.4).
+
+Pongamos ahora
+\[
+  B=B_P\widehat\otimes_{W(k)}A
+\]
+y observemos que, al ser el cuerpo residual de $A$ igual al de $W(k)$, es
+\emph{a fortiori} un $W(k)$-módulo de tipo finito. Resulta, pues, en primer lugar
+de (19.7.1.2) que $B$ es un anillo semilocal noetheriano completo,
+estando $\mathfrak mB$ contenido en el radical de $B$; además,
+$B/\mathfrak mB$ es $k$-isomorfo a
+$B_P\otimes_{W(k)}k=B_0$, luego $B$ es en realidad un anillo local. Como $B_P$
+es un $W(k)$-módulo plano, (19.7.1.2) muestra finalmente que $B$ es un $A$-módulo
+plano. C.Q.F.D.
+\end{proof}
+
+\begin{lemma}[19.7.1.4]
+\label{0.19.7.1.4-es}
+Sean $A$ un anillo, $\mathfrak J$ un ideal de $A$, y $M$, $N$ dos $A$-módulos
+separados para la topología $\mathfrak J$-preádica. Se supone además que $N$
+es completo para la topología $\mathfrak J$-preádica y que $M$ es un
+$A$-módulo plano. Sea $u:N\to M$ un $A$-homomorfismo; si
+$u\otimes1:N\otimes_A(A/\mathfrak J)\to M\otimes_A(A/\mathfrak J)$ es
+biyectivo, entonces $u$ es biyectivo.
+\end{lemma}
+
+\begin{proof}
+Tomando los módulos graduados asociados con respecto a las filtraciones
+$\mathfrak J$-preádicas, resulta de las hipótesis sobre $M$ y $N$ relativas
+a las topologías $\mathfrak J$-preádicas que basta probar que
+$\gr(u):\gr_\bullet(N)\to\gr_\bullet(M)$ es \emph{biyectivo} (Bourbaki,
+\emph{Alg. conm.}, cap.~III, §~2, n\textsuperscript{o}~8, cor.~3 del teo.~1).
+Ahora bien, se tiene un diagrama conmutativo
+\[
+\xymatrix{
+  \gr_0(N)\otimes_{A_0}\gr_\bullet(A)
+    \ar[r]^-{\gr_0(u)\otimes1}\ar[d]_{\varphi_N} &
+  \gr_0(M)\otimes_{A_0}\gr_\bullet(A)\ar[d]^{\varphi_M} \\
+  \gr_\bullet(N)\ar[r]_-{\gr(u)} & \gr_\bullet(M)
+}
+\]
+
+\oldpage[0\textsubscript{IV-1}]{108}
+
+donde $A_0=A/\mathfrak J=\gr_0(A)$, y $\varphi_M$ y $\varphi_N$ son las
+aplicaciones canónicas ($\mathbf 0_{\mathrm{III}}$, 10.1.1.2). Por
+hipótesis, $\gr_0(u)$ es biyectivo, al igual que $\varphi_M$
+($\mathbf 0_{\mathrm{III}}$, 10.2.1), y $\varphi_N$ es sobreyectivo; se
+deduce primero que $\gr_0(u)\otimes1$ es biyectivo, después que $\varphi_N$ es
+inyectivo, luego biyectivo, y finalmente que $\gr(u)$ es biyectivo.
+\end{proof}
+
+\begin{lemma}[19.7.1.5]
+\label{0.19.7.1.5-es}
+Sean $A$ un anillo noetheriano, $\mathfrak J$ un ideal de $A$, y $B$, $B'$ dos
+$A$-álgebras que son anillos locales noetherianos, siendo los homomorfismos
+$A\to B$, $A\to B'$ continuos para la topología $\mathfrak J$-preádica
+sobre $A$. Se supone que:
+\begin{enumerate}
+  \item[$1^{\mathrm o}$] $B$ y $B'$ son completos para las topologías
+  $\mathfrak J$-preádicas;
+  \item[$2^{\mathrm o}$] $B$ es una $A$-álgebra formalmente lisa;
+  \item[$3^{\mathrm o}$] $B'$ es un $A$-módulo plano.
+\end{enumerate}
+Pongamos $A_0=A/\mathfrak J$, y sea
+$u_0:B\otimes_A A_0\to B'\otimes_A A_0$ un $A_0$-isomorfismo; entonces
+existe un $A$-isomorfismo $u:B\to B'$ tal que $u_0=u\otimes1$ (lo que
+implica que $B'$ es una $A$-álgebra formalmente lisa y $B$ un $A$-módulo
+plano).
+\end{lemma}
+
+\begin{proof}
+Pongamos $B_0=B\otimes_A A_0$, $B'_0=B'\otimes_A A_0$. Observemos que, si
+$\mathfrak m$ y $\mathfrak m'$ son los ideales maximales de $B$ y $B'$, las
+topologías $\mathfrak J$-preádicas sobre $B$ y $B'$ son separadas, puesto que
+$\mathfrak JB\subset\mathfrak m$ y $\mathfrak JB'\subset\mathfrak m'$; además,
+como $\mathfrak JB'$ es cerrado en $B'$ para la topología
+$\mathfrak J$-preádica, el homomorfismo compuesto
+$B\to B_0\xrightarrow{u_0}B'_0$, que es continuo para las topologías
+$\mathfrak J$-preádicas, se factoriza en $B\xrightarrow{u}B'\to B'_0$, donde
+$u$ es un $A$-homomorfismo continuo (19.3.10). Se tiene evidentemente
+$u_0=u\otimes1$, y la hipótesis de que $u_0$ es biyectivo implica que lo mismo
+ocurre con $u$ en virtud de (19.7.1.4).
+\end{proof}
+
+\medskip
+\noindent\textbf{(19.7.1.6)}\enspace
+\emph{Fin de la demostración.} --- Para terminar de probar (19.7.1), hay que
+mostrar que $a)$ implica $b)$; ya se sabe que $a)$ implica que $B_0$ es
+una $k$-álgebra formalmente lisa (19.3.5, (iii)), por tanto basta probar
+que $B$ es un $A$-módulo plano. Equivale a establecer que $\widehat B$
+es un $\widehat A$-módulo plano (Bourbaki, \emph{Alg. conm.}, cap.~III, §~5,
+n\textsuperscript{o}~4, prop.~4), y se sabe que $\widehat B$ es una
+$\widehat A$-álgebra formalmente lisa (19.3.6); podemos, pues, limitarnos al
+caso en que $A$ y $B$ son completos. Como $B_0$ es una $k$-álgebra formalmente
+lisa, es un anillo regular (19.6.5) y completo
+($\mathbf 0_{\mathrm I}$, 6.3.5); aplicando (19.7.1.3), se ve que existe
+una $A$-álgebra $B'$ que es un anillo local noetheriano completo y un
+$A$-módulo plano, un homomorfismo local $A\to B'$ y un $k$-isomorfismo
+$B_0\simeq B'_0=B'\otimes_A k$. Basta entonces aplicar (19.7.1.5),
+tomando como $\mathfrak J$ el ideal maximal de $A$, para obtener que $B$ es
+$A$-isomorfo a $B'$, y por tanto es un $A$-módulo plano. C.Q.F.D.
+
+\begin{theorem}[19.7.2]
+\label{0.19.7.2-es}
+Sean $A$ un anillo local noetheriano, $\mathfrak J$ un ideal contenido en
+el ideal maximal de $A$, $A_0=A/\mathfrak J$, $B_0$ un anillo local noetheriano
+completo y $A_0\to B_0$ un homomorfismo local que hace de $B_0$ una
+$A_0$-álgebra formalmente lisa. Entonces existe un anillo local noetheriano
+completo $B$, un homomorfismo local $A\to B$ que hace de $B$ un $A$-módulo
+plano, y un $A_0$-isomorfismo
+$u:B\otimes_A A_0\xrightarrow{\sim}B_0$. Si $(B',u')$ es un par
+que satisface las mismas condiciones que $(B,u)$, existe un $A$-isomorfismo
+$v:B\xrightarrow{\sim}B'$ que hace conmutativo el diagrama
+\[
+\xymatrix{
+  B\otimes_A A_0\ar[rr]^{v\otimes1}_{\sim}\ar[dr]^{\sim}_u &&
+  B'\otimes_A A_0\ar[dl]^{u'}_{\sim} \\
+  & B_0
+}
+\]
+\end{theorem}
+
+\oldpage[0\textsubscript{IV-1}]{109}
+
+\begin{proof}
+Sea $\mathfrak m$ el ideal maximal de $A$, de modo que
+$\mathfrak m_0=\mathfrak m/\mathfrak J$ es el ideal maximal de $A_0$, teniendo $A$ y
+$A_0$ el mismo cuerpo residual $k$. Pongamos
+$B_{00}=B_0\otimes_{A_0}k$; como $B_{00}$ es una $k$-álgebra formalmente
+lisa (19.3.5, (iii)), es un anillo local regular (19.6.5); aplicando
+(19.7.1.3), se ve que existe una $A$-álgebra topológica $B$ que es un
+anillo local noetheriano completo, un $A$-módulo plano, y para la cual se tiene un
+$k$-isomorfismo
+$u_{00}:B\otimes_A k\xrightarrow{\sim}B_{00}$. Observemos que, en virtud de (19.7.1),
+$B$ es una $A$-álgebra formalmente lisa, luego
+$B\otimes_A A_0=B/\mathfrak JB$ es una $A_0$-álgebra formalmente lisa
+(19.3.5, (iii)) y un anillo local noetheriano completo; además, $B_0$ es un
+$A_0$-módulo plano en virtud de la hipótesis y de (19.7.1); como se tiene un
+$k$-isomorfismo
+\[
+  u_{00}:B\otimes_A k=(B\otimes_A A_0)\otimes_{A_0}k
+  \xrightarrow{\sim}B_0\otimes_{A_0}k=B_{00},
+\]
+se deduce de (19.7.1.5), aplicado sustituyendo allí $A$ por $A_0$ y
+$\mathfrak J$ por $\mathfrak m_0$, que existe un $A_0$-isomorfismo
+$u:B\otimes_A A_0\xrightarrow{\sim}B_0$ tal que $u_{00}=u\otimes1$. En cuanto a
+la afirmación de unicidad, nótese que los ideales $\mathfrak J^hB$ (resp.
+$\mathfrak J^hB'$) son cerrados en $B$ (resp. $B'$)
+($\mathbf 0_{\mathrm I}$, 7.3.5), luego $B$ y $B'$ son separados y completos
+para las topologías $\mathfrak J$-preádicas (Bourbaki, \emph{Top. gén.},
+cap.~III, 3\textsuperscript{a} ed., §~3, n\textsuperscript{o}~5, cor.~2 de la
+prop.~9); se tiene por hipótesis un $A_0$-isomorfismo
+$v_0:B\otimes_A A_0\xrightarrow{\sim}B'\otimes_A A_0$ tal que
+$u'\circ v_0=u$; como $B$ es una $A$-álgebra formalmente lisa y $B'$ un
+$A$-módulo plano, se puede aplicar (19.7.1.5), de donde resulta la existencia del
+$A$-isomorfismo $v$ requerido.
+\end{proof}
+
+\begin{remarks}[19.7.3]
+\label{0.19.7.3-es}
+\begin{enumerate}
+  \item[(i)] Se observará que la afirmación de unicidad de (19.7.2) sigue siendo
+  válida si se supone solamente que $B$ y $B'$ son completos \emph{para
+  las topologías $\mathfrak J$-preádicas}. Ignoramos si se puede
+  mejorar del mismo modo la afirmación de existencia, es decir, si se puede
+  prescindir de suponer que el anillo local $B_0$ es \emph{completo} (para su topología
+  $\mathfrak n_0$-preádica, denotando por $\mathfrak n_0$ su ideal
+  maximal) exigiendo solamente que $B$ sea completo \emph{para la topología
+  $\mathfrak J$-preádica}. Cuando $A_0$ es completo para la topología
+  $\mathfrak m$-preádica, se puede ver que este problema se reduce al siguiente:
+  si $B_0$ es un anillo local noetheriano regular (no necesariamente
+  completo) que contiene el cuerpo primo $\mathbf F_p=\mathbf Z/p\mathbf Z$,
+  ¿existe para todo $n>1$ una $(\mathbf Z/p^n\mathbf Z)$-álgebra plana $B$
+  tal que $B/pB$ sea isomorfa a $B_0$?
+  \item[(ii)] Se observará que, en general, el isomorfismo $v$ cuya existencia se
+  afirma en (19.7.2) \emph{no es único} (cf.~(19.8.7)).
+\end{enumerate}
+\end{remarks}
+
+\subsection{Álgebras de Cohen y $p$-anillos de Cohen; aplicación a la
+estructura de los anillos locales completos}
+\label{subsection:0.19.8-es}
+
+Los resultados de esta sección son aplicaciones inmediatas de los teoremas
+de (19.7), pero merecen explicitarse en razón de su importancia
+práctica.
+
+\begin{definition}[19.8.1]
+\label{0.19.8.1-es}
+Sean $A$, $B$ dos anillos locales noetherianos, $\mathfrak m$ el ideal maximal
+de $A$, $k=A/\mathfrak m$ su cuerpo residual,
+$\varphi:A\to B$ un homomorfismo local, que hace de $B$ una $A$-álgebra. Se
+dice que $B$ es una \emph{$A$-álgebra de Cohen} si satisface las condiciones
+siguientes:
+\begin{enumerate}
+  \item[(i)] $B$ es un anillo \emph{completo}.
+  \item[(ii)] $B$ es un $A$-módulo \emph{plano}.
+  \item[(iii)] $B\otimes_A k$ es un \emph{cuerpo} (es decir,
+  $\mathfrak mB$ es el ideal maximal de $B$) que es una \emph{extensión
+  separable} de $k$.
+\end{enumerate}
+\end{definition}
+
+\oldpage[0\textsubscript{IV-1}]{110}
+
+\begin{theorem}[19.8.2]
+\label{0.19.8.2-es}
+Sean $A$ un anillo local noetheriano y $k$ su cuerpo residual.
+\begin{enumerate}
+  \item[(i)] Si $B$ es una $A$-álgebra de Cohen, $B$ es una $A$-álgebra
+  formalmente lisa. Para todo anillo local noetheriano completo $C$, todo
+  homomorfismo local $A\to C$ y todo ideal $\mathfrak J\neq C$ de $C$,
+  todo $A$-homomorfismo $B\to C/\mathfrak J$ se factoriza, por tanto, en
+  $B\xrightarrow{v}C\to C/\mathfrak J$, donde $v$ es un $A$-homomorfismo
+  (necesariamente local).
+  \item[(ii)] Para todo cuerpo $K$, extensión separable de $k$, existe una
+  $A$-álgebra de Cohen $B$ tal que $B\otimes_A k$ sea $k$-isomorfa a $K$,
+  y tal $A$-álgebra es única salvo isomorfismo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Como $K$ es una $k$-álgebra formalmente lisa (19.6.1), la afirmación (i)
+resulta de (19.7.1). Para demostrar (ii), se puede reducir al caso en que $A$ es
+\emph{completo}, pues equivale decir que $B$ es un $A$-módulo plano
+o un $\widehat A$-módulo plano ($\mathbf 0_{\mathrm{III}}$, 10.2.3), se tiene
+$\mathfrak mB=\mathfrak m\widehat AB$ y $k$ es el cuerpo residual de
+$\widehat A$. Basta entonces aplicar (19.7.2) tomando
+$\mathfrak J=\mathfrak m$ y $B_0=K$ (y utilizando (19.6.1)).
+\end{proof}
+
+\begin{definition}[19.8.3]
+\label{0.19.8.3-es}
+Se llama \emph{anillo local primo} a un anillo local de la forma
+$\mathbf Z_{p\mathbf Z}$, donde $p\mathbf Z$ es un ideal primo de $\mathbf Z$.
+Se llama \emph{anillo local completo primo} al completado de un anillo local
+primo.
+\end{definition}
+
+Los anillos locales primos son, por tanto, de dos tipos:
+\begin{enumerate}
+  \item[$1^{\mathrm o}$] Los que corresponden a los ideales maximales
+  $p\mathbf Z$, donde $p\neq0$ es un número primo; $\mathbf Z_{p\mathbf Z}$
+  es un anillo de valoración discreta, cuyo completado es \emph{el anillo de los
+  enteros $p$-ádicos}, denotado ordinariamente por $\mathbf Z_p$\footnote{Esta notación,
+  utilizada actualmente de manera universal, está en este caso en conflicto con la
+  notación $A_f$ adoptada en ($\mathbf 0_{\mathrm I}$, 1.2.3): con
+  $A=\mathbf Z$ y $f=p$, $A_f$ significa, en efecto, el anillo de los números
+  racionales de la forma $k/p^n$ ($k\in\mathbf Z$, $n$ entero $\geq0$);
+  evitaremos siempre utilizar la notación $\mathbf Z_p$ para designar este
+  último anillo.}.
+  \item[$2^{\mathrm o}$] Para el ideal primo $p\mathbf Z=(0)$,
+  $\mathbf Z_{p\mathbf Z}$ es el cuerpo de los números racionales $\mathbf Q$,
+  idéntico a su completado (siendo la topología, naturalmente, la topología
+  de anillo local noetheriano, por tanto aquí la topología discreta).
+\end{enumerate}
+
+La terminología de (19.8.3), análoga a la de los «cuerpos primos», se
+justifica de la misma manera: para todo anillo local $A$, consideremos
+el homomorfismo canónico $\varphi:\mathbf Z\to A$, y sea $p\mathbf Z$
+la imagen inversa por este homomorfismo del ideal maximal $\mathfrak m$ de
+$A$; $p\mathbf Z$ es un ideal primo de $\mathbf Z$ y el homomorfismo
+anterior se factoriza, por tanto, en
+$\mathbf Z\to\mathbf Z_{p\mathbf Z}\xrightarrow{\psi}A$; además, como
+$\varphi$ es el \emph{único} homomorfismo de $\mathbf Z$ en $A$, $p$ y
+$\psi$ están determinados de manera \emph{única}. En otras palabras, para todo anillo
+local $A$, hay un \emph{único homomorfismo} $\psi:P\to A$, donde $P$ es un
+anillo local primo; si además $A$ es separado y completo, se puede prolongar
+por completación este homomorfismo, y hay, por tanto, un \emph{único
+homomorfismo} $\widehat\psi:\widehat P\to A$, donde $\widehat P$ es un anillo
+local completo primo. Además, por paso a los cocientes, $\psi$ induce un
+homomorfismo del cuerpo residual $\mathbf F_p$ si $p>0$ (resp. $\mathbf Q$ si
+$p=0$) en el cuerpo residual $k$ de $A$, y $p$ es, por tanto, la
+\emph{característica} de $k$.
+
+Si se toma en particular como $A$ un anillo local primo (resp. completo
+primo), se ve que en tal anillo no existe más que \emph{un solo
+endomorfismo}, a saber, la identidad.

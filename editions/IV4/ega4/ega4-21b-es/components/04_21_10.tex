@@ -1,0 +1,685 @@
+\subsection{Imágenes inversas e imágenes directas de ciclos 1-codimensionales}
+\label{subsection:IV.21.10}
+
+En un capítulo posterior, dedicado a la teoría de intersecciones, se desarrollarán sistemáticamente las nociones de imagen inversa e imagen directa de ciclos.
+En el presente número nos limitaremos a definir estas nociones en ciertos casos particulares útiles y, para los ciclos $1$-codimensionales, estas definiciones se elegirán de modo que sean compatibles con las definiciones correspondientes para los divisores \sref{IV.21.4} y \sref{IV.21.5}, habida cuenta del homomorfismo $\operatorname{cyc}$ definido en \sref{IV.21.6}.
+
+\begin{env}[21.10.1]
+\label{IV.21.10.1}
+\oldpage[IV-4]{289}
+Sean $X$, $X'$ dos preesquemas localmente noetherianos, $f:X'\to X$ un morfismo y $T$ una parte de $X$;
+supongamos que la imagen por $f$ de todo punto maximal de $X'$ sea un punto maximal de $X$, y que, para todo $x'\in X'^{(1)}$ (es decir, tal que $\dim(\sh{O}_{X',x'})=1$), se cumpla una de las tres condiciones siguientes para el punto $x=f(x')$:
+\begin{enumerate}[label=(\roman*)]
+  \item $x\notin T$;
+  \item $x\in X^{(1)}$ y $\sh{O}_{X',x'}$ es un $\sh{O}_{X,x}$-módulo plano;
+  \item el anillo $\sh{O}_{X,x}$ es factorial y $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$.
+\end{enumerate}
+Bajo estas condiciones nos proponemos, para todo ciclo $1$-codimensional $Z$ sobre $X$ cuyo soporte esté contenido en $T$, definir un ciclo $1$-codimensional $Z'=f^*(Z)$ de modo que $Z\mapsto f^*(Z)$ sea un homomorfismo de grupos ordenados desde el subgrupo de $\mathfrak{Z}^1(X)$ formado por los ciclos con soporte contenido en $T$ hacia el grupo ordenado $\mathfrak{Z}^1(X')$.
+Para ello, sea
+\[
+\label{IV.21.10.1.1}
+  Z=\sum_{x\in T\cap X^{(1)}}n_x\cdot\overline{\{x\}}
+  \tag{21.10.1.1}
+\]
+donde la familia de los $x\in T\cap X^{(1)}$ tales que $n_x\neq0$ es localmente finita.
+Para todo $x'\in X'^{(1)}$, definamos un entero $n_{x'}$ del modo siguiente, poniendo $x=f(x')$:
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item si $x\notin T$, se toma $n_{x'}=0$;
+  \item si $x\in X^{(1)}$ y si $\sh{O}_{X',x'}$ es un $\sh{O}_{X,x}$-módulo plano, se sabe por \sref{IV.6.1.1} que $\dim(\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'})=0$; dicho de otro modo, $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ es un $\sh{O}_{X',x'}$-módulo de longitud finita $\lambda_{x'}$, y se toma $n_{x'}=\lambda_{x'}n_x$;
+  \item si $\sh{O}_{X,x}$ es factorial y $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, se sabe por \sref{IV.21.6.9} que el homomorfismo canónico $\operatorname{cyc}:\operatorname{Div}(\sh{O}_{X,x})\to\mathfrak{Z}^1(\Spec(\sh{O}_{X,x}))$ es biyectivo; por otra parte, como $\dim(\sh{O}_{X',x'})=1$ y $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, $\operatorname{Ass}(\sh{O}_{X',x'})$ consta únicamente de los puntos maximales de $\Spec(\sh{O}_{X',x'})$, de modo que la hipótesis sobre $f$ implica $f(\operatorname{Ass}(\sh{O}_{X',x'}))\subset\operatorname{Ass}(\sh{O}_{X,x})$, y de \sref{IV.21.4.5}, (ii), resulta que está definido el homomorfismo $f^*:\operatorname{Div}(\sh{O}_{X,x})\to\operatorname{Div}(\sh{O}_{X',x'})$;
+por último, como $x'$ es el único punto cerrado de $\Spec(\sh{O}_{X',x'})$, $\mathfrak{Z}^1(\Spec(\sh{O}_{X',x'}))$ es canónicamente isomorfo a $\bb{Z}$.
+\end{enumerate}
+Se tiene, pues, un homomorfismo canónico compuesto
+\[
+\label{IV.21.10.1.2}
+  \mathfrak{Z}^1(\Spec(\sh{O}_{X,x}))
+  \xrightarrow{\operatorname{cyc}^{-1}}\operatorname{Div}(\sh{O}_{X,x})
+  \xrightarrow{f^*}\operatorname{Div}(\sh{O}_{X',x'})
+  \xrightarrow{\operatorname{cyc}}\mathfrak{Z}^1(\Spec(\sh{O}_{X',x'}))
+  \xrightarrow{\sim}\bb{Z}
+  \tag{21.10.1.2}
+\]
+Si $Z_x$ es el ciclo $\sum_{y\in\Spec(\sh{O}_{X,x})\cap X^{(1)}}n_y(\overline{\{y\}}\cap\Spec(\sh{O}_{X,x}))$ sobre $\Spec(\sh{O}_{X,x})$, se toma entonces como $n_{x'}$ la \emph{imagen} de $Z_x$ por el homomorfismo \sref{IV.21.10.1.2}.
+\end{env}
+
+\oldpage[IV-4]{290}
+\begin{env}[21.10.2]
+\label{IV.21.10.2}
+Nos proponemos demostrar que:
+\begin{enumerate}[label=\emph{\Alph*)}]
+  \item Cuando dos de las condiciones 1\textsuperscript{o}, 2\textsuperscript{o}, 3\textsuperscript{o} de \sref{IV.21.10.1} se satisfacen \emph{simultáneamente}, los valores correspondientes de $n_{x'}$ \emph{coinciden}.
+  \item El conjunto de los $x'\in X'^{(1)}$ tales que $n_{x'}\neq0$ es \emph{localmente finito} en $X'$.
+\end{enumerate}
+
+Para demostrar A), supongamos primero que $x\notin T$ y que $x$ satisface una de las condiciones 2\textsuperscript{o} o 3\textsuperscript{o} de \sref{IV.21.10.1};
+entonces $n_x=0$ y, si estamos en el caso 2\textsuperscript{o}, se tiene $n_{x'}=0$;
+si estamos en el caso 3\textsuperscript{o}, se tiene $Z_x=0$ puesto que $\Supp(Z)\subset T$, y por tanto también $n_{x'}=0$.
+Queda por considerar el caso en que se está a la vez en los casos 2\textsuperscript{o} y 3\textsuperscript{o};
+entonces, puesto que $\dim(\sh{O}_{X,x})=1$, $\sh{O}_{X,x}$ es un anillo de valoración discreta;
+si $t$ es un uniformizador de este anillo, el divisor correspondiente a $Z_x$ es $\operatorname{div}(t^{n_x})$ en $\operatorname{Div}(\sh{O}_{X,x})$, y su imagen en $\operatorname{Div}(\sh{O}_{X',x'})$ es el divisor de $t'^{n_x}$, donde $t'$ es el elemento (regular) de $\sh{O}_{X',x'}$ imagen de $t$.
+Evidentemente, podemos limitarnos al caso $n_x=1$; entonces la definición \sref{IV.21.6.5.1} muestra que la imagen de $Z_x$ por \sref{IV.21.10.1.2} es el número $\lambda_{x'}$, lo que termina la demostración de A).
+
+Demostremos ahora B).
+Pongamos $T_0=\Supp(Z)\subset T$, $T'_0=f^{-1}(T_0)$;
+basta demostrar que la relación $n_{x'}\neq0$ implica que $x'$ pertenece al conjunto de los puntos maximales de $T'_0$, siendo este último localmente finito en $X'$.
+Es inmediato que necesariamente se tiene $x'\in T'_0$;
+si $x'$ no fuera maximal en el conjunto cerrado $T'_0$, existiría
+\oldpage[IV-4]{291}
+una generalización $y'$ de $x'$ en $T'_0$, distinta de $x'$, y como $x'\in X'^{(1)}$, $y'$ sería necesariamente un punto maximal de $X'$;
+por consiguiente, $y=f(y')$ sería un punto maximal de $X$ por hipótesis;
+pero esto es absurdo, puesto que $y\in T_0$ y $T_0$ es puramente de codimensión $1$ en $X$.
+\end{env}
+
+\begin{env}[21.10.3]
+\label{IV.21.10.3}
+Ahora podemos poner
+\[
+  f^*(Z)=\sum_{x'\in X'^{(1)}}n_{x'}\overline{\{x'\}},
+\]
+teniendo sentido la suma del segundo miembro en virtud de lo demostrado en \sref{IV.21.10.2};
+se dice que el ciclo $1$-codimensional $f^*(Z)$ es la \emph{imagen inversa} de $Z$ por $f$.
+Es inmediato que la aplicación $f^*$ así definida es un homomorfismo de grupos ordenados.
+Además, si $U$ es un abierto de $X$, $V$ un abierto de $X'$ tal que $f(V)\subset U$ y $f':V\to U$ la restricción de $f$, de las definiciones resulta inmediatamente que
+\[
+\label{IV.21.10.3.1}
+  f'^*(Z|U)=f^*(Z)|V.
+  \tag{21.10.3.1}
+\]
+
+Denotemos por $\Gamma_T(\mathscr{Z}^1_X)$ el mayor subhaz de grupos conmutativos de $\mathscr{Z}^1_X$ cuyo soporte está contenido en $T$;
+de la relación \sref{IV.21.10.3.1} resulta que las aplicaciones $\Gamma(U,\Gamma_T(\mathscr{Z}^1_X))\to\Gamma(V,\mathscr{Z}^1_{X'})$ que acabamos de definir determinan un homomorfismo de haces de grupos conmutativos ordenados sobre $X'$
+\[
+  \psi^*(\Gamma_T(\mathscr{Z}^1_X))\to\mathscr{Z}^1_{X'}
+\]
+donde $\psi$ es la aplicación continua subyacente al morfismo $f$.
+\end{env}
+
+\begin{proposition}[21.10.4]
+\label{IV.21.10.4}
+Supongamos satisfechas las condiciones de \sref{IV.21.10.1}.
+Entonces, para todo divisor $D$ sobre $X$ tal que $\Supp(D)\subset T$ y esté definido $f^*(D)$ \sref{IV.21.4.2}, se tiene
+\[
+\label{IV.21.10.4.1}
+  \operatorname{cyc}(f^*(D))=f^*(\operatorname{cyc}(D)).
+  \tag{21.10.4.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Como la cuestión es local sobre $X$, podemos limitarnos al caso en que $X=\Spec(A)$ es afín, $D=\operatorname{div}(t)$, $t$ es un elemento regular no invertible de $A$ y el subpreesquema $Y(D)$ \sref{IV.21.2.12} tiene un único punto maximal $y$, de modo que $\operatorname{cyc}(D)=n_y\cdot\overline{\{y\}}$, donde $n_y$ es la longitud de $\sh{O}_{X,y}/t_y\sh{O}_{X,y}$ \sref{IV.21.6.5.1}.
+En la demostración de \sref{IV.21.10.2}, B), hemos visto que los puntos $x'\in X'$ tales que $\operatorname{mult}_{x'}(f^*(\operatorname{cyc}(D)))\neq0$ son puntos maximales de $f^{-1}(\overline{\{y\}})$.
+Si el punto $x'$ está en el caso 3\textsuperscript{o} de \sref{IV.21.10.1}, la igualdad de las multiplicidades en $x'$ de los dos miembros de \sref{IV.21.10.4.1} resulta de la definición de $n_{x'}$ mediante el homomorfismo \sref{IV.21.10.1.2}.
+Supongamos, por el contrario, que $x'$ está en el caso 2\textsuperscript{o} de \sref{IV.21.10.1}, y sea $x=f(x')$;
+puesto que $x\in X^{(1)}\cap\overline{\{y\}}$, se tiene necesariamente $x=y$.
+Observemos ahora que $f^*(D)=\operatorname{div}(t')$, donde $t'$ es la imagen de $t$ en $\Gamma(X',\sh{O}_{X'})$, y $Y(f^*(D))=f^{-1}(Y(D))$;
+la multiplicidad de $f^*(D)$ en el punto $x'$ es, pues, la longitud $n'_{x'}$ del $\sh{O}_{X',x'}$-módulo
+\[
+  \sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}
+  =(\sh{O}_{X,y}/t_y\sh{O}_{X,y})\otimes_{\sh{O}_{X,y}}\sh{O}_{X',x'};
+\]
+como de \sref{IV.4.7.1} resulta que $n'_{x'}=\lambda_{x'}n_y$, las multiplicidades en el punto $x'$ de los dos miembros de \sref{IV.21.10.4.1} son también iguales, lo que termina la demostración.
+\end{proof}
+
+\begin{env}[21.10.5]
+\label{IV.21.10.5}
+\oldpage[IV-4]{292}
+Supongamos ahora que $f:X'\to X$ es un morfismo de preesquemas localmente noetherianos que transforma todo punto maximal de $X'$ en un punto maximal de $X$, y supongamos además que, para toda parte cerrada rara $T$ de $X$, $f$ satisface las condiciones de \sref{IV.21.10.1};
+esto significa también que, para todo $x'\in X'^{(1)}$, o bien $x=f(x')$ es un punto maximal de $X$, o bien $x'$ satisface una de las condiciones (ii), (iii) de \sref{IV.21.10.1}.
+Teniendo en cuenta que todo ciclo $1$-codimensional tiene soporte raro en $X$, se ve que $f^*(Z)$ está definido para todo ciclo $1$-codimensional $Z$ sobre $X$;
+en virtud de \sref{IV.21.10.3.1}, se ha definido así un homomorfismo de haces de grupos conmutativos ordenados
+\[
+  \psi^*(\mathscr{Z}^1_X)\to\mathscr{Z}^1_{X'}.
+\]
+Si además, para todo divisor $D$ sobre $X$, está definido $f^*(D)$ \sref{IV.21.4.5}, el hecho de que el soporte de $D$ sea raro en $X$ \sref{IV.21.6.6} implica que \sref{IV.21.10.4} es aplicable y, por tanto, se tiene la fórmula \sref{IV.21.10.4.1} para todo divisor $D$ sobre $X$.
+En particular:
+\end{env}
+
+\begin{proposition}[21.10.6]
+\label{IV.21.10.6}
+Sean $X$, $X'$ dos preesquemas localmente noetherianos y $f:X'\to X$ un morfismo plano.
+Entonces $f^*(Z)$ está definido para todo ciclo $1$-codimensional $Z$ sobre $X$, $f^*(D)$ está definido para todo divisor $D$ sobre $X$ y se tiene la relación \sref{IV.21.10.4.1}.
+\end{proposition}
+
+\begin{proof}
+En efecto, si $x'\in X'^{(1)}$ es tal que $x=f(x')$ no es maximal, de \sref{IV.6.1.1} resulta necesariamente que $x\in X^{(1)}$, de modo que estamos en el caso (ii) de \sref{IV.21.10.1}.
+Podemos, pues, aplicar \sref{IV.21.10.5}, teniendo en cuenta \sref{IV.21.4.5} y \sref{IV.2.3.4}.
+\end{proof}
+
+\begin{remark}[21.10.7]
+\label{IV.21.10.7}
+La existencia de $f^*(Z)$ para todo ciclo $1$-codimensional $Z$ sobre $X$ resulta ya de la hipótesis de que $f$ es \emph{plano en los puntos $x'$ de $X'$ de codimensión $\leq1$ en $X'$} (es decir, tales que $\dim\sh{O}_{X',x'}\leq1$);
+en efecto, para todo punto maximal $z'\in X'$, de \sref{IV.6.1.1} resulta que $z=f(z')$ es un punto maximal de $X$, puesto que $\dim\sh{O}_{X,z}\leq\dim\sh{O}_{X',z'}=0$.
+Asimismo, si $x'\in X'^{(1)}$, $x=f(x')$ es maximal o pertenece a $X^{(1)}$ por \sref{IV.6.1.1};
+podemos, pues, aplicar de nuevo \sref{IV.21.10.5}.
+\end{remark}
+
+\begin{proposition}[21.10.8]
+\label{IV.21.10.8}
+Sean $X$, $X'$, $X''$ tres preesquemas localmente noetherianos y $f:X'\to X$, $g:X''\to X'$ dos morfismos;
+se supone que $f$ (resp.\ $g$) es plano en todo punto de codimensión $\leq1$ en $X'$ (resp.\ $X''$).
+Entonces $f\circ g$ es plano en todo punto de codimensión $\leq1$ en $X''$ y, para todo ciclo $1$-codimensional $Z$ sobre $X$, se tiene $(f\circ g)^*(Z)=g^*(f^*(Z))$.
+\end{proposition}
+
+\begin{proof}
+La primera afirmación resulta de \sref{IV.6.1.1} y \sref{IV.2.1.6}.
+La segunda resulta de que $f$ (resp.\ $g$, resp.\ $f\circ g$) transforma los puntos maximales de $X'$ (resp.\ $X''$, resp.\ $X''$) en puntos maximales de $X$ (resp.\ $X'$, resp.\ $X$), y de que, si $x''\in X''^{(1)}$ es tal que $x'=g(x'')\in X'^{(1)}$ y $x=f(x')\in X^{(1)}$, se tiene
+\[
+  \operatorname{long}(\sh{O}_{X'',x''}/\mathfrak{m}_x\sh{O}_{X'',x''})
+  =\operatorname{long}(\sh{O}_{X'',x''}/\mathfrak{m}_{x'}\sh{O}_{X'',x''})
+   \cdot\operatorname{long}(\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}).
+\]
+En efecto, si se pone $A=\sh{O}_{X,x}$, $A'=\sh{O}_{X',x'}$, $A''=\sh{O}_{X'',x''}$, $\mathfrak{m}=\mathfrak{m}_x$, $\mathfrak{m}'=\mathfrak{m}_{x'}$, se tiene $A''/\mathfrak{m}A''=(A'/\mathfrak{m}A')\otimes_{A'}A''$, y la fórmula
+\[
+  \operatorname{long}_{A''}(A''/\mathfrak{m}A'')
+  =\operatorname{long}_{A'}(A'/\mathfrak{m}A')
+   \cdot\operatorname{long}_{A''}(A''/\mathfrak{m}'A'')
+\]
+resulta de \sref{IV.4.7.1} y de la hipótesis de planitud de $A''$ sobre $A'$.
+\end{proof}
+
+\begin{env}[21.10.9]
+\label{IV.21.10.9}
+Sean $X$ un preesquema localmente noetheriano y $\Lambda$ un grupo conmutativo, escrito aditivamente y considerado, por tanto, como $\bb{Z}$-módulo;
+denotaremos también por $\bb{Z}$ y $\Lambda$ los haces simples sobre $X$ asociados a los prehaces constantes iguales respectivamente a $\bb{Z}$ y $\Lambda$ \sref[0]{0.3.6}.
+Se llama \emph{haz de gérmenes de ciclos $1$-codimensionales con coeficientes en $\Lambda$} al haz de grupos conmutativos $\mathscr{Z}^1_X\otimes_{\bb{Z}}\Lambda$.
+Si $\Lambda=\bb{Q}$, se dice que las secciones
+\oldpage[IV-4]{293}
+de $\mathscr{Z}^1_X\otimes_{\bb{Z}}\bb{Q}$ sobre $X$ son los \emph{ciclos $1$-codimensionales con coeficientes racionales}.
+Como las fibras de $\mathscr{Z}^1_X$ son $\bb{Z}$-módulos sin torsión \sref{IV.21.6.3}, el homomorfismo canónico $\mathscr{Z}^1_X\to\mathscr{Z}^1_X\otimes_{\bb{Z}}\bb{Q}$ es \emph{inyectivo}, de modo que los ciclos $1$-codimensionales se identifican con ciclos $1$-codimensionales con coeficientes racionales.
+\end{env}
+
+\begin{env}[21.10.10]
+\label{IV.21.10.10}
+Vamos a ver que, bajo ciertas condiciones, se puede ampliar la definición de $f^*(Z)$ dada en \sref{IV.21.10.3} para un ciclo $1$-codimensional $Z$ sobre $X$, pero a condición de tomar como $f^*(Z)$ un ciclo $1$-codimensional con coeficientes racionales sobre $X'$.
+El caso más general en que nos situamos es aquel en el que $f$ transforma todo punto maximal de $X'$ en un punto maximal de $X$ y, en todo punto $x'\in X'^{(1)}$, se cumple una de las condiciones (i), (ii), (iii) de \sref{IV.21.10.1} \emph{o una cuarta condición} (poniendo $x=f(x')$):
+\begin{enumerate}
+  \item[(iv)] $x\in X^{(1)}$, $\mathfrak{m}_x\notin\operatorname{Ass}(\sh{O}_{X,x})$ y, \emph{además, si se pone} $A=\widehat{\sh{O}}_{X,x}$, $A'=\widehat{\sh{O}}_{X',x'}$, \emph{y si $K$ denota el anillo total de fracciones de $A$, entonces $A'$ es una $A$-álgebra finita y $K'=A'\otimes_AK$ es un $K$-módulo} libre.
+\end{enumerate}
+
+Denotemos entonces por $r_{x'}$ el rango del $K$-módulo libre $K'$, por $q_{x'}$ el grado de $\boldsymbol{k}(x')=\boldsymbol{k}(A')$ sobre $\boldsymbol{k}(x)=\boldsymbol{k}(A)$, y pongamos $\mu_{x'}=r_{x'}/q_{x'}$.
+Para un ciclo $1$-codimensional con soporte contenido en $T$, dado por \sref{IV.21.10.1.1}, y para todo $x'\in X'^{(1)}$, se define $c_{x'}\in\bb{Q}$ igual al número $n_{x'}\in\bb{Z}$ cuando se está en uno de los casos $1\textsuperscript{o}$, $2\textsuperscript{o}$, $3\textsuperscript{o}$ de \sref{IV.21.10.1}; pero queda aquí una cuarta posibilidad:
+\begin{enumerate}
+  \item[$4\textsuperscript{o}$] si $x'$ satisface la condición (iv) anterior, se toma $c_{x'}=\mu_{x'}n_x\in\bb{Q}$.
+\end{enumerate}
+\end{env}
+
+\begin{env}[21.10.11]
+\label{IV.21.10.11}
+Queda por demostrar que, cuando la condición $4\textsuperscript{o}$ de \sref{IV.21.10.10} se satisface \emph{al mismo tiempo} que una de las condiciones $1\textsuperscript{o}$, $2\textsuperscript{o}$, $3\textsuperscript{o}$ de \sref{IV.21.10.1}, se tiene $n_{x'}=c_{x'}$.
+Esto es evidente si $x\notin T$, pues entonces $n_x=0$.
+Para estudiar los otros dos casos, observemos que $\mathfrak{m}_x\sh{O}_{X',x'}$ es cerrado para la topología $\mathfrak{m}_{x'}$-preádica, de modo que el completado de $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ para esta última topología es $A'/\mathfrak{m}_xA'$.
+Si se está a la vez en los casos $2\textsuperscript{o}$ y $4\textsuperscript{o}$, $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ es discreto para la topología $\mathfrak{m}_{x'}$-preádica y, por tanto, isomorfo a $A'/\mathfrak{m}_xA'$.
+Como $A'$ es una $A$-álgebra finita y \emph{plana} $(\mathbf{0}_{\mathrm{III}},10.2.3)$, es un $A$-módulo \emph{libre} $(\mathbf{0}_{\mathrm{III}},10.1.3)$, y el rango de $A'/\mathfrak{m}_xA'$ sobre $A/\mathfrak{m}_xA=\boldsymbol{k}(x)$ es igual al rango de $A'$ sobre $A$ y, por tanto, también al de $K'$ sobre $K$.
+Por otra parte, este rango es también igual al producto de la longitud $\lambda_{x'}$ de $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ (como $\sh{O}_{X',x'}$-módulo, o como $\boldsymbol{k}(x')$-módulo) por el rango $[\boldsymbol{k}(x'): \boldsymbol{k}(x)]=q_{x'}$, lo que demuestra la relación $\mu_{x'}=r_{x'}/q_{x'}=\lambda_{x'}$ en este caso.
+
+Supongamos, por último, que se está a la vez en los casos $3\textsuperscript{o}$ y $4\textsuperscript{o}$.
+Entonces, puesto que $\dim(\sh{O}_{X,x})=1$, $\sh{O}_{X,x}$ es un anillo de valoración discreta y, por tanto, regular.
+Por otra parte, $\sh{O}_{X',x'}$ tiene dimensión $1$ y, puesto que $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, $\sh{O}_{X',x'}$ es un anillo de Cohen--Macaulay $(\mathbf{0},16.4.6)$;
+por último, puesto que $A'$ es un $A$-módulo de tipo finito, $A'/\mathfrak{m}_xA'$ es un $\boldsymbol{k}(x)$-espacio vectorial de rango finito;
+como $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ está contenido en $A'/\mathfrak{m}_xA'$, es también un $\boldsymbol{k}(x)$-espacio vectorial de rango finito y, por tanto, un anillo artiniano.
+La aplicación de \sref{IV.6.1.5} muestra entonces que $\sh{O}_{X',x'}$ es un $\sh{O}_{X,x}$-módulo \emph{plano}; por tanto, se está también en el caso $2\textsuperscript{o}$ y se concluye por lo visto anteriormente.
+
+Así pues, en el caso que hemos considerado, se pondrá
+\[
+  f^*(Z)=\sum_{x'\in X'^{(1)}}c_{x'}\cdot\overline{\{x'\}}.
+\]
+\oldpage[IV-4]{294}
+que es, por tanto, un ciclo $1$-codimensional sobre $X'$ con coeficientes \emph{racionales}.
+Se ha definido así también un homomorfismo $f^*$ de grupos ordenados que satisface \sref{IV.21.10.3.1} y, por consiguiente, un homomorfismo de haces de grupos conmutativos
+\[
+  \psi^*(\Gamma_T(\mathscr{Z}^1_X))\to\mathscr{Z}^1_{X'}\otimes_{\bb{Z}}\bb{Q}.
+\]
+
+Cuando $f$ satisface las condiciones anteriores para \emph{toda parte cerrada $T$ rara} en $X$, es decir, cuando para todo $x'\in X'^{(1)}$ o bien $x=f(x')$ es un punto maximal de $X$, o bien $x'$ satisface una de las condiciones (ii), (iii) o (iv), entonces $f^*(Z)$ está definido para todo ciclo $1$-codimensional $Z$ sobre $X$, y se ha definido un homomorfismo de haces de grupos conmutativos ordenados
+\[
+  \psi^*(\mathscr{Z}^1_X)\to\mathscr{Z}^1_{X'}\otimes_{\bb{Z}}\bb{Q},
+\]
+de donde, por tensorización, se obtiene un homomorfismo de haces de $\bb{Q}$-espacios vectoriales ordenados
+\[
+\label{IV.21.10.11.1}
+  \psi^*(\mathscr{Z}^1_X\otimes_{\bb{Z}}\bb{Q})\to\mathscr{Z}^1_{X'}\otimes_{\bb{Z}}\bb{Q}.
+  \tag{21.10.11.1}
+\]
+\end{env}
+
+\begin{remark}[21.10.12]
+\label{IV.21.10.12}
+Cuando se está en la situación de \sref{IV.21.10.10}, puede ocurrir efectivamente que, para ciclos $1$-codimensionales $Z$ sobre $X$, $f^*(Z)$ sea un ciclo $1$-codimensional con coeficientes \emph{no enteros}; dicho de otro modo, los números $\mu_{x'}$ pueden no ser enteros.
+Se obtiene un ejemplo tomando el anillo íntegro completo $A$ de $(\mathbf{0}_{\mathrm{IV}},6.15.11)$, (ii), y su clausura integral $A'$: el punto cerrado $x'$ de $\Spec(A')$ satisface la condición (iv) de \sref{IV.21.10.10} y se tiene $\mu_{x'}=\frac12$.
+\end{remark}
+
+\begin{lemma}[21.10.13]
+\label{IV.21.10.13}
+Sean $A$ un anillo local noetheriano de dimensión $1$ y $t$ un elemento regular de $A$ perteneciente al ideal maximal $\mathfrak{m}$ (lo que implica que $\mathfrak{m}\notin\operatorname{Ass}(A)$).
+\begin{enumerate}[label=(\roman*)]
+  \item Para todo $A$-módulo $M$ de tipo finito, el núcleo $N_t(M)$ y el conúcleo $P_t(M)$ de la homotecia $t_M:M\to M$ de razón $t$ tienen longitud finita. Se pone $d_t(M)=\operatorname{long}P_t(M)-\operatorname{long}N_t(M)$.
+  \item Si $0\to M'\to M\to M''\to0$ es una sucesión exacta de $A$-módulos de tipo finito, se tiene $d_t(M)=d_t(M')+d_t(M'')$.
+  \item Se tiene $d_t(M)\geq0$ para todo $A$-módulo $M$ de tipo finito; para que $d_t(M)=0$, es necesario y suficiente que $M$ sea de longitud finita.
+  \item Si $K$ es el anillo total de fracciones de $A$ y si $M\otimes_AK$ es un $K$-módulo libre de rango $n$, se tiene $d_t(M)=n\cdot d_t(A)=n\cdot\operatorname{long}(A/tA)$.
+  \item Si $M$ satisface las hipótesis de (iv) y si, además, $t$ es $M$-regular, se tiene $\operatorname{long}(M/tM)=n\cdot\operatorname{long}(A/tA)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) $\Spec(A)$ está formado por el punto $\mathfrak{m}$ y por los ideales primos minimales $\mathfrak{p}_i$;
+como, por hipótesis, $t\notin\mathfrak{p}_i$ para todo $i$ (Bourbaki, \emph{Alg. comm.}, cap.~IV, \textsection~1, n\textsuperscript{o}~1, cor.~3 de la prop.~2), la imagen de $t$ en cada $A_{\mathfrak{p}_i}$ es invertible y, por tanto, los soportes de los $A$-módulos de tipo finito $N_t(M)$ y $P_t(M)$ son vacíos o están reducidos a $\mathfrak{m}$;
+de $(\mathbf{0},16.1.10)$ se concluye que estos módulos tienen longitud finita.
+
+(ii) Puesto que $t$ es regular, se tiene una sucesión exacta
+\[
+  0\to A\xrightarrow{t_A}A\to A/tA\to0
+\]
+\oldpage[IV-4]{295}
+y puesto que $\operatorname{Tor}_i^A(M,A)=0$ para $i\geq1$, la sucesión exacta de los Tor da, por una parte, la sucesión exacta
+\[
+  0\to\operatorname{Tor}_1^A(M,A/tA)\to M\xrightarrow{t_M}M\to M/tM\to0
+\]
+y, por otra parte, para $i\geq2$,
+\[
+  0=\operatorname{Tor}_i^A(M,A)\to\operatorname{Tor}_i^A(M,A/tA)\to\operatorname{Tor}_{i-1}^A(M,A)=0,
+\]
+por tanto, se tiene $N_t(M)=\operatorname{Tor}_1^A(M,A/tA)$ y $\operatorname{Tor}_i^A(M,A/tA)=0$ para $i\geq2$;
+la sucesión exacta de los Tor da una sucesión exacta
+\[
+  0\to\operatorname{Tor}_1^A(M',A/tA)\to\operatorname{Tor}_1^A(M,A/tA)\to\operatorname{Tor}_1^A(M'',A/tA)\to
+\]
+\[
+  M'\otimes_A(A/tA)\to M\otimes_A(A/tA)\to M''\otimes_A(A/tA)\to0
+\]
+y esta sucesión se escribe, según lo anterior,
+\[
+  0\to N_t(M')\to N_t(M)\to N_t(M'')\to P_t(M')\to P_t(M)\to P_t(M'')\to0,
+\]
+lo que demuestra (ii).
+
+Para demostrar (iii), observemos que existe una serie de composición $(M_h)$ de $M$ cuyos cocientes $M_h/M_{h+1}$ son isomorfos a $A/\mathfrak{m}$ o a uno de los $A/\mathfrak{p}_i$ (Bourbaki, \emph{Alg. comm.}, cap.~IV, \textsection~1, n\textsuperscript{o}~4, teorema~1), y para que $M$ sea de longitud finita es necesario y suficiente que todos estos cocientes sean isomorfos a $A/\mathfrak{m}$.
+Todo se reduce, pues, en virtud de (ii), a demostrar que $d_t(A/\mathfrak{m})=0$ y $d_t(A/\mathfrak{p}_i)>0$.
+Ahora bien, como la imagen de $t$ en $A/\mathfrak{m}$ es $0$, se tiene $N_t(A/\mathfrak{m})=A/\mathfrak{m}$ y $P_t(A/\mathfrak{m})=A/\mathfrak{m}$, de donde resulta la primera afirmación;
+por otra parte, la imagen de $t$ en $A/\mathfrak{p}_i$ es regular, de modo que $N_t(A/\mathfrak{p}_i)=0$ y $P_t(A/\mathfrak{p}_i)=A/(tA+\mathfrak{p}_i)$, que no está reducido a $0$, de donde resulta la segunda afirmación.
+
+(iv) Existe una base de $M\otimes_AK$ de la forma $(x_j/s)_{1\leq j\leq n}$, donde $s$ es un elemento regular de $A$ y $x_j\in M$.
+Consideremos el homomorfismo $u:A^n\to M$ que transforma el elemento $e_j$ $(1\leq j\leq n)$ de la base canónica de $A^n$ en $x_j$, y demostremos que $\operatorname{Ker}(u)$ y $\operatorname{Coker}(u)$ tienen \emph{longitud finita};
+en efecto, para todo $i$, la imagen de $s$ en $A_{\mathfrak{p}_i}$ es invertible y, como $K_{\mathfrak{p}_i}=A_{\mathfrak{p}_i}$, las imágenes de los $x_j/s$ en $M_{\mathfrak{p}_i}$ forman una base de este $A_{\mathfrak{p}_i}$-módulo;
+por tanto, $u_{\mathfrak{p}_i}:A_{\mathfrak{p}_i}^n\to M_{\mathfrak{p}_i}$ es biyectivo.
+Como en (i), se concluye que los soportes de $\operatorname{Ker}(u)$ y $\operatorname{Coker}(u)$ están contenidos en $\{\mathfrak{m}\}$ y, por tanto, que estos módulos tienen longitud finita.
+Así pues, de (ii) y (iii) resulta que $d_t(M)=d_t(A^n)=n\cdot d_t(A)=n\cdot\operatorname{long}(A/tA)$, puesto que $t$ es regular.
+
+Por último, está claro que (v) se deduce inmediatamente de (iv), pues entonces $N_t(M)=0$.
+\end{proof}
+
+Este lema permite generalizar \sref{IV.21.10.4}:
+
+\begin{proposition}[21.10.13]
+\label{IV.21.10.13bis}
+Supongamos que $f$ satisface las condiciones de \sref{IV.21.10.10}.
+Entonces, para todo divisor $D$ sobre $X$ tal que $\Supp(D)\subset T$ y esté definido $f^*(D)$, se tiene
+\[
+\label{IV.21.10.13.1}
+  \operatorname{cyc}(f^*(D))=f^*(\operatorname{cyc}(D)).
+  \tag{21.10.13.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Razonando como en \sref{IV.21.10.4}, todo se reduce a ver, con las mismas notaciones, que si $x'$ está en el caso $4\textsuperscript{o}$ de \sref{IV.21.10.10} y si $n_y$ es la longitud de $\sh{O}_{X,y}/t_y\sh{O}_{X,y}$, entonces la
+\oldpage[IV-4]{296}
+longitud $n_{x'}$ de $\sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}$ es igual a $\mu_{x'}n_y$, siendo $\mu_{x'}$ el número racional definido en \sref{IV.21.10.10}.
+Como $\sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}$ tiene longitud finita, tiene la misma longitud que su completado $\mathfrak{m}_{x'}$-preádico $A'/t'_{x'}A'$, que también puede escribirse $A'/t_yA'$;
+además, como $t'_{x'}$ es regular por hipótesis en $\sh{O}_{X',x'}$, también lo es en $A'$ por planitud $(\mathbf{0}_{\mathrm{I}},6.3.4)$ y, cuando $A'$ se considera como $A$-módulo, puede decirse también que $t_y$ es $A'$-regular.
+Como $A$ tiene dimensión $1$ y $A'$ es un $A$-módulo de tipo finito tal que $A'\otimes_AK$ es un $K$-módulo libre de rango $r_{x'}$, se puede aplicar \sref{IV.21.10.13}, (v), a $M=A'$ y a $t_y$, y la longitud de $A'/t_yA'$ como $A$-módulo es, por tanto, $r_{x'}n_y$.
+Como $\boldsymbol{k}(x')$ es un $\boldsymbol{k}(x)$-espacio vectorial de rango $q_{x'}$, la longitud de $A'/t_yA'$ como $A'$-módulo es, por tanto, $r_{x'}n_y/q_{x'}=\mu_{x'}n_y$, lo que termina la demostración.
+\end{proof}
+
+\begin{env}[21.10.14]
+\label{IV.21.10.14}
+Sean ahora $X$, $X'$ dos preesquemas localmente noetherianos y $f:X'\to X$ un morfismo que tiene las \emph{dos propiedades} siguientes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ es finito;
+  \item la imagen por $f$ de todo punto maximal de $X'$ es un punto maximal de $X$.
+\end{enumerate}
+Para todo $x\in X^{(1)}$, todos los puntos $x'\in f^{-1}(x)$ pertenecen entonces a $X'^{(1)}$, como resulta de la hipótesis \emph{b)} y de la desigualdad $(\mathbf{0},16.3.9.1)$, por ser discreta la fibra $f^{-1}(x)$.
+Sea entonces
+\[
+  Z'=\sum_{x'\in X'^{(1)}}n_{x'}\cdot\overline{\{x'\}}
+\]
+un ciclo $1$-codimensional sobre $X'$.
+Para todo $x\in X^{(1)}$, definamos un entero $n_x$ mediante la fórmula
+\[
+  n_x=\sum_{x'\in f^{-1}(x)}n_{x'}\cdot[\boldsymbol{k}(x'): \boldsymbol{k}(x)],
+\]
+lo que tiene sentido, pues los puntos de $f^{-1}(x)$ son finitos y $\boldsymbol{k}(x')$ es un cuerpo de grado finito sobre $\boldsymbol{k}(x)$ \sref[I]{I.6.4.4}.
+Además, el conjunto de los $x\in X^{(1)}$ tales que $n_x\neq0$ es \emph{localmente finito} en $X$, pues está contenido en la imagen por $f$ del conjunto de los $x'\in X'^{(1)}$ tales que $n_{x'}\neq0$, y la conclusión resulta de que el morfismo $f$ es cuasicompacto.
+Se puede, pues, definir un ciclo $1$-codimensional sobre $X$ poniendo
+\[
+\label{IV.21.10.14.1}
+  f_*(Z')=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}
+  \tag{21.10.14.1}
+\]
+y se dice que $f_*(Z')$ es la \emph{imagen directa} de $Z'$ por $f$.
+Está claro que la aplicación $f_*:\mathfrak{Z}^1(X')\to\mathfrak{Z}^1(X)$ así definida es un homomorfismo de grupos ordenados.
+Además, si $U$ es un abierto de $X$ y $f_U:f^{-1}(U)\to U$ es la restricción de $f$, de las definiciones resulta inmediatamente que
+\[
+\label{IV.21.10.14.2}
+  (f_U)_*(Z'|f^{-1}(U))=f_*(Z')|U,
+  \tag{21.10.14.2}
+\]
+por tanto, denotando por $\psi$ la aplicación continua subyacente al morfismo $f$, las aplicaciones $\Gamma(f^{-1}(U),\mathscr{Z}^1_{X'})\to\Gamma(U,\mathscr{Z}^1_X)$ que acabamos de definir determinan un homomorfismo de haces de grupos conmutativos ordenados sobre $X$
+\[
+  \psi_*(\mathscr{Z}^1_{X'})\to\mathscr{Z}^1_X.
+\]
+\end{env}
+
+\begin{proposition}[21.10.15]
+\label{IV.21.10.15}
+\oldpage[IV-4]{297}
+Sean $X$, $X'$, $X''$ tres preesquemas localmente noetherianos y $f:X'\to X$, $g:X''\to X'$ dos morfismos que satisfacen las condiciones \emph{a)} y \emph{b)} de \sref{IV.21.10.14}.
+Entonces $f\circ g$ satisface las mismas condiciones y, para todo ciclo $1$-codimensional $Z''$ sobre $X''$, se tiene
+\[
+  (f\circ g)_*(Z'')=f_*(g_*(Z'')).
+\]
+\end{proposition}
+
+\begin{proof}
+Esto resulta inmediatamente de las definiciones.
+\end{proof}
+
+\begin{proposition}[21.10.16]
+\label{IV.21.10.16}
+Sean $X$, $X'$, $X_1$ tres preesquemas localmente noetherianos, $f:X'\to X$ un morfismo que satisface las condiciones \emph{a)} y \emph{b)} de \sref{IV.21.10.14}, y $g:X_1\to X$ un morfismo plano.
+Se pone $X'_1=X'\times_XX_1$ (de modo que $X'_1$ es localmente noetheriano) y se denotan por $f_1:X'_1\to X_1$ y $g_1:X'_1\to X'$ las proyecciones canónicas.
+Entonces $f_1$ satisface las condiciones \emph{a)} y \emph{b)} de \sref{IV.21.10.14} y, para todo ciclo $1$-codimensional $Z'$ sobre $X'$, se tiene
+\[
+\label{IV.21.10.16.1}
+  g^*(f_*(Z'))=(f_1)_*(g_1^*(Z')).
+  \tag{21.10.16.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Está claro que $f_1$ es finito y satisface la condición \emph{b)} de \sref{IV.21.10.14} en virtud de \sref{IV.2.3.7}.
+Para demostrar \sref{IV.21.10.16.1}, nos reducimos inmediatamente al caso en que $X$, $X'$ y $X_1$ son los espectros de anillos locales noetherianos de dimensión $1$, $A$, $A'$ y $A_1$, siendo $A'$ un $A$-módulo finito y $A_1$ un $A$-módulo plano.
+Denotando por $x$, $x'$ y $x_1$ los puntos cerrados de $X$, $X'$ y $X_1$, respectivamente, se trata de ver que
+\[
+\label{IV.21.10.16.2}
+  \sum_{x'_1}\lambda_{x'_1}[\boldsymbol{k}(x'_1):\boldsymbol{k}(x_1)]
+  =\lambda_{x_1}[\boldsymbol{k}(x'):\boldsymbol{k}(x)]
+  \tag{21.10.16.2}
+\]
+donde $x'_1$ recorre el conjunto de los puntos cerrados de $X'_1$ (es decir, el conjunto de los puntos situados a la vez sobre $x'$ y sobre $x_1$), y donde $\lambda_{x'_1}=\operatorname{long}(\sh{O}_{X'_1,x'_1}/\mathfrak{m}_{x'}\sh{O}_{X'_1,x'_1})$ y $\lambda_{x_1}=\operatorname{long}(A_1/\mathfrak{m}_xA_1)$.
+El primer miembro de \sref{IV.21.10.16.2} se escribe también
+\[
+  \operatorname{long}_{A_1}(A'_1/\mathfrak{m}_{x'}A'_1),
+\]
+donde se ha puesto $A'_1=A'\otimes_AA_1$.
+Se tiene, pues, $A'_1/\mathfrak{m}_{x'}A'_1=(A'/\mathfrak{m}_{x'}A')\otimes_AA_1$ y, como $A_1$ es un $A$-módulo plano, por \sref{IV.4.7.1} se tiene
+\[
+  \operatorname{long}_{A_1}(A'_1/\mathfrak{m}_{x'}A'_1)
+  =\operatorname{long}_{A}(A'/\mathfrak{m}_{x'}A')\operatorname{long}_{A_1}(A_1/\mathfrak{m}_xA_1)
+  =[\boldsymbol{k}(x'): \boldsymbol{k}(x)]\cdot\lambda_{x_1},
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{proposition}[21.10.17]
+\label{IV.21.10.17}
+Sean $X$, $X'$ dos preesquemas localmente noetherianos y $f:X'\to X$ un morfismo finito localmente libre.
+Entonces $f$ satisface la condición \emph{b)} de \sref{IV.21.10.14} y, para todo divisor $D'$ sobre $X'$, se tiene
+\[
+\label{IV.21.10.17.1}
+  f_*(\operatorname{cyc}(D'))=\operatorname{cyc}(f_*(D')).
+  \tag{21.10.17.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Como $f$ es plano y finito, la condición \emph{b)} de \sref{IV.21.10.14} y la relación $f(X'^{(1)})\subset X^{(1)}$ resultan de \sref{IV.6.1.1}.
+La definición \sref{IV.21.10.14.1} muestra que podemos reducirnos al caso en que $X=\Spec(A)=\Spec(\sh{O}_{X,x})$ para un $x\in X^{(1)}$;
+entonces $X'=\Spec(A')$, donde $A'$ es una
+\oldpage[IV-4]{298}
+$A$-álgebra que es un $A$-módulo libre de rango finito;
+además, podemos suponer que $D'=\operatorname{div}(t')$, donde $t'$ es un elemento regular de $A'$;
+entonces se tiene $f_*(D')=\operatorname{div}(t)$, donde $t=\mathrm{N}_{A'/A}(t')$ es un elemento regular de $A$ \sref{IV.21.5.2}.
+Podemos limitarnos al caso en que $t'$ no es invertible en $A'$, lo que equivale a que $t$ no lo sea en $A$;
+el anillo $A/tA$ tiene entonces longitud finita y es $\neq0$, y $A'/tA'$ es un producto directo de anillos locales artinianos $A'_i$ $(1\leq i\leq r)$, siendo el cuerpo residual de $A'_i$ igual a $\boldsymbol{k}(x'_i)$, donde los $x'_i$ $(1\leq i\leq r)$ son los puntos de $X'$ situados sobre $x$.
+Si $t'_i$ $(1\leq i\leq r)$ es la imagen de $t'$ en $A'_i$, $A'/t'A'$ es el producto directo de los $A'_i/t'_iA'_i$;
+como el producto $\operatorname{long}_{A'_i}(A'_i/t'_iA'_i)\cdot[\boldsymbol{k}(x'_i):\boldsymbol{k}(x)]$ es igual a $\operatorname{long}_A(A'_i/t'_iA'_i)$, se ve que la multiplicidad en el punto $x$ del primer miembro de \sref{IV.21.10.17.1} es $\operatorname{long}_A(A'/t'A')$, de modo que la fórmula que hay que demostrar se reduce a
+\[
+\label{IV.21.10.17.2}
+  \operatorname{long}_A(A'/t'A')=\operatorname{long}_A(A/tA).
+  \tag{21.10.17.2}
+\]
+
+Esta relación resulta del lema más general siguiente.
+\end{proof}
+
+\begin{lemma}[21.10.17.3]
+\label{IV.21.10.17.3}
+Sean $A$ un anillo local noetheriano de dimensión $1$, $M$ un $A$-módulo libre de rango finito y $u$ un endomorfismo inyectivo de $M$.
+Entonces se tiene
+\[
+\label{IV.21.10.17.4}
+  \operatorname{long}_A(\operatorname{Coker}u)=\operatorname{long}_A(A/(\det u)A).
+  \tag{21.10.17.4}
+\]
+\end{lemma}
+
+\begin{proof}
+Distinguamos varios casos.
+
+I) $A$ es un anillo de valoración discreta.
+Sea, en efecto, $\pi$ un uniformizador de $A$, y observemos que $\operatorname{long}_A(A/\pi^kA)=k$;
+si $n$ es el rango de $M$ y si $\pi^{m_i}$ $(1\leq i\leq n)$ son los factores invariantes de $u$, $\operatorname{Coker}(u)$ es la suma directa de los $A$-módulos $A/\pi^{m_i}A$, por lo que tiene longitud $m=\sum_{i=1}^nm_i$, y $\det(u)$ es el producto de un elemento invertible por $\pi^m$, de donde resulta la conclusión en este caso (Bourbaki, \emph{Alg.}, cap.~VII, \textsection~4, n\textsuperscript{o}~5, cor.~1 de la prop.~4).
+
+II) $A$ es un anillo íntegro completo (de dimensión $1$).
+Se sabe entonces por $(\mathbf{0},19.8.8)$, (ii), que existe un subanillo $B$ de $A$, que es un anillo de valoración discreta, tal que $B\to A$ es un homomorfismo local que hace de $A$ un $B$-módulo de tipo finito;
+como este $B$-módulo es evidentemente sin torsión, es libre (Bourbaki, \emph{Alg. comm.}, cap.~VI, \textsection~3, n\textsuperscript{o}~6, lema~1).
+Denotemos por $M'$ el conjunto $M$ provisto de su estructura de $B$-módulo (libre), y por $u'$ el endomorfismo $u$ considerado como $B$-endomorfismo.
+De I) resulta que
+\[
+\label{IV.21.10.17.5}
+  \operatorname{long}_B(\operatorname{Coker}u')=\operatorname{long}_B(B/(\det u')B).
+  \tag{21.10.17.5}
+\]
+Pero se tiene (Bourbaki, \emph{Alg.}, cap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7)
+\[
+  \det u'=\mathrm{N}_{A/B}(\det u),
+\]
+por tanto, aplicando \sref{IV.21.10.17.4} a la homotecia $x\mapsto(\det u)x$ del $B$-módulo libre $A$, se obtiene
+\[
+  \operatorname{long}_B(B/(\det u')B)=\operatorname{long}_B(A/(\det u)A),
+\]
+de donde, sustituyendo en \sref{IV.21.10.17.5} y dividiendo por $[\boldsymbol{k}(A):\boldsymbol{k}(B)]$, longitud del $B$-módulo $\boldsymbol{k}(A)$, se obtiene \sref{IV.21.10.17.4} en el caso considerado.
+
+\oldpage[IV-4]{299}
+III) $A$ es un anillo completo.
+Observemos que podemos suponer, además, que $\mathfrak{m}\notin\operatorname{Ass}(A)$;
+en efecto, puesto que $\det(u)$ es un elemento regular de $A$, si se tuviera $\mathfrak{m}\in\operatorname{Ass}(A)$, se deduciría que $\det(u)\notin\mathfrak{m}$, de modo que $\det(u)$ sería invertible, $u$ sería un automorfismo de $M$, y la fórmula \sref{IV.21.10.17.4} sería entonces trivial, pues sus dos miembros serían nulos.
+
+En lo que sigue, para un endomorfismo $v$ de un módulo $N$ sobre un anillo $R$, tal que $\operatorname{Ker}v$ y $\operatorname{Coker}v$ tengan longitud finita, se pondrá
+\[
+  \chi(N,v)=\operatorname{long}_R(\operatorname{Ker}(v))-\operatorname{long}_R(\operatorname{Coker}(v)).
+\]
+Obsérvese que la hipótesis sobre $v$ equivale a decir que el complejo
+\[
+  K^0:0\to N\xrightarrow{v}N\to0
+\]
+tiene sus módulos de cohomología de longitud finita y que $\chi(N,v)=\chi(H^0(K^0))$ $(\mathbf{0}_{\mathrm{III}},11.10)$.
+De ello se deduce que, si $N'$, $N$, $N''$ son tres $R$-módulos y se tiene un diagrama conmutativo
+\[
+  \xymatrix{
+    0 \ar[r] & N' \ar[r]^r \ar[d]^{v'} & N \ar[r]^s \ar[d]^v & N'' \ar[r] \ar[d]^{v''} & 0\\
+    0 \ar[r] & N' \ar[r]_r & N \ar[r]_s & N'' \ar[r] & 0
+  }
+\]
+cuyas filas son exactas, y si dos de los tres números $\chi(N,v)$, $\chi(N',v')$ y $\chi(N'',v'')$ están definidos, entonces también lo está el tercero y se tiene
+\[
+\label{IV.21.10.17.6}
+  \chi(N,v)=\chi(N',v')+\chi(N'',v'').
+  \tag{21.10.17.6}
+\]
+En efecto, esto resulta inmediatamente de la sucesión exacta de cohomología.
+
+Por último, si $N$ es un $R$-módulo de longitud finita, se tiene $\chi(N,v)=0$.
+
+Con estas notaciones se tiene el lema siguiente.
+\end{proof}
+
+\begin{lemma}[21.10.17.7]
+\label{IV.21.10.17.7}
+Sea $A$ un anillo local noetheriano de dimensión $1$ cuyo ideal maximal $\mathfrak{m}$ es tal que $\mathfrak{m}\notin\operatorname{Ass}(A)$;
+sean $\mathfrak{p}_i$ $(1\leq i\leq n)$ los ideales primos minimales de $A$.
+Sea $M$ un $A$-módulo libre de tipo finito y $u$ un endomorfismo de $M$ tal que $\chi(M,u)$ está definido;
+para cada $i$, pongamos $M_i=M\otimes_A(A/\mathfrak{p}_i)$ y sea $u_i$ el endomorfismo $u\otimes1_{A/\mathfrak{p}_i}$ de $M_i$;
+entonces, si $\chi(M_i,u_i)$ está definido para cada $i$, se tiene
+\[
+\label{IV.21.10.17.8}
+  \chi(M,u)=\sum_{i=1}^n\operatorname{long}(A_{\mathfrak{p}_i})\cdot\chi(M_i,u_i).
+  \tag{21.10.17.8}
+\]
+\end{lemma}
+
+\begin{proof}
+Puesto que $\mathfrak{m}\notin\operatorname{Ass}(A)$, se tiene una descomposición primaria reducida única $(0)=\bigcap_{1\leq i\leq n}\mathfrak{q}_i$, donde el ideal $\mathfrak{q}_i$ es $\mathfrak{p}_i$-primario para $1\leq i\leq n$.
+Si se pone $M'_i=M\otimes_A(A/\mathfrak{q}_i)$, se tiene, pues, una sucesión exacta
+\[
+  0\to M\to\bigoplus_iM'_i\to M''\to0
+\]
+de $A$-módulos, donde $M''$ tiene longitud finita:
+en efecto, localizando la sucesión exacta anterior en cada uno de los $\mathfrak{p}_i$, se obtiene $M''_{\mathfrak{p}_i}=0$, pues $(\mathfrak{q}_i)_{\mathfrak{p}_i}=0$ y $(\mathfrak{q}_j)_{\mathfrak{p}_i}=A_{\mathfrak{p}_i}$ para $j\neq i$ (Bourbaki, \emph{Alg. comm.}, cap.~IV, \textsection~2, n\textsuperscript{o}~4, prop.~6), de modo que $(M'_i)_{\mathfrak{p}_i}=M_{\mathfrak{p}_i}$ y $(M'_j)_{\mathfrak{p}_i}=0$;
+\oldpage[IV-4]{300}
+como el soporte de $M''$ está, pues, reducido a $\mathfrak{m}$, $M''$ tiene longitud finita $(\mathbf{0},16.1.10)$.
+Si se pone $u'_i=u\otimes1_{A/\mathfrak{q}_i}$, y si $u''$ es el endomorfismo de $M''$ deducido de $\bigoplus u'_i$ pasando a los cocientes, de \sref{IV.21.10.17.6} se deduce que $\chi(M,u)+\chi(M'',u'')=\sum_i\chi(M'_i,u'_i)$ y, puesto que $M''$ tiene longitud finita, $\chi(M'',u'')=0$.
+Para demostrar \sref{IV.21.10.17.8}, podemos, pues, reducirnos al caso en que $n=1$.
+Denotaremos entonces por $\mathfrak{p}$ el único ideal primo minimal, que es el nilradical de $A$;
+si $A_0=A/\mathfrak{p}$, $M_0=M\otimes_AA_0$, $u_0=u\otimes1_{A_0}$, se trata de demostrar que, si $\chi(M_0,u_0)$ está definido, se tiene
+\[
+\label{IV.21.10.17.9}
+  \chi(M,u)=\operatorname{long}A_{\mathfrak{p}}\cdot\chi(M_0,u_0).
+  \tag{21.10.17.9}
+\]
+
+Sea $\mathfrak{n}_j$ $(0\leq j\leq r)$ la «potencia simbólica $j$-ésima» de $\mathfrak{p}$, imagen inversa en $A$ del ideal $(\mathfrak{p}A_{\mathfrak{p}})^j$ de $A_{\mathfrak{p}}$ $(1\leq j\leq r)$, con $\mathfrak{n}_0=A$ y $\mathfrak{n}_r=0$;
+pongamos
+\[
+  M_j=\mathfrak{n}_jM/\mathfrak{n}_{j+1}M\qquad(0\leq j\leq r-1),
+\]
+y denotemos por $v_j$ el endomorfismo de $M_j$ deducido de $u$ por restricción a $\mathfrak{n}_jM$ y paso a los cocientes.
+Vamos a demostrar primero que cada uno de los números $\chi(M_j,v_j)$ está definido y que se tiene
+\[
+\label{IV.21.10.17.10}
+  \chi(M,u)=\sum_j\chi(M_j,v_j).
+  \tag{21.10.17.10}
+\]
+La primera afirmación implicará la segunda, aplicando \sref{IV.21.10.17.6} a cada una de las sucesiones exactas
+\[
+  0\to\mathfrak{n}_jM/\mathfrak{n}_{j+1}M\to M/\mathfrak{n}_{j+1}M\to M/\mathfrak{n}_jM\to0.
+\]
+
+Para demostrar la primera afirmación, observemos que, si $m$ es el rango del $A$-módulo libre $M$, $M_j$ es isomorfo a $(\mathfrak{n}_j/\mathfrak{n}_{j+1})^m$; dicho de otro modo, puesto que $\mathfrak{p}$ anula cada uno de los cocientes $\mathfrak{n}_j/\mathfrak{n}_{j+1}$, $M_j$ es un $A_0$-módulo isomorfo a $M_0\otimes_{A_0}(\mathfrak{n}_j/\mathfrak{n}_{j+1})$.
+Denotemos por $l_j$ el rango del $A_0$-módulo $\mathfrak{n}_j/\mathfrak{n}_{j+1}$;
+como el cuerpo de fracciones $K_0$ de $A_0$ es el cuerpo residual de $A_{\mathfrak{p}}$, $l_j$ es también la longitud del $A_{\mathfrak{p}}$-módulo $(\mathfrak{p}A_{\mathfrak{p}})^j/(\mathfrak{p}A_{\mathfrak{p}})^{j+1}$.
+Existe un sistema de generadores del $A_0$-módulo $M_j$ que contiene una base de $M_j\otimes_{A_0}K_0$;
+por tanto, existe un $A_0$-homomorfismo
+\[
+  w_j:M_0^{l_j}\to M_j
+\]
+cuya localización en el ideal $(0)$ de $A_0$ es un isomorfismo, de modo que el soporte de $\operatorname{Ker}(w_j)$ y de $\operatorname{Coker}(w_j)$ está reducido al ideal maximal $\mathfrak{m}/\mathfrak{p}$ de $A_0$;
+$\operatorname{Ker}(w_j)$ y $\operatorname{Coker}(w_j)$ son, por tanto, $A_0$-módulos de longitud finita $(\mathbf{0},16.1.10)$.
+Como por hipótesis $\chi(M_0,u_0)$ está definido, también lo está $\chi(M_0^{l_j},u_0^{l_j})=l_j\chi(M_0,u_0)$ y, en virtud de \sref{IV.21.10.17.6} y del hecho de que $\operatorname{Ker}(w_j)$ y $\operatorname{Coker}(w_j)$ tienen longitud finita, se ve que $\chi(M_j,v_j)$ está definido y es igual a $l_j\chi(M_0,u_0)$;
+la relación \sref{IV.21.10.17.10} da entonces
+\[
+  \chi(M,u)=\left(\sum_jl_j\right)\chi(M_0,u_0),
+\]
+y, en virtud de una observación anterior, $\sum_jl_j$ no es sino la longitud de $A_{\mathfrak{p}}$, lo que termina la demostración del lema \sref{IV.21.10.17.7}.
+\end{proof}
+
+\oldpage[IV-4]{301}
+Para aplicar este lema cuando $A$ es un anillo completo y $\mathfrak{m}\notin\operatorname{Ass}(A)$, se observa que, si $u$ es inyectivo, también lo son los $u_i$ (con las notaciones del lema):
+en efecto, $\det u$ es entonces un elemento regular de $A$, por lo que no pertenece a ninguno de los $\mathfrak{p}_i$, y su imagen $\det u_i$ en $A/\mathfrak{p}_i$ es, por consiguiente, un elemento $\neq0$ de este anillo íntegro, lo que demuestra que $u_i$ es inyectivo.
+Como $\operatorname{Coker}(u_i)$ es imagen de $\operatorname{Coker}(u)$, también tiene longitud finita y, por tanto, $\chi(M_i,u_i)$ está definido para todo $i$;
+se tiene, por consiguiente, la fórmula \sref{IV.21.10.17.8}.
+Por otra parte, puesto que $\det(u)$ es un elemento regular de $A$, no está contenido en ninguno de los $\mathfrak{p}_i$;
+el ideal $(\det u)A$ es, pues, $\mathfrak{m}$-primario y el cociente $A/(\det u)A$ tiene longitud finita.
+Aplicando el mismo razonamiento anterior a la homotecia inyectiva $t:\xi\mapsto(\det u)\xi$ de $A$ y a sus imágenes $t_i=\det u_i$ en los $A/\mathfrak{p}_i$, se obtiene
+\[
+  \chi(A,t)=\sum_i\operatorname{long}(A_{\mathfrak{p}_i})\cdot\chi(A/\mathfrak{p}_i,t_i).
+\]
+Pero los anillos $A/\mathfrak{p}_i$ son íntegros y completos y, aplicando el resultado de II) a cada uno de ellos, se obtiene de nuevo la relación \sref{IV.21.10.17.4} para $M$ y $u$.
+
+IV) Caso general.
+Pongamos $A'=\widehat{A}$, $M'=M\otimes_AA'$, $u'=u\otimes1_{A'}$;
+se tiene $\det(u')=\det(u)$ y, por planitud, $\operatorname{Coker}(u')=(\operatorname{Coker}(u))_{(A')}$ y $A'/(\det u)A'=(A/(\det u)A)_{(A')}$;
+como la fórmula \sref{IV.21.10.17.4} es verdadera para $A'$ y $u'$ en virtud de III), también lo es para $A$ y $u$ en virtud de \sref{IV.4.7.1}.
+
+Esto termina la demostración de \sref{IV.21.10.17}.
+
+\begin{proposition}[21.10.18]
+\label{IV.21.10.18}
+Sean $X$, $X'$ dos preesquemas localmente noetherianos y $f:X'\to X$ un morfismo finito que transforma todo punto maximal de $X'$ en un punto maximal de $X$ y satisface, para todo $x'\in X'^{(1)}$\footnote{Corrección de fuente: el francés impreso y el inglés mantenido dicen $x'\in X'$. Las condiciones (ii)--(iv) de \sref{IV.21.10.10} se formulan para $x'\in X'^{(1)}$; con la lectura impresa, ningún punto maximal de un $X'$ no vacío puede satisfacerlas.}, una de las condiciones (ii), (iii), (iv) de \sref{IV.21.10.10}.
+Se supone además que existe un entero $n$ tal que, para todo punto maximal $x$ de $X$, $(f_*(\sh{O}_{X'}))_x$ es un $\sh{O}_{X,x}$-módulo libre de rango $n$.
+Entonces, para todo ciclo $1$-codimensional $Z$ sobre $X$, se tiene
+\[
+\label{IV.21.10.18.1}
+  f_*(f^*(Z))=n\cdot Z
+  \tag{21.10.18.1}
+\]
+(«fórmula de proyección»).
+\end{proposition}
+
+\begin{proof}
+En virtud de las definiciones, nos reducimos inmediatamente al caso en que $X$ es el espectro de un anillo local noetheriano $A$ de dimensión $1$, con punto cerrado $x$, y $Z=\overline{\{x\}}$;
+pongamos $X'=\Spec(A')$, donde $A'$ es una $A$-álgebra finita y, para todo ideal primo minimal $\mathfrak{p}_i$ de $A$, $A'_{\mathfrak{p}_i}$ es un $A_{\mathfrak{p}_i}$-módulo libre de rango $n$.
+Demostremos que podemos limitarnos, además, al caso en que $A$ es completo.
+Hagamos, en efecto, el cambio de base $h:Y\to X$, donde $Y=\Spec(B)$, con $B=\widehat{A}$, y pongamos
+\[
+  Y'=X'\times_XY=\Spec(B\otimes_AA'),\qquad g=f_{\{Y\}}:Y'\to Y;
+\]
+el morfismo $g$ es entonces finito y, como $h$ es plano, los puntos maximales de $Y$ están situados sobre los de $X$;
+sobre cada $\mathfrak{p}_i$ solo hay un número finito de ideales minimales $\mathfrak{p}_{ij}$ de $B$, y $(B\otimes_AA')_{\mathfrak{p}_{ij}}$ es un $B_{\mathfrak{p}_{ij}}$-módulo libre de rango $n$.
+Por último, si $f$ satisface una de las condiciones (ii), (iii) o (iv) de \sref{IV.21.10.10} en cada punto $x'$ de $f^{-1}(x)$, $g$ satisface la condición correspondiente en el único punto $y'$ de $g^{-1}(y)$ situado sobre $x'$ (denotando por $y$ el punto cerrado de $Y$);
+esto es inmediato para las condiciones (ii) y (iv);
+para la condición (iii), esta implica que $A$ es un anillo de valoración discreta, por lo que lo mismo ocurre con $B$, y la condición
+\oldpage[IV-4]{302}
+$\mathfrak{m}_{y'}\notin\operatorname{Ass}(\sh{O}_{Y',y'})$ resulta, por planitud, de la condición $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$ $(\mathbf{0},3.3.1)$.
+El morfismo $g$ satisface, pues, las mismas condiciones que $f$;
+si se demuestra la fórmula \sref{IV.21.10.18.1} para $g$ y $\overline{\{y\}}$, la misma fórmula será válida para $f$ y $\overline{\{x\}}$ en virtud de \sref{IV.21.10.16.1}.
+
+Podemos, pues, suponer que $A$ es \emph{completo};
+entonces lo mismo ocurre con $A'$, que es, por tanto, un producto directo de anillos locales completos;
+podemos, por consiguiente, limitarnos al caso en que $A'$ es un anillo \emph{local}, y queda verificar \sref{IV.21.10.18.1} en cada uno de los casos (ii), (iii), (iv) para el punto cerrado $x'$ de $X'$.
+En el caso (ii), como $A'$ es un $A$-módulo plano de tipo finito, es un $A$-módulo \emph{libre} $(\mathbf{0}_{\mathrm{III}},10.1.3)$, de rango $n$ en virtud de la hipótesis.
+Ahora bien, por definición \sref{IV.21.10.1} y \sref{IV.21.10.3}, se tiene
+\[
+  f^*(Z)=\lambda_{x'}\cdot\overline{\{x'\}},
+\]
+donde $\lambda_{x'}$ es la longitud del $A'$-módulo $A'/\mathfrak{m}_xA'$; entonces,
+\[
+  f_*(f^*(Z))=(\lambda_{x'}[\boldsymbol{k}(x'): \boldsymbol{k}(x)])\cdot\overline{\{x\}};
+\]
+pero $\lambda_{x'}[\boldsymbol{k}(x'): \boldsymbol{k}(x)]$ es la longitud de $A'/\mathfrak{m}_xA'=A'\otimes_A\boldsymbol{k}(x)$ como $A$-módulo, o también su rango como $\boldsymbol{k}(x)$-espacio vectorial, y por tanto es igual a $n$.
+
+En el caso (iii), $A$ es un anillo de valoración discreta y, por tanto, regular, y la hipótesis $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$ implica que $A'$ es un anillo de Cohen--Macaulay $(\mathbf{0},16.4.6)$;
+como $\dim(A')=\dim(A)=1$ y $A'/\mathfrak{m}_xA'$ es un anillo artiniano, de \sref{IV.6.1.5} resulta que $A'$ es un $A$-módulo plano y nos reducimos al caso (ii).
+
+En el caso (iv), si $K$ es el anillo total de fracciones de $A$, $K'=A'\otimes_AK$ es por hipótesis un $K$-módulo libre de rango $n$ y, por definición \sref{IV.21.10.10}, se tiene
+\[
+  f^*(Z)=\frac{n}{[\boldsymbol{k}(x'): \boldsymbol{k}(x)]}\cdot\overline{\{x'\}},
+\]
+de donde $f_*(f^*(Z))=n\cdot\overline{\{x\}}$.
+\end{proof}
+
+Obsérvese que la fórmula \sref{IV.21.10.18.1} es aplicable, en particular, cuando el morfismo $f$ es \emph{finito} y \emph{plano} y tal que, para todo punto maximal $x$ de $X$, $(f_*(\sh{O}_{X'}))_x$ es un $\sh{O}_{X,x}$-módulo libre de rango $n$.
+
+\begin{corollary}[21.10.19]
+\label{IV.21.10.19}
+Bajo las hipótesis de \sref{IV.21.10.18}, sea $D$ un divisor sobre $X$ tal que esté definido $f^*(D)$ \sref{IV.21.4.5}; entonces se tiene
+\[
+\label{IV.21.10.19.1}
+  f_*(\operatorname{cyc}(f^*(D)))=n\cdot\operatorname{cyc}(D).
+  \tag{21.10.19.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Esto resulta de \sref{IV.21.10.18} y \sref{IV.21.10.13bis}.
+\end{proof}

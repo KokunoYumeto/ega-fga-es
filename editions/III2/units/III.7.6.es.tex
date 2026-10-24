@@ -1,0 +1,686 @@
+\subsection{Descenso de las propiedades de exactitud. Teorema de
+semicontinuidad y criterio de exactitud de Grauert}
+\label{subsection:III.7.6}
+\label{III.7.6}
+
+\begin{proposition}[7.6.1]
+\label{III.7.6.1}
+Bajo las hipótesis de \sref{III.7.4.1}, sea $B$ una $A$-álgebra
+conmutativa. Si $T_p$ es exacto por la derecha (respectivamente,
+exacto por la izquierda, exacto), lo mismo ocurre con $T_p^{(B)}$;
+el recíproco es cierto cuando $B$ es un $A$-módulo fielmente plano.
+\end{proposition}
+
+\begin{proof}
+La primera aserción es un caso particular de una aserción trivial de
+\sref{III.7.1.3}. Recíprocamente, supongamos primero que $B$ es un
+$A$-módulo plano. Entonces, para todo $A$-módulo $M$,
+\[
+  H_\bullet\bigl(P_\bullet\otimes_A(M\otimes_A B)\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A M)\otimes_A B,
+\]
+lo cual también puede escribirse, para todo $p$,
+\[
+  T_p(M)\otimes_A B
+  \simeq
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1}
+\]
+salvo isomorfismo canónico. Supongamos que $T_p^{(B)}$ es exacto por
+la derecha (respectivamente, exacto por la izquierda, exacto). Como
+$M\mapsto M_{(B)}$ es un funtor exacto, el miembro izquierdo de
+\eqref{III.7.6.1.1} es un funtor exacto por la derecha
+(respectivamente, exacto por la izquierda, exacto) en $M$. Si ahora
+$B$ es fielmente plano sobre $A$, se sigue que $T_p$ tiene la misma
+propiedad de exactitud \sref[0]{0.6.4.1}.
+\end{proof}
+
+\long\def\egaIIISubsectionSevenSixEleven{%
+\begin{remark}[7.6.11]
+\label{III.7.6.11}
+Cabe preguntarse si \sref{III.7.6.9}[(i)] puede reforzarse mediante la
+desigualdad
+\[
+  \operatorname{rank}_{\kres(x)}T_p(\kres(x))
+  \geq
+  \operatorname{rank}_{\kres(x)}
+  \bigl(T_p(A)\otimes_A\kres(x)\bigr)
+  \tag{7.6.11.1}\label{III.7.6.11.1}
+\]
+para todo $x\in\Spec(A)$. Esta desigualdad se verifica cuando $A$ es
+un anillo de valuación discreta y $x$ es su ideal maximal
+\sref{III.7.6.5}. Limitémonos ahora al caso en que $A$ es un anillo
+local noetheriano, de ideal maximal $\mathfrak m$ y cuerpo residual
+$k$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] Para todo complejo $P_\bullet$ de $A$-módulos planos de
+    tipo finito,
+    \[
+      \operatorname{rank}_k T_p(k)
+      \geq
+      \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+      \qquad\text{para todo entero }p.
+      \tag{7.6.11.2}\label{III.7.6.11.2}
+    \]
+  \item[b)] Para todo $A$-módulo $M$ de tipo finito,
+    \[
+      \operatorname{rank}_k(M\otimes_A k)
+      \geq
+      \operatorname{rank}_k(\check M\otimes_A k).
+      \tag{7.6.11.3}\label{III.7.6.11.3}
+    \]
+  \item[c)] Para todo $A$-módulo $N$ de tipo finito,
+    \[
+      \operatorname{rank}_k\Tor_1^A(N,k)
+      \geq
+      \operatorname{rank}_k\Tor_2^A(N,k).
+      \tag{7.6.11.4}\label{III.7.6.11.4}
+    \]
+\end{enumerate}
+Equivalentemente, por cambio de dimensión (M, V, 7.2), puede
+exigirse, para todo $i\geq1$,
+\[
+  \operatorname{rank}_k\Tor_i^A(N,k)
+  \geq
+  \operatorname{rank}_k\Tor_{i+1}^A(N,k).
+  \tag{7.6.11.5}\label{III.7.6.11.5}
+\]
+
+Demos brevemente algunas indicaciones sobre la demostración. Para ver
+que \textnormal{a)} implica \textnormal{b)}, considérese una sucesión
+exacta
+\[
+  L_1\xrightarrow{d}L_0\longrightarrow M\longrightarrow0,
+\]
+donde $L_0$ y $L_1$ son libres de tipo finito, y aplíquese
+\textnormal{a)} al complejo
+\[
+  P_1\xrightarrow{{}^t d}P_0,
+  \qquad
+  P_0=\check L_1,\quad P_1=\check L_0,
+\]
+siendo nulos todos sus demás términos. Entonces
+\[
+  T_1(A)=\check M
+\]
+y
+\[
+  T_1(k)
+  =
+  \Hom_A(M,k)
+  =
+  \Hom_k(M/\mathfrak mM,k).
+\]
+Así, $T_1(k)$ es el dual del espacio vectorial $M\otimes_A k$ y tiene
+el mismo rango. Para probar que \textnormal{b)} implica
+\textnormal{c)}, establezcamos primero el lema siguiente.
+
+\begin{lemma}[7.6.11.6]
+\label{III.7.6.11.6}
+Dado un complejo de $A$-módulos planos
+\[
+  \cdots\longrightarrow0\longrightarrow
+  P_1\xrightarrow{d}P_0
+  \longrightarrow0\longrightarrow\cdots,
+\]
+se tiene una sucesión exacta
+\[
+  0\longrightarrow\Tor_2^A(Z'_0,k)
+  \longrightarrow T_1(A)\otimes_A k
+  \longrightarrow T_1(k)
+  \longrightarrow\Tor_1^A(Z'_0,k)
+  \longrightarrow0.
+  \tag{7.6.11.7}\label{III.7.6.11.7}
+\]
+\end{lemma}
+
+\oldpage[III]{197}
+\begin{proof}
+De la sucesión exacta
+\[
+  0\longrightarrow Z_1\longrightarrow P_1
+  \longrightarrow B_0\longrightarrow0
+\]
+se obtiene
+\[
+  0\longrightarrow\Tor_1^A(B_0,k)
+  \longrightarrow Z_1\otimes_A k
+  \longrightarrow P_1\otimes_A k
+  \xrightarrow{u}B_0\otimes_A k
+  \longrightarrow0.
+\]
+La sucesión exacta
+\[
+  0\longrightarrow B_0\longrightarrow Z_0
+  \longrightarrow Z'_0\longrightarrow0
+\]
+y la planitud de $Z_0=P_0$ dan
+\[
+  \Tor_1^A(B_0,k)=\Tor_2^A(Z'_0,k).
+\]
+Por definición, $Z_1=T_1(A)$. Además,
+$T_1(k)=\Ker(d\otimes1)$, y $d\otimes1$ se factoriza como
+\[
+  P_1\otimes_A k
+  \xrightarrow{u}B_0\otimes_A k
+  \xrightarrow{v}Z_0\otimes_A k
+  =
+  P_0\otimes_A k.
+\]
+Por tanto, $T_1(k)=u^{-1}(R)$, donde $R=\Ker v$. Como $u$ es
+sobreyectivo, $R=u(T_1(k))$; finalmente,
+$R=\Tor_1^A(Z'_0,k)$ por definición de $v$. Esto demuestra
+\eqref{III.7.6.11.7}.
+\end{proof}
+
+Para deducir \textnormal{c)} de \textnormal{b)}, tómese una sucesión
+exacta
+\[
+  L_1\xrightarrow{d}L_0\longrightarrow N\longrightarrow0
+\]
+con $L_0,L_1$ libres de tipo finito, y considérese el funtor $T$
+asociado al complejo formado por $L_1$ y $L_0$. Como $L_0$ y $L_1$
+son libres, se identifican con sus biduales. Si
+\[
+  M=\Coker({}^t d),
+\]
+entonces
+\[
+  T_1(A)=\Ker d=\check M.
+\]
+Además,
+\[
+  M\otimes_A k=\Coker({}^t d\otimes1_k)
+\]
+tiene el mismo rango sobre $k$ que $\Ker(d\otimes1_k)$. La hipótesis
+\textnormal{b)} da, por tanto,
+\[
+  \operatorname{rank}_k\bigl(T_1(A)\otimes_A k\bigr)
+  \leq
+  \operatorname{rank}_kT_1(k).
+\]
+Como $Z'_0=N$, la desigualdad \eqref{III.7.6.11.4} se deduce de la
+sucesión exacta \eqref{III.7.6.11.7}.
+
+Finalmente, para probar que \textnormal{c)} implica
+\textnormal{a)}, aplíquese \sref{III.7.6.11.6} al complejo de dos
+términos
+\[
+  P_p\longrightarrow P_{p-1}.
+\]
+La hipótesis \textnormal{c)}, aplicada a $Z'_{p-1}$, da
+\[
+  \operatorname{rank}_k R\geq\operatorname{rank}_k S,
+\]
+donde
+\[
+  R=\Ker(P_p\otimes_A k\longrightarrow P_{p-1}\otimes_A k),
+  \qquad
+  S=Z_p\otimes_A k.
+\]
+Factorícese $d_{p+1}:P_{p+1}\to P_p$ como
+\[
+  P_{p+1}\xrightarrow{v}Z_p\xrightarrow{j}P_p.
+\]
+Entonces
+\[
+  \Im(d_{p+1}\otimes1)
+  =
+  (j\otimes1)\bigl(\Im(v\otimes1)\bigr).
+\]
+Como
+\[
+  T_p(A)\otimes_A k
+  =
+  (Z_p/B_p)\otimes_A k
+  =
+  (Z_p\otimes_A k)/\Im(v\otimes1)
+\]
+y
+\[
+  T_p(k)=R/\Im(d_{p+1}\otimes1),
+\]
+se obtiene la desigualdad \eqref{III.7.6.11.2}.
+
+Supongamos ahora que el anillo local $A$ es regular de dimensión
+$n$. Se sabe [17] que el $A$-módulo $\Tor_i^A(k,k)$ es isomorfo a la
+potencia exterior
+\[
+  \bigwedge\nolimits^i(\mathfrak m/\mathfrak m^2).
+\]
+Así, \eqref{III.7.6.11.4} no se verifica para $N=k$ en cuanto
+$n\geq4$. Por otra parte, supongamos que $A$ es un anillo local
+íntegro tal que todo $A$-módulo reflexivo de tipo finito es libre,
+como ocurre cuando $A$ es un anillo regular de dimensión $2$.
+Entonces se verifica \eqref{III.7.6.11.3}. En efecto, el dual
+$\check M$ de un $A$-módulo $M$ de tipo finito es reflexivo, luego
+libre, y por consiguiente
+\[
+  \operatorname{rank}_k(\check M\otimes_A k)
+  =
+  \operatorname{rank}_K(\check M)
+  =
+  \operatorname{rank}_K(M),
+\]
+donde $K$ es el cuerpo de fracciones de $A$. Toda base de
+$M\otimes_A k$ sobre $k$ está formada por las imágenes de un sistema
+de generadores de $M$ (Bourbaki, \emph{Alg\`ebre commutative},
+cap.~II, \S~3, n\textsuperscript{o}~2, cor.~2 de la prop.~4). Por
+tanto,
+\[
+  \operatorname{rank}_K(M)
+  \leq
+  \operatorname{rank}_k(M\otimes_A k),
+\]
+lo cual demuestra la aserción.
+\end{remark}
+}
+
+\begin{proposition}[7.6.2]
+\label{III.7.6.2}
+Bajo las hipótesis de \sref{III.7.4.1}, supongamos además que $A$ es
+un anillo noetheriano reducido y que los $P_i$ son $A$-módulos de
+tipo finito. Para que $T_p$ sea exacto por la derecha
+(respectivamente, exacto por la izquierda, exacto), es necesario y
+suficiente que $T_p^{(B)}$ tenga la misma propiedad para toda
+$A$-álgebra $B$ que sea un anillo de valuación discreta.
+\end{proposition}
+
+\begin{proof}
+Por \sref{III.7.3.1} y \sref{III.7.3.3}, podemos limitarnos a la
+exactitud por la derecha, y solo hay que demostrar la suficiencia.
+Por \sref{III.7.4.2}, basta probar que $Z'_{p-1}(P_\bullet)$ es un
+$A$-módulo plano. Como $P_{p-1}$ es de tipo finito,
+$Z'_{p-1}(P_\bullet)$ también es de tipo finito; el criterio de
+\sref[0]{0.10.2.8} muestra entonces que basta con que
+\[
+  Z'_{p-1}(P_\bullet)\otimes_A B
+\]
+sea un $B$-módulo plano para toda $A$-álgebra $B$ que sea un anillo
+de valuación discreta. Como $P_\bullet$ es un complejo de
+$A$-módulos planos, se tiene
+\[
+  Z'_{p-1}(P_\bullet)\otimes_A B
+  =
+  Z'_{p-1}(P_\bullet\otimes_A B).
+\]
+
+\oldpage[III]{193}
+El complejo $P_\bullet\otimes_A B$ está formado por $B$-módulos
+planos \sref[0]{0.6.2.1}, y para todo $B$-módulo $N$ se tiene
+\[
+  H_\bullet(P_\bullet\otimes_A N)
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr),
+\]
+y, por tanto,
+\[
+  T_p^{(B)}(N)
+  =
+  H_p\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr).
+\]
+Aplicando \sref{III.7.4.2} a $T_p^{(B)}$, vemos que la hipótesis de
+que $T_p^{(B)}$ es exacto por la derecha equivale a que
+$Z'_{p-1}(P_\bullet\otimes_A B)$ sea un $B$-módulo plano.
+
+El criterio precedente nos lleva a examinar más de cerca el caso de
+los anillos de valuación discreta.
+\end{proof}
+
+\begin{proposition}[7.6.3]
+\label{III.7.6.3}
+Bajo las hipótesis de \sref{III.7.4.1}, supongamos que $A$ es un
+anillo noetheriano regular de dimensión $1$ (es decir, que $A$ es
+noetheriano y, para todo $x\in\Spec(A)$, el anillo $A_x$ es un cuerpo
+o un anillo de valuación discreta). Entonces, para todo entero $p$ y
+todo $A$-módulo $M$, se tiene una sucesión exacta canónica, funtorial
+en $M$,
+\[
+  0
+  \longrightarrow T_p(A)\otimes_A M
+  \xrightarrow{t_M} T_p(M)
+  \longrightarrow
+  \Tor_1^A\bigl(T_{p-1}(A),M\bigr)
+  \longrightarrow 0.
+  \tag{7.6.3.1}\label{III.7.6.3.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En lo que sigue, para simplificar la notación omitiremos el complejo
+$P_\bullet$ de las notaciones homológicas usuales
+$H_p(P_\bullet)$, $B_p(P_\bullet)$, $Z_p(P_\bullet)$ y
+$Z'_p(P_\bullet)$. Se tienen las tres sucesiones exactas
+\begin{gather*}
+  0\longrightarrow H_p\longrightarrow Z'_p
+  \longrightarrow B_{p-1}\longrightarrow 0,\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}
+  \longrightarrow H_{p-1}\longrightarrow 0,\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}
+  \longrightarrow B_{p-2}\longrightarrow 0.
+\end{gather*}
+Como $P_{p-1}$ y $P_{p-2}$ son planos, también lo son sus
+submódulos respectivos $B_{p-1}$, $Z_{p-1}$ y $B_{p-2}$: para todo
+$x\in\Spec(A)$, los $A_x$-módulos planos y los $A_x$-módulos sin
+torsión son los mismos. Tensorizando por $M$ se obtienen, por tanto,
+las sucesiones exactas
+\[
+  0=\Tor_1^A(B_{p-1},M)
+  \longrightarrow H_p\otimes_A M
+  \longrightarrow Z'_p\otimes_A M
+  \xrightarrow{u}B_{p-1}\otimes_A M
+  \longrightarrow 0,
+  \tag{7.6.3.2}\label{III.7.6.3.2}
+\]
+\[
+  0=\Tor_1^A(Z_{p-1},M)
+  \longrightarrow \Tor_1^A(H_{p-1},M)
+  \longrightarrow B_{p-1}\otimes_A M
+  \xrightarrow{v} Z_{p-1}\otimes_A M,
+  \tag{7.6.3.3}\label{III.7.6.3.3}
+\]
+y
+\[
+  0=\Tor_1^A(B_{p-2},M)
+  \longrightarrow Z_{p-1}\otimes_A M
+  \xrightarrow{w}P_{p-1}\otimes_A M.
+  \tag{7.6.3.4}\label{III.7.6.3.4}
+\]
+
+Por definición,
+\[
+  T_p(M)=
+  \Ker(d_p\otimes 1)/\Im(d_{p+1}\otimes 1).
+\]
+Es, por tanto, el núcleo del homomorfismo
+\[
+  (P_p\otimes_A M)/\Im(d_{p+1}\otimes 1)
+  \longrightarrow P_{p-1}\otimes_A M
+\]
+inducido por $d_p\otimes 1$. Por la definición
+$Z'_p=P_p/B_p$, este homomorfismo también puede escribirse
+$Z'_p\otimes_A M\to P_{p-1}\otimes_A M$; es el compuesto
+\[
+  Z'_p\otimes_A M
+  \xrightarrow{u}B_{p-1}\otimes_A M
+  \xrightarrow{v}Z_{p-1}\otimes_A M
+  \xrightarrow{w}P_{p-1}\otimes_A M.
+\]
+Como $w$ es inyectivo por \eqref{III.7.6.3.4}, se tiene una sucesión
+exacta
+\[
+  0\longrightarrow\Ker u\longrightarrow T_p(M)
+  \longrightarrow\Ker v\longrightarrow 0.
+\]
+En vista de \eqref{III.7.6.3.2} y \eqref{III.7.6.3.3}, y puesto que
+$H_p=T_p(A)$ por definición, esta es precisamente
+\eqref{III.7.6.3.1}.
+\end{proof}
+
+\begin{remarks}[7.6.4]
+\label{III.7.6.4}
+\textnormal{(i)}
+El grupo $H_\bullet(P_\bullet\otimes_A M)$ es la homología del
+bicomplejo $P_\bullet\otimes_A M$, donde $M$ se considera como un
+complejo concentrado en grado $0$. Es, por consiguiente,
+\sref{III.6.3.6}\sref{III.6.3.2} el objeto al que converge la sucesión
+espectral regular cuyo término $E_2$ es
+\[
+  E^2_{pq}
+  =
+  \Tor_p^A\bigl(H_q(P_\bullet),M\bigr)
+  =
+  \Tor_p^A\bigl(T_q(A),M\bigr).
+\]
+
+\oldpage[III]{194}
+La hipótesis sobre $A$ implica que $\Tor_p^A(E,F)=0$ para $p\geq 2$
+y para $A$-módulos cualesquiera $E,F$ \sref[0]{0.17.2.2}. Se sabe
+(M, XV) que esto implica la exactitud de
+\[
+  0\longrightarrow E^2_{0,q}
+  \longrightarrow H_q(P_\bullet\otimes_A M)
+  \longrightarrow E^2_{1,q-1}
+  \longrightarrow 0,
+\]
+que es precisamente \eqref{III.7.6.3.1}.
+
+\medskip
+\textnormal{(ii)}
+Teniendo en cuenta \sref{III.7.3.1}, la sucesión exacta
+\eqref{III.7.6.3.1} recupera \sref{III.7.4.3} como caso particular.
+\end{remarks}
+
+\begin{corollary}[7.6.5]
+\label{III.7.6.5}
+Bajo las hipótesis de \sref{III.7.4.1}, supongamos que $A$ es un
+anillo de valuación discreta, con cuerpo de fracciones $K$ y cuerpo
+residual $k$, y que los $T_i(A)$ son $A$-módulos de tipo finito.
+Entonces
+\[
+  \operatorname{rank}_k T_p(k)
+  \geq
+  \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rank}_A T_p(A)
+  =
+  \operatorname{rank}_K T_p(K).
+  \tag{7.6.5.1}\label{III.7.6.5.1}
+\]
+Además, los dos términos extremos de esta desigualdad son iguales si
+y solo si $T_p$ es exacto o, equivalentemente, si y solo si $T_p(A)$
+y $T_{p-1}(A)$ son $A$-módulos libres.
+\end{corollary}
+
+\begin{proof}
+Tómese $M=k$ en la sucesión exacta \eqref{III.7.6.3.1}. Como los
+términos son espacios vectoriales sobre $k$, se obtiene
+\[
+  \operatorname{rank}_k T_p(k)
+  =
+  \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+  +
+  \operatorname{rank}_k
+  \Tor_1^A\bigl(T_{p-1}(A),k\bigr).
+\]
+Por otra parte, como $T_p(A)$ es un módulo de tipo finito sobre el
+anillo local íntegro $A$, se tiene (Bourbaki,
+\emph{Alg\`ebre commutative}, cap.~II, \S~3,
+n\textsuperscript{o}~2, cor.~1 de la prop.~4)
+\[
+  \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rank}_A T_p(A)
+  =
+  \operatorname{rank}_K\bigl(T_p(A)\otimes_A K\bigr),
+  \tag{7.6.5.2}\label{III.7.6.5.2}
+\]
+y los dos miembros de \eqref{III.7.6.5.2} son iguales si y solo si
+$T_p(A)$ es un $A$-módulo libre (\emph{loc.\ cit.}, prop.~7). Como
+$K$ es un $A$-módulo plano, también se tiene, por definición,
+\[
+  T_p(A)\otimes_A K
+  =
+  H_p(P_\bullet)\otimes_A K
+  =
+  H_p(P_\bullet\otimes_A K)
+  =
+  T_p(K).
+\]
+Esto demuestra \eqref{III.7.6.5.1}. También muestra que la igualdad
+solo puede darse si, en primer lugar, $T_p(A)$ es libre y, en segundo
+lugar,
+\[
+  \Tor_1^A\bigl(T_{p-1}(A),k\bigr)=0,
+\]
+siendo esta última condición equivalente a que $T_{p-1}(A)$ sea
+libre \sref[0]{0.10.1.3}. Finalmente, para los módulos de tipo finito
+sobre $A$, la planitud y la libertad son equivalentes (Bourbaki,
+\emph{Alg\`ebre commutative}, cap.~II, \S~3,
+n\textsuperscript{o}~2, cor.~2 de la prop.~5), y el resultado se
+deduce de \sref{III.7.4.3}.
+\end{proof}
+
+\begin{env}[7.6.6]
+\label{III.7.6.6}
+Manteniéndose las hipótesis de \sref{III.7.4.1}, para todo
+$x\in\Spec(A)$ pongamos
+\[
+  d_p(x)=d_p^T(x)
+  =
+  \operatorname{rank}_{\kres(x)}T_p(\kres(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+\label{III.7.6.7}
+Sea $\varphi:A\to A'$ un homomorfismo de anillos, y sea
+\[
+  f={}^a\!\varphi:\Spec(A')\longrightarrow\Spec(A)
+\]
+la aplicación correspondiente \sref[I]{I.1.2.1}. Si
+$T'_\bullet=T_\bullet^{(A')}$ \sref{III.7.1.3}, entonces
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1}
+\]
+\end{lemma}
+
+\oldpage[III]{195}
+\begin{proof}
+Para $x'\in\Spec(A')$, pongamos $x=f(x')$. Entonces
+\begin{align*}
+  H_\bullet(P_\bullet\otimes_A\kres(x'))
+  &=
+  H_\bullet\bigl(
+    (P_\bullet\otimes_A\kres(x))
+    \otimes_{\kres(x)}\kres(x')
+  \bigr)\\
+  &=
+  H_\bullet(P_\bullet\otimes_A\kres(x))
+  \otimes_{\kres(x)}\kres(x'),
+\end{align*}
+porque $\kres(x')$ es plano sobre $\kres(x)$. Esto demuestra
+\eqref{III.7.6.7.1}.
+\end{proof}
+
+\begin{lemma}[7.6.8]
+\label{III.7.6.8}
+Si $A$ es noetheriano y $P_\bullet$ está formado por $A$-módulos de
+tipo finito, la función $x\mapsto d_p^T(x)$ sobre $\Spec(A)$ es
+constructible.
+\end{lemma}
+
+\begin{proof}
+Para toda parte cerrada irreducible $Y$ de $X=\Spec(A)$, debemos
+probar que existe un abierto no vacío $U$ de $Y$ en el cual $d_p$ es
+constante \sref[0]{0.9.2.2}. Escribamos
+$Y=\Spec(A/\mathfrak a)$, donde $\mathfrak a$ es un ideal de $A$ tal
+que $A/\mathfrak a$ es reducido. Por \sref{III.7.6.7}, podemos
+reducirnos al caso en que $Y=X$ y $A$ es un anillo noetheriano
+íntegro; la aserción resulta entonces de \sref{III.7.4.5}.
+\end{proof}
+
+\begin{theorem}[7.6.9]
+\label{III.7.6.9}
+Sean $A$ un anillo noetheriano, $P_\bullet$ un complejo de
+$A$-módulos planos de tipo finito y
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+\]
+el funtor homológico definido por $P_\bullet$. Para
+$x\in\Spec(A)$, pongamos
+\[
+  d_p(x)=\operatorname{rank}_{\kres(x)}T_p(\kres(x)).
+\]
+Entonces:
+\begin{enumerate}
+  \item[(i)] La función $d_p$ es constructible y semicontinua
+    superiormente sobre $\Spec(A)$.
+  \item[(ii)] Si $T_p$ es exacto, $d_p$ es continua (y, por tanto,
+    localmente constante) sobre $\Spec(A)$. El recíproco es cierto
+    cuando $A$ es reducido.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\textnormal{(i)}
+La constructibilidad se demostró en \sref{III.7.6.8}. Para probar la
+semicontinuidad superior, basta, por tanto, \sref[0]{0.9.2.4},
+demostrar que, si $x'\neq x$ es una generalización de $x$ en
+$\Spec(A)$, entonces $d_p(x')\leq d_p(x)$. Existe un anillo de
+valuación discreta $B$ y un morfismo
+\[
+  f:\Spec(B)\longrightarrow\Spec(A)
+\]
+tales que, si $a$ es el punto cerrado de $\Spec(B)$ y $b$ su punto
+genérico, entonces $f(a)=x$ y $f(b)=x'$
+\sref[II]{II.7.1.9}. Por \eqref{III.7.6.7.1}, nos reducimos a probar
+$d_p(a)\geq d_p(b)$ sobre $\Spec(B)$, que es precisamente
+\eqref{III.7.6.5.1}.\footnote{El principio de demostrar
+\textnormal{(i)} por reducción al caso de un anillo de valuación
+discreta nos fue comunicado oralmente por Hironaka.}
+
+\medskip
+\textnormal{(ii)}
+La primera aserción ya se demostró en \sref{III.7.3.4}. Para el
+recíproco, utilícese el criterio valuativo \sref{III.7.6.2}. En vista
+de \eqref{III.7.6.7.1}, nos reducimos al caso en que $A$ es un anillo
+de valuación discreta. Como $\Spec(A)$ tiene entonces solamente dos
+puntos, la hipótesis de que $d_p$ es constante implica que $T_p$ es
+exacto, por \sref{III.7.6.5}.
+\end{proof}
+
+\begin{corollary}[7.6.10]
+\label{III.7.6.10}
+Sean $A$ un anillo noetheriano, $\mathfrak p_i$ $(1\leq i\leq r)$
+sus ideales primos minimales, y $k_i$ el cuerpo residual de
+$A_{\mathfrak p_i}$.
+\begin{enumerate}
+  \item[(i)] Para todo $x\in\Spec(A)$, existe un índice $i$ tal que
+    \[
+      d_p(x)\geq
+      \operatorname{rank}_{k_i}T_p(k_i).
+      \tag{7.6.10.1}\label{III.7.6.10.1}
+    \]
+\end{enumerate}
+En particular, si $A$ es un anillo íntegro y $K$ es su cuerpo de
+fracciones, entonces
+\[
+  d_p(x)\geq\operatorname{rank}_K T_p(K)
+  \tag{7.6.10.2}\label{III.7.6.10.2}
+\]
+para todo $x\in\Spec(A)$.
+
+\oldpage[III]{196}
+\begin{enumerate}
+  \item[(ii)] Supongamos además que $A$ es local y reducido, y sea
+    $k$ su cuerpo residual. Entonces $T_p$ es exacto si y solo si
+    \[
+      \operatorname{rank}_k T_p(k)
+      =
+      \operatorname{rank}_{k_i}T_p(k_i)
+      \qquad(1\leq i\leq r).
+      \tag{7.6.10.3}\label{III.7.6.10.3}
+    \]
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La aserción \textnormal{(i)} es inmediata: todo entorno de $x$
+contiene uno de los $\mathfrak p_i$, y basta aplicar la definición de
+semicontinuidad. Si $A$ es local, el único entorno del ideal maximal
+$\mathfrak m$ en $\Spec(A)$ es todo $\Spec(A)$; por tanto,
+\[
+  d_p(x)\leq\operatorname{rank}_k T_p(k)
+\]
+para todo $x\in\Spec(A)$. Junto con \textnormal{(i)}, esto muestra que
+\eqref{III.7.6.10.3} implica que $d_p$ es constante sobre
+$\Spec(A)$ y, por tanto, que $T_p$ es exacto por
+\sref{III.7.6.9}[(ii)]. El recíproco se deduce inmediatamente del
+mismo resultado.
+\end{proof}
+
+\egaIIISubsectionSevenSixEleven

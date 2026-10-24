@@ -1,0 +1,816 @@
+\subsection{Pares parafactoriales. Anillos locales parafactoriales}
+\label{subsection:IV.21.13}
+\label{IV.21.13}
+
+\begin{definition}[21.13.1]
+\label{IV.21.13.1}
+Sean $X$ un espacio anillado, $Y$ una parte cerrada de $X$ y $U=X-Y$.
+Se dice que el par $(X,Y)$ es \emph{parafactorial} si, para todo abierto $V$ de $X$,
+el functor de restricción
+$\mathscr L\mapsto\mathscr L|(U\cap V)$, de la categoría de los
+$\mathcal O_V$-módulos invertibles a la de los $\mathcal O_{U\cap V}$-módulos
+invertibles, es una \emph{equivalencia de categorías}.
+\end{definition}
+
+Decir que el par $(X,Y)$ es parafactorial significa, pues, que para todo abierto $V$
+de $X$ se satisfacen las condiciones siguientes:
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item el functor $\mathscr L\mapsto\mathscr L|(U\cap V)$ es \emph{plenamente
+  fiel}; dicho de otro modo, para dos $\mathcal O_V$-módulos invertibles $\mathscr L$,
+  $\mathscr L'$, la aplicación de restricción
+  \[
+    \operatorname{Hom}_{\mathcal O_V}(\mathscr L,\mathscr L')
+    \longrightarrow
+    \operatorname{Hom}_{\mathcal O_{U\cap V}}
+    (\mathscr L|(U\cap V),\mathscr L'|(U\cap V))
+  \]
+  es \emph{biyectiva};
+  \item el functor $\mathscr L\mapsto\mathscr L|(U\cap V)$ es
+  \emph{esencialmente sobreyectivo}; dicho de otro modo, para todo
+  $\mathcal O_{U\cap V}$-módulo invertible $\mathscr L_0$, existe un
+  $\mathcal O_V$-módulo invertible $\mathscr L$ tal que $\mathscr L_0$ sea
+  \oldpage[IV-4]{314}
+  isomorfo a $\mathscr L|(U\cap V)$; esto se expresa también diciendo que
+  el homomorfismo canónico (21.3.2.4)
+  \[
+    \operatorname{Pic}(V)\longrightarrow\operatorname{Pic}(U\cap V)
+  \]
+  es \emph{sobreyectivo}.
+\end{enumerate}
+
+\begin{lemma}[21.13.2]
+\label{IV.21.13.2}
+Sea $f:X'\to X$ un morfismo de espacios anillados; para todo abierto $V$ de $X$,
+se denota por $f_V:f^{-1}(V)\to V$ la restricción de $f$. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Para todo abierto $V$ de $X$, el functor
+  $\mathscr E\mapsto f_V^*(\mathscr E)$ de la categoría de los $\mathcal O_V$-módulos
+  localmente libres de rango finito a la categoría de los
+  $\mathcal O_{f^{-1}(V)}$-módulos localmente libres de rango finito es fiel
+  (resp.\ plenamente fiel).
+  \item[\emph{a')}] Para todo abierto $V$ de $X$, el functor
+  $\mathscr L\mapsto f_V^*(\mathscr L)$ de la categoría de los $\mathcal O_V$-módulos
+  localmente libres de rango $1$ a la categoría de los
+  $\mathcal O_{f^{-1}(V)}$-módulos localmente libres de rango $1$ es fiel
+  (resp.\ plenamente fiel).
+  \item Para todo abierto $V$ de $X$, el homomorfismo canónico
+  $(\mathbf 0_{\mathrm I}, 4.4.3.2)$
+  $\mathscr E\to(f_V)_*(f_V^*(\mathscr E))$ es un monomorfismo
+  (resp.\ un isomorfismo) para todo $\mathcal O_V$-módulo localmente libre
+  $\mathscr E$ de rango finito.
+  \item[\emph{b')}] El homomorfismo canónico
+  $\mathcal O_X\to f_*(\mathcal O_{X'})$ es un monomorfismo
+  (resp.\ un isomorfismo).
+\end{enumerate}
+
+Supongamos que el homomorfismo canónico $\mathcal O_X\to f_*(\mathcal O_{X'})$ es
+biyectivo; entonces, para que un $\mathcal O_{X'}$-módulo localmente libre de rango finito
+$\mathscr E'$ sea isomorfo a un $\mathcal O_{X'}$-módulo de la forma
+$f^*(\mathscr E)$, donde $\mathscr E$ es un $\mathcal O_X$-módulo localmente libre de
+rango finito, es necesario y suficiente que se satisfagan las dos condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+  \item $f_*(\mathscr E')$ es un $\mathcal O_X$-módulo localmente libre;
+  \item el homomorfismo canónico $(\mathbf 0_{\mathrm I}, 4.4.3.3)$
+  $f^*(f_*(\mathscr E'))\to\mathscr E'$ es un isomorfismo.
+\end{enumerate}
+Cuando se satisfacen estas dos condiciones, $\mathscr E$ es isomorfo a
+$f_*(\mathscr E')$.
+\end{lemma}
+
+\begin{proof}
+Decir que el functor $\mathscr E\mapsto f_V^*(\mathscr E)$ es fiel
+(resp.\ plenamente fiel) significa que, para dos $\mathcal O_V$-módulos localmente
+libres de rango finito $\mathscr E_1$, $\mathscr E_2$, la aplicación
+\[
+  \operatorname{Hom}_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)
+  \longrightarrow
+  \operatorname{Hom}_{\mathcal O_{f^{-1}(V)}}
+  (f_V^*(\mathscr E_1),f_V^*(\mathscr E_2))
+\]
+es inyectiva (resp.\ biyectiva); como esto debe cumplirse sustituyendo $V$ por un
+abierto $W\subset V$ y $\mathscr E_1$, $\mathscr E_2$ por $\mathscr E_1|W$,
+$\mathscr E_2|W$, y como
+\[
+  \operatorname{Hom}_{\mathcal O_W}(\mathscr E_1|W,\mathscr E_2|W)
+  =\Gamma(W,\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)),
+\]
+la condición significa también que el homomorfismo canónico de haces
+\[
+\label{IV.21.13.2.1}
+  \mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)
+  \longrightarrow
+  (f_V)_*(f_V^*(\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)))
+  \tag{21.13.2.1}
+\]
+es inyectivo (resp.\ biyectivo). Pero, puesto que $\mathscr E_1$ y $\mathscr E_2$ son
+localmente libres de rango finito,
+$\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)$, isomorfo a
+$\mathscr E_1^\vee\otimes_{\mathcal O_V}\mathscr E_2$
+$(\mathbf 0_{\mathrm I}, 5.4.2)$, es también localmente libre de rango finito; esto muestra
+ya que $b)$ implica $a)$ y, recíprocamente, $b)$ es un caso particular de $a)$,
+teniendo en cuenta el isomorfismo
+$\mathscr E\xrightarrow{\sim}\mathscr Hom_{\mathcal O_V}(\mathcal O_V,\mathscr E)$.
+Está claro que $a')$ es un caso particular de $a)$ y $b')$ un caso particular de
+$a')$. Recíprocamente, como $b)$ es una propiedad local, para verificarla podemos
+limitarnos al caso en que $\mathscr E=\mathcal O_V^n$, y esto muestra que $b')$ implica
+$b)$.
+
+Si el homomorfismo canónico $\mathcal O_X\to f_*(\mathcal O_{X'})$ es biyectivo,
+y si se satisfacen las condiciones (i) y (ii), está claro que
+$\mathscr E'=f^*(\mathscr E)$ con $\mathscr E=f_*(\mathscr E')$, salvo isomorfismo.
+\oldpage[IV-4]{315}
+Recíprocamente, supongamos que $\mathscr E'=f^*(\mathscr E)$, con $\mathscr E$ localmente
+libre; como la cuestión es local sobre $X$, podemos suponer que
+$\mathscr E=\mathcal O_X^n$, de donde $\mathscr E'=\mathcal O_{X'}^n$, y las condiciones
+(i) y (ii) resultan de la hipótesis de que
+$\mathcal O_X\to f_*(\mathcal O_{X'})$ es un isomorfismo.
+\end{proof}
+
+En este número aplicaremos el lema anterior a una inyección canónica
+$j:U\to X$, donde $U$ es el espacio anillado inducido por $X$ sobre un \emph{abierto} de $X$.
+Con estas notaciones, (21.13.2) se traduce en:
+
+\begin{corollary}[21.13.3]
+\label{IV.21.13.3}
+Sean $X$ un espacio anillado, $Y$ una parte cerrada de $X$, $U=X-Y$ y
+$j:U\to X$ la inyección canónica. Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Para todo abierto $V$ de $X$, el functor de restricción
+  $\mathscr E\mapsto\mathscr E|(U\cap V)$ de la categoría de los
+  $\mathcal O_V$-módulos localmente libres de rango finito a la categoría de los
+  $\mathcal O_{U\cap V}$-módulos localmente libres de rango finito es fiel
+  (resp.\ plenamente fiel).
+  \item[\emph{a')}] Para todo abierto $V$ de $X$, el functor de restricción
+  $\mathscr L\mapsto\mathscr L|(U\cap V)$ de la categoría de los
+  $\mathcal O_V$-módulos localmente libres de rango $1$ a la categoría de los
+  $\mathcal O_{U\cap V}$-módulos localmente libres de rango $1$ es fiel
+  (resp.\ plenamente fiel).
+  \item Para todo abierto $V$ de $X$, el homomorfismo canónico
+  $\mathscr E\to(j_V)_*(\mathscr E|(U\cap V))$ es inyectivo (resp.\ biyectivo) para
+  todo $\mathcal O_V$-módulo localmente libre de rango finito $\mathscr E$.
+  \item[\emph{b')}] El homomorfismo canónico
+  $\mathcal O_X\to j_*(\mathcal O_U)$ es inyectivo (resp.\ biyectivo).
+\end{enumerate}
+
+Supongamos que el homomorfismo canónico $\mathcal O_X\to j_*(\mathcal O_U)$ es
+biyectivo. Entonces, para que un $\mathcal O_U$-módulo localmente libre de rango finito
+$\mathscr F$ sea de la forma $\mathscr E|U$, donde $\mathscr E$ es un
+$\mathcal O_X$-módulo localmente libre de rango finito, es necesario y suficiente que
+$j_*(\mathscr F)$ sea un $\mathcal O_X$-módulo localmente libre, y en este caso se
+puede tomar $\mathscr E=j_*(\mathscr F)$.
+\end{corollary}
+
+\begin{lemma}[21.13.4]
+\label{IV.21.13.4}
+Sean $X$ un preesquema localmente noetheriano, $Y$ una parte cerrada de $X$,
+$U=X-Y$ y $j:U\to X$ la inyección canónica. Para que el homomorfismo canónico
+$\mathcal O_X\to j_*(\mathcal O_U)$ sea inyectivo (resp.\ biyectivo), es necesario y
+suficiente que $\operatorname{prof}_Y(\mathcal O_X)\geq1$
+(resp.\ $\operatorname{prof}_Y(\mathcal O_X)\geq2$) (dicho de otro modo, que
+$\operatorname{prof}(\mathcal O_{X,x})\geq1$
+(resp.\ $\operatorname{prof}(\mathcal O_{X,x})\geq2$) para todo $x\in Y$).
+\end{lemma}
+
+\begin{proof}
+Estas afirmaciones son, en efecto, casos particulares de (5.10.2) y (5.10.5).
+\end{proof}
+
+\begin{proposition}[21.13.5]
+\label{IV.21.13.5}
+Sean $X$ un espacio anillado, $Y$ una parte cerrada de $X$, $U=X-Y$ y
+$j:U\to X$ la inyección canónica. Para que el par $(X,Y)$ sea parafactorial, es
+necesario y suficiente que el homomorfismo canónico $\mathcal O_X\to j_*(\mathcal O_U)$
+sea biyectivo, y que para todo abierto $V$ de $X$ y todo
+$\mathcal O_{U\cap V}$-módulo invertible $\mathscr L$, $(j_V)_*(\mathscr L)$ sea un
+$\mathcal O_V$-módulo invertible (notación de (21.13.3)).
+\end{proposition}
+
+\begin{proof}
+Es una consecuencia inmediata de la definición (21.13.1) y de (21.13.3).
+\end{proof}
+
+\begin{corollary}[21.13.6]
+\label{IV.21.13.6}
+Sean $X$ un espacio anillado e $Y$ una parte cerrada de $X$.
+\begin{enumerate}[label=(\roman*)]
+  \item Si el par $(X,Y)$ es parafactorial, también lo es
+  $(W,Y\cap W)$ para todo abierto $W$ de $X$. Recíprocamente, si $(W_\alpha)$ es un
+  recubrimiento abierto de $X$ tal que cada uno de los pares
+  $(W_\alpha,Y\cap W_\alpha)$ es parafactorial, entonces el par $(X,Y)$ es
+  parafactorial.
+  \item Si el par $(X,Y)$ es parafactorial, también lo es $(X,Y')$ para
+  toda parte cerrada $Y'$ de $Y$.
+  \item Supongamos que $X$ es un preesquema, y sean $X'$ un preesquema y
+  $f:X'\to X$ un morfismo fielmente plano y cuasicompacto; pongamos
+  $Y'=f^{-1}(Y)$. Supongamos que el par $(X',Y')$ es parafactorial y que
+  el abierto $U=X-Y$ es retrocompacto en $X$ $(\mathbf 0_{\mathrm{III}}, 9.1.1)$.
+  Entonces el par $(X,Y)$ es parafactorial.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\oldpage[IV-4]{316}
+(i) Como el hecho de que el homomorfismo canónico
+$\mathcal O_X\to j_*(\mathcal O_U)$ sea biyectivo es una propiedad local sobre $X$,
+todo se reduce a ver (en virtud de (21.13.5)), designando por
+$j_\alpha:U\cap W_\alpha\to W_\alpha$ la inyección canónica, que se tiene la propiedad
+siguiente: si, para todo $\alpha$ y para todo $\mathcal O_U$-módulo invertible
+$\mathscr L$, $(j_\alpha)_*(\mathscr L|(U\cap W_\alpha))$ es un
+$\mathcal O_{W_\alpha}$-módulo invertible, entonces $j_*(\mathscr L)$ es un
+$\mathcal O_X$-módulo invertible. Pero la propiedad de ser un $\mathcal O_X$-módulo
+invertible es local sobre $X$, y $(W_\alpha)$ es un recubrimiento abierto de $X$;
+como se tiene
+\[
+  j_*(\mathscr L)|W_\alpha
+  =(j_\alpha)_*(\mathscr L|(U\cap W_\alpha)),
+\]
+esto demuestra nuestra afirmación.
+
+(ii) Pongamos $U'=X-Y'$, y sea $j':U'\to X$ la inyección canónica. Decir que
+el homomorfismo $\mathcal O_X\to j'_*(\mathcal O_{U'})$ es biyectivo equivale a decir
+que para todo abierto $V$ de $X$, el homomorfismo
+$\Gamma(V,\mathcal O_X)\to\Gamma(V\cap U',\mathcal O_X)$ es biyectivo; pero
+el homomorfismo compuesto
+\[
+  \Gamma(V,\mathcal O_X)\longrightarrow\Gamma(V\cap U',\mathcal O_X)
+  \longrightarrow\Gamma(V\cap U,\mathcal O_X)
+\]
+es biyectivo por hipótesis (21.13.5), y al sustituir $V$ por $V\cap U'$, se ve que
+$\Gamma(V\cap U',\mathcal O_X)\to\Gamma(V\cap U,\mathcal O_X)$ es biyectivo, por lo que
+$\Gamma(V,\mathcal O_X)\to\Gamma(V\cap U',\mathcal O_X)$ es biyectivo. Observemos ahora
+que si $j'':U\to U'$ es la inyección canónica y si $\mathscr L'$ es un
+$\mathcal O_{U'}$-módulo invertible, $\mathscr L'|U$ es un $\mathcal O_U$-módulo
+invertible, luego
+$j_*(\mathscr L'|U)=j'_*(j''_*(\mathscr L'|U))$ es por hipótesis un
+$\mathcal O_X$-módulo invertible. Como el par $(U',U'\cap Y)$ es parafactorial
+en virtud de (i), se tiene $j''_*(\mathscr L'|U)\cong\mathscr L'$, luego
+$j'_*(\mathscr L')$ es un $\mathcal O_X$-módulo invertible. Para concluir basta
+sustituir en el razonamiento anterior $X$, $U$ y $U'$ por $V$,
+$V\cap U$ y $V\cap U'$, donde $V$ es un abierto de $X$.
+
+(iii) Pongamos $U'=X'-Y'=f^{-1}(U)$ y observemos que, puesto que se trata de preesquemas, se
+puede escribir $U'=U\times_X X'$; sea $f_U:f^{-1}(U)\to U$ la restricción de $f$ y
+sea $j':U'\to X'$ la inyección canónica, que también se escribe $j_{(X')}$. Demostremos
+primero que el homomorfismo canónico
+$\rho:\mathcal O_X\to j_*(\mathcal O_U)$ es biyectivo; para ello, observemos que por
+hipótesis el homomorfismo canónico
+$\mathcal O_{X'}\to j'_*(\mathcal O_{U'})$ es biyectivo; pero, puesto que el morfismo
+$j$ es cuasicompacto y separado por hipótesis, y el morfismo $f$ es plano,
+$j'_*(\mathcal O_{U'})=j'_*(f_U^*(\mathcal O_U))$ se identifica canónicamente con
+$f^*(j_*(\mathcal O_U))$ en virtud de (2.3.1); como
+$\mathcal O_{X'}=f^*(\mathcal O_X)$, se ve que el homomorfismo
+$f^*(\rho):f^*(\mathcal O_X)\to f^*(j_*(\mathcal O_U))$ es biyectivo; se concluye
+que $\rho$ es biyectivo puesto que $f$ es fielmente plano (2.2.7). Consideremos ahora
+un $\mathcal O_U$-módulo invertible $\mathscr L$, y sea
+$\mathscr L'=f_U^*(\mathscr L)$, que es un $\mathcal O_{U'}$-módulo invertible. Por
+hipótesis $j'_*(f_U^*(\mathscr L))$ es un $\mathcal O_{X'}$-módulo invertible, que
+es isomorfo a $f^*(j_*(\mathscr L))$ por (2.3.1), como antes. Pero, puesto que $f$
+es fielmente plano y cuasicompacto, esto implica que $j_*(\mathscr L)$ es un
+$\mathcal O_X$-módulo localmente libre (2.5.2). Para terminar la demostración basta
+sustituir $X$ por un abierto $V$ y $X'$ por $f^{-1}(V)$ en lo que
+precede.
+\end{proof}
+
+\begin{definition}[21.13.7]
+\label{IV.21.13.7}
+Se dice que un anillo local $A$ es \emph{parafactorial} si, poniendo
+$X=\operatorname{Spec}(A)$ y designando por $a$ el punto cerrado de $X$, el par
+$(X,\{a\})$ es parafactorial.
+\end{definition}
+
+\begin{proposition}[21.13.8]
+\label{IV.21.13.8}
+Con las notaciones de (21.13.7), se pone $U=X-\{a\}$. Para que $A$ sea
+parafactorial, es necesario y suficiente que verifique las condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+  \item El homomorfismo canónico
+  $A=\Gamma(X,\mathcal O_X)\to\Gamma(U,\mathcal O_X)$ es biyectivo.
+  \item $\operatorname{Pic}(U)=0$.
+\end{enumerate}
+\oldpage[IV-4]{317}
+Si además $A$ es noetheriano, la condición (i) equivale a
+\begin{enumerate}
+  \item[\textup{(i bis)}] $\operatorname{prof}(A)\geq2$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En efecto, el único abierto de $X$ que contiene $a$ es el propio $X$, y por tanto todo
+$\mathcal O_X$-módulo invertible es isomorfo a $\mathcal O_X$, dicho de otro modo,
+$\operatorname{Pic}(X)=0$; la primera afirmación resulta entonces de la definición
+(21.13.1) y de (21.13.3). La segunda afirmación no es sino un caso particular de
+(21.13.4).
+\end{proof}
+
+\begin{env}[21.13.9]
+\label{IV.21.13.9}
+\emph{Ejemplos}. ---
+
+(i) Un anillo local noetheriano parafactorial es necesariamente de dimensión
+$\geq2$ en virtud de (21.13.8); dicho de otro modo, un anillo local noetheriano de
+dimensión $\leq1$ no es parafactorial.
+
+(ii) Un anillo local noetheriano \emph{factorial} $A$ de dimensión $\geq2$ es
+parafactorial, como resulta de (21.13.8) y de (21.6.14).
+
+(iii) Si $A$ es un anillo local noetheriano de dimensión $\geq3$ y parafactorial, no
+es necesariamente normal, ni siquiera reducido. Consideremos un anillo local regular
+$B$ de dimensión $\geq3$, y sea $A=D_B(B)$ $(\mathbf 0, 18.2.3)$, isomorfo a
+$B[T]/(T^2)$; se ve inmediatamente que se tiene
+$\operatorname{prof}(A)=\operatorname{prof}(B)=\dim(B)\geq3$. Para demostrar que $A$
+es parafactorial basta, con las notaciones de (21.13.8), probar que
+$\operatorname{Pic}(U)=0$. Sea $\mathfrak J$ el núcleo del aumento $A\to B$,
+tal que $\mathfrak J^2=0$ y que, como $B$-módulo, es isomorfo a $B$.
+Como $B=A/\mathfrak J$, $X=\operatorname{Spec}(A)$ y
+$X_0=\operatorname{Spec}(B)$ tienen el mismo espacio subyacente; si
+$\mathscr J=\widetilde{\mathfrak J}$, $X_0$ es el subesquema definido por
+$\mathscr J$; denotaremos por $U_0$ el subpreesquema inducido por $X_0$ sobre el abierto
+$U$. Para todo $z\in\mathfrak J$, pongamos $\varphi(z)=1+z$; puesto que
+$(1+z)(1-z)=1$, $1+z$ es invertible en $A$ y $\varphi(\mathfrak J)$ es el núcleo
+del homomorfismo sobreyectivo canónico de grupos multiplicativos $A^*\to B^*$; dicho
+de otro modo, se tiene una sucesión exacta de grupos conmutativos
+\[
+  0\longrightarrow\mathfrak J\xrightarrow{\varphi}A^*\longrightarrow B^*
+  \longrightarrow1
+\]
+(siendo multiplicativos los tres últimos grupos y aditivos los dos primeros). Por la
+misma razón, para todo $t\in A$, se tiene la sucesión exacta
+\[
+  0\longrightarrow\mathfrak J_t\xrightarrow{\varphi_t}(A_t)^*
+  \longrightarrow(B_{t_0})^*\longrightarrow1
+\]
+designando por $t_0$ la imagen de $t$ en $B$, puesto que
+$B_{t_0}=A_t/\mathfrak J_t$; dicho de otro modo, se tiene una sucesión exacta de haces de
+grupos conmutativos sobre el espacio topológico $X$
+\[
+  0\longrightarrow\mathscr J\xrightarrow{u}\mathcal O_X^*
+  \longrightarrow\mathcal O_{X_0}^*\longrightarrow1
+\]
+de donde, por restricción al abierto $U$, una sucesión exacta
+\[
+  0\longrightarrow\mathscr J|U\longrightarrow\mathcal O_U^*
+  \longrightarrow\mathcal O_{U_0}^*\longrightarrow1.
+\]
+De la sucesión exacta de cohomología se deduce una sucesión exacta
+\[
+\label{IV.21.13.9.1}
+  \mathrm H^1(U,\mathscr J)\longrightarrow\mathrm H^1(U,\mathcal O_U^*)
+  \xrightarrow{u_1}\mathrm H^1(U,\mathcal O_{U_0}^*)
+  \tag{21.13.9.1}
+\]
+Pero, puesto que $\mathfrak J$ es un $B$-módulo isomorfo a $B$, se tiene
+$\mathrm H^1(U,\mathscr J)=\mathrm H^1(U_0,\mathcal O_{U_0})$, y resulta del
+cap.~III, 3\textsuperscript{a} parte (véase también [41, III, Ejemplo III-1]) que se tiene
+\oldpage[IV-4]{318}
+$\mathrm H^1(U_0,\mathcal O_{U_0})=0$ en razón de la relación
+$\operatorname{prof}(B)\geq3$. Por otra parte, como $B$ es factorial, se tiene
+$\mathrm H^1(U,\mathcal O_{U_0}^*)=\operatorname{Pic}(U_0)=0$; de la
+sucesión exacta anterior se deduce, pues, que
+$\operatorname{Pic}(U)=\mathrm H^1(U,\mathcal O_U^*)=0$.
+
+(iv) Existen también anillos locales noetherianos de dimensión $3$ que son
+íntegros, íntegramente cerrados y parafactoriales, pero no factoriales. Sea, en efecto, $B$
+un anillo local noetheriano, completo, íntegro e íntegramente cerrado, de dimensión
+$\geq2$ y no factorial (por ejemplo, el completado del anillo localizado del álgebra
+íntegra $k[U,V,W]/(W^2-UV)$ en el ideal imagen de $(U)+(V)+(W)$). Resulta entonces de
+lo que se verá más adelante (21.14.2) que el anillo local $A=B[[T]]$ de las series formales
+en $T$ sobre $B$ es parafactorial, pero no es factorial, pues de lo contrario $B$ lo sería
+en virtud de (21.13.12) más abajo.
+
+(v) Se puede demostrar que un anillo local de intersección completa absoluta (19.3.1) de
+dimensión $\geq4$ es parafactorial (cf. [41, XI, 3.13 (i)]).
+
+(vi) Se ha visto (Observación (ii)) que todo anillo local noetheriano factorial $A$ de
+dimensión $2$ es parafactorial. Pero hay anillos locales noetherianos de
+dimensión $2$ que son parafactoriales y no factoriales. Se puede demostrar que, para
+que un anillo local noetheriano $A$ de dimensión $2$ sea parafactorial y no
+factorial, es necesario y suficiente que satisfaga las tres condiciones siguientes:
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item $A$ es un anillo de Cohen--Macaulay (dicho de otro modo,
+  $\operatorname{prof}(A)=2$).
+  \item $A$ es íntegro y, si $A'$ es su clausura integral, $A'$ es factorial y es
+  un $A$-álgebra finita.
+  \item Sea $\mathfrak J$ el conductor de $A$ en $A'$ (anulador del $A$-módulo
+  $A'/A$, o también el mayor ideal de $A'$ contenido en $A$); pongamos
+  $B=A/\mathfrak J$, $B'=A'/\mathfrak J$; entonces $\dim(B)=1$ (lo que implica
+  $A'\neq A$, dicho de otro modo, $A$ no es íntegramente cerrado), y la aplicación
+  canónica $\operatorname{Div}(B)\to\operatorname{Div}(B')$ (21.4.5) es
+  \emph{sobreyectiva}.
+\end{enumerate}
+Se puede demostrar además que estas condiciones implican la propiedad siguiente:
+
+$4^{\mathrm o}$ El anillo $B'$ (y \emph{a fortiori} $B\subset B'$) es reducido, y el
+morfismo $\operatorname{Spec}(B')\to\operatorname{Spec}(B)$ es biyectivo.
+
+Si se pone $X=\operatorname{Spec}(A)$, $X'=\operatorname{Spec}(A')$,
+$Y=\operatorname{Spec}(B)$, $Y'=\operatorname{Spec}(B')$, de modo que $Y$
+(resp.\ $Y'$) está definido por el ideal $\mathfrak J$ de $A$ (resp.\ $A'$), el morfismo
+estructural $f:X'\to X$ es un isomorfismo de $X'-Y'$ sobre $X-Y$ (Bourbaki,
+\emph{Alg. comm.}, cap.~V, \S1, n\textsuperscript{o}~5, cor.~5 de la prop.~16). Se
+ve, pues, en virtud de $4^{\mathrm o}$ que $f$ es un morfismo \emph{biyectivo}; dicho
+de otro modo, $X$ es un preesquema \emph{unirrama} (6.15.1) (y en particular
+$A'$ es un anillo local noetheriano); en general $X$ no es geométricamente
+unirrama. El espacio $Y$, de dimensión $1$, está constituido por el punto cerrado $x$ de
+$X$ y los puntos maximales $y_i$ ($1\leq i\leq r$) de $Y$, y el único punto $y_i'$
+de $Y'$ sobre $y_i$ es también un punto maximal de $Y'$; como $B$ y $B'$ son
+reducidos, se deduce que se tiene
+\[
+  \mathfrak m_{y_i}\mathcal O_{X',y_i'}=\mathfrak m_{y_i'}.
+\]
+Para $z=y_i$ y $z'=y_i'$, esta relación también se verifica evidentemente para
+$z\notin Y$ y $z'$ el único punto de $f^{-1}(z)$, por tanto para todo
+$z\in U=X-\{x\}$ y $z'$ el único punto de $f^{-1}(z)$. En particular, si el anillo
+$A$ es de característica $0$ (0, 21.1.1), se ve que $U'$ es \emph{no ramificado} sobre
+$U$ (pero no étale en general).
+
+Nos limitaremos aquí a demostrar que las condiciones $1^{\mathrm o}$,
+$2^{\mathrm o}$ y $3^{\mathrm o}$ anteriores son \emph{suficientes} para que $A$ sea
+parafactorial. Ahora bien, en virtud de la condición $1^{\mathrm o}$ y de (21.13.8), basta
+demostrar que $\operatorname{Pic}(U)=0$. Puesto que $A'$ es factorial en virtud de
+$2^{\mathrm o}$, se tiene $\operatorname{Pic}(U')=0$, y de (21.8.5, (ii)) se deduce una
+sucesión exacta
+\[
+  1\longrightarrow
+  \left(\prod_{i=1}^r
+  \mathcal O_{U',y_i'}^*/\mathcal O_{U,y_i}^*\right)
+  \big/\operatorname{Im}\Gamma(U',\mathcal O_{U'}^*)
+  \longrightarrow\operatorname{Pic}(U)\longrightarrow\operatorname{Pic}(U')
+  \longrightarrow0
+\]
+y se trata, pues, de demostrar que el segundo término de esta sucesión se reduce al elemento
+neutro, tomando como $S$ el conjunto de los $y_i$ ($1\leq i\leq r$) y observando
+que aquí $f_*(\mathcal O_{X'})$ es la $\mathcal O_X$-álgebra $\widetilde{A'}$. Sean
+$\mathfrak p_i$, $\mathfrak p_i'$ los ideales primos de $A$ y $A'$ correspondientes
+a los puntos $y_i$, $y_i'$, y observemos que $\mathfrak p_i'\cap A=\mathfrak p_i$;
+para cada $i$, démonos un elemento invertible $a_i'/s_i$ de
+$A'_{\mathfrak p_i'}$, con $a_i'\in A'$, $s_i\notin\mathfrak p_i'$; como solo
+tenemos que examinar los grupos cociente
+$(A'_{\mathfrak p_i'})^*/(A_{\mathfrak p_i})^*$, se puede suponer $s_i=1$ para todo
+$i$; sea $b_i'\in B'=A'/\mathfrak J$ la imagen canónica de $a_i'$, de modo que
+$b_i'/1$ es un elemento no nulo de $k(y_i')=\mathcal O_{Y',y_i'}$. El conjunto
+$U\cap Y$ formado por los $y_i$ es un abierto afín de la forma $D(t)$ en $Y$, con
+$t\in\mathfrak m$, ideal maximal de $A$; existe, pues, un elemento invertible
+$b'\in B'_t$ cuyas imágenes canónicas son los $b_i'/1$, y como $t$ es regular
+en el anillo íntegro $A'$, se puede suponer que $b'$ es de la forma $b''/t^m$, donde
+$b''\in B'$ es invertible. Sea $a''$ un elemento de $A'$ de clase $b''$, que
+es, pues, necesariamente invertible; $a'=a''/t^m$ es invertible en $A'_t$ y para
+todo $i$ se tiene
+\[
+  u_i=a''-a_i't^m\in\mathfrak J,
+  \qquad
+  t^m a_i'=a''-u_i=a''(1-a''^{-1}u_i);
+\]
+pero $a''^{-1}u_i\in\mathfrak J\subset\mathfrak m$, luego $1-a''^{-1}u_i$ es un
+elemento invertible de $A$, y las clases de $a'$ y $a_i'$ en
+$(A'_{\mathfrak p_i'})^*/(A_{\mathfrak p_i})^*$ son las mismas, lo que termina la
+demostración.
+
+\oldpage[IV-4]{319}
+Para obtener un ejemplo explícito de anillo parafactorial de dimensión $2$ obtenido de
+esta manera y \emph{no factorial}, consideremos el anillo
+\[
+  E=\mathbb R[[U,V]]/(U^2+V^2),
+\]
+cuya clausura integral $E'$ se identifica con $\mathbb C[[U]]$ (6.15.11). Si se pone
+$A=E[[T]]$, la clausura integral de $A$ es el anillo $A'=E'[[T]]$ (Bourbaki,
+\emph{Alg. comm.}, cap.~V, \S1, n\textsuperscript{o}~4, prop.~14); se comprueba
+inmediatamente que el conductor de $E$ en $E'$ es el ideal maximal $\mathfrak n$ de
+$E$, luego el conductor $\mathfrak J$ de $A$ en $A'$ es $\mathfrak n[[T]]$, y se
+tiene $B=A/\mathfrak J\cong\mathbb R[[T]]$, $B'=A'/\mathfrak J\cong\mathbb C[[T]]$.
+Es entonces inmediato que las condiciones $1^{\mathrm o}$, $2^{\mathrm o}$ y
+$3^{\mathrm o}$ enunciadas anteriormente se verifican, pero $A$ ni siquiera es
+íntegramente cerrado.
+
+Se puede variar este ejemplo, y el lector verá fácilmente que, si $k$ es un cuerpo
+algebraicamente cerrado, el anillo $A$, localización del anillo
+$k[U,V,W]/(U^2-WV^2)$ en el ideal maximal engendrado por las imágenes de $U$, $V$ y $W$,
+verifica también las condiciones $1^{\mathrm o}$, $2^{\mathrm o}$ y $3^{\mathrm o}$
+anteriores.
+
+Podría suceder incluso que estas tres condiciones implicaran que cada uno de los anillos
+$B'/\mathfrak p_i'$ fuese un anillo de valoración discreta, lo que implicaría que
+$A'$ fuese incluso un anillo \emph{regular}.
+\end{env}
+
+\begin{proposition}[21.13.10]
+\label{IV.21.13.10}
+Sean $X$ un preesquema localmente noetheriano e $Y$ una parte cerrada de $X$. Para que
+el par $(X,Y)$ sea parafactorial, es necesario y suficiente que, para todo $y\in Y$,
+el anillo local $\mathcal O_{X,y}$ sea parafactorial.
+\end{proposition}
+
+\begin{proof}
+Pongamos $U=X-Y$ y sea $j:U\to X$ la inyección canónica.
+
+En virtud de (21.13.4), decir que el homomorfismo canónico
+$\mathcal O_X\to j_*(\mathcal O_U)$ es biyectivo equivale a decir que cada uno de los
+anillos locales $\mathcal O_{X,y}$ para $y\in Y$ satisface la condición (i bis) de
+(21.13.8).
+
+Demostremos primero que, si el par $(X,Y)$ es parafactorial, cada uno de los anillos
+$\mathcal O_{X,y}$ ($y\in Y$) es parafactorial. Teniendo en cuenta la observación
+anterior, todo se reduce a ver que, si se pone
+$T_y=\operatorname{Spec}(\mathcal O_{X,y})$ y $U_y=T_y-\{y\}$, todo
+$\mathcal O_{U_y}$-módulo invertible $\mathscr L_0$ es isomorfo a
+$\mathcal O_{U_y}$. Ahora bien, cuando $V$ recorre el conjunto de los entornos abiertos
+afines de $y$ en $X$, resulta de (8.2.13) y $(\mathbf I, 2.4.2)$ que el
+preesquema $U_y$ es límite proyectivo de los preesquemas inducidos por $X$ sobre los abiertos
+$V-(V\cap\overline{\{y\}})$, que son cuasicompactos puesto que $X$ es localmente
+noetheriano. Como los $V-(V\cap\overline{\{y\}})$ son separados, resulta entonces de
+(8.5.2, (ii)) y (8.5.5) que hay un entorno abierto afín $V$ de $y$ en $X$ y
+un $\mathcal O_{U_V}$-módulo invertible $\mathscr L'_V$ tal que $\mathscr L_0$ es el
+haz inducido por $\mathscr L'_V$ sobre $U_y$. Pero la hipótesis implica, en virtud de
+(21.13.6, (i) y (ii))\footnote{El francés impreso cita (i) y (iii), y el inglés mantenido solo (i); aquí (ii) es la propiedad
+hereditaria para una parte cerrada menor.}, que el par $(V,V\cap\overline{\{y\}})$ es parafactorial;
+se concluye por la definición (21.13.1) que existe un $\mathcal O_V$-módulo invertible
+$\mathscr L_V$ que induce $\mathscr L'_V$ sobre $U_V$. Sustituyendo si es preciso $V$ por un
+entorno abierto más pequeño de $y$, se puede suponer que $\mathscr L_V$ es isomorfo
+a $\mathcal O_V$, de donde se concluye que $\mathscr L_0$ es isomorfo a
+$\mathcal O_{U_y}$.
+
+Recíprocamente, demostremos que, si todos los $\mathcal O_{X,y}$ ($y\in Y$) son
+parafactoriales, el par $(X,Y)$ es parafactorial. Teniendo en cuenta la observación
+inicial, todo se reduce evidentemente a demostrar que para todo $\mathcal O_U$-módulo invertible
+$\mathscr L$, $j_*(\mathscr L)$ es un $\mathcal O_X$-módulo invertible (21.13.5).
+Como la cuestión es local sobre $X$, se puede suponer que $X$ es noetheriano. El conjunto $V$ de los
+$x\in X$ tales que la restricción de $j_*(\mathscr L)$ a un entorno abierto de $x$
+en $X$ es invertible es evidentemente abierto en $X$; se trata de demostrar que
+$V=X$. Para ello, supongamos lo contrario y pongamos $Z=X-V\neq\varnothing$. Sea $y$
+un punto \emph{maximal} de $Z$; puesto que $Z\subset Y$ por definición,
+$\mathcal O_{X,y}$ es por hipótesis un anillo parafactorial. Sustituyendo si es preciso
+$X$ por un entorno abierto de $y$ en $X$, se puede suponer que la restricción de
+$j_*(\mathscr L)$
+\oldpage[IV-4]{320}
+a $X-\overline{\{y\}}$\footnote{El francés impreso y el inglés mantenido escriben aquí el locus con $V$; como $y\notin V$, tras la reducción
+al entorno se restablece el abierto punteado con $X$.} es invertible; por tanto, con las notaciones introducidas
+anteriormente, el $\mathcal O_{U_y}$-módulo $\mathscr L_0$ inducido por $j_*(\mathscr L)$
+sobre $U_y$ es invertible. Puesto que $\mathcal O_{X,y}$ es parafactorial,
+$\mathscr L_0$ está inducido por un $\mathcal O_{T_y}$-módulo invertible $\mathscr L'$;
+pero como $T_y$ es límite proyectivo de los entornos abiertos $W$ de $y$ en $X$,
+se pueden aplicar de nuevo (8.5.2, (ii)) y (8.5.5), lo que prueba la existencia de tal
+entorno $W$ y de un $\mathcal O_W$-módulo invertible $\mathscr L''$ que induce
+$\mathscr L'$ sobre $T_y$, y por tanto $\mathscr L_0$ sobre $U_y$; aplicando esta
+vez (8.5.2.5) y (8.5.2, (i)), se deduce que, sustituyendo si es preciso $W$ por un
+entorno abierto más pequeño de $y$, se puede suponer que las restricciones de
+$j_*(\mathscr L)$ y de $\mathscr L''$ a
+$W-(W\cap\overline{\{y\}})$ son iguales. Si se pone entonces $V_1=V\cup W$ y se
+designa por $\mathscr L_1$ el $\mathcal O_{V_1}$-módulo invertible igual a
+$\mathscr L''$ en $W$ y a $j_*(\mathscr L)|V$ en $V$, se tiene $U\subset V_1$ y
+$\mathscr L_1|U=\mathscr L$. Se concluye entonces del hecho de que el homomorfismo
+$\mathcal O_X\to j_*(\mathcal O_U)$ es biyectivo y de (21.13.2, $b$)) que
+$j_*(\mathscr L)|V_1$ es isomorfo a $\mathscr L_1$, luego invertible. Pero esto
+contradice la definición de $V$, y concluye así la demostración de (21.13.10).
+\end{proof}
+
+\begin{corollary}[21.13.11]
+\label{IV.21.13.11}
+Sean $X$ un preesquema localmente noetheriano, $Y$ una parte cerrada de $X$ y
+$U=X-Y$. Supongamos que el par $(X,Y)$ es parafactorial y que $U$ es
+localmente factorial; dicho de otro modo (21.13.10), para todo $x\in X$, el anillo
+$\mathcal O_{X,x}$ es: $1^{\mathrm o}$ parafactorial si $x\in Y$;
+$2^{\mathrm o}$ factorial si $x\notin Y$. Entonces $X$ es localmente factorial
+(dicho de otro modo, $\mathcal O_{X,x}$ es de hecho factorial para todo $x\in X$).
+\end{corollary}
+
+\begin{proof}
+Supongamos, en efecto, lo contrario, y sea $y$ un punto de $Y$ tal que
+$\mathcal O_{X,y}$ no es factorial y tiene dimensión \emph{mínima} entre
+todos los puntos de $Y$ que tienen esta propiedad. Entonces, si se pone
+$T_y=\operatorname{Spec}(\mathcal O_{X,y})$, $U_y=T_y-\{y\}$, la hipótesis de que
+$\mathcal O_{X,y}$ es parafactorial implica $\operatorname{Pic}(U_y)=0$ y
+$\operatorname{prof}(\mathcal O_{X,y})\geq2$ (21.13.8); además, la elección de $y$
+implica que $U_y$ es localmente factorial. Pero entonces (21.6.14) prueba que
+$\mathcal O_{X,y}$ es factorial, contrariamente a la hipótesis.
+\end{proof}
+
+\begin{proposition}[21.13.12]
+\label{IV.21.13.12}
+Sean $A$, $B$ dos anillos locales noetherianos y
+$\rho:A\to B$ un homomorfismo local que hace de $B$ un $A$-módulo plano. Entonces, si
+$B$ es factorial, también lo es $A$.
+\end{proposition}
+
+\begin{proof}
+Ya se sabe que $A$ es íntegro e íntegramente cerrado (6.5.4), por lo que se puede limitar
+al caso en que $\dim(A)\geq2$, y razonar por inducción sobre $n=\dim(A)$. Sean
+$X=\operatorname{Spec}(A)$, $a$ el punto cerrado de $X$,
+$X'=\operatorname{Spec}(B)$, $f:X'\to X$ el morfismo estructural,
+$U=X-\{a\}$ y $U'=f^{-1}(U)$.
+
+Los anillos locales $\mathcal O_{X',x'}$ en los puntos $x'\in f^{-1}(a)$ son factoriales
+y de dimensión $\geq2$ (6.1.2), luego parafactoriales (21.13.9, (ii)); se concluye de
+(21.13.10) que el par $(X',f^{-1}(a))$ es parafactorial. En virtud de (21.13.6,
+(iii)), esto demuestra que el anillo $A$ es parafactorial, luego
+$\operatorname{prof}(A)\geq2$ y $\operatorname{Pic}(U)=0$ (21.13.8). Finalmente, como los
+anillos locales de $U$ son de dimensión $<n$, la hipótesis de inducción prueba que
+$U$ es \emph{localmente factorial}; la conclusión resulta entonces de (21.6.14).
+\end{proof}
+
+\begin{env}[21.13.12.1]
+\label{IV.21.13.12.1}
+Obsérvese que el enunciado (21.13.12) en el que se sustituye «factorial» por «parafactorial»
+ya no es exacto, como muestra el ejemplo en que $A=k$ es un cuerpo y $B$ el anillo
+local factorial $k[[T_1,T_2]]$. Sin embargo, resulta de (21.13.6, (iii)) que, bajo
+las condiciones de (21.13.12), si $\mathfrak m$ designa el ideal maximal de $A$ y si
+$\mathfrak mB$ es un \emph{ideal}
+\oldpage[IV-4]{321}
+\emph{de definición} de $B$ (dicho de otro modo, si $\dim(B/\mathfrak mB)=0$), entonces,
+cuando $B$ es parafactorial, también lo es $A$. En particular, si el
+completado $\widehat A$ de un anillo local noetheriano es parafactorial, también lo es
+$A$.
+\end{env}
+
+\begin{remark}[21.13.13]
+\label{IV.21.13.13}
+Una parte de las definiciones y resultados anteriores está vinculada a consideraciones
+más generales sobre la cohomología de los haces de grupos conmutativos sobre un espacio
+topológico, desarrolladas en el cap.~III, 3\textsuperscript{a} parte, y solo hemos
+dado aquí una exposición independiente de ellas para comodidad del lector. En efecto, si $X$
+es un espacio anillado, se tiene una \emph{equivalencia} canónica entre la categoría de los
+$\mathcal O_X$-módulos invertibles y la de los \emph{haces homogéneos principales
+bajo el haz de grupos} $\mathcal O_X^*$ (16.5.15). Esta equivalencia se define
+haciendo corresponder a todo $\mathcal O_X$-módulo invertible $\mathscr L$ el
+haz $\mathscr L^*=\mathscr Isom_{\mathcal O_X}(\mathcal O_X,\mathscr L)$ de los
+gérmenes de isomorfismos de $\mathcal O_X$ sobre $\mathscr L$; es inmediato que
+$\mathscr L^*$ está provisto canónicamente de una estructura de haz homogéneo principal
+bajo $\mathcal O_X^*\cong\mathscr Isom_{\mathcal O_X}(\mathcal O_X,\mathcal O_X)$.
+La verificación de que el functor $\mathscr L\mapsto\mathscr L^*$ es una
+equivalencia de categorías es inmediata.
+
+Dicho esto, consideremos en general un espacio topológico $X$ y un haz de
+grupos $\mathscr G$ sobre $X$; sea $Y$ una parte cerrada de $X$, pongamos $U=X-Y$, y
+sea $i$ un entero tal que $0\leq i\leq2$; se dirá que el par $(X,Y)$ es
+\emph{$i$-puro para $\mathscr G$} si, para todo abierto $V$ de $X$, el functor de
+restricción $\mathscr P\mapsto\mathscr P|(U\cap V)$, de la categoría de haces
+homogéneos principales bajo el haz de grupos $\mathscr G|V$ a la categoría
+análoga bajo el haz de grupos $\mathscr G|(U\cap V)$, es \emph{fiel}
+($i=0$), resp.\ \emph{plenamente fiel} ($i=1$), resp.\ una \emph{equivalencia de
+categorías} ($i=2$). En el caso en que $X$ es un espacio anillado y
+$\mathscr G=\mathcal O_X^*$, decir que $(X,Y)$ es $i$-puro significa, pues, para $i=0$,
+que el homomorfismo $\mathcal O_X\to j_*(\mathcal O_U)$ es \emph{inyectivo}; para
+$i=1$, que este homomorfismo es \emph{biyectivo}; y finalmente, para $i=2$, que el par
+$(X,Y)$ es \emph{parafactorial} (21.13.3).
+
+Volviendo al caso general, recordemos que los morfismos de la categoría de los haces
+principales bajo $\mathscr G$ son por definición los isomorfismos. Decir que el par
+$(X,Y)$ es $0$-puro significa, pues, que para todo abierto $V$ de $X$, el homomorfismo
+canónico $\mathrm H^0(V,\mathscr G)\to\mathrm H^0(U\cap V,\mathscr G)$ es inyectivo;
+decir que el par $(X,Y)$ es $1$-puro significa que el homomorfismo canónico
+$\mathrm H^0(V,\mathscr G)\to\mathrm H^0(U\cap V,\mathscr G)$ es biyectivo (y entonces
+el homomorfismo canónico
+$\mathrm H^1(V,\mathscr G)\to\mathrm H^1(U\cap V,\mathscr G)$ es inyectivo); finalmente,
+se puede demostrar que para que el par $(X,Y)$ sea $2$-puro es necesario y suficiente que
+los homomorfismos
+$\mathrm H^i(V,\mathscr G)\to\mathrm H^i(U\cap V,\mathscr G)$ sean biyectivos para
+$i=0$ e $i=1$. Cuando $\mathscr G$ es un haz de grupos conmutativos, al
+introducir los haces de cohomología $\mathscr H_Y^p(\mathscr G)$ definidos en el
+cap.~III, 3\textsuperscript{a} parte, decir que $(X,Y)$ es $i$-puro para $i\leq2$
+significa que $\mathscr H_Y^p(\mathscr G)=0$ para $p\leq i$; en esta forma, la
+noción se generaliza inmediatamente a todo entero $i$.
+\end{remark}
+
+\begin{proposition}[21.13.14]
+\label{IV.21.13.14}
+Sean $X$ un preesquema localmente noetheriano \emph{normal} y
+$(U_\lambda)_{\lambda\in L}$ una familia filtrante decreciente de abiertos de $X$. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Todo ciclo $1$-codimensional $Z$ sobre $X$ tal que exista un índice
+  $\lambda$ para el cual $Z|U_\lambda$ sea localmente principal (21.6.7), es
+  localmente principal.
+  \item Para todo $x\in X$ tal que $\dim(\mathcal O_{X,x})\geq2$ y que $x$
+  no pertenezca a $\bigcap_{\lambda\in L}U_\lambda$, el anillo
+  $\mathcal O_{X,x}$ es parafactorial.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-4]{322}
+La condición $b)$ puede expresarse también del modo siguiente:
+
+\emph{$b')$ Para toda parte cerrada $Y$ de $X$ tal que
+$\operatorname{codim}(Y,X)\geq2$ y tal que exista $\lambda$ para el cual
+$Y\subset X-U_\lambda$, el par $(X,Y)$ es parafactorial.}
+
+La propiedad $a)$ puede expresarse también del modo siguiente: si el conjunto cerrado
+$N$ de los puntos $x\in X$ en los que $Z$ no es principal está contenido en uno de los
+$X-U_\lambda$, entonces $Z$ es localmente principal. Como $X$ es normal, la condición
+$\dim(\mathcal O_{X,x})\leq1$ implica que $\mathcal O_{X,x}$ es un cuerpo o un
+anillo de valoración discreta, luego $Z_x$ es principal; dicho de otro modo, se tiene
+necesariamente $\operatorname{codim}(N,X)\geq2$ (5.1.3). La propiedad $a)$ es, pues,
+equivalente a la siguiente:
+
+\emph{$a')$ Si existe un conjunto cerrado $Y$ contenido en uno de los $X-U_\lambda$, tal
+que $\operatorname{codim}(Y,X)\geq2$ y que $Z|(X-Y)$ sea localmente principal,
+entonces $Z$ es localmente principal.}
+
+Observemos, por otra parte, que $b)$ implica $b')$ en virtud de (21.13.10); recíprocamente, si
+$b')$ se verifica y si $x\notin U_\lambda$, entonces $Y=\overline{\{x\}}$\footnote{El francés impreso y el inglés mantenido escriben $Y=\{x\}$,
+que no es necesariamente cerrado; se restablece aquí su clausura.} está contenida en
+$X-U_\lambda$ y se tiene $\operatorname{codim}(Y,X)\geq2$, luego resulta nuevamente de
+(21.13.10) que $\mathcal O_{X,x}$ es parafactorial, lo que prueba la equivalencia de
+$b)$ y $b')$. Se queda así reducido a probar la equivalencia de $a')$ y $b')$.
+Observemos que, puesto que $X$ es normal, se tiene, para toda parte cerrada $Y$ de $X$ tal que
+$\operatorname{codim}(Y,X)\geq2$, $\operatorname{prof}_Y(\mathcal O_X)\geq2$
+(5.8.6); si se pone $U=X-Y$, el homomorfismo
+$\mathcal O_X\to j_*(\mathcal O_U)$ es, pues, biyectivo (21.13.4); como las condiciones
+$a')$ y $b')$ son locales, se ve que basta demostrar la equivalencia de las
+condiciones siguientes, cuando $X$ es noetheriano y normal e $Y$ es cerrado en $X$ y
+tal que $\operatorname{codim}(Y,X)\geq2$:
+
+\emph{$a'')$ Para todo ciclo $1$-codimensional $Z$ sobre $X$, la hipótesis de que $Z|U$
+(donde $U=X-Y$) es localmente principal implica que el propio $Z$ es localmente
+principal.}
+
+\emph{$b'')$ El homomorfismo canónico
+$\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ es sobreyectivo.}
+
+Demostremos primero que $a'')$ implica $b'')$; un elemento
+$\zeta_0\in\operatorname{Pic}(U)$ tiene por imagen en $\mathfrak{Cl}(U)$ (21.6.11) la
+clase de un ciclo $1$-codimensional $Z_0$ sobre $U$, que es localmente principal.
+La hipótesis $\operatorname{codim}(Y,X)\geq2$ implica que el homomorfismo de
+restricción $\mathscr Z^1(X)\to\mathscr Z^1(U)$ es biyectivo, luego $Z_0=Z|U$, donde $Z$
+es un ciclo $1$-codimensional sobre $X$; puesto que $Z_0$ es localmente principal, también lo
+es $Z$ en virtud de $a'')$; resulta de (21.6.11) que la imagen de $Z$ en
+$\mathfrak{Cl}(X)$ es la imagen de un único elemento $\zeta\in\operatorname{Pic}(X)$,
+y entonces está claro que $\zeta_0$ es la imagen de $\zeta$.
+
+Recíprocamente, demostremos que $b'')$ implica $a'')$. Sea, pues, $Z$ un ciclo
+$1$-codimensional sobre $X$ tal que $Z|U$ sea localmente principal; la imagen de $Z|U$
+en $\mathfrak{Cl}(U)$ es, pues, la imagen de un único elemento
+$\zeta_0\in\operatorname{Pic}(U)$ (21.6.11). Por hipótesis existe
+$\zeta\in\operatorname{Pic}(X)$ cuya imagen en $\operatorname{Pic}(U)$ es
+$\zeta_0$; la imagen de $\zeta$ en $\mathfrak{Cl}(X)$ es entonces la clase de un ciclo
+$1$-codimensional $Z'$ sobre $X$ tal que $Z|U$ y $Z'|U$ son linealmente
+equivalentes. Pero, puesto que $U$ es esquemáticamente denso en $X$, la imagen de
+$\mathscr Z^1_{\mathrm{princ}}(X)$ por el isomorfismo
+$\mathscr Z^1(X)\to\mathscr Z^1(U)$ es $\mathscr Z^1_{\mathrm{princ}}(U)$, luego $Z$
+y $Z'$ son linealmente equivalentes, y puesto que $Z'$ es localmente principal, también lo
+es $Z$.
+\end{proof}
+
+\begin{corollary}[21.13.15]
+\label{IV.21.13.15}
+Sean $X$ un preesquema localmente noetheriano y normal y $S$ una parte de $X$. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Todo ciclo $1$-codimensional sobre $X$ que es principal en los puntos de $S$ es
+  localmente principal.
+  \oldpage[IV-4]{323}
+  \item Para todo $x\in X$ que no es generalización de un punto de $S$ (dicho de otro
+  modo, tal que $\overline{\{x\}}\cap S=\varnothing$) y que es tal que
+  $\dim(\mathcal O_{X,x})\geq2$, el anillo $\mathcal O_{X,x}$ es parafactorial.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Está claro que el conjunto $S'$ de los puntos de $X$ que son generalizaciones de puntos de $S$ es
+la intersección de los entornos abiertos de $S$. Se puede limitar al caso en que $X$ es
+noetheriano (pues las propiedades $a)$ y $b)$ son locales sobre $X$); como todo ciclo
+$1$-codimensional sobre $X$ que es principal en los puntos de $S$ lo es también en los puntos
+de un entorno abierto de $S$, se ve que la condición $a)$ de (21.13.15) equivale a
+la condición $a)$ de (21.13.14) aplicada a la familia $(U_\lambda)$ de los entornos
+abiertos de $S$. El corolario resulta entonces de la equivalencia de $a)$ y $b)$ en
+(21.13.14).
+\end{proof}
+
+\begin{remark}[21.13.16]
+\label{IV.21.13.16}
+Bajo las condiciones generales de (21.13.14), supongamos además que se tiene
+$\varinjlim\operatorname{Pic}(U_\lambda)=0$. Entonces la condición $a)$ de (21.13.14)
+es también equivalente a la siguiente:
+\begin{enumerate}
+  \item[c)] \emph{Todo ciclo $1$-codimensional sobre $X$ cuyo soporte está contenido
+  en uno de los conjuntos $X-U_\lambda$ es localmente principal.}
+\end{enumerate}
+
+Se puede limitar al caso en que $X$ es irreducible y todos los $U_\lambda$ son no
+vacíos. Está claro que $a)$ implica $c)$, pues si el ciclo $1$-codimensional $Z$ sobre
+$X$ tiene su soporte en $X-U_\lambda$, $Z|U_\lambda=0$, luego $Z|U_\lambda$ es
+localmente principal. Recíprocamente, $c)$ implica $a)$: sea, en efecto, $Z$ un ciclo
+$1$-codimensional sobre $X$ tal que $Z|U_\lambda$ sea localmente principal; como $X$
+es normal, $Z|U_\lambda=\operatorname{cyc}(D_\lambda)$, donde $D_\lambda$ es un
+divisor sobre $U_\lambda$ (21.6.10, (ii)), y la hipótesis implica (en virtud de
+(21.3.4)) que hay un conjunto $U_\mu\subset U_\lambda$ tal que
+$D_\mu=D_\lambda|U_\mu$ es equivalente a $0$. Si
+$D_\mu=\operatorname{div}(f_\mu)$, donde $f_\mu$ es una función racional regular
+sobre $U_\mu$, $f_\mu$ puede considerarse como una función racional regular
+sobre $X$. Si $Z'=\operatorname{cyc}(\operatorname{div}(f_\mu))$, se ve entonces que
+$Z''=Z-Z'$ tiene su soporte en $X-U_\mu$; en virtud de la hipótesis, $Z''$ es
+localmente principal, de donde la conclusión.
+
+La condición $\varinjlim\operatorname{Pic}(U_\lambda)=0$ se cumplirá en particular
+si $(U_\lambda)$ es la familia de los entornos abiertos de un \emph{punto} $z\in X$,
+pues para todo $\mathcal O_{U_\lambda}$-módulo invertible $\mathscr L_\lambda$, existe
+por definición un $U_\mu\subset U_\lambda$ tal que
+$\mathscr L_\lambda|U_\mu$ es isomorfo a $\mathcal O_{U_\mu}$. Se ve, pues, que,
+en el enunciado de (21.13.15), si $S=\{z\}$, las condiciones $a)$ y $b)$ equivalen
+también a la siguiente:
+\begin{enumerate}
+  \item[c)] \emph{Todo ciclo $1$-codimensional sobre $X$ cuyo soporte no contiene
+  a $z$ es localmente principal.}
+\end{enumerate}
+Si además $\operatorname{Pic}(X)=0$, se concluirá que esta condición implica que
+todo ciclo $1$-codimensional cuyo soporte no contiene a $z$ es principal.
+\end{remark}

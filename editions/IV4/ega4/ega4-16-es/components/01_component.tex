@@ -1,0 +1,296 @@
+\subsection{Invariantes normales de una inmersión}
+\label{IV.16.1}
+
+\begin{env}[16.1.1]
+\label{IV.16.1.1}
+Sean $(X,\mathcal{O}_X)$, $(Y,\mathcal{O}_Y)$ dos espacios anillados,
+$f=(\psi,\theta):Y\to X$ un morfismo de espacios anillados (0\textsubscript{I}, 4.1.1)
+tal que el homomorfismo
+\[
+  \theta^\#:\psi^*(\mathcal{O}_X)\longrightarrow\mathcal{O}_Y
+\]
+sea sobreyectivo, de modo que $\mathcal{O}_Y$ se identifica con un haz de anillos cociente
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f$. Se puede entonces dotar
+$\psi^*(\mathcal{O}_X)$ de la filtración $\mathscr{I}_f$-preádica.
+\end{env}
+
+\begin{definition}[16.1.2]
+\label{IV.16.1.2}
+El haz de anillos aumentado sobre $\mathcal{O}_Y$
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1}$ se llama el $n$-ésimo invariante normal
+de $f$; el espacio anillado
+$(Y,\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1})$ se llama la $n$-ésima vecindad
+infinitesimal de $Y$ para el morfismo $f$, y se denota por $Y_f^{(n)}$ o simplemente
+$Y^{(n)}$. El haz de anillos graduados asociado al haz de anillos filtrados
+$\psi^*(\mathcal{O}_X)$
+\[
+  \mathscr{G}r_\bullet(f)=\bigoplus_{n\geq 0}
+  (\mathscr{I}_f^n/\mathscr{I}_f^{n+1})
+  \tag{16.1.2.1}
+  \label{IV.16.1.2.1}
+\]
+se llama el haz de anillos graduados asociado a $f$. El haz
+$\mathscr{G}r_1(f)=\mathscr{I}_f/\mathscr{I}_f^2$ se llama el haz conormal
+de $f$ (que también se denota por $\mathscr{N}_{Y/X}$ si no hay riesgo de confusión).
+\end{definition}
+
+Está claro que los
+$\mathcal{O}_{Y^{(n)}}=\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1}$
+(que también se denotan por $\mathcal{O}_{Y_f^{(n)}}$) forman un
+\oldpage[IV-4]{6}
+sistema proyectivo de haces de anillos sobre $Y$; el homomorfismo de transición
+$\varphi_{nm}:\mathcal{O}_{Y^{(m)}}\to\mathcal{O}_{Y^{(n)}}$ para $n\leq m$
+identifica $\mathcal{O}_{Y^{(n)}}$ con el cociente de $\mathcal{O}_{Y^{(m)}}$ por la
+potencia $(\mathscr{I}_f/\mathscr{I}_f^{n+1})^m$ del ideal de aumentación de
+$\mathcal{O}_{Y^{(n)}}$, núcleo de
+$\varphi_{0n}:\mathcal{O}_{Y^{(n)}}\to\mathcal{O}_Y$. Por consiguiente, los $Y^{(n)}$ forman
+un sistema inductivo de espacios anillados, todos ellos con espacio subyacente
+$Y$, y se tienen morfismos canónicos de espacios anillados
+$h_n:Y^{(n)}\to X$ iguales a $(\psi,\theta_n)$, donde $\theta_n^\#$ es el morfismo
+canónico
+$\psi^*(\mathcal{O}_X)\to\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1}$.
+Está claro que el haz $\mathscr{G}r_\bullet(f)$ es un haz de álgebras
+graduadas sobre el haz de anillos
+$\mathcal{O}_Y=\mathscr{G}r_0(f)$, y los $\mathscr{G}r_k(f)$ son
+$\mathcal{O}_Y$-módulos.
+
+Como para todo haz de anillos filtrado, se tiene un homomorfismo canónico
+sobreyectivo de $\mathcal{O}_Y$-álgebras graduadas
+\[
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{G}r_1(f))
+  \longrightarrow\mathscr{G}r_\bullet(f)
+  \tag{16.1.2.2}
+  \label{IV.16.1.2.2}
+\]
+que coincide en grados 0 y 1 con los homomorfismos identidad.
+
+\begin{examples}[16.1.3]
+\label{IV.16.1.3}
+\begin{enumerate}
+\item[(i)] Supongamos que $X$ es un espacio localmente anillado, que $Y$ está
+reducido a un único punto $y$ (dotado de un anillo $\mathcal{O}_y$) y que, si
+$x=\psi(y)$, $\theta^\#:\mathcal{O}_x\to\mathcal{O}_y$ es un homomorfismo
+sobreyectivo de anillos cuyo núcleo es el ideal maximal $\mathfrak{m}_x$ de
+$\mathcal{O}_x$. Entonces los $\mathcal{O}_{Y^{(n)}}$ se identifican con los anillos
+$\mathcal{O}_x/\mathfrak{m}_x^{n+1}$, y $\mathscr{G}r_\bullet(f)$ con el anillo
+graduado asociado al anillo local $\mathcal{O}_x$ dotado de su filtración
+$\mathfrak{m}_x$-preádica.
+\item[(ii)] Supongamos que $Y$ es un subconjunto cerrado de un subespacio abierto $U$
+de $X$ y que $\mathcal{O}_Y$ está inducido sobre $Y$ por un haz cociente
+$\mathcal{O}_U/\mathscr{I}$, donde $\mathscr{I}$ es un ideal de $\mathcal{O}_U$
+tal que $\mathscr{I}_x=\mathcal{O}_x$ para todo $x\notin Y$; si $X$ es un
+espacio localmente anillado, supondremos además que
+$\mathscr{I}_x\neq\mathcal{O}_x$ para $x\in Y$, de modo que
+$(Y,\mathcal{O}_Y)$ sigue siendo un espacio localmente anillado.
+
+Sea $\psi_0:Y\to U$ la inyección canónica, y denotemos por
+$\theta_0:\mathcal{O}_U\to(\psi_0)_*(\mathcal{O}_Y)$ el homomorfismo tal que
+$\theta_0^\#$ sea el homomorfismo canónico
+$\psi_0^*(\mathcal{O}_U)=\mathcal{O}_U|Y\to
+(\mathcal{O}_U/\mathscr{I})|Y$, de modo que
+$j_0=(\psi_0,\theta_0):Y\to U$ es un morfismo de espacios anillados (y de espacios
+localmente anillados si $X$ es un espacio localmente anillado); si
+$i:U\to X$ es la inyección canónica (morfismo de espacios anillados),
+$j=i\circ j_0$ es el morfismo $(\psi,\theta)$ de $Y$ en $X$, donde
+$\psi:Y\to X$ es la inyección canónica, y
+$\theta:\mathcal{O}_X\to\psi_*(\mathcal{O}_Y)$ es el homomorfismo tal que
+$\theta^\#=\theta_0^\#$. Como $\theta^\#$ es sobreyectivo, se pueden aplicar las
+definiciones precedentes; $\mathcal{O}_{Y^{(n)}}$ es igual a
+$\psi_0^*(\mathcal{O}_U/\mathscr{I}^{n+1})$, y se tiene
+$(\psi_0)_*(\mathcal{O}_{Y^{(n)}})=\mathcal{O}_U/\mathscr{I}^{n+1}$, y
+$\mathscr{G}r_n(j)=\mathscr{G}r_n(j_0)=
+\psi_0^*(\mathscr{I}^n/\mathscr{I}^{n+1})=
+j_0^*(\mathscr{I}^n/\mathscr{I}^{n+1})$.
+\end{enumerate}
+\end{examples}
+
+\begin{env}[16.1.4]
+\label{IV.16.1.4}
+El ejemplo (16.1.3, (ii)) muestra que, en general, los
+$\mathcal{O}_{Y^{(n)}}$ no están dotados canónicamente de una estructura de
+$\mathcal{O}_Y$-módulo, ni, a fortiori, de una estructura de
+$\mathcal{O}_Y$-álgebra. El dato de tal estructura equivale al de un
+homomorfismo de haces de anillos
+$\lambda_n:\mathcal{O}_Y\to\mathcal{O}_{Y^{(n)}}$, inverso por la derecha del
+homomorfismo de aumentación $\varphi_{0n}$; también equivale al dato
+de un morfismo de espacios anillados
+$(1_Y,\lambda_n):Y^{(n)}\to Y$, inverso por la izquierda del morfismo canónico
+$(1_Y,\varphi_{0n}):Y\to Y^{(n)}$.
+\end{env}
+
+\begin{proposition}[16.1.5]
+\label{IV.16.1.5}
+Sea $f=(\psi,\theta):Y\to X$ una inmersión de preesquemas. Entonces:
+\begin{enumerate}
+\item[(i)] $\mathscr{G}r_\bullet(f)$ es una $\mathcal{O}_Y$-álgebra graduada
+cuasicoherente.
+\oldpage[IV-4]{7}
+\item[(ii)] Los $Y^{(n)}$ son preesquemas, canónicamente isomorfos a
+subpreesquemas de $X$.
+\item[(iii)] Todo homomorfismo de haces de anillos
+$\lambda_n:\mathcal{O}_Y\to\mathcal{O}_{Y^{(n)}}$, inverso por la derecha del
+homomorfismo de aumentación $\varphi_{0n}$, convierte
+$\mathcal{O}_{Y^{(n)}}$ y los $\mathcal{O}_{Y^{(k)}}$ para $k\leq n$ en
+$\mathcal{O}_Y$-álgebras cuasicoherentes; las estructuras de
+$\mathcal{O}_Y$-módulo deducidas de las estructuras precedentes sobre los
+$\mathscr{G}r_k(f)$ para $k\leq n$ coinciden con las definidas en
+(16.1.2).
+\end{enumerate}
+\end{proposition}
+
+\noindent(i) Como la cuestión es local sobre $X$ y sobre $Y$, basta considerar el caso
+en que $Y$ es un subpreesquema cerrado de $X$ definido por un ideal cuasicoherente
+$\mathscr{I}$ de $\mathcal{O}_X$; como $\mathcal{O}_Y$ es la restricción a
+$Y$ de $\mathcal{O}_X/\mathscr{I}$, la afirmación (i) es evidente, y $Y^{(n)}$
+es el subpreesquema cerrado de $X$ definido por el ideal cuasicoherente
+$\mathscr{I}^{n+1}$ de $\mathcal{O}_X$. Finalmente, para probar (iii), observemos que el
+dato de $\lambda_n$ dota al ideal
+$\mathscr{I}/\mathscr{I}^{n+1}$ de la aumentación $\varphi_{0n}$ y a sus
+cocientes $\mathscr{I}/\mathscr{I}^{k+1}$ ($1\leq k\leq n$) de estructuras de
+$\mathcal{O}_Y$-módulo, y basta probar por inducción sobre $k$ que los
+$\mathscr{I}/\mathscr{I}^{k+1}$ son $\mathcal{O}_Y$-módulos
+cuasicoherentes y que la estructura de $\mathcal{O}_Y$-módulo cociente que de ello se
+deduce sobre $\mathscr{I}^k/\mathscr{I}^{k+1}$ es la misma que la definida en
+(16.1.2). La segunda afirmación es inmediata, pues
+$\mathscr{I}^k/\mathscr{I}^{k+1}$ está anulado por
+$\mathscr{I}/\mathscr{I}^{n+1}$; la primera resulta, por inducción sobre $k$,
+del hecho de que es trivial para $k=1$ y de que
+$\mathscr{I}/\mathscr{I}^{k+1}$ es una extensión de
+$\mathscr{I}/\mathscr{I}^k$ por
+$\mathscr{I}^k/\mathscr{I}^{k+1}$ (III, 1.4.17).
+
+\begin{corollary}[16.1.6]
+\label{IV.16.1.6}
+Bajo las hipótesis generales de (16.1.5), si la inmersión $f$ es localmente de
+presentación finita, los $\mathscr{G}r_n(f)$ son $\mathcal{O}_Y$-módulos
+cuasicoherentes de tipo finito.
+\end{corollary}
+
+En efecto, con las notaciones de la demostración de (16.1.5), $\mathscr{I}$ es un
+ideal de tipo finito de $\mathcal{O}_X$ (1.4.7), por tanto los
+$\mathscr{I}^n/\mathscr{I}^{n+1}$ son $\mathcal{O}_Y$-módulos de tipo finito,
+de donde se sigue la conclusión.
+
+\begin{corollary}[16.1.7]
+\label{IV.16.1.7}
+Bajo las hipótesis generales de (16.1.5), sea $g:X\to Y$ un morfismo de
+preesquemas que es inverso por la izquierda de $f$. Entonces, para todo $n$, el morfismo compuesto
+$(1,\lambda_n):Y^{(n)}\xrightarrow{h_n}X\xrightarrow{g}Y$ define un
+homomorfismo de haces de anillos
+$\lambda_n:\mathcal{O}_Y\to\mathcal{O}_{Y^{(n)}}$ inverso por la derecha de
+la aumentación $\varphi_{0n}$, que convierte a $\mathcal{O}_{Y^{(n)}}$ en una
+$\mathcal{O}_Y$-álgebra cuasicoherente; para estos homomorfismos, los
+homomorfismos de transición
+$\varphi_{nm}:\mathcal{O}_{Y^{(m)}}\to\mathcal{O}_{Y^{(n)}}$ ($n\leq m$) son
+homomorfismos de $\mathcal{O}_Y$-álgebras. Además, si $g$ es localmente
+de tipo finito, los $\mathcal{O}_{Y^{(n)}}$ son $\mathcal{O}_Y$-módulos
+cuasicoherentes de tipo finito.
+\end{corollary}
+
+La primera afirmación se sigue inmediatamente de las definiciones y de (16.1.5). Por otra
+parte, si $g$ es localmente de tipo finito, entonces $f$ es localmente de
+presentación finita (1.4.3, (v)); como los $\mathscr{G}r_n(f)$ son entonces
+$\mathcal{O}_Y$-módulos cuasicoherentes de tipo finito por (16.1.6), lo mismo ocurre
+con los $\mathcal{O}_Y$-módulos
+$\mathscr{I}/\mathscr{I}^{n+1}$, que son extensiones de un número finito de
+$\mathscr{G}r_k(f)$ (III, 1.4.17).
+
+\begin{proposition}[16.1.8]
+\label{IV.16.1.8}
+Sean $X$ un preesquema localmente noetheriano, $j:Y\to X$ una inmersión. Entonces
+los $Y^{(n)}$ son preesquemas localmente noetherianos, los
+$\mathscr{G}r_n(j)$ son $\mathcal{O}_Y$-módulos coherentes, y
+$\mathscr{G}r_\bullet(j)$ es un haz coherente de anillos sobre el espacio $Y$.
+\end{proposition}
+
+Como todo es local sobre $X$ y $Y$, se reduce al caso en que $X$ es afín y $j$
+una inmersión cerrada; entonces todas las afirmaciones son evidentes salvo la
+última, que resulta de que, si $A$ es un anillo noetheriano y
+$\mathfrak{I}$ un ideal de $A$, $\operatorname{gr}_{\mathfrak{I}}^\bullet(A)$
+es un anillo noetheriano, teniendo en cuenta la exactitud del funtor $\psi^*$ y
+(0\textsubscript{I}, 5.3.7).
+
+\begin{proposition}[16.1.9]
+\label{IV.16.1.9}
+\oldpage[IV-4]{8}
+Sean $X$ un preesquema, $j:Y\to X$ una inmersión localmente de presentación
+finita, $y$ un punto de $Y$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(a)] Existe una vecindad abierta $U$ de $y$ en $Y$ tal que $j|U$ es
+un homeomorfismo de $U$ sobre un abierto de $X$.
+\item[(b)] Existe un entero $n>0$ tal que el homomorfismo canónico
+\[
+  (\varphi_{n,n-1})_y:
+  \mathcal{O}_{Y^{(n)},y}\longrightarrow\mathcal{O}_{Y^{(n-1)},y}
+\]
+sea biyectivo.
+\item[(c)] Existe un entero $n>0$ tal que
+$(\mathscr{G}r_n(j))_y=0$.
+\end{enumerate}
+Además, si el entero $n$ satisface b) o c), existe una vecindad $V$ de $y$
+en $Y$ tal que $\mathscr{G}r_m(j)|V=0$ para $m\geq n$ y que
+$\varphi_{nm}|V:\mathcal{O}_{Y^{(m)}}|V\to\mathcal{O}_{Y^{(n)}}|V$ sea
+biyectivo para $m\geq n$.
+\end{proposition}
+
+Como la cuestión es local sobre $Y$, basta considerar el caso en que $j$ es una
+inmersión cerrada, estando $Y$ definido por un ideal cuasicoherente de tipo finito
+$\mathscr{I}$ de $\mathcal{O}_X$. La equivalencia de b) y c), para un $n$ dado,
+es entonces inmediata; además, como
+$\mathscr{I}^n/\mathscr{I}^{n+1}$ es un $\mathcal{O}_X$-módulo de tipo finito,
+existe una vecindad abierta $U$ de $y$ en $X$ tal que
+$\mathscr{I}^n|U=\mathscr{I}^{n+1}|U$ (0\textsubscript{I}, 5.2.2), y por tanto también
+$\mathscr{I}^n|U=\mathscr{I}^m|U$ para $m\geq n$, lo que prueba las últimas
+afirmaciones. Para probar que a) implica b), basta considerar el caso en que
+el espacio subyacente a $Y$ es igual al espacio subyacente a $X$, y en que
+$\mathscr{I}$ está engendrado por un número finito de sus secciones sobre $X$:
+como $\mathscr{I}$ está entonces contenido en el nilradical $\mathscr{N}$ de
+$\mathcal{O}_X$ (I, 5.1.2), es nilpotente, lo que prueba b). Finalmente, para
+probar que b) implica a), basta también considerar el caso en que
+$\mathscr{I}^n=\mathscr{I}^{n+1}$; entonces, para todo $y\in Y$, como
+$\mathscr{I}_y\subset\mathfrak{m}_y$, ideal maximal de
+$\mathcal{O}_{X,y}$, se tiene necesariamente $\mathscr{I}_y^n=0$ en virtud del
+lema de Nakayama, puesto que $\mathscr{I}_y$ es un ideal de tipo finito.
+El conjunto de los $x\in X$ tales que $\mathscr{I}_x^n=0$ es por tanto un abierto $U$ de
+$X$ que contiene a $Y$ (0\textsubscript{I}, 5.2.2); como, por otra parte,
+$\mathscr{I}_x\neq 0$ para $x\notin Y$, se tiene necesariamente $U=Y$.
+
+\begin{corollary}[16.1.10]
+\label{IV.16.1.10}
+Para que la restricción de la inmersión $j$ a una vecindad de $y$ en $Y$ sea
+una inmersión abierta (es decir, para que $j$ sea un isomorfismo local en el
+punto $y$), es necesario y suficiente que
+$(\mathscr{G}r_1(j))_y=(\mathscr{N}_{Y/X})_y=0$.
+\end{corollary}
+
+La condición es evidentemente necesaria, y el razonamiento precedente, aplicado
+para $n=1$, prueba que es suficiente.
+
+\begin{remarks}[16.1.11]
+\label{IV.16.1.11}
+\begin{enumerate}
+\item[(i)] Bajo las condiciones de la definición (16.1.1), el límite proyectivo
+del sistema proyectivo
+$(\mathcal{O}_{Y^{(n)}},\varphi_{nm})$ de haces de anillos sobre $Y$ se
+llama el invariante normal de orden infinito de $f$, y se denota a veces por
+$\mathcal{O}_{Y^{(\infty)}}$. Cuando $X$ es un preesquema localmente
+noetheriano y $j:Y\to X$ es una inmersión cerrada, siendo por tanto $Y$ un subpreesquema
+cerrado de $X$ definido por un ideal coherente $\mathscr{I}$,
+$\mathcal{O}_{Y^{(\infty)}}$ no es sino la completación formal de
+$\mathcal{O}_X$ a lo largo de $Y$ (I, 10.8.4), y
+$Y^{(\infty)}=(Y,\mathcal{O}_{Y^{(\infty)}})$ es el preesquema formal completado de
+$X$ a lo largo de $Y$ (I, 10.8.5). En todos los casos, se podrá decir que
+$Y^{(\infty)}$ es la vecindad formal de $Y$ en $X$ (para el morfismo
+$f$). En el caso particular que acabamos de considerar, es por tanto el preesquema
+formal que es límite inductivo de las vecindades infinitesimales de orden $n$.
+\item[(ii)] Obsérvese que, para un morfismo de preesquemas
+$f=(\psi,\theta):Y\to X$, puede ocurrir que el homomorfismo
+$\theta^\#:\psi^*(\mathcal{O}_X)\to\mathcal{O}_Y$ sea sobreyectivo sin que $f$
+sea una inmersión
+\oldpage[IV-4]{9}
+local, y sin que $f$ sea inyectivo. Se obtiene un ejemplo tomando como $Y$
+una suma de preesquemas $Y_\lambda$ todos isomorfos a
+$\operatorname{Spec}(\mathcal{O}_x)$, donde $x\in X$, y como $f$ el morfismo
+cuya restricción a cada uno de los $Y_\lambda$ es el morfismo canónico.
+\end{enumerate}
+\end{remarks}

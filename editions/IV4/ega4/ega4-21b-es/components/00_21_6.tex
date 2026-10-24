@@ -1,0 +1,350 @@
+\subsection{Ciclo 1-codimensional asociado a un divisor}
+\label{subsection:IV.21.6}
+\label{IV.21.6}
+
+\begin{env}[21.6.1]
+\label{IV.21.6.1}
+Sea $X$ un preesquema localmente noetheriano, y sea $\mathfrak{I}(X)$ el conjunto de los \emph{conjuntos cerrados irreducibles} de $X$ (que está en correspondencia biunívoca con $X$ por la aplicación $x\mapsto\overline{\{x\}}$).
+En el grupo producto $\bb{Z}^X$, consideremos el subgrupo $\mathfrak{Z}(X)$ de los elementos $(n_x)_{x\in X}$ tales que el conjunto de los $\overline{\{x\}}\in\mathfrak{I}(X)$ para los cuales $n_x\neq0$ (o, lo que es lo mismo, el conjunto de los $x\in X$ tales que $n_x\neq0$) sea localmente finito.
+Está claro que $\mathfrak{Z}(X)$ es un subgrupo de $\bb{Z}^X$ que contiene el grupo suma directa $\bb{Z}^{(X)}$ (grupo libre que tiene por base $\mathfrak{I}(X)$), y es igual a él cuando $X$ es noetheriano.
+Los elementos de $\mathfrak{Z}(X)$ se llaman \emph{ciclos} sobre $X$, y los de $\mathfrak{I}(X)$, \emph{ciclos primos} (en general no forman una base de $\mathfrak{Z}(X)$ cuando $X$ no es noetheriano).
+Siempre se considera $\mathfrak{Z}(X)$ ordenado por el orden inducido sobre este subgrupo por el orden producto de $\bb{Z}^X$, y se denotará por $\mathfrak{Z}^+(X)$ el conjunto de los ciclos $\geq0$.
+
+\oldpage[IV-4]{271}
+
+Para todo ciclo $Z\in\mathfrak{Z}(X)$, igual a $(n_x)_{x\in X}$, se escribirá, por abuso de lenguaje,
+\[
+  Z=\sum_{x\in X}n_x\cdot\overline{\{x\}}.
+\]
+Se llama \emph{multiplicidad de $Z$ en el punto $x$} y se denota por $\operatorname{mult}_x(Z)$ el entero $n_x$ (positivo o negativo).
+Decir que $Z\geq0$ significa que $\operatorname{mult}_x(Z)\geq0$ para todo $x\in X$.
+Se llama \emph{soporte de $Z$} y se denota por $\Supp(Z)$ la unión de los $\overline{\{x\}}$ tales que $\operatorname{mult}_x(Z)\neq0$;
+por definición de $\mathfrak{Z}(X)$, es un conjunto cerrado de $X$, como unión de una familia localmente finita de conjuntos cerrados.
+Se llama \emph{dimensión} (resp.\ \emph{codimensión}) de $Z$ y se denota por $\dim(Z)$ (resp.\ $\codim(Z)$) la dimensión (resp.\ codimensión en $X$) de $\Supp(Z)$.
+\end{env}
+
+\begin{env}[21.6.2]
+\label{IV.21.6.2}
+Se dice que un conjunto cerrado $Y$ de $X$ es \emph{puramente de codimensión $p$} (en $X$) si \emph{cada una} de sus componentes irreducibles es de codimensión $p$ en $X$.
+Se dice que un ciclo es \emph{puramente de codimensión $p$}, o (por abuso de lenguaje) es un \emph{ciclo $p$-codimensional}, si su soporte es puramente de codimensión $p$.
+Se denota por $X^{(p)}$ el conjunto de los $x\in X$ tales que $\codim(\overline{\{x\}},X)=p$, o, lo que es lo mismo \sref{IV.5.1.2}, $\dim(\sh{O}_{X,x})=p$:
+los ciclos puramente de codimensión $p$ forman un subgrupo $\mathfrak{Z}^p(X)$ de $\mathfrak{Z}(X)$, isomorfo al subgrupo de $\bb{Z}^{X^{(p)}}$ formado por los $(n_x)_{x\in X^{(p)}}$ tales que el conjunto de los $\overline{\{x\}}$ (o el conjunto de los $x$) para los cuales $n_x\neq0$ sea localmente finito;
+este subgrupo contiene el grupo libre $\bb{Z}^{(X^{(p)})}$ y es idéntico a él cuando $X$ es noetheriano.
+Se denota por $\mathfrak{Z}^{p+}(X)$ el conjunto de los elementos $\geq0$ de $\mathfrak{Z}^p(X)$.
+Está claro que el grupo ordenado $\mathfrak{Z}(X)$ contiene la suma directa de los subgrupos ordenados $\mathfrak{Z}^p(X)$, y es idéntico a esta suma directa cuando $X$ es noetheriano;
+en este último caso, se considera $\mathfrak{Z}(X)$ \emph{graduado} por los $\mathfrak{Z}^p(X)$ para $p\in\bb{N}$.
+\end{env}
+
+\begin{env}[21.6.3]
+\label{IV.21.6.3}
+Sean $Z=\sum_{x\in X}n_x\cdot\overline{\{x\}}$ un ciclo sobre $X$ y $U$ un abierto de $X$;
+se llama \emph{restricción} de $Z$ a $U$ y se denota por $Z|U$ el ciclo $\sum_{x\in U}n_x\cdot(U\cap\overline{\{x\}})$ sobre $U$;
+se tiene $\Supp(Z|U)=\Supp(Z)\cap U$.
+Está claro que $Z\mapsto Z|U$ es un homomorfismo de grupos ordenados de $\mathfrak{Z}(X)$ en $\mathfrak{Z}(U)$ (resp.\ de $\mathfrak{Z}^p(X)$ en $\mathfrak{Z}^p(U)$), y que si $V$ es un abierto contenido en $U$, se tiene $Z|V=(Z|U)|V$;
+la aplicación $U\mapsto\mathfrak{Z}(U)$ (resp.\ $U\mapsto\mathfrak{Z}^p(U)$) es, por tanto, un \emph{prehaz} sobre $X$ de grupos ordenados conmutativos.
+De hecho, este prehaz es un \emph{haz}, suma directa de los haces $(i_x)_*(\bb{Z}_{\overline{\{x\}}})$, donde $x$ recorre $X$ (resp.\ $X^{(p)}$), y para cada $x\in X$, $i_x$ es la inyección canónica $\overline{\{x\}}\to X$ y $\bb{Z}_{\overline{\{x\}}}$ es el haz simple asociado al haz constante $\bb{Z}$ sobre el espacio $\overline{\{x\}}$:
+esto se deduce inmediatamente de la descripción de las secciones de una suma directa de haces de grupos conmutativos (G, II, 2.7).
+Este haz se denota por $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+Se denota por $\mathscr{Z}_X^+$ (resp.\ $\mathscr{Z}_X^{p+}$) el subhaz
+\oldpage[IV-4]{272}
+de monoides $U\mapsto\mathfrak{Z}^+(U)$ (resp.\ $U\mapsto\mathfrak{Z}^{p+}(U)$) de $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+El haz $\mathscr{Z}_X$ es evidentemente \emph{suma directa} de los haces $\mathscr{Z}_X^p$.
+
+Señalemos finalmente que los haces $\mathscr{Z}_X^p$ (y, por tanto, también $\mathscr{Z}_X$) son \emph{flácidos}.
+Supongamos, en efecto, dada una sección $Z$ de $\mathscr{Z}_X^p$ sobre un abierto $U$, de modo que el conjunto $S$ de los $x\in U$ tales que $\operatorname{mult}_x(Z)\neq0$ sea localmente finito \emph{en} $U$;
+este conjunto también es localmente finito \emph{en} $X$, pues para todo $z\in X$ y todo entorno abierto noetheriano $V$ de $z$, $U\cap V$ es noetheriano y, por tanto, solo contiene un número finito de puntos de $S$.
+Se define entonces una sección $Z'$ de $\mathscr{Z}_X^p$ sobre $X$ poniendo $Z'=\sum_{x\in U}\operatorname{mult}_x(Z)\cdot\overline{\{x\}}$ y, puesto que la adherencia de $x$ en $U$ es $\overline{\{x\}}\cap U$, se tiene efectivamente $Z'|U=Z$, de donde resulta nuestra afirmación.
+\end{env}
+
+\begin{env}[21.6.4]
+\label{IV.21.6.4}
+Nos proponemos definir un homomorfismo canónico
+\[
+\label{IV.21.6.4.1}
+  c:\sh{D}iv_X\to\mathscr{Z}_X^1
+  \tag{21.6.4.1}
+\]
+de haces de grupos conmutativos.
+Evidentemente, basta definir un homomorfismo de $\sh{M}_X^*$ en $\mathscr{Z}_X^1$ que se anule en $\sh{O}_X^*$ \sref{IV.21.1.2};
+ahora bien, por definición, $\sh{M}_X^*$ es el \emph{simetrizado} del haz de monoides $\sh{O}_X\cap\sh{M}_X^*$, y un homomorfismo $\sh{M}_X^*\to\mathscr{Z}_X^1$ queda determinado de manera única por su restricción $\sh{S}(\sh{O}_X)\to\mathscr{Z}_X^1$, que es un homomorfismo de haces de \emph{monoides} sometido a la única condición de ser nulo en $\sh{O}_X^*$;
+equivalentemente, para definir $c$, basta definir un homomorfismo de \emph{haces de monoides}
+\[
+\label{IV.21.6.4.2}
+  c:\sh{D}iv_X^+\to\mathscr{Z}_X^{1+}.
+  \tag{21.6.4.2}
+\]
+\end{env}
+
+\begin{env}[21.6.5]
+\label{IV.21.6.5}
+Ahora bien, se ha visto que a todo divisor positivo $D$ sobre $X$ se hace corresponder el subpreesquema cerrado $Y(D)$ de $X$, definido por el ideal $\sh{J}_X(D)\subset\sh{O}_X$, y que está regularmente inmerso y es de codimensión $1$.
+En cada uno de los puntos maximales $x$ de $Y(D)$ se tiene, por tanto, (\sref{IV.19.1.4} y \sref{IV.5.1.2}) $\codim(\overline{\{x\}},X)=\dim(\sh{O}_{X,x})=1$, es decir, $x\in X^{(1)}$;
+además, el conjunto de estos puntos maximales es localmente finito en $X$ \sref{IV.3.1.6}, y $\sh{O}_{Y(D),x}$ es un anillo \emph{artiniano}.
+En todo punto $x\in X^{(1)}$ que no sea punto maximal de $Y(D)$, se tiene necesariamente $x\notin Y(D)$ y, por tanto, $\sh{O}_{Y(D),x}=0$.
+Pongamos
+\[
+\label{IV.21.6.5.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{long}(\sh{O}_{Y(D),x})\cdot\overline{\{x\}}
+  \tag{21.6.5.1}
+\]
+que es, por tanto, un elemento de $\mathfrak{Z}^1(X)$.
+\end{env}
+
+\begin{proposition}[21.6.6]
+\label{IV.21.6.6}
+La aplicación $D\mapsto\operatorname{cyc}(D)$ es un homomorfismo del monoide $\operatorname{Div}^+(X)$ en $\mathfrak{Z}^{1+}(X)$.
+\end{proposition}
+
+\begin{proof}
+Todo se reduce a ver que para dos divisores positivos $D$, $D'$, se tiene
+\[
+  \operatorname{cyc}(D+D')=\operatorname{cyc}(D)+\operatorname{cyc}(D').
+\]
+Ahora bien, se tiene \sref{IV.21.2.5} $\sh{J}_X(D+D')=\sh{J}_X(D)\sh{J}_X(D')$;
+todo se reduce a ver que si $x\in X^{(1)}$, si se pone $A=\sh{O}_{X,x}$, y si $t$ y $t'$ son dos elementos regulares de $A$, se tiene $\operatorname{long}(A/tt'A)=\operatorname{long}(A/tA)+\operatorname{long}(A/t'A)$;
+pero, puesto que $t$ es regular, $tA/tt'A$ es isomorfo a $A/t'A$, de donde resulta inmediatamente la proposición.
+\end{proof}
+
+Se deduce inmediatamente de las definiciones que, para todo abierto $U\subset X$, se tiene
+\[
+  Y(D|U)=Y(D)\cap U,
+\]
+\oldpage[IV-4]{273}
+por tanto, $\operatorname{cyc}(D|U)=\operatorname{cyc}(D)|U$, y los homomorfismos $\operatorname{cyc}:\operatorname{Div}^+(U)\to\mathfrak{Z}^1(U)$ definen así un homomorfismo de haces de monoides \sref{IV.21.6.4.2}, de donde se obtiene el homomorfismo buscado \sref{IV.21.6.4.1} de haces de grupos.
+
+Se tiene $\Supp(\operatorname{cyc}(D))\subset\Supp(D)$ para todo divisor $D$ y
+\begin{env}[21.6.6.2]
+\label{IV.21.6.6.2}
+\[
+  \Supp(\operatorname{cyc}(D))=\Supp(D)\quad\text{cuando}\quad D\geq0;
+\]
+\end{env}
+en efecto, ya se ha visto la segunda relación \sref{IV.21.2.12};
+cuando $D$ es arbitrario, la relación $D_x=0$ implica la existencia de un entorno abierto $U$ de $x$ tal que $D|U=0$, de donde $\operatorname{cyc}(D)|U=0$, lo que demuestra nuestra afirmación.
+
+\begin{env}[21.6.7]
+\label{IV.21.6.7}
+El homomorfismo \sref{IV.21.6.4.1} da, al pasar a los grupos de secciones sobre $X$, un \emph{homomorfismo creciente de grupos ordenados} $\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$, que se seguirá denotando por $D\mapsto\operatorname{cyc}(D)$;
+el número $\operatorname{mult}_x(\operatorname{cyc}(D))$ para $x\in X^{(1)}$ se denota también por $\operatorname{mult}_x(D)$ o $\operatorname{mult}_{\overline{\{x\}}}(D)$ y se llama \emph{multiplicidad del divisor $D$ en el punto $x$}, o \emph{multiplicidad del ciclo primo $\overline{\{x\}}$ en $D$};
+es un entero positivo o negativo, igual, como se ha visto, a $\operatorname{long}(\sh{O}_{Y(D),x})$ cuando $D$ es un divisor \emph{positivo};
+se tiene, por tanto, por definición
+\[
+\label{IV.21.6.7.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{mult}_x(D)\cdot\overline{\{x\}},
+  \tag{21.6.7.1}
+\]
+y, en virtud de que $D\mapsto\operatorname{cyc}(D)$ es un homomorfismo, se tiene
+\[
+\label{IV.21.6.7.2}
+  \operatorname{mult}_x(-D)=-\operatorname{mult}_x(D),\qquad
+  \operatorname{mult}_x(D+D')=\operatorname{mult}_x(D)+\operatorname{mult}_x(D')
+  \tag{21.6.7.2}
+\]
+para dos divisores cualesquiera $D$, $D'$.
+
+Para toda función meromorfa regular $f$ sobre $X$, se pone en particular, para $x\in X^{(1)}$,
+\[
+\label{IV.21.6.7.3}
+  o_x(f)=\operatorname{mult}_x(\operatorname{div}(f))
+  \tag{21.6.7.3}
+\]
+y se dice que $o_x(f)$ (entero positivo o negativo) es \emph{el orden de $f$ en el punto} $x\in X^{(1)}$.
+Si $f_x\in\sh{O}_{X,x}$ (elemento regular de este anillo local por hipótesis), se tiene, por tanto,
+\[
+\label{IV.21.6.7.4}
+  o_x(f)=\operatorname{long}(\sh{O}_{X,x}/f_x\sh{O}_{X,x});
+  \tag{21.6.7.4}
+\]
+para dos funciones meromorfas regulares $f$, $f'$ sobre $X$, se tiene
+\[
+\label{IV.21.6.7.5}
+  o_x(ff')=o_x(f)+o_x(f'),\qquad o_x(f^{-1})=-o_x(f)
+  \tag{21.6.7.5}
+\]
+para todo $x\in X^{(1)}$.
+Los ciclos $1$-codimensionales
+\[
+  Z^+(f)=\sum_{x\in X^{(1)}}(o_x(f))^+\cdot\overline{\{x\}},\qquad
+  Z^-(f)=\sum_{x\in X^{(1)}}(o_x(f))^-\cdot\overline{\{x\}}
+\]
+se llaman respectivamente el \emph{ciclo de los ceros} y el \emph{ciclo de los polos} (o \emph{ciclo polar}) de $f$, y se tiene evidentemente $\operatorname{cyc}(\operatorname{div}(f))=Z^+(f)-Z^-(f)$.
+Los ciclos $1$-codimensionales de la forma $\operatorname{cyc}(\operatorname{div}(f))$ se llaman \emph{principales} (o \emph{linealmente equivalentes a cero}) y forman un subgrupo $\mathfrak{Z}^1_\mathrm{princ}(X)$ de $\mathfrak{Z}^1(X)$.
+Las secciones sobre $X$ de la imagen $c(\sh{D}iv_X)\subset\mathscr{Z}_X^1$ se
+\oldpage[IV-4]{274}
+llaman \emph{ciclos localmente principales};
+tal ciclo $Z$ se caracteriza, por tanto, por el hecho de que, para todo $y\in X$, existe un entorno abierto $U$ de $y$ en $X$ y una función meromorfa regular $f$ sobre $U$ tal que $Z|U=\sum_{x\in U\cap X^{(1)}}o_x(f)(\overline{\{x\}}\cap U)$.
+Si $Z=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}$, es equivalente decir que, para todo $y\in X$, si se pone $T_y=\Spec(\sh{O}_{X,y})$ y $Z_y=\sum_{x\in X^{(1)}\cap T_y}n_x(\overline{\{x\}}\cap T_y)$, $Z_y$ es \emph{principal}, es decir, existe una función meromorfa regular $g$ sobre $T_y$ tal que $Z_y=\operatorname{cyc}(\operatorname{div}(g))$.
+Esto se deduce inmediatamente, en efecto, de la definición anterior y de \sref{IV.20.3.7}, que establece una correspondencia biunívoca entre las funciones meromorfas regulares sobre $T_y$ y los gérmenes de funciones meromorfas regulares sobre los entornos abiertos de $y$ en $X$ cuando $X$ es localmente noetheriano.
+El hecho de que $Z_y$ sea principal se expresa también diciendo que $Z$ es \emph{principal en el punto $y$}.
+El conjunto de los puntos en los que $Z$ es principal es evidentemente \emph{abierto}, en virtud de lo anterior.
+
+Del homomorfismo canónico $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ se deduce un homomorfismo $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$, en virtud de la definición de $\mathfrak{Z}^1_\mathrm{princ}(X)$.
+Se dice que el grupo $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$ es el \emph{grupo de las clases de ciclos $1$-codimensionales} de $X$ y se denota por $\mathfrak{Cl}(X)$.
+Dos elementos de $\mathfrak{Z}^1(X)$ que tienen la misma imagen en $\mathfrak{Cl}(X)$ se llaman \emph{linealmente equivalentes}.
+\end{env}
+
+\begin{env}[21.6.8]
+\label{IV.21.6.8}
+Consideremos en particular el caso en que $X=\Spec(A)$, donde $A$ es un anillo \emph{noetheriano, íntegro e íntegramente cerrado}.
+Entonces $X^{(1)}$ es el conjunto de los \emph{ideales primos de altura $1$} de $A$, y $\mathfrak{Z}^1(X)$ se identifica, por tanto, con el \emph{grupo de los divisores} (en el sentido de N.~Bourbaki) del anillo de Krull $A$ (Bourbaki, \emph{Álg.\ conmut.}, cap.~VII, \textsection~1, n\textsuperscript{o}~3, cor.\ del teorema~2 y n\textsuperscript{o}~6, teorema~3).
+
+Como, por otra parte, las funciones meromorfas regulares sobre $X$ se identifican entonces con los elementos no nulos del cuerpo de fracciones $K$ de $A$, la aplicación $f\mapsto\operatorname{cyc}(\operatorname{div}(f))$ de $M(X)$ en $\mathfrak{Z}^1(X)$ se identifica con la aplicación denotada por $f\mapsto\operatorname{div}(f)$ en Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~1);
+$\mathfrak{Z}^1_\mathrm{princ}(X)$ se identifica, por tanto, con el \emph{grupo de los divisores principales} de $A$ en el sentido de Bourbaki, y $\mathfrak{Cl}(X)$ con el \emph{grupo de las clases de divisores} de $A$ en el sentido de Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~2 y n\textsuperscript{o}~10).
+\end{env}
+
+\begin{theorem}[21.6.9]
+\label{IV.21.6.9}
+Sea $X$ un preesquema localmente noetheriano normal.
+\begin{enumerate}[label=(\roman*)]
+  \item El homomorfismo canónico $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ es inyectivo y su imagen está formada por los ciclos localmente principales.
+  \item Las condiciones siguientes son equivalentes:
+  \begin{enumerate}[label=\emph{\alph*)}]
+    \item El homomorfismo $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ es biyectivo.
+    \item Todo ciclo $1$-codimensional es localmente principal.
+    \item Para todo $x\in X$, el anillo local $\sh{O}_{X,x}$ es factorial.
+  \end{enumerate}
+  (Se dice entonces que $X$ es un preesquema \emph{localmente factorial}.)
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Basta demostrar que
+\[
+\label{IV.21.6.9.1}
+  \operatorname{cyc}^{-1}(\mathfrak{Z}^{1+}(X))=\operatorname{Div}^+(X),
+  \tag{21.6.9.1}
+\]
+puesto que se tiene $\operatorname{Div}^+(X)\cap(-\operatorname{Div}^+(X))=0$ y $\mathfrak{Z}^{1+}(X)\cap(-\mathfrak{Z}^{1+}(X))=0$.
+Se reduce, por tanto, a demostrar que si $D$ es un divisor sobre $X$ tal que $\operatorname{mult}_x(D)\geq0$ para todo $x\in X^{(1)}$, entonces $D\geq0$.
+Ahora bien, para todo $x\notin X^{(1)}$, el anillo local $\sh{O}_{X,x}$ es íntegro e íntegramente cerrado y
+\oldpage[IV-4]{275}
+de dimensión $0$ o $\geq2$, por lo que se tiene $\operatorname{prof}(\sh{O}_{X,x})=0$ o $\operatorname{prof}(\sh{O}_{X,x})\geq2$ \sref[0]{0.16.5.1}.
+Por otra parte, en los puntos $x\in X^{(1)}$, el anillo $\sh{O}_{X,x}$ es un anillo de valoración discreta (\sref[II]{II.7.1.6}) y, por tanto, $\operatorname{prof}(\sh{O}_{X,x})=1$ \sref[0]{0.16.5.1};
+los únicos puntos de $X$ tales que $\operatorname{prof}(\sh{O}_{X,x})=1$ son, por consiguiente, los puntos de $X^{(1)}$, y la conclusión se deduce entonces de \sref{IV.21.1.8}.
+
+  \item La equivalencia de \emph{a)} y \emph{b)} es clara en virtud de (i).
+Según la caracterización de los ciclos localmente principales dada en \sref{IV.21.6.7}, y la relación entre ciclos $1$-codimensionales sobre $\Spec(A)$ y divisores (en el sentido de Bourbaki) del anillo $A$ cuando $A$ es un anillo noetheriano íntegramente cerrado \sref{IV.21.6.8}, la condición \emph{b)} equivale a decir que, para todo $x\in X$, todo divisor del anillo $\sh{O}_{X,x}$ es principal, es decir, que el anillo $\sh{O}_{X,x}$ es factorial (Bourbaki, \emph{Álg.\ conmut.}, cap.~VII, \textsection~3, n\textsuperscript{o}~1), de donde resulta la equivalencia de \emph{b)} y \emph{c)}.
+\end{enumerate}
+\end{proof}
+
+\begin{env}[21.6.9.2]
+\label{IV.21.6.9.2}
+Cuando $A$ es un anillo noetheriano \emph{factorial}, está claro que $X=\Spec(A)$ es localmente factorial (Bourbaki, \emph{Álg.\ conmut.}, cap.~VII, \textsection~3, n\textsuperscript{o}~4, prop.~3).
+Si, en este caso, se escribe un elemento $f\neq0$ del cuerpo de fracciones $K$ de $A$ en la forma $r/s$, donde $r$ y $s$ son dos elementos \emph{primos entre sí} de $A$, cuyos divisores están bien determinados (\emph{loc.\ cit.}, \textsection~3, n\textsuperscript{o}~3), estos divisores se identifican respectivamente con el \emph{divisor de los ceros} y el \emph{divisor de los polos} de $f$ \sref{IV.21.6.7}.
+\end{env}
+
+\begin{corollary}[21.6.10]
+\label{IV.21.6.10}
+Sea $X$ un preesquema localmente noetheriano normal.
+\begin{enumerate}[label=(\roman*)]
+  \item Existe un homomorfismo canónico inyectivo
+\[
+\label{IV.21.6.10.1}
+  \operatorname{Pic}(X)\to\mathfrak{Cl}(X).
+  \tag{21.6.10.1}
+\]
+
+  \item Si $X$ es localmente factorial, el homomorfismo \sref{IV.21.6.10.1} es biyectivo, y recíprocamente.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Se ha visto \sref{IV.21.6.7} que la imagen de $\operatorname{Div.princ}(X)$ por el homomorfismo $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ es $\mathfrak{Z}^1_\mathrm{princ}(X)$;
+se deduce, por tanto, de \sref{IV.21.6.9} que el homomorfismo $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)=\mathfrak{Cl}(X)$ deducido de $\operatorname{cyc}$ es inyectivo, y que es biyectivo si y solo si $X$ es localmente factorial.
+La conclusión se deduce entonces del hecho de que, cuando $X$ es localmente noetheriano y reducido, el homomorfismo canónico $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\operatorname{Pic}(X)$ \sref{IV.21.3.3.1} es biyectivo \sref{IV.21.3.4}, (ii).
+\end{proof}
+
+\begin{corollary}[21.6.11]
+\label{IV.21.6.11}
+Sea $X$ un preesquema localmente noetheriano y localmente factorial.
+Entonces el haz $\sh{D}iv_X$ es flácido, y para todo abierto $U$ de $X$, el homomorfismo canónico $\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ es sobreyectivo.
+\end{corollary}
+
+\begin{proof}
+Teniendo en cuenta \sref{IV.21.6.9}, (ii), la primera afirmación equivale a decir que el haz $\mathscr{Z}_X^1$ es flácido, lo que se ha visto más arriba \sref{IV.21.6.3}.
+Para todo abierto $U$ de $X$, el homomorfismo canónico $\mathfrak{Z}^1(X)\to\mathfrak{Z}^1(U)$ es, por tanto, sobreyectivo;
+como, en virtud de \sref{IV.21.6.10}, el homomorfismo $\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ se identifica canónicamente con $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)\to\mathfrak{Z}^1(U)/\mathfrak{Z}^1_\mathrm{princ}(U)$, también es sobreyectivo.
+\end{proof}
+
+\begin{proposition}[21.6.12]
+\label{IV.21.6.12}
+Sea $X$ un preesquema noetheriano reducido.
+Sea $(U_\lambda)_{\lambda\in L}$ una familia filtrante decreciente de abiertos de $X$ que satisface las condiciones siguientes:
+\begin{enumerate}
+  \item[\rm 1\textsuperscript{o}] Si $Y_\lambda=X-U_\lambda$, se tiene $\codim(Y_\lambda,X)\geq2$ para todo $\lambda\in L$.
+  \item[\rm 2\textsuperscript{o}] Para todo $x\in\bigcap_{\lambda\in L}U_\lambda$, el anillo $\sh{O}_{X,x}$ es factorial.
+\end{enumerate}
+Entonces existen isomorfismos canónicos
+\[
+\label{IV.21.6.12.1}
+  \varinjlim\operatorname{Div}(U_\lambda)\simto\mathfrak{Z}^1(X),\qquad
+  \varinjlim\operatorname{Pic}(U_\lambda)\simto\mathfrak{Cl}(X)
+  \tag{21.6.12.1}
+\]
+tales que, para todo abierto $V$ de $X$, los diagramas
+\[
+\label{IV.21.6.12.2}
+  \xymatrix{
+    \varinjlim\operatorname{Div}(U_\lambda) \ar[r]^-\sim \ar[d] & \mathfrak{Z}^1(X) \ar[d] & & \varinjlim\operatorname{Pic}(U_\lambda) \ar[r]^-\sim \ar[d] & \mathfrak{Cl}(X) \ar[d]\\
+    \varinjlim\operatorname{Div}(U_\lambda\cap V) \ar[r]^-\sim & \mathfrak{Z}^1(V) & & \varinjlim\operatorname{Pic}(U_\lambda\cap V) \ar[r]^-\sim & \mathfrak{Cl}(V)
+  }
+  \tag{21.6.12.2}
+\]
+sean conmutativos.
+\end{proposition}
+
+\begin{proof}
+La hipótesis 1\textsuperscript{o} sobre $U_\lambda$ implica que, para todo $\lambda\in L$, se tiene $X^{(1)}\subset U_\lambda$ \sref{IV.5.1.3.1}; por tanto, el homomorfismo de restricción $\mathfrak{Z}^1(X)\to\mathfrak{Z}^1(U_\lambda)$ es biyectivo y, en consecuencia, se tiene un isomorfismo canónico $\varinjlim\mathfrak{Z}^1(U_\lambda)\simto\mathfrak{Z}^1(X)$.
+Los homomorfismos canónicos $\operatorname{cyc}:\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(U_\lambda)$ definen, por tanto, pasando al límite inductivo, el primero de los homomorfismos canónicos \sref{IV.21.6.12.1}, y el segundo se deduce de él pasando a los cocientes.
+Además, de la condición 1\textsuperscript{o} se deduce que los $U_\lambda$ son densos en $X$ y, por tanto, esquemáticamente densos, puesto que $X$ es reducido \sref{IV.11.10.4}; en consecuencia, toda función meromorfa sobre $X$ queda enteramente determinada por su restricción a cada $U_\lambda$;
+de esto se deduce inmediatamente que, en el isomorfismo $\mathfrak{Z}^1(X)\simto\mathfrak{Z}^1(U_\lambda)$, la imagen de $\mathfrak{Z}^1_\mathrm{princ}(X)$ es $\mathfrak{Z}^1_\mathrm{princ}(U_\lambda)$, por lo que se tiene también un isomorfismo canónico $\varinjlim\mathfrak{Cl}(U_\lambda)\simto\mathfrak{Cl}(X)$.
+El segundo de los homomorfismos canónicos \sref{IV.21.6.12.1} será, por tanto, un isomorfismo si lo es el primero, y queda entonces por demostrar este último punto, siendo trivial la conmutatividad de los diagramas \sref{IV.21.6.12.2}.
+
+\oldpage[IV-4]{276}
+Demostremos primero que el homomorfismo $\varinjlim\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(X)$ es \emph{inyectivo}.
+Pongamos $T=\bigcap_\lambda U_\lambda$, y señalemos que los $U_\lambda$ forman un \emph{sistema fundamental de entornos} de $T$.
+En efecto, para todo abierto $V\supset T$, $X-V$ es un subespacio cerrado de $X$ y, por tanto, un espacio noetheriano en el que todo conjunto cerrado irreducible admite un punto genérico;
+como los conjuntos $(X-V)\cap(X-U_\lambda)$ son cerrados en $X-V$, forman una familia filtrante creciente y tienen por unión $X-V$, nuestra afirmación se deduce de \sref[0]{0.9.2.4}.
+Dicho esto, se trata de ver que si $D\in\operatorname{Div}(U_\lambda)$ es tal que $\operatorname{cyc}(D)=0$ en $\mathfrak{Z}^1(U_\lambda)$, entonces existe $\mu\geq\lambda$ tal que $D|U_\mu=0$.
+En virtud de lo anterior, bastará ver que para todo $x\in T$, se tiene $D_x=0$;
+en efecto, habrá entonces un entorno $W(x)$ de $x$ en $X$ tal que $D|W(x)=0$, y la unión de los $W(x)$ para $x\in T$ contiene algún $U_\mu$.
+Teniendo en cuenta \sref{IV.21.4.6}, se reduce, por tanto, al caso en que $X=\Spec(\sh{O}_{X,x})$ con $x\in T$;
+pero, por hipótesis, $\sh{O}_{X,x}$ es factorial, luego íntegro e íntegramente cerrado, y $\Spec(\sh{O}_{X,x})$ es entonces normal;
+por consiguiente, la conclusión se deduce de \sref{IV.21.6.9}, (i).
+
+\oldpage[IV-4]{277}
+Para demostrar que el homomorfismo $\varinjlim\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(X)$ es biyectivo, bastará demostrar del mismo modo que, para todo $Z\in\mathfrak{Z}^1(X)$ y todo $x\in T$, existe un entorno $W(x)$ de $x$ en $X$ y un divisor $D^{(x)}$ sobre $W(x)$ tal que $\operatorname{cyc}(D^{(x)})=Z|W(x)$.
+En efecto, se podrá entonces recubrir el conjunto cuasicompacto $T$ por un número finito de $W(x_i)$ y, en virtud de la primera parte de la demostración, puesto que el número de pares $(i,j)$ es finito, existirá un índice $\lambda$ tal que, en cada uno de los $W(x_i)\cap W(x_j)\cap U_\lambda$, las restricciones de $D^{(x_i)}$ y $D^{(x_j)}$ coincidan;
+como se puede suponer además que $U_\lambda$ está contenido en la unión de los $W(x_i)$, se ve que las restricciones $D^{(x_i)}|(W(x_i)\cap U_\lambda)$ son las restricciones de un mismo divisor $D\in\operatorname{Div}(U_\lambda)$ que será tal que $\operatorname{cyc}(D)=Z|U_\lambda$.
+Se reduce de nuevo al caso en que $X=\Spec(\sh{O}_{X,x})$ con $x\in T$, pero como $\sh{O}_{X,x}$ es factorial, también lo son sus localizaciones (Bourbaki, \emph{Álg.\ conmut.}, cap.~VII, \textsection~3, n\textsuperscript{o}~4, prop.~3), y basta aplicar \sref{IV.21.6.9}, (ii).
+\end{proof}
+
+\begin{corollary}[21.6.13]
+\label{IV.21.6.13}
+Sea $A$ un anillo local noetheriano, íntegro e íntegramente cerrado, de dimensión $\geq2$.
+Pongamos $X=\Spec(A)$, y sean $a$ el punto cerrado de $X$ y $U=X-\{a\}$.
+Para que $A$ sea factorial, es necesario y suficiente que $U$ sea localmente factorial y que $\operatorname{Pic}(U)=0$.
+\end{corollary}
+
+\begin{proof}
+En efecto, decir que $A$ es factorial equivale a decir que $\mathfrak{Cl}(X)=0$ (Bourbaki, \emph{Álg.\ conmut.}, cap.~VII, \textsection~1, n\textsuperscript{o}~4, cor.\ del teorema~2 y \textsection~3, n\textsuperscript{o}~2, teorema~1);
+basta entonces utilizar la existencia del segundo isomorfismo \sref{IV.21.6.12.1}, tomando la familia $(U_\lambda)$ restringida al único abierto $U$.
+\end{proof}
+
+\begin{corollary}[21.6.14]
+\label{IV.21.6.14}
+Sean $A$ un anillo local noetheriano de dimensión $\geq2$, $X=\Spec(A)$, $a$ el punto cerrado de $X$ y $U=X-\{a\}$.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $A$ es factorial.
+  \item $\operatorname{Pic}(U)=0$ y $\operatorname{prof}(A)\geq2$ (condiciones que expresaremos más adelante \sref{IV.21.13} diciendo que el anillo $A$ es \emph{parafactorial}), y $U$ es localmente factorial.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Está claro que si $A$ es factorial, es normal y, por tanto, $\operatorname{prof}(A)\geq2$, puesto que $\dim(A)\geq2$ \sref[0]{0.16.5.1}, y \sref{IV.21.6.13} muestra que \emph{a)} implica \emph{b)}.
+Recíprocamente, si se satisface \emph{b)}, basta ver que $A$ es íntegramente cerrado para concluir, mediante \sref{IV.21.6.13}, que \emph{b)} implica \emph{a)}.
+En virtud del criterio de Serre \sref{IV.5.8.6}, basta verificar para $X$ las condiciones $(\mathrm{R}_1)$ y $(\mathrm{S}_2)$.
+Ahora bien, al ser $U$ localmente factorial, satisface estas condiciones, y la hipótesis $\operatorname{prof}(A)\geq2$ implica que $X$ también las satisface.
+\end{proof}

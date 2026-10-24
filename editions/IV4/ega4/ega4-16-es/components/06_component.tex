@@ -1,0 +1,203 @@
+\subsection{Haces de $p$-diferenciales y diferencial exterior.}
+\label{IV.16.6}
+
+\begin{env}[16.6.1]
+\label{IV.16.6.1}
+Sea $f:X\to S$ un morfismo de preesquemas. Se llama \emph{haz de
+$p$-diferenciales de $X$ relativo a $S$} ($p$ entero) a la
+\emph{$p$-ésima potencia exterior} (0, 4.1.5) del $\mathcal{O}_X$-módulo
+$\Omega_{X/S}^1$, denotada por
+\[
+  \Omega_{X/S}^p=\bigwedge^p(\Omega_{X/S}^1).
+  \tag{16.6.1.1}
+  \label{IV.16.6.1.1}
+\]
+Se tiene, por tanto, $\Omega_{X/S}^0=\mathcal{O}_X$, y $\Omega_{X/S}^p=0$ para $p<0$;
+los $\Omega_{X/S}^p$ son los componentes homogéneos del álgebra exterior
+sobre $\Omega_{X/S}^1$
+\[
+  \Omega_{X/S}^{\bullet}=\bigwedge(\Omega_{X/S}^1)
+  =\bigoplus_{p\in\mathbf{Z}}\bigwedge^p(\Omega_{X/S}^1),
+  \tag{16.6.1.2}
+  \label{IV.16.6.1.2}
+\]
+que es, por tanto, una $\mathcal{O}_X$-álgebra graduada cuasicoherente,
+anticonmutativa y cuyos elementos de grado 1 son de cuadrado nulo. Para todo
+abierto afín $U$ de $X$, se tiene
+\[
+  \Gamma(U,\Omega_{X/S}^{\bullet})
+  =\bigwedge(\Gamma(U,\Omega_{X/S}^1)),
+\]
+donde $\Gamma(U,\Omega_{X/S}^1)$ se considera como
+$\Gamma(U,\mathcal{O}_X)$-módulo.
+
+Cuando $S=\operatorname{Spec}(A)$ y $X=\operatorname{Spec}(B)$ son
+afines, siendo $B$ una $A$-álgebra, se tiene (0, 4.1.5)
+$\Omega_{X/S}^p=(\Omega_{B/A}^p)^{\sim}$, poniendo
+$\Omega_{B/A}^p=\bigwedge^p\Omega_{B/A}^1$.
+\end{env}
+
+\begin{theorem}[16.6.2]
+\label{IV.16.6.2}
+Existe un único endomorfismo $d$ del haz de grupos aditivos
+$\Omega_{X/S}^{\bullet}$ que tiene las propiedades siguientes:
+\begin{enumerate}
+\item[(i)] $d\circ d=0$.
+\item[(ii)] Para todo abierto $U$ de $X$ y toda sección
+$f\in\Gamma(U,\mathcal{O}_X)$, se tiene $df=d_{X/S}f$.
+\oldpage[IV-4]{35}
+\item[(iii)] Para todo abierto $U$ de $X$, todo par de enteros $p$, $q$ y
+todo par de secciones
+$\omega'_p\in\Gamma(U,\Omega_{X/S}^p)$,
+$\omega''_q\in\Gamma(U,\Omega_{X/S}^q)$, se tiene
+\[
+  d(\omega'_p\wedge\omega''_q)
+  =(d\omega'_p)\wedge\omega''_q
+  +(-1)^p\omega'_p\wedge d\omega''_q.
+  \tag{16.6.2.1}
+  \label{IV.16.6.2.1}
+\]
+\end{enumerate}
+Además, $d$ es un endomorfismo de $\psi^*(\mathcal{O}_X)$-módulos
+graduados, de grado $+1$.
+\end{theorem}
+
+Supongamos probada la existencia del endomorfismo $d$. Para todo abierto afín
+$U$ de $X$, toda sección de $\Omega_{X/S}^p$ sobre $U$ es (en virtud
+de (i)) combinación lineal de un número finito de elementos de la forma
+$g(df_1\wedge df_2\wedge\cdots\wedge df_p)$, donde $g$ y los $f_i$ son
+secciones de $\mathcal{O}_X$ sobre $U$ (0, 20.4.7). Las condiciones (i)
+y (iii) muestran entonces, por inducción sobre $p$, que necesariamente se tiene
+\[
+  d(g(df_1\wedge df_2\wedge\cdots\wedge df_p))
+  =dg\wedge df_1\wedge df_2\wedge\cdots\wedge df_p.
+  \tag{16.6.2.2}
+  \label{IV.16.6.2.2}
+\]
+Esto prueba, por tanto, la \emph{unicidad} de $d$ y la última afirmación del teorema.
+En virtud de esta propiedad de unicidad, para demostrar la existencia de $d$, se
+puede reducir al caso en que $S=\operatorname{Spec}(A)$ y
+$X=\operatorname{Spec}(B)$ son afines. Ahora bien (Bourbaki, \emph{Alg.}, cap.
+III, 3\textsuperscript{a} ed., \S~10), para definir una $A$-antiderivación
+$D$ de grado $+1$ de un álgebra exterior $\bigwedge(M)$ (donde $M$ es un
+$B$-módulo y $B$ una $A$-álgebra), con valores en una
+$A$-álgebra \emph{graduada anticonmutativa}
+$C=\bigoplus_{n=0}^{\infty}C_n$, cuyos elementos de grado 1 son de cuadrado
+nulo, basta elegir arbitrariamente una $A$-derivación $D_0$ de $B$
+en $C_1$ y un $A$-homomorfismo $D_1$ de $M$ en $C_2$; existe entonces
+una única $A$-antiderivación $D$ de $\bigwedge(M)$ en $C$
+que coincide con $D_0$ en $B$ y con $D_1$ en $M$.
+
+En el caso actual, $D_0$ es necesariamente igual a $d_{B/A}$ en virtud de
+(ii); todo se reduce a ver, teniendo en cuenta (16.6.2.2), que existe un
+$A$-homomorfismo $u$ de $\Omega_{B/A}^1$ en $\Omega_{B/A}^2$ tal que
+se tenga
+\[
+  u(g.df)=dg\wedge df
+  \tag{16.6.2.3}
+  \label{IV.16.6.2.3}
+\]
+para cualesquiera $f$, $g$ en $A$; para ello bastará mostrar que
+existe un $A$-homomorfismo
+$v:B\otimes_A\Omega_{B/A}^1\to\Omega_{B/A}^2$ tal que
+\[
+  v(g.\omega)=dg\wedge\omega
+  \tag{16.6.2.4}
+  \label{IV.16.6.2.4}
+\]
+para $g\in B$ y $\omega\in\Omega_{B/A}^1$. Finalmente, como
+$\Omega_{B/A}^1=\mathfrak{I}/\mathfrak{I}^2$ (donde
+$\mathfrak{I}=\mathfrak{I}_{B/A}$ es el núcleo del homomorfismo canónico
+$B\otimes_A B\to B$) y $\Omega_{B/A}^1$ está engendrado por los elementos
+de la forma $g.df$, basta definir un $A$-homomorfismo
+$w:B\otimes_A(B\otimes_A B)\to\Omega_{B/A}^2$ tal que
+\[
+  w(g'\otimes g\otimes f)=dg'\wedge(g.df)
+  \tag{16.6.2.5}
+  \label{IV.16.6.2.5}
+\]
+y tal que $w$ sea nulo sobre la imagen de $B\otimes_A\mathfrak{I}^2$. Ahora bien,
+como el segundo miembro de (16.6.2.5) es $A$-trilineal en $g'$, $g$, $f$,
+la existencia de $w$ que satisface (16.6.2.5) es inmediata. Como, por otra parte,
+$\mathfrak{I}$ está engendrado por los elementos $1\otimes x-x\otimes1$
+($x\in B$), se reduce a comprobar que, cuando
+$z=(1\otimes x-x\otimes1)(1\otimes y-y\otimes1)$, se tiene
+$w(g'\otimes z)=0$. Ahora bien, como
+$z=1\otimes(xy)+(xy)\otimes1-x\otimes y-y\otimes x$, la fórmula (16.6.2.4)
+muestra que
+\oldpage[IV-4]{36}
+basta ver que se tiene $d(xy)-x.dy-y.dx=0$, lo que expresa que $d$ es una
+derivación.
+
+Queda por probar que $d$ satisface la condición (i). Ahora bien, el cuadrado de una
+antiderivación es una derivación (Bourbaki, \emph{loc. cit.}), y como
+$\Omega_{B/A}^{\bullet}$ está engendrado por $\Omega_{B/A}^1$ como
+$B$-álgebra, basta comprobar que $d(dz)=0$ para $z\in B$ y
+$z\in\Omega_{B/A}^1$; en el primer caso, esto resulta de la fórmula
+(16.6.2.3) con $g=1$; en el segundo, se puede reducir al caso en que $z=g.df$
+con $f$, $g$ en $B$, y entonces, en virtud de (16.6.2.1) y (16.6.2.3), se tiene
+\[
+  d(d(g.df))=d(dg\wedge df)
+  =(d(dg))\wedge(df)-(dg)\wedge(d(df))=0.
+\]
+\hfill Q.E.D.
+
+\begin{definition}[16.6.3]
+\label{IV.16.6.3}
+La antiderivación $d$ definida en (16.6.2) (denotada también por $d_{X/S}$) se
+llama \emph{diferencial exterior sobre $X$} (relativa a $S$).
+\end{definition}
+
+\begin{proposition}[16.6.4]
+\label{IV.16.6.4}
+Para todo cambio de base $g:S'\to S$, si se pone
+$X'=X\times_S S'$, el homomorfismo canónico
+\[
+  \Omega_{X/S}^{\bullet}\otimes_S S'
+  \longrightarrow\Omega_{X'/S'}^{\bullet}
+  \tag{16.6.4.1}
+  \label{IV.16.6.4.1}
+\]
+deducido del isomorfismo (16.5.9.1) es biyectivo. Además, si $s$ es una
+sección de $\Omega_{X/S}^{\bullet}$ sobre un abierto $U$ de $X$,
+$s\otimes1$ su imagen inversa, sección de $\Omega_{X'/S'}^{\bullet}$
+sobre la imagen inversa $U'$ de $U$ en $X'$, se tiene
+$d_{X'/S'}(s\otimes1)=d_{X/S}(s)\otimes1$.
+\end{proposition}
+
+La primera afirmación es inmediata, pues la formación del álgebra exterior
+de un módulo conmuta con toda extensión del anillo de escalares. Para
+probar la segunda, se puede, en virtud de (16.6.2.2), reducir al caso en que
+$s\in\Gamma(U,\mathcal{O}_X)$, y en este caso la afirmación ya fue probada
+(16.4.3.7).
+
+\begin{env}[16.6.5]
+\label{IV.16.6.5}
+Supongamos que $\Omega_{X/S}^1$ es un $\mathcal{O}_X$-módulo localmente libre
+de rango $n$ en un punto $x$, de modo que hay $n$ secciones
+$s_i\in\Gamma(U,\mathcal{O}_X)$ tales que los $ds_i$ forman una base del
+$\Gamma(U,\mathcal{O}_X)$-módulo $\Gamma(U,\Omega_{X/S}^1)$ (16.5.8).
+Entonces, para todo entero $p\geq1$, los $p$-diferenciales
+$ds_{i_1}\wedge ds_{i_2}\wedge\cdots\wedge ds_{i_p}$ (para
+$i_1<i_2<\cdots<i_p$, elementos de $[1,n]$) forman una base de
+$\binom{n}{p}$ elementos de $\Gamma(U,\Omega_{X/S}^p)$ sobre
+$\Gamma(U,\mathcal{O}_X)$. Además, la fórmula (16.6.2.2) muestra que, para
+toda sección $g\in\Gamma(U,\mathcal{O}_X)$, se tiene
+\[
+  d(g.ds_{i_1}\wedge ds_{i_2}\wedge\cdots\wedge ds_{i_p})
+  =\sum_k(-1)^r\frac{\partial g}{\partial s_k}
+  ds_{i_1}\wedge\cdots\wedge ds_{i_r}\wedge ds_k\wedge
+  ds_{i_{r+1}}\wedge\cdots\wedge ds_{i_p}
+  \tag{16.6.5.1}
+  \label{IV.16.6.5.1}
+\]
+donde, en el segundo miembro, $k$ recorre el conjunto de los $n-p$ índices distintos de los
+$i_h$, siendo $i_r$ el mayor índice $<k$.
+
+Obsérvese que la relación $d(dg)=0$ para toda sección
+$g\in\Gamma(U,\mathcal{O}_X)$ se expresa en la forma
+\[
+  D_i(D_jg)=D_j(D_ig)\qquad\text{para $i\neq j$};
+\]
+es decir, las derivaciones $D_i$ definidas en (16.5.7) conmutan dos a dos.
+\end{env}

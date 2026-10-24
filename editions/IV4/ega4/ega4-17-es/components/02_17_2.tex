@@ -1,0 +1,80 @@
+\subsection{Propiedades generales de los diferenciales}
+\label{subsection:IV.17.2}
+
+\begin{proposition}[17.2.1]
+\label{IV.17.2.1}
+Para que un morfismo $f:X\to Y$ sea formalmente no ramificado, es necesario y suficiente que $\Omega_f^1=0$ (lo que también se escribe $\Omega_{X/Y}^1=0$ (16.3.1)).
+\end{proposition}
+
+Teniendo en cuenta (17.1.6), se reduce al caso en que $Y=\Spec(A)$ y $X=\Spec(B)$ son afines, y la conclusión resulta entonces de (0, 20.7.4) y de la interpretación de $\Omega_{X/Y}^1$ en este caso (16.3.7).
+
+\begin{corollary}[17.2.2]
+\label{IV.17.2.2}
+Sean $f:X\to Y$, $g:Y\to Z$ dos morfismos. Para que $f$ sea formalmente no ramificado, es necesario y suficiente que el homomorfismo canónico (16.4.19)
+\[
+  f^*(\Omega_{Y/Z}^1)\longrightarrow\Omega_{X/Z}^1
+\]
+sea sobreyectivo.
+\end{corollary}
+
+Es una consecuencia inmediata de (17.2.1) y de la sucesión exacta (16.4.19.1).
+
+\begin{proposition}[17.2.3]
+\label{IV.17.2.3}
+Sea $f:X\to Y$ un morfismo formalmente liso.
+\begin{enumerate}
+  \item[(i)] El $\sh{O}_X$-módulo $\Omega_{X/Y}^1$ es localmente proyectivo (16.10.1). Si $f$ es localmente de tipo finito, $\Omega_{X/Y}^1$ es localmente libre de tipo finito.
+  \item[(ii)] Para todo morfismo $g:Y\to Z$, la sucesión (16.4.19) de $\sh{O}_X$-módulos
+  \[
+  \label{IV.17.2.3.1}
+    0\longrightarrow f^*(\Omega_{Y/Z}^1)\longrightarrow\Omega_{X/Z}^1\longrightarrow\Omega_{X/Y}^1\longrightarrow0
+    \tag{17.2.3.1}
+  \]
+  es exacta; además, para todo $x\in X$, existe una vecindad abierta $U$ de $x$ tal que las restricciones a $U$ de los homomorfismos de (17.2.3.1) forman una sucesión exacta escindida.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-4]{60}
+\begin{enumerate}
+  \item[(i)] Se sabe (16.3.9) que si $f$ es localmente de tipo finito, $\Omega_f^1$ es un $\sh{O}_X$-módulo de tipo finito. Para demostrar que, en todos los casos, es localmente proyectivo, se puede restringir, en virtud de (17.1.6), al caso en que $Y=\Spec(A)$ y $X=\Spec(B)$ son afines, y esto resulta de la hipótesis sobre $f$ y de (0, 20.4.9 y 0, 19.2.1).
+  \item[(ii)] También aquí se puede restringir al caso en que $X$, $Y$ y $Z$ son afines (17.1.6), y la conclusión resulta en este caso de la interpretación de los módulos que figuran en la sucesión (17.2.3.1) y de (0, 20.5.7).
+\end{enumerate}
+
+\begin{corollary}[17.2.4]
+\label{IV.17.2.4}
+Si $f:X\to Y$ es un morfismo formalmente étale, entonces, para todo morfismo $g:Y\to Z$, el homomorfismo canónico de $\sh{O}_X$-módulos
+\[
+  f^*(\Omega_{Y/Z}^1)\longrightarrow\Omega_{X/Z}^1
+\]
+es biyectivo.
+\end{corollary}
+
+Esto resulta de la exactitud de la sucesión (17.2.3.1) y del hecho de que entonces se tiene $\Omega_{X/Y}^1=0$ (17.2.1).
+
+\begin{proposition}[17.2.5]
+\label{IV.17.2.5}
+Sean $f:X\to Y$ un morfismo, $X'$ un subpreesquema de $X$ tal que el morfismo compuesto $X'\xrightarrow{j}X\to Y$ (donde $j$ es la inyección canónica) sea formalmente liso. Entonces la sucesión de $\sh{O}_{X'}$-módulos (16.4.21)
+\[
+\label{IV.17.2.5.1}
+  0\longrightarrow\mathcal{N}_{X'/X}\longrightarrow\Omega_{X/Y}^1\otimes_{\sh{O}_X}\sh{O}_{X'}\longrightarrow\Omega_{X'/Y}^1\longrightarrow0
+  \tag{17.2.5.1}
+\]
+es exacta; además, para todo $x\in X$, existe una vecindad abierta $U$ de $x$ tal que las restricciones a $U$ de los homomorfismos de (17.2.5.1) forman una sucesión exacta escindida.
+\end{proposition}
+
+De nuevo en virtud de (17.1.6), se puede restringir al caso en que $Y=\Spec(A)$ y $X=\Spec(B)$ son afines, y $X'=\Spec(B/\mathfrak{J})$, donde $\mathfrak{J}$ es un ideal de $B$. Entonces el haz conormal $\mathcal{N}_{X'/X}$ corresponde al $B$-módulo $\mathfrak{J}/\mathfrak{J}^2$ (16.1.3), y la conclusión se deduce de (0, 20.5.14).
+
+\begin{proposition}[17.2.6]
+\label{IV.17.2.6}
+Sean $X$, $Y$ dos preesquemas, $f:X\to Y$ un morfismo localmente de tipo finito. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $f$ es un monomorfismo.
+  \item[b)] $f$ es radicial y formalmente no ramificado.
+  \item[c)] Para todo $y\in Y$, la fibra $f^{-1}(y)$ es vacía o $k(y)$-isomorfa a $\Spec(k(y))$ (es decir, está reducida a un solo punto $z$ tal que $k(y)\to\sh{O}_z/\mathfrak{m}_y\sh{O}_z$ sea un isomorfismo).
+\end{enumerate}
+\end{proposition}
+
+El hecho de que a) implique c) resulta de (8.11.5.1). Es claro que c) implica que $f$ es radicial; demostremos que de c) también resulta que $\Omega_{X/Y}^1=0$, lo que probará que c) implica b) (17.2.1). Obsérvese que el $\sh{O}_X$-módulo $\Omega_{X/Y}^1$ es cuasicoherente de tipo finito (16.3.9). Resulta, pues, de (I, 9.1.13.1) que, para que $(\Omega_{X/Y}^1)_x=0$, es necesario y suficiente que, si se pone $Y_1=\Spec(k(y))$, $X_1=f^{-1}(y)=X\times_Y Y_1$, se tenga $(\Omega_{X_1/Y_1}^1)_x=0$; pero, como el morfismo $f_1:X_1\to Y_1$ deducido de $f$ es formalmente no ramificado en virtud de la hipótesis c) (17.1.3), la conclusión resulta de (17.2.1). Demostremos finalmente que b) implica a); para ello, consideremos el morfismo diagonal $g=\Delta_f:X\to X\times_Y X$; puesto que $f$ es radicial, $g$ es sobreyectivo (I, 8.7.1); por otra parte, $\Omega_{X/Y}^1$ es por definición el haz conormal $\mathop{Gr}\nolimits_1(g)$ de la inmersión $g$ (16.3.1), y decir que $f$ es formalmente no ramificado significa, por tanto, que
+
+\oldpage[IV-4]{61}
+$\mathop{Gr}\nolimits_1(g)=0$ (17.2.1). Además, $g$ es localmente de presentación finita (I, 4.3.1); por tanto, la hipótesis $\mathop{Gr}\nolimits_1(g)=0$ implica que $g$ es una inmersión abierta (16.1.10); al ser sobreyectiva, esta inmersión es un isomorfismo, por lo que $f$ es un monomorfismo (I, 5.3.8).

@@ -1,0 +1,268 @@
+\oldpage[III]{190}
+\subsection{Caso de los anillos locales noetherianos}
+\label{subsection:III.7.5}
+
+\begin{env}[7.5.1]
+\label{III.7.5.1}
+Sean $A$ un anillo local noetheriano y $\mathfrak m$ su ideal
+maximal. Para todo $A$-módulo $M$, designemos por $\widehat M$ su
+completado separado para la topología $\mathfrak m$-ádica, el cual es
+isomorfo a
+\[
+  \varprojlim_n
+  \bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+  =
+  \varprojlim_n
+  \bigl(M/\mathfrak m^{n+1}M\bigr).
+\]
+Sea $T$ un funtor covariante aditivo de $\cat{Ab}_A$ en
+$\cat{Ab}$. Los homomorfismos canónicos
+\sref{III.7.2.3.1}
+\[
+  T(M)\otimes_A(A/\mathfrak m^{n+1})
+  \longrightarrow
+  T\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+\]
+forman evidentemente un sistema proyectivo de $A$-homomorfismos. Por
+paso al límite dan, por tanto, un $\widehat A$-homomorfismo funtorial
+en $M$
+\[
+  \widehat{T(M)}
+  \longrightarrow
+  \varprojlim_n T(M_n),
+  \tag{7.5.1.1}\label{III.7.5.1.1.eq}
+\]
+donde se ha puesto
+\[
+  M_n=M\otimes_A(A/\mathfrak m^{n+1}),
+  \qquad
+  A_n=A/\mathfrak m^{n+1}.
+\]
+\end{env}
+
+\begin{proposition}[7.5.2]
+\label{III.7.5.2}
+Sean $A$ un anillo local noetheriano de ideal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ su cuerpo residual y $T$ un funtor covariante
+aditivo de $\cat{Ab}_A$ en $\cat{Ab}$, semiexacto y que conmuta con
+los límites inductivos. Supongamos además que, para todo $A$-módulo
+de tipo finito $M$, $T(M)$ es un $A$-módulo de tipo finito y que el
+homomorfismo canónico \eqref{III.7.5.1.1.eq} es un isomorfismo. En
+estas condiciones, las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T$ es exacto por la derecha;
+  \item[(b)] para todo $n$, el funtor $N\mapsto T(N)$ es exacto por
+    la derecha en la categoría de los $A_n$-módulos de tipo finito;
+    equivalentemente, $T$ es exacto por la derecha en la categoría
+    de los $A$-módulos de longitud finita;
+  \item[(c)] el homomorfismo canónico
+    \[
+      T(\varepsilon):T(A)\longrightarrow T(k)
+    \]
+    es sobreyectivo;
+  \item[(d)] para todo $n$ suficientemente grande, el homomorfismo
+    canónico
+    \[
+      T(A_n)\longrightarrow T(k)
+    \]
+    es sobreyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Es claro que (a) implica (b). Demostremos el recíproco. Sea
+$u:M\to N$ un epimorfismo de $A$-módulos; debemos probar que $T(u)$
+es un epimorfismo. Como $T$ conmuta con los límites inductivos y los
+límites inductivos filtrantes son exactos en la categoría de los
+módulos, basta considerar el caso en que $M$ y $N$ son de tipo
+finito.
+
+Los módulos $T(M)$ y $T(N)$ son entonces de tipo finito. Como $A$ es
+noetheriano y local, basta probar que
+\[
+  \widehat{T(u)}:
+  \widehat{T(M)}
+  \longrightarrow
+  \widehat{T(N)}
+\]
+es sobreyectivo \sref[0]{0.7.3.5} y \sref[0]{0.6.4.1}. Por hipótesis,
+$\widehat{T(M)}$ y $\widehat{T(N)}$ son, respectivamente,
+\[
+  \varprojlim_n T(M_n)
+  \quad\hbox{y}\quad
+  \varprojlim_n T(N_n).
+\]
+Así, $\widehat{T(u)}$ es el límite inverso del sistema proyectivo de
+homomorfismos
+\[
+  T(u\otimes 1_{A_n}):T(M_n)\longrightarrow T(N_n).
+\]
+La condición (b) significa precisamente que estos homomorfismos son
+sobreyectivos. Además, $T(M_n)$ es un $A_n$-módulo de tipo finito y
+$A_n$ es artiniano. Se sigue que $\widehat{T(u)}$ es sobreyectivo
+\sref[0]{0.13.1.2} y \sref[0]{0.13.2.2}.
+
+Es claro que (a) implica (c), y (c) implica (d). Finalmente,
+\sref{III.7.2.7} muestra que (b) y (d) son equivalentes, pues $T$ es
+semiexacto en $\cat{Ab}_{A_n}$. Esto termina la demostración.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+\label{III.7.5.3}
+Bajo las hipótesis generales de \sref{III.7.5.2}, si $T(k)=0$,
+entonces $T(M)=0$ para todo $A$-módulo $M$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{191}
+Como $k$ es el único $A$-módulo simple, de
+\eqref{III.7.3.5.4.eq} se deduce que $T(E)=0$ para todo $A$-módulo
+de longitud finita $E$. Si $M$ es de tipo finito, entonces
+\[
+  \widehat{T(M)}
+  \simeq
+  \varprojlim_n T(M_n).
+\]
+Cada $M_n$ es de longitud finita, de modo que
+$\widehat{T(M)}=0$. Por hipótesis, $T(M)$ es de tipo finito y se
+inyecta en $\widehat{T(M)}$ \sref[0]{0.7.3.5}; por consiguiente,
+$T(M)=0$. Finalmente, para un $A$-módulo arbitrario $M$, el módulo
+$T(M)$ es el límite inductivo de los $T(N_\alpha)$, donde los
+$N_\alpha$ recorren los submódulos de tipo finito de $M$. Esto
+termina la demostración.
+\end{proof}
+
+\begin{proposition}[7.5.4]
+\label{III.7.5.4}
+Sean $A$ un anillo local noetheriano de ideal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ su cuerpo residual y $T_\bullet$ un funtor
+homológico de $\cat{Ab}_A$ en $\cat{Ab}$ que conmuta con los límites
+inductivos. Supongamos además que, para todo $i$ y todo $A$-módulo
+de tipo finito $M$, $T_i(M)$ es de tipo finito y el homomorfismo
+canónico
+\[
+  \widehat{T_i(M)}
+  \longrightarrow
+  \varprojlim_n T_i(M_n)
+\]
+es biyectivo. Para un entero dado $p$, las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_p$ es exacto;
+  \item[(b)] $T_p$ es exacto por la derecha y $T_p(A)$ es un
+    $A$-módulo libre;
+  \item[(c)] los homomorfismos canónicos
+    \[
+      T_{p+1}(A)\longrightarrow T_{p+1}(k),
+      \qquad
+      T_p(A)\longrightarrow T_p(k)
+    \]
+    son sobreyectivos;
+  \item[(d)] para todo $n$, los homomorfismos canónicos
+    \[
+      T_{p+1}(A_n)\longrightarrow T_{p+1}(k),
+      \qquad
+      T_p(A_n)\longrightarrow T_p(k)
+    \]
+    son sobreyectivos;
+  \item[(e)] para todo $n$, el funtor $N\mapsto T_p(N)$ es exacto
+    en la categoría de los $A_n$-módulos de tipo finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Por \sref{III.7.3.3}, la condición (a) equivale a decir que
+$T_{p+1}$ y $T_p$ son exactos por la derecha. Como $T_\bullet$ es
+un funtor homológico en $\cat{Ab}_{A_n}$, el mismo razonamiento que
+en \sref{III.7.3.1} muestra que (e) equivale a decir que $T_p$ y
+$T_{p+1}$ son exactos por la derecha en la categoría de los
+$A_n$-módulos de tipo finito. Se deduce de \sref{III.7.5.2} que (a)
+y (e) son equivalentes; la misma proposición da también la
+equivalencia de (a), (c) y (d).
+
+Finalmente, todo módulo plano de tipo finito sobre el anillo local
+$A$ es libre (Bourbaki, \emph{Algèbre commutative}, cap.~II,
+\S~3, n\textsuperscript{o}~2, cor.~2 de la prop.~5). La equivalencia
+de (a) y (b) resulta entonces de \sref{III.7.3.1} y
+\sref{III.7.3.3}.
+\end{proof}
+
+\begin{corollary}[7.5.5]
+\label{III.7.5.5}
+Supongamos verificadas las hipótesis generales de
+\sref{III.7.5.4}.
+\begin{enumerate}
+  \item[(i)] Si $T_p(k)=0$, entonces $T_p=0$, el funtor $T_{p+1}$
+    es exacto por la derecha y $T_{p-1}$ es exacto por la izquierda.
+  \item[(ii)] Si $T_{p-1}(k)=T_{p+1}(k)=0$, entonces $T_p$ es
+    exacto, el homomorfismo canónico
+    \[
+      T_p(A)\otimes_A M
+      \longrightarrow
+      T_p(M)
+    \]
+    es biyectivo y $T_p(A)$ es un $A$-módulo libre.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La aserción (i) se deduce inmediatamente de \sref{III.7.5.3}, pues
+$T_p$ es semiexacto; la última aserción resulta de la definición de
+funtor homológico. Teniendo en cuenta \sref{III.7.3.3}, (i) da de
+inmediato las dos primeras aserciones de (ii), y el hecho de que
+$T_p(A)$ sea libre resulta de \sref{III.7.5.4}.
+\end{proof}
+
+\begin{corollary}[7.5.6]
+\label{III.7.5.6}
+Supongamos verificadas las hipótesis generales de
+\sref{III.7.5.4}, y supongamos además que $A$ es un anillo de
+valuación discreta.
+\begin{enumerate}
+  \item[(i)] El funtor $T_p$ es exacto por la derecha si y solo si
+    $T_{p-1}(A)$ es un $A$-módulo libre.
+  \item[(ii)] El funtor $T_p$ es exacto si y solo si $T_p(A)$ y
+    $T_{p-1}(A)$ son $A$-módulos libres.
+\end{enumerate}
+\end{corollary}
+
+\oldpage[III]{192}
+\begin{proof}
+Es claro que (ii) implica (i) (cf.\ \sref{III.7.3.3}). Para probar
+(i), sea $f$ un generador del ideal maximal de $A$, es decir, un
+uniformizador de $A$. Un $A$-módulo de tipo finito $M$ es libre,
+equivalentemente plano, si y solo si la homotecia
+\[
+  h_f:M\longrightarrow M,\qquad x\longmapsto fx,
+\]
+es inyectiva, pues en la situación presente esto equivale a decir
+que $M$ es sin torsión \sref[0]{0.6.3.4}. La sucesión exacta
+\[
+  0
+  \longrightarrow A
+  \xrightarrow{h_f}
+  A
+  \longrightarrow k
+  \longrightarrow 0
+\]
+da la sucesión exacta de homología
+\[
+  T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow T_{p-1}(A)
+  \xrightarrow{h_f}
+  T_{p-1}(A).
+\]
+Así, $T_{p-1}(A)$ es libre si y solo si
+$T_p(A)\to T_p(k)$ es sobreyectivo, y la conclusión resulta de
+\sref{III.7.5.2}.
+\end{proof}
+
+\begin{remark}[7.5.7]
+\label{III.7.5.7}
+En virtud de \sref{III.7.4.7}, las hipótesis generales de
+\sref{III.7.4.4} implican que el funtor homológico $T_\bullet$
+definido por \eqref{III.7.4.1.1.eq} satisface las hipótesis generales
+de \sref{III.7.5.4}. En este caso, \sref{III.7.5.6} está, por tanto,
+contenido en \sref{III.7.4.3}.
+\end{remark}

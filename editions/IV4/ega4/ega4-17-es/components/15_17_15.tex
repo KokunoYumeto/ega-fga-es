@@ -1,0 +1,202 @@
+\subsection{Caso de los preesquemas sobre un cuerpo de base.}
+\label{subsection:IV.17.15}
+
+Recordemos primero (6.7.7, 6.7.8 y 6.8.1) la
+
+\begin{proposition}[17.15.1]
+\label{IV.17.15.1}
+Sean $k$ un cuerpo y $X$ un preesquema localmente de tipo finito sobre $k$. Para que $X$ sea liso en un punto $x$, es necesario y suficiente que, para toda extensión radicial $k'$ de $k$ (o solamente para toda extensión finita radicial de $k$), el anillo local $\sh{O}_{X,x}\otimes_k k'$ sea regular. Si $k(x)$ es una extensión separable de $k$ (en particular, si $k$ es perfecto), esto equivale a decir que $\sh{O}_{X,x}$ es regular.
+\end{proposition}
+
+\begin{corollary}[17.15.2]
+\label{IV.17.15.2}
+Bajo las condiciones de (17.15.1), para que $X$ sea liso sobre $k$, es necesario y suficiente que $X$ sea geométricamente regular sobre $k$ (6.7.6), lo que implica que $X$ es regular. Si $k$ es perfecto, entonces $X$ es liso sobre $k$ si y solo si $X$ es regular.
+\end{corollary}
+
+\begin{proposition}[17.15.3]
+\label{IV.17.15.3}
+Sean $k$ un cuerpo, $X$ un preesquema localmente de tipo finito sobre $k$, $x$ un punto de $X$, $n=\dim_x(X)$. Sea $(g_i)_{1\leq i\leq n}$ una familia de $n$ secciones de $\sh{O}_X$ sobre $X$, y sea $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ el morfismo correspondiente al $k$-homomorfismo $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ que transforma $T_i$ en $g_i$ (I, 2.2.4). Las condiciones siguientes son equivalentes (e implican que $X$ es liso sobre $k$ en el punto $x$ y, por consiguiente, regular en el punto $x$):
+\begin{enumerate}
+  \item[a)] $f$ es étale en el punto $x$.
+  \item[b)] Las imágenes de los $d_{X/k}g_i$ forman una base del $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/k})_x$.
+  \item[c)] Las imágenes de los $d_{X/k}g_i$ generan el $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ es étale en el punto $x$, $X$ es liso sobre $k$ en el punto $x$ puesto que $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ es liso sobre $k$ (17.3.8); el hecho de que a) implique b) es, pues, un caso particular de (17.11.3). Como b) implica trivialmente c), queda por ver que c) implica a). Observemos primero
+
+\oldpage[IV-4]{100}
+
+que la hipótesis entraña que el homomorfismo $(f^*(\Omega^1_{Y/k}))_x\to(\Omega^1_{X/k})_x$ es sobreyectivo; por tanto, reemplazando $X$ por una vecindad abierta de $x$, podemos suponer que el homomorfismo $f^*(\Omega^1_{Y/k})\to\Omega^1_{X/k}$ es sobreyectivo (Bourbaki, \emph{Alg. comm.}, cap. II, § 5, n\textsuperscript{o} 1, prop. 2); por consiguiente $f$ es \emph{no ramificado} (17.2.2). Veamos primero que podemos reducirnos al caso en que $x$ es \emph{racional sobre $k$}. En efecto, si ponemos $k'=k(x)$, $X'=X\otimes_k k'$, $Y'=Y\otimes_k k'=\operatorname{Spec}(k'[T_1,\ldots,T_n])$, existe un punto $x'\in X'$ por encima de $x$ tal que $k(x')=k'$. Para probar que $f$ es étale en el punto $x$, basta demostrar que $f'=f_{(k')}:X'\to Y'$ es étale en el punto $x'$ (17.7.1, (ii)); además $f'$ es no ramificado (17.3.3, (iii)) y se tiene $\dim_{x'}(X')=n$ (4.2.7). De la misma manera, reemplazando $k'$ por una extensión algebraicamente cerrada de $k'$, podemos suponer que $k$ es \emph{algebraicamente cerrado}. Pongamos entonces $y=f(x)$, $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$; como el cuerpo residual de $B$ es igual a $k$, lo mismo ocurre con el de $A$, de modo que $x$ (resp. $y$) es un punto cerrado de $X$ (resp. $Y$) (I, 6.4.2) y, por consiguiente, $\dim(A)=\dim(B)=n$. Puesto que $f$ es no ramificado, el homomorfismo $\widehat A\to\widehat B$ es sobreyectivo (17.4.4, f'')); pero como $\dim(\widehat A)=\dim(\widehat B)=n$, y $\widehat A$, al ser un anillo regular, es íntegro, el homomorfismo $\widehat A\to\widehat B$ es también inyectivo (0, 16.3.10). Por tanto, este homomorfismo es biyectivo, lo que termina de demostrar que $f$ es étale en el punto $x$ (17.6.3, e'')).
+
+\begin{corollary}[17.15.4]
+\label{IV.17.15.4}
+Bajo las hipótesis generales de (17.15.3), supongamos además que $k(x)$ sea una extensión finita y separable de $k$ y que los gérmenes $(g_i)_x$ pertenezcan a $\mathfrak m_x$. Entonces las condiciones a), b), c) de (17.15.3) son también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[d)] Los $n$ gérmenes $(g_i)_x$ generan el ideal maximal $\mathfrak m_x$ de $\sh{O}_{X,x}$.
+  \item[d')] El anillo $\sh{O}_{X,x}$ es regular y los $(g_i)_x$ forman un sistema regular de parámetros para este anillo (0, 17.1.6).
+\end{enumerate}
+\end{corollary}
+
+En efecto, d') implica trivialmente d). Por otra parte, como $k(x)$ es una extensión finita y separable de $k$, se tiene $\Omega^1_{k(x)/k}=0$ (0, 20.6.20) y $k(x)=\sh{O}_{X,x}/\mathfrak m_x$ es una $k$-álgebra formalmente lisa para las topologías discretas (0, 19.6.1), por lo que la sucesión exacta (0, 20.5.14.1) se aplica a $A=k$, $B=\sh{O}_{X,x}$, $\mathfrak{R}=\mathfrak m_x$, y proporciona un isomorfismo canónico
+\[
+\delta:\mathfrak m_x/\mathfrak m_x^2\xrightarrow{\sim}(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x).
+\]
+De aquí se deduce primero la equivalencia de las condiciones c) y d), teniendo en cuenta el lema de Nakayama. Por otra parte, si $f$ es étale en el punto $x$, el anillo $\sh{O}_{X,x}$ es regular y de dimensión $n$, puesto que $x$ es un punto cerrado de $X$ (I, 6.4.2), y $n$ elementos de $\mathfrak m_x$ que generan este ideal maximal forman entonces necesariamente un sistema regular de parámetros para $\sh{O}_{X,x}$ (0, 17.1.6), lo que prueba que a) implica d').
+
+\begin{proposition}[17.15.5]
+\label{IV.17.15.5}
+Sean $k$ un cuerpo, $X$ un preesquema localmente de tipo finito sobre $k$, $x$ un punto de $X$, $n=\dim_x(X)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $X$ es liso sobre $k$ en el punto $x$.
+  \item[b)] $X$ es diferencialmente liso sobre $k$ en el punto $x$.
+  \item[c)] $(\Omega^1_{X/k})_x$ es un $\sh{O}_{X,x}$-módulo libre de rango $n$.
+  \item[d)] $(\Omega^1_{X/k})_x$ es un $\sh{O}_{X,x}$-módulo que admite un sistema de $n$ generadores.
+
+\oldpage[IV-4]{101}
+
+  \item[e)] Existe una extensión perfecta $k'$ de $k$ y una vecindad abierta $U$ de $x$ en $X$ tales que el preesquema $U\otimes_k k'$ sea regular.
+\end{enumerate}
+\end{proposition}
+
+El hecho de que $X$ sea liso sobre $k$ en el punto $x$ entraña la existencia de una vecindad abierta $U$ de $x$ que sea lisa sobre $k$, por lo que $U\otimes_k k'$ es regular para toda extensión $k'$ de $k$ (17.15.2), lo que prueba que a) implica e). Recíprocamente, e) implica a), pues entonces $U\otimes_k k'$ es liso sobre $k'$ (17.15.2), y por tanto $U$ es liso sobre $k$ (17.7.1, (ii)).
+
+Ya hemos demostrado que a) implica c) (17.10.2); c) implica d) trivialmente y el hecho de que d) implique a) resulta de (0, 20.4.7) y (17.15.3, c)).
+
+Finalmente, ya hemos visto que a) implica b) (17.12.4). Recíprocamente, para demostrar que b) implica a), podemos reducirnos al caso en que $x$ es racional sobre $k$, considerando, como en la demostración de (17.15.3), un punto $x'$ de $X'=X\otimes_k k'$ por encima de $x$ y tal que $k(x')=k'=k(x)$, utilizando de nuevo (17.7.1, (ii)) y el hecho de que, si $X$ es diferencialmente liso en el punto $x$, $X'$ es diferencialmente liso en el punto $x'$ (16.10.4). Suponiendo, pues, que $x$ es racional sobre $k$, el hecho de que $f$ sea liso en $x$ resulta entonces de la hipótesis b) y de (17.12.5), aplicado a la $k$-sección $u:\operatorname{Spec}(k)\to X$ tal que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Sea $X$ un preesquema de tipo finito sobre un cuerpo $k$. Para que $X$ sea liso sobre $k$, es necesario y suficiente que el $\sh{O}_X$-Módulo $\Omega^1_{X/k}$ sea localmente libre y que los anillos locales en los puntos maximales de $X$ sean cuerpos, extensiones separables de $k$ (esta última condición se verifica automáticamente si $k$ es un cuerpo perfecto y $X$ un preesquema reducido).
+\end{corollary}
+
+Las condiciones son necesarias, pues si $X$ es liso sobre $k$, resulta de (17.10.2) que $\Omega^1_{X/k}$ es localmente libre; por otra parte, $X$ es regular, por tanto \emph{a fortiori} reducido, y en todo punto maximal $x$ de $X$, $\sh{O}_{X,x}$ es un cuerpo, que debe ser una $k$-álgebra formalmente lisa para las topologías discretas (17.5.1), y por consiguiente una extensión separable de $k$ (0, 19.6.1).
+
+Las condiciones son suficientes. En efecto, podemos reducirnos al caso en que $X$ es conexo, por lo que $\Omega^1_{X/k}$ es localmente libre de rango constante $n$. Para todo punto maximal $x$ de $X$, se tiene entonces $\operatorname{rg}_{k(x)}\Omega^1_{k(x)/k}=n$, puesto que $\sh{O}_{X,x}=k(x)$; como por hipótesis $k(x)$ es una extensión separable de $k$, se tiene $\Upsilon_{k(x)/k}=0$ (0, 20.6.3), por lo que $\deg.\operatorname{tr}_k k(x)=n$ por la igualdad de Cartier (0, 21.7.1). Todas las componentes irreducibles de $X$ tienen, pues, la misma dimensión $n$ (5.2.1), y concluimos que $X$ es liso sobre $k$ en todo punto en virtud de que c) implica a) en (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ es de característica 0, entonces, para que $X$ sea liso sobre $k$ en el punto $x$, es necesario y suficiente que $(\Omega^1_{X/k})_x$ sea un $\sh{O}_{X,x}$-módulo libre.
+\end{corollary}
+
+Esto resulta de (16.12.2) y de la equivalencia de b) y a) en (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Sean $k$ un cuerpo, $X$ un preesquema localmente de tipo finito sobre $k$, $x$ un punto de $X$; pongamos $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$, de modo que $n-r=\deg.\operatorname{tr}_k k(x)$ (5.2.3). Sea $(g_i)_{1\leq i\leq n}$ una familia de $n$ secciones de $\sh{O}_X$ sobre $X$, tales que $(g_i)_x\in\mathfrak m_x$ para $1\leq i\leq r$; sea $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ el morfismo correspondiente al $k$-homomorfismo $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ que transforma $T_i$ en $g_i$. Las condiciones siguientes son equivalentes (e implican que $X$ es liso sobre $k$ en el punto $x$ y que $k(x)$ es una extensión separable de $k$):
+\begin{enumerate}
+  \item[a)] $f$ es étale en el punto $x$.
+
+\oldpage[IV-4]{102}
+
+  \item[b)] Los gérmenes $(g_i)_x$ para $1\leq i\leq r$ generan $\mathfrak m_x$ (y por consiguiente forman un sistema regular de parámetros para $\sh{O}_{X,x}$ (0, 17.1.6)) y las imágenes en $\Omega^1_{k(x)/k}$ de los elementos $(d_{X/k}g_i)_x$ para $r+1\leq i\leq n$ generan $\Omega^1_{k(x)/k}$.
+\end{enumerate}
+\end{proposition}
+
+Se tiene en efecto (0, 20.5.12.1) la sucesión exacta de $k(x)$-módulos
+\[
+\label{IV.17.15.8.1}
+\tag{17.15.8.1}
+\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)\to\Omega^1_{k(x)/k}\to0
+\]
+y la condición b) entraña, por tanto, que los $(d_{X/k}g_i)_x$ generan $(\Omega^1_{X/k})_x$ teniendo en cuenta el lema de Nakayama; el hecho de que b) implica a) resulta, pues, de (17.15.3). Recíprocamente, si a) se verifica, los $(d_{X/k}g_i)_x$ para $1\leq i\leq n$ forman una base de $(\Omega^1_{X/k})_x$ en virtud de (17.15.3). Si $t_i$ ($1\leq i\leq n$) es la imagen de $(g_i)_x$ en $k(x)$, se deduce de lo anterior que los $dt_i$ generan $\Omega^1_{k(x)/k}$ para $1\leq i\leq n$, y como por hipótesis $t_i=0$ para $1\leq i\leq r$, los $dt_i$ para $r+1\leq i\leq n$ generan ya $\Omega^1_{k(x)/k}$. Como $\deg.\operatorname{tr}_k k(x)=n-r$, se sigue de la igualdad de Cartier (0, 21.7.1) que $\Upsilon_{k(x)/k}=0$, por lo que $k(x)$ es una extensión separable de $k$ (0, 20.6.3), y la sucesión de $k(x)$-espacios vectoriales
+\[
+\label{IV.17.15.8.2}
+\tag{17.15.8.2}
+0\to\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)\to\Omega^1_{k(x)/k}\to0
+\]
+es exacta ((0, 20.5.14) y (0, 19.6.1)); además los $dt_i$ para $r+1\leq i\leq n$ forman una base de $\Omega^1_{k(x)/k}$, por lo que ninguno de los $t_i$ tales que $r+1\leq i\leq n$ puede ser nulo. Esto demuestra que las imágenes de los $(g_i)_x$ en $\mathfrak m_x/\mathfrak m_x^2$ para $1\leq i\leq r$ generan necesariamente $\mathfrak m_x/\mathfrak m_x^2$, y por consiguiente los $(g_i)_x$ para $1\leq i\leq r$ generan $\mathfrak m_x$ en virtud del lema de Nakayama, lo que termina de probar que a) implica b).
+
+\begin{corollary}[17.15.9]
+\label{IV.17.15.9}
+Sean $X$ un preesquema localmente de tipo finito sobre un cuerpo $k$, $x$ un punto de $X$ y pongamos $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] El anillo $\sh{O}_{X,x}$ es regular y $k(x)$ es una extensión separable de $k$.
+  \item[b)] $X$ es liso sobre $k$ en el punto $x$, y el homomorfismo canónico
+  \[
+  \mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \]
+  es inyectivo.
+  \item[c)] Existen $n$ secciones $g_i$ de $\sh{O}_X$ sobre una vecindad abierta $U$ de $x$ tales que $(g_i)_x\in\mathfrak m_x$ para $1\leq i\leq r$ y que el morfismo $U\to\operatorname{Spec}(k[T_1,\ldots,T_n])$ correspondiente a los $g_i$ (cf. (17.15.8)) sea étale en el punto $x$.
+  \item[d)] Existen $n$ secciones $g_i$ ($1\leq i\leq n$) de $\sh{O}_X$ sobre una vecindad abierta $U$ de $x$, tales que los $(g_i)_x$ para $1\leq i\leq r$ generan $\mathfrak m_x$ y que las imágenes en $\Omega^1_{k(x)/k}$ de los $(d_{U/k}g_i)_x$ para $r+1\leq i\leq n$ generan $\Omega^1_{k(x)/k}$.
+\end{enumerate}
+\end{corollary}
+
+La equivalencia de c) y d) resulta de (17.15.8). Además, se ha visto en la demostración de (17.15.8) que la condición c) implica que $X$ es liso sobre $k$ en el punto $x$ y que la sucesión (17.15.8.2) es exacta, por lo que c) implica b). La condición b) entraña que el anillo $\sh{O}_{X,x}$ es regular, por lo que $\mathfrak m_x/\mathfrak m_x^2$ es de rango $r$; además, $(\Omega^1_{X/k})_x$ es entonces un $\sh{O}_{X,x}$-módulo libre de rango $n$ (17.10.2); como la sucesión (17.15.7.2) es exacta por hipótesis, $\Omega^1_{k(x)/k}$ es de rango $n-r=\deg.\operatorname{tr}_k k(x)$ y la igualdad de Cartier muestra que $\Upsilon_{k(x)/k}=0$, por lo que $k(x)$ es separable sobre $k$ (0, 20.6.3); así b) implica a). Finalmente, si a)
+
+\oldpage[IV-4]{103}
+
+se verifica, se deduce de nuevo de la igualdad de Cartier que $\Omega^1_{k(x)/k}$ es de rango $n-r$. Como, por otra parte, el anillo $\sh{O}_{X,x}$ es regular, la existencia de los $g_i$ que verifican las condiciones de d) es inmediata.
+
+\begin{remarks}[17.15.10]
+\label{IV.17.15.10}
+\begin{enumerate}
+  \item[(i)] Para que un preesquema de tipo finito $X$ sobre $k$ sea liso sobre $k$, no basta que $\Omega^1_{X/k}$ sea localmente libre, como muestra el ejemplo en que $X=\operatorname{Spec}(K)$, siendo $K$ una extensión finita no separable de $k$.
+  \item[(ii)] Cuando $k$ no es perfecto, puede ocurrir que $X$ sea liso sobre $k$ sin que $k(x)$ sea separable sobre $k$. Tenemos un ejemplo tomando $X=\operatorname{Spec}(k[T])$ y para $x$ el punto correspondiente al ideal primo principal $(T^p-\lambda)$ ($p>0$ es la característica de $k$, $\lambda\in k-k^p$).
+  \item[(iii)] Sin embargo, si $X$ es un preesquema liso sobre $k$, el conjunto de los puntos cerrados de $X$ tales que $k(x)$ sea una extensión separable (y finita) de $k$ es denso en $X$. En efecto, sea $f:X\to\operatorname{Spec}(k)$ el morfismo estructural; para todo $x_0\in X$, existe una vecindad abierta $U$ de $x_0$ en $X$ y una factorización de $f|U:U\xrightarrow{g}\operatorname{Spec}(k[T_1,\ldots,T_n])\xrightarrow{h}\operatorname{Spec}(k)$ en la que $g$ es étale (17.11.4). Como podemos reducirnos al caso en que $k$ no es perfecto, y por tanto es infinito, el conjunto de los puntos del abierto $g(U)$ que son racionales sobre $k$ no es vacío; si $y$ es un punto de este tipo y $x\in U$ un punto por encima de $y$, $x$ es cerrado en $X$ y $k(x)$ es separable sobre $k(y)=k$ (17.6.2).
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[17.15.11]
+\label{IV.17.15.11}
+Sea $X$ un preesquema de tipo finito sobre un cuerpo $k$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $X$ es étale sobre $k$.
+  \item[b)] $X$ es no ramificado sobre $k$.
+  \item[c)] $X$ es isomorfo a $\operatorname{Spec}(A)$, donde $A$ es una $k$-álgebra finita y separable.
+\end{enumerate}
+\end{proposition}
+
+Esto resulta de (17.6.2) y (17.4.2), teniendo en cuenta que la condición b) implica aquí que $X$ es finito sobre $k$.
+
+\begin{proposition}[17.15.12]
+\label{IV.17.15.12}
+Sean $k$ un cuerpo y $X$ un preesquema localmente de tipo finito sobre $k$. Para que exista un abierto en todas partes denso $U$ de $X$ que sea liso sobre $k$, es necesario y suficiente que para todo punto maximal $x$ de $X$, $X$ sea reducido en este punto y que $k(x)$ sea una extensión separable de $k$. Para que exista un abierto en todas partes denso $U$ de $X$ tal que $U_{\mathrm{red}}$ sea liso sobre $k$, es necesario y suficiente que para todo punto maximal $x$ de $X$, $k(x)$ sea una extensión separable de $k$.
+\end{proposition}
+
+La segunda afirmación resulta evidentemente de la primera. Decir que existe un abierto en todas partes denso $U$ liso sobre $k$ significa que $X$ es liso sobre $k$ en cada uno de sus puntos maximales $x$. Para ello es necesario que $\sh{O}_{X,x}$ sea regular (17.15.1) y, \emph{a fortiori}, reducido, por tanto un cuerpo, igual a $k(x)$; además (17.15.1), $k(x)\otimes_k k'$ debe ser regular para toda extensión radicial $k'$ de $k$, por lo que $k(x)$ debe ser una extensión separable de $k$ (4.3.5); el recíproco es inmediato, en virtud de (17.15.1).
+
+\begin{corollary}[17.15.13]
+\label{IV.17.15.13}
+Sea $X$ un preesquema algebraico sobre un cuerpo $k$. Entonces existen un abierto en todas partes denso $U$ en $X$ y una extensión finita radicial $k'$ de $k$ tales que $(U_{(k')})_{\mathrm{red}}$ sea liso sobre $k'$.
+\end{corollary}
+
+En efecto, existe una extensión finita radicial $k'$ tal que $(X_{(k')})_{\mathrm{red}}$ sea geométricamente reducido sobre $k'$ (4.6.6), lo que equivale a decir (4.6.1) que para todo punto maximal $x'$ de $X_{(k')}$, $k(x')$ sea una extensión separable de $k'$. Se concluye, pues, de (17.15.12) que existe un abierto en todas partes denso $U'$ de $X_{(k')}$ tal que $U'_{\mathrm{red}}$ sea liso sobre $k'$. Pero el \oldpage[IV-4]{104}morfismo $X_{(k')}\to X$ es un homeomorfismo (2.4.5), por lo que $U'$ es de la forma $U_{(k')}$, donde $U$ es un abierto en todas partes denso de $X$.
+
+\begin{proposition}[17.15.14]
+\label{IV.17.15.14}
+Sea $X$ un preesquema algebraico sobre $k$, de dimensión $\leq1$. Entonces existe una extensión finita radicial $k'$ de $k$ tal que el normalizado (II, 6.3.8) de $(X_{(k')})_{\mathrm{red}}$ sea liso sobre $k'$.
+\end{proposition}
+
+Demostremos primero los dos lemas siguientes:
+
+\begin{lemma}[17.15.14.1]
+\label{IV.17.15.14.1}
+Sean $X$ un preesquema reducido cuyo conjunto de componentes irreducibles sea localmente finito, $f:Y\to X$ un morfismo. Para que $Y$ sea $X$-isomorfo al normalizado $X'$ de $X$ (II, 6.3.8), es necesario y suficiente que se verifiquen las condiciones siguientes:
+\begin{enumerate}
+  \item[(i)] $Y$ es normal;
+  \item[(ii)] $f$ es un morfismo entero y birracional.
+\end{enumerate}
+Cuando existe en $X$ un abierto denso y normal (lo que siempre ocurre cuando $X$ es excelente (7.8.3), en particular cuando $X$ es localmente de tipo finito sobre un cuerpo), se puede reemplazar la condición (ii) por la siguiente:
+\begin{enumerate}
+  \item[(ii bis)] $f$ es entero y existe un abierto denso $U$ en $X$ tal que $f^{-1}(U)$ sea denso en $Y$ y que la restricción $f^{-1}(U)\to U$ de $f$ sea un isomorfismo.
+\end{enumerate}
+\end{lemma}
+
+Como la cuestión es local sobre $X$, podemos suponer que $X$ tiene un número finito de componentes irreducibles; sean $X_i$ ($1\leq i\leq m$) los subpreesquemas reducidos de $X$ que tienen esas componentes como espacios subyacentes. Sabemos (II, 6.3.6) que $X'$ es la suma de los normalizados $X'_i$ de los $X_i$; cada uno de los morfismos estructurales $f_i:X'_i\to X_i$ es, pues, entero y birracional, por lo que $f$ es entero y birracional; es inmediato que (ii) implica (ii bis) cuando existe un abierto $V$ denso y normal en $X$, tomando $U=V$. Recíprocamente, si se cumplen las condiciones (i) y (ii), $Y$ tiene un número finito de componentes irreducibles $Y_i$ ($1\leq i\leq m$), con $Y_i$ dominante sobre $X_i$ para cada índice $i$ (6.15.4); $Y$ es la suma de los $Y_i$ puesto que es normal, y el morfismo $g_i:Y_i\to X_i$ en el que se factoriza la restricción $Y_i\to X$ de $f$ (I, 5.2.2) es birracional; como $X_i$ y $Y_i$ son íntegros, se deduce del hecho de que $g_i$ es entero y $Y_i$ normal que, para todo abierto afín $V$ de $X_i$, $\Gamma(g_i^{-1}(V),\sh{O}_{Y_i})$ es la clausura entera de $\Gamma(V,\sh{O}_{X_i})$, por lo que $Y$ se identifica canónicamente con $X'$ (II, 6.3.4). Finalmente, si suponemos verificada la condición (ii bis), podemos reducirnos al caso en que $U$ es unión de abiertos irreducibles disjuntos $U_i$ ($1\leq i\leq m$), por lo que $f^{-1}(U)$ es unión disjunta de los $V_i=f^{-1}(U_i)$. Como los $V_i$ son irreducibles y $f^{-1}(U)$ es denso en $Y$, las clausuras $\overline{V_i}$ son las componentes irreducibles de $Y$ y, por consiguiente, $f$ es birracional.
+
+\begin{lemma}[17.15.14.2]
+\label{IV.17.15.14.2}
+Sean $k$ un cuerpo y $X$ un preesquema algebraico sobre $k$. Entonces existe una extensión finita radicial $k'$ de $k$ tal que $(X_{(k')})_{\mathrm{red}}$ sea geométricamente reducido sobre $k'$ y su normalizado sea geométricamente normal sobre $k'$.
+\end{lemma}
+
+Teniendo en cuenta (4.6.6) y (I, 5.1.8), podemos reducirnos al caso en que $X$ ya sea geométricamente reducido sobre $k$. Sean $p$ el exponente característico de $k$ y $k_1=k^{p^{-\infty}}$ la menor extensión perfecta de $k$; $k_1$ es, pues, límite inductivo de las extensiones finitas radiciales de $k$. Pongamos $X_1=X_{(k_1)}$, que es reducido por hipótesis, y sea $Y_1$ su normalizado; si $f_1:Y_1\to X_1$ es el morfismo estructural, $f_1$ es, por tanto, finito (7.8.3, (vi)) y sobreyectivo, y existe un abierto denso $U_1$ en $X_1$ tal que $f_1^{-1}(U_1)=V_1$ sea denso en $Y_1$ y que \oldpage[IV-4]{105}la restricción $V_1\to U_1$ de $f_1$ sea un isomorfismo (17.15.14.1). Aplicando (8.9.1) y (8.10.5, (vi) y (x)), se ve primero que existen una extensión finita radicial $k''$ de $k$ y un morfismo finito sobreyectivo $Y''\to X''=X_{(k'')}$ tales que $Y_1=Y''\times_{X''}X_1=Y''\otimes_{k''}k_1$; puesto que $Y_1$ es normal y $k_1$ perfecto, se deduce de (6.7.7) que $Y''$ es geométricamente normal sobre $k''$. Como las proyecciones $X_1\to X''$ y $Y_1\to Y''$ son morfismos enteros, sobreyectivos y radiciales, son homeomorfismos (2.4.5), y si $U''$ y $V''$ son las imágenes de $U_1$ y $V_1$ en $X''$ y $Y''$, respectivamente, son abiertos densos en $X''$ y $Y''$, respectivamente, tales que $V''=f''^{-1}(U'')$, donde $f'':Y''\to X''$ es el morfismo estructural. Como $U_1=U''\otimes_{k''}k_1$, resulta de (8.10.5, (i)) que existe una extensión finita radicial $k'$ de $k''$ tal que, si ponemos $X'=X\otimes_k k'=X''\otimes_{k''}k'$, $Y'=Y''\otimes_{k''}k'$, $f'=f''_{(k')}:Y'\to X'$, y si $U'$ y $V'$ son las imágenes de $U''$ y $V''$ en $X'$ y $Y'$ respectivamente, la restricción $V'\to U'$ de $f'$ sea un isomorfismo. Como $Y'$ es normal y $f'$ entero y birracional, se concluye de (17.15.14.1) que $Y'$ es isomorfo al normalizado de $X'$, lo que prueba el lema, puesto que $Y'$ es geométricamente normal.
+
+Volvamos ahora a la demostración de (17.15.14), y apliquemos a $k$ y $X$ el lema (17.15.14.2); como $\dim(X)\leq1$, también se tiene $\dim(X_{(k')})\leq1$ (4.1.4), y el normalizado $Y'$ de $X_{(k')}$ tiene asimismo dimensión $\leq1$ (5.4.2 y II, 7.4.6). Decir que $Y'$ es geométricamente normal sobre $k'$ equivale entonces, en virtud de las definiciones y de (II, 7.4.5), a que $Y'$ sea geométricamente regular sobre $k'$, y por tanto liso sobre $k'$ (17.5.1), lo que prueba (17.15.14).
+
+\begin{proposition}[17.15.15]
+\label{IV.17.15.15}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita. Para que $f$ sea liso en un punto $x\in X$, es necesario y suficiente que $f$ sea plano en el punto $x$ y que $\Omega^1_f$ sea un $\sh{O}_X$-Módulo localmente libre en una vecindad de $x$, de rango en $x$ igual a $\dim_x f$.
+\end{proposition}
+
+La necesidad de las condiciones resulta de (17.5.1) y (17.10.2). Recíprocamente, si se verifican estas condiciones, y si $y=f(x)$, basta demostrar (17.5.1) que $f^{-1}(y)$ es liso sobre $k(y)$ en el punto $x$; pero esto resulta de la definición de $\dim_x f$ (17.10.1), de (16.4.5) y de (17.15.5).

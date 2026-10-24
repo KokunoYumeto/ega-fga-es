@@ -1,0 +1,1106 @@
+\section{Anillos regulares}
+\label{section:0.17-es}
+
+\subsection{Definición de los anillos regulares}
+\label{subsection:0.17.1-es}
+
+\begin{proposition}[17.1.1]
+\label{0.17.1.1-es}
+Sean $A$ un anillo local noetheriano de dimensión $n$, $\mathfrak{m}$ su
+ideal maximal, $k=A/\mathfrak{m}$ su cuerpo residual. Las condiciones siguientes
+son equivalentes~:
+\begin{enumerate}
+  \item[\rm a)] El homomorfismo canónico sobreyectivo de $k$-módulos graduados
+  (15.1.1.1)
+  \[
+    \varphi:\mathbf{S}^*_k(\mathfrak{m}/\mathfrak{m}^2)
+    \longrightarrow\operatorname{gr}^*_{\mathfrak{m}}(A)
+  \]
+  (donde el segundo miembro es el $k$-módulo graduado asociado a $A$ provisto de
+  la filtración $\mathfrak{m}$-preádica) es biyectivo.
+  \item[\rm b)] Se tiene
+  $\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)=n$.
+  \item[\rm c)] El ideal $\mathfrak{m}$ admite un sistema de generadores de $n$
+  elementos.
+  \item[\rm d)] El ideal $\mathfrak{m}$ admite un sistema de generadores que es
+  una sucesión $A$-regular.
+\end{enumerate}
+\end{proposition}
+
+
+\begin{proof}
+En virtud del lema de Nakayama,
+$\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)$ es el menor número de
+elementos de un sistema de generadores de $\mathfrak{m}$, por lo que b) y c) son
+equivalentes. Por otra parte, si $(x_i)_{1\leq i\leq r}$ es un sistema de
+generadores de $\mathfrak{m}$ cuyas clases $\overline{x}_i$ módulo
+$\mathfrak{m}^2$ forman una base del $k$-espacio vectorial
+$\mathfrak{m}/\mathfrak{m}^2$, $\mathbf{S}^*(\mathfrak{m}/\mathfrak{m}^2)$
+es isomorfo al anillo de
+\oldpage[0\textsubscript{IV-1}]{40}
+polinomios $k[\mathrm{T}_1,\ldots,\mathrm{T}_r]$~; habida cuenta de que todo
+$A$-módulo de tipo finito es separado para la filtración $\mathfrak{m}$-preádica
+($0_{\mathrm I}$, 7.3.5), se deduce de (15.1.9) que las condiciones a) y d)
+son equivalentes~; además, como toda sucesión $A$-regular de elementos de
+$\mathfrak{m}$ tiene a lo sumo $n$ elementos (16.4.1), se ve que d) implica c).
+Queda demostrar que c) implica a).
+
+Pongamos, para abreviar,
+$\mathrm{S}=\mathbf{S}^*(\mathfrak{m}/\mathfrak{m}^2)
+=k[\mathrm{T}_1,\ldots,\mathrm{T}_n]$,
+$\mathrm{G}=\operatorname{gr}^*_{\mathfrak{m}}(A)$, y consideremos la sucesión
+exacta
+$0\longrightarrow\mathfrak{J}\longrightarrow\mathrm{S}
+\xrightarrow{\varphi}\mathrm{G}\longrightarrow0$, donde el núcleo
+$\mathfrak{J}$ de $\varphi$ es, por tanto, un ideal graduado de $\mathrm{S}$. Para
+todo entero $s>0$, se tiene
+\begin{equation}
+\label{0.17.1.1.1-es}
+\tag{17.1.1.1}
+  \binom{s+n-1}{n-1}
+  =\operatorname{long}(\mathrm{S}_s)
+  =\operatorname{long}(\mathrm{G}_s)
+  +\operatorname{long}(\mathfrak{J}_s).
+\end{equation}
+
+Supongamos $\mathfrak{J}\neq0$, de modo que existe un elemento homogéneo
+$u\in\mathfrak{J}$ de grado $h>0$~; $\mathfrak{J}_s$ contiene
+$u\mathrm{S}_{s-h}$ para $s\geq h$, y como $u\neq0$ y $\mathrm{S}$ es
+íntegro, $u\mathrm{S}_{s-h}$ es isomorfo a $\mathrm{S}_{s-h}$ como
+$k$-espacio vectorial~; se tendría, por tanto,
+$\operatorname{long}(\mathfrak{J}_s)\geq
+\operatorname{long}(\mathrm{S}_{s-h})=\binom{s-h+n-1}{n-1}$, de donde, para
+$s\geq h$,
+\begin{equation}
+\label{0.17.1.1.2-es}
+\tag{17.1.1.2}
+  \operatorname{long}(\mathrm{G}_s)
+  \leq\binom{s+n-1}{n-1}-\binom{s-h+n-1}{n-1}.
+\end{equation}
+Ahora bien, el segundo miembro de (17.1.1.2) es un polinomio en $s$ de grado
+$\leq n-2$~; pero se tiene
+$\mathrm{G}_s=\mathfrak{m}^s/\mathfrak{m}^{s+1}$, y para $s$ suficientemente grande,
+$\operatorname{long}(\mathrm{G}_s)$ es un polinomio en $s$ de grado exactamente
+igual a $n-1$ cuyo coeficiente dominante es $>0$ (16.2.1), lo que contradice
+la desigualdad (17.1.1.2). C.Q.F.D.
+\end{proof}
+
+\begin{definition}[17.1.2]
+\label{0.17.1.2-es}
+Se dice que un anillo local noetheriano que verifica las condiciones equivalentes de
+(17.1.1) es \emph{regular}.
+\end{definition}
+
+\begin{corollary}[17.1.3]
+\label{0.17.1.3-es}
+Un anillo local regular es íntegro, íntegramente cerrado y un anillo de
+Cohen-Macaulay.
+\end{corollary}
+
+\begin{proof}
+La última aserción se deduce de (17.1.1, d))~; por otra parte, si $A$ es
+regular, $\operatorname{gr}^*_{\mathfrak{m}}(A)$ es íntegro y completamente
+íntegramente cerrado, por ser isomorfo a $k[\mathrm{T}_1,\ldots,\mathrm{T}_n]$~;
+se concluye que $A$ posee también estas dos propiedades (Bourbaki,
+\emph{Alg.~comm.}, cap.~III, \S~2, no~3, cor. de la prop.~1 y cap.~V,
+\S~1, no~5, prop.~15).
+\end{proof}
+
+\begin{examples}[17.1.4]
+\label{0.17.1.4-es}
+\begin{enumerate}
+  \item[\rm (i)] Un anillo local regular de \emph{dimensión} $0$, por ser
+  íntegro en virtud de (17.1.3), es necesariamente un \emph{cuerpo}, y recíprocamente.
+  \item[\rm (ii)] Para que un anillo local noetheriano de \emph{dimensión} $1$
+  sea regular, es necesario y suficiente que sea un \emph{anillo de valuación
+  discreta}~: en efecto, decir que un anillo local noetheriano de dimensión $1$ es
+  regular significa que su ideal maximal es \emph{principal}, y la conclusión
+  se deduce de Bourbaki, \emph{Alg.~comm.}, cap.~VI, \S~3, no~6, prop.~9.
+  \item[\rm (iii)] Sea $k$ un cuerpo~; el anillo de series formales
+  $A=k[[\mathrm{T}_1,\ldots,\mathrm{T}_n]]$ es un \emph{anillo regular de
+  dimensión $n$}~; en efecto, es claro que los $\mathrm{T}_i$
+  $(1\leq i\leq n)$ generan el ideal maximal $\mathfrak{m}$ de $A$ y
+  forman una sucesión $A$-regular, pues
+  $A/(\mathrm{T}_1A+\cdots+\mathrm{T}_iA)$ es isomorfo a
+  $k[[\mathrm{T}_{i+1},\ldots,\mathrm{T}_n]]$.
+\end{enumerate}
+\end{examples}
+
+\begin{proposition}[17.1.5]
+\label{0.17.1.5-es}
+Para que un anillo local noetheriano $A$ sea regular, es necesario y suficiente que
+su completado $\widehat{A}$ lo sea.
+\end{proposition}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{41}
+En efecto, el ideal maximal de $\widehat{A}$ es $\mathfrak{m}\widehat{A}$ y se
+sabe que $\mathfrak{m}^h/\mathfrak{m}^{h+1}$ y
+$(\mathfrak{m}\widehat{A})^h/(\mathfrak{m}\widehat{A})^{h+1}$ son
+$k$-espacios vectoriales isomorfos~; la condición a) de (17.1.1) es, por tanto, la
+misma para $A$ y $\widehat{A}$.
+\end{proof}
+
+\begin{definition}[17.1.6]
+\label{0.17.1.6-es}
+Dado un anillo local noetheriano $A$, de ideal maximal $\mathfrak{m}$, se
+llama \emph{sistema regular de parámetros de $A$} a un sistema de parámetros
+para $A$ (16.3.5) que genera $\mathfrak{m}$.
+\end{definition}
+
+La existencia de tal sistema equivale a que $A$ sea regular (17.1.1)~;
+si $(x_i)_{1\leq i\leq n}$ es un sistema regular de parámetros, es un
+sistema minimal de generadores de $\mathfrak{m}$, cuyas clases módulo
+$\mathfrak{m}^2$ forman una base de $\mathfrak{m}/\mathfrak{m}^2$ sobre $k$~;
+en virtud de (17.1.1, a)) y de (15.1.9), $(x_i)$ es una sucesión $A$-regular
+maximal (de donde procede la terminología).
+
+Se advertirá, sin embargo, que, en un anillo regular, un sistema de
+parámetros para $A$ que sea también una sucesión $A$-regular \emph{no es
+necesariamente} un sistema regular de parámetros, como muestra el ejemplo
+de las potencias $k$-ésimas de un sistema regular de parámetros (15.1.20).
+
+\begin{proposition}[17.1.7]
+\label{0.17.1.7-es}
+Sean $A$ un anillo local noetheriano, $\mathfrak{m}$ su ideal maximal,
+$k=A/\mathfrak{m}$ su cuerpo residual, $(x_i)_{1\leq i\leq r}$ una sucesión
+de elementos de $\mathfrak{m}$, $\mathfrak{J}$ el ideal
+$x_1A+\cdots+x_rA$. Las condiciones siguientes son equivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $A$ es regular y los $x_i$ forman parte de un sistema
+  regular de parámetros de $A$.
+  \item[\rm a')] $A$ es regular y las clases $\overline{x}_i$ de los $x_i$
+  módulo $\mathfrak{m}^2$ son linealmente independientes sobre $k$.
+  \item[\rm b)] Los $x_i$ forman parte de un sistema de parámetros para $A$ y
+  $A/\mathfrak{J}$ es un anillo regular.
+\end{enumerate}
+Además, cuando se verifican estas condiciones, $\mathfrak{J}$ es un ideal
+primo.
+\end{proposition}
+
+\begin{proof}
+La última aserción se deduce trivialmente de que $A/\mathfrak{J}$,
+por ser regular, es íntegro (17.1.3). Pongamos $n=\dim(A)$. La equivalencia de a)
+y a') es inmediata~; en efecto, las clases módulo $\mathfrak{m}^2$ de los elementos
+de un sistema regular de parámetros forman una base de
+$\mathfrak{m}/\mathfrak{m}^2$ sobre $k$, y recíprocamente, si los
+$\overline{x}_i$ $(1\leq i\leq r)$ son linealmente independientes sobre $k$, se
+pueden encontrar $n-r$ elementos $x_i\in\mathfrak{m}$ $(r+1\leq i\leq n)$ tales que
+los $\overline{x}_i$ $(1\leq i\leq n)$ formen una base de
+$\mathfrak{m}/\mathfrak{m}^2$, por lo que $(x_i)_{1\leq i\leq n}$ es un sistema
+regular de parámetros. Para ver que a) implica b), observemos que, puesto que
+los $x_i$ forman parte de un sistema de parámetros de $A$, se tiene
+$\dim(A/\mathfrak{J})=n-r$ (16.3.6)~; sea
+$\mathfrak{n}=\mathfrak{m}/\mathfrak{J}$ el ideal maximal de
+$A/\mathfrak{J}$. Se tiene una sucesión exacta
+\begin{equation}
+\label{0.17.1.7.1-es}
+\tag{17.1.7.1}
+  0\longrightarrow(\mathfrak{m}^2+\mathfrak{J})/\mathfrak{m}^2
+  \longrightarrow\mathfrak{m}/\mathfrak{m}^2
+  \longrightarrow\mathfrak{n}/\mathfrak{n}^2\longrightarrow0
+\end{equation}
+puesto que $\mathfrak{n}^2=(\mathfrak{m}^2+\mathfrak{J})/\mathfrak{J}$~;
+la hipótesis a) implica que
+$\operatorname{rg}_k((\mathfrak{m}^2+\mathfrak{J})/\mathfrak{m}^2)=r$, por lo que
+$\operatorname{rg}_k(\mathfrak{n}/\mathfrak{n}^2)=n-r
+=\dim(A/\mathfrak{J})$, lo que demuestra b) en virtud de (17.1.1, b)).
+
+Recíprocamente, para demostrar que b) implica a), observemos que el hecho de que los $x_i$
+formen parte de un sistema de parámetros implica que
+$\dim(A/\mathfrak{J})=n-r$ (16.3.6)~; la hipótesis de que $A/\mathfrak{J}$ es
+regular implica, por otra parte,
+$\operatorname{rg}_k(\mathfrak{n}/\mathfrak{n}^2)=n-r$ (17.1.1)~; además,
+se tiene evidentemente
+$\operatorname{rg}_k((\mathfrak{m}^2+\mathfrak{J})/\mathfrak{m}^2)\leq r$,
+por lo que se deduce de (17.1.7.1) que
+$\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)\leq r+(n-r)=n$~; así, $A$
+es regular en virtud de (16.2.6) y (17.1.1). Además, la relación
+$\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)=n$ implica entonces
+$\operatorname{rg}_k((\mathfrak{m}^2+\mathfrak{J})/\mathfrak{m}^2)=r$, y por
+consiguiente los $\overline{x}_i$ son linealmente independientes sobre $k$. C.Q.F.D.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{42}
+
+\begin{corollary}[17.1.8]
+\label{0.17.1.8-es}
+Sean $A$ un anillo local noetheriano, $\mathfrak{m}$ su ideal maximal, $t$ un
+elemento de $\mathfrak{m}$. Las condiciones siguientes son equivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $A/tA$ es regular y $t$ es no divisor de cero en $A$.
+  \item[\rm b)] $A$ es regular y $t\notin\mathfrak{m}^2$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Es el caso particular $r=1$ de (17.1.7) (habida cuenta de que un elemento de
+$\mathfrak{m}$ no divisor de cero forma parte de un sistema de parámetros
+(16.4.1)).
+\end{proof}
+
+\begin{corollary}[17.1.9]
+\label{0.17.1.9-es}
+Sean $A$ un anillo local regular, $\mathfrak{m}$ su ideal maximal,
+$\mathfrak{J}$ un ideal de $A$ contenido en $\mathfrak{m}$. Las condiciones
+siguientes son equivalentes~:
+\begin{enumerate}
+  \item[\rm a)] El anillo $A/\mathfrak{J}$ es regular.
+  \item[\rm b)] $\mathfrak{J}$ está engendrado por una sucesión
+  $(x_i)_{1\leq i\leq r}$ que forma parte de un sistema regular de parámetros
+  de $A$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Ya se ha visto (17.1.7) que b) implica a). Recíprocamente, supongamos que
+$A/\mathfrak{J}$ es regular (lo que implica que $\mathfrak{J}$ es primo)
+y sean $n=\dim(A)$, $n-r=\dim(A/\mathfrak{J})$; con la notación de
+(17.1.7), la sucesión exacta (17.1.7.1) da
+$\operatorname{rg}_k((\mathfrak{m}^2+\mathfrak{J})/\mathfrak{m}^2)=r$, luego
+existe una sucesión $(x_i)_{1\leq i\leq r}$ de elementos de $\mathfrak{J}$ que
+forma parte de un sistema regular de parámetros de $A$. Pongamos
+$\mathfrak{J}'=x_1A+\cdots+x_rA$; de (17.1.7) resulta que $\mathfrak{J}'$
+es un ideal primo de $A$ y que $A/\mathfrak{J}'$ es regular y de
+dimensión $n-r$; pero como
+$A/\mathfrak{J}=(A/\mathfrak{J}')/(\mathfrak{J}/\mathfrak{J}')$ y
+$\mathfrak{J}/\mathfrak{J}'$ es primo en el anillo íntegro
+$A/\mathfrak{J}'$, las dimensiones de $A/\mathfrak{J}$ y de
+$A/\mathfrak{J}'$ solo pueden ser iguales si
+$\mathfrak{J}=\mathfrak{J}'$ (16.1.2.2).
+\end{proof}
+
+\subsection{Recordatorios sobre la dimensión proyectiva y la dimensión inyectiva de los
+módulos}
+\label{subsection:0.17.2-es}
+
+\begin{env}[17.2.1]
+\label{0.17.2.1-es}
+Sean $A$ un anillo y $M$ un $A$-módulo. Recordemos (M, VI, 2) que se denomina
+\emph{dimensión proyectiva} (resp. \emph{dimensión inyectiva}) de $M$ y que
+se denota $\operatorname{dim.proj}(M)$ o
+$\operatorname{dim.proj}_A(M)$ (resp. $\operatorname{dim.inj}(M)$ o
+$\operatorname{dim.inj}_A(M)$) al menor $n$ (entero o igual a $+\infty$)
+tal que existe una resolución proyectiva por la izquierda (resp. una resolución
+inyectiva por la derecha) de $M$ que sea \emph{de longitud $n$}. Es equivalente
+(\emph{loc. cit.}) decir que $n$ es el menor número tal que para todo
+$A$-módulo $N$, se tiene $\operatorname{Ext}^i_A(M,N)=0$ (resp.
+$\operatorname{Ext}^i_A(N,M)=0$) para todo $i>n$, o tan solo para $i=n+1$.
+Para todo \emph{factor directo} $M'$ de $M$, se tiene, pues,
+$\operatorname{dim.proj}(M')\leq\operatorname{dim.proj}(M)$, ya que
+$\operatorname{Ext}^i_A(M',N)$ es un factor directo de
+$\operatorname{Ext}^i_A(M,N)$; asimismo,
+$\operatorname{dim.inj}(M')\leq\operatorname{dim.inj}(M)$. Una condición
+equivalente a $\operatorname{dim.proj}(M)=n$ (resp.
+$\operatorname{dim.inj}(M)=n$) es que $n$ sea el menor número tal que,
+para toda sucesión exacta
+\[
+  0\longrightarrow R\longrightarrow P_{n-1}\longrightarrow\cdots
+  \longrightarrow P_0\longrightarrow M\longrightarrow0
+\]
+(resp.
+$0\longrightarrow M\longrightarrow Q_0\longrightarrow\cdots
+\longrightarrow Q_{n-1}\longrightarrow C\longrightarrow0$), donde todos los
+$P_i$ para $0\leq i<n$ son proyectivos (resp. todos los $Q_i$ para $0\leq i<n$
+son inyectivos), entonces $R$ es proyectivo (resp. $C$ es inyectivo).
+\end{env}
+
+\begin{remarks}[17.2.2]
+\label{0.17.2.2-es}
+\begin{enumerate}
+  \item[\rm (i)] Decir que $M$ es un $A$-módulo \emph{proyectivo} (resp.
+  \emph{inyectivo}) equivale, pues, a decir que
+  $\operatorname{dim.proj}(M)=0$ (resp. $\operatorname{dim.inj}(M)=0$).
+  \item[\rm (ii)] Sea $T$ un \emph{funtor covariante} aditivo de la categoría
+  de los $A$-módulos en una categoría abeliana. De las definiciones de
+  (17.2.1) y de la definición de los
+  \oldpage[0\textsubscript{IV-1}]{43}
+  funtores derivados resulta inmediatamente que si $\operatorname{dim.proj}(M)\leq n$ (resp.
+  $\operatorname{dim.inj}(M)\leq n$), se tiene $L^iT(M)=0$ (resp.
+  $R^iT(M)=0$) \emph{para todo $i>n$}.
+  \item[\rm (iii)] Si se supone que $A$ es \emph{noetheriano} y $M$ es \emph{de tipo
+  finito}, la última interpretación de la dimensión proyectiva dada en
+  (17.2.1) muestra que, si $\operatorname{dim.proj}(M)=n$, $M$ admite una
+  resolución por la izquierda de longitud $n$ formada por módulos proyectivos \emph{de tipo
+  finito}. Si además $A$ es un anillo \emph{local} noetheriano, $M$ admite una
+  resolución de longitud $n$ por módulos \emph{libres de tipo finito}, pues un
+  $A$-módulo proyectivo de tipo finito es entonces libre (Bourbaki,
+  \emph{Alg.~comm.}, cap.~II, \S~3, núm.~2, cor.~2 de la prop.~5).
+\end{enumerate}
+\end{remarks}
+
+\begin{lemma}[17.2.3]
+\label{0.17.2.3-es}
+Sean $A$ un anillo y $M$ un $A$-módulo. Para que
+$\operatorname{dim.inj}(M)\leq n$, es necesario y suficiente que para todo
+$A$-módulo monógeno $N$, se tenga $\operatorname{Ext}^{n+1}_A(N,M)=0$.
+\end{lemma}
+
+\begin{proof}
+Con la notación de (17.2.1), se trata de probar que $C$ es inyectivo;
+para todo $A$-módulo $N$, $\operatorname{Ext}^{n+1}_A(N,M)$ es isomorfo a
+$\operatorname{Ext}^1_A(N,C)$ (M, V, 7), luego se tiene
+$\operatorname{Ext}^1_A(N,C)=0$ para todo $A$-módulo $N$ de la forma
+$A/\mathfrak{J}$, donde $\mathfrak{J}$ es un ideal cualquiera de $A$. La sucesión
+exacta de Ext muestra entonces que el homomorfismo canónico
+$\operatorname{Hom}(A,C)\longrightarrow\operatorname{Hom}(\mathfrak{J},C)$ es
+sobreyectivo para todo ideal $\mathfrak{J}$ de $A$, lo que implica que $C$ es un
+$A$-módulo inyectivo (M, I, 3.2).
+\end{proof}
+
+\begin{lemma}[17.2.4]
+\label{0.17.2.4-es}
+Sean $A$ un anillo noetheriano y $M$ un $A$-módulo de tipo finito. Para que
+$\operatorname{dim.proj}(M)\leq n$, es necesario y suficiente que para todo
+$A$-módulo monógeno $N$, se tenga $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{lemma}
+
+\begin{proof}
+En efecto, se sabe (M, VI, 2.5) que la condición
+$\operatorname{dim.proj}(M)\leq n$ es equivalente a
+$\operatorname{Ext}^{n+1}_A(M,N)=0$ para todo $A$-módulo $N$ \emph{de tipo
+finito}; para ver que la condición del enunciado también es suficiente, se
+razona por inducción sobre el número de generadores $m$ de $N$: existe un
+submódulo $N_1$ de $N$ engendrado por $m-1$ elementos y tal que
+$N_2=N/N_1$ es monógeno; de la sucesión exacta
+$0\longrightarrow N_1\longrightarrow N\longrightarrow N_2\longrightarrow0$,
+se deduce entonces la sucesión exacta
+$\operatorname{Ext}^{n+1}_A(M,N_1)\longrightarrow
+\operatorname{Ext}^{n+1}_A(M,N)\longrightarrow
+\operatorname{Ext}^{n+1}_A(M,N_2)$, y la hipótesis de inducción muestra que la
+condición del enunciado implica efectivamente $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{proof}
+
+\begin{corollary}[17.2.5]
+\label{0.17.2.5-es}
+Sean $A$ un anillo noetheriano y $M$ un $A$-módulo. Se tiene
+\begin{equation}
+\label{0.17.2.5.1-es}
+\tag{17.2.5.1}
+  \operatorname{dim.inj}_A(M)
+  =\sup_{\mathfrak{m}}
+  \bigl(\operatorname{dim.inj}_{A_{\mathfrak{m}}}(M_{\mathfrak{m}})\bigr)
+\end{equation}
+y, si $M$ es \emph{de tipo finito},
+\begin{equation}
+\label{0.17.2.5.2-es}
+\tag{17.2.5.2}
+  \operatorname{dim.proj}_A(M)
+  =\sup_{\mathfrak{m}}
+  \bigl(\operatorname{dim.proj}_{A_{\mathfrak{m}}}(M_{\mathfrak{m}})\bigr)
+\end{equation}
+donde $\mathfrak{m}$ recorre el conjunto de los ideales primos (o el conjunto de los
+ideales maximales) de $A$.
+\end{corollary}
+
+\begin{proof}
+En efecto, si $N$ es un $A$-módulo de tipo finito (por tanto, de presentación finita),
+se tiene, para todo conjunto multiplicativo $S$ de $A$ y para todo $i\geq0$,
+\[
+  S^{-1}\operatorname{Ext}^i_A(N,M)
+  =\operatorname{Ext}^i_{S^{-1}A}(S^{-1}N,S^{-1}M)
+\]
+por planitud, considerando una resolución libre de $M$ y utilizando el
+hecho de que la relación precedente es válida para $i=0$ (Bourbaki,
+\emph{Alg.~comm.}, cap.~II, \S~2, núm.~7, prop.~19). En particular,
+$\operatorname{Ext}^i_{A_{\mathfrak{m}}}
+(A_{\mathfrak{m}}/\mathfrak{J}A_{\mathfrak{m}},M_{\mathfrak{m}})
+=(\operatorname{Ext}^i_A(A/\mathfrak{J},M))_{\mathfrak{m}}$ para todo ideal
+primo $\mathfrak{m}$ y todo ideal $\mathfrak{J}$ de $A$; si se tienen
+en cuenta (17.2.3) y el hecho de que todo
+\oldpage[0\textsubscript{IV-1}]{44}
+ideal de $A_{\mathfrak{m}}$ es de la forma $\mathfrak{J}A_{\mathfrak{m}}$
+para un ideal adecuado $\mathfrak{J}$ de $A$, se deduce la fórmula
+(17.2.5.1) de lo que precede y de Bourbaki, \emph{Alg.~comm.}, cap.~II,
+\S~3, núm.~3, teorema~1. Se procede del mismo modo para (17.2.5.2), utilizando esta vez
+(17.2.4) e intercambiando los papeles de $M$ y $N$.
+\end{proof}
+
+Para los anillos noetherianos y los módulos de tipo finito, el estudio de la
+dimensión proyectiva o de la dimensión inyectiva queda, pues, reducido por
+(17.2.5) al caso de los anillos \emph{locales}. Se tiene entonces el
+
+\begin{lemma}[17.2.6]
+\label{0.17.2.6-es}
+Sean $A$ un anillo local noetheriano, $k$ su cuerpo residual y $M$ un
+$A$-módulo de tipo finito. Para que $\operatorname{dim.proj}(M)\leq n$, es
+necesario que $\operatorname{Tor}^A_i(M,k)=0$ para $i>n$, y basta que
+$\operatorname{Tor}^A_{n+1}(M,k)=0$.
+\end{lemma}
+
+\begin{proof}
+La necesidad es un caso particular de la observación (17.2.2 (ii)), aplicada al
+funtor covariante $M\mapsto k\otimes_A M$. Para probar que la condición es
+suficiente, se trata, con la notación de (17.2.1), de establecer que $R$ es
+proyectivo cuando se supone que los $P_i$ son de tipo finito; ahora bien,
+$\operatorname{Tor}^A_{n+1}(M,k)$ es isomorfo a
+$\operatorname{Tor}^A_1(R,k)$ (M, V, 7); y se sabe que, puesto que $R$ es de
+tipo finito, la condición $\operatorname{Tor}^A_1(R,k)=0$ implica que $R$ es
+libre (Bourbaki, \emph{Alg.~comm.}, cap.~II, \S~3, núm.~2, cor.~2 de la
+prop.~5).
+\end{proof}
+
+\begin{corollary}[17.2.7]
+\label{0.17.2.7-es}
+Bajo las hipótesis de (17.2.6), sea $x$ un elemento $M$-regular de $A$
+perteneciente al ideal maximal de $A$; entonces se tiene
+\begin{equation}
+\label{0.17.2.7.1-es}
+\tag{17.2.7.1}
+  \operatorname{dim.proj}(M/xM)=\operatorname{dim.proj}(M)+1.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En efecto, de la sucesión exacta
+$0\longrightarrow M\xrightarrow{x}M\longrightarrow M/xM\longrightarrow0$
+definida por la multiplicación por $x$ en $M$, se deduce la sucesión exacta de
+Tor:
+\[
+  \operatorname{Tor}^A_i(M,k)\xrightarrow{x}
+  \operatorname{Tor}^A_i(M,k)\longrightarrow
+  \operatorname{Tor}^A_i(M/xM,k)\longrightarrow
+  \operatorname{Tor}^A_{i-1}(M,k)\xrightarrow{x}
+  \operatorname{Tor}^A_{i-1}(M,k)
+\]
+para todo $i\geq1$. Ahora bien, para todo $A$-módulo $N$, la homotecia de razón $x$
+en $M\otimes_A N$ procede tanto de la homotecia de razón $x$ en
+$M$ como de la homotecia de razón $x$ en $N$; se concluye inmediatamente,
+puesto que la homotecia de razón $x$ en $k$ es nula por definición, que,
+para todo $i$, el homomorfismo
+$\operatorname{Tor}^A_i(M,k)\xrightarrow{x}\operatorname{Tor}^A_i(M,k)$ es
+\emph{nulo}; dicho de otro modo, se tiene la sucesión exacta
+\[
+  0\longrightarrow\operatorname{Tor}^A_i(M,k)\longrightarrow
+  \operatorname{Tor}^A_i(M/xM,k)\longrightarrow
+  \operatorname{Tor}^A_{i-1}(M,k)\longrightarrow0.
+\]
+Si $\operatorname{dim.proj}(M)=n$, se tiene
+$\operatorname{Tor}^A_n(M,k)\neq0$ y
+$\operatorname{Tor}^A_{n+1}(M,k)=\operatorname{Tor}^A_{n+2}(M,k)=0$ en virtud
+de (17.2.6). De lo que precede resulta, pues, que se tiene
+$\operatorname{Tor}^A_{n+1}(M/xM,k)\neq0$ y
+$\operatorname{Tor}^A_{n+2}(M/xM,k)=0$, luego
+$\operatorname{dim.proj}(M/xM)=n+1$ por (17.2.6).
+\end{proof}
+
+\begin{proposition}[17.2.8]
+\label{0.17.2.8-es}
+\textnormal{(M.~Auslander)} Sea $A$ un anillo. Las condiciones siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[\rm a)] Todo $A$-módulo es de dimensión proyectiva $\leq n$.
+  \item[\rm a')] Todo $A$-módulo de tipo finito es de dimensión proyectiva
+  $\leq n$.
+  \item[\rm b)] Todo $A$-módulo es de dimensión inyectiva $\leq n$.
+  \item[\rm c)] Para todo par de $A$-módulos $M$, $N$, se tiene
+  $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+  \item[\rm c')] Para todo par de $A$-módulos $M$, $N$ tal que $M$ sea de
+  tipo finito (o solamente monógeno), se tiene
+  $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{45}
+Esto resulta inmediatamente de (17.2.1) y (17.2.3).
+\end{proof}
+
+El menor número $n$ (entero o $+\infty$) para el cual se satisfacen las condiciones
+equivalentes de (17.2.8) se denomina \emph{dimensión cohomológica
+global} (o simplemente \emph{dimensión cohomológica}) de $A$
+y se denota por $\operatorname{dim.coh}(A)$.
+
+\begin{proposition}[17.2.9]
+\label{0.17.2.9-es}
+Sea $A$ un anillo noetheriano. Las condiciones siguientes son equivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $\operatorname{dim.coh}(A)\leq n$.
+  \item[\rm b)] Todo $A$-módulo de tipo finito es de dimensión inyectiva
+  $\leq n$.
+  \item[\rm c)] Para todo par de $A$-módulos de tipo finito, $M$, $N$, se tiene
+  $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Esto resulta inmediatamente de la definición y de (17.2.4).
+\end{proof}
+
+\begin{corollary}[17.2.10]
+\label{0.17.2.10-es}
+Si $A$ es un anillo noetheriano, se tiene
+\begin{equation}
+\label{0.17.2.10.1-es}
+\tag{17.2.10.1}
+  \operatorname{dim.coh}(A)
+  =\sup_{\mathfrak{m}}
+  \bigl(\operatorname{dim.coh}(A_{\mathfrak{m}})\bigr)
+\end{equation}
+donde $\mathfrak{m}$ recorre el espectro de $A$ (o el conjunto de los ideales
+maximales de $A$).
+\end{corollary}
+
+\begin{proof}
+Esto se deduce de (17.2.9) y (17.2.5).
+\end{proof}
+
+\begin{proposition}[17.2.11]
+\label{0.17.2.11-es}
+Sean $A$ un anillo local noetheriano y $k$ su cuerpo residual. Para que
+$\operatorname{dim.coh}(A)\leq n$, es necesario que
+$\operatorname{Tor}^A_i(k,k)=0$, para $i>n$, y basta con que
+$\operatorname{Tor}^A_{n+1}(k,k)=0$.
+\end{proposition}
+
+\begin{proof}
+Habida cuenta de (17.2.6), basta demostrar que las relaciones
+$\operatorname{dim.coh}(A)\leq n$ y
+$\operatorname{dim.proj}_A(k)\leq n$ son equivalentes. Es claro que la
+primera implica la segunda por definición. Recíprocamente, si
+$\operatorname{dim.proj}_A(k)\leq n$, se tiene
+$\operatorname{Tor}^A_i(M,k)=0$ para $i>n$ y para todo $A$-módulo $M$ en
+virtud de (17.2.2, (ii))~; por tanto, $\operatorname{dim.proj}(M)\leq n$, lo que
+demuestra la proposición en virtud de (17.2.8).
+\end{proof}
+
+\begin{corollary}[17.2.12]
+\label{0.17.2.12-es}
+Sea $A$ un anillo noetheriano. Para que se tenga
+$\operatorname{dim.coh}(A)\leq n$, es necesario que, para todo ideal
+maximal $\mathfrak{m}$ de $A$, se tenga
+$\operatorname{Tor}^{A_{\mathfrak{m}}}_i(A/\mathfrak{m},A/\mathfrak{m})=0$
+para $i>n$, y basta con que estas relaciones se verifiquen para $i=n+1$.
+\end{corollary}
+
+\begin{proof}
+Esto resulta inmediatamente de (17.2.11) y (17.2.10).
+\end{proof}
+
+\begin{proposition}[17.2.13]
+\label{0.17.2.13-es}
+Sean $A$, $B$ dos anillos locales noetherianos y
+$\varphi:A\longrightarrow B$ un homomorfismo local que hace de $B$ un
+$A$-módulo plano. Entonces se tiene
+\begin{equation}
+\label{0.17.2.13.1-es}
+\tag{17.2.13.1}
+  \operatorname{dim.coh}(A)\leq\operatorname{dim.coh}(B).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Supongamos que $\operatorname{dim.coh}(B)=n$ es finita~; basta demostrar
+que, para todo par $(M,N)$ de $A$-módulos de tipo finito, se tiene
+$\operatorname{Tor}^A_i(M,N)=0$ para $i>n$ (17.2.11). Como $B$ es un
+$A$-módulo fielmente plano ($0_{\rm I}$, 6.6.2), demostrar esto equivale
+($0_{\rm I}$, 6.4.1) a demostrar que se tiene
+\begin{equation}
+\label{0.17.2.13.2-es}
+\tag{17.2.13.2}
+  \operatorname{Tor}^A_i(M,N)\otimes_A B=0.
+\end{equation}
+Ahora bien, si $L_\bullet=(L_j)$ es una resolución derecha de $M$ por $A$-módulos
+libres, del hecho de que $B$ sea un $A$-módulo plano se deduce que
+$L_\bullet\otimes_A B=(L_j\otimes_A B)$ es una resolución derecha del
+$B$-módulo $M\otimes_A B$ por $B$-módulos libres~; además, se tiene
+$(L_j\otimes_A B)\otimes_B(N\otimes_A B)
+=(L_j\otimes_A N)\otimes_A B$, de donde se concluye inmediatamente que el primer miembro
+\oldpage[0\textsubscript{IV-1}]{46}
+de (17.2.13.2) es igual a
+$\operatorname{Tor}^B_i(M\otimes_A B,N\otimes_A B)$~; la hipótesis sobre $B$
+implica que este $B$-módulo es nulo para $i>n$ (17.2.2, (ii)), de donde resulta la
+conclusión.
+\end{proof}
+
+\begin{env}[17.2.14]
+\label{0.17.2.14-es}
+Sean $(X,\mathscr{O}_X)$ un espacio anillado y $\mathscr{F}$ un
+$\mathscr{O}_X$-Módulo~; se llama \emph{dimensión proyectiva} (resp.
+\emph{inyectiva}) \emph{puntual} de $\mathscr{F}$ y se denota por
+$\operatorname{dim.proj}(\mathscr{F})$ (resp.
+$\operatorname{dim.inj}(\mathscr{F})$) el número
+$\sup_{x\in X}(\operatorname{dim.proj}(\mathscr{F}_x))$ (resp.
+$\sup_{x\in X}(\operatorname{dim.inj}(\mathscr{F}_x))$. Se llama
+\emph{dimensión cohomológica puntual de $X$} y se denota por
+$\operatorname{dim.coh}(X)$ el número
+$\sup_{x\in X}(\operatorname{dim.coh}(\mathscr{O}_x))$. Se deduce de
+(17.2.5) y (17.2.10) que, cuando $A$ es un anillo noetheriano, $M$ un
+$A$-módulo de tipo finito y $X=\operatorname{Spec}(A)$, se tiene
+$\operatorname{dim.proj}(\widetilde{M})=\operatorname{dim.proj}(M)$,
+$\operatorname{dim.inj}(\widetilde{M})=\operatorname{dim.inj}(M)$ y
+$\operatorname{dim.coh}(X)=\operatorname{dim.coh}(A)$. Se llama
+\emph{dimensión proyectiva} (resp. \emph{inyectiva}) \emph{de $\mathscr{F}$ en
+un punto $x\in X$} a la dimensión proyectiva (resp. inyectiva) de
+$\mathscr{F}_x$, y \emph{dimensión cohomológica de $X$ en un punto $x$} a la
+dimensión cohomológica de $\mathscr{O}_x$.
+\end{env}
+
+\begin{proposition}[17.2.15]
+\label{0.17.2.15-es}
+Sean $X$, $Y$ dos espacios anillados en anillos locales noetherianos y
+$f:X\longrightarrow Y$ un morfismo plano. Si
+$\operatorname{dim.coh}(X)\leq n$, entonces $Y$ es de dimensión cohomológica
+$\leq n$ en todo punto de $f(X)$.
+\end{proposition}
+
+\begin{proof}
+Esto resulta inmediatamente de (17.2.13).
+\end{proof}
+
+\subsection{Teoría cohomológica de los anillos regulares}
+\label{subsection:0.17.3-es}
+
+\begin{theorem}[17.3.1]
+\label{0.17.3.1-es}
+\textnormal{(Hilbert-Serre)} Sea $A$ un anillo local noetheriano. Para que $A$
+sea de dimensión cohomológica finita, es necesario y suficiente que $A$ sea
+regular~; se tiene entonces
+\begin{equation}
+\label{0.17.3.1.1-es}
+\tag{17.3.1.1}
+  \operatorname{dim.coh}(A)=\dim(A).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Supongamos que $A$ es regular~; sean $\mathfrak{m}$ su ideal maximal y
+$\mathbf{x}=(x_i)_{1\leq i\leq n}$ un sistema regular de parámetros de $A$
+(17.1.6)~; consideremos el complejo del álgebra exterior
+$K_\bullet(\mathbf{x})$ (\textbf{III}, 1.1.1), que está formado por $A$-módulos
+libres, con $K_i(\mathbf{x})=0$ para $i>n$~; como $(x_i)$ es una sucesión
+regular, se tiene $H_i(K_\bullet(\mathbf{x}))=0$ para $i>0$ (\textbf{III},
+1.1.4 y 1.1.3.3) y
+$H_0(K_\bullet(\mathbf{x}))=A/(x_1A+\cdots+x_nA)=A/\mathfrak{m}=k$~; los
+$K_i(\mathbf{x})$ forman, por tanto, una \emph{resolución libre} de $k$ de
+longitud $n$. Ahora bien, el hecho de que los $x_i$ pertenezcan a $\mathfrak{m}$
+implica inmediatamente que, en el complejo
+$K_\bullet(\mathbf{x},k)=K_\bullet(\mathbf{x})\otimes_A k$, el operador de borde
+es nulo en todos los grados, de modo que se tiene, por definición,
+$\operatorname{Tor}^A_i(k,k)=\bigwedge^i(k^n)$~; la igualdad (17.3.1.1) resulta
+entonces inmediatamente de (17.2.11) (este resultado es esencialmente el «~teorema de las
+sizigias~» de Hilbert).
+
+Demostremos ahora que, si $A$ es un anillo local noetheriano,
+$\mathfrak{m}$ su ideal maximal, y si
+$\operatorname{dim.proj}_A(\mathfrak{m})$ es \emph{finita}, entonces $A$ es
+regular, lo que terminará la demostración de (17.3.1). Procederemos por
+inducción sobre $n=\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)$. Para
+$n=0$, se tiene $\mathfrak{m}=0$ y la aserción es trivial.
+\end{proof}
+
+\begin{lemma}[17.3.1.2]
+\label{0.17.3.1.2-es}
+\textnormal{(Nagata)} Si todo elemento de
+$\mathfrak{m}-\mathfrak{m}^2$ es divisor de cero en $A$, existe
+$c\neq0$ en $A$ tal que $c\mathfrak{m}=0$ (dicho de otro modo, se tiene
+$\mathfrak{m}\in\operatorname{Ass}(A)$).
+\end{lemma}
+
+\begin{proof}
+Podemos limitarnos al caso en que $\mathfrak{m}\neq0$, y por tanto
+$\mathfrak{m}\neq\mathfrak{m}^2$. La hipótesis implica que
+$\mathfrak{m}-\mathfrak{m}^2$ está contenido en la unión de los ideales
+$\mathfrak{p}_i$ de $\operatorname{Ass}(A)$ (Bourbaki,
+\emph{Alg.~comm.}, cap.~IV, \S~1, no~1, cor.~3 de la prop.~2)~; por tanto,
+$\mathfrak{m}$ está contenido en la unión de $\mathfrak{m}^2$
+\oldpage[0\textsubscript{IV-1}]{47}
+y de los $\mathfrak{p}_i$, y por tanto en uno de los $\mathfrak{p}_i$, puesto que
+$\mathfrak{m}\not\subset\mathfrak{m}^2$ (Bourbaki, \emph{Alg.~comm.},
+cap.~II, \S~1, no~1, prop.~2)~; como $\mathfrak{m}$ es maximal, esto demuestra el
+lema.
+\end{proof}
+
+\begin{lemma}[17.3.1.3]
+\label{0.17.3.1.3-es}
+Si $a\in\mathfrak{m}-\mathfrak{m}^2$, $\mathfrak{m}/Aa$ es isomorfo a un
+factor directo de $\mathfrak{m}/a\mathfrak{m}$.
+\end{lemma}
+
+\begin{proof}
+Existe un sistema minimal de generadores de $\mathfrak{m}$ que contiene a $a$
+(cuyas imágenes en $\mathfrak{m}/\mathfrak{m}^2$ forman una base de este
+$k$-espacio vectorial)~; sea $\mathfrak{b}$ el ideal engendrado por los elementos
+de este sistema distintos de $a$. Como la relación $xa\in\mathfrak{b}$ implica
+$x\in\mathfrak{m}$ (considerando la imagen de $xa$ en
+$\mathfrak{m}/\mathfrak{m}^2$), se tiene
+$\mathfrak{b}\cap Aa\subset a\mathfrak{m}$, de donde se obtiene un homomorfismo
+$\mathfrak{b}/(\mathfrak{b}\cap Aa)\longrightarrow
+\mathfrak{m}/a\mathfrak{m}$ deducido de la inyección
+$\mathfrak{b}\longrightarrow\mathfrak{m}$ por paso a los cocientes, y que
+es \emph{inyectivo}. Además, $\mathfrak{b}+Aa=\mathfrak{m}$, y
+el homomorfismo compuesto
+\[
+  \mathfrak{m}/Aa=(\mathfrak{b}+Aa)/Aa
+  \xrightarrow{\sim}\mathfrak{b}/(\mathfrak{b}\cap Aa)
+  \longrightarrow\mathfrak{m}/a\mathfrak{m}
+  \longrightarrow\mathfrak{m}/Aa
+\]
+es la identidad~; de donde resulta el lema.
+\end{proof}
+
+\begin{lemma}[17.3.1.4]
+\label{0.17.3.1.4-es}
+Sean $A$ un anillo local noetheriano, $\mathfrak{m}$ su ideal maximal, $E$
+un $A$-módulo de tipo finito y de dimensión proyectiva finita. Si
+$a\in\mathfrak{m}$ es $A$-regular y $E$-regular, entonces $E/aE$ es un
+$(A/aA)$-módulo de dimensión proyectiva finita, a lo sumo igual a
+$\operatorname{dim.proj}_A(E)$.
+\end{lemma}
+\begin{proof}
+Razonemos por inducción sobre $h=\operatorname{dim.proj}_A(E)$, siendo trivial
+el caso $h=0$, puesto que entonces $E$ es un $A$-módulo proyectivo, y por tanto
+$E/aE$ es un $(A/aA)$-módulo proyectivo. Existe una sucesión exacta
+\[
+  0\longrightarrow N\longrightarrow L\longrightarrow E\longrightarrow0
+\]
+donde $L$ es libre y $\operatorname{dim.proj}_A(N)=h-1$ (17.2.2, (iii)), siendo
+$N$ de tipo finito. Además, la sucesión
+\[
+  0\longrightarrow N/aN\longrightarrow L/aL\longrightarrow E/aE
+  \longrightarrow0
+\]
+es exacta (15.1.18). Como $a$ es $A$-regular, también es $N$-regular, puesto
+que $L$ es libre; la hipótesis de inducción implica que $N/aN$ es un
+$(A/aA)$-módulo de dimensión proyectiva $\leq h-1$, y como $L/aL$ es un
+$(A/aA)$-módulo libre, $E/aE$ es un $(A/aA)$-módulo de dimensión proyectiva
+$\leq h$.
+\end{proof}
+
+Examinemos ahora dos casos:
+
+\medskip\noindent\textbf{I.} --- Supongamos primero que todo elemento de
+$\mathfrak{m}-\mathfrak{m}^2$ es divisor de cero en $A$, en cuyo caso
+(17.3.1.2) existe $c\neq0$ en $A$ tal que $c\mathfrak{m}=0$. Demostremos
+entonces que $\mathfrak{m}=0$. Si no fuera así, observemos primero que
+$\mathfrak{m}$ no podría ser un $A$-módulo proyectivo, pues sería libre
+(Bourbaki, \emph{Alg.~comm.}, cap.~II, \S~3, n.º~2, cor.~2 de la prop.~5),
+lo que contradice la relación $c\mathfrak{m}=0$. Se tendría, por tanto,
+$n=\operatorname{dim.coh}(A)\geq1$. Como
+$\mathfrak{m}\in\operatorname{Ass}(A)$, existiría una sucesión exacta de
+$A$-homomorfismos
+\[
+  0\longrightarrow k\longrightarrow A\longrightarrow E\longrightarrow0.
+\]
+Pero esto es absurdo, pues, en virtud de la relación $n\geq1$, la sucesión
+exacta de los Tor daría la sucesión exacta
+$0\longrightarrow\operatorname{Tor}^A_{n+1}(E,k)\longrightarrow
+\operatorname{Tor}^A_n(k,k)\longrightarrow0$; ahora bien, se tiene
+$\operatorname{Tor}^A_{n+1}(E,k)=0$ (17.2.2, (ii)) y
+$\operatorname{Tor}^A_n(k,k)\neq0$ (17.2.11), y hemos llegado a una
+contradicción.
+
+\medskip\noindent\textbf{II.} --- Podemos, pues, limitarnos al caso en que
+existe $a\in\mathfrak{m}-\mathfrak{m}^2$ que es un elemento $A$-regular y, por
+tanto, también $\mathfrak{m}$-regular. Consideremos el anillo $A'=A/aA$ y su
+ideal
+\oldpage[0\textsubscript{IV-1}]{48}
+máximo $\mathfrak{m}'=\mathfrak{m}/aA$; es claro que
+$\operatorname{rg}_k(\mathfrak{m}'/\mathfrak{m}'^2)=n-1$. En virtud de
+(17.3.1.4), $\mathfrak{m}/a\mathfrak{m}$ es un $A'$-módulo de dimensión
+proyectiva finita, luego lo mismo ocurre con
+$\mathfrak{m}'=\mathfrak{m}/aA$, que es un sumando directo suyo (17.3.1.3 y
+17.2.1). La hipótesis de inducción implica, por tanto, que $A'=A/aA$ es
+regular, lo que demuestra, por (17.1.8), que $A$ es regular.
+
+\begin{corollary}[17.3.2]
+\label{0.17.3.2-es}
+Si $A$ es un anillo local regular, $A_{\mathfrak{p}}$ es regular para todo
+ideal primo $\mathfrak{p}$ de $A$.
+\end{corollary}
+
+\begin{proof}
+En efecto, se ha visto (17.2.10) que
+$\operatorname{dim.coh}(A_{\mathfrak{p}})\leq
+\operatorname{dim.coh}(A)$, luego la conclusión resulta inmediatamente de
+(17.3.1).
+\end{proof}
+
+\begin{proposition}[17.3.3]
+\label{0.17.3.3-es}
+Sean $A$, $B$ dos anillos locales noetherianos,
+$\varphi:A\longrightarrow B$ un homomorfismo local, $\mathfrak{m}$ (resp.
+$\mathfrak{n}$) el ideal máximo de $A$ (resp. $B$),
+$k=A/\mathfrak{m}$ (resp. $k'=B/\mathfrak{n}$) el cuerpo residual de $A$
+(resp. $B$). Se tiene, por tanto, un homomorfismo canónico de $k'$-espacios
+vectoriales
+\begin{equation}
+\label{0.17.3.3.1-es}
+\tag{17.3.3.1}
+  \psi:(\mathfrak{m}/\mathfrak{m}^2)\otimes_k k'
+  \longrightarrow\mathfrak{n}/\mathfrak{n}^2.
+\end{equation}
+\begin{enumerate}
+  \item[\rm (i)] Si $B$ es regular y $B$ es un $A$-módulo plano, $A$ es
+  regular.
+  \item[\rm (ii)] Las condiciones siguientes son equivalentes:
+  \begin{enumerate}
+    \item[\rm a)] $B$ es regular y el homomorfismo $\psi$ (17.3.3.1) es
+    inyectivo.
+    \item[\rm b)] $A$ y $B$ son regulares, y para un sistema regular de
+    parámetros $(x_i)_{1\leq i\leq m}$ de $A$, los $\varphi(x_i)$ forman parte
+    de un sistema regular de parámetros de $B$ (en cuyo caso esta propiedad se
+    verifica para \emph{todo} sistema regular de parámetros de $A$).
+    \item[\rm c)] $B$ y $B\otimes_A k$ son regulares, y $B$ es un $A$-módulo
+    plano.
+    \item[\rm d)] $A$ y $B\otimes_A k$ son regulares, y $B$ es un $A$-módulo
+    plano.
+    \item[\rm e)] $A$ y $B\otimes_A k$ son regulares, y se tiene
+    \begin{equation}
+    \label{0.17.3.3.2-es}
+    \tag{17.3.3.2}
+      \dim(B)=\dim(A)+\dim(B\otimes_A k).
+    \end{equation}
+  \end{enumerate}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\textnormal{(i)} Se tiene
+$\operatorname{dim.coh}(A)\leq\operatorname{dim.coh}(B)$ por (17.2.13), luego
+basta aplicar (17.3.1).
+
+\textnormal{(ii)} Cuando se supone que $A$ es regular y $(x_i)$ es un sistema
+regular de parámetros de $A$, decir que $B$ es un $A$-módulo \emph{plano}
+equivale, en virtud de (15.1.21), a decir que la sucesión de los
+$y_i=\varphi(x_i)$ es $B$-regular (puesto que $B\otimes_A k$ es un
+$k$-módulo plano). Por otra parte, como $\dim(A)=m$ y la sucesión $(y_i)$
+engendra el ideal $\mathfrak{m}B$, la relación (17.3.3.2), que también se
+escribe $\dim(B/\mathfrak{m}B)=\dim(B)-m$, equivale a decir que la sucesión
+$(y_i)_{1\leq i\leq m}$ forma parte de un sistema de parámetros de $B$
+(16.3.7). Se ve, por tanto, que las condiciones b), d) y e) equivalen,
+respectivamente, a las siguientes:
+\begin{enumerate}
+  \item[\rm b')] $A$ y $B$ son regulares y $(y_i)_{1\leq i\leq m}$ forma
+  parte de un sistema regular de parámetros de $B$.
+  \item[\rm d')] $A$ es regular,
+  $B/(\sum_{i=1}^m y_iB)$ es regular y la sucesión $(y_i)$ es
+  $B$-regular.
+  \item[\rm e')] $A$ es regular,
+  $B/(\sum_{i=1}^m y_iB)$ es regular y la sucesión $(y_i)$ forma parte de un
+  sistema de parámetros de $B$.
+\end{enumerate}
+Ahora bien, b') y e') son equivalentes en virtud de (17.1.7), y como d')
+implica e') (16.4.1) y se sigue de b') (17.1.7), es equivalente a ellas.
+La conjunción
+\oldpage[0\textsubscript{IV-1}]{49}
+de b) y d) implica trivialmente c), y, en virtud de (i), c) implica d); se ha
+probado, por tanto, la equivalencia de b), c), d) y e). Además, es claro que
+b) implica a), pues las clases de los $x_i$ en
+$\mathfrak{m}/\mathfrak{m}^2$ forman entonces una base de este $k$-espacio
+vectorial y las clases de los $y_i$ en $\mathfrak{n}/\mathfrak{n}^2$ un
+sistema libre de este $k'$-espacio vectorial. Queda, pues, probar que a)
+implica e). Pongamos $V=\mathfrak{m}/\mathfrak{m}^2$,
+$W=\mathfrak{n}/\mathfrak{n}^2$; es inmediato que se tiene
+$\psi(V\otimes_k k')=(\mathfrak{n}^2+\mathfrak{m}B)/\mathfrak{n}^2$. Por una
+parte, en virtud de (16.3.9),
+\begin{equation}
+\label{0.17.3.3.3-es}
+\tag{17.3.3.3}
+  \dim(B)\leq\dim(A)+\dim(B\otimes_A k)~;
+\end{equation}
+en segundo lugar, según (16.2.6), se tiene
+\begin{equation}
+\label{0.17.3.3.4-es}
+\tag{17.3.3.4}
+  \dim(A)\leq\operatorname{rg}_{k'}(V\otimes_k k').
+\end{equation}
+Por último, en el anillo local $B\otimes_A k=B/\mathfrak{m}B$,
+$\mathfrak{n}'=\mathfrak{n}/\mathfrak{m}B$ es el ideal máximo, $k'$ el cuerpo
+residual y $\mathfrak{n}'/\mathfrak{n}'^2$ es isomorfo a
+$\mathfrak{n}/(\mathfrak{n}^2+\mathfrak{m}B)
+=W/\psi(V\otimes_k k')$; se tiene, por tanto, según (16.2.6),
+\begin{equation}
+\label{0.17.3.3.5-es}
+\tag{17.3.3.5}
+  \dim(B\otimes_A k)
+  \leq\operatorname{rg}_{k'}W
+  -\operatorname{rg}_{k'}\psi(V\otimes_k k').
+\end{equation}
+Finalmente, puesto que se supone que $B$ es regular, se tiene
+$\dim(B)=\operatorname{rg}_{k'}W$ (17.1.1); se concluye, por tanto, de
+(17.3.3.3), (17.3.3.4) y (17.3.3.5) que se tiene
+\[
+  \operatorname{rg}_{k'}W
+  \leq\dim(A)+\dim(B\otimes_A k)
+  \leq\operatorname{rg}_{k'}W
+  +\operatorname{rg}_{k'}(V\otimes_k k')
+  -\operatorname{rg}_{k'}\psi(V\otimes_k k')
+\]
+y decir que los dos términos extremos de esta desigualdad son iguales
+significa que $\psi$ es \emph{inyectivo}. La condición a) implica, por tanto,
+necesariamente que en cada una de las relaciones (17.3.3.3), (17.3.3.4) y
+(17.3.3.5), los dos miembros son \emph{iguales}; ahora bien, la igualdad en
+(17.3.3.4) (resp. (17.3.3.5)) significa que $A$ (resp. $B\otimes_A k$) es
+\emph{regular} (17.1.1); queda así demostrado que a) implica e).
+\end{proof}
+
+\begin{proposition}[17.3.4]
+\label{0.17.3.4-es}
+Sean $A$ un anillo local regular de dimensión $n$, $\mathfrak{m}$ su ideal
+máximo. Para todo $A$-módulo no nulo de tipo finito $M$, se tiene
+\begin{equation}
+\label{0.17.3.4.1-es}
+\tag{17.3.4.1}
+  \operatorname{prof}(M)+\operatorname{dim.proj}(M)=n.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Razonemos por inducción sobre $m=\operatorname{prof}(M)$. Si $m=0$, se sabe
+(16.4.6, (i)) que existe un sub-$A$-módulo $N$ de $M$ isomorfo a
+$k=A/\mathfrak{m}$; aplicando la sucesión exacta de los Tor a la sucesión
+exacta $0\longrightarrow N\longrightarrow M\longrightarrow M/N\longrightarrow0$,
+se obtiene una sucesión exacta
+\[
+  \operatorname{Tor}^A_{n+1}(M/N,k)\longrightarrow
+  \operatorname{Tor}^A_n(N,k)\longrightarrow
+  \operatorname{Tor}^A_n(M,k),
+\]
+y la hipótesis de que $A$ es regular implica
+$\operatorname{Tor}^A_{n+1}(M/N,k)=0$ ((17.3.1.1) y (17.2.6)), luego
+$\operatorname{Tor}^A_n(k,k)$ es isomorfo a un sub-$A$-módulo de
+$\operatorname{Tor}^A_n(M,k)$; aplicando de nuevo (17.3.1.1) y (17.2.6), se
+ve que $\operatorname{Tor}^A_n(M,k)\neq0$, luego
+$\operatorname{dim.proj}(M)\geq n$ (17.2.6); pero como
+$\operatorname{dim.proj}(M)\leq n$ por (17.3.1.1), se tiene efectivamente
+$\operatorname{dim.proj}(M)=n$.
+
+Supongamos ahora que $m>0$, y sea $x$ un elemento $M$-regular perteneciente a
+$\mathfrak{m}$; se sabe entonces (16.4.6, (i)) que se tiene
+$\operatorname{prof}(M/xM)=m-1$, y, por otra parte, (17.2.7),
+$\operatorname{dim.proj}(M/xM)=\operatorname{dim.proj}(M)+1$; la hipótesis de
+inducción prueba inmediatamente la relación (17.3.4.1).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{50}
+
+\begin{corollary}[17.3.5]
+\label{0.17.3.5-es}
+\begin{enumerate}
+  \item[\rm(i)] Sea $A$ un anillo local regular de dimensión $n$; para que un
+  $A$-módulo $M\neq0$ de tipo finito sea libre, es necesario y suficiente que
+  $M$ sea un $A$-módulo de Cohen-Macaulay de dimensión $n$.
+  \item[\rm(ii)] Sean $A$ un anillo local regular, $B$ un anillo local,
+  $\rho:A\to B$ un homomorfismo local que hace de $B$ un $A$-módulo de tipo
+  finito. Para que $B$ sea un $A$-módulo libre, es necesario y suficiente que
+  $B$ sea un anillo de Cohen-Macaulay y que $\rho$ sea inyectivo (o,
+  equivalentemente (16.1.5), que $\dim(B)=\dim(A)$).
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) Esto resulta de (17.3.4.1) y del hecho de que, para un $A$-módulo de tipo
+finito, es lo mismo decir que este módulo es proyectivo que decir que es libre
+(Bourbaki, \emph{Alg. comm.}, cap.~II, \S~3, n\textsuperscript{o}~2, cor.~2 de
+la prop.~5); los $A$-módulos libres de tipo finito $M$ se caracterizan, por
+tanto, por la relación $\operatorname{dim.proj}(M)=0$ (17.2.2, (i)).
+
+(ii) Decir que $B$ es un anillo de Cohen-Macaulay equivale a decir que $B$ es
+un $A$-módulo de Cohen-Macaulay (16.5.3), luego basta aplicar (i), puesto que
+$\dim(B)=\dim(A)$ (16.1.5).
+\end{proof}
+
+\begin{env}[17.3.6]
+\label{0.17.3.6-es}
+Se dice que un anillo noetheriano $A$ es \emph{regular} si, para todo ideal
+primo $\mathfrak{p}$ de $A$, el anillo local $A_{\mathfrak{p}}$ es regular;
+cuando el propio $A$ es un anillo local, se sigue de (17.3.2) que esta
+definición es equivalente a la de (17.1.2). Para que $A$ sea regular, basta,
+en virtud de (17.3.2), que $A_{\mathfrak{m}}$ sea regular para todo ideal
+máximo $\mathfrak{m}$ de $A$. Además, se sigue inmediatamente de esta
+definición que, para todo conjunto multiplicativamente cerrado $S$ de $A$,
+$S^{-1}A$ es regular.
+\end{env}
+
+\begin{proposition}[17.3.7]
+\label{0.17.3.7-es}
+Si $A$ es un anillo noetheriano regular, todo anillo de polinomios
+$A[T_1,\ldots,T_n]$ es regular.
+\end{proposition}
+
+\begin{proof}
+Es evidentemente suficiente probar que el anillo de polinomios $B=A[T]$ es
+regular; como $B$ es un $A$-módulo libre, para todo ideal primo
+$\mathfrak{q}$ de $B$, $B_{\mathfrak{q}}$ es un
+$A_{\mathfrak{p}}$-módulo plano, donde $\mathfrak{p}=\mathfrak{q}\cap A$
+($0_{\mathrm I}$, 6.3.1); basta, por tanto, en virtud de (17.1.10), probar que
+$B_{\mathfrak{q}}/\mathfrak{p}B_{\mathfrak{q}}$ es regular, y como este anillo
+es un anillo local en un ideal primo de
+$A_{\mathfrak{p}}[T]/\mathfrak{p}A_{\mathfrak{p}}[T]=k[T]$ (donde $k$ es el
+cuerpo residual $A_{\mathfrak{p}}/\mathfrak{p}A_{\mathfrak{p}}$), basta
+probar que $C=k[T]$ es regular; ahora bien, como $C$ es un dominio de ideales
+principales, los anillos locales en los ideales primos de $C$ son anillos de
+valoración discreta o un cuerpo (para el ideal $(0)$), luego son regulares
+(17.1.4), lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[17.3.8]
+\label{0.17.3.8-es}
+Si $A$ es un anillo regular, todo anillo de series formales
+$A[[T_1,\ldots,T_n]]$ es regular.
+\end{corollary}
+
+\begin{proof}
+Sea $\mathfrak{J}$ el ideal engendrado por los $T_i$ en el anillo de polinomios
+$A[T_1,\ldots,T_n]$; como este último es regular por (17.3.7), y
+$A[[T_1,\ldots,T_n]]$ es el completado de $A[T_1,\ldots,T_n]$ para la
+topología $\mathfrak{J}$-preádica (Bourbaki, \emph{Alg. comm.}, cap.~III,
+\S~2, n\textsuperscript{o}~12, \emph{Ejemplo 1}), la conclusión resulta del lema siguiente.
+\end{proof}
+
+\begin{lemma}[17.3.8.1]
+\label{0.17.3.8.1-es}
+Sean $A$ un anillo regular, $\mathfrak{J}$ un ideal de $A$,
+$\widehat{A}$ el completado separado de $A$ para la topología
+$\mathfrak{J}$-preádica. Entonces $\widehat{A}$ es regular.
+\end{lemma}
+
+\begin{proof}
+Basta, en efecto, (17.3.6) ver que, para todo ideal máximo
+$\mathfrak{n}$ de $\widehat{A}$, el anillo local
+$\widehat{A}_{\mathfrak{n}}$ es regular; se sabe (Bourbaki,
+\emph{Alg. comm.}, cap.~III, \S~3, n\textsuperscript{o}~4, prop.~8) que
+$\mathfrak{n}$
+\oldpage[0\textsubscript{IV-1}]{51}
+es de la forma $\mathfrak{m}\widehat{A}$, donde $\mathfrak{m}$ es un ideal
+máximo de $A$ que contiene a $\mathfrak{J}$, y que el homomorfismo canónico
+$A\to\widehat{A}$ da un homomorfismo \emph{inyectivo}
+$A_{\mathfrak{m}}\to\widehat{A}_{\mathfrak{n}}$, tal que la topología
+$\mathfrak{n}\widehat{A}_{\mathfrak{n}}$-preádica de
+$\widehat{A}_{\mathfrak{n}}$ induzca sobre $A_{\mathfrak{m}}$ la topología
+$\mathfrak{m}A_{\mathfrak{m}}$-preádica, y que $A_{\mathfrak{m}}$ sea denso
+en $\widehat{A}_{\mathfrak{n}}$ para la topología
+$\mathfrak{n}\widehat{A}_{\mathfrak{n}}$-preádica; por consiguiente, los
+\emph{completados} de los anillos locales noetherianos $A_{\mathfrak{m}}$ y
+$\widehat{A}_{\mathfrak{n}}$ son canónicamente \emph{isomorfos}. Ahora bien,
+por hipótesis $A_{\mathfrak{m}}$ es regular, luego también lo es su completado
+(17.1.5), y como el completado de $\widehat{A}_{\mathfrak{n}}$ es regular,
+también lo es $\widehat{A}_{\mathfrak{n}}$ por (17.1.5).
+\end{proof}
+
+\begin{corollary}[17.3.9]
+\label{0.17.3.9-es}
+Sea $A$ un anillo noetheriano, cociente de un anillo noetheriano regular $B$.
+Si $C$ es una $A$-álgebra de tipo finito, todo anillo de fracciones $S^{-1}C$
+de $C$ es cociente de un anillo regular.
+\end{corollary}
+
+\begin{proof}
+En efecto, $C$ es cociente de un anillo de polinomios $A[T_1,\ldots,T_n]$;
+como $A=B/\mathfrak{J}$, donde $\mathfrak{J}$ es un ideal de $B$, se tiene
+$A[T_1,\ldots,T_n]=B[T_1,\ldots,T_n]/\mathfrak{J}B[T_1,\ldots,T_n]$; en
+virtud de (17.3.7), se puede, por tanto, limitar al caso en que $C$ es cociente
+de un anillo regular $B'$; pero si $S'$ es la imagen inversa de $S$ en $B'$,
+$S'$ es un conjunto multiplicativamente cerrado de $B'$ y $C$ es un anillo
+cociente de $S'^{-1}B'$, de modo que finalmente todo se reduce a ver que,
+cuando $C$ es \emph{regular}, también lo es $S^{-1}C$, lo que se ha visto en
+(17.3.6).
+\end{proof}
+
+La importancia de los cocientes de anillos regulares se debe, entre otras
+cosas, a la propiedad precedente y al hecho de que son anillos
+\emph{catenarios} (16.5.12).
+
+Todos los anillos importantes en las aplicaciones a la Geometría algebraica
+son cocientes de anillos regulares.

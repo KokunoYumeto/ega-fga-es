@@ -1,0 +1,905 @@
+\subsection{Propiedades funtoriales de los invariantes diferenciales}
+\label{IV.16.4}
+
+\begin{env}[16.4.1]
+\label{IV.16.4.1}
+Consideremos un diagrama conmutativo de morfismos de preesquemas
+\[
+  \xymatrix{
+    X \ar[d]_-{f} & X' \ar[l]_-u \ar[d]^-{f'} \\
+    S & S' \ar[l]^-w
+  }
+  \tag{16.4.1.1}
+  \label{IV.16.4.1.1}
+\]
+De él se deduce un diagrama conmutativo
+\[
+  \xymatrix{
+    X \ar[d]_-{\Delta_f} & X' \ar[l]_-u \ar[d]^-{\Delta_{f'}} \\
+    X\times_S X & X'\times_{S'}X' \ar[l]^-v
+  }
+\]
+donde $v$ es el morfismo compuesto (I, 5.3.5 y 5.3.15)
+\[
+  X'\times_{S'}X'
+  \xrightarrow{(p'_1,p'_2)_S}X'\times_S X'
+  \xrightarrow{u\times_S u}X\times_S X.
+  \tag{16.4.1.2}
+  \label{IV.16.4.1.2}
+\]
+Se deducen, por tanto, de $u$ y $v$, como se explicó en (16.2.1),
+homomorfismos de haces de anillos aumentados
+\[
+  \nu_n:\rho^*(\mathscr{P}_{X/S}^n)\longrightarrow
+  \mathscr{P}_{X'/S'}^n
+  \tag{16.4.1.3}
+  \label{IV.16.4.1.3}
+\]
+(donde se ha puesto $u=(\rho,\lambda)$); estos homomorfismos forman un sistema
+proyectivo y dan, por tanto, en el límite un homomorfismo de haces de anillos
+aumentados
+\[
+  \nu_\infty:\rho^*(\mathscr{P}_{X/S}^\infty)\longrightarrow
+  \mathscr{P}_{X'/S'}^\infty;
+  \tag{16.4.1.4}
+  \label{IV.16.4.1.4}
+\]
+por otra parte, al pasar a los cocientes, los homomorfismos $\nu_n$ dan un
+dihomomorfismo de álgebras graduadas (relativo a $\lambda^\#$):
+\[
+  \operatorname{gr}(u):\rho^*(\mathscr{G}r_\bullet(\mathscr{P}_{X/S}))
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X'/S'}).
+  \tag{16.4.1.5}
+  \label{IV.16.4.1.5}
+\]
+\end{env}
+
+\begin{env}[16.4.2]
+\label{IV.16.4.2}
+\oldpage[IV-4]{17}
+Si se tiene un diagrama conmutativo
+\[
+  \xymatrix{
+    X \ar[d]_-{f} & X' \ar[l]_-u \ar[d]^-{f'} &
+      X'' \ar[l]_-{u'} \ar[d]^-{f''} \\
+    S & S' \ar[l]^-w & S'' \ar[l]^-{w'}
+  }
+\]
+se deduce un diagrama conmutativo
+\[
+  \xymatrix{
+    X \ar[d]_-{\Delta_f} & X' \ar[l]_-u \ar[d]^-{\Delta_{f'}} &
+      X'' \ar[l]_-{u'} \ar[d]^-{\Delta_{f''}} \\
+    X\times_S X & X'\times_{S'}X' \ar[l]^-v &
+      X''\times_{S''}X'' \ar[l]^-{v'}
+  }
+\]
+donde $v'$ se define a partir de $u'$, $w'$, $f'$, $f''$ como $v$ a partir de
+$u$, $w$, $f$, $f'$. Se verifica inmediatamente que, si $u''=u\circ u'$,
+$w''=w\circ w'$, entonces el morfismo compuesto $v\circ v'$ es igual al morfismo
+$v''$ definido a partir de $u''$, $w''$, $f$, $f''$ como $v$ a partir de $u$,
+$w$, $f$, $f'$. Si se pone $u'=(\rho',\lambda')$,
+$u''=(\rho'',\lambda'')$, resulta entonces de (16.2.1) que el homomorfismo
+$\nu_n'':\rho''^*(\mathscr{P}_{X/S}^n)\to\mathscr{P}_{X''/S''}^n$ es igual al
+compuesto
+\[
+  \rho'^*(\rho^*(\mathscr{P}_{X/S}^n))
+  \xrightarrow{\rho'^*(\nu_n^\#)}
+  \rho'^*(\mathscr{P}_{X'/S'}^n)
+  \xrightarrow{\nu_n'}\mathscr{P}_{X''/S''}^n
+\]
+y se tienen propiedades de transitividad análogas para los homomorfismos
+(16.4.1.4) y (16.4.1.5), lo que permite decir que los
+$\mathscr{P}_{X/S}^n$, $\mathscr{P}_{X/S}^\infty$ y
+$\mathscr{G}r_\bullet(\mathscr{P}_{X/S})$ dependen funtorialmente de $f$.
+\end{env}
+
+\begin{env}[16.4.3]
+\label{IV.16.4.3}
+Se verifica inmediatamente (por ejemplo, reduciéndose al caso afín con ayuda de
+(16.3.7)) que, con las notaciones de (16.4.1), el diagrama
+\[
+  \xymatrix{
+    \rho^*(\mathcal{O}_X) \ar[r]^{\lambda^\#} \ar[d] &
+      \mathcal{O}_{X'} \ar[d] \\
+    \rho^*(\mathscr{P}_{X/S}^n) \ar[r]_{\nu_n} &
+      \mathscr{P}_{X'/S'}^n
+  }
+  \tag{16.4.3.1}
+  \label{IV.16.4.3.1}
+\]
+donde las flechas verticales son las que definen las estructuras de álgebra
+elegidas en (16.3.5) (es decir, las que provienen de las primeras proyecciones),
+es conmutativo; lo mismo ocurre con el diagrama
+\[
+  \xymatrix{
+    \rho^*(\mathcal{O}_X) \ar[r]^{\lambda^\#}
+      \ar[d]_{\rho^*(d_{X/S}^n)} &
+      \mathcal{O}_{X'} \ar[d]^{d_{X'/S'}^n} \\
+    \rho^*(\mathscr{P}_{X/S}^n) \ar[r]_{\nu_n} &
+      \mathscr{P}_{X'/S'}^n
+  }
+  \tag{16.4.3.2}
+  \label{IV.16.4.3.2}
+\]
+\oldpage[IV-4]{18}
+las flechas verticales definen aquí las estructuras de álgebra provenientes de las
+segundas proyecciones; además, si $\sigma$ y $\sigma'$ son las simetrías
+canónicas correspondientes a $f$ y $f'$ (16.3.4), se tiene
+\[
+  \nu_n\circ\rho^*(\sigma)=\sigma'\circ\nu_n
+\]
+que permite pasar de uno de los diagramas precedentes al otro. Se deduce, por tanto, de
+(16.4.3.1) un homomorfismo canónico de $\mathcal{O}_{X'}$-álgebras aumentadas
+\[
+  P^n(u):u^*(\mathscr{P}_{X/S}^n)
+  =\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\mathscr{P}_{X'/S'}^n
+  \tag{16.4.3.3}
+  \label{IV.16.4.3.3}
+\]
+y resulta de (16.4.3.2) que el diagrama
+\[
+  \xymatrix{
+    \mathcal{O}_{X'} \ar[r]^{\operatorname{id}}
+      \ar[d]_{u^*(d_{X/S}^n)} &
+      \mathcal{O}_{X'} \ar[d]^{d_{X'/S'}^n} \\
+    u^*(\mathscr{P}_{X/S}^n) \ar[r]_{P^n(u)} &
+      \mathscr{P}_{X'/S'}^n
+  }
+  \tag{16.4.3.4}
+  \label{IV.16.4.3.4}
+\]
+es conmutativo. Se deduce un homomorfismo de $\mathcal{O}_{X'}$-álgebras
+graduadas
+\[
+  \operatorname{Gr}_\bullet(u):u^*(\mathscr{G}r_\bullet(\mathscr{P}_{X/S}))
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X'/S'})
+  \tag{16.4.3.5}
+  \label{IV.16.4.3.5}
+\]
+y, en particular, un homomorfismo de $\mathcal{O}_{X'}$-módulos
+\[
+  \operatorname{Gr}_1(u):
+  \Omega_{X/S}^1\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\Omega_{X'/S'}^1
+  \tag{16.4.3.6}
+  \label{IV.16.4.3.6}
+\]
+que da lugar a un diagrama conmutativo
+\[
+  \xymatrix{
+    \mathcal{O}_{X'} \ar[r]^{\operatorname{id}}
+      \ar[d]_{d_{X/S}\otimes 1} &
+      \mathcal{O}_{X'} \ar[d]^{d_{X'/S'}} \\
+    \Omega_{X/S}^1\otimes_{\mathcal{O}_X}\mathcal{O}_{X'} \ar[r] &
+      \Omega_{X'/S'}^1
+  }
+  \tag{16.4.3.7}
+  \label{IV.16.4.3.7}
+\]
+\end{env}
+
+\begin{env}[16.4.4]
+\label{IV.16.4.4}
+Cuando $S=\operatorname{Spec}(A)$, $S'=\operatorname{Spec}(A')$,
+$X=\operatorname{Spec}(B)$, $X'=\operatorname{Spec}(B')$ son afines, de modo
+que se tiene un diagrama conmutativo de homomorfismos de anillos
+\[
+  \xymatrix{
+    B \ar[r] & B' \\
+    A \ar[u] \ar[r] & A' \ar[u]
+  }
+\]
+la imagen de $\mathfrak{I}_{B/A}$ en $B'\otimes_{A'}B'$ está contenida en
+$\mathfrak{I}_{B'/A'}$, y el homomorfismo $\nu_n$ corresponde al
+homomorfismo de anillos $P_{B/A}^n\to P_{B'/A'}^n$ deducido del homomorfismo
+$B\otimes_A B\to B'\otimes_{A'}B'$ al pasar a los cocientes. El homomorfismo
+(16.4.3.6) corresponde al homomorfismo definido en (0, 20.5.4.1), y el
+diagrama conmutativo (16.4.3.7) al diagrama (0, 20.5.4.2).
+\end{env}
+
+\oldpage[IV-4]{19}
+\begin{proposition}[16.4.5]
+\label{IV.16.4.5}
+Supongamos que $X'=X\times_S S'$, siendo $f'$ y $u$ las proyecciones canónicas.
+Entonces los homomorfismos canónicos $P^n(u)$ (16.4.3.3) y
+$\operatorname{Gr}_1(u)$ (16.4.3.6) son biyectivos.
+\end{proposition}
+
+En efecto, se tiene entonces $X'\times_{S'}X'=(X\times_S X)\times_S S'$, y se puede, por tanto,
+aplicar (16.2.3, (ii)) reemplazando $g$ por la primera proyección
+$p_1:X\times_S X\to X$ y $f$ por la diagonal $\Delta_f$.
+
+Obsérvese también que, bajo las hipótesis de (16.4.5), el homomorfismo
+$\operatorname{Gr}_\bullet(u)$ (16.4.3.5) es sobreyectivo, pero no biyectivo en
+general. Sin embargo (16.2.4):
+
+\begin{corollary}[16.4.6]
+\label{IV.16.4.6}
+Siendo las hipótesis las de (16.4.5), supongamos además que $w:S'\to S$ es
+plano (resp. que los $\mathscr{G}r_n(\mathscr{P}_{X/S})$ son
+$\mathcal{O}_X$-módulos planos para $n\leq m$); entonces el homomorfismo
+\[
+  \operatorname{Gr}_n(u):u^*(\mathscr{G}r_n(\mathscr{P}_{X/S}))
+  \longrightarrow\mathscr{G}r_n(\mathscr{P}_{X'/S'})
+\]
+es biyectivo para todo $n$ (resp. para $n\leq m$).
+\end{corollary}
+
+En efecto, si $w$ es plano, lo mismo ocurre con
+$v:X'\times_{S'}X'\to X\times_S X$, por lo que la conclusión resulta de (16.2.4).
+
+\begin{env}[16.4.7]
+\label{IV.16.4.7}
+Sean $S$ un preesquema, $\mathscr{E}$ un $\mathcal{O}_S$-módulo
+cuasicoherente, y pongamos $X=\mathbf{V}(\mathscr{E})$ (II, 1.7.8), fibrado
+vectorial asociado a $\mathscr{E}$, igual a
+$\operatorname{Spec}(\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))$. Sea
+$f:X\to S$ el morfismo estructural. Para todo abierto $U$ de $S$, y toda
+sección $t\in\Gamma(U,\mathscr{E})$, $t$ se identifica con una sección de
+$\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})$ sobre $U$; sea $t'$ su
+imagen en
+$\Gamma(f^{-1}(U),\mathcal{O}_X)=\Gamma(U,f_*(\mathcal{O}_X))=
+\Gamma(U,\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))$, y pongamos
+\[
+  \delta(t)=d_{X/S}^n(t')-t'\in
+  \Gamma(f^{-1}(U),\mathscr{P}_{X/S}^n);
+  \tag{16.4.7.1}
+  \label{IV.16.4.7.1}
+\]
+está claro que $\delta$ es un dihomomorfismo de módulos (correspondiente al
+homomorfismo de anillos
+$\Gamma(U,\mathcal{O}_S)\to\Gamma(f^{-1}(U),\mathcal{O}_X)$) de
+$\Gamma(U,\mathscr{E})$ en $\Gamma(f^{-1}(U),\mathscr{P}_{X/S}^n)$, cuya
+imagen pertenece además al ideal de aumentación de
+$\Gamma(f^{-1}(U),\mathscr{P}_{X/S}^n)$. Se deduce (haciendo variar $U$)
+un homomorfismo canónico de $\mathcal{O}_X$-álgebras
+\[
+  f^*(\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))
+  \longrightarrow\mathscr{P}_{X/S}^n
+  \tag{16.4.7.2}
+  \label{IV.16.4.7.2}
+\]
+y, según la observación precedente, si $\mathscr{K}$ es el ideal que es núcleo de
+la aumentación $\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})\to\mathcal{O}_S$,
+la imagen de $\mathscr{K}^{n+1}$ por (16.4.7.2) es nula, de modo que, al
+factorizar por $\mathscr{K}^{n+1}$, se obtiene finalmente un homomorfismo canónico
+\[
+  \delta_n:f^*(\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})/
+  \mathscr{K}^{n+1})\longrightarrow\mathscr{P}_{X/S}^n.
+  \tag{16.4.7.3}
+  \label{IV.16.4.7.3}
+\]
+\end{env}
+
+\begin{proposition}[16.4.8]
+\label{IV.16.4.8}
+Bajo las condiciones de (16.4.7), los homomorfismos $\delta_n$ son biyectivos y
+forman un sistema proyectivo de isomorfismos; se deduce un isomorfismo de
+$\mathcal{O}_X$-álgebras graduadas
+\[
+  f^*(\mathscr{S}_{\mathcal{O}_S}^{\bullet}(\mathscr{E}))
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X/S}).
+  \tag{16.4.8.1}
+  \label{IV.16.4.8.1}
+\]
+\end{proposition}
+
+El hecho de que los homomorfismos (16.4.7.3) formen un sistema proyectivo resulta
+inmediatamente de su definición. Para probar que son isomorfismos, bastará
+\oldpage[IV-4]{20}
+probar que (16.4.8.1) es un isomorfismo, pues las filtraciones de los dos miembros de
+(16.4.7.3) son finitas (Bourbaki, \emph{Alg. comm.}, cap. III, \S~2,
+n\textsuperscript{o} 8, cor. 3 del teo. 1). Para ello, consideremos la sucesión exacta
+escindida de $\mathcal{O}_S$-módulos
+\[
+  \xymatrix{
+    0 \ar[r] & \mathscr{E} \ar[r]^{u} &
+    \mathscr{E}\oplus\mathscr{E} \ar[r]^{v} &
+    \mathscr{E} \ar[r] & 0
+  }
+  \tag{16.4.8.2}
+  \label{IV.16.4.8.2}
+\]
+donde, para todo par de secciones $s$, $t$ de $\mathscr{E}$ sobre un abierto
+$U$ de $S$, se toma $u(s)=(-s,s)$ y $v(s,t)=s+t$. Se tiene
+\[
+  X\times_S X=\operatorname{Spec}
+  (\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})\otimes_{\mathcal{O}_S}
+  \mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))
+  =\operatorname{Spec}(\mathscr{S}_{\mathcal{O}_S}
+  (\mathscr{E}\oplus\mathscr{E}))
+\]
+(II, 1.4.6 y 1.7.11), y el morfismo diagonal $X\to X\times_S X$ corresponde
+(II, 1.2.7) al homomorfismo de $\mathcal{O}_S$-álgebras
+$\mathscr{S}(v):\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}\oplus\mathscr{E})
+\to\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})$ (II, 1.7.4), de modo que, si
+$\mathscr{I}$ es el núcleo de este homomorfismo, se tiene
+\[
+  \mathscr{P}_{X/S}^n=f^*(\mathscr{S}_{\mathcal{O}_S}
+  (\mathscr{E}\oplus\mathscr{E})/\mathscr{I}^{n+1}).
+\]
+
+La proposición será consecuencia del lema siguiente:
+
+\begin{lemma}[16.4.8.3]
+\label{IV.16.4.8.3}
+Sean $Y$ un espacio anillado,
+$0\to\mathscr{F}'\xrightarrow{u}\mathscr{F}\xrightarrow{v}\mathscr{F}''\to0$
+una sucesión exacta de $\mathcal{O}_Y$-módulos tal que todo punto $y\in Y$
+tiene una vecindad abierta $V$ tal que la sucesión
+$0\to\mathscr{F}'|V\to\mathscr{F}|V\to\mathscr{F}''|V\to0$ es escindida.
+Sea $\mathscr{I}$ el ideal que es núcleo de
+$\mathscr{S}(v):\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})\to
+\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}'')$, y sea
+$\operatorname{gr}_{\mathscr{I}}^\bullet
+(\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))$ la $\mathcal{O}_Y$-álgebra graduada
+asociada a la $\mathcal{O}_Y$-álgebra
+$\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})$ dotada de la filtración
+$\mathscr{I}$-preádica. Entonces el homomorfismo de $\mathcal{O}_Y$-álgebras
+graduadas
+\[
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')
+  \otimes_{\mathcal{O}_Y}
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')
+  \longrightarrow
+  \operatorname{gr}_{\mathscr{I}}^\bullet
+  (\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))
+  \tag{16.4.8.4}
+  \label{IV.16.4.8.4}
+\]
+(donde el primer miembro es el producto tensorial graduado de las
+$\mathcal{O}_Y$-álgebras simétricas dotadas de su graduación canónica
+(II, 1.7.4 y 2.1.2)), proveniente de la inyección canónica
+\[
+  \mathscr{F}'\longrightarrow\mathscr{I}
+  =\operatorname{gr}_{\mathscr{I}}^1
+  (\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})),
+\]
+es biyectivo.
+\end{lemma}
+
+En efecto, la inyección $\mathscr{F}'\to\mathscr{I}$ da canónicamente un
+homomorfismo de $\mathcal{O}_Y$-álgebras graduadas\linebreak
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')\to\allowbreak
+\operatorname{gr}_{\mathscr{I}}^\bullet
+(\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))$, y como el segundo miembro es por
+definición una $\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$-álgebra
+graduada, se deduce el homomorfismo canónico (16.4.8.4) tensorizando el
+precedente con $\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$. Para
+probar el lema, como la cuestión es local, basta considerar el caso en que
+$\mathscr{F}=\mathscr{F}'\oplus\mathscr{F}''$, siendo $u$ y $v$ los
+homomorfismos canónicos. Entonces el álgebra graduada
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F})$ se identifica canónicamente con el
+producto tensorial graduado
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')
+\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$ (II, 1.7.4), y es
+inmediato que $\mathscr{I}$ es entonces el ideal
+$\mathscr{I}'\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, donde $\mathscr{I}'$ es
+el ideal de aumentación de
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')$, es decir, la suma
+(directa) de los $\mathscr{S}_{\mathcal{O}_Y}^m(\mathscr{F}')$ para $m\geq1$. Se
+concluye que $\mathscr{I}^n=\mathscr{I}'^n\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, donde esta vez
+$\mathscr{I}'^n$ es la suma (directa) de los
+$\mathscr{S}_{\mathcal{O}_Y}^m(\mathscr{F}')$ para $m\geq n$; se tiene por consiguiente
+$\mathscr{I}^n/\mathscr{I}^{n+1}=
+\mathscr{S}_{\mathcal{O}_Y}^n(\mathscr{F}')\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, lo que prueba que
+(16.4.8.4) es biyectivo.
+
+\oldpage[IV-4]{21}
+Demostrado este lema, queda por ver que el homomorfismo (16.4.8.1) es
+efectivamente la imagen por $f^*$ del homomorfismo (16.4.8.4) correspondiente a la sucesión
+exacta (16.4.8.2); se comprueba fácilmente que esto resulta de la definición de
+$u$ (16.4.8.2) y de la de $\delta$ (16.4.7.1), teniendo en cuenta la definición
+de la estructura de $\mathcal{O}_X$-álgebra sobre $\mathscr{P}_{X/S}^n$ y de
+la de $d_{X/S}^n$ (16.3.5 y 16.3.6).
+
+En particular:
+
+\begin{corollary}[16.4.9]
+\label{IV.16.4.9}
+Bajo las condiciones de (16.4.7), se tiene un isomorfismo canónico
+\[
+  \operatorname{gr}_1(\delta):f^*(\mathscr{E})
+  \xrightarrow{\sim}\Omega_{X/S}^1.
+  \tag{16.4.9.1}
+  \label{IV.16.4.9.1}
+\]
+\end{corollary}
+
+\begin{corollary}[16.4.10]
+\label{IV.16.4.10}
+Si $S=\operatorname{Spec}(A)$, $\mathscr{E}=\mathcal{O}_S^m$, de modo que
+\[
+  X=\operatorname{Spec}(A[T_1,\ldots,T_m]),
+\]
+$\mathscr{P}_{X/S}^n$ se identifica canónicamente con el
+$\mathcal{O}_X$-álgebra correspondiente al $A[T_1,\ldots,T_m]$-álgebra cociente
+\[
+  A[T_1,\ldots,T_m,U_1,\ldots,U_m]/\mathfrak{K}^{n+1},
+\]
+donde las $U_i$ ($1\leq i\leq m$) son $m$ nuevas indeterminadas y
+$\mathfrak{K}$ es el ideal engendrado por $U_1,\ldots,U_m$.
+\end{corollary}
+
+Se recupera así, en particular, la estructura de $\Omega_{X/S}^1$ en este caso
+(0, 20.5.13).
+
+Obsérvese además que $d_{X/S}^n$ hace corresponder entonces a un polinomio
+$F(T_1,\ldots,T_m)$ la clase mód.\ $\mathfrak{K}^{n+1}$ de
+$F(T_1+U_1,\ldots,T_m+U_m)$, como resulta de la definición (16.4.7.1).
+
+\begin{proposition}[16.4.11]
+\label{IV.16.4.11}
+Sean $f:X\to S$ un morfismo, $g:S\to X$ una sección sobre $S$ de $X$,
+$S_g^{(n)}$ la $n$-ésima vecindad infinitesimal de $S$ para la inmersión $g$
+(16.1.2). Existe entonces un único isomorfismo de
+$\mathcal{O}_S$-álgebras
+\[
+  \varpi_n:g^*(\mathscr{P}_{X/S}^n)\longrightarrow
+  \mathcal{O}_{S_g^{(n)}}
+  \tag{16.4.11.1}
+  \label{IV.16.4.11.1}
+\]
+(para la estructura de $\mathcal{O}_S$-álgebra sobre
+$\mathcal{O}_{S_g^{(n)}}$ definida por $f$ (16.1.7)), que hace conmutativo el
+diagrama
+\[
+  \xymatrix{
+    \mathcal{O}_S=g^*(\mathcal{O}_X)
+      \ar[rr]^-{\lambda_n}\ar[dr]_-{g^*(d_{X/S}^n)}
+      &&\mathcal{O}_{S_g^{(n)}}\\
+    &g^*(\mathscr{P}_{X/S}^n)\ar[ur]_-{\varpi_n}
+  }
+  \tag{16.4.11.2}
+  \label{IV.16.4.11.2}
+\]
+(donde $\lambda_n$ es el homomorfismo estructural).
+\end{proposition}
+
+En virtud de (I, 5.3.7), donde se reemplazan $X$, $Y$, $S$ por $S$, $X$, $S$,
+respectivamente, y $f$ por $g$, los diagramas
+\[
+  \xymatrix@=3pc{
+    S\ar[r]^-g\ar[d]_-g&X\ar[d]^-{\Delta_f}
+      &S\ar[r]^-g\ar[d]_-g&X\ar[d]^-{\Delta_f}\\
+    X\ar[r]_{(g\circ f,1_X)_S}&X\times_S X
+      &X\ar[r]_{(1_X,g\circ f)_S}&X\times_S X
+  }
+  \tag{16.4.11.3}
+  \label{IV.16.4.11.3}
+\]
+\oldpage[IV-4]{22}
+identifican $S$ con el producto fibrado de los $(X\times_S X)$-preesquemas $X$ y $X$ para los
+morfismos $\Delta_f$ y $(g\circ f,1_X)_S$ (resp.\ $(1_X,g\circ f)_S$).
+Por otra parte, los diagramas
+\[
+  \xymatrix@=3pc{
+    X\ar[r]^{(g\circ f,1_X)_S}\ar[d]_-f&X\times_S X\ar[d]^-{p_1}
+      &X\ar[r]^{(1_X,g\circ f)_S}\ar[d]_-f&X\times_S X\ar[d]^-{p_2}\\
+    S\ar[r]_{g}&X&S\ar[r]_{g}&X
+  }
+  \tag{16.4.11.4}
+  \label{IV.16.4.11.4}
+\]
+identifican $X$ con el producto fibrado de los $X$-preesquemas $S$ y $X\times_S X$ para los
+morfismos $g$ y $p_1$ (resp.\ $p_2$) (caso particular de la fórmula
+de asociatividad (I, 3.3.9.1)). Puede decirse que $\Delta_f$, considerado como
+sección sobre $X$ de $X\times_S X$ (relativamente a $p_1$ o $p_2$), desempeña el papel
+de una \emph{sección universal} para las secciones sobre $S$ de $X$: cada una de estas
+secciones $g$ se deduce, en efecto, de ella por el \emph{cambio de base}
+$(g\circ f,1_X)_S:X\to X\times_S X$. La definición del homomorfismo
+$\varpi_n$ y el hecho de que sea biyectivo resultan, por tanto, de estas observaciones y de
+(16.2.3, (ii)) aplicado al primer diagrama (16.4.11.4). La conmutatividad del
+diagrama (16.4.11.2) resulta asimismo de (16.2.3, (ii)) aplicado esta vez al
+segundo diagrama (16.4.11.4). Para explicitar $\varpi_n$, basta considerar el
+caso en que $g$ es una inmersión \emph{cerrada}: en efecto, para todo $s\in S$, hay
+una vecindad abierta $W$ de $s$ en $S$ tal que $g(W)$ es cerrado en un
+abierto $U$ de $X$, y está claro que $g|W$ es una sección sobre $W$ del morfismo
+$U\cap f^{-1}(W)\to W$, restricción de $f$, y $g(W)$ es \emph{a fortiori}
+cerrado en $U\cap f^{-1}(W)$. Se puede, por tanto, suponer que $S$ es un
+subpreesquema cerrado de $X$ definido por un ideal cuasicoherente $\mathscr{K}$.
+Entonces las definiciones precedentes muestran que, si $W$ es un abierto de $S$,
+$t$ una sección de $\mathcal{O}_X$ sobre $f^{-1}(W)$,
+$\varpi_n(d^n t|W)$ es igual a la imagen canónica de $t$ en
+$\Gamma(W,(\mathcal{O}_X/\mathscr{K}^{n+1})|W)$. La unicidad de $\varpi_n$
+resulta, por tanto, de que la imagen de $\mathcal{O}_X$ por $d_{X/S}^n$ genera el
+$\mathcal{O}_X$-módulo $\mathscr{P}_{X/S}^n$ (16.3.8).
+
+\begin{corollary}[16.4.12]
+\label{IV.16.4.12}
+Sean $k$ un cuerpo, $X$ un $k$-preesquema, $x$ un punto de $X$ racional sobre
+$k$. Entonces $(\mathscr{P}_{X/k}^n)_x\otimes_{\mathcal{O}_x}k(x)$ es
+canónicamente isomorfo (como $k(x)$-álgebra aumentada) a
+$\mathcal{O}_x/\mathfrak{m}_x^{n+1}$.
+\end{corollary}
+
+Basta considerar la única sección sobre $k$, $g$, de $X$ tal que
+$g(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[16.4.13]
+\label{IV.16.4.13}
+Sean $f:X\to S$ un morfismo, $s$ un punto de $S$,
+$X_s=X\times_S\operatorname{Spec}(k(s))$ la fibra de $f$ en $s$. Si
+$x\in X_s$ es racional sobre $k(s)$,
+$(\mathscr{P}_{X/S}^n)_x\otimes_{\mathcal{O}_s}k(s)$ es canónicamente
+isomorfo a $\mathcal{O}_{X_s,x}/\mathfrak{m}'_x{}^{\,n+1}$, donde
+$\mathfrak{m}'_x$ es el ideal maximal de $\mathcal{O}_{X_s,x}$; más
+precisamente, este isomorfismo hace corresponder a $(d^n t)_x\otimes1$ (donde $t$ es
+una sección de $\mathcal{O}_X$ sobre una vecindad abierta de $x$ en
+$X$) la clase de $t_x\otimes1$ módulo $\mathfrak{m}'_x{}^{\,n+1}$.
+\end{corollary}
+
+Esto resulta de (16.4.5) y (16.4.12).
+
+Los corolarios precedentes justifican la terminología de «haz de partes
+principales de orden $n$».
+
+\begin{proposition}[16.4.14]
+\label{IV.16.4.14}
+Sea $\rho:A\to B$ un homomorfismo de anillos, $S$ un subconjunto
+multiplicativamente estable de $B$. Entonces los homomorfismos canónicos
+\[
+  S^{-1}P_{B/A}^n\longrightarrow P_{S^{-1}B/A}^n
+  \tag{16.4.14.1}
+  \label{IV.16.4.14.1}
+\]
+\oldpage[IV-4]{23}
+deducidos de los homomorfismos canónicos
+$P_{B/A}^n\to P_{S^{-1}B/A}^n$ (16.4.4), forman un sistema proyectivo y son
+biyectivos.
+\end{proposition}
+
+Basta observar que
+\[
+  S^{-1}((B\otimes_A B)/\mathfrak{I}^{n+1})
+  =S^{-1}(B\otimes_A B)/(S^{-1}\mathfrak{I})^{n+1}
+\]
+por planitud, y que
+$S^{-1}(B\otimes_A B)=(S^{-1}B)\otimes_A(S^{-1}B)$ (I, 1.3.4).
+
+\begin{corollary}[16.4.15]
+\label{IV.16.4.15}
+Con las notaciones de (16.4.14), sea $R$ un subconjunto multiplicativo de
+$A$ tal que $\rho(R)\subset S$. Entonces se tienen isomorfismos canónicos
+\[
+  S^{-1}P_{B/A}^n\xrightarrow{\sim}P_{S^{-1}B/R^{-1}A}^n
+  \tag{16.4.15.1}
+  \label{IV.16.4.15.1}
+\]
+que forman un sistema proyectivo.
+\end{corollary}
+
+Basta, evidentemente, definir isomorfismos canónicos
+\[
+  P_{S^{-1}B/A}^n\xrightarrow{\sim}P_{S^{-1}B/R^{-1}A}^n,
+  \tag{16.4.15.2}
+  \label{IV.16.4.15.2}
+\]
+es decir, se reduce al caso en que $\rho(R)$ está formado por elementos
+\emph{invertibles} de $B$. Pero entonces el isomorfismo (16.4.15.2) se
+deduce simplemente del isomorfismo canónico
+$B\otimes_A B\to B\otimes_{R^{-1}A}B$ al pasar a los cocientes
+(0$_{\rm I}$, 1.5.3).
+
+\begin{corollary}[16.4.16]
+\label{IV.16.4.16}
+Sean $f:X\to S$ un morfismo de preesquemas, $x$ un punto de $X$,
+$s=f(x)$. Entonces se tienen isomorfismos canónicos
+\[
+  (\mathscr{P}_{X/S}^n)_x\xrightarrow{\sim}
+  P_{\mathcal{O}_x/\mathcal{O}_s}^n
+  \tag{16.4.16.1}
+  \label{IV.16.4.16.1}
+\]
+que forman un sistema proyectivo.
+\end{corollary}
+
+Se deducen de aquí isomorfismos para los graduados asociados y, en particular,
+un isomorfismo canónico
+\[
+  (\Omega_{X/S}^1)_x\xrightarrow{\sim}
+  \Omega_{\mathcal{O}_x/\mathcal{O}_s}^1.
+  \tag{16.4.16.2}
+  \label{IV.16.4.16.2}
+\]
+
+\begin{corollary}[16.4.17]
+\label{IV.16.4.17}
+Sean $k$ un cuerpo, $K$ el cuerpo de fracciones racionales
+$k(T_1,\ldots,T_r)$. Entonces, para todo entero $n$, el homomorfismo de
+$K[U_1,\ldots,U_r]$ ($U_i$ indeterminadas) en $P_{K/k}^n$ que hace corresponder a cada $U_i$
+$d^nT_i-T_i\cdot1$ es sobreyectivo y define un isomorfismo
+del cociente $K[U_1,\ldots,U_r]/\mathfrak{m}^{n+1}$ (donde $\mathfrak{m}$ es
+el ideal engendrado por las $U_i$) sobre $P_{K/k}^n$.
+\end{corollary}
+
+Esto resulta de (16.4.8), (16.4.10) y (16.4.14), donde se toma $A=k$,
+$B=k[T_1,\ldots,T_r]$ y $S=B-\{0\}$.
+
+Se recupera así el hecho de que los $dT_i$ forman una base del $K$-espacio
+vectorial $\Omega_{K/k}^1$ (0, 20.5.10).
+
+\begin{proposition}[16.4.18]
+\label{IV.16.4.18}
+Sean $f:X\to Y$, $g:Y\to Z$ dos morfismos de preesquemas; consideremos
+los homomorfismos canónicos de $\mathcal{O}_X$-álgebras aumentadas
+(16.4.3.3)
+\[
+  g_{X/Y/Z}:\mathscr{P}_{X/Z}^n\longrightarrow\mathscr{P}_{X/Y}^n
+  \tag{16.4.18.1}
+  \label{IV.16.4.18.1}
+\]
+\[
+  f_{X/Y/Z}:f^*(\mathscr{P}_{Y/Z}^n)
+  \longrightarrow\mathscr{P}_{X/Z}^n.
+  \tag{16.4.18.2}
+  \label{IV.16.4.18.2}
+\]
+Entonces $g_{X/Y/Z}$ es sobreyectivo, y su núcleo es el ideal engendrado por la imagen
+por $f_{X/Y/Z}$ del ideal de aumentación de
+$f^*(\mathscr{P}_{Y/Z}^n)$.
+\end{proposition}
+
+\oldpage[IV-4]{24}
+Observemos primero que $g_{X/Y/Z}$ corresponde al caso en que, en (16.4.3.3), se toma
+$X'=X$, $S'=Y$, $S=Z$ y $u=1_X$, y $f_{X/Y/Z}$ al caso en que se reemplazan
+$X'$, $X$, $S$, $S'$ por $X$, $Y$, $Z$, $Z$, respectivamente, y $u$, $f$ por
+$f$, $g$, respectivamente.
+
+Se tiene un diagrama conmutativo (I, 5.3.5)
+\[
+  \xymatrix{
+    X\ar[r]^-{\Delta_f}\ar[dr]_-f
+      &X\times_Y X\ar[d]^-p\ar[r]^-j
+      &X\times_Z X\ar[d]^-{f\times_Z f}\\
+    &Y\ar[r]_-{\Delta_g}&Y\times_Z Y
+  }
+  \tag{16.4.18.3}
+  \label{IV.16.4.18.3}
+\]
+donde $j=(1_X,1_X)_Z$ es una inmersión, $j\circ\Delta_f=\Delta_{g\circ f}$ y
+$p$ es el morfismo estructural. Como basta considerar el caso en que $X$, $Y$,
+$Z$ son afines, se puede suponer que las inmersiones $\Delta_f$, $\Delta_g$ y
+$j$ son cerradas, de modo que $\mathcal{O}_X$ y
+$\mathcal{O}_{X\times_Y X}$ se identifican, respectivamente, con
+$\mathcal{O}_{X\times_Z X}/\mathscr{J}$ y
+$\mathcal{O}_{X\times_Z X}/\mathscr{L}$, donde
+$\mathscr{J}\supset\mathscr{L}$ son los dos ideales cuasicoherentes
+correspondientes, respectivamente, a las inmersiones $\Delta_{g\circ f}$ y $j$. El
+$\mathcal{O}_X$-álgebra $\mathscr{P}_{X/Z}^n$ se identifica, por tanto, con
+$\mathcal{O}_{X\times_Z X}/\mathscr{J}^{n+1}$, y
+$\mathscr{P}_{X/Y}^n$ se identifica con
+$\mathcal{O}_{X\times_Y X}/(\mathscr{J}/\mathscr{L})^{n+1}$, es decir, con
+$\mathcal{O}_{X\times_Z X}/(\mathscr{J}^{n+1}+\mathscr{L})$, y por consiguiente con el
+cociente de $\mathscr{P}_{X/Z}^n$ por
+$(\mathscr{J}^{n+1}+\mathscr{L})/\mathscr{J}^{n+1}$. Pero se sabe
+(\emph{loc. cit.}) que $p$ y $j$ hacen de $X\times_Y X$ el producto fibrado de los
+$(Y\times_Z Y)$-preesquemas $Y$ y $X\times_Z X$; por tanto, si $\mathcal{O}_Y$ se
+identifica con $\mathcal{O}_{Y\times_Z Y}/\mathscr{K}$, donde $\mathscr{K}$ es
+el ideal correspondiente a $\Delta_g$, $\mathscr{L}$ es igual a
+$(f\times_Z f)^*(\mathscr{K})\cdot\mathcal{O}_{X\times_Z X}$ (I, 4.4.5).
+Como $(\mathscr{J}^{n+1}+\mathscr{L})/\mathscr{J}^{n+1}$ es el ideal de
+$\mathscr{P}_{X/Z}^n$ engendrado por la imagen de $\mathscr{L}$, se deduce la
+proposición.
+
+\begin{corollary}[16.4.19]
+\label{IV.16.4.19}
+Con las notaciones de (16.4.18), se tiene una sucesión exacta de
+$\mathcal{O}_X$-módulos cuasicoherentes
+\[
+  \xymatrix{
+    f^*(\Omega_{Y/Z}^1)\ar[r]^-{f_{X/Y/Z}}&
+    \Omega_{X/Z}^1\ar[r]^-{g_{X/Y/Z}}&
+    \Omega_{X/Y}^1\ar[r]&0.
+  }
+  \tag{16.4.19.1}
+  \label{IV.16.4.19.1}
+\]
+\end{corollary}
+
+Cuando $X$, $Y$, $Z$ son afines, se recupera así la sucesión exacta
+(0, 20.5.7.1).
+
+\begin{proposition}[16.4.20]
+\label{IV.16.4.20}
+Sean $f:Y\to Z$ un morfismo, $j:X\to Y$ una inmersión cerrada,
+$\mathscr{K}$ el ideal cuasicoherente de $\mathcal{O}_Y$ correspondiente a $j$.
+Entonces se tiene
+$\mathscr{P}_{X/Y}^n=\mathcal{O}_X=\mathcal{O}_Y/\mathscr{K}$,
+el homomorfismo canónico
+$j_{X/Y/Z}:j^*(\mathscr{P}_{Y/Z}^n)\to\mathscr{P}_{X/Z}^n$ es sobreyectivo, y
+su núcleo es el ideal de $j^*(\mathscr{P}_{Y/Z}^n)$ engendrado por
+$j^*(\mathcal{O}_Y\cdot d_{Y/Z}^n(\mathscr{K}))$ (debe observarse que
+$d_{Y/Z}^n(\mathscr{K})$ es un subhaz de grupos conmutativos de
+$\mathscr{P}_{Y/Z}^n$, pero no un $\mathcal{O}_Y$-módulo en general).
+\end{proposition}
+
+Se sabe (I, 5.3.8) que la diagonal
+$\Delta_j:X\to X\times_Y X$ es un isomorfismo, de donde se sigue la primera afirmación.
+Si $\varpi_1$ y $\varpi_2$ son los dos homomorfismos de álgebras
+$\mathcal{O}_Y\to\mathscr{P}_{Y/Z}^n$ correspondientes, respectivamente, a las dos
+proyecciones canónicas $p_1$, $p_2$ de $Y\times_Z Y$ sobre $Y$, recordemos que,
+por definición (16.3.5 y 16.3.6), $\varpi_1$ es el homomorfismo estructural del
+$\mathcal{O}_Y$-álgebra $\mathscr{P}_{Y/Z}^n$ y
+$\varpi_2=d_{Y/Z}^n$. El $\mathcal{O}_X$-álgebra
+$j^*(\mathscr{P}_{Y/Z}^n)$ se identifica, por tanto, con
+$\mathscr{P}_{Y/Z}^n/\varpi_1(\mathscr{K})\mathscr{P}_{Y/Z}^n$ y su cociente
+por el ideal engendrado por $j^*(d_{Y/Z}^n(\mathscr{K}))$ con
+\[
+  \mathscr{P}_{Y/Z}^n/
+  (\varpi_1(\mathscr{K})+\varpi_2(\mathscr{K}))\mathscr{P}_{Y/Z}^n.
+\]
+Observemos ahora que se tiene un diagrama conmutativo
+\oldpage[IV-4]{25}
+\[
+  \xymatrix{
+    Y\ar[d]_-{\Delta_f}&X\ar[l]_-j\ar[d]^-{\Delta_{f\circ j}}\\
+    Y\times_Z Y&X\times_Z X\ar[l]^-{j\times_Z j}
+  }
+\]
+que identifica $X$ con el producto fibrado de los $(Y\times_Z Y)$-preesquemas $Y$ y
+$X\times_Z X$ (I, 5.3.7). Como $j\times_Z j$ es una inmersión, se deduce
+de esta observación y de (16.2.2) que, si $\Delta_{Y/Z}^n$ y
+$\Delta_{X/Z}^n$ denotan las vecindades infinitesimales de orden $n$ de $Y$
+y $X$ para las inmersiones canónicas $\Delta_f$ y $\Delta_{f\circ j}$,
+respectivamente, se tiene un diagrama
+\[
+  \xymatrix{
+    \Delta_{Y/Z}^n\ar[d]&\Delta_{X/Z}^n\ar[l]\ar[d]\\
+    Y\times_Z Y&X\times_Z X\ar[l]^-{j\times_Z j}
+  }
+\]
+que hace de $\Delta_{X/Z}^n$ el producto fibrado de los $(Y\times_Z Y)$-preesquemas
+$\Delta_{Y/Z}^n$ y $X\times_Z X$. También puede decirse que
+$\mathscr{P}_{X/Z}^n$ se identifica con el haz de anillos
+$\mathscr{P}_{Y/Z}^n\otimes_{\mathcal{O}_{Y\times_Z Y}}
+\mathcal{O}_{X\times_Z X}$. Pero se ve inmediatamente (por ejemplo, reduciéndose
+al caso afín) que
+\[
+  \mathcal{O}_{X\times_Z X}=
+  \mathcal{O}_{Y\times_Z Y}/
+  (p_1^*(\mathscr{K})+p_2^*(\mathscr{K}))
+  \mathcal{O}_{Y\times_Z Y}.
+\]
+Por tanto, $\mathscr{P}_{X/Z}^n$ se identifica con el cociente de
+$\mathscr{P}_{Y/Z}^n$ por el ideal engendrado por la imagen en
+$\mathscr{P}_{Y/Z}^n$ de $p_1^*(\mathscr{K})+p_2^*(\mathscr{K})$. Pero, por
+definición, este ideal también está engendrado por
+$\varpi_1(\mathscr{K})+\varpi_2(\mathscr{K})$. Q.E.D.
+
+\begin{corollary}[16.4.21]
+\label{IV.16.4.21}
+Sean $f:Y\to Z$ un morfismo, $j:X\to Y$ una inmersión. Se tiene una sucesión
+exacta de $\mathcal{O}_X$-módulos cuasicoherentes
+\[
+  \xymatrix{
+    \mathscr{N}_{X/Y}\ar[r]&j^*(\Omega_{Y/Z}^1)\ar[r]&
+    \Omega_{X/Z}^1\ar[r]&0.
+  }
+  \tag{16.4.21.1}
+  \label{IV.16.4.21.1}
+\]
+\end{corollary}
+
+Cuando $X$, $Y$ y $Z$ son afines, se recupera así la sucesión exacta
+(0, 20.5.12.1).
+
+\begin{corollary}[16.4.22]
+\label{IV.16.4.22}
+Si $f:X\to S$ es un morfismo localmente de presentación finita,
+$\mathscr{P}_{X/S}^n$ y $\Omega_{X/S}^1$ son
+$\mathcal{O}_X$-módulos cuasicoherentes de presentación finita.
+\end{corollary}
+
+Se reduce inmediatamente al caso en que $S=\operatorname{Spec}(A)$ es afín,
+$X=\operatorname{Spec}(B)$, donde
+$B=A[T_1,\ldots,T_r]/\mathfrak{K}$, siendo $\mathfrak{K}$ un ideal de tipo
+finito de $C=A[T_1,\ldots,T_r]$. Se aplica entonces (16.4.20) con $Z=S$,
+$Y=\operatorname{Spec}(C)$ y $\mathscr{K}=\widetilde{\mathfrak{K}}$. Entonces
+$j^*(\mathscr{P}_{Y/Z}^n)$ es un $\mathcal{O}_X$-módulo libre de rango finito
+(16.4.10), y la hipótesis sobre $\mathfrak{K}$ implica que
+$j^*(\mathcal{O}_Y\cdot d_{Y/Z}^n(\mathscr{K}))$ genera un
+$\mathcal{O}_X$-módulo cuasicoherente de tipo finito; de donde se sigue la conclusión.
+
+\begin{proposition}[16.4.23]
+\label{IV.16.4.23}
+Sean $X$, $Y$ dos $S$-preesquemas, $Z=X\times_S Y$ su producto fibrado,
+$p:X\times_S Y\to X$ y $q:X\times_S Y\to Y$ las proyecciones canónicas.
+Entonces el homomorfismo canónico
+\[
+  p_{Z/X/S}\oplus q_{Z/Y/S}:
+  p^*(\Omega_{X/S}^1)\oplus q^*(\Omega_{Y/S}^1)
+  \longrightarrow\Omega_{(X\times_S Y)/S}^1
+  \tag{16.4.23.1}
+  \label{IV.16.4.23.1}
+\]
+es biyectivo.
+\end{proposition}
+
+\oldpage[IV-4]{26}
+El diagrama conmutativo
+\[
+  \xymatrix{
+    Y\ar[d]_-g&X\times_S Y\ar[l]_-q\ar[d]_-h&
+      X\times_S Y\ar[l]_-{\operatorname{id}}\ar[d]^-p\\
+    S&S\ar[l]^-{\operatorname{id}}&X\ar[l]^-f
+  }
+\]
+da una factorización del \emph{isomorfismo} canónico $P^n(p)$ (16.4.5)
+\[
+  p^*(\mathscr{P}_{X/S}^n)\longrightarrow
+  \mathscr{P}_{Z/S}^n\longrightarrow\mathscr{P}_{Z/Y}^n
+\]
+y, del mismo modo, intercambiando los papeles de $X$ y $Y$, se tiene una factorización
+del \emph{isomorfismo} $P^n(q)$
+\[
+  q^*(\mathscr{P}_{Y/S}^n)\longrightarrow
+  \mathscr{P}_{Z/S}^n\longrightarrow\mathscr{P}_{Z/X}^n.
+\]
+Esto prueba que el homomorfismo canónico (16.4.18.1)
+\[
+  p_{Z/X/S}:p^*(\mathscr{P}_{X/S}^n)\longrightarrow\mathscr{P}_{Z/S}^n
+  \quad\text{(resp.\
+  $q_{Z/Y/S}:q^*(\mathscr{P}_{Y/S}^n)\to\mathscr{P}_{Z/S}^n$)}
+\]
+es \emph{inyectivo}, y que el núcleo del homomorfismo canónico sobreyectivo
+(16.4.18.2)
+\[
+  \mathscr{P}_{Z/S}^n\longrightarrow\mathscr{P}_{Z/Y}^n
+  \quad\text{(resp.\
+  $\mathscr{P}_{Z/S}^n\to\mathscr{P}_{Z/X}^n$)}
+\]
+es suplementario de la imagen de $p_{Z/X/S}$ (resp.\ $q_{Z/Y/S}$). Pero,
+por otra parte, este núcleo está, en virtud de (16.4.18), engendrado por la imagen por
+$q_{Z/Y/S}$ (resp.\ $p_{Z/X/S}$) del ideal de aumentación de
+$q^*(\mathscr{P}_{Y/S}^n)$ (resp.\ $p^*(\mathscr{P}_{X/S}^n)$). Se concluye
+la proposición considerando el caso $n=1$.
+
+Se generaliza inmediatamente (16.4.23) al caso de un producto fibrado de un número finito
+arbitrario de $S$-preesquemas.
+
+\begin{remarks}[16.4.24]
+\label{IV.16.4.24}
+\begin{enumerate}
+\item[(i)] Veremos (17.2.3) que, cuando el morfismo $f:X\to Y$ de
+(16.4.18) es \emph{liso}, el homomorfismo $f_{X/Y/Z}$ de (16.4.19.1) es
+localmente \emph{invertible por la izquierda} y, en particular, inyectivo. Del mismo modo,
+cuando el morfismo $f\circ j:X\to Z$ de (16.4.20) es \emph{liso},
+el homomorfismo de la izquierda en (16.4.21.2) es localmente
+\emph{invertible por la izquierda} y \emph{a fortiori} inyectivo (17.2.5). En el cap. V,
+daremos también una variante, para módulos sobre
+preesquemas, de los «módulos de imperfección» estudiados en (0, 20.6), y de las sucesiones
+exactas en las que figuran.
+
+\item[(ii)] Sean $X$ un espacio topológico, $\mathscr{A}$ un haz
+de anillos sobre $X$ y $\mathscr{B}$ una $\mathscr{A}$-álgebra sobre $X$. Entonces está
+claro que
+\[
+  U\longmapsto
+  P_{\Gamma(U,\mathscr{B})/\Gamma(U,\mathscr{A})}^n
+  \qquad (U\text{ abierto en }X)
+\]
+es un prehaz de $\Gamma(U,\mathscr{B})$-álgebras aumentadas; por tanto, el
+haz asociado $\mathscr{P}_{\mathscr{B}/\mathscr{A}}^n$ es una
+$\mathscr{B}$-álgebra aumentada. En el caso particular en que $X$ es un
+preesquema, $f=(\psi,\theta):X\to S$ un morfismo de preesquemas, resulta
+fácilmente de (16.4.16) y de la exactitud del funtor $\varinjlim$ que
+$\mathscr{P}_{X/S}^n$ es canónicamente isomorfo a
+$\mathscr{P}_{\mathcal{O}_X/\psi^*(\mathcal{O}_S)}^n$. De ello se sigue que el
+formalismo desarrollado en el presente parágrafo podría considerarse como
+un
+\oldpage[IV-4]{27}
+caso particular de un formalismo diferencial para espacios anillados dotados
+de un haz de álgebras sobre el haz estructural. Sin embargo, no hemos
+querido partir de este punto de vista, menos intuitivo y menos cómodo para las
+aplicaciones. Parece, además, que, para las diversas especies de
+«variedades», la construcción «global» de los $\mathscr{P}^n$, análoga a la que
+utilizamos aquí, está también mejor adaptada a las aplicaciones.
+\end{enumerate}
+\end{remarks}

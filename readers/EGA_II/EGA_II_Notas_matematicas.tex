@@ -1,0 +1,556 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noquoting,es-noshorthands]{babel}
+\usepackage{lmodern,amsmath,amssymb,geometry,hyperref}
+\geometry{margin=27mm}
+\setlength{\emergencystretch}{3em}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\title{Notas matemáticas sobre EGA II}
+\author{}
+\date{}
+\begin{document}
+
+% BEGIN RIGHTS AND AI AUTHORSHIP NOTICE
+\begingroup
+\small
+\noindent\textbf{Derechos, disponibilidad y autoría}
+
+Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Este proyecto no dedica esas obras o contribuciones al dominio público ni concede una licencia sobre ellas. Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
+
+Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en \href{https://www.numdam.org/}{NUMDAM}. Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
+
+Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede \href{https://github.com/KokunoYumeto/ega-fga-es/issues}{abrir una incidencia en GitHub}. El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
+
+Estas notas matemáticas y su composición están producidas por IA. El trabajo documentado incluye OpenAI Codex, GPT-6 Astra, esfuerzo Ultra. Se conserva la autoría de las obras originales y de las contribuciones citadas; no se atribuyen a la IA. El responsable de la publicación no tradujo el texto.
+\par
+\endgroup
+\clearpage
+% END RIGHTS AND AI AUTHORSHIP NOTICE
+
+\maketitle
+Estas notas acompañan a la edición española con enmiendas de
+A.~Grothendieck, con la colaboración de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique II},
+\emph{Publications Mathématiques de l'IHÉS} \textbf{8} (1961),
+pp.~5--222. Los números de resultados sin indicación de volumen
+son los de EGA II. La traducción según el impreso y la edición
+con enmiendas son textos distintos. Las precisiones matemáticas
+de esta última se exponen aquí por separado; no forman parte
+del texto de los autores.
+
+La fuente primaria es la edición francesa conservada en
+\href{https://numdam.org/item/PMIHES_1961__8__5_0/}{NUMDAM}.
+La errata de (3.3.2) citada aquí pertenece a EGA IV-4,
+\emph{Publications Mathématiques de l'IHÉS} \textbf{32} (1967),
+p.~345. Los referencias a EGA I y EGA III conservan la numeración
+de esas obras.
+
+La traducción española utiliza una referencia inglesa y una
+estructura TeX derivadas del proyecto humano
+\href{https://github.com/ryankeleti/ega/tree/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971}{ryankeleti/ega, versión 3d7afe28}.
+Sus colaboradores nombrados son Mateo Carmona, Tim Holzschuh,
+Tim Hosgood, Ryan Keleti, Thiago Solovera \& Nery y Wayne Yang;
+los \href{https://github.com/ryankeleti/ega/blob/3d7afe28c99d1887ccdb85acf2ca1afd93fb1971/README.md}{créditos por sección}
+precisan sus contribuciones. La traducción inglesa heredada
+conserva esa autoría. Estas notas y la traducción española no
+se atribuyen a esos colaboradores. La atribución no establece
+autorización ni aval.
+
+
+\section{Abiertos principales y secciones sobre una base afín: 1.2.7 y 1.3.7}
+Si $S=\Spec(A)$, un abierto principal $D(\lambda)$ se define mediante
+un elemento $\lambda\in A$. Para un homomorfismo $\rho:A\to B$,
+la expresión $\rho(\lambda)$ pertenece entonces a $B$ y
+$f^{-1}(D(\lambda))=D(\rho(\lambda))$. En la demostración de (1.2.7),
+el impreso dice $\lambda\in S$; el anillo requerido es $A$.
+En (1.3.7), la identidad afín es
+$\Gamma(S,\widetilde B)=B$. La letra $U$ que aparece en el impreso
+no designa allí un abierto previamente fijado.
+
+\section{Finitud del módulo y del álgebra: 1.4.5}
+Las hipótesis de (1.4.3) permiten una $\mathcal O_S$-álgebra
+cuasi-coherente arbitraria. Sobre $S=\Spec(A)$ corresponde a una
+$A$-álgebra $B$, sin hipótesis de tipo finito sobre $A$.
+La equivalencia entre la finitud de $M$ como $B$-módulo y la finitud
+de su haz asociado sobre $\Spec(B)$ es I, (1.3.13).
+Por ejemplo, $B=A[x_1,x_2,\ldots]$ no tiene por qué ser de tipo finito
+sobre $A$, y esa equivalencia sigue siendo válida. La afirmación
+adicional de finitud de $B$ y la referencia a I, (9.6.2) en el impreso
+no se deducen de las hipótesis ni son necesarias para este argumento.
+
+\section{Propiedad universal del álgebra simétrica: 1.7.4}
+La propiedad universal de $\operatorname{Sym}_{\mathcal A}(\mathcal E)$
+se formula en la categoría de $\mathcal A$-álgebras conmutativas.
+En efecto, un homomorfismo de módulos $u:\mathcal E\to\mathcal B$
+se prolonga al álgebra tensorial. Para descender a la simétrica debe
+anular las relaciones $x\otimes y-y\otimes x$, es decir,
+$u(x)u(y)=u(y)u(x)$. La conmutatividad de $\mathcal B$ asegura esta
+condición para todo $u$. Sin ella, dos matrices que no conmuten dan
+un homomorfismo desde un módulo libre de rango dos que no admite
+esa prolongación. La calificación «conmutativa» explicita la categoría
+en que vale la afirmación.
+
+\section{Grados altos y un ideal primo homogéneo: 2.3.2}
+Sean $x\in\mathfrak J\cap S_m$ y $f\in S_d\setminus\mathfrak p$,
+con $d>0$. La pertenencia $f^rx\in\mathfrak J\cap S_{m+rd}$ vale
+para todo $r\geq0$, porque $\mathfrak J$ es un ideal graduado.
+La condición que requiere $r$ suficientemente grande es $m+rd\geq n$.
+La hipótesis sobre los componentes de grado al menos $n$ da entonces
+$f^rx\in\mathfrak p$. Como $\mathfrak p$ es primo y $f\notin\mathfrak p$,
+se obtiene $x\in\mathfrak p$; este es el criterio de (2.1.8).
+La frase impresa sobre la pertenencia eventual al ideal es verdadera,
+pero no separa esa pertenencia de la cota de grado que se utiliza.
+
+\section{Componentes de un homomorfismo graduado: 2.6.4 y 8.14.7}
+Si $f\in S_d$ y $\alpha$ es un homomorfismo de grado cero, entonces
+$f^n\in S_{nd}$ y $\alpha(f^n)=\alpha_{nd}(f^n)$.
+En (2.6.4) las tres componentes aplicadas a las potencias son,
+respectivamente, $\alpha_{nd}$, $\alpha_{kd}$ y $\alpha_{nd}$.
+En las dos aplicaciones a $f^n$ de (8.14.7) la componente es
+$\alpha_{nd}$. Estas graduaciones son también las que permiten
+dividir la sección por la potencia invertible sobre $D_+(f)$.
+El subíndice $d$ impreso en esos lugares no corresponde al grado
+del argumento cuando el exponente varía.
+
+\section{Cartas afines de Proj y componente de grado cero: 3.1.7 y 3.1.8}
+En (3.1.7), la identificación del álgebra de la carta $X_f$ con
+$\mathcal A$ proporciona la identificación de esquemas mediante
+(3.1.4), que describe esa carta como un espectro relativo.
+En (3.1.8)(ii), la graduación con componente cero $\mathcal O_Y$
+y componentes positivos $\mathcal S_n$ se escribe
+\[
+\mathcal S'=\mathcal O_Y\oplus\bigoplus_{n>0}\mathcal S_n.
+\]
+Esto expresa la sustitución de la componente de grado cero utilizada
+en la comparación de Proj. La suma con $n\geq0$ que figura en el
+impreso incluye además $\mathcal S_0$. No se afirma por ello que
+una construcción de álgebra unitaria con esa suma sea imposible;
+la lectura indicada precisa cuál es la componente cero de la
+construcción considerada.
+
+\section{Homomorfismos de haces asociados: 3.2.6}
+Las aplicaciones $\lambda$ y $\mu$ son los homomorfismos canónicos
+definidos en (2.5.11.2) y (2.5.12.2). Las hipótesis adicionales de
+(3.2.6) son las que permiten afirmar que son isomorfismos.
+No puede llamárselas isomorfismos antes de imponer esas hipótesis.
+Por ejemplo, para $S=k[t]$ con $\deg t=2$, el haz asociado a $S(1)$
+es cero: su localización homogénea tiene componente de grado cero
+nula. En cambio, el haz asociado a $S(2)$ es no nulo sobre
+$\Proj(S)=\Spec(k)$. Por tanto, la aplicación de producto desde
+$\widetilde{S(1)}\otimes\widetilde{S(1)}$ a
+$\widetilde{S(2)}$ no es un isomorfismo.
+
+\section{Graduación y localización de un módulo: 3.3.2}
+El homomorfismo graduado de (3.3.2.5) tiene por objeto de llegada
+$\mathcal M(n)$; la graduación de ese objeto procede de $\mathcal M$.
+Esta última lectura figura también en la primera errata para EGA II
+de EGA IV-4, p.~345. Sobre una base afín, al localizar se obtiene
+\[
+M_n\otimes_A S_{(f)}\longrightarrow (M(n))_{(f)},
+\qquad x\otimes1\longmapsto x/1.
+\]
+El objeto $(S(n))_{(f)}$ que aparece en la última línea impresa no es
+el módulo localizado de esa aplicación. La graduación y el objeto de
+llegada son dos aspectos distintos de la misma construcción.
+
+\section{Denominadores en la generación relativa: 3.4.7}
+Para un haz cuasi-coherente sobre $Y=\Spec(A)$, una sección sobre
+$D(f)$ se expresa como $s_i/f^n$. Para una familia finita se puede
+elegir un mismo exponente $n>0$. Tras el pullback, con $g=\theta(f)$,
+se tiene $t_i=s_i g^{-n}$ sobre $p^{-1}(D(f))$.
+Así, la igualdad $s|W=\sum_i a_i(t_i|W)$ se convierte en
+$s|W=\sum_i b_i(s_i|W)$ con $b_i=a_i(g|W)^{-n}$.
+El signo positivo en $s_i g^n$ del impreso no es compatible con
+esa fórmula para $b_i$. Por ejemplo, en $k[t,t^{-1}]$, con $n=1$
+y $a_i=s_i=1$, los dos signos dan respectivamente $t$ y $t^{-1}$.
+
+\section{Dominio del morfismo de Proj: 3.6.2 y 3.6.4}
+Un homomorfismo graduado $\varphi:\mathcal S\to\mathcal S'$
+induce un morfismo cuyo dominio de definición $G(\varphi)$ es un
+abierto de $\Proj(\mathcal S')$. Cuando $\varphi$ es sobreyectivo,
+$G(\varphi)=\Proj(\mathcal S')$ y el morfismo hacia
+$\Proj(\mathcal S)$ es una inmersión cerrada. Por eso, en (3.6.2)(i),
+el dominio completo es $\Proj(\mathcal S')$, no $X=\Proj(\mathcal S)$.
+El resultado que se aplica en (3.6.4) es precisamente (3.6.2)(i);
+(3.6.1) es la definición precedente y no tiene un apartado (i).
+
+\section{Dominios locales y secciones que trivializan: 3.8.2 y 3.8.5}
+En (3.8.2), $V_\alpha=r^{-1}(D_+(s_\alpha))$ es el abierto sobre
+el que se restringe $r$ para obtener el morfismo a $D_+(s_\alpha)$.
+La mención a $U_\alpha$ en esa restricción no corresponde al abierto
+definido en la frase. En (3.8.5), para cada sección $f_{ij}$ y cada
+$x\in X_{f_{ij}}$, es la sección $f_{ij}|V$ la que constituye una
+base local del haz invertible sobre un entorno $V$ de $x$.
+Los índices vinculan la trivialización con la sección de la familia
+finita que se está considerando.
+
+\section{Extensión de escala en la construcción proyectiva: 4.2.1}
+En la carta afín de (4.2.1), el objeto de llegada es
+$L_r=(S(1))_{(f)}\otimes_{S_{(f)}}B_{[\omega]}$.
+La aplicación $E\otimes_A B\to L_r$ viene dada por
+\[
+x\otimes1\longmapsto (x/1)\otimes1
+                 =(f/1)\otimes\omega(x/f).
+\]
+La igualdad usa el balanceo del producto tensorial sobre $S_{(f)}$.
+En particular, el segundo factor del primer tensor es $1\in B$;
+el símbolo $f$ impreso en esa posición no expresa esa extensión
+de escala.
+
+\section{Haces invertibles en un fibrado proyectivo: 4.2.7}
+En la fórmula
+$\mathcal L\simeq p^*\mathcal L'\otimes\mathcal O_{\mathbf P(\mathcal E)}(m)$,
+la unicidad del entero $m$ requiere fibras proyectivas de dimensión
+positiva y una base no vacía. Se consideran, pues, $Y$ no vacío,
+conexo y localmente noetheriano y $\mathcal E$ localmente libre de
+rango al menos dos. En una fibra, el grado del haz invertible fija
+$m$; la conexidad asegura que ese entero localmente constante es
+constante. La unicidad de $\mathcal L'$ se deduce de
+$p_*\mathcal O_{\mathbf P(\mathcal E)}=\mathcal O_Y$ y la fórmula
+de proyección, una vez fijado $m$.
+
+En rango uno, $\mathbf P(\mathcal E)\simeq Y$ y
+$\mathcal O(1)\simeq p^*\mathcal E$. Para cada entero $m$ se puede
+absorber $\mathcal E^{\otimes m}$ en $\mathcal L'$; por ello $m$
+no es único. Sobre la base vacía tampoco se distingue ningún entero.
+
+El cálculo de imágenes directas de III, (2.1.15), junto con la
+fórmula de proyección de 0, (5.4.10), da
+\[
+p_*\mathcal L=0\quad(m<0),\qquad
+p_*\mathcal L\simeq\mathcal L'\otimes
+                \operatorname{Sym}^m(\mathcal E)\quad(m\geq0).
+\]
+El haz al que se aplica $p_*$ es $\mathcal L$, no
+$\mathcal L^{\otimes m}$: el entero $m$ ya es el exponente de
+la torsión en su descomposición. Para describir un morfismo
+$\mathbf P(\mathcal E)\to\mathbf P(\mathcal F)$, la aplicación
+adyunta $\psi^\sharp:p^*\mathcal F\to\mathcal L$ es un
+homomorfismo de $\mathcal O_{\mathbf P(\mathcal E)}$-módulos.
+Estas precisiones fijan tanto el exponente como el espacio en que
+viven los haces.
+
+\section{Potencias positivas y la inmersión asociada: 4.4.1}
+El entero utilizado en (4.4.1)(i) y en su demostración satisface
+$n>0$. Se aplica (3.8.5) a una potencia positiva del haz invertible
+y se compara la subálgebra generada por las secciones de ese grado
+con el correspondiente Veronese. El grado cero no proporciona ese
+Veronese ni sustituye a una potencia positiva en la caracterización.
+Esta condición no afecta a las sumas de componentes que incluyen
+legítimamente la componente de grado cero.
+
+\section{Cuasi-coherencia de tipo finito: 4.4.6 y 4.6.8}
+El submódulo $\mathcal E$ de (4.4.6)(b') es cuasi-coherente de
+tipo finito. Asimismo, I, (9.4.7), aplicado en (4.6.8), da una
+extensión cuasi-coherente de tipo finito del haz de ideales.
+No se puede sustituir en general esta conclusión por la coherencia
+sin una hipótesis adicional sobre la base. Sobre un anillo no
+coherente, incluso un módulo de tipo finito puede no ser coherente.
+La finitud de los generadores se mantiene en ambas afirmaciones;
+es la propiedad utilizada por los argumentos de inmersión y de
+extensión de los ideales.
+
+\section{Clausura y esquema proyectivo: 4.4.7 y 4.5.2}
+La existencia de la clausura del subpreesquema que interviene en
+(4.4.7) es I, (9.5.10). El apartado siguiente, I, (9.5.11), explica
+la terminología de clausura; la referencia a (9.5.10) identifica
+directamente la afirmación de existencia empleada.
+En la demostración de (4.5.2), $S$ es el anillo graduado de secciones
+y el esquema ambiente es $\Proj(S)$. La expresión impresa
+$S=\Proj(A)$ confunde ese anillo con el esquema al que se aplica
+la inmersión.
+
+\section{Restricción de un haz amplio: 4.5.3}
+La definición (4.5.3) de este volumen incluye la cuasi-compacidad
+del esquema. Si $\mathcal L$ es amplio y $U\subset X$ es abierto
+cuasi-compacto, los abiertos afines de la forma $X_s$ contenidos
+en $U$ forman una base para $U$, y las restricciones de las secciones
+dan el criterio (4.5.2) para $\mathcal L|U$.
+La cuasi-compacidad de $U$ conserva, además, la hipótesis explícita
+de la definición. Esta precisión se refiere a la convención del
+volumen; no pretende imponer esa misma convención a otras
+definiciones de amplitud en la literatura.
+
+\section{Correspondencia de las dos secciones: 4.5.13}
+La aplicación de restricción envía la sección $s_\alpha$ de
+$\mathcal O_X(p)$ a $s|U_\alpha$, y la sección $t_\alpha$ de
+$\mathcal O_X(q)$ a $t|U_\alpha$. Los dos paréntesis introducidos
+por «respectivamente» se cierran después de la sección de grado
+$q$ y después de su módulo de llegada, respectivamente.
+Así quedan separadas las dos correspondencias; no cambia la
+identidad de producto de (4.5.13.3).
+
+\section{Abierto de no anulación de una sección inversa: 4.6.13}
+La identidad $X_{s'_i}=f^{-1}(Y_{s_i})$ es el apartado (i) del
+lema (4.6.13.1), inmediatamente anterior. El localizador
+«4.6.1.13» del impreso no corresponde a un resultado de la obra.
+
+\section{Abiertos afines y exactitud de la imagen directa: 5.2.1 y 5.2.2}
+En la implicación (c') a (b) de (5.2.1), $U$ es un entorno de $x$.
+La sección elegida pertenece al ideal que se anula sobre $X\setminus U$
+y satisface $f(x)=1$. En consecuencia,
+$x\in X_f\subset U$, no $X_f\subset X\setminus U$.
+En (5.2.2), la exactitud es una propiedad del funtor $f_*$ sobre
+los haces considerados, cuando varía $\mathcal F$. Para un haz
+fijado, $f_*(\mathcal F)$ es un objeto de la categoría de módulos,
+no el nombre del funtor cuya exactitud se invoca.
+
+\section{El grafo en la demostración del lema de Chow: 5.6.1}
+En la parte (D), los abiertos previamente definidos son $U''_k$.
+El grafo $T_k\subset X\times_S W_k$ de $h_k:W_k\to X$ es cerrado,
+pues $X$ es separado sobre $S$, y su proyección a $W_k$ es un
+isomorfismo. El morfismo desde el abierto $U'$ se factoriza a través
+de ese grafo por la conmutatividad de (5.6.1.5).
+La propiedad de clausura de I, (9.5.8), extiende la factorización
+al subpreesquema inducido por $X'$ sobre $U''_k$. La proyección del
+grafo da entonces la inmersión requerida de $U''_k$ en $W_k$.
+Hablar de esta factorización precisa los morfismos a los que se
+aplica la propiedad de clausura.
+
+\section{Composición con un grafo cerrado: 5.6.3}
+En la demostración, $X$ es propio sobre $S$, $P$ es separado sobre
+$S$, $f:X'\to X$ es proyectivo y $j:X'\to P$ es una inmersión.
+La factorización con todos sus dominios es
+\[
+X'\xrightarrow{\Gamma_j}X'\times_S P
+\xrightarrow{f\times1_P}X\times_S P
+\xrightarrow{q_2}P.
+\]
+Su compuesto es $j$. El grafo $\Gamma_j$ es cerrado por la
+separación de $P$. El segundo morfismo es propio por cambio de
+base de $f$, y $q_2$ es propio por cambio de base de $X\to S$.
+Por ello $j$ es cerrado; al ser ya una inmersión, es una inmersión
+cerrada. La expresión que compone solo $f\times1_P$ y $q_2$
+omite el primer morfismo y tiene por dominio $X'\times_S P$,
+no $X'$.
+
+\section{Morfismos finitos, fibras y productos: 6.1.10--6.2.4}
+El paso a los esquemas reducidos en (6.1.10) utiliza (6.1.5)(vi);
+esa proposición consta de los apartados (i)--(vi), sin apartado (vii).
+La finitud de las fibras que permite concluir en (6.2.3) que un
+morfismo finito es cuasifinito es (6.1.7), junto con el criterio
+de (6.2.2). El resultado (6.1.8) trata otra propiedad de los
+cuerpos de funciones.
+Para $f:X\to Y$ y $g:X'\to Y'$, el producto de (6.2.4)(iv) es
+\[
+f\times_S g:X\times_S X'\longrightarrow Y\times_S Y'.
+\]
+Los dos factores del dominio son las fuentes de $f$ y $g$;
+los del codominio son sus objetos de llegada.
+
+\section{Rango y número de generadores: 6.4.3}
+El entero $n$ de la demostración es el rango de $E$, reducido a uno
+mediante la potencia exterior. Ese rango no es el número de
+generadores de $E$ sobre $A$. Si $e_1,\ldots,e_m$ generan $E$,
+la aplicación
+\[
+\operatorname{Hom}_A(E,E)\longrightarrow E^m,
+\qquad u\longmapsto(u(e_1),\ldots,u(e_m))
+\]
+es inyectiva: un endomorfismo nulo sobre los generadores es nulo.
+Se requiere, por tanto, un índice independiente $m$. Por ejemplo,
+el ideal $(x,y)$ de $k[x,y]$ tiene rango uno, pero no es cíclico.
+
+\section{Cuerpos de fracciones en el criterio valuativo: 7.1.4}
+La condición (i) exige un $\kappa(y)$-homomorfismo
+$\kappa(x)\to\kappa(b)$, donde $b$ es el punto genérico de
+$Y'=\Spec(A')$. El cuerpo $\kappa(b)$ es $\operatorname{Frac}(A')$;
+no es el cuerpo residual del punto cerrado de $A'$.
+Por (7.1.2), se elige primero un anillo de valuación $B$ que domine
+$\mathcal O_{y'}$ y cuyo cuerpo de fracciones sea $\kappa(x)$.
+Después se elige un anillo de valuación completo $A'$ que domine
+$B$ y tenga cuerpo residual algebraicamente cerrado. La inclusión
+$B\subset A'$ induce
+\[
+\kappa(x)=\operatorname{Frac}(B)
+\longrightarrow\operatorname{Frac}(A')=\kappa(b).
+\]
+Para la condición (ii), basta tomar directamente el anillo de
+valuación que domina $\mathcal O_{y'}$ con cuerpo de fracciones
+$\kappa(x)$. Una condición sobre la extensión del cuerpo residual
+de $A'$ no proporciona por sí sola el homomorfismo entre cuerpos
+de fracciones que exige (i).
+
+\section{Imagen de una especialización: 7.2.1}
+En (7.2.1)(b), $y'$ es una especialización de $y=f(x)$.
+El punto buscado $x'$ es una especialización de $x$ situada sobre
+$y'$, de modo que la igualdad es $f(x')=y'$.
+La letra $x$ que figura en el segundo miembro del impreso pertenece
+al espacio fuente y no expresa la condición de estar sobre $y'$.
+
+\section{El radical y la graduación natural: 8.2.10}
+Con $S=\bigoplus_{d\geq0}S_d$, se escribe
+$S_{[n]}=\bigoplus_{d\geq n}S_d$ y
+$S^\natural=\bigoplus_{n\geq0}S_{[n]}$, graduado por $n$.
+Para una familia de elementos homogéneos positivos $(f_\alpha)$,
+la condición pertinente es
+\[
+S_+\subset\sqrt{(f_\alpha)S},
+\quad\text{y la conclusión es}\quad
+S^\natural_+\subset\sqrt{(f^\natural_\alpha)S^\natural}.
+\]
+Los radicales se toman en los anillos unitarios indicados. No se
+exige que coincidan con todo el ideal irrelevante: pueden contener
+nilpotentes de grado cero.
+
+Para comprobar la conclusión, considérese $g\in S_{k+h}$ como
+elemento de grado $k>0$ de $S^\natural$, con $h\geq0$.
+La hipótesis da, para algún exponente y después para todos los
+exponentes mayores,
+$g^m=\sum_\alpha c_{\alpha m}f_\alpha$, con un conjunto finito
+fijo de índices. Tomando componentes homogéneas, los coeficientes
+tienen grado $m(k+h)-\deg f_\alpha$ en $S$.
+Para $m$ suficientemente grande, $km>\deg f_\alpha$ para todos
+esos índices. El mismo coeficiente se puede considerar como
+elemento de grado $km-\deg f_\alpha>0$ de $S^\natural$, pues
+\[
+m(k+h)-\deg f_\alpha\ \geq\ km-\deg f_\alpha.
+\]
+La igualdad expresa entonces $g^m$ en el ideal generado por los
+$f^\natural_\alpha$. Los elementos homogéneos positivos así
+considerados generan $S^\natural_+$ como grupo aditivo; el radical
+es un ideal, de modo que se obtiene la inclusión anunciada.
+
+Para ver por qué no se debe exigir igualdad con el radical de todo
+el anillo, tómese $S=k[\varepsilon]/(\varepsilon^2)$ concentrado
+en grado cero y la familia vacía. Se tiene $S_+=0$, mientras que
+$\sqrt{(0)}=(\varepsilon)\ne0$. La formulación mediante inclusión
+permite esta situación y expresa el argumento de (8.2.10)(iv).
+
+\section{El álgebra del lema de generación: 8.2.14.1}
+El lema tiene por álgebra $T$ y su conclusión compara $T_n$ con
+$T_1^n$ para $n$ suficientemente grande. La descomposición en
+monomios de sus generadores $h_j$ se aplica, por tanto, a un
+elemento de $T_n$. La letra $S_n$ de esa frase pertenece a la
+notación de la proposición circundante, no a la del lema.
+
+\section{Soporte finito local de una acción de grupo multiplicativo: 8.3.9}
+Una aplicación de haces
+$\psi:\mathcal S\to\mathcal S[T,T^{-1}]$ se escribe
+$\psi=\sum_{n\in\mathbf Z}\psi_nT^n$.
+La suma directa que define el haz de polinomios de Laurent tiene
+soporte finito local: para una sección $s$ y un punto, existe un
+entorno de ese punto en el que solo un número finito de
+$\psi_n(s)$ son no nulos. En un abierto arbitrario no tiene por
+qué existir un único conjunto finito de índices válido en todo él.
+
+Por ejemplo, sea $Y=\coprod_{r\geq1}\Spec(k)$ y, en cada componente,
+considérese $k[z]$ con la acción $z\mapsto zT^r$.
+La familia de secciones $z$ define una sección sobre $Y$.
+En cada componente su imagen tiene un solo peso, pero al recorrer
+$Y$ aparecen todos los pesos $r$. Esto demuestra la necesidad de
+la calificación local. Sobre un abierto cuasi-compacto, un
+recubrimiento finito por tales entornos sí proporciona un conjunto
+finito común de índices.
+
+\section{La definición de la graduación natural: 8.7.3}
+La igualdad $S_n^\natural=S_{[n]}$ utilizada en la demostración
+es la definición (8.2.6.2). El número «8.2.7.4» del impreso no
+corresponde a una fórmula de (8.2.7), que termina en (8.2.7.3).
+La referencia a (8.2.6.2) fija la construcción a la que se aplica
+la localización de la demostración.
+
+\section{Contravarianza y componentes de un álgebra: 8.7.4}
+Un homomorfismo $\mathcal S''\to\mathcal S$ induce por
+contravarianza un morfismo
+$\Spec(\mathcal S)\to\Spec(\mathcal S'')$.
+Lo mismo ocurre con el morfismo de Proj en su dominio de definición.
+Así, el morfismo vertical de (8.7.4)(i) va de $C_X$ a $C_{X''}$,
+y el de la derecha va de $\Proj(\mathcal S^\natural)$ a
+$\Proj(\mathcal S^{\prime\prime\natural})$.
+Estas direcciones hacen que las flechas horizontales canónicas
+formen un cuadrado con los mismos dominios y codominios.
+En (8.7.4)(ii), el álgebra graduada es
+$\mathcal T=\bigoplus_{n\geq0}\mathcal J_n$; el componente del
+sumando de índice $n$ es $\mathcal J_n$, no $\mathcal J_m$ con
+un índice libre.
+
+\section{La variable formal y las componentes de la fibra: 8.10.1 y 8.10.3}
+El isomorfismo de (8.10.1)(iii) tiene por dominio $A[[T]]$ y por
+codominio $C=\varprojlim B/\mathfrak J^{n+1}$.
+Envía la variable formal $T$ al elemento $t\in C$; esta dirección
+determina la aplicación sobre las series mediante completitud.
+
+En (8.10.3), el anillo local regular de dimensión uno es el de la
+fibra $\pi^{-1}(x)$ en $j(x)$. La reducción a
+$\Spec(\kappa(x))$ convierte el espacio total del argumento en esa
+fibra. Su anillo local es íntegro, de modo que existe una única
+componente irreducible de la fibra que contiene $j(x)$, por I,
+(5.1.4). Escribir explícitamente $\pi^{-1}(x)$ conserva el objeto
+del enunciado; la $V$ del argumento reducido designa ese cambio
+de base, no una afirmación nueva sobre las componentes del espacio
+total anterior al cambio de base.
+
+\section{Hipótesis del morfismo de contracción: 8.11.7}
+La demostración invoca (8.11.6). Además de las hipótesis impresas
+de (8.11.7), se requieren las dos condiciones sobre $q$ de ese
+resultado: $q$ es propio y
+\[
+q:V\setminus j(X)\ \xrightarrow{\ \sim\ }\
+       C\setminus\varepsilon(Y).
+\]
+Con ellas, (8.11.6) proporciona la biyectividad y el carácter
+cerrado usados para $u:C'\to C$; la identificación fuera de la
+sección proporciona la birracionalidad. El resultado (8.11.2),
+aplicado al destino normal, da entonces el isomorfismo.
+
+Sin esas condiciones, tómense $Y=C=\Spec(k)$,
+$X=\mathbf P^1_k$, $\mathcal L=\mathcal O(1)$ y el morfismo
+estructural $q:\mathbf V(\mathcal L)\to\Spec(k)$.
+Las condiciones impresas sobre $p$, la amplitud relativa, la
+normalidad de $C$ y $p_*\mathcal O_X=\mathcal O_Y$ se cumplen,
+y el diagrama con las secciones es conmutativo. Sin embargo,
+\[
+C'=\Spec\!\left(\bigoplus_{n\geq0}
+              H^0(\mathbf P^1_k,\mathcal O(n))\right)
+   =\Spec(k[x_0,x_1])=\mathbf A^2_k,
+\]
+que no es isomorfo a $C$. Las condiciones adicionales excluyen
+este ejemplo y permiten la aplicación citada en la prueba.
+
+\section{Identificación y restricción de un haz: 8.12.8 y 8.13.3}
+La reducción de (8.12.8) usa los isomorfismos (8.12.5.3) y
+(8.12.6.1); la primera referencia identifica la comparación de
+haces necesaria para el homomorfismo canónico considerado.
+En (8.13.3), $\mathcal N$ es el módulo sobre la base, mientras
+que $\widetilde{\mathcal N}$ es el haz sobre el espectro relativo
+$C$. El objeto que se restringe a
+$C\cap\widehat C_f=\Spec(S_f)$ es
+$\widetilde{\mathcal N}$, conforme a (8.3.2.6).
+
+\section{Estructura de módulo de las secciones graduadas: 8.14.5}
+El haz $\mathcal F$ de (8.14.5) es un módulo. La multiplicación
+por secciones de $\mathcal S_X$ induce en
+$\boldsymbol\Gamma_*(\mathcal F)$ una estructura de módulo
+graduado sobre $\boldsymbol\Gamma_*(\mathcal S_X)$.
+No hay en las hipótesis una multiplicación interna ni una unidad
+en $\mathcal F$ que lo conviertan en un álgebra. La estructura
+afirmada es, por tanto, la de módulo graduado.
+
+\section{Notaciones y bibliografía}
+En el índice de notaciones, la norma de (6.5.1) se aplica a una
+sección $f$ de la $\mathcal A$-álgebra $\mathcal B$.
+El cono proyectante se define en (8.3.1), que es el localizador
+correspondiente a esa entrada.
+La bibliografía impresa de EGA II es la continuación [23]--[26]
+en la página 205. Las entradas [1], [9], [11] y [13] que se citan
+en el volumen pertenecen a la bibliografía precedente de la serie.
+Su presencia en el lector autónomo con enmiendas permite consultar
+esas referencias sin atribuirlas a la continuación impresa de EGA II.
+
+\section{Objetos representados en los addenda a EGA I}
+En la demostración de I, (1.8.3), incluida en los addenda de EGA II,
+los funtores comparados son $\operatorname{Hom}(-,Y)$ y
+$\operatorname{Hom}(-,\Spec(A))$. Su isomorfismo natural da,
+por la propiedad de los funtores representables, un isomorfismo
+$Y\to\Spec(A)$; la letra $X$ del impreso no es el objeto representado.
+La aplicación sobre pares provistos de un módulo que se usa en
+I, (1.8.10), es (1.8.9.1), definida inmediatamente antes.
+En I, (1.8.11), el resultado (1.8.7) es un corolario; su
+identificación y su aplicación a los funtores considerados no
+dependen de llamarlo proposición.
+
+\end{document}

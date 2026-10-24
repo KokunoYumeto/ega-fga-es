@@ -1,0 +1,1055 @@
+\oldpage[IV-3]{95}
+\section{Preesquemas de Jacobson}
+\label{section:IV.10}
+
+Ya hemos tenido ocasión de observar \sref{IV.5.2.5} que incluso los
+preesquemas \emph{excelentes} \sref{IV.7.8.5} no se comportan siempre como las
+``variedades'' de la Geometría Algebraica clásica, especialmente en lo relativo
+a cuestiones de dimensión; así, si $X$ es el espectro de un anillo de valoración
+discreta completo, el conjunto de los puntos cerrados de $X$ (reducido a un solo
+elemento) no es denso en todas partes en $X$, mientras que su complementario
+(reducido a un solo elemento) es un abierto denso en todas partes de $X$ cuya
+dimensión es cero, por tanto $<\dim(X)$. En esta sección examinamos condiciones
+generales bajo las cuales no se producen tales fenómenos; como consecuencia,
+las relaciones entre dimensión, codimensión, profundidad y coprofundidad en
+estos preesquemas se comportan más satisfactoriamente en ciertos aspectos (10.6
+y 10.8). Además, en los preesquemas considerados, el hecho de que el conjunto
+de los puntos cerrados sea denso en todas partes (e incluso ``muy denso''
+\sref{IV.10.1.3}) permite considerar únicamente estos puntos en muchas
+demostraciones; recuperamos así el punto de vista clásico de las ``variedades
+algebraicas'', que, desde nuestro punto de vista, son los conjuntos de puntos
+cerrados de los \emph{preesquemas algebraicos sobre un cuerpo}, y establecemos
+el vínculo entre el lenguaje de los esquemas y el de las ``variedades'' o
+``espacios algebraicos'' de Serre (10.9 y 10.10).
+
+\subsection{Subconjuntos muy densos de un espacio topológico}
+\label{subsection:IV.10.1}
+
+\begin{env}[10.1.1]
+\label{IV.10.1.1}
+Decimos que un subconjunto de un espacio topológico $X$ es \emph{cuasiconstruible} si es una unión finita de subconjuntos localmente cerrados de $X$.
+Decimos que un subconjunto $T$ de $X$ es \emph{localmente cuasiconstruible} si, para todo $x\in X$, existe un entorno abierto $V$ de $x$ tal que $T\cap V$ es cuasiconstruible en $V$.
+Está claro que todo subconjunto cuasiconstruible de $X$ es localmente cuasiconstruible; el recíproco es cierto si $X$ es cuasicompacto.
+El razonamiento de \sref[$0_{\mathrm{III}}$]{0.9.1.3}, en el que se suprime la palabra ``retrocompacto'', muestra que el conjunto de los subconjuntos cuasiconstruibles (resp.\ localmente cuasiconstruibles) de $X$, que denotaremos por $\mathfrak{Qc}(X)$ (resp.\ $\mathfrak{Lqc}(X)$), es estable por unión finita, intersección finita y paso al complementario.
+Si $f:X\to Y$ es una aplicación continua, se deduce inmediatamente de estas definiciones que, para todo subconjunto cuasiconstruible (resp.\ localmente cuasiconstruible) $Z$ de $Y$, $f^{-1}(Z)$ es cuasiconstruible (resp.\ localmente cuasiconstruible) en $X$.
+
+Los subconjuntos construibles (resp.\ localmente construibles) de $X$ son evidentemente cuasiconstruibles (resp.\ localmente cuasiconstruibles); el recíproco es cierto cuando $X$ es noetheriano (resp.\ localmente noetheriano).
+
+En lo que sigue, denotaremos respectivamente por $\mathfrak{O}(X)$, $\mathfrak{F}(X)$, $\mathfrak{Lf}(X)$, $\mathfrak{C}(X)$, $\mathfrak{Lc}(X)$ el conjunto de los subconjuntos de $X$ que son respectivamente abiertos, cerrados, localmente cerrados, construibles y localmente construibles.
+\end{env}
+
+\oldpage[IV-3]{96}
+
+\begin{proposition}[10.1.2]
+\label{IV.10.1.2}
+Sea $X$ un espacio topológico y $X_0$ un subconjunto de $X$.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Para todo subconjunto localmente cerrado $Z\neq\varnothing$ de $X$, se tiene $Z\cap X_0\neq\varnothing$.
+  \item[\rm a$'$)] Para todo subconjunto cerrado $Z$ de $X$, se tiene $Z=\overline{Z\cap X_0}$.
+  \item Para todo subconjunto localmente cuasiconstruible $Z\neq\varnothing$ de $X$, se tiene $Z\cap X_0\neq\varnothing$.
+  \item[\rm b$'$)] Para todo subconjunto localmente cuasiconstruible $Z$ de $X$, se tiene $Z\subset\overline{Z\cap X_0}$ (dicho de otro modo, $Z\cap X_0$ es denso en $Z$).
+  \item La aplicación $U\mapsto U\cap X_0$ de $\mathfrak{O}(X)$ en $\mathfrak{O}(X_0)$ es inyectiva (y por tanto biyectiva).
+  \item[\rm c$'$)] La aplicación $F\mapsto F\cap X_0$ de $\mathfrak{F}(X)$ en $\mathfrak{F}(X_0)$ es inyectiva (y por tanto biyectiva).
+  \item[\rm c$''$)] La aplicación $Z\mapsto Z\cap X_0$ de $\mathfrak{Qc}(X)$ en $\mathfrak{Qc}(X_0)$ es inyectiva (y por tanto biyectiva).
+  \item[\rm c$'''$)] La aplicación $Z\mapsto Z\cap X_0$ de $\mathfrak{Lqc}(X)$ en $\mathfrak{Lqc}(X_0)$ es inyectiva.
+\end{enumerate}
+Además, cuando se satisfacen estas condiciones, la aplicación $Z\mapsto Z\cap X_0$ de $\mathfrak{Lqc}(X)$ en $\mathfrak{Lqc}(X_0)$ es biyectiva.
+\end{proposition}
+
+\begin{proof}
+Observemos que las afirmaciones de sobreyectividad de $c)$ y $c')$ son triviales; significan que todo subconjunto localmente cerrado de $X_0$ es la traza sobre $X_0$ de un subconjunto localmente cerrado de $X$, y que la aplicación $\mathfrak{Qc}(X)\to\mathfrak{Qc}(X_0)$ definida en $c'')$ también es sobreyectiva.
+
+Demostraremos las implicaciones
+\[
+  c''')\Rightarrow c'')\Rightarrow c')\Rightarrow c)\Rightarrow b)\Rightarrow b')\Rightarrow a')\Rightarrow a)\Rightarrow c''').
+\]
+
+Las tres primeras son triviales.
+Para ver que $c)$ implica $b)$, observemos primero que $c)$ significa que $X_0$ es \emph{denso} en $X$.
+Sustituyendo respectivamente $X$ y $X_0$ por $U$ y $U\cap X_0$, podemos por tanto limitarnos al caso en que $Z$ es localmente cerrado en $X$, y entonces $Z=V\cap\complement W$, donde $V$ y $W$ son abiertos de $X$; la hipótesis $Z\neq\varnothing$ significa que $V\not\subset W$, o equivalentemente $V\cup W\neq W$.
+En virtud de $c)$, se tiene $(V\cup W)\cap X_0\neq W\cap X_0$, luego $V\cap X_0\not\subset W$, y por consiguiente $(V\cap\complement W)\cap X_0\neq\varnothing$.
+
+Para ver que $b)$ implica $b')$, basta aplicar $b)$ a $Z\cap U$, donde $U$ es un entorno abierto de un punto arbitrario de $Z$.
+Como $Z\cap\overline{X_0}\subset\overline{Z\cap X_0}$, es trivial que $b')$ implica $a')$.
+Para mostrar que $a')$ implica $a)$, observemos que, si $Z$ es localmente cerrado en $X$, podemos escribir $Z=F-F'$, donde $F$ y $F'$ son cerrados de $X$ y $F'\subset F$; de donde $Z\cap X_0=(F\cap X_0)-(F'\cap X_0)$.
+Si $Z\cap X_0=\varnothing$, entonces, en virtud de $a')$, tendríamos $F\cap X_0=F'\cap X_0$, luego $F=F'$, es decir, $Z=\varnothing$.
+
+Para ver que $a)$ implica $c''')$, basta mostrar que, si $Z\neq\varnothing$ es localmente cuasiconstruible, entonces $Z\cap X_0\neq\varnothing$: en efecto, la relación $Z'\cap X_0=Z''\cap X_0$ equivale a $((Z'\cup Z'')-(Z'\cap Z''))\cap X_0=\varnothing$.
+Dicho de otro modo, basta probar que $a)$ implica $b)$; en efecto, sustituyendo respectivamente $X$ y $X_0$ por $U$ y $U\cap X_0$, nos reducimos al caso en que $Z$ es localmente cerrado en $X$, de donde se sigue la conclusión.
+
+Queda por mostrar que la aplicación $\mathfrak{Lqc}(X)\to\mathfrak{Lqc}(X_0)$ es sobreyectiva.
+Sea pues $Z_0$ un subconjunto localmente cuasiconstruible de $X_0$: existe un recubrimiento $(V_\alpha)$ de $X_0$ por abiertos de $X_0$ tal que $Z_0\cap V_\alpha$ es cuasiconstruible en $V_\alpha$ (y
+\oldpage[IV-3]{97}
+por tanto también en $X_0$).
+En virtud de $c)$, para todo $\alpha$ existe un único abierto $U_\alpha$ de $X$ tal que $X_0\cap U_\alpha=V_\alpha$, y en virtud de $c'')$ un único subconjunto cuasiconstruible $Z_\alpha$ de $X$ tal que $Z_0\cap V_\alpha=X_0\cap Z_\alpha$.
+Si $\alpha$ y $\beta$ son dos índices cualesquiera, se tiene $Z_\beta\cap U_\alpha\cap X_0=U_\alpha\cap Z_0\cap V_\beta=V_\alpha\cap Z_0\cap V_\beta=Z_\alpha\cap X_0\cap V_\beta\subset Z_\alpha\cap X_0$; como $Z_\beta\cap U_\alpha$ y $Z_\alpha$ son cuasiconstruibles en $X$, se deduce de $c'')$ que $Z_\beta\cap U_\alpha\subset Z_\alpha$.
+Si ponemos $Z=\bigcup_\alpha Z_\alpha$, entonces $Z\cap U_\alpha=Z_\alpha$ para todo $\alpha$; además, puesto que los $V_\alpha$ recubren $X_0$, se deduce de $c)$ que los $U_\alpha$ recubren $X$, y vemos por tanto que $Z$ es localmente cuasiconstruible en $X$ y que $Z_0=Z\cap X_0$.
+\end{proof}
+
+\begin{definition}[10.1.3]
+\label{IV.10.1.3}
+Cuando un subconjunto $X_0$ de un espacio topológico satisface las condiciones equivalentes de \sref{IV.10.1.2}, decimos que $X_0$ es \emph{muy denso} en $X$.
+\end{definition}
+
+Ya hemos visto en el curso de la demostración de \sref{IV.10.1.2} que entonces $X_0$ es denso en $X$.
+
+\begin{corollary}[10.1.4]
+\label{IV.10.1.4}
+Si $X_0$ es muy denso en $X$ y $U$ es un abierto de $X$, $U\cap X_0$ es muy denso en $U$.
+Recíprocamente, si $(U_\alpha)$ es un recubrimiento abierto de $X$ tal que $U_\alpha\cap X_0$ es muy denso en $U_\alpha$ para todo $\alpha$, entonces $X_0$ es muy denso en $X$.
+\end{corollary}
+
+Como todo subconjunto localmente cerrado de $U$ es localmente cerrado en $X$, la primera afirmación se deduce del criterio $a)$ de \sref{IV.10.1.2}; y lo mismo vale para la segunda, pues si $Z\neq\varnothing$ es localmente cerrado en $X$, $Z\cap U_\alpha$ es localmente cerrado en $U_\alpha$ para todo $\alpha$, y $Z\cap U_\alpha\neq\varnothing$ para al menos un $\alpha$.
+
+\subsection{Cuasihomeomorfismos}
+\label{subsection:IV.10.2}
+
+\begin{proposition}[10.2.1]
+\label{IV.10.2.1}
+Sean $X_0$, $X$ dos espacios topológicos y $f:X_0\to X$ una aplicación continua.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item La aplicación $U\mapsto f^{-1}(U)$ de $\mathfrak{O}(X)$ en $\mathfrak{O}(X_0)$ es biyectiva.
+  \item[\rm a$'$)] La aplicación $F\mapsto f^{-1}(F)$ de $\mathfrak{F}(X)$ en $\mathfrak{F}(X_0)$ es biyectiva.
+  \item La topología de $X_0$ es la imagen inversa por $f$ de la de $X$, y $f(X_0)$ es muy denso \sref{IV.10.1.3} en $X$.
+  \item El funtor $\sh{F}\mapsto f^*(\sh{F})$ de la categoría de haces de conjuntos (resp.\ haces de grupos abelianos) sobre $X$ en la categoría de haces de conjuntos (resp.\ haces de grupos abelianos) sobre $X_0$ es una equivalencia de categorías.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Está claro que $a)$ y $a')$ son equivalentes, y que $a)$ implica que la topología de $X_0$ es la imagen inversa por $f$ de la de $X$.
+Por otra parte, si $f(X_0)$ no es muy denso en $X$, existen dos abiertos distintos $U_1$, $U_2$ de $X$ tales que $U_1\cap f(X_0)=U_2\cap f(X_0)$, y por tanto $f^{-1}(U_1)=f^{-1}(U_2)$, lo que termina de mostrar que $a)$ implica $b)$.
+Recíprocamente, la condición $b)$ implica que las aplicaciones $U\mapsto U\cap f(X_0)$ de $\mathfrak{O}(X)$ en $\mathfrak{O}(f(X_0))$ y $V\mapsto f^{-1}(V)$ de $\mathfrak{O}(f(X_0))$ en $\mathfrak{O}(X_0)$ son biyectivas, y por tanto también lo es su compuesta $U\mapsto f^{-1}(U)$.
+
+Para ver que $a)$ implica $c)$, basta aplicar la definición de $f^*(\sh{F})$ \sref[0]{0.3.7.1} y los axiomas de los haces: $a)$ significa que, para todo abierto $U$ de $X$, la aplicación canónica $\Gamma(U,\sh{F})\to\Gamma(f^{-1}(U),f^*(\sh{F}))$ es una biyección funtorial en $\sh{F}$, de donde $c)$.
+Queda por mostrar que $c)$ implica $b)$.
+
+\oldpage[IV-3]{98}
+Supongamos primero que $f(X_0)$ no es muy denso en $X$; existen entonces dos cerrados distintos $Y\supset Y'$ de $X$ tales que $Y\cap f(X_0)=Y'\cap f(X_0)$.
+Sea $\sh{F}$ (resp.\ $\sh{F}'$) el haz de grupos abelianos sobre $X$ que es la imagen directa por la inyección canónica $Y\to X$ (resp.\ $Y'\to X$) del haz simple asociado al prehaz constante $\mathbf{Z}$ sobre $Y$ (resp.\ $Y'$); la definición de $f^*$ \sref[0]{0.3.7.1} muestra que $f^*(\sh{F})$ es isomorfo a $f^*(\sh{F}')$, pero $\sh{F}$ no es isomorfo a $\sh{F}'$, y por tanto no se satisface la condición $c)$.
+(Obsérvese que el funtor $f^*$ ni siquiera es entonces \emph{fiel}, pues si $u$ y $v$ son el automorfismo identidad y el endomorfismo nulo de $\sh{F}/\sh{F}'$, $f^*(u)$ y $f^*(v)$ son iguales.)
+
+Mostremos ahora que $c)$ implica que la topología de $X_0$ es la imagen inversa por $f$ de la de $X$.
+Observemos que, si la condición $c)$ se satisface para la categoría de haces de conjuntos, también se satisface para la categoría de haces de grupos abelianos, pues se deduce inmediatamente de las definiciones \sref[$0_{\mathrm{III}}$]{0.8.2.5} que la categoría de los \emph{objetos en grupos abelianos} de la categoría de haces de conjuntos no es otra que la categoría de haces de grupos abelianos.
+Bastará pues probar nuestra afirmación suponiendo satisfecha $c)$ para las categorías de haces de grupos abelianos sobre $X$ y $X_0$.
+Ahora bien, si $\mathbf{Z}_X$ denota el haz simple sobre $X$ asociado al prehaz constante $\mathbf{Z}$, existe un isomorfismo canónico $\Gamma(X,\sh{F})\xrightarrow{\sim}\operatorname{Hom}(\mathbf{Z}_X,\sh{F})$ funtorial en $\sh{F}$ (por el mismo razonamiento que en \sref[0]{0.5.1.1}); como por definición \sref[0]{0.3.7.1} está claro que $f^*(\mathbf{Z}_X)=\mathbf{Z}_{X_0}$, la hipótesis de que $f^*$ es una equivalencia significa que el homomorfismo canónico $\Gamma(X,\sh{F})\to\Gamma(X_0,f^*(\sh{F}))$ es \emph{biyectivo} para todo haz de grupos abelianos $\sh{F}$ sobre $X$.
+Sea ahora $Y_0$ un cerrado de $X_0$; sea $\sh{F}_0$ el haz sobre $X_0$ que es la imagen directa por la inyección canónica $Y_0\to X_0$ del haz simple asociado al prehaz constante $\mathbf{Z}$ sobre $Y_0$.
+Como $f^*$ es una equivalencia, $\sh{F}_0$ es isomorfo a un haz de la forma $f^*(\sh{F})$, donde $\sh{F}$ es un haz de grupos abelianos sobre $X$.
+Consideremos entonces una sección $s_0$ de $\sh{F}_0$ sobre $X_0$ tal que $(s_0)_{x_0}=1_{x_0}$ si $x_0\in Y_0$, y $(s_0)_{x_0}=0_{x_0}$ si $x_0\notin Y_0$.
+Las observaciones precedentes muestran que existe una sección $s$ de $\sh{F}$ sobre $X$ tal que $(s_0)_{x_0}=s_{f(x_0)}$ para todo $x_0\in X_0$ (estando identificadas canónicamente las fibras $(\sh{F}_0)_{x_0}$ y $\sh{F}_{f(x_0)}$ \sref[0]{0.3.7.1}); esto significa que $Y_0$ es la imagen inversa por $f$ del conjunto $Y$ de los $x\in X$ tales que $s_x\neq 0_x$, y $Y$ es cerrado en $X$.
+\end{proof}
+
+\begin{definition}[10.2.2]
+\label{IV.10.2.2}
+Cuando una aplicación continua $f:X_0\to X$ satisface las condiciones equivalentes de \sref{IV.10.2.1}, decimos que $f$ es un \emph{cuasihomeomorfismo} de $X_0$ en $X$.
+\end{definition}
+
+En virtud de \sref{IV.10.2.1},~$b)$, decir que un subconjunto $X_0$ de un espacio topológico $X$ es muy denso en $X$ significa que la inyección canónica $X_0\to X$ es un cuasihomeomorfismo.
+
+\begin{corollary}[10.2.3]
+\label{IV.10.2.3}
+La compuesta de dos cuasihomeomorfismos es un cuasihomeomorfismo.
+\end{corollary}
+
+Esto se deduce inmediatamente de \sref{IV.10.2.1},~$a)$.
+
+\begin{corollary}[10.2.4]
+\label{IV.10.2.4}
+Sea $f:X\to Y$ un cuasihomeomorfismo, $Y'$ un subconjunto localmente cuasiconstruible de $Y$ y $X'=f^{-1}(Y')$; entonces la restricción $f'=f|X':X'\to Y'$ es un cuasihomeomorfismo.
+\end{corollary}
+
+\begin{proof}
+Está claro, en virtud de \sref{IV.10.2.1},~$b)$, que la topología inducida sobre $X'$ por la de $X$ es la imagen inversa por $f'$ de la topología inducida sobre $Y'$ por la de $Y$.
+Por otra parte,
+\oldpage[IV-3]{99}
+sea $Z\neq\varnothing$ un subconjunto cerrado \emph{en} $Y'$, y sea $z\in Z$; existe un entorno abierto $U$ de $z$ en $Y$ tal que $U\cap Y'$ es la unión de un número finito de cerrados $Y'_j$ de $U$; si $j$ es un índice tal que $z\in Y'_j$, $Z\cap Y'_j$ es por tanto cerrado en $U$.
+Como $f(X)\cap U$ es muy denso en $U$ \sref{IV.10.1.4}, $Z\cap Y'_j\cap f(X)$ no es vacío \sref{IV.10.1.2},~$a)$, ni, \emph{a fortiori}, $Z\cap f(X)$; pero, como $Z\subset Y'$, se tiene $Z\cap f(X)=Z\cap f'(X')$; el criterio \sref{IV.10.1.2},~$a)$ muestra que $f'(X')$ es muy denso en $Y'$, y concluimos por \sref{IV.10.2.1},~$b)$.
+\end{proof}
+
+\begin{corollary}[10.2.5]
+\label{IV.10.2.5}
+Sea $f:X\to Y$ una aplicación continua y $(V_\alpha)$ un recubrimiento abierto de $Y$.
+Si, para todo $\alpha$, la restricción $f^{-1}(V_\alpha)\to V_\alpha$ de $f$ es un cuasihomeomorfismo, entonces $f$ es un cuasihomeomorfismo.
+\end{corollary}
+
+Esto se deduce inmediatamente del criterio \sref{IV.10.2.1},~$b)$ y de \sref{IV.10.1.4}.
+
+\begin{corollary}[10.2.6]
+\label{IV.10.2.6}
+Sea $f:X\to Y$ un cuasihomeomorfismo, $Y'$ un subconjunto localmente cuasiconstruible de $Y$ y $X'=f^{-1}(Y')$.
+Para que $Y'$ sea cuasicompacto (resp.\ noetheriano, resp.\ retrocompacto en $Y$), es necesario y suficiente que $X'$ sea cuasicompacto (resp.\ noetheriano, resp.\ retrocompacto en $X$).
+\end{corollary}
+
+\begin{proof}
+Probemos las dos primeras afirmaciones; en virtud de \sref{IV.10.2.4}, podemos limitarnos al caso en que $Y'=Y$.
+Decir que $X$ es cuasicompacto (resp.\ noetheriano) significa que, para toda familia filtrante creciente $(U_\alpha)$ de $\mathfrak{O}(X)$ que tenga a $X$ como elemento máximo (resp.\ para toda familia filtrante creciente $(U_\alpha)$ de $\mathfrak{O}(X)$), existe $\gamma$ tal que $U_\alpha=U_\gamma$ para $\alpha\geq\gamma$.
+Como $U\mapsto f^{-1}(U)$ es una biyección de $\mathfrak{O}(Y)$ sobre $\mathfrak{O}(X)$, nuestra afirmación se deduce inmediatamente de la observación precedente.
+
+Los abiertos cuasicompactos de $X$ son por tanto los conjuntos de la forma $f^{-1}(U)$, donde $U$ es un abierto cuasicompacto de $Y$, en virtud de \sref{IV.10.2.1},~$a)$ y de lo que precede.
+Para que $X'$ sea retrocompacto en $X$, es necesario y suficiente que, para todo abierto cuasicompacto $U$ de $Y$, $f^{-1}(U)\cap X'=f^{-1}(U\cap Y')$ sea cuasicompacto \sref[$0_{\mathrm{III}}$]{0.9.1.1}; la primera parte de la demostración muestra que esto equivale a decir que $U\cap Y'$ es cuasicompacto para todo abierto cuasicompacto $U$, es decir, que $Y'$ es retrocompacto en $Y$.
+\end{proof}
+
+\begin{proposition}[10.2.7]
+\label{IV.10.2.7}
+Sea $f:X\to Y$ un cuasihomeomorfismo.
+Entonces la aplicación $Z\mapsto f^{-1}(Z)$ de $\mathfrak{P}(Y)$ en $\mathfrak{P}(X)$ define por restricción las biyecciones (cf.\ \sref{IV.10.1.1} para la notación):
+\[
+  \mathfrak{O}(Y)\xrightarrow{\sim}\mathfrak{O}(X)
+\]
+\[
+  \mathfrak{F}(Y)\xrightarrow{\sim}\mathfrak{F}(X)
+\]
+\[
+  \mathfrak{Lf}(Y)\xrightarrow{\sim}\mathfrak{Lf}(X)
+\]
+\[
+  \mathfrak{Qc}(Y)\xrightarrow{\sim}\mathfrak{Qc}(X)
+\]
+\[
+  \mathfrak{Lqc}(Y)\xrightarrow{\sim}\mathfrak{Lqc}(X)
+\]
+\[
+  \mathfrak{C}(Y)\xrightarrow{\sim}\mathfrak{C}(X)
+\]
+\[
+  \mathfrak{Lc}(Y)\xrightarrow{\sim}\mathfrak{Lc}(X).
+\]
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-3]{100}
+Para las dos primeras, esto no es sino la definición \sref{IV.10.2.2}; como la topología de $X$ es la imagen inversa por $f$ de la de $f(X)$, las cinco aplicaciones restantes, en las que se sustituye $Y$ por $f(X)$, son biyectivas.
+Basta pues (por \sref{IV.10.2.1},~$b)$) limitarnos al caso en que $X$ es un subespacio muy denso de $Y$, y ya se ha probado \sref{IV.10.1.2} que las aplicaciones $\mathfrak{Lf}(Y)\to\mathfrak{Lf}(X)$, $\mathfrak{Qc}(Y)\to\mathfrak{Qc}(X)$, $\mathfrak{Lqc}(Y)\to\mathfrak{Lqc}(X)$ son biyectivas.
+Como todo subconjunto localmente construible es localmente cuasiconstruible, las aplicaciones $\mathfrak{C}(Y)\to\mathfrak{C}(X)$ y $\mathfrak{Lc}(Y)\to\mathfrak{Lc}(X)$ son inyectivas; además, para todo abierto $U\subset Y$, la restricción $f^{-1}(U)\to U$ de $f$ es un cuasihomeomorfismo \sref{IV.10.2.4}, por lo que, si mostramos que $\mathfrak{C}(Y)\to\mathfrak{C}(X)$ es sobreyectiva, lo mismo será cierto para $\mathfrak{Lc}(Y)\to\mathfrak{Lc}(X)$.
+Pero, en virtud de \sref{IV.10.2.6}, todo abierto retrocompacto $Z$ de $X$ es de la forma $f^{-1}(T)$, donde $T$ es un abierto retrocompacto de $Y$; esto prueba evidentemente la sobreyectividad de $\mathfrak{C}(Y)\to\mathfrak{C}(X)$.
+\end{proof}
+
+\begin{remarks}[10.2.8]
+\label{IV.10.2.8}
+(i) Vimos en la demostración de \sref{IV.10.2.1} que, si $f$ es un cuasihomeomorfismo, la aplicación canónica
+\begin{equation}
+\label{IV.10.2.8.1}
+\tag{10.2.8.1}
+\Gamma(Y,\sh{F})\to\Gamma(X,f^*(\sh{F}))
+\end{equation}
+es un isomorfismo funtorial en $\sh{F}$ en la categoría de haces de grupos abelianos sobre $Y$.
+Como $f^*$ es exacto en esta categoría \sref[0]{0.3.7.2}, esto implica que los homomorfismos canónicos $(T,3.2.2)$
+\[
+  \mathrm{H}^i(Y,\sh{F})\xrightarrow{\sim}\mathrm{H}^i(X,f^*(\sh{F}))
+\]
+son \emph{biyectivos} para todo $i$.
+
+(ii) Si $f:X\to Y$ es una aplicación continua y $\sh{F}$, $\sh{G}$ son dos haces de grupos abelianos sobre $Y$, se tiene $f^*(\sh{F}\otimes_{\mathbf{Z}_Y}\sh{G})=f^*(\sh{F})\otimes_{\mathbf{Z}_X}f^*(\sh{G})$, salvo isomorfismo canónico \sref[0]{0.4.3.3}.
+Concluimos que, si $f$ es un cuasihomeomorfismo, $f^*$ también es una \emph{equivalencia} entre la categoría de haces de anillos sobre $Y$ y la categoría de haces de anillos sobre $X$; el dato de una estructura de espacio anillado sobre $Y$ equivale por tanto al de una estructura de espacio anillado sobre $X$.
+
+Dados dos espacios anillados $(X,\sh{O}_X)$, $(Y,\sh{O}_Y)$, diremos que un morfismo de espacios anillados $f=(\psi,\theta):(X,\sh{O}_X)\to(Y,\sh{O}_Y)$ es un \emph{cuasiisomorfismo} si $\psi$ es un cuasihomeomorfismo de $X$ en $Y$ y $\theta^\sharp:\psi^*(\sh{O}_Y)\to\sh{O}_X$ es un isomorfismo de haces de anillos; cuando esto ocurre, el espacio anillado $(X,\sh{O}_X)$ queda enteramente determinado, salvo isomorfismo, por $(Y,\sh{O}_Y)$, el espacio $X$ y el cuasihomeomorfismo $\psi$ (que puede elegirse arbitrariamente).
+Cuando $f$ es un cuasiisomorfismo de espacios anillados, el funtor
+\[
+  \sh{F}\mapsto f^*(\sh{F})
+\]
+es una \emph{equivalencia} entre la categoría de $\sh{O}_Y$-Módulos y la de $\sh{O}_X$-Módulos, pues aquí $f^*(\sh{F})$ se identifica canónicamente con $\psi^*(\sh{F})$.
+Obtenemos, por ejemplo, isomorfismos de bi-$\partial$-funtores
+\[
+  \operatorname{Ext}^i_{\sh{O}_Y}(\sh{F},\sh{G})\xrightarrow{\sim}\operatorname{Ext}^i_{\sh{O}_X}(f^*(\sh{F}),f^*(\sh{G})).
+\]
+
+En general, puede decirse que las construcciones usuales de la teoría de haces y del álgebra homológica, efectuadas sobre el espacio anillado $Y$ o sobre el espacio anillado $X$, son equivalentes.
+\end{remarks}
+
+\subsection{Espacios de Jacobson}
+\label{subsection:IV.10.3}
+
+\oldpage[IV-3]{101}
+
+\begin{definition}[10.3.1]
+\label{IV.10.3.1}
+Decimos que un espacio topológico $X$ es un \emph{espacio de Jacobson} si el conjunto $X_0$ de los puntos cerrados de $X$ es muy denso en $X$ (dicho de otro modo, si la inyección canónica $X_0\to X$ es un cuasihomeomorfismo).
+\end{definition}
+
+Esto significa por tanto \sref{IV.10.1.2} que todo subconjunto localmente cerrado (o solamente localmente cuasiconstruible) $Z\neq\varnothing$ de $X$ contiene un punto cerrado de $X$, o equivalentemente que \emph{todo subconjunto cerrado de $X$ es la adherencia del conjunto de sus puntos cerrados}.
+
+\begin{proposition}[10.3.2]
+\label{IV.10.3.2}
+Sea $X$ un espacio de Jacobson y $Z$ un subconjunto localmente cuasiconstruible de $X$; entonces el subespacio $Z$ es un espacio de Jacobson, y para que un punto de $Z$ sea cerrado en $Z$ es necesario y suficiente que sea cerrado en $X$.
+\end{proposition}
+
+\begin{proof}
+Si $X_0$ es el conjunto de los puntos cerrados de $X$, $Z\cap X_0$ es muy denso en $Z$ en virtud de \sref{IV.10.2.4}, aplicado a la inyección $i:X_0\to X$; como el conjunto $Z_0$ de los puntos cerrados de $Z$ contiene evidentemente a $Z\cap X_0$, es \emph{a fortiori} muy denso en $Z$, luego $Z$ es un espacio de Jacobson.
+Mostremos ahora que se tiene $Z_0=Z\cap X_0$; sea $x\in Z$ un punto cerrado en $Z$; sea $\overline{\{x\}}$ su adherencia en $X$. Entonces $\overline{\{x\}}\cap Z=\{x\}$ es un subconjunto localmente cuasiconstruible de $X$, y como su intersección con $X_0$ no es vacía \sref{IV.10.1.2}, se tiene $x\in X_0$.
+\end{proof}
+
+\begin{proposition}[10.3.3]
+\label{IV.10.3.3}
+Sea $X$ un espacio topológico y $(U_\alpha)$ un recubrimiento abierto de $X$.
+Para que $X$ sea un espacio de Jacobson, es necesario y suficiente que cada uno de los subespacios $U_\alpha$ sea un espacio de Jacobson.
+\end{proposition}
+
+\begin{proof}
+La condición es necesaria en virtud de \sref{IV.10.3.2}.
+Recíprocamente, mostremos primero que la hipótesis de que los $U_\alpha$ son espacios de Jacobson implica que, para que un punto $x\in U_\alpha$ sea cerrado en $X$, basta que sea cerrado en $U_\alpha$.
+Basta en efecto ver que esta condición implica que $x$ también es cerrado en cada uno de los $U_\beta$ que lo contienen; pero $U_\alpha\cap U_\beta$ es abierto en $U_\alpha$, luego $x$ es cerrado en $U_\alpha\cap U_\beta$, y en virtud de \sref{IV.10.3.2}, $x$ también es cerrado en $U_\beta$, lo que termina la demostración.
+\end{proof}
+
+\subsection{Preesquemas de Jacobson y anillos de Jacobson}
+\label{subsection:IV.10.4}
+
+\begin{definition}[10.4.1]
+\label{IV.10.4.1}
+Decimos que un preesquema $X$ es un \emph{preesquema de Jacobson} si el espacio topológico subyacente a $X$ es un espacio de Jacobson.
+Decimos que un anillo $A$ es un \emph{anillo de Jacobson} si $\operatorname{Spec}(A)$ es un preesquema de Jacobson.
+\end{definition}
+
+Todo cerrado de $X=\operatorname{Spec}(A)$ es de la forma $Z=V(\mathfrak{a})$, donde $\mathfrak{a}$ es un ideal igual a su radical, y el conjunto $X_0$ de los puntos cerrados de $X$ es el conjunto de los ideales maximales de $A$; decir que $Z\cap X_0$ es denso en $Z$ significa por tanto que $\mathfrak{a}$ es una \emph{intersección de ideales maximales} \sref[I]{I.1.1.4}; como $\mathfrak{a}$ es una intersección de ideales primos, esto equivale a decir que todo ideal primo de $A$ es una intersección de ideales maximales; en virtud de \sref{IV.10.3.1} y \sref{IV.10.1.2}, la definición usual de los anillos de Jacobson (Bourbaki, \emph{Alg.\ comm.}, cap.~V, \S\,3, n$^\circ$\,4, def.~1) coincide así con la definición \sref{IV.10.4.1}.
+
+\begin{proposition}[10.4.2]
+\label{IV.10.4.2}
+\oldpage[IV-3]{102}
+Sea $X$ un preesquema y $(U_\alpha)$ un recubrimiento de $X$ formado por abiertos afines.
+Para que $X$ sea un preesquema de Jacobson, es necesario y suficiente que los anillos $\Gamma(U_\alpha,\sh{O}_X)$ de los $U_\alpha$ sean anillos de Jacobson.
+\end{proposition}
+
+Esto se deduce de \sref{IV.10.3.3} y de la definición \sref{IV.10.4.1}.
+
+\begin{env}[10.4.3]
+\label{IV.10.4.3}
+Un preesquema discreto es un preesquema de Jacobson; un anillo artiniano es por tanto un anillo de Jacobson.
+Todo anillo de ideales principales que tenga una infinidad de ideales maximales (por ejemplo $\mathbf{Z}$) es un anillo de Jacobson; un anillo local noetheriano $A$ es un anillo de Jacobson si y solo si su ideal maximal es su único ideal primo, es decir, si $A$ es artiniano.
+Todo subpreesquema de un preesquema de Jacobson es un preesquema de Jacobson en virtud de \sref{IV.10.3.2}.
+\end{env}
+
+\begin{proposition}[10.4.4]
+\label{IV.10.4.4}
+Sea $B$ un anillo íntegro.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Existe $f\neq 0$ en $B$ tal que $B_f$ es un cuerpo.
+  \item El cuerpo de fracciones de $B$ es una $B$-álgebra de tipo finito.
+  \item Existe un cuerpo $K$ que contiene a $B$ y que es una $B$-álgebra de tipo finito.
+  \item El punto genérico de $\operatorname{Spec}(B)$ es aislado.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Está claro que $d)$ equivale a $a)$, pues $d)$ significa que existe $f\neq 0$ en $B$ tal que $D(f)$ se reduce al punto genérico de $\operatorname{Spec}(B)$.
+Es trivial que $a)$ implica $b)$ y que $b)$ implica $c)$.
+Finalmente, $c)$ implica $a)$, en virtud de Bourbaki, \emph{Alg.\ comm.}, cap.~V, \S\,3, n$^\circ$\,1, cor.~2 del th.~1.
+\end{proof}
+
+\begin{proposition}[10.4.5]
+\label{IV.10.4.5}
+Sea $A$ un anillo.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $A$ es un anillo de Jacobson.
+  \item Para todo ideal primo no maximal $\mathfrak{p}$ de $A$ y todo $f\neq 0$ en $B=A/\mathfrak{p}$, $B_f$ no es un cuerpo.
+  \item[\rm b$'$)] Toda $A$-álgebra de tipo finito $K$ que sea un cuerpo es una $A$-álgebra finita.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Sabemos que $a)$ implica $b')$ (Bourbaki, \emph{Alg.\ comm.}, cap.~V, \S\,3, n$^\circ$\,4, cor.~3 del th.~3).
+Además, el núcleo del homomorfismo $A\to K$ es entonces un ideal \emph{maximal} $\mathfrak{m}$ de $A$, y $K$ es una extensión finita de $A/\mathfrak{m}$ (\emph{loc.\ cit.}).
+Es trivial que $b')$ implica $b)$, pues $A/\mathfrak{p}=B$ no es un cuerpo, toda $B$-álgebra de tipo finito es una $A$-álgebra de tipo finito y $B_f$ es una $B$-álgebra de tipo finito.
+Queda por mostrar que $b)$ implica $a)$.
+Utilizaremos el lema siguiente:
+\end{proof}
+
+\begin{lemma}[10.4.5.1]
+\label{IV.10.4.5.1}
+Sea $X$ un espacio topológico que tenga la propiedad siguiente: para todo subconjunto localmente cerrado $Z\neq\varnothing$ de $X$, existe un subconjunto $Z'$ de $Z$, localmente cerrado en $X$ (o en $Z$, lo que equivale a lo mismo), y un punto $x\in Z'$, cerrado en $Z'$.
+Entonces, para que $X$ sea un espacio de Jacobson, es necesario y suficiente que ningún punto no cerrado $x$ de $X$ sea aislado en $\overline{\{x\}}$.
+\end{lemma}
+
+\begin{proof}
+Si $X$ es un espacio de Jacobson, un punto no cerrado $x$ de $X$ no puede ser aislado en $\overline{\{x\}}$, pues esto significaría que existe un abierto $U$ de $X$ tal que $U\cap\overline{\{x\}}=\{x\}$; pero $U\cap\overline{\{x\}}$ es localmente cerrado en $X$ y no contendría ningún punto cerrado en $X$, lo que contradice la hipótesis de que $X$ es un espacio de Jacobson.
+Recíprocamente, supongamos satisfechas las condiciones del enunciado; entonces el conjunto $X_0$ de los puntos cerrados de $X$ coincide con el conjunto de los $x\in X$ que son aislados en $\overline{\{x\}}$; pero se deduce de \sref{IV.5.1.10.1} que
+\oldpage[IV-3]{103}
+este conjunto es \emph{muy denso} en $X$, luego $X$ es un espacio de Jacobson por definición.
+\end{proof}
+
+Recordemos \sref{IV.5.1.10} que la hipótesis formulada sobre $X$ en \sref{IV.10.4.5.1} siempre se satisface cuando el espacio subyacente a $X$ es un \emph{preesquema}.
+
+Volviendo a la demostración de \sref{IV.10.4.5}, la condición $b)$ significa que, para todo punto no cerrado $x$ de $\operatorname{Spec}(A)$, el punto genérico $x$ de $\operatorname{Spec}(A/\mathfrak{j}_x)=V(\mathfrak{j}_x)=\overline{\{x\}}$ no es aislado en $\overline{\{x\}}$; por tanto, $b)$ implica $a)$ por el lema \sref{IV.10.4.5.1} y \sref{IV.10.4.4}.
+
+\begin{corollary}[10.4.6]
+\label{IV.10.4.6}
+Toda álgebra de tipo finito $B$ sobre un anillo de Jacobson $A$ es un anillo de Jacobson, y la imagen inversa en $A$ de todo ideal maximal de $B$ es un ideal maximal de $A$.
+En particular, toda álgebra de tipo finito sobre un cuerpo o sobre $\mathbf{Z}$ es un anillo de Jacobson.
+\end{corollary}
+
+\begin{proof}
+Una $B$-álgebra de tipo finito $K$ que sea un cuerpo es también una $A$-álgebra de tipo finito, y por tanto un $A$-módulo de tipo finito y \emph{a fortiori} un $B$-módulo de tipo finito, de donde la primera afirmación; la segunda se probó en el curso de la demostración de \sref{IV.10.4.5}, aplicada a $K=B/\mathfrak{m}$.
+\end{proof}
+
+\begin{corollary}[10.4.7]
+\label{IV.10.4.7}
+Si $X$ es un preesquema de Jacobson y $f:Y\to X$ es un morfismo localmente de tipo finito, entonces $Y$ es un preesquema de Jacobson y la imagen por $f$ de todo punto cerrado de $Y$ es un punto cerrado de $X$.
+\end{corollary}
+
+\begin{proof}
+Como la cuestión es local sobre $X$ y sobre $Y$, nos reducimos al caso en que $X$ e $Y$ son afines, y el corolario se deduce entonces de \sref{IV.10.4.6}.
+\end{proof}
+
+\begin{corollary}[10.4.8]
+\label{IV.10.4.8}
+Si $k$ es un cuerpo algebraicamente cerrado y $X$ un $k$-preesquema localmente de tipo finito, el conjunto de los puntos racionales de $X$ sobre $k$ es muy denso en $X$.
+\end{corollary}
+
+\begin{proof}
+En efecto, $X$ es un preesquema de Jacobson \sref{IV.10.4.7} y los puntos cerrados son exactamente los puntos racionales sobre $k$ \sref[I]{I.6.4.2}.
+\end{proof}
+
+\begin{env}[10.4.9]
+\label{IV.10.4.9}
+El hecho de que los preesquemas localmente de tipo finito sobre un cuerpo o sobre $\mathbf{Z}$ sean preesquemas de Jacobson es particularmente importante, por la posibilidad de reducirse a este caso en muchas cuestiones de geometría algebraica \sref{IV.8.1.2},~$c)$.
+Daremos dos ejemplos:
+\end{env}
+
+\begin{env}[10.4.10]
+\label{IV.10.4.10}
+\textbf{Aplicaciones (10.4.10) :~I~: Demostración de \sref{IV.6.15.9}.}
+Sea $k$ un cuerpo separablemente cerrado y $X$ un $k$-preesquema localmente de tipo finito sobre $k$ y \emph{unirramificado}.
+Sabemos que el cierre entero de una $k$-álgebra íntegra de tipo finito $A$ en una extensión finita de su cuerpo de fracciones es una $A$-álgebra finita (Bourbaki, \emph{Alg.\ comm.}, cap.~V, \S\,3, n$^\circ$\,2, th.~2), luego toda $k$-álgebra de tipo finito es un anillo universalmente japonés; concluimos que el conjunto de los puntos $x\in X$ en los que $X$ es geométricamente unirramificado es localmente construible \sref{IV.9.7.10}.
+Pero la hipótesis y el lema \sref{IV.6.15.8} implican que este conjunto contiene todos los puntos \emph{cerrados} de $X$.
+La conclusión se deduce por tanto de \sref{IV.10.4.6}, \sref{IV.10.3.1} y de la biyectividad de la aplicación canónica $\mathfrak{Lc}(X)\to\mathfrak{Lc}(X_0)$ (donde $X_0$ es el conjunto de los puntos cerrados de $X$) \sref{IV.10.2.7}.
+\end{env}
+
+\begin{env}[10.4.11]
+\label{IV.10.4.11}
+\oldpage[IV-3]{104}
+\textbf{Aplicaciones :~II~: Proposición (10.4.11).}
+Sea $S$ un preesquema y $X$ un $S$-preesquema de tipo finito.
+Todo $S$-endomorfismo de $X$ que sea radicial es sobreyectivo (y por tanto biyectivo).
+\end{env}
+
+\begin{proof}
+Sea $f:X\to S$ el morfismo estructural, $g:X\to X$ el $S$-endomorfismo considerado y, para todo $s\in S$, sea $g_s$ el morfismo deducido de $g$ por el cambio de base $\operatorname{Spec}(k(s))\to S$, que es un $k(s)$-endomorfismo de la fibra $f^{-1}(s)=X\times_S\operatorname{Spec}(k(s))$.
+
+Para probar que $g$ es sobreyectivo, basta probar que $g_s$ es sobreyectivo para todo $s\in S$; podemos por tanto (en virtud de \sref[I]{I.3.5.7}) reducirnos al caso en que $S=\operatorname{Spec}(k)$ es el espectro de un cuerpo $k$, en cuyo caso $f$ es un morfismo de presentación finita, pues $S$ es noetheriano.
+Aplicando \sref{IV.8.9.1} y \sref{IV.8.10.5},~(vii), nos reducimos al caso en que $S=\operatorname{Spec}(A)$, donde $A$ es una sub-$\mathbf{Z}$-álgebra de tipo finito de $k$.
+Pero entonces $X$ es un preesquema de Jacobson \sref{IV.10.4.7}, y $g(X)$ es construible en $X$ \sref[I]{I.1.8.5}; por tanto, para probar que $g(X)=X$, basta mostrar que $g(X)$ contiene todos los puntos \emph{cerrados} de $X$ \sref{IV.10.3.1}.
+
+\begin{lemma}[10.4.11.1]
+\label{IV.10.4.11.1}
+Sea $Y$ un $\mathbf{Z}$-preesquema de tipo finito.
+\begin{enumerate}[label=(\roman*)]
+  \item Para que un punto $y\in Y$ sea cerrado, es necesario y suficiente que $k(y)$ sea un cuerpo finito.
+  \item Para todo número primo $p$ y todo entero $d\geq 1$, el conjunto de los puntos $y\in Y$ tales que $k(y)$ es una extensión de $\mathbf{F}_p$ de grado divisor de $d$ es finito.
+\end{enumerate}
+\end{lemma}
+
+La afirmación (i) se deduce del hecho de que la imagen de un punto cerrado $y\in Y$ en $\operatorname{Spec}(\mathbf{Z})$ es un punto cerrado \sref{IV.10.4.7}, es decir, un número primo, y de \sref[I]{I.6.4.2}.
+Por otra parte, como $Y$ es una unión finita de abiertos afines de tipo finito sobre $\mathbf{Z}$, podemos limitarnos a probar (ii) en el caso en que $Y=\operatorname{Spec}(C)$, donde $C$ es una $\mathbf{Z}$-álgebra de tipo finito.
+Ahora bien, los puntos $y\in Y$ tales que el grado de $k(y)$ sobre $\mathbf{F}_p$ divide a $d$ son exactamente los núcleos de los homomorfismos $C\to\mathbf{F}_{p^d}$; pero, si $(t_i)$ es un sistema de generadores de la $\mathbf{Z}$-álgebra $C$, todo homomorfismo de $C$ queda determinado por sus valores sobre los elementos $t_i$, y por tanto solo hay un número finito de homomorfismos de $C$ en un cuerpo finito.
+
+Siendo esto así, como $X$ es un $\mathbf{Z}$-preesquema de tipo finito, sea $T_{p,d}$ el conjunto de los puntos cerrados $z\in X$ tales que $k(z)$ es una extensión de $\mathbf{F}_p$ de grado divisor de $d$; se deduce de \sref{IV.10.4.11.1} que el conjunto $T_{p,d}$ es finito y que el conjunto de los puntos cerrados de $X$ es la unión de los $T_{p,d}$.
+Además, si $z\in T_{p,d}$ y $h$ es un endomorfismo cualquiera de $X$, $k(h(z))$ es isomorfo a un subcuerpo de $k(z)$, luego $h(z)\in T_{p,d}$; dicho de otro modo, $T_{p,d}$ es \emph{estable} bajo todo endomorfismo de $X$.
+Como $g$ es inyectivo por hipótesis, su restricción a $T_{p,d}$ es \emph{biyectiva}, pues $T_{p,d}$ es finito, lo que termina de probar la proposición.
+
+Veremos más adelante \sref{IV.17.9.6} que, si además se supone que $X$ es un $S$-preesquema de presentación finita y, por otra parte, que $g$ es un monomorfismo, puede afirmarse que $g$ es un \emph{automorfismo} de $X$.
+\end{proof}
+
+\subsection{Preesquemas de Jacobson noetherianos}
+\label{subsection:IV.10.5}
+
+\begin{proposition}[10.5.1]
+\label{IV.10.5.1}
+Sea $B$ un anillo noetheriano íntegro.
+Las condiciones equivalentes $a)$ a $d)$ de \sref{IV.10.4.4} son entonces también equivalentes a las siguientes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \setcounter{enumi}{4}
+  \item $\operatorname{Spec}(B)$ es finito.
+  \item $B$ es un anillo semilocal de dimensión $\leq 1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-3]{105}
+En efecto, se deduce del teorema de Artin--Tate \sref[0]{0.16.3.3} que las condiciones $a)$ y $f)$ son equivalentes.
+La condición $f)$ implica que $\operatorname{Spec}(B)$ es la unión del conjunto de sus puntos cerrados y de su punto genérico, luego $f)$ implica $e)$ sin suponer que $B$ sea noetheriano.
+Finalmente, $e)$ implica $d)$ sin suponer que $B$ sea noetheriano, pues el punto genérico $x$ de $X$ es el complementario de la unión de las adherencias $\overline{\{y\}}$, donde $y$ recorre el conjunto de los puntos $y\neq x$, y como estos puntos son finitos en número, $\{x\}$ es el complementario de un cerrado de $X$.
+\end{proof}
+
+\begin{corollary}[10.5.2]
+\label{IV.10.5.2}
+Para que un anillo noetheriano $A$ sea un anillo de Jacobson, es necesario y suficiente que no exista ningún ideal primo $\mathfrak{p}$ de $A$ tal que $A/\mathfrak{p}$ sea un anillo semilocal de dimensión $1$.
+\end{corollary}
+
+\begin{proof}
+Esto se deduce inmediatamente de \sref{IV.10.5.1} y de la condición $b)$ de \sref{IV.10.4.5}, pues los ideales primos $\mathfrak{p}$ de $A$ tales que $A/\mathfrak{p}$ es semilocal de dimensión~$0$ son los ideales maximales de $A$.
+\end{proof}
+
+\begin{corollary}[10.5.3]
+\label{IV.10.5.3}
+Sea $X$ un preesquema noetheriano irreducible.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item El punto genérico de $X$ es aislado.
+  \item $X$ es finito.
+  \item $X$ es de dimensión $\leq 1$ y el conjunto de sus puntos cerrados es finito.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Existe por hipótesis un número finito de abiertos afines irreducibles $U_i$ ($1\leq i\leq n$) que recubren $X$ y cada uno de los cuales contiene el punto genérico de $X$; basta probar la equivalencia de $a)$, $b)$ y $c)$ para cada uno de los $(U_i)_{\mathrm{red}}$ (teniendo en cuenta \sref[0]{0.14.1.7}).
+Pero esta equivalencia se deduce de \sref{IV.10.5.1}.
+\end{proof}
+
+\begin{remark}[10.5.4]
+\label{IV.10.5.4}
+Un preesquema noetheriano $X$ que satisfaga las condiciones equivalentes de \sref{IV.10.5.3} no es necesariamente un esquema afín; de hecho, puede incluso ser \emph{no separado}, como se ve sustituyendo, en el ejemplo \sref[I]{I.5.5.11} de la ``recta afín con punto duplicado'', $X_1$ y $X_2$ por el espectro del anillo de valoración discreta $(K[s])_{(s)}$, y $U_{12}$ y $U_{21}$ por el abierto reducido al punto genérico en $X_1$ y $X_2$ respectivamente; el preesquema no separado $X$ así obtenido tiene exactamente $3$ puntos.
+\end{remark}
+
+\begin{proposition}[10.5.5]
+\label{IV.10.5.5}
+Sea $X$ un preesquema noetheriano.
+\begin{enumerate}[label=(\roman*)]
+  \item El conjunto $X_0$ de los puntos $x\in X$ tales que $\overline{\{x\}}$ es finito es muy denso en $X$.
+  \item Para que $X$ sea un preesquema de Jacobson, es necesario y suficiente que no exista ningún subpreesquema de $X$ isomorfo al espectro de un anillo semilocal íntegro de dimensión $1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La condición de que $\overline{\{x\}}$ sea finito equivale aquí, por \sref{IV.10.5.3}, a que $x$ sea aislado en $\overline{\{x\}}$, pues este es el espacio subyacente a un subpreesquema (noetheriano) de $X$; la afirmación (i) se deduce por tanto de \sref{IV.5.1.10.1}.
+Análogamente, teniendo en cuenta \sref{IV.10.4.5.1}, para mostrar la afirmación (ii), observemos que, para que un punto no cerrado $x$ de $X$ pertenezca a $X_0$, es necesario y suficiente que el subpreesquema cerrado íntegro $Y$ de $X$ cuyo espacio subyacente es $\overline{\{x\}}$ sea de dimensión $1$ y finito, y por tanto una unión finita de subpreesquemas $U_i$ abiertos (en $Y$) y afines que sean espectros de anillos semilocales íntegros de dimensión $1$.
+Recíprocamente, si existe un subpreesquema $Z$ de $X$ que sea el espectro de un anillo semilocal íntegro de dimensión $1$, $Z$ no es un preesquema de Jacobson \sref{IV.10.5.2}, y por tanto tampoco lo es $X$ \sref{IV.10.3.2}.
+\end{proof}
+
+\oldpage[IV-3]{106}
+
+\begin{remark}[10.5.6]
+\label{IV.10.5.6}
+La afirmación (ii) de \sref{IV.10.5.5} sigue siendo válida cuando $X$ es \emph{localmente noetheriano}: en efecto, si $(V_\alpha)$ es un recubrimiento de $X$ por abiertos afines (noetherianos), todo subpreesquema de uno de los $V_\alpha$ es un subpreesquema de $X$; recíprocamente, si un subpreesquema $Z$ de $X$ es isomorfo al espectro de un anillo semilocal íntegro de dimensión $1$, existe un $\alpha$ tal que $V_\alpha\cap Z$ contiene un abierto afín $U$ de $Z$ que no se reduce al punto genérico de $Z$, y que por tanto también es el espectro de un anillo semilocal íntegro de dimensión $1$.
+Concluimos por \sref{IV.10.3.3}.
+\end{remark}
+
+\begin{proposition}[10.5.7]
+\label{IV.10.5.7}
+Sea $X$ un preesquema localmente noetheriano y $Y$ un cerrado de $X$ tal que todo cerrado no vacío de $X$ corta a $Y$.
+Entonces el subpreesquema inducido sobre el abierto $X-Y$ es un preesquema de Jacobson.
+\end{proposition}
+
+\begin{proof}
+Apliquemos el criterio \sref{IV.10.5.5},~(ii), y supongamos que existe en $X-Y$ un subpreesquema $Z$ que es el espectro de un anillo semilocal íntegro de dimensión $1$. El punto genérico $z$ de $Z$ es entonces aislado en $Z$ (o en la adherencia $\overline{Z}$ de $Z$ en $X$), y $Z$ es distinto de $\{z\}$.
+Sea $y\neq z$ un punto de $Z$; como no pertenece a $Y$, no es un punto cerrado de $X$, y su adherencia $\overline{\{y\}}$ en $X$ corta a $Y$ en un punto $x\neq y$, que es por tanto una especialización de $y$.
+La existencia de la cadena $\{x\}\subset\overline{\{y\}}\subset\overline{\{z\}}$ muestra entonces que la dimensión de $\overline{\{z\}}$ sería $\geq 2$, y lo mismo ocurriría con la dimensión de $U\cap\overline{\{z\}}$, donde $U$ es un entorno abierto afín (y por tanto noetheriano) de $x$ en $X$.
+Pero esto contradice que el punto genérico $z$ de $U\cap\overline{\{z\}}$ sea aislado en $U\cap\overline{\{z\}}$ \sref{IV.10.5.3}.
+\end{proof}
+
+\begin{corollary}[10.5.8]
+\label{IV.10.5.8}
+Sea $A$ un anillo noetheriano; para todo elemento $f$ del radical $\mathfrak{R}$ de $A$, el anillo $A_f$ es un anillo de Jacobson, y el abierto $\operatorname{Spec}(A)-V(\mathfrak{R})$ es un esquema de Jacobson.
+\end{corollary}
+
+\begin{proof}
+Si $X=\operatorname{Spec}(A)$ y $Y=V(\mathfrak{J})$, donde $\mathfrak{J}$ es un ideal de $A$, decir que todo cerrado no vacío de $X$ corta a $Y$ equivale \sref[0]{0.2.1.3} a decir que $Y$ contiene todos los \emph{puntos cerrados} de $X$, o equivalentemente que $\mathfrak{J}$ está \emph{contenido en el radical} $\mathfrak{R}$ de $A$.
+Si $f\in\mathfrak{R}$, el abierto $D(f)$ no corta a $V(\mathfrak{R})$, y es un espacio de Jacobson en virtud de \sref{IV.10.5.7}.
+\end{proof}
+
+\begin{corollary}[10.5.9]
+\label{IV.10.5.9}
+Sea $A$ un anillo local noetheriano, $\mathfrak{m}$ su ideal maximal, $X=\operatorname{Spec}(A)$ y $Y=X-\{\mathfrak{m}\}$; entonces $Y$ es un esquema de Jacobson, cuyos puntos cerrados son los ideales primos $\mathfrak{p}\in\operatorname{Spec}(A)$ tales que $\dim(A/\mathfrak{p})=1$.
+\end{corollary}
+
+\begin{proof}
+La primera afirmación es un caso particular de \sref{IV.10.5.8}; por otra parte, los puntos cerrados de $Y$ son los ideales primos $\mathfrak{p}$ de $A$ que son elementos maximales del conjunto de los ideales primos $\neq\mathfrak{m}$, lo que, por definición de la dimensión, significa que $\dim(A/\mathfrak{p})=1$.
+\end{proof}
+
+\begin{proposition}[10.5.10]
+\label{IV.10.5.10}
+Sea $A$ un anillo local noetheriano, reducido, completo y que no sea un cuerpo.
+Entonces las intersecciones finitas de los núcleos de los homomorfismos locales de $A$ en anillos de valoración discreta $V$, que hacen de $V$ una $A$-álgebra finita, forman una base de filtro convergente a $0$ para la topología ádica de $A$.
+\end{proposition}
+
+\begin{proof}
+Basta (Bourbaki, \emph{Alg.\ comm.}, cap.~III, \S\,2, n$^\circ$\,7, prop.~8) probar que la intersección de los núcleos considerados en el enunciado se reduce a $0$.
+Supongamos primero que $A$ es íntegro y de dimensión $1$; en virtud del teorema de Nagata \sref[0]{0.23.1.5} y \sref[0]{0.23.1.6}, el cierre entero $A'$ de $A$ es un anillo local íntegro completo,
+\oldpage[IV-3]{107}
+íntegramente cerrado y de dimensión $1$, y una $A$-álgebra finita; es por tanto un anillo de valoración discreta, y la proposición se deduce inmediatamente en este caso.
+
+Pasemos al caso general; sea $x$ el punto cerrado de $X=\operatorname{Spec}(A)$ y pongamos $Y=X-\{x\}$; sabemos \sref{IV.10.5.9} que $Y$ es un preesquema de Jacobson.
+Mostremos que la intersección de los ideales primos $\mathfrak{p}$ de $A$ tales que $\dim(A/\mathfrak{p})=1$ se reduce a $0$; la proposición se seguirá entonces, pues, para cada uno de estos ideales $\mathfrak{p}$, la intersección de los núcleos de los homomorfismos locales de $A/\mathfrak{p}$ en anillos de valoración discreta $V$ que hacen de $V$ una $(A/\mathfrak{p})$-álgebra finita se reduce a $0$.
+Pero decir que la intersección de estos ideales primos se reduce a $0$ significa que el conjunto de dichos ideales es denso en $X$, o equivalentemente en $Y$ (puesto que $Y$ es denso en $X$), y esto se deduce inmediatamente de \sref{IV.10.5.9}.
+\end{proof}
+
+\subsection{Dimensión en los preesquemas de Jacobson}
+\label{subsection:IV.10.6}
+
+Los resultados de esta sección precisan, en ciertos casos, y generalizan resultados del \S\,5.
+
+\begin{proposition}[10.6.1]
+\label{IV.10.6.1}
+Sea $S$ un preesquema localmente noetheriano que satisfaga además las condiciones: $1^\circ$~$S$ es un preesquema de Jacobson; $2^\circ$~para todo $s\in S$, $\sh{O}_{S,s}$ es universalmente catenario \sref{IV.5.6.2}; $3^\circ$~toda componente irreducible $S'$ de $S$ es equicodimensional (dicho de otro modo, para todo punto cerrado $s$ de $S'$ y todo subpreesquema de $S$ cuyo espacio subyacente sea $S'$, se tiene $\dim(S')=\dim(\sh{O}_{S',s})$).
+Se tienen entonces las propiedades siguientes:
+\begin{enumerate}[label=(\roman*)]
+  \item Para todo morfismo localmente de tipo finito $g:X\to S$, $X$ satisface las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ anteriores.
+En particular, si $X$ es equidimensional (por ejemplo, si $X$ es irreducible), $X$ es biequidimensional (dicho de otro modo, $X$ es catenario y para todo punto cerrado $x$ de $X$ se tiene $\dim(\sh{O}_{X,x})=\dim(X)$ \sref[0]{0.14.3.3}).
+  \item Sean $X$, $Y$ dos $S$-preesquemas localmente de tipo finito sobre $S$ y $f:X\to Y$ un $S$-morfismo; supongamos que $X$ es irreducible y que $f$ es dominante.
+Si $\xi$ (resp.\ $\eta$) es el punto genérico de $X$ (resp.\ $Y$) y $e=\dim(f^{-1}(\eta))=\deg.\mathrm{tr}_{k(\eta)}k(\xi)$, se tiene
+\begin{equation}
+\label{IV.10.6.1.1}
+\tag{10.6.1.1}
+\dim(X)=\dim(Y)+e.
+\end{equation}
+  \item Sean $X$, $Y$ dos $S$-preesquemas localmente de tipo finito sobre $S$, $f:X\to Y$ un $S$-morfismo y $n$ un entero no negativo tal que $\dim(f^{-1}(y))\geq n$ (resp.\ $\dim(f^{-1}(y))\leq n$) para todo $y\in Y$.
+Entonces se tiene
+\begin{equation}
+\label{IV.10.6.1.2}
+\tag{10.6.1.2}
+\dim(X)\geq\dim(Y)+n
+\end{equation}
+(resp.
+\begin{equation}
+\label{IV.10.6.1.3}
+\tag{10.6.1.3}
+\dim(X)\leq\dim(Y)+n).
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) La propiedad $1^\circ$ para $X$ se deduce de \sref{IV.10.4.7}.
+Para todo $x\in X$, $\sh{O}_{X,x}$ es el anillo local, en un ideal primo, de una $\sh{O}_{S,g(x)}$-álgebra de tipo finito, y el homomorfismo $\sh{O}_{S,g(x)}\to\sh{O}_{X,x}$
+\oldpage[IV-3]{108}
+es local; por tanto \sref{IV.5.6.3},~(iv), $\sh{O}_{X,x}$ es universalmente catenario.
+Para mostrar que $X$ satisface la condición $3^\circ$, consideremos varios casos:
+
+\emph{a)} $X$ es un subpreesquema cerrado irreducible de $S$; sea $S'$ una componente irreducible de $S$ que contiene a $X$, $\xi$ el punto genérico de $X$ y $x$ un punto cerrado de $X$; para todo $s\in S'$, $\sh{O}_{S',s}$, cociente de $\sh{O}_{S,s}$, es catenario \sref{IV.5.6.1}, luego las condiciones $2^\circ$ y $3^\circ$ implican que $S'$ es biequidimensional \sref[0]{0.14.3.3}.
+En virtud de \sref{IV.5.1.2} y de \sref[0]{0.14.3.3.2}, se tiene por tanto
+\[
+  \dim(\sh{O}_{X,x})=\dim(\sh{O}_{S',x})-\dim(\sh{O}_{S',\xi})=\dim(S')-\dim(\sh{O}_{S',\xi})
+\]
+lo que prueba que $\dim(\sh{O}_{X,x})$ no depende del punto cerrado $x$ considerado, de donde la afirmación en este caso \sref{IV.5.1.4}.
+
+\emph{b)} $X$ es irreducible y $g$ dominante.
+Entonces, para todo punto cerrado $x$ de $X$, $g(x)$ es cerrado en $S$ por \sref{IV.10.4.7}; como $\sh{O}_{S,g(x)}$ es universalmente catenario, se deduce de \sref{IV.5.6.5.3} que se tiene
+\[
+  \dim(\sh{O}_{X,x})=\dim(\sh{O}_{S,g(x)})+e
+\]
+donde $e=\dim(g^{-1}(\zeta))$, siendo $\zeta$ el punto genérico de $S$.
+Como $\dim(S)=\dim(\sh{O}_{S,g(x)})$ en virtud de la condición $3^\circ$ para $S$, se tiene $\dim(\sh{O}_{X,x})=\dim(S)+e$ para todo punto cerrado $x\in X$; esto prueba la condición $3^\circ$ para $X$ \sref{IV.5.1.4}, y al mismo tiempo la fórmula
+\begin{equation}
+\label{IV.10.6.1.4}
+\tag{10.6.1.4}
+\dim(X)=\dim(S)+e.
+\end{equation}
+
+\emph{c) Caso general.}
+Considerando un subpreesquema reducido $X'$ de $X$ cuyo espacio subyacente sea una componente irreducible de $X$, nos reducimos al caso en que $X$ es íntegro; utilizando \sref[I]{I.5.2.2} y el caso $a)$ probado anteriormente, podemos sustituir entonces $S$ por el subpreesquema reducido cuyo espacio subyacente es $\overline{g(X)}$; quedamos así reducidos al caso $b)$, lo que termina de probar (i).
+
+(ii) Como el morfismo $f$ es localmente de tipo finito \sref[I]{I.1.3.4}, podemos aplicar los resultados de (i) sustituyendo $S$ por $Y$; además, como $X$ es irreducible y $f$ dominante, también podemos sustituir $S$ por $Y$ en \sref{IV.10.6.1.4}, lo que da \sref{IV.10.6.1.1}.
+
+(iii) La afirmación relativa al caso en que $\dim(f^{-1}(y))\leq n$ para todo $y\in Y$ ya se ha probado bajo hipótesis más generales en \sref{IV.5.6.7}.
+Supongamos que $\dim(f^{-1}(y))\geq n$ para todo $y\in Y$, y consideremos un punto genérico $\eta$ de una componente irreducible $Y'$ de $Y$; existe al menos una componente irreducible $Z$ de $f^{-1}(\eta)$ de dimensión $\geq n$; si $\xi$ es el punto genérico de $Z$, $\xi$ también es un punto genérico de una componente irreducible $X'$ de $X$ tal que $f(X')$ es denso en $Y'$ \sref[0]{0.2.1.8}.
+Consideremos los subpreesquemas reducidos de $X$, $Y$ que tienen respectivamente por espacios subyacentes $X'$, $Y'$, y la restricción $X'\to Y'$ de $f$ \sref[I]{I.5.2.2}; se deduce entonces de (ii) que $\dim(X')\geq\dim(Y')+n$, y \emph{a fortiori} $\dim(X)\geq\dim(Y')+n$; como esto es cierto para toda componente irreducible $Y'$ de $Y$, concluimos la desigualdad \sref{IV.10.6.1.2}.
+\end{proof}
+
+\begin{corollary}[10.6.2]
+\label{IV.10.6.2}
+Supongamos que $X$ satisface las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}.
+Entonces, para todo abierto denso $U$ de $X$, se tiene $\dim(U)=\dim(X)$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[IV-3]{109}
+Sabemos en efecto que $\dim(U)\leq\dim(X)$ \sref[0]{0.14.1.4}; además, como $X$ es un preesquema de Jacobson, $U$ contiene un punto cerrado de cada componente irreducible de $X$, luego $\dim(U)=\dim(X)$ en virtud de \sref{IV.10.6.1} y \sref[0]{0.14.1.2.1}.
+\end{proof}
+
+\begin{proposition}[10.6.3]
+\label{IV.10.6.3}
+Supongamos que $X$ satisface las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}, y sea $Y$ un cerrado de $X$.
+Para todo $x\in Y$ y todo entorno abierto $U$ de $x$ en $X$ que no corte las componentes irreducibles de $Y$ que no contienen a $x$, se tiene
+\begin{equation}
+\label{IV.10.6.3.1}
+\tag{10.6.3.1}
+\dim_x(Y)=\dim(U\cap Y)=\dim\overline{\{x\}}+\operatorname{codim}(\overline{\{x\}},Y)=\sup_i\dim(Y_i)
+\end{equation}
+donde los $Y_i$ ($1\leq i\leq m$) son las componentes irreducibles de $Y$ que contienen a $x$.
+\end{proposition}
+
+\begin{proof}
+Considerando un subpreesquema cerrado de $X$ cuyo espacio subyacente sea $Y$, podemos limitarnos, en virtud de \sref{IV.10.6.1},~(i), al caso en que $Y=X$.
+Por la elección de $U$, $U$ es la unión de los $U\cap X_i$, luego $\dim(U)=\sup_i\dim(U\cap X_i)$; pero, por \sref{IV.10.6.2} aplicado a un subpreesquema cerrado de $X$ cuyo espacio subyacente sea $X_i$, se tiene (teniendo en cuenta \sref{IV.10.6.1},~(i)) $\dim(U\cap X_i)=\dim(X_i)$; esto prueba que el segundo y el cuarto miembros de \sref{IV.10.6.3.1} son iguales.
+Como $U\cap X_i$ es biequidimensional \sref{IV.10.6.1},~(i) (pues la inmersión $U\cap X_i\to X_i$ es de tipo finito \sref[I]{I.6.3.5}), se tiene
+
+\begin{equation}
+\label{IV.10.6.3.2}
+\tag{10.6.3.2}
+\dim(X_i)=\dim(U\cap X_i)=\dim(U\cap\overline{\{x\}})+\operatorname{codim}(U\cap\overline{\{x\}},U\cap X_i)
+\end{equation}
+\sref[0]{0.14.3.5}.
+Por \sref{IV.10.6.2}, aplicado a un subpreesquema cerrado de $X$ cuyo espacio subyacente sea $\overline{\{x\}}$, $\dim(U\cap\overline{\{x\}})=\dim(\overline{\{x\}})$; como, por las mismas razones, también se tiene
+
+\begin{equation}
+\label{IV.10.6.3.3}
+\tag{10.6.3.3}
+\dim(X_i)=\dim(\overline{\{x\}})+\operatorname{codim}(\overline{\{x\}},X_i)
+\end{equation}
+se obtiene
+\[
+  \dim(U)=\dim(\overline{\{x\}})+\sup_i\operatorname{codim}(\overline{\{x\}},X_i)=\dim(\overline{\{x\}})+\operatorname{codim}(\overline{\{x\}},X)
+\]
+por definición de la codimensión \sref[0]{0.14.2.1}.
+Esto muestra que $\dim(U)$ es \emph{independiente} del entorno abierto $U$ de $x$ que satisface las condiciones del enunciado, y por tanto es igual a $\dim_x(X)$, por \sref[0]{0.14.1.4.1}.
+\end{proof}
+
+\begin{corollary}[10.6.4]
+\label{IV.10.6.4}
+Bajo las hipótesis de \sref{IV.10.6.3}, sea $\sh{F}$ un $\sh{O}_X$-módulo coherente y $Y$ su soporte.
+Para todo $x\in Y$, se tiene
+\begin{equation}
+\label{IV.10.6.4.1}
+\tag{10.6.4.1}
+\dim(\overline{\{x\}})+\dim(\sh{F}_x)=\dim_x Y.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En efecto, esto se deduce de \sref{IV.10.6.3.1} y de la fórmula $\dim(\sh{F}_x)=\operatorname{codim}(\overline{\{x\}},Y)$ \sref{IV.5.1.12.2}.
+\end{proof}
+
+\subsection{Ejemplos y contraejemplos}
+\label{subsection:IV.10.7}
+
+\begin{env}[10.7.1]
+\label{IV.10.7.1}
+Sea $S$ un preesquema localmente noetheriano de dimensión $\leq 1$ y supongamos que $S$ es un \emph{preesquema de Jacobson}; cuando $S$ es noetheriano, esto equivale a decir que las componentes irreducibles de $S$ de dimensión $1$ son infinitas, pues todo $x\in S$ que no sea un punto cerrado es el punto genérico de una componente tal \sref{IV.10.4.5} y \sref{IV.10.5.4}.
+Entonces $S$ satisface también las condiciones $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}: en efecto, todo anillo local $\sh{O}_{S,s}$ es de dimensión $0$ o $1$, y por tanto universalmente catenario \sref{IV.7.2.9}; por otra parte, una componente irreducible $S'$ de $S$ o bien se reduce
+\oldpage[IV-3]{110}
+a un punto o bien es de dimensión $1$, y para todo punto cerrado $s\in S'$, $\sh{O}_{S',s}$ es necesariamente de dimensión $1$.
+
+De estas observaciones y de \sref{IV.10.6.1} se deduce que todo preesquema localmente de tipo finito sobre $S$ satisface también las propiedades $1^\circ$, $2^\circ$ y $3^\circ$; este es en particular el caso de los preesquemas \emph{localmente de tipo finito sobre un cuerpo o sobre $\mathbf{Z}$}.
+\end{env}
+
+\begin{env}[10.7.2]
+\label{IV.10.7.2}
+Sea $A$ un anillo local noetheriano \emph{universalmente catenario} y sea $S$ el complementario del \emph{punto cerrado} $a$ en $X=\operatorname{Spec}(A)$.
+Entonces $S$ satisface las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}: en efecto, ya se ha visto que $S$ es un preesquema de Jacobson \sref{IV.10.5.9}; como $A$ es universalmente catenario, también lo son todos los anillos locales $A_\mathfrak{p}$ en los ideales primos de $A$ \sref{IV.5.6.3}.
+Por otra parte, una componente irreducible $S'$ de $S$ es el complementario de $a$ en una componente irreducible $X'$ de $X$. Para todo punto cerrado $x$ de $S$, la adherencia de $x$ en $X$ es $\{x,a\}$, luego $\dim(\overline{\{x\}})=1$. Como $X'$ es biequidimensional por hipótesis \sref[0]{0.14.3.3}, se deduce que $\dim(\sh{O}_{X',x})=\dim(X')-1$ \sref[0]{0.14.3.2}, lo que prueba que $S'$ es equicodimensional \sref{IV.5.1.4}.
+\end{env}
+
+\begin{env}[10.7.3]
+\label{IV.10.7.3}
+Sea $A$ un anillo de valoración discreta; mostremos que en $B=A[T_1,\ldots,T_n]$, con $n$ indeterminadas, existen dos ideales maximales $\mathfrak{m}$, $\mathfrak{n}$ de \emph{alturas respectivas} $n$ y $n+1$.
+Lo hemos visto en \sref{IV.5.2.5},~(i) para $n=1$; probémoslo por inducción sobre $n$.
+Como $A[T_1,\ldots,T_{n+1}]$ es un $A[T_1,\ldots,T_n]$-módulo libre, y por tanto fielmente plano, existen ideales maximales $\mathfrak{m}'$ y $\mathfrak{n}'$ de $A[T_1,\ldots,T_{n+1}]$ situados respectivamente sobre $\mathfrak{m}$ y $\mathfrak{n}$ \sref[0]{0.6.5.1}; por \sref{IV.5.5.3}, estos ideales tienen alturas respectivas $n+1$ y $n+2$, lo que prueba la afirmación.
+Supongamos $n\geq 2$ en lo que sigue.
+Sea $\mathfrak{J}=\mathfrak{m}\cap\mathfrak{n}=\mathfrak{m}\mathfrak{n}$ y sea $R=1+\mathfrak{J}$, que es un subconjunto multiplicativo de $B$.
+Si $B'=R^{-1}B$, el ideal $\mathfrak{J}'=R^{-1}\mathfrak{J}$ está contenido en el radical de $B'$ (Bourbaki, \emph{Alg\`ebre commutative}, cap.~III, \S3, n.~5, prop.~12).
+Como espacio topológico, $X'=\operatorname{Spec}(B')$ se identifica con un subespacio de $X=\operatorname{Spec}(B)$, y en los puntos $x$ de $X'$ los anillos locales $\sh{O}_{X,x}$ y $\sh{O}_{X',x}$ son los mismos \sref[I]{I.1.6.2}.
+Consideremos en $X'$ el cerrado $Y'=V(\mathfrak{J}')$, y pongamos $S=X'\setminus Y'$.
+Entonces $S$ es un preesquema de Jacobson \sref{IV.10.5.7}, y es evidentemente irreducible y noetheriano; además, para todo $s\in S$, el anillo local $\sh{O}_{S,s}=\sh{O}_{X,s}$ es universalmente catenario por \sref{IV.5.6.3}, pues $A$ es universalmente catenario \sref{IV.5.6.4}.
+Sin embargo, existen dos puntos cerrados $a,b$ de $S$ tales que $\sh{O}_{S,a}$ y $\sh{O}_{S,b}$ \emph{no tienen la misma dimensión}; dicho de otro modo, $S$ no satisface la condición $3^\circ$ de \sref{IV.10.6.1}.
+Para verlo, consideremos los dos ideales maximales $\mathfrak{m}'=R^{-1}\mathfrak{m}$ y $\mathfrak{n}'=R^{-1}\mathfrak{n}$ de $B'$, que tienen alturas $n$ y $n+1$, respectivamente.
+Se tiene $\mathfrak{J}'=\mathfrak{m}'\cap\mathfrak{n}'$, y por tanto $\mathfrak{J}'$ no está contenido en ningún ideal primo de $B'$ distinto de $\mathfrak{m}'$ y $\mathfrak{n}'$; estos son, en consecuencia, los únicos ideales maximales de $B'$.
+Sean $a',b'$ los únicos puntos cerrados de $X'$, correspondientes a $\mathfrak{m}'$ y $\mathfrak{n}'$.
+Existe en $B'$ un ideal primo no maximal $\mathfrak{p}'\subset\mathfrak{m}'$ que no está contenido en $\mathfrak{n}'$: basta mostrar que en $B$ existe un ideal primo no maximal contenido en $\mathfrak{m}$ y no en $\mathfrak{n}$; para ello puede, por ejemplo, considerarse la fibra de $\mathfrak{m}$ para el morfismo correspondiente a la inyección $A[T_1]\longrightarrow B=A[T_1,\ldots,T_n]$ y aplicar \sref{IV.6.1.2}.
+Considerando una cadena maximal de ideales primos entre $\mathfrak{p}'$ y $\mathfrak{m}'$, y sustituyendo $\mathfrak{p}'$ por el penúltimo ideal de esta cadena, podemos por tanto suponer que el punto $a$ de $X'$ correspondiente a $\mathfrak{p}'$ tiene por adherencia $\{a,a'\}$ en $X'$.
+Como $B'_{\mathfrak{m}'}$ es biequidimensional, $\mathfrak{p}'$ tiene entonces altura $n-1$.
+Del mismo modo se construye un ideal primo no maximal $\mathfrak{q}'$ de $B'$ de altura $n$ tal que, si $b$ es el punto correspondiente de $X'$, la adherencia de $b$ en $X'$ es $\{b,b'\}$.
+Así, $a$ y $b$ pertenecen a $S$ y son cerrados en $S$, y proporcionan por tanto el ejemplo buscado.
+\end{env}
+
+\subsection{Profundidad rectificada}
+\label{subsection:IV.10.8}
+
+\begin{definition}[10.8.1]
+\label{IV.10.8.1}
+Sea $X$ un preesquema localmente noetheriano y $\sh{F}$ un $\sh{O}_X$-Módulo coherente.
+Para todo $x\in X$, llamamos \emph{profundidad rectificada} de $\sh{F}$ en el punto $x$ y denotamos $\operatorname{prof}^*_x(\sh{F})$ el número (entero $\geq 0$ o $+\infty$) igual a
+\begin{equation}
+\label{IV.10.8.1.1}
+\tag{10.8.1.1}
+\operatorname{prof}^*_x(\sh{F})=\operatorname{prof}(\sh{F}_x)+\dim(\overline{\{x\}})
+\end{equation}
+donde $\overline{\{x\}}$ es la adherencia del punto $x$ en $X$.
+Para todo subconjunto $Z$ de $X$, llamamos \emph{profundidad rectificada de $\sh{F}$ a lo largo de $Z$} y denotamos $\operatorname{prof}^*_Z(\sh{F})$ el número
+\begin{equation}
+\label{IV.10.8.1.2}
+\tag{10.8.1.2}
+\operatorname{prof}^*_Z(\sh{F})=\inf_{x\in Z}\operatorname{prof}^*_x(\sh{F}).
+\end{equation}
+\end{definition}
+
+Dicho de otro modo, para todo entero $n$, la relación $\operatorname{prof}^*_Z(\sh{F})\geq n$ equivale a $\operatorname{prof}^*_x(\sh{F})\geq n$ para todo $x\in Z$.
+Si $Z=X$, se escribe $\operatorname{prof}^*(\sh{F})$ en lugar de $\operatorname{prof}^*_X(\sh{F})$.
+
+\oldpage[IV-3]{111}
+
+\begin{remarks}[10.8.2]
+\label{IV.10.8.2}
+(i) En todo punto cerrado $x\in X$, la profundidad rectificada es igual a la profundidad.
+
+(ii) Sea $Y$ un subpreesquema cerrado de $X$, $j:Y\to X$ la inyección canónica y $\sh{G}$ un $\sh{O}_Y$-módulo coherente.
+Sabemos \sref{IV.5.7.3},~(vi) que $\operatorname{prof}(\sh{G}_x)=\operatorname{prof}(j_*(\sh{G})_x)$ para todo $x\in Y$; deducimos por tanto que $\operatorname{prof}^*_x(\sh{G})=\operatorname{prof}^*_x(j_*(\sh{G}))$ para todo $x\in Y$.
+
+(iii) La noción de profundidad rectificada solo presenta interés cuando es de carácter \emph{local}, es decir, cuando no cambia al sustituir $X$ por un entorno abierto arbitrario $U$ de $x$.
+Esto exige evidentemente que $x$ no sea aislado en $\overline{\{x\}}$ cuando $x$ no es un punto cerrado de $X$, y por consiguiente que $X$ sea un \emph{preesquema de Jacobson} \sref{IV.10.4.5.1}; la mayoría de las veces, también será necesario saber que $\dim(U)=\dim(X)$ para todo abierto denso $U$ de $X$, y habrá que suponer por tanto que $X$ satisface además las condiciones $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}.
+\end{remarks}
+
+\begin{lemma}[10.8.3]
+\label{IV.10.8.3}
+Sea $X$ un preesquema regular y biequidimensional y $\sh{F}$ un $\sh{O}_X$-Módulo coherente.
+Entonces, para todo $x\in X$, se tiene
+\begin{equation}
+\label{IV.10.8.3.1}
+\tag{10.8.3.1}
+\operatorname{prof}^*_x(\sh{F})=\dim(X)-\dim.\operatorname{proj}(\sh{F}_x).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+En efecto, como $X$ es biequidimensional, se tiene \sref[0]{0.14.3.5.1}
+\[
+  \dim(\overline{\{x\}})=\dim(X)-\operatorname{codim}(\overline{\{x\}},X)=\dim(X)-\dim(\sh{O}_{X,x})
+\]
+en virtud de \sref{IV.5.1.2}.
+Por otra parte, como $X$ es regular, se tiene por \sref[0]{0.17.3.4}
+\[
+  \operatorname{prof}(\sh{F}_x)=\dim(\sh{O}_{X,x})-\dim.\operatorname{proj}(\sh{F}_x)
+\]
+de donde el lema.
+\end{proof}
+
+\begin{corollary}[10.8.4]
+\label{IV.10.8.4}
+Bajo las hipótesis de \sref{IV.10.8.3}, la función $x\mapsto\operatorname{prof}^*_x(\sh{F})$ es semicontinua inferiormente.
+\end{corollary}
+
+\begin{proof}
+Esto se deduce de \sref{IV.10.8.3.1}, pues $x\mapsto\dim.\operatorname{proj}(\sh{F}_x)$ es semicontinua superiormente \sref{IV.6.11.1}.
+\end{proof}
+
+\begin{proposition}[10.8.5]
+\label{IV.10.8.5}
+Sea $S$ un preesquema localmente noetheriano, $X$ un preesquema localmente de tipo finito sobre $S$ y $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Supongamos que $S$ satisface las condiciones: $1^\circ$~$S$ es un preesquema de Jacobson; $2^\circ$~$S$ es regular; $3^\circ$~las componentes irreducibles de $S$ son equicodimensionales.
+Entonces la función $x\mapsto\operatorname{prof}^*_x(\sh{F})$ es semicontinua inferiormente; dicho de otro modo, para todo entero $n$, el conjunto $U_n$ de los $x\in X$ tales que $\operatorname{prof}^*_x(\sh{F})\geq n$ es abierto.
+\end{proposition}
+
+\begin{proof}
+Como los anillos locales $\sh{O}_{S,s}$ de $S$ son regulares, son universalmente catenarios \sref{IV.5.6.4}; dicho de otro modo, $S$ satisface las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}, y por tanto lo mismo ocurre con $X$ \sref{IV.10.6.1},~(i).
+Como la noción de profundidad rectificada es entonces de carácter local \sref{IV.10.8.2},~(iii), podemos limitarnos al caso en que $S=\operatorname{Spec}(A)$ y $X=\operatorname{Spec}(B)$ son afines, siendo $A$ un anillo regular y $B$ una $A$-álgebra de tipo finito, y por tanto un cociente de un anillo de polinomios $C=A[T_1,\ldots,T_n]$; este último anillo es regular \sref[0]{0.17.3.7}.
+Podemos pues suponer que $X$ es un subpreesquema cerrado de un preesquema regular $Y$ que satisface también las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}; teniendo en cuenta la observación \sref{IV.10.8.2},~(ii), quedamos así reducidos al caso en que $X$ es además regular y noetheriano.
+Pero como los anillos locales de $X$ son entonces íntegros, las componentes irreducibles de $X$ son
+\oldpage[IV-3]{112}
+abiertas \sref[I]{I.6.1.10}, y por tanto también podemos suponer que $X$ es irreducible.
+Entonces, como los anillos locales de $X$ son catenarios \sref[0]{0.16.5.12}, la hipótesis $3^\circ$ de \sref{IV.10.6.1} implica que $X$ es biequidimensional (\sref{IV.5.1.5} y \sref[0]{0.14.3.3}); basta pues aplicar \sref{IV.10.8.4}.
+\end{proof}
+
+Obsérvese que, si $S$ es el espectro de un cuerpo o de $\mathbf{Z}$, satisface las condiciones de \sref{IV.10.8.5}.
+
+\begin{corollary}[10.8.6]
+\label{IV.10.8.6}
+Bajo las hipótesis de \sref{IV.10.8.5}, para todo $x\in X$, el número $\operatorname{prof}^*_x(\sh{F})$ es el único entero $n$ que tiene la propiedad siguiente: existe un entorno abierto $U$ de $x$ tal que, para todo punto $x'\in U\cap\overline{\{x\}}$ cerrado en $U$, se tiene $\operatorname{prof}(\sh{F}_{x'})=n$.
+En particular, para que $\operatorname{prof}^*_x(\sh{F})\geq m$ (resp.\ $\operatorname{prof}^*_x(\sh{F})\leq m$), es necesario y suficiente que exista un entorno abierto $V$ de $x$ en $X$ tal que, para todo punto $x'\in V\cap\overline{\{x\}}$ cerrado en $V$, se tenga $\operatorname{prof}(\sh{F}_{x'})\geq m$ (resp.\ $\operatorname{prof}(\sh{F}_{x'})\leq m$).
+\end{corollary}
+
+\begin{proof}
+En efecto, podemos limitarnos al caso en que $x$ no es un punto cerrado; si $\operatorname{prof}^*_x(\sh{F})=n$, el conjunto de los $y\in X$ tales que $\operatorname{prof}^*_y(\sh{F})\leq n$ es cerrado en virtud de \sref{IV.10.8.5}, y por tanto contiene a $\overline{\{x\}}$; en virtud de la semicontinuidad inferior de $\operatorname{prof}^*_y(\sh{F})$, existe un entorno abierto $U$ de $x$ tal que $\operatorname{prof}^*_y(\sh{F})=n$ para todo $y\in U\cap\overline{\{x\}}$, y por tanto $\operatorname{prof}(\sh{F}_{x'})=n$ si $x'\in U\cap\overline{\{x\}}$ es cerrado (puesto que la noción de profundidad rectificada es local).
+\end{proof}
+
+Para los preesquemas que satisfacen las hipótesis de \sref{IV.10.8.5}, la noción de profundidad rectificada puede por tanto definirse mediante los valores de la profundidad en los \emph{puntos cerrados} de $X$ (estos forman un conjunto muy denso en todo cerrado de $X$).
+
+\begin{proposition}[10.8.7]
+\label{IV.10.8.7}
+Sea $S$ un preesquema localmente noetheriano que satisfaga las condiciones $1^\circ$, $2^\circ$ y $3^\circ$ de \sref{IV.10.6.1}.
+Sea $X$ un preesquema localmente de tipo finito sobre $S$, $\sh{F}$ un $\sh{O}_X$-Módulo coherente y $Y=\operatorname{Supp}(\sh{F})$.
+Entonces, para todo $x\in Y$, se tiene
+\begin{equation}
+\label{IV.10.8.7.1}
+\tag{10.8.7.1}
+\operatorname{prof}^*_x(\sh{F})=\dim_x(Y)-\operatorname{coprof}(\sh{F}_x).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+En efecto, por definición, $\operatorname{coprof}(\sh{F}_x)=\dim(\sh{F}_x)-\operatorname{prof}(\sh{F}_x)$, y se deduce de \sref{IV.10.6.4} que $\dim_x(Y)=\dim(\overline{\{x\}})+\dim(\sh{F}_x)$; de donde \sref{IV.10.8.7.1} por definición de $\operatorname{prof}^*_x(\sh{F})$.
+\end{proof}
+
+\begin{corollary}[10.8.8]
+\label{IV.10.8.8}
+Supongamos que las hipótesis sobre $f$ y $\sh{F}$ son las de \sref{IV.9.9.1}. Entonces la función $x\mapsto\operatorname{prof}^*_x(\sh{F}_{f(x)})$ es construible.
+\end{corollary}
+
+\begin{proof}
+Para todo $s\in S$, la fibra $X_s$, al ser localmente de tipo finito sobre $k(s)$, es un preesquema de Jacobson \sref{IV.10.4.7}. Como $\operatorname{Spec}(k(s))$ satisface las condiciones de \sref{IV.10.6.1}, se tiene
+\[
+  \operatorname{prof}^*_x(\sh{F}_{f(x)})
+  =\dim_x(\operatorname{Supp}(\sh{F}_{f(x)}))
+   -\operatorname{coprof}((\sh{F}_{f(x)})_x)
+\]
+por \sref{IV.10.8.7}.
+Ahora bien, si $Z=\operatorname{Supp}(\sh{F})$, se tiene $Z_{f(x)}=\operatorname{Supp}(\sh{F}_{f(x)})$ \sref[I]{I.9.1.13} y $Z$ es localmente construible \sref{IV.8.9.1}; por tanto, las funciones $x\mapsto\dim_x(\operatorname{Supp}(\sh{F}_{f(x)}))$ y $x\mapsto\operatorname{coprof}((\sh{F}_{f(x)})_x)$ son localmente construibles (\sref{IV.9.9.1} y \sref{IV.9.9.3}), lo que prueba la proposición.
+\end{proof}
+
+\subsection{Espectros maximales y ultrapreesquemas}
+\label{subsection:IV.10.9}
+
+Los resultados de esta sección no se utilizarán en lo que sigue.
+
+\begin{env}[10.9.1]
+\label{IV.10.9.1}
+Sea $X$ un preesquema de Jacobson, y sea $S(X)$ el \emph{espacio anillado} cuyo espacio subyacente es el subespacio de los puntos cerrados de $X$, y cuyo haz de anillos es el haz inducido sobre este subespacio por $\sh{O}_X$, es decir, el haz $\psi^*(\sh{O}_X)$, donde $\psi:S(X)\to X$ denota la inyección canónica.
+Como $\psi$ es un
+\oldpage[IV-3]{113}
+cuasihomeomorfismo, hemos visto \sref{IV.10.2.8},~(ii) que, si $\theta:\sh{O}_X\to\psi_*(\sh{O}_{S(X)})$ es el homomorfismo de haces de anillos tal que $\theta^\sharp:\psi^*(\sh{O}_X)\to\sh{O}_{S(X)}$ es la identidad, entonces $j_X=(\psi,\theta)$ es un \emph{cuasiisomorfismo} de espacios anillados, y $\sh{F}\mapsto j_X^*(\sh{F})$ es una equivalencia entre la categoría de $\sh{O}_X$-Módulos y la de $\sh{O}_{S(X)}$-Módulos.
+Está claro que, bajo esta equivalencia, a los $\sh{O}_X$-módulos localmente libres (resp.\ coherentes) corresponden los $\sh{O}_{S(X)}$-módulos localmente libres (resp.\ coherentes). Además, si $\sh{L}$ es un $\sh{O}_X$-módulo localmente libre y $U$ es un abierto de $X$ tal que $\sh{L}|_U\simeq(\sh{O}_X|_U)^n$, entonces
+\[
+  j_X^*(\sh{L})|_{U\cap S(X)}
+  \simeq \bigl(\sh{O}_{S(X)}|_{U\cap S(X)}\bigr)^n.
+\]
+\end{env}
+
+\begin{env}[10.9.2]
+\label{IV.10.9.2}
+Sean $X$, $Y$ dos preesquemas de Jacobson y $f=(\rho,\lambda):X\to Y$ un morfismo \emph{localmente de tipo finito}.
+Se ha visto \sref{IV.10.4.7} que $\rho(S(X))\subset S(Y)$ y, por restricción de $\rho$ a $S(X)$, se define por tanto una aplicación continua $S(\rho):S(X)\to S(Y)$.
+Para todo abierto $V$ de $Y$, se define por composición un homomorfismo de anillos
+\[
+  \Gamma(V\cap S(Y),\sh{O}_{S(Y)})\to\Gamma(V,\sh{O}_Y)\xrightarrow{\lambda_V}\Gamma(f^{-1}(V),\sh{O}_X)\to\Gamma(f^{-1}(V)\cap S(X),\sh{O}_{S(X)})
+\]
+donde los dos isomorfismos extremos se han definido en \sref{IV.10.9.1}; está claro que esto define un homomorfismo de haces de anillos $S(\lambda):\sh{O}_{S(Y)}\to\rho_*(\sh{O}_{S(X)})$ (recordando que los abiertos de $S(X)$ (resp.\ $S(Y)$) corresponden biyectivamente a los de $X$ (resp.\ $Y$) \sref{IV.10.2.1}); se obtiene así un morfismo de espacios anillados $S(f)=(S(\rho),S(\lambda)):(S(X),\sh{O}_{S(X)})\to(S(Y),\sh{O}_{S(Y)})$ tal que el diagrama
+\[
+  \xymatrix{
+    S(X)\ar[r]^{S(f)}\ar[d]_{j_X} & S(Y)\ar[d]^{j_Y}\\
+    X\ar[r]^{f} & Y
+  }
+\]
+es conmutativo; además, si $Z$ es un tercer preesquema de Jacobson y $g:Y\to Z$ un morfismo localmente de tipo finito, $S(g\circ f)=S(g)\circ S(f)$.
+Se ha definido así un \emph{funtor covariante} $S:\mathbf{C}\to\mathbf{C}'$, donde $\mathbf{C}'$ es la categoría de los \emph{espacios anillados en anillos locales}, y $\mathbf{C}$ la categoría cuyos objetos son los \emph{preesquemas de Jacobson} y cuyos morfismos son los morfismos localmente de tipo finito entre preesquemas de Jacobson.
+\end{env}
+
+\begin{env}[10.9.3]
+\label{IV.10.9.3}
+Determinemos ahora la subcategoría $\mathbf{C}''$ de $\mathbf{C}'$ formada por los espacios anillados isomorfos a $S(X)$ y cuyos morfismos provienen de los $S(f)$.
+Supongamos primero que $X=\operatorname{Spec}(A)$, donde $A$ es un anillo de Jacobson; entonces $S(X)$ es el conjunto de los ideales \emph{maximales} de $A$, provisto: $1^\circ$~de la topología inducida por la de $X$, de modo que una base de esta topología está formada por los $D^m(h)=D(h)\cap S(X)$, es decir, el conjunto de los ideales maximales $\mathfrak{m}$ de $A$ tales que $h\notin\mathfrak{m}$; $2^\circ$~del haz de anillos $\sh{O}_{S(X)}$ tal que $\Gamma(D^m(h),\sh{O}_{S(X)})=A_h$.
+Diremos que este espacio anillado es el \emph{espectro maximal} del anillo de Jacobson $A$ y lo denotaremos $\operatorname{Spm}(A)$.
+
+Obsérvese que, si $j:D(h)\to X$ es la inyección canónica, el espacio anillado inducido sobre $D^m(h)$ por $S(X)$ y $S(D(h))$ son canónicamente isomorfos, y que la inyección canónica $D^m(h)\to S(X)$ de espacios anillados es igual a $S(j)$.
+
+Sea $B$ un segundo anillo de Jacobson, $Y=\operatorname{Spec}(B)$, $\varphi:B\to A$ un homomorfismo de anillos que hace de $A$ una $B$-álgebra de \emph{tipo finito}, $f=({}^a\varphi,\widetilde{\varphi}):X\to Y$ el morfismo correspondiente de preesquemas, y
+\[
+  S(f):\operatorname{Spm}(A)\to\operatorname{Spm}(B)
+\]
+el morfismo de espacios anillados correspondiente a $f$.
+Está claro que $S(f)=(\psi,\theta)$ es un morfismo de espacios anillados en anillos locales, es decir, $(\mathrm{Err}_{\mathrm{II}},1.8.2)$, para todo $x\in\operatorname{Spm}(A)$, $\theta^\sharp_x$ es un homomorfismo \emph{local}.
+Recíprocamente:
+\end{env}
+
+\begin{proposition}[10.9.4]
+\label{IV.10.9.4}
+Sean $A$, $B$ dos anillos de Jacobson.
+Si $u=(\psi,\theta):\operatorname{Spm}(A)\to\operatorname{Spm}(B)$ es un morfismo de espacios anillados en anillos locales tal que $\Gamma(\theta):B\to A$ hace de $A$ una $B$-álgebra de tipo finito, existe un único morfismo de preesquemas $f:\operatorname{Spec}(A)\to\operatorname{Spec}(B)$ tal que $u=S(f)$.
+\end{proposition}
+
+\begin{proof}
+La unicidad de $f$ es evidente, pues si $f=({}^a\varphi,\widetilde{\varphi})$, se debe tener $\varphi=\Gamma(\theta)$; queda por mostrar que $S(f)$ está definido y que $u=S(f)$.
+Ahora bien, la primera afirmación se deduce de que se supone que $\varphi$ hace de $A$ una $B$-álgebra de tipo finito, y por tanto $f(\operatorname{Spm}(A))\subset\operatorname{Spm}(B)$; el hecho de que $\theta^\sharp_x$ sea un homomorfismo local para todo $x\in\operatorname{Spm}(A)$ permite repetir el razonamiento de \sref[I]{I.1.7.3}, restringiéndonos a los puntos $x$ de $\operatorname{Spm}(A)$, para mostrar así sucesivamente que $\psi(x)={}^a\varphi(x)$ para todo $x\in\operatorname{Spm}(A)$, y después que $\theta^\sharp_x=\varphi_x:B_{\psi(x)}\to A_x$, lo que termina de probar que $u=S(f)$.
+\end{proof}
+
+\oldpage[IV-3]{114}
+
+\begin{env}[10.9.5]
+\label{IV.10.9.5}
+Consideremos ahora un espacio anillado $(X,\sh{O}_X)$; diremos que un abierto $U$ de $X$ es \emph{ultraafín} si el espacio anillado inducido $(U,\sh{O}_X|U)$ es isomorfo a un espectro maximal $\operatorname{Spm}(A)$, donde $A$ es un anillo de Jacobson.
+Diremos que $X$ es un \emph{ultrapreesquema} si todo punto de $X$ admite un entorno abierto ultraafín.
+Se muestra, como en \sref[I]{I.2.1.3} y \sref[I]{I.2.1.4}, que los abiertos ultraafines forman una \emph{base} de la topología de $X$ y que $X$ es un espacio de Kolmogórov.
+Si $Y$ es un segundo ultrapreesquema, diremos que un morfismo de espacios anillados $f:X\to Y$ es un \emph{morfismo de ultrapreesquemas} si satisface las condiciones siguientes: $1^\circ$~$f$ es un morfismo de espacios anillados en anillos locales; $2^\circ$~para todo $x\in X$, existe un entorno abierto ultraafín $V$ de $f(x)$ en $Y$ y un abierto ultraafín $U$ de $x$ en $X$ tales que $f(U)\subset V$ y que el homomorfismo $\Gamma(V,\sh{O}_Y)\to\Gamma(U,\sh{O}_X)$ correspondiente a $f$ hace de $\Gamma(U,\sh{O}_X)$ una $\Gamma(V,\sh{O}_Y)$-\emph{álgebra de tipo finito}.
+
+Es inmediato que la compuesta de dos morfismos tales está bien definida y es un tercer morfismo tal por la observación final de \sref{IV.10.9.3}.
+Está claro que la categoría $C''_0$ así definida es una subcategoría de $C'$ que contiene a $C''$; nos proponemos ahora mostrar que $C''=C''_0$, dicho de otro modo:
+\end{env}
+
+\begin{proposition}[10.9.6]
+\label{IV.10.9.6}
+El funtor $X\mapsto S(X)$ de $\mathbf{C}$ en $\mathbf{C}''_0$ es una equivalencia de categorías.
+\end{proposition}
+
+\begin{proof}
+$1^\circ$ Mostremos primero que el funtor $X\mapsto S(X)$ es \emph{plenamente fiel}, dicho de otro modo, que para $X$, $Y$ en $\mathbf{C}$, la aplicación canónica
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X,Y)\to\operatorname{Hom}_{\mathbf{C}''_0}(S(X),S(Y))
+\]
+es \emph{biyectiva}.
+En primer lugar es \emph{inyectiva}: sean $f$, $g$ dos morfismos localmente de tipo finito de $X$ en $Y$, y supongamos que $S(f)=S(g)$; se tiene $f^{-1}(V)\cap S(X)=g^{-1}(V)\cap S(X)$ para todo abierto $V$ de $Y$, luego \sref{IV.10.3.1} y \sref{IV.10.2.7} dan $f^{-1}(V)=g^{-1}(V)$; basta por tanto probar que, para todo abierto afín $V$ de $Y$, $f$ y $g$ coinciden en $f^{-1}(V)=g^{-1}(V)$; dicho de otro modo, nos reducimos al caso en que $Y=\operatorname{Spec}(B)$ es el espectro de un anillo de Jacobson $B$.
+Basta \sref[I]{I.2.2.4} mostrar que los homomorfismos de anillos $B\to\Gamma(X,\sh{O}_X)$ correspondientes a $f$ y $g$ son iguales.
+Ahora bien, para todo $s\in B$, las imágenes de $s$ por estos homomorfismos son dos secciones de $\sh{O}_X$ sobre $X$ que, por hipótesis, inducen la \emph{misma} sección sobre $S(X)$; sabemos \sref{IV.10.2.8} que estas secciones son idénticas, de donde nuestra afirmación.
+En segundo lugar, probemos que todo morfismo $h:S(X)\to S(Y)$ (para la categoría $\mathbf{C}''_0$) es de la forma $S(f)$, donde $f:X\to Y$ es un morfismo localmente de tipo finito.
+Por hipótesis, existe un recubrimiento abierto ultraafín $(U'_\lambda)$ (resp.\ $(V'_\mu)$) de $S(X)$ (resp.\ $S(Y)$) tal que, para todo $\lambda$, $h(U'_\lambda)$ está contenido en uno de los $V'_\mu$ y el homomorfismo de anillos correspondiente a la restricción $h_\lambda:U'_\lambda\to V'_\mu$ hace del segundo anillo un álgebra de tipo finito sobre el primero.
+Podemos suponer que $U'_\lambda=U_\lambda\cap S(X)$ y $V'_\mu=V_\mu\cap S(Y)$, donde $U_\lambda$ y $V_\mu$ son abiertos afines de $X$ y $Y$, respectivamente, determinados de manera única. Si, para todo $\lambda$, $h_\lambda=S(f_\lambda)$ para un morfismo de tipo finito $f_\lambda:U_\lambda\to V_\mu$, entonces la primera parte del razonamiento, aplicada a las restricciones de $f_\alpha$ y $f_\beta$ a $U_\alpha\cap U_\beta$, muestra que los $f_\lambda$ son restricciones de un único morfismo $f:X\to Y$, y claramente $h=S(f)$. Quedamos así reducidos al caso en que $X$ e $Y$ son afines, y la conclusión se deduce de \sref{IV.10.9.4}.
+
+$2^\circ$ Queda por probar que todo ultrapreesquema $X'$ es de la forma $S(X)$ para un preesquema de Jacobson $X$ (que será necesariamente único salvo isomorfismo, en virtud de $1^\circ$).
+Existen abiertos ultraafines $(U'_\alpha)$ de $X'$, cada uno de los cuales es de la forma $S(U_\alpha)$, siendo $U_\alpha$ el espectro de un anillo de Jacobson.
+Para cada par de índices $\alpha$, $\beta$, consideremos el único abierto $U_{\alpha\beta}$ de $U_\alpha$ cuya traza sobre $U'_\alpha$ es $U'_\alpha\cap U'_\beta$; en virtud de $1^\circ$, el automorfismo identidad de $U'_\alpha\cap U'_\beta$ es de la forma $S(\theta_{\alpha\beta})$, donde $\theta_{\alpha\beta}:U_{\alpha\beta}\to U_{\beta\alpha}$ es un isomorfismo de preesquemas.
+Se verifica fácilmente (en virtud de $1^\circ$) que la familia $(\theta_{\alpha\beta})$ satisface la condición de pegado \sref[0]{0.4.1.7}, y que esta familia define un preesquema $X$; está claro entonces que se tiene $X'=S(X)$, lo que termina la demostración.
+\end{proof}
+
+\subsection{Espacios algebraicos de Serre}
+\label{subsection:IV.10.10}
+
+\begin{env}[10.10.1]
+\label{IV.10.10.1}
+El lenguaje introducido por Serre en (FAC) resulta a veces cómodo, especialmente en las cuestiones en que el interés principal recae sobre los puntos racionales sobre el cuerpo base $k$ (algebraicamente cerrado por hipótesis) de las ``variedades algebraicas'' sobre $k$ que se consideran.
+Esbozaremos aquí este lenguaje enlazándolo con las consideraciones precedentes, para permitir al lector traducir los enunciados de Serre al lenguaje de los esquemas.
+Por lo demás, también es posible desarrollar el lenguaje de Serre para preesquemas sobre un cuerpo no algebraicamente cerrado (e incluso sobre un anillo artiniano); pero esto introduce complicaciones técnicas considerables y, además, sobre un cuerpo base arbitrario desaparecen las ventajas (ante todo psicológicas) del punto de vista de Serre; por ello nos limitaremos al marco fijado por Serre.
+La presente sección, al igual que la precedente, no se utilizará en lo que sigue de este Tratado, y nos contentaremos por tanto con indicaciones breves.
+\end{env}
+
+\oldpage[IV-3]{115}
+
+\begin{env}[10.10.2]
+\label{IV.10.10.2}
+Dado un ultrapreesquema $R$, se puede definir naturalmente (como en toda categoría) la noción de $R$-\emph{ultrapreesquema}.
+Consideremos en particular un cuerpo algebraicamente cerrado $k$; $\operatorname{Spm}(k)$ es entonces idéntico a $\operatorname{Spec}(k)$; diremos que un $\operatorname{Spm}(k)$-ultrapreesquema $X'$ es un \emph{espacio prealgebraico sobre $k$}: es un espacio $k$-anillado en anillos locales en el que todo punto admite un entorno abierto isomorfo al espectro maximal de una $k$-álgebra de tipo finito; por tanto, esto equivale a decir (por \sref{IV.10.9.6}) que $X'=S(X)$, donde $X$ es un $k$-preesquema localmente de tipo finito.
+Si $X$, $Y$, $Z$ son tres $k$-preesquemas localmente de tipo finito, lo mismo ocurre con $X\times_ZY$ \sref[I]{subsection:I.3.4}; por tanto, en virtud de \sref{IV.10.9.6}, existen productos en la categoría de los espacios prealgebraicos sobre $k$, tanto el producto ``sobre $k$'' $X'\times_kY'$ como el ``producto fibrado'' $X'\times_{Z'}Y'$, donde $X'$, $Y'$, $Z'$ son tres espacios prealgebraicos sobre $k$.
+Se puede definir, pues, el morfismo diagonal $\Delta_{X'}:X'\to X'\times_k X'$ (que no es otro que $S(\Delta_X)$); se dice que $X'$ es un \emph{espacio algebraico sobre $k$} si $X$ es un esquema, y esto equivale a decir que la imagen de $\Delta_{X'}$ es un subconjunto \emph{cerrado} de $X'\times_k X'$.
+\end{env}
+
+\begin{env}[10.10.3]
+\label{IV.10.10.3}
+Las simplificaciones que provienen de la hipótesis de que $k$ es algebraicamente cerrado consisten ante todo en lo siguiente: para todo $k$-preesquema $X$ localmente de tipo finito, existe una correspondencia biyectiva entre los \emph{puntos cerrados de $X$}, los \emph{puntos de $X$ con valores en $k$} \sref[I]{I.3.4.4} y los \emph{puntos racionales de $X$ sobre $k$} \sref[I]{I.3.4.5}, en virtud de \sref[I]{I.6.4.2}.
+Esto muestra en particular \sref[I]{I.3.4.3.1} que, para dos espacios $k$-prealgebraicos $X'$, $Y'$, el conjunto subyacente al producto $X'\times_kY'$ es idéntico al \emph{conjunto producto} $X'\times Y'$ de los conjuntos subyacentes (pero, desde luego, la topología del espacio subyacente a $X'\times_kY'$ no es la \emph{topología producto} de las topologías de los espacios subyacentes a $X'$ e $Y'$ y, en general, es estrictamente más fina que esta última).
+
+Por otra parte, los anillos locales $\sh{O}_x$ en los puntos de un espacio prealgebraico $X'$ sobre $k$ son $k$-álgebras cuyo cuerpo residual es \emph{isomorfo a $k$}; si $A$ y $B$ son dos $k$-álgebras de esta índole, un $k$-homomorfismo $\varphi:A\to B$ es necesariamente \emph{local}: en efecto, si existiera un elemento $x$ del ideal maximal de $A$ tal que $\varphi(x)$ fuese invertible, existiría un $\lambda\in k$ no nulo tal que $\varphi(x-\lambda.1)$ perteneciese al ideal maximal de $B$, lo cual es absurdo puesto que $x-\lambda.1$ es invertible.
+De ello concluimos inmediatamente que, si $X'=S(X)$, $Y'=S(Y)$ son dos espacios prealgebraicos sobre $k$, todo morfismo $X'\to Y'$ de \emph{espacios $k$-anillados} es también un morfismo de espacios $k$-anillados \emph{en anillos locales} (\sref[I]{I.1.8.2}; cf.\ $\mathrm{Err}_{\mathrm{II}}$). Además, con la notación precedente, si $A$ y $B$ son $k$-álgebras de tipo finito, el homomorfismo correspondiente hace de $B$ una $A$-álgebra de tipo finito; por tanto, todo morfismo $X'\to Y'$ de espacios $k$-anillados es, por \sref{IV.10.9.6}, de la forma $S(f)$, donde $f:X\to Y$ es un morfismo de $k$-preesquemas.
+
+Por último, para todo abierto $U$ de $X'$, toda sección $s\in\Gamma(U,\sh{O}_{X'})$ y todo $x\in U$, $s(x)$ \sref[0]{0.5.5.1} se identifica con un elemento de $k$; así, $s$ determina una aplicación $\overline{s}:x\mapsto s(x)$ de $U$ en $k$, es decir, una sección sobre $U$ del haz $\sh{A}(X')$ de gérmenes de aplicaciones de $X'$ en $k$. Como $h_U:s\mapsto\overline{s}$ es evidentemente un homomorfismo de anillos $\Gamma(U,\sh{O}_{X'})\to\Gamma(U,\sh{A}(X'))$ y conmuta con la restricción a un abierto $V\subset U$, los $h_U$ definen un homomorfismo de haces de anillos $h:\sh{O}_{X'}\to\sh{A}(X')$.
+Si se toma $U$ ultraafín, $\operatorname{Spm}(A)$, donde $A$ es un anillo de Jacobson, decir que $\overline{s}=0$ significa que, para todo ideal maximal $\mathfrak{m}$ de $A$, $s$ pertenece a $\mathfrak{m}$, o equivalentemente que $s$ pertenece al \emph{radical} de $A$; pero, como $A$ es un anillo de Jacobson, su radical es su nilradical. Por consiguiente, $h_U$ es inyectivo si y solo si $A$ es reducido.
+\end{env}
+
+\begin{env}[10.10.4]
+\label{IV.10.10.4}
+Se dice que el espacio $k$-prealgebraico $X'=S(X)$ es \emph{reducido} si $X$ es reducido. Como el conjunto de puntos $x\in X$ en los que $X$ es reducido es abierto \sref[0]{0.5.2.2}, su complementario, si no es vacío, contiene al menos un punto cerrado \sref{IV.5.1.11}; por tanto, equivale a decir que $X'$ es reducido o que cada uno de sus anillos locales $\sh{O}_x$ ($x\in X'$) es reducido. Acabamos de ver en \sref{IV.10.10.3} que, para que el homomorfismo $h:\sh{O}_{X'}\to\sh{A}(X')$ sea \emph{inyectivo}, es necesario y suficiente que $X'$ sea \emph{reducido}.
+En (FAC), Serre se limita de hecho a los espacios prealgebraicos \emph{reducidos}, lo que le permite definir $\sh{O}_{X'}$ como un \emph{subhaz} de $\sh{A}(X')$.
+Obsérvese que, si $X'$ e $Y'$ son dos espacios $k$-prealgebraicos reducidos, lo mismo ocurre con $X'\times_k Y'$: en efecto, esto equivale a decir que, si $A$ y $B$ son dos $k$-álgebras reducidas de tipo finito, $A\otimes_k B$ es también reducido; pero acabamos de ver que los radicales de $A$ y $B$ son $0$, y como $k$ es algebraicamente cerrado, $A$ y $B$ son álgebras ``separables'' sobre $k$ en el sentido de Bourbaki (\emph{Alg.}, cap.~VIII, \S\,7, n$^\circ$\,5, prop.~5); por tanto, $A\otimes_k B$ carece de radical (\emph{loc.\ cit.}, n$^\circ$\,6, cor.~3 del th.~3), y como es un anillo de Jacobson, es reducido.
+Sin embargo, si $Z'$ es un tercer espacio prealgebraico reducido sobre $k$, el ``producto fibrado'' $X'\times_{Z'}Y'$ de dos espacios prealgebraicos reducidos sobre $Z'$ no es reducido en general, lo que implica que la categoría de estos espacios resulta insuficiente en muchas cuestiones (especialmente en la teoría de grupos algebraicos).
+Pero, como hemos visto anteriormente, se puede conservar el lenguaje de Serre sin limitarse, como hace este último (quien además solo considera espacios \emph{prealgebraicos} cuasicompactos), al caso de los espacios prealgebraicos reducidos.
+\end{env}
+
+\oldpage[IV-3]{116}
+
+\begin{env}[10.10.5]
+\label{IV.10.10.5}
+Por último, también se pueden considerar ultrapreesquemas sobre un cuerpo arbitrario $k$
+conservando un lenguaje próximo al de Serre e introduciendo, como en Weil, una
+extensión algebraicamente cerrada fija $K$ de $k$ (elegida suficientemente grande---por ejemplo,
+de grado de trascendencia infinito sobre $k$---para disponer de suficientes ``puntos genéricos''
+en el sentido de Weil).
+A todo preesquema $X$ localmente de tipo finito sobre $k$ se asocia entonces el conjunto
+\[
+ S_K(X)=S(X\otimes_k K)
+\]
+de puntos de $X$ con valores en $K$.
+Existe una aplicación canónica $j:S_K(X)\to X$, que es un cuasihomeomorfismo cuando
+se dota a $S_K(X)$ de la topología imagen inversa de la de $X$ por $j$; al dotar a $S_K(X)$
+del haz de $k$-álgebras $j^*(\sh{O}_X)$, se obtiene una subcategoría de la categoría
+de espacios $k$-anillados en anillos locales, que se podría llamar categoría de los
+\emph{espacios $(k,K)$-prealgebraicos}.
+Todavía se pueden definir productos en ella, y los resultados de \sref{IV.10.10.3} y
+\sref{IV.10.10.4} se pueden generalizar (sustituyendo aquí $\sh{A}(X')$ por el haz
+$\sh{A}_K(X')$ de gérmenes de aplicaciones de $X'$ en $K$).
+Sin embargo, este punto de vista atribuye un papel artificial a un cuerpo de extensión
+de $k$ elegido arbitrariamente, y lo mencionamos únicamente para descartarlo.
+\end{env}

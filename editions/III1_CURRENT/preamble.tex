@@ -1,105 +1,114 @@
+% Set-up of the Spanish translation of EGA III, first part:
+% document class and packages, statement environments, headings and contents,
+% sheaf operators, and the commands for page marks and cross-references.
+% Written for these editions and dedicated to the public domain under CC0 1.0.
 \documentclass[oneside]{amsart}
 
+% Commutative diagrams.
 \usepackage[all]{xy}
 \usepackage{tikz-cd}
+% T1 text encoding.
 \usepackage[T1]{fontenc}
-\usepackage{xstring}
-\usepackage{xparse}
-\usepackage{xcolor}
-\definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
-\usepackage[linktocpage=true,colorlinks=true,hyperindex,hypertexnames=false,citecolor=blue,linkcolor=brightmaroon]{hyperref}
-\usepackage[a4paper,left=1.25in,right=1.25in,top=0.75in,bottom=0.75in]{geometry}
-%\usepackage[charter,greekfamily=didot]{mathdesign}
-%\usepackage{Baskervaldx}
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{mathpazo}
-\linespread{1.05}
-
+% String handling and argument parsing for the reference commands below;
+% colour.
+\usepackage{xstring,xparse,xcolor}
+% Coloured links: cross-references in deep red, citations in blue; contents
+% entries linked by their page numbers.
+\definecolor{egalinkred}{rgb}{0.76,0.13,0.28}
+\usepackage[
+  linktocpage=true,
+  colorlinks=true,
+  hyperindex,
+  hypertexnames=false,
+  citecolor=blue,
+  linkcolor=egalinkred
+]{hyperref}
+% A4 paper; margins of 1.25in at the sides and 0.75in at head and foot.
+\usepackage[a4paper,hmargin=1.25in,vmargin=0.75in]{geometry}
+% Palatino for text and mathematics, AMS symbols and Ralph Smith's script
+% alphabet; Palatino is set with its customary slightly opened leading.
+\usepackage{amssymb,mathrsfs,mathpazo}\linespread{1.05}
+% Headings are not left at the foot of a page; margin notes; lists, long
+% tables and multiple columns; the Aurical hand (for sheaf operators);
+% microtypography.
 \usepackage[nobottomtitles]{titlesec}
 \usepackage{marginnote}
 \usepackage[shortlabels]{enumitem}
-\usepackage{longtable}
-\usepackage{multicol}
-\usepackage{aurical}
-\usepackage{microtype}
+\usepackage{longtable,multicol,aurical,microtype}
 
-\newtheoremstyle{ega-env-style}%
-  {}{}{\rmfamily}{}{\bfseries}{.}{ }{\thmnote{(#3)}}%
-
-\newtheoremstyle{ega-thm-env-style}%
-  {}{}{\itshape}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}%
-
-\newtheoremstyle{ega-defn-env-style}%
-  {}{}{\rmfamily}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}%
-
-\theoremstyle{ega-env-style}
-\newtheorem*{env}{---}
-
-\theoremstyle{ega-thm-env-style}
-\newtheorem*{theorem}{Teorema}
-\newtheorem*{proposition}{Proposición}
-\newtheorem*{lemma}{Lema}
-\newtheorem*{corollary}{Corolario}
-
-\theoremstyle{ega-defn-env-style}
-\newtheorem*{definition}{Definición}
-\newtheorem*{example}{Ejemplo}
-\newtheorem*{examples}{Ejemplos}
-\newtheorem*{remark}{Observación}
-\newtheorem*{remarks}{Observaciones}
-\newtheorem*{scholium}{Escolio}
-\newtheorem*{notation}{Notación}
+% Statements. EGA numbers its statements in the text, so the environments
+% are unnumbered and take the number as optional argument. For instance
+% \begin{proposition}[2.1.3] starts with the bold heading "Proposition
+% (2.1.3). ---" (in the language of the edition) and sets the statement in
+% italics; definitions, examples, remarks and notation are set in roman;
+% \begin{env}[2.1.4] starts a numbered paragraph with a bold "(2.1.4).".
+\newtheoremstyle{egaitem}{}{}{\rmfamily}{}{\bfseries}{.}{ }{\thmnote{(#3)}}
+\newtheoremstyle{egastatement}{}{}{\itshape}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}
+\newtheoremstyle{egadescription}{}{}{\rmfamily}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}
+\makeatletter
+\newcommand*{\ega@statement}[3]{\theoremstyle{#1}\newtheorem*{#2}{#3}}
+\ega@statement{egaitem}{env}{---}
+\ega@statement{egastatement}{theorem}{Teorema}
+\ega@statement{egastatement}{proposition}{Proposición}
+\ega@statement{egastatement}{lemma}{Lema}
+\ega@statement{egastatement}{corollary}{Corolario}
+\ega@statement{egadescription}{definition}{Definición}
+\ega@statement{egadescription}{example}{Ejemplo}
+\ega@statement{egadescription}{examples}{Ejemplos}
+\ega@statement{egadescription}{remark}{Observación}
+\ega@statement{egadescription}{remarks}{Observaciones}
+\ega@statement{egadescription}{scholium}{Escolio}
+\ega@statement{egadescription}{notation}{Notación}
+\makeatother
 
 \renewcommand{\proofname}{Demostración}
 \renewcommand{\contentsname}{Índice general}
 \renewcommand{\refname}{Referencias}
 
-% indent subsections, see https://tex.stackexchange.com/questions/177290/.
-% also make section titles bigger.
-% also add § to \thesection, https://tex.stackexchange.com/questions/119667/ and https://tex.stackexchange.com/questions/308737/.
+% Contents and headings. Subsection entries of the contents are indented by
+% 2.5pc, with 2.2pc for the number. Section headings are amsart's centred small
+% capitals, in bold at \Large size. Heading numbers end with a full stop and a
+% tie, and a section number is preceded by the sign \S.
 \makeatletter
-\def\l@subsection{\@tocline{2}{0pt}{2.5pc}{2.2pc}{}}
-\def\section{\@startsection{section}{1}%
-  \z@{.7\linespacing\@plus\linespacing}{.5\linespacing}%
-  {\normalfont\bfseries\Large\scshape\centering}}
-\renewcommand{\@seccntformat}[1]{%
-  \ifnum\pdfstrcmp{#1}{section}=0\textsection\fi%
-  \csname the#1\endcsname.~}
+\renewcommand*{\l@subsection}{\@tocline{2}{0pt}{2.5pc}{2.2pc}{}}
+\renewcommand*{\section}{%
+  \@startsection{section}{1}{\z@}{.7\linespacing\@plus\linespacing}%
+  {.5\linespacing}{\normalfont\bfseries\Large\scshape\centering}}
+\@namedef{ega@numbersign@section}{\textsection}
+\newcommand*{\ega@numbersign}[1]{%
+  \ifcsname ega@numbersign@#1\endcsname\csname ega@numbersign@#1\endcsname\fi}
+\renewcommand*{\@seccntformat}[1]{\ega@numbersign{#1}\csname the#1\endcsname.~}
 \makeatother
 
-%\allowdisplaybreaks[1]
-%\binoppenalty=9999
-%\relpenalty=9999
+% Sheaves are written in the script alphabet of mathrsfs.
+\renewcommand*{\mathcal}{\mathscr}
+\input{preamble-base.tex}
 
-% for Chapter 0, Chapter I, etc.
-% credit for ZeroRoman https://tex.stackexchange.com/questions/211414/
-% added into scripts/make_book.py
-%\newcommand{\ZeroRoman}[1]{\ifcase\value{#1}\relax 0\else\Roman{#1}\fi}
-%\renewcommand{\thechapter}{\ZeroRoman{chapter}}
+% Sheaf operators (\shHom, \shExt, ...): a script capital followed by the
+% rest of the name in slanted Aurical, moved 2.2pt towards the capital. The
+% middle argument of \ega@sheafop is the space put after the capital.
+\makeatletter
+\newcommand*{\ega@sheafop}[3]{\sh{#1}#2\textup{\kern-2.2pt{\Fontauri\slshape #3}}}
+\newcommand*{\shHom}{\ega@sheafop{H}{}{om}}
+\newcommand*{\shProj}{\ega@sheafop{P}{}{roj}}
+\newcommand*{\shExt}{\ega@sheafop{E}{}{xt}}
+\newcommand*{\shTor}{\ega@sheafop{T}{}{or}}
+\newcommand*{\shGr}{\ega@sheafop{G}{}{r}}
+\newcommand*{\shDer}{\ega@sheafop{D}{\,}{er}}
+\newcommand*{\shDiff}{\ega@sheafop{D}{\,}{if{}f}\,}
+\newcommand*{\shHomcont}{\ega@sheafop{H}{}{om.\,cont}}
+\newcommand*{\shAut}{\ega@sheafop{A}{}{ut}}
+\makeatother
 
-\def\mathcal{\mathscr}
-\input{preamble-base}
+% Doubtful passages of the translation: \unsure{...} adds a red "(?)" after its
+% argument, and \completelyunsure stands for a passage left open, "(???)".
+\newcommand*{\unsure}[1]{#1 {\color{red}(?)}}
+\newcommand*{\completelyunsure}{{\color{red}(???)}}
 
-\def\shHom{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}   % sheaf Hom
-\def\shProj{\sh{P}\textup{\kern-2.2pt{\Fontauri\slshape roj}}} % sheaf Proj
-\def\shExt{\sh{E}\textup{\kern-2.2pt{\Fontauri\slshape xt}}}   % sheaf Ext
-\def\shTor{\sh{T}\textup{\kern-2.2pt{\Fontauri\slshape or}}}   % sheaf Tor
-\def\shGr{\sh{G}\textup{\kern-2.2pt{\Fontauri\slshape r}}}     % sheaf Gr
-\def\shDer{\sh{D}\,\textup{\kern-2.2pt{\Fontauri\slshape er}}} % sheaf Der
-\def\shDiff{\sh{D}\,\textup{\kern-2.2pt{\Fontauri\slshape if{}f}}\,} % sheaf Diff
-\def\shHomcont{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om.\,cont}}}   % sheaf Hom.cont
-\def\shAut{\sh{A}\textup{\kern-2.2pt{\Fontauri\slshape ut}}}   % sheaf Aut
-
-% if unsure of a translation
-%\newcommand{\unsure}[2][]{\hl{#2}\marginpar{#1}}
-%\newcommand{\completelyunsure}{\unsure{[\ldots]}}
-\def\unsure#1{#1 {\color{red}(?)}}
-\def\completelyunsure{{\color{red}(???)}}
-
-% use to mark where original page starts
-\newcommand{\oldpage}[2][]{{\marginnote{\normalfont{\textbf{#1}~|~#2}}}\ignorespaces}
-\def\sectionbreak{\begin{center}***\end{center}}
+% Pages of the printed original, noted in the margin as "volume | page":
+% \oldpage[III]{81}. \sectionbreak is a centred row of asterisks.
+\newcommand{\oldpage}[2][]{{\marginnote{\normalfont\textbf{#1}~|~#2}}\ignorespaces}
+\newcommand*{\sectionbreak}{\begin{center}***\end{center}}
 
 % Give every source label its own zero-size PDF destination.  The inherited
 % unnumbered theorem environments otherwise leave many labels pointing to the
@@ -107,33 +116,22 @@
 \let\EGAOriginalLabel\label
 \renewcommand{\label}[1]{\phantomsection\EGAOriginalLabel{#1}}
 
-% for referencing environments.
-% use as \sref{chapter-number.x.y.z}, with optional args
-% for volume and indices, e.g. \sref[volume]{chapter-number.x.y.z}[i].
+% Cross-references. Labels have the form <chapter>.<number> and only the number
+% is printed: \sref{0.4.1.2} gives "(4.1.2)". An optional first argument adds
+% a volume in bold, \sref[I]{I.2.3.1} giving "(I, 2.3.1)"; an optional last
+% argument adds a further indication, \sref{0.4.1.2}[ii] giving "(4.1.2, ii)".
+% \eref{eq:0.4.1.2} refers in the same way to a numbered display. Corrections
+% taken from published errata are marked \erratum[volume]{corrected text}, with
+% "Err" and the volume in the margin.
 \makeatletter
 \newcommand{\EGAUnavailableHyperref}[2]{#2}
-\NewDocumentCommand{\sref}{o m o}{%
-  \@ifundefined{r@#2}%
-    {\IfNoValueTF{#1}%
-      {\IfNoValueTF{#3}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\StrBehind{#2}{.})}}}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\StrBehind{#2}{.},~{#3})}}}}%
-      {\IfNoValueTF{#3}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\textbf{#1},~\StrBehind{#2}{.})}}}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\textbf{#1},~\StrBehind{#2}{.},~{#3})}}}}}%
-    {\IfNoValueTF{#1}%
-      {\IfNoValueTF{#3}%
-        {\hyperref[#2]{\normalfont{(\StrBehind{#2}{.})}}}%
-        {\hyperref[#2]{\normalfont{(\StrBehind{#2}{.},~{#3})}}}}%
-      {\IfNoValueTF{#3}%
-        {\hyperref[#2]{\normalfont{(\textbf{#1},~\StrBehind{#2}{.})}}}%
-        {\hyperref[#2]{\normalfont{(\textbf{#1},~\StrBehind{#2}{.},~{#3})}}}}}%
-}
+\newcommand*{\ega@labelnumber}[1]{\StrBehind{#1}{.}}
+\newcommand*{\ega@reftext}[3]{%
+  \normalfont{(\IfValueT{#1}{\textbf{#1},~}\ega@labelnumber{#2}\IfValueT{#3}{,~{#3}})}}
+\NewDocumentCommand{\sref}{o m o}{\@ifundefined{r@#2}%
+    {\EGAUnavailableHyperref{#2}{\ega@reftext{#1}{#2}{#3}}}%
+    {\hyperref[#2]{\ega@reftext{#1}{#2}{#3}}}}
+\newcommand{\eref}[1]{\hyperref[#1]{\normalfont{(\ega@labelnumber{#1})}}}
+\newcommand*{\ega@errmark}[1]{\textbf{Err}\textsubscript{#1}}
+\newcommand{\erratum}[2][]{{#2}\marginpar{\footnotesize\ega@errmark{#1}}}
 \makeatother
-
-% for marking changes following errata
-% use as \erratum[volume]{correction} to say where the erratum is given
-\newcommand{\erratum}[2][]{{#2}\marginpar{\footnotesize\textbf{Err}\textsubscript{#1}}}
-
-% for referencing equations, use as \eref{eq:chapter-number.x.y.z}.
-\newcommand{\eref}[1]{\hyperref[#1]{\normalfont{(\StrBehind{#1}{.})}}}

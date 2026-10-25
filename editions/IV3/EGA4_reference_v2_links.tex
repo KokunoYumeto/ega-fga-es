@@ -2944,14 +2944,8 @@
   \fi
 }
 \RenewDocumentCommand{\sref}{o m o}{%
-  \IfNoValueTF{#1}%
-    {\IfNoValueTF{#3}%
-      {\sgaStableOrOriginalLink{#2}{\normalfont{(\StrBehind{#2}{.})}}}%
-      {\sgaStableOrOriginalLink{#2}{\normalfont{(\StrBehind{#2}{.},~{#3})}}}}%
-    {\IfNoValueTF{#3}%
-      {\sgaStableOrOriginalLink{#2}{\normalfont{(\textbf{#1},~\StrBehind{#2}{.})}}}%
-      {\sgaStableOrOriginalLink{#2}{\normalfont{(\textbf{#1},~\StrBehind{#2}{.},~{#3})}}}}%
-}
+  \sgaStableOrOriginalLink{#2}%
+    {\normalfont{(\IfValueT{#1}{\textbf{#1},~}\StrBehind{#2}{.}\IfValueT{#3}{,~{#3}})}}}
 \renewcommand{\eref}[1]{%
   \sgaStableOrOriginalLink{#1}{\normalfont{(\StrBehind{#1}{.})}}}
 \makeatother

@@ -27,7 +27,7 @@
 
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\input{preamble-base}
+\input{preamble-base.tex}
 \makeatletter
 \newcommand{\EGAUnavailableHyperref}[2]{%
   \begingroup
@@ -37,23 +37,12 @@
   \hyperref[#1]{#2}%
   \endgroup
 }
-\NewDocumentCommand{\sref}{o m o}{%
-  \@ifundefined{r@#2}%
-    {\IfNoValueTF{#1}%
-      {\IfNoValueTF{#3}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\StrBehind{#2}{.})}}}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\StrBehind{#2}{.},~{#3})}}}}%
-      {\IfNoValueTF{#3}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\textbf{#1},~\StrBehind{#2}{.})}}}%
-        {\EGAUnavailableHyperref{#2}{\normalfont{(\textbf{#1},~\StrBehind{#2}{.},~{#3})}}}}}%
-    {\IfNoValueTF{#1}%
-      {\IfNoValueTF{#3}%
-        {\hyperref[#2]{\normalfont{(\StrBehind{#2}{.})}}}%
-        {\hyperref[#2]{\normalfont{(\StrBehind{#2}{.},~{#3})}}}}%
-      {\IfNoValueTF{#3}%
-        {\hyperref[#2]{\normalfont{(\textbf{#1},~\StrBehind{#2}{.})}}}%
-        {\hyperref[#2]{\normalfont{(\textbf{#1},~\StrBehind{#2}{.},~{#3})}}}}}%
-}
+% \sref[volume]{chapter.number}[detail] prints "(volume, number, detail)".
+\newcommand*{\ega@reftext}[3]{%
+  \normalfont{(\IfValueT{#1}{\textbf{#1},~}\StrBehind{#2}{.}\IfValueT{#3}{,~{#3}})}}
+\NewDocumentCommand{\sref}{o m o}{\@ifundefined{r@#2}%
+    {\EGAUnavailableHyperref{#2}{\ega@reftext{#1}{#2}{#3}}}%
+    {\hyperref[#2]{\ega@reftext{#1}{#2}{#3}}}}
 \newcommand{\EGAIVFourExternalLabel}[1]{%
   \expandafter\gdef\csname r@#1\endcsname{{#1}{0}{}{#1}{}}}
 \newcommand{\EGAIVFourExternalCitation}[2]{%

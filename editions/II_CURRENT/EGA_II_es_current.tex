@@ -6,8 +6,15 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[all]{xy}
 \usepackage{xstring,xparse,xcolor}
-\definecolor{brightmaroon}{rgb}{0.76,0.13,0.28}
-\usepackage[linktocpage=true,colorlinks=true,hyperindex,hypertexnames=false,citecolor=blue,linkcolor=brightmaroon]{hyperref}
+\definecolor{egalinkred}{rgb}{0.76,0.13,0.28}
+\usepackage[
+  linktocpage=true,
+  colorlinks=true,
+  hyperindex,
+  hypertexnames=false,
+  citecolor=blue,
+  linkcolor=egalinkred
+]{hyperref}
 \usepackage[left=30mm,right=30mm,top=22mm,bottom=25mm]{geometry}
 \usepackage{marginnote}
 \usepackage[shortlabels]{enumitem}
@@ -22,83 +29,110 @@
   pdfsubject={Estudio global elemental de algunas clases de morfismos}
 }
 
-\newtheoremstyle{ega-env-style}{}{}{\rmfamily}{}{\bfseries}{.}{ }{\thmnote{(#3)}}
-\newtheoremstyle{ega-thm-env-style}{}{}{\itshape}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}
-\newtheoremstyle{ega-defn-env-style}{}{}{\rmfamily}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}
-\theoremstyle{ega-env-style}
-\newtheorem*{env}{---}
-\theoremstyle{ega-thm-env-style}
-\newtheorem*{theorem}{Teorema}
-\newtheorem*{proposition}{Proposición}
-\newtheorem*{lemma}{Lema}
-\newtheorem*{corollary}{Corolario}
-\theoremstyle{ega-defn-env-style}
-\newtheorem*{definition}{Definición}
-\newtheorem*{example}{Ejemplo}
-\newtheorem*{remark}{Observación}
-\newtheorem*{remarks}{Observaciones}
-\newtheorem*{notation}{Notación}
+% Statements. EGA numbers its statements in the text, so the environments
+% are unnumbered and take the number as optional argument. For instance
+% \begin{proposition}[2.1.3] starts with the bold heading "Proposition
+% (2.1.3). ---" (in the language of the edition) and sets the statement in
+% italics; definitions, examples, remarks and notation are set in roman;
+% \begin{env}[2.1.4] starts a numbered paragraph with a bold "(2.1.4).".
+\newtheoremstyle{egaitem}{}{}{\rmfamily}{}{\bfseries}{.}{ }{\thmnote{(#3)}}
+\newtheoremstyle{egastatement}{}{}{\itshape}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}
+\newtheoremstyle{egadescription}{}{}{\rmfamily}{}{\bfseries}{. --- }{ }{\thmname{#1}\thmnote{ (#3)}}
+\makeatletter
+\newcommand*{\ega@statement}[3]{\theoremstyle{#1}\newtheorem*{#2}{#3}}
+\ega@statement{egaitem}{env}{---}
+\ega@statement{egastatement}{theorem}{Teorema}
+\ega@statement{egastatement}{proposition}{Proposición}
+\ega@statement{egastatement}{lemma}{Lema}
+\ega@statement{egastatement}{corollary}{Corolario}
+\ega@statement{egadescription}{definition}{Definición}
+\ega@statement{egadescription}{example}{Ejemplo}
+\ega@statement{egadescription}{remark}{Observación}
+\ega@statement{egadescription}{remarks}{Observaciones}
+\ega@statement{egadescription}{notation}{Notación}
+\makeatother
 \renewcommand{\proofname}{Demostración}
 
-\def\sh{\mathcal}
-\def\bb{\mathbf}
-\def\cat{\mathtt}
-\def\leq{\leqslant}
-\def\geq{\geqslant}
-\def\setmin{-}
-\def\rad{\mathfrak{r}}
-\def\nilrad{\mathfrak{N}}
-\def\emp{\varnothing}
-\def\vphi{\phi}
-\def\HH{\mathrm{H}}
-\def\CHH{\check{\HH}}
-\def\RR{\mathrm{R}}
-\def\LL{\mathrm{L}}
-\def\dual#1{{#1}^\vee}
-\def\kres{k}
-\def\C{\cat{C}}
-\def\op{^\cat{op}}
-\def\Set{\cat{Set}}
-\def\CHom{\cat{Hom}}
-\def\supertilde{{\,\widetilde{\,}\,}}
-\def\GL{\bb{GL}}
-\def\bbGamma{\boldsymbol\Gamma}
-\def\red{\mathrm{red}}
-\def\rg{\operatorname{rg}}
-\def\gr{\operatorname{gr}}
-\def\Gr{\operatorname{Gr}}
-\def\Hom{\operatorname{Hom}}
-\def\Proj{\operatorname{Proj}}
-\def\Tor{\operatorname{Tor}}
-\def\Ext{\operatorname{Ext}}
-\def\Supp{\operatorname{Supp}}
-\def\Ker{\operatorname{Ker}}
-\def\Im{\operatorname{Im}}
-\def\Coker{\operatorname{Coker}}
-\def\Spec{\operatorname{Spec}}
+% Notation of the EGA editions: the abbreviations the transcription uses for alphabets, symbols, operators and
+% arrows. Written for these editions and dedicated to the public domain under CC0 1.0.
+\makeatletter
+% a command that may or may not exist already is (re)defined in one step
+\newcommand{\ega@define}[2]{\providecommand{#1}{}\renewcommand{#1}{#2}}
+\newcommand{\ega@operator}[2]{\providecommand{#1}{}\renewcommand{#1}{\operatorname{#2}}}
+
+% alphabets: sheaves, bold letters, categories
+\ega@define{\sh}{\mathcal}
+\ega@define{\bb}{\mathbf}
+\ega@define{\cat}{\mathtt}
+\ega@define{\C}{\cat{C}}
+\ega@define{\Set}{\cat{Set}}
+\ega@define{\CHom}{\cat{Hom}}
+\ega@define{\op}{^{\cat{op}}}
+\ega@define{\GL}{\bb{GL}}
+\ega@define{\bbGamma}{\boldsymbol{\Gamma}}
+
+% letters and symbols
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\ega@define{\setmin}{-}
+\ega@define{\emp}{\varnothing}
+\ega@define{\vphi}{\phi}
+\ega@define{\kres}{k}
+\ega@define{\rad}{\mathfrak{r}}
+\ega@define{\nilrad}{\mathfrak{N}}
+\ega@define{\HH}{\mathrm{H}}
+\ega@define{\CHH}{\check{\mathrm{H}}}
+\ega@define{\RR}{\mathrm{R}}
+\ega@define{\LL}{\mathrm{L}}
+\ega@define{\red}{\mathrm{red}}
+\providecommand{\dual}{}\renewcommand{\dual}[1]{{#1}^{\vee}}
+% the tilde of the sheaf associated with a module, written after it: M\supertilde
+\ega@define{\supertilde}{{\,\widetilde{\,}\,}}
+
+% operators
+\ega@operator{\rg}{rg}
+\ega@operator{\gr}{gr}
+\ega@operator{\Gr}{Gr}
+\ega@operator{\Hom}{Hom}
+\ega@operator{\Proj}{Proj}
+\ega@operator{\Tor}{Tor}
+\ega@operator{\Ext}{Ext}
+\ega@operator{\Supp}{Supp}
+\ega@operator{\Ker}{Ker}
+\ega@operator{\Im}{Im}
+\ega@operator{\Coker}{Coker}
+\ega@operator{\Spec}{Spec}
+\ega@operator{\Spm}{Spm}
+\ega@operator{\Spf}{Spf}
+\ega@operator{\grad}{grad}
+\ega@operator{\dimc}{dimc}
+\ega@operator{\codim}{codim}
+\ega@operator{\id}{id}
+\ega@operator{\Der}{Der}
+\ega@operator{\Diff}{Diff}
+\ega@operator{\Hyp}{Hyp}
+\ega@operator{\Tr}{Tr}
+
+% arrows: long in displays, short in text, scripts and subscripts
+\newcommand{\ega@arrow}[2]{\mathchoice{#1}{#2}{#2}{#2}}
+\let\ega@shortmapsto\mapsto
+\renewcommand{\to}{\ega@arrow{\longrightarrow}{\rightarrow}}
+\providecommand{\from}{}\renewcommand{\from}{\ega@arrow{\longleftarrow}{\leftarrow}}
+\renewcommand{\mapsto}{\ega@arrow{\longmapsto}{\ega@shortmapsto}}
+\ega@define{\isoto}{\simeq}
+\ega@define{\simto}{\xrightarrow{\sim}}
+
+% wide accents
+\newcommand{\ega@wide}[2]{\renewcommand{#1}[1]{#2{##1}}}
+\ega@wide{\hat}{\widehat}
+\ega@wide{\tilde}{\widetilde}
+\makeatother
 \def\Frac{\operatorname{Frac}}
-\def\Spm{\operatorname{Spm}}
-\def\Spf{\operatorname{Spf}}
-\def\grad{\operatorname{grad}}
-\def\dimc{\operatorname{dimc}}
-\def\codim{\operatorname{codim}}
-\def\id{\operatorname{id}}
-\def\Der{\operatorname{Der}}
-\def\Diff{\operatorname{Diff}}
-\def\Hyp{\operatorname{Hyp}}
-\def\Tr{\operatorname{Tr}}
 \def\shHom{\mathcal{H}\!\mathit{om}}
 \def\shProj{\mathcal{P}\!\mathit{roj}}
 \def\shAut{\mathcal{A}\!\mathit{ut}}
-\renewcommand{\to}{\mathchoice{\longrightarrow}{\rightarrow}{\rightarrow}{\rightarrow}}
-\newcommand{\from}{\mathchoice{\longleftarrow}{\leftarrow}{\leftarrow}{\leftarrow}}
-\let\mapstoo\mapsto
-\renewcommand{\mapsto}{\mathchoice{\longmapsto}{\mapstoo}{\mapstoo}{\mapstoo}}
-\def\isoto{\simeq}
-\def\simto{\xrightarrow{\sim}}
-\renewcommand{\hat}[1]{\widehat{#1}}
-\renewcommand{\tilde}[1]{\widetilde{#1}}
-\def\sectionbreak{\begin{center}***\end{center}}
+% A centred row of asterisks.
+\newcommand*{\sectionbreak}{\begin{center}***\end{center}}
 \newcommand{\oldpage}[2][]{\marginnote{\normalfont\footnotesize\textbf{#1}~|~#2}\ignorespaces}
 
 \let\EGAOriginalLabel\label
@@ -113,7 +147,11 @@
   \EGAMaybeRefLink{#2}{\EGARefNumber{#2}}%
   \IfBlankF{#3}{,~#3})}}
 \makeatother
-\newcommand{\eref}[1]{\hyperref[#1]{\normalfont{(\StrBehind{#1}{.})}}}
+% \eref{eq:chapter.number} refers to a numbered display, printing "(number)".
+\makeatletter
+\newcommand*{\ega@labelnumber}[1]{\StrBehind{#1}{.}}
+\newcommand{\eref}[1]{\hyperref[#1]{\normalfont{(\ega@labelnumber{#1})}}}
+\makeatother
 
 
 \newcommand{\EGAResetVolumeCounters}{%

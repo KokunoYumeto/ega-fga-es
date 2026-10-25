@@ -231,11 +231,6 @@
   \fi}
 \newcommand{\EGAReadLink}[2]{\sgaStableOrOriginalLink{#1}{#2}}
 \RenewDocumentCommand{\sref}{o m o}{%
-  \IfNoValueTF{#1}%
-    {\IfNoValueTF{#3}%
-      {\EGAReadLink{#2}{\normalfont{(\StrBehind{#2}{.})}}}%
-      {\EGAReadLink{#2}{\normalfont{(\StrBehind{#2}{.},\nobreakspace{}{#3})}}}}%
-    {\IfNoValueTF{#3}%
-      {\EGAReadLink{#2}{\normalfont{(\textbf{#1},\nobreakspace{}\StrBehind{#2}{.})}}}%
-      {\EGAReadLink{#2}{\normalfont{(\textbf{#1},\nobreakspace{}\StrBehind{#2}{.},\nobreakspace{}{#3})}}}}}
+  \EGAReadLink{#2}{\normalfont{(\IfValueT{#1}{\textbf{#1},\nobreakspace{}}%
+    \StrBehind{#2}{.}\IfValueT{#3}{,\nobreakspace{}{#3}})}}}
 \makeatother

@@ -21,7 +21,11 @@
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \newcommand{\sh}[1]{\mathscr{#1}}
-\newcommand{\shTor}{\sh{T}\textup{\kern-2.2pt{\Fontauri\slshape or}}}
+% Sheaf Tor: script T followed by "or" in slanted Aurical, moved 2.2pt left.
+\makeatletter
+\newcommand*{\ega@sheafop}[3]{\sh{#1}#2\textup{\kern-2.2pt{\Fontauri\slshape #3}}}
+\newcommand{\shTor}{\ega@sheafop{T}{}{or}}
+\makeatother
 \newcommand{\RR}{\mathrm R}
 \newcommand{\HH}{\mathrm H}
 \newcommand{\bb}[1]{\mathbf{#1}}

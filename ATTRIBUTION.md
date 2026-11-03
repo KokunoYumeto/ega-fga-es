@@ -12,7 +12,7 @@ Las fuentes inglesas utilizadas para preparar las traducciones españolas de EGA
 - EGA IV-1, capítulo 0: el § 14.
 - EGA IV-4: el § 16 y las partes iniciales de los §§ 17 y 20 del capítulo IV.
 
-La traducción inglesa heredada conserva esa procedencia. La traducción española y las adiciones y correcciones producidas por IA no se atribuyen a esos colaboradores. La atribución no implica autorización ni aval.
+La traducción inglesa y la estructura TeX heredadas conservan esa procedencia. La traducción española y las adiciones y correcciones producidas por IA no se atribuyen a esos colaboradores. La atribución no implica autorización ni aval.
 
 ## Traducción española
 

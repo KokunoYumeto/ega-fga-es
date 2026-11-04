@@ -16,7 +16,7 @@ La traducción inglesa y la estructura TeX heredadas conservan esa procedencia. 
 
 ## Traducción española
 
-La traducción al español, las correcciones, la edición y la composición están producidas por IA. Los modelos documentados son OpenAI Codex, GPT-6 Astra (esfuerzo Ultra) y, para EGA III-1, GPT-5.6 Sol (esfuerzo Ultra). No se afirma revisión humana. La autoría de las obras originales y de las contribuciones humanas citadas se conserva.
+La traducción al español, las correcciones, la edición y la composición están producidas por IA. Tradujeron modelos de OpenAI Codex (GPT-5.6 Sol y GPT-6.1 Sol, esfuerzo Ultra); GPT-6 Astra (esfuerzo Ultra) revisó, corrigió y montó las ediciones. No se afirma revisión humana. La autoría de las obras originales y de las contribuciones humanas citadas se conserva.
 
 - [EGA II: alcance e identidad de las fuentes](editions/II_CURRENT/FUENTES.md).
 - [EGA III-1: alcance e identidad de las fuentes](editions/III1_CURRENT/FUENTES.md).

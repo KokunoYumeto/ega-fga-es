@@ -8,8 +8,9 @@ y EGA IV, partes 3 y 4, y el capítulo 0 de EGA IV, parte 1.
 
 ## Cómo se hizo
 
-Las traducciones están producidas por IA, y también las correcciones, la edición y la composición. Los modelos
-documentados son OpenAI Codex, GPT-6 Astra (esfuerzo Ultra) y, para EGA III-1, GPT-5.6 Sol (esfuerzo Ultra). En la
+Las traducciones están producidas por IA, y también las correcciones, la edición y la composición. Tradujeron
+modelos de OpenAI Codex (GPT-5.6 Sol y GPT-6.1 Sol, esfuerzo Ultra); GPT-6 Astra (esfuerzo Ultra) revisó, corrigió
+y montó las ediciones. En la
 preparación de algunas secciones de EGA se usaron fuentes inglesas que incorporan la traducción humana del proyecto
 ryankeleti/ega; para FGA, la traducción inglesa de Tim Hosgood sirvió de referencia (véase «Fuentes y créditos»).
 

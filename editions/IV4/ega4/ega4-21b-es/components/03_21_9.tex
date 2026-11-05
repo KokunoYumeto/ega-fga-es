@@ -48,13 +48,13 @@ entonces (G, II, 3.10) se tiene
   =\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(A(x))),
 \]
 por lo que toda sección $s$ de $\sh{F}$ sobre $U$ es suma directa de un número \emph{finito} de secciones $s_k\in\Gamma(U,(i_{x_k})_*(A(x_k)))$ ($1\leq k\leq n$), con $x_k\in X_0$.
-Pero, como $x_k$ es cerrado en $X$, el soporte de $s_k$ se reduce a $\{x_k\}$; por tanto, el soporte de $s$ está contenido en el conjunto finito de los $x_k$, que es evidentemente discreto puesto que los puntos $x_k$ son cerrados en $X$.
+Pero, como $x_k$ es cerrado en $X$, el soporte de $s_k$ se reduce a $x_k$; por tanto, el soporte de $s$ está contenido en el conjunto finito de los $x_k$, que es evidentemente discreto puesto que los puntos $x_k$ son cerrados en $X$.
 Demostremos finalmente que \emph{b)} implica \emph{a)};
 para todo abierto noetheriano $U$, todo soporte de una sección de $\sh{F}$ sobre $U$, por ser discreto y cuasicompacto, es \emph{finito}.
 Se deduce, pues, de la hipótesis \emph{b)} que, para todo abierto noetheriano $U$, la imagen del homomorfismo \sref{IV.21.9.1.1} (para $Y=X_0$) está contenida en $\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(\sh{F}_x))$ y que este homomorfismo es inyectivo, lo que establece \emph{a)}.
 
 Por último, para demostrar que $\sh{F}$ es flácido, consideremos una sección $s$ de $\sh{F}$ sobre un abierto $U$ de $X$;
-como el soporte de $s$ es un subespacio discreto y cerrado de $X$, se prolonga $s$ a una sección $s'$ de $\sh{F}$ sobre $X$ poniendo $s'_x=0$ en $X-U$.
+como el soporte de $s$ es un subespacio discreto y cerrado de $X$, se prolonga $s$ a una sección $s'$ de $\sh{F}$ sobre $X$ poniendo $s'_x=0$ en $X\setmin U$.
 \end{proof}
 
 \begin{remark}[21.9.3]
@@ -65,7 +65,7 @@ así lo muestra el ejemplo en que se toma como $X$ el espectro de un anillo de v
 
   \item Supuestas satisfechas las condiciones de \sref{IV.21.9.2}, sea $E$ un subconjunto discreto de $X_0$ y, para todo $x\in E$, sea $a(x)$ un elemento de $A(x)$.
 Existe entonces una sección única $t$ de $\bigoplus_{x\in X_0}(i_x)_*(A(x))$ sobre $X$ tal que $t_x=a(x)$ para todo $x\in E$ y que el soporte de $t$ esté contenido en $E$.
-En efecto, para todo abierto noetheriano $U$, $E\cap U$ es finito, y basta tomar como $t$ la sección de $\bigoplus_{x\in E}(i_x)_*(A(x))$ cuya restricción a cada abierto noetheriano $U$ sea la suma de los $a(x)$ para $x\in E\cap U$.
+En efecto, para todo abierto noetheriano $U$, $E\cap U$ es finito, y basta tomar como $t$ la sección de $\bigoplus_{x\in X_0}(i_x)_*(A(x))$ cuya restricción a cada abierto noetheriano $U$ sea la suma de los $a(x)$ para $x\in E\cap U$.
 \end{enumerate}
 \end{remark}
 
@@ -101,13 +101,13 @@ Para todo subconjunto discreto $E\subset X^{(1)}$ y toda familia $(D(x))_{x\in E
 \end{corollary}
 
 \begin{proof}
-Esto resulta de \sref{IV.21.9.4} y de \sref{IV.21.9.3}, (ii).
+Esto resulta de \sref{IV.21.9.4} y de \sref{IV.21.9.3}[(ii)].
 \end{proof}
 
 \begin{corollary}[21.9.6]
 \label{IV.21.9.6}
 Sea $X$ un preesquema localmente noetheriano de dimensión $\leq1$;
-todo divisor $D$ sobre $X$ es de la forma $D'-D''$, donde $D'$ y $D''$ son dos divisores $\geq0$ cuyos soportes están contenidos en el de $D$.
+todo divisor $D$ sobre $X$ es de la forma $D'\setmin D''$, donde $D'$ y $D''$ son dos divisores $\geq0$ cuyos soportes están contenidos en el de $D$.
 \end{corollary}
 
 \begin{proof}
@@ -126,7 +126,7 @@ Podemos suponer que $U$ es unión de abiertos disjuntos no vacíos $U_\alpha$, c
 basta entonces tomar en cada $U_\alpha$ un punto $x_\alpha$ cerrado en $X$ (existe uno, pues el único punto genérico de $U_\alpha$ no puede ser aislado por hipótesis), y aplicar \sref{IV.21.9.5} al conjunto discreto de los $x_\alpha$.
 \end{proof}
 
-El interés de este corolario es que permitirá demostrar que una curva algebraica separada $X$ sobre un cuerpo $k$ es cuasiproyectiva, pues el divisor $D\geq0$ definido en \sref{IV.21.9.7} es entonces necesariamente \emph{amplio} en virtud del teorema de Riemann--Roch para las curvas (cap.~V).
+El interés de este corolario es que permitirá demostrar que una curva algebraica separada $X$ sobre un cuerpo $k$ es cuasiproyectiva, pues el divisor $D\geq0$ definido en \sref{IV.21.9.7} es entonces necesariamente \emph{amplio} en virtud del teorema de Riemann-Roch para las curvas (cap.~V).
 
 \begin{env}[21.9.8]
 \label{IV.21.9.8}
@@ -145,7 +145,7 @@ Entonces el haz $\sh{D}iv_X$ es canónicamente isomorfo a $\bigoplus_{x\in X^{(1
 \begin{env}[21.9.10]
 \label{IV.21.9.10}
 Supongamos solamente que el anillo local noetheriano $A$ de dimensión $1$ sea \emph{reducido};
-entonces, si $A'$ es el \emph{normalizado} de $A$ (la clausura integral de $A$ en su anillo total de fracciones), $A'$ es noetheriano en virtud del teorema de Krull--Akizuki (Bourbaki, \emph{Alg.\ comm.}, cap.~VII, \textsection~2, n\textsuperscript{o}~5, prop.~5), y se ha visto en \sref{IV.21.8.6} cómo
+entonces, si $A'$ es el \emph{normalizado} de $A$ (la clausura integral de $A$ en su anillo total de fracciones), $A'$ es noetheriano en virtud del teorema de Krull-Akizuki (Bourbaki, \emph{Alg.\ comm.}, cap.~VII, \textsection~2, n\textsuperscript{o}~5, prop.~5), y se ha visto en \sref{IV.21.8.6} cómo
 \oldpage[IV-4]{287}
 $\operatorname{Div}(A)$ puede obtenerse como \emph{extensión} de $\operatorname{Div}(A')$, siendo este último grupo de la forma $\bb{Z}^r$.
 \end{env}
@@ -178,7 +178,7 @@ Existe un entorno abierto afín $U^{(x)}$ de $x$ en $X$ y una sección $g^{(x)}$
 veremos que, tomando $U^{(x)}$ suficientemente pequeño, se puede conseguir que $g^{(x)}$ no sea divisor de cero en $\Gamma(U^{(x)},\sh{O}_X)$, es decir, \sref{IV.3.1.9}, que, si $V^{(x)}$ denota el subconjunto cerrado de $U^{(x)}$ formado por los $y$ tales que $g^{(x)}(y)=0$, se tenga $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
 
 Ahora bien, si $z\in\operatorname{Ass}(\sh{O}_X)$, la hipótesis $x\notin Z_0$ implica que, o bien $x\notin\overline{\{z\}}$, o bien $x$ no está aislado en $\overline{\{z\}}\cap X_0$.
-Reemplazando $U^{(x)}$ por un abierto más pequeño, se puede suponer que el segundo caso es el que se produce para todo $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$.
+Reemplazando $U^{(x)}$ por un abierto más pequeño, se puede suponer que el segundo caso es el que se produce para todo $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$;
 $V^{(x)}$ contendría entonces una componente irreducible de dimensión $1$ de $X_0\cap U^{(x)}$ que contiene a $x$;
 pero esto significaría que la imagen $\overline{g}^{(x)}$ de $g^{(x)}$ en $\Gamma(U^{(x)}\cap X_0,\sh{O}_{X_0})$ estaría en el nilradical de este anillo y, por consiguiente, $s_x$ pertenecería al nilradical de $\sh{O}_{X_0,x}$, lo que es absurdo.
 Se tiene, pues, $x\notin\overline{\{z\}}$ para todo punto $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$ y, como este conjunto es finito, se puede suponer, reemplazando $U^{(x)}$ por un entorno abierto más pequeño de $x$, que $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
@@ -189,11 +189,11 @@ Pero existe entonces, en virtud de la condición 2\textsuperscript{o}, un subcon
 Reemplazando de nuevo $U^{(x)}$ por un entorno abierto más pequeño de $x$, se puede suponer
 \oldpage[IV-4]{288}
 que $W^{(x)}=V^{(x)}$, es decir, que $V^{(x)}$ es cerrado en $X$.
-Se puede definir entonces un divisor $D^{(x)}$ sobre $X$ mediante la condición de que $D^{(x)}|U^{(x)}=D'^{(x)}$ y $D^{(x)}|(X-V^{(x)})=0$, lo que tiene sentido porque, en $U^{(x)}\cap(X-V^{(x)})$, la restricción de $g^{(x)}$ es una sección invertible, por lo que las restricciones a este abierto de los dos divisores considerados sobre $U^{(x)}$ y $X-V^{(x)}$ son iguales.
+Se puede definir entonces un divisor $D^{(x)}$ sobre $X$ mediante la condición de que $D^{(x)}|U^{(x)}=D'^{(x)}$ y $D^{(x)}|(X\setmin V^{(x)})=0$, lo que tiene sentido porque, en $U^{(x)}\cap(X\setmin V^{(x)})$, la restricción de $g^{(x)}$ es una sección invertible, por lo que las restricciones a este abierto de los dos divisores considerados sobre $U^{(x)}$ y $X\setmin V^{(x)}$ son iguales.
 Basta entonces, para responder a la cuestión, tomar $D=\sum_{x\in T}D^{(x)}$, lo que tiene sentido puesto que $T$ es finito.
 
   \item Teniendo en cuenta el diagrama conmutativo \sref{IV.21.4.2.1}, la conclusión resultará de (i) si se demuestra que todo $\sh{O}_{X_0}$-módulo invertible $\sh{L}_0$ es isomorfo a un $\sh{O}_{X_0}$-módulo de la forma $\sh{O}_{X_0}(D_0)$ \sref{IV.21.2.8}, donde $D_0$ es un divisor sobre $X_0$ cuyo soporte no corta a $Z_0$.
-Ahora bien, como $U_0$ es esquemáticamente denso en $X_0$ \sref{IV.20.2.13}, (iv), basta para ello demostrar que existe una sección $t\in\Gamma(U_0,\sh{L}_0)$ tal que $t(z_0)\neq0$ en los puntos de $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ \sref{IV.3.1.9}.
+Ahora bien, como $U_0$ es esquemáticamente denso en $X_0$ \sref{IV.20.2.13}[(iv)] basta para ello demostrar que existe una sección $t\in\Gamma(U_0,\sh{L}_0)$ tal que $t(z_0)\neq0$ en los puntos de $(\operatorname{Ass}(\sh{O}_{X_0}))\cup Z_0$ \sref{IV.3.1.9}.
 Podemos, pues, limitarnos al caso en que $X_0=\Spec(A_0)$ sea afín;
 pero entonces $\sh{L}_0$ es amplio \sref[II]{II.5.1.4} y, como el conjunto $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ es finito, la conclusión resulta de \sref[II]{II.4.5.4}.
 \end{enumerate}
@@ -208,7 +208,7 @@ Entonces, para todo subesquema cerrado $X'_0$ de $X$, que tenga a $X_0$ como con
 \begin{proof}
 Demostremos primero que basta probar el corolario cuando el anillo local henseliano $A$ sea además noetheriano.
 En efecto, se sabe \sref{IV.18.6.15} que se puede escribir $A=\varinjlim A_\lambda$, donde los $A_\lambda$ son anillos locales noetherianos y henselianos, siendo locales los homomorfismos $A_\lambda\to A$;
-existe además un índice $\alpha$ y un morfismo separado de presentación finita $f_\alpha:X_\alpha\to S_\alpha=\Spec(A_\alpha)$ tales que $X$ y $f$ se deduzcan de $X_\alpha$ y $f_\alpha$ por el cambio de base $S\to S_\alpha$ \sref{IV.8.10.5}, (v);
+existe además un índice $\alpha$ y un morfismo separado de presentación finita $f_\alpha:X_\alpha\to S_\alpha=\Spec(A_\alpha)$ tales que $X$ y $f$ se deduzcan de $X_\alpha$ y $f_\alpha$ por el cambio de base $S\to S_\alpha$ \sref{IV.8.10.5}[(v)];
 con las notaciones habituales \sref{IV.8.8.1}, los morfismos $f_\lambda:X_\lambda\to S_\lambda$ serán separados para $\lambda\geq\alpha$ y se tendrá $X=X_\lambda\times_{S_\lambda}S$.
 Además, se puede suponer que, si $s_{0\alpha}$ es el único punto cerrado de $S_\alpha$, existe un subesquema cerrado $X'_{0\alpha}$ de $X_\alpha$, que tiene el mismo conjunto subyacente que $f_\alpha^{-1}(s_{0\alpha})$, tal que $X'_0=X'_{0\alpha}\times_{S_\alpha}S$ \sref{IV.8.6.3};
 para $\lambda\geq\alpha$, pongamos $X'_{0\lambda}=X'_{0\alpha}\times_{S_\alpha}S_\lambda$;
@@ -225,14 +225,14 @@ Para todo $\sh{O}_{X'_0}$-módulo invertible $\sh{L}'_0$, existe un $\lambda\geq
 basta considerar un $\sh{O}_{X_\lambda}$-módulo invertible $\sh{L}_\lambda$ tal que $\operatorname{cl}(\sh{L}'_{0\lambda})$ sea la imagen de $\operatorname{cl}(\sh{L}_\lambda)$ en $\operatorname{Pic}(X'_{0\lambda})$, y tomar luego el $\sh{O}_X$-módulo invertible $\sh{L}$ deducido de $\sh{L}_\lambda$ por cambio de base;
 en virtud de la conmutatividad del diagrama anterior, $\operatorname{cl}(\sh{L}'_0)$ será la imagen de $\operatorname{cl}(\sh{L})$.
 
-Supongamos, pues, que $A$ es noetheriano, y por tanto también $X$, y comprobemos que $X$ y $X'_0$ satisfacen las condiciones de \sref{IV.21.9.11}, (ii).
+Supongamos, pues, que $A$ es noetheriano, y por tanto también $X$, y comprobemos que $X$ y $X'_0$ satisfacen las condiciones de \sref{IV.21.9.11}[(ii)].
 Por hipótesis, se tiene $\dim(X'_0)\leq1$;
 por otra parte, para verificar la condición 2\textsuperscript{o} de \sref{IV.21.9.11}, consideremos el subpreesquema reducido $Y$ de $X$ que tenga el subconjunto localmente cerrado $Y$ como espacio subyacente;
-como el morfismo $g:Y\to S$, restricción de $f$, es cuasifinito en cada uno de los puntos $x_i$ de $Y\cap X_0$ ($1\leq i\leq n$), se puede aplicar \sref{IV.18.5.11}, c), y se ve que $Y$ es suma de los subpreesquemas abiertos $Y_i=\Spec(\sh{O}_{Y,x_i})$ ($1\leq i\leq n$) y de un preesquema $Y''$ tal que $Y''\cap X_0=\emp$, y además que las inyecciones canónicas $j_i:Y_i\to X$ son tales que $f\circ j_i$ sea un morfismo finito.
+como el morfismo $g:Y\to S$, restricción de $f$, es cuasifinito en cada uno de los puntos $x_i$ de $Y\cap X_0$ ($1\leq i\leq n$), se puede aplicar \sref{IV.18.5.11}[\emph{c)}] y se ve que $Y$ es suma de los subpreesquemas abiertos $Y_i=\Spec(\sh{O}_{Y,x_i})$ ($1\leq i\leq n$) y de un preesquema $Y''$ tal que $Y''\cap X_0=\emp$, y además que las inyecciones canónicas $j_i:Y_i\to X$ son tales que $f\circ j_i$ sea un morfismo finito.
 Como $f$ es separado, $j_i$ es también un morfismo finito, por lo que $Y_i$ es cerrado en $X$;
 se responde, pues, a la cuestión tomando $Y'=\bigcup_{1\leq i\leq n}Y_i$.
 
-Queda por verificar la hipótesis suplementaria de \sref{IV.21.9.11}, (ii).
+Queda por verificar la hipótesis suplementaria de \sref{IV.21.9.11}[(ii)].
 Ahora bien, como $X'_0$ es una curva separada sobre el cuerpo $\boldsymbol{k}(s_0)$, es un $\boldsymbol{k}(s_0)$-esquema cuasiproyectivo (cap.~V)\footnote{El lector comprobará que \sref{IV.21.9.12} no se utiliza para demostrar esta propiedad en el cap.~V.}, por lo que existe un $\sh{O}_{X'_0}$-módulo amplio \sref[II]{II.5.3.1}, y esto termina la demostración.
 \end{proof}
 

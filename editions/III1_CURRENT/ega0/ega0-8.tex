@@ -199,7 +199,7 @@ Por ejemplo, en la categoría $\Set$, los objetos finales son los conjuntos unit
 
 \begin{env}[8.1.11]
 \label{0.8.1.11}
-Para dos objetos $X$ e $Y$ de una categoría $\C$, pongamos $h_X'(Y)=\Hom(X,Y)$ y, para todo morfismo $u:Y\to Y'$, sea $h_X'(u)$ la aplicación $v\mapsto uv$ de $\Hom(X,Y)$ en $\Hom(X,Y')$; $h_X'$ es entonces un \emph{funtor covariante $\C\to\Set$}, de modo que deducimos, como en \sref{0.8.1.2}, la definición de un funtor covariante canónico $h':\C\op\to\CHom(\C,\Set)$; un funtor \emph{covariante} $F$ de $\C$ en $\Set$, es decir, un objeto de $\CHom(\C,\Set)$, es entonces \emph{representable} si existe un objeto $X\in\C$ (necesariamente único salvo isomorfismo único) tal que $F$ es \emph{isomorfo a $h_X'$}; dejamos al lector el desarrollo de las nociones ``duales'' de las anteriores, que esta vez comprenden la noción de \emph{límite inductivo}, y en particular la noción usual de ``solución de un problema universal''.
+Para dos objetos $X$ e $Y$ de una categoría $\C$, pongamos $h_X'(Y)=\Hom(X,Y)$ y, para todo morfismo $u:Y\to Y'$, sea $h_X'(u)$ la aplicación $v\mapsto uv$ de $\Hom(X,Y)$ en $\Hom(X,Y')$; $h_X'$ es entonces un \emph{funtor covariante $\C\to\Set$}, de modo que deducimos, como en \sref{0.8.1.2}, la definición de un funtor covariante canónico $h':\C\op\to\CHom(\C,\Set)$; un funtor \emph{covariante} $F$ de $\C$ en $\Set$, es decir, \emph{un} objeto de $\CHom(\C,\Set)$, es entonces \emph{representable} si existe un objeto $X\in\C$ (necesariamente único salvo isomorfismo único) tal que $F$ es \emph{isomorfo a $h_X'$}; dejamos al lector el desarrollo de las nociones ``duales'' de las anteriores, que esta vez comprenden la noción de \emph{límite inductivo}, y en particular la noción usual de ``solución de un problema universal''.
 \end{env}
 
 \subsection{Estructuras algebraicas en categorías}
@@ -294,10 +294,10 @@ es conmutativo.
 Bajo las hipótesis de \sref{0.8.2.5}, si queremos expresar, para todo $Y\in\C$, que la ley interna $\gamma_X(Y)$ es una \emph{ley de grupo}, es necesario, en primer lugar, que sea asociativa y, en segundo lugar, que exista una aplicación $\alpha_X(Y):h_X(Y)\to h_X(Y)$ con las propiedades de la operación de \emph{inverso} de un grupo; como hemos visto que, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ debe ser un homomorfismo de grupos $h_X(Y')\to h_X(Y)$, vemos primero que $\alpha_X:h_X\to h_X$ debe ser una \emph{transformación natural}.
 Por otra parte, se pueden expresar las propiedades características del inverso $s\mapsto s^{-1}$ de un grupo $G$ sin hacer intervenir el elemento identidad: basta comprobar que las dos aplicaciones compuestas
 \[
-  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,s^{-1}t)\mapsto s(s^{-1}t),
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,s^{-1}t)\mapsto s(s^{-1}t)
 \]
 \[
-  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,ts^{-1})\mapsto(ts^{-1})s
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,ts^{-1})\leadsto(ts^{-1})s
 \]
 son iguales a la segunda proyección $(s,t)\mapsto t$ de $G\times G$ en $G$.
 Por \sref{0.8.1.3}, tenemos $\alpha_X=h_{a_X}$, donde $a_X\in\Hom(X,X)$; la primera condición anterior expresa entonces que el morfismo compuesto
@@ -309,21 +309,21 @@ es la segunda proyección $X\times X\to X$ en $\C$, y la segunda condición es a
 
 \begin{env}[8.2.7]
 \label{0.8.2.7}
-Supongamos ahora que existe un \emph{objeto final} $e$ \sref{0.8.1.10} en $\C$.
+Supongamos ahora que existe un \emph{objeto final} $\boldsymbol e$ \sref{0.8.1.10} en $\C$.
 Supongamos siempre que $\gamma_X(Y)$ es una ley de grupo sobre $h_X(Y)$ para todo $Y\in\C$, y denotemos por $\eta_X(Y)$ el elemento identidad de $\gamma_X(Y)$.
-Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
+Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=\boldsymbol e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(\boldsymbol e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
 Pongamos $e_X=\eta_X(X)$, el elemento identidad del grupo $h_X(X)=\Hom(X,X)$; la conmutatividad del diagrama
 \[
   \xymatrix{
-    h_X(e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(e)} &
+    h_X(\boldsymbol e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(\boldsymbol e)} &
     h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
-    h_X(e)\ar[r]_{h_X(\varepsilon)} &
+    h_X(\boldsymbol e)\ar[r]_{h_X(\varepsilon)} &
     h_X(Y)
   }
 \]
 (cf. \sref{0.8.1.2}) muestra que, sobre el conjunto $h_X(Y)$, la aplicación $h_{e_X}(Y)$ no es otra que
 \oldpage[0\textsubscript{III}]{12}
-$s\mapsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
+$s\leadsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
 Comprobamos entonces que el hecho de que $\eta_X(Y)$ sea el elemento identidad de $\gamma_X(Y)$ para todo $Y\in\C$ equivale a decir que el morfismo compuesto
 \[
   X\xrightarrow{(1_X,1_X)}X\times X\xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,

@@ -484,7 +484,7 @@ Por ejemplo, en la categoría $\Set$, los objetos finales son los conjuntos unit
 
 \begin{env}[8.1.11]
 \label{0.8.1.11}
-Para dos objetos $X$ e $Y$ de una categoría $\C$, pongamos $h_X'(Y)=\Hom(X,Y)$ y, para todo morfismo $u:Y\to Y'$, sea $h_X'(u)$ la aplicación $v\mapsto uv$ de $\Hom(X,Y)$ en $\Hom(X,Y')$; $h_X'$ es entonces un \emph{funtor covariante $\C\to\Set$}, de modo que deducimos, como en \sref{0.8.1.2}, la definición de un funtor covariante canónico $h':\C\op\to\CHom(\C,\Set)$; un funtor \emph{covariante} $F$ de $\C$ en $\Set$, es decir, un objeto de $\CHom(\C,\Set)$, es entonces \emph{representable} si existe un objeto $X\in\C$ (necesariamente único salvo isomorfismo único) tal que $F$ es \emph{isomorfo a $h_X'$}; dejamos al lector el desarrollo de las nociones ``duales'' de las anteriores, que esta vez comprenden la noción de \emph{límite inductivo}, y en particular la noción usual de ``solución de un problema universal''.
+Para dos objetos $X$ e $Y$ de una categoría $\C$, pongamos $h_X'(Y)=\Hom(X,Y)$ y, para todo morfismo $u:Y\to Y'$, sea $h_X'(u)$ la aplicación $v\mapsto uv$ de $\Hom(X,Y)$ en $\Hom(X,Y')$; $h_X'$ es entonces un \emph{funtor covariante $\C\to\Set$}, de modo que deducimos, como en \sref{0.8.1.2}, la definición de un funtor covariante canónico $h':\C\op\to\CHom(\C,\Set)$; un funtor \emph{covariante} $F$ de $\C$ en $\Set$, es decir, \emph{un} objeto de $\CHom(\C,\Set)$, es entonces \emph{representable} si existe un objeto $X\in\C$ (necesariamente único salvo isomorfismo único) tal que $F$ es \emph{isomorfo a $h_X'$}; dejamos al lector el desarrollo de las nociones ``duales'' de las anteriores, que esta vez comprenden la noción de \emph{límite inductivo}, y en particular la noción usual de ``solución de un problema universal''.
 \end{env}
 
 \subsection{Estructuras algebraicas en categorías}
@@ -579,10 +579,10 @@ es conmutativo.
 Bajo las hipótesis de \sref{0.8.2.5}, si queremos expresar, para todo $Y\in\C$, que la ley interna $\gamma_X(Y)$ es una \emph{ley de grupo}, es necesario, en primer lugar, que sea asociativa y, en segundo lugar, que exista una aplicación $\alpha_X(Y):h_X(Y)\to h_X(Y)$ con las propiedades de la operación de \emph{inverso} de un grupo; como hemos visto que, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ debe ser un homomorfismo de grupos $h_X(Y')\to h_X(Y)$, vemos primero que $\alpha_X:h_X\to h_X$ debe ser una \emph{transformación natural}.
 Por otra parte, se pueden expresar las propiedades características del inverso $s\mapsto s^{-1}$ de un grupo $G$ sin hacer intervenir el elemento identidad: basta comprobar que las dos aplicaciones compuestas
 \[
-  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,s^{-1}t)\mapsto s(s^{-1}t),
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,s^{-1}t)\mapsto s(s^{-1}t)
 \]
 \[
-  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,ts^{-1})\mapsto(ts^{-1})s
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,ts^{-1})\leadsto(ts^{-1})s
 \]
 son iguales a la segunda proyección $(s,t)\mapsto t$ de $G\times G$ en $G$.
 Por \sref{0.8.1.3}, tenemos $\alpha_X=h_{a_X}$, donde $a_X\in\Hom(X,X)$; la primera condición anterior expresa entonces que el morfismo compuesto
@@ -594,21 +594,21 @@ es la segunda proyección $X\times X\to X$ en $\C$, y la segunda condición es a
 
 \begin{env}[8.2.7]
 \label{0.8.2.7}
-Supongamos ahora que existe un \emph{objeto final} $e$ \sref{0.8.1.10} en $\C$.
+Supongamos ahora que existe un \emph{objeto final} $\boldsymbol e$ \sref{0.8.1.10} en $\C$.
 Supongamos siempre que $\gamma_X(Y)$ es una ley de grupo sobre $h_X(Y)$ para todo $Y\in\C$, y denotemos por $\eta_X(Y)$ el elemento identidad de $\gamma_X(Y)$.
-Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
+Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=\boldsymbol e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(\boldsymbol e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
 Pongamos $e_X=\eta_X(X)$, el elemento identidad del grupo $h_X(X)=\Hom(X,X)$; la conmutatividad del diagrama
 \[
   \xymatrix{
-    h_X(e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(e)} &
+    h_X(\boldsymbol e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(\boldsymbol e)} &
     h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
-    h_X(e)\ar[r]_{h_X(\varepsilon)} &
+    h_X(\boldsymbol e)\ar[r]_{h_X(\varepsilon)} &
     h_X(Y)
   }
 \]
 (cf. \sref{0.8.1.2}) muestra que, sobre el conjunto $h_X(Y)$, la aplicación $h_{e_X}(Y)$ no es otra que
 \oldpage[0\textsubscript{III}]{12}
-$s\mapsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
+$s\leadsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
 Comprobamos entonces que el hecho de que $\eta_X(Y)$ sea el elemento identidad de $\gamma_X(Y)$ para todo $Y\in\C$ equivale a decir que el morfismo compuesto
 \[
   X\xrightarrow{(1_X,1_X)}X\times X\xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
@@ -654,7 +654,7 @@ Para que un subconjunto de $X$ sea construible, es necesario y suficiente que se
 Está claro que la condición es suficiente.
 Para ver que es necesaria, consideremos el conjunto $\mathfrak{G}$ de las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$; basta ver que el complementario de todo conjunto de $\mathfrak{G}$ pertenece a $\mathfrak{G}$.
 Sea $Z=\bigcup_{i\in I}(U_i\cap\complement{V_i})$, donde $I$ es finito y los $U_i$ y $V_i$ son abiertos retrocompactos de $X$; tenemos
-$\complement{Z}=\bigcap_{i\in I}(V_i\cup\complement{U_i})$, de modo que $\complement{Z}$ es una unión finita de conjuntos que son intersecciones de cierto número de los $V_i$ y de cierto número de los $\complement{U_i}$, por tanto de la forma
+$\complement{Z}=\bigcap_{i\in I}(V_i\cup\complement{U_i})$, de modo que $Z$ es una unión finita de conjuntos que son intersecciones de cierto número de los $V_i$ y de cierto número de los $\complement{U_i}$, por tanto de la forma
 \oldpage[0\textsubscript{III}]{13}
 $V\cap\complement{U}$, donde $U$ es la unión de cierto número de los $U_i$ y $V$ es la intersección de cierto número de los $V_i$; pero hemos observado antes que las uniones e intersecciones finitas de abiertos retrocompactos de $X$ son abiertos retrocompactos de $X$, de donde se sigue la conclusión.
 \end{proof}
@@ -755,7 +755,7 @@ Sea $U$ un abierto cuasicompacto de $X$; $T\cap U$ es localmente construible en 
 
 \begin{env}[9.2.1]
 \label{0.9.2.1}
-Hemos visto \sref{0.9.1.7} que, en un espacio noetheriano $X$, los subconjuntos construibles de $X$ son las \emph{uniones finitas de subconjuntos localmente cerrados de $X$}.
+Hemos visto \sref{0.9.1.7} que, en un espacio noetheriano $X$, los subconjuntos construibles de $X$ son las \emph{uniones finitas de subconjuntos localmente cerrados} de $X$.
 
 La imagen inversa de un conjunto construible de $X$ por una aplicación continua de un espacio noetheriano $X'$ en $X$ es construible en $X'$.
 Si $Y$ es un subconjunto construible de un espacio noetheriano $X$, entonces los subconjuntos de $Y$ que son construibles como subespacios de $Y$ coinciden con los que son construibles como subespacios de $X$.
@@ -770,7 +770,7 @@ Para que $E$ sea denso en todas partes en $X$, es necesario y suficiente que $E$
 \begin{proof}
 \oldpage[0\textsubscript{III}]{15}
 La condición es evidentemente suficiente, pues todo abierto no vacío es denso en $X$.
-Recíprocamente, sea $E=\bigcup_{i=1}^n(U_i\cap F_i)$ un subconjunto construible de $X$, siendo los $U_i$ abiertos no vacíos y los $F_i$ cerrados en $X$; tenemos entonces $\overline{E}\subset\bigcup_i F_i$.
+Recíprocamente, sea $E=\bigcup_{i=1}^n(U_i\cap F_{\boldsymbol i})$ un subconjunto construible de $X$, siendo los $U_i$ abiertos no vacíos y los $F_i$ cerrados en $X$; tenemos entonces $\overline{E}\subset\bigcup_i F_i$.
 En consecuencia, si $\overline{E}=X$, entonces $X$ es igual a uno de los $F_i$, luego $E\supset U_i$, lo que termina la demostración.
 \end{proof}
 
@@ -1234,17 +1234,17 @@ En lo que sigue utilizamos una noción de sucesión espectral más general que l
 \begin{enumerate}
   \item[(a)] Una familia $(E_r^{pq})$ de objetos de $\cat{C}$ definida para $p,q\in\bb{Z}$ y $r\geq 2$.
   \item[(b)] Una familia de morfismos $d_r^{pq}:E_r^{pq}\to E_r^{p+r,q-r+1}$ tales que $d_r^{p+r,q-r+1}d_r^{pq}=0$.
-    Ponemos $Z_{r+1}(E_r^{pq})=\Ker(d_r^{pq})$ y $B_{r+1}(E_r^{pq})=\Im(d_r^{p-r,q+r-1})$, de modo que
+    Ponemos $Z_{r+1}(E_r^{pq})=\Ker(d_r^{pq})$ y $B_{r+1}(E_r^{pq})=\Im(d_r^{p+r,q-r+1})$, de modo que
     \[
       B_{r+1}(E_r^{pq})\subset Z_{r+1}(E_r^{pq})\subset E_r^{pq}.
     \]
   \item[(c)] Una familia de isomorfismos $\alpha_r^{pq}:Z_{r+1}(E_r^{pq})/B_{r+1}(E_r^{pq})\isoto E_{r+1}^{pq}$.
 
-  Definimos entonces, para $k\geq r+1$, por inducción sobre $k$, los subobjetos $B_k(E_r^{pq})$ y $Z_k(E_r^{pq})$ como las imágenes inversas, por el morfismo canónico $E_r^{pq}\to E_r^{pq}/B_{r+1}(E_r^{pq})$, de los subobjetos de este cociente identificados mediante $\alpha_r^{pq}$ con los subobjetos $B_k(E_{r+1}^{pq})$ y $Z_k(E_{r+1}^{pq})$, respectivamente.
+  Definimos entonces, para $k\geq r+1$, por inducción sobre $k$, los subobjetos $B_k(E_r^{pq})$ y $Z_k(E_r^{pq})$ como las imágenes inversas, por el morfismo canónico $E_r^{pq}\to E_r^{pq}/B_{r+1}(E_r^{pq})$ de los subobjetos de este cociente identificados mediante $\alpha_r^{pq}$ con los subobjetos $B_k(E_{r+1}^{pq})$ y $Z_k(E_{r+1}^{pq})$, respectivamente.
 Está claro que se tiene entonces, salvo isomorfismo,
   \[
   \label{0.11.1.1.1}
-    Z_k(E_r^{pq})/B_k(E_r^{pq})=E_k^{pq}\text{ para }k\geq r+1,
+    Z_k(E_r^{pq})/B_k(E_r^{pq})=E_k^{pq}\text{ para }k\geq r+1
     \tag{11.1.1.1}
   \]
   y, si ponemos $B_r(E_r^{pq})=0$ y $Z_r(E_r^{pq})=E_r^{pq}$, se tienen las relaciones de inclusión
@@ -1274,7 +1274,7 @@ Está claro que se tiene entonces, salvo isomorfismo,
 La familia $(E^n)$, sin las filtraciones, se llama el \emph{término límite} (o \emph{límite}) de la sucesión espectral $E$.
 
 Supongamos que la categoría $\cat{C}$ admite sumas directas infinitas, o que para todo $r\geq 2$ y todo $n\in\bb{Z}$ existe solo un número finito de pares $(p,q)$ tales que $p+q=n$ y $E_r^{pq}\neq 0$ (basta que esto se cumpla para $r=2$).
-Entonces están definidos los $E_r^{(n)}=\sum_{p+q=n}E_r^{pq}$ y, si denotamos por $d_r^{(n)}$ el morfismo $E_r^{(n)}\to E_r^{(n+1)}$ cuya restricción a $E_r^{pq}$ es $d_r^{pq}$ para todo par $(p,q)$ tal que $p+q=n$, entonces $d_r^{(n+1)}\circ d_r^{(n)}=0$; en otras palabras, $(E_r^{(n)})_{n\in\bb{Z}}$ es un \emph{complejo $E_r^{(\bullet)}$} en $\cat{C}$, con diferencial de grado $+1$, y de (c) se deduce que $\HH^n(E_r^{(\bullet)})$ es \emph{isomorfo a $E_{r+1}^{(n)}$} para todo $r\geq 2$.
+Entonces están definidos los $E_r^{(n)}=\sum_{p+q=n}E_r^{pq}$ y, si denotamos por $d_r^{(n)}$ el morfismo $E_r^{(n)}\to E_r^{(n+1)}$ cuya restricción a $E_r^{pq}$ es $d_r^{pq}$ para todo par $(p,q)$ tal que $p+q=n$, entonces $d_r^{(n+1)}\circ d_r^{(n)}=0$; en otras palabras, $(E_r^{(n)})_{n\in\bb{Z}}$ es un \emph{complejo $E_r^{(\bullet)}$} en $\cat{C}$, con diferencial de grado $+1$, y de (c) se deduce que $\HH^n(E_n^{(\bullet)})$ es \emph{isomorfo a $E_{r+1}^{(n)}$} para todo $r\geq 2$.
 \end{env}
 
 \begin{env}[11.1.2]
@@ -1288,10 +1288,10 @@ Un \emph{morfismo $u:E\to E'$} de una sucesión espectral $E$ en una sucesión e
     E_r^{\prime p+r,q-r+1}
   }
 \]
-sean conmutativos; además, pasando a los cocientes, $u_r^{pq}$ da un morfismo $\overline{u}_r^{pq}:Z_{r+1}(E_r^{pq})/B_{r+1}(E_r^{pq})\to Z_{r+1}(E_r^{\prime pq})/B_{r+1}(E_r^{\prime pq})$ y debe tenerse $\alpha_r^{\prime pq}\circ\overline{u}_r^{pq}=u_{r+1}^{pq}\circ\alpha_r^{pq}$; finalmente, debe tenerse $u_2^{pq}(B_\infty(E_2^{pq}))\subset B_\infty(E_2^{\prime pq})$ y $u_2^{pq}(Z_\infty(E_2^{pq}))\subset Z_\infty(E_2^{\prime pq})$; pasando a los cocientes, $u_2^{pq}$ da entonces un morfismo $u_\infty^{pq}:E_\infty^{pq}\to E_\infty^{\prime pq}$, y el diagrama
+sean conmutativos; además, pasando a los cocientes, $u_r^{pq}$ da un morfismo $\overline{u}_r^{pq}:Z_{r+1}(E_r^{pq})/B_{r+1}(E_r^{pq})\to Z_{r+1}(E_r^{\prime pq})/B_{r+1}(E_r^{\prime pq})$ y debe tenerse $\alpha_r^{\prime pq}\circ\overline{u}_r^{pq}=u_{r+1}^{pq}\circ\alpha_r^{pq}$; finalmente, debe tenerse $u_2^{pq}(B_\infty(E_2^{pq}))\subset B_\infty(E_2^{\prime pq})$ y $u_2^{pq}(Z_\infty(E_2^{pq}))\subset Z_\infty(E_2^{\prime pq})$; pasando a los cocientes, $u_2^{pq}$ da entonces un morfismo $u_\infty^{\prime pq}:E_\infty^{pq}\to E_\infty^{\prime pq}$, y el diagrama
 \[
   \xymatrix{
-    E_\infty^{pq}\ar[r]^-{u_\infty^{pq}}\ar[d]_{\beta^{pq}} &
+    E_\infty^{pq}\ar[r]^-{u_\infty^{\prime pq}}\ar[d]_{\beta^{pq}} &
     E_\infty^{\prime pq}\ar[d]^{\beta^{\prime pq}}\\
     \gr_p(E^{p+q})\ar[r]_{\gr_p(u^{p+q})} &
     \gr_p(E^{\prime p+q})
@@ -1408,7 +1408,7 @@ A todo complejo $K^\bullet=(K^i)$ cuyo diferencial $d$ es de grado $+1$ podemos 
 Denotamos análogamente mediante notaciones como $K^{\bullet\bullet}=(K^{ij})$ (resp. $K_{\bullet\bullet}=(K_{ij})$) los \emph{bicomplejos} (o \emph{complejos dobles}) de objetos de $\cat{C}$ en los que los \emph{dos} diferenciales son de grado $+1$ (resp. $-1$); todavía se puede pasar de un tipo al otro cambiando los signos de los índices, y tenemos notaciones y observaciones análogas para los multicomplejos cualesquiera.
 Las notaciones $K^\bullet$ y $K_\bullet$ se utilizarán también para \emph{objetos $\bb{Z}$-graduados} de $\cat{C}$, que no son necesariamente complejos (pueden considerarse como tales para los diferenciales \emph{nulos}); por ejemplo, escribimos $\HH^\bullet(K^\bullet)=(\HH^i(K^\bullet))_{i\in\bb{Z}}$ para la \emph{cohomología} de un complejo $K^\bullet$ cuyo diferencial es de grado $+1$, y $\HH_\bullet(K_\bullet)=(\HH_i(K_\bullet))_{i\in\bb{Z}}$ para la \emph{homología} de un complejo $K_\bullet$ cuyo diferencial es de grado $-1$; cuando se pasa de $K^\bullet$ a $K_\bullet'$ por el procedimiento descrito anteriormente, se tiene $\HH_i(K_\bullet')=\HH^{-i}(K^\bullet)$.
 
-Recordemos en este caso que, para un complejo $K^\bullet$ (resp. $K_\bullet$), escribiremos en general $Z^i(K^\bullet)=\Ker(K^i\to K^{i+1})$ (``objeto de cociclos'') y $B^i(K^\bullet)=\Im(K^{i-1}\to K^i)$ (``objeto de cobordes'') (resp. $Z_i(K_\bullet)=\Ker(K_i\to K_{i-1})$ (``objeto de ciclos'') y $B_i(K_\bullet)=\Im(K_{i+1}\to K_i)$ (``objeto de bordes'')), de modo que $\HH^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp. $\HH_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+Recordemos en este caso que, para un complejo $K^\bullet$ (resp. $K_\bullet$), escribiremos en general $Z^i(K^\bullet)=\Ker(K^i\to K^{i+1})$ (``objeto de cociclos'') y $B^i(K^\bullet)=\Im(K^{i-1}\to K^i)$ (``objeto de cobordes'') (resp. $Z_i(K_\bullet)=\Ker(K_i\to K_{i-1})$ (``objeto de ciclos'') y $B_i(K_\bullet)=\Im(K_{i+1}\to K_i))$ (``objeto de bordes'')), de modo que $\HH^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp. $\HH_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
 
 Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) es un complejo en $\cat{C}$ y $T:\cat{C}\to\cat{C}'$ un funtor de $\cat{C}$ en una categoría abeliana $\cat{C}'$, denotamos por $T(K^\bullet)$ (resp. $T(K_\bullet)$) el complejo $(T(K^i))$ (resp. $(T(K_i))$) en $\cat{C}'$.
 
@@ -1425,7 +1425,7 @@ de $K^\bullet$, es decir, $F^p(K^\bullet)=(K^i\cap F^p(K^\bullet))_{i\in\bb{Z}}$
 Recordemos rápidamente cómo se define \emph{funtorialmente} una sucesión espectral $E(K^\bullet)$ a partir de $K^\bullet$ (M,~XV,~4 y G,~I,~4.3).
 Para $r\geq 2$, el morfismo canónico $F^p(K^\bullet)/F^{p+r}(K^\bullet)\to F^p(K^\bullet)/F^{p+1}(K^\bullet)$ define un morfismo en cohomología
 \[
-  \HH^{p+q}(F^p(K^\bullet)/F^{p+r}(K^\bullet))\to\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet)).
+  \HH^{p+q}(F^p(K^\bullet)/F^{p+r}(K^\bullet))\to\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))
 \]
 
 Denotamos por $Z_r^{pq}(K^\bullet)$ la imagen de este morfismo.
@@ -1439,7 +1439,7 @@ deducimos de la sucesión exacta de cohomología un morfismo
 \]
 y denotamos por $B_r^{pq}(K^\bullet)$ la imagen de este morfismo; se demuestra que $B_r^{pq}(K^\bullet)\subset Z_r^{pq}(K^\bullet)$ y se toma $E_r^{pq}(K^\bullet)=Z_r^{pq}(K^\bullet)/B_r^{pq}(K^\bullet)$; no precisaremos la definición de los $d_r^{pq}$ ni de los $\alpha_r^{pq}$.
 
-Observemos aquí que todos los $Z_r^{pq}(K^\bullet)$ y $B_r^{pq}(K^\bullet)$, para $p$ y $q$ fijos, son subobjetos del mismo objeto $\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))$, que denotamos por $Z_1^{pq}(K^\bullet)$; ponemos $B_1^{pq}(K^\bullet)=0$, de modo que las definiciones anteriores de $Z_r^{pq}(K^\bullet)$ y $B_r^{pq}(K^\bullet)$ valen también para $r=1$; ponemos asimismo $E_1^{pq}(K^\bullet)=Z_1^{pq}(K^\bullet)$.
+Observemos aquí que todos los $Z_r^{pq}(K^\bullet)$ y $B_p^{pq}(K^\bullet)$, para $p$ y $q$ fijos, son subobjetos del mismo objeto $\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))$, que denotamos por $Z_1^{pq}(K^\bullet)$; ponemos $B_1^{pq}(K^\bullet)=0$, de modo que las definiciones anteriores de $Z_r^{pq}(K^\bullet)$ y $B_r^{pq}(K^\bullet)$ valen también para $r=1$; ponemos asimismo $E_1^{pq}(K^\bullet)=Z_1^{pq}(K^\bullet)$.
 Definimos $d_1^{pq}$ y $\alpha_1^{pq}$ de modo que se satisfagan las condiciones de \sref{0.11.1.1} para $r=1$.
 Por otra parte, definimos los subobjetos $Z_\infty^{pq}(K^\bullet)$ como la imagen del morfismo
 \[
@@ -1523,7 +1523,7 @@ Se demuestra además~(M,~XV,~6) que se tiene
 \[
 \label{0.11.3.2.2}
   'E_2^{pq}(K^{\bullet\bullet})
-  = \HH_\mathrm{I}^p(\HH_\mathrm{II}^q(K^{\bullet\bullet}))
+  = \HH_\mathrm{I}^p(\HH_\mathrm{II}^p(K^{\bullet\bullet}))
   \quad\text{y}\quad
   ''E_2^{pq}(K^{\bullet\bullet})
   = \HH_\mathrm{II}^q(\HH_\mathrm{I}^p(K^{\bullet\bullet})).
@@ -1539,12 +1539,12 @@ además, dos morfismos \emph{homótopos} definen una homotopía \emph{de orden $
 Sea $K^{\bullet\bullet}=(K^{ij})$ un bicomplejo en una categoría abeliana $\cat{C}$.
 \begin{enumerate}
   \item[{\rm(i)}] Si existen $i_0$ y $j_0$ tales que $K^{ij}=0$ para $i<i_0$ o $j<j_0$ (resp.~$i>i_0$ o $j>j_0$), entonces las dos sucesiones espectrales $'E(K^{\bullet\bullet})$ y $''E(K^{\bullet\bullet})$ son birregulares.
-  \item[{\rm(ii)}] Si existen $i_0$ e $i_1$ tales que $K^{ij}=0$ para $i<i_0$ o $i>i_1$ (resp.~si existen $j_0$ y $j_1$ tales que $K^{ij}=0$ para $j<j_0$ o $j>j_1$), entonces las dos sucesiones espectrales $'E(K^{\bullet\bullet})$ y $''E(K^{\bullet\bullet})$ son birregulares.
+  \item[{\rm(ii)}] Si existen $i_0$ e $i_1$ tales que $K^{ij}=0$ para $i<i_0$ o $i>i_1$ \textup{(resp.}~si existen $j_0$ y $j_1$ tales que $K^{ij}=0$ para $j<j_0$ o $j>j_1$), entonces las dos sucesiones espectrales $'E(K^{\bullet\bullet})$ y $''E(K^{\bullet\bullet})$ son birregulares.
 \end{enumerate}
 Supongamos además que los límites inductivos filtrantes existen y son exactos en $\cat{C}$. Entonces:
 \begin{enumerate}
-  \item[{\rm(iii)}] Si existe $i_0$ tal que $K^{ij}=0$ para $i>i_0$ (resp.~si existe $j_0$ tal que $K^{ij}=0$ para $j<j_0$), entonces la sucesión espectral $'E(K^{\bullet\bullet})$ es regular.
-  \item[{\rm(iv)}] Si existe $i_0$ tal que $K^{ij}=0$ para $i<i_0$ (resp.~si existe $j_0$ tal que $K^{ij}=0$ para $j>j_0$), entonces la sucesión espectral $''E(K^{\bullet\bullet})$ es regular.
+  \item[{\rm(iii)}] Si existe $i_0$ tal que $K^{ij}=0$ para $i>i_0$ \textup{(resp.}~si existe $j_0$ tal que $K^{ij}=0$ para $j<j_0$), entonces la sucesión espectral $'E(K^{\bullet\bullet})$ es regular.
+  \item[{\rm(iv)}] Si existe $i_0$ tal que $K^{ij}=0$ para $i<i_0$ \textup{(resp.}~si existe $j_0$ tal que $K^{ij}=0$ para $j>j_0$), entonces la sucesión espectral $''E(K^{\bullet\bullet})$ es regular.
 \end{enumerate}
 \end{proposition}
 
@@ -1633,11 +1633,11 @@ Señalemos, no obstante, los criterios correspondientes a \sref{0.11.3.3}:
 \label{0.11.3.6}
 Las sucesiones espectrales $'E(K_{\bullet\bullet})$ y $''E(K_{\bullet\bullet})$ son \emph{birregulares} en los casos siguientes:
 \begin{enumerate}
-  \item[(a)] Existen $i_0$ y $j_0$ tales que $K_{ij}=0$ para $i>i_0$ o $j>j_0$ (resp. para $i<i_0$
+  \item[\textit{a)}] Existen $i_0$ y $j_0$ tales que $K_{ij}=0$ para $i>i_0$ o $j>j_0$ (resp. para $i<i_0$
     \oldpage[0\textsubscript{III}]{32}
     o $j<j_0$);
-  \item[(b)] Existen $i_0$ e $i_1$ tales que $K_{ij}=0$ para $i<i_0$ y $i>i_1$;
-  \item[(c)] Existen $j_0$ y $j_1$ tales que $K_{ij}=0$ para $j<j_0$ y $j>j_1$.
+  \item[\textit{b)}] Existen $i_0$ e $i_1$ tales que $K_{ij}=0$ para $i<i_0$ y $i>i_1$;
+  \item[\textit{c)}] Existen $j_0$ y $j_1$ tales que $K_{ij}=0$ para $j<j_0$ y $j>j_1$.
 \end{enumerate}
 
 La sucesión $'E(K_{\bullet\bullet})$ es \emph{regular} si existe $i_0$ tal que $K_{ij}=0$ para $i<i_0$, o si existe $j_0$ tal que $K_{ij}=0$ para $j>j_0$.
@@ -1844,7 +1844,7 @@ Se generaliza fácilmente a todo multifuntor covariante aditivo.
 
 \begin{proposition}[11.4.7]
 \label{0.11.4.7}
-Supongamos que, para todo objeto inyectivo $I$ de $\cat{C}$ (resp. $I'$ de $\cat{C}'$), $A'\mapsto T(I, A')$ (resp. $A\mapsto T(A, I')$) es un funtor exacto.
+Supongamos que, para todo objeto inyectivo $I$ de $\cat{C}$ \textup{(resp.} $I'$ de $\cat{C}'$), $A'\mapsto T(I, A')$ \textup{(resp.} $A\mapsto T(A, I')$) es un funtor exacto.
 Entonces, con la notación de \sref{0.11.4.6}, se tiene isomorfismos canónicos
 \[
   \label{0.11.4.7.1} \RR^\bullet T(K^\bullet, K'^\bullet) \simto \HH^\bullet(T(L^{\bullet\bullet}, K'^\bullet)) \simto \HH^\bullet(T(K^\bullet, L'^{\bullet\bullet})) \tag{11.4.7.1} 
@@ -1927,7 +1927,7 @@ de complejos, para todo $r$ induce una sucesión exacta
 \]
 Por hipótesis, esta última da una sucesión exacta
 \[
-  \cdots\longrightarrow\RR^nT(K'^\bullet_{(r)})
+  \ldots\longrightarrow\RR^nT(K'^\bullet_{(r)})
   \longrightarrow\RR^nT(K^\bullet_{(r)})
   \longrightarrow\RR^nT(K''^\bullet_{(r)})
   \xrightarrow{\partial}\RR^{n+1}T(K'^\bullet_{(r)})
@@ -1936,7 +1936,7 @@ Por hipótesis, esta última da una sucesión exacta
 Estas sucesiones exactas forman un sistema inductivo.
 El Lema~\sref{0.11.5.1} y la exactitud de $\varinjlim$ dan, por tanto, una sucesión exacta
 \[
-  \cdots\longrightarrow\RR^nT(K'^\bullet)
+  \ldots\longrightarrow\RR^nT(K'^\bullet)
   \longrightarrow\RR^nT(K^\bullet)
   \longrightarrow\RR^nT(K''^\bullet)
   \xrightarrow{\partial}\RR^{n+1}T(K'^\bullet)
@@ -2060,7 +2060,7 @@ entre sus primeras sucesiones espectrales.
 Por \sref{0.11.3.3}, estas sucesiones espectrales son regulares, de modo que por \sref{0.11.1.5} basta comprobar que este morfismo es un isomorfismo sobre los términos $E_2$.
 Equivalentemente, hay que demostrar que
 \[
-  \HH_\mathrm{II}^q(T(L^{i,\bullet}))=\RR^qT(K^i).
+  \HH_\mathrm{II}^q(T(L'^{i,\bullet}))=\RR^qT(K^i).
 \]
 Como $L^{i,\bullet}$ es una resolución por la derecha de $K^i$, esto reduce la cuestión al lema siguiente.
 \end{env}
@@ -2238,11 +2238,11 @@ y
 \label{0.11.6.2.2}
 \tag{11.6.2.2}
   {}''E^2_{pq}
-  =\LL_pT(\HH_q(K_\bullet)),
+  =\LL_pT(\HH_q(K_\bullet))
 \]
 donde $\LL_pT$ denota el funtor derivado por la izquierda de grado $p$ de $T$ para $p\geq0$, y cero para $p<0$, mientras que $\LL_qT(K_\bullet)$ denota el complejo $(\LL_qT(K_i))_{i\in\bb{Z}}$.
 
-Las propiedades de la hiperhomología no se deducen todas de las de la hipercohomología con solo ``invertir las flechas'' (a menos que se impongan a $\cat{C}'$ hipótesis adicionales de tipo (AB~5*) de (T, 1.5)).
+Las propiedades de la hiperhomología no se deducen todas de las de la hipercohomología con solo ``invertir las flechas'' (a menos que se impongan a $\cat{C}'$ hipótesis adicionales de tipo AB~5*) de T, 1.5).
 La razón son las condiciones de regularidad de las dos sucesiones espectrales anteriores, a las que ahora hay que aplicar los criterios de \sref{0.11.3.4}.
 Estos criterios muestran que, si los límites inductivos filtrantes existen y son exactos en $\cat{C}'$, entonces existe el complejo definido por el bicomplejo $T(L_{\bullet\bullet})$ y la \emph{segunda} sucesión espectral ${}''E(T(L_{\bullet\bullet}))$ es regular.
 Si $K_\bullet$ está acotado inferiormente o existe un entero $n$ tal que todo objeto de $\cat{C}$ admite una resolución proyectiva de longitud a lo sumo $n$, entonces las \emph{dos} sucesiones espectrales de hiperhomología existen (sin hipótesis alguna sobre $\cat{C}'$) y son birregulares.
@@ -2253,9 +2253,9 @@ Si $K_\bullet$ está acotado inferiormente o existe un entero $n$ tal que todo o
 Sean $\cat{C}$ y $\cat{C}'$ dos categorías abelianas, y sea $T$ un funtor covariante aditivo de $\cat{C}$ en $\cat{C}'$.
 Entonces:
 \begin{enumerate}
-  \item[{\rm(i)}] \emph{La hiperhomología $\LL_\bullet T(K_\bullet)$ es un funtor homológico sobre la categoría abeliana de los complejos de $\cat{C}$ acotados inferiormente.}
+  \item[{\rm(i)}] {La hiperhomología $\LL_\bullet T(K_\bullet)$ es un funtor homológico sobre la categoría abeliana de los complejos de $\cat{C}$ acotados inferiormente.}
 
-  \item[{\rm(ii)}] \emph{Sea $K_\bullet$ un complejo de $\cat{C}$ acotado inferiormente.
+  \item[{\rm(ii)}] {Sea $K_\bullet$ un complejo de $\cat{C}$ acotado inferiormente.
   Si $\LL_nT(K_i)=0$ para todo $n>0$ y todo $i\in\bb{Z}$, existen isomorfismos funtoriales}
   \[
   \label{0.11.6.3.1}
@@ -2266,7 +2266,7 @@ Entonces:
     \qquad(i\in\bb{Z}).
   \]
 
-  \item[{\rm(iii)}] \emph{Sea $K_\bullet$ un complejo de $\cat{C}$ acotado inferiormente.
+  \item[{\rm(iii)}] {Sea $K_\bullet$ un complejo de $\cat{C}$ acotado inferiormente.
   Sea $L_{\bullet\bullet}=(L_{ij})$ un bicomplejo tal que $L_{ij}=0$ para $j<0$ y, para todo $i$, $L_{i,\bullet}$ es una resolución de $K_i$.
   Supongamos además que $\LL_nT(L_{ij})=0$ para todo par $(i,j)$ y todo $n>0$.
   Entonces existe un isomorfismo funtorial}
@@ -2275,7 +2275,7 @@ Entonces:
   \tag{11.6.3.2}
     \LL_\bullet T(K_\bullet)
     \simto
-    \HH_\bullet(T(L_{\bullet\bullet})).
+    \HH_\bullet(T(L_{\bullet\bullet}))
   \]
 \end{enumerate}
 
@@ -2313,9 +2313,9 @@ Además:
 \label{0.11.6.5}
 Sean $\cat{C}$, $\cat{C}'$ y $\cat{C}''$ tres categorías abelianas, y sea $T$ un bifuntor covariante biaditivo de $\cat{C}\times\cat{C}'$ en $\cat{C}''$.
 \begin{enumerate}
-  \item[{\rm(i)}] \emph{$\LL_\bullet T(K_\bullet,K'_\bullet)$ es un bifuntor homológico en cada uno de los complejos acotados inferiormente $K_\bullet,K'_\bullet$, formados respectivamente por objetos de $\cat{C}$ y de $\cat{C}'$.}
+  \item[{\rm(i)}] {$\LL_\bullet T(K_\bullet,K'_\bullet)$ es un bifuntor homológico en cada uno de los complejos acotados inferiormente $K_\bullet,K'_\bullet$, formados respectivamente por objetos de $\cat{C}$ y de $\cat{C}'$.}
 
-  \item[{\rm(ii)}] \emph{Supongamos que $K_\bullet$ y $K'_\bullet$ están acotados inferiormente.
+  \item[{\rm(ii)}] {Supongamos que $K_\bullet$ y $K'_\bullet$ están acotados inferiormente.
   Sean $L_{\bullet\bullet}=(L_{ij})$ y $L'_{\bullet\bullet}=(L'_{ij})$ dos bicomplejos tales que $L_{ij}=L'_{ij}=0$ para $j<0$ y tales que, para todo $i$, $L_{i,\bullet}$ es una resolución de $K_i$ y $L'_{i,\bullet}$ es una resolución de $K'_i$.
   Supongamos finalmente que $\LL_nT(L_{ij},L'_{hk})=0$ para todo $n>0$ y todo sistema de índices $(i,j,h,k)$.
   Entonces existe un isomorfismo funtorial}
@@ -2327,7 +2327,7 @@ Sean $\cat{C}$, $\cat{C}'$ y $\cat{C}''$ tres categorías abelianas, y sea $T$ u
     \HH_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet})).
   \]
 
-  \item[{\rm(iii)}] \emph{Supongamos además que, para todo par $(i,j)$ y todo par $(h,k)$, los funtores
+  \item[{\rm(iii)}] {Supongamos además que, para todo par $(i,j)$ y todo par $(h,k)$, los funtores
   \[
     A\longmapsto T(A,L'_{hk}),
     \qquad
@@ -2502,7 +2502,7 @@ y, por tanto,
 En otras palabras, el complejo simple
 $\HH^{\mathrm{I}}_q(T(U_{\bullet\bullet}))$ es el complejo simple
 asociado al bicomplejo
-$T(\HH^{\mathrm{I}}_q(M_{\bullet\bullet\bullet}))$.
+$T(\HH^{\mathrm{I}}_q(M_{\bullet\bullet\bullet})$.
 Para todo $q$, $\HH^{\mathrm{I}}_q(M_{\bullet\bullet\bullet})$ es una
 resolución proyectiva en $\cat{K}$ del complejo simple
 $\HH^{\mathrm{I}}_q(K_{\bullet\bullet})$.
@@ -2600,7 +2600,7 @@ El subgrupo $\mathrm{D}_\bullet(A)$ de $\mathrm{C}_\bullet(A)$ engendrado
 por las cadenas $\sigma=(\alpha_0,\ldots,\alpha_h)$ para las cuales dos de los
 $\alpha_i$ son iguales, y por las cadenas
 \[
-  \pi(\sigma)-\varepsilon_\pi\sigma,
+  \pi(\sigma)-\varepsilon_\pi.\sigma,
 \]
 donde, para toda permutación $\pi$,
 \[
@@ -2893,7 +2893,7 @@ Existen dos homomorfismos canónicos de complejos
 \]
 y se demuestra allí que existen homotopías $h$ y $h'$ tales que
 \[
-  f\circ g-1=d\circ h+h\circ d,
+  f\circ g-1=d\circ h+h\circ d\qquad\text{et}
   \qquad
   g\circ f-1=d\circ h'+h'\circ d.
 \]
@@ -2955,7 +2955,7 @@ la fórmula
 \[
   d\lambda(\sigma,\tau)
   =
-  \sum_{j,k}(-1)^{j+k}\lambda(\sigma_j,\tau_k)
+  \sum(-1)^{j+k}\lambda(\sigma_j,\tau_k)
 \]
 está definida y da el diferencial de
 $\mathrm{P}^\bullet(A,B;\sh{S})$.
@@ -3098,17 +3098,17 @@ este homomorfismo induce asimismo un isomorfismo en cohomología.
 
 \begin{proposition}[11.9.1]
 \label{0.11.9.1}
-Sea $\cat{C}$ una categoría abeliana, y sean $K'$ y $K''$ subconjuntos
+Sea $\cat{C}$ una categoría abeliana, y sean $\boldsymbol K'$ y $K''$ subconjuntos
 del conjunto de objetos de $\cat{C}$, con $K''\subset K'$, que satisfacen las
 condiciones siguientes:
 \begin{enumerate}
   \item[{\rm(i)}]
-  \emph{Para todo $A'\in K'$ y todo epimorfismo $u:A\to A'$ en
-  $\cat{C}$, existen un objeto $B\in K''$ y un morfismo $v:B\to A$
+  \emph{Para todo $A'\in\boldsymbol K'$ y todo epimorfismo $u:A\to A'$ en
+  $\cat{C}$, existen un objeto $B\in\boldsymbol K''$ y un morfismo $v:B\to A$
   tales que $u\circ v$ es un epimorfismo.}
 
   \item[{\rm(ii)}]
-  \emph{Para todo par $A,B\in K'$ y todo epimorfismo $u:A\to B$,
+  \emph{Para todo par $A,B\in\boldsymbol K'$ y todo epimorfismo $u:A\to B$,
   el objeto $\Ker(u)$ pertenece a $K'$.}
 
   \item[{\rm(iii)}]
@@ -3116,10 +3116,10 @@ condiciones siguientes:
 \end{enumerate}
 
 \emph{Sea $P_\bullet=(P_i)_{i\in\bb{Z}}$ un complejo en $\cat{C}$ tal
-que $\HH_i(P_\bullet)\in K'$ para todo $i$, y supongamos que existe un
+que $\HH_i(P_\bullet)\in\boldsymbol K'$ para todo $i$, y supongamos que existe un
 entero $d$ para el cual $\HH_i(P_\bullet)=0$ cuando $i<d$.
 Entonces existen un complejo $Q_\bullet=(Q_i)_{i\in\bb{Z}}$ en $\cat{C}$
-tal que $Q_i\in K''$ para todo $i$ y $Q_i=0$ para $i<d$, y un
+tal que $Q_i\in\boldsymbol K''$ para todo $i$ y $Q_i=0$ para $i<d$, y un
 homomorfismo de complejos
 \[
   u:Q_\bullet\longrightarrow P_\bullet
@@ -3137,8 +3137,8 @@ Demostremos primero la consecuencia siguiente de la condición~(i).
 \medskip\noindent
 \emph{(i bis)}
 \emph{Sea $u:C\to B$ un epimorfismo en $\cat{C}$, sea $A$ un
-objeto de $K'$, y sea $v:A\to B$ un morfismo en $\cat{C}$.
-Entonces existen un objeto $D\in K''$, un epimorfismo $u':D\to A$ y un
+objeto de $\boldsymbol K'$, y sea $v:A\to B$ un morfismo en $\cat{C}$.
+Entonces existen un objeto $D\in\boldsymbol K''$, un epimorfismo $u':D\to A$ y un
 morfismo $v':D\to C$ tales que el diagrama}
 \[
   \xymatrix{
@@ -3170,7 +3170,7 @@ El conúcleo de $q$ es el cociente de $A$ por $v^{-1}(u(C))$
 Como $u$ es un epimorfismo, $u(C)=B$ y
 $v^{-1}(u(C))=A$; por tanto, $q$ es un epimorfismo.
 Aplicando~(i) a $q:C\times_B A\to A$, se obtienen un objeto
-$D\in K''$ y un morfismo $w:D\to C\times_B A$ tales que $q\circ w$ es
+$D\in\boldsymbol K''$ y un morfismo $w:D\to C\times_B A$ tales que $q\circ w$ es
 un epimorfismo.
 Basta tomar $u'=q\circ w$ y $v'=p\circ w$.
 
@@ -3194,8 +3194,8 @@ tales que
 Supongamos además que se cumplen las condiciones siguientes:
 \begin{enumerate}
   \item[$(\mathrm{I}_i)$]
-  $Q_j\in K''$ para $j\leq i$, y
-  $\mathrm{B}_j(Q_\bullet)\in K'$ para $j<i$.
+  $Q_j\in\boldsymbol K''$ para $j\leq i$, y
+  $\mathrm{B}_j(Q_\bullet)\in\boldsymbol K'$ para $j<i$.
 
   \item[$(\mathrm{II}_i)$]
   Para $j<i$, el homomorfismo
@@ -3229,7 +3229,7 @@ La condición~(ii) y $(\mathrm{III}_i)$ muestran también que
   N_i=\Ker(v_i)
 \]
 pertenece a $K'$.
-Por (i bis), existen un objeto $Q'_{i+1}\in K''$, un epimorfismo
+Por (i \emph{bis}), existen un objeto $Q'_{i+1}\in\boldsymbol K''$, un epimorfismo
 \[
   d'_{i+1}:Q'_{i+1}\longrightarrow N_i,
 \]
@@ -3251,8 +3251,8 @@ El morfismo canónico
   \longrightarrow
   \HH_{i+1}(P_\bullet)
 \]
-es un epimorfismo, y $\HH_{i+1}(P_\bullet)\in K'$.
-La condición~(i) proporciona, por tanto, un objeto $Q''_{i+1}\in K''$ y un
+es un epimorfismo, y $\HH_{i+1}(P_\bullet)\in\boldsymbol K'$.
+La condición~(i) proporciona, por tanto, un objeto $Q''_{i+1}\in\boldsymbol K''$ y un
 morfismo
 \[
   u''_{i+1}:Q''_{i+1}\longrightarrow
@@ -3293,7 +3293,7 @@ Como
 \[
   d^Q_{i+1}(Q_{i+1})
   =
-  d'_{i+1}(Q'_{i+1})
+  d'_{i+1}(Q_{i+1})
   =
   N_i
   \subset
@@ -3321,7 +3321,7 @@ Por la definición de $N_i$, el morfismo
 inducido por los $u_k$ para $k\leq i+1$ es un isomorfismo, puesto que $v_i$ es
 un epimorfismo; por tanto, se cumple $(\mathrm{II}_{i+1})$.
 Finalmente, el factor $Q''_{i+1}$ está contenido en
-$\mathrm{Z}_{i+1}(Q_\bullet)$.
+$\mathrm{Z}_{i+1}(Q_{(\bullet)})$.
 La elección de $u''_{i+1}$ muestra que
 \[
   v_{i+1}:
@@ -3359,7 +3359,7 @@ es un isomorfismo.
 
 \begin{proof}
 Apliquemos \sref{0.11.9.1} tomando como $\cat{C}$ la categoría de los
-$A$-módulos a derecha, como $K'$ el conjunto de los $A$-módulos finitamente engendrados y
+$A$-módulos a derecha, como $\boldsymbol K'$ el conjunto de los $A$-módulos finitamente engendrados y
 como $K''$ el conjunto de los $A$-módulos libres de rango finito.
 Las condiciones~(i), (ii) y~(iii) de \sref{0.11.9.1} se deducen inmediatamente
 de la hipótesis de que $A$ es noetheriano.
@@ -3410,7 +3410,7 @@ Sea $A$ un anillo, no necesariamente conmutativo, y sea
 \[
   M^\bullet:
   0\longrightarrow M^0\longrightarrow M^1
-  \longrightarrow\cdots\longrightarrow M^n\longrightarrow 0
+  \longrightarrow\ldots\longrightarrow M^n\longrightarrow 0
   \tag{11.10.1.1}\label{0.11.10.1.1}
 \]
 un complejo de $A$-módulos a izquierda de longitud finita.
@@ -3420,7 +3420,7 @@ entero
 \[
   \chi(M^\bullet)
   =
-  \sum_{i=0}^{n}(-1)^i\operatorname{length}(M^i).
+  \sum_{i=0}^{n}(-1)^i\operatorname{length}M^i.
   \tag{11.10.1.2}\label{0.11.10.1.2}
 \]
 \end{env}
@@ -3485,7 +3485,7 @@ Por consiguiente,
   =
   \operatorname{length}(\mathrm{B}^{i+1})
   +
-  \operatorname{length}(\mathrm{B}^i).
+  \operatorname{length}(\mathrm{B}^i)
 \]
 Multipliquemos esta igualdad por $(-1)^i$ y sumemos para $0\leq i\leq n$.
 Como $\mathrm{B}^0=\mathrm{B}^{n+1}=0$, se deduce la igualdad deseada.
@@ -3598,7 +3598,7 @@ en $X$ (G, II, 7.2.1).
 Pongamos $A=\Gamma(X,\sh{O}_X)$.
 Como todo elemento de $A$ define un endomorfismo del grupo abeliano
 $\Gamma(X,\sh{F})$, define por funtorialidad un endomorfismo del
-$\delta$-funtor $\HH^\bullet(X,\sh{F})$.
+$\partial$-funtor $\HH^\bullet(X,\sh{F})$.
 Estos endomorfismos dotan a cada $\HH^p(X,\sh{F})$ de una
 estructura de $A$-módulo, y el operador de conexión $\partial$ es
 $A$-lineal.
@@ -3622,7 +3622,7 @@ Para todo recubrimiento abierto $\mathfrak{U}$ de $X$, denotaremos siempre
 por $\check{\mathrm{C}}^\bullet(\mathfrak{U},\sh{F})$ (contrariamente a
 (G, II, 5.1)) el complejo de cocadenas alternadas del nervio de
 $\mathfrak{U}$ con valores en el sistema de coeficientes
-$\Gamma(U_\alpha,\sh{F})$.
+$\Gamma(U_\sigma,\sh{F})$.
 Está claro que
 $\check{\mathrm{C}}^\bullet(\mathfrak{U},\sh{F})$ es un
 $A$-módulo graduado, de modo que los grupos de cohomología
@@ -3659,8 +3659,8 @@ abelianos sobre $X$, el funtor
 \[
   \sh{F}\longmapsto\HH^\bullet(X',\psi^*(\sh{F}))
 \]
-es un $\delta$-funtor sobre dicha categoría, y se sabe que existe un
-homomorfismo canónico de $\delta$-funtores
+es un $\partial$-funtor sobre dicha categoría, y se sabe que existe un
+homomorfismo canónico de $\partial$-funtores
 \[
 \label{0.12.1.3.2}
 \tag{12.1.3.2}
@@ -3776,7 +3776,7 @@ $X'$, existe un morfismo
   \psi^*(\sh{L}^\bullet)\longrightarrow\sh{L}'^\bullet
 \]
 de complejos de haces de grupos abelianos, compatible con los
-aumentos (M, V, 1.1.a), y determinado salvo homotopía.
+aumentos (M, V, 1.1.\emph{a)}, y determinado salvo homotopía.
 Se obtienen así homomorfismos
 \[
   \Gamma(X,\sh{L}^\bullet)
@@ -3787,7 +3787,7 @@ Se obtienen así homomorfismos
 \]
 de complejos de grupos abelianos.
 Su compuesto, al pasar a la cohomología, da un morfismo de
-$\delta$-funtores
+$\partial$-funtores
 \[
   \HH^\bullet(X,\sh{F})
   \longrightarrow
@@ -4079,13 +4079,13 @@ Se sigue que el diagrama
 \label{0.12.1.6.2}
 \tag{12.1.6.2}
   \xymatrix@C=6pt{
-    \cdots\ar[r]
+    \ldots\ar[r]
       & \HH^p(X,\sh{F})\ar[r]\ar[d]_{u_p}
       & \HH^p(X,\sh{G})\ar[r]\ar[d]_{v_p}
       & \HH^p(X,\sh{H})\ar[r]^-\partial\ar[d]_{w_p}
       & \HH^{p+1}(X,\sh{F})\ar[r]\ar[d]_{u_{p+1}}
-      & \cdots\\
-    \cdots\ar[r]
+      & \ldots\\
+    \ldots\ar[r]
       & \HH^p(X',\sh{F}')\ar[r]
       & \HH^p(X',\sh{G}')\ar[r]
       & \HH^p(X',\sh{H}')\ar[r]_-\partial
@@ -4111,8 +4111,8 @@ En efecto, \sref{0.12.1.6.1} se factoriza como
 donde la fila intermedia es exacta
 \sref[0\textsubscript{I}]{0.3.7.2}.
 Basta entonces utilizar el hecho de que \sref{0.12.1.3.2} es un
-homomorfismo de $\delta$-funtores y que los
-$\HH^p(X',\sh{F}')$ forman un $\delta$-funtor en $\sh{F}'$.
+homomorfismo de $\partial$-funtores y que los
+$\HH^p(X',\sh{F}')$ forman un $\partial$-funtor en $\sh{F}'$.
 \end{remark}
 
 \begin{env}[12.1.7]
@@ -4674,10 +4674,10 @@ existen un entorno abierto $U$ de $X$ y una sucesión exacta
 de $(\sh{O}_X|U)$-módulos
 \[
   0\longrightarrow\sh{R}\longrightarrow\sh{L}_{p-1}
-  \longrightarrow\cdots\longrightarrow\sh{L}_0
+  \longrightarrow\ldots\longrightarrow\sh{L}_0
   \longrightarrow\sh{F}|U\longrightarrow0,
 \]
-donde cada $\sh{L}_i$ ($0\leq i\leq p-1$) es isomorfo a
+donde cada $\sh{L}_i$ ($0\leq i\leq p\setmin 1$) es isomorfo a
 $\sh{O}_X^{n_i}|U$, y $\sh{R}$ es coherente.
 Esto se sigue por inducción sobre $p$ de
 \sref[0\textsubscript{I}]{0.5.3.2} y
@@ -4935,14 +4935,14 @@ vienen dados por
 \begin{equation}
 \label{0.12.4.1.1}
 \tag{12.4.1.1}
-  {}'E_2^{pq}
+  {}'\mathcal E_2^{pq}
   =\sh{H}^p\bigl(\sh{H}^q(f,\sh{K}^\bullet)\bigr)
 \end{equation}
 y
 \begin{equation}
 \label{0.12.4.1.2}
 \tag{12.4.1.2}
-  {}''E_2^{pq}
+  {}''\mathcal E_2^{pq}
   =\sh{H}^p\bigl(f,\sh{H}^q(\sh{K}^\bullet)\bigr)
   \quad
   \bigl(=\RR^p f_*(\sh{H}^q(\sh{K}^\bullet))\bigr).
@@ -5245,7 +5245,7 @@ Dejamos al lector los detalles de las definiciones.
 \begin{env}[13.1.1]
 \label{0.13.1.1}
 Sea $\cat{C}$ una categoría abeliana en la que existan los productos
-infinitos (axioma AB~3* de T, 1.5).
+infinitos (axioma AB~3*) de T, 1.5).
 Entonces existe el ínfimo de una familia de subobjetos de un objeto de
 $\cat{C}$, y todo sistema proyectivo de objetos de $\cat{C}$ posee un
 límite proyectivo; este último es un funtor exacto por la izquierda del
@@ -5288,7 +5288,7 @@ $(A'_\alpha,f_{\alpha\beta}|A'_\beta)$ es un sistema proyectivo y
 Para un sistema proyectivo $(A_\alpha,f_{\alpha\beta})$ en $\cat{C}$,
 se llama \emph{condición de Mittag-Leffler} a la siguiente:
 \begin{itemize}
-  \item[\textbf{(ML)}]
+  \item[(ML)]
   \emph{Para todo índice $\alpha$, existe un $\beta\geq\alpha$ tal
   que, para todo $\gamma\geq\beta$,}
   \[
@@ -5425,7 +5425,7 @@ $y_\lambda\in B_\lambda$ tal que
   h_{\beta\lambda}\bigl(v_\lambda(y_\lambda)\bigr).
 \]
 De aquí que
-$v_\beta(y_\beta-g_{\beta\lambda}(y_\lambda))=0$, y por tanto
+$v_\beta(y_\beta\setmin g_{\beta\lambda}(y_\lambda))=0$, y por tanto
 existe un $x_\beta\in A_\beta$
 \oldpage[0\textsubscript{III}]{66}
 tal que
@@ -5520,7 +5520,7 @@ En efecto, tomemos $y_\lambda\in E_\lambda$ y pongamos
 \]
 Sea $y'_\alpha=g_{\alpha\beta}(y'_\beta)$ para algún
 $y'_\beta\in E_\beta$.
-Entonces $y'_\beta-y_\beta=x_\beta\in A_\beta$, y por hipótesis existe
+Entonces $y'_\beta\setmin y_\beta=x_\beta\in A_\beta$, y por hipótesis existe
 un $x_\lambda\in A_\lambda$ tal que
 \[
   g_{\alpha\beta}(x_\beta)
@@ -5640,10 +5640,10 @@ Se sigue de \sref{0.13.2.2} que
 \]
 es exacta.
 Ahora bien,
-$\varprojlim_\alpha\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)$
+$\varprojlim\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)$
 se identifica con un subgrupo de $\mathrm{K}^{n+1}$ que contiene
 $\mathrm{B}^n(\mathrm{K}^\bullet)$, mientras que
-$\varprojlim_\alpha\mathrm{Z}^n(\mathrm{K}^\bullet_\alpha)$
+$\varprojlim\mathrm{Z}^n(\mathrm{K}^\bullet_\alpha)$
 se identifica con un subgrupo de $\mathrm{Z}^n(\mathrm{K}^\bullet)$.
 Por consiguiente, $h_n$ es sobreyectivo.
 
@@ -5668,7 +5668,7 @@ sucesión exacta
   \longrightarrow0.
 \]
 Como
-$\varprojlim_\alpha\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
+$\varprojlim\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
 \supset\mathrm{B}^n(\mathrm{K}^\bullet)$
 y el compuesto de $u$ con la inyección
 \[
@@ -5893,7 +5893,7 @@ se obtiene manifiestamente un complejo de haces de grupos abelianos
   0\longrightarrow\sh{F}
   \longrightarrow\sh{G}^0
   \longrightarrow\sh{G}^1
-  \longrightarrow\cdots.
+  \longrightarrow\ldots.
 \]
 Para demostrar nuestra aserción, queda establecer que
 $\sh{H}^i(\sh{G}^\bullet)=0$ para $i>0$.
@@ -6158,7 +6158,7 @@ Esto demuestra que $\bb{A}$ satisface (ML).
 \begin{env}[13.4.4]
 \label{0.13.4.4}
 Supongamos que el límite proyectivo
-$A=\varprojlim_k A_k$ existe en $\cat{C}$.
+$A=\varprojlim A_k$ existe en $\cat{C}$.
 En las definiciones de \sref{0.13.4.1}, se puede entonces reemplazar $A_k$
 por $A$, y la filtración así definida sobre $A$ sigue satisfaciendo
 \begin{equation}
@@ -6175,7 +6175,7 @@ por $A$, y la filtración así definida sobre $A$ sigue satisfaciendo
 \begin{corollary}[13.4.5]
 \label{0.13.4.5}
 Supongamos que $\cat{C}$ es la categoría de grupos abelianos.
-Si el sistema proyectivo $\bb{A}$ satisface (ML) y
+Si el sistema proyectivo $\bb{A}$ satisface \textup{(ML)} y
 $A=\varprojlim_k A_k$, entonces para todo $p\in\bb{Z}$ existe un
 isomorfismo canónico
 \begin{equation}
@@ -6368,13 +6368,13 @@ tal que el diagrama
 \tag{13.5.5.3}
   \xymatrix{
     \mathrm{E}_s^{pq}(\bb{X}^\bullet)
-      \ar[r]^{j_s}\ar[d]_i
+      \ar[r]^{js}\ar[d]_i
     &
     \mathrm{E}_\infty^{pq}(X^\bullet_{p+s-1})
       \ar[d]
     \\
     \mathrm{E}_r^{pq}(\bb{X}^\bullet)
-      \ar[r]^{j_r}
+      \ar[r]^{jr}
     &
     \mathrm{E}_\infty^{pq}(X^\bullet_{p+r-1})
   }
@@ -6506,8 +6506,8 @@ $\mathrm{F}^i(A)$.
 
 \begin{proof}
 Sea $p$ (respectivamente, $q>p$) el mayor índice tal que
-$\mathrm{F}^p(A)=A$ (respectivamente, el menor índice tal que
-$\mathrm{F}^q(A)=0$).
+$\mathrm{F}^i(A)=A$ (respectivamente, el menor índice tal que
+$\mathrm F^i(A)=0$).
 Razonamos por inducción sobre $q-p$, siendo inmediato el lema cuando
 $q-p=1$.
 Supongamos construida una resolución inyectiva ${X''}^\bullet$ de
@@ -6718,7 +6718,7 @@ de anillos
 \oldpage[0\textsubscript{III}]{75}
 tal que, para todo $t\in\mathrm{F}^i(S)$,
 \[
-  h_t(\mathrm{F}^j(A))
+  h_t(\mathrm F^i(A))
   \subset
   \mathrm{F}^{i+j}(A)
 \]
@@ -6818,8 +6818,8 @@ un funtor covariante aditivo.
 Consideremos un sistema proyectivo estricto
 $\bb{A}=(A_k)_{k\in\bb{Z}}$ en $\cat{C}$, acotado inferiormente; más
 precisamente, supongamos que $A_k=0$ para $k<k_0$.
-A este sistema asociamos canónicamente, sobre cada $A_k$, la
-filtración $(\mathrm{F}^p(A_k))_{p\in\bb{Z}}$ dada por
+A este sistema asociamos canónicamente, sobre cada $A_k$ la
+filtración $(\mathrm{F}^p(A_k))_{k\in\bb{Z}}$ dada por
 \sref{0.13.4.1.1}.
 Como el sistema proyectivo es estricto, los morfismos canónicos
 \begin{equation}
@@ -6955,7 +6955,7 @@ equivalentes, y \sref{0.13.7.4.1} no es sino
 Sea $\sh{F}=(\sh{F}_k)_{k\in\bb{N}}$ un sistema proyectivo de
 haces de grupos abelianos que satisface las condiciones {\rm(i)}, {\rm(ii)}
 y {\rm(iii)} de \sref{0.13.3.1}, y pongamos
-$\sh{F}=\varprojlim_k\sh{F}_k$.
+$\sh{F}=\varprojlim\sh{F}_k$.
 Supongamos que, para el funtor
 $\sh{G}\longmapsto\Gamma(X,\sh{G})$, el sistema proyectivo
 $(\mathrm{E}_r^{pq}(\sh{F}))_r$ es esencialmente constante siempre que
@@ -7431,7 +7431,7 @@ Sea $A$ un anillo y sea $\mathbf{f}=(f_i)_{1\leq i\leq r}$ un sistema de $r$ ele
 El \emph{complejo del álgebra exterior $K_\bullet(\mathbf{f})$} correspondiente a $\mathbf{f}$ es un complejo de cadenas (G, I, 2.2) definido del modo siguiente: el $A$-módulo graduado $K_\bullet(\mathbf{f})$ es igual al \emph{álgebra exterior $\wedge(A^r)$}, graduada de la manera usual, y la aplicación borde es la \emph{multiplicación interior $i_\mathbf{f}$} por $\mathbf{f}$, considerado como elemento del dual $\dual{(A^r)}$; recordemos que $i_\mathbf{f}$ es una \emph{antiderivación} de grado $-1$ de $\wedge(A^r)$, y que, si $(\mathbf{e}_i)_{1\leq i\leq r}$ es la base canónica de $A^r$, se tiene $i_\mathbf{f}(\mathbf{e}_i)=f_i$; la verificación de la condición $i_\mathbf{f}\circ i_\mathbf{f}=0$ es inmediata.
 
 Una definición equivalente es la siguiente: para cada $i$, se considera un complejo de cadenas $K_\bullet(f_i)$ definido por $K_0(f_i)=K_1(f_i)=A$, $K_n(f_i)=0$ para $n\neq 0,1$; la aplicación borde queda definida por la condición de que $d_1:A\to A$ sea la \emph{multiplicación por $f_i$}.
-Se toma entonces como $K_\bullet(\mathbf{f})$ el \emph{producto tensorial $K_\bullet(f_1)\otimes K_\bullet(f_2)\otimes\cdots\otimes K_\bullet(f_r)$} (G, I, 2.7), provisto de su grado total; la verificación del isomorfismo de este complejo con el definido anteriormente es inmediata.
+Se toma entonces como $K_\bullet(\mathbf{f})$ el \emph{producto tensorial $K_\bullet(f_1)\otimes K_\bullet(f_2)\otimes\ldots\otimes K_\bullet(f_r)$} (G, I, 2.7), provisto de su grado total; la verificación del isomorfismo de este complejo con el definido anteriormente es inmediata.
 \end{env}
 
 \begin{env}[1.1.2]
@@ -7451,12 +7451,12 @@ y el \emph{complejo de cocadenas} (G, I, 2.2)
 
 Si $g$ es una $k$-cocadena de este último complejo y se pone
 \[
-  g(i_1,\dots,i_k)=g(\mathbf{e}_{i_1}\wedge\cdots\wedge\mathbf{e}_{i_k}),
+  g(i_1,\dots,i_k)=g(\mathbf{e}_{i_1}\wedge\ldots\wedge\mathbf{e}_{i_k}),
 \]
 entonces $g$ se identifica con una aplicación \emph{alternada} de $[1,r]^k$ en $M$, y de las definiciones anteriores se deduce que
 \[
 \label{III.1.1.2.3}
-  d^k g(i_1,i_2,\dots,i_{k+1})=\sum_{h=1}^{k+1}(-1)^{h-1}f_{i_h}g(i_1,\dots,\widehat{i_h},\dots,i_{k+1}).
+  d^k g(i_1,i_2,\dots,i_{k+1})=\sum_{h=1}^{k+1}(-1)^{h-1}f_{i_h}g(i_1,\dots,\widehat i_h,\dots,i_{k+1}).
   \tag{1.1.2.3}
 \]
 \end{env}
@@ -7474,7 +7474,7 @@ De los complejos anteriores se deducen, como de costumbre, los \emph{$A$-módulo
   \tag{1.1.3.2}
 \]
 
-Se define un \emph{$A$-isomorfismo $K_i(\mathbf{f},M)\isoto K^{r-i}(\mathbf{f},M)$} que envía cada cadena $z=\sum(\mathbf{e}_{i_1}\wedge\cdots\wedge\mathbf{e}_{i_k})\otimes z_{i_1,\dots,i_k}$ a la cocadena $g_z$ tal que $g_z(j_1,\dots,j_{r-k})=\varepsilon z_{i_1,\dots,i_k}$, donde $(j_h)_{1\leq h\leq r-k}$ es la sucesión estrictamente creciente complementaria a la sucesión estrictamente creciente $(i_h)_{1\leq h\leq k}$ en $[1,r]$ y $\varepsilon=(-1)^\nu$, siendo $\nu$ el número de inversiones de la permutación $i_1,\dots,i_k,j_1,\dots,j_{r-k}$ de $[1,r]$.
+Se define un \emph{$A$-isomorfismo $K_i(\mathbf{f},M)\isoto K^{r-i}(\mathbf{f},M)$} que envía cada cadena $z=\sum(\mathbf{e}_{i_1}\wedge\ldots\wedge\mathbf{e}_{i_k})\otimes z_{i_1,\dots,i_k}$ a la cocadena $g_z$ tal que $g_z(j_1,\dots,j_{r-k})=\varepsilon z_{i_1,\dots,i_k}$, donde $(j_h)_{1\leq h\leq r-k}$ es la sucesión estrictamente creciente complementaria a la sucesión estrictamente creciente $(i_h)_{1\leq h\leq k}$ en $[1,r]$ y $\varepsilon=(-1)^\nu$, siendo $\nu$ el número de inversiones de la permutación $i_1,\dots,i_k,j_1,\dots,j_{r-k}$ de $[1,r]$.
 Se comprueba que $g_{dz}=d(g_z)$, lo que da un isomorfismo
 \[
   \HH^i(\mathbf{f},M)\isoto\HH_{r-i}(\mathbf{f},M)\text{ para }0\leq i\leq r.
@@ -7483,7 +7483,7 @@ Se comprueba que $g_{dz}=d(g_z)$, lo que da un isomorfismo
 
 En este capítulo se considerarán especialmente los módulos de cohomología $\HH^\bullet(\mathbf{f},M)$.
 
-Para un $\mathbf{f}$ dado, es inmediato (G, I, 2.1) que $M\mapsto\HH^\bullet(\mathbf{f},M)$ es un \emph{funtor cohomológico} (T, II, 2.1) de la categoría de $A$-módulos en la categoría de $A$-módulos graduados, nulo en los grados $<0$ y $>r$.
+Para un $\mathbf{f}$ dado, es inmediato (G, I, 2.1) que $M\leadsto\HH^\bullet(\mathbf{f},M)$ es un \emph{funtor cohomológico} (T, II, 2.1) de la categoría de $A$-módulos en la categoría de $A$-módulos graduados, nulo en los grados $<0$ y $>r$.
 Además, se tiene
 \[
   \HH^0(\mathbf{f},M)=\Hom_A(A/(\mathbf{f}),M),
@@ -7502,7 +7502,7 @@ Se utilizará el siguiente resultado conocido, del que se recordará una demostr
 \begin{proposition}[1.1.4]
 \label{III.1.1.4}
 Sean $A$ un anillo, $\mathbf{f}=(f_i)_{1\leq i\leq r}$ una familia finita de elementos de $A$ y $M$ un $A$-módulo.
-Si, para $1\leq i\leq r$, la aplicación $z\mapsto f_i\cdot z$ sobre $M_{i-1}=M/(f_1 M+\cdots+f_{i-1}M)$ es inyectiva, entonces $\HH^i(\mathbf{f},M)=0$ para $i\neq r$.
+Si, para $1\leq i\leq r$, la aplicación $z\mapsto f_i\cdot z$ sobre $M_{i-1}=M/(f_1 M+\ldots+f_{i-1}M)$ es inyectiva, entonces $\HH^i(\mathbf{f},M)=0$ para $i\neq r$.
 \end{proposition}
 
 \begin{proof}
@@ -7531,14 +7531,14 @@ Considérense $K_0$ y $K_1$ como complejos de cadenas (nulos en las dimensiones 
 a la que puede aplicarse la sucesión exacta de homología
 \[
   \begin{aligned}
-  \cdots&\to\HH_{p+1}(K_1\otimes L_\bullet)
+  \ldots&\to\HH_{p+1}(K_1\otimes L_\bullet)
   \xrightarrow{\partial}\HH_p(K_0\otimes L_\bullet)
   \to\HH_p(K_\bullet\otimes L_\bullet)\\
   &\to\HH_p(K_1\otimes L_\bullet)
-  \xrightarrow{\partial}\HH_{p-1}(K_0\otimes L_\bullet)\to\cdots.
+  \xrightarrow{\partial}\HH_{p-1}(K_0\otimes L_\bullet)\to\ldots.
   \end{aligned}
 \]
-Pero es evidente que $\HH_p(K_0\otimes L_\bullet)=K_0\otimes\HH_p(L_\bullet)$ y $\HH_p(K_1\otimes L_\bullet)=K_1\otimes\HH_{p-1}(L_\bullet)$ para todo $p$; además, se comprueba inmediatamente que el operador $\partial:K_1\otimes\HH_p(L_\bullet)\to K_0\otimes\HH_p(L_\bullet)$ no es otro que $d_1\otimes 1$; el lema se deduce así de la sucesión exacta anterior y de la definición de $\HH_0(K_\bullet\otimes\HH_p(L_\bullet))$ y $\HH_1(K_\bullet\otimes\HH_{p-1}(L_\bullet))$.
+Pero es evidente que $\HH_p(K_0\otimes L_\bullet)=K_0\otimes\HH_p(L_\bullet)$ y $\HH_p(K_1\otimes L_\bullet)=K_1\otimes\HH_{v-1}(L_\bullet)$ para todo $p$; además, se comprueba inmediatamente que el operador $\partial:K_1\otimes\HH_p(L_\bullet)\to K_0\otimes\HH_p(L_\bullet)$ no es otro que $d_1\otimes 1$; el lema se deduce así de la sucesión exacta anterior y de la definición de $\HH_0(K_\bullet\otimes\HH_p(L_\bullet))$ y $\HH_1(K_\bullet\otimes\HH_{p-1}(L_\bullet))$.
 
 Establecido el lema, el final de la demostración de la Proposición \sref{III.1.1.4} es inmediato: la hipótesis de inducción y el Lema \sref{III.1.1.4.1} dan $\HH_p(K_\bullet\otimes L_\bullet)=0$ para $p\geq 2$; además, si se prueba que $\HH_1(K_\bullet,\HH_0(L_\bullet))=0$, se deduce también del Lema \sref{III.1.1.4.1} que $\HH_1(K_\bullet\otimes L_\bullet)=0$; pero, por definición, $\HH_1(K_\bullet,\HH_0(L_\bullet))$ no es otro que el núcleo de la aplicación $z\mapsto f_r\cdot z$ sobre $M_{r-1}$, y, como por hipótesis este núcleo es nulo, queda terminada la demostración.
 \end{proof}
@@ -7551,7 +7551,7 @@ Puede definirse un homomorfismo canónico de complejos
   \vphi_\mathbf{g}:K_\bullet(\mathbf{f}\mathbf{g})\to K_\bullet(\mathbf{f})
   \tag{1.1.5.1}
 \]
-como la extensión canónica al álgebra exterior $\wedge(A^r)$ de la aplicación $A$-lineal $(x_1,\dots,x_r)\mapsto(g_1 x_1,\dots,g_r x_r)$ de $A^r$ en sí mismo.
+como la extensión canónica al álgebra exterior $\wedge(A^r)$ de la aplicación $A$-lineal $(x_1,\dots,x_r)\leadsto(g_1 x_1,\dots,g_r x_r)$ de $A^r$ en sí mismo.
 Para ver que se trata de un homomorfismo de complejos, basta observar, en general, que, si $u:E\to F$ es una aplicación $A$-lineal, $\mathbf{x}\in\dual{F}$ y $\mathbf{y}={}^t u(\mathbf{x})\in\dual{E}$, se tiene la fórmula
 \[
   (\wedge u)\circ i_\mathbf{y}=i_\mathbf{x}\circ(\wedge u);
@@ -7571,7 +7571,7 @@ En particular, para todo par de enteros $m$ y $n$ tales que $0\leq n\leq m$, se 
 \]
 y, por consiguiente, homomorfismos
 \[
-  \vphi_{\mathbf{f}^{m-n}}:K^\bullet(\mathbf{f}^n,M)\to K^\bullet(\mathbf{f}^m,M),
+  \vphi_{\mathbf{f}^{m-n}}:K^\bullet(\mathbf{f}^n,M)\to K^\bullet(\mathbf{f}^m,M)
   \tag{1.1.6.2}
 \]
 \[
@@ -7592,7 +7592,7 @@ Estos últimos homomorfismos satisfacen evidentemente la condición de transitiv
 deduciéndose la última igualdad del hecho de que el paso al límite inductivo conmuta con el funtor $\HH^\bullet$ (G, I, 2.1).
 Se verá más adelante \sref{III.1.4.3} que $\HH^\bullet((\mathbf{f}),M)$ depende en realidad solo del \emph{ideal $(\mathbf{f})$} de $A$ (e incluso solo de la topología $(\mathbf{f})$-preádica sobre $A$), lo que justifica las notaciones.
 
-Es claro que $M\mapsto C^\bullet((\mathbf{f}),M)$ es un funtor exacto $A$-lineal y que $M\mapsto\HH^\bullet((\mathbf{f}),M)$ es un funtor cohomológico.
+Es claro que $M\mapsto C^\bullet((\mathbf{f}),M)$ es un funtor exacto $A$-lineal y que $M\leadsto\HH^\bullet((\mathbf{f}),M)$ es un funtor cohomológico.
 \end{env}
 
 \begin{env}[1.1.7]
@@ -7633,7 +7633,7 @@ Con las mismas notaciones anteriores, póngase $X=\Spec(A)$ y sea $Y$ el subpree
 Se probará en \textsection9 que $\HH^\bullet((\mathbf{f}),M)$ es isomorfo a la cohomología $\HH_Y^\bullet(X,\widetilde{M})$ correspondiente al antifiltro $\Phi$ de subconjuntos cerrados de $Y$ (T, 3.2).
 Se mostrará también que la Proposición \sref{III.1.2.3}, aplicada a $X$ y a $\sh{F}=\widetilde{M}$, es un caso particular de una sucesión exacta de cohomología
 \[
-  \cdots\to\HH_Y^p(X,\sh{F})\to\HH^p(X,\sh{F})\to\HH^p(X\setmin Y,\sh{F})\to\HH_Y^{p+1}(X,\sh{F})\to\cdots.
+  \ldots\to\HH_Y^p(X,\sh{F})\to\HH^p(X,\sh{F})\to\HH^p(X\setmin Y,\sh{F})\to\HH_Y^{p+1}(X,\sh{F})\to\ldots.
 \]
 \end{remark}
 
@@ -7665,7 +7665,7 @@ Póngase
 \]
 \sref[0]{0.5.5.3}; se tiene, por tanto, también
 \[
-  \Gamma(U_{i_0 i_1\cdots i_p},\sh{F})=M_{f_{i_0}f_{i_1}\cdots f_{i_p}}.
+  \Gamma(U_{i_0 i_1\cdots i_p},\sh{F})=M_{f_{i_0}f_{i_1}\cdots f_{i_p}}
   \tag{1.2.2.1}
 \]
 
@@ -7731,11 +7731,11 @@ Si se tiene una sucesión exacta $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to 0$ de $\sh{
 \]
 es exacta y da, por tanto, una sucesión exacta de cohomología
 \[
-  \cdots\to\HH^p(\mathfrak{U},\sh{F}')\to\HH^p(\mathfrak{U},\sh{F})\to\HH^p(\mathfrak{U},\sh{F}'')\xrightarrow{\partial}\HH^{p+1}(\mathfrak{U},\sh{F}')\to\cdots.
+  \ldots\to\HH^p(\mathfrak{U},\sh{F}')\to\HH^p(\mathfrak{U},\sh{F})\to\HH^p(\mathfrak{U},\sh{F}'')\xrightarrow{\partial}\HH^{p+1}(\mathfrak{U},\sh{F}')\to\ldots.
 \]
 Por otra parte, si se pone $M'=\Gamma(X,\sh{F}')$ y $M''=\Gamma(X,\sh{F}'')$, la sucesión $0\to M'\to M\to M''\to 0$ es exacta; como $C^\bullet((\mathbf{f}),M)$ es un funtor exacto en $M$, se tiene asimismo la sucesión exacta de cohomología
 \[
-  \cdots\to\HH^p((\mathbf{f}),M')\to\HH^p((\mathbf{f}),M)\to\HH^p((\mathbf{f}),M'')\xrightarrow{\partial}\HH^{p+1}((\mathbf{f}),M')\to\cdots.
+  \ldots\to\HH^p((\mathbf{f}),M')\to\HH^p((\mathbf{f}),M)\to\HH^p((\mathbf{f}),M'')\xrightarrow{\partial}\HH^{p+1}((\mathbf{f}),M')\to\ldots.
 \]
 
 Así pues, como el diagrama
@@ -7759,7 +7759,7 @@ es conmutativo, se concluye que los diagramas
   \xymatrix{
     \HH^p(\mathfrak{U},\sh{F}'')\ar[r]^\partial\ar[d] &
     \HH^{p+1}(\mathfrak{U},\sh{F}')\ar[d]\\
-    \HH^{p+1}((\mathbf{f}),M'')\ar[r]^\partial &
+    \HH^{p+1}((\mathbf{f}),M'')\ar[r]_\partial &
     \HH^{p+2}((\mathbf{f}),M')
   }
   \tag{1.2.5.1}
@@ -7791,7 +7791,7 @@ Para todo $\sh{O}_X$-módulo cuasi-coherente $\sh{F}$, se tiene $\RR^q f_*(\sh{F
 \end{corollary}
 
 \begin{proof}
-Por definición, $\RR^q f_*(\sh{F})$ es el $\sh{O}_Y$-módulo asociado al prehaz $U\mapsto\HH^q(f^{-1}(U),\sh{F})$, donde $U$ recorre los abiertos de $Y$.
+Por definición, $\RR^q f_*(\sh{F})$ es el $\sh{O}_Y$-módulo asociado al prehaz $U\leadsto\HH^q(f^{-1}(U),\sh{F})$, donde $U$ recorre los abiertos de $Y$.
 Pero los abiertos afines forman una base de $Y$, y, para un abierto tal $U$, $f^{-1}(U)$ es afín \sref[II]{II.1.3.2}; por tanto, $\HH^q(f^{-1}(U),\sh{F})=0$ por el Teorema~\sref{III.1.3.1}, lo que prueba el corolario.
 \end{proof}
 
@@ -7862,7 +7862,7 @@ Si $X$ es un \emph{esquema afín}, de la Observación~\sref{III.1.2.5} y de la P
   \xymatrix{
     \HH^q(U,\sh{F}'')\ar[r]^\partial\ar[d] &
     \HH^{q+1}(U,\sh{F}')\ar[d]\\
-    \HH^{q+1}((\mathbf{f}),M'')\ar[r]^\partial &
+    \HH^{q+1}((\mathbf{f}),M'')\ar[r]_\partial &
     \HH^{q+2}((\mathbf{f}),M')
   }
   \tag{1.4.4.1}
@@ -7873,24 +7873,24 @@ correspondientes a una sucesión exacta $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to 0$ d
 \begin{proposition}[1.4.5]
 \label{III.1.4.5}
 \oldpage[III]{90}
-Sea $X$ un esquema cuasicompacto, sea $\sh{L}$ un $\sh{O}_X$-módulo invertible, y considérese el anillo graduado $A_\bullet=\Gamma_\bullet(\sh{L})$ \sref[0]{0.5.4.6}; entonces $\HH^\bullet(\sh{F},\sh{L})=\bigoplus_{n\in\bb{Z}}\HH^\bullet(X,\sh{F}\otimes\sh{L}^{\otimes n})$ es un $A_\bullet$-módulo graduado y, para todo $f\in A_n$, se tiene un isomorfismo canónico
+Sea $X$ un esquema cuasicompacto, sea $\sh{L}$ un $\sh{O}_X$-módulo invertible, y considérese el anillo graduado $A_*=\Gamma_*(\sh{L})$ \sref[0]{0.5.4.6}; entonces $\HH^\bullet(\sh{F},\sh{L})=\bigoplus_{n\in\bb{Z}}\HH^\bullet(X,\sh{F}\otimes\sh{L}^{\otimes n})$ es un $A_*$-módulo graduado y, para todo $f\in A_n$, se tiene un isomorfismo canónico
 \[
   \HH^\bullet(X_f,\sh{F})\isoto(\HH^\bullet(\sh{F},\sh{L}))_{(f)}
   \tag{1.4.5.1}\label{III.1.4.5.1}
 \]
-de $(A_\bullet)_{(f)}$-módulos.
+de $(A_*)_{(f)}$-módulos.
 \end{proposition}
 
 \begin{proof}
 Como $X$ es un esquema cuasicompacto, puede calcularse la cohomología de todos los $\sh{O}_X$-módulos $\sh{F}\otimes\sh{L}^{\otimes n}$ utilizando un mismo recubrimiento finito $\mathfrak{U}=(U_i)$, formado por abiertos afines tales que la restricción $\sh{L}|U_i$ sea isomorfa a $\sh{O}_X|U_i$ para cada $i$ \sref{III.1.4.1}.
 Es entonces inmediato que los $U_i\cap X_f$ son abiertos afines \sref[I]{I.1.3.6}, y puede calcularse así la cohomología $\HH^\bullet(X_f,\sh{F}\otimes\sh{L}^{\otimes n})$ utilizando el recubrimiento $\mathfrak{U}|X_f=(U_i\cap X_f)$ \sref{III.1.4.1}.
 Es inmediato que, para todo $f\in A_n$, la multiplicación por $f$ define un homomorfismo $C^\bullet(\mathfrak{U},\sh{F}\otimes\sh{L}^m)\to C^\bullet(\mathfrak{U},\sh{F}\otimes\sh{L}^{\otimes(m+n)})$ y, por tanto, un homomorfismo $\HH^\bullet(\mathfrak{U},\sh{F}\otimes\sh{L}^{\otimes m})\to\HH^\bullet(\mathfrak{U},\sh{F}\otimes\sh{L}^{\otimes(m+n)})$, lo que establece la primera afirmación.
-Por otra parte, para un $f\in A_n$ dado, de \sref[I]{I.9.3.2} se deduce que se tiene un isomorfismo de complejos de $(A_\bullet)_{(f)}$-módulos
+Por otra parte, para un $f\in A_n$ dado, de \sref[I]{I.9.3.2} se deduce que se tiene un isomorfismo de complejos de $(A_*)_{(f)}$-módulos
 \[
   C^\bullet(\mathfrak{U}|X_f,\sh{F})\isoto\bigg(\!\!C^\bullet\bigg(\mathfrak{U},\bigoplus_{n\in\bb{Z}}\sh{F}\otimes\sh{L}^{\otimes n}\bigg)\!\!\bigg)_{(f)},
 \]
 teniendo en cuenta \sref[I]{I.1.3.9}[ii].
-Al pasar a la cohomología de estos complejos se obtiene el isomorfismo (\hyperref[III.1.4.5.1]{1.4.5.1}), recordando que el funtor $M\mapsto M_{(f)}$ es exacto sobre la categoría de $A_\bullet$-módulos graduados.
+Al pasar a la cohomología de estos complejos se obtiene el isomorfismo (\hyperref[III.1.4.5.1]{1.4.5.1}), recordando que el funtor $M\mapsto M_{(f)}$ es exacto sobre la categoría de $A_*$-módulos graduados.
 \end{proof}
 
 \begin{corollary}[1.4.6]
@@ -8044,7 +8044,7 @@ Sean $u:X\to Y$ un morfismo separado de tipo finito y $v:Y'\to Y$ un morfismo pl
     X\ar[d]_u &
     X'=X_{(Y')}\ar[l]_{v'}\ar[d]^{u'}\\
     Y &
-    Y'\ar[l]_{v}.
+    Y'\ar[l]^{v}.
   }
   \tag{1.4.15.1}
   \label{III.1.4.15.1}
@@ -8156,8 +8156,8 @@ La cuestión es local sobre $X$, de modo que puede suponerse que $X=\Spec(A)$ es
 La verificación de (d2) es inmediata, pues, si $t\in\Gamma(X,\sh{G})$ se anula al restringirlo a $D(f)$, lo mismo ocurre con su imagen $v(t)\in\Gamma(X,\sh{H})$; por tanto, existe un $m>0$ tal que $f^m v(t)=v(f^m t)=0$ \sref[I]{I.1.4.1}, y, como $\Gamma$ es exacto por la izquierda, $f^m t=u(s)$, donde $s\in\Gamma(X,\sh{F})$; como $u$ es inyectivo, la restricción de $s$ a $D(f)$ es nula, luego por \sref[I]{I.1.4.1} existe un entero $n>0$ tal que $f^n s=0$; se deduce finalmente que $f^{m+n}t=u(f^n s)=0$.
 
 Compruébese ahora (d2); sea $t'\in\Gamma(D(f),\sh{G})$; como $\sh{H}$ es cuasi-coherente, existe un entero $m$ tal que $f^m v(t')=v(f^m t')$ se prolonga a una sección $z\in\Gamma(X,\sh{H})$ \sref[I]{I.1.4.1}.
-Pero, en virtud del Teorema~\sref{III.1.3.1} (o de (\textbf{I},~5.1.9.2)) aplicado al $\sh{O}_X$-módulo cuasi-coherente $\sh{F}$, la sucesión $\Gamma(X,\sh{G})\to\Gamma(X,\sh{H})\to 0$ es exacta; existe, pues, $t\in\Gamma(X,\sh{G})$ tal que $z=v(t)$; se ve así que $v(f^m t'-t'')=0$, denotando por $t''$ la restricción de $t$ a $D(f)$; por tanto, $f^m t'-t''=u(s')$, donde $s'\in\Gamma(D(f),\sh{F})$.
-Pero, como $\sh{F}$ es cuasi-coherente, existe un entero $n>0$ tal que $f^n s'$ se prolonga a una sección $s\in\Gamma(X,\sh{F})$; como $f^{m+n}t'-f^n t''=u(f^n s')$, se ve que $f^{m+n}t'$ es la restricción a $D(f)$ de una sección $f^n t+u(f^n s)\in\Gamma(X,\sh{G})$, lo que termina la demostración.
+Pero, en virtud del Teorema~\sref{III.1.3.1} (o de (\textbf{I},~5.1.9.2)) aplicado al $\sh{O}_X$-módulo cuasi-coherente $\sh{F}$, la sucesión $\Gamma(X,\sh{G})\to\Gamma(X,\sh{H})\to 0$ es exacta; existe, pues, $t\in\Gamma(X,\sh{G})$ tal que $z=v(t)$; se ve así que $v(f^m t'\setmin t'')=0$, denotando por $t''$ la restricción de $t$ a $D(f)$; por tanto, $f^m t'\setmin t''=u(s')$, donde $s'\in\Gamma(D(f),\sh{F})$.
+Pero, como $\sh{F}$ es cuasi-coherente, existe un entero $n>0$ tal que $f^n s'$ se prolonga a una sección $s\in\Gamma(X,\sh{F})$; como $f^{m+n}t'\setmin f^n t''=u(f^n s')$, se ve que $f^{m+n}t'$ es la restricción a $D(f)$ de una sección $f^n t+u(f^n s)\in\Gamma(X,\sh{G})$, lo que termina la demostración.
 \end{proof}
 
 \section{Estudio cohomológico de los morfismos proyectivos}
@@ -8195,7 +8195,7 @@ Los grupos abelianos (\hyperref[III.2.1.1.2]{2.1.1.2}) y (\hyperref[III.2.1.1.3]
   (\HH^\bullet(U,\sh{F}(*)))_{mn} = \HH^m(U,\sh{F}\otimes\sh{L}^{\otimes n})
 \]
 y una definición análoga para (\hyperref[III.2.1.1.3]{2.1.1.3}).
-Para la segunda graduación, está claro que estos grupos son $S$-módulos graduados, como se deduce, por ejemplo, del hecho de que $\sh{F}\mapsto\HH^m(U,\sh{F})$ y $\sh{F}\mapsto\HH^m(\mathfrak{U},\sh{F})$ son funtores.
+Para la segunda graduación, está claro que estos grupos son $S$-módulos graduados, como se deduce, por ejemplo, del hecho de que $\sh{F}\leadsto\HH^m(U,\sh{F})$ y $\sh{F}\leadsto\HH^m(\mathfrak{U},\sh{F})$ son funtores.
 \end{env}
 
 \begin{env}[2.1.2]
@@ -8214,7 +8214,7 @@ Si $X$ es un preesquema cuyo espacio subyacente es noetheriano, o un esquema cua
 \]
 
 Además, con la notación de (\hyperref[III.1.2.2]{1.2.2}), podemos identificar $M_{f_{i_0}f_{i_1}\cdots f_{i_p}}$ con $\varinjlim_n M_{i_0 i_1\cdots i_p}^{(n)}$.
-Esta identificación es un isomorfismo de $S$-módulos \emph{graduados} si definimos el grado de un elemento homogéneo $z\in\varinjlim_n M_{i_0 i_1\cdots i_p}^{(n)}$ como sigue: $z$ es la imagen canónica de un elemento homogéneo $x\in M_{i_0 i_1\cdots i_p}^{(n)} = M$ de grado $m$, y tomamos como grado de $z$ el número $m-n(d_{i_0}+d_{i_1}+\cdots+d_{i_p})$.
+Esta identificación es un isomorfismo de $S$-módulos \emph{graduados} si definimos el grado de un elemento homogéneo $z\in\varinjlim_n M_{i_0 i_1\cdots i_p}^{(n)}$ como sigue: $z$ es la imagen canónica de un elemento homogéneo $x\in M_{i_0 i_1\cdots i_p}^{(n)} = M$ de grado $m$, y tomamos como grado de $z$ el número $m-n(d_{i_0}+d_{i_1}+\ldots+d_{i_p})$.
 Teniendo en cuenta la definición de los homomorfismos $\vphi_{kh}:M_{i_0 i_1\cdots i_p}^{(h)}\to M_{i_0 i_1\cdots i_p}^{(k)}$ (\hyperref[III.1.2.2]{1.2.2}), se ve inmediatamente que esta definición no depende del ``representante'' $x$ de $z$ elegido.
 Denotando, como en (\hyperref[III.1.2.2]{1.2.2}), por $C_n^p(M)$ el conjunto de aplicaciones alternadas de $[1,r]^{p+1}$ en $M$ (para todo $n$), definimos de manera análoga una estructura de $S$-módulo graduado sobre $\varinjlim_n C_n^p(M)$; como en (\hyperref[III.1.2.2]{1.2.2}), se tiene entonces
 \[
@@ -8229,7 +8229,7 @@ Se tiene también, como en (\hyperref[III.1.2.2]{1.2.2}),
   C^p(\mathfrak{U},\sh{F}(*)) = C^{p+1}((\mathbf{f}),M) = \varinjlim_n K^{p+1}(\mathbf{f}^n,M)
   \tag{2.1.2.3}
 \]
-donde el isomorfismo \emph{conserva los grados}: el grado de un elemento de $\varinjlim_n K^{p+1}(\mathbf{f}^n,M)$ que sea la imagen canónica de una cocadena $g\in K^{p+1}(\mathbf{f}^n,M)$ cuyos valores $g(i_0,\dots,i_p)$ pertenezcan a una misma componente homogénea $M_m$ de $M$ es $m-n(d_{i_0}+\cdots+d_{i_p})$, independientemente de la elección de esta cocadena como representante del elemento considerado.
+donde el isomorfismo \emph{conserva los grados}: el grado de un elemento de $\varinjlim_n K^{p+1}(\mathbf{f}^n,M)$ que sea la imagen canónica de una cocadena $g\in K^{p+1}(\mathbf{f}^n,M)$ cuyos valores $g(i_0,\dots,i_p)$ pertenezcan a una misma componente homogénea $M_m$ de $M$ es $m-n(d_{i_0}+\ldots+d_{i_p})$, independientemente de la elección de esta cocadena como representante del elemento considerado.
 
 Como los isomorfismos anteriores son compatibles con los operadores de coborde, se concluye, como en (\hyperref[III.1.2.2]{1.2.2}), que:
 \end{env}
@@ -8316,8 +8316,8 @@ El mismo razonamiento que en (\hyperref[III.1.2.5]{1.2.5}) muestra, por tanto, q
 \[
 \label{III.2.1.6.1}
   \xymatrix{
-    \HH^p(U,\widetilde{M''}(*)) \ar[r]^-\partial \ar[d] &
-    \HH^{p+1}(U,\widetilde{M'}(*)) \ar[d] \\
+    \HH^p(U,\widetilde M''(*)) \ar[r]^-\partial \ar[d] &
+    \HH^{p+1}(U,\widetilde M'(*)) \ar[d] \\
     \HH^{p+1}((\mathbf{f}),M'') \ar[r]^-\partial &
     \HH^{p+2}((\mathbf{f}),M')
   }
@@ -8336,11 +8336,11 @@ Quedamos así reducidos esencialmente a calcular $\HH^\bullet((\mathbf{T}),S)$, 
 
 \begin{lemma}[2.1.8]
 \label{III.2.1.8}
-Si $S=A[\mathrm{T}_0,\dots,\mathrm{T}_r]$, entonces, con $\mathbf{T}=(\mathrm{T}_i)_{0\leq i\leq r}$,
+Si $S=A[\mathrm{T}_0,\dots,\mathrm{T}_r]$, entonces, con $\mathbf{T}=(\mathrm{T}_i)_{0\leq i\leq r}$
 \[
 \label{III.2.1.8.1}
   \HH^i(\mathbf{T}^n,S)=0
-  \qquad\text{si }i\neq r+1,
+  \qquad\text{si }i\neq r+1
   \tag{2.1.8.1}
 \]
 \[
@@ -8350,7 +8350,7 @@ Si $S=A[\mathrm{T}_0,\dots,\mathrm{T}_r]$, entonces, con $\mathbf{T}=(\mathrm{T}
 \]
 Por tanto, el $A$-módulo $\HH^{r+1}(\mathbf{T}^n,S)$ tiene una $A$-base formada por las clases módulo $(\mathbf{T}^n)$ de los monomios
 \[
-  \mathrm{T}_{\mathbf{p}}=\mathrm{T}_0^{p_0}\cdots\mathrm{T}_r^{p_r},
+  \mathrm{T}_{\mathbf{p}}=\mathrm{T}_0^{p_0}\ldots\mathrm{T}_r^{p_r},
   \qquad \mathbf{p}=(p_0,\dots,p_r),\quad 0\leq p_i<n\ \text{para todo }i.
 \]
 \end{lemma}
@@ -8367,10 +8367,10 @@ Para $i=r+1$, el sistema inductivo consta de los módulos $S/(\mathbf{T}^n)$, si
   \vphi_{nm}:S/(\mathbf{T}^n)\longrightarrow S/(\mathbf{T}^m)
   \qquad (0\leq n\leq m)
 \]
-la multiplicación por $(\mathrm{T}_0\cdots\mathrm{T}_r)^{m-n}$.
-Para $n\geq\sup(p_i)_{0\leq i\leq r}$, denotemos por $\xi_{\mathbf{p}}^{(n)}=\xi_{p_0,\dots,p_r}^{(n)}$ la clase de $\mathrm{T}_0^{n-p_0}\cdots\mathrm{T}_r^{n-p_r}$ módulo $(\mathbf{T}^n)$.
+la multiplicación por $(\mathrm{T}_0\ldots\mathrm{T}_r)^{m-n}$.
+Para $n\geq\sup(p_i)_{0\leq i\leq r}$, denotemos por $\xi_{\mathbf{p}}^{(n)}=\xi_{p_0,\dots,p_r}^{(n)}$ la clase de $\mathrm{T}_0^{n-p_0}\ldots\mathrm{T}_r^{n-p_r}$ módulo $(\mathbf{T}^n)$.
 Entonces $\vphi_{nm}(\xi_{\mathbf{p}}^{(n)})=\xi_{\mathbf{p}}^{(m)}$, de modo que estos elementos tienen la misma imagen canónica $\xi_{\mathbf{p}}=\xi_{p_0,\dots,p_r}$ en el límite inductivo $\HH^{r+1}((\mathbf{T}),S)$.
-Por la definición del grado en (\hyperref[III.2.1.2]{2.1.2}), el grado de $\xi_{\mathbf{p}}$ es $-|\mathbf{p}|=-(p_0+p_1+\cdots+p_r)$.
+Por la definición del grado en (\hyperref[III.2.1.2]{2.1.2}), el grado de $\xi_{\mathbf{p}}$ es $-|\mathbf{p}|=-(p_0+p_1+\ldots+p_r)$.
 Está claro que los $\xi_{\mathbf{p}}^{(n)}$ con $0<p_i\leq n$ para $0\leq i\leq r$ forman una base de $S/(\mathbf{T}^n)$.
 Se deduce, pues, inmediatamente de \sref{III.2.1.8}:
 \end{env}
@@ -8381,7 +8381,7 @@ Con la notación de \sref{III.2.1.8},
 \[
 \label{III.2.1.10.1}
   \HH^i((\mathbf{T}),S)=0
-  \qquad\text{para }i\neq r+1,
+  \qquad\text{para }i\neq r+1
   \tag{2.1.10.1}
 \]
 y $\HH^{r+1}((\mathbf{T}),S)$ es un $A$-módulo libre con base los elementos $\xi_{p_0,\dots,p_r}$ tales que $p_i>0$ para $0\leq i\leq r$.
@@ -8395,7 +8395,7 @@ El razonamiento de \sref{III.2.1.8} muestra más generalmente que
 \[
 \label{III.2.1.11.1}
   \HH^i(\mathbf{T}^n,M)=0
-  \qquad\text{si }i\neq r+1,
+  \qquad\text{si }i\neq r+1
   \tag{2.1.11.1}
 \]
 \[
@@ -8406,10 +8406,10 @@ El razonamiento de \sref{III.2.1.8} muestra más generalmente que
 En efecto, esta última fórmula se deduce directamente de (\hyperref[III.1.1.3.5]{1.1.3.5}).
 Además, está claro que
 \[
-  M/(\mathrm{T}_0^nM+\cdots+\mathrm{T}_{i-1}^nM)
-  =\bigl(S/(\mathrm{T}_0^nS+\cdots+\mathrm{T}_{i-1}^nS)\bigr)\otimes_A N,
+  M/(\mathrm{T}_0^nM+\ldots+\mathrm{T}_{i-1}^nM)
+  =\bigl(S/(\mathrm{T}_0^nS+\ldots+\mathrm{T}_{i-1}^nS)\bigr)\otimes_A N,
 \]
-puesto que el ideal $\mathrm{T}_0^nS+\cdots+\mathrm{T}_{i-1}^nS$ es un sumando directo del $A$-módulo $S$.
+puesto que el ideal $\mathrm{T}_0^nS+\ldots+\mathrm{T}_{i-1}^nS$ es un sumando directo del $A$-módulo $S$.
 Esto permite aplicar \sref{III.1.1.4} a $M$ y da (\hyperref[III.2.1.11.1]{2.1.11.1}).
 \end{env}
 
@@ -8423,7 +8423,7 @@ Entonces:
   \item[{\rm(i)}] $\HH^i(X,\sh{O}_X(*))=0$ para $i\neq0,r$.
   \item[{\rm(ii)}] El homomorfismo canónico $\alpha:S\to\HH^0(X,\sh{O}_X(*))$ \sref[II]{II.2.6.2} es biyectivo.
 \oldpage[III]{99}
-  \item[{\rm(iii)}] $\HH^r(X,\sh{O}_X(*))$ es un $A$-módulo libre con base los elementos $\xi_{p_0,\dots,p_r}$, donde $p_i>0$ para $0\leq i\leq r$; el elemento $\xi_{p_0,\dots,p_r}$ tiene grado $-|\mathbf{p}|=-(p_0+\cdots+p_r)$, y
+  \item[{\rm(iii)}] $\HH^r(X,\sh{O}_X(*))$ es un $A$-módulo libre con base los elementos $\xi_{p_0,\dots,p_r}$, donde $p_i>0$ para $0\leq i\leq r$; el elemento $\xi_{p_0,\dots,p_r}$ tiene grado $-|\mathbf{p}|=-(p_0+\ldots+p_r)$, y
   \[
     \mathrm{T}_i\xi_{p_0,\dots,p_r}
     =\xi_{p_0,\dots,p_{i-1},p_i-1,p_{i+1},\dots,p_r}.
@@ -8459,7 +8459,7 @@ Los únicos valores de $i$ y $n$ para los cuales puede ocurrir que $\RR^if_*(\sh
 Además, el homomorfismo canónico \sref[II]{II.3.3.2}
 \[
   \alpha:\bb{S}_{\sh{O}_Y}(\sh{E})
-  \longrightarrow \Gamma_*(\sh{O}_X)
+  \longrightarrow \bbGamma_*(\sh{O}_X)
   =\RR^0f_*(\sh{O}_X(*))
   =\bigoplus_{n\in\bb{Z}}f_*(\sh{O}_X(n))
 \]
@@ -8588,7 +8588,7 @@ Además, si $j:X\to P$ es la inyección canónica, entonces $j_*(\sh{F})$ es un 
   j_*(\sh{F}(n))=(j_*\sh{F})(n)
 \]
 por \sref[II]{II.3.4.5} y \sref[II]{II.3.5.2}.
-En virtud de (G, II, Corolario del Teorema~4.9.1), quedamos, por tanto, reducidos a demostrar \sref{III.2.2.2} en el caso particular
+En virtud de (G, \textbf{II}, Corolario del Teorema~4.9.1), quedamos, por tanto, reducidos a demostrar \sref{III.2.2.2} en el caso particular
 \[
   X=\bb{P}_A^r,
   \qquad S=A[T_0,\ldots,T_r].
@@ -8614,7 +8614,7 @@ donde $\sh{R}$ es coherente \sref[0]{0.5.3.3} y $\sh{E}$ satisface (i) y (iii).
 Como el cambio de grado es exacto, para todo $n\in\bb{Z}$ se tiene también una sucesión exacta
 \[
   0\longrightarrow\sh{R}(n)\longrightarrow\sh{E}(n)
-   \longrightarrow\sh{F}(n)\longrightarrow0,
+   \longrightarrow\sh{F}(n)\longrightarrow0
 \]
 y, por tanto, una sucesión exacta de cohomología
 \[
@@ -8661,11 +8661,11 @@ Como el cambio de grado es exacto, basta demostrar que, para $n$ suficientemente
   0&\longrightarrow f_*(\sh{F}'(n))
     \longrightarrow f_*(\sh{F}(n))
     \longrightarrow f_*(\sh{G}'(n))
-    \longrightarrow0,\\
+    \longrightarrow0\\
   0&\longrightarrow f_*(\sh{G}'(n))
     \longrightarrow f_*(\sh{G}(n))
     \longrightarrow f_*(\sh{G}''(n))
-    \longrightarrow0,\\
+    \longrightarrow0\\
   0&\longrightarrow f_*(\sh{G}''(n))
     \longrightarrow f_*(\sh{H}(n))
     \longrightarrow f_*(\sh{H}''(n))
@@ -8684,7 +8684,7 @@ La sucesión de cohomología es entonces
   \longrightarrow f_*(\sh{G}(n))
   \longrightarrow f_*(\sh{H}(n))
   \longrightarrow \RR^1f_*(\sh{F}(n))
-  \longrightarrow\cdots,
+  \longrightarrow\ldots,
 \]
 y la conclusión se deduce de \sref{III.2.2.1}, (ii).
 \end{proof}
@@ -8799,7 +8799,7 @@ Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoh
   X=\Proj(\sh{S}),
 \]
 y sea $q:X\to Y$ el morfismo estructural.
-Sea $\sh{M}$ un $\sh{S}$-módulo graduado cuasicoherente que satisface la condición \textbf{(TF)}.
+Sea $\sh{M}$ un $\sh{S}$-módulo graduado cuasicoherente que satisface la condición \textup{\textbf{(TF)}}.
 Existe entonces un entero $N$ tal que, para $n\geq N$, el homomorfismo canónico \sref[II]{II.8.14.5.1}
 \[
   \alpha_n:\sh{M}_n
@@ -8846,8 +8846,8 @@ Consideremos el diagrama conmutativo
 \[
   \xymatrix{
     \widetilde{L'_n}\ar[r]\ar[d]_{\alpha_n} &
-    \widetilde{L_n}\ar[r]\ar[d]^{\alpha_n} &
-    \widetilde{M_n}\ar[r]\ar[d]^{\alpha_n} &
+    \widetilde L_n\ar[r]\ar[d]_{\alpha_n} &
+    \widetilde M_n\ar[r]\ar[d]_{\alpha_n} &
     0\\
     q_*(\widetilde{L'}(n))\ar[r] &
     q_*(\widetilde{L}(n))\ar[r] &
@@ -8918,9 +8918,9 @@ Por último, sea $\cat{K}_X$ la categoría de los $\sh{S}_X$-módulos graduados 
 
 Por \sref[II]{II.8.14.8}, \sref[II]{II.8.14.10} y \sref{III.2.3.2}, los funtores
 \[
-  \sh{M}\longmapsto\shProj(\sh{M}),
+  \sh{M}\leadsto\shProj(\sh{M}),
   \qquad
-  \sh{F}\longmapsto\bbGamma_*(\sh{F})
+  \sh{F}\leadsto\bbGamma_*(\sh{F})
 \]
 definen una equivalencia (T, I, 1.2) entre la categoría cociente
 \[
@@ -9264,9 +9264,9 @@ Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoh
 un morfismo proyectivo, pongamos $\sh{S}'=f^*(\sh{S})$, y sea $\sh{M}$ un $\sh{S}'$-módulo cuasicoherente de tipo finito.
 Entonces:
 \begin{enumerate}
-  \item[(i)] Para todo $p\in\bb Z$, $\RR^p f_*(\sh{M})$ es un $\sh{S}$-módulo de tipo finito.
+  \item[\textup{(i)}] Para todo $p\in\bb Z$, $\RR^p f_*(\sh{M})$ es un $\sh{S}$-módulo de tipo finito.
 
-  \item[(ii)] Supongamos además que $\sh{L}$ es un $\sh{O}_X$-módulo invertible amplio para $f$ y, para todo $n\in\bb Z$, pongamos
+  \item[\textup{(ii)}] Supongamos además que $\sh{L}$ es un $\sh{O}_X$-módulo invertible amplio para $f$ y, para todo $n\in\bb Z$, pongamos
   \[
     \sh{M}(n)=\sh{M}\otimes\sh{L}^{\otimes n}.
   \]
@@ -9556,7 +9556,7 @@ Existe, por tanto, un entero $r>0$ para el cual la sucesión exacta larga de coh
   \longrightarrow\cdots
 \]
 \[
-  \cdots\longrightarrow\HH^r(X,\sh{F}')
+  \ldots\longrightarrow\HH^r(X,\sh{F}')
   \longrightarrow\HH^r(X,\sh{F})
   \longrightarrow\HH^r(X,\sh{F}'')
   \longrightarrow0.
@@ -9579,21 +9579,21 @@ Para todo $n\in\bb Z$, pongamos
   \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}.
 \]
 \begin{enumerate}
-  \item[(i)] Existe un único polinomio $P\in\bb Q[T]$ tal que
+  \item[\textup{(i)}] Existe un único polinomio $P\in\bb Q[T]$ tal que
   \[
     \chi_A(\sh{F}(n))=P(n)
   \]
   para todo $n\in\bb Z$.
   El polinomio $P$ se llama el \emph{polinomio de Hilbert} de $\sh{F}$ con respecto a $A$.
 
-  \item[(ii)] Para todo $n$ suficientemente grande,
+  \item[\textup{(ii)}] Para todo $n$ suficientemente grande,
   \[
     \chi_A(\sh{F}(n))
     =
     \operatorname{length}_A\Gamma(X,\sh{F}(n)).
   \]
 
-  \item[(iii)] El coeficiente del término de mayor grado de $\chi_A(\sh{F}(n))$ es no negativo.
+  \item[\textup{(iii)}] El coeficiente del término de mayor grado de $\chi_A(\sh{F}(n))$ es no negativo.
 \end{enumerate}
 \end{theorem}
 
@@ -9704,7 +9704,7 @@ Podemos, por tanto, limitarnos al caso
 donde $A$ es un cuerpo.
 
 En este caso, $\sh{F}=\widetilde{M}$ para un $S$-módulo graduado $M$ de tipo finito \sref[II]{II.2.7.8}.
-Por el teorema de las sicigias de Hilbert (M, VIII, 6.5), $M$ posee una resolución finita por $S$-módulos libres graduados de tipo finito:
+Por el teorema de las sicigias de Hilbert (M, VIII, 6.5), $M$ posee una resolución finita por $S$-módulos \emph{libres} graduados de tipo finito:
 \[
   0\longrightarrow L_q
   \longrightarrow L_{q-1}
@@ -9713,7 +9713,7 @@ Por el teorema de las sicigias de Hilbert (M, VIII, 6.5), $M$ posee una resoluci
   \longrightarrow M
   \longrightarrow0.
 \]
-Como el funtor $M\mapsto\widetilde{M}$ es exacto \sref[II]{II.2.5.4}, obtenemos una sucesión exacta
+Como el funtor $\widetilde{M}$ es exacto \sref[II]{II.2.5.4}, obtenemos una sucesión exacta
 \[
   0\longrightarrow\widetilde{L}_q
   \longrightarrow\widetilde{L}_{q-1}
@@ -9738,7 +9738,7 @@ Una inducción sobre $q$, utilizando \sref{III.2.5.1}, da
   \sum_{j=1}^{q}
   (-1)^{j+1}\chi_A(\widetilde{L}_j(n)).
 \]
-Para demostrar \emph{(i)}, quedamos, por tanto, reducidos al caso en que $M$ es graduado, libre y de tipo finito y, por consiguiente, al caso
+Para demostrar \emph{(i)}, quedamos, por tanto, reducidos al caso en que $M$ es graduado, \emph{libre} y de tipo finito y, por consiguiente, al caso
 \[
   M=S(h)
 \]
@@ -9771,7 +9771,7 @@ para todo $n\in\bb Z$.
 \end{lemma}
 
 \begin{proof}
-Para $n\geq0$,
+Para $n>0$,
 \[
   \chi_A(\sh{O}_X(n))
   =
@@ -9812,7 +9812,7 @@ Este número es
   =
   (-1)^r\binom{n+r}{r}.
 \]
-Finalmente, si $-r\leq n<0$, entonces
+Finalmente, si $-r\leq n\leq0$, entonces
 \[
   \binom{n+r}{r}=0,
 \]
@@ -9892,7 +9892,7 @@ punto cerrado y, por tanto, es todo $X$, puesto que $X$ es noetheriano
 
 Sean $\sh{J}$ y $\sh{J}'$, respectivamente, los ideales cuasicoherentes de
 $\sh{O}_X$ que definen los subpreesquemas cerrados reducidos cuyos espacios
-subyacentes son $X-U$ y $(X-U)\cup\{x\}$, respectivamente \sref[I]{I.5.2.1}.
+subyacentes son $X\setmin U$ y $(X\setmin U)\cup\{x\}$, respectivamente \sref[I]{I.5.2.1}.
 Los ideales $\sh{J}$ y $\sh{J}'$ son coherentes \sref[I]{I.6.1.1},
 $\sh{J}'\subset\sh{J}$, y
 \[
@@ -9945,7 +9945,7 @@ $\sh{L}$ un $\sh{O}_X$-módulo invertible, y pongamos
   \sh{L}'=g^*(\sh{L}).
 \]
 Supongamos que existe un subconjunto $Z$ de $X$, propio sobre $Y$
-\sref[II]{II.5.4.10}, tal que, para todo $x\in X-Z$, o bien $X$ es
+\sref[II]{II.5.4.10}, tal que, para todo $x\in X\setmin Z$, o bien $X$ es
 normal en $x$, o bien
 \[
   \bigl(g_*(\sh{O}_{X'})\bigr)_x
@@ -10006,12 +10006,12 @@ En lo sucesivo suponemos que $Y$ es afín y que $X$ es reducido.
 \end{env}
 
 Se satisfacen ahora las hipótesis de \sref[II]{II.6.6.11}.
-Existen un $Y$-preesquema reducido $X_2$ y un
+Existen un $Y$-preesquema reducido $X_2$, y un
 $Y$-morfismo finito birracional
 \[
   h:X_2\to X
 \]
-cuya restricción a $h^{-1}(X-Z)$ es un isomorfismo sobre $X-Z$, y
+cuya restricción a $h^{-1}(X\setmin Z)$ es un isomorfismo sobre $X\setmin Z$, y
 tal que $h^*(\sh{L})$ es amplio.
 Reemplazando $X'$ por $X_2$, quedamos reducidos a demostrar la proposición bajo
 la hipótesis adicional de que $g$ posee las propiedades que acabamos de enumerar para
@@ -10046,8 +10046,8 @@ $X_1$, $\sh{L}_1$, $g_1$ y $Z_1$.
 \oldpage[III]{113}
 
 Esto nos permite demostrar \sref{III.2.6.2} por inducción noetheriana
-\sref[0]{0.2.2.2} cuando la restricción de $g$ a $g^{-1}(X-Z)$ es un
-isomorfismo sobre $X-Z$; como se vio en \sref{III.2.6.2.1}, ese caso es
+\sref[0]{0.2.2.2} cuando la restricción de $g$ a $g^{-1}(X\setmin Z)$ es un
+isomorfismo sobre $X\setmin Z$; como se vio en \sref{III.2.6.2.1}, ese caso es
 suficiente.
 Basta mostrar que, si la conclusión de \sref{III.2.6.2} se cumple
 para $\sh{L}_1$ sobre todo subpreesquema cerrado $X_1$ de $X$ cuyo
@@ -10081,7 +10081,7 @@ Se sigue que
 \]
 Está claro que $\sh{K}_x=\sh{A}_x$ en todo punto que admite un entorno
 $W_x$ sobre el cual $g:g^{-1}(W_x)\to W_x$ es un isomorfismo.
-Esto ocurre, en particular, en todo punto de $X-Z$, y en un
+Esto ocurre, en particular, en todo punto de $X\setmin Z$, y en un
 entorno de todo punto genérico de una componente irreducible de
 $X$.
 
@@ -10100,7 +10100,7 @@ Podemos, por tanto, reducirnos al caso
 \[
   Z=\Spec(\sh{A}/\sh{K}).
 \]
-Como $X-Z_1$ es un subconjunto abierto no vacío de $X$, podemos además
+Como $X\setmin Z_1$ es un subconjunto abierto no vacío de $X$, podemos además
 suponer que el espacio subyacente de $Z$ es distinto de $X$.
 \end{env}
 
@@ -10136,8 +10136,8 @@ Distinguimos dos casos.
 
 \smallskip
 \noindent
-$1^\circ$ Supongamos primero que $x\in X-Z$.
-Podemos suponer evidentemente que $U\subset X-Z$, de modo que
+$1^\circ$ Supongamos primero que $x\in X\setmin Z$.
+Podemos suponer evidentemente que $U\subset X\setmin Z$, de modo que
 $U'=g^{-1}(U)$ no corta a $Z'$.
 Como $\sh{L}'$ es amplio, existen $n>0$ y una sección $s'$ de
 $\sh{L}'^{\otimes n}$ sobre $X'$ tales que
@@ -10168,7 +10168,7 @@ $s''$ posee manifiestamente las propiedades requeridas.
 \noindent
 $2^\circ$ Supongamos ahora que $x\in Z$.
 Sea $\sh{J}$ el ideal coherente de $\sh{O}_X$ que define el
-subpreesquema cerrado reducido cuyo espacio subyacente es $X-U$, y consideremos en
+subpreesquema cerrado reducido cuyo espacio subyacente es $X\setmin U$, y consideremos en
 $\sh{B}$ los ideales coherentes
 
 \oldpage[III]{114}
@@ -10297,7 +10297,7 @@ El diagrama \eqref{III.2.6.2.6} implica, por tanto, que $t$ es una sección
 de $\sh{J}\otimes\sh{L}^{\otimes n}$ y, en particular, una sección de
 $\sh{L}^{\otimes n}$.
 Se tiene $t(x)\neq0$, luego $x\in X_t$.
-Por la definición de $\sh{J}$, la sección $t$ se anula sobre $X-U$, el
+Por la definición de $\sh{J}$, la sección $t$ se anula sobre $X\setmin U$, el
 soporte de $\sh{O}_X/\sh{J}$.
 Así, $X_t\subset U$, y la demostración está terminada.
 \end{env}
@@ -10367,7 +10367,7 @@ Consideremos ahora dos casos:
     y la hipótesis de que $\C'$ es exacto.
   \item[(b)] $Y$ es irreducible y, por consiguiente, el subpreesquema $Y$ de $X$ es \emph{íntegro}.
     Si $y$ es su punto genérico, se tiene $(\sh{O}_Y)_y=\kres(y)$ y, como $j^*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente, $\sh{F}_y=(j^*(\sh{F}))_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión finita~$m$.
-    Por hipótesis existe un $\sh{O}_X$-módulo coherente $\sh{G}\in\C'$ (necesariamente de soporte $Y$) tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+    Por hipótesis existe \emph{un} $\sh{O}_X$-módulo coherente $\sh{G}\in\C'$ (necesariamente de soporte $Y$) tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
     Existe, por tanto, un $\kres(y)$-isomorfismo $(\sh{G}_y)^m\isoto\sh{F}_y$, que es también un $\sh{O}_Y$-isomorfismo; como $\sh{G}^m$ y $\sh{F}$ son coherentes, existe un entorno abierto $W$ de $y$ en $X$ y un isomorfismo $\sh{G}^m|W\isoto\sh{F}|W$ \sref[0]{0.5.2.7}.
     Sea $\sh{H}$ el grafo de este isomorfismo, que es un $(\sh{O}_X|W)$-submódulo coherente de $(\sh{G}^m\oplus\sh{F})|W$, canónicamente isomorfo a $\sh{G}^m|W$ y a $\sh{F}|W$; existe entonces un $\sh{O}_X$-submódulo coherente $\sh{H}_0$ de $\sh{G}^m\oplus\sh{F}$ que induce $\sh{H}$ sobre $W$ y $0$ sobre $X\setmin Y$, puesto que $\sh{G}^m$ y $\sh{F}$ tienen soporte $Y$~\sref[I]{I.9.4.7}.
     Las restricciones $v:\sh{H}_0\to\sh{G}^m$ y $w:\sh{H}_0\to\sh{F}$ de las proyecciones canónicas de $\sh{G}^m\oplus\sh{F}$ son entonces homomorfismos de $\sh{O}_X$-módulos coherentes que, sobre $W$ y sobre $X\setmin Y$, se reducen a isomorfismos; en otras palabras, los núcleos y conúcleos de $v$ y $w$ tienen su soporte en el cerrado $Y\setmin(Y\cap W)$, distinto de $Y$.
@@ -10413,7 +10413,7 @@ En virtud del Corolario~\sref{III.3.1.3}, nos reducimos a probar que, cuando $X$
 En virtud del lema de Chow~\sref[II]{II.5.6.2}, existen un preesquema irreducible $X'$ y un morfismo \emph{proyectivo} y sobreyectivo $g:X'\to X$ tales que $f\circ g:X'\to Y$ es \emph{proyectivo}.
 Existe un $\sh{O}_{X'}$-módulo $\sh{L}$ amplio para $g$~\sref[II]{II.5.3.1}; aplicamos el teorema fundamental de los morfismos proyectivos~\sref{III.2.2.1} a $g:X'\to X$ y a $\sh{L}$: existe entonces un entero $n$ tal que $\sh{F}=g_*(\sh{O}_{X'}(n))$ es un $\sh{O}_X$-módulo coherente y $\RR^q g_*(\sh{O}_{X'}(n))=0$ para todo $q>0$; además, como $g^*(g_*(\sh{O}_{X'}(n)))\to\sh{O}_{X'}(n)$ es sobreyectivo para $n$ suficientemente grande~\sref{III.2.2.1}, vemos que podemos suponer, en el punto genérico $x$ de $X$, que $\sh{F}_x\neq 0$~\sref[II]{II.3.4.7}.
 Por otra parte, como $f\circ g$ es proyectivo e $Y$ es noetheriano, los $\RR^q(f\circ g)_*(\sh{O}_{X'}(n))$ son \emph{coherentes}~\sref{III.2.2.1}.
-Ahora bien, $\RR^\bullet(f\circ g)_*(\sh{O}_{X'}(n))$ es la convergencia de una sucesión espectral de Leray cuyo término $E_2$ viene dado por $E_2^{pq}=\RR^p f_*(\RR^q g_*(\sh{O}_{X'}(n)))$; lo anterior muestra que esta sucesión espectral degenera, y sabemos entonces~\sref[0]{0.11.1.6} que $E_2^{p0}=\RR^p f_*(\sh{F})$ es isomorfo a $\RR^p(f\circ g)_*(\sh{O}_{X'}(n))$, lo que termina la demostración.
+Ahora bien, $\RR^\bullet(f\circ g)_*(\sh{O}_{X'}(n))$ es la convergencia de una sucesión espectral de Leray cuyo término $E_2$ viene dado por $E_2^{pq}=\RR^p f_*(\RR^q g_*(\sh{O}_{X'}(n)))$; lo anterior muestra que esta sucesión espectral degenera, y sabemos entonces~\sref[0]{0.11.1.6} que $E_2^{p0}=\RR^p f_*(\sh{F})$ es isomorfo a $\RR^p(f\circ g)_*(\sh{O}_{X'}(n)))$, lo que termina la demostración.
 \end{proof}
 
 \begin{corollary}[3.2.2]
@@ -10442,7 +10442,7 @@ Para todo $\sh{O}_X$-módulo coherente $\sh{F}$ cuyo soporte sea propio sobre $Y
 \oldpage[III]{118}
 \begin{proof}
 Como la cuestión es local sobre $Y$, podemos suponer que $Y$ es noetheriano, y lo mismo ocurre entonces con $X$~\sref[I]{I.6.3.7}.
-Por hipótesis, todo subpreesquema cerrado $Z$ de $X$ cuyo espacio subyacente sea $\Supp(\sh{F})$ es propio sobre $Y$; en otras palabras, si $j:Z\to X$ es la inmersión canónica, entonces $f\circ j:Z\to Y$ es propio.
+Por hipótesis, todo subpreesquema cerrado $Z$ de $X$ cuyo espacio subyacente sea $\Supp(\sh{F})$ es propio sobre $Y$; en otras palabras, si $j:Y\to X$ es la inmersión canónica, entonces $f\circ j:Z\to Y$ es propio.
 Podemos suponer que $Z$ es tal que $\sh{F}=j_*(\sh{G})$, donde $\sh{G}=j^*(\sh{F})$ es un $\sh{O}_Z$-módulo coherente~\sref[I]{I.9.3.5}; como $\RR^q f_*(\sh{F})=\RR^q(f\circ j)_*(\sh{G})$ por el Corolario~\sref{III.1.3.4}, la conclusión se deduce inmediatamente del Teorema~\sref{III.3.2.1}.
 \end{proof}
 
@@ -10482,7 +10482,7 @@ Entonces, para todo $p\geq 0$, la suma directa $\bigoplus_{k\geq 0}\HH^p(X,\math
 \end{corollary}
 
 \begin{proof}
-Basta aplicar el Corolario~\sref{III.3.3.2} con $Y=\Spec(A)$, $\sh{S}=\widetilde{S}$ y $\sh{M}_k=\mathfrak{m}^k\sh{F}$, teniendo en cuenta el Corolario~\sref{III.1.4.11}.
+Basta aplicar el Corolario~\sref{III.3.3.2} con $Y=\Spec(A)$, $\sh{S}=\widetilde{\mathcal S}$ y $\sh{M}_k=\mathfrak{m}^k\sh{F}$, teniendo en cuenta el Corolario~\sref{III.1.4.11}.
 \end{proof}
 
 Recordemos que la estructura de $S$-módulo sobre $\bigoplus_{k\geq 0}\HH^p(X,\mathfrak{m}^k\sh{F})$ se obtiene considerando, para todo $a\in\mathfrak{m}^r$, la aplicación $\HH^p(X,\mathfrak{m}^k\sh{F})\to\HH^p(X,\mathfrak{m}^{k+r}\sh{F})$ que procede del paso a cohomología de la aplicación de multiplicación $\mathfrak{m}^k\sh{F}\to\mathfrak{m}^{k+r}\sh{F}$ definida por $a$~\sref{III.2.4.1}.
@@ -10593,7 +10593,7 @@ Consideremos, por otra parte, la $\sh{O}_{X_0}$-álgebra graduada cuasi-coherent
 La hipótesis de que $\sh{F}$ es un $\sh{O}_\mathfrak{X}$-módulo de tipo finito implica primero que $\sh{M}$ es
 \oldpage[III]{121}
 un $\sh{S}$-módulo graduado \emph{de tipo finito}.
-En efecto, la cuestión es local sobre $\mathfrak{X}$, y podemos suponer que $\mathfrak{X}=\Spf(B)$, donde $B$ es un anillo ádico noetheriano, y que $\sh{F}=N^\Delta$, donde $N$ es un $B$-módulo de tipo finito~\sref[I]{I.10.10.5}; se tiene además $X_0=\Spec(B_0)$, donde $B_0=B/\mathfrak{J}B$, y los $\sh{O}_{X_0}$-módulos cuasi-coherentes $\sh{S}$ y $\sh{M}$ son respectivamente iguales a $\widetilde{S'}$ y $\widetilde{M'}$, donde $S'=\bigoplus_{k\geq 0}((\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}B_0)$ y $M'=\bigoplus_{k\geq 0}((\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}N_0)$, con $N_0=N/\mathfrak{J}N$; se tiene evidentemente $M'=S'\otimes_{B_0}N_0$, y como $N_0$ es un $B_0$-módulo de tipo finito, $M'$ es un $S'$-módulo de tipo finito, lo que prueba nuestra afirmación~\sref[I]{I.1.3.13}.
+En efecto, la cuestión es local sobre $\mathfrak{X}$, y podemos suponer que $\mathfrak{X}=\Spf(B)$, donde $B$ es un anillo ádico noetheriano, y que $\sh{F}=N^\Delta$, donde $N$ es un $B$-módulo de tipo finito~\sref[I]{I.10.10.5}; se tiene además $X_0=\Spec(B_0)$, donde $B_0=B/\mathfrak{J}B$, y los $\sh{O}_{X_0}$-módulos cuasi-coherentes $\sh{S}$ y $\sh{M}$ son respectivamente iguales a $\widetilde S'$ y $\widetilde M'$, donde $S'=\bigoplus_{k\geq 0}((\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}B_0)$ y $M'=\bigoplus_{k\geq 0}((\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}N_0)$, con $N_0=N/\mathfrak{J}N$; se tiene evidentemente $M'=S'\otimes_{B_0}N_0$, y como $N_0$ es un $B_0$-módulo de tipo finito, $M'$ es un $S'$-módulo de tipo finito, lo que prueba nuestra afirmación~\sref[I]{I.1.3.13}.
 
 Como el morfismo $f_0:X_0\to Y_0$ es \emph{propio} por hipótesis, podemos aplicar el Corolario~\sref{III.3.3.2} a $\sh{S}$, $\sh{M}$ y al morfismo $f_0$: teniendo en cuenta el Corolario~\sref{III.1.4.11}, concluimos que, para \emph{todo $n\geq 0$}, $\bigoplus_{k\geq 0}\HH^n(X_0,\sh{M}_k)$ es un $S$-módulo graduado \emph{de tipo finito}.
 Esto prueba que la condición ($\text{F}_n$) de~\sref[0]{0.13.7.7} se satisface para \emph{todo $n\geq 0$}, cuando se considera el sistema proyectivo estricto $(\sh{F}/\mathfrak{J}^k\sh{F})_{k\geq 0}$ de haces de grupos abelianos sobre $X_0$, cada uno dotado de su estructura natural de «$A$-módulo filtrado».
@@ -10624,7 +10624,7 @@ es un isomorfismo; pero se tiene~\sref[0]{0.3.2.6}
   \varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))=\Gamma(\mathfrak{Y}_g,\varprojlim_k\RR^n f_*(\sh{F}_k)),
 \]
 \oldpage[III]{122}
-y como el haz $\RR^n f_*(\sh{F})$ es el haz asociado al prehaz $\mathfrak{Y}_g\mapsto\HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F})$ sobre los $\mathfrak{Y}_g$~\sref[0]{0.3.2.1}, hemos demostrado que el homomorfismo~(\hyperref[III.3.4.2.2]{3.4.2.2}) es \emph{biyectivo}.
+y como el haz $\RR^n f_*(\sh{F})$ es el haz asociado al prehaz $\mathfrak{Y}_g\leadsto\HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F})$ sobre los $\mathfrak{Y}_g$~\sref[0]{0.3.2.1}, hemos demostrado que el homomorfismo~(\hyperref[III.3.4.2.2]{3.4.2.2}) es \emph{biyectivo}.
 Demostremos ahora que $\RR^n f_*(\sh{F})$ es un $\sh{O}_\mathfrak{Y}$-módulo coherente y, más precisamente, que se tiene
 \[
 \label{III.3.4.5.1}
@@ -10678,7 +10678,7 @@ morfismo propio, sea $Y'$ un subconjunto cerrado de $Y$, y pongamos
   X'=f^{-1}(Y').
 \]
 Denotamos por $\widehat{X}$ y $\widehat{Y}$ los esquemas formales
-$X_{/X'}$ y $Y_{/Y'}$, obtenidos completando $X$ e $Y$ a lo largo de
+$X_{/X'}$ y $Y_{/Y'}$ obtenidos completando $X$ e $Y$ a lo largo de
 $X'$ e $Y'$, respectivamente \sref[I]{I.10.8.5}.
 Denotamos por $\widehat{f}:\widehat{X}\to\widehat{Y}$ la extensión de
 $f$ a estas completaciones \sref[I]{I.10.9.1}.
@@ -10901,7 +10901,7 @@ Demostraremos que el diagrama
       \ar[rr]^{\rho_n}\ar[dr]_{\vphi_n}
     &&
     \RR^n\widehat{f}_*(\widehat{\sh{F}})
-      \ar[dl]^{\psi_n}\\
+      \ar[dl]^{\psi_{\boldsymbol n}}\\
     &
     \displaystyle\varprojlim_k\RR^n f_*(\sh{F}_k)
     &
@@ -11190,7 +11190,7 @@ Demostremos primero que
 \[
   \mathfrak{J}^m\mathrm{R}_k
   \subset
-  \mathrm{R}_{k+m},
+  \mathrm R_{\boldsymbol k+m},
   \tag{4.1.7.10}
   \label{III.4.1.7.10}
 \]
@@ -11472,11 +11472,11 @@ Obtenemos, por tanto, el diagrama conmutativo
     &
     \mathrm{R}_{k+m}\ar[r]\ar[u]
     &
-    \mathrm{H}\ar[r]\ar@{=}[u]
+    \mathrm{H}\ar[r]\ar[u]^{\textit{id.}}
     &
     \mathrm{H}_{k+m}\ar[r]\ar[u]
     &
-    \mathrm{Q}_{k+m}\ar[r]\ar[u]^{\nu_m}
+    \mathrm{Q}_{k+m}\ar[r]\ar[u]_{\nu_m}
     &
     0,
   }
@@ -11655,7 +11655,7 @@ por \sref{III.1.3.4}; y, teniendo en cuenta \sref[I]{I.10.9.5},
 \[
   \RR^n\widehat{f}_*(\widehat{\sh{F}})
   =
-  \RR^n\widehat{(f\circ u)}_*(\widehat{\sh{G}}).
+  \RR^n(f\circ u)^{\widehat{\,}}_*(\widehat{\sh{G}}).
 \]
 Podemos, por tanto, aplicar \sref{III.4.1.5} a $\sh{G}$ y al morfismo
 propio $f\circ u$.
@@ -11715,7 +11715,7 @@ este módulo está separada \sref[0]{0.7.3.5}.
 
 Cuando $Y$ es noetheriano e $y$ es cerrado, las demás afirmaciones se
 siguen de \sref{III.4.1.7}, reemplazando $Y$ por un entorno afín de
-$y$ y tomando $Y'=\{y\}$; aquí utilizamos (G,~II,~4.9.1).
+$y$ y tomando $Y'=\{y\}$; aquí utilizamos (G,~II,~4 9.1).
 
 En general, pongamos
 \[
@@ -12293,7 +12293,7 @@ $g^{-1}(y)$ consta de un solo punto $y'$. Además,
   \subset
   \mathrm{R}(X).
 \]
-Como $\sh{O}_{y'}$ es finito sobre $\sh{O}_y$ (y \emph{a fortiori} sobre $\mathrm{R}(Y)$), está contenido en $\mathrm{R}(Y)$ en virtud de la hipótesis. Como $y$ es normal, necesariamente
+Como $\sh{O}_{y'}$ es finito sobre $\sh{O}_y$ (y \emph{a fortiori} sobre $\mathrm{R}(Y)$) está contenido en $\mathrm{R}(Y)$ en virtud de la hipótesis. Como $y$ es normal, necesariamente
 $\sh{O}_{y'}=\sh{O}_y$. Así, $g$ es un isomorfismo local en $y'$
 \sref[I]{I.6.5.4}, lo que demuestra la primera parte. La segunda
 afirmación se sigue de la primera: la hipótesis adicional hace que $g$
@@ -12345,7 +12345,7 @@ $S'\otimes_AA_0=S$ por definición, se sigue la proposición.
 \end{proof}
 
 
-\subsection{El ``teorema principal'' de Zariski}
+\subsection{El ``teorema principal'' de Zariski.}
 \label{subsection:III.4.4}
 
 \begin{proposition}[4.4.1]
@@ -12373,7 +12373,7 @@ $f^{-1}(f(x))$, que es conexa por \sref{III.4.3.2}, debe constar
 entonces del único punto $x$.
 
 Como $f$ es cerrado, para todo entorno abierto $V$ de $x$ en $X$, el
-conjunto cerrado $f(X-V)$ no contiene a $y=f(x)$. Si $U$ es su
+conjunto cerrado $f(X\setmin V)$ no contiene a $y=f(x)$. Si $U$ es su
 complementario en $Y$, entonces $f^{-1}(U)\subset V$. Así, las
 imágenes inversas por $f$ de un sistema fundamental de entornos
 abiertos de $y$ forman un sistema fundamental de entornos abiertos de
@@ -12381,7 +12381,7 @@ $x$. La igualdad $f_*(\sh{O}_X)=\sh{O}_Y$ y la definición de la
 imagen directa de un haz \sref[0]{0.3.4.1}, \sref{III.4.2.1} implican
 ahora que, si $f=(\psi,\theta)$, el homomorfismo
 \[
-  \theta_y^\#:\sh{O}_y\longrightarrow\sh{O}_x
+  \theta_y^\sharp:\sh{O}_y\longrightarrow\sh{O}_x
 \]
 es un isomorfismo. Por tanto, existen entornos abiertos $V$ de $x$ y
 $U$ de $y$ tales que la restricción de $f$ es un isomorfismo
@@ -12561,7 +12561,7 @@ cerrado, y $\sh{O}_x$ y $\sh{O}_y$ tienen el mismo cuerpo de fracciones
 \sref[I]{I.7.1.5}. Podemos, por tanto, aplicar
 \sref{III.4.4.8}; si $f=(\psi,\theta)$, el homomorfismo
 \[
-  \theta_y^\#:\sh{O}_y\longrightarrow\sh{O}_x
+  \theta_y^\sharp:\sh{O}_y\longrightarrow\sh{O}_x
 \]
 es biyectivo. De \sref[I]{I.6.5.4} se sigue que $f$ es un isomorfismo
 local. Como $f$ es separado y $X$ es íntegro, $f$ es una inmersión
@@ -12824,7 +12824,7 @@ donde el miembro izquierdo es la completación separada, para la
 topología $\mathfrak J$-preádica, del $A$-módulo
 $\Hom_{\sh{O}_X}(\sh{F},\sh{G})$. Este isomorfismo se obtiene pasando
 a las completaciones separadas en el homomorfismo
-$u\mapsto\hat{u}$.
+$u\to\hat{u}$.
 \end{corollary}
 
 
@@ -13161,7 +13161,7 @@ $\sh{F}|_{f^{-1}(U)}$ y $\sh{G}|_{f^{-1}(U)}$ son isomorfos.
 Bajo las hipótesis de \sref{III.4.6.4} sobre $f$, $X$ e $Y$,
 supongamos que
 \[
-  \HH^1(X_y,\sh{O}_{X_y})=0.
+  \HH^1(X_y,\sh{O}_{X_{\boldsymbol y}})=0.
 \]
 Si $\sh{F}$ y $\sh{G}$ son dos $\sh{O}_X$-módulos invertibles tales
 que $\sh{F}_y$ y $\sh{G}_y$ son isomorfos, entonces existe un entorno
@@ -13201,7 +13201,7 @@ de $Z$, y pongamos
   Y\times_Z\Spec(\kres(z)).
 \]
 \begin{enumerate}
-\item[(i)] Si $f_z$ es finito (respectivamente una inmersión cerrada),
+\item[\textup{(i)}] Si $f_z$ es finito (respectivamente una inmersión cerrada),
   existe un entorno abierto $U$ de $z$ tal que el morfismo
   \[
     g^{-1}(U)\longrightarrow h^{-1}(U)
@@ -13228,7 +13228,7 @@ isomorfismo) \sref[II]{II.6.1.1}, \sref[I]{I.4.2.4}. Como $h$ es
 cerrado, existe un entorno abierto $U$ de $z$ tal que
 $h^{-1}(U)\subset V$, y la proposición se sigue.
 
-\noindent\textit{(i)} Obsérvese primero que $f$ es propio
+\noindent (i) Obsérvese primero que $f$ es propio
 \sref[II]{II.5.4.3}. Si
 $f_z$ es finito, el entorno requerido $V_y$, para cada
 $y\in h^{-1}(z)$, existe por \sref{III.4.4.11}.
@@ -13265,7 +13265,7 @@ es sobreyectivo. Como $\sh{B}_y$ es un $\sh{O}_y$-módulo finito y
 $\sh{O}_y$ es un anillo local noetheriano, la conclusión se sigue, como
 en \sref{III.4.6.3}, del lema de Nakayama.
 
-\noindent\textit{(ii)} El mismo razonamiento muestra que ahora
+\noindent (ii) El mismo razonamiento muestra que ahora
 basta probar
 que $u_y$ es biyectivo, sabiendo que $u_y\otimes1$ es biyectivo.
 La inyectividad requerida se sigue del lema siguiente; la sobreyectividad
@@ -13485,7 +13485,7 @@ de $f$ a $f^{-1}(U)$.
 \begin{proof}
 \oldpage[III]{145}
 
-\noindent\textit{I)} Pongamos
+\noindent I) Pongamos
 \[
   Y'=\Spec(\sh{O}_y),\qquad
   X'=X\times_Y Y',\qquad
@@ -13737,7 +13737,7 @@ para $m\leq n$,
   A_m\simeq A_n/\mathfrak{R}^{m+1}A_n.
 \]
 Se sigue que $\mathfrak{X}\simeq\Spf(A)$, donde
-$A=\varprojlim A_n$, y la conclusión se sigue de
+$A=\varprojlim_n A_n$, y la conclusión se sigue de
 \sref[0]{0.7.2.9}.
 
 Finalmente, para probar que \emph{c)} implica \emph{a)}, podemos restringirnos
@@ -13833,8 +13833,8 @@ $\sh{O}_{\mathfrak{Y}}$-álgebra coherente.
 
 \begin{proof}
 Podemos considerar $f$ como el límite inductivo de un sistema inductivo
-$(f_n)$ de morfismos $f_n:X_n\to Y_n$. Demostremos que los
-$f_n$ son finitos y que $f_*(\sh{O}_{\mathfrak{X}})$ es
+$(f_n)$ de morfismos $f_{\boldsymbol n}:X_n\to Y_{\boldsymbol n}$. Demostremos que los
+$f_n$ son finitos y $f_*(\sh{O}_{\mathfrak{X}})$ es
 isomorfo al límite proyectivo de los
 $(f_n)_*(\sh{O}_{X_n})$; esto probará la afirmación
 \sref[I]{I.10.10.5}. Basta restringirse al caso
@@ -14113,8 +14113,8 @@ cerrado reducido cuyo espacio subyacente es $Z$
 anillo cociente de $A$ es, por tanto, ádico y noetheriano.
 
 Se tiene entonces $f(X')=Y'$. Si $V$ es un entorno abierto de $X'$
-en $X$, el conjunto $f(X-V)$ es cerrado en $Y$ y no corta a $Y'$.
-Esto es imposible salvo que $X-V$ sea vacío, pues $\mathfrak{J}$
+en $X$, el conjunto $f(X\setmin V)$ es cerrado en $Y$ y no corta a $Y'$.
+Esto es imposible salvo que $X\setmin V$ sea vacío, pues $\mathfrak{J}$
 está contenido en el radical de $A$
 \sref[I]{I.1.1.15} \sref[0]{0.7.1.10}. Por tanto, $V=X$.
 \end{proof}
@@ -14170,7 +14170,7 @@ El caso más importante es el siguiente:
 \begin{corollary}[5.1.6]
 \label{III.5.1.6}
 Supongamos que $X$ es propio sobre $Y=\Spec(A)$. Entonces el funtor
-$\sh{F}\mapsto\widehat{\sh{F}}$ es una equivalencia entre la
+$\sh{F}\leadsto\widehat{\sh{F}}$ es una equivalencia entre la
 categoría de los $\sh{O}_X$-módulos coherentes y la categoría de los
 $\sh{O}_{\widehat{X}}$-módulos coherentes.
 \end{corollary}
@@ -14366,7 +14366,7 @@ la $A$-álgebra graduada asociada a la
 filtración $\mathfrak{J}$-ádica de $A$. Es de tipo finito
 porque $A$ es noetheriano. Pongamos
 \[
-  \sh{S}'=f_0^*(\widetilde{S}),\qquad
+  \sh{S}'=f_0^*(\widetilde{\mathbf S}),\qquad
   \sh{M}=\bigoplus_{k\geq0}\sh{M}_k.
 \]
 Entonces $\sh{S}'$ es una $\sh{O}_{X_0}$-álgebra cuasi-coherente de
@@ -14401,7 +14401,7 @@ Apliquemos la sucesión exacta de cohomología a
        {\mathfrak{J}^{k}\sh{F}(n)}
   \longrightarrow0.
 \]
-Para $0\leq h<k$, $n\geq n_0$ y $q>0$, una inducción sobre $k-h$
+Para $0\leq h<k$, $n\geq n_0$ y $q>0$, una inducción sobre $h-k$
 da
 \[
   \HH^q\left(
@@ -14497,7 +14497,7 @@ sobre
 \oldpage[III]{153}
 $\mathfrak{X}$. Equivalentemente, $\sh{F}$ es isomorfo a un cociente
 de un $\sh{O}_{\mathfrak{X}}$-módulo de la forma
-$(\sh{O}_{\mathfrak{X}}(-n))^k$.
+$(\sh{O}_{\mathfrak X}(\setmin n))^k$.
 \end{corollary}
 
 \begin{proof}
@@ -14530,7 +14530,7 @@ proyectivo, de modo que existe un $\sh{O}_X$-módulo amplio $\sh{L}$
   X_n=\widehat{X}\times_{\widehat{Y}}Y_n
 \]
 es el subpreesquema cerrado
-$X\times_Y Y_n=f^{-1}(Y_n)$ de $X$. Si
+$X_n\times_Y Y_n=f^{-1}(Y_n)$ de $X$. Si
 \[
   \sh{L}'=\sh{L}\otimes_{\sh{O}_X}\sh{O}_{\widehat{X}}
 \]
@@ -14579,8 +14579,8 @@ propia. Por tanto, $T'$ es propio sobre $Y$ y, en consecuencia, cerrado en
 $Z'$ \sref[II]{II.5.4.10}. Se deduce que $\sh{F}'$ es inducido
 sobre $\widehat{X}$ por el $\sh{O}_{\widehat{Z}}$-módulo $\sh{G}'$
 obtenido pegando $\sh{F}'$, sobre el abierto $\widehat{X}$, con el
-haz cero sobre el abierto $\widehat{Z}-T'$; ambos haces coinciden sobre
-su intersección $\widehat{X}-T'$.
+haz cero sobre el abierto $\widehat Z\setmin T'$; ambos haces coinciden sobre
+su intersección $\widehat X\setmin T'$.
 
 El módulo $\sh{G}'$ es coherente. Por \sref{III.5.2.5}, existe un
 $\sh{O}_Z$-módulo coherente $\sh{G}$ tal que
@@ -14702,7 +14702,7 @@ Sea $\widehat{f}:\widehat{Z}\to\widehat{X}$ la extensión de $f$
 a las compleciones. Sea $\sh{M}$ un ideal coherente de
 $\sh{O}_X$ tal que, si
 \[
-  U=X-\Supp(\sh{O}_X/\sh{M}),
+  U=X-\Supp(\sh{O}_X/\sh{M})
 \]
 la restricción $f^{-1}(U)\to U$ de $f$ es un isomorfismo. Entonces,
 para todo $\sh{O}_{\widehat{X}}$-módulo coherente $\sh{F}$, existe
@@ -14758,7 +14758,7 @@ $\sh{M}_1=h^*(\sh{M})$ es un ideal coherente de $\sh{O}_{X_1}$ y
   =h^{-1}\bigl(\Supp(\sh{O}_X/\sh{M})\bigr)
 \]
 \sref[I]{I.9.1.13}. Así, si
-$U_1=X_1-\Supp(\sh{O}_{X_1}/\sh{M}_1)$, entonces
+$U_1=X_1\setmin\Supp(\sh{O}_{X_1}/\sh{M}_1)$, entonces
 $U_1=h^{-1}(U)$, y la restricción
 $f_1^{-1}(U_1)\to U_1$ es un isomorfismo
 \sref[I]{I.3.2.7}. Finalmente, $\widehat{\sh{M}}$ y
@@ -14809,7 +14809,7 @@ nulas. Existe, por tanto, un entero $n>0$ tal que
 
 \begin{env}[5.3.5]
 \label{III.5.3.5}
-\emph{Fin de la demostración del teorema de existencia.}
+\textbf{Fin de la demostración del teorema de existencia.}
 Conservemos las hipótesis de \sref{III.5.1.4}. Utilicemos la inducción
 noetheriana \sref[0]{0.2.2.2}, suponiendo conocido el teorema para todo
 subpreesquema cerrado $T$ de $X$ cuyo espacio subyacente es distinto
@@ -14823,7 +14823,7 @@ cuasiproyectivo, $g$ es proyectivo y sobreyectivo, y existe un
 subconjunto abierto no vacío $U$ de $X$ para el cual
 $g^{-1}(U)\to U$ es un isomorfismo. Sea $\sh{M}$ un ideal coherente
 de $\sh{O}_X$ que define un subpreesquema cerrado de espacio subyacente
-$X-U$ \sref[I]{I.5.2.2}, y sea $\sh{F}$ un
+$X\setmin U$ \sref[I]{I.5.2.2}, y sea $\sh{F}$ un
 $\sh{O}_{\widehat{X}}$-módulo coherente cuyo soporte $E$ es propio sobre $Y$.
 Denotemos por $\widehat{Z}$ la compleción de $Z$ a lo largo de
 $h^{-1}(Y')$, y por
@@ -14853,7 +14853,7 @@ y el conúcleo $\sh{R}$ de
 \]
 son anulados por una potencia $\widehat{\sh{M}}^{\,n}$. Sea $T$
 el subpreesquema cerrado de $X$ definido por $\sh{M}^n$, cuyo
-espacio subyacente es $X-U$, y sea $j:T\to X$ la inmersión
+espacio subyacente es $X\setmin U$, y sea $j:T\to X$ la inmersión
 canónica. Su extensión
 $\widehat{j}:\widehat{T}\to\widehat{X}$ es la inmersión canónica
 \sref[I]{I.10.14.7}, y podemos escribir
@@ -14889,7 +14889,7 @@ $\widehat{S}$, $\widehat{X}$ y $\widehat{Y}$ las compleciones
 de $S$, $X$ e $Y$ a lo largo de $S'$, $u^{-1}(S')$ y $v^{-1}(S')$,
 respectivamente. Para todo $S$-morfismo $f:X\to Y$, sea
 $\widehat{f}:\widehat{X}\to\widehat{Y}$ su extensión a las
-compleciones. Entonces la aplicación $f\mapsto\widehat{f}$ es una biyección
+compleciones. Entonces la aplicación $f\leadsto\widehat{f}$ es una biyección
 \[
   \Hom_S(X,Y)
   \xrightarrow{\ \sim\ }
@@ -14961,20 +14961,20 @@ Sea $g:X\to T$ el inverso de $p\circ i$, y pongamos
 \]
 Entonces $f:X\to Y$ tiene por grafo $\Gamma_f=i\circ g$. Como
 $\widehat{g}$ es el inverso de
-$\widehat{p\circ i}$, se tiene
+$(p\circ i)^{\widehat{\,}}$, se tiene
 \[
-  \widehat{\Gamma_f}
+  (\Gamma_f)^{\widehat{\,}}
   =\widehat{i}\circ\widehat{g}
   =j\circ w
   =\Gamma_h.
 \]
-Pero $\widehat{\Gamma_f}=\Gamma_{\widehat{f}}$
+Pero $(\Gamma_f)^{\widehat{\,}}=\Gamma_{\widehat{f}}$
 \sref[I]{I.10.9.8}; por tanto, $h=\widehat{f}$, lo que termina la
 demostración.
 \end{proof}
 
 En lenguaje categórico, el funtor
-$X\mapsto\widehat{X}$ es, por tanto, plenamente fiel
+$X\leadsto\widehat{X}$ es, por tanto, plenamente fiel
 \sref[0]{0.8.1.6} de la categoría de los preesquemas propios sobre
 $\Spec(A)$ en la categoría de los preesquemas formales propios sobre
 $\Spf(A)$, para todo anillo noetheriano ádico $A$. Proporciona, por
@@ -15285,7 +15285,7 @@ Se deduce de \sref{III.5.1.8} que existe un subpreesquema cerrado
 $Z$ de $T$, propio sobre $Y$, tal que, si
 $i:Z\to T$ es la inmersión canónica, entonces
 \[
-  \widehat{i}:\widehat{Z}\longrightarrow\widehat{T}
+  \widehat i=\widehat{Z}\longrightarrow\widehat{T}
 \]
 es un isomorfismo; aquí $\widehat{Z}$ es la compleción de $Z$
 a lo largo de $Z_0$. Por \sref{III.4.6.8}, existe un entorno abierto
@@ -15328,15 +15328,15 @@ $Z'\cap X_0=\varnothing$ y demuestra que $P\subset Z$.
 \section*{BIBLIOGRAFÍA (continuación)}
 
 \begin{flushleft}
-[27] P. Gabriel, \emph{Des catégories abéliennes}, tesis, París (1961).
+[27] P. \textsc{Gabriel}, \emph{Des catégories abéliennes}, tesis, París (1961).
 
 \medskip
-[28] J. E. Roos, \emph{Sur les foncteurs dérivés de $\varprojlim$.
-Applications}, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702--3704.
+[28] J. E. \textsc{Roos}, Sur les foncteurs dérivés de $\varprojlim$.
+Applications, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702-3704.
 
 \medskip
-[29] H. Cartan, \emph{Séminaire de l'École Normale Supérieure},
-13.er año (1960--1961), exposición n.º 11.
+[29] H. \textsc{Cartan}, Séminaire de l'École Normale Supérieure,
+13.er año (1960-1961), exposición n.º 11.
 \end{flushleft}
 
 \clearpage
@@ -15344,95 +15344,95 @@ Applications}, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702--3704.
 \section*{ÍNDICE DE NOTACIONES}
 
 \begin{flushleft}
-$\Set$: 0, 8.1.1.
+$\Set$: \textbf 0, 8.1.1.
 
 $h_X(Y)$, $h_X(u)$ ($X$, $Y$ objetos de una categoría $\C$, $u$ un morfismo
-de $\C$): 0, 8.1.1.
+de $\C$): \textbf 0, 8.1.1.
 
-$h_w(u)$ ($u$ y $w$ morfismos de $\C$): 0, 8.1.2.
+$h_w(u)$ ($u$ y $w$ morfismos de $\C$): \textbf 0, 8.1.2.
 
-$Z_k(E_r^{pq})$, $B_k(E_r^{pq})$ ($k\geq r$): 0, 11.1.1.
+$Z_k(E_r^{pq})$, $B_k(E_r^{pq})$ ($k\geq r$): \textbf 0, 11.1.1.
 
-$Z_\infty(E_2^{pq})$, $B_\infty(E_2^{pq})$: 0, 11.1.1.
+$Z_\infty(E_2^{pq})$, $B_\infty(E_2^{pq})$: \textbf 0, 11.1.1.
 
-$K^\bullet$, $K_\bullet$ (complejos): 0, 11.2.1.
+$K^\bullet$, $K_\bullet$ (complejos): \textbf 0, 11.2.1.
 
-$K^{\bullet\bullet}$, $K_{\bullet\bullet}$ (bicomplejos): 0, 11.2.1.
+$K^{\bullet\bullet}$, $K_{\bullet\bullet}$ (bicomplejos): \textbf 0, 11.2.1.
 
 $B^i(K^\bullet)$, $Z^i(K^\bullet)$, $H^i(K^\bullet)$,
-$H^\bullet(K^\bullet)$: 0, 11.2.1.
+$H^\bullet(K^\bullet)$: \textbf 0, 11.2.1.
 
 $B_i(K_\bullet)$, $Z_i(K_\bullet)$, $H_i(K_\bullet)$,
-$H_\bullet(K_\bullet)$: 0, 11.2.1.
+$H_\bullet(K_\bullet)$: \textbf 0, 11.2.1.
 
-$T(K^\bullet)$, $T(K_\bullet)$ ($T$ un funtor): 0, 11.2.1.
+$T(K^\bullet)$, $T(K_\bullet)$ ($T$ un funtor): \textbf 0, 11.2.1.
 
-$E(K^\bullet)$ ($K^\bullet$ un complejo filtrado): 0, 11.2.2.
+$E(K^\bullet)$ ($K^\bullet$ un complejo filtrado): \textbf 0, 11.2.2.
 
 $K^{i,\bullet}$, $K^{\bullet,j}$, $Z_{\mathrm{II}}^p(K^{i,\bullet})$,
 $B_{\mathrm{II}}^p(K^{i,\bullet})$, $H_{\mathrm{II}}^p(K^{i,\bullet})$,
 $Z_{\mathrm I}^p(K^{\bullet,j})$, $B_{\mathrm I}^p(K^{\bullet,j})$,
-$H_{\mathrm I}^p(K^{\bullet,j})$: 0, 11.3.1.
+$H_{\mathrm I}^p(K^{\bullet,j})$: \textbf 0, 11.3.1.
 
 $H_{\mathrm{II}}^p(K^{\bullet\bullet})$,
 $Z_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
 $B_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
 $H_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
-$H^n(K^{\bullet\bullet})$: 0, 11.3.1.
+$H^n(K^{\bullet\bullet})$: \textbf 0, 11.3.1.
 
 $F_{\mathrm I}^p(K^{\bullet\bullet})$,
 $F_{\mathrm{II}}^p(K^{\bullet\bullet})$, ${}'E(K^{\bullet\bullet})$,
-${}''E(K^{\bullet\bullet})$: 0, 11.3.2.
+${}''E(K^{\bullet\bullet})$: \textbf 0, 11.3.2.
 
 $K_{i,\bullet}$, $K_{\bullet,j}$, $H_p^{\mathrm{II}}(K_{i,\bullet})$,
 $H_p^{\mathrm I}(K_{\bullet,j})$, $H_p^{\mathrm{II}}(K_{\bullet\bullet})$,
 $H_p^{\mathrm I}(K_{\bullet\bullet})$,
 $H_q^{\mathrm I}(H_p^{\mathrm{II}}(K_{\bullet\bullet}))$,
 $H_q^{\mathrm{II}}(H_p^{\mathrm I}(K_{\bullet\bullet}))$,
-$H_n(K_{\bullet\bullet})$: 0, 11.3.5.
+$H_n(K_{\bullet\bullet})$: \textbf 0, 11.3.5.
 
-$\RR^\bullet T(K^\bullet)$ ($T$ un funtor covariante aditivo): 0, 11.4.3.
+$\RR^\bullet T(K^\bullet)$ ($T$ un funtor covariante aditivo): \textbf 0, 11.4.3.
 
 $\RR^\bullet T(K^\bullet,K'^{\bullet})$ ($T$ un bifuntor covariante
-aditivo): 0, 11.4.6.
+aditivo): \textbf 0, 11.4.6.
 
-$\LL_\bullet T(K_\bullet)$ ($T$ un funtor covariante aditivo): 0, 11.6.2.
+$\LL_\bullet T(K_\bullet)$ ($T$ un funtor covariante aditivo): \textbf 0, 11.6.2.
 
 $\LL_\bullet T(K_\bullet,K'_\bullet)$ ($T$ un bifuntor covariante
-aditivo): 0, 11.6.6.
+aditivo): \textbf 0, 11.6.6.
 
 $\LL_\bullet T(K_{\bullet\bullet})$ ($T$ un funtor covariante aditivo):
 0, 11.7.2.
 
 $|\sigma|$, $\Sigma(A)$, $\mathrm C_\bullet(A)$, $\mathrm L_\bullet(A)$
-($A$ un conjunto finito, $\sigma$ un símplex de $A$): 0, 11.8.1.
+($A$ un conjunto finito, $\sigma$ un símplex de $A$): \textbf 0, 11.8.1.
 
 $\mathrm C^\bullet(A,B;\sh{S})$, $\mathrm L^\bullet(A,B;\sh{S})$
-($A$, $B$ conjuntos finitos, $\sh{S}$ un sistema de coeficientes): 0, 11.8.4.
+($A$, $B$ conjuntos finitos, $\sh{S}$ un sistema de coeficientes): \textbf 0, 11.8.4.
 
 $\mathrm P^\bullet(A,B;\sh{S})$ ($A$, $B$ conjuntos finitos, $\sh{S}$ un
-sistema de coeficientes): 0, 11.8.6.
+sistema de coeficientes): \textbf 0, 11.8.6.
 
 $\mathrm C^\bullet(A,B;\sh{S}^\bullet)$,
 $\mathrm L^\bullet(A,B;\sh{S}^\bullet)$ ($A$, $B$ conjuntos finitos,
-$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): 0, 11.8.8.
+$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): \textbf 0, 11.8.8.
 
 $\mathrm P^\bullet(A,B;\sh{S}^\bullet)$ ($A$, $B$ conjuntos finitos,
-$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): 0, 11.8.10.
+$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): \textbf 0, 11.8.10.
 
 $\chi(M^\bullet)$ ($M^\bullet$ un complejo finito de módulos de longitud finita):
 0, 11.10.1.
 
 $\check C^\bullet(\mathfrak U,\sh{F})$ ($\sh{F}$ un haz de grupos abelianos
-sobre $X$, $\mathfrak U$ un recubrimiento abierto de $X$): 0, 12.1.2.
+sobre $X$, $\mathfrak U$ un recubrimiento abierto de $X$): \textbf 0, 12.1.2.
 
 $\RR^p f_*(\sh{F})$ ($f:X\to Y$ un morfismo de espacios anillados,
-$\sh{F}$ un haz de $\sh{O}_X$-módulos): 0, 12.2.1.
+$\sh{F}$ un haz de $\sh{O}_X$-módulos): \textbf 0, 12.2.1.
 
 $\sh{H}^p(f,\sh{K}^\bullet)$,
 $\sh{H}^p_f(\sh{K}^\bullet)$, ${}'E(f,\sh{K}^\bullet)$,
 ${}''E(f,\sh{K}^\bullet)$ ($f:X\to Y$ un morfismo de espacios anillados,
-$\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos): 0, 12.4.1.
+$\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos): \textbf 0, 12.4.1.
 
 $\mathbf H^\bullet(X,\sh{K}^\bullet)$,
 $\mathbf H^\bullet(V,\sh{K}^\bullet)$ ($X$ un espacio anillado,
@@ -15442,24 +15442,24 @@ $\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos, $V$ abierto en $X$):
 $\operatorname{gr}^\bullet(A)$ ($A$ un sistema proyectivo que satisface (ML)):
 0, 13.4.2.
 
-$E(A)$ ($A$ un objeto filtrado): 0, 13.6.4.
+$E(A)$ ($A$ un objeto filtrado): \textbf 0, 13.6.4.
 
 $K_\bullet(\mathbf f)$, $i_{\mathbf f}$ ($\mathbf f$ una familia finita de
-elementos de un anillo): III, 1.1.1.
+elementos de un anillo): \textbf{III}, 1.1.1.
 
 $K^\bullet(\mathbf f,M)$, $K_\bullet(\mathbf f,M)$ ($\mathbf f$ una familia
-finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.2.
+finita de elementos de un anillo $A$, $M$ un $A$-módulo): \textbf{III}, 1.1.2.
 
 $H^\bullet(\mathbf f,M)$, $H_\bullet(\mathbf f,M)$ ($\mathbf f$ una familia
-finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.3.
+finita de elementos de un anillo $A$, $M$ un $A$-módulo): \textbf{III}, 1.1.3.
 
 $C^\bullet((\mathbf f),M)$, $H^\bullet((\mathbf f),M)$ ($\mathbf f$ una
-familia finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.6.
+familia finita de elementos de un anillo $A$, $M$ un $A$-módulo): \textbf{III}, 1.1.6.
 
-$H^\bullet(U,\sh{F}^{(*)})$,
-$H^\bullet(\mathfrak U,\sh{F}^{(*)})$ ($\sh{F}$ un
+$H^\bullet(U,\sh{F}(*))$,
+$H^\bullet(\mathfrak U,\sh{F}(*))$ ($\sh{F}$ un
 $\sh{O}_X$-módulo cuasi-coherente, $U$ abierto en $X$, $\mathfrak U$ un recubrimiento abierto de $X$):
-III, 2.1.1.
+\textbf{III}, 2.1.1.
 \end{flushleft}
 
 \clearpage
@@ -15467,134 +15467,134 @@ III, 2.1.1.
 \section*{ÍNDICE TERMINOLÓGICO}
 
 \begin{flushleft}
-Término de convergencia de una sucesión espectral: 0, 11.1.1.
+Término de convergencia de una sucesión espectral: \textbf 0, 11.1.1.
 
-Algebraizable ($\sh{O}_X$-módulo): III, 5.2.1.
+Algebraizable ($\sh{O}_X$-módulo): \textbf{III}, 5.2.1.
 
-Algebraizable (esquema formal): III, 5.4.2.
+Algebraizable (esquema formal): \textbf{III}, 5.4.2.
 
-Analíticamente íntegro (anillo): III, 4.3.6.
+Analíticamente íntegro (anillo): \textbf{III}, 4.3.6.
 
-Aplicación cuasicompacta: 0, 9.1.1.
+Aplicación cuasicompacta: \textbf 0, 9.1.1.
 
-Aumentación de una resolución: 0, 11.4.1.
+Aumentación de una resolución: \textbf 0, 11.4.1.
 
-Característica de Euler--Poincaré de un complejo: 0, 11.10.1.
+Característica de Euler--Poincaré de un complejo: \textbf 0, 11.10.1.
 
 Característica de Euler--Poincaré de un $\sh{O}_X$-módulo coherente
-($X$ proyectivo sobre $\Spec(A)$, $A$ un anillo artiniano): III, 2.5.1.
+($X$ proyectivo sobre $\Spec(A)$, $A$ un anillo artiniano): \textbf{III}, 2.5.1.
 
-Cocadena bialternada: 0, 11.8.4.
+Cocadena bialternada: \textbf 0, 11.8.4.
 
-Complejo definido por un bicomplejo: 0, 11.3.1.
+Complejo definido por un bicomplejo: \textbf 0, 11.3.1.
 
-Complejo de álgebra exterior: III, 1.1.1.
+Complejo de álgebra exterior: \textbf{III}, 1.1.1.
 
-Condición (ML): 0, 13.1.2.
+Condición (ML): \textbf 0, 13.1.2.
 
-Constructible (subconjunto, conjunto): 0, 9.1.2.
+Constructible (subconjunto, conjunto): \textbf 0, 9.1.2.
 
-Constructible (función): 0, 9.3.1.
+Constructible (función): \textbf 0, 9.3.1.
 
-Producto cup: 0, 12.1.2.
+Producto cup: \textbf 0, 12.1.2.
 
-Dihomomorfismo para estructuras algebraicas sobre categorías: 0, 8.2.1.
+Dihomomorfismo para estructuras algebraicas sobre categorías: \textbf 0, 8.2.1.
 
-Exacto (subconjunto) en una categoría abeliana: III, 3.1.1.
+Exacto (subconjunto) en una categoría abeliana: \textbf{III}, 3.1.1.
 
-Esencialmente constante (sistema proyectivo): 0, 13.4.2.
+Esencialmente constante (sistema proyectivo): \textbf 0, 13.4.2.
 
-Factorización de Stein: III, 4.3.3.
+Factorización de Stein: \textbf{III}, 4.3.3.
 
 Codiscreta, coseparada, discreta, exhaustiva, finita, separada
-(filtración): 0, 11.1.3.
+(filtración): \textbf 0, 11.1.3.
 
-Final (objeto) de una categoría: 0, 8.1.10.
+Final (objeto) de una categoría: \textbf 0, 8.1.10.
 
-Finito (morfismo) de preesquemas formales: III, 4.8.2.
+Finito (morfismo) de preesquemas formales: \textbf{III}, 4.8.2.
 
 Finito (preesquema formal) sobre $\mathfrak Y$,
-$\mathfrak Y$-finito (preesquema formal): III, 4.8.2.
+$\mathfrak Y$-finito (preesquema formal): \textbf{III}, 4.8.2.
 
-Funtor covariante canónico $\C\to\CHom(\C\op,\Set)$: 0, 8.1.2.
+Funtor covariante canónico $\C\to\CHom(\C\op,\Set)$: \textbf 0, 8.1.2.
 
-Género aritmético: III, 2.5.1.
+Género aritmético: \textbf{III}, 2.5.1.
 
-Geométricamente conexa (fibra): III, 4.3.4.
+Geométricamente conexa (fibra): \textbf{III}, 4.3.4.
 
-Homomorfismo de estructuras algebraicas sobre categorías: 0, 8.2.1.
+Homomorfismo de estructuras algebraicas sobre categorías: \textbf 0, 8.2.1.
 
 Hipercohomología de un funtor respecto de un complejo $K^\bullet$:
 0, 11.4.3.
 
 Hipercohomología de un bifuntor respecto de dos complejos
-$K^\bullet$, $K'^{\bullet}$: 0, 11.4.6.
+$K^\bullet$, $K'^{\bullet}$: \textbf 0, 11.4.6.
 
 Hiperhomología de un funtor respecto de un complejo $K_\bullet$:
 0, 11.6.2.
 
 Hiperhomología de un bifuntor respecto de dos complejos $K_\bullet$,
-$K'_\bullet$: 0, 11.6.6.
+$K'_\bullet$: \textbf 0, 11.6.6.
 
-Hiperhomología de un funtor respecto de un bicomplejo: 0, 11.7.2.
+Hiperhomología de un funtor respecto de un bicomplejo: \textbf 0, 11.7.2.
 
-Localmente constructible (conjunto): 0, 9.1.11.
+Localmente constructible (conjunto): \textbf 0, 9.1.11.
 
-Ley de composición externa (interna) sobre los objetos de una categoría: 0, 8.2.1.
+Ley de composición externa (interna) sobre los objetos de una categoría: \textbf 0, 8.2.1.
 
 \oldpage[III]{164}
 
 $S$-$\C$-módulo filtrado, $\operatorname{gr}^\bullet(S)$-$\C$-módulo graduado,
-$\operatorname{gr}^{\bullet\bullet}(S)$-$\C$-módulo bigraduado: 0, 13.6.6.
+$\operatorname{gr}^\bullet(S)$-$\C$-módulo bigraduado: \textbf 0, 13.6.6.
 
-Morfismo de sucesiones espectrales: 0, 11.1.2.
+Morfismo de sucesiones espectrales: \textbf 0, 11.1.2.
 
-Número geométrico de componentes conexas de una fibra: III, 4.3.4.
+Número geométrico de componentes conexas de una fibra: \textbf{III}, 4.3.4.
 
-Objeto grupo en $\C$, $\C$-grupo, $\C$-anillo, $\C$-módulo: 0, 8.2.3.
+Objeto grupo en $\C$, $\C$-grupo, $\C$-anillo, $\C$-módulo: \textbf 0, 8.2.3.
 
 Objeto de bordes, objeto de cobordes, objeto de cociclos, objeto de
-ciclos: 0, 11.2.1.
+ciclos: \textbf 0, 11.2.1.
 
-Objeto de imágenes universales: 0, 13.1.1.
+Objeto de imágenes universales: \textbf 0, 13.1.1.
 
-Objeto graduado asociado a un sistema proyectivo que satisface (ML): 0, 13.4.2.
+Objeto graduado asociado a un sistema proyectivo que satisface (ML): \textbf 0, 13.4.2.
 
-Objeto graduado acotado inferiormente (superiormente): 0, 11.2.1.
+Objeto graduado acotado inferiormente (superiormente): \textbf 0, 11.2.1.
 
-Subconjunto propio (sobre $\mathfrak Y$) de un preesquema formal: III, 3.4.1.
+Subconjunto propio (sobre $\mathfrak Y$) de un preesquema formal: \textbf{III}, 3.4.1.
 
-Plena (subcategoría): 0, 8.1.5.
+Plena (subcategoría): \textbf 0, 8.1.5.
 
-Plenamente fiel (funtor): 0, 8.1.5.
+Plenamente fiel (funtor): \textbf 0, 8.1.5.
 
-Polinomio de Hilbert: III, 2.5.3.
+Polinomio de Hilbert: \textbf{III}, 2.5.3.
 
-Propio (morfismo) de preesquemas formales: III, 3.4.1.
+Propio (morfismo) de preesquemas formales: \textbf{III}, 3.4.1.
 
-Representable (funtor): 0, 8.1.8.
+Representable (funtor): \textbf 0, 8.1.8.
 
 Cohomológica, derecha, izquierda, homológica, inyectiva, libre, plana, proyectiva
-(resolución): 0, 11.4.1.
+(resolución): \textbf 0, 11.4.1.
 
-Resolución de Cartan--Eilenberg derecha, inyectiva: 0, 11.4.2.
+Resolución de Cartan--Eilenberg derecha, inyectiva: \textbf 0, 11.4.2.
 
-Resolución de Cartan--Eilenberg izquierda, proyectiva: 0, 11.6.1.
+Resolución de Cartan--Eilenberg izquierda, proyectiva: \textbf 0, 11.6.1.
 
-Retrocompacto (conjunto): 0, 9.1.1.
+Retrocompacto (conjunto): \textbf 0, 9.1.1.
 
-Estricto (sistema proyectivo): 0, 13.4.2.
+Estricto (sistema proyectivo): \textbf 0, 13.4.2.
 
-Sucesión espectral en una categoría abeliana: 0, 11.1.1.
+Sucesión espectral en una categoría abeliana: \textbf 0, 11.1.1.
 
 Débilmente convergente, regular, coregular, birregular (sucesión espectral):
 0, 11.1.3.
 
-Sucesión espectral degenerada: 0, 11.1.6.
+Sucesión espectral degenerada: \textbf 0, 11.1.6.
 
-Sucesión espectral de un funtor relativa a un objeto filtrado: 0, 13.6.4.
+Sucesión espectral de un funtor relativa a un objeto filtrado: \textbf 0, 13.6.4.
 
-Sucesiones espectrales de un bicomplejo: 0, 11.3.2 y 11.3.5.
+Sucesiones espectrales de un bicomplejo: \textbf 0, 11.3.2 y 11.3.5.
 
 Sucesiones espectrales de hipercohomología de un funtor respecto de un complejo:
 0, 11.4.3.
@@ -15605,11 +15605,11 @@ Sucesiones espectrales de hiperhomología de un funtor respecto de un complejo:
 Sucesiones espectrales de hiperhomología de un funtor respecto de un bicomplejo:
 0, 11.7.2.
 
-Sistema de coeficientes: 0, 11.8.4.
+Sistema de coeficientes: \textbf 0, 11.8.4.
 
-Unirrama (anillo, punto): III, 4.3.6.
+Unirrama (anillo, punto): \textbf{III}, 4.3.6.
 
-Universalmente abierto (morfismo): III, 4.3.9.
+Universalmente abierto (morfismo): \textbf{III}, 4.3.9.
 \end{flushleft}
 
 \clearpage
@@ -15822,7 +15822,6 @@ O.~Zariski, \emph{Theory and applications of holomorphic functions on algebraic
   varieties over arbitrary ground fields}, Mem. Amer. Math. Soc., no. 5, 1951.
 
 \end{thebibliography}
-
 \bibliographystyle{amsalpha}
 
 \end{document}

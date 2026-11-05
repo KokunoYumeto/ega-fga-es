@@ -15,7 +15,7 @@ $\sh O_X$-módulo coherente y $T$ una parte de $X$, se define (5.10.1)
 
 Asimismo, para todo punto $t\in T$ se define
 \begin{equation}
-  \operatorname{prof}_{T,t}(\sh F)=\inf_{x\in T\cap\Spec(\sh O_{X,t})}\operatorname{prof}(\sh F_x),
+  \operatorname{prof}_{T,t}(\sh F)=\inf_{z\in T\cap\Spec(\sh O_{X,t})}\operatorname{prof}(\sh F_z),
   \tag{19.9.1.2}\label{IV.19.9.1.2}
 \end{equation}
 y se dice que $\operatorname{prof}_{T,t}(\sh F)$ es la
@@ -39,16 +39,16 @@ pertenecientes a $\mathfrak J$.
 La suficiencia de la condición se deduce inmediatamente de ($0$, 16.4.5);
 probemos su necesidad. Razonamos por inducción sobre $r$ (no hay nada que
 demostrar si $r=0$): puesto que
-$\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\geq r-1$ para todo
+$\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\geq r\setmin 1$ para todo
 $\mathfrak p\supset\mathfrak J$, por hipótesis existe una sucesión
 $M$-regular $(g_i)_{1\leq i\leq r-1}$ formada por elementos de $\mathfrak J$.
-Pongamos $N=M/(g_1M+\cdots+g_{r-1}M)$; para todo
+Pongamos $N=M/(g_1M+\ldots+g_{r-1}M)$; para todo
 $\mathfrak p\supset\mathfrak J$, las imágenes de los $g_i$ en $A_{\mathfrak p}$
 pertenecen por tanto al ideal maximal $\mathfrak pA_{\mathfrak p}$ y forman
 una sucesión $M_{\mathfrak p}$-regular ($0$, 15.1.14); se concluye entonces de
 ($0$, 16.4.6) que
 $\operatorname{prof}_{A_{\mathfrak p}}(N_{\mathfrak p})
-=\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})-(r-1)\geq1$, y se ve
+=\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\setmin(r\setmin 1)\geq1$, y se ve
 que todo se reduce a demostrar el lema para $r=1$. Pero la hipótesis significa
 entonces que, para todo $\mathfrak p\supset\mathfrak J$,
 $\mathfrak pA_{\mathfrak p}$ no está asociado a $M_{\mathfrak p}$
@@ -67,13 +67,13 @@ Sean $X$ un preesquema localmente noetheriano, $\sh F$ un
 $\sh O_X$-módulo coherente, $Y$ una parte cerrada de $X$, $y$ un punto de
 $Y$ y $n$ un entero $>0$. Las condiciones siguientes son equivalentes:
 \begin{enumerate}
-  \item[a)] Existe una vecindad abierta $U$ de $y$ en $X$ tal que
+  \item[\textup{a)}] Existe una vecindad abierta $U$ de $y$ en $X$ tal que
   $\operatorname{prof}_{Y\cap U}(\sh F|U)\geq n$.
-  \item[b)] Existe una vecindad abierta $U$ de $y$ en $X$ y una sucesión
+  \item[\textup{b)}] Existe una vecindad abierta $U$ de $y$ en $X$ y una sucesión
   $(\sh F|U)$-regular de $n$ secciones $f_i$ de $\sh O_U$ sobre $U$, tales que
-  $f_i(x)=0$ ($0_{\mathrm I}$, 5.5.1) para $1\leq i\leq n$ en todo punto
+  $f_i(x)=0$ \textup{($\mathbf 0_{\mathrm I}$, 5.5.1)} para $1\leq i\leq n$ en todo punto
   $x\in U\cap Y$.
-  \item[c)] Se tiene $\operatorname{prof}_{Y,y}(\sh F)\geq n$.
+  \item[\textup{c)}] Se tiene $\operatorname{prof}_{Y,y}(\sh F)\geq n$.
 \end{enumerate}
 Además, el conjunto de los $y\in Y$ que verifican estas condiciones es abierto
 en $Y$.
@@ -98,7 +98,7 @@ sucesión $(\sh F|U')$-regular.
 \begin{corollary}[19.9.4]
 \label{IV.19.9.4}
 Con las notaciones de (19.9.3), la función
-$y\mapsto\operatorname{prof}_{Y,y}(\sh F)$ es semicontinua inferiormente en
+$y\leadsto\operatorname{prof}_{Y,y}(\sh F)$ es semicontinua inferiormente en
 $Y$.
 \end{corollary}
 
@@ -114,7 +114,7 @@ En efecto, para todo $z'\in\Spec(\sh O_{X',y'})$, se deduce de (6.3.1) que
 $\operatorname{prof}(\sh F'_{z'})\geq\operatorname{prof}(\sh F_{g(z')})$,
 y si $z''$ es un punto maximal de la fibra $g^{-1}(g(z'))$, generalización de
 $z'$ (y por tanto perteneciente también a $\Spec(\sh O_{X',y'})$), se tiene
-(\emph{loc. cit.})
+\emph{(loc. cit.)}
 $\operatorname{prof}(\sh F'_{z''})=\operatorname{prof}(\sh F_{g(z')})$.
 La proposición se deduce entonces de
 $g(\Spec(\sh O_{X',y'}))=\Spec(\sh O_{X,g(y')})$, puesto que $g$ es plano
@@ -129,9 +129,9 @@ siguientes son equivalentes (denotamos por $X_{f(y)}$ la fibra de $f$ en el
 punto $f(y)$, por $\sh F_{f(y)}$ la imagen inversa de $\sh F$ en
 $X_{f(y)}$, y ponemos $Y_{f(y)}=X_{f(y)}\cap Y$):
 \begin{enumerate}
-  \item[a)] Se tiene
+  \item[\textup{a)}] Se tiene
   $\operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})\geq n$.
-  \item[b)] Existe una vecindad abierta $U$ de $y$ en $X$ y una sucesión
+  \item[\textup{b)}] Existe una vecindad abierta $U$ de $y$ en $X$ y una sucesión
   $(g_i)_{1\leq i\leq n}$ de $n$ secciones de $\sh O_X$ sobre $U$ que es
   transversalmente $\sh F$-regular relativamente a $S$ (cf. (19.2.1) para la
   terminología), y tal que $g_i(x)=0$ para $1\leq i\leq n$ y para todo
@@ -139,7 +139,7 @@ $X_{f(y)}$, y ponemos $Y_{f(y)}=X_{f(y)}\cap Y$):
 \end{enumerate}
 El conjunto $V_n$ de los $y\in Y$ que verifican estas condiciones es abierto en
 $Y$; si además $Y$ es localmente constructible en $X$, $V_n$ es
-retrocompacto en $X$ ($0_{\mathrm{III}}$, 9.1.1).
+retrocompacto en $X$ \textup{($\mathbf 0_{\mathrm{III}}$, 9.1.1)}.
 \end{proposition}
 
 En virtud de (19.9.3), la condición a) equivale a la existencia de una
@@ -182,8 +182,8 @@ $V_n$ es retrocompacto en $X$.
 
 \begin{corollary}[19.9.7]
 \label{IV.19.9.7}
-Bajo las hipótesis generales de (19.9.6), la función
-$y\mapsto\operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})$ es semicontinua
+Bajo las hipótesis generales de \textup{(19.9.6)}, la función
+$y\leadsto\operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})$ es semicontinua
 inferiormente en $Y$. Si además $Y$ es localmente constructible, esta función
 es localmente constructible.
 \end{corollary}
@@ -195,8 +195,8 @@ cerrada de $X$, $\sh F$ un $\sh O_X$-módulo de presentación finita y
 $f$-plano, y $\sh G$ un $\sh O_S$-módulo cuasi-coherente. Supongamos que, para
 todo $x\in Z$, se tiene
 $\operatorname{prof}((\sh F_{f(x)})_x)\geq1$
-(resp. $\operatorname{prof}((\sh F_{f(x)})_x)\geq2$). Entonces, si
-$j:X-Z\to X$ es la inmersión canónica y se pone
+\textup{(resp. $\operatorname{prof}((\sh F_{f(x)})_x)\geq2$)}. Entonces, si
+$j:X\setmin Z\to X$ es la inmersión canónica y se pone
 $\sh H=\sh F\otimes_{\sh O_X}f^*(\sh G)$, el homomorfismo canónico
 $\rho_{\sh H}:\sh H\to j_*(j^*(\sh H))$ relativo a $j$ es inyectivo (resp.
 bijectivo).
@@ -215,7 +215,7 @@ Volviendo a la demostración de (19.9.8), por (19.9.6) se tiene todavía
 $\operatorname{prof}((\sh F_{f(x)})_x)\geq1$
 (resp. $\operatorname{prof}((\sh F_{f(x)})_x)\geq2$) para todo $x\in Z'$.
 Si la proposición está demostrada sustituyendo el par $(X,Z)$ por
-$(X,Z')$ y $(X-Z,Z'\cap(X-Z))$, es inmediato que también lo estará para
+$(X,Z')$ y $(X\setmin Z,Z'\cap(X\setmin Z))$, es inmediato que también lo estará para
 $(X,Z)$; podemos, pues, limitar la demostración al caso de $X$ y $Z'$. Es
 decir, podemos suponer que (19.9.8) se demuestra cuando
 $S=\Spec(A)$, $X=\Spec(B)$, donde $B$ es una $A$-álgebra de presentación
@@ -260,8 +260,8 @@ de $A$, de modo que $A=\varinjlim A_\lambda$; pongamos
 \]
 si $p_\lambda:X\to X_\lambda$ es la proyección canónica, se tiene
 $Z=p_\lambda^{-1}(Z_\lambda)$ y
-$X-Z=p_\lambda^{-1}(X_\lambda-Z_\lambda)$. Como
-$X_\lambda-Z_\lambda$ es cuasicompacto y cuasi-separado, se deduce (8.5.2)
+$X\setmin Z=p_\lambda^{-1}(X_\lambda\setmin Z_\lambda)$. Como
+$X_\lambda\setmin Z_\lambda$ es cuasicompacto y cuasi-separado, se deduce (8.5.2)
 que, si se pone $\sh F_\lambda=\widetilde{M_\lambda}$ y
 $\sh H_\lambda=(M_\lambda\otimes_{A_\lambda}N_\lambda)^\sim$, los
 homomorfismos
@@ -300,7 +300,7 @@ Para terminar la demostración cuando $A$ es noetheriano, observemos que, en
 virtud de la hipótesis de planitud y de (6.3.1), se tiene entonces
 $\operatorname{prof}_Z(\sh H)\geq1$
 (resp. $\operatorname{prof}_Z(\sh H)\geq2$); pero la conclusión de (19.9.8)
-se deduce en este caso de (5.10.2) (resp. 5.10.4)).
+se deduce en este caso de (5.10.2) (resp. (5.10.4)).
 
 \begin{remark}[19.9.9]
 \label{IV.19.9.9}
@@ -312,9 +312,9 @@ generalización de (19.9.8):
 $x\in Z$, se tiene $\operatorname{prof}((\sh F_{f(x)})_x)\geq k$; entonces el
 homomorfismo canónico}
 \[
-  H^i(X,\sh H)\longrightarrow H^i(X-Z,\sh H|(X-Z))
+  H^i(X,\sh H)\longrightarrow H^i(X\setmin Z,\sh H|(X\setmin Z))
 \]
-\emph{es biyectivo para $i\leq k-2$ e inyectivo para $i=k-1$} (lo que,
+\emph{es biyectivo para $i\leq k\setmin 2$ e inyectivo para $i=k\setmin 1$} (lo que,
 expresado mediante la noción cohomológica general de profundidad introducida
 en el cap. III, se escribe también
 $\operatorname{prof}_Z(\sh H)\geq k$).

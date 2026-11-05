@@ -108,8 +108,8 @@ cerrado reducido cuyo espacio subyacente es $Z$
 anillo cociente de $A$ es, por tanto, ádico y noetheriano.
 
 Se tiene entonces $f(X')=Y'$. Si $V$ es un entorno abierto de $X'$
-en $X$, el conjunto $f(X-V)$ es cerrado en $Y$ y no corta a $Y'$.
-Esto es imposible salvo que $X-V$ sea vacío, pues $\mathfrak{J}$
+en $X$, el conjunto $f(X\setmin V)$ es cerrado en $Y$ y no corta a $Y'$.
+Esto es imposible salvo que $X\setmin V$ sea vacío, pues $\mathfrak{J}$
 está contenido en el radical de $A$
 \sref[I]{I.1.1.15} \sref[0]{0.7.1.10}. Por tanto, $V=X$.
 \end{proof}
@@ -165,7 +165,7 @@ El caso más importante es el siguiente:
 \begin{corollary}[5.1.6]
 \label{III.5.1.6}
 Supongamos que $X$ es propio sobre $Y=\Spec(A)$. Entonces el funtor
-$\sh{F}\mapsto\widehat{\sh{F}}$ es una equivalencia entre la
+$\sh{F}\leadsto\widehat{\sh{F}}$ es una equivalencia entre la
 categoría de los $\sh{O}_X$-módulos coherentes y la categoría de los
 $\sh{O}_{\widehat{X}}$-módulos coherentes.
 \end{corollary}
@@ -361,7 +361,7 @@ la $A$-álgebra graduada asociada a la
 filtración $\mathfrak{J}$-ádica de $A$. Es de tipo finito
 porque $A$ es noetheriano. Pongamos
 \[
-  \sh{S}'=f_0^*(\widetilde{S}),\qquad
+  \sh{S}'=f_0^*(\widetilde{\mathbf S}),\qquad
   \sh{M}=\bigoplus_{k\geq0}\sh{M}_k.
 \]
 Entonces $\sh{S}'$ es una $\sh{O}_{X_0}$-álgebra cuasi-coherente de
@@ -396,7 +396,7 @@ Apliquemos la sucesión exacta de cohomología a
        {\mathfrak{J}^{k}\sh{F}(n)}
   \longrightarrow0.
 \]
-Para $0\leq h<k$, $n\geq n_0$ y $q>0$, una inducción sobre $k-h$
+Para $0\leq h<k$, $n\geq n_0$ y $q>0$, una inducción sobre $h-k$
 da
 \[
   \HH^q\left(
@@ -492,7 +492,7 @@ sobre
 \oldpage[III]{153}
 $\mathfrak{X}$. Equivalentemente, $\sh{F}$ es isomorfo a un cociente
 de un $\sh{O}_{\mathfrak{X}}$-módulo de la forma
-$(\sh{O}_{\mathfrak{X}}(-n))^k$.
+$(\sh{O}_{\mathfrak X}(\setmin n))^k$.
 \end{corollary}
 
 \begin{proof}
@@ -525,7 +525,7 @@ proyectivo, de modo que existe un $\sh{O}_X$-módulo amplio $\sh{L}$
   X_n=\widehat{X}\times_{\widehat{Y}}Y_n
 \]
 es el subpreesquema cerrado
-$X\times_Y Y_n=f^{-1}(Y_n)$ de $X$. Si
+$X_n\times_Y Y_n=f^{-1}(Y_n)$ de $X$. Si
 \[
   \sh{L}'=\sh{L}\otimes_{\sh{O}_X}\sh{O}_{\widehat{X}}
 \]
@@ -574,8 +574,8 @@ propia. Por tanto, $T'$ es propio sobre $Y$ y, en consecuencia, cerrado en
 $Z'$ \sref[II]{II.5.4.10}. Se deduce que $\sh{F}'$ es inducido
 sobre $\widehat{X}$ por el $\sh{O}_{\widehat{Z}}$-módulo $\sh{G}'$
 obtenido pegando $\sh{F}'$, sobre el abierto $\widehat{X}$, con el
-haz cero sobre el abierto $\widehat{Z}-T'$; ambos haces coinciden sobre
-su intersección $\widehat{X}-T'$.
+haz cero sobre el abierto $\widehat Z\setmin T'$; ambos haces coinciden sobre
+su intersección $\widehat X\setmin T'$.
 
 El módulo $\sh{G}'$ es coherente. Por \sref{III.5.2.5}, existe un
 $\sh{O}_Z$-módulo coherente $\sh{G}$ tal que
@@ -697,7 +697,7 @@ Sea $\widehat{f}:\widehat{Z}\to\widehat{X}$ la extensión de $f$
 a las compleciones. Sea $\sh{M}$ un ideal coherente de
 $\sh{O}_X$ tal que, si
 \[
-  U=X-\Supp(\sh{O}_X/\sh{M}),
+  U=X-\Supp(\sh{O}_X/\sh{M})
 \]
 la restricción $f^{-1}(U)\to U$ de $f$ es un isomorfismo. Entonces,
 para todo $\sh{O}_{\widehat{X}}$-módulo coherente $\sh{F}$, existe
@@ -753,7 +753,7 @@ $\sh{M}_1=h^*(\sh{M})$ es un ideal coherente de $\sh{O}_{X_1}$ y
   =h^{-1}\bigl(\Supp(\sh{O}_X/\sh{M})\bigr)
 \]
 \sref[I]{I.9.1.13}. Así, si
-$U_1=X_1-\Supp(\sh{O}_{X_1}/\sh{M}_1)$, entonces
+$U_1=X_1\setmin\Supp(\sh{O}_{X_1}/\sh{M}_1)$, entonces
 $U_1=h^{-1}(U)$, y la restricción
 $f_1^{-1}(U_1)\to U_1$ es un isomorfismo
 \sref[I]{I.3.2.7}. Finalmente, $\widehat{\sh{M}}$ y
@@ -804,7 +804,7 @@ nulas. Existe, por tanto, un entero $n>0$ tal que
 
 \begin{env}[5.3.5]
 \label{III.5.3.5}
-\emph{Fin de la demostración del teorema de existencia.}
+\textbf{Fin de la demostración del teorema de existencia.}
 Conservemos las hipótesis de \sref{III.5.1.4}. Utilicemos la inducción
 noetheriana \sref[0]{0.2.2.2}, suponiendo conocido el teorema para todo
 subpreesquema cerrado $T$ de $X$ cuyo espacio subyacente es distinto
@@ -818,7 +818,7 @@ cuasiproyectivo, $g$ es proyectivo y sobreyectivo, y existe un
 subconjunto abierto no vacío $U$ de $X$ para el cual
 $g^{-1}(U)\to U$ es un isomorfismo. Sea $\sh{M}$ un ideal coherente
 de $\sh{O}_X$ que define un subpreesquema cerrado de espacio subyacente
-$X-U$ \sref[I]{I.5.2.2}, y sea $\sh{F}$ un
+$X\setmin U$ \sref[I]{I.5.2.2}, y sea $\sh{F}$ un
 $\sh{O}_{\widehat{X}}$-módulo coherente cuyo soporte $E$ es propio sobre $Y$.
 Denotemos por $\widehat{Z}$ la compleción de $Z$ a lo largo de
 $h^{-1}(Y')$, y por
@@ -848,7 +848,7 @@ y el conúcleo $\sh{R}$ de
 \]
 son anulados por una potencia $\widehat{\sh{M}}^{\,n}$. Sea $T$
 el subpreesquema cerrado de $X$ definido por $\sh{M}^n$, cuyo
-espacio subyacente es $X-U$, y sea $j:T\to X$ la inmersión
+espacio subyacente es $X\setmin U$, y sea $j:T\to X$ la inmersión
 canónica. Su extensión
 $\widehat{j}:\widehat{T}\to\widehat{X}$ es la inmersión canónica
 \sref[I]{I.10.14.7}, y podemos escribir
@@ -884,7 +884,7 @@ $\widehat{S}$, $\widehat{X}$ y $\widehat{Y}$ las compleciones
 de $S$, $X$ e $Y$ a lo largo de $S'$, $u^{-1}(S')$ y $v^{-1}(S')$,
 respectivamente. Para todo $S$-morfismo $f:X\to Y$, sea
 $\widehat{f}:\widehat{X}\to\widehat{Y}$ su extensión a las
-compleciones. Entonces la aplicación $f\mapsto\widehat{f}$ es una biyección
+compleciones. Entonces la aplicación $f\leadsto\widehat{f}$ es una biyección
 \[
   \Hom_S(X,Y)
   \xrightarrow{\ \sim\ }
@@ -956,20 +956,20 @@ Sea $g:X\to T$ el inverso de $p\circ i$, y pongamos
 \]
 Entonces $f:X\to Y$ tiene por grafo $\Gamma_f=i\circ g$. Como
 $\widehat{g}$ es el inverso de
-$\widehat{p\circ i}$, se tiene
+$(p\circ i)^{\widehat{\,}}$, se tiene
 \[
-  \widehat{\Gamma_f}
+  (\Gamma_f)^{\widehat{\,}}
   =\widehat{i}\circ\widehat{g}
   =j\circ w
   =\Gamma_h.
 \]
-Pero $\widehat{\Gamma_f}=\Gamma_{\widehat{f}}$
+Pero $(\Gamma_f)^{\widehat{\,}}=\Gamma_{\widehat{f}}$
 \sref[I]{I.10.9.8}; por tanto, $h=\widehat{f}$, lo que termina la
 demostración.
 \end{proof}
 
 En lenguaje categórico, el funtor
-$X\mapsto\widehat{X}$ es, por tanto, plenamente fiel
+$X\leadsto\widehat{X}$ es, por tanto, plenamente fiel
 \sref[0]{0.8.1.6} de la categoría de los preesquemas propios sobre
 $\Spec(A)$ en la categoría de los preesquemas formales propios sobre
 $\Spf(A)$, para todo anillo noetheriano ádico $A$. Proporciona, por
@@ -1280,7 +1280,7 @@ Se deduce de \sref{III.5.1.8} que existe un subpreesquema cerrado
 $Z$ de $T$, propio sobre $Y$, tal que, si
 $i:Z\to T$ es la inmersión canónica, entonces
 \[
-  \widehat{i}:\widehat{Z}\longrightarrow\widehat{T}
+  \widehat i=\widehat{Z}\longrightarrow\widehat{T}
 \]
 es un isomorfismo; aquí $\widehat{Z}$ es la compleción de $Z$
 a lo largo de $Z_0$. Por \sref{III.4.6.8}, existe un entorno abierto
@@ -1323,15 +1323,15 @@ $Z'\cap X_0=\varnothing$ y demuestra que $P\subset Z$.
 \section*{BIBLIOGRAFÍA (continuación)}
 
 \begin{flushleft}
-[27] P. Gabriel, \emph{Des catégories abéliennes}, tesis, París (1961).
+[27] P. \textsc{Gabriel}, \emph{Des catégories abéliennes}, tesis, París (1961).
 
 \medskip
-[28] J. E. Roos, \emph{Sur les foncteurs dérivés de $\varprojlim$.
-Applications}, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702--3704.
+[28] J. E. \textsc{Roos}, Sur les foncteurs dérivés de $\varprojlim$.
+Applications, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702-3704.
 
 \medskip
-[29] H. Cartan, \emph{Séminaire de l'École Normale Supérieure},
-13.er año (1960--1961), exposición n.º 11.
+[29] H. \textsc{Cartan}, Séminaire de l'École Normale Supérieure,
+13.er año (1960-1961), exposición n.º 11.
 \end{flushleft}
 
 \clearpage
@@ -1339,95 +1339,95 @@ Applications}, C. R. Acad. Sci. Paris, vol. CCLII, 1961, pp. 3702--3704.
 \section*{ÍNDICE DE NOTACIONES}
 
 \begin{flushleft}
-$\Set$: 0, 8.1.1.
+$\Set$: \textbf 0, 8.1.1.
 
 $h_X(Y)$, $h_X(u)$ ($X$, $Y$ objetos de una categoría $\C$, $u$ un morfismo
-de $\C$): 0, 8.1.1.
+de $\C$): \textbf 0, 8.1.1.
 
-$h_w(u)$ ($u$ y $w$ morfismos de $\C$): 0, 8.1.2.
+$h_w(u)$ ($u$ y $w$ morfismos de $\C$): \textbf 0, 8.1.2.
 
-$Z_k(E_r^{pq})$, $B_k(E_r^{pq})$ ($k\geq r$): 0, 11.1.1.
+$Z_k(E_r^{pq})$, $B_k(E_r^{pq})$ ($k\geq r$): \textbf 0, 11.1.1.
 
-$Z_\infty(E_2^{pq})$, $B_\infty(E_2^{pq})$: 0, 11.1.1.
+$Z_\infty(E_2^{pq})$, $B_\infty(E_2^{pq})$: \textbf 0, 11.1.1.
 
-$K^\bullet$, $K_\bullet$ (complejos): 0, 11.2.1.
+$K^\bullet$, $K_\bullet$ (complejos): \textbf 0, 11.2.1.
 
-$K^{\bullet\bullet}$, $K_{\bullet\bullet}$ (bicomplejos): 0, 11.2.1.
+$K^{\bullet\bullet}$, $K_{\bullet\bullet}$ (bicomplejos): \textbf 0, 11.2.1.
 
 $B^i(K^\bullet)$, $Z^i(K^\bullet)$, $H^i(K^\bullet)$,
-$H^\bullet(K^\bullet)$: 0, 11.2.1.
+$H^\bullet(K^\bullet)$: \textbf 0, 11.2.1.
 
 $B_i(K_\bullet)$, $Z_i(K_\bullet)$, $H_i(K_\bullet)$,
-$H_\bullet(K_\bullet)$: 0, 11.2.1.
+$H_\bullet(K_\bullet)$: \textbf 0, 11.2.1.
 
-$T(K^\bullet)$, $T(K_\bullet)$ ($T$ un funtor): 0, 11.2.1.
+$T(K^\bullet)$, $T(K_\bullet)$ ($T$ un funtor): \textbf 0, 11.2.1.
 
-$E(K^\bullet)$ ($K^\bullet$ un complejo filtrado): 0, 11.2.2.
+$E(K^\bullet)$ ($K^\bullet$ un complejo filtrado): \textbf 0, 11.2.2.
 
 $K^{i,\bullet}$, $K^{\bullet,j}$, $Z_{\mathrm{II}}^p(K^{i,\bullet})$,
 $B_{\mathrm{II}}^p(K^{i,\bullet})$, $H_{\mathrm{II}}^p(K^{i,\bullet})$,
 $Z_{\mathrm I}^p(K^{\bullet,j})$, $B_{\mathrm I}^p(K^{\bullet,j})$,
-$H_{\mathrm I}^p(K^{\bullet,j})$: 0, 11.3.1.
+$H_{\mathrm I}^p(K^{\bullet,j})$: \textbf 0, 11.3.1.
 
 $H_{\mathrm{II}}^p(K^{\bullet\bullet})$,
 $Z_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
 $B_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
 $H_{\mathrm I}^q(H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
-$H^n(K^{\bullet\bullet})$: 0, 11.3.1.
+$H^n(K^{\bullet\bullet})$: \textbf 0, 11.3.1.
 
 $F_{\mathrm I}^p(K^{\bullet\bullet})$,
 $F_{\mathrm{II}}^p(K^{\bullet\bullet})$, ${}'E(K^{\bullet\bullet})$,
-${}''E(K^{\bullet\bullet})$: 0, 11.3.2.
+${}''E(K^{\bullet\bullet})$: \textbf 0, 11.3.2.
 
 $K_{i,\bullet}$, $K_{\bullet,j}$, $H_p^{\mathrm{II}}(K_{i,\bullet})$,
 $H_p^{\mathrm I}(K_{\bullet,j})$, $H_p^{\mathrm{II}}(K_{\bullet\bullet})$,
 $H_p^{\mathrm I}(K_{\bullet\bullet})$,
 $H_q^{\mathrm I}(H_p^{\mathrm{II}}(K_{\bullet\bullet}))$,
 $H_q^{\mathrm{II}}(H_p^{\mathrm I}(K_{\bullet\bullet}))$,
-$H_n(K_{\bullet\bullet})$: 0, 11.3.5.
+$H_n(K_{\bullet\bullet})$: \textbf 0, 11.3.5.
 
-$\RR^\bullet T(K^\bullet)$ ($T$ un funtor covariante aditivo): 0, 11.4.3.
+$\RR^\bullet T(K^\bullet)$ ($T$ un funtor covariante aditivo): \textbf 0, 11.4.3.
 
 $\RR^\bullet T(K^\bullet,K'^{\bullet})$ ($T$ un bifuntor covariante
-aditivo): 0, 11.4.6.
+aditivo): \textbf 0, 11.4.6.
 
-$\LL_\bullet T(K_\bullet)$ ($T$ un funtor covariante aditivo): 0, 11.6.2.
+$\LL_\bullet T(K_\bullet)$ ($T$ un funtor covariante aditivo): \textbf 0, 11.6.2.
 
 $\LL_\bullet T(K_\bullet,K'_\bullet)$ ($T$ un bifuntor covariante
-aditivo): 0, 11.6.6.
+aditivo): \textbf 0, 11.6.6.
 
 $\LL_\bullet T(K_{\bullet\bullet})$ ($T$ un funtor covariante aditivo):
 0, 11.7.2.
 
 $|\sigma|$, $\Sigma(A)$, $\mathrm C_\bullet(A)$, $\mathrm L_\bullet(A)$
-($A$ un conjunto finito, $\sigma$ un símplex de $A$): 0, 11.8.1.
+($A$ un conjunto finito, $\sigma$ un símplex de $A$): \textbf 0, 11.8.1.
 
 $\mathrm C^\bullet(A,B;\sh{S})$, $\mathrm L^\bullet(A,B;\sh{S})$
-($A$, $B$ conjuntos finitos, $\sh{S}$ un sistema de coeficientes): 0, 11.8.4.
+($A$, $B$ conjuntos finitos, $\sh{S}$ un sistema de coeficientes): \textbf 0, 11.8.4.
 
 $\mathrm P^\bullet(A,B;\sh{S})$ ($A$, $B$ conjuntos finitos, $\sh{S}$ un
-sistema de coeficientes): 0, 11.8.6.
+sistema de coeficientes): \textbf 0, 11.8.6.
 
 $\mathrm C^\bullet(A,B;\sh{S}^\bullet)$,
 $\mathrm L^\bullet(A,B;\sh{S}^\bullet)$ ($A$, $B$ conjuntos finitos,
-$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): 0, 11.8.8.
+$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): \textbf 0, 11.8.8.
 
 $\mathrm P^\bullet(A,B;\sh{S}^\bullet)$ ($A$, $B$ conjuntos finitos,
-$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): 0, 11.8.10.
+$\sh{S}^\bullet$ un complejo de sistemas de coeficientes): \textbf 0, 11.8.10.
 
 $\chi(M^\bullet)$ ($M^\bullet$ un complejo finito de módulos de longitud finita):
 0, 11.10.1.
 
 $\check C^\bullet(\mathfrak U,\sh{F})$ ($\sh{F}$ un haz de grupos abelianos
-sobre $X$, $\mathfrak U$ un recubrimiento abierto de $X$): 0, 12.1.2.
+sobre $X$, $\mathfrak U$ un recubrimiento abierto de $X$): \textbf 0, 12.1.2.
 
 $\RR^p f_*(\sh{F})$ ($f:X\to Y$ un morfismo de espacios anillados,
-$\sh{F}$ un haz de $\sh{O}_X$-módulos): 0, 12.2.1.
+$\sh{F}$ un haz de $\sh{O}_X$-módulos): \textbf 0, 12.2.1.
 
 $\sh{H}^p(f,\sh{K}^\bullet)$,
 $\sh{H}^p_f(\sh{K}^\bullet)$, ${}'E(f,\sh{K}^\bullet)$,
 ${}''E(f,\sh{K}^\bullet)$ ($f:X\to Y$ un morfismo de espacios anillados,
-$\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos): 0, 12.4.1.
+$\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos): \textbf 0, 12.4.1.
 
 $\mathbf H^\bullet(X,\sh{K}^\bullet)$,
 $\mathbf H^\bullet(V,\sh{K}^\bullet)$ ($X$ un espacio anillado,
@@ -1437,24 +1437,24 @@ $\sh{K}^\bullet$ un complejo de $\sh{O}_X$-módulos, $V$ abierto en $X$):
 $\operatorname{gr}^\bullet(A)$ ($A$ un sistema proyectivo que satisface (ML)):
 0, 13.4.2.
 
-$E(A)$ ($A$ un objeto filtrado): 0, 13.6.4.
+$E(A)$ ($A$ un objeto filtrado): \textbf 0, 13.6.4.
 
 $K_\bullet(\mathbf f)$, $i_{\mathbf f}$ ($\mathbf f$ una familia finita de
-elementos de un anillo): III, 1.1.1.
+elementos de un anillo): \textbf{III}, 1.1.1.
 
 $K^\bullet(\mathbf f,M)$, $K_\bullet(\mathbf f,M)$ ($\mathbf f$ una familia
-finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.2.
+finita de elementos de un anillo $A$, $M$ un $A$-módulo): \textbf{III}, 1.1.2.
 
 $H^\bullet(\mathbf f,M)$, $H_\bullet(\mathbf f,M)$ ($\mathbf f$ una familia
-finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.3.
+finita de elementos de un anillo $A$, $M$ un $A$-módulo): \textbf{III}, 1.1.3.
 
 $C^\bullet((\mathbf f),M)$, $H^\bullet((\mathbf f),M)$ ($\mathbf f$ una
-familia finita de elementos de un anillo $A$, $M$ un $A$-módulo): III, 1.1.6.
+familia finita de elementos de un anillo $A$, $M$ un $A$-módulo): \textbf{III}, 1.1.6.
 
-$H^\bullet(U,\sh{F}^{(*)})$,
-$H^\bullet(\mathfrak U,\sh{F}^{(*)})$ ($\sh{F}$ un
+$H^\bullet(U,\sh{F}(*))$,
+$H^\bullet(\mathfrak U,\sh{F}(*))$ ($\sh{F}$ un
 $\sh{O}_X$-módulo cuasi-coherente, $U$ abierto en $X$, $\mathfrak U$ un recubrimiento abierto de $X$):
-III, 2.1.1.
+\textbf{III}, 2.1.1.
 \end{flushleft}
 
 \clearpage
@@ -1462,134 +1462,134 @@ III, 2.1.1.
 \section*{ÍNDICE TERMINOLÓGICO}
 
 \begin{flushleft}
-Término de convergencia de una sucesión espectral: 0, 11.1.1.
+Término de convergencia de una sucesión espectral: \textbf 0, 11.1.1.
 
-Algebraizable ($\sh{O}_X$-módulo): III, 5.2.1.
+Algebraizable ($\sh{O}_X$-módulo): \textbf{III}, 5.2.1.
 
-Algebraizable (esquema formal): III, 5.4.2.
+Algebraizable (esquema formal): \textbf{III}, 5.4.2.
 
-Analíticamente íntegro (anillo): III, 4.3.6.
+Analíticamente íntegro (anillo): \textbf{III}, 4.3.6.
 
-Aplicación cuasicompacta: 0, 9.1.1.
+Aplicación cuasicompacta: \textbf 0, 9.1.1.
 
-Aumentación de una resolución: 0, 11.4.1.
+Aumentación de una resolución: \textbf 0, 11.4.1.
 
-Característica de Euler--Poincaré de un complejo: 0, 11.10.1.
+Característica de Euler--Poincaré de un complejo: \textbf 0, 11.10.1.
 
 Característica de Euler--Poincaré de un $\sh{O}_X$-módulo coherente
-($X$ proyectivo sobre $\Spec(A)$, $A$ un anillo artiniano): III, 2.5.1.
+($X$ proyectivo sobre $\Spec(A)$, $A$ un anillo artiniano): \textbf{III}, 2.5.1.
 
-Cocadena bialternada: 0, 11.8.4.
+Cocadena bialternada: \textbf 0, 11.8.4.
 
-Complejo definido por un bicomplejo: 0, 11.3.1.
+Complejo definido por un bicomplejo: \textbf 0, 11.3.1.
 
-Complejo de álgebra exterior: III, 1.1.1.
+Complejo de álgebra exterior: \textbf{III}, 1.1.1.
 
-Condición (ML): 0, 13.1.2.
+Condición (ML): \textbf 0, 13.1.2.
 
-Constructible (subconjunto, conjunto): 0, 9.1.2.
+Constructible (subconjunto, conjunto): \textbf 0, 9.1.2.
 
-Constructible (función): 0, 9.3.1.
+Constructible (función): \textbf 0, 9.3.1.
 
-Producto cup: 0, 12.1.2.
+Producto cup: \textbf 0, 12.1.2.
 
-Dihomomorfismo para estructuras algebraicas sobre categorías: 0, 8.2.1.
+Dihomomorfismo para estructuras algebraicas sobre categorías: \textbf 0, 8.2.1.
 
-Exacto (subconjunto) en una categoría abeliana: III, 3.1.1.
+Exacto (subconjunto) en una categoría abeliana: \textbf{III}, 3.1.1.
 
-Esencialmente constante (sistema proyectivo): 0, 13.4.2.
+Esencialmente constante (sistema proyectivo): \textbf 0, 13.4.2.
 
-Factorización de Stein: III, 4.3.3.
+Factorización de Stein: \textbf{III}, 4.3.3.
 
 Codiscreta, coseparada, discreta, exhaustiva, finita, separada
-(filtración): 0, 11.1.3.
+(filtración): \textbf 0, 11.1.3.
 
-Final (objeto) de una categoría: 0, 8.1.10.
+Final (objeto) de una categoría: \textbf 0, 8.1.10.
 
-Finito (morfismo) de preesquemas formales: III, 4.8.2.
+Finito (morfismo) de preesquemas formales: \textbf{III}, 4.8.2.
 
 Finito (preesquema formal) sobre $\mathfrak Y$,
-$\mathfrak Y$-finito (preesquema formal): III, 4.8.2.
+$\mathfrak Y$-finito (preesquema formal): \textbf{III}, 4.8.2.
 
-Funtor covariante canónico $\C\to\CHom(\C\op,\Set)$: 0, 8.1.2.
+Funtor covariante canónico $\C\to\CHom(\C\op,\Set)$: \textbf 0, 8.1.2.
 
-Género aritmético: III, 2.5.1.
+Género aritmético: \textbf{III}, 2.5.1.
 
-Geométricamente conexa (fibra): III, 4.3.4.
+Geométricamente conexa (fibra): \textbf{III}, 4.3.4.
 
-Homomorfismo de estructuras algebraicas sobre categorías: 0, 8.2.1.
+Homomorfismo de estructuras algebraicas sobre categorías: \textbf 0, 8.2.1.
 
 Hipercohomología de un funtor respecto de un complejo $K^\bullet$:
 0, 11.4.3.
 
 Hipercohomología de un bifuntor respecto de dos complejos
-$K^\bullet$, $K'^{\bullet}$: 0, 11.4.6.
+$K^\bullet$, $K'^{\bullet}$: \textbf 0, 11.4.6.
 
 Hiperhomología de un funtor respecto de un complejo $K_\bullet$:
 0, 11.6.2.
 
 Hiperhomología de un bifuntor respecto de dos complejos $K_\bullet$,
-$K'_\bullet$: 0, 11.6.6.
+$K'_\bullet$: \textbf 0, 11.6.6.
 
-Hiperhomología de un funtor respecto de un bicomplejo: 0, 11.7.2.
+Hiperhomología de un funtor respecto de un bicomplejo: \textbf 0, 11.7.2.
 
-Localmente constructible (conjunto): 0, 9.1.11.
+Localmente constructible (conjunto): \textbf 0, 9.1.11.
 
-Ley de composición externa (interna) sobre los objetos de una categoría: 0, 8.2.1.
+Ley de composición externa (interna) sobre los objetos de una categoría: \textbf 0, 8.2.1.
 
 \oldpage[III]{164}
 
 $S$-$\C$-módulo filtrado, $\operatorname{gr}^\bullet(S)$-$\C$-módulo graduado,
-$\operatorname{gr}^{\bullet\bullet}(S)$-$\C$-módulo bigraduado: 0, 13.6.6.
+$\operatorname{gr}^\bullet(S)$-$\C$-módulo bigraduado: \textbf 0, 13.6.6.
 
-Morfismo de sucesiones espectrales: 0, 11.1.2.
+Morfismo de sucesiones espectrales: \textbf 0, 11.1.2.
 
-Número geométrico de componentes conexas de una fibra: III, 4.3.4.
+Número geométrico de componentes conexas de una fibra: \textbf{III}, 4.3.4.
 
-Objeto grupo en $\C$, $\C$-grupo, $\C$-anillo, $\C$-módulo: 0, 8.2.3.
+Objeto grupo en $\C$, $\C$-grupo, $\C$-anillo, $\C$-módulo: \textbf 0, 8.2.3.
 
 Objeto de bordes, objeto de cobordes, objeto de cociclos, objeto de
-ciclos: 0, 11.2.1.
+ciclos: \textbf 0, 11.2.1.
 
-Objeto de imágenes universales: 0, 13.1.1.
+Objeto de imágenes universales: \textbf 0, 13.1.1.
 
-Objeto graduado asociado a un sistema proyectivo que satisface (ML): 0, 13.4.2.
+Objeto graduado asociado a un sistema proyectivo que satisface (ML): \textbf 0, 13.4.2.
 
-Objeto graduado acotado inferiormente (superiormente): 0, 11.2.1.
+Objeto graduado acotado inferiormente (superiormente): \textbf 0, 11.2.1.
 
-Subconjunto propio (sobre $\mathfrak Y$) de un preesquema formal: III, 3.4.1.
+Subconjunto propio (sobre $\mathfrak Y$) de un preesquema formal: \textbf{III}, 3.4.1.
 
-Plena (subcategoría): 0, 8.1.5.
+Plena (subcategoría): \textbf 0, 8.1.5.
 
-Plenamente fiel (funtor): 0, 8.1.5.
+Plenamente fiel (funtor): \textbf 0, 8.1.5.
 
-Polinomio de Hilbert: III, 2.5.3.
+Polinomio de Hilbert: \textbf{III}, 2.5.3.
 
-Propio (morfismo) de preesquemas formales: III, 3.4.1.
+Propio (morfismo) de preesquemas formales: \textbf{III}, 3.4.1.
 
-Representable (funtor): 0, 8.1.8.
+Representable (funtor): \textbf 0, 8.1.8.
 
 Cohomológica, derecha, izquierda, homológica, inyectiva, libre, plana, proyectiva
-(resolución): 0, 11.4.1.
+(resolución): \textbf 0, 11.4.1.
 
-Resolución de Cartan--Eilenberg derecha, inyectiva: 0, 11.4.2.
+Resolución de Cartan--Eilenberg derecha, inyectiva: \textbf 0, 11.4.2.
 
-Resolución de Cartan--Eilenberg izquierda, proyectiva: 0, 11.6.1.
+Resolución de Cartan--Eilenberg izquierda, proyectiva: \textbf 0, 11.6.1.
 
-Retrocompacto (conjunto): 0, 9.1.1.
+Retrocompacto (conjunto): \textbf 0, 9.1.1.
 
-Estricto (sistema proyectivo): 0, 13.4.2.
+Estricto (sistema proyectivo): \textbf 0, 13.4.2.
 
-Sucesión espectral en una categoría abeliana: 0, 11.1.1.
+Sucesión espectral en una categoría abeliana: \textbf 0, 11.1.1.
 
 Débilmente convergente, regular, coregular, birregular (sucesión espectral):
 0, 11.1.3.
 
-Sucesión espectral degenerada: 0, 11.1.6.
+Sucesión espectral degenerada: \textbf 0, 11.1.6.
 
-Sucesión espectral de un funtor relativa a un objeto filtrado: 0, 13.6.4.
+Sucesión espectral de un funtor relativa a un objeto filtrado: \textbf 0, 13.6.4.
 
-Sucesiones espectrales de un bicomplejo: 0, 11.3.2 y 11.3.5.
+Sucesiones espectrales de un bicomplejo: \textbf 0, 11.3.2 y 11.3.5.
 
 Sucesiones espectrales de hipercohomología de un funtor respecto de un complejo:
 0, 11.4.3.
@@ -1600,11 +1600,11 @@ Sucesiones espectrales de hiperhomología de un funtor respecto de un complejo:
 Sucesiones espectrales de hiperhomología de un funtor respecto de un bicomplejo:
 0, 11.7.2.
 
-Sistema de coeficientes: 0, 11.8.4.
+Sistema de coeficientes: \textbf 0, 11.8.4.
 
-Unirrama (anillo, punto): III, 4.3.6.
+Unirrama (anillo, punto): \textbf{III}, 4.3.6.
 
-Universalmente abierto (morfismo): III, 4.3.9.
+Universalmente abierto (morfismo): \textbf{III}, 4.3.9.
 \end{flushleft}
 
 \clearpage

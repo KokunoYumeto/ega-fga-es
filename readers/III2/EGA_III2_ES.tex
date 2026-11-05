@@ -60,6 +60,7 @@
 
 
 \setlength{\emergencystretch}{6em}
+\providecommand{\setmin}{-}% la diferencia de conjuntos X - Y, como en la edición francesa
 \begin{document}
 % BEGIN RIGHTS AND AI TRANSLATION NOTICE
 \begingroup
@@ -130,13 +131,13 @@ funtor
   \mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G).
 \]
 Si $\mathscr F$ es plano sobre $Y$, el funtor
-$\mathscr G\mapsto\mathscr F\otimes_{\mathscr O_Y}\mathscr G$ es exacto
+$\mathscr G\leadsto\mathscr F\otimes_{\mathscr O_Y}\mathscr G$ es exacto
 (0\textsubscript{I}, 6.7.4) y, por consiguiente, el funtor compuesto
-$\mathscr G\mapsto\mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G)$
+$\mathscr G\leadsto\mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G)$
 sigue siendo un funtor cohomológico. Pero esto ya no sucede en el caso
 general; para poder aplicar los métodos cohomológicos, se ve uno llevado a
 sustituir
-$\mathscr G\mapsto\mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G)$
+$\mathscr G\leadsto\mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G)$
 por otros funtores, que esta vez son siempre funtores cohomológicos. Estos
 funtores, que generalizan los funtores «Tor» de la teoría de módulos, se
 definen en los números 6.3 a 6.7; hay, por lo demás, dos generalizaciones de
@@ -157,7 +158,7 @@ de base conduce también a sucesiones espectrales (6.9).
 \begin{env}[6.1.2]
 \label{III.6.1.2}
 Además, se comprueba (6.10) que los funtores cohomológicos
-$\mathscr G\mapsto\mathscr T_\bullet(\mathscr G)$ así definidos son
+$\mathscr G\leadsto\mathscr T_\bullet(\mathscr G)$ así definidos son
 localmente (sobre $Y$) de la forma
 \[
   \mathscr G\longmapsto
@@ -171,7 +172,7 @@ origen a $\mathscr T_\bullet$ y estudiar, de
 \oldpage[III]{138}
 
 manera general, los funtores de la forma precedente
-$\mathscr G\mapsto\mathscr H_\bullet(\mathscr L_\bullet\otimes_Y\mathscr G)$
+$\mathscr G\leadsto\mathscr H_\bullet(\mathscr L_\bullet\otimes_Y\mathscr G)$
 (imponiendo además, cuando proceda, hipótesis de finitud adecuadas sobre los
 $\mathscr L_i$ o los $\mathscr H_i(\mathscr L_\bullet)$): este es el objeto
 del § 7, cuya lectura es, en lo esencial, independiente del § 6. Las
@@ -180,14 +181,14 @@ exactitud de una componente $\mathscr T_i$ de $\mathscr T_\bullet$; se darán
 diversos criterios que permiten establecer tales propiedades; como
 aplicación, se obtendrán condiciones que permiten afirmar (con las notaciones
 de (6.1.1)) que el funtor
-$\mathscr G\mapsto\mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G)$
+$\mathscr G\leadsto\mathrm R^n f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr G)$
 es exacto (lo que se expresará diciendo que $\mathscr F$ es
 cohomológicamente plano sobre $Y$ en dimensión $n$). Otra propiedad
 importante de las componentes $\mathscr T_i$ de
 $\mathscr T_\bullet(\mathscr G)=
 \mathscr H_\bullet(\mathscr L_\bullet\otimes_Y\mathscr G)$ es una propiedad
 de semicontinuidad de la función
-$y\mapsto\dim_{k(y)}(T_i(k(y)))$; cuando $\mathscr T_i$ es exacto, esta
+$y\leadsto\dim_{\boldsymbol k(y)}(T_i(\boldsymbol k(y)))$; cuando $\mathscr T_i$ es exacto, esta
 propiedad es sustituida por una propiedad de continuidad, y el recíproco es
 además cierto, por Grauert, cuando $Y$ es reducido (7.8.4).
 \end{env}
@@ -207,16 +208,16 @@ desarrollos que exceden el marco del presente capítulo.
 \begin{env}[6.1.4]
 \label{III.6.1.4}
 Para abreviar, dados dos complejos $K^\bullet$, $K'^\bullet$ en una categoría
-abeliana $C$, diremos que un morfismo de complejos
+abeliana $\boldsymbol C$, diremos que un morfismo de complejos
 $f:K^\bullet\to K'^\bullet$ es una equivalencia homotópica si existe un
 morfismo $g:K'^\bullet\to K^\bullet$ tal que los morfismos compuestos
 $f\circ g$ y $g\circ f$ sean ambos homotópicos a la identidad (por abuso de
 lenguaje, cuando exista una equivalencia homotópica de este tipo, diremos
 asimismo que $K^\bullet$ y $K'^\bullet$ son homotópicamente equivalentes).
 Cuando se puede definir la hipercohomología de un funtor covariante aditivo
-$T$ de $C$ en una categoría abeliana $C'$, respecto de un complejo de $C$
-(0, 11.4.3), es inmediato que una equivalencia homotópica
-$K^\bullet\to K'^\bullet$ de complejos de $C$ define canónicamente un
+$T$ de $\boldsymbol C$ en una categoría abeliana $C'$, respecto de un complejo de $\boldsymbol C$
+(\textbf 0, 11.4.3), es inmediato que una equivalencia homotópica
+$K^\bullet\to K'^\bullet$ de complejos de $\boldsymbol C$ define canónicamente un
 isomorfismo
 \[
   \mathrm R^\bullet T(K^\bullet)\xrightarrow{\sim}
@@ -233,7 +234,7 @@ Sean $X$ un preesquema y
 $\mathscr K^\bullet=(\mathscr K^i)_{i\in\mathbf Z}$ un complejo de
 $\mathscr O_X$-módulos cuya diferencial es de grado $+1$.
 Recordemos que, para todo morfismo $f:X\to Y$ de preesquemas, se han definido
-(0, 12.4.1) los $\mathscr O_Y$-módulos de hipercohomología
+(\textbf 0, 12.4.1) los $\mathscr O_Y$-módulos de hipercohomología
 $\mathscr H^n(f,\mathscr K^\bullet)$ (denotados también por
 $\mathscr H_f^n(\mathscr K^\bullet)$ o
 $\mathrm R^n f_*(\mathscr K^\bullet)$) para todo $n\in\mathbf Z$;
@@ -244,11 +245,11 @@ $''\mathscr E(f,\mathscr K^\bullet)$, cuyos términos $\mathscr E_2$ vienen
 dados por
 \begin{align}
   '\mathscr E_2^{pq}
-    &=\mathscr H^p\bigl(\mathscr H^q(f,\mathscr K^\bullet)\bigr),
+    &=\mathscr H^p\bigl(\mathscr H^q(f,\mathscr K^\bullet)\bigr)
     \tag{6.2.1.1}\label{III.6.2.1.1}\\
   ''\mathscr E_2^{pq}
     &=\mathscr H^p\bigl(f,\mathscr H^q(\mathscr K^\bullet)\bigr)
-      =\mathrm R^p f_*\bigl(\mathscr H^q(\mathscr K^\bullet)\bigr).
+      =\mathrm R^p f_*\bigl(\mathscr H^q(\mathscr K^\bullet)\bigr)
     \tag{6.2.1.2}\label{III.6.2.1.2}
 \end{align}
 
@@ -270,7 +271,7 @@ $\mathscr K^i=0$, salvo para $i=i_0$, se tiene
 \]
 La sucesión espectral $'\mathscr E(f,\mathscr K^\bullet)$ es siempre
 regular; las dos sucesiones espectrales son birregulares cuando
-$\mathscr K^\bullet$ está acotado inferiormente (0, 12.4.1).
+$\mathscr K^\bullet$ está acotado inferiormente (\textbf 0, 12.4.1).
 
 Toda equivalencia homotópica $h:\mathscr K^\bullet\to\mathscr K'^\bullet$ de complejos de
 $\mathscr O_X$-módulos (6.1.4) da lugar a un isomorfismo
@@ -280,10 +281,10 @@ si se supone solamente que
 $\mathscr H^\bullet(h):\mathscr H^\bullet(\mathscr K^\bullet)\to
 \mathscr H^\bullet(\mathscr K'^\bullet)$ es un isomorfismo y que
 $\mathscr K^\bullet$ y $\mathscr K'^\bullet$ están acotados inferiormente,
-como se deduce inmediatamente de (0, 11.1.5), aplicado a la sucesión espectral
+como se deduce inmediatamente de (\textbf 0, 11.1.5), aplicado a la sucesión espectral
 (6.2.1.2) y a su análoga para $\mathscr K'^\bullet$. Por último, para todo
 cubrimiento abierto $\mathfrak U=(U_\alpha)$ de $X$, se ha definido también
-(0, 12.4.5) la hipercohomología
+(\textbf 0, 12.4.5) la hipercohomología
 $\mathbf H^\bullet(\mathfrak U,\mathscr K^\bullet)$ como la cohomología del
 bicomplejo $C^\bullet(\mathfrak U,\mathscr K^\bullet)$ (cuyo componente de
 índices $(i,j)$ es, por definición,
@@ -303,9 +304,9 @@ isomorfos.
 
 \begin{proof}
 En efecto, toda intersección finita $V$ de abiertos del cubrimiento
-$\mathfrak U$ es afín (I, 5.5.6), por lo que
+$\mathfrak U$ es afín (\textbf I, 5.5.6), por lo que
 $\mathrm H^q(V,\mathscr K^i)=0$ para todo $i$ y todo $q>0$ (1.3.1); la
-proposición es, por tanto, un caso particular de (0, 12.4.7).
+proposición es, por tanto, un caso particular de (\textbf 0, 12.4.7).
 \end{proof}
 
 \begin{proposition}[6.2.3]
@@ -320,15 +321,15 @@ Como los $\mathscr H^q(f,\mathscr K^i)=\mathrm R^q f_*(\mathscr K^i)$ son
 $\mathscr O_Y$-módulos cuasicoherentes (1.4.10), lo mismo ocurre con
 $'\mathscr E_2^{pq}$, que, según (6.2.1.1), es cociente del núcleo de un
 homomorfismo de módulos cuasicoherentes por la imagen de un homomorfismo de
-esta clase (I, 4.1.1). Por la misma razón, todos los
+esta clase (\textbf I, 4.1.1). Por la misma razón, todos los
 $\mathscr O_Y$-módulos $'\mathscr E_r^{pq}$,
-$B_k('\mathscr E_2^{pq})$, $Z_k('\mathscr E_2^{pq})$ de la primera sucesión
+$B_k('\mathscr E_r^{pq})$, $Z_k('\mathscr E_r^{pq})$ de la primera sucesión
 espectral son cuasicoherentes. La regularidad de la sucesión espectral
 $'\mathscr E(f,\mathscr K^\bullet)$ implica que
 $Z_\infty('\mathscr E_2^{pq})$ es igual a uno de los
 $Z_k('\mathscr E_2^{pq})$, luego es cuasicoherente, y lo mismo ocurre con
 $B_\infty('\mathscr E_2^{pq})=\varinjlim_k B_k('\mathscr E_2^{pq})$
-(0, 11.2.4 e I, 4.1.1); por tanto, los $'\mathscr E_\infty^{pq}$ son también
+(\textbf 0, 11.2.4 e I, 4.1.1); por tanto, los $'\mathscr E_\infty^{pq}$ son también
 cuasicoherentes. Como la sucesión espectral precedente es regular, la
 filtración de los $F^p(\mathscr H^n(f,\mathscr K^\bullet))$ es discreta y
 exhaustiva; dicho de otro modo, el $\mathscr O_Y$-módulo
@@ -339,7 +340,7 @@ $\mathscr O_Y$-módulos $'\mathscr E_\infty^{pq}$ y, por tanto, es
 cuasicoherente. Por inducción sobre $k$, se deduce que los $\mathscr G_k$ son
 cuasicoherentes (1.4.17), y, como
 $\mathscr H^n(f,\mathscr K^\bullet)=\varinjlim_k\mathscr G_k$, queda demostrada
-la proposición (I, 4.1.1).
+la proposición (\textbf I, 4.1.1).
 \end{proof}
 
 \oldpage[III]{140}
@@ -360,7 +361,7 @@ es biyectivo para todo $n\in\mathbf Z$.
 La demostración es la misma que la de (1.4.11), utilizando (6.2.2),
 reemplazando $\mathscr F$ por $\mathscr K^\bullet$,
 $\mathscr K^\bullet$ por
-$f_*(C^\bullet(\mathfrak U,\mathscr K^\bullet))$,
+$f_*(\mathscr C^\bullet(\mathfrak U,\mathscr K^\bullet))$,
 $\mathscr H^\bullet(\mathscr K^\bullet)$ por
 $\mathscr H^\bullet(f,\mathscr K^\bullet)$, y observando que este último es un
 $\mathscr O_Y$-módulo cuasicoherente por (6.2.3).
@@ -385,16 +386,16 @@ suponer que $\mathfrak U$ es finito, puesto que $X$ es cuasicompacto. Como las
 cocadenas de cada complejo $C^\bullet(\mathfrak U,\mathscr K^j)$ son
 alternadas por definición, existe un entero $r>0$ tal que
 $C^i(\mathfrak U,\mathscr K^j)=0$ para $i<0$ y $i>r$; se concluye de ello
-(0, 11.3.3) que las dos sucesiones espectrales del bicomplejo
+(\textbf 0, 11.3.3) que las dos sucesiones espectrales del bicomplejo
 $C^\bullet(\mathfrak U,\mathscr K^\bullet)$ son birregulares. Como las
 intersecciones de los miembros de $\mathfrak U$ son abiertos afines
-(I, 5.5.6), cada funtor
-$\mathscr F\mapsto C^i(\mathfrak U,\mathscr F)$ es exacto en la categoría de
+(\textbf I, 5.5.6), cada funtor
+$\mathscr F\leadsto C^i(\mathfrak U,\mathscr F)$ es exacto en la categoría de
 los $\mathscr O_X$-módulos cuasicoherentes; por consiguiente,
 $\mathrm H_I^q(C^i(\mathfrak U,\mathscr K^\bullet))
 =C^i(\mathfrak U,\mathscr H^q(\mathscr K^\bullet))$, y los términos
 $E_2$ de la segunda sucesión espectral de
-$C^\bullet(\mathfrak U,\mathscr K^\bullet)$ vienen dados (0, 11.3.2) por
+$C^\bullet(\mathfrak U,\mathscr K^\bullet)$ vienen dados (\textbf 0, 11.3.2) por
 \[
   ''E_2^{pq}
   =\mathrm H^p(C^\bullet(\mathfrak U,\mathscr H^q(\mathscr K^\bullet)))
@@ -405,9 +406,9 @@ en virtud de (1.4.1); dado que $f$ es propio, estos son
 $\Gamma(Y,\mathscr O_Y)$-módulos de tipo finito (3.2.1). Puesto que la sucesión
 espectral $''E(C^\bullet(\mathfrak U,\mathscr K^\bullet))$ es birregular, se
 deduce que los $\mathbf H^n(X,\mathscr K^\bullet)$ son
-$\Gamma(Y,\mathscr O_Y)$-módulos de tipo finito (0, 11.1.8).
+$\Gamma(Y,\mathscr O_Y)$-módulos de tipo finito (\textbf 0, 11.1.8).
 
-A fortiori, si $\mathscr K^\bullet$ es un complejo de
+\emph{A fortiori}, si $\mathscr K^\bullet$ es un complejo de
 $\mathscr O_X$-módulos coherentes, los $\mathscr O_Y$-módulos
 $\mathscr H^n(f,\mathscr K^\bullet)$ son coherentes bajo las hipótesis de
 (6.2.5) relativas a $Y$ y $f$ (0\textsubscript{I}, 5.3.4).
@@ -416,24 +417,24 @@ $\mathscr H^n(f,\mathscr K^\bullet)$ son coherentes bajo las hipótesis de
 \begin{env}[6.2.6]
 La hipercohomología $\mathscr H^\bullet(f,\mathscr K^\bullet)$ es un funtor
 cohomológico en la categoría de los complejos de $\mathscr O_X$-módulos
-acotados inferiormente (0, 12.4.4). Es un funtor cohomológico en la categoría
+acotados inferiormente (\textbf 0, 12.4.4). Es un funtor cohomológico en la categoría
 de todos los complejos de $\mathscr O_X$-módulos cuando el morfismo $f$ es
 cuasicompacto y el espacio subyacente a $X$ es localmente noetheriano: en
 efecto, de (G, II, 3.10.1) se deduce entonces que $f_*$ conmuta con los límites
 inductivos (pues la cuestión es local sobre $Y$), y puede aplicarse
-(0, 11.5.2).
+(\textbf 0, 11.5.2).
 
 Por último, si $f$ es separado, $\mathscr H^\bullet(f,\mathscr K^\bullet)$ es
 un funtor cohomológico en la categoría de los complejos de
 $\mathscr O_X$-módulos cuasicoherentes. Esto es inmediato cuando $Y$ es
 afín, pues entonces $X$ es un esquema; por tanto, en virtud del isomorfismo
 canónico (6.2.2), todo se reduce a ver que
-$\mathscr K^\bullet\mapsto\mathbf H^\bullet(\mathfrak U,\mathscr K^\bullet)$
+$\mathscr K^\bullet\leadsto\mathbf H^\bullet(\mathfrak U,\mathscr K^\bullet)$
 es un funtor cohomológico en la categoría de los complejos de
 $\mathscr O_X$-módulos cuasicoherentes, lo cual es inmediato, ya que el
 funtor $\mathscr K^\bullet\mapsto
 C^\bullet(\mathfrak U,\mathscr K^\bullet)$ es exacto en esta categoría
-(I, 1.3.7). En el caso general, para todo abierto afín $V$
+(\textbf I, 1.3.7). En el caso general, para todo abierto afín $V$
 
 \oldpage[III]{141}
 
@@ -458,13 +459,13 @@ cubrimiento abierto afín más fino que $\mathfrak U$, el diagrama
 \[
   \xymatrix@C=34pt@R=11pt{
     \mathbf H^\bullet(\mathfrak U,\mathscr K^\bullet)
-      \ar[rrd]^-{\sim}\ar[dd]^{\iota}
+      \ar[rrd]^-{\sim}\ar[dd]^{\wr}
     && \\
     &&
     \mathbf H^\bullet(f^{-1}(V),\mathscr K^\bullet)
     \\
     \mathbf H^\bullet(\mathfrak U',\mathscr K^\bullet)
-      \ar[rru]_-{\sim}
+      \ar[rru]^-{\sim}
     &&
   }
 \]
@@ -472,15 +473,15 @@ de isomorfismos canónicos es conmutativo, al igual que el diagrama
 \[
   \xymatrix@C=46pt@R=25pt{
     \mathbf H^n(\mathfrak U,\mathscr K''^\bullet)
-      \ar[r]^-{\partial}\ar[d]^{\iota}
+      \ar[r]^-{\partial}\ar[d]^{\wr}
     &
     \mathbf H^{n+1}(\mathfrak U,\mathscr K'^\bullet)
-      \ar[d]^{\iota}
+      \ar[d]^{\wr}
     \\
     \mathbf H^n(\mathfrak U',\mathscr K''^\bullet)
       \ar[r]_-{\partial}
     &
-    \mathbf H^{n+1}(\mathfrak U',\mathscr K'^\bullet).
+    \mathbf H^{n+1}(\mathfrak U',\mathscr K'^\bullet)
   }
 \]
 
@@ -489,7 +490,7 @@ $\mathscr K^\bullet\to\mathscr K'^\bullet$ es una equivalencia homotópica (6.1.
 isomorfismo correspondiente
 $\mathscr H^\bullet(f,\mathscr K^\bullet)\xrightarrow{\sim}
 \mathscr H^\bullet(f,\mathscr K'^\bullet)$ es entonces un isomorfismo de
-$\partial$-funtores (0, 11.4.4).
+$\partial$-funtores (\textbf 0, 11.4.4).
 \end{env}
 
 \begin{env}[6.2.7]
@@ -637,14 +638,14 @@ filtrantes de complejos de $A$-módulos; se tiene un isomorfismo canónico
   \xrightarrow{\sim}
   \mathbf{Tor}_\bullet^A
   \left(\varinjlim_\lambda P_\bullet^\lambda,
-        \varinjlim_\mu Q_\bullet^\mu\right).
+        \varinjlim_\mu Q_\bullet^\mu\right)
   \tag{6.3.6.1}\label{III.6.3.6.1}
 \]
 \end{proposition}
 
 \begin{proof}
 Pongamos $P_\bullet=\varinjlim_\lambda P_\bullet^\lambda$,
-$Q_\bullet=\varinjlim_\mu Q_\bullet^\mu$; por funtorialidad, está claro que
+$Q_\bullet=\varinjlim Q_\bullet^\mu$; por funtorialidad, está claro que
 los $\mathbf{Tor}_\bullet^A(P_\bullet^\lambda,Q_\bullet^\mu)$ forman un
 sistema inductivo y que las aplicaciones
 $\mathbf{Tor}_\bullet^A(P_\bullet^\lambda,Q_\bullet^\mu)\to
@@ -658,20 +659,20 @@ de donde se obtiene un homomorfismo canónico \sref{III.6.3.6.1} y, más
 generalmente,
 un homomorfismo canónico
 \[
-  \varinjlim_{\lambda,\mu}''E(P_\bullet^\lambda,Q_\bullet^\mu)
+  \varinjlim''E(P_\bullet^\lambda,Q_\bullet^\mu)
   \longrightarrow ''E(P_\bullet,Q_\bullet)
 \]
 del cual \sref{III.6.3.6.1} es el homomorfismo de los términos límite.
 Además, la sucesión espectral $''E(P_\bullet,Q_\bullet)$ es regular
 \sref{III.6.3.2}, y lo mismo
 ocurre con la sucesión espectral
-$\varinjlim_{\lambda,\mu}''E(P_\bullet^\lambda,Q_\bullet^\mu)$, como resulta
+$\varinjlim''E(P_\bullet^\lambda,Q_\bullet^\mu)$, como resulta
 de las definiciones \sref[0]{0.11.1.7} y de la demostración de
 \sref[0]{0.11.3.3}; para demostrar que \sref{III.6.3.6.1} es biyectivo basta,
 pues, por \sref[0]{0.11.1.5}, probar que el
 homomorfismo
 \[
-  \varinjlim_{\lambda,\mu}''E(P_\bullet^\lambda,Q_\bullet^\mu)
+  \varinjlim''E(P_\bullet^\lambda,Q_\bullet^\mu)
   \longrightarrow ''E(P_\bullet,Q_\bullet)
   \tag{6.3.6.2}\label{III.6.3.6.2}
 \]
@@ -680,7 +681,7 @@ el límite inductivo de complejos de módulos, finalmente se reduce todo a
 probar que, para dos sistemas inductivos filtrantes $(F^\lambda)$,
 $(G^\mu)$ de $A$-módulos, el homomorfismo canónico
 \[
-  \varinjlim_{\lambda,\mu}\operatorname{Tor}_\bullet^A(F^\lambda,G^\mu)
+  \varinjlim_{\lambda,\mu}(\operatorname{Tor}_\bullet^A(F^\lambda,G^\mu))
   \longrightarrow
   \operatorname{Tor}_\bullet^A
   \left(\varinjlim_\lambda F^\lambda,
@@ -705,8 +706,8 @@ $L_i$ forman una resolución $L_\bullet$ de $F$, pues el funtor
 $\varinjlim$ es exacto; además, los $L_i$, límites inductivos de
 $A$-módulos libres, son planos \sref[0]{0.6.1.2}. Se considera de
 igual modo, para cada $\mu$, la resolución libre canónica $M_\bullet^\mu$ de
-$G^\mu$, y $M_\bullet=\varinjlim_\mu M_\bullet^\mu$ es una resolución plana
-de $G=\varinjlim_\mu G^\mu$. Se tiene entonces
+$G^\mu$, y $M_\bullet=\varinjlim M_\bullet^\mu$ es una resolución plana
+de $G=\varinjlim G^\mu$. Se tiene entonces
 $\operatorname{Tor}_\bullet^A(\varinjlim_\lambda F^\lambda,
 \varinjlim_\mu G^\mu)=H_\bullet(L_\bullet\otimes_A M_\bullet)$ en virtud de
 \sref{III.6.3.5} y \sref{III.6.3.4}; pero
@@ -724,7 +725,7 @@ Cuando se supone que existe $i_0$ tal que
 $P_i^\lambda=Q_i^\mu=0$ para $i<i_0$, cualesquiera que sean $\lambda$ y
 $\mu$, se demuestra del mismo modo que el homomorfismo canónico
 \[
-  \varinjlim_{\lambda,\mu}'E(P_\bullet^\lambda,Q_\bullet^\mu)
+  \varinjlim'E(P_\bullet^\lambda,Q_\bullet^\mu)
   \longrightarrow'E(P_\bullet,Q_\bullet)
   \tag{6.3.6.3}\label{III.6.3.6.3}
 \]
@@ -878,7 +879,7 @@ $A$-módulo plano. Se tienen entonces isomorfismos canónicos funtoriales
   \left\{
   \begin{aligned}
   'E(P_\bullet\otimes_A A',Q_\bullet\otimes_A A')
-    &\xrightarrow{\sim}'E(P_\bullet,Q_\bullet)\otimes_A A',\\
+    &\xrightarrow{\sim}'E(P_\bullet,Q_\bullet)\otimes_A A'\\
   ''E(P_\bullet\otimes_A A',Q_\bullet\otimes_A A')
     &\xrightarrow{\sim}''E(P_\bullet,Q_\bullet)\otimes_A A'.
   \end{aligned}
@@ -918,7 +919,7 @@ canónicos funtoriales de grado 0
   \mathbf{Tor}_\bullet^{A'}
   (P'_{\bullet[\rho]}\otimes_A A',Q'_{\bullet[\rho]}\otimes_A A')
   \longrightarrow
-  \mathbf{Tor}_\bullet^{A'}(P'_\bullet,Q'_\bullet),
+  \mathbf{Tor}_\bullet^{A'}(P'_\bullet,Q'_\bullet)
   \tag{6.3.10.1}\label{III.6.3.10.1}
 \]
 donde la primera flecha es el homomorfismo $A$-lineal definido en
@@ -969,7 +970,7 @@ que generaliza \sref{III.6.3.6.1}
   \mathbf{Tor}_\bullet^{A^\lambda}
   (P_\bullet^\lambda,Q_\bullet^\lambda)
   \xrightarrow{\sim}
-  \mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet),
+  \mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)
   \tag{6.3.12.1}\label{III.6.3.12.1}
 \]
 donde $A=\varinjlim A^\lambda$, $P_\bullet=\varinjlim P_\bullet^\lambda$,
@@ -1239,7 +1240,7 @@ Supongamos, pues, que $X^{(1)}=\mathrm D(f)$ e
 $Y^{(1)}=\mathrm D(g)$, de modo que $B^{(1)}=B_f$ y
 $C^{(1)}=C_g$. Entonces $u^*(\sh P_\bullet)$ y
 $v^*(\sh Q_\bullet)$ se identifican, respectivamente, con
-$((P_\bullet)_f)\supertilde$ y $((Q_\bullet)_g)\supertilde$.
+$(P_\bullet)_f\supertilde$ y $(Q_\bullet)_g\supertilde$.
 Además, $X^{(1)}\times_SY^{(1)}$ se identifica con el subesquema
 abierto $\mathrm D(f\otimes g)$ de
 \[
@@ -1289,7 +1290,7 @@ homomorfismos canónicos de funtores espectrales
   {}'\sh E(u^*\sh P_\bullet,v^*\sh Q_\bullet),\\
   (u\times_Sv)^*\,{}''\sh E(\sh P_\bullet,\sh Q_\bullet)
   &\longrightarrow
-  {}''\sh E(u^*\sh P_\bullet,v^*\sh Q_\bullet).
+  {}''\sh E(u^*\sh P_\bullet,v^*\sh Q_\bullet)
   \end{aligned}
   \right.
   \tag{6.4.6.1}\label{III.6.4.6.1}
@@ -1464,7 +1465,7 @@ y
   \bigoplus_{q'+q''=q}
   \shTor_p^S
   \bigl(\sh H_{q'}(\sh P_\bullet),
-        \sh H_{q''}(\sh Q_\bullet)\bigr).
+        \sh H_{q''}(\sh Q_\bullet)\bigr)
   \tag{6.5.4.2}\label{III.6.5.4.2}
 \]
 La sucesión espectral \sref{III.6.5.4.2} es siempre regular.
@@ -1518,7 +1519,7 @@ isomorfismo canónico
   \shTor_\bullet^S(\sh P_{\alpha\bullet},\sh Q_\bullet)
   \xrightarrow{\sim}
   \shTor_\bullet^S
-  \left(\varinjlim_\alpha\sh P_{\alpha\bullet},\sh Q_\bullet\right).
+  \left(\varinjlim\sh P_{\alpha\bullet},\sh Q_\bullet\right).
   \tag{6.5.6.1}\label{III.6.5.6.1}
 \]
 \end{proposition}
@@ -1713,9 +1714,9 @@ homotópica entre cualesquiera dos resoluciones de este tipo
 Sean $X$ e $Y$ dos $S$-preesquemas, y supongamos que se cumple
 una de las condiciones siguientes:
 \begin{enumerate}
-  \item[(i)] $X$ y $Z=X\times_SY$ son localmente noetherianos, y
+  \item[\textup{(i)}] $X$ y $Z=X\times_SY$ son localmente noetherianos, y
     $X$ es plano sobre $S$;
-  \item[(ii)] $S$ y $X$ son localmente noetherianos, y $Y$ es de
+  \item[\textup{(ii)}] $S$ y $X$ son localmente noetherianos, y $Y$ es de
     tipo finito sobre $S$.
 \end{enumerate}
 Sea $\sh P_\bullet$ (respectivamente $\sh Q_\bullet$) un complejo
@@ -1804,7 +1805,7 @@ $(1\leq i\leq m)$, cada uno provisto de un complejo
 $\sh P_\bullet^{(i)}$ de $\sh O_{X^{(i)}}$-módulos
 cuasicoherentes. Si
 \[
-  Z=X^{(1)}\times_SX^{(2)}\times_S\cdots\times_SX^{(m)},
+  Z=X^{(1)}\times_SX^{(2)}\times_S\ldots\times_SX^{(m)},
 \]
 se define así un $\sh O_Z$-módulo cuasicoherente
 \[
@@ -1822,7 +1823,7 @@ hipertor:
 \[
   ''\sh E_{pq}^2
   =
-  \bigoplus_{q_1+q_2+\cdots+q_m=q}
+  \bigoplus_{q_1+q_2+\ldots+q_m=q}
   \shTor_p^S
   \bigl(
     \sh H_{q_1}(\sh P_\bullet^{(1)}),\ldots,
@@ -1850,7 +1851,7 @@ $\mathfrak U^{(i)}=(U_\alpha^{(i)})$ de $X^{(i)}$ por abiertos afines; sea
 \[
   X=X^{(1)}\times_S X^{(2)},
 \]
-que es un $S$-esquema cuasicompacto (I, 5.5.1 y 6.6.4), y sea
+que es un $S$-esquema cuasicompacto (\textbf I, 5.5.1 y 6.6.4), y sea
 $\mathfrak U=\mathfrak U^{(1)}\times_S\mathfrak U^{(2)}$ el cubrimiento de
 $X$ formado por los abiertos afines
 $U_\alpha^{(1)}\times_S U_\beta^{(2)}$. Para todo par de enteros
@@ -1942,7 +1943,7 @@ el bicomplejo cuya componente de índices $(j,k)$ es
 Como $L_{\bullet\bullet}^{(i)}$ es un funtor exacto respecto de
 $\mathscr P_\bullet^{(i)}$, puesto que las intersecciones de los miembros
 \oldpage[III]{154}
-de $\mathfrak U^{(i)}$ son afines (I, 5.5.6 y 1.3.11),
+de $\mathfrak U^{(i)}$ son afines (\textbf I, 5.5.6 y 1.3.11),
 $\mathbf{Tor}_\bullet^S
 (\mathfrak U^{(1)},\mathfrak U^{(2)};
  \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ es un
@@ -1952,13 +1953,13 @@ $\mathscr P_\bullet^{(2)}$, con valores en la categoría de los $A$-módulos
 bifuntor es el término límite común de seis funtores espectrales birregulares,
 que denotaremos por
 \[
-  {}^{(t)}\mathscr E^S
+  {}^{(t)}E^S
   (\mathfrak U^{(1)},\mathfrak U^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
 \]
 o por
 \[
-  {}^{(t)}\mathscr E
+  {}^{(t)}E
   (\mathfrak U^{(1)},\mathfrak U^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)}),
 \]
@@ -1966,30 +1967,30 @@ donde $t$ ha de sustituirse por una de las letras $a$, $b$, $a'$, $b'$, $c$,
 $d$, y cuyos términos $E_2$ son los siguientes:
 \[
 \begin{aligned}
-  {}^{(a)}\mathscr E_{pq}^2
+  {}^{(a)}E_{pq}^2
   &=\bigoplus_{q_1+q_2=q}
     \mathbf{Tor}_p^A
     \bigl(\mathrm H_{q_1}(L_{\bullet\bullet}^{(1)}),
-          \mathrm H_{q_2}(L_{\bullet\bullet}^{(2)})\bigr),\\
-  {}^{(b)}\mathscr E_{pq}^2
+          \mathrm H_{q_2}(L_{\bullet\bullet}^{(2)})\bigr)\\
+  {}^{(b)}E_{pq}^2
   &=\mathrm H_p\bigl(
     \mathbf{Tor}_q^{A,\mathrm{II}}
-    (L_{\bullet\bullet}^{(1)},L_{\bullet\bullet}^{(2)})\bigr),\\
-  {}^{(a')}\mathscr E_{pq}^2
+    (L_{\bullet\bullet}^{(1)},L_{\bullet\bullet}^{(2)})\bigr)\\
+  {}^{(a')}E_{pq}^2
   &=\bigoplus_{q_1+q_2=q}
     \mathbf{Tor}_p^A
     \bigl(\mathrm H_{q_1}^{\mathrm I}(L_{\bullet\bullet}^{(1)}),
-          \mathrm H_{q_2}^{\mathrm I}(L_{\bullet\bullet}^{(2)})\bigr),\\
-  {}^{(b')}\mathscr E_{pq}^2
+          \mathrm H_{q_2}^{\mathrm I}(L_{\bullet\bullet}^{(2)})\bigr)\\
+  {}^{(b')}E_{pq}^2
   &=\mathrm H_p\bigl(
     \mathbf{Tor}_q^A
-    (L_{\bullet\bullet}^{(1)},L_{\bullet\bullet}^{(2)})\bigr),\\
-  {}^{(c)}\mathscr E_{pq}^2
+    (L_{\bullet\bullet}^{(1)},L_{\bullet\bullet}^{(2)})\bigr)\\
+  {}^{(c)}E_{pq}^2
   &=\bigoplus_{q_1+q_2=q}
     \mathbf{Tor}_p^A
     \bigl(\mathrm H_{q_1}^{\mathrm{II}}(L_{\bullet\bullet}^{(1)}),
-          \mathrm H_{q_2}^{\mathrm{II}}(L_{\bullet\bullet}^{(2)})\bigr),\\
-  {}^{(d)}\mathscr E_{pq}^2
+          \mathrm H_{q_2}^{\mathrm{II}}(L_{\bullet\bullet}^{(2)})\bigr)\\
+  {}^{(d)}E_{pq}^2
   &=\mathrm H_p\bigl(
     \mathbf{Tor}_q^{A,\mathrm I}
     (L_{\bullet\bullet}^{(1)},L_{\bullet\bullet}^{(2)})\bigr),
@@ -2007,7 +2008,7 @@ módulo de homología $\mathrm H_n(L_{\bullet\bullet}^{(i)})$ del bicomplejo
 $L_{\bullet\bullet}^{(i)}$ era igual a
 $\mathbf H^{-n}(X^{(i)},\mathscr P_\bullet^{(i)})$; por tanto,
 \[
-  {}^{(a)}\mathscr E_{pq}^2
+  {}^{(a)}E_{pq}^2
   =\bigoplus_{q_1+q_2=q}
    \mathbf{Tor}_p^A
    \bigl(\mathbf H^{-q_1}(X^{(1)},\mathscr P_\bullet^{(1)}),
@@ -2022,7 +2023,7 @@ $\mathbf H^{-n}(\mathfrak U^{(i)},\mathscr P_k^{(i)})$; se sabe por (1.4.1)
 que este módulo es canónicamente isomorfo a
 $\mathbf H^{-n}(X^{(i)},\mathscr P_k^{(i)})$; por tanto,
 \[
-  {}^{(a')}\mathscr E_{pq}^2
+  {}^{(a')}E_{pq}^2
   =\bigoplus_{q_1+q_2=q}
    \mathbf{Tor}_p^A
    \bigl(\mathbf H^{-q_1}(X^{(1)},\mathscr P_\bullet^{(1)}),
@@ -2073,7 +2074,7 @@ esquemas, los $U_\rho^{(i)}$ son afines y, por tanto, se tiene (6.4.1.1)
     (\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr).
 \]
 \oldpage[III]{155}
-Se ve, pues, que ${}^{(b)}\mathscr E_{pq}^2$ es el $(-p)$-ésimo módulo de
+Se ve, pues, que ${}^{(b)}E_{pq}^2$ es el $(-p)$-ésimo módulo de
 cohomología del complejo
 \[
   L^\bullet(\Phi^{(1)},\Phi^{(2)};\mathscr S)
@@ -2105,7 +2106,7 @@ elementos. Pero entonces se tiene
   U_\sigma^{(1)}\times_S U_\tau^{(2)}
   =(U_{\alpha_0}^{(1)}\times_S U_{\beta_0}^{(2)})\cap\cdots\cap
     (U_{\alpha_h}^{(1)}\times_S U_{\beta_h}^{(2)})
-  \qquad\text{(I, 3.2.7)}.
+  \qquad\text{(\textbf I, 3.2.7)}.
 \]
 Si se denota por $\mathfrak U$ el cubrimiento de
 $Z=X^{(1)}\times_S X^{(2)}$ por los abiertos afines
@@ -2113,7 +2114,7 @@ $U_\alpha^{(1)}\times_S U_\beta^{(2)}$, se ve finalmente, teniendo en cuenta
 que $X^{(1)}\times_S X^{(2)}$ es un esquema, que se tiene, en virtud de
 (1.3.1),
 \[
-  {}^{(b)}\mathscr E_{pq}^2
+  {}^{(b)}E_{pq}^2
   =\mathbf H^{-p}\bigl(X^{(1)}\times_S X^{(2)},
     \mathscr{T}\!or_q^S
     (\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr).
@@ -2134,13 +2135,13 @@ esta componente es suma directa de los $A$-módulos
 \[
   \Gamma\bigl(U_\sigma^{(1)}\times_S U_\tau^{(2)},
     \mathscr{T}\!or_q^S
-    (\mathscr P_{k_1}^{(1)},\mathscr P_{k_2}^{(2)})\bigr),
+    (\mathscr P_{k_1}^{(1)},\mathscr P_{k_2}^{(2)})\bigr)
 \]
 donde $k_1+k_2=k$, y $\sigma$ (respectivamente, $\tau$) recorre los elementos
 de $\mathfrak P(\Phi^{(1)})$ (respectivamente,
 $\mathfrak P(\Phi^{(2)})$) tales que
 $\operatorname{Card}(\sigma)+\operatorname{Card}(\tau)=-h-2$. El término
-${}^{(b')}\mathscr E_{pq}^2$ que estamos calculando es el $(-p)$-ésimo módulo
+${}^{(b')}E_{pq}^2$ que estamos calculando es el $(-p)$-ésimo módulo
 de cohomología de un bicomplejo $N^{\bullet\bullet}=(N^{hk})$, donde el
 complejo simple $N^{\bullet k}$ es el complejo de cocadenas bialternadas sobre
 $\Phi^{(1)}$ y $\Phi^{(2)}$, con valores en el sistema de coeficientes
@@ -2149,12 +2150,12 @@ $\Phi^{(1)}$ y $\Phi^{(2)}$, con valores en el sistema de coeficientes
   \Gamma\left(U_\sigma^{(1)}\times_S U_\tau^{(2)},
     \bigoplus_{k_1+k_2=k}
     \mathscr{T}\!or_q^S
-    (\mathscr P_{-k_1}^{(1)},\mathscr P_{-k_2}^{(2)})\right),
+    (\mathscr P_{-k_1}^{(1)},\mathscr P_{-k_2}^{(2)})\right)
 \]
 y estos sistemas de coeficientes forman un complejo $\mathscr S^\bullet$ cuyo
 diferencial proviene del diferencial del complejo simple asociado al bicomplejo
 $\mathscr{T}\!or_q^S
-(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$. Se sabe que la
+(\mathscr P^{(1)\bullet},\mathscr P^{(2)\bullet})$. Se sabe que la
 cohomología de $N^{\bullet\bullet}$ es la misma que la del bicomplejo
 $C^\bullet(\Phi^{(1)},\Phi^{(2)};\mathscr S^\bullet)$
 ($0_{\mathrm I}$, 11.8.9), y también la misma que la del bicomplejo
@@ -2165,20 +2166,20 @@ bigrado $(h,k)$ son las combinaciones lineales de los
   \Gamma\left(U_\sigma^{(1)}\times_S U_\tau^{(2)},
     \bigoplus_{k_1+k_2=k}
     \mathscr{T}\!or_q^S
-    (\mathscr P_{-k_1}^{(1)},\mathscr P_{-k_2}^{(2)})\right),
+    (\mathscr P_{-k_1}^{(1)},\mathscr P_{-k_2}^{(2)})\right)
 \]
 donde $\sigma=(\alpha_0,\ldots,\alpha_h)$ y
 $\tau=(\beta_0,\ldots,\beta_h)$ son sucesiones con el mismo número de
 elementos ($0_{\mathrm I}$, 11.8.10). Se ve entonces, como antes, que
-${}^{(b')}\mathscr E_{pq}^2$ es el $(-p)$-ésimo módulo de cohomología del
+${}^{(b')}E_{pq}^2$ es el $(-p)$-ésimo módulo de cohomología del
 bicomplejo $C^\bullet(\mathfrak U,\mathscr Q^\bullet)$, donde
 $\mathscr Q^\bullet$ es el complejo simple asociado al bicomplejo
 $\mathscr{T}\!or_q^S
-(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ de
+(\mathscr P^{(1)\bullet},\mathscr P^{(2)\bullet})$ de
 $\mathscr O_Z$-módulos. Con las convenciones adoptadas en (6.6.1), se tiene,
 por tanto,
 \[
-  {}^{(b')}\mathscr E_{pq}^2
+  {}^{(b')}E_{pq}^2
   =\mathbf H^{-p}\bigl(X^{(1)}\times_S X^{(2)},
     \mathscr{T}\!or_q^S
     (\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr).
@@ -2195,7 +2196,7 @@ $C^{-h}(\mathfrak U^{(i)},\mathscr H_n(\mathscr P_\bullet^{(i)}))$, en virtud
 de la exactitud del funtor $C^{-h}$. Por tanto, por definición del hipertor de
 dos módulos relativo a dos cubrimientos (6.6.2),
 \[
-  {}^{(c)}\mathscr E_{pq}^2
+  {}^{(c)}E_{pq}^2
   =\bigoplus_{q_1+q_2=q}
    \mathbf{Tor}_p^S
    \bigl(\mathfrak U^{(1)},\mathfrak U^{(2)};
@@ -2210,7 +2211,7 @@ $\mathbf{Tor}_q^S
 (\mathfrak U^{(1)},\mathfrak U^{(2)};
  \mathscr P_h^{(1)},\mathscr P_k^{(2)})$. Por tanto,
 \[
-  {}^{(d)}\mathscr E_{pq}^2
+  {}^{(d)}E_{pq}^2
   =\mathrm H_p\bigl(
     \mathbf{Tor}_q^S
     (\mathfrak U^{(1)},\mathfrak U^{(2)};
@@ -2222,7 +2223,7 @@ $\mathbf{Tor}_q^S
 \label{III.6.6.6}
 La teoría de la hiperhomología de los funtores de bicomplejos
 ($0_{\mathrm I}$, 11.7.3) muestra, como en (6.3.4), que, para toda resolución
-\emph{plana} de Cartan--Eilenberg $M_{\bullet\bullet}^{(i)}$ de
+\emph{plana} de Cartan--Eilenberg $M_{\bullet\bullet\bullet}^{(i)}$ de
 $L_{\bullet\bullet}^{(i)}$ (en la categoría de los complejos de módulos
 acotados inferiormente) ($i=1,2$), se tienen isomorfismos canónicos de
 bi-$\partial$-funtores
@@ -2235,13 +2236,13 @@ bi-$\partial$-funtores
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   &\xrightarrow{\sim}
    \mathrm H_\bullet
-   (M_{\bullet\bullet}^{(1)}\otimes_A M_{\bullet\bullet}^{(2)})\\
+   (M_{\bullet\bullet\bullet}^{(1)}\otimes_A M_{\bullet\bullet\bullet}^{(2)})\\
   &\xrightarrow{\sim}
    \mathrm H_\bullet
-   (M_{\bullet\bullet}^{(1)}\otimes_A L_{\bullet\bullet}^{(2)})
+   (M_{\bullet\bullet\bullet}^{(1)}\otimes_A L_{\bullet\bullet}^{(2)})
    \xrightarrow{\sim}
    \mathrm H_\bullet
-   (L_{\bullet\bullet}^{(1)}\otimes_A M_{\bullet\bullet}^{(2)}).
+   (L_{\bullet\bullet}^{(1)}\otimes_A M_{\bullet\bullet\bullet}^{(2)}).
 \end{aligned}
 \tag{6.6.6.1}
 \]
@@ -2261,14 +2262,14 @@ espectrales
 \begin{env}[6.6.7, $t$]
 \label{III.6.6.7.t}
 \[
-  {}^{(t)}\mathscr E
+  {}^{(t)}E
   (\mathfrak U^{(1)},\mathfrak U^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \xrightarrow{\sim}
-  {}^{(t)}\mathscr E
+  {}^{(t)}E
   (\mathfrak V^{(1)},\mathfrak V^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
-  \tag{6.6.7, $t$}\label{III.6.6.7.t.eq}
+  \tag{6.6.7, $t$)}\label{III.6.6.7.t.eq}
 \]
 \end{env}
 donde $t$ se sustituye por $a$, $b$, $a'$, $b'$, $c$ o $d$.
@@ -2311,11 +2312,11 @@ inductivos de funtores espectrales sobre el conjunto filtrante de pares
 $(\mathfrak U^{(1)},\mathfrak U^{(2)})$ de cubrimientos abiertos afines
 finitos de $X^{(1)}$ y $X^{(2)}$. Denotaremos por
 \[
-  {}^{(t)}\mathscr E
+  {}^{(t)}E
   (X^{(1)},X^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \quad\text{o}\quad
-  {}^{(t)}\mathscr E^S
+  {}^{(t)}E^S
   (X^{(1)},X^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
 \]
@@ -2349,7 +2350,7 @@ Bajo las hipótesis de (6.6.1), consideremos ahora dos $S$-morfismos
 $f_i:X^{(i)}\to Y^{(i)}$, donde
 $Y^{(i)}=\operatorname{Spec}(B_i)$ es un $S$-esquema \emph{afín}, siendo
 $B_i$ una $A$-álgebra ($i=1,2$); esto define, pues, un $A$-homomorfismo
-$B_i\to\Gamma(X^{(i)},\mathscr O_{X^{(i)}})$ (I, 2.2.4) y, por consiguiente,
+$B_i\to\Gamma(X^{(i)},\mathscr O_{X^{(i)}})$ (\textbf I, 2.2.4) y, por consiguiente,
 cada uno de los $L_{\bullet\bullet}^{(i)}$ definidos en (6.6.2) es un
 bicomplejo de $B_i$-módulos; se concluye que
 $L_{\bullet\bullet}^{(1)}\otimes_A L_{\bullet\bullet}^{(2)}$ es un
@@ -2359,17 +2360,17 @@ la categoría de las sucesiones espectrales de
 $(B_1\otimes_A B_2)$-módulos. Si se pone
 $Y=Y^{(1)}\times_S Y^{(2)}=\operatorname{Spec}(B_1\otimes_A B_2)$, se pueden
 considerar los $\mathscr O_Y$-módulos cuasicoherentes asociados a estos
-módulos (I, 1.3.4); denotaremos por
+módulos (\textbf I, 1.3.4); denotaremos por
 ${}^{(t)}\mathscr E
 (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$
 (para $t=a$, $b$, $a'$, $b'$, $c$ o $d$) las seis sucesiones espectrales
 \[
-  \bigl({}^{(t)}\mathscr E
+  \bigl({}^{(t)}E
   (X^{(1)},X^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr)^{\sim}
 \]
 de $\mathscr O_Y$-módulos, y por
-$\mathfrak{Tor}_\bullet^S
+$\boldsymbol{\mathscr T\!or}_\bullet^S
 (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ su término
 límite común
 \[
@@ -2378,7 +2379,7 @@ límite común
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr)^{\sim}.
 \]
 Lo denotaremos por
-$\mathfrak{Tor}_\bullet^S(f_1,f_2;\mathscr F^{(1)},\mathscr F^{(2)})$
+$\mathscr T\!or_\bullet^S(f_1,f_2;\mathscr F^{(1)},\mathscr F^{(2)})$
 cuando $\mathscr P_\bullet^{(i)}$ esté reducido a su término de grado 0,
 $\mathscr F^{(i)}$ ($i=1,2$).
 \end{env}
@@ -2395,7 +2396,7 @@ $f_i:X^{(i)}\to Y^{(i)}$ son morfismos \emph{separados y cuasicompactos}. Se
 trata entonces, para todo par de complejos $\mathscr P_\bullet^{(i)}$ de
 $\mathscr O_{X^{(i)}}$-módulos cuasicoherentes, acotados inferiormente
 ($i=1,2$), de definir para todo $n$ un $\mathscr O_Y$-módulo cuasicoherente
-$\mathfrak{Tor}_n^S
+$\mathscr T\!or_n^S
 (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$, así como seis
 funtores espectrales, que se reduzcan a las definiciones de (6.6.8) cuando
 $S$, $Y^{(1)}$ e $Y^{(2)}$ son afines (se pone
@@ -2418,17 +2419,17 @@ $Y^{(i)}=\operatorname{Spec}(B_i)$ es afín y $W^{(i)}=D(g_i)$, donde
 $g_i\in B_i$, de modo que
 $W=D(g_1\otimes g_2)$
 \oldpage[III]{158}
-en $Y=\operatorname{Spec}(B_1\otimes_A B_2)$ (II, 4.3.2.1); si
+en $Y=\operatorname{Spec}(B_1\otimes_A B_2)$ (\textbf{II}, 4.3.2.1); si
 $X'^{(i)}=f_i^{-1}(W^{(i)})$, se trata de establecer un isomorfismo canónico
 de funtores espectrales
 \begin{env}[6.7.1.1]
 \label{III.6.7.1.1}
 \[
-  {}^{(t)}\mathscr E
+  {}^{(t)}E
   (X'^{(1)},X'^{(2)};
    \mathscr P'_\bullet{}^{(1)},\mathscr P'_\bullet{}^{(2)})
   \xrightarrow{\sim}
-  {}^{(t)}\mathscr E
+  {}^{(t)}E
   (X^{(1)},X^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \otimes_B B_g
@@ -2440,7 +2441,7 @@ donde se ha puesto $B=B_1\otimes_A B_2$ y $g=g_1\otimes g_2$. Para ello,
 partamos de cubrimientos abiertos afines finitos $\mathfrak U^{(i)}$ de
 $X^{(i)}$ ($i=1,2$), y sea $\mathfrak U'^{(i)}$ la traza de
 $\mathfrak U^{(i)}$ sobre $X'^{(i)}$, que sigue estando formada por abiertos
-afines (I, 5.5.10); más precisamente, se tiene
+afines (\textbf I, 5.5.10); más precisamente, se tiene
 \[
   C^\bullet(\mathfrak U'^{(i)},\mathscr P'_\bullet{}^{(i)})
   =C^\bullet(\mathfrak U^{(i)},\mathscr P_\bullet^{(i)})
@@ -2510,11 +2511,11 @@ canónicos
 \begin{env}[6.7.2.1]
 \label{III.6.7.2.1}
 \[
-  {}^{(t)}\mathscr E^S
+  {}^{(t)}E^S
   (X^{(1)},X^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \xrightarrow{\sim}
-  {}^{(t)}\mathscr E^{S'}
+  {}^{(t)}E^{S'}
   (X^{(1)},X^{(2)};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)}).
   \tag{6.7.2.1}\label{III.6.7.2.1.eq}
@@ -2539,13 +2540,13 @@ cuasicompacto de $S$-preesquemas y $\mathscr P_\bullet^{(i)}$ un complejo
 acotado inferiormente de $\mathscr O_{X^{(i)}}$-módulos cuasicoherentes
 ($i=1,2$); se pone $Y=Y^{(1)}\times_S Y^{(2)}$. Existe un
 bi-$\partial$-funtor
-  $\mathfrak{Tor}_\bullet^S
+  $\boldsymbol{\mathscr T\!or}_\bullet^S
 (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$
 con valores en la categoría de los $\mathscr O_Y$-módulos cuasicoherentes,
 tal que, si $V^{(i)}$ es un abierto afín de $Y^{(i)}$ ($i=1,2$) y
 $V=V^{(1)}\times_S V^{(2)}$, se tiene
 \[
-  \mathfrak{Tor}_\bullet^S
+  \boldsymbol{\mathscr T\!or}_\bullet^S
   (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})|V
   =\Bigl(\mathbf{Tor}_\bullet^S
     \bigl(f_1^{-1}(V^{(1)}),f_2^{-1}(V^{(2)});
@@ -2570,11 +2571,11 @@ cuyos términos $E_2$ vienen dados por
           \mathscr H^{-q_2}(f_2,\mathscr P_\bullet^{(2)})\bigr),\\
   {}^{(b)}\mathscr E_{pq}^2
   &=\mathscr H^{-p}\bigl(f_1\times_S f_2,
-    \mathfrak{Tor}_q^S
+    \mathscr T\!or_q^S
     (\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr),\\
   {}^{(a')}\mathscr E_{pq}^2
   &=\bigoplus_{q_1+q_2=q}
-    \mathfrak{Tor}_p^S
+    \mathscr T\!or_p^S
     \bigl(\mathscr H^{-q_1}(f_1,\mathscr P_\bullet^{(1)}),
           \mathscr H^{-q_2}(f_2,\mathscr P_\bullet^{(2)})\bigr),\\
   {}^{(b')}\mathscr E_{pq}^2
@@ -2583,12 +2584,12 @@ cuyos términos $E_2$ vienen dados por
     (\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr),\\
   {}^{(c)}\mathscr E_{pq}^2
   &=\bigoplus_{q_1+q_2=q}
-    \mathfrak{Tor}_p^S
+    \mathscr T\!or_p^S
     \bigl(f_1,f_2;
       \mathscr H_{q_1}(\mathscr P_\bullet^{(1)}),
       \mathscr H_{q_2}(\mathscr P_\bullet^{(2)})\bigr),\\
   {}^{(d)}\mathscr E_{pq}^2
-  &=\mathscr H_p\bigl(\mathfrak{Tor}_q^S
+  &=\mathscr H_p\bigl(\mathscr T\!or_q^S
     (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})\bigr).
 \end{aligned}
 \]
@@ -2614,7 +2615,7 @@ $\mathscr P_\bullet$
 \begin{env}[6.7.4.1]
 \label{III.6.7.4.1}
 \[
-  \mathfrak{Tor}_n^Y(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)
+  \mathscr T\!or_n^Y(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)
   \xrightarrow{\sim}
   \mathscr H^{-n}(f,\mathscr P_\bullet)
   \qquad\text{(para todo $n\in\mathbf Z$)}.
@@ -2643,7 +2644,7 @@ bi-$\partial$-funtores
 \begin{env}[6.7.4.2]
 \label{III.6.7.4.2}
 \[
-  \mathfrak{Tor}_\bullet^S
+  \boldsymbol{\mathscr T\!or}_\bullet^S
   (1_{X^{(1)}},1_{X^{(2)}};
    \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \xrightarrow{\sim}
@@ -2692,10 +2693,10 @@ sucesión es birregular y de que, por hipótesis, el homomorfismo considerado es
 un isomorfismo sobre los términos $E_2$ ($0_{\mathrm I}$, 11.1.5). Esto
 demuestra ya que
 \[
-  \mathfrak{Tor}_\bullet^S
+  \mathscr T\!or_\bullet^S
   (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \longrightarrow
-  \mathfrak{Tor}_\bullet^S
+  \mathscr T\!or_\bullet^S
   (f_1,f_2;\mathscr Q_\bullet^{(1)},\mathscr P_\bullet^{(2)})
 \]
 es un isomorfismo. Aplicando las relaciones (6.7.4.1) y (6.7.4.2), se ve
@@ -2749,7 +2750,7 @@ de bi-$\partial$-funtores
 \begin{env}[6.7.6.1]
 \label{III.6.7.6.1}
 \[
-  \mathfrak{Tor}_n^S
+  \mathscr T\!or_n^S
   (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \xrightarrow{\sim}
   \mathscr H^{-n}\bigl(f_1\times_S f_2,
@@ -2770,7 +2771,7 @@ $M_{\bullet\bullet\bullet}^{(2)}$ es una resolución proyectiva de
 Cartan--Eilenberg de $L_{\bullet\bullet}^{(2)}$, en el sentido de
 ($0_{\mathrm I}$, 11.7.1). Por otra parte, los módulos
 $L_{ij}^{(1)}$ son \emph{planos} sobre $A$ en virtud de la hipótesis
-(I, 4.15.1); de ($0_{\mathrm I}$, 11.7.5) se deduce entonces un isomorfismo
+(1.4.15.1); de ($0_{\mathrm I}$, 11.7.5) se deduce entonces un isomorfismo
 canónico
 \begin{env}[6.7.6.2]
 \label{III.6.7.6.2}
@@ -2857,7 +2858,7 @@ $\mathbf Z$)
 \begin{env}[6.7.7.1]
 \label{III.6.7.7.1}
 \[
-  \mathfrak{Tor}_n^S
+  \boldsymbol{\mathscr T\!or}_n^S
   (f_1,f_2;\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})
   \xrightarrow{\sim}
   \bigoplus_{q_1+q_2=n}
@@ -2951,12 +2952,12 @@ $Y=Y^{(1)}\times_S Y^{(2)}$).
 
 \begin{proof}
 De (6.5.13) se deduce que los hipertor locales
-$\mathscr{T}\!or_n^S(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ son
+$\mathfrak{Tor}_n^S(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ son
 $\mathscr O_X$-módulos coherentes
 ($X=X^{(1)}\times_S X^{(2)}$ es localmente noetheriano, pues uno de los
-$X^{(i)}$ es, por hipótesis, de tipo finito sobre $S$ (I, 6.3.4 y 6.3.8)).
+$X^{(i)}$ es, por hipótesis, de tipo finito sobre $S$ (\textbf I, 6.3.4 y 6.3.8)).
 Como $Y$ es localmente noetheriano y $f_1\times_S f_2$ es propio
-(II, 5.4.2), de (6.2.5) se deduce que los términos
+(\textbf{II}, 5.4.2), de (6.2.5) se deduce que los términos
 ${}^{(b)}\mathscr E_{pq}^2$ de (6.7.3) son $\mathscr O_Y$-módulos coherentes.
 Como todas las sucesiones espectrales de (6.7.3) son birregulares en virtud
 de la hipótesis $2^\circ$, se concluye por ($0_{\mathrm I}$, 11.1.8).
@@ -3103,7 +3104,7 @@ $(B'_1\otimes_A B'_2)$-módulos
   \tag{6.7.10.5}\label{III.6.7.10.5.eq}
 \]
 \end{env}
-lo que, teniendo en cuenta (I, 1.6.5), no es sino el homomorfismo buscado
+lo que, teniendo en cuenta (\textbf I, 1.6.5), no es sino el homomorfismo buscado
 (6.7.10.2) en el caso particular considerado.
 
 Queda pasar al caso general siguiendo los procedimientos de pegado de (6.7.1)
@@ -3162,7 +3163,7 @@ $1\leq i\leq m$ de $\mathbf N$, escribiremos
 \begin{proposition}[6.7.12]
 \label{III.6.7.12}
 Con las notaciones de (6.7.11), sea $J$ un subconjunto de $I$ tal que, para
-$i\in I-J$, se tenga $X^{(i)}=Y^{(i)}=S$, que $f_i$ sea la identidad y que
+$i\in I\setmin J$, se tenga $X^{(i)}=Y^{(i)}=S$, que $f_i$ sea la identidad y que
 $\mathscr P_\bullet^{(i)}$ sea el complejo reducido al término de grado $0$
 igual a $\mathscr O_S$. Hay entonces un isomorfismo canónico de
 $\partial$-funtores
@@ -3181,7 +3182,7 @@ $\partial$-funtores
 
 \begin{proof}
 Podemos limitarnos a definir este isomorfismo cuando $S$ y los $Y^{(i)}$ son
-afines, pues el pegado se efectúa como de costumbre. Para $i\in I-J$, puede
+afines, pues el pegado se efectúa como de costumbre. Para $i\in I\setmin J$, puede
 tomarse el cubrimiento $\mathfrak U^{(i)}$ formado por el único conjunto $S$,
 y entonces
 $L_{\bullet\bullet}^{(i)}=C^\bullet(\mathfrak U^{(i)},
@@ -3193,7 +3194,7 @@ evidente.
 \begin{remark}[6.7.13]
 \label{III.6.7.13}
 Con las notaciones de (6.7.3), consideremos el $S$-isomorfismo canónico
-$Y^{(1)}\times_S Y^{(2)}\to Y^{(2)}\times_S Y^{(1)}$ (I, 3.3.5); entonces la
+$Y^{(1)}\times_S Y^{(2)}\to Y^{(2)}\times_S Y^{(1)}$ (\textbf I, 3.3.5); entonces la
 imagen por este isomorfismo de
 $\mathfrak{Tor}_\bullet^S(f_1,f_2;
 \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ es
@@ -3302,11 +3303,11 @@ $Z^{(1)}\times_SZ^{(2)}$, donde
 \[
   Z^{(1)}
   =
-  Y^{(1)}\times_S\cdots\times_SY^{(r)}
+  Y^{(1)}\times_S\ldots\times_SY^{(r)}
   \quad\hbox{y}\quad
   Z^{(2)}
   =
-  Y^{(r+1)}\times_S\cdots\times_SY^{(m)}.
+  Y^{(r+1)}\times_S\ldots\times_SY^{(m)}.
 \]
 Basta tratar el caso en que $S$ y todos los $Y^{(i)}$ son afines.
 El paso de este caso al caso general utiliza los métodos de
@@ -3349,7 +3350,7 @@ y cuyo término $E_2$ es
       X^{(r+1)},\ldots,X^{(m)};
       \sh P_\bullet^{(r+1)},\ldots,\sh P_\bullet^{(m)}
     \bigr)
-  \Bigr).
+  \Bigr)
 \end{split}
 \]
 \end{corollary}
@@ -3404,9 +3405,9 @@ La sucesión espectral buscada es, pues, precisamente
 la interpretación precedente de sus módulos de homología para los
 dos productos parciales
 \[
-  X^{(1)}\times_S\cdots\times_SX^{(r)}
+  X^{(1)}\times_S\ldots\times_SX^{(r)}
   \quad\hbox{y}\quad
-  X^{(r+1)}\times_S\cdots\times_SX^{(m)}.
+  X^{(r+1)}\times_S\ldots\times_SX^{(m)}.
 \]
 Finalmente, las afirmaciones de regularidad se deducen de
 \sref{III.6.3.2}. En efecto, como los
@@ -3549,26 +3550,26 @@ y cuyos términos $E_2$ son respectivamente
   (f_1,\ldots,f_m;
    \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)}),\\
   &\mathscr H_{q''}(\mathscr Q'_\bullet)
-  \Bigr),
+  \Bigr)
 \end{split}
 \]
 \[
 \begin{split}
   {}^{(f)}\mathscr E_{pq}^2
-  =\bigoplus_{q_1+q_2+\cdots+q_{m+1}=q}
+  =\bigoplus_{q_1+q_2+\ldots+q_{m+1}=q}
   \mathscr{T}\!or_p^{S'}\Bigl(
   &\mathfrak{Tor}_{q_1}^S
   (f_1,1_{S'};\mathscr P_\bullet^{(1)},\mathscr O_{S'}),\ldots,\\
   &\mathfrak{Tor}_{q_m}^S
   (f_m,1_{S'};\mathscr P_\bullet^{(m)},\mathscr O_{S'}),
   \mathscr H_{q_{m+1}}(\mathscr Q'_\bullet)
-  \Bigr),
+  \Bigr)
 \end{split}
 \]
 \[
 \begin{split}
   {}^{(f')}\mathscr E_{pq}^2
-  =\bigoplus_{q_1+\cdots+q_m=q}
+  =\bigoplus_{q_1+\ldots+q_m=q}
   \mathfrak{Tor}_p^{S'}\Bigl(
   &f'_1,\ldots,f'_m,1_{S'};\\
   &\mathscr{T}\!or_{q_1}^S
@@ -3618,26 +3619,26 @@ y cuyos términos $E_2$ son respectivamente
   (X^{(1)},\ldots,X^{(m)};
    \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)}),\\
   &H_{q''}(Q'_\bullet)
-  \Bigr),
+  \Bigr)
 \end{split}
 \]
 \[
 \begin{split}
   {}^{(f)}E_{pq}^2
-  =\bigoplus_{q_1+q_2+\cdots+q_{m+1}=q}
+  =\bigoplus_{q_1+q_2+\ldots+q_{m+1}=q}
   \operatorname{Tor}_p^{A'}\Bigl(
   &\mathbf{Tor}_{q_1}^S
   (X^{(1)},S';\mathscr P_\bullet^{(1)},\mathscr O_{S'}),\ldots,\\
   &\mathbf{Tor}_{q_m}^S
   (X^{(m)},S';\mathscr P_\bullet^{(m)},\mathscr O_{S'}),
   H_{q_{m+1}}(Q'_\bullet)
-  \Bigr),
+  \Bigr)
 \end{split}
 \]
 \[
 \begin{split}
   {}^{(f')}E_{pq}^2
-  =\bigoplus_{q_1+\cdots+q_m=q}
+  =\bigoplus_{q_1+\ldots+q_m=q}
   \mathbf{Tor}_p^{S'}\Bigl(
   &X'^{(1)},\ldots,X'^{(m)},S';\\
   &\mathscr{T}\!or_{q_1}^S
@@ -3654,7 +3655,7 @@ y cuyos términos $E_2$ son respectivamente
 No volveremos sobre el primero de estos funtores espectrales, que fue tratado
 en \sref{III.6.8.3} y solo se incluye aquí como recordatorio. Para definir
 los otros, consideremos para cada $i$ un cubrimiento abierto afín finito
-$\mathfrak U^{(i)}$ de $X^{(i)}$ y, si
+$\mathfrak U^{(i)}$ de $X^{(i)}$, y, si
 $u_i:X'^{(i)}\to X^{(i)}$ es la proyección canónica, el cubrimiento abierto
 afín finito correspondiente
 $\mathfrak U'^{(i)}=u_i^{-1}(\mathfrak U^{(i)})$.
@@ -3671,7 +3672,7 @@ considerando el tricomplejo
 \[
   M_{\bullet\bullet\bullet}
   =M_{\bullet\bullet\bullet}^{(1)}\otimes_A
-   M_{\bullet\bullet\bullet}^{(2)}\otimes_A\cdots\otimes_A
+   M_{\bullet\bullet\bullet}^{(2)}\otimes_A\ldots\otimes_A
    M_{\bullet\bullet\bullet}^{(m)}\otimes_A Q'_\bullet
 \]
 (donde $Q'_\bullet$ se considera como un tricomplejo cuyos dos últimos
@@ -3682,7 +3683,7 @@ $Q'_\bullet$ es un complejo de $A'$-módulos)
 \[
   M_{\bullet\bullet\bullet}
   =M_{\bullet\bullet\bullet}'^{(1)}\otimes_{A'}
-   M_{\bullet\bullet\bullet}'^{(2)}\otimes_{A'}\cdots\otimes_{A'}
+   M_{\bullet\bullet\bullet}'^{(2)}\otimes_{A'}\ldots\otimes_{A'}
    M_{\bullet\bullet\bullet}'^{(m)}\otimes_{A'} Q'_\bullet.
 \]
 Ahora bien, consideremos cada uno de los complejos
@@ -3703,7 +3704,7 @@ cuando $\mathscr P_\bullet^{(i)}$ está acotado inferiormente) y cuyo término
 $E_2$ viene dado por
 \[
   E_{pq}^2
-  =\bigoplus_{q_1+\cdots+q_{m+1}=q}
+  =\bigoplus_{q_1+\ldots+q_{m+1}=q}
   \operatorname{Tor}_p^{A'}
   (H_{q_1}(M_{\bullet\bullet\bullet}'^{(1)}),\ldots,
    H_{q_m}(M_{\bullet\bullet\bullet}'^{(m)}),H_{q_{m+1}}(Q'_\bullet)).
@@ -3727,14 +3728,14 @@ $M_{\bullet\bullet\bullet}'^{(i)}$ son $A'$-módulos proyectivos, la teoría
 general de la hiperhomología muestra que la homología del bicomplejo
 \[
   M_{\bullet\bullet\bullet}'^{(1)}\otimes_{A'}
-  M_{\bullet\bullet\bullet}'^{(2)}\otimes_{A'}\cdots\otimes_{A'}
+  M_{\bullet\bullet\bullet}'^{(2)}\otimes_{A'}\ldots\otimes_{A'}
   M_{\bullet\bullet\bullet}'^{(m)}\otimes_{A'} Q'_\bullet
 \]
 es canónicamente isomorfa a su hiperhomología \sref[0]{0.11.6.5}; por tanto,
 es el término límite de una sucesión espectral cuyo término $E_2$ es igual a
 \[
   E_{pq}^2
-  =\bigoplus_{q_1+\cdots+q_{m+1}=q}
+  =\bigoplus_{q_1+\ldots+q_{m+1}=q}
   \operatorname{Tor}_p^{A'}
   (H_{q_1}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(1)}),\ldots,
    H_{q_m}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(m)}),
@@ -3746,7 +3747,7 @@ $H_0^{\mathrm{II}}(Q'_\bullet)=Q'_\bullet$; la fórmula precedente también
 se escribe
 \[
   E_{pq}^2
-  =\bigoplus_{q_1+\cdots+q_m=q}
+  =\bigoplus_{q_1+\ldots+q_m=q}
   \operatorname{Tor}_p^{A'}
   (H_{q_1}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(1)}),\ldots,
    H_{q_m}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(m)}),Q'_\bullet).
@@ -3761,7 +3762,7 @@ en virtud de \sref{III.6.3.4}; pero
 $L_{-j,k}^{(i)}=C^j(\mathfrak U^{(i)},\mathscr P_k^{(i)})$, suma directa de
 los $\Gamma(V,\mathscr P_k^{(i)})$, donde $V$ recorre las intersecciones
 (afines) de $j+1$ conjuntos del cubrimiento $\mathfrak U^{(i)}$; si
-$V'=u_i^{-1}(V)$, $V'$ es afín en $X'^{(i)}$ y de
+$V'=u_i^{-1}(V)$, $V'$ es afín en $X'^{(i)}$, y de
 \sref{III.6.4.1.1} resulta que se tiene
 \[
   \Gamma\bigl(V',\mathscr{T}\!or_{q_i}^S
@@ -3773,7 +3774,7 @@ $H_{q_i}^{\mathrm{II}}(M_{\bullet\bullet\bullet}'^{(i)})$, se obtiene la
 expresión
 \[
   C^\bullet\bigl(\mathfrak U'^{(i)},
-  \mathscr{T}\!or_{q_i}^S(\mathscr P_\bullet^{(i)},\mathscr O_{S'})\bigr),
+  \mathscr{T}\!or_{q_i}^S(\mathscr P_\bullet^{(i)},\mathscr O_{S'})\bigr)
 \]
 lo que da finalmente la expresión buscada para el término $E_2$ de la
 sucesión $(f')$. El hecho de que esta sucesión sea birregular bajo las
@@ -3844,7 +3845,7 @@ isomorfismos canónicos funtoriales
    \mathscr P_\bullet'^{(1)},\ldots,
    \mathscr P_\bullet'^{(m)},\mathscr Q'_\bullet)
   \xrightarrow{\sim}\\
-  &\qquad
+  &\qquad\xrightarrow{\sim}
   \bigoplus_{n'+n''=n}
   \mathfrak{Tor}_{n'}^S
   (f_1,\ldots,f_m;
@@ -3911,7 +3912,7 @@ degenerada; la hipótesis $2^\circ$ implica además que es birregular
   (f_1,\ldots,f_m,1_{S'};
    \mathscr P_\bullet^{(1)},\ldots,
    \mathscr P_\bullet^{(m)},\mathscr Q'_\bullet)
-  \longrightarrow {}^{(f')}\mathscr E_{n0}^2\\
+  \longrightarrow {}^{(f')}\mathscr E_{n0}^2=\\
   &\qquad=
   \mathfrak{Tor}_n^{S'}
   (f'_1,\ldots,f'_m,1_{S'};
@@ -3936,7 +3937,7 @@ es birregular, el homomorfismo de borde
   (f_1,\ldots,f_m,1_{S'};
    \mathscr P_\bullet^{(1)},\ldots,
    \mathscr P_\bullet^{(m)},\mathscr Q'_\bullet)
-  \longrightarrow {}^{(e)}\mathscr E_{0n}^2\\
+  \longrightarrow {}^{(e)}\mathscr E_{0n}^2=\\
   &\qquad=
   \bigoplus_{n'+n''=n}
   \mathfrak{Tor}_{n'}^S
@@ -3987,7 +3988,7 @@ y $q_i\ne0$; calculemos
   \mathscr{T}\!or_{q_1}^S(\mathscr P_\bullet^{(1)},\mathscr O_{S'}),
   \ldots,\\
   &\mathscr{T}\!or_{q_m}^S(\mathscr P_\bullet^{(m)},\mathscr O_{S'})
-  \Bigr).
+  \Bigr)
 \end{split}
 \tag{6.9.7.1}\label{III.6.9.7.1.eq}
 \]
@@ -3997,20 +3998,20 @@ por el método de \sref{III.6.6.2}, con ayuda de la imagen inversa de un
 cubrimiento afín fijo $\mathfrak U^{(i)}$ de $X^{(i)}$
 ($1\leq i\leq m$) (independiente de $S'$ y de los
 $\mathscr P_\bullet^{(i)}$); los términos $L_{jk}^{(i)}$ son nulos para
-$j<-N_i$ (que solo depende de $\mathfrak U^{(i)}$); si alguno de los $q_i$
+$j<\setmin N_i$ (que solo depende de $\mathfrak U^{(i)}$); si alguno de los $q_i$
 no es nulo, el complejo simple cuya homología de grado $p$ es
 \eqref{III.6.9.7.1.eq} tiene términos nulos en todos los grados
 \[
   <r+\sum_{j\ne i}d_j-\sum_{i=1}^m N_i,
 \]
-por lo que \eqref{III.6.9.7.1.eq} es nulo para $p<r-N$, designando por $N$
+por lo que \eqref{III.6.9.7.1.eq} es nulo para $p<r\setmin N$, designando por $N$
 el mayor de los números
 \[
   \sum_{i=1}^m N_i-\sum_{j\ne i}d_j.
 \]
-Se concluye que ${}^{(f')}\mathscr E_{pq}^2=0$ para $q\ne0$ y $p<r-N$;
+Se concluye que ${}^{(f')}\mathscr E_{pq}^2=0$ para $q\ne0$ y $p<r\setmin N$;
 como, por otra parte, ${}^{(f')}\mathscr E_{pq}^2=0$ para $q<0$, se ve que el
-homomorfismo de borde \eqref{III.6.9.6.4.eq} es biyectivo para $n<r-N$
+homomorfismo de borde \eqref{III.6.9.6.4.eq} es biyectivo para $n<r\setmin N$
 \emph{(M, XV, 5.6)} (para $\mathscr Q'_\bullet=\mathscr O_{S'}$). En segundo
 lugar, si
 \[
@@ -4139,10 +4140,10 @@ inferiormente, formado por $\mathscr O_X$-módulos cuasicoherentes y planos
 sobre $S$. Se supone además que los $\mathscr O_Y$-módulos
 $\mathscr H^n(f,\mathscr P_\bullet)$ son planos sobre $S$. Para todo $s\in S$,
 denotemos por $X_s$ y $Y_s$ las fibras
-$X\otimes_S k(s)$, $Y\otimes_S k(s)$,
+$X\otimes_S \boldsymbol k(s)$, $Y\otimes_S \boldsymbol k(s)$,
 por $f_s:X_s\to Y_s$ el morfismo $f\times_S1$, y por
 $\mathscr P_\bullet^s$ el complejo
-$\mathscr P_\bullet\otimes_{\mathscr O_S}k(s)$ de
+$\mathscr P_\bullet\otimes_{\mathscr O_S}\boldsymbol k(s)$ de
 $\mathscr O_{X_s}$-módulos. Se tienen entonces isomorfismos canónicos
 funtoriales
 \begin{env}[6.9.10.1]
@@ -4150,14 +4151,14 @@ funtoriales
 \[
   \mathscr H^n(f_s,\mathscr P_\bullet^s)
   \xrightarrow{\sim}
-  \mathscr H^n(f,\mathscr P_\bullet)\otimes_{\mathscr O_S}k(s).
+  \mathscr H^n(f,\mathscr P_\bullet)\otimes_{\mathscr O_S}\boldsymbol k(s).
   \tag{6.9.10.1}\label{III.6.9.10.1.eq}
 \]
 \end{env}
 \end{corollary}
 
 Se tiene así, bajo hipótesis de planitud convenientes, un caso en el que la
-formación de los funtores derivados $R^nf_*(\mathscr F)$ «conmuta con el paso
+formación de los funtores derivados $\mathrm R^nf_*(\mathscr F)$ «conmuta con el paso
 a las fibras», que volveremos a encontrar por otro método en el §~7.
 
 \subsection{Estructura local de ciertos funtores cohomológicos}
@@ -4246,7 +4247,7 @@ teniendo en cuenta la Observación \sref{III.6.6.6}. Con las
 notaciones allí utilizadas, cada $L_{\bullet\bullet}^{(i)}$ es un
 bicomplejo de $A_i$-módulos, donde $A_i$ denota el anillo de
 $Y^{(i)}$. Tiene, por tanto, una resolución proyectiva de
-Cartan--Eilenberg $M_{\bullet\bullet\bullet}^{(i)}$ (en el sentido
+Cartan-Eilenberg $M_{\bullet\bullet\bullet}^{(i)}$ (en el sentido
 de \sref[0]{0.11.7.1}) por $A_i$-módulos proyectivos. Por
 \sref{III.6.6.6}, el miembro izquierdo de
 \eqref{III.6.10.1.1.eq} es canónicamente isomorfo a
@@ -4263,7 +4264,7 @@ donde
   M_{\bullet\bullet\bullet}^{(1)}
   \otimes_A
   M_{\bullet\bullet\bullet}^{(2)}
-  \otimes_A\cdots\otimes_A
+  \otimes_A\ldots\otimes_A
   M_{\bullet\bullet\bullet}^{(n)}
 \]
 y $\sh Q_\bullet'=\widetilde{Q_\bullet'}$.
@@ -4314,7 +4315,7 @@ Con las notaciones de \sref{III.6.10.1},
   \sh H_\bullet
   (\sh R_\bullet\otimes_S\sh Q_\bullet')
   \simeq
-  \mathbf{Tor}_\bullet(\sh R_\bullet,\sh Q_\bullet'),
+  \mathscr T\!or_\bullet(\sh R_\bullet,\sh Q_\bullet'),
 \]
 porque $\sh R_\bullet$ consta de $\sh O_Y$-módulos planos sobre
 $S$ \sref{III.6.5.9}. Es, por tanto, según \sref{III.6.5.4}, el
@@ -4397,7 +4398,7 @@ constan de $B$-módulos libres; como
 $M_{\bullet\bullet\bullet}$ es su producto tensorial sobre $B$,
 se puede exigir además en \sref{III.6.10.1} que
 $\sh R_\bullet$ esté asociado a un complejo de $B$-módulos
-libres.
+\emph{libres}.
 
 Además, por (M, XVII, 1.2), el tricomplejo
 $M_{\bullet\bullet\bullet}$ depende funtorialmente de cada uno de
@@ -4439,16 +4440,16 @@ hipertor.
 
 Pongamos
 \[
-  X=X^{(1)}\times_SX^{(2)}\times_S\cdots\times_SX^{(n)},
+  X=X^{(1)}\times_SX^{(2)}\times_S\ldots\times_SX^{(n)},
   \qquad
-  f=f_1\times_Sf_2\times_S\cdots\times_Sf_n,
+  f=f_1\times_Sf_2\times_S\ldots\times_Sf_n,
 \]
 \[
   \sh P_\bullet
   =
   \sh P_\bullet^{(1)}
   \otimes_S\sh P_\bullet^{(2)}
-  \otimes_S\cdots\otimes_S\sh P_\bullet^{(n)},
+  \otimes_S\ldots\otimes_S\sh P_\bullet^{(n)},
 \]
 y
 \[
@@ -5125,7 +5126,7 @@ es la suma directa de las aplicaciones $\bb Z$-lineales
   T_\alpha:
   \Hom_A(A_s,L_\alpha)
   \longrightarrow
-  \Hom_{\bb Z}(T(A_s),T(L_\alpha)),
+  \Hom_{\bb Z}(T(A_s),T(L_\alpha))
 \]
 por la hipótesis sobre $T$. Solo queda, por tanto, demostrar el
 lema para $L=A_s$; pero entonces $t_L$ es precisamente el
@@ -5167,7 +5168,7 @@ para todo $A$-módulo a izquierda $M$. Existe una sucesión exacta
 \[
   L'\longrightarrow L\longrightarrow M\longrightarrow0,
 \]
-donde $L$ y $L'$ son $A$-módulos libres a izquierda. Como $T$ y
+donde $L$ y $L'$ son $A$-módulos \emph{libres} a izquierda. Como $T$ y
 $T'$ son exactos por la derecha, existe un diagrama conmutativo
 \[
 \xymatrix{
@@ -5703,7 +5704,7 @@ de $\Tor$, muestra que
   \Tor^A_1(N,k)=0.
 \]
 Se sigue que $N=T_p(A)$ es un $A$-módulo plano
-\emph{(0, 10.1.3)}.
+\emph{(\textbf 0, 10.1.3)}.
 \end{proof}
 
 \begin{lemma}[7.3.6]
@@ -5776,7 +5777,7 @@ Supongamos que $T_\bullet$ satisface las condiciones generales de
 \sref{III.7.3.7} y conmuta con los límites inductivos. Supongamos
 además que $A$ es un dominio entero y que cada $T_n(A)$ es un
 $A$-módulo de presentación finita. Entonces, para todo entero $N$,
-existe un $f\in A-\{0\}$ tal que
+existe un $f\in A\setmin\{0\}$ tal que
 \[
   T_p^{(A_f)}:\cat{Ab}_{A_f}\longrightarrow\cat{Ab}
 \]
@@ -5803,7 +5804,7 @@ presentación finita, existe un $f$ con la propiedad deseada
 no.~1, cor.\ de la prop.~2).
 
 Si solo hay un número finito de índices $i$ tales que $T_i\neq0$,
-se puede elegir $f\in A-\{0\}$ de modo que todos los
+se puede elegir $f\in A\setmin\{0\}$ de modo que todos los
 $T_p^{(A_f)}$ sean exactos.
 \end{proof}
 
@@ -5827,7 +5828,7 @@ Sea $\mathfrak p$ un ideal primo minimal de $A$. El anillo
 $B=A/\mathfrak p$ es un dominio entero, y $\Spec(B)$ se identifica
 con una componente irreducible del espacio topológico $\Spec(A)$.
 Probaremos por inducción sobre $p\leq N$ que existe un
-$f_p\in B-\{0\}$ tal que, si $B'=B_{f_p}$, entonces
+$f_p\in B\setmin\{0\}$ tal que, si $B'=B_{f_p}$, entonces
 $T_i^{(B')}$ es exacto y $T_i(B')$ es un $B'$-módulo de tipo finito
 para $i\leq p$.
 
@@ -5880,7 +5881,7 @@ La demostración de \sref{III.7.3.9} solo ha utilizado la hipótesis
 de tipo finito sobre $T_i(A)$ para $i\leq N$. Podemos, por tanto,
 aplicar ese corolario al dominio entero $B$, al funtor
 $T_\bullet^{(B)}$ y a $N=p+1$, lo que completa la inducción. Existe,
-en consecuencia, un $f_N\in B-\{0\}$ tal que $\Spec(B_{f_N})$ es un
+en consecuencia, un $f_N\in B\setmin\{0\}$ tal que $\Spec(B_{f_N})$ es un
 abierto $V$, denso en $\Spec(B)$, que no interseca ninguna otra
 componente irreducible de $\Spec(A)$.
 
@@ -5896,8 +5897,8 @@ constantes, pues
 Repitiendo el mismo razonamiento para cada componente irreducible de
 $\Spec(A)$ se prueba el corolario. Podemos, por tanto, reducirnos al
 caso en que $A$ es un dominio entero. El razonamiento de
-\sref{III.7.3.9} da entonces un $f\in A-\{0\}$ tal que los
-$T_p(A_f)$ son $A_f$-módulos libres de tipo finito para $p\leq N$.
+\sref{III.7.3.9} da entonces un $f\in A\setmin\{0\}$ tal que los
+$T_p(A_f)$ son $A_f$-módulos \emph{libres} de tipo finito para $p\leq N$.
 La conclusión resulta de \sref{III.7.3.4}.
 \end{proof}
 
@@ -5950,7 +5951,7 @@ y es inmediato que (d) implica ($\mathrm{d}'$).
 Queda por mostrar que ($\mathrm{d}'$) implica (a) cuando $A$ es
 reducido. Razonamos por inducción sobre $q\leq p$, pues $T_q$ es
 exacto para $q\leq i_0$. Supongamos que $T_k$ es exacto para
-$k\leq q<p$. Mostraremos que $T_{q+1}(A)$ es un $A$-módulo libre.
+$k\leq q<p$. Mostraremos que $T_{q+1}(A)$ es un $A$-módulo \emph{libre}.
 Por la hipótesis de inducción, el homomorfismo canónico
 \[
   T_{q+1}(A)\otimes_A M
@@ -5977,7 +5978,7 @@ funtores homológicos del tipo particular que estudiaremos en
 intervenir uno de los $T_p$.
 
 \subsection{\texorpdfstring{Criterios de exactitud para los funtores
-$H_\bullet(P_\bullet\otimes_A M)$}{Criterios de exactitud para los funtores H.(P. tensor M)}}
+$H_\bullet(P_\bullet\otimes_A M)$.}{Criterios de exactitud para los funtores H.(P. tensor M)}}
 \label{subsection:III.7.4}
 \label{III.7.4}
 
@@ -6038,7 +6039,7 @@ $p\in\bb Z$, las propiedades siguientes son equivalentes:
   \item[(c)] existe un complejo $P'_\bullet$ de $A$-módulos planos a derecha
     tal que la diferencial
     \[
-      d'_{p+1}:P'_{p+1}\longrightarrow P'_p
+      d_{p+1}:P'_{p+1}\longrightarrow P'_p
     \]
     sea nula, y un isomorfismo de funtores homológicos de
     $H_\bullet(P_\bullet\otimes_A M)$ sobre
@@ -6085,13 +6086,13 @@ monomorfismo para todo monomorfismo $f:M\to N$, luego el diagrama
 \eqref{III.7.4.2.1.eq} muestra que $u$ es un monomorfismo, y, por consiguiente,
 $T_p$ (que ya es semiexacto) es exacto por la izquierda. Así, (a) y (b) son
 equivalentes. Es inmediato que (c) implica (a), pues si
-$d'_{p+1}:P'_{p+1}\to P'_p$ es nula, y
+$d_{p+1}:P'_{p+1}\to P'_p$ es nula, y
 $0\to M'\to M\to M''\to0$ es una sucesión exacta de $A$-módulos, el
 homomorfismo de borde en la sucesión exacta
 \[
-  H_{p+1}(P'_\bullet\otimes M'')
-  \xrightarrow{\partial}H_p(P'_\bullet\otimes M')
-  \longrightarrow H_p(P'_\bullet\otimes M)
+  H_{p+1}(P_\bullet\otimes M'')
+  \xrightarrow{\partial}H_p(P_\bullet\otimes M')
+  \longrightarrow H_p(P_\bullet\otimes M)
 \]
 \oldpage[III]{187}
 es nulo por definición \emph{(M, IV, 1)}, luego $T_p$ es exacto por la
@@ -6109,8 +6110,8 @@ $Z_{p+1}(P_\bullet)$ es plano \sref[0]{0.6.1.2}. Tomaremos
 \[
   P'_i=P_i\quad\text{para }i\ne p\text{ y }i\ne p+1,
   \qquad
-  P'_p=Z'_p(P_\bullet),
-  \qquad
+  P'_p=Z'_p(P_\bullet)
+  \qquad\text{et}\qquad
   P'_{p+1}=Z_{p+1}(P_\bullet);
 \]
 como diferencial $d'_i:P'_i\to P'_{i-1}$, se tomará la del complejo
@@ -6252,7 +6253,7 @@ por la izquierda, primero se puede, como en \sref{III.7.4.4}, reducir al caso
 en que los $P_i$ son planos y de tipo finito, luego (puesto que $A$ es
 noetheriano) proyectivos de tipo finito (Bourbaki,
 \emph{Algèbre commutative}, cap.~II, \S~5, n\textsuperscript{o}~2, cor.~del
-teor.~1). El dual $\check P_i$ de $P_i$ es entonces también un $A$-módulo
+teor.~1). El \emph{dual} $\check P_i$ de $P_i$ es entonces también un $A$-módulo
 proyectivo de tipo finito, $P_i$ es canónicamente isomorfo al dual de
 $\check P_i$, y el homomorfismo canónico
 \[
@@ -6301,10 +6302,10 @@ buscado. Además, $Q$, por ser un cociente de $\check P_p$, es de tipo finito.
 Supongamos verificadas las condiciones generales de \sref{III.7.4.4}. Entonces,
 para todo $A$-módulo $M$ de tipo finito:
 \begin{enumerate}
-  \item[(i)] los $T_i(M)$ son $A$-módulos de tipo finito;
-  \item[(ii)] para todo ideal $\mathfrak m$ de $A$, el homomorfismo canónico
+  \item[\textup{(i)}] los $T_i(M)$ son $A$-módulos de tipo finito;
+  \item[\textup{(ii)}] para todo ideal $\mathfrak m$ de $A$, el homomorfismo canónico
     \[
-      \widehat{T_i(M)}
+      (T_i(M))^{\widehat{\,}}
       \longrightarrow
       \varprojlim_n T_i\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
       \tag{7.4.7.1}\label{III.7.4.7.1.eq}
@@ -6333,9 +6334,9 @@ tipo finito. Para todo $A$-módulo $M$ de tipo finito, pongamos
 \]
 entonces, los homomorfismos canónicos
 \[
-  \widehat{K(M)}\longrightarrow\varprojlim_n K(M_n),
+  (K(M))^{\widehat{\,}}\longrightarrow\varprojlim_n K(M_n),
   \qquad
-  \widehat{C(M)}\longrightarrow\varprojlim_n C(M_n)
+  (C(M))^{\widehat{\,}}\longrightarrow\varprojlim_n C(M_n)
   \tag{7.4.7.3}\label{III.7.4.7.3.eq}
 \]
 (donde se ha puesto
@@ -6345,18 +6346,18 @@ para todo ideal $\mathfrak m$ de $A$.
 
 \begin{proof}
 Como $E\otimes M$ y $F\otimes M$ son de tipo finito, y el funtor
-$M\mapsto\widehat M$ es exacto en la categoría de los $A$-módulos de tipo
-finito \sref[0]{0.7.3.3}, $\widehat{K(M)}$ y $\widehat{C(M)}$ son,
+$M\leadsto\widehat M$ es exacto en la categoría de los $A$-módulos de tipo
+finito \sref[0]{0.7.3.3}, $(K(M))^{\widehat{\,}}$ y $(C(M))^{\widehat{\,}}$ son,
 respectivamente, el núcleo y el conúcleo de
 \[
   \widehat{(u\otimes1)}:
   \widehat{(E\otimes M)}\longrightarrow\widehat{(F\otimes M)}.
 \]
 La exactitud por la izquierda del funtor $\varprojlim$ muestra, por tanto, que
-$\widehat{K(M)}=\varprojlim_n K(M_n)$; por otra parte, la exactitud por la
+$(K(M))^{\widehat{\,}}=\varprojlim_n K(M_n)$; por otra parte, la exactitud por la
 derecha del producto tensorial prueba que
 $C(M_n)=C(M)\otimes_A(A/\mathfrak m^{n+1})$, luego
-$\widehat{C(M)}=\varprojlim_n C(M_n)$ por definición.
+$(C(M))^{\widehat{\,}}=\varprojlim_n C(M_n)$ por definición.
 \end{proof}
 
 \begin{remark}[7.4.8]
@@ -6408,7 +6409,7 @@ forman evidentemente un sistema proyectivo de $A$-homomorfismos. Por
 paso al límite dan, por tanto, un $\widehat A$-homomorfismo funtorial
 en $M$
 \[
-  \widehat{T(M)}
+  (T(M))^{\widehat{\,}}
   \longrightarrow
   \varprojlim_n T(M_n),
   \tag{7.5.1.1}\label{III.7.5.1.1.eq}
@@ -6461,26 +6462,26 @@ finito.
 Los módulos $T(M)$ y $T(N)$ son entonces de tipo finito. Como $A$ es
 noetheriano y local, basta probar que
 \[
-  \widehat{T(u)}:
-  \widehat{T(M)}
+  (T(u))^{\widehat{\,}}:
+  (T(M))^{\widehat{\,}}
   \longrightarrow
   \widehat{T(N)}
 \]
 es sobreyectivo \sref[0]{0.7.3.5} y \sref[0]{0.6.4.1}. Por hipótesis,
-$\widehat{T(M)}$ y $\widehat{T(N)}$ son, respectivamente,
+$(T(M))^{\widehat{\,}}$ y $\widehat{T(N)}$ son, respectivamente,
 \[
   \varprojlim_n T(M_n)
   \quad\hbox{y}\quad
   \varprojlim_n T(N_n).
 \]
-Así, $\widehat{T(u)}$ es el límite inverso del sistema proyectivo de
+Así, $(T(u))^{\widehat{\,}}$ es el límite inverso del sistema proyectivo de
 homomorfismos
 \[
   T(u\otimes 1_{A_n}):T(M_n)\longrightarrow T(N_n).
 \]
 La condición (b) significa precisamente que estos homomorfismos son
 sobreyectivos. Además, $T(M_n)$ es un $A_n$-módulo de tipo finito y
-$A_n$ es artiniano. Se sigue que $\widehat{T(u)}$ es sobreyectivo
+$A_n$ es artiniano. Se sigue que $(T(u))^{\widehat{\,}}$ es sobreyectivo
 \sref[0]{0.13.1.2} y \sref[0]{0.13.2.2}.
 
 Es claro que (a) implica (c), y (c) implica (d). Finalmente,
@@ -6500,13 +6501,13 @@ Como $k$ es el único $A$-módulo simple, de
 \eqref{III.7.3.5.4.eq} se deduce que $T(E)=0$ para todo $A$-módulo
 de longitud finita $E$. Si $M$ es de tipo finito, entonces
 \[
-  \widehat{T(M)}
+  (T(M))^{\widehat{\,}}
   \simeq
   \varprojlim_n T(M_n).
 \]
 Cada $M_n$ es de longitud finita, de modo que
-$\widehat{T(M)}=0$. Por hipótesis, $T(M)$ es de tipo finito y se
-inyecta en $\widehat{T(M)}$ \sref[0]{0.7.3.5}; por consiguiente,
+$(T(M))^{\widehat{\,}}=0$. Por hipótesis, $T(M)$ es de tipo finito y se
+inyecta en $(T(M))^{\widehat{\,}}$ \sref[0]{0.7.3.5}; por consiguiente,
 $T(M)=0$. Finalmente, para un $A$-módulo arbitrario $M$, el módulo
 $T(M)$ es el límite inductivo de los $T(N_\alpha)$, donde los
 $N_\alpha$ recorren los submódulos de tipo finito de $M$. Esto
@@ -6562,7 +6563,7 @@ y (e) son equivalentes; la misma proposición da también la
 equivalencia de (a), (c) y (d).
 
 Finalmente, todo módulo plano de tipo finito sobre el anillo local
-$A$ es libre (Bourbaki, \emph{Algèbre commutative}, cap.~II,
+$A$ es \emph{libre} (Bourbaki, \emph{Algèbre commutative}, cap.~II,
 \S~3, n\textsuperscript{o}~2, cor.~2 de la prop.~5). La equivalencia
 de (a) y (b) resulta entonces de \sref{III.7.3.1} y
 \sref{III.7.3.3}.
@@ -6573,9 +6574,9 @@ de (a) y (b) resulta entonces de \sref{III.7.3.1} y
 Supongamos verificadas las hipótesis generales de
 \sref{III.7.5.4}.
 \begin{enumerate}
-  \item[(i)] Si $T_p(k)=0$, entonces $T_p=0$, el funtor $T_{p+1}$
+  \item[\textup{(i)}] Si $T_p(k)=0$, entonces $T_p=0$, el funtor $T_{p+1}$
     es exacto por la derecha y $T_{p-1}$ es exacto por la izquierda.
-  \item[(ii)] Si $T_{p-1}(k)=T_{p+1}(k)=0$, entonces $T_p$ es
+  \item[\textup{(ii)}] Si $T_{p-1}(k)=T_{p+1}(k)=0$, entonces $T_p$ es
     exacto, el homomorfismo canónico
     \[
       T_p(A)\otimes_A M
@@ -6600,9 +6601,9 @@ Supongamos verificadas las hipótesis generales de
 \sref{III.7.5.4}, y supongamos además que $A$ es un anillo de
 valuación discreta.
 \begin{enumerate}
-  \item[(i)] El funtor $T_p$ es exacto por la derecha si y solo si
+  \item[\textup{(i)}] El funtor $T_p$ es exacto por la derecha si y solo si
     $T_{p-1}(A)$ es un $A$-módulo libre.
-  \item[(ii)] El funtor $T_p$ es exacto si y solo si $T_p(A)$ y
+  \item[\textup{(ii)}] El funtor $T_p$ es exacto si y solo si $T_p(A)$ y
     $T_{p-1}(A)$ son $A$-módulos libres.
 \end{enumerate}
 \end{corollary}
@@ -6632,7 +6633,7 @@ da la sucesión exacta de homología
   \longrightarrow T_p(k)
   \longrightarrow T_{p-1}(A)
   \xrightarrow{h_f}
-  T_{p-1}(A).
+  T_{p-1}(A)
 \]
 Así, $T_{p-1}(A)$ es libre si y solo si
 $T_p(A)\to T_p(k)$ es sobreyectivo, y la conclusión resulta de
@@ -6704,7 +6705,7 @@ un anillo de valuación discreta y $x$ es su ideal maximal
 local noetheriano, de ideal maximal $\mathfrak m$ y cuerpo residual
 $k$. Las condiciones siguientes son equivalentes:
 \begin{enumerate}
-  \item[a)] Para todo complejo $P_\bullet$ de $A$-módulos planos de
+  \item[\emph{a)}] Para todo complejo $P_\bullet$ de $A$-módulos planos de
     tipo finito,
     \[
       \operatorname{rank}_k T_p(k)
@@ -6713,14 +6714,14 @@ $k$. Las condiciones siguientes son equivalentes:
       \qquad\text{para todo entero }p.
       \tag{7.6.11.2}\label{III.7.6.11.2}
     \]
-  \item[b)] Para todo $A$-módulo $M$ de tipo finito,
+  \item[\emph{b)}] Para todo $A$-módulo $M$ de tipo finito,
     \[
       \operatorname{rank}_k(M\otimes_A k)
       \geq
       \operatorname{rank}_k(\check M\otimes_A k).
       \tag{7.6.11.3}\label{III.7.6.11.3}
     \]
-  \item[c)] Para todo $A$-módulo $N$ de tipo finito,
+  \item[\emph{c)}] Para todo $A$-módulo $N$ de tipo finito,
     \[
       \operatorname{rank}_k\Tor_1^A(N,k)
       \geq
@@ -6729,7 +6730,7 @@ $k$. Las condiciones siguientes son equivalentes:
     \]
 \end{enumerate}
 Equivalentemente, por cambio de dimensión (M, V, 7.2), puede
-exigirse, para todo $i\geq1$,
+exigirse, para todo $i\geq1$
 \[
   \operatorname{rank}_k\Tor_i^A(N,k)
   \geq
@@ -7249,7 +7250,7 @@ Entonces:
 \begin{enumerate}
   \item[(i)] La función $d_p$ es constructible y semicontinua
     superiormente sobre $\Spec(A)$.
-  \item[(ii)] Si $T_p$ es exacto, $d_p$ es continua (y, por tanto,
+  \item[\textup{(ii)}] Si $T_p$ es exacto, $d_p$ es continua (y, por tanto,
     localmente constante) sobre $\Spec(A)$. El recíproco es cierto
     cuando $A$ es reducido.
 \end{enumerate}
@@ -7352,7 +7353,7 @@ $\mathscr O_X$-módulos $\mathscr P_i$ son planos sobre $Y$
 
 \oldpage[III]{198}
 Consideraremos el $\partial$-funtor
-$\mathscr M\mapsto\mathscr T_\bullet(\mathscr M)$ (también denotado por
+$\mathscr M\leadsto\mathscr T_\bullet(\mathscr M)$ (también denotado por
 $\mathscr T_\bullet(\mathscr P_\bullet,\mathscr M)$) de la categoría de los
 $\mathscr O_Y$-módulos cuasicoherentes en la categoría de los
 $\mathscr O_Y$-módulos cuasicoherentes, en virtud de \sref{III.6.2.3}, definido
@@ -7499,7 +7500,7 @@ Para todo morfismo $g:Y'\to Y$ existe un homomorfismo canónico
 \[
   \mathscr T_p(\mathscr O_Y)\otimes_{\mathscr O_Y}\mathscr O_{Y'}
   \longrightarrow
-  \mathscr T^{Y'}_p(\mathscr O_{Y'}),
+  \mathscr T^{Y'}_p(\mathscr O_{Y'})
   \tag{7.7.3.2}\label{III.7.7.3.2}
 \]
 que no es sino el caso particular de \sref{III.6.7.11.2}, para los objetos
@@ -7555,8 +7556,8 @@ semicontinuidad fue descubierta, en el marco de los espacios analíticos y bajo
 hipótesis bastante particulares, por Kodaira--Spencer (``On the variations of
 almost-complex structures'', \emph{Algebraic Geometry and Topology, A Symposium
 in honor of S. Lefschetz}, Princeton Series n\textsuperscript{o} 12,
-p.~139--150, Princeton, 1957), y la versión general fue demostrada por Grauert
-[5].}
+p.~139-150, Princeton, 1957), y la versión general fue demostrada por Grauert
+[5].}.
 \emph{La función}
 \[
   y\longmapsto
@@ -7574,9 +7575,9 @@ p.~139--150, Princeton, 1957), y la versión general fue demostrada por Grauert
 \textnormal{II) (La propiedad de cambio de base).}
 \emph{Para un entero $p$ dado, las condiciones siguientes son equivalentes:}
 \begin{enumerate}
-  \item[a)] $\mathscr T_p$ es exacto por la derecha.
+  \item[\textup{a)}] $\mathscr T_p$ es exacto por la derecha.
 
-  \item[a$'$)] $\mathscr T_p(\mathscr M)$ es isomorfo a un funtor de la forma
+  \item[\textup{a$'$)}] $\mathscr T_p(\mathscr M)$ es isomorfo a un funtor de la forma
     $\mathscr N\otimes_{\mathscr O_Y}\mathscr M$, siendo $\mathscr N$
     necesariamente isomorfo a
     \[
@@ -7585,12 +7586,12 @@ p.~139--150, Princeton, 1957), y la versión general fue demostrada por Grauert
       \mathscr H^{-p}(f,\mathscr P^\bullet).
     \]
 
-  \item[a$''$)] El homomorfismo canónico funtorial
+  \item[\textup{a$''$)}] El homomorfismo canónico funtorial
     \eqref{III.7.7.3.1} es un isomorfismo.
 
-  \item[b)] $\mathscr T_{p-1}$ es exacto por la izquierda.
+  \item[\textup{b)}] $\mathscr T_{p-1}$ es exacto por la izquierda.
 
-  \item[b$'$)] Existe un $\mathscr O_Y$-módulo $\mathscr Q$ (necesariamente
+  \item[\textup{b$'$)}] Existe un $\mathscr O_Y$-módulo $\mathscr Q$ (necesariamente
     coherente y determinado salvo isomorfismo único) y un isomorfismo de
     funtores
     \[
@@ -7600,11 +7601,11 @@ p.~139--150, Princeton, 1957), y la versión general fue demostrada por Grauert
       \tag{7.7.5.2}\label{III.7.7.5.2}
     \]
 
-  \item[c)] Denotando por $A_\alpha$ el anillo del abierto afín $U_\alpha$,
+  \item[\textup{c)}] Denotando por $A_\alpha$ el anillo del abierto afín $U_\alpha$,
     para todo índice $\alpha$ el funtor de $A_\alpha$-módulos
     $T_p^{A_\alpha}$ es exacto por la derecha.
 
-  \item[d)] Para todo morfismo $g:Y'\to Y$, el homomorfismo canónico
+  \item[\textup{d)}] Para todo morfismo $g:Y'\to Y$, el homomorfismo canónico
     \[
       \mathscr T_p(\mathscr O_Y)
       \otimes_{\mathscr O_Y}\mathscr O_{Y'}
@@ -7618,7 +7619,7 @@ p.~139--150, Princeton, 1957), y la versión general fue demostrada por Grauert
 
 \begin{proof}
 La propiedad de semicontinuidad es local sobre $Y$ y resulta, por tanto, de
-\sref{III.7.7.4} y \sref{III.7.6.9}. Es claro que a$''$) implica a$'$) y que
+\sref{III.7.7.4} y \sref{III.7.6.9}. Es claro que a$''$) implica \emph{a$'$)} y que
 a$'$) implica a). La equivalencia de a), a$''$), b) y b$'$) se demostró en
 \sref{III.7.3.1} y \sref{III.7.4.6}, habida cuenta de
 \sref{III.7.7.4}, cuando $Y$ es afín.
@@ -7683,7 +7684,7 @@ sobre $Y'$. Ahora bien, cuando $Y=\operatorname{Spec}(A)$ e
 $Y'=\operatorname{Spec}(A')$, vimos que $T_\bullet^{A'}$ es el funtor obtenido
 \oldpage[III]{201}
 a partir de $T_\bullet^A$ por extensión de escalares a $A'$, y es claro entonces
-que a$'$) implica que \eqref{III.7.7.5.3} es un isomorfismo.
+que \emph{a$'$)} implica que \eqref{III.7.7.5.3} es un isomorfismo.
 Recíprocamente, supongamos todavía que $Y=\operatorname{Spec}(A)$ es afín y sea
 $A'$ la $A$-álgebra $A\oplus M$, donde $M$ es un $A$-módulo cualquiera y la
 multiplicación en $A'$ viene dada por
@@ -7756,7 +7757,7 @@ dos funtores en el $\mathscr O_Y$-módulo cuasicoherente $\mathscr M$,
     f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
     \longrightarrow
     f_*(\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
-  \bigr),\\
+  \bigr)\\
   T(\mathscr M)
   &=
   \Gamma(Y,\mathscr T(\mathscr M))\\
@@ -7815,10 +7816,10 @@ $v:\mathscr Q'\to\mathscr Q$ de $\mathscr O_Y$-módulos tal que el diagrama
 \[
 \xymatrix@C=42pt@R=28pt{
   \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
-    \ar[r]\ar[d]_-{\sim}
+    \ar[r]\ar[d]_-{\wr}
   &
   \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
-    \ar[d]^-{\sim}
+    \ar[d]^-{\wr}
   \\
   \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M)
     \ar[r]
@@ -7854,7 +7855,7 @@ $\mathscr M$,
   \bigl(
     \mathscr{H}\!om_{\mathscr O_X}
       (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
-  \bigr),\\
+  \bigr)\\
   T(\mathscr M)
   &=
   \Gamma(Y,\mathscr T(\mathscr M))
@@ -7902,7 +7903,7 @@ $i=0,1$; estos son $\mathscr O_X$-módulos coherentes
 $v:\mathscr E_1\to\mathscr E_0$ denota el homomorfismo dado, sea
 $u=\mathscr{H}\!om(v,1_{\mathscr F}):\mathscr F_0\to\mathscr F_1$. En virtud
 de la exactitud por la izquierda del funtor
-$\mathscr H\mapsto\mathscr{H}\!om_{\mathscr O_X}
+$\mathscr H\leadsto\mathscr{H}\!om_{\mathscr O_X}
 (\mathscr H,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$, se tienen
 isomorfismos funtoriales en $\mathscr M$,
 \begin{align*}
@@ -7923,7 +7924,7 @@ isomorfismos funtoriales en $\mathscr M$,
     \mathscr F_0\otimes_{\mathscr O_Y}\mathscr M
     \longrightarrow
     \mathscr F_1\otimes_{\mathscr O_Y}\mathscr M
-  \bigr).
+  \bigr)
 \end{align*}
 Puesto que $f_*$ es exacto por la izquierda, se deduce un isomorfismo funtorial
 \[
@@ -7938,7 +7939,7 @@ Puesto que $f_*$ es exacto por la izquierda, se deduce un isomorfismo funtorial
     f_*(\mathscr F_0\otimes_{\mathscr O_Y}\mathscr M)
     \longrightarrow
     f_*(\mathscr F_1\otimes_{\mathscr O_Y}\mathscr M)
-  \bigr),
+  \bigr)
 \]
 y basta entonces aplicar \sref{III.7.7.7}.
 \end{proof}
@@ -8027,9 +8028,9 @@ donde $\mathscr E_0$ y $\mathscr E_1$ son localmente libres de tipo finito.
 condiciones generales de \sref{III.7.7.5}, sean $y$ un punto de $Y$ y $p$ un
 entero. Las propiedades siguientes son equivalentes:
 \begin{enumerate}
-  \item[a)] El funtor $T_p^{\mathscr O_y}$ es exacto por la derecha.
+  \item[\textup{a)}] El funtor $T_p^{\mathscr O_y}$ es exacto por la derecha.
 
-  \item[b)] El homomorfismo canónico
+  \item[\textup{b)}] El homomorfismo canónico
     \[
       T_p^{\mathscr O_y}(\mathscr O_y)
       \longrightarrow
@@ -8037,7 +8038,7 @@ entero. Las propiedades siguientes son equivalentes:
     \]
     es sobreyectivo.
 
-  \item[c)] Para todo entero $n$, el homomorfismo canónico
+  \item[\textup{c)}] Para todo entero $n$, el homomorfismo canónico
     \[
       T_p^{\mathscr O_y}
       (\mathscr O_y/\mathfrak m_y^{n+1})
@@ -8056,7 +8057,7 @@ Habida cuenta de \sref{III.7.7.4}, la equivalencia de a), b) y c) resulta de
 $T_p^{\mathscr O_y}$ es exacto por la derecha sea abierto es también
 consecuencia de \sref{III.7.4.4}; recíprocamente, si $\mathscr T_p^V$ es exacto
 por la derecha, lo mismo ocurre con $T_p^{\mathscr O_y}$ para todo $y\in V$,
-por la condición c) de \sref{III.7.7.5} y \sref{III.7.6.1}.
+por la condición \emph{c)} de \sref{III.7.7.5} y \sref{III.7.6.1}.
 \end{proof}
 
 \begin{corollary}[7.7.11]
@@ -8149,12 +8150,12 @@ válidas a condición de poner esta vez
 \[
   \mathscr T_p(\mathscr M)
   =
-  \operatorname{Tor}^Y_p
+  \boldsymbol{\mathscr T\!or}^Y_p
     (f,1_Y;\mathscr P_\bullet,\mathscr M).
   \tag{7.7.12.1}\label{III.7.7.12.1}
 \]
 En efecto,
-$\operatorname{Tor}^Y_n(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)$ es entonces un
+$\boldsymbol{\mathscr T\!or}^Y_n(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)$ es entonces un
 $\mathscr O_Y$-módulo \emph{coherente} en virtud de \sref{III.6.7.9}. La
 demostración de \sref{III.6.10.5} se aplica sin cambio, teniendo en cuenta
 \sref{III.6.10.1}, y muestra también que, cuando
@@ -8227,15 +8228,15 @@ cuasicompacto.
 Con las notaciones e hipótesis de \sref{III.7.8.1}, las condiciones
 siguientes son equivalentes:
 \begin{enumerate}
-  \item[a)] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+  \item[\textup{a)}] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
     en el punto $y$, en dimensión $p$.
-  \item[b)] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
+  \item[\textup{b)}] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
     $\mathscr T_p^U$ y $\mathscr T_{p+1}^U$ son exactos por la
     derecha.
-  \item[c)] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
+  \item[\textup{c)}] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
     $\mathscr T_p^U$ y $\mathscr T_{p-1}^U$ son exactos por la
     izquierda.
-  \item[d)] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
+  \item[\textup{d)}] Existe un entorno abierto $U$ de $y$ en $Y$ tal que
     $\mathscr T_{p+1}^U$ es exacto por la derecha y
     $\mathscr T_{p-1}^U$ es exacto por la izquierda.
 \end{enumerate}
@@ -8256,10 +8257,10 @@ $Y$, y $\mathscr T_\bullet$ el funtor definido por
 \eqref{III.7.7.1.1}. Para todo $y\in Y$, las condiciones siguientes
 son equivalentes:
 \begin{enumerate}
-  \item[a)] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+  \item[\textup{a)}] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
     en $y$, en dimensión $p$.
-  \item[b)] El funtor $\mathscr T_p^{\mathscr O_y}$ es exacto.
-  \item[c)] Existe un entero $n_0$ tal que, para $n\geq n_0$,
+  \item[\textup{b)}] El funtor $\mathscr T_p^{\mathscr O_y}$ es exacto.
+  \item[\textup{c)}] Existe un entero $n_0$ tal que, para $n\geq n_0$,
     \[
       \operatorname{length}
         \mathscr T_p^{\mathscr O_y}
@@ -8274,7 +8275,7 @@ son equivalentes:
     \]
     Aquí todas las longitudes son longitudes de
     $\mathscr O_y$-módulos.
-  \item[d)] Existe un entorno abierto $U$ de $y$ tal que
+  \item[\textup{d)}] Existe un entorno abierto $U$ de $y$ tal que
     \[
       \mathscr H^{-p}(f,\mathscr P^\bullet)|U
     \]
@@ -8294,7 +8295,7 @@ son equivalentes:
 \end{enumerate}
 Cuando se cumplen estas condiciones, se tiene además:
 \begin{enumerate}
-  \item[e)] Existe un entorno de $y$ en el cual la función
+  \item[\textup{e)}] Existe un entorno de $y$ en el cual la función
     $z\mapsto d_p(z)$, definida en \eqref{III.7.7.5.1}, es
     constante.
 \end{enumerate}
@@ -8343,11 +8344,11 @@ $\mathscr T_p^U$ \eqref{III.7.7.2.2}.
 Bajo las hipótesis de \sref{III.7.8.4}, las condiciones siguientes
 son equivalentes:
 \begin{enumerate}
-  \item[a)] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
+  \item[\textup{a)}] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
     en toda dimensión $i\leq p$.
-  \item[b)] Para $i\leq p+1$, los funtores $\mathscr T_i$ son
+  \item[\textup{b)}] Para $i\leq p+1$, los funtores $\mathscr T_i$ son
     exactos por la derecha.
-  \item[c)] Para $i\geq-p$, los $\mathscr O_Y$-módulos
+  \item[\textup{c)}] Para $i\geq\setmin p$, los $\mathscr O_Y$-módulos
     $\mathscr H^i(f,\mathscr P^\bullet)$ son localmente libres.
 \end{enumerate}
 \end{proposition}
@@ -8357,7 +8358,7 @@ La equivalencia de a) y b) es inmediata por \sref{III.7.8.3}, y a)
 implica c) por \sref{III.7.8.4}.
 
 Recíprocamente, supongamos que se cumple c). Recordemos también que
-$\mathscr L_i=0$ para $i<i_0$ \sref{III.7.7.4}, y por tanto
+$\mathscr L_i=0$ para $i\leq i_0$ \sref{III.7.7.4}, y por tanto
 $\mathscr T_i=0$ para $i\leq i_0$. Todo punto $y\in Y$ tiene, pues,
 un entorno afín $U=\Spec(A)$ tal que $T_i^A(A)$ es un $A$-módulo
 libre para $i\leq p$. De \sref{III.7.3.7} se deduce que
@@ -8469,9 +8470,9 @@ ya es sobreyectivo.
 Bajo las hipótesis de \sref{III.7.8.6}, existe un entorno abierto
 $U$ de $y$ tal que:
 \begin{enumerate}
-  \item[(i)] $f_*(\mathscr O_X)|U$ es isomorfo a un
+  \item[\textup{(i)}] $f_*(\mathscr O_X)|U$ es isomorfo a un
     $(\mathscr O_Y|U)$-módulo de la forma $(\mathscr O_Y|U)^m$;
-  \item[(ii)] para todo $z\in U$, el homomorfismo canónico
+  \item[\textup{(ii)}] para todo $z\in U$, el homomorfismo canónico
     \[
       \bigl(f_*(\mathscr O_X)\bigr)_z
         \otimes_{\mathscr O_z}\kres(z)
@@ -8538,7 +8539,7 @@ Bajo las hipótesis de \sref{III.7.8.6}, consideremos la
 factorización de Stein de $f$ \sref{III.4.3.3},
 \[
   \xymatrix{
-    X \ar[r]^{f'} & Y' \ar[r]^{g} & Y .
+    X \ar[r]^{f'} & Y' \ar[r]^{g} & Y
   }
 \]
 \oldpage[III]{208}
@@ -8575,7 +8576,7 @@ $Y$, a lo largo de la sección unidad.
 \end{remarks}
 
 \subsection{Aplicación a los morfismos propios: III. Invariancia de la
-característica de Euler-Poincaré y del polinomio de Hilbert}
+característica de Euler-Poincaré y del polinomio de Hilbert.}
 \label{subsection:III.7.9}
 \label{III.7.9}
 
@@ -8610,7 +8611,7 @@ tipo finito y, para todo $A$-módulo $M$, pongamos
 \]
 Entonces, para todo $\mathfrak p\in\Spec(A)$, se tiene
 \[
-  \sum_i(-1)^i
+  \sum_i(\setmin 1)^i
     \operatorname{rank}_{\kres(\mathfrak p)}
       T_i\bigl(\kres(\mathfrak p)\bigr)
   =
@@ -8663,7 +8664,7 @@ entonces la función
   y\longmapsto
   \sum_i(-1)^i
     \operatorname{rank}_{\kres(y)}
-      \mathscr T_i\bigl(\kres(y)\bigr)
+      T_i\bigl(\kres(y)\bigr)
   \tag{7.9.4.1}\label{III.7.9.4.1}
 \]
 es localmente constante en $Y$.
@@ -8698,7 +8699,7 @@ Bajo las hipótesis de \sref{III.7.9.4}, la función
   \operatorname{EP}(\mathscr P_\bullet)
 \]
 cuando no haya riesgo de confusión, y se dice que este entero es la
-\emph{característica de Euler-Poincaré de $\mathscr P_\bullet$}
+\emph{característica de Euler-Poincaré} de $\mathscr P_\bullet$
 relativa a $f$ (o a $Y$). En general, se escribe asimismo
 \[
   \operatorname{EP}(f,\mathscr P_\bullet;y),\qquad
@@ -8770,7 +8771,7 @@ inducción sobre la longitud de $\mathscr P_\bullet$, se obtiene
 \[
   \operatorname{EP}(\mathscr P_\bullet;y)
   =
-  \sum_i(-1)^i\operatorname{EP}(\mathscr P_i;y).
+  \sum_i(-1)^i\operatorname{EP}(\mathscr P_i;y)
   \tag{7.9.6.2}\label{III.7.9.6.2}
 \]
 
@@ -8843,7 +8844,7 @@ Entonces
 es un $\mathscr O_Y$-módulo localmente libre, cuyo rango en
 $y\in Y$ es
 \[
-  (-1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y).
+  (\setmin 1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y).
 \]
 \end{proposition}
 
@@ -8861,9 +8862,9 @@ Su rango en $y\in Y$ es
   \operatorname{rank}_{\kres(y)}
     \mathscr T_{i_0}(\kres(y))
   =
-  (-1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y),
+  (\setmin 1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y),
 \]
-por definición, ya que $\mathscr T_i(\kres(y))=0$ para
+por definición, ya que $T_i(\kres(y))=0$ para
 $i\neq i_0$.
 \end{proof}
 
@@ -8880,7 +8881,7 @@ existe un entero $i_0$ tal que
 para todo $i\neq i_0$ y todo $y\in Y$. Entonces
 $R^{i_0}f_*(\mathscr F)$ es un $\mathscr O_Y$-módulo localmente
 libre, cuyo rango en $y$ es
-$(-1)^{i_0}\operatorname{EP}(f,\mathscr F;y)$.
+$(\setmin 1)^{i_0}\operatorname{EP}(f,\mathscr F;y)$.
 \end{corollary}
 
 En particular:
@@ -9005,7 +9006,7 @@ y, en particular,
 \[
   \operatorname{PH}(\mathscr P_\bullet;y)
   =
-  \sum_i(-1)^i\operatorname{PH}(\mathscr P_i;y).
+  \sum_i(\setmin 1)^i\operatorname{PH}(\mathscr P_i;y).
   \tag{7.9.12.2}\label{III.7.9.12.2}
 \]
 Estas fórmulas se deducen inmediatamente de
@@ -9122,14 +9123,14 @@ demostrada la proposición.
 $\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$: 6.3.1.
 
 \medskip
-$\mathscr{T}\!or_n^{\mathscr O_S}(\mathscr P_\bullet,\mathscr Q_\bullet)$,
+$\boldsymbol{\mathscr T\!or}_n^{\mathscr O_S}(\mathscr P_\bullet,\mathscr Q_\bullet)$,
 $\mathscr{T}\!or_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$: 6.4.1 y 6.5.1.
 
 \medskip
 $\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$: 6.5.1.
 
 \medskip
-$\mathscr{T}\!or_q^S(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)},\ldots,
+$\boldsymbol{\mathscr T\!or}_q^S(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)},\ldots,
 \mathscr P_\bullet^{(m)})$: 6.5.15.
 
 \medskip
@@ -9148,12 +9149,12 @@ $\mathscr{T}\!or_n^S(\mathfrak U^{(1)},\mathfrak U^{(2)};
 \mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$: 6.6.2.
 
 \medskip
-$\mathscr{T}\!or_n^S(f_1,f_2;\mathscr P_\bullet^{(1)},
+$\boldsymbol{\mathscr T\!or}_n^S(f_1,f_2;\mathscr P_\bullet^{(1)},
 \mathscr P_\bullet^{(2)})$: 6.6.8, 6.7.1 y 6.7.3.
 
 \medskip
-$\mathscr{T}\!or_n^S((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})$,
-$\mathscr{T}\!or_n^S(f_1,\ldots,f_m;\mathscr P_\bullet^{(1)},\ldots,
+$\boldsymbol{\mathscr T\!or}_n^S((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})$,
+$\boldsymbol{\mathscr T\!or}_n^S(f_1,\ldots,f_m;\mathscr P_\bullet^{(1)},\ldots,
 \mathscr P_\bullet^{(m)})$: 6.7.11.
 
 \medskip
@@ -9283,7 +9284,7 @@ módulos \dotfill 43
 7.3. Criterios de exactitud de los funtores homológicos de módulos \dotfill 48
 
 7.4. Criterios de exactitud para los funtores
-$\mathrm H_i(P\otimes_A M)$ \dotfill 53
+$\mathrm H_\bullet(P_\bullet\otimes_A M)$ \dotfill 53
 
 7.5. Caso de los anillos locales noetherianos \dotfill 58
 
@@ -9319,26 +9320,26 @@ característica de Euler-Poincaré y del polinomio de Hilbert \dotfill 76
 A) \emph{Errores tipográficos}
 \end{center}
 
-\noindent\textbf{$(0_{\mathrm I},\,3.2.1)$} En la línea 2 de la p. 27, sustituir
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 3.2.1)} En la línea 2 de la p. 27, sustituir
 $X$ por $U$.
 
-\noindent\textbf{$(0_{\mathrm I},\,3.2.6)$} En la primera línea contando desde
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 3.2.6)} En la primera línea contando desde
 abajo de la p. 27 y en la línea 1 de la p. 28, sustituir (3 veces)
-$\mathfrak S_\lambda$ por $\mathscr H_\lambda$.
+$\mathfrak H_\lambda$ por $\mathscr H_\lambda$.
 
-\noindent\textbf{$(0_{\mathrm I},\,3.4.5)$} Añadir un paréntesis delante de
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 3.4.5)} Añadir un paréntesis delante de
 3.4.5).
 
-\noindent\textbf{$(0_{\mathrm I},\,4.2.1)$} En la línea 10 de la p. 39,
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 4.2.1)} En la línea 10 de la p. 39,
 sustituir $\psi_*(A)$ por $\psi_*(\mathscr A)$.
 
-\noindent\textbf{$(0_{\mathrm I},\,5.1.3)$} En la línea 16 de la p. 45,
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 5.1.3)} En la línea 16 de la p. 45,
 sustituir $\mathscr F|V$ por $\mathscr F|U$.
 
-\noindent\textbf{$(0_{\mathrm I},\,5.3.9)$} En la línea 12 de la p. 48, antes
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 5.3.9)} En la línea 12 de la p. 48, antes
 de «tal que», añadir: sobre un entorno abierto $U$ de $x$.
 
-\noindent\textbf{$(0_{\mathrm I},\,7.6.9)$} En la tercera línea contando desde
+\noindent\textbf{($\mathbf 0_{\mathrm I}$, 7.6.9)} En la tercera línea contando desde
 abajo de la p. 73, sustituir $I_\lambda$ por $J_\lambda$.
 
 \noindent\textbf{(I, 1.1.15)} En la línea 3 de la p. 83, sustituir
@@ -9348,7 +9349,7 @@ $\mathfrak a$ por $\mathfrak a\ne A$.
 p. 90, sustituir $\widetilde N$ por $N$.
 
 \noindent\textbf{(I, 2.3.1)} En la tercera línea contando desde abajo de la
-p. 101, sustituir (0, 4.1.6) por (0, 4.1.7).
+p. 101, sustituir (\textbf 0, 4.1.6) por (\textbf 0, 4.1.7).
 
 \noindent\textbf{(I, 2.3.2)} En la línea 11 de la p. 101, sustituir $B$ por
 $B_s$ y $C$ por $C_t$.
@@ -9372,7 +9373,7 @@ $1_X\times g$ por $1_{X'}\times g$.
 $X$ por $X'$.
 
 \noindent\textbf{(I, 4.2.2)} En la línea 8 de la p. 123, en la flecha vertical
-izquierda del diagrama, sustituir $\alpha_{\psi(y)}$ por $\varphi_{\psi(y)}$.
+izquierda del diagrama, sustituir $\alpha_{\psi(y)}$ por $\rho_{\psi(y)}$.
 
 \noindent\textbf{(I, 4.4.3)} En la línea 16 de la p. 126, sustituir «isomorfa»
 por «isomorfas».
@@ -9412,11 +9413,11 @@ contando desde abajo de la p. 222, sustituir I, 2.1.7 por I, 2.1.8; en la línea
 junto a la flecha vertical izquierda del diagrama.
 
 \noindent\textbf{(II, 4.2.7)} En la línea 16 contando desde abajo de la p. 75,
-sustituir (III, 2.1.14) por (III, 2.1.13).
+sustituir (III, 2.1.14) por (\textbf{III}, 2.1.13).
 
 \noindent\textbf{(II, 5.2.1)} En la línea 16 contando desde abajo de la p. 97,
 sustituir $X-U$ por $U$. En la línea 8 contando desde abajo de la p. 97,
-sustituir $X'$ por $X_f$.
+sustituir $X^f$ por $X_f$.
 
 \noindent\textbf{(II, 5.3.6)} En la línea 16 de la p. 100, sustituir (4.6.18)
 por (4.6.17).
@@ -9430,31 +9431,31 @@ sustituir cap. V por cap. IV.
 \noindent\textbf{(II, 7.4.12)} En la línea 1 de la p. 151, sustituir cap. V
 por cap. III.
 
-\noindent\textbf{(II, 8.1.4)} En la línea 15 de la p. 154, sustituir (III,
-2.3.8) por (III, 2.3.7).
+\noindent\textbf{(II, 8.1.4)} En la línea 15 de la p. 154, sustituir (\textbf{III},
+2.3.8) por (\textbf{III}, 2.3.7).
 
 \noindent\textbf{(II, 8.10.5)} En la línea 17 contando desde abajo de la p.
 187, sustituir $g_{(j)x}$ por $g_{j(x)}$.
 
-\noindent\textbf{$(0_{\mathrm{III}},\,10.2.7)$} En la línea 1 de la p. 20,
-sustituir $u$-ádico por $\mathfrak m$-ádico. En la línea 13 contando desde abajo
+\noindent\textbf{($\mathbf 0_{\mathrm{III}}$, 10.2.7)} En la línea 1 de la p. 20,
+sustituir $u$-ádico por $\mathfrak n$-ádico. En la línea 13 contando desde abajo
 de la p. 20, sustituir $k$ por $k_i$.
 
-\noindent\textbf{$(0_{\mathrm{III}},\,11.1.1)$} En la línea 18 de la p. 23,
+\noindent\textbf{($\mathbf 0_{\mathrm{III}}$, 11.1.1)} En la línea 18 de la p. 23,
 sustituir $\operatorname{Im}(d_r^{p+r,q-r+1})$ por
 $\operatorname{Im}(d_r^{p-r,q+r-1})$.
 
-\noindent\textbf{$(0_{\mathrm{III}},\,11.8.6)$} En la línea 14 contando desde
+\noindent\textbf{($\mathbf 0_{\mathrm{III}}$, 11.8.6)} En la línea 14 contando desde
 abajo de la p. 45, sustituir las flechas $\to$ por $\rightsquigarrow$ (4 veces).
 
-\noindent\textbf{$(0_{\mathrm{III}},\,12.3.4)$} En la línea 4 de la p. 61,
+\noindent\textbf{($\mathbf 0_{\mathrm{III}}$, 12.3.4)} En la línea 4 de la p. 61,
 sustituir $\rightsquigarrow$ por $\to$.
 
-\noindent\textbf{$(0_{\mathrm{III}},\,13.2.4)$} En la segunda línea contando
+\noindent\textbf{($\mathbf 0_{\mathrm{III}}$, 13.2.4)} En la segunda línea contando
 desde abajo de la p. 67, sustituir $\varinjlim$ por $\varprojlim$ (2 veces).
 
 \noindent\textbf{(III, 1.1.7)} En la línea 15 de la p. 85, sustituir $A^r$ por
-$\bigwedge(A^r)$ (2 veces).
+$\wedge(A^r)$ (2 veces).
 
 \noindent\textbf{(III, 1.2.4)} En la línea 7 de la p. 87, sustituir
 $\Gamma(U,\mathscr F)$ por $\Gamma(U,\mathscr O_X)$ y sustituir $\mathscr G$
@@ -9485,12 +9486,12 @@ en el capítulo N serán designadas en lo sucesivo por $\mathbf{Err}_{\mathrm N}
 seguido de un número.}
 \end{center}
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,1)$} En
-$(0_{\mathrm I},\,5.1.3)$, en la línea 18 de la p. 45, sustituir «suma directa»
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 1)} En
+($\mathbf 0_{\mathrm I}$, 5.1.3), en la línea 18 de la p. 45, sustituir «suma directa»
 por «suma directa finita».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,2)$} En
-$(0_{\mathrm I},\,5.4.3)$, en las líneas 8 a 4 contando desde abajo de la p. 49,
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 2)} En
+($\mathbf 0_{\mathrm I}$, 5.4.3), en las líneas 8 a 4 contando desde abajo de la p. 49,
 sustituir desde «En el caso general\ldots{}» por el texto siguiente:
 
 En el caso general en que $X$ es un espacio anillado tal que $\mathscr O_x$ es
@@ -9518,22 +9519,22 @@ consideración del producto tensorial
 $\mathscr L^{-1}\otimes\mathscr L\otimes\mathscr F$ muestra de inmediato que
 $\mathscr F$ es isomorfo a $\mathscr L^{-1}$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,3)$} En
-$(0_{\mathrm I},\,7.2.4)$, es preciso imponer la condición de que las potencias
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 3)} En
+($\mathbf 0_{\mathrm I}$, 7.2.4), es preciso imponer la condición de que las potencias
 $\mathfrak J^n$ sean ideales \emph{cerrados} en el anillo admisible $A$ para
 que la proposición sea correcta. La demostración dada es incorrecta, y el
 enunciado rectificado resulta de Bourbaki, \emph{Top. gén.}, cap. III,
 3.\textsuperscript{a} ed., \S~3, n.\textsuperscript{o}~5, cor. 1 de la prop. 9.
 Asimismo, es preciso suponer que los $\mathfrak J^n$ son \emph{cerrados} en $A$
-en los enunciados $(0_{\mathrm I},\,7.2.5)$ y $(0_{\mathrm I},\,7.2.6)$.
+en los enunciados ($\mathbf 0_{\mathrm I}$, 7.2.5) y ($\mathbf 0_{\mathrm I}$, 7.2.6).
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,4)$} Después de la
-proposición (I, 2.2.5), añadir: con las notaciones de (I, 2.2.5), si
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 4)} Después de la
+proposición (\textbf I, 2.2.5), añadir: con las notaciones de (\textbf I, 2.2.5), si
 $\mathfrak J$ es un ideal de $A$, se denota por
-$\widetilde{\mathfrak J\mathscr F}$ el sub-$\mathscr O_X$-módulo
-$\mathfrak J\widetilde{\mathscr F}$ definido en $(0,\,4.3.5)$.
+$\mathfrak J\mathscr F$ el sub-$\mathscr O_X$-módulo
+$\widetilde{\mathfrak J}\mathscr F$ definido en $(0,\,4.3.5)$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,5)$} En (I, 3.4.5), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 5)} En (\textbf I, 3.4.5), en la
 primera línea contando desde abajo de la p. 112, sustituir «\emph{un cuerpo}
 $K$» por «\emph{un cuerpo algebraicamente cerrado} $K$». En la línea 1 de la
 p. 113, sustituir «\emph{extensión}» por «\emph{extensión algebraicamente
@@ -9550,8 +9551,8 @@ En las líneas 7 y 16 de la p. 113, suprimir «geométrico»; en las líneas 10 
 de la p. 113, suprimir «geométricos». En las líneas 10 y 11 contando desde
 abajo de la p. 115, suprimir «\emph{geométrico}».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,6)$} Al final de la
-demostración de (I, 3.6.1), en la línea 12 contando desde abajo de la p. 117,
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 6)} Al final de la
+demostración de (\textbf I, 3.6.1), en la línea 12 contando desde abajo de la p. 117,
 añadir: Si se pone
 $X'=X\times_Y\operatorname{Spec}(\mathscr O_y/\mathfrak a_y)$, entonces, para
 todo punto $x\in X'$, identificado por $p$ con un punto de $X$, se tiene
@@ -9560,12 +9561,12 @@ la cuestión es local en $X$ y $Y$, se puede suponer que
 $X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, y se tiene
 $(B/\mathfrak a_yB)_x=B_x/\mathfrak a_yB_x$ por planitud $(0,\,1.3.2)$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,7)$} En (I, 5.1.1), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 7)} En (\textbf I, 5.1.1), en la
 tercera línea contando desde abajo de la p. 127, sustituir
 «$\mathscr O_X$-módulo cuasicoherente» por «\emph{ideal cuasicoherente de}
 $\mathscr B$».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,8)$} Después de (I, 5.1.10),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 8)} Después de (\textbf I, 5.1.10),
 en la línea 16 de la p. 131, añadir:
 
 \emph{Observación (5.1.11).} --- Una ligera adaptación del razonamiento hecho
@@ -9579,13 +9580,13 @@ $\mathscr J^n=0$, que el espacio anillado
 $X_0=(X,\mathscr O_X/\mathscr J)$ sea un esquema afín y, por último, que los
 ideales $\mathscr J^k/\mathscr J^{k+1}$ sean $\mathscr O_{X_0}$-módulos
 cuasicoherentes. Basta, en efecto, utilizar (1.8.1) (cf.
-$(\mathbf{Err}_{\mathrm{II}})$) en lugar de (2.2.4) en el razonamiento.
+\textbf{($\mathbf{Err}_{\mathrm{II}}$)}) en lugar de (2.2.4) en el razonamiento.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,9)$} En (I, 5.3.1), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 9)} En (\textbf I, 5.3.1), en la
 línea 11 de la p. 132, insertar, después de «o $\Delta_X$», «o $\Delta_\varphi$
 si $\varphi:X\to S$ es el morfismo estructural».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,10)$} En (I, 5.3.9), la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 10)} En (\textbf I, 5.3.9), la
 demostración es insuficiente, pues no prueba que $\Delta_X(X)$ sea localmente
 cerrado en $X\times_SX$. Para obtener una demostración correcta, basta utilizar
 (4.2.4, $a$)): para todo $x\in X$ y todo entorno afín $U$ de $x$ en $X$,
@@ -9597,11 +9598,11 @@ corresponde al homomorfismo canónico $A\otimes_BA\to A$ que transforma
 $x\otimes y$ en $xy$; como este homomorfismo es sobreyectivo, $\Delta_X$ es en
 este caso una inmersión cerrada (4.2.3), lo que termina la demostración.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,11)$} En (I, 7.1.15) y
-(I, 7.1.16), en las líneas 7 y 15 contando desde abajo de la p. 158, suprimir
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 11)} En (\textbf I, 7.1.15) y
+(\textbf I, 7.1.16), en las líneas 7 y 15 contando desde abajo de la p. 158, suprimir
 «\emph{geométricos}».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,12)$} Sustituir (I, 7.4.7)
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 12)} Sustituir (\textbf I, 7.4.7)
 por: Se extienden (por abuso de lenguaje) las definiciones de (7.4.1) al caso
 en que $X$ es un preesquema \emph{reducido} tal que todo punto admite un
 entorno abierto que solo tiene un número \emph{finito} de componentes
@@ -9611,12 +9612,12 @@ $\mathscr F$ es un \emph{haz de torsión} equivale a decir que
 $\operatorname{Supp}(\mathscr F)$ \emph{no contiene ninguna componente
 irreducible de $X$}.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,13)$} En (I, 10.11.7), en
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 13)} En (\textbf I, 10.11.7), en
 las líneas 17 a 23 de la p. 205, el final de la demostración desde «Queda por
 probar\ldots{}» es innecesario en virtud de (10.11.6), pues los haces
 considerados son coherentes por $(0,\,5.3.5)$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,14)$} En (II, 1.7.8),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 14)} En (\textbf{II}, 1.7.8),
 después de la línea 10 contando desde abajo de la p. 16, añadir: cuando
 $\mathscr E=\mathscr O_S^n$, se escribe también $\mathbf V_S^n$ en lugar de
 $\mathbf V(\mathscr E)$; si además $S=\operatorname{Spec}(A)$ es afín, se
@@ -9624,35 +9625,35 @@ escribe $\mathbf V_A^n$ en lugar de $\mathbf V_S^n$; se tiene
 $\mathbf V_A^n=\operatorname{Spec}(A[T_1,\ldots,T_n])$, donde los $T_i$ son
 indeterminadas.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,15)$} En (II, 1.7.10), en
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 15)} En (\textbf{II}, 1.7.10), en
 la línea 10 de la p. 17, suprimir «\emph{geométricos}»; en las líneas 12 y
-16--17 de la p. 17, suprimir «geométrico».
+16-17 de la p. 17, suprimir «geométrico».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,16)$} En (II, 1.7.12),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 16)} En (\textbf{II}, 1.7.12),
 añadir: Se pone asimismo:
 \[
   \mathbf V(\mathscr O_S^n)=\mathbf V_S^n=S[T_1,\ldots,T_n].
 \]
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,17)$} En (II, 4.2.6), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 17)} En (\textbf{II}, 4.2.6), en la
 línea 7 de la p. 75, suprimir «\emph{geométricos}»; en la línea 8 de la p. 75,
 suprimir «\emph{geométrico}».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,18)$} En (II, 4.6.13), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 18)} En (\textbf{II}, 4.6.13), en la
 línea 7 de la p. 92, es preciso especificar el razonamiento, pues, con las
 notaciones de (4.4.10), hay que probar aquí que la inmersión $\Gamma_f$ es
-\emph{cuasicompacta}, a fin de aplicar (i bis). En virtud de (4.6.4), para
+\emph{cuasicompacta}, a fin de aplicar (i \emph{bis}). En virtud de (4.6.4), para
 probar que $\mathscr L$ es amplio para $f$, se puede limitar al caso
 en que $Y$ es afín. Obsérvese, por otra parte, que en cada una de las hipótesis
-de (v), $f$ es cuasicompacto (I, 6.6.4). Por otra parte, si $g$ es
+de (v), $f$ es cuasicompacto (\textbf I, 6.6.4). Por otra parte, si $g$ es
 \oldpage[III]{221}
-separado, $\Gamma_f$ es una inmersión cerrada (I, 5.4.3), luego cuasicompacta
-(I, 6.6.4). Si, por el contrario, $X$ es localmente noetheriano, como $Y$ es
+separado, $\Gamma_f$ es una inmersión cerrada (\textbf I, 5.4.3), luego cuasicompacta
+(\textbf I, 6.6.4). Si, por el contrario, $X$ es localmente noetheriano, como $Y$ es
 afín y $f$ cuasicompacto, el espacio subyacente a $X$ es cuasicompacto, luego
-noetheriano, y se puede aplicar de nuevo (I, 6.6.4) para probar que $\Gamma_f$
+noetheriano, y se puede aplicar de nuevo (\textbf I, 6.6.4) para probar que $\Gamma_f$
 es cuasicompacta.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,19)$} El enunciado de (II,
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 19)} El enunciado de (\textbf{II},
 5.2.2) es incorrecto, pues las condiciones $b)$, $c)$ y $c')$ no son locales
 en $Y$ cuando no se sabe si, para un abierto $U$ de $Y$, un
 $(\mathscr O_X|f^{-1}(U))$-módulo cuasicoherente es la restricción a
@@ -9662,10 +9663,10 @@ y cuasicompacto}» por: «\emph{Sean $X$, $Y$ dos preesquemas tales que $X$ sea
 un esquema o que el espacio subyacente a $X$ sea localmente noetheriano, y sea
 $f:X\to Y$ un morfismo cuasicompacto.}» En la demostración, se observará que
 las hipótesis implican que $f$ es \emph{separado} cuando se supone que $X$ es
-un esquema, en virtud de (I, 5.5.5 y 5.5.8); por tanto, se puede aplicar
-(I, 9.2.2) en ambos casos.
+un esquema, en virtud de (\textbf I, 5.5.5 y 5.5.8); por tanto, se puede aplicar
+(\textbf I, 9.2.2) en ambos casos.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,20)$} En (II, 6.2.3),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 20)} En (\textbf{II}, 6.2.3),
 añadir, después de la línea 18 contando desde abajo de la p. 115:
 
 \emph{Se dice que un morfismo $f:X\to Y$ es cuasifinito en un punto $x\in X$
@@ -9674,7 +9675,7 @@ $U$ de $x$ tales que $f(U)\subset V$ y que el morfismo $U\to V$, restricción de
 $f$, sea cuasifinito. Se dice que un morfismo $f:X\to Y$ es localmente
 cuasifinito si es cuasifinito en todo punto de $X$.}
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,21)$} En (II, 6.4.3), la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 21)} En (\textbf{II}, 6.4.3), la
 demostración es incorrecta, pues los elementos de un sub-$A$-módulo de tipo
 finito de $K$ no son necesariamente enteros sobre $A$. Sustituir las 9 últimas
 líneas de la p. 121 por el texto siguiente: Como se puede suponer que $E$ es
@@ -9686,32 +9687,32 @@ inmediatamente que los valores propios de $u\otimes1$ (en una clausura
 algebraica de $K$) son elementos \emph{enteros} sobre $A$, y por tanto también
 lo son los $\sigma_i(u)$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,22)$} En
-$(0_{\mathrm{III}},\,9.1.1)$, en la línea 18 contando desde abajo de la p. 12,
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 22)} En
+($\mathbf 0_{\mathrm{III}}$, 9.1.1), en la línea 18 contando desde abajo de la p. 12,
 suprimir «abierta».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,23)$} En
-$(0_{\mathrm{III}},\,11.7.3)$, en la línea 10 de la p. 43, después de
-$\mathsf C''$, añadir: tal que, para todo objeto proyectivo $P$ de
-$\mathsf C'$ (respectivamente, todo objeto proyectivo $P'$ de $\mathsf C''$),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 23)} En
+($\mathbf 0_{\mathrm{III}}$, 11.7.3), en la línea 10 de la p. 43, después de
+$\boldsymbol C'$, añadir: tal que, para todo objeto proyectivo $P$ de
+$\boldsymbol C$ (respectivamente, todo objeto proyectivo $P'$ de $\boldsymbol C'$),
 el funtor $A'\rightsquigarrow T(P,A')$ (respectivamente,
-$A\rightsquigarrow T(A,P')$) sea exacto en $\mathsf C'$ (respectivamente, en
+$A\rightsquigarrow T(A,P')$) sea exacto en $\boldsymbol C$ (respectivamente, en
 $\mathsf C$).
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,24)$} El enunciado de
-$(0_{\mathrm{III}},\,13.7.7)$ es inexacto y debe modificarse como sigue: en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 24)} El enunciado de
+($\mathbf 0_{\mathrm{III}}$, 13.7.7) es inexacto y debe modificarse como sigue: en la
 línea 6 de la p. 78, suprimir «y
 $(\mathrm R^{n+1}T(A_k))_{k\in\mathbf Z}$»; en la línea 7 de la p. 78, sustituir
-«$\mathrm R'^nT(A)$ es un $S$-módulo de tipo finito» por
-«$\mathrm R'^nT(A)$ y $\mathrm R'^{n+1}T(A)$ son $S$-módulos de tipo finito»;
-en las líneas 12--13 de la p. 78, suprimir «y $p+q=n+1$». En la demostración,
+«$\mathrm R'^nT(\mathbf A)$ es un $S$-módulo de tipo finito» por
+«$\mathrm R'^nT(\mathbf A)$ y $\mathrm R'^{n+1}T(A)$ son $S$-módulos de tipo finito»;
+en las líneas 12-13 de la p. 78, suprimir «y $p+q=n+1$». En la demostración,
 en la línea 23 de la p. 78, suprimir «y para $n+1$».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,25)$} En (III, 1.4.15), en
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 25)} En (\textbf{III}, 1.4.15), en
 la línea 6 contando desde abajo de la p. 92, sustituir «\emph{de tipo finito}»
 por «\emph{cuasicompacto}».
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,26)$} En (III, 2.2.4), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 26)} En (\textbf{III}, 2.2.4), en la
 línea 1 de la p. 102, sustituir «\emph{que los soportes de $\mathscr F$ y de
 $\mathscr H$ sean propios sobre $Y$}» por «\emph{que el soporte de
 $\operatorname{Im}(\mathscr F\to\mathscr G)$ sea propio sobre $Y$}». En la
@@ -9730,9 +9731,9 @@ exacta para todo $n$, y basta por tanto mostrar que, para $n$ suficientemente
 grande, la sucesión $f_*(\mathscr F(n))\to f_*(\mathscr G_1(n))\to0$ es exacta.
 Dicho de otro modo, se puede limitar al caso en que $\mathscr H=0$ y en que el
 soporte de $\mathscr G$ es propio sobre $Y$, luego \emph{cerrado en $Z$}
-(II, 5.4.10); por consiguiente, $\mathscr G'=i_*(\mathscr G)$ es un
+(\textbf{II}, 5.4.10); por consiguiente, $\mathscr G'=i_*(\mathscr G)$ es un
 $\mathscr O_Z$-módulo coherente tal que $\mathscr G'|X=\mathscr G$. Se sabe
-(I, 9.4.3) que existe un $\mathscr O_Z$-módulo coherente $\mathscr F'$ tal que
+(\textbf I, 9.4.3) que existe un $\mathscr O_Z$-módulo coherente $\mathscr F'$ tal que
 $\mathscr F'|X=\mathscr F$. Además, como $X$ es abierto en $Z$ y
 $\operatorname{Supp}(\mathscr G)\subset X$ es cerrado en $Z$, es inmediato que
 se define un homomorfismo sobreyectivo $u':\mathscr F'\to\mathscr G'$ de haces
@@ -9756,7 +9757,7 @@ $\mathscr G'$ muestra además que $w$ es \emph{biyectivo}; por otra parte, en
 virtud de (2.2.3), $\Gamma(u')$ es \emph{sobreyectivo} para $n$ suficientemente
 grande, luego lo mismo vale para $\Gamma(u)$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,27)$} En (III, 2.2.5),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 27)} En (\textbf{III}, 2.2.5),
 después de la línea 7 contando desde abajo de la p. 102, añadir:
 
 (iii) Bajo las hipótesis de (2.2.4) relativas a $X$, $Y$, $f$ y $\mathscr L$,
@@ -9771,16 +9772,16 @@ existe $N$ tal que, para $n\geq N$, el homomorfismo correspondiente
 $\mathrm R^if_*(\mathscr F(n))\to\mathrm R^if_*(\mathscr G(n))$ sea
 \emph{biyectivo} para todo $i>0$.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,28)$} En (III, 4.4.9), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 28)} En (\textbf{III}, 4.4.9), en la
 línea 17 contando desde abajo de la p. 137, sustituir «\emph{Sean $Y$ un
 preesquema íntegro localmente noetheriano}» por «\emph{Sean $X$ e $Y$ dos
 preesquemas íntegros localmente noetherianos}»; en la línea 16 contando desde
 abajo de la p. 137, sustituir «\emph{de tipo finito}» por «\emph{localmente de
 tipo finito}». La demostración permanece esencialmente inalterada, pues
-$f^{-1}(y)$ es localmente de tipo finito sobre $k(y)$ y, por tanto, sigue
+$f^{-1}(y)$ es localmente de tipo finito sobre $\boldsymbol k(y)$ y, por tanto, sigue
 siendo discreto.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,29)$} En (I, 9.3.4), en la
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 29)} En (\textbf I, 9.3.4), en la
 línea 19 contando desde abajo de la p. 173, sustituir «\emph{noetheriano}» por
 «\emph{cuasicompacto}»; en las líneas 18 y 19 contando desde abajo de la p.
 173, sustituir «\emph{coherente}» por «\emph{cuasicoherente de tipo finito}».
@@ -9792,7 +9793,7 @@ $A$-módulo de tipo finito, $\mathscr J=\widetilde{\mathfrak J}$, donde
 $\mathfrak J$ es un ideal de tipo finito de $A$; el resto del razonamiento
 permanece entonces inalterado.
 
-\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,30)$} En (I, 9.3.5),
+\noindent\textbf{($\mathbf{Err}_{\mathrm{III}}$, 30)} En (\textbf I, 9.3.5),
 sustituir las líneas 1 a 7 contando desde abajo de la p. 173 por el texto
 siguiente:
 
@@ -9804,8 +9805,8 @@ tipo finito $\mathscr G$ tales que, si $j:Y\to X$ es la inyección canónica,
 $\mathscr F$ sea isomorfo a $j_*(\mathscr G)$.}
 
 Bastará mostrar que el ideal $\mathscr J$ de $\mathscr O_X$,
-\emph{anulador de $\mathscr F$}, es \emph{cuasicoherente}; se tomará entonces
-como $Y$ el subpreesquema cerrado de $X$ definido por $\mathscr J$ (I, 4.1.2),
+\emph{anulador} de $\mathscr F$, es \emph{cuasicoherente}; se tomará entonces
+como $Y$ el subpreesquema cerrado de $X$ definido por $\mathscr J$ (\textbf I, 4.1.2),
 y, como $\mathscr J\mathscr F=0$, $\mathscr F$ es un
 $(\mathscr O_X/\mathscr J)$-módulo y se resolverá la cuestión tomando
 $\mathscr G=j^*(\mathscr F)$. Para ver que $\mathscr J$ es cuasicoherente, se

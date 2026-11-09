@@ -130,6 +130,8 @@
   \par\medskip\noindent\itshape Definición (#1). ---\ }{\par}
 \newenvironment{examples}[1][]{%
   \par\medskip\noindent\itshape Ejemplos (#1). ---\ }{\par}
+\newenvironment{example}[1][]{%
+  \par\medskip\noindent\itshape Ejemplo (#1). ---\ }{\par}
 \newenvironment{proposition}[1][]{%
   \par\medskip\noindent\itshape Proposición (#1). ---\ }{\par}
 \newenvironment{theorem}[1][]{%
@@ -6006,14 +6008,14 @@ Con las notaciones de \textup{(8.8.1)}, se supone $X_\alpha$ cuasicompacto, y $f
 
 La suficiencia de la condición y la última afirmación resultan de (16.10.4). Para probar que la condición es necesaria, observemos que $\Delta_f:X\to X\times_SX$ y $p_2:X\times_SX\to X$ se deducen por cambio de base de $\Delta_{f_\lambda}:X_\lambda\to X_\lambda\times_{S_\lambda}X_\lambda$ y $p_{2,\lambda}:X_\lambda\times_{S_\lambda}X_\lambda\to X_\lambda$. En virtud de (17.12.5), para todo $z\in\Delta_f(X)$, existe una vecindad abierta afín $U(z)$ de $z$ en $X\times_SX$ tal que $p_2$ sea liso en $U(z)$; en virtud de (8.2.11) y (17.7.8), existen un índice $\lambda(z)$ y una vecindad $U_{\lambda(z)}$ de la proyección de $z$ en $X_{\lambda(z)}\times_{S_{\lambda(z)}}X_{\lambda(z)}$ tales que $U(z)$ sea la imagen inversa de $U_{\lambda(z)}$, y que $p_{2,\lambda(z)}$ sea liso en $U_{\lambda(z)}$. Como $X$ es cuasicompacto, se puede recubrir $\Delta_f(X)$ por un número finito de vecindades $U(z_i)$; en virtud de (8.3.4), existe un $\lambda$ superior a todos los $\lambda(z_i)$ tal que las imágenes inversas de los $U_{\lambda(z_i)}$ en $X_\lambda\times_{S_\lambda}X_\lambda$ forman un recubrimiento de $\Delta_{f_\lambda}(X_\lambda)$; resulta entonces de (17.12.5) que este índice $\lambda$ cumple lo requerido.
 
-\begin{examples}[17.12.7]
+\begin{example}[17.12.7]
 \label{IV.17.12.7}
 Sean $S$ un preesquema, $G$ un $S$-\emph{preesquema en grupos}, localmente de presentación finita sobre $S$. Entonces, para que $G$ sea diferencialmente liso, es necesario y suficiente que $G$ sea liso sobre $S$ en los puntos de la «sección unidad» $e$ de $G$. La condición es, en efecto, necesaria por (17.12.5). Recíprocamente, supongamos que se cumple; para todo morfismo $S'\to S$, $G'=G\times_SS'$ es entonces un $S'$-preesquema en grupos localmente de presentación finita sobre $S'$; podemos, por tanto, en virtud de (17.12.5), reducirnos a probar que, para toda $S$-sección $s$ de $G$, $f$ es liso en los puntos de $s(S)$. Ahora bien, si $m:G\times_SG\to G$ es el morfismo que define la estructura de preesquema en grupos de $G$, $m\circ(s\times1_G):S\times_SG\to G\times_SG\to G$ es un
 
 \oldpage[IV-4]{89}
 
 $S$-isomorfismo del preesquema $G$, la «traslación por la izquierda» $\tau_s$, que transforma los puntos de la sección unidad de $G$ en los puntos de $s(S)$; se concluye que $G$ es liso sobre $S$ en los puntos de $s(S)$.
-\end{examples}
+\end{example}
 
 \begin{remark}[17.12.8]
 \label{IV.17.12.8}
@@ -6425,7 +6427,7 @@ Pero aquí los $\sh{O}_T$-módulos de los dos miembros de (17.13.12.2) son local
 \label{IV.17.14.1}
 Sea $f:X\to Y$ un morfismo localmente de presentación finita, $x$ un punto de $X$, $y=f(x)$. Para que $f$ sea liso \textup{(resp.} no ramificado, \textup{resp.} étale\textup{)} en el punto $x$, es necesario y suficiente que se satisfaga la condición siguiente:
 
-Para todo esquema local $Y'=\operatorname{Spec}(A')$ con punto cerrado $y'$, todo morfismo $h:Y'\to Y$ tal que $h(y')=y$, todo subesquema cerrado $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, donde el ideal $\mathfrak{J}'$ es de cuadrado nulo, y todo $Y$-morfismo $g_0:Y'_0\to X$ tal que $g_0(y')=x$, existe al menos un \textup{(resp.} a lo sumo uno, \textup{resp.} uno y solo uno\textup{)} $Y$-morfismo $g:Y'\to X$ tal que $g_0$ sea su restricción a $Y'_0$.
+Para todo \textup{esquema local} $Y'=\operatorname{Spec}(A')$ con punto cerrado $y'$, todo morfismo $h:Y'\to Y$ tal que $h(y')=y$, todo subesquema cerrado $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, donde el ideal $\mathfrak{J}'$ es de cuadrado nulo, y todo $Y$-morfismo $g_0:Y'_0\to X$ tal que $g_0(y')=x$, existe al menos un \textup{(resp.} a lo sumo uno, \textup{resp.} uno y solo uno\textup{)} $Y$-morfismo $g:Y'\to X$ tal que $g_0$ sea su restricción a $Y'_0$.
 \end{proposition}
 
 Teniendo en cuenta las definiciones (17.1.1 y 17.3.1), se trata de demostrar que la condición del enunciado es \emph{suficiente} para que $f$ sea liso (resp. no ramificado) en el punto $x$.
@@ -6719,7 +6721,7 @@ Supongamos, pues, $S=\Spec(k)$, donde $k$ es un cuerpo, siendo $X$ de tipo finit
 
 \begin{corollary}[17.16.5]
 \label{IV.17.16.5}
-Sea $f:X\to S$ un morfismo sobreyectivo localmente de presentación finita. Entonces existe un morfismo $g:S'\to S$ sobreyectivo, localmente de presentación finita y localmente cuasi-finito, tal que exista un $S$-morfismo $S'\to X$ \textup{(en otras palabras, que exista una} $S'$-sección \textup{de} $X'=X\times_S S'$\textup{)}. Si $S$ es cuasi-compacto \textup{(resp.} cuasi-compacto y cuasi-separado\textup{)}, se puede suponer que $S'$ es afín \textup{(resp.} $S'$ afín y el morfismo $g$ de presentación finita y cuasi-finito\textup{)}.
+Sea $f:X\to S$ un morfismo sobreyectivo localmente de presentación finita. Entonces existe un morfismo $g:S'\to S$ sobreyectivo, localmente de presentación finita y \textup{localmente cuasi-finito}, tal que exista un $S$-morfismo $S'\to X$ \textup{(en otras palabras, que exista una} $S'$-sección \textup{de} $X'=X\times_S S'$\textup{)}. Si $S$ es cuasi-compacto \textup{(resp.} cuasi-compacto y cuasi-separado\textup{)}, se puede suponer que $S'$ es afín \textup{(resp.} $S'$ afín y el morfismo $g$ de presentación finita y cuasi-finito\textup{)}.
 \end{corollary}
 
 Es suficiente demostrar el corolario suponiendo que $S$ es afín: en efecto, $S$ es unión de una familia $(S_\alpha)$ de abiertos afines, y si para cada $\alpha$, $S'_\alpha$ es afín y el morfismo $g_\alpha:S'_\alpha\to S_\alpha$ responde a la cuestión y es de presentación finita y cuasi-finito, tomando para $S'$ el preesquema suma de los $S'_\alpha$, con $g:S'\to S$ coincidiendo con $g_\alpha$ en cada uno de los $S'_\alpha$, este morfismo responde a la cuestión; además, si $S$ es cuasi-compacto, podemos suponer finita la familia $(S_\alpha)$, por lo que $S'$ es afín; si además $S$ es cuasi-separado, las inmersiones $S_\alpha\to S$ son de presentación finita (1.6.2), por lo que también lo es $g$.
@@ -8864,7 +8866,7 @@ Cada una de las condiciones \textup{a), a$'$), b)} implica la siguiente:
 \begin{enumerate}
   \item[\textup{d)}] El anillo $A_{\mathfrak p}$ es geométricamente regular sobre $k$.
 \end{enumerate}
-Si además $[k:k^p]<+\infty$, la condición $d)$ es equivalente a $a)$, $a')$ y $b)$.
+Si además $[k:k^p]<+\infty$, la condición \textup{d)} es equivalente a \textup{a), a$'$)} y \textup{b)}.
 \end{theorem}
 
 El hecho de que \emph{d)} implique \emph{b)} cuando $[k:k^p]<+\infty$ no es otro que (18.11.3). Es claro que \emph{a)} implica trivialmente \emph{a$'$)}; mostremos que \emph{c)} implica \emph{a)} cuando $\dim(A)=n$. Con las notaciones de \emph{a)}, se tiene entonces
@@ -12908,7 +12910,7 @@ $\sh{O}_{X,x}$ y el entero $n$ es \emph{el mismo} para todos estos puntos.
 
 \begin{corollary}[21.4.13]
 \ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.13}\fi
-Supongamos las hipótesis de {\EGAReadLink{IV.21.4.11}{(21.4.11)}}. Para todo
+Supongamos las hipótesis de \textup{\EGAReadLink{IV.21.4.11}{(21.4.11)}}. Para todo
 $\sh{O}_X$-módulo invertible $\sh{L}$ tal que, para todo punto maximal $\eta$ de
 $Y$, la imagen recíproca
 \[
@@ -19077,7 +19079,7 @@ $\sh{O}_{X,x}$ y el entero $n$ es \emph{el mismo} para todos estos puntos.
 
 \begin{corollary}[21.4.13]
 \ifdefined\EGAIVSuppressErratumLabels\else\label{IV.21.4.13}\fi
-Supongamos las hipótesis de {\EGAReadLink{IV.21.4.11}{(21.4.11)}}. Para todo
+Supongamos las hipótesis de \textup{\EGAReadLink{IV.21.4.11}{(21.4.11)}}. Para todo
 $\sh{O}_X$-módulo invertible $\sh{L}$ tal que, para todo punto maximal $\eta$ de
 $Y$, la imagen recíproca
 \[

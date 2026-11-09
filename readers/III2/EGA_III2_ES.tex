@@ -43,7 +43,7 @@
 \newcommand{\isoto}{\xrightarrow{\sim}}
 \newcommand{\simto}{\xrightarrow{\sim}}
 \newcommand{\shHom}{\mathscr{H}\!om}
-\newcommand{\sref}[2][]{(#2)}
+\newcommand{\sref}[2][]{\textup{(#2)}}
 \newcommand{\oldpage}[2][]{\setcounter{footnote}{0}\marginpar{\scriptsize\textbf{#1}~|~#2}\ignorespaces}
 \newenvironment{env}[1][]{\par\medskip\noindent\textbf{(#1)}\ }{\par}
 \newenvironment{theorem}[1][]{\par\medskip\noindent\itshape Teorema (#1). ---\ }{\par}
@@ -279,7 +279,7 @@ $\mathscr H^\bullet(f,\mathscr K^\bullet)\xrightarrow{\sim}
 \mathscr H^\bullet(f,\mathscr K'^\bullet)$ en hipercohomología. Lo mismo ocurre
 si se supone solamente que
 $\mathscr H^\bullet(h):\mathscr H^\bullet(\mathscr K^\bullet)\to
-\mathscr H^\bullet(\mathscr K'^\bullet)$ es un isomorfismo y que
+\mathscr H^\bullet(\mathscr K'^\bullet)$ es un \emph{isomorfismo} y que
 $\mathscr K^\bullet$ y $\mathscr K'^\bullet$ están \emph{acotados inferiormente},
 como se deduce inmediatamente de (\textbf 0, 11.1.5), aplicado a la sucesión espectral
 (6.2.1.2) y a su análoga para $\mathscr K'^\bullet$. Por último, para todo
@@ -1504,9 +1504,9 @@ $''\sh E(\sh P_\bullet,\sh Q_\bullet)$ son \emph{birregulares}.
 
 Finalmente, bajo el isomorfismo canónico
 $X\times_SY\xrightarrow{\sim}Y\times_SX$,
-$\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)$ corresponde
+$\boldsymbol{\shTor}_\bullet^S(\sh P_\bullet,\sh Q_\bullet)$ corresponde
 canónicamente a
-$\shTor_\bullet^S(\sh Q_\bullet,\sh P_\bullet)$.
+$\boldsymbol{\shTor}_\bullet^S(\sh Q_\bullet,\sh P_\bullet)$.
 \end{env}
 
 \begin{proposition}[6.5.6]
@@ -1515,10 +1515,10 @@ Sea $(\sh P_{\alpha\bullet})$ un sistema inductivo filtrante de
 complejos de $\sh O_X$-módulos cuasicoherentes. Existe un
 isomorfismo canónico
 \[
-  \varinjlim_\alpha
-  \shTor_\bullet^S(\sh P_{\alpha\bullet},\sh Q_\bullet)
+  \varinjlim
+  (\boldsymbol{\shTor}_\bullet^S(\sh P_{\alpha\bullet},\sh Q_\bullet))
   \xrightarrow{\sim}
-  \shTor_\bullet^S
+  \boldsymbol{\shTor}_\bullet^S
   \left(\varinjlim\sh P_{\alpha\bullet},\sh Q_\bullet\right).
   \tag{6.5.6.1}\label{III.6.5.6.1}
 \]
@@ -1537,11 +1537,11 @@ se reduce a \sref{III.6.3.6}.
 \textnormal{(i)} Consideremos en particular el caso $S=X=Y$, con
 $\sh P_\bullet$ y $\sh Q_\bullet$ dos complejos de
 $\sh O_S$-módulos cuasicoherentes. Entonces los
-$\shTor_n^S(\sh P_\bullet,\sh Q_\bullet)$ son
+$\boldsymbol{\shTor}_n^S(\sh P_\bullet,\sh Q_\bullet)$ son
 $\sh O_S$-módulos cuasicoherentes. Además, para todo punto
 $z\in S$, \sref{III.6.5.6} da un isomorfismo canónico
 \[
-  \bigl(\shTor_n^S(\sh P_\bullet,\sh Q_\bullet)\bigr)_z
+  \bigl(\boldsymbol{\shTor}_n^S(\sh P_\bullet,\sh Q_\bullet)\bigr)_z
   \xrightarrow{\sim}
   \mathbf{Tor}_n^{\sh O_z}
   \bigl((\sh P_\bullet)_z,(\sh Q_\bullet)_z\bigr),
@@ -1564,7 +1564,7 @@ Los $A(U)$-módulos
   \mathbf{Tor}_n^{A(U)}\bigl(P_\bullet(U),Q_\bullet(U)\bigr)
 \]
 forman entonces un \emph{prehaz} sobre $X$; denotemos por
-$\shTor_n^X(\sh P_\bullet,\sh Q_\bullet)$ el $\sh O_X$-módulo
+$\boldsymbol{\shTor}_n^X(\sh P_\bullet,\sh Q_\bullet)$ el $\sh O_X$-módulo
 asociado. Cuando $X$ es un \emph{preesquema}, \sref{III.6.3.12} muestra
 que este módulo es canónicamente isomorfo al hipertor definido
 más arriba. No desarrollaremos más esta generalización.
@@ -1606,7 +1606,7 @@ inferiormente de $\sh O_X$-módulos cuasicoherentes
 Supongamos que cada $\sh P_i$ es plano sobre $S$. Entonces existe
 un isomorfismo canónico de $\partial$-funtores en $\sh Q_\bullet$
 \[
-  \shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
+  \boldsymbol{\shTor}_\bullet^S(\sh P_\bullet,\sh Q_\bullet)
   \xrightarrow{\sim}
   \sh H_\bullet(\sh P_\bullet\otimes_S\sh Q_\bullet).
   \tag{6.5.9.1}\label{III.6.5.9.1}
@@ -1642,9 +1642,9 @@ un complejo $\sh Q_\bullet$ de $\sh O_Y$-módulos
 cuasicoherentes, existe un isomorfismo canónico funtorial
 \[
   (f\times_Sg)_*
-  \bigl(\shTor_\bullet^S(\sh P_\bullet,\sh Q_\bullet)\bigr)
+  \bigl(\boldsymbol{\shTor}_\bullet^S(\sh P_\bullet,\sh Q_\bullet)\bigr)
   \xrightarrow{\sim}
-  \shTor_\bullet^S(f_*\sh P_\bullet,g_*\sh Q_\bullet).
+  \boldsymbol{\shTor}_\bullet^S(f_*\sh P_\bullet,g_*\sh Q_\bullet).
   \tag{6.5.11.1}\label{III.6.5.11.1}
 \]
 \end{proposition}
@@ -2715,7 +2715,7 @@ primero que los homomorfismos
 inducidos por $u$ son isomorfismos. La afirmación relativa a las sucesiones
 $(a)$ y $(b)$ se deduce entonces de que estas sucesiones son birregulares
 (6.7.3) y de que los homomorfismos considerados son biyectivos sobre los
-términos $E_2$ ($0_{\mathrm I}$, 11.1.5).
+términos $E_2$ (\textbf{0}, 11.1.5).
 
 Obsérvese, por otra parte, que, si
 $u:\mathscr P_\bullet^{(1)}\to\mathscr Q_\bullet^{(1)}$ es una
@@ -6981,7 +6981,7 @@ los anillos de valuación discreta.
 
 \begin{proposition}[7.6.3]
 \label{III.7.6.3}
-Bajo las hipótesis de \sref{III.7.4.1}, supongamos que $A$ es un
+Bajo las hipótesis de \textup{\sref{III.7.4.1}}, supongamos que $A$ es un
 anillo noetheriano regular de dimensión $1$ (es decir, que $A$ es
 noetheriano y, para todo $x\in\Spec(A)$, el anillo $A_x$ es un cuerpo
 o un anillo de valuación discreta). Entonces, para todo entero $p$ y
@@ -7191,8 +7191,8 @@ Sea $\varphi:A\to A'$ un homomorfismo de anillos, y sea
 \[
   f={}^a\!\varphi:\Spec(A')\longrightarrow\Spec(A)
 \]
-la aplicación correspondiente \sref[I]{I.1.2.1}. Si
-$T'_\bullet=T_\bullet^{(A')}$ \sref{III.7.1.3}, entonces
+la aplicación correspondiente \textup{\sref[I]{I.1.2.1}}. Si
+$T'_\bullet=T_\bullet^{(A')}$ \textup{\sref{III.7.1.3}}, entonces
 \[
   d_p^{T'}=d_p^T\circ f.
   \tag{7.6.7.1}\label{III.7.6.7.1}
@@ -7837,7 +7837,7 @@ $\mathscr R=\operatorname{Coker}(v)$ para obtener el isomorfismo
 
 \begin{corollary}[7.7.8]
 \label{III.7.7.8}
-Bajo las hipótesis de \sref{III.7.7.6} relativas a $X$, $Y$ y $f$, sean
+Bajo las hipótesis de \textup{\sref{III.7.7.6}} relativas a $X$, $Y$ y $f$, sean
 $\mathscr F$ y $\mathscr G$ dos $\mathscr O_X$-módulos coherentes que verifican
 las condiciones siguientes:
 \begin{enumerate}
@@ -8025,7 +8025,7 @@ donde $\mathscr E_0$ y $\mathscr E_1$ son localmente libres de tipo finito.
 \begin{proposition}[7.7.10]
 \label{III.7.7.10}
 \textnormal{(Criterios locales para la propiedad de cambio de base).} Bajo las
-condiciones generales de \sref{III.7.7.5}, sean $y$ un punto de $Y$ y $p$ un
+condiciones generales de \textup{\sref{III.7.7.5}}, sean $y$ un punto de $Y$ y $p$ un
 entero. Las propiedades siguientes son equivalentes:
 \begin{enumerate}
   \item[\textup{a)}] El funtor $T_p^{\mathscr O_y}$ es exacto por la derecha.
@@ -8225,7 +8225,7 @@ cuasicompacto.
 
 \begin{proposition}[7.8.3]
 \label{III.7.8.3}
-Con las notaciones e hipótesis de \sref{III.7.8.1}, las condiciones
+Con las notaciones e hipótesis de \textup{\sref{III.7.8.1}}, las condiciones
 siguientes son equivalentes:
 \begin{enumerate}
   \item[\textup{a)}] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
@@ -8299,7 +8299,7 @@ Cuando se cumplen estas condiciones, se tiene además:
     $z\leadsto d_p(z)$, definida en \eqref{III.7.7.5.1}, es
     constante.
 \end{enumerate}
-Además, si $Y$ es \textup{reducido} en $y$ \sref[0]{0.4.1.4}, la condición
+Además, si $Y$ es \textup{reducido} en $y$ \textup{\sref[0]{0.4.1.4}}, la condición
 e) es equivalente a las demás condiciones.
 \end{proposition}
 
@@ -8341,7 +8341,7 @@ $\mathscr T_p^U$ \eqref{III.7.7.2.2}.
 
 \begin{proposition}[7.8.5]
 \label{III.7.8.5}
-Bajo las hipótesis de \sref{III.7.8.4}, las condiciones siguientes
+Bajo las hipótesis de \textup{\sref{III.7.8.4}}, las condiciones siguientes
 son equivalentes:
 \begin{enumerate}
   \item[\textup{a)}] $\mathscr P_\bullet$ es homológicamente plano sobre $Y$
@@ -8466,7 +8466,7 @@ ya es sobreyectivo.
 
 \begin{corollary}[7.8.7]
 \label{III.7.8.7}
-Bajo las hipótesis de \sref{III.7.8.6}, existe un entorno abierto
+Bajo las hipótesis de \textup{\sref{III.7.8.6}}, existe un entorno abierto
 $U$ de $y$ tal que:
 \begin{enumerate}
   \item[\textup{(i)}] $f_*(\mathscr O_X)|U$ es isomorfo a un
@@ -8490,7 +8490,7 @@ una elección adecuada de $U$, y de \eqref{III.7.7.5.3}.
 
 \begin{corollary}[7.8.8]
 \label{III.7.8.8}
-Supongamos que se cumplen las hipótesis de \sref{III.7.8.6} y,
+Supongamos que se cumplen las hipótesis de \textup{\sref{III.7.8.6}} y,
 además, que
 \[
   \Gamma(X_y,\mathscr O_{X_y})=\kres(y).
@@ -8511,7 +8511,7 @@ necesariamente igual a $1$.
 
 \begin{corollary}[7.8.9]
 \label{III.7.8.9}
-Bajo las hipótesis de \sref{III.7.8.6}, existen un entorno abierto
+Bajo las hipótesis de \textup{\sref{III.7.8.6}}, existen un entorno abierto
 $U$ de $y$, un $\mathscr O_U$-módulo coherente $\mathscr Q$,
 determinado salvo isomorfismo único, y un isomorfismo de funtores en
 el $\mathscr O_U$-módulo cuasicoherente $\mathscr M$,
@@ -8788,7 +8788,7 @@ al de los complejos con un solo término.
 
 \begin{proposition}[7.9.7]
 \label{III.7.9.7}
-Bajo las hipótesis de \sref{III.7.9.4}, sean $Y'$ un preesquema
+Bajo las hipótesis de \textup{\sref{III.7.9.4}}, sean $Y'$ un preesquema
 localmente noetheriano y $g:Y'\to Y$ un morfismo, pongamos
 \[
   X'=X\times_Y Y',\qquad
@@ -8828,7 +8828,7 @@ caso en que $Y$ e $Y'$ son afines.
 
 \begin{proposition}[7.9.8]
 \label{III.7.9.8}
-Supongamos que se cumplen las hipótesis de \sref{III.7.9.4} y,
+Supongamos que se cumplen las hipótesis de \textup{\sref{III.7.9.4}} y,
 además, que existe un entero $i_0$ tal que
 \[
   T_i(\kres(y))=0
@@ -8887,7 +8887,7 @@ En particular:
 
 \begin{corollary}[7.9.10]
 \label{III.7.9.10}
-Bajo las hipótesis preliminares de \sref{III.7.9.9} relativas a
+Bajo las hipótesis preliminares de \textup{\sref{III.7.9.9}} relativas a
 $X$, $Y$ y $\mathscr F$, supongamos que
 $R^if_*(\mathscr F)=0$ para todo $i>0$. Entonces
 $f_*(\mathscr F)$ es un $\mathscr O_Y$-módulo localmente libre,
@@ -8900,7 +8900,7 @@ En virtud de \sref{III.7.9.9}, basta demostrar el lema siguiente.
 
 \begin{lemma}[7.9.10.1]
 \label{III.7.9.10.1}
-Bajo las hipótesis de \sref{III.7.9.10}, se tiene
+Bajo las hipótesis de \textup{\sref{III.7.9.10}}, se tiene
 \[
   H^i\bigl(f^{-1}(y),
     \mathscr F\otimes_{\mathscr O_Y}\kres(y)\bigr)=0
@@ -8922,7 +8922,7 @@ lema resulta entonces de la equivalencia de las condiciones \emph{a)} y
 \oldpage[III]{211}
 \begin{proposition}[7.9.11]
 \label{III.7.9.11}
-Bajo las hipótesis de \sref{III.7.9.4}, sea $\mathscr L$ un
+Bajo las hipótesis de \textup{\sref{III.7.9.4}}, sea $\mathscr L$ un
 $\mathscr O_X$-módulo inversible muy amplio sobre $Y$ y, para todo
 $n\in\bb Z$, pongamos
 \[

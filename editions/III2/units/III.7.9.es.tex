@@ -38,7 +38,7 @@ Entonces, para todo $\mathfrak p\in\Spec(A)$, se tiene
     \operatorname{rank}_{\kres(\mathfrak p)}
       T_i\bigl(\kres(\mathfrak p)\bigr)
   =
-  \sum_i(-1)^i\operatorname{rank}_{\mathfrak p}(P_i).
+  \sum_i(\setmin 1)^i\operatorname{rank}_{\mathfrak p}(P_i).
   \tag{7.9.2.1}\label{III.7.9.2.1}
 \]
 \end{proposition}
@@ -58,7 +58,7 @@ dimensión finita al pasar a la homología
 \label{III.7.9.3}
 La función
 \[
-  \mathfrak p\longmapsto
+  \mathfrak p\leadsto
   \sum_i(-1)^i
     \operatorname{rank}_{\kres(\mathfrak p)}
       T_i\bigl(\kres(\mathfrak p)\bigr)
@@ -78,14 +78,14 @@ Si se pone
   \mathscr H^{-\bullet}
     \bigl(f,\mathscr P^\bullet
       \otimes_{\mathscr O_Y}\mathscr M\bigr)
-  \qquad\text{(cf.~\eqref{III.7.7.1.1})},
+  \qquad\text{\textup{(cf.~\eqref{III.7.7.1.1})}},
 \]
 entonces la función
 
 \oldpage[III]{209}
 \[
-  y\longmapsto
-  \sum_i(-1)^i
+  y\leadsto
+  \sum_i(\setmin 1)^i
     \operatorname{rank}_{\kres(y)}
       T_i\bigl(\kres(y)\bigr)
   \tag{7.9.4.1}\label{III.7.9.4.1}
@@ -156,7 +156,7 @@ Como $\mathscr T_\bullet$ es un funtor homológico
   \mathscr T_{i+2d+2d'}(\mathscr P''_\bullet,\kres(y))
   \longrightarrow
   \mathscr T_{i-1}(\mathscr P'_\bullet,\kres(y))
-  \longrightarrow\cdots ,
+  \longrightarrow\ldots ,
 \]
 que, además, solo tiene un número finito de términos. Al escribir
 que la característica de Euler-Poincaré de este complejo es nula
@@ -176,16 +176,16 @@ $\mathscr P_\bullet=(\mathscr P_i)$ y que $\mathscr P_i=0$ para
 $i<0$. Se tiene entonces la sucesión exacta de complejos
 \[
 \xymatrix@C=2.4em{
-  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
-    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
-  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
-    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
-  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
-    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
-  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
-    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
-  \cdots \ar[r] & 0 \ar[r] & 0 \ar[r]
-    & 0 \ar[r] & 0 \ar[r] & \cdots
+  \ldots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d] & \ldots \\
+  \ldots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r]\ar[d] & \ldots \\
+  \ldots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r]\ar[d] & \ldots \\
+  \ldots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d] & \ldots \\
+  \ldots \ar[r] & 0 \ar[r] & 0 \ar[r]
+    & 0 \ar[r] & 0 \ar[r] & \ldots
 }
 \]
 cuyas flechas verticales no nulas son los automorfismos identidad.
@@ -194,7 +194,7 @@ inducción sobre la longitud de $\mathscr P_\bullet$, se obtiene
 \[
   \operatorname{EP}(\mathscr P_\bullet;y)
   =
-  \sum_i(-1)^i\operatorname{EP}(\mathscr P_i;y)
+  \sum(\setmin 1)^i\operatorname{EP}(\mathscr P_i;y)
   \tag{7.9.6.2}\label{III.7.9.6.2}
 \]
 
@@ -255,7 +255,7 @@ caso en que $Y$ e $Y'$ son afines.
 Supongamos que se cumplen las hipótesis de \sref{III.7.9.4} y,
 además, que existe un entero $i_0$ tal que
 \[
-  \mathscr T_i(\kres(y))=0
+  T_i(\kres(y))=0
   \qquad\text{para $i\neq i_0$ y todo $y\in Y$.}
 \]
 Entonces
@@ -273,17 +273,17 @@ $y\in Y$ es
 
 \begin{proof}
 Observemos primero que los funtores
-$\mathscr T_i^{\mathscr O_y}$ cumplen las hipótesis de
+$T_j^{\mathscr O_y}$ cumplen las hipótesis de
 \sref{III.7.4.4}, por lo que \sref{III.7.4.7} les es aplicable.
 La hipótesis y \sref{III.7.5.3} implican que
-$\mathscr T_i^{\mathscr O_y}$ es nulo para $i\neq i_0$.
+$T_i^{\mathscr O_y}$ es nulo para $i\neq i_0$.
 En consecuencia, $\mathscr T_{i_0}$ es exacto por
 \sref{III.7.3.3}, y \sref{III.7.8.4} muestra que
 $\mathscr H^{-i_0}(f,\mathscr P^\bullet)$ es localmente libre.
 Su rango en $y\in Y$ es
 \[
   \operatorname{rank}_{\kres(y)}
-    \mathscr T_{i_0}(\kres(y))
+    T_{i_0}(\kres(y))
   =
   (\setmin 1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y),
 \]
@@ -339,8 +339,8 @@ $\mathscr P_\bullet$ reducido a su único término no nulo
 $\mathscr F$ en grado $0$, la hipótesis da
 $\mathscr T_p(\mathscr O_Y)=0$ para $p<0$. Se deduce de
 \sref{III.7.3.7} que $\mathscr T_p$ es exacto para $p<0$, y el
-lema resulta entonces de la equivalencia de las condiciones a) y
-d) de \sref{III.7.7.5}.
+lema resulta entonces de la equivalencia de las condiciones \emph{a)} y
+\emph{d)} de \sref{III.7.7.5}.
 \end{proof}
 
 \oldpage[III]{211}
@@ -357,7 +357,7 @@ $n\in\bb Z$, pongamos
 \]
 Entonces, para todo $y\in Y$, la función
 \[
-  n\longmapsto
+  n\leadsto
   \operatorname{EP}(f,\mathscr P_\bullet(n);y)
   \tag{7.9.11.1}\label{III.7.9.11.1}
 \]
@@ -367,7 +367,7 @@ todos los puntos de una misma componente conexa de $Y$.
 
 \begin{proof}
 Es claro que $\mathscr P_\bullet(n)$ es un complejo de
-$\mathscr O_X$-módulos planos sobre $Y$. En virtud de
+$\mathscr O_X$-módulos \emph{planos} sobre $Y$. En virtud de
 \eqref{III.7.9.6.2}, podemos reducirnos al caso en que
 $\mathscr P_\bullet$ tiene un único término no nulo
 $\mathscr F\neq0$ en grado $0$. Como se trata de cuestiones
@@ -381,12 +381,12 @@ entonces $\mathscr L_y$ es un $\mathscr O_{X_y}$-módulo muy amplio
 \sref[II]{II.4.4.10}. Por \sref{III.7.7.2}, para el funtor
 $\mathscr T_\bullet$ asociado a $\mathscr P_\bullet(n)$ se tiene
 \[
-  \mathscr T_i(\kres(y))
+  T_i(\kres(y))
   =
   H^{-i}\bigl(
     X_y,\mathscr F_y\otimes\mathscr L_y^{\otimes n}\bigr),
   \qquad
-  \mathscr F_y=\mathscr F\otimes_{\mathscr O_Y}\kres(y).
+  \mathscr F_y=\mathscr F\otimes_{\mathscr O_y}\kres(y).
 \]
 Por consiguiente, $\operatorname{EP}(f,\mathscr F(n);y)$ no es
 sino la característica de Euler-Poincaré
@@ -406,9 +406,9 @@ denotará por
   \qquad\text{o}\qquad
   \operatorname{PH}(\mathscr P_\bullet;y),
 \]
-y se llamará \emph{polinomio de Hilbert en $y$} relativo a
+y se llamará \emph{polinomio de Hilbert} en $y$ relativo a
 $\mathscr P_\bullet$, $f$ y $\mathscr L$ (o simplemente
-\emph{polinomio de Hilbert en $y$} de $\mathscr P_\bullet$, o de
+\emph{polinomio de Hilbert en $y$} de $\mathscr P_\bullet$, o \emph{de}
 $f$, cuando no haya riesgo de confusión). Cuando $Y$ es conexo y
 no vacío, se suprime la referencia a $y$ en la notación y la
 terminología. Este invariante desempeñará un papel esencial en el
@@ -509,7 +509,7 @@ n.\textsuperscript{o}~2, teorema~1). Sea
 \]
 el anillo graduado asociado. Se sabe que $X$ se identifica
 canónicamente con $\Proj(S)$ por
-\sref[II]{II.4.5.2}{(b)} y \sref[II]{II.5.4.4}. Sea
+\sref[II]{II.4.5.2}{\emph{(b)}} y \sref[II]{II.5.4.4}. Sea
 \[
   M=\bigoplus_{n\geq n_0}\Gamma(X,\mathscr F(n)).
 \]

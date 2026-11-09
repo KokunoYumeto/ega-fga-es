@@ -8,8 +8,8 @@
 Sean $f=(\psi,\theta):X\to S$ un morfismo de preesquemas,
 $\mathscr{F}$, $\mathscr{G}$ dos $\mathcal{O}_X$-módulos, y $n$ un entero
 $\geq0$. Se dice que un homomorfismo de haces de grupos aditivos
-$D:\mathscr{F}\to\mathscr{G}$ es un \emph{operador diferencial de orden
-$\leq n$} (relativamente a $S$) si existe un homomorfismo de
+$D:\mathscr{F}\to\mathscr{G}$ es un operador diferencial de orden
+$\leq n$ (relativamente a $S$) si existe un homomorfismo de
 $\mathcal{O}_X$-módulos
 $u:\mathscr{P}_{X/S}^n(\mathscr{F})\to\mathscr{G}$ (donde
 $\mathscr{P}_{X/S}^n(\mathscr{F})$ está provisto de su estructura de
@@ -40,7 +40,7 @@ $D:\mathscr{F}\to\mathscr{G}$ es el ínfimo de los enteros $n$ tales que
 $D$ sea un operador diferencial de orden $\leq n$ (y, por tanto, $+\infty$
 si no hay tales enteros); este orden es siempre finito si $X$ es
 \emph{cuasicompacto}. Los operadores diferenciales de orden $0$ no son sino
-los homomorfismos de $\mathcal{O}_X$-módulos
+los homomorfismos de $\mathcal{O}_X$-\emph{módulos}
 $\mathscr{F}\to\mathscr{G}$; se conviene en que todo operador diferencial
 de orden $<0$ es \emph{nulo}. Para $n\geq0$, un operador diferencial no es,
 en general, un homomorfismo de $\mathcal{O}_X$-módulos, pero es siempre
@@ -116,7 +116,7 @@ cuando $U$ recorre los abiertos de $X$, los homomorfismos
 $u\mapsto u\circ d_{U/S,\mathscr{F}|U}^n$ son \emph{isomorfismos} de grupos
 aditivos
 \[
-  \mathscr{H}\!om_{\mathcal{O}_U}
+  \operatorname{Hom}_{\mathcal{O}_U}
   (\mathscr{P}_{U/S}^n(\mathscr{F}|U),\mathscr{G}|U)
   \xrightarrow{\sim}
   \operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U),
@@ -254,7 +254,7 @@ $\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ como un
 $\Gamma(U,\mathcal{O}_X)$-bimódulo topológico, de modo que
 $\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ aparece como un haz con valores en
 la categoría de los grupos conmutativos topológicos
-(0\textsubscript{I}, 3.2.6). Entonces, por (G, II, 1.11), el límite del sistema
+($\mathbf{0}_{\mathrm I}$, 3.2.6). Entonces, por (G, II, 1.11), el límite del sistema
 inductivo de haces de grupos conmutativos
 \[
   (\mathscr{H}\!om_{\mathcal{O}_X}
@@ -270,7 +270,7 @@ $\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))\to\Gamma(U,\mathscr{G})$. Se
 puede, por tanto, expresar también (16.8.4) diciendo que se tiene un
 isomorfismo canónico
 \[
-  \mathscr{H}\!om.\mathrm{cont}_{\mathcal{O}_X}
+  \mathscr{H}\!om.\mathit{cont}_{\mathcal{O}_X}
   (\mathscr{P}_{X/S}^{\infty}(\mathscr{F}),\mathscr{G})
   \xrightarrow{\sim}
   \mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})
@@ -300,7 +300,7 @@ siguientes son equivalentes:
   $(a_i)_{1\leq i\leq n+1}$ de $n+1$ secciones de $\mathcal{O}_X$ sobre
   $U$ y toda sección $t$ de $\mathscr{F}$ sobre $U$, se tiene la identidad
   \[
-    \sum_{H\subset I_{n+1}}(-1)^{\operatorname{Card}(H)}
+    \sum_{H\subset I_{n+1}}(\setmin 1)^{\operatorname{Card}(H)}
     \left(\prod_{i\in H}a_i\right)
     D\!\left(\left(\prod_{i\notin H}a_i\right)t\right)=0
     \tag{16.8.8.2}
@@ -311,14 +311,14 @@ siguientes son equivalentes:
 \oldpage[IV-4]{43}
 \end{proposition}
 
-Demostremos primero la equivalencia entre a) y c). Por definición, para
+Demostremos primero la equivalencia entre \emph{a)} y \emph{c)}. Por definición, para
 demostrar que $D$ es un operador diferencial de orden $\leq n$, basta
 demostrarlo para la restricción
 $D|U:\mathscr{F}|U\to\mathscr{G}|U$ a todo abierto afín $U$ de $X$; por
-otra parte, la propiedad c) es válida para todo abierto $U$ de $X$ si lo es
+otra parte, la propiedad \emph{c)} es válida para todo abierto $U$ de $X$ si lo es
 para todo abierto afín. Se puede, por tanto, reducir al caso en que
 $S=\operatorname{Spec}(A)$ y $X=\operatorname{Spec}(B)$ son afines. En
-virtud de (16.8.2) (cuyas notaciones se conservan), la condición a) significa
+virtud de (16.8.2) (cuyas notaciones se conservan), la condición \emph{a)} significa
 entonces que el $A$-homomorfismo $D':B\otimes_A M\to N$ tal que
 $D'(b\otimes t)=bD(t)$ se anula sobre
 $\mathfrak J^{n+1}(B\otimes_A M)$, lo que, en virtud de (\textbf 0, 20.4.4),
@@ -336,16 +336,16 @@ por $D'$ no es el primer miembro de (16.8.8.2).}
   \left(\left(\prod_{i\notin H}a_i\right)t\right),
 \]
 y el valor de $D'$ sobre este elemento no es sino, salvo ese signo común, el
-primer miembro de (16.8.8.2), lo que demuestra la equivalencia entre a) y c).
+primer miembro de (16.8.8.2), lo que demuestra la equivalencia entre \emph{a)} y \emph{c)}.
 
-Demostremos ahora la equivalencia entre b) y c). Razonemos por inducción
+Demostremos ahora la equivalencia entre \emph{b)} y \emph{c)}. Razonemos por inducción
 sobre $n$, siendo trivial la afirmación para $n=0$. Escribiendo $a_{n+1}$ en
-lugar de $a$ en la condición b), se ve, en virtud de la hipótesis de
-inducción, que la condición b) significa que, para toda familia
+lugar de $a$ en la condición \emph{b)}, se ve, en virtud de la hipótesis de
+inducción, que la condición \emph{b)} significa que, para toda familia
 $(a_i)_{1\leq i\leq n}$ de $n$ secciones de $\mathcal{O}_X$ sobre $U$ y
 toda sección $t$ de $\mathscr{F}$ sobre $U$, se tiene
 \[
-  \sum_{H'\subset I_n}(-1)^{\operatorname{Card}(H')}
+  \sum_{H'\subset I_n}(\setmin 1)^{\operatorname{Card}(H')}
   \left(\prod_{i\in H'}a_i\right)
   D_{a_{n+1}}\!\left(\left(\prod_{i\notin H'}a_i\right)t\right)=0
 \]
@@ -553,14 +553,14 @@ $\mathscr{D}\!iff_{X/S}$.
     =\prod_{\lambda\in L}
     \operatorname{Diff}_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}),
   \]
-  y, por consiguiente, también (0\textsubscript{I}, 3.2.6)
+  y, por consiguiente, también ($\mathbf{0}_{\mathrm I}$, 3.2.6)
   \[
     \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
     =\prod_{\lambda\in L}
     \mathscr{D}\!iff_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}).
   \]
   Por otra parte, si $\mathscr{G}=\prod_{\mu\in M}\mathscr{G}_\mu$
-  (0\textsubscript{I}, 3.2.6), se tiene
+  ($\mathbf{0}_{\mathrm I}$, 3.2.6), se tiene
   \[
     \operatorname{Hom}_{\mathcal{O}_X}
     (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})

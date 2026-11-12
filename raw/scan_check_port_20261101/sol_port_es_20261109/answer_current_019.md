@@ -1,0 +1,936 @@
+```json
+[
+  {
+    "id": 4759,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\mathrm{C}^\\bullet(A,B;\\sh{S}^\\bullet)\n  =\n  \\bigl(\n    \\mathrm{C}^h(A,B;\\sh{S}^k)\n  \\bigr)_{(h,k)\\in\\bb{Z}\\times\\bb{Z}}"
+  },
+  {
+    "id": 4760,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "es un bicomplejo de grupos abelianos, y que",
+    "en_new": "es un \\emph{bicomplejo} de grupos abelianos, y que"
+  },
+  {
+    "id": 4761,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\mathrm{L}^\\bullet(A,B;\\sh{S}^\\bullet)\n  =\n  \\bigl(\n    \\mathrm{L}^h(A,B;\\sh{S}^k)\n  \\bigr)"
+  },
+  {
+    "id": 4762,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "La inyección canónica\n\\[\n  \\mathrm{L}^\\bullet(A,B;\\sh{S}^\\bullet)\n  \\longrightarrow\n  \\mathrm{C}^\\bullet(A,B;\\sh{S}^\\bullet)\n\\]\ninduce un isomorfismo en la cohomología de estos dos bicomplejos."
+  },
+  {
+    "id": 4763,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\mathrm{C}^{\\bullet\\bullet}\n  =\n  \\mathrm{C}^\\bullet(A,B;\\sh{S}^\\bullet),\n  \\qquad\n  \\mathrm{L}^{\\bullet\\bullet}\n  =\n  \\mathrm{L}^\\bullet(A,B;\\sh{S}^\\bullet)."
+  },
+  {
+    "id": 4764,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "sucesiones espectrales de estos bicomplejos son regulares",
+    "en_new": "sucesiones espectrales de estos bicomplejos son \\emph{regulares}"
+  },
+  {
+    "id": 4765,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4766,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "es biyectivo.\nLa conclusión se deduce",
+    "en_new": "es \\emph{biyectivo}.\nLa conclusión se deduce"
+  },
+  {
+    "id": 4767,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\mathrm{C}^\\bullet(A,B;\\sh{S}^\\bullet)\n  \\longrightarrow\n  \\mathrm{P}^\\bullet(A,B;\\sh{S}^\\bullet),"
+  },
+  {
+    "id": 4768,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "este homomorfismo induce asimismo un isomorfismo en cohomología.",
+    "en_new": "este homomorfismo induce asimismo un \\emph{isomorfismo} en cohomología."
+  },
+  {
+    "id": 4769,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "Sea $\\cat{C}$ una categoría abeliana, y sean $\\boldsymbol K'$ y $K''$ subconjuntos\ndel conjunto de objetos de $\\cat{C}$, con $K''\\subset K'$, que satisfacen las",
+    "en_new": "Sea $\\cat{C}$ una categoría abeliana, y sean $\\boldsymbol K'$ y $\\boldsymbol K''$ subconjuntos\ndel conjunto de objetos de $\\cat{C}$, con $\\boldsymbol K''\\subset\\boldsymbol K'$, que satisfacen las"
+  },
+  {
+    "id": 4770,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\emph{Para todo $A'\\in\\boldsymbol K'$ y todo epimorfismo $u:A\\to A'$ en\n  $\\cat{C}$, existen un objeto $B\\in\\boldsymbol K''$ y un morfismo $v:B\\to A$\n  tales que $u\\circ v$ es un epimorfismo.}",
+    "en_new": "Para todo $A'\\in\\boldsymbol K'$ y todo epimorfismo $u:A\\to A'$ en\n  $\\cat{C}$, existen un objeto $B\\in\\boldsymbol K''$ y un morfismo $v:B\\to A$\n  tales que $u\\circ v$ es un epimorfismo.",
+    "note": "Se elimina la inversión de cursiva dentro de la proposición; se conserva la notación de composición."
+  },
+  {
+    "id": 4771,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\emph{Para todo par $A,B\\in\\boldsymbol K'$ y todo epimorfismo $u:A\\to B$,\n  el objeto $\\Ker(u)$ pertenece a $K'$.}",
+    "en_new": "Para todo par $A,B\\in\\boldsymbol K'$ y todo epimorfismo $u:A\\to B$,\n  el objeto $\\Ker(u)$ pertenece a $\\boldsymbol K'$."
+  },
+  {
+    "id": 4772,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\emph{El producto de dos objetos de $K''$ pertenece a $K''$.}",
+    "en_new": "El producto de dos objetos de $\\boldsymbol K''$ pertenece a $\\boldsymbol K''$."
+  },
+  {
+    "id": 4773,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\emph{Sea $P_\\bullet=(P_i)_{i\\in\\bb{Z}}$ un complejo en $\\cat{C}$ tal\nque $\\HH_i(P_\\bullet)\\in\\boldsymbol K'$ para todo $i$, y supongamos que existe un\nentero $d$ para el cual $\\HH_i(P_\\bullet)=0$ cuando $i<d$.\nEntonces existen un complejo $Q_\\bullet=(Q_i)_{i\\in\\bb{Z}}$ en $\\cat{C}$\ntal que $Q_i\\in\\boldsymbol K''$ para todo $i$ y $Q_i=0$ para $i<d$, y un\nhomomorfismo de complejos\n\\[\n  u:Q_\\bullet\\longrightarrow P_\\bullet\n\\]\ncuyo morfismo inducido\n\\[\n  \\HH_\\bullet(Q_\\bullet)\\longrightarrow\\HH_\\bullet(P_\\bullet)\n\\]\nes un isomorfismo.}",
+    "en_new": "Sea $P_\\bullet=(P_i)_{i\\in\\bb{Z}}$ un complejo en $\\cat{C}$ tal\nque $\\HH_i(P_\\bullet)\\in\\boldsymbol K'$ para todo $i$, y supongamos que existe un\nentero $d$ para el cual $\\HH_i(P_\\bullet)=0$ cuando $i<d$.\nEntonces existen un complejo $Q_\\bullet=(Q_i)_{i\\in\\bb{Z}}$ en $\\cat{C}$\ntal que $Q_i\\in\\boldsymbol K''$ para todo $i$ y $Q_i=0$ para $i<d$, y un\nhomomorfismo de complejos\n\\[\n  u:Q_\\bullet\\longrightarrow P_\\bullet\n\\]\ncuyo morfismo inducido\n\\[\n  \\HH_\\bullet(Q_\\bullet)\\longrightarrow\\HH_\\bullet(P_\\bullet)\n\\]\nes un isomorfismo.",
+    "note": "Las letras ya están corregidas; se elimina la inversión de cursiva."
+  },
+  {
+    "id": 4774,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\emph{(i bis)}",
+    "en_new": "(i \\emph{bis})"
+  },
+  {
+    "id": 4775,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\emph{Sea $u:C\\to B$ un epimorfismo en $\\cat{C}$, sea $A$ un\nobjeto de $\\boldsymbol K'$, y sea $v:A\\to B$ un morfismo en $\\cat{C}$.\nEntonces existen un objeto $D\\in\\boldsymbol K''$, un epimorfismo"
+  },
+  {
+    "id": 4776,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "Formemos el producto fibrado $C\\times_B A$ en $\\cat{C}$ y sean"
+  },
+  {
+    "id": 4778,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "tales que $q\\circ w$ es\nun epimorfismo.\nBasta tomar $u'=q\\circ w$ y $v'=p\\circ w$.",
+    "note": "La composición explícita es la convención española equivalente."
+  },
+  {
+    "id": 4779,
+    "decision": "not_applicable",
+    "note": "Puntuación sintáctica francesa."
+  },
+  {
+    "id": 4780,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "$Q_j\\in\\boldsymbol K''$ para $j\\leq i$, y\n  $\\mathrm{B}_j(Q_\\bullet)\\in\\boldsymbol K'$ para $j<i$."
+  },
+  {
+    "id": 4781,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "inducido por $(u_k)_{k\\leq i}$ es un isomorfismo.",
+    "en_new": "inducido por $(u_k)_{k\\leq i}$ es un \\emph{isomorfismo}."
+  },
+  {
+    "id": 4782,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4783,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "canónica, es un epimorfismo.\n\\end{enumerate}",
+    "en_new": "canónica, es un \\emph{epimorfismo}.\n\\end{enumerate}"
+  },
+  {
+    "id": 4790,
+    "decision": "not_applicable",
+    "note": "La frase se traslada al otro lado del salto de página francés; reaparece en el contexto de 4792."
+  },
+  {
+    "id": 4792,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "Por~(iii), $Q_{i+1}$ pertenece a $K''$.",
+    "en_new": "Por~(iii), $Q_{i+1}$ pertenece a $\\boldsymbol K''$."
+  },
+  {
+    "id": 4794,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4795,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4796,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "como $K''$ el conjunto de los $A$-módulos libres de rango finito.",
+    "en_new": "como $\\boldsymbol K''$ el conjunto de los $A$-módulos libres de rango finito."
+  },
+  {
+    "id": 4797,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "$P_i$ son $A$-módulos planos a derecha.",
+    "en_new": "$P_i$ son $A$-módulos \\emph{planos} a derecha."
+  },
+  {
+    "id": 4798,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4799,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "induce de nuevo un isomorfismo",
+    "en_new": "induce de nuevo un \\emph{isomorfismo}"
+  },
+  {
+    "id": 4800,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\HH_\\bullet(Q_\\bullet\\otimes_A M)\n    \\isoto\n    \\HH_\\bullet(P_\\bullet\\otimes_A M),"
+  },
+  {
+    "id": 4801,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "La conclusión de \\sref{0.11.9.2} no tiene por qué cumplirse cuando $A$ no es\n  noetheriano.",
+    "en_new": "La conclusión de \\sref{0.11.9.2} no tiene por qué cumplirse cuando $A$ no es\n  \\emph{noetheriano}."
+  },
+  {
+    "id": 4802,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "implicaría que todo $A$-módulo por la derecha finitamente engendrado admite una resolución por",
+    "en_new": "implicaría que todo $A$-módulo por la derecha finitamente engendrado admite una \\emph{resolución} por"
+  },
+  {
+    "id": 4803,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "un complejo de $A$-módulos a izquierda de longitud finita.",
+    "en_new": "un \\emph{complejo} de $A$-módulos a izquierda de \\emph{longitud finita}."
+  },
+  {
+    "id": 4806,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "Para todo complejo finito $M^\\bullet$ de $A$-módulos a izquierda de longitud\nfinita,\n\\[\n  \\chi(M^\\bullet)=\\chi\\bigl(\\HH^\\bullet(M^\\bullet)\\bigr),\n\\]\ndonde $\\HH^\\bullet(M^\\bullet)$ se considera como un complejo con diferencial\nnulo.\nEn particular, si la sucesión \\eqref{0.11.10.1.1} es exacta, entonces\n$\\chi(M^\\bullet)=0$.",
+    "note": "No hay un énfasis exterior que invierta la cursiva de la proposición."
+  },
+  {
+    "id": 4807,
+    "decision": "not_applicable",
+    "note": "Separación de fórmulas."
+  },
+  {
+    "id": 4808,
+    "decision": "not_applicable",
+    "note": "Separación de fórmulas."
+  },
+  {
+    "id": 4810,
+    "decision": "not_applicable",
+    "note": "Puntuación sintáctica francesa."
+  },
+  {
+    "id": 4811,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\chi\\bigl(\\mathrm{E}_r^{(\\bullet)}\\bigr)\n\\]\nde todos los complejos\n\\[\n  \\mathrm{E}_r^{(\\bullet)}\n  =\n  \\bigl(\\mathrm{E}_r^{(n)}\\bigr)_{n\\in\\bb{Z}}"
+  },
+  {
+    "id": 4812,
+    "decision": "not_applicable",
+    "note": "La condición sobre n es equivalente; solo cambia la presentación."
+  },
+  {
+    "id": 4813,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\chi\\bigl(\\mathrm{E}_\\infty^{(\\bullet)}\\bigr)\n  =\n  \\chi\\bigl(\\mathrm{E}_2^{(\\bullet)}\\bigr),\n\\]\ndonde\n\\[\n  \\mathrm{E}_\\infty^{(\\bullet)}\n  =\n  \\bigl(\\mathrm{E}_\\infty^{(n)}\\bigr)_{n\\in\\bb{Z}}"
+  },
+  {
+    "id": 4816,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\chi\\bigl(\\mathrm{E}_r^{(\\bullet)}\\bigr)\n  =\n  \\chi\\bigl(\\mathrm{E}_{r+1}^{(\\bullet)}\\bigr)"
+  },
+  {
+    "id": 4817,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "\\HH^\\bullet\\bigl(\\mathrm{E}_r^{(\\bullet)}\\bigr)\n  \\simeq\n  \\mathrm{E}_{r+1}^{(\\bullet)}"
+  },
+  {
+    "id": 4819,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "cohomología $\\HH^\\bullet(X,\\sh{F})$, que es",
+    "en_new": "\\emph{cohomología} $\\HH^\\bullet(X,\\sh{F})$, que es"
+  },
+  {
+    "id": 4820,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "un funtor cohomológico universal\n(T, 2.2)",
+    "en_new": "un \\emph{funtor cohomológico universal}\n(T, 2.2)"
+  },
+  {
+    "id": 4821,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "(T, 2.2) de la categoría $\\cat{C}(X)$ de",
+    "note": "Se conserva la macro editorial de categorías."
+  },
+  {
+    "id": 4675,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "a la restricción a la categoría $\\cat{C}(X)$ del funtor cohomológico",
+    "note": "Se conserva la macro editorial de categorías."
+  },
+  {
+    "id": 4677,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "estructura de $A$-módulo, y el operador de conexión",
+    "en_new": "estructura de $A$-\\emph{módulo}, y el operador de conexión"
+  },
+  {
+    "id": 4678,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "una $A$-álgebra graduada\nanticomutativa, y de",
+    "en_new": "una $A$-\\emph{álgebra graduada\nanticomutativa}, y de"
+  },
+  {
+    "id": 4679,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$S$-módulo graduado.",
+    "en_new": "$S$-\\emph{módulo graduado}."
+  },
+  {
+    "id": 4680,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "por $\\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F})$ (contrariamente a",
+    "en_new": "por $\\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F})$ (contrariamente a"
+  },
+  {
+    "id": 4682,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Está claro que\n$\\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F})$ es un",
+    "en_new": "Está claro que\n$\\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F})$ es un"
+  },
+  {
+    "id": 4683,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$A$-módulo graduado, de modo que",
+    "en_new": "$A$-\\emph{módulo graduado}, de modo que"
+  },
+  {
+    "id": 4684,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "grupos de cohomología\n$\\check{\\HH}^p(\\mathfrak{U},\\sh{F})$ de este complejo",
+    "en_new": "grupos de cohomología\n$\\HH^p(\\mathfrak{U},\\sh{F})$ de este complejo"
+  },
+  {
+    "id": 4685,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "una estructura de $A$-módulo.\nAdemás, las aplicaciones canónicas",
+    "en_new": "una estructura de $A$-\\emph{módulo}.\nAdemás, las aplicaciones canónicas"
+  },
+  {
+    "id": 4686,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\check{\\HH}^p(\\mathfrak{U},\\sh{F})\n  \\longrightarrow\n  \\HH^p(X,\\sh{F})",
+    "en_new": "\\HH^p(\\mathfrak{U},\\sh{F})\n  \\longrightarrow\n  \\HH^p(X,\\sh{F})"
+  },
+  {
+    "id": 4687,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "(G, II, 5.4) son $A$-lineales.",
+    "en_new": "(G, II, 5.4) son $A$-\\emph{lineales}."
+  },
+  {
+    "id": 4688,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Para todo $f$-morfismo $u:\\sh{F}\\to\\sh{F}'$",
+    "en_new": "Para todo \\emph{$f$-morfismo} $u:\\sh{F}\\to\\sh{F}'$"
+  },
+  {
+    "id": 4689,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.4.4.1}, veremos que se puede definir,",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4690,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sh{F}\\longmapsto\\HH^\\bullet(X',\\psi^*(\\sh{F}))",
+    "note": "Ya se usa una flecha de asignación, no una flecha de morfismo."
+  },
+  {
+    "id": 4694,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Así, \\sref{0.12.1.3.2} es un homomorfismo de $A$-módulos.",
+    "en_new": "Así, \\sref{0.12.1.3.2} es un homomorfismo de $A$-\\emph{módulos}."
+  },
+  {
+    "id": 4695,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4696,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "dihomomorfismo canónico, funtorial en $\\sh{F}$,",
+    "en_new": "dihomomorfismo canónico, \\emph{funtorial} en $\\sh{F}$,"
+  },
+  {
+    "id": 4699,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "productos tensoriales \\sref[0\\textsubscript{I}]{0.4.3.3}, se comprueba",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4700,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\psi^*(\\sh{L}^\\bullet)$ es una resolución de $\\psi^*(\\sh{F})$",
+    "en_new": "$\\psi^*(\\sh{L}^\\bullet)$ es una \\emph{resolución} de $\\psi^*(\\sh{F})$"
+  },
+  {
+    "id": 4703,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F})\n  \\longrightarrow\n  \\check{\\mathrm{C}}^\\bullet(\\mathfrak{U}',f^*(\\sh{F})),",
+    "en_new": "\\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F})\n  \\longrightarrow\n  \\mathrm{C}^\\bullet(\\mathfrak{U}',f^*(\\sh{F})),"
+  },
+  {
+    "id": 4704,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\theta_p:\n  \\check{\\HH}^p(\\mathfrak{U},\\sh{F})\n  \\longrightarrow\n  \\check{\\HH}^p(\\mathfrak{U}',f^*(\\sh{F})).",
+    "en_new": "\\theta_p:\n  \\HH^p(\\mathfrak{U},\\sh{F})\n  \\longrightarrow\n  \\HH^p(\\mathfrak{U}',f^*(\\sh{F}))."
+  },
+  {
+    "id": 4706,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\check{\\HH}^p(\\mathfrak{U},\\sh{F})\n      \\ar[r]^-{\\theta_p}\\ar[d]\n      & \\check{\\HH}^p(\\mathfrak{U}',f^*(\\sh{F}))\\ar[d]",
+    "en_new": "\\HH^p(\\mathfrak{U},\\sh{F})\n      \\ar[r]^-{\\theta_p}\\ar[d]\n      & \\HH^p(\\mathfrak{U}',f^*(\\sh{F}))\\ar[d]"
+  },
+  {
+    "id": 4707,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\Gamma\\bigl(X,\\sh{C}^\\bullet(\\mathfrak{U},\\sh{F})\\bigr)\n  =\n  \\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F})",
+    "en_new": "\\Gamma\\bigl(X,\\sh{C}^\\bullet(\\mathfrak{U},\\sh{F})\\bigr)\n  =\n  \\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F})"
+  },
+  {
+    "id": 4708,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\check{\\HH}^p(\\mathfrak{U},\\sh{F})\\ar[r]\\ar[d]\n      & \\check{\\HH}^p(\\mathfrak{U}',\\psi^*(\\sh{F}))\\ar[d]",
+    "en_new": "\\HH^p(\\mathfrak{U},\\sh{F})\\ar[r]\\ar[d]\n      & \\HH^p(\\mathfrak{U}',\\psi^*(\\sh{F}))\\ar[d]"
+  },
+  {
+    "id": 4709,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\check{\\HH}^p(\\mathfrak{U}',\\psi^*(\\sh{F}))\\ar[r]\\ar[d]\n      & \\check{\\HH}^p(\\mathfrak{U}',f^*(\\sh{F}))\\ar[d]",
+    "en_new": "\\HH^p(\\mathfrak{U}',\\psi^*(\\sh{F}))\\ar[r]\\ar[d]\n      & \\HH^p(\\mathfrak{U}',f^*(\\sh{F}))\\ar[d]"
+  },
+  {
+    "id": 24624,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\Gamma\\bigl(X,\\sh{C}^\\bullet(\\mathfrak{U},\\sh{F})\\bigr)\n      \\ar[r]\\ar[d]\n      & \\Gamma\\bigl(X',",
+    "en_new": "\\Gamma\\bigl(X,\\sh{C}^\\bullet(\\mathfrak{U},\\sh{F})\\bigr)\n      \\ar[rr]\\ar[d]&\n      & \\Gamma\\bigl(X',"
+  },
+  {
+    "id": 4710,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Sean $\\sh{F},\\sh{G},\\sh{H}$ tres $\\sh{O}_X$-módulos,",
+    "en_new": "Sean $\\sh{F},\\sh{G},\\sh{K}$ tres $\\sh{O}_X$-módulos,"
+  },
+  {
+    "id": 4711,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "u:\\sh{F}\\otimes_{\\sh{O}_X}\\sh{G}\\longrightarrow\\sh{H},",
+    "en_new": "u:\\sh{F}\\otimes_{\\sh{O}_X}\\sh{G}\\longrightarrow\\sh{K},"
+  },
+  {
+    "id": 4712,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\longrightarrow\n  \\HH^{p+q}(X,\\sh{H})\n",
+    "en_new": "\\longrightarrow\n  \\HH^{p+q}(X,\\sh{K})\n"
+  },
+  {
+    "id": 4713,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\xymatrix@C=10pt{\n    \\HH^p(X,\\sh{F})\\otimes_A\\HH^q(X,\\sh{G})\n      \\ar[r]\\ar[d]\n      & \\HH^{p+q}(X,\\sh{H})\\ar[d]",
+    "en_new": "\\xymatrix@C=10pt{\n    \\HH^p(X,\\sh{F})\\otimes_A\\HH^q(X,\\sh{G})\n      \\ar[r]\\ar[d]\n      & \\HH^{p+q}(X,\\sh{K})\\ar[d]"
+  },
+  {
+    "id": 4714,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "& \\HH^{p+q}(X',f^*(\\sh{H}))\n  }\n\\]\nson conmutativos",
+    "en_new": "& \\HH^{p+q}(X',f^*(\\sh{K}))\n  }\n\\]\nson conmutativos"
+  },
+  {
+    "id": 4715,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\sh{F},\\sh{G},\\sh{H}$ respectivamente, que están constituidas por",
+    "en_new": "$\\sh{F},\\sh{G},\\sh{K}$ respectivamente, que están constituidas por"
+  },
+  {
+    "id": 4716,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4717,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\xymatrix@C=7pt{\n    \\HH^p(X,\\sh{F})\\otimes_A\\HH^q(X,\\sh{G})\n      \\ar[r]\\ar[d]\n      & \\HH^{p+q}(X,\\sh{H})\\ar[d]",
+    "en_new": "\\xymatrix@C=7pt{\n    \\HH^p(X,\\sh{F})\\otimes_A\\HH^q(X,\\sh{G})\n      \\ar[r]\\ar[d]\n      & \\HH^{p+q}(X,\\sh{K})\\ar[d]",
+    "note": "Ocurrencia en (12.1.5.4), correspondiente a la página 54."
+  },
+  {
+    "id": 4718,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "& \\HH^{p+q}\\bigl(\\Gamma(X',\\psi^*(\\sh{N}^\\bullet))\\bigr).\n  }"
+  },
+  {
+    "id": 4720,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\psi^*(\\sh{H})$ respectivamente, existe un diagrama conmutativo",
+    "en_new": "$\\psi^*(\\sh{K})$ respectivamente, existe un diagrama conmutativo"
+  },
+  {
+    "id": 4721,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "& \\HH^{p+q}(X',\\psi^*(\\sh{H})).",
+    "en_new": "& \\HH^{p+q}(X',\\psi^*(\\sh{K}))."
+  },
+  {
+    "id": 4723,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "& \\HH^{p+q}(X',\\psi^*(\\sh{H}))\\ar[d]",
+    "en_new": "& \\HH^{p+q}(X',\\psi^*(\\sh{K}))\\ar[d]"
+  },
+  {
+    "id": 4724,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "& \\HH^{p+q}(X',f^*(\\sh{H})).",
+    "en_new": "& \\HH^{p+q}(X',f^*(\\sh{K})).",
+    "note": "Ocurrencia en (12.1.5.6), correspondiente a la página 54."
+  },
+  {
+    "id": 4730,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.3.7.2}.",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4606,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.3.7.1};",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4607,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "(M, V, 1.1(a))",
+    "en_new": "(M, V, 1.1 \\textit{a)})"
+  },
+  {
+    "id": 4608,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Define el funtor imagen\ndirecta",
+    "en_new": "Define el funtor \\emph{imagen\ndirecta}"
+  },
+  {
+    "id": 4609,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "f_*:\\cat{C}(X)\\longrightarrow\\cat{C}(Y),",
+    "note": "Se conserva la macro editorial de categorías."
+  },
+  {
+    "id": 4610,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "que es además idéntico a la restricción a $\\cat{C}(X)$ del",
+    "note": "Se conserva la macro editorial de categorías."
+  },
+  {
+    "id": 4611,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "es isomorfo a un subhaz de un haz inyectivo\nde grupos abelianos",
+    "en_new": "es isomorfo a un subhaz de un haz \\emph{inyectivo}\nde grupos abelianos"
+  },
+  {
+    "id": 4612,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "se definen los funtores derivados por la derecha",
+    "en_new": "se definen los \\emph{funtores derivados} por la derecha"
+  },
+  {
+    "id": 4613,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "sobre $Y$, y los $\\RR^p\\psi_*$ forman un funtor cohomológico universal\n(T, 2.3).",
+    "en_new": "sobre $Y$, y los $\\RR^p\\psi_*$ forman un \\emph{funtor cohomológico universal}\n(T, 2.3)."
+  },
+  {
+    "id": 4614,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Supongamos ahora que $\\sh{F}$ es un $\\sh{O}_X$-módulo.",
+    "en_new": "Supongamos ahora que $\\sh{F}$ es un $\\sh{O}_X$-\\emph{módulo}."
+  },
+  {
+    "id": 4615,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "define, por tanto, sobre todo $\\RR^p\\psi_*(\\sh{F})$ la estructura de un\n$\\sh{O}_Y$-módulo.",
+    "en_new": "define, por tanto, sobre todo $\\RR^p\\psi_*(\\sh{F})$ la estructura de un\n$\\sh{O}_Y$-\\emph{módulo}."
+  },
+  {
+    "id": 4616,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "aditivo de $\\cat{C}(X)$ en $\\cat{C}(Y)$.",
+    "note": "Se conserva la macro editorial de categorías."
+  },
+  {
+    "id": 4617,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Además, los $\\RR^p f_*$ forman un $\\delta$-funtor.",
+    "en_new": "Además, los $\\RR^p f_*$ forman un \\emph{$\\partial$-funtor}."
+  },
+  {
+    "id": 4618,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4619,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4620,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "es un homomorfismo de $\\sh{O}_Y$-módulos.\nFinalmente",
+    "en_new": "es un homomorfismo de $\\sh{O}_Y$-\\emph{módulos}.\nFinalmente"
+  },
+  {
+    "id": 4621,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "se identifican con los funtores derivados por la\nderecha de $f_*$.",
+    "en_new": "se identifican con los funtores \\emph{derivados} por la\nderecha de $f_*$."
+  },
+  {
+    "id": 4622,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Todo $\\sh{O}_X$-módulo admite una resolución inyectiva por",
+    "en_new": "Todo $\\sh{O}_X$-módulo admite una resolución \\emph{inyectiva} por"
+  },
+  {
+    "id": 4623,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "tal resolución está constituida por haces flácidos\nde grupos abelianos",
+    "en_new": "tal resolución está constituida por haces \\emph{flácidos}\nde grupos abelianos"
+  },
+  {
+    "id": 4624,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "y todo haz flácido $\\sh{G}$",
+    "en_new": "y todo haz \\emph{flácido} $\\sh{G}$"
+  },
+  {
+    "id": 4625,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Se sigue que los $\\RR^p f_*$ forman un funtor cohomológico universal\nde",
+    "en_new": "Se sigue que los $\\RR^p f_*$ forman un \\emph{funtor cohomológico universal\nde}"
+  },
+  {
+    "id": 4626,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "de $\\cat{C}(X)$ en $\\cat{C}(Y)$ (T, 2.3).",
+    "note": "Se conserva la macro editorial de categorías."
+  },
+  {
+    "id": 4627,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Para $p=q=0$, este homomorfismo se reduce a\n\\sref[0\\textsubscript{I}]{0.4.2.2.1}.",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4628,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Para todo $\\sh{O}_X$-módulo $\\sh{F}$ y todo $\\sh{O}_Y$-módulo\n$\\sh{L}$ localmente libre de rango finito, existen isomorfismos canónicos\nfuntoriales",
+    "note": "El enunciado ya carece del énfasis exterior redundante."
+  },
+  {
+    "id": 4629,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "homomorfismo canónico \\sref[0\\textsubscript{I}]{0.4.4.3.2}.",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4630,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Se sigue (T, 2.4.1) que la sucesión espectral de Leray para funtores",
+    "en_new": "Se sigue (T, 2.4.1) que la \\emph{sucesión espectral de Leray} para funtores"
+  },
+  {
+    "id": 4631,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "sucesión espectral birregular cuyo término límite es el funtor",
+    "en_new": "sucesión espectral \\emph{birregular} cuyo término límite es el funtor"
+  },
+  {
+    "id": 4632,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.4.4.3.3} da, por funtorialidad,",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4633,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "combinada con \\sref[0\\textsubscript{I}]{0.4.2.2.1}), y las flechas",
+    "note": "Referencia de la página 60; la macro ya da la tipografía editorial."
+  },
+  {
+    "id": 4634,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\emph{extensión} de un $\\sh{O}_X$-módulo $\\sh{F}$ por un"
+  },
+  {
+    "id": 4635,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "se identifica canónicamente con el grupo abeliano de clases de\nextensiones de $\\sh{F}$ por $\\sh{G}$.",
+    "en_new": "se identifica canónicamente con el \\emph{grupo abeliano de clases de\nextensiones de $\\sh{F}$ por $\\sh{G}$}."
+  },
+  {
+    "id": 4636,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Sea $(X,\\sh{O}_X)$ un espacio anillado cuyo haz de anillos\n$\\sh{O}_X$ es coherente.\nEntonces, para todo par de $\\sh{O}_X$-módulos coherentes $\\sh{F}$ y\n$\\sh{G}$ y todo $p\\geq0$,\n\\[\n  \\shExt^p_{\\sh{O}_X}(\\sh{F},\\sh{G})\n\\]\nes un $\\sh{O}_X$-módulo coherente.",
+    "note": "El enunciado ya carece del énfasis exterior redundante."
+  },
+  {
+    "id": 4639,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.5.3.2} y",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4640,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.5.3.4}, pues $\\sh{O}_X$ es coherente.",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4641,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4642,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 4643,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.5.3.5}; por tanto, también lo es el tercero",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 4644,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "también lo es el tercero\n\\sref[0\\textsubscript{I}]{0.5.3.4}.",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 5517,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 5518,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 5037,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Sea $f:X\\to Y$ un morfismo plano de espacios anillados, y sean",
+    "en_new": "Sea $f:X\\to Y$ un morfismo \\textup{plano} de espacios anillados, y sean"
+  },
+  {
+    "id": 5038,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\item[\\rm(i)] Existe un homomorfismo de bifuntores cohomológicos",
+    "note": "El apartado ya carece del énfasis exterior redundante."
+  },
+  {
+    "id": 5039,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.4.4.6}.\n\n  \\item[\\rm(ii)] Existe un morfismo canónico de sucesiones espectrales",
+    "note": "Los apartados ya carecen del énfasis exterior redundante."
+  },
+  {
+    "id": 5040,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "deducidos de \\sref{0.12.3.4.1} y \\sref{0.12.1.3.1}.\n\\end{enumerate}",
+    "note": "Final del apartado (ii) de 12.3.4, sin énfasis exterior redundante."
+  },
+  {
+    "id": 5041,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "que en grado $0$ se reduce al homomorfismo canónico\n  \\sref[0\\textsubscript{I}]{0.4.4.6}.",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 5042,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.6.7.2}, los funtores",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 5043,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de las fórmulas."
+  },
+  {
+    "id": 5044,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.4.4.6} induce, por tanto, canónicamente un",
+    "note": "La macro de referencias ya da la tipografía editorial."
+  },
+  {
+    "id": 5046,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 5047,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 5048,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$f^*(\\sh{L}^\\bullet)$ es una resolución de $f^*(\\sh{G})$.",
+    "en_new": "$f^*(\\sh{L}^\\bullet)$ es una \\emph{resolución} de $f^*(\\sh{G})$."
+  },
+  {
+    "id": 5049,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 5050,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula."
+  },
+  {
+    "id": 5051,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Bajo las hipótesis de \\sref{0.12.3.4}, supongamos además que el\nhaz de anillos $\\sh{O}_Y$ es coherente.\nEntonces, para todo $\\sh{O}_Y$-módulo coherente $\\sh{F}$, los\nhomomorfismos canónicos \\sref{0.12.3.4.1} son biyectivos.",
+    "note": "El enunciado ya carece del énfasis exterior redundante."
+  }
+]
+```
+III1_CURRENT/ega0/ega0-11.tex, página 45: queda el francés `\text{et}` entre las dos identidades de homotopía.
+III1_CURRENT/ega0/ega0-11.tex, página 48: `\mathrm{Z}_{i+1}(Q_{(\bullet)})` contiene paréntesis espurios en el subíndice de \(Q\).
+III1_CURRENT/ega0/ega0-12.tex, página 51: en `aumentos (M, V, 1.1.\emph{a)}, y determinado` falta cerrar el paréntesis exterior de la referencia.
+III1_CURRENT/ega0/ega0-12.tex, página 61: aparece duplicado «de» en `de\nde bicomplejos de haces`.

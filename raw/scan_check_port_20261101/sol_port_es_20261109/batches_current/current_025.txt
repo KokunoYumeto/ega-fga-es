@@ -1,0 +1,3076 @@
+# Spanish hand pass, current_025: 139 items on 9 printed pages
+
+=================== PAGE III 116 ===================
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 115 -----
+\oldpage[III]{115}
+
+\begin{env}[2.6.3]
+\label{III.2.6.3}
+\emph{Observación.}
+Cuando $X$ es propio sobre $Y$, la Proposición~\sref{III.2.6.2} puede demostrarse
+más sencillamente razonando como en el teorema de Chevalley
+\sref[II]{II.6.7.1}, con ayuda de la Proposición~\sref{III.2.6.1} y
+del lema \sref[II]{II.6.7.1.1}.
+\end{env}
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 115 -----
+\section{Teorema de finitud para los morfismos propios}
+\label{section:III.3}
+
+\subsection{El lema de d\'evissage}
+\label{subsection:III.3.1}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1}
+Sea $\C$ una categoría abeliana.
+Diremos que un subconjunto $\C'$ del conjunto de objetos de $\C$ es \emph{exacto} si $0\in\C'$ y si, para toda sucesión exacta $0\to A'\to A\to A''\to 0$ en $\C$ tal que dos de los objetos $A$, $A'$, $A''$ pertenecen a $\C'$, el tercero pertenece también a $\C'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2}
+Sea $X$ un preesquema noetheriano; denotemos por $\C$ la categoría abeliana de los $\sh{O}_X$-módulos coherentes.
+Sea $\C'$ un subconjunto exacto de $\C$, y sea $X'$ un subconjunto cerrado del espacio subyacente a $X$.
+Supongamos que, para todo subconjunto cerrado irreducible $Y$ de $X'$, de punto genérico $y$, existe un $\sh{O}_X$-módulo $\sh{G}\in\C'$ de soporte $Y$ tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+Entonces todo $\sh{O}_X$-módulo coherente cuyo soporte esté contenido en $X'$ pertenece a $\C'$ (y, en particular, si $X'=X$, se tiene $\C'=\C$).
+\end{theorem}
+
+\begin{proof}
+Consideremos la siguiente propiedad $\textbf{P}(Y)$ de un subconjunto cerrado $Y$ de $X'$: todo $\sh{O}_X$-módulo coherente cuyo soporte esté contenido en $Y$ pertenece a $\C'$.
+En virtud del principio de inducción noetheriana \sref[0]{0.2.2.2}, vemos que basta demostrar que \emph{si $Y$ es un subconjunto cerrado de $X'$ tal que la propiedad $\textbf{P}(Y')$ es verdadera para todo subconjunto cerrado $Y'$ de $Y$, distinto de $Y$, entonces $\textbf{P}(Y)$ es verdadera}.
+
+Sea, pues, $\sh{F}\in\C$ de soporte contenido en $Y$, y demostremos que $\sh{F}\in\C'$.
+Denotemos también por $Y$ el subpreesquema cerrado reducido de $X$ cuyo espacio subyacente es $Y$ \sref[I]{I.5.2.1}; está definido por un haz coherente de ideales $\sh{J}$ de $\sh{O}_X$.
+Sabemos \sref[I]{I.9.3.4} que existe un entero $n>0$ tal que $\sh{J}^n\sh{F}=0$; para $1\leq k\leq n$ se tiene, por tanto, una sucesión exacta
+\[
+  0\to\sh{J}^{k-1}\sh{F}/\sh{J}^k\sh{F}\to\sh{F}/\sh{J}^k\sh{F}\to\sh{F}/\sh{J}^{k-1}\sh{F}\to 0
+\]
+ de $\sh{O}_X$-módulos coherentes (\sref[0]{0.5.3.6} y \sref[0]{0.5.3.3}); como $\C'$ es exacto, una inducción sobre $k$ muestra que basta probar que cada $\sh{F}_k=\sh{J}^{k-1}\sh{F}/\sh{J}^k\sh{F}$ pertenece a $\C'$.
+Nos reducimos así a probar que $\sh{F}\in\C'$ bajo la hipótesis adicional $\sh{J}\sh{F}=0$; esto equivale a decir que $\sh{F}=j_*(j^*(\sh{F}))$, donde $j$ es la inmersión canónica $Y\to X$.
+Consideremos ahora dos casos:
+\begin{enumerate}
+  \item[(a)] $Y$ es \emph{reducible}.
+    Escribamos $Y=Y'\cup Y''$, donde $Y'$ e $Y''$ son subconjuntos cerrados de $Y$, distintos de $Y$; denotemos también por $Y'$ e $Y''$ los subpreesquemas cerrados reducidos de $X$ cuyos espacios subyacentes son, respectivamente, $Y'$ e $Y''$, definidos respectivamente por los haces de ideales $\sh{J}'$ y $\sh{J}''$ de $\sh{O}_X$.
+    Pongamos $\sh{F}'=\sh{F}\otimes_{\sh{O}_X}(\sh{O}_X/\sh{J}')$ y $\sh{F}''=\sh{F}\otimes_{\sh{O}_X}(\sh{O}_X/\sh{J}'')$.
+    Los homomorfismos canónicos $\sh{F}\to\sh{F}'$ y $\sh{F}\to\sh{F}''$ definen así un homomorfismo $u:\sh{F}\to\sh{F}'\oplus\sh{F}''$.
+    Demostremos que, para todo $z\not\in Y'\cap Y''$, el homomorfismo $u_z:\sh{F}_z\to\sh{F}_z'\oplus\sh{F}_z''$ es \emph{biyectivo}.
+    En efecto, se tiene $\sh{J}'\cap\sh{J}''=\sh{J}$, pues la cuestión es local y
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 116 -----
+\oldpage[III]{116}
+    la igualdad anterior se deduce de (\sref[I]{I.5.2.1} y \sref[I]{I.1.1.5}); si $z\not\in Y''$, se tiene $\sh{J}_z'=\sh{J}_z$, de donde $\sh{F}_z'=\sh{F}_z$ y $\sh{F}_z''=0$, lo que prueba nuestra afirmación en este caso; se razona del mismo modo si $z\not\in Y'$.
+    Por consiguiente, el núcleo y el conúcleo de $u$, que pertenecen a $\C$ \sref[0]{0.5.3.4}, tienen su soporte en $Y'\cap Y''$ y, por hipótesis, pertenecen a $\C'$; por la misma razón, $\sh{F}'$ y $\sh{F}''$ pertenecen a $\C'$, y por tanto también $\sh{F}'\oplus\sh{F}''$, pues $\C'$ es exacto.
+    La conclusión se obtiene entonces considerando las dos sucesiones exactas
+    \[
+      0\to\Im u\to\sh{F}'\oplus\sh{F}''\to\Coker u\to 0,
+    \]
+    \[
+      0\to\Ker u\to\sh{F}\to\Im u\to 0,
+    \]
+    y la hipótesis de que $\C'$ es exacto.
+  \item[(b)] $Y$ es irreducible y, por consiguiente, el subpreesquema $Y$ de $X$ es \emph{íntegro}.
+    Si $y$ es su punto genérico, se tiene $(\sh{O}_Y)_y=\kres(y)$ y, como $j^*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente, $\sh{F}_y=(j^*(\sh{F}))_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión finita~$m$.
+    Por hipótesis existe \emph{un} $\sh{O}_X$-módulo coherente $\sh{G}\in\C'$ (necesariamente de soporte $Y$) tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+    Existe, por tanto, un $\kres(y)$-isomorfismo $(\sh{G}_y)^m\isoto\sh{F}_y$, que es también un $\sh{O}_Y$-isomorfismo; como $\sh{G}^m$ y $\sh{F}$ son coherentes, existe un entorno abierto $W$ de $y$ en $X$ y un isomorfismo $\sh{G}^m|W\isoto\sh{F}|W$ \sref[0]{0.5.2.7}.
+    Sea $\sh{H}$ el grafo de este isomorfismo, que es un $(\sh{O}_X|W)$-submódulo coherente de $(\sh{G}^m\oplus\sh{F})|W$, canónicamente isomorfo a $\sh{G}^m|W$ y a $\sh{F}|W$; existe entonces un $\sh{O}_X$-submódulo coherente $\sh{H}_0$ de $\sh{G}^m\oplus\sh{F}$ que induce $\sh{H}$ sobre $W$ y $0$ sobre $X\setmin Y$, puesto que $\sh{G}^m$ y $\sh{F}$ tienen soporte $Y$~\sref[I]{I.9.4.7}.
+    Las restricciones $v:\sh{H}_0\to\sh{G}^m$ y $w:\sh{H}_0\to\sh{F}$ de las proyecciones canónicas de $\sh{G}^m\oplus\sh{F}$ son entonces homomorfismos de $\sh{O}_X$-módulos coherentes que, sobre $W$ y sobre $X\setmin Y$, se reducen a isomorfismos; en otras palabras, los núcleos y conúcleos de $v$ y $w$ tienen su soporte en el cerrado $Y\setmin(Y\cap W)$, distinto de $Y$.
+    Pertenecen a $\C'$; por otra parte, $\sh{G}^m\in\C'$, pues $\sh{G}\in\C'$ y $\C'$ es exacto.
+    De la exactitud de $\C'$ concluimos sucesivamente que $\sh{H}_0\in\C'$ y luego que $\sh{F}\in\C'$.
+C.Q.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3}
+Supongamos además que el subconjunto exacto $\C'$ de $\C$ tiene la propiedad de que todo factor directo coherente de un $\sh{O}_X$-módulo coherente $\sh{M}\in\C'$ pertenece también a $\C'$.
+En este caso, la conclusión del Teorema~\sref{III.3.1.2} sigue siendo válida cuando la condición «$\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$» se sustituye por $\sh{G}_y\neq 0$ (lo que equivale a $\Supp(\sh{G})=Y$).
+\end{corollary}
+
+\begin{proof}
+El razonamiento del Teorema~\sref{III.3.1.2} solo debe modificarse en el caso~(b); ahora $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión $q>0$ y, por tanto, se tiene un $\sh{O}_Y$-isomorfismo $(\sh{G}_y)^m\isoto(\sh{F}_y)^q$; el final del razonamiento del Teorema~\sref{III.3.1.2} prueba entonces que $\sh{F}^q\in\C'$, y la hipótesis adicional sobre $\C'$ implica que $\sh{F}\in\C'$.
+\end{proof}
+
+\subsection{El teorema de finitud: caso de los esquemas ordinarios}
+\label{subsection:III.3.2}
+\label{III.3.2}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1}
+Sea $Y$ un preesquema localmente noetheriano y sea $f:X\to Y$ un morfismo propio.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\sh{O}_Y$-módulos $\RR^q f_*(\sh{F})$ son coherentes para $q\geq 0$.
+\end{theorem}
+
+\begin{proof}
+Como la cuestión es local sobre $Y$, podemos suponer que $Y$ es noetheriano, y por tanto que $X$ es noetheriano~\sref[I]{I.6.3.7}.
+Los $\sh{O}_X$-módulos coherentes $\sh{F}$ para los cuales es válida la conclusión del Teorema~\sref{III.3.2.1} forman un subconjunto \emph{exacto} $\C'$ de la categoría $\C$ de los $\sh{O}_X$-módulos coherentes.
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 117 -----
+\oldpage[III]{117}
+En efecto, sea $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to 0$ una sucesión exacta de $\sh{O}_X$-módulos coherentes; supongamos, por ejemplo, que $\sh{F}'$ y $\sh{F}''$ pertenecen a $\C'$; se tiene la sucesión exacta larga de cohomología
+\[
+  \RR^{q-1}f_*(\sh{F}'')\xrightarrow{\partial}\RR^q f_*(\sh{F}')\to\RR^q f_*(\sh{F})\to\RR^q f_*(\sh{F}'')\xrightarrow{\partial}\RR^{q+1}f_*(\sh{F}'),
+\]
+en la que, por hipótesis, los cuatro términos exteriores son coherentes; lo mismo ocurre con el término central $\RR^q f_*(\sh{F})$ por (\sref[0]{0.5.3.4}~y~\sref[0]{0.5.3.3}).
+Se demuestra del mismo modo que, cuando $\sh{F}$ y $\sh{F}'$ (resp.~$\sh{F}$ y $\sh{F}''$) pertenecen a $\C'$, también pertenece $\sh{F}''$ (resp.~$\sh{F}'$).
+Además, todo \emph{factor directo} coherente $\sh{F}'$ de un $\sh{O}_X$-módulo $\sh{F}\in\C'$ pertenece a $\C'$: en efecto, $\RR^q f_*(\sh{F}')$ es entonces un factor directo de $\RR^q f_*(\sh{F})$~(G,~II,~4.4.4), por lo que es de tipo finito; como es cuasi-coherente~\sref{III.1.4.10}, es coherente, pues $Y$ es noetheriano.
+En virtud del Corolario~\sref{III.3.1.3}, nos reducimos a probar que, cuando $X$ es \emph{irreducible} de punto genérico $x$, existe \emph{un} $\sh{O}_X$-módulo coherente $\sh{F}$ perteneciente a $\C'$ tal que $\sh{F}_x\neq 0$: en efecto, una vez establecido este punto, puede aplicarse a cualquier subpreesquema cerrado irreducible $Y$ de $X$, pues si $j:Y\to X$ es la inmersión canónica, $f\circ j$ es propio~\sref[II]{II.5.4.2}, y si $\sh{G}$ es un $\sh{O}_Y$-módulo coherente de soporte $Y$, entonces $j_*(\sh{G})$ es un $\sh{O}_X$-módulo coherente tal que $\RR^q(f\circ j)_*(\sh{G})=\RR^q f_*(j_*(\sh{G}))$~(G,~II,~4.9.1); podemos, por tanto, aplicar el Corolario~\sref{III.3.1.3}.
+
+En virtud del lema de Chow~\sref[II]{II.5.6.2}, existen un preesquema irreducible $X'$ y un morfismo \emph{proyectivo} y sobreyectivo $g:X'\to X$ tales que $f\circ g:X'\to Y$ es \emph{proyectivo}.
+Existe un $\sh{O}_{X'}$-módulo $\sh{L}$ amplio para $g$~\sref[II]{II.5.3.1}; aplicamos el teorema fundamental de los morfismos proyectivos~\sref{III.2.2.1} a $g:X'\to X$ y a $\sh{L}$: existe entonces un entero $n$ tal que $\sh{F}=g_*(\sh{O}_{X'}(n))$ es un $\sh{O}_X$-módulo coherente y $\RR^q g_*(\sh{O}_{X'}(n))=0$ para todo $q>0$; además, como $g^*(g_*(\sh{O}_{X'}(n)))\to\sh{O}_{X'}(n)$ es sobreyectivo para $n$ suficientemente grande~\sref{III.2.2.1}, vemos que podemos suponer, en el punto genérico $x$ de $X$, que $\sh{F}_x\neq 0$~\sref[II]{II.3.4.7}.
+Por otra parte, como $f\circ g$ es proyectivo e $Y$ es noetheriano, los $\RR^q(f\circ g)_*(\sh{O}_{X'}(n))$ son \emph{coherentes}~\sref{III.2.2.1}.
+Ahora bien, $\RR^\bullet(f\circ g)_*(\sh{O}_{X'}(n))$ es la convergencia de una sucesión espectral de Leray cuyo término $E_2$ viene dado por $E_2^{pq}=\RR^p f_*(\RR^q g_*(\sh{O}_{X'}(n)))$; lo anterior muestra que esta sucesión espectral degenera, y sabemos entonces~\sref[0]{0.11.1.6} que $E_2^{p0}=\RR^p f_*(\sh{F})$ es isomorfo a $\RR^p(f\circ g)_*(\sh{O}_{X'}(n))$, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[3.2.2]
+\label{III.3.2.2}
+Sea $Y$ un preesquema localmente noetheriano.
+Para todo morfismo propio $f:X\to Y$, la imagen directa por $f$ de cualquier $\sh{O}_X$-módulo coherente es un $\sh{O}_Y$-módulo coherente.
+\end{corollary}
+
+\begin{corollary}[3.2.3]
+\label{III.3.2.3}
+Sea $A$ un anillo noetheriano y sea $X$ un esquema propio sobre $A$; para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\HH^p(X,\sh{F})$ son $A$-módulos de tipo finito, y existe un entero $r>0$ tal que, para todo $\sh{O}_X$-módulo coherente $\sh{F}$ y todo $p>r$, $\HH^p(X,\sh{F})=0$.
+\end{corollary}
+
+\begin{proof}
+La segunda afirmación ya se demostró en~\sref{III.1.4.12}; la primera se deduce del teorema de finitud~\sref{III.3.2.1}, teniendo en cuenta el Corolario~\sref{III.1.4.11}.
+\end{proof}
+
+En particular, si $X$ es un \emph{esquema algebraico propio} sobre un cuerpo $k$, entonces, para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\HH^p(X,\sh{F})$ son espacios vectoriales sobre $k$ de \emph{dimensión finita}.
+
+\begin{corollary}[3.2.4]
+\label{III.3.2.4}
+Sea $Y$ un preesquema localmente noetheriano y sea $f:X\to Y$ un morfismo de tipo finito.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$ cuyo soporte sea propio sobre $Y$~\sref[II]{II.5.4.10}, los $\sh{O}_Y$-módulos $\RR^q f_*(\sh{F})$ son coherentes.
+\end{corollary}
+----- French corrections on page III 116 -----
+[id 5707]
+OLD: (I, 5.2.1 et 1.1.5)
+NEW: (\textbf{I}, 5.2.1 et 1.1.5)
+FRENCH CONTEXT (corrected): ur tout
+$z\notin Y'\cap Y''$, l'homomorphisme
+$u_z:\mathcal F_z\to\mathcal F'_z\oplus\mathcal F''_z$ est \emph{bijectif}.
+En effet, on a $\mathcal J'\cap\mathcal J''=\mathcal J$, car la question est
+locale et
+\oldpage[III]{116}
+l'égalité précédente résulte de (\textbf{I}, 5.2.1 et 1.1.5)~; si $z\notin Y''$, on a
+donc $\mathcal J'_z=\mathcal J_z$, d'où $\mathcal F'_z=\mathcal F_z$ et
+$\mathcal F''_z=0$, ce qui établit notre assertion dans ce cas~; on raisonne
+de même si $z\notin Y'$. Par suite, le noyau et le conoyau de $u$, qui sont
+dans $\bo
+
+[id 5708]
+OLD: qui sont
+dans $K$
+NEW: qui sont
+dans $\boldsymbol{K}$
+FRENCH CONTEXT (corrected): }, 5.2.1 et 1.1.5)~; si $z\notin Y''$, on a
+donc $\mathcal J'_z=\mathcal J_z$, d'où $\mathcal F'_z=\mathcal F_z$ et
+$\mathcal F''_z=0$, ce qui établit notre assertion dans ce cas~; on raisonne
+de même si $z\notin Y'$. Par suite, le noyau et le conoyau de $u$, qui sont
+dans $\boldsymbol{K}$ (\textbf{0}\textsubscript{I}, 5.3.4) ont leurs supports dans $Y'\cap Y''$,
+et sont donc dans $\boldsymbol{K}'$ par hypothèse~; pour la même raison, $\mathcal F'$ et
+$\mathcal F''$ sont dans $\boldsymbol{K}'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisqu
+
+[id 5709]
+OLD: (0\textsubscript{I}, 5.3.4)
+NEW: (\textbf{0}\textsubscript{I}, 5.3.4)
+FRENCH CONTEXT (corrected): mathcal G''$ le noyau, l'image et
+le conoyau de $\mathcal F\to\mathcal G$~; $\mathcal G'$ est le noyau et
+$\mathcal G''$ l'image de $\mathcal G\to\mathcal H$, soit $\mathcal H''$
+le conoyau de cet homomorphisme~; tous ces $\mathcal O_X$-Modules sont
+cohérents (\textbf{0}\textsubscript{I}, 5.3.4). Comme $\mathcal F(n)$ est un
+foncteur exact en $\mathcal F$, il suffit de prouver que pour $n$ assez
+grand, chacune des suites
+\begin{align*}
+0&\longrightarrow f_*(\mathcal F'(n))
+\longrightarrow f_*(\mathcal F(n))
+\longrightarrow f_*(\mathcal G'(n))\longrig
+
+[id 5710]
+OLD: sont donc dans $K'$ par
+NEW: sont donc dans $\boldsymbol{K}'$ par
+FRENCH CONTEXT (corrected): _z$ et
+$\mathcal F''_z=0$, ce qui établit notre assertion dans ce cas~; on raisonne
+de même si $z\notin Y'$. Par suite, le noyau et le conoyau de $u$, qui sont
+dans $\boldsymbol{K}$ (\textbf{0}\textsubscript{I}, 5.3.4) ont leurs supports dans $Y'\cap Y''$,
+et sont donc dans $\boldsymbol{K}'$ par hypothèse~; pour la même raison, $\mathcal F'$ et
+$\mathcal F''$ sont dans $\boldsymbol{K}'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisque $\boldsymbol{K}'$ est exact. La conclusion résulte alors de la considération des
+deux suites exactes
+\[
+0\longrig
+
+[id 5711]
+OLD: sont dans $K'$, donc aussi
+NEW: sont dans $\boldsymbol{K}'$, donc aussi
+FRENCH CONTEXT (corrected): n Y'$. Par suite, le noyau et le conoyau de $u$, qui sont
+dans $\boldsymbol{K}$ (\textbf{0}\textsubscript{I}, 5.3.4) ont leurs supports dans $Y'\cap Y''$,
+et sont donc dans $\boldsymbol{K}'$ par hypothèse~; pour la même raison, $\mathcal F'$ et
+$\mathcal F''$ sont dans $\boldsymbol{K}'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisque $\boldsymbol{K}'$ est exact. La conclusion résulte alors de la considération des
+deux suites exactes
+\[
+0\longrightarrow\operatorname{Im}u\longrightarrow
+\mathcal F'\oplus\mathcal F''\longrightarrow
+\operatorname{Coker
+
+[id 5712]
+OLD: puisque $K'$ est exact. La
+NEW: puisque $\boldsymbol{K}'$ est exact. La
+FRENCH CONTEXT (corrected): ol{K}$ (\textbf{0}\textsubscript{I}, 5.3.4) ont leurs supports dans $Y'\cap Y''$,
+et sont donc dans $\boldsymbol{K}'$ par hypothèse~; pour la même raison, $\mathcal F'$ et
+$\mathcal F''$ sont dans $\boldsymbol{K}'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisque $\boldsymbol{K}'$ est exact. La conclusion résulte alors de la considération des
+deux suites exactes
+\[
+0\longrightarrow\operatorname{Im}u\longrightarrow
+\mathcal F'\oplus\mathcal F''\longrightarrow
+\operatorname{Coker}u\longrightarrow0
+\]
+\[
+0\longrightarrow\operatorname{Ker}u\longrightarr
+
+[id 5713]
+OLD: \operatorname{Coker}u\longrightarrow0,
+NEW: \operatorname{Coker}u\longrightarrow0
+FRENCH CONTEXT (corrected): ol{K}'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisque $\boldsymbol{K}'$ est exact. La conclusion résulte alors de la considération des
+deux suites exactes
+\[
+0\longrightarrow\operatorname{Im}u\longrightarrow
+\mathcal F'\oplus\mathcal F''\longrightarrow
+\operatorname{Coker}u\longrightarrow0
+\]
+\[
+0\longrightarrow\operatorname{Ker}u\longrightarrow\mathcal F
+\longrightarrow\operatorname{Im}u\longrightarrow0
+\]
+et de l'hypothèse que $\boldsymbol{K}'$ est exact.
+
+\item[\textit{b)}] $Y$ est irréductible, et par suite le sous-préschéma $Y$ de $X$ est
+
+
+[id 5714]
+OLD: hypothèse que $K'$ est exact.
+NEW: hypothèse que $\boldsymbol{K}'$ est exact.
+FRENCH CONTEXT (corrected): \longrightarrow\operatorname{Im}u\longrightarrow
+\mathcal F'\oplus\mathcal F''\longrightarrow
+\operatorname{Coker}u\longrightarrow0
+\]
+\[
+0\longrightarrow\operatorname{Ker}u\longrightarrow\mathcal F
+\longrightarrow\operatorname{Im}u\longrightarrow0
+\]
+et de l'hypothèse que $\boldsymbol{K}'$ est exact.
+
+\item[\textit{b)}] $Y$ est irréductible, et par suite le sous-préschéma $Y$ de $X$ est
+\emph{intègre}. Si $y$ est son point générique, on a
+$(\mathcal O_Y)_y=\boldsymbol{k}(y)$, et comme $j^*(\mathcal F)$ est un
+$\mathcal O_Y$-Module cohérent, $\mathcal F_y=
+
+[id 5715]
+OLD: \item[b)]
+NEW: \item[\textit{b)}]
+FRENCH CONTEXT (corrected): '\emph{Algèbre commutative}, telle qu'elle est exposée par exemple dans les volumes en cours de préparation des \emph{Éléments} de N.~Bourbaki (et, en attendant la parution de ces volumes, dans Samuel-Zariski~\cite{I-13} et Samuel~\cite{I-11},~\cite{I-12}).
+  \item[\textit{b)}] L'\emph{Algèbre homologique}, pour laquelle nous renvoyons à Cartan-Eilenberg~\cite{I-2} (cité~(M)) et Godement~\cite{I-4} (cité~(G)), ainsi qu'à l'article récent de A.~Grothendieck~\cite{I-6} (cité~(T)).
+  \item[\textit{c)}] La \emph{Théorie des faisceaux}, 
+
+[id 5716]
+OLD: $(\mathcal O_Y)_y=k(y)$
+NEW: $(\mathcal O_Y)_y=\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): rrow\mathcal F
+\longrightarrow\operatorname{Im}u\longrightarrow0
+\]
+et de l'hypothèse que $\boldsymbol{K}'$ est exact.
+
+\item[\textit{b)}] $Y$ est irréductible, et par suite le sous-préschéma $Y$ de $X$ est
+\emph{intègre}. Si $y$ est son point générique, on a
+$(\mathcal O_Y)_y=\boldsymbol{k}(y)$, et comme $j^*(\mathcal F)$ est un
+$\mathcal O_Y$-Module cohérent, $\mathcal F_y=(j^*(\mathcal F))_y$ est un
+$\boldsymbol{k}(y)$-espace vectoriel de dimension finie $m$. Par hypothèse, il y a un
+$\mathcal O_X$-Module cohérent $\mathcal G$ (nécessairement de s
+
+[id 5717]
+OLD: $k(y)$-espace vectoriel de dimension finie
+NEW: $\boldsymbol{k}(y)$-espace vectoriel de dimension finie
+FRENCH CONTEXT (corrected):  irréductible, et par suite le sous-préschéma $Y$ de $X$ est
+\emph{intègre}. Si $y$ est son point générique, on a
+$(\mathcal O_Y)_y=\boldsymbol{k}(y)$, et comme $j^*(\mathcal F)$ est un
+$\mathcal O_Y$-Module cohérent, $\mathcal F_y=(j^*(\mathcal F))_y$ est un
+$\boldsymbol{k}(y)$-espace vectoriel de dimension finie $m$. Par hypothèse, il y a un
+$\mathcal O_X$-Module cohérent $\mathcal G$ (nécessairement de support $Y$)
+tel que $\mathcal G_y$ soit un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$. Par
+suite, il y a un $\boldsymbol{k}(y)$-isomorphisme
+$(\mathcal G_
+
+[id 5718]
+OLD: soit un $k(y)$
+NEW: soit un $\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): 
+$\mathcal O_Y$-Module cohérent, $\mathcal F_y=(j^*(\mathcal F))_y$ est un
+$\boldsymbol{k}(y)$-espace vectoriel de dimension finie $m$. Par hypothèse, il y a un
+$\mathcal O_X$-Module cohérent $\mathcal G$ (nécessairement de support $Y$)
+tel que $\mathcal G_y$ soit un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$. Par
+suite, il y a un $\boldsymbol{k}(y)$-isomorphisme
+$(\mathcal G_y)^m\xrightarrow{\sim}\mathcal F_y$, qui est aussi un
+$\mathcal O_Y$-isomorphisme, et comme $\mathcal G^m$ et $\mathcal F$ sont
+cohérents, il existe un voisi
+
+[id 5719]
+OLD: un $k(y)$-isomorphisme
+NEW: un $\boldsymbol{k}(y)$-isomorphisme
+FRENCH CONTEXT (corrected): s~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), et soit $X_1$ le sous-pré
+
+[id 5720]
+OLD: (0\textsubscript{I}, 5.2.7)
+NEW: (\textbf{0}\textsubscript{I}, 5.2.7)
+FRENCH CONTEXT (corrected): al G_y)^m\xrightarrow{\sim}\mathcal F_y$, qui est aussi un
+$\mathcal O_Y$-isomorphisme, et comme $\mathcal G^m$ et $\mathcal F$ sont
+cohérents, il existe un voisinage ouvert $W$ de $y$ dans $X$ et un
+isomorphisme $\mathcal G^m|W\xrightarrow{\sim}\mathcal F|W$
+(\textbf{0}\textsubscript{I}, 5.2.7). Soit $\mathcal H$ le graphe de cet isomorphisme,
+qui est un sous-$(\mathcal O_X|W)$-Module cohérent de
+$(\mathcal G^m\oplus\mathcal F)|W$, canoniquement isomorphe à
+$\mathcal G^m|W$ et à $\mathcal F|W$~; il existe donc un sous-$\mathcal O_X$-%
+Module cohéren
+
+[id 5721]
+OLD: sous-$\mathcal O_X$-
+Module
+NEW: sous-$\mathcal O_X$-%
+Module
+FRENCH CONTEXT (corrected): (\textbf{0}\textsubscript{I}, 5.2.7). Soit $\mathcal H$ le graphe de cet isomorphisme,
+qui est un sous-$(\mathcal O_X|W)$-Module cohérent de
+$(\mathcal G^m\oplus\mathcal F)|W$, canoniquement isomorphe à
+$\mathcal G^m|W$ et à $\mathcal F|W$~; il existe donc un sous-$\mathcal O_X$-%
+Module cohérent $\mathcal H_0$ de $\mathcal G^m\oplus\mathcal F$, induisant
+$\mathcal H$ sur $W$ et $0$ sur $X\setmin Y$ puisque $\mathcal G^m$ et
+$\mathcal F$ ont pour support $Y$ (\textbf{I}, 9.4.7). Les restrictions
+$v:\mathcal H_0\to\mathcal G^m$ et $w:\mathcal 
+
+[id 5723]
+OLD: (I, 9.4.7)
+NEW: (\textbf{I}, 9.4.7)
+FRENCH CONTEXT (corrected): $\mathcal G^m|W$ et à $\mathcal F|W$~; il existe donc un sous-$\mathcal O_X$-%
+Module cohérent $\mathcal H_0$ de $\mathcal G^m\oplus\mathcal F$, induisant
+$\mathcal H$ sur $W$ et $0$ sur $X\setmin Y$ puisque $\mathcal G^m$ et
+$\mathcal F$ ont pour support $Y$ (\textbf{I}, 9.4.7). Les restrictions
+$v:\mathcal H_0\to\mathcal G^m$ et $w:\mathcal H_0\to\mathcal F$ des
+projections canoniques de $\mathcal G^m\oplus\mathcal F$ sont alors des
+homomorphismes de $\mathcal O_X$-Modules cohérents, qui, dans $W$ et dans
+$X\setmin Y$, se réduisent
+
+[id 5726]
+OLD: donc à $K'$~;
+NEW: donc à $\boldsymbol{K}'$~;
+FRENCH CONTEXT (corrected): smes de $\mathcal O_X$-Modules cohérents, qui, dans $W$ et dans
+$X\setmin Y$, se réduisent à des isomorphismes~; autrement dit, les noyaux et
+conoyaux de $v$ et $w$ ont leur support dans l'ensemble fermé
+$Y\setmin(Y\cap W)$, distinct de $Y$. Ils appartiennent donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\bo
+
+[id 5727]
+OLD: $\mathcal G^m\in K'$
+NEW: $\mathcal G^m\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected):  dans $W$ et dans
+$X\setmin Y$, se réduisent à des isomorphismes~; autrement dit, les noyaux et
+conoyaux de $v$ et $w$ ont leur support dans l'ensemble fermé
+$Y\setmin(Y\cap W)$, distinct de $Y$. Ils appartiennent donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+
+[id 5728]
+OLD: puisque $\mathcal G\in K'$
+NEW: puisque $\mathcal G\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): e réduisent à des isomorphismes~; autrement dit, les noyaux et
+conoyaux de $v$ et $w$ ont leur support dans l'ensemble fermé
+$Y\setmin(Y\cap W)$, distinct de $Y$. Ils appartiennent donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.
+
+[id 5729]
+OLD: et que $K'$ est
+exact
+NEW: et que $\boldsymbol{K}'$ est
+exact
+FRENCH CONTEXT (corrected): ment dit, les noyaux et
+conoyaux de $v$ et $w$ ont leur support dans l'ensemble fermé
+$Y\setmin(Y\cap W)$, distinct de $Y$. Ils appartiennent donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensem
+
+[id 5730]
+OLD: l'exactitude de $K'$
+NEW: l'exactitude de $\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): 'ensemble fermé
+$Y\setmin(Y\cap W)$, distinct de $Y$. Ils appartiennent donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait en outre la propr
+
+[id 5731]
+OLD: $\mathcal H_0\in K'$
+NEW: $\mathcal H_0\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): stinct de $Y$. Ils appartiennent donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait en outre la propriété
+que tout facteur direct cohérent 
+
+[id 5732]
+OLD: puis que $\mathcal F\in K'$
+NEW: puis que $\mathcal F\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): donc à $\boldsymbol{K}'$~; d'autre
+part, on a $\mathcal G^m\in\boldsymbol{K}'$ puisque $\mathcal G\in\boldsymbol{K}'$ et que $\boldsymbol{K}'$ est
+exact. On en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait en outre la propriété
+que tout facteur direct cohérent d'un $\mathcal O_X$-Module cohérent
+$\ma
+
+[id 5733]
+OLD: exact $K'$ de $K$ ait
+NEW: exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait
+FRENCH CONTEXT (corrected):  en conclut successivement, par l'exactitude de $\boldsymbol{K}'$, que
+$\mathcal H_0\in\boldsymbol{K}'$ puis que $\mathcal F\in\boldsymbol{K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait en outre la propriété
+que tout facteur direct cohérent d'un $\mathcal O_X$-Module cohérent
+$\mathcal M\in\boldsymbol{K}'$ appartienne encore à $\boldsymbol{K}'$. Dans ces conditions, la
+conclusion de (\hyperref[III.3.1.2-fr]{3.1.2}) subsiste encore lorsque la
+
+[id 5734]
+OLD: $\mathcal M\in K'$
+NEW: $\mathcal M\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): K}'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait en outre la propriété
+que tout facteur direct cohérent d'un $\mathcal O_X$-Module cohérent
+$\mathcal M\in\boldsymbol{K}'$ appartienne encore à $\boldsymbol{K}'$. Dans ces conditions, la
+conclusion de (\hyperref[III.3.1.2-fr]{3.1.2}) subsiste encore lorsque la
+condition «~$\mathcal G_y$ est un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$~»
+est remplacée par $\mathcal G_y
+
+[id 5735]
+OLD: encore à $K'$. Dans
+NEW: encore à $\boldsymbol{K}'$. Dans
+FRENCH CONTEXT (corrected): 
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $\boldsymbol{K}'$ de $\boldsymbol{K}$ ait en outre la propriété
+que tout facteur direct cohérent d'un $\mathcal O_X$-Module cohérent
+$\mathcal M\in\boldsymbol{K}'$ appartienne encore à $\boldsymbol{K}'$. Dans ces conditions, la
+conclusion de (\hyperref[III.3.1.2-fr]{3.1.2}) subsiste encore lorsque la
+condition «~$\mathcal G_y$ est un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$~»
+est remplacée par $\mathcal G_y\neq0$ (ce qui équivaut à
+$\operatorname{Supp
+
+[id 5736]
+OLD: «~$\mathcal G_y$ est un $k(y)$
+NEW: «~$\mathcal G_y$ est un $\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): a propriété
+que tout facteur direct cohérent d'un $\mathcal O_X$-Module cohérent
+$\mathcal M\in\boldsymbol{K}'$ appartienne encore à $\boldsymbol{K}'$. Dans ces conditions, la
+conclusion de (\hyperref[III.3.1.2-fr]{3.1.2}) subsiste encore lorsque la
+condition «~$\mathcal G_y$ est un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$~»
+est remplacée par $\mathcal G_y\neq0$ (ce qui équivaut à
+$\operatorname{Supp}(\mathcal G)=Y$).
+\end{corollary}
+
+\begin{proof}
+En effet, le raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) ne doit être
+modifié que dans le ca
+
+[id 5737]
+OLD: dans le cas b)~;
+NEW: dans le cas \textit{b)}~;
+FRENCH CONTEXT (corrected): bol{k}(y)$-espace vectoriel de dimension $1$~»
+est remplacée par $\mathcal G_y\neq0$ (ce qui équivaut à
+$\operatorname{Supp}(\mathcal G)=Y$).
+\end{corollary}
+
+\begin{proof}
+En effet, le raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) ne doit être
+modifié que dans le cas \textit{b)}~; cette fois $\mathcal G_y$ est un $\boldsymbol{k}(y)$-espace
+vectoriel de dimension $q>0$, et on a par suite un $\mathcal O_Y$-%
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prou
+
+[id 5738]
+OLD: cette fois $\mathcal G_y$ est un $k(y)$
+NEW: cette fois $\mathcal G_y$ est un $\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): l de dimension $1$~»
+est remplacée par $\mathcal G_y\neq0$ (ce qui équivaut à
+$\operatorname{Supp}(\mathcal G)=Y$).
+\end{corollary}
+
+\begin{proof}
+En effet, le raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) ne doit être
+modifié que dans le cas \textit{b)}~; cette fois $\mathcal G_y$ est un $\boldsymbol{k}(y)$-espace
+vectoriel de dimension $q>0$, et on a par suite un $\mathcal O_Y$-%
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prouve alors que
+$\mathcal F^q\in\boldsymbol{K}'$, et l'h
+
+[id 5739]
+OLD: un $\mathcal O_Y$-
+isomorphisme
+NEW: un $\mathcal O_Y$-%
+isomorphisme
+FRENCH CONTEXT (corrected): G)=Y$).
+\end{corollary}
+
+\begin{proof}
+En effet, le raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) ne doit être
+modifié que dans le cas \textit{b)}~; cette fois $\mathcal G_y$ est un $\boldsymbol{k}(y)$-espace
+vectoriel de dimension $q>0$, et on a par suite un $\mathcal O_Y$-%
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prouve alors que
+$\mathcal F^q\in\boldsymbol{K}'$, et l'hypothèse additionnelle sur $\boldsymbol{K}'$ implique que
+$\mathcal F\in\boldsymbol{K}'$
+
+[id 5740]
+OLD: $\mathcal F^q\in K'$
+NEW: $\mathcal F^q\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): \mathcal G_y$ est un $\boldsymbol{k}(y)$-espace
+vectoriel de dimension $q>0$, et on a par suite un $\mathcal O_Y$-%
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prouve alors que
+$\mathcal F^q\in\boldsymbol{K}'$, et l'hypothèse additionnelle sur $\boldsymbol{K}'$ implique que
+$\mathcal F\in\boldsymbol{K}'$.
+\end{proof}
+
+\subsection{Le théorème de finitude : cas des schémas usuels}
+\label{subsection:III.3.2-fr}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1-fr}
+Soient $Y$ u
+
+[id 5741]
+OLD: additionnelle sur $K'$
+NEW: additionnelle sur $\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): ectoriel de dimension $q>0$, et on a par suite un $\mathcal O_Y$-%
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prouve alors que
+$\mathcal F^q\in\boldsymbol{K}'$, et l'hypothèse additionnelle sur $\boldsymbol{K}'$ implique que
+$\mathcal F\in\boldsymbol{K}'$.
+\end{proof}
+
+\subsection{Le théorème de finitude : cas des schémas usuels}
+\label{subsection:III.3.2-fr}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un mor
+
+[id 5742]
+OLD: implique que
+$\mathcal F\in K'$.
+NEW: implique que
+$\mathcal F\in\boldsymbol{K}'$.
+FRENCH CONTEXT (corrected):  par suite un $\mathcal O_Y$-%
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prouve alors que
+$\mathcal F^q\in\boldsymbol{K}'$, et l'hypothèse additionnelle sur $\boldsymbol{K}'$ implique que
+$\mathcal F\in\boldsymbol{K}'$.
+\end{proof}
+
+\subsection{Le théorème de finitude : cas des schémas usuels}
+\label{subsection:III.3.2-fr}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre. Pour tout $\mathcal O_X$-Modul
+
+[id 5743]
+OLD: (I, 6.3.7)
+NEW: (\textbf{I}, 6.3.7)
+FRENCH CONTEXT (corrected): est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (\textbf{II}, 1.3.7 et \textbf{I}, 6.3.4, (ii)), $X'$ est
+noethérien (\textbf{I}, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+$R^pf_*(\mathcal M)\to R^ph_*(\widetilde{\mathcal M})$ est bijectif
+(\hyperref[III.1.3.4-fr]{1.3.4}). En outre, cet homomorphisme est un
+homomorph
+
+[id 5744]
+OLD: forment un sous-ensemble exact
+NEW: forment un sous-ensemble \emph{exact}
+FRENCH CONTEXT (corrected): theorem}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y$ noethérien, donc $X$
+noethérien (\textbf{I}, 6.3.7). Les $\mathcal O_X$-Modules cohérents $\mathcal F$ pour
+lesquels la conclusion du th. (\hyperref[III.3.2.1-fr]{3.2.1}) est vraie
+forment un sous-ensemble \emph{exact} $\boldsymbol{K}'$ de la catégorie $\boldsymbol{K}$ des
+$\mathcal O_X$-Modules cohérents.
+\oldpage[III]{117}
+En effet, soit
+$0\to\mathcal F'\to\mathcal F\to\mathcal F''\to0$ une suite exacte de
+$\mathcal O_X$-Modules cohérents~; supposons par exemple que $\mat
+
+[id 5745]
+OLD: $K'$ de la catégorie $K$ des
+NEW: $\boldsymbol{K}'$ de la catégorie $\boldsymbol{K}$ des
+FRENCH CONTEXT (corrected): ant locale sur $Y$, on peut supposer $Y$ noethérien, donc $X$
+noethérien (\textbf{I}, 6.3.7). Les $\mathcal O_X$-Modules cohérents $\mathcal F$ pour
+lesquels la conclusion du th. (\hyperref[III.3.2.1-fr]{3.2.1}) est vraie
+forment un sous-ensemble \emph{exact} $\boldsymbol{K}'$ de la catégorie $\boldsymbol{K}$ des
+$\mathcal O_X$-Modules cohérents.
+\oldpage[III]{117}
+En effet, soit
+$0\to\mathcal F'\to\mathcal F\to\mathcal F''\to0$ une suite exacte de
+$\mathcal O_X$-Modules cohérents~; supposons par exemple que $\mathcal F'$
+et $\mathcal F''$ appartiennent à $\boldsymbol
+
+=================== PAGE III 117 ===================
+----- (Spanish page III 116: shown above in this file) -----
+----- (Spanish page III 117: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 118 -----
+\oldpage[III]{118}
+\begin{proof}
+Como la cuestión es local sobre $Y$, podemos suponer que $Y$ es noetheriano, y lo mismo ocurre entonces con $X$~\sref[I]{I.6.3.7}.
+Por hipótesis, todo subpreesquema cerrado $Z$ de $X$ cuyo espacio subyacente sea $\Supp(\sh{F})$ es propio sobre $Y$; en otras palabras, si $j:Z\to X$ es la inmersión canónica, entonces $f\circ j:Z\to Y$ es propio.
+Podemos suponer que $Z$ es tal que $\sh{F}=j_*(\sh{G})$, donde $\sh{G}=j^*(\sh{F})$ es un $\sh{O}_Z$-módulo coherente~\sref[I]{I.9.3.5}; como $\RR^q f_*(\sh{F})=\RR^q(f\circ j)_*(\sh{G})$ por el Corolario~\sref{III.1.3.4}, la conclusión se deduce inmediatamente del Teorema~\sref{III.3.2.1}.
+\end{proof}
+
+\subsection{Generalización del teorema de finitud (esquemas ordinarios)}
+\label{subsection:III.3.3}
+
+\begin{proposition}[3.3.1]
+\label{III.3.3.1}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasi-coherente de tipo finito, graduada en grados positivos, sea $Y'=\Proj(\sh{S})$, y sea $g:Y'\to Y$ el morfismo estructural.
+Sea $f:X\to Y$ un morfismo propio, sea $\sh{S}'=f^*(\sh{S})$, y sea $\sh{M}=\bigoplus_{k\in\bb{Z}}\sh{M}_k$ un $\sh{S}'$-módulo graduado cuasi-coherente de tipo finito.
+Entonces los $\RR^p f_*(\sh{M})=\bigoplus_{k\in\bb{Z}}\RR^p f_*(\sh{M}_k)$ son $\sh{S}$-módulos graduados de tipo finito para todo $p$.
+Supongamos además que $\sh{S}$ está generada por $\sh{S}_1$; entonces, para todo $p\in\bb{Z}$, existe un entero $k_p$ tal que, para todo $k\geq k_p$ y todo $r\geq 0$, se tiene
+\[
+\label{III.3.3.1.1}
+  \RR^p f_*(\sh{M}_{k+r})=\sh{S}_r\RR^p f_*(\sh{M}_k).
+  \tag{3.3.1.1}
+\] 
+\end{proposition}
+
+\begin{proof}
+La primera afirmación es idéntica al enunciado del Teorema~\sref{III.2.4.1}[i], en el que simplemente se sustituye «morfismo proyectivo» por «morfismo propio».
+En la demostración del Teorema~\sref{III.2.4.1}[i], la hipótesis sobre $f$ solo se utilizó para demostrar (con la notación de aquella demostración) que $\RR^p f_*'(\widetilde{\sh{M}})$ es un $\sh{O}_{Y'}$-módulo coherente.
+Bajo las hipótesis de la Proposición~\sref{III.3.3.1}, $f'$ es propio~\sref[II]{II.5.4.2}[iii], de modo que podemos retomar sin modificación la demostración del Teorema~\sref{III.2.4.1}[i], gracias al teorema de finitud~\sref{III.3.2.1}.
+
+Para la segunda afirmación, basta observar que existe un recubrimiento abierto afín finito $(U_i)$ de $Y$ tal que las restricciones a los $U_i$ de los dos miembros de~(\hyperref[III.3.3.1.1]{3.3.1.1}) son iguales para todo $k\geq k_{p,i}$~\sref[II]{II.2.1.6}[ii]; basta tomar como $k_p$ el mayor de los $k_{p,i}$.
+\end{proof}
+
+\begin{corollary}[3.3.2]
+\label{III.3.3.2}
+Sea $A$ un anillo noetheriano, sea $\mathfrak{m}$ un ideal de $A$, sea $X$ un $A$-esquema propio y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Entonces, para todo $p\geq 0$, la suma directa $\bigoplus_{k\geq 0}\HH^p(X,\mathfrak{m}^k\sh{F})$ es un módulo de tipo finito sobre el anillo $S=\bigoplus_{k\geq 0}\mathfrak{m}^k$; en particular, existe un entero $k_p\geq 0$ tal que, para todo $k\geq k_p$ y todo $r\geq 0$, se tiene
+\[
+\label{III.3.3.2.1}
+  \HH^p(X,\mathfrak{m}^{k+r}\sh{F})=\mathfrak{m}^r\HH^p(X,\mathfrak{m}^k\sh{F}).
+  \tag{3.3.2.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Basta aplicar la Proposición~\sref{III.3.3.1} con $Y=\Spec(A)$, $\sh{S}=\widetilde{S}$ y $\sh{M}_k=\mathfrak{m}^k\sh{F}$, teniendo en cuenta el Corolario~\sref{III.1.4.11}.
+\end{proof}
+
+Recordemos que la estructura de $S$-módulo sobre $\bigoplus_{k\geq 0}\HH^p(X,\mathfrak{m}^k\sh{F})$ se obtiene considerando, para todo $a\in\mathfrak{m}^r$, la aplicación $\HH^p(X,\mathfrak{m}^k\sh{F})\to\HH^p(X,\mathfrak{m}^{k+r}\sh{F})$ que procede del paso a cohomología de la aplicación de multiplicación $\mathfrak{m}^k\sh{F}\to\mathfrak{m}^{k+r}\sh{F}$ definida por $a$~\sref{III.2.4.1}.
+
+\subsection{Teorema de finitud: caso de los esquemas formales}
+\label{subsection:III.3.4}
+----- French corrections on page III 117 -----
+[id 5529]
+OLD: appartiennent à $K'$~;
+NEW: appartiennent à $\boldsymbol{K}'$~;
+FRENCH CONTEXT (corrected): tégorie $\boldsymbol{K}$ des
+$\mathcal O_X$-Modules cohérents.
+\oldpage[III]{117}
+En effet, soit
+$0\to\mathcal F'\to\mathcal F\to\mathcal F''\to0$ une suite exacte de
+$\mathcal O_X$-Modules cohérents~; supposons par exemple que $\mathcal F'$
+et $\mathcal F''$ appartiennent à $\boldsymbol{K}'$~; on a la suite exacte de cohomologie
+\[
+R^{q-1}f_*(\mathcal F'')\xrightarrow{\partial}R^qf_*(\mathcal F')
+\longrightarrow R^qf_*(\mathcal F)\longrightarrow R^qf_*(\mathcal F'')
+\xrightarrow{\partial}R^{q+1}f_*(\mathcal F')
+\]
+dans laquelle par hypothèse les qu
+
+[id 5530]
+OLD: (0\textsubscript{I}, 5.3.4 et 5.3.3)
+NEW: (\textbf{0}\textsubscript{I}, 5.3.4 et 5.3.3)
+FRENCH CONTEXT (corrected): F')
+\longrightarrow R^qf_*(\mathcal F)\longrightarrow R^qf_*(\mathcal F'')
+\xrightarrow{\partial}R^{q+1}f_*(\mathcal F')
+\]
+dans laquelle par hypothèse les quatre termes extrêmes sont cohérents~; il
+en est donc de même du terme médian $R^qf_*(\mathcal F)$ par
+(\textbf{0}\textsubscript{I}, 5.3.4 et 5.3.3). On montre de la même manière que
+lorsque $\mathcal F$ et $\mathcal F'$ (resp. $\mathcal F$ et
+$\mathcal F''$) sont dans $\boldsymbol{K}'$, il en est de même de $\mathcal F''$ (resp.
+$\mathcal F'$). De plus, tout \emph{facteur direct} cohérent $\mathcal F'$
+d
+
+[id 5531]
+OLD: sont dans $K'$
+NEW: sont dans $\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): n Y'$. Par suite, le noyau et le conoyau de $u$, qui sont
+dans $\boldsymbol{K}$ (\textbf{0}\textsubscript{I}, 5.3.4) ont leurs supports dans $Y'\cap Y''$,
+et sont donc dans $\boldsymbol{K}'$ par hypothèse~; pour la même raison, $\mathcal F'$ et
+$\mathcal F''$ sont dans $\boldsymbol{K}'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisque $\boldsymbol{K}'$ est exact. La conclusion résulte alors de la considération des
+deux suites exactes
+\[
+0\longrightarrow\operatorname{Im}u\longrightarrow
+\mathcal F'\oplus\mathcal F''\longrightarrow
+\operat
+
+[id 5532]
+OLD: \mathcal F\in K'$
+NEW: \mathcal F\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $\boldsymbol{P}(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in\boldsymbol{K}$ à support contenu dans $Y$ et prouvons que
+$\mathcal F\in\boldsymbol{K}'$. Désignons encore par $Y$ le sous-préschéma fermé réduit de
+$X$ ayant $Y$ pour espace sous-jacent (\textbf{I}, 5.2.1)~; il est défini par un Idéal
+cohérent $\mathcal J$ de $\mathcal O_X$. On sait (\textbf{I}, 9.3.4) qu'il existe un
+entier $n>0$ tel que $\math
+
+[id 5533]
+OLD: aussi à $K'$~:
+NEW: aussi à $\boldsymbol{K}'$~:
+FRENCH CONTEXT (corrected):  F'$ (resp. $\mathcal F$ et
+$\mathcal F''$) sont dans $\boldsymbol{K}'$, il en est de même de $\mathcal F''$ (resp.
+$\mathcal F'$). De plus, tout \emph{facteur direct} cohérent $\mathcal F'$
+d'un $\mathcal O_X$-Module $\mathcal F\in\boldsymbol{K}'$ appartient aussi à $\boldsymbol{K}'$~: en
+effet, $R^qf_*(\mathcal F')$ est alors facteur direct de
+$R^qf_*(\mathcal F)$ (G, II, 4.4.4), donc est de type fini, et comme il est
+quasi-cohérent (\hyperref[III.1.4.10-fr]{1.4.10}), il est cohérent, $Y$
+étant noethérien. En vertu de (\hyperref[III.3.1.3-
+
+[id 5535]
+OLD: $K'$, tel que
+NEW: $\boldsymbol{K}'$, tel que
+FRENCH CONTEXT (corrected): .4.10}), il est cohérent, $Y$
+étant noethérien. En vertu de (\hyperref[III.3.1.3-fr]{3.1.3}), on est
+ramené à prouver que lorsque $X$ est \emph{irréductible} de point générique
+$x$, il existe \emph{un} $\mathcal O_X$-Module cohérent $\mathcal F$ appartenant à
+$\boldsymbol{K}'$, tel que $\mathcal F_x\neq0$~: en effet, si ce point est établi, on
+pourra l'appliquer à tout sous-préschéma fermé irréductible $Y$ de $X$, car
+si $j:Y\to X$ est l'injection canonique, $f\circ j$ est propre (\textbf{II}, 5.4.2),
+et si $\mathcal G$ est un $\mathcal O_Y
+
+[id 5536]
+OLD: (II, 5.4.2)
+NEW: (\textbf{II}, 5.4.2)
+FRENCH CONTEXT (corrected): ohérent $\mathcal F$ appartenant à
+$\boldsymbol{K}'$, tel que $\mathcal F_x\neq0$~: en effet, si ce point est établi, on
+pourra l'appliquer à tout sous-préschéma fermé irréductible $Y$ de $X$, car
+si $j:Y\to X$ est l'injection canonique, $f\circ j$ est propre (\textbf{II}, 5.4.2),
+et si $\mathcal G$ est un $\mathcal O_Y$-Module cohérent de support $Y$,
+$j_*(\mathcal G)$ est un $\mathcal O_X$-Module cohérent tel que
+\[
+R^q(f\circ j)_*(\mathcal G)=R^qf_*(j_*(\mathcal G))
+\]
+(G, II, 4.9.1), donc on est bien dans les conditions d'applicat
+
+[id 5537]
+OLD: (II, 5.6.2)
+NEW: (\textbf{II}, 5.6.2)
+FRENCH CONTEXT (corrected): $,
+$j_*(\mathcal G)$ est un $\mathcal O_X$-Module cohérent tel que
+\[
+R^q(f\circ j)_*(\mathcal G)=R^qf_*(j_*(\mathcal G))
+\]
+(G, II, 4.9.1), donc on est bien dans les conditions d'application de
+(\hyperref[III.3.1.3-fr]{3.1.3}).
+
+Or, en vertu du lemme de Chow (\textbf{II}, 5.6.2), il existe un préschéma
+irréductible $X'$ et un morphisme \emph{projectif} et surjectif
+$g:X'\to X$ tel que $f\circ g:X'\to Y$ soit \emph{projectif}. Il existe un
+$\mathcal O_{X'}$-Module $\mathcal L$ ample pour $g$ (\textbf{II}, 5.3.1)~;
+appliquons le th. fo
+
+[id 5538]
+OLD: (II, 5.3.1)
+NEW: (\textbf{II}, 5.3.1)
+FRENCH CONTEXT (corrected): vertu du lemme de Chow (\textbf{II}, 5.6.2), il existe un préschéma
+irréductible $X'$ et un morphisme \emph{projectif} et surjectif
+$g:X'\to X$ tel que $f\circ g:X'\to Y$ soit \emph{projectif}. Il existe un
+$\mathcal O_{X'}$-Module $\mathcal L$ ample pour $g$ (\textbf{II}, 5.3.1)~;
+appliquons le th. fondamental des morphismes projectifs
+(\hyperref[III.2.2.1-fr]{2.2.1}) à $g:X'\to X$ et à $\mathcal L$~: il
+existe donc un entier $n$ tel que
+$\mathcal F=g_*(\mathcal O_{X'}(n))$ soit un $\mathcal O_X$-Module cohérent
+et $R^qg_*(\mathcal O
+
+[id 5539]
+OLD: (II, 3.4.7)
+NEW: (\textbf{II}, 3.4.7)
+FRENCH CONTEXT (corrected): ections de $\mathcal S_1$ au-dessus de $U_\alpha$. Si on
+suppose (2.2.2) démontré, il suffira alors de prendre pour $N$ dans les
+parties (ii) et (iii) de (2.2.1) le plus grand des entiers analogues
+correspondant aux $U_\alpha$ (tenant compte de (1.4.11) et de
+(\textbf{II}, 3.4.7)).
+
+Pour prouver (2.2.2), remarquons que $X$ s'identifie à un sous-schéma
+fermé de $P=\mathbf P_A^r$ (\textbf{II}, 3.6.2)~; en outre, si $j:X\to P$ est
+l'injection canonique, $j_*(\mathcal F)$ est un
+$\mathcal O_P$-Module cohérent et on a
+$j_*(\mathcal F(n))=(
+
+[id 5540]
+OLD: (0, 11.1.6)
+NEW: (\textbf{0}, 11.1.6)
+FRENCH CONTEXT (corrected): $ sont bijectifs. Mais le terme
+$E_2$ de cette suite est donné par
+$''E_2^{pq}=H^p(Y,R^qf_*(\mathcal F))$ (G, II, 4.17.1), donc il résulte de
+(\hyperref[III.1.3.2-fr]{1.3.2}) que $''E_2^{pq}=0$ pour $q>0$, et la suite
+spectrale dégénère~; d'où notre assertion (\textbf{0}, 11.1.6).
+\end{proof}
+
+\begin{corollary}[1.3.4]
+\label{III.1.3.4-fr}
+Soient $f:X\to Y$ un morphisme affine, $g:Y\to Z$ un morphisme.
+\oldpage[III]{89}
+Pour tout $\mathcal O_X$-Module quasi-cohérent $\mathcal F$,
+l'homomorphisme canonique
+$R^pg_*(f_*(\mathcal F))\to R^
+
+[id 5541]
+OLD: (II, 5.4.10)
+NEW: (\textbf{II}, 5.4.10)
+FRENCH CONTEXT (corrected): athcal L^{\otimes n}$
+(pour $n\in\mathbb Z$). Soit
+$\mathcal F\to\mathcal G\to\mathcal H$ une suite exacte de
+$\mathcal O_X$-Modules cohérents,
+\oldpage[III]{102}
+telle que le support de
+$\operatorname{Im}(\mathcal F\to\mathcal G)$ soit propre sur $Y$ \textup{(\textbf{II}, 5.4.10)}. Il existe alors
+un entier $N$ tel que, pour $n\geq N$, la suite
+\[
+f_*(\mathcal F(n))\longrightarrow f_*(\mathcal G(n))
+\longrightarrow f_*(\mathcal H(n))
+\]
+est exacte.
+\end{corollary}
+
+\begin{proof}
+Le même raisonnement qu'au début de
+(\hyperref[III.2.2.1
+
+=================== PAGE III 118 ===================
+----- (Spanish page III 117: shown above in this file) -----
+----- (Spanish page III 118: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 119 -----
+\oldpage[III]{119}
+Los resultados de esta sección (salvo la definición~\sref{III.3.4.1}) no se utilizarán en el resto de este capítulo.
+
+\begin{env}[3.4.1]
+\label{III.3.4.1}
+Sean $\mathfrak{X}$ y $\mathfrak{S}$ dos preesquemas formales localmente noetherianos~\sref[I]{I.10.4.2}, y sea $f:\mathfrak{X}\to\mathfrak{S}$ un morfismo de preesquemas formales.
+Diremos que $f$ es un morfismo \emph{propio} si satisface las condiciones siguientes:
+\begin{enumerate}
+  \item[1.º] \emph{$f$ es un morfismo de tipo finito~\sref[I]{I.10.13.3}}.
+  \item[2.º] \emph{Si $\sh{K}$ es un haz de ideales de definición de $\mathfrak{S}$ y se pone $\sh{J}=f^*(\sh{K})\sh{O}_\mathfrak{X}$, $X_0=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{J})$, $S_0=(\mathfrak{S},\sh{O}_\mathfrak{S}/\sh{K})$, entonces el morfismo $f_0:X_0\to S_0$ inducido por $f$~\sref[I]{I.10.5.6} es propio}.
+\end{enumerate}
+Es inmediato que esta definición no depende del haz de ideales de definición $\sh{K}$ de $\mathfrak{S}$ considerado; en efecto, si $\sh{K}'$ es un segundo haz de ideales de definición tal que $\sh{K}'\subset\sh{K}$, y si se pone $\sh{J}'=f^*(\sh{K}')\sh{O}_\mathfrak{X}$, $X_0'=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{J}')$, $S_0'=(\mathfrak{S},\sh{O}_\mathfrak{S}/\sh{K}')$, entonces el morfismo $f_0':X_0'\to S_0'$ inducido por $f$ es tal que el diagrama
+\[
+  \xymatrix{
+    X_0\ar[r]^{f_0}\ar[d]_i &
+    S_0\ar[d]^j\\
+    X_0'\ar[r]_{f_0'} &
+    S_0'
+  }
+\]
+es conmutativo, siendo $i$ y $j$ inmersiones sobreyectivas; en virtud de~\sref[II]{II.5.4.5}, es equivalente decir que $f_0$ o $f_0'$ es propio.
+
+Observemos que, para todo $n\geq 0$, si se pone $X_n=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{J}^{n+1})$, $S_n=(\mathfrak{S},\sh{O}_\mathfrak{S}/\sh{K}^{n+1})$, entonces el morfismo $f_n:X_n\to S_n$ inducido por $f$~\sref[I]{I.10.5.6} es propio para todo $n$ en cuanto lo es para $n=0$~\sref[II]{II.5.4.6}.
+
+Si $g:Y\to Z$ es un morfismo propio de preesquemas ordinarios localmente noetherianos, $Z'$ es un subconjunto cerrado de $Z$, e $Y'$ es un subconjunto cerrado de $Y$ tal que $g(Y')\subset Z'$, entonces la extensión $\widehat{g}:Y_{/Y'}\to Z_{/Z'}$ de $g$ a las compleciones~\sref[I]{I.10.9.1} es un morfismo propio de preesquemas formales, como se deduce de la definición y de~\sref[II]{II.5.4.5}.
+
+Sean $\mathfrak{X}$ y $\mathfrak{S}$ dos preesquemas formales localmente noetherianos y sea $f:\mathfrak{X}\to\mathfrak{S}$ un morfismo \emph{de tipo finito}~\sref[I]{I.10.13.3}; conservando la notación anterior, diremos que un subconjunto $Z$ del espacio subyacente a $\mathfrak{X}$ es \emph{propio} sobre $\mathfrak{S}$ (o propio para $f$) si, considerado como subconjunto de $X_0$, $Z$ es \emph{propio sobre $S_0$}~\sref[II]{II.5.4.10}.
+Todas las propiedades de los subconjuntos propios de preesquemas ordinarios enunciadas en~\sref[II]{II.5.4.10} siguen siendo válidas para los subconjuntos propios de preesquemas formales, como se deduce inmediatamente de las definiciones.
+\end{env}
+
+\begin{theorem}[3.4.2]
+\label{III.3.4.2}
+Sean $\mathfrak{X}$ y $\mathfrak{Y}$ preesquemas formales localmente noetherianos, y sea $f:\mathfrak{X}\to\mathfrak{Y}$ un morfismo propio.
+Para todo $\sh{O}_\mathfrak{X}$-módulo coherente $\sh{F}$, los $\sh{O}_\mathfrak{Y}$-módulos $\RR^q f_*(\sh{F})$ son coherentes para todo $q\geq 0$.
+\end{theorem}
+
+Sea $\sh{J}$ un haz de ideales de definición de $\mathfrak{Y}$, sea $\sh{K}=f^*(\sh{J})\sh{O}_\mathfrak{X}$, y consideremos los $\sh{O}_\mathfrak{X}$-módulos
+\[
+\label{III.3.4.2.1}
+  \sh{F}_k=\sh{F}\otimes_{\sh{O}_\mathfrak{Y}}(\sh{O}_\mathfrak{Y}/\sh{J}^{k+1})=\sh{F}/\sh{K}^{k+1}\sh{F}\quad(k\geq 0)
+  \tag{3.4.2.1}
+\]
+que forman evidentemente un \emph{sistema proyectivo} de $\sh{O}_\mathfrak{X}$-módulos topológicos, tal que
+----- French corrections on page III 118 -----
+[id 5542]
+OLD: (I, 6.3.7)
+NEW: (\textbf{I}, 6.3.7)
+FRENCH CONTEXT (corrected): est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (\textbf{II}, 1.3.7 et \textbf{I}, 6.3.4, (ii)), $X'$ est
+noethérien (\textbf{I}, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+$R^pf_*(\mathcal M)\to R^ph_*(\widetilde{\mathcal M})$ est bijectif
+(\hyperref[III.1.3.4-fr]{1.3.4}). En outre, cet homomorphisme est un
+homomorph
+
+[id 5543]
+OLD: (I, 9.3.5)
+NEW: (\textbf{I}, 9.3.5)
+FRENCH CONTEXT (corrected): e{Supp}(\mathcal F)$
+est propre sur $Y$, autrement dit, si $j:Z\to X$ est l'injection canonique,
+$f\circ j:Z\to Y$ est propre. Or, on peut supposer $Z$ tel que
+$\mathcal F=j_*(\mathcal G)$, où $\mathcal G=j^*(\mathcal F)$ est un
+$\mathcal O_Z$-Module cohérent (\textbf{I}, 9.3.5)~; comme on a
+$R^qf_*(\mathcal F)=R^q(f\circ j)_*(\mathcal G)$ par
+(\hyperref[III.1.3.4-fr]{1.3.4}), la conclusion résulte aussitôt de
+(\hyperref[III.3.2.1-fr]{3.2.1}).
+\end{proof}
+
+\subsection{Généralisation du théorème de finitude (schémas usuels)}
+\label{su
+
+[id 5544]
+OLD: (II, 5.4.2, (iii))
+NEW: (\textbf{II}, 5.4.2, (iii))
+FRENCH CONTEXT (corrected): )), l'hypothèse sur $f$ a été utilisée
+uniquement pour montrer (avec les notations de cette démonstration) que
+$R^pf'_*(\widetilde{\mathcal M})$ est un $\mathcal O_{Y'}$-Module cohérent.
+Avec les hypothèses de (\hyperref[III.3.3.1-fr]{3.3.1}), $f'$ est propre
+(\textbf{II}, 5.4.2, (iii)), donc on peut reprendre sans changement toute la
+démonstration de (\hyperref[III.2.4.1-fr]{2.4.1}, (i)), grâce au théorème de
+finitude (\hyperref[III.3.2.1-fr]{3.2.1}).
+
+Quant à la seconde assertion, il suffit de remarquer qu'il y a un
+recouvrement ouvert aff
+
+[id 5545]
+OLD: (II, 2.1.6, (ii))
+NEW: (\textbf{II}, 2.1.6, (ii))
+FRENCH CONTEXT (corrected): utre que (\textbf{II}, 4.6.18). Enfin, pour $0\leq k<d$,
+$(\mathcal S_X)^{(d,k)}$ est un $(\mathcal S_X)^{(d)}$-Module de type fini
+(\textbf{II}, 8.14.14), donc chacun des $(\mathcal S_X)_n$ est un
+$\mathcal O_X$-Module quasi-cohérent de type fini en vertu de
+(\textbf{II}, 2.1.6, (ii)), la question étant locale~; comme $\mathcal O_X$ est
+cohérent, il en est de même des $(\mathcal S_X)_n$.
+
+(ii) Quitte à remplacer la période $d$ par un de ses multiples, on peut
+supposer que $\mathcal L=\mathcal S'_d$ est un $\mathcal O_X$-Module
+\emph{très a
+
+=================== PAGE III 119 ===================
+----- (Spanish page III 118: shown above in this file) -----
+----- (Spanish page III 119: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 120 -----
+\oldpage[III]{120}
+\[
+  \sh{F}=\varprojlim_k\sh{F}_k
+\]
+por \sref[I]{I.10.11.3}.
+Por otra parte, del Teorema~\sref{III.3.4.2} se deduce que cada $\RR^q f_*(\sh{F})$, por ser coherente, está dotado naturalmente de una estructura de $\sh{O}_\mathfrak{Y}$-módulo topológico~\sref[I]{I.10.11.6}, y lo mismo ocurre con los $\RR^q f_*(\sh{F}_k)$.
+A los homomorfismos canónicos $\sh{F}\to\sh{F}_k=\sh{F}/\sh{K}^{k+1}\sh{F}$ corresponden canónicamente homomorfismos
+\[
+  \RR^q f_*(\sh{F})\to\RR^q f_*(\sh{F}_k),
+\]
+que son necesariamente continuos para las estructuras de $\sh{O}_\mathfrak{Y}$-módulo topológico anteriores~\sref[I]{I.10.11.6} y forman un sistema proyectivo, dando en el límite un homomorfismo funtorial canónico
+\[
+\label{III.3.4.2.2}
+  \RR^q f_*(\sh{F})\to\varprojlim_k\RR^q f_*(\sh{F}_k),
+  \tag{3.4.2.2}
+\]
+que es un homomorfismo continuo de $\sh{O}_\mathfrak{Y}$-módulos topológicos.
+Junto con el Teorema~\sref{III.3.4.2}, demostraremos el
+\begin{corollary}[3.4.3]
+\label{III.3.4.3}
+Cada uno de los homomorfismos~(\hyperref[III.3.4.2.2]{3.4.2.2}) es un isomorfismo topológico.
+Además, si $\mathfrak{Y}$ es noetheriano, el sistema proyectivo $(\RR^q f_*(\sh{F}/\sh{K}^{k+1}\sh{F}))_{k\geq 0}$ satisface la condición \emph{(ML)}~\sref[0]{0.13.1.1}.
+\end{corollary}
+Comenzaremos estableciendo el Teorema~\sref{III.3.4.2} y el Corolario~\sref{III.3.4.3} cuando $\mathfrak{Y}$ es un esquema formal afín noetheriano~\sref[I]{I.10.4.1}:
+\begin{corollary}[3.4.4]
+\label{III.3.4.4}
+Bajo las hipótesis del Teorema~\sref{III.3.4.2}, supongamos además que $\mathfrak{Y}=\Spf(A)$, donde $A$ es un anillo ádico noetheriano.
+Sea $\mathfrak{J}$ un ideal de definición de $A$, y pongamos $\sh{F}_k=\sh{F}/\mathfrak{J}^{k+1}\sh{F}$ para $k\geq 0$.
+Entonces los $\HH^n(\mathfrak{X},\sh{F})$ son $A$-módulos de tipo finito; el sistema proyectivo $(\HH^n(\mathfrak{X},\sh{F}_k))_{k\geq 0}$ satisface la condición \emph{(ML)} para todo $n$; si se pone
+\[
+\label{III.3.4.4.1}
+  N_{n,k}=\Ker\big(\HH^n(\mathfrak{X},\sh{F})\to\HH^n(\mathfrak{X},\sh{F}_k)\big)
+  \tag{3.4.4.1}
+\]
+(igual también a $\Im(\HH^n(\mathfrak{X},\mathfrak{J}^{k+1}\sh{F})\to\HH^n(\mathfrak{X},\sh{F}))$ por la sucesión exacta de cohomología), entonces los $N_{n,k}$ definen sobre $\HH^n(\mathfrak{X},\sh{F})$ una filtración $\mathfrak{J}$-buena~\sref[0]{0.13.7.7}; finalmente, el homomorfismo canónico
+\[
+\label{III.3.4.4.2}
+  \HH^n(\mathfrak{X},\sh{F})\to\varprojlim_k\HH^n(\mathfrak{X},\sh{F}_k)
+  \tag{3.4.4.2}
+\]
+es un isomorfismo topológico para todo $n$ (el miembro izquierdo está dotado de la topología $\mathfrak{J}$-ádica y los $\HH^n(\mathfrak{X},\sh{F}_k)$ de la topología discreta).
+\end{corollary}
+
+Pongamos
+\[
+\label{III.3.4.4.3}
+  S=\gr(A)=\bigoplus_{k\geq 0}\mathfrak{J}^k/\mathfrak{J}^{k+1},\ \sh{M}=\gr(\sh{F})=\bigoplus_{k\geq 0}\mathfrak{J}^k\sh{F}/\mathfrak{J}^{k+1}\sh{F}. \tag{3.4.4.3}
+\]
+Sabemos que $\mathfrak{J}^\Delta$ es un haz de ideales de definición de $\mathfrak{Y}$~\sref[I]{I.10.3.1}; sean $\sh{K}=f^*(\mathfrak{J}^\Delta)\sh{O}_\mathfrak{X}$, $X_0=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{K})$, $Y_0=(\mathfrak{Y},\sh{O}_\mathfrak{Y}/\mathfrak{J}^\Delta)=\Spec(A_0)$, con $A_0=A/\mathfrak{J}$.
+Está claro que los $\sh{M}_k=\mathfrak{J}^k\sh{F}/\mathfrak{J}^{k+1}\sh{F}$ son $\sh{O}_{X_0}$-módulos coherentes~\sref[I]{I.10.11.3}.
+Consideremos, por otra parte, la $\sh{O}_{X_0}$-álgebra graduada cuasi-coherente
+\[
+\label{III.3.4.4.4}
+  \sh{S}=\sh{O}_{X_0}\otimes_{A_0}S.
+  \tag{3.4.4.4}
+\]
+La multiplicación define un homomorfismo sobreyectivo de álgebras graduadas
+\[
+  \sh{S}\longrightarrow\gr(\sh{O}_\mathfrak{X})
+  =\bigoplus_{k\geq 0}\sh{K}^k/\sh{K}^{k+1},
+\]
+por medio del cual $\sh{M}$ es un $\sh{S}$-módulo graduado.
+
+\begingroup
+\microtypesetup{protrusion=false,expansion=false}
+La hipótesis de que $\sh{F}$ es un $\sh{O}_\mathfrak{X}$-módulo de tipo finito implica primero que $\sh{M}$ es
+----- French corrections on page III 119 -----
+[id 5546]
+OLD: (I, 10.4.2)
+NEW: (\textbf{I}, 10.4.2)
+FRENCH CONTEXT (corrected): résultats de cette section (sauf la définition
+(\hyperref[III.3.4.1-fr]{3.4.1})) ne seront pas utilisés dans la suite de ce
+chapitre.
+
+\begin{env}[3.4.1]
+\label{III.3.4.1-fr}
+Soient $\mathfrak X$ et $\mathfrak S$ deux préschémas formels localement
+noethériens (\textbf{I}, 10.4.2), $f:\mathfrak X\to\mathfrak S$ un morphisme de
+préschémas formels. Nous dirons que $f$ est un morphisme \emph{propre} s'il
+vérifie les conditions suivantes~:
+\begin{enumerate}
+\item[$1^\circ$] \emph{$f$ est un morphisme de type fini} (\textbf{I}, 10.13.3).
+\i
+
+[id 5547]
+OLD: \item[$1^\circ$] $f$ est un morphisme de type fini
+NEW: \item[$1^\circ$] \emph{$f$ est un morphisme de type fini}
+FRENCH CONTEXT (corrected): t $\mathfrak S$ deux préschémas formels localement
+noethériens (\textbf{I}, 10.4.2), $f:\mathfrak X\to\mathfrak S$ un morphisme de
+préschémas formels. Nous dirons que $f$ est un morphisme \emph{propre} s'il
+vérifie les conditions suivantes~:
+\begin{enumerate}
+\item[$1^\circ$] \emph{$f$ est un morphisme de type fini} (\textbf{I}, 10.13.3).
+\item[$2^\circ$] \emph{Si $\mathcal K$ est un Idéal de définition de $\mathfrak S$
+et si l'on pose}
+$\mathcal J=f^*(\mathcal K)\mathcal O_{\mathfrak X}$,
+$X_0=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J)$,
+$S_0=(\mathfrak S,\mathca
+
+[id 5548]
+OLD: (I, 10.13.3).
+NEW: (\textbf{I}, 10.13.3).
+FRENCH CONTEXT (corrected): iens (\textbf{I}, 10.4.2), $f:\mathfrak X\to\mathfrak S$ un morphisme de
+préschémas formels. Nous dirons que $f$ est un morphisme \emph{propre} s'il
+vérifie les conditions suivantes~:
+\begin{enumerate}
+\item[$1^\circ$] \emph{$f$ est un morphisme de type fini} (\textbf{I}, 10.13.3).
+\item[$2^\circ$] \emph{Si $\mathcal K$ est un Idéal de définition de $\mathfrak S$
+et si l'on pose}
+$\mathcal J=f^*(\mathcal K)\mathcal O_{\mathfrak X}$,
+$X_0=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J)$,
+$S_0=(\mathfrak S,\mathcal O_{\mathfrak S}/\math
+
+[id 5549]
+OLD: \item[$2^\circ$] Si $\mathcal K$ est un Idéal de définition de $\mathfrak S$
+et si l'on pose
+NEW: \item[$2^\circ$] \emph{Si $\mathcal K$ est un Idéal de définition de $\mathfrak S$
+et si l'on pose}
+FRENCH CONTEXT (corrected): 2), $f:\mathfrak X\to\mathfrak S$ un morphisme de
+préschémas formels. Nous dirons que $f$ est un morphisme \emph{propre} s'il
+vérifie les conditions suivantes~:
+\begin{enumerate}
+\item[$1^\circ$] \emph{$f$ est un morphisme de type fini} (\textbf{I}, 10.13.3).
+\item[$2^\circ$] \emph{Si $\mathcal K$ est un Idéal de définition de $\mathfrak S$
+et si l'on pose}
+$\mathcal J=f^*(\mathcal K)\mathcal O_{\mathfrak X}$,
+$X_0=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J)$,
+$S_0=(\mathfrak S,\mathcal O_{\mathfrak S}/\mathcal K)$, \emph{le morphisme}
+$f_0:X_0\to S_0$ \emph{déduit de} $f$ (\textbf{I}, 10.5.6) \emph{est pr
+
+[id 5550]
+OLD: (I, 10.5.6) est propre.
+NEW: (\textbf{I}, 10.5.6) \emph{est propre}.
+FRENCH CONTEXT (corrected): de $\mathfrak S$
+et si l'on pose}
+$\mathcal J=f^*(\mathcal K)\mathcal O_{\mathfrak X}$,
+$X_0=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J)$,
+$S_0=(\mathfrak S,\mathcal O_{\mathfrak S}/\mathcal K)$, \emph{le morphisme}
+$f_0:X_0\to S_0$ \emph{déduit de} $f$ (\textbf{I}, 10.5.6) \emph{est propre}.
+\end{enumerate}
+
+Il est immédiat que cette définition ne dépend pas de l'Idéal de définition
+$\mathcal K$ de $\mathfrak S$ considéré~; en effet, si $\mathcal K'$ est un
+second Idéal de définition tel que $\mathcal K'\subset\mathcal K$, et si on
+pose $\mathcal
+
+[id 5551]
+OLD: vertu de (II, 5.4.5)
+NEW: vertu de (\textbf{II}, 5.4.5)
+FRENCH CONTEXT (corrected): o S'_0$ déduit de $f$ est tel que le diagramme
+\[
+\xymatrix{
+X_0\ar[r]^{f_0}\ar[d]_i & S_0\ar[d]^j\\
+X'_0\ar[r]_{f'_0} & S'_0
+}
+\]
+est commutatif, $i$ et $j$ étant des immersions surjectives~; il revient donc
+au même de dire que $f_0$ ou $f'_0$ est propre, en vertu de (\textbf{II}, 5.4.5).
+
+On notera que, pour tout $n\geq0$, si on pose
+$X_n=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J^{n+1})$,
+$S_n=(\mathfrak S,\mathcal O_{\mathfrak S}/\mathcal K^{n+1})$, le morphisme
+$f_n:X_n\to S_n$ déduit de $f$ (\textbf{I}, 10.5.6) est propre pour tout
+
+[id 5552]
+OLD: (I, 10.5.6) est propre pour
+NEW: (\textbf{I}, 10.5.6) est propre pour
+FRENCH CONTEXT (corrected):  propre, en vertu de (\textbf{II}, 5.4.5).
+
+On notera que, pour tout $n\geq0$, si on pose
+$X_n=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J^{n+1})$,
+$S_n=(\mathfrak S,\mathcal O_{\mathfrak S}/\mathcal K^{n+1})$, le morphisme
+$f_n:X_n\to S_n$ déduit de $f$ (\textbf{I}, 10.5.6) est propre pour tout $n$ dès qu'il
+l'est pour $n=0$ (\textbf{II}, 5.4.6).
+
+Si $g:Y\to Z$ est un morphisme propre de préschémas usuels, localement
+noethériens, $Z'$ une partie fermée de $Z$, $Y'$ une partie fermée de $Y$
+telle que $g(Y')\subset Z'$, le prolongement
+$\widehat 
+
+[id 5553]
+OLD: (II, 5.4.6)
+NEW: (\textbf{II}, 5.4.6)
+FRENCH CONTEXT (corrected): eq0$, si on pose
+$X_n=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J^{n+1})$,
+$S_n=(\mathfrak S,\mathcal O_{\mathfrak S}/\mathcal K^{n+1})$, le morphisme
+$f_n:X_n\to S_n$ déduit de $f$ (\textbf{I}, 10.5.6) est propre pour tout $n$ dès qu'il
+l'est pour $n=0$ (\textbf{II}, 5.4.6).
+
+Si $g:Y\to Z$ est un morphisme propre de préschémas usuels, localement
+noethériens, $Z'$ une partie fermée de $Z$, $Y'$ une partie fermée de $Y$
+telle que $g(Y')\subset Z'$, le prolongement
+$\widehat g:Y_{/Y'}\to Z_{/Z'}$ de $g$ aux complétés (\textbf{I}, 1
+
+[id 5554]
+OLD: (I, 10.9.1)
+NEW: (\textbf{I}, 10.9.1)
+FRENCH CONTEXT (corrected): bf{II}, 5.4.6).
+
+Si $g:Y\to Z$ est un morphisme propre de préschémas usuels, localement
+noethériens, $Z'$ une partie fermée de $Z$, $Y'$ une partie fermée de $Y$
+telle que $g(Y')\subset Z'$, le prolongement
+$\widehat g:Y_{/Y'}\to Z_{/Z'}$ de $g$ aux complétés (\textbf{I}, 10.9.1) est un
+morphisme propre de préschémas formels, comme il résulte de la définition et
+de (\textbf{II}, 5.4.5).
+
+Soient $\mathfrak X$ et $\mathfrak S$ deux préschémas formels localement
+noethériens, $f:\mathfrak X\to\mathfrak S$ un morphisme \emph{de type fini}
+
+
+[id 5555]
+OLD: et
+de (II, 5.4.5)
+NEW: et
+de (\textbf{II}, 5.4.5)
+FRENCH CONTEXT (corrected): Z'$ une partie fermée de $Z$, $Y'$ une partie fermée de $Y$
+telle que $g(Y')\subset Z'$, le prolongement
+$\widehat g:Y_{/Y'}\to Z_{/Z'}$ de $g$ aux complétés (\textbf{I}, 10.9.1) est un
+morphisme propre de préschémas formels, comme il résulte de la définition et
+de (\textbf{II}, 5.4.5).
+
+Soient $\mathfrak X$ et $\mathfrak S$ deux préschémas formels localement
+noethériens, $f:\mathfrak X\to\mathfrak S$ un morphisme \emph{de type fini}
+(\textbf{I}, 10.13.3)~; les notations étant les mêmes que ci-dessus, on dit qu'une
+partie $Z$ de l'espace so
+
+[id 5556]
+OLD: (I, 10.13.3)~;
+NEW: (\textbf{I}, 10.13.3)~;
+FRENCH CONTEXT (corrected):  est un
+morphisme propre de préschémas formels, comme il résulte de la définition et
+de (\textbf{II}, 5.4.5).
+
+Soient $\mathfrak X$ et $\mathfrak S$ deux préschémas formels localement
+noethériens, $f:\mathfrak X\to\mathfrak S$ un morphisme \emph{de type fini}
+(\textbf{I}, 10.13.3)~; les notations étant les mêmes que ci-dessus, on dit qu'une
+partie $Z$ de l'espace sous-jacent à $\mathfrak X$ est \emph{propre} sur
+$\mathfrak S$ (ou propre pour $f$) si, considérée comme partie de $X_0$, $Z$
+est \emph{propre sur $S_0$} (\textbf{II}, 5.4.10).
+
+[id 5557]
+OLD: \emph{propre sur}
+NEW: \emph{propre} sur
+FRENCH CONTEXT (corrected): trinsèques.
+\end{env}
+
+\begin{env}[3.7.3]
+\label{I.3.7.3-fr}
+Signalons enfin un fait très particulier, qui a sans doute contribué à
+retarder la clarification conceptuelle de la situation envisagée ici~: si
+$A$ est un anneau de valuation discrète et si $X$ est \emph{propre} sur $A$
+(ce qui est en fait le cas si $X$ est un sous-préschéma fermé d'un
+$\mathbf{P}_A^r$, cf. \textbf{II}, 5.5.4), les points de $X$ à valeurs dans $A$ et les
+points de $X'$ à valeurs dans $K$ sont en correspondance biunivoque
+(\textbf{II}, 7.3.8). C'est pourq
+
+[id 5558]
+OLD: (II, 5.4.10). Toutes
+NEW: (\textbf{II}, 5.4.10). Toutes
+FRENCH CONTEXT (corrected): \textbf{I}, 10.13.3)~; les notations étant les mêmes que ci-dessus, on dit qu'une
+partie $Z$ de l'espace sous-jacent à $\mathfrak X$ est \emph{propre} sur
+$\mathfrak S$ (ou propre pour $f$) si, considérée comme partie de $X_0$, $Z$
+est \emph{propre sur $S_0$} (\textbf{II}, 5.4.10). Toutes les propriétés des parties
+propres de préschémas usuels énoncées dans (\textbf{II}, 5.4.10) sont encore valables
+pour les parties propres de préschémas formels comme il résulte aussitôt des
+définitions.
+\end{env}
+
+\begin{theorem}[3.4.2]
+\label{III.3.4.2-fr}
+S
+
+[id 5559]
+OLD: dans (II, 5.4.10)
+NEW: dans (\textbf{II}, 5.4.10)
+FRENCH CONTEXT (corrected):  l'espace sous-jacent à $\mathfrak X$ est \emph{propre} sur
+$\mathfrak S$ (ou propre pour $f$) si, considérée comme partie de $X_0$, $Z$
+est \emph{propre sur $S_0$} (\textbf{II}, 5.4.10). Toutes les propriétés des parties
+propres de préschémas usuels énoncées dans (\textbf{II}, 5.4.10) sont encore valables
+pour les parties propres de préschémas formels comme il résulte aussitôt des
+définitions.
+\end{env}
+
+\begin{theorem}[3.4.2]
+\label{III.3.4.2-fr}
+Soient $\mathfrak X$, $\mathfrak Y$ deux préschémas formels localement
+noethériens, $f:\mathf
+
+[id 14431]
+OLD: le morphisme
+$f_0:X_0\to S_0$ déduit de
+NEW: \emph{le morphisme}
+$f_0:X_0\to S_0$ \emph{déduit de}
+FRENCH CONTEXT (corrected): ^\circ$] \emph{Si $\mathcal K$ est un Idéal de définition de $\mathfrak S$
+et si l'on pose}
+$\mathcal J=f^*(\mathcal K)\mathcal O_{\mathfrak X}$,
+$X_0=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J)$,
+$S_0=(\mathfrak S,\mathcal O_{\mathfrak S}/\mathcal K)$, \emph{le morphisme}
+$f_0:X_0\to S_0$ \emph{déduit de} $f$ (\textbf{I}, 10.5.6) \emph{est propre}.
+\end{enumerate}
+
+Il est immédiat que cette définition ne dépend pas de l'Idéal de définition
+$\mathcal K$ de $\mathfrak S$ considéré~; en effet, si $\mathcal K'$ est un
+second Idéal de définition tel que $\mathcal K
+
+[id 14432]
+OLD: le morphisme
+$f_0:X_0\to Y_0$ déduit de
+NEW: \emph{le morphisme}
+$f_0:X_0\to Y_0$ \emph{déduit de}
+
+=================== PAGE III 120 ===================
+----- (Spanish page III 119: shown above in this file) -----
+----- (Spanish page III 120: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 121 -----
+\oldpage[III]{121}
+un $\sh{S}$-módulo graduado \emph{de tipo finito}.
+En efecto, la cuestión es local sobre $\mathfrak{X}$, y podemos suponer que $\mathfrak{X}=\Spf(B)$, donde $B$ es un anillo ádico noetheriano, y que $\sh{F}=N^\Delta$, donde $N$ es un $B$-módulo de tipo finito~\sref[I]{I.10.10.5}.
+Pongamos $B_0=B/\mathfrak{J}B$ y $N_0=N/\mathfrak{J}N$.
+Entonces $X_0=\Spec(B_0)$, y los $\sh{O}_{X_0}$-módulos cuasi-coherentes $\sh{S}$ y $\sh{M}$ están asociados respectivamente a
+\[
+  S'=\bigoplus_{k\geq 0}((\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}B_0),\qquad
+  M'=\bigoplus_{k\geq 0}\mathfrak{J}^kN/\mathfrak{J}^{k+1}N.
+\]
+Para todo $k\geq 0$, la multiplicación induce una aplicación sobreyectiva
+\[
+  (\mathfrak{J}^k/\mathfrak{J}^{k+1})\otimes_{A_0}N_0
+  \longrightarrow\mathfrak{J}^kN/\mathfrak{J}^{k+1}N,
+  \qquad \overline a\otimes\overline n\longmapsto\overline{an}.
+\]
+Estas aplicaciones definen un homomorfismo sobreyectivo de $S'$-módulos graduados $S'\otimes_{B_0}N_0\longrightarrow M'$.
+Como $N_0$ es un $B_0$-módulo de tipo finito, $M'$ es, por tanto, un $S'$-módulo de tipo finito, lo que prueba nuestra afirmación~\sref[I]{I.1.3.13}.
+\par\endgroup
+
+Como el morfismo $f_0:X_0\to Y_0$ es \emph{propio} por hipótesis, podemos aplicar la Proposición~\sref{III.3.3.1} a $\sh{S}$, $\sh{M}$ y al morfismo $f_0$: teniendo en cuenta el Corolario~\sref{III.1.4.11}, concluimos que, para \emph{todo $n\geq 0$}, $\bigoplus_{k\geq 0}\HH^n(X_0,\sh{M}_k)$ es un $S$-módulo graduado \emph{de tipo finito}.
+Esto prueba que la condición ($\text{F}_n$) de~\sref[0]{0.13.7.7} se satisface para \emph{todo $n\geq 0$}, cuando se considera el sistema proyectivo estricto $(\sh{F}/\mathfrak{J}^k\sh{F})_{k\geq 0}$ de haces de grupos abelianos sobre $X_0$, cada uno dotado de su estructura natural de «$A$-módulo filtrado».
+Podemos, pues, aplicar~\sref[0]{0.13.7.7}, que demuestra que:
+\begin{enumerate}
+  \item[1.º] El sistema proyectivo $(\HH^n(\mathfrak{X},\sh{F}_k))_{k\geq 0}$ satisface la condición (ML).
+  \item[2.º] Si $\HH^{\prime n}=\varprojlim_k\HH^n(\mathfrak{X},\sh{F}_k)$, entonces $\HH^{\prime n}$ es un $A$-módulo de tipo finito.
+  \item[3.º] La filtración definida sobre $\HH^{\prime n}$ por los núcleos de los homomorfismos canónicos $\HH^{\prime n}\to\HH^n(\mathfrak{X},\sh{F}_k)$ es $\mathfrak{J}$-buena.
+\end{enumerate}
+
+Observemos, por otra parte, que si se pone $X_k=(\mathfrak{X},\sh{O}_\mathfrak{X}/\sh{K}^{k+1})$, entonces $\sh{F}_k$ es un $\sh{O}_{X_k}$-módulo coherente~\sref[I]{I.10.11.3}; y si $U$ es un abierto afín de $X_0$, entonces $U$ es también un abierto afín de cada $X_k$~\sref[I]{I.5.1.9}, de modo que $\HH^n(U,\sh{F}_k)=0$ para todo $n>0$ y todo $k$~\sref{III.1.3.1}, y $\HH^0(U,\sh{F}_k)\to\HH^0(U,\sh{F}_h)$ es sobreyectivo para $h\leq k$~\sref[I]{I.1.3.9}.
+Estamos, pues, en las condiciones de~\sref[0]{0.13.3.2}, y la aplicación de~\sref[0]{0.13.3.1} demuestra que $\HH^{\prime n}$ se identifica canónicamente con $\HH^n(\mathfrak{X},\varprojlim_k\sh{F}_k)=\HH^n(\mathfrak{X},\sh{F})$; esto termina la demostración del Corolario~\sref{III.3.4.4}.
+
+\begin{env}[3.4.5]
+\label{III.3.4.5}
+Volvamos a la demostración de~\sref{III.3.4.2} y~\sref{III.3.4.3}.
+Demostremos primero las proposiciones en el caso $\mathfrak{Y}=\Spf(A)$ considerado en~\sref{III.3.4.4}; para ello, para todo $g\in A$, apliquemos~\sref{III.3.4.4} al esquema formal afín noetheriano inducido sobre el abierto $\mathfrak{Y}_g=\mathfrak{D}(g)$ de $\mathfrak{Y}$, que es igual a $\Spf(A_{\{g\}})$, y al preesquema formal inducido por $\mathfrak{X}$ sobre $f^{-1}(\mathfrak{Y}_g)$; observemos que $\mathfrak{Y}_g$ es también un abierto afín del preesquema $Y_k=(\mathfrak{Y},\sh{O}_\mathfrak{Y}/(\mathfrak{J}^\Delta)^{k+1})$, y como $\sh{F}_k$ es un $\sh{O}_{X_k}$-módulo coherente, se tiene
+\[
+  \HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F}_k)=\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))
+\]
+para todo $k\geq 0$, en virtud del Corolario~\sref{III.1.4.11}.
+El homomorfismo canónico
+\[
+  \HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F})\to\varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))
+\]
+es un isomorfismo; pero se tiene~\sref[0]{0.3.2.6}
+\[
+  \varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))=\Gamma(\mathfrak{Y}_g,\varprojlim_k\RR^n f_*(\sh{F}_k)),
+\]
+----- French corrections on page III 120 -----
+[id 5560]
+OLD: (I, 10.11.3). D'autre
+NEW: (\textbf{I}, 10.11.3). D'autre
+FRENCH CONTEXT (corrected): cal F/\mathcal K^{k+1}\mathcal F\qquad(k\geq0)
+\tag{3.4.2.1}\label{III.3.4.2.1-fr}
+\]
+qui forment évidemment un \emph{système projectif} de
+$\mathcal O_{\mathfrak X}$-Modules topologiques, tel que
+
+\oldpage[III]{120}
+\[
+\mathcal F=\varprojlim_k\mathcal F_k
+\]
+(\textbf{I}, 10.11.3). D'autre part, il résultera de
+(\hyperref[III.3.4.2-fr]{3.4.2}) que chacun des $R^qf_*(\mathcal F)$, étant
+cohérent, est naturellement muni d'une structure de
+$\mathcal O_{\mathfrak Y}$-Module topologique (\textbf{I}, 10.11.6), et il en est de
+même des $R^qf_*(\mathca
+
+[id 5561]
+OLD: topologique (I, 10.11.6)
+NEW: topologique (\textbf{I}, 10.11.6)
+FRENCH CONTEXT (corrected): }
+\[
+\mathcal F=\varprojlim_k\mathcal F_k
+\]
+(\textbf{I}, 10.11.3). D'autre part, il résultera de
+(\hyperref[III.3.4.2-fr]{3.4.2}) que chacun des $R^qf_*(\mathcal F)$, étant
+cohérent, est naturellement muni d'une structure de
+$\mathcal O_{\mathfrak Y}$-Module topologique (\textbf{I}, 10.11.6), et il en est de
+même des $R^qf_*(\mathcal F_k)$. Aux homomorphismes canoniques
+$\mathcal F\to\mathcal F_k=\mathcal F/\mathcal K^{k+1}\mathcal F$
+correspondent canoniquement des homomorphismes
+\[
+R^qf_*(\mathcal F)\longrightarrow R^qf_*(\mathcal F_k)
+\]
+qui s
+
+[id 5562]
+OLD: précédentes (I, 10.11.6)
+NEW: précédentes (\textbf{I}, 10.11.6)
+FRENCH CONTEXT (corrected): athcal F_k=\mathcal F/\mathcal K^{k+1}\mathcal F$
+correspondent canoniquement des homomorphismes
+\[
+R^qf_*(\mathcal F)\longrightarrow R^qf_*(\mathcal F_k)
+\]
+qui sont nécessairement continus pour les structures de
+$\mathcal O_{\mathfrak Y}$-Module topologique précédentes (\textbf{I}, 10.11.6), et
+forment un système projectif, donnant à la limite un homomorphisme canonique
+fonctoriel
+\[
+R^qf_*(\mathcal F)\longrightarrow\varprojlim_kR^qf_*(\mathcal F_k)
+\tag{3.4.2.2}\label{III.3.4.2.2-fr}
+\]
+qui sera un homomorphisme continu de $\mathcal O_{\mathfra
+
+[id 5563]
+OLD: condition (ML) (
+NEW: condition \textup{(ML)} (
+FRENCH CONTEXT (corrected): 4.3]
+\label{III.3.4.3-fr}
+Chacun des homomorphismes (\hyperref[III.3.4.2.2-fr]{3.4.2.2}) est un
+isomorphisme topologique. En outre, si $\mathfrak Y$ est noethérien, le
+système projectif
+$(R^qf_*(\mathcal F/\mathcal K^{k+1}\mathcal F))_{k\geq0}$ satisfait à la
+condition \textup{(ML)} (\textbf{0}, 13.1.1).
+\end{corollary}
+
+Nous commencerons par établir (\hyperref[III.3.4.2-fr]{3.4.2}) et
+(\hyperref[III.3.4.3-fr]{3.4.3}) lorsque $\mathfrak Y$ est un schéma affine
+formel noethérien (\textbf{I}, 10.4.1)~:
+
+\begin{corollary}[3.4.4]
+\label{III.3.
+
+[id 5564]
+OLD: 0, 13.1.1)
+NEW: \textbf{0}, 13.1.1)
+FRENCH CONTEXT (corrected): 
+Chacun des homomorphismes (\hyperref[III.3.4.2.2-fr]{3.4.2.2}) est un
+isomorphisme topologique. En outre, si $\mathfrak Y$ est noethérien, le
+système projectif
+$(R^qf_*(\mathcal F/\mathcal K^{k+1}\mathcal F))_{k\geq0}$ satisfait à la
+condition \textup{(ML)} (\textbf{0}, 13.1.1).
+\end{corollary}
+
+Nous commencerons par établir (\hyperref[III.3.4.2-fr]{3.4.2}) et
+(\hyperref[III.3.4.3-fr]{3.4.3}) lorsque $\mathfrak Y$ est un schéma affine
+formel noethérien (\textbf{I}, 10.4.1)~:
+
+\begin{corollary}[3.4.4]
+\label{III.3.4.4-fr}
+Sous les hy
+
+[id 5565]
+OLD: (I, 10.4.1)
+NEW: (\textbf{I}, 10.4.1)
+FRENCH CONTEXT (corrected): mathcal F))_{k\geq0}$ satisfait à la
+condition \textup{(ML)} (\textbf{0}, 13.1.1).
+\end{corollary}
+
+Nous commencerons par établir (\hyperref[III.3.4.2-fr]{3.4.2}) et
+(\hyperref[III.3.4.3-fr]{3.4.3}) lorsque $\mathfrak Y$ est un schéma affine
+formel noethérien (\textbf{I}, 10.4.1)~:
+
+\begin{corollary}[3.4.4]
+\label{III.3.4.4-fr}
+Sous les hypothèses de (\hyperref[III.3.4.2-fr]{3.4.2}), supposons en outre
+que $\mathfrak Y=\operatorname{Spf}(A)$, où $A$ est un anneau adique
+noethérien. Soit $\mathfrak J$ un idéal de définition de $A$, et 
+
+[id 5566]
+OLD: condition (ML) pour
+NEW: condition \textup{(ML)} pour
+FRENCH CONTEXT (corrected): éal de définition de $A$, et posons
+$\mathcal F_k=\mathcal F/\mathfrak J^{k+1}\mathcal F$ pour $k\geq0$. Alors
+les $H^n(\mathfrak X,\mathcal F)$ sont des $A$-modules de type fini~; le
+système projectif $(H^n(\mathfrak X,\mathcal F_k))_{k\geq0}$ satisfait à la
+condition \textup{(ML)} pour tout $n$~; si on pose
+\[
+N_{n,k}=\operatorname{Ker}\bigl(H^n(\mathfrak X,\mathcal F)
+\longrightarrow H^n(\mathfrak X,\mathcal F_k)\bigr)
+\tag{3.4.4.1}\label{III.3.4.4.1-fr}
+\]
+(égal aussi à
+$\operatorname{Im}(H^n(\mathfrak X,\mathfrak J^{k+1}\mathcal F)
+\to H
+
+[id 5567]
+OLD: (0, 13.7.7)
+NEW: (\textbf{0}, 13.7.7)
+FRENCH CONTEXT (corrected): .3.4.4.1-fr}
+\]
+(égal aussi à
+$\operatorname{Im}(H^n(\mathfrak X,\mathfrak J^{k+1}\mathcal F)
+\to H^n(\mathfrak X,\mathcal F))$ par la suite exacte de cohomologie), les
+$N_{n,k}$ définissent sur $H^n(\mathfrak X,\mathcal F)$ une filtration
+$\mathfrak J$-bonne (\textbf{0}, 13.7.7)~; enfin, l'homomorphisme canonique
+\[
+H^n(\mathfrak X,\mathcal F)
+\longrightarrow\varprojlim_kH^n(\mathfrak X,\mathcal F_k)
+\tag{3.4.4.2}\label{III.3.4.4.2-fr}
+\]
+est un isomorphisme topologique pour tout $n$ (le premier membre étant muni
+de la topologie $\ma
+
+[id 5568]
+OLD: (I, 10.3.1)
+NEW: (\textbf{I}, 10.3.1)
+FRENCH CONTEXT (corrected): k J^k/\mathfrak J^{k+1},\qquad
+\mathcal M=\operatorname{gr}(\mathcal F)=\bigoplus_{k\geq0}
+\mathfrak J^k\mathcal F/\mathfrak J^{k+1}\mathcal F.
+\tag{3.4.4.3}\label{III.3.4.4.3-fr}
+\]
+On sait que $\mathfrak J^\Delta$ est un Idéal de définition de $\mathfrak Y$
+(\textbf{I}, 10.3.1)~; soient
+$\mathcal K=f^*(\mathfrak J^\Delta)\mathcal O_{\mathfrak X}$,
+$X_0=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal K)$,
+$Y_0=(\mathfrak Y,\mathcal O_{\mathfrak Y}/\mathfrak J^\Delta)
+=\operatorname{Spec}(A_0)$ avec $A_0=A/\mathfrak J$. Il est clair qu
+
+[id 5569]
+OLD: (I, 10.11.3). Considérons
+NEW: (\textbf{I}, 10.11.3). Considérons
+FRENCH CONTEXT (corrected): hcal K)$,
+$Y_0=(\mathfrak Y,\mathcal O_{\mathfrak Y}/\mathfrak J^\Delta)
+=\operatorname{Spec}(A_0)$ avec $A_0=A/\mathfrak J$. Il est clair que les
+$\mathcal M_k=\mathfrak J^k\mathcal F/\mathfrak J^{k+1}\mathcal F$ sont des
+$\mathcal O_{X_0}$-Modules cohérents (\textbf{I}, 10.11.3). Considérons d'autre part la
+$\mathcal O_{X_0}$-Algèbre graduée quasi-cohérente
+\[
+\mathcal S=\mathcal O_{X_0}\otimes_{A_0}S.
+\tag{3.4.4.4}\label{III.3.4.4.4-fr}
+\]
+La multiplication définit un homomorphisme surjectif d'Algèbres graduées
+\[
+\mathcal S\longrightarrow
+\oper
+
+[id 14433]
+OLD: \mathcal F=\varprojlim_k\mathcal F_k
+\]
+par (
+NEW: \mathcal F=\varprojlim_k\mathcal F_k
+\]
+(
+FRENCH CONTEXT (corrected): O_{\mathfrak Y}/\mathcal J^{k+1})
+=\mathcal F/\mathcal K^{k+1}\mathcal F\qquad(k\geq0)
+\tag{3.4.2.1}\label{III.3.4.2.1-fr}
+\]
+qui forment évidemment un \emph{système projectif} de
+$\mathcal O_{\mathfrak X}$-Modules topologiques, tel que
+
+\oldpage[III]{120}
+\[
+\mathcal F=\varprojlim_k\mathcal F_k
+\]
+(\textbf{I}, 10.11.3). D'autre part, il résultera de
+(\hyperref[III.3.4.2-fr]{3.4.2}) que chacun des $R^qf_*(\mathcal F)$, étant
+cohérent, est naturellement muni d'une structure de
+$\mathcal O_{\mathfrak Y}$-Module topologique (\textbf{I}, 10.11.6), et il en es
+
+[id 14434]
+OLD: \]
+par 
+NEW: \]
+
+FRENCH CONTEXT (corrected): 
+\begin{env}[1.2.2]
+\label{0.1.2.2-fr}
+Soient $S$ une partie multiplicative d'un anneau $A$, $M$ un $A$-module; dans l'ensemble $M\times S$, la relation entre couples $(m_1,s_1)$, $(m_2,s_2)$~:
+\[
+  \text{<<~il existe $s\in S$ tel que $s(s_1m_2-s_2m_1)=0$~>>}
+\]
+est une relation d'équivalence.
+On désigne par $S^{-1}M$ l'ensemble quotient de $M\times S$ par cette relation, par $m/s$ l'image canonique dans $S^{-1}M$ du couple $(m,s)$; on appelle application \emph{canonique} de $M$ dans $S^{-1}M$ l'application $i_M^S:m\t
+
+=================== PAGE III 121 ===================
+----- (Spanish page III 120: shown above in this file) -----
+----- (Spanish page III 121: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 122 -----
+\oldpage[III]{122}
+y como el haz $\RR^n f_*(\sh{F})$ es el haz asociado al prehaz $\mathfrak{Y}_g\leadsto\HH^n(f^{-1}(\mathfrak{Y}_g),\sh{F})$ sobre los $\mathfrak{Y}_g$~\sref[0]{0.3.2.1}, hemos demostrado que el homomorfismo~(\hyperref[III.3.4.2.2]{3.4.2.2}) es \emph{biyectivo}.
+Demostremos ahora que $\RR^n f_*(\sh{F})$ es un $\sh{O}_\mathfrak{Y}$-módulo coherente y, más precisamente, que se tiene
+\[
+\label{III.3.4.5.1}
+  \RR^n f_*(\sh{F})=\big(\HH^n(\mathfrak{X},\sh{F})\big)^\Delta.
+  \tag{3.4.5.1}
+\]
+
+Con la notación anterior, como $\sh{F}_k$ es un $\sh{O}_{X_k}$-módulo coherente~\sref{III.1.4.13}, se tiene
+\[
+  \Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))=(\Gamma(\mathfrak{Y},\RR^n f_*(\sh{F}_k)))_g=(\HH^n(\mathfrak{X},\sh{F}_k))_g.
+\]
+
+Ahora bien, los $\HH^n(\mathfrak{X},\sh{F}_k)$ forman un sistema proyectivo que satisface (ML), y su límite proyectivo $\HH^n(\mathfrak{X},\sh{F})$ es un $A$-módulo de tipo finito.
+Concluimos~\sref[0]{0.13.7.8} que se tiene
+\[
+  \varprojlim_k\big((\HH^n(\mathfrak{X},\sh{F}_k))_g\big)=\HH^n(\mathfrak{X},\sh{F})\otimes_A A_{\{g\}}=\Gamma(\mathfrak{Y}_g,(\HH^n(\mathfrak{X},\sh{F}))^\Delta),
+\]
+teniendo en cuenta~\sref[I]{I.10.10.8} aplicado a $A$ y $A_{\{g\}}$; esto demuestra~(\hyperref[III.3.4.5.1]{3.4.5.1}), pues $\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}))=\varprojlim_k\Gamma(\mathfrak{Y}_g,\RR^n f_*(\sh{F}_k))$.
+
+Como (\hyperref[III.3.4.2.2]{3.4.2.2}) es entonces un isomorfismo de $\sh{O}_\mathfrak{Y}$-módulos coherentes, es necesariamente un isomorfismo \emph{topológico}~\sref[I]{I.10.11.6}.
+Finalmente, de las relaciones $\RR^n f_*(\sh{F}_k)=(\HH^n(\mathfrak{X},\sh{F}_k))^\Delta$ se deduce que el sistema proyectivo $(\RR^n f_*(\sh{F}_k))_{k\geq 0}$ satisface (ML)~\sref[I]{I.10.10.2}.
+
+Una vez demostrados \sref{III.3.4.2} y \sref{III.3.4.3} en el caso en que el preesquema formal $\mathfrak{Y}$ es afín noetheriano, el paso al caso general es inmediato para~\sref{III.3.4.2} y para la primera afirmación de~\sref{III.3.4.3}, que son locales sobre $\mathfrak{Y}$.
+En cuanto a la segunda afirmación de~\sref{III.3.4.3}, como $\mathfrak{Y}$ es noetheriano, basta recubrirlo por un número finito de abiertos afines noetherianos $U_i$ y observar que las restricciones del sistema proyectivo $(\RR^q f_*(\sh{F}_k))$ a cada uno de los $U_i$ satisfacen (ML).
+\end{env}
+
+En el curso de la demostración hemos probado además:
+\begin{corollary}[3.4.6]
+\label{III.3.4.6}
+Bajo las hipótesis del Corolario~\sref{III.3.4.4}, el homomorfismo canónico
+\[
+\label{III.3.4.6.1}
+  \HH^q(\mathfrak{X},\sh{F})\to\Gamma(\mathfrak{Y},\RR^q f_*(\sh{F}))
+  \tag{3.4.6.1}
+\]
+es biyectivo.
+\end{corollary}
+----- Spanish, III1_CURRENT/ega3/ega3-4.tex, page III 122 -----
+\section{El teorema fundamental de los morfismos propios. Aplicaciones}
+\label{section:III.4}
+
+
+\subsection{El teorema fundamental}
+\label{subsection:III.4.1}
+
+\begin{env}[4.1.1]
+\label{III.4.1.1}
+Sean $X$ e $Y$ esquemas ordinarios noetherianos, sea $f:X\to Y$ un
+morfismo propio, sea $Y'$ un subconjunto cerrado de $Y$, y pongamos
+\[
+  X'=f^{-1}(Y').
+\]
+Denotamos por $\widehat{X}$ y $\widehat{Y}$ los esquemas formales
+$X_{/X'}$ y $Y_{/Y'}$ obtenidos completando $X$ e $Y$ a lo largo de
+$X'$ e $Y'$, respectivamente \sref[I]{I.10.8.5}.
+Denotamos por $\widehat{f}:\widehat{X}\to\widehat{Y}$ la extensión de
+$f$ a estas completaciones \sref[I]{I.10.9.1}.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, denotamos por
+----- French corrections on page III 121 -----
+[id 5570]
+OLD: (I, 10.10.5)
+NEW: (\textbf{I}, 10.10.5)
+FRENCH CONTEXT (corrected):  \emph{de type fini}. En effet, la question est
+locale sur $\mathfrak X$, et on peut donc supposer pour la traiter que
+$\mathfrak X=\operatorname{Spf}(B)$, où $B$ est un anneau adique noethérien,
+et $\mathcal F=N^\Delta$, où $N$ est un $B$-module de type fini
+(\textbf{I}, 10.10.5). Posons $B_0=B/\mathfrak J B$ et $N_0=N/\mathfrak JN$.
+Alors $X_0=\operatorname{Spec}(B_0)$, et les
+$\mathcal O_{X_0}$-Modules quasi-cohérents $\mathcal S$ et $\mathcal M$
+sont respectivement associés à
+\[
+S'=\bigoplus_{k\geq0}
+((\mathfrak J^k/\mathfrak J^{k+
+
+[id 5571]
+OLD: B_0),\qquad
+NEW: B_0)\quad\text{et}\quad
+FRENCH CONTEXT (corrected): \mathfrak J B$ et $N_0=N/\mathfrak JN$.
+Alors $X_0=\operatorname{Spec}(B_0)$, et les
+$\mathcal O_{X_0}$-Modules quasi-cohérents $\mathcal S$ et $\mathcal M$
+sont respectivement associés à
+\[
+S'=\bigoplus_{k\geq0}
+((\mathfrak J^k/\mathfrak J^{k+1})\otimes_{A_0}B_0)\quad\text{et}\quad
+M'=\bigoplus_{k\geq0}\mathfrak J^kN/\mathfrak J^{k+1}N.
+\]
+Pour tout $k\geq0$, la multiplication induit une application surjective
+\[
+(\mathfrak J^k/\mathfrak J^{k+1})\otimes_{A_0}N_0
+\longrightarrow\mathfrak J^kN/\mathfrak J^{k+1}N,
+\qquad \overline a\otimes
+
+[id 5572]
+OLD: (I, 1.3.13)
+NEW: (\textbf{I}, 1.3.13)
+FRENCH CONTEXT (corrected): n\longmapsto\overline{an}.
+\]
+Ces applications définissent un homomorphisme surjectif de
+$S'$-modules gradués $S'\otimes_{B_0}N_0\longrightarrow M'$.
+Comme $N_0$ est un $B_0$-module de type fini, $M'$ est donc un
+$S'$-module de type fini, d'où notre assertion (\textbf{I}, 1.3.13).
+
+Comme le morphisme $f_0:X_0\to Y_0$ est \emph{propre} par hypothèse, on peut
+appliquer (\hyperref[III.3.3.1-fr]{3.3.1}) à $\mathcal S$, $\mathcal M$ et au
+morphisme $f_0$~; compte tenu de (\hyperref[III.1.4.11-fr]{1.4.11}), on en
+conclut que pour \emph{tout
+
+[id 5573]
+OLD: de (0, 13.7.7)
+NEW: de (\textbf{0}, 13.7.7)
+FRENCH CONTEXT (corrected): cal M$ et au
+morphisme $f_0$~; compte tenu de (\hyperref[III.1.4.11-fr]{1.4.11}), on en
+conclut que pour \emph{tout $n\geq0$},
+$\bigoplus_{k\geq0}H^n(X_0,\mathcal M_k)$ est un $S$-module gradué \emph{de
+type fini}. Cela prouve que la condition $(\mathrm F_n)$ de (\textbf{0}, 13.7.7) est
+vérifiée pour \emph{tout $n\geq0$}, lorsqu'on considère le système projectif
+strict $(\mathcal F/\mathfrak J^k\mathcal F)_{k\geq0}$ de faisceaux de
+groupes abéliens sur $X_0$, munis chacun de sa structure naturelle de
+«~$A$-module filtré~». On peut donc a
+
+[id 5574]
+OLD: appliquer (0, 13.7.7)
+NEW: appliquer (\textbf{0}, 13.7.7)
+FRENCH CONTEXT (corrected): ) est
+vérifiée pour \emph{tout $n\geq0$}, lorsqu'on considère le système projectif
+strict $(\mathcal F/\mathfrak J^k\mathcal F)_{k\geq0}$ de faisceaux de
+groupes abéliens sur $X_0$, munis chacun de sa structure naturelle de
+«~$A$-module filtré~». On peut donc appliquer (\textbf{0}, 13.7.7), qui prouve que~:
+\begin{enumerate}
+\item[$1^\circ$] Le système projectif
+$(H^n(\mathfrak X,\mathcal F_k))_{k\geq0}$ vérifie la condition (ML).
+\item[$2^\circ$] Si
+$H'^{n}=\varprojlim_kH^n(\mathfrak X,\mathcal F_k)$, $H'^{n}$ est un
+$A$-module de type fini.
+\
+
+[id 5576]
+OLD: $H'^{,n}$ est un
+NEW: $H'^{n}$ est un
+FRENCH CONTEXT (corrected): n peut donc appliquer (\textbf{0}, 13.7.7), qui prouve que~:
+\begin{enumerate}
+\item[$1^\circ$] Le système projectif
+$(H^n(\mathfrak X,\mathcal F_k))_{k\geq0}$ vérifie la condition (ML).
+\item[$2^\circ$] Si
+$H'^{n}=\varprojlim_kH^n(\mathfrak X,\mathcal F_k)$, $H'^{n}$ est un
+$A$-module de type fini.
+\item[$3^\circ$] La filtration définie sur $H'^{n}$ par les noyaux des
+homomorphismes canoniques $H'^{n}\to H^n(\mathfrak X,\mathcal F_k)$ est
+$\mathfrak J$-bonne.
+\end{enumerate}
+
+Notons d'autre part que si on pose
+$X_k=(\mathfrak X,
+
+[id 5577]
+OLD: sur $H'^{,n}$ par
+NEW: sur $H'^{n}$ par
+FRENCH CONTEXT (corrected): item[$1^\circ$] Le système projectif
+$(H^n(\mathfrak X,\mathcal F_k))_{k\geq0}$ vérifie la condition (ML).
+\item[$2^\circ$] Si
+$H'^{n}=\varprojlim_kH^n(\mathfrak X,\mathcal F_k)$, $H'^{n}$ est un
+$A$-module de type fini.
+\item[$3^\circ$] La filtration définie sur $H'^{n}$ par les noyaux des
+homomorphismes canoniques $H'^{n}\to H^n(\mathfrak X,\mathcal F_k)$ est
+$\mathfrak J$-bonne.
+\end{enumerate}
+
+Notons d'autre part que si on pose
+$X_k=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal K^{k+1})$,
+$\mathcal F_k$ est un $\mathcal O_{X
+
+[id 5578]
+OLD: $H'^{,n}\to
+NEW: $H'^{n}\to
+FRENCH CONTEXT (corrected): thcal F_k))_{k\geq0}$ vérifie la condition (ML).
+\item[$2^\circ$] Si
+$H'^{n}=\varprojlim_kH^n(\mathfrak X,\mathcal F_k)$, $H'^{n}$ est un
+$A$-module de type fini.
+\item[$3^\circ$] La filtration définie sur $H'^{n}$ par les noyaux des
+homomorphismes canoniques $H'^{n}\to H^n(\mathfrak X,\mathcal F_k)$ est
+$\mathfrak J$-bonne.
+\end{enumerate}
+
+Notons d'autre part que si on pose
+$X_k=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal K^{k+1})$,
+$\mathcal F_k$ est un $\mathcal O_{X_k}$-Module cohérent (\textbf{I}, 10.11.3) et si
+$U$
+
+[id 5579]
+OLD: (I, 10.11.3)
+NEW: (\textbf{I}, 10.11.3)
+FRENCH CONTEXT (corrected): cal F/\mathcal K^{k+1}\mathcal F\qquad(k\geq0)
+\tag{3.4.2.1}\label{III.3.4.2.1-fr}
+\]
+qui forment évidemment un \emph{système projectif} de
+$\mathcal O_{\mathfrak X}$-Modules topologiques, tel que
+
+\oldpage[III]{120}
+\[
+\mathcal F=\varprojlim_k\mathcal F_k
+\]
+(\textbf{I}, 10.11.3). D'autre part, il résultera de
+(\hyperref[III.3.4.2-fr]{3.4.2}) que chacun des $R^qf_*(\mathcal F)$, étant
+cohérent, est naturellement muni d'une structure de
+$\mathcal O_{\mathfrak Y}$-Module topologique (\textbf{I}, 10.11.6), et il en est de
+même des $R^qf_
+
+[id 5580]
+OLD: (I, 5.1.9)
+NEW: (\textbf{I}, 5.1.9)
+FRENCH CONTEXT (corrected): e part que si on pose
+$X_k=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal K^{k+1})$,
+$\mathcal F_k$ est un $\mathcal O_{X_k}$-Module cohérent (\textbf{I}, 10.11.3) et si
+$U$ est un ouvert affine dans $X_0$, $U$ est aussi un ouvert affine dans
+chacun des $X_k$ (\textbf{I}, 5.1.9), donc $H^n(U,\mathcal F_k)=0$ pour tout $n>0$ et
+tout $k$ (\hyperref[III.1.3.1-fr]{1.3.1}) et
+$H^0(U,\mathcal F_k)\to H^0(U,\mathcal F_h)$ est surjectif pour $h\leq k$
+(\textbf{I}, 1.3.9). On est donc dans les conditions de (\textbf{0}, 13.3.2) et l'applicati
+
+[id 5581]
+OLD: (I, 1.3.9)
+NEW: (\textbf{I}, 1.3.9)
+FRENCH CONTEXT (corrected): affine dans $X_0$, $U$ est aussi un ouvert affine dans
+chacun des $X_k$ (\textbf{I}, 5.1.9), donc $H^n(U,\mathcal F_k)=0$ pour tout $n>0$ et
+tout $k$ (\hyperref[III.1.3.1-fr]{1.3.1}) et
+$H^0(U,\mathcal F_k)\to H^0(U,\mathcal F_h)$ est surjectif pour $h\leq k$
+(\textbf{I}, 1.3.9). On est donc dans les conditions de (\textbf{0}, 13.3.2) et l'application
+de (\textbf{0}, 13.3.1) prouve que $H'^{n}$ s'identifie canoniquement à
+$H^n(\mathfrak X,\varprojlim_k\mathcal F_k)=H^n(\mathfrak X,\mathcal F)$~;
+cela achève de prouver (\hyperref[III.
+
+[id 5582]
+OLD: (0, 13.3.2)
+NEW: (\textbf{0}, 13.3.2)
+FRENCH CONTEXT (corrected): hacun des $X_k$ (\textbf{I}, 5.1.9), donc $H^n(U,\mathcal F_k)=0$ pour tout $n>0$ et
+tout $k$ (\hyperref[III.1.3.1-fr]{1.3.1}) et
+$H^0(U,\mathcal F_k)\to H^0(U,\mathcal F_h)$ est surjectif pour $h\leq k$
+(\textbf{I}, 1.3.9). On est donc dans les conditions de (\textbf{0}, 13.3.2) et l'application
+de (\textbf{0}, 13.3.1) prouve que $H'^{n}$ s'identifie canoniquement à
+$H^n(\mathfrak X,\varprojlim_k\mathcal F_k)=H^n(\mathfrak X,\mathcal F)$~;
+cela achève de prouver (\hyperref[III.3.4.4-fr]{3.4.4}).
+
+\begin{env}[3.4.5]
+\label{III.3.4.5-f
+
+[id 5583]
+OLD: (0, 13.3.1)
+NEW: (\textbf{0}, 13.3.1)
+FRENCH CONTEXT (corrected):  $H^n(U,\mathcal F_k)=0$ pour tout $n>0$ et
+tout $k$ (\hyperref[III.1.3.1-fr]{1.3.1}) et
+$H^0(U,\mathcal F_k)\to H^0(U,\mathcal F_h)$ est surjectif pour $h\leq k$
+(\textbf{I}, 1.3.9). On est donc dans les conditions de (\textbf{0}, 13.3.2) et l'application
+de (\textbf{0}, 13.3.1) prouve que $H'^{n}$ s'identifie canoniquement à
+$H^n(\mathfrak X,\varprojlim_k\mathcal F_k)=H^n(\mathfrak X,\mathcal F)$~;
+cela achève de prouver (\hyperref[III.3.4.4-fr]{3.4.4}).
+
+\begin{env}[3.4.5]
+\label{III.3.4.5-fr}
+Revenons maintenant à la démonstration
+
+[id 5584]
+OLD: $H'^{,n}$ s'identifie
+NEW: $H'^{n}$ s'identifie
+FRENCH CONTEXT (corrected): ut $n>0$ et
+tout $k$ (\hyperref[III.1.3.1-fr]{1.3.1}) et
+$H^0(U,\mathcal F_k)\to H^0(U,\mathcal F_h)$ est surjectif pour $h\leq k$
+(\textbf{I}, 1.3.9). On est donc dans les conditions de (\textbf{0}, 13.3.2) et l'application
+de (\textbf{0}, 13.3.1) prouve que $H'^{n}$ s'identifie canoniquement à
+$H^n(\mathfrak X,\varprojlim_k\mathcal F_k)=H^n(\mathfrak X,\mathcal F)$~;
+cela achève de prouver (\hyperref[III.3.4.4-fr]{3.4.4}).
+
+\begin{env}[3.4.5]
+\label{III.3.4.5-fr}
+Revenons maintenant à la démonstration de (\hyperref[III.3.4.2-fr]{3.4
+
+[id 5585]
+OLD: (0\textsubscript{I}, 3.2.6)
+NEW: (\textbf{0}\textsubscript{I}, 3.2.6)
+FRENCH CONTEXT (corrected): aisceau
+$U\leadsto H^i(\Gamma(U,\mathcal G^\bullet))$ (G, II, 4.1)~; or, le complexe
+$\Gamma(U,\mathcal G^\bullet)$ est la limite projective du système
+projectif de complexes de groupes abéliens
+$(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))_{k\in\mathbb N}$
+(\textbf{0}\textsubscript{I}, 3.2.6). On a vu dans \emph{a)} que pour chaque
+$i\geq0$, les applications
+$\Gamma(U,\mathcal C^i(X,\mathcal F_k))\to
+\Gamma(U,\mathcal C^i(X,\mathcal F_h))$ $(h\leq k)$ sont \emph{surjectives}~;
+d'autre part, on a
+$H^i(U,\mathcal F_k)=
+H^i(\Gamma(U,\mathcal C^\bulle
+
+[id 14435]
+OLD: \widetilde{S'}
+NEW: \widetilde{S}'
+FRENCH CONTEXT (corrected): a première assertion résulte de la commutativité de
+(\hyperref[II.8.5.1.3-fr]{8.5.1.3}). Pour démontrer la seconde, on peut se
+borner au cas où $Y=\operatorname{Spec}(A)$ et
+$Y'=\operatorname{Spec}(A')$ sont affines,
+$\mathcal{S}=\widetilde{S}$, $\mathcal{S}'=\widetilde{S}'$. Pour tout $f$
+homogène dans $S_+$, si on pose $f'=\varphi(f)$, on a
+$\Phi^{-1}(C_f)=C'_{f'}$ (\hyperref[I.2.2.4.1-fr]{\textbf{I}, 2.2.4.1})~; dire que
+$G(\varphi)=\operatorname{Proj}(S')$ signifie que dans $S'_+$ la racine de
+l'idéal engendré par les $f'=\v
+
+[id 14436]
+OLD: \widetilde{M'}
+NEW: \widetilde{M}'
+FRENCH CONTEXT (corrected): ctoriel du
+$\mathscr{O}_{X'}$-Module $(M_{[\varphi]})^{\sim}$ sur l'image directe
+$\Phi_*(\widetilde{M})$.
+\end{proposition}
+
+Posons pour abréger $M'=M_{[\varphi]}$, et pour tout $f'\in A'$, posons
+encore $f=\varphi(f')$. Les modules de sections
+$\Gamma(D(f'),\widetilde{M}')$ et $\Gamma(D(f),\widetilde{M})$
+s'identifient respectivement aux modules $M'_{f'}$ et $M_f$ (sur
+$A'_{f'}$ et $A_f$ respectivement)~; en outre, le $A'_{f'}$-module
+$(M_f)_{[\varphi_{f'}]}$ est canoniquement isomorphe à $M'_{f'}$
+(\hyperref[0.1.5.2-fr]{\text
+
+=================== PAGE III 122 ===================
+----- (Spanish page III 121: shown above in this file) -----
+----- (Spanish page III 122: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-4.tex, page III 123 -----
+\oldpage[III]{123}
+
+\[
+  \widehat{\sh{F}}=\sh{F}_{/X'}
+\]
+su completación a lo largo de $X'$ \sref[I]{I.10.8.4}; este es un
+$\sh{O}_{\widehat{X}}$-módulo coherente \sref[I]{I.10.8.8}.
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2}
+Sea $\sh{J}$ un ideal coherente de $\sh{O}_Y$ tal que
+\[
+  \Supp(\sh{O}_Y/\sh{J})=Y'
+\]
+\sref[I]{I.5.2.1}.
+Sabemos \sref[I]{I.4.4.5} que
+\[
+  \sh{K}=f^*(\sh{J})\sh{O}_X
+\]
+es un ideal coherente de $\sh{O}_X$ que satisface
+\[
+  \Supp(\sh{O}_X/\sh{K})=X'.
+\]
+Para todo $k\geq0$, consideremos el $\sh{O}_X$-módulo coherente
+\[
+  \sh{F}_k
+  =
+  \sh{F}\otimes_{\sh{O}_Y}(\sh{O}_Y/\sh{J}^{k+1})
+  =
+  \sh{F}/\sh{K}^{k+1}\sh{F}.
+\]
+Los $\sh{O}_Y$-módulos
+\[
+  \RR^n f_*(\sh{F})
+  \quad\text{y}\quad
+  \RR^n f_*(\sh{F}_k)
+\]
+son coherentes para todo $n$ \sref{III.3.2.1}.
+Para todo $k\geq0$ y todo $n$, el homomorfismo canónico
+$\sh{F}\to\sh{F}_k$ induce, por funtorialidad, un homomorfismo
+\[
+  \RR^n f_*(\sh{F})
+  \longrightarrow
+  \RR^n f_*(\sh{F}_k).
+  \tag{4.1.2.1}
+  \label{III.4.1.2.1}
+\]
+Como $\sh{F}_k$ es un $\sh{O}_X/\sh{K}^{k+1}$-módulo,
+$\RR^n f_*(\sh{F}_k)$ es un
+$\sh{O}_Y/\sh{J}^{k+1}$-módulo \sref[0]{0.12.2.1}.
+Deducimos, pues, de \eqref{III.4.1.2.1} un homomorfismo
+\[
+  \RR^n f_*(\sh{F})
+  \otimes_{\sh{O}_Y}(\sh{O}_Y/\sh{J}^{k+1})
+  \longrightarrow
+  \RR^n f_*(\sh{F}_k).
+  \tag{4.1.2.2}
+  \label{III.4.1.2.2}
+\]
+Los dos miembros de \eqref{III.4.1.2.2} forman sistemas proyectivos.
+El límite proyectivo del miembro izquierdo es la completación
+\[
+  \bigl(\RR^n f_*(\sh{F})\bigr)_{/Y'},
+\]
+que denotaremos por
+\[
+  \widehat{\RR^n f_*(\sh{F})}.
+\]
+Los homomorfismos \eqref{III.4.1.2.2} son compatibles con los sistemas
+proyectivos y definen, por tanto, al pasar al límite, un homomorfismo
+canónico
+\[
+  \vphi_n:
+  \widehat{\RR^n f_*(\sh{F})}
+  \longrightarrow
+  \varprojlim_k\RR^n f_*(\sh{F}_k).
+  \tag{4.1.2.3}
+  \label{III.4.1.2.3}
+\]
+Además, \eqref{III.4.1.2.2} es un homomorfismo de
+$\sh{O}_Y/\sh{J}^{k+1}$-módulos.
+Por \sref[I]{I.10.8.3}, puede considerarse, por tanto, como un
+homomorfismo continuo de $\sh{O}_{\widehat{Y}}$-módulos topológicos
+provistos de sus topologías seudodiscretas \sref[0]{0.3.8.1}.
+En consecuencia, $\vphi_n$ es un homomorfismo continuo de
+$\sh{O}_{\widehat{Y}}$-módulos topológicos.
+\end{env}
+
+\begin{env}[4.1.3]
+\label{III.4.1.3}
+Sea $i:\widehat{X}\to X$ el morfismo canónico de espacios anillados
+definido en \sref[I]{I.10.8.7}.
+Tenemos el diagrama conmutativo
+\[
+  \xymatrix{
+    X_k\ar[r]^{h_k}\ar[dr]_{i_k} &
+    \widehat{X}\ar[d]^{i}\\
+    & X
+  }
+  \tag{4.1.3.1}
+  \label{III.4.1.3.1}
+\]
+donde $X_k$ es el subesquema cerrado de $X$ definido por
+$\sh{K}^{k+1}$, $i_k$ es la inmersión canónica, y $h_k$ es el
+morfismo de espacios anillados que corresponde a la identidad sobre
+los espacios subyacentes y al homomorfismo canónico
+\[
+  \sh{O}_{\widehat{X}}
+  \longrightarrow
+  \sh{O}_X/\sh{K}^{k+1}
+\]
+\sref[I]{I.10.5.2}.
+Además,
+\[
+  \widehat{\sh{F}}=i^*(\sh{F})
+\]
+salvo isomorfismo canónico \sref[I]{I.10.8.8}.
+Tenemos
+\[
+  \HH^n(X_k,i_k^*(\sh{F}_k))
+  =
+  \HH^n(X,\sh{F}_k)
+  \tag{4.1.3.2}
+  \label{III.4.1.3.2}
+\]
+salvo isomorfismo canónico.
+----- French corrections on page III 122 -----
+[id 6190]
+OLD: (0\textsubscript{I}, 3.2.1)
+NEW: (\textbf{0}\textsubscript{I}, 3.2.1)
+FRENCH CONTEXT (corrected): Y_g,R^nf_*(\mathcal F_k))
+=\Gamma(\mathfrak Y_g,\varprojlim_kR^nf_*(\mathcal F_k))
+\]
+\oldpage[III]{122}
+et comme le faisceau $R^nf_*(\mathcal F)$ est associé au préfaisceau
+$\mathfrak Y_g\leadsto H^n(f^{-1}(\mathfrak Y_g),\mathcal F)$ sur les
+$\mathfrak Y_g$ (\textbf{0}\textsubscript{I}, 3.2.1), on a bien montré que
+l'homomorphisme (\hyperref[III.3.4.2.2-fr]{3.4.2.2}) est \emph{bijectif}. Prouvons
+ensuite que $R^nf_*(\mathcal F)$ est un $\mathcal O_{\mathfrak Y}$-Module
+cohérent, et de façon plus précise que l'on a
+\[
+R^nf_*(\mathcal F)=(H^n(\mathfr
+
+[id 6191]
+OLD: est bijectif. Prouvons
+NEW: est \emph{bijectif}. Prouvons
+FRENCH CONTEXT (corrected): e le faisceau $R^nf_*(\mathcal F)$ est associé au préfaisceau
+$\mathfrak Y_g\leadsto H^n(f^{-1}(\mathfrak Y_g),\mathcal F)$ sur les
+$\mathfrak Y_g$ (\textbf{0}\textsubscript{I}, 3.2.1), on a bien montré que
+l'homomorphisme (\hyperref[III.3.4.2.2-fr]{3.4.2.2}) est \emph{bijectif}. Prouvons
+ensuite que $R^nf_*(\mathcal F)$ est un $\mathcal O_{\mathfrak Y}$-Module
+cohérent, et de façon plus précise que l'on a
+\[
+R^nf_*(\mathcal F)=(H^n(\mathfrak X,\mathcal F))^\Delta.
+\tag{3.4.5.1}\label{III.3.4.5.1-fr}
+\]
+
+Avec les notations précédentes, on a, p
+
+[id 6194]
+OLD: (0, 13.7.8)
+NEW: (\textbf{0}, 13.7.8)
+FRENCH CONTEXT (corrected): thfrak Y,R^nf_*(\mathcal F_k)))_g
+=(H^n(\mathfrak X,\mathcal F_k))_g.
+\]
+
+Or, les $H^n(\mathfrak X,\mathcal F_k)$ forment un système projectif
+vérifiant (ML) et leur limite projective $H^n(\mathfrak X,\mathcal F)$ est
+un $A$-module de type fini. On en conclut (\textbf{0}, 13.7.8) que l'on a
+\[
+\varprojlim_k((H^n(\mathfrak X,\mathcal F_k))_g)
+=H^n(\mathfrak X,\mathcal F)\otimes_AA_{\{g\}}
+=\Gamma(\mathfrak Y_g,(H^n(\mathfrak X,\mathcal F))^\Delta)
+\]
+compte tenu de (\textbf{I}, 10.10.8) appliqué à $A$ et $A_{\{g\}}$~; ceci démontre
+(\h
+
+[id 6195]
+OLD: \varprojlim_k(H^n(\mathfrak X,\mathcal F_k))_g
+NEW: \varprojlim_k((H^n(\mathfrak X,\mathcal F_k))_g)
+FRENCH CONTEXT (corrected): (H^n(\mathfrak X,\mathcal F_k))_g.
+\]
+
+Or, les $H^n(\mathfrak X,\mathcal F_k)$ forment un système projectif
+vérifiant (ML) et leur limite projective $H^n(\mathfrak X,\mathcal F)$ est
+un $A$-module de type fini. On en conclut (\textbf{0}, 13.7.8) que l'on a
+\[
+\varprojlim_k((H^n(\mathfrak X,\mathcal F_k))_g)
+=H^n(\mathfrak X,\mathcal F)\otimes_AA_{\{g\}}
+=\Gamma(\mathfrak Y_g,(H^n(\mathfrak X,\mathcal F))^\Delta)
+\]
+compte tenu de (\textbf{I}, 10.10.8) appliqué à $A$ et $A_{\{g\}}$~; ceci démontre
+(\hyperref[III.3.4.5.1-fr]{3.4.5.1}) puisque
+$\Gamma(\mathfrak Y_g
+
+[id 6196]
+OLD: (I, 10.10.8)
+NEW: (\textbf{I}, 10.10.8)
+FRENCH CONTEXT (corrected):  F)$ est
+un $A$-module de type fini. On en conclut (\textbf{0}, 13.7.8) que l'on a
+\[
+\varprojlim_k((H^n(\mathfrak X,\mathcal F_k))_g)
+=H^n(\mathfrak X,\mathcal F)\otimes_AA_{\{g\}}
+=\Gamma(\mathfrak Y_g,(H^n(\mathfrak X,\mathcal F))^\Delta)
+\]
+compte tenu de (\textbf{I}, 10.10.8) appliqué à $A$ et $A_{\{g\}}$~; ceci démontre
+(\hyperref[III.3.4.5.1-fr]{3.4.5.1}) puisque
+$\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F))
+=\varprojlim_k\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F_k))$.
+
+Comme (\hyperref[III.3.4.2.2-fr]{3.4.2.2}) est alors un isomorphis
+
+[id 6197]
+OLD: puisque
+\[
+\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F))
+=\varprojlim_k\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F_k)).
+\]
+Comme
+NEW: puisque
+$\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F))
+=\varprojlim_k\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F_k))$.
+
+Comme
+FRENCH CONTEXT (corrected): \mathfrak X,\mathcal F_k))_g)
+=H^n(\mathfrak X,\mathcal F)\otimes_AA_{\{g\}}
+=\Gamma(\mathfrak Y_g,(H^n(\mathfrak X,\mathcal F))^\Delta)
+\]
+compte tenu de (\textbf{I}, 10.10.8) appliqué à $A$ et $A_{\{g\}}$~; ceci démontre
+(\hyperref[III.3.4.5.1-fr]{3.4.5.1}) puisque
+$\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F))
+=\varprojlim_k\Gamma(\mathfrak Y_g,R^nf_*(\mathcal F_k))$.
+
+Comme (\hyperref[III.3.4.2.2-fr]{3.4.2.2}) est alors un isomorphisme de
+$\mathcal O_{\mathfrak Y}$-Modules cohérents, c'est nécessairement un
+isomorphisme \emph{topologique} (\textbf{I}, 10.11.6). Enfin, il résulte des relations
+$R^nf_*(\mathcal F_k)=(H^n(\mathfrak
+
+[id 6198]
+OLD: (I, 10.11.6)
+NEW: (\textbf{I}, 10.11.6)
+FRENCH CONTEXT (corrected): l F=\varprojlim_k\mathcal F_k
+\]
+(\textbf{I}, 10.11.3). D'autre part, il résultera de
+(\hyperref[III.3.4.2-fr]{3.4.2}) que chacun des $R^qf_*(\mathcal F)$, étant
+cohérent, est naturellement muni d'une structure de
+$\mathcal O_{\mathfrak Y}$-Module topologique (\textbf{I}, 10.11.6), et il en est de
+même des $R^qf_*(\mathcal F_k)$. Aux homomorphismes canoniques
+$\mathcal F\to\mathcal F_k=\mathcal F/\mathcal K^{k+1}\mathcal F$
+correspondent canoniquement des homomorphismes
+\[
+R^qf_*(\mathcal F)\longrightarrow R^qf_*(\mathcal F_k)
+\]
+qui s
+
+[id 6199]
+OLD: (I, 10.10.2)
+NEW: (\textbf{I}, 10.10.2)
+FRENCH CONTEXT (corrected): les cohérents, c'est nécessairement un
+isomorphisme \emph{topologique} (\textbf{I}, 10.11.6). Enfin, il résulte des relations
+$R^nf_*(\mathcal F_k)=(H^n(\mathfrak X,\mathcal F_k))^\Delta$ que le système
+projectif $(R^nf_*(\mathcal F_k))_{k\geq0}$ vérifie (ML) (\textbf{I}, 10.10.2).
+
+Une fois (\hyperref[III.3.4.2-fr]{3.4.2}) et
+(\hyperref[III.3.4.3-fr]{3.4.3}) démontrés dans le cas où le préschéma formel
+$\mathfrak Y$ est affine noethérien, il est immédiat de passer de là au cas
+général pour (\hyperref[III.3.4.2-fr]{3.4.2}) et la premiè
+
+[id 6200]
+OLD: Sous les hypothèses de (\hyperref[III.3.4.4-fr]{3.4.4})
+NEW: Sous les hypothèses de \textup{(\hyperref[III.3.4.4-fr]{3.4.4})}
+FRENCH CONTEXT (corrected): 'ouverts
+affines noethériens $U_i$ et de remarquer que les restrictions du système
+projectif $(R^qf_*(\mathcal F_k))$ à chacun des $U_i$ vérifient (ML).
+\end{env}
+
+Nous avons en outre démontré en cours de route~:
+
+\begin{corollary}[3.4.6]
+\label{III.3.4.6-fr}
+Sous les hypothèses de \textup{(\hyperref[III.3.4.4-fr]{3.4.4})}, l'homomorphisme
+canonique
+\[
+H^q(\mathfrak X,\mathcal F)
+\longrightarrow\Gamma(\mathfrak Y,R^qf_*(\mathcal F))
+\tag{3.4.6.1}\label{III.3.4.6.1-fr}
+\]
+est bijectif.
+\end{corollary}
+
+\section{Le théorème fondamental des morphismes propres. Applications}
+\label
+
+[id 6201]
+OLD: morphisme propre, $Y'$
+NEW: morphisme \emph{propre}, $Y'$
+FRENCH CONTEXT (corrected):  théorème fondamental des morphismes propres. Applications}
+\label{section:III.4-fr}
+
+\subsection{Le théorème fondamental}
+\label{subsection:III.4.1-fr}
+
+\begin{env}[4.1.1]
+\label{III.4.1.1-fr}
+Soient $X$, $Y$ deux préschémas usuels noethériens, $f:X\to Y$ un
+morphisme \emph{propre}, $Y'$ une partie fermée de $Y$, $X'$ son image réciproque
+$f^{-1}(Y')$. Nous désignerons par $\widehat X$ et $\widehat Y$ les
+préschémas formels $X_{/X'}$ et $Y_{/Y'}$ \emph{complétés} de $X$ et $Y$ le long
+de $X'$ et $Y'$ respectivement (\textbf{I}, 10.8.5), par $
+
+[id 6203]
+OLD: complétés de $X$
+NEW: \emph{complétés} de $X$
+FRENCH CONTEXT (corrected): }
+Soient $X$, $Y$ deux préschémas usuels noethériens, $f:X\to Y$ un
+morphisme \emph{propre}, $Y'$ une partie fermée de $Y$, $X'$ son image réciproque
+$f^{-1}(Y')$. Nous désignerons par $\widehat X$ et $\widehat Y$ les
+préschémas formels $X_{/X'}$ et $Y_{/Y'}$ \emph{complétés} de $X$ et $Y$ le long
+de $X'$ et $Y'$ respectivement (\textbf{I}, 10.8.5), par $\widehat f$ le \emph{prolongement}
+de $f$ à ces complétés (\textbf{I}, 10.9.1) qui est un morphisme
+$\widehat X\to\widehat Y$ de préschémas formels. Pour tout
+$\mathcal O_X$-Module \emph
+
+[id 6204]
+OLD: (I, 10.8.5)
+NEW: (\textbf{I}, 10.8.5)
+FRENCH CONTEXT (corrected): rphisme \emph{propre}, $Y'$ une partie fermée de $Y$, $X'$ son image réciproque
+$f^{-1}(Y')$. Nous désignerons par $\widehat X$ et $\widehat Y$ les
+préschémas formels $X_{/X'}$ et $Y_{/Y'}$ \emph{complétés} de $X$ et $Y$ le long
+de $X'$ et $Y'$ respectivement (\textbf{I}, 10.8.5), par $\widehat f$ le \emph{prolongement}
+de $f$ à ces complétés (\textbf{I}, 10.9.1) qui est un morphisme
+$\widehat X\to\widehat Y$ de préschémas formels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\
+
+[id 6205]
+OLD: le prolongement
+NEW: le \emph{prolongement}
+FRENCH CONTEXT (corrected): fermée de $Y$, $X'$ son image réciproque
+$f^{-1}(Y')$. Nous désignerons par $\widehat X$ et $\widehat Y$ les
+préschémas formels $X_{/X'}$ et $Y_{/Y'}$ \emph{complétés} de $X$ et $Y$ le long
+de $X'$ et $Y'$ respectivement (\textbf{I}, 10.8.5), par $\widehat f$ le \emph{prolongement}
+de $f$ à ces complétés (\textbf{I}, 10.9.1) qui est un morphisme
+$\widehat X\to\widehat Y$ de préschémas formels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\widehat{\mathcal F}$ son \emph{complété} 
+
+[id 6206]
+OLD: (I, 10.9.1)
+NEW: (\textbf{I}, 10.9.1)
+FRENCH CONTEXT (corrected): bf{II}, 5.4.6).
+
+Si $g:Y\to Z$ est un morphisme propre de préschémas usuels, localement
+noethériens, $Z'$ une partie fermée de $Z$, $Y'$ une partie fermée de $Y$
+telle que $g(Y')\subset Z'$, le prolongement
+$\widehat g:Y_{/Y'}\to Z_{/Z'}$ de $g$ aux complétés (\textbf{I}, 10.9.1) est un
+morphisme propre de préschémas formels, comme il résulte de la définition et
+de (\textbf{II}, 5.4.5).
+
+Soient $\mathfrak X$ et $\mathfrak S$ deux préschémas formels localement
+noethériens, $f:\mathfrak X\to\mathfrak S$ un morphisme \emph{de type fini}
+
+
+[id 6207]
+OLD: $\mathcal O_X$-Module cohérent $\mathcal F$
+NEW: $\mathcal O_X$-Module \emph{cohérent} $\mathcal F$
+FRENCH CONTEXT (corrected): '}$ \emph{complétés} de $X$ et $Y$ le long
+de $X'$ et $Y'$ respectivement (\textbf{I}, 10.8.5), par $\widehat f$ le \emph{prolongement}
+de $f$ à ces complétés (\textbf{I}, 10.9.1) qui est un morphisme
+$\widehat X\to\widehat Y$ de préschémas formels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\widehat{\mathcal F}$ son \emph{complété} $\mathcal F_{/X'}$ le
+long de $X'$ (\textbf{I}, 10.8.4) qui est un $\mathcal O_{\widehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1
+
+=================== PAGE III 123 ===================
+----- (Spanish page III 122: shown above in this file) -----
+----- (Spanish page III 123: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-4.tex, page III 124 -----
+\oldpage[III]{124}
+
+En efecto,
+\[
+  \sh{F}_k=(i_k)_*(i_k^*(\sh{F}_k))
+\]
+(G,~II,~4.9.1).
+El homomorfismo canónico
+\[
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \HH^n(X_k,h_k^*(\widehat{\sh{F}}))
+\]
+\sref[0]{0.12.1.3.5} puede escribirse también
+\[
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \HH^n(X,\sh{F}_k).
+  \tag{4.1.3.3}
+  \label{III.4.1.3.3}
+\]
+Estos homomorfismos forman un sistema proyectivo y definen, por tanto,
+un homomorfismo canónico
+\[
+  \psi_{n,X}:
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k).
+  \tag{4.1.3.4}
+  \label{III.4.1.3.4}
+\]
+Reemplazando $X$ por un subconjunto abierto de la forma $f^{-1}(V)$,
+donde $V$ es un abierto afín de $Y$, y teniendo en cuenta
+\sref{III.1.4.11}, obtenemos homomorfismos
+\[
+  \psi_{n,V}:
+  \HH^n(\widehat{X}\cap f^{-1}(V),\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\Gamma(V,\RR^n f_*(\sh{F}_k)).
+  \tag{4.1.3.5}
+  \label{III.4.1.3.5}
+\]
+Estos homomorfismos conmutan manifiestamente con la restricción de $V$
+a un subconjunto abierto afín más pequeño.
+Definen, por tanto, un homomorfismo canónico de haces
+\[
+  \psi_n:
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\RR^n f_*(\sh{F}_k).
+  \tag{4.1.3.6}
+  \label{III.4.1.3.6}
+\]
+\end{env}
+
+\begin{env}[4.1.4]
+\label{III.4.1.4}
+Por último, sea $j:\widehat{Y}\to Y$ el morfismo canónico de espacios
+anillados \sref[I]{I.10.8.7}.
+Como $\RR^n f_*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente
+\sref{III.3.2.1}, tenemos, salvo isomorfismo canónico,
+\[
+  j^*(\RR^n f_*(\sh{F}))
+  =
+  \widehat{\RR^n f_*(\sh{F})}
+\]
+\sref[I]{I.10.8.8}.
+Existe, en consecuencia, un homomorfismo canónico
+\[
+  \rho_n:
+  \widehat{\RR^n f_*(\sh{F})}
+  =
+  j^*(\RR^n f_*(\sh{F}))
+  \longrightarrow
+  \RR^n\widehat{f}_*(i^*(\sh{F}))
+  =
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+  \tag{4.1.4.1}
+  \label{III.4.1.4.1}
+\]
+definido para los espacios anillados en general; véase la demostración
+de \sref{III.1.4.15}.
+Demostraremos que el diagrama
+\[
+  \xymatrix{
+    \widehat{\RR^n f_*(\sh{F})}
+      \ar[rr]^{\rho_n}\ar[dr]_{\vphi_n}
+    &&
+    \RR^n\widehat{f}_*(\widehat{\sh{F}})
+      \ar[dl]^{\psi_n}\\
+    &
+    \displaystyle\varprojlim_k\RR^n f_*(\sh{F}_k)
+    &
+  }
+  \tag{4.1.4.2}
+  \label{III.4.1.4.2}
+\]
+es conmutativo.
+Basta demostrar la conmutatividad del diagrama formado por los
+homomorfismos correspondientes de prehaces.
+Podemos, por tanto, restringirnos al caso en que $Y$ es afín, y basta
+demostrar que
+\[
+  \xymatrix{
+    \widehat{\HH^n(X,\sh{F})}
+      \ar[rr]^{\rho_n}\ar[dr]_{\vphi_n}
+    &&
+    \HH^n(\widehat{X},\widehat{\sh{F}})
+      \ar[dl]^{\psi_{n,X}}\\
+    &
+    \displaystyle\varprojlim_k\HH^n(X,\sh{F}_k)
+    &
+  }
+  \tag{4.1.4.3}
+  \label{III.4.1.4.3}
+\]
+es conmutativo.
+La conmutatividad de \eqref{III.4.1.3.1}, junto con las relaciones
+entre los grupos de cohomología establecidas en \sref{III.4.1.3}, da
+el diagrama conmutativo
+----- French corrections on page III 123 -----
+[id 6210]
+OLD: son complété
+NEW: son \emph{complété}
+FRENCH CONTEXT (corrected):  \emph{prolongement}
+de $f$ à ces complétés (\textbf{I}, 10.9.1) qui est un morphisme
+$\widehat X\to\widehat Y$ de préschémas formels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\widehat{\mathcal F}$ son \emph{complété} $\mathcal F_{/X'}$ le
+long de $X'$ (\textbf{I}, 10.8.4) qui est un $\mathcal O_{\widehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2-fr}
+Soit $\mathcal J$ un Idéal cohérent de $\mathcal O_Y$ tel que
+$\operatorname{
+
+[id 6211]
+OLD: (I, 10.8.4)
+NEW: (\textbf{I}, 10.8.4)
+FRENCH CONTEXT (corrected): , 10.9.1) qui est un morphisme
+$\widehat X\to\widehat Y$ de préschémas formels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\widehat{\mathcal F}$ son \emph{complété} $\mathcal F_{/X'}$ le
+long de $X'$ (\textbf{I}, 10.8.4) qui est un $\mathcal O_{\widehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2-fr}
+Soit $\mathcal J$ un Idéal cohérent de $\mathcal O_Y$ tel que
+$\operatorname{Supp}(\mathcal O_Y/\mathcal J)=Y'$ (\textbf{I}, 5.2.1)~;
+
+[id 6212]
+OLD: cohérent (I, 10.8.8).
+NEW: cohérent (\textbf{I}, 10.8.8).
+FRENCH CONTEXT (corrected): hémas formels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\widehat{\mathcal F}$ son \emph{complété} $\mathcal F_{/X'}$ le
+long de $X'$ (\textbf{I}, 10.8.4) qui est un $\mathcal O_{\widehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2-fr}
+Soit $\mathcal J$ un Idéal cohérent de $\mathcal O_Y$ tel que
+$\operatorname{Supp}(\mathcal O_Y/\mathcal J)=Y'$ (\textbf{I}, 5.2.1)~; on sait
+(\textbf{I}, 4.4.5) que
+$\mathcal K=f^*(\mathcal J)\mathcal O_X$
+e
+
+[id 6213]
+OLD: (I, 5.2.1)
+NEW: (\textbf{I}, 5.2.1)
+FRENCH CONTEXT (corrected):  et \textbf{0}\textsubscript{I}, 2.1.3). Soit $\mathcal J$ (resp.
+$\mathcal J'$) le faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X\setmin U$ (resp. $(X\setmin U)\cup\{x\}$) (\textbf{I}, 5.2.1)~; il est clair que
+$\mathcal J$ et $\mathcal J'$ sont cohérents (\textbf{I}, 6.1.1), que
+$\mathcal J'\subset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (\textbf{0}\textsubscript{I}, 5.3.3) ayant pour support 
+
+[id 6214]
+OLD: (I, 4.4.5)
+NEW: (\textbf{I}, 4.4.5)
+FRENCH CONTEXT (corrected): un $\mathcal O_{\widehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2-fr}
+Soit $\mathcal J$ un Idéal cohérent de $\mathcal O_Y$ tel que
+$\operatorname{Supp}(\mathcal O_Y/\mathcal J)=Y'$ (\textbf{I}, 5.2.1)~; on sait
+(\textbf{I}, 4.4.5) que
+$\mathcal K=f^*(\mathcal J)\mathcal O_X$
+est un Idéal cohérent de $\mathcal O_X$ tel que
+\[
+\operatorname{Supp}(\mathcal O_X/\mathcal K)=X'.
+\]
+Nous considérerons pour tout $k\geq0$ les $\mathcal O_X$-Modules cohérents
+\[
+\mathcal F_k
+=\mathcal F\otimes_{
+
+[id 6215]
+OLD: que
+\[
+\mathcal K=f^*(\mathcal J)\mathcal O_X
+\]
+est un Idéal
+NEW: que
+$\mathcal K=f^*(\mathcal J)\mathcal O_X$
+est un Idéal
+FRENCH CONTEXT (corrected): ehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2-fr}
+Soit $\mathcal J$ un Idéal cohérent de $\mathcal O_Y$ tel que
+$\operatorname{Supp}(\mathcal O_Y/\mathcal J)=Y'$ (\textbf{I}, 5.2.1)~; on sait
+(\textbf{I}, 4.4.5) que
+$\mathcal K=f^*(\mathcal J)\mathcal O_X$
+est un Idéal cohérent de $\mathcal O_X$ tel que
+\[
+\operatorname{Supp}(\mathcal O_X/\mathcal K)=X'.
+\]
+Nous considérerons pour tout $k\geq0$ les $\mathcal O_X$-Modules cohérents
+\[
+\mathcal F_k
+=\mathcal F\otimes_{\mathcal O_Y}(\mathcal O_Y/\mathcal J^{k+1})
+=\mathcal F/\
+
+[id 6217]
+OLD: sont cohérents pour tout
+NEW: sont \emph{cohérents} pour tout
+FRENCH CONTEXT (corrected): rons pour tout $k\geq0$ les $\mathcal O_X$-Modules cohérents
+\[
+\mathcal F_k
+=\mathcal F\otimes_{\mathcal O_Y}(\mathcal O_Y/\mathcal J^{k+1})
+=\mathcal F/\mathcal K^{k+1}\mathcal F.
+\]
+
+Les $\mathcal O_Y$-Modules $R^nf_*(\mathcal F)$ et
+$R^nf_*(\mathcal F_k)$ sont \emph{cohérents} pour tout $n$
+(\hyperref[III.3.2.1-fr]{3.2.1}). Pour tout $k\geq0$ et tout $n$,
+l'homomorphisme canonique $\mathcal F\to\mathcal F_k$ définit par
+fonctorialité un homomorphisme
+\[
+R^nf_*(\mathcal F)\longrightarrow R^nf_*(\mathcal F_k).
+\tag{4.1.2.1}\label{III.4.1.2.1-f
+
+[id 6219]
+OLD: (0, 12.2.1)
+NEW: (\textbf{0}, 12.2.1)
+FRENCH CONTEXT (corrected): homomorphisme
+\[
+R^nf_*(\mathcal F)\longrightarrow R^nf_*(\mathcal F_k).
+\tag{4.1.2.1}\label{III.4.1.2.1-fr}
+\]
+
+En outre, comme $\mathcal F_k$ est un
+$\mathcal O_X/\mathcal K^{k+1}$-Module, $R^nf_*(\mathcal F_k)$ est un
+$\mathcal O_Y/\mathcal J^{k+1}$-Module (\textbf{0}, 12.2.1) et on déduit donc de
+(\hyperref[III.4.1.2.1-fr]{4.1.2.1}) un homomorphisme
+\[
+R^nf_*(\mathcal F)\otimes_{\mathcal O_Y}
+(\mathcal O_Y/\mathcal J^{k+1})
+\longrightarrow R^nf_*(\mathcal F_k).
+\tag{4.1.2.2}\label{III.4.1.2.2-fr}
+\]
+
+Les deux membres de (\hyperref
+
+[id 6221]
+OLD: que le complété
+NEW: que le \emph{complété}
+FRENCH CONTEXT (corrected): O_Y}
+(\mathcal O_Y/\mathcal J^{k+1})
+\longrightarrow R^nf_*(\mathcal F_k).
+\tag{4.1.2.2}\label{III.4.1.2.2-fr}
+\]
+
+Les deux membres de (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) forment deux
+systèmes projectifs, et la limite projective du premier membre n'est autre
+que le \emph{complété} $(R^nf_*(\mathcal F))_{/Y'}$, que nous noterons
+$(R^nf_*(\mathcal F))^{\widehat{\,}}$. En outre, il est immédiat que les
+homomorphismes (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) forment un système
+projectif, d'où par passage à la limite un \emph{homomorphisme cano
+
+[id 6222]
+OLD: $\widehat{R^nf_*(\mathcal F)}$. En outre
+NEW: $(R^nf_*(\mathcal F))^{\widehat{\,}}$. En outre
+FRENCH CONTEXT (corrected): k).
+\tag{4.1.2.2}\label{III.4.1.2.2-fr}
+\]
+
+Les deux membres de (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) forment deux
+systèmes projectifs, et la limite projective du premier membre n'est autre
+que le \emph{complété} $(R^nf_*(\mathcal F))_{/Y'}$, que nous noterons
+$(R^nf_*(\mathcal F))^{\widehat{\,}}$. En outre, il est immédiat que les
+homomorphismes (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) forment un système
+projectif, d'où par passage à la limite un \emph{homomorphisme canonique}
+\[
+\varphi_n:(R^nf_*(\mathcal F))^{\widehat{\,}}
+\longrightarrow\varprojlim_kR^nf_*(\math
+
+[id 6223]
+OLD: limite un homomorphisme canonique
+NEW: limite un \emph{homomorphisme canonique}
+FRENCH CONTEXT (corrected): n'est autre
+que le \emph{complété} $(R^nf_*(\mathcal F))_{/Y'}$, que nous noterons
+$(R^nf_*(\mathcal F))^{\widehat{\,}}$. En outre, il est immédiat que les
+homomorphismes (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) forment un système
+projectif, d'où par passage à la limite un \emph{homomorphisme canonique}
+\[
+\varphi_n:(R^nf_*(\mathcal F))^{\widehat{\,}}
+\longrightarrow\varprojlim_kR^nf_*(\mathcal F_k).
+\tag{4.1.2.3}\label{III.4.1.2.3-fr}
+\]
+
+D'ailleurs (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) est un homomorphisme de
+$(\mathcal O_Y/\mathcal J^{k+1})$-Modules, et pa
+
+[id 6224]
+OLD: \varphi_n:\widehat{R^nf_*(\mathcal F)}
+NEW: \varphi_n:(R^nf_*(\mathcal F))^{\widehat{\,}}
+FRENCH CONTEXT (corrected): \mathcal F))_{/Y'}$, que nous noterons
+$(R^nf_*(\mathcal F))^{\widehat{\,}}$. En outre, il est immédiat que les
+homomorphismes (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) forment un système
+projectif, d'où par passage à la limite un \emph{homomorphisme canonique}
+\[
+\varphi_n:(R^nf_*(\mathcal F))^{\widehat{\,}}
+\longrightarrow\varprojlim_kR^nf_*(\mathcal F_k).
+\tag{4.1.2.3}\label{III.4.1.2.3-fr}
+\]
+
+D'ailleurs (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) est un homomorphisme de
+$(\mathcal O_Y/\mathcal J^{k+1})$-Modules, et par suite (\textbf{I}, 10.8.3) peut
+être considéré 
+
+[id 6226]
+OLD: (I, 10.8.3)
+NEW: (\textbf{I}, 10.8.3)
+FRENCH CONTEXT (corrected): phi_n:(R^nf_*(\mathcal F))^{\widehat{\,}}
+\longrightarrow\varprojlim_kR^nf_*(\mathcal F_k).
+\tag{4.1.2.3}\label{III.4.1.2.3-fr}
+\]
+
+D'ailleurs (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) est un homomorphisme de
+$(\mathcal O_Y/\mathcal J^{k+1})$-Modules, et par suite (\textbf{I}, 10.8.3) peut
+être considéré comme un homomorphisme continu de
+$\mathcal O_{\widehat Y}$-Modules topologiques pseudo-discrets
+(\textbf{0}\textsubscript{I}, 3.8.1). L'homomorphisme $\varphi_n$ est par suite un
+homomorphisme \emph{continu} de $\mathcal O_{\widehat Y}$-M
+
+[id 6227]
+OLD: (0\textsubscript{I}, 3.8.1)
+NEW: (\textbf{0}\textsubscript{I}, 3.8.1)
+FRENCH CONTEXT (corrected): eurs (\hyperref[III.4.1.2.2-fr]{4.1.2.2}) est un homomorphisme de
+$(\mathcal O_Y/\mathcal J^{k+1})$-Modules, et par suite (\textbf{I}, 10.8.3) peut
+être considéré comme un homomorphisme continu de
+$\mathcal O_{\widehat Y}$-Modules topologiques pseudo-discrets
+(\textbf{0}\textsubscript{I}, 3.8.1). L'homomorphisme $\varphi_n$ est par suite un
+homomorphisme \emph{continu} de $\mathcal O_{\widehat Y}$-Modules topologiques.
+\end{env}
+
+\begin{env}[4.1.3]
+\label{III.4.1.3-fr}
+Soit $i:\widehat X\to X$ le morphisme canonique d'espaces annelés défini
+dans (\te
+
+[id 6228]
+OLD: suite un
+homomorphisme continu
+NEW: suite un
+homomorphisme \emph{continu}
+FRENCH CONTEXT (corrected): al O_Y/\mathcal J^{k+1})$-Modules, et par suite (\textbf{I}, 10.8.3) peut
+être considéré comme un homomorphisme continu de
+$\mathcal O_{\widehat Y}$-Modules topologiques pseudo-discrets
+(\textbf{0}\textsubscript{I}, 3.8.1). L'homomorphisme $\varphi_n$ est par suite un
+homomorphisme \emph{continu} de $\mathcal O_{\widehat Y}$-Modules topologiques.
+\end{env}
+
+\begin{env}[4.1.3]
+\label{III.4.1.3-fr}
+Soit $i:\widehat X\to X$ le morphisme canonique d'espaces annelés défini
+dans (\textbf{I}, 10.8.7), de sorte que l'on a le diagramme commutatif
+\[
+\xymatrix{
+
+[id 6229]
+OLD: (I, 10.8.7)
+NEW: (\textbf{I}, 10.8.7)
+FRENCH CONTEXT (corrected): 8.1). L'homomorphisme $\varphi_n$ est par suite un
+homomorphisme \emph{continu} de $\mathcal O_{\widehat Y}$-Modules topologiques.
+\end{env}
+
+\begin{env}[4.1.3]
+\label{III.4.1.3-fr}
+Soit $i:\widehat X\to X$ le morphisme canonique d'espaces annelés défini
+dans (\textbf{I}, 10.8.7), de sorte que l'on a le diagramme commutatif
+\[
+\xymatrix{
+X_k\ar[r]^{h_k}\ar[dr]_{i_k}&\widehat X\ar[d]^i\\
+&X
+}
+\tag{4.1.3.1}\label{III.4.1.3.1-fr}
+\]
+où $X_k$ est le sous-préschéma fermé de $X$ défini par l'Idéal
+$\mathcal K^{k+1}$, $i_k$ l'injection canon
+
+[id 6230]
+OLD: (I, 10.5.2)
+NEW: (\textbf{I}, 10.5.2)
+FRENCH CONTEXT (corrected): é de $X$ défini par l'Idéal
+$\mathcal K^{k+1}$, $i_k$ l'injection canonique, $h_k$ le morphisme
+d'espaces annelés correspondant à l'identité dans les espaces sous-jacents
+et à l'homomorphisme canonique
+$\mathcal O_{\widehat X}\to\mathcal O_X/\mathcal K^{k+1}$ (\textbf{I}, 10.5.2).
+En outre, on a $\widehat{\mathcal F}=i^*(\mathcal F)$ (\textbf{I}, 10.8.8) à un
+isomorphisme canonique près. On sait que l'on a
+\[
+H^n(X_k,i_k^*(\mathcal F_k))=H^n(X,\mathcal F_k)
+\tag{4.1.3.2}\label{III.4.1.3.2-fr}
+\]
+\oldpage[III]{124}
+à un isomorphisme ca
+
+[id 6231]
+OLD: (I, 10.8.8) à un
+NEW: (\textbf{I}, 10.8.8) à un
+FRENCH CONTEXT (corrected):  $h_k$ le morphisme
+d'espaces annelés correspondant à l'identité dans les espaces sous-jacents
+et à l'homomorphisme canonique
+$\mathcal O_{\widehat X}\to\mathcal O_X/\mathcal K^{k+1}$ (\textbf{I}, 10.5.2).
+En outre, on a $\widehat{\mathcal F}=i^*(\mathcal F)$ (\textbf{I}, 10.8.8) à un
+isomorphisme canonique près. On sait que l'on a
+\[
+H^n(X_k,i_k^*(\mathcal F_k))=H^n(X,\mathcal F_k)
+\tag{4.1.3.2}\label{III.4.1.3.2-fr}
+\]
+\oldpage[III]{124}
+à un isomorphisme canonique près, puisque
+$\mathcal F_k=(i_k)_*(i_k^*(\mathcal F_k))$ (G, II, 4.9.1)~
+
+=================== PAGE III 124 ===================
+----- (Spanish page III 123: shown above in this file) -----
+----- (Spanish page III 124: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-4.tex, page III 125 -----
+\oldpage[III]{125}
+
+\[
+  \xymatrix{
+    \HH^n(X,\sh{F})
+      \ar[r]\ar[dr]
+    &
+    \HH^n(\widehat{X},\widehat{\sh{F}})
+      =
+    \HH^n(\widehat{X},i^*(\sh{F}))
+      \ar[d]\\
+    &
+    \HH^n(X,\sh{F}_k)
+      =
+    \HH^n(X_k,i_k^*(\sh{F})).
+  }
+\]
+La conmutatividad de \eqref{III.4.1.4.3} se sigue inmediatamente.
+\end{env}
+
+\begin{theorem}[4.1.5]
+\label{III.4.1.5}
+Sea $f:X\to Y$ un morfismo propio de esquemas noetherianos, sea
+$Y'$ un subconjunto cerrado de $Y$, y pongamos $X'=f^{-1}(Y')$.
+Entonces, para todo $\sh{O}_X$-módulo coherente $\sh{F}$,
+\[
+  \RR^n\widehat{f}_*(\widehat{\sh{F}})
+\]
+es un $\sh{O}_{\widehat{Y}}$-módulo coherente, y los homomorfismos
+$\vphi_n$, $\psi_n$ y $\rho_n$ del diagrama
+\eqref{III.4.1.4.2} son isomorfismos topológicos.
+\end{theorem}
+
+\begin{proof}
+Basta demostrar que $\vphi_n$ y $\psi_n$ son isomorfismos.
+En efecto, $\RR^n f_*(\sh{F})$ es coherente \sref{III.3.2.1}, luego
+su completación $\widehat{\RR^n f_*(\sh{F})}$ es coherente
+\sref[I]{I.10.8.8}; la bicontinuidad de $\vphi_n$, $\psi_n$ y
+$\rho_n$ es entonces automática \sref[I]{I.10.11.6}.
+\end{proof}
+
+\begin{env}[4.1.6]
+\label{III.4.1.6}
+\emph{Observaciones.}
+\begin{enumerate}
+  \item[(i)] Pongamos
+  \[
+    \widehat{\sh{F}}_k
+    =
+    \widehat{\sh{F}}/
+    \widehat{\sh{K}}^{\,k+1}\widehat{\sh{F}}.
+  \]
+  Entonces, inmediatamente,
+  \[
+    \sh{F}_k=i_*(\widehat{\sh{F}}_k),
+  \]
+  y el homomorfismo canónico \eqref{III.4.1.3.6} es precisamente el
+  homomorfismo ya definido en (\hyperref[III.3.4.2.2]{3.4.2.2}):
+  \[
+    \RR^n\widehat{f}_*(\widehat{\sh{F}})
+    \longrightarrow
+    \varprojlim_k
+    \RR^n\widehat{f}_*(\widehat{\sh{F}}_k).
+    \tag{4.1.6.1}
+    \label{III.4.1.6.1}
+  \]
+  Así, el hecho de que $\psi_n$ sea un isomorfismo es un caso particular
+  de \sref{III.3.4.3}.
+  Daremos, no obstante, más adelante una demostración directa, evitando
+  las delicadas consideraciones relativas a los límites proyectivos de
+  sucesiones espectrales \sref[0]{0.13.7} en las que se apoya el teorema
+  general \sref{III.3.4.3}.
+
+  \item[(ii)] Como los $\psi_n$ son isomorfismos, decir que los
+  $\vphi_n$ son isomorfismos equivale a decir que
+  \[
+    \rho_n=\psi_n^{-1}\circ\vphi_n
+  \]
+  son isomorfismos.
+  El Teorema~\sref{III.4.1.5} afirma, en particular, que la formación de
+  $\RR^n f_*$ conmuta con la completación; puede llamarse, por tanto, el
+  primer teorema de comparación entre las teorías ``algebraica'' y
+  ``formal''.
+\end{enumerate}
+Comenzaremos demostrando la forma afín de \sref{III.4.1.5}.
+\end{env}
+
+\begin{corollary}[4.1.7]
+\label{III.4.1.7}
+Bajo las hipótesis de \sref{III.4.1.5}, supongamos además que
+$Y=\Spec(A)$, donde $A$ es noetheriano, y que
+$\sh{J}=\widetilde{\mathfrak{J}}$, donde $\mathfrak{J}$ es un ideal
+de $A$, de modo que
+\[
+  \sh{F}_k=\sh{F}/\mathfrak{J}^{k+1}\sh{F}.
+\]
+El homomorfismo canónico
+\[
+  \vphi_n:
+  \widehat{\HH^n(X,\sh{F})}
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k)
+  \tag{4.1.7.1}
+  \label{III.4.1.7.1}
+\]
+donde el primer término es la completación separada de
+$\HH^n(X,\sh{F})$ para la topología $\mathfrak{J}$-preádica, es un
+isomorfismo.
+Para todo $n$, el sistema proyectivo
+\[
+  \bigl(\HH^n(X,\sh{F}_k)\bigr)_{k\geq0}
+\]
+satisface la condición \emph{(ML)}, y el homomorfismo canónico
+\[
+  \psi_n:
+  \HH^n(\widehat{X},\widehat{\sh{F}})
+  \longrightarrow
+  \varprojlim_k\HH^n(X,\sh{F}_k)
+  \tag{4.1.7.2}
+  \label{III.4.1.7.2}
+\]
+----- French corrections on page III 124 -----
+[id 6234]
+OLD: (0, 12.1.3.5)
+NEW: (\textbf{0}, 12.1.3.5)
+FRENCH CONTEXT (corrected): .1.3.2}\label{III.4.1.3.2-fr}
+\]
+\oldpage[III]{124}
+à un isomorphisme canonique près, puisque
+$\mathcal F_k=(i_k)_*(i_k^*(\mathcal F_k))$ (G, II, 4.9.1)~;
+l'homomorphisme canonique
+$H^n(\widehat X,\widehat{\mathcal F})\to
+H^n(X_k,h_k^*(\widehat{\mathcal F}))$ (\textbf{0}, 12.1.3.5) s'écrit donc aussi
+\[
+H^n(\widehat X,\widehat{\mathcal F})\longrightarrow H^n(X,\mathcal F_k)
+\tag{4.1.3.3}\label{III.4.1.3.3-fr}
+\]
+et ces homomorphismes forment évidemment un système projectif, d'où par
+passage à la limite, un homomorphisme canonique
+\[
+\ps
+
+[id 6236]
+OLD: un homomorphisme
+canonique de faisceaux
+NEW: un \emph{homomorphisme
+canonique} de faisceaux
+FRENCH CONTEXT (corrected): {-1}(V),\widehat{\mathcal F})
+\longrightarrow\varprojlim_k\Gamma(V,R^nf_*(\mathcal F_k))~;
+\tag{4.1.3.5}\label{III.4.1.3.5-fr}
+\]
+ces homomorphismes commutent de façon évidente à la restriction de $V$ à
+un ouvert affine plus petit, donc définissent finalement un \emph{homomorphisme
+canonique} de faisceaux
+\[
+\psi_n:R^n\widehat f_*(\widehat{\mathcal F})
+\longrightarrow\varprojlim_kR^nf_*(\mathcal F_k).
+\tag{4.1.3.6}\label{III.4.1.3.6-fr}
+\]
+\end{env}
+
+\begin{env}[4.1.4]
+\label{III.4.1.4-fr}
+Soit enfin $j:\widehat Y\to Y$ le morphisme canonique d'espaces annelés
+
+[id 6237]
+OLD: (I, 10.8.7)
+NEW: (\textbf{I}, 10.8.7)
+FRENCH CONTEXT (corrected): 8.1). L'homomorphisme $\varphi_n$ est par suite un
+homomorphisme \emph{continu} de $\mathcal O_{\widehat Y}$-Modules topologiques.
+\end{env}
+
+\begin{env}[4.1.3]
+\label{III.4.1.3-fr}
+Soit $i:\widehat X\to X$ le morphisme canonique d'espaces annelés défini
+dans (\textbf{I}, 10.8.7), de sorte que l'on a le diagramme commutatif
+\[
+\xymatrix{
+X_k\ar[r]^{h_k}\ar[dr]_{i_k}&\widehat X\ar[d]^i\\
+&X
+}
+\tag{4.1.3.1}\label{III.4.1.3.1-fr}
+\]
+où $X_k$ est le sous-préschéma fermé de $X$ défini par l'Idéal
+$\mathcal K^{k+1}$, $i_k$ l'injection canon
+
+[id 6238]
+OLD: (I, 10.8.8)
+NEW: (\textbf{I}, 10.8.8)
+FRENCH CONTEXT (corrected): mels. Pour tout
+$\mathcal O_X$-Module \emph{cohérent} $\mathcal F$, nous
+\oldpage[III]{123}
+désignerons par $\widehat{\mathcal F}$ son \emph{complété} $\mathcal F_{/X'}$ le
+long de $X'$ (\textbf{I}, 10.8.4) qui est un $\mathcal O_{\widehat X}$-Module
+cohérent (\textbf{I}, 10.8.8).
+\end{env}
+
+\begin{env}[4.1.2]
+\label{III.4.1.2-fr}
+Soit $\mathcal J$ un Idéal cohérent de $\mathcal O_Y$ tel que
+$\operatorname{Supp}(\mathcal O_Y/\mathcal J)=Y'$ (\textbf{I}, 5.2.1)~; on sait
+(\textbf{I}, 4.4.5) que
+$\mathcal K=f^*(\mathcal J)\mathcal O_X$
+
+
+[id 6239]
+OLD: \rho_n:\widehat{R^nf_*(\mathcal F)}=
+NEW: \rho_n:(R^nf_*(\mathcal F))^{\widehat{\,}}=
+FRENCH CONTEXT (corrected): me $R^nf_*(\mathcal F)$ est un $\mathcal O_Y$-Module
+cohérent (\hyperref[III.3.2.1-fr]{3.2.1}), on a
+$j^*(R^nf_*(\mathcal F))=(R^nf_*(\mathcal F))^{\widehat{\,}}$ à un isomorphisme
+canonique près (\textbf{I}, 10.8.8) et on a donc un homomorphisme canonique
+\[
+\rho_n:(R^nf_*(\mathcal F))^{\widehat{\,}}=j^*(R^nf_*(\mathcal F))
+\longrightarrow R^n\widehat f_*(i^*(\mathcal F))
+=R^n\widehat f_*(\widehat{\mathcal F})
+\tag{4.1.4.1}\label{III.4.1.4.1-fr}
+\]
+défini de façon générale pour les espaces annelés (voir la démonstration
+de (\hyperref[III.1.4.15-fr]{1.4.15}
+
+[id 6240]
+OLD: \widehat{R^nf_*(\mathcal F)}\ar[rr]
+NEW: (R^nf_*(\mathcal F))^{\widehat{\,}}\ar[rr]
+FRENCH CONTEXT (corrected): widehat f_*(i^*(\mathcal F))
+=R^n\widehat f_*(\widehat{\mathcal F})
+\tag{4.1.4.1}\label{III.4.1.4.1-fr}
+\]
+défini de façon générale pour les espaces annelés (voir la démonstration
+de (\hyperref[III.1.4.15-fr]{1.4.15})). Montrons que le diagramme
+\[
+\xymatrix{
+(R^nf_*(\mathcal F))^{\widehat{\,}}\ar[rr]^{\rho_n}\ar[dr]_{\varphi_n}
+&&R^n\widehat f_*(\widehat{\mathcal F})\ar[dl]^{\psi_n}\\
+&\displaystyle\varprojlim_kR^nf_*(\mathcal F_k)&
+}
+\tag{4.1.4.2}\label{III.4.1.4.2-fr}
+\]
+est \emph{commutatif}. Il suffit évidemment de prouver la commutativité du
+diagramm
+
+[id 6241]
+OLD: est commutatif. Il suffit
+NEW: est \emph{commutatif}. Il suffit
+FRENCH CONTEXT (corrected):  Montrons que le diagramme
+\[
+\xymatrix{
+(R^nf_*(\mathcal F))^{\widehat{\,}}\ar[rr]^{\rho_n}\ar[dr]_{\varphi_n}
+&&R^n\widehat f_*(\widehat{\mathcal F})\ar[dl]^{\psi_n}\\
+&\displaystyle\varprojlim_kR^nf_*(\mathcal F_k)&
+}
+\tag{4.1.4.2}\label{III.4.1.4.2-fr}
+\]
+est \emph{commutatif}. Il suffit évidemment de prouver la commutativité du
+diagramme correspondant d'homomorphismes de préfaisceaux, donc on peut se
+borner au cas où $Y$ est affine, et tout revient à prouver que le diagramme
+\[
+\xymatrix{
+(H^n(X,\mathcal F))^{\widehat{\,}}\ar[rr]^{\rho_n}\ar
+
+[id 6242]
+OLD: \widehat{H^n(X,\mathcal F)}\ar[rr]
+NEW: (H^n(X,\mathcal F))^{\widehat{\,}}\ar[rr]
+FRENCH CONTEXT (corrected): l{III.4.1.4.2-fr}
+\]
+est \emph{commutatif}. Il suffit évidemment de prouver la commutativité du
+diagramme correspondant d'homomorphismes de préfaisceaux, donc on peut se
+borner au cas où $Y$ est affine, et tout revient à prouver que le diagramme
+\[
+\xymatrix{
+(H^n(X,\mathcal F))^{\widehat{\,}}\ar[rr]^{\rho_n}\ar[dr]_{\varphi_n}
+&&H^n(\widehat X,\widehat{\mathcal F})\ar[dl]^{\psi_{n,X}}\\
+&\displaystyle\varprojlim_kH^n(X,\mathcal F_k)&
+}
+\tag{4.1.4.3}\label{III.4.1.4.3-fr}
+\]
+est commutatif. Mais la commutativité de
+(\hyperref[III.4.1.3.1-fr]{4.1.3.1}) et 
+
+[id 7874]
+OLD: =\widehat{R^nf_*(\mathcal F)}$
+NEW: =(R^nf_*(\mathcal F))^{\widehat{\,}}$
+FRENCH CONTEXT (corrected): gin{env}[4.1.4]
+\label{III.4.1.4-fr}
+Soit enfin $j:\widehat Y\to Y$ le morphisme canonique d'espaces annelés
+(\textbf{I}, 10.8.7)~; comme $R^nf_*(\mathcal F)$ est un $\mathcal O_Y$-Module
+cohérent (\hyperref[III.3.2.1-fr]{3.2.1}), on a
+$j^*(R^nf_*(\mathcal F))=(R^nf_*(\mathcal F))^{\widehat{\,}}$ à un isomorphisme
+canonique près (\textbf{I}, 10.8.8) et on a donc un homomorphisme canonique
+\[
+\rho_n:(R^nf_*(\mathcal F))^{\widehat{\,}}=j^*(R^nf_*(\mathcal F))
+\longrightarrow R^n\widehat f_*(i^*(\mathcal F))
+=R^n\widehat f_*(\widehat{\mathcal F})
+\tag{4.
+

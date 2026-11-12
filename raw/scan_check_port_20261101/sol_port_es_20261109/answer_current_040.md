@@ -1,0 +1,937 @@
+```json
+[
+  {
+    "id": 24353,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "inmediatamente que todo abierto de $X$ es saturado para $R$",
+    "en_new": "inmediatamente que todo abierto de $X$ es \\emph{saturado} para $R$"
+  },
+  {
+    "id": 24354,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "topología de $X$ es la imagen recíproca de la de $Y$",
+    "en_new": "topología de $X$ es la \\emph{imagen recíproca} de la de $Y$"
+  },
+  {
+    "id": 24359,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24360,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 45).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 45).}",
+    "note": "Incluye la notación definitiva de 24433; conserva la puntuación española."
+  },
+  {
+    "id": 24363,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24364,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 46).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 46).}",
+    "note": "Incluye la notación definitiva de 24434."
+  },
+  {
+    "id": 24368,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24369,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 47).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 47).}",
+    "note": "Incluye la notación definitiva de 24435."
+  },
+  {
+    "id": 24372,
+    "decision": "unclear",
+    "note": "La inserción citada está en francés, no en español; no hay palabras españolas sobre las que restituir el énfasis sin traducir además la cita."
+  },
+  {
+    "id": 24373,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "a) implica b') resulta de",
+    "en_new": "\\emph{a)} implica \\emph{b')} resulta de"
+  },
+  {
+    "id": 24374,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "b') implica a) resulta de",
+    "en_new": "\\emph{b')} implica \\emph{a)} resulta de"
+  },
+  {
+    "id": 24375,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24376,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 48).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 48).}",
+    "note": "Incluye la notación definitiva de 24436."
+  },
+  {
+    "id": 24380,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24381,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 49).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 49).}",
+    "note": "Incluye la notación definitiva de 24437."
+  },
+  {
+    "id": 24385,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24386,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 50).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 50).}",
+    "note": "Incluye la notación definitiva de 24438."
+  },
+  {
+    "id": 24388,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24389,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 51).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 51).}",
+    "note": "Incluye la notación definitiva de 24439."
+  },
+  {
+    "id": 24391,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24392,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 52).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 52).}",
+    "note": "Incluye la notación definitiva de 24440."
+  },
+  {
+    "id": 24394,
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezamiento."
+  },
+  {
+    "id": 24395,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 53).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 53).}",
+    "note": "Incluye la notación definitiva de 24441."
+  },
+  {
+    "id": 24397,
+    "decision": "not_applicable",
+    "note": "La traducción no tiene un primer término correlativo equivalente al primer « soit »."
+  },
+  {
+    "id": 24398,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "cuasicompacto o que $f$ es abierto.",
+    "en_new": "cuasicompacto \\textup{o} que $f$ es abierto."
+  },
+  {
+    "id": 24399,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24433,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 45).}",
+    "note": "covered by 24360"
+  },
+  {
+    "id": 24434,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 46).}",
+    "note": "covered by 24364"
+  },
+  {
+    "id": 24435,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 47).}",
+    "note": "covered by 24369"
+  },
+  {
+    "id": 24436,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 48).}",
+    "note": "covered by 24376"
+  },
+  {
+    "id": 24437,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 49).}",
+    "note": "covered by 24381"
+  },
+  {
+    "id": 24438,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 50).}",
+    "note": "covered by 24386"
+  },
+  {
+    "id": 24439,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 51).}",
+    "note": "covered by 24389"
+  },
+  {
+    "id": 24440,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 52).}",
+    "note": "covered by 24392"
+  },
+  {
+    "id": 24441,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 53).}",
+    "note": "covered by 24395"
+  },
+  {
+    "id": 24400,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24402,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición; las dos igualdades ya están presentes."
+  },
+  {
+    "id": 24403,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "Se sigue inmediatamente que existe un\nmayor abierto $U\\subset Y$",
+    "en_new": "Se sigue inmediatamente que existe un\n\\emph{mayor} abierto $U\\subset Y$"
+  },
+  {
+    "id": 24404,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición de la fórmula."
+  },
+  {
+    "id": 24405,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "maximal de $Y\\setminus U$. Encontraremos un entorno abierto $V$",
+    "note": "La diferencia de conjuntos ya usa el símbolo correcto."
+  },
+  {
+    "id": 24407,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "({\\EGAReadLink{IV.8.1.2}{8.1.2}}, a), nos reducimos",
+    "en_new": "({\\EGAReadLink{IV.8.1.2}{8.1.2}}, \\emph{a)}), nos reducimos"
+  },
+  {
+    "id": 24408,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "maximal de $Y\\setminus U$, el abierto $W=Y_1\\cap U$",
+    "note": "La diferencia de conjuntos ya usa el símbolo correcto."
+  },
+  {
+    "id": 24409,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "$Y_1\\setminus\\{y\\}$. Podemos, por tanto, limitarnos al caso",
+    "note": "La diferencia de conjuntos ya usa el símbolo correcto."
+  },
+  {
+    "id": 24410,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "$Y=Y_1$ y $U=Y\\setminus\\{y\\}$.",
+    "note": "La diferencia de conjuntos ya usa el símbolo correcto."
+  },
+  {
+    "id": 24411,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición de las fórmulas."
+  },
+  {
+    "id": 24412,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición de las fórmulas."
+  },
+  {
+    "id": 24413,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "$\\operatorname{prof}(\\sh{O}_{X,x})\\geq 2$ para todo\n$x\\in f^{-1}(y)$ {\\EGAReadLink{IV.6.3.1}{(6.3.1)}}.",
+    "en_new": "$\\operatorname{prof}(\\sh{O}_{X,x})\\geq 2$ para \\emph{todo}\n$x\\in f^{-1}(y)$ {\\EGAReadLink{IV.6.3.1}{(6.3.1)}}."
+  },
+  {
+    "id": 24415,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "$U=Y\\setminus\\{y\\}$ es esquemáticamente denso en $Y$",
+    "note": "La diferencia de conjuntos ya usa el símbolo correcto."
+  },
+  {
+    "id": 24416,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "$f^{-1}(U)=X\\setminus f^{-1}(y)$",
+    "note": "La diferencia de conjuntos ya usa el símbolo correcto."
+  },
+  {
+    "id": 24418,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "existe un abierto cuasicompacto $T\\subset X$",
+    "en_new": "existe un abierto \\emph{cuasicompacto} $T\\subset X$"
+  },
+  {
+    "id": 24001,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24002,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24004,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "\\begin{corollary}[21.4.10]\n\\ifdefined\\EGAIVSuppressErratumLabels\\else\\label{IV.21.4.10}\\fi\nSupongamos las hipótesis generales de {\\EGAReadLink{IV.21.4.9}{(21.4.9)}} y, además, que",
+    "note": "La macro de referencia incluye los paréntesis en redonda."
+  },
+  {
+    "id": 24006,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "\\begin{corollary}[21.4.11]\n\\ifdefined\\EGAIVSuppressErratumLabels\\else\\label{IV.21.4.11}\\fi\nSupongamos las hipótesis generales de {\\EGAReadLink{IV.21.4.9}{(21.4.9)}} y, además, que",
+    "note": "La macro de referencia incluye los paréntesis en redonda."
+  },
+  {
+    "id": 24009,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "se supone solamente que los $X_y$ son reducidos, hay que",
+    "en_new": "se supone solamente que los $X_y$ son \\emph{reducidos}, hay que"
+  },
+  {
+    "id": 24010,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "en cada uno de los grupos",
+    "en_new": "en \\emph{cada uno} de los grupos"
+  },
+  {
+    "id": 24012,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "\\operatorname{div}((t_x')^n)",
+    "en_new": "\\operatorname{div}(t'^n_x)"
+  },
+  {
+    "id": 24013,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "y el entero $n$ es el mismo para todos estos puntos.",
+    "en_new": "y el entero $n$ es \\emph{el mismo} para todos estos puntos."
+  },
+  {
+    "id": 24014,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21-erratum53-insertion-es.tex",
+    "en_old": "Supongamos las hipótesis de {\\EGAReadLink{IV.21.4.11}{(21.4.11)}}. Para todo",
+    "note": "La macro de referencia incluye los paréntesis en redonda."
+  },
+  {
+    "id": 24015,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24016,
+    "decision": "not_applicable",
+    "note": "Tipografía del colofón."
+  },
+  {
+    "id": 24017,
+    "decision": "not_applicable",
+    "note": "Tipografía del colofón."
+  },
+  {
+    "id": 8816,
+    "decision": "unclear",
+    "note": "No se muestra la página española 5 ni su encabezamiento; el texto proporcionado comienza en la página 6."
+  },
+  {
+    "id": 8817,
+    "decision": "unclear",
+    "note": "No se muestra la nota de la página española 5."
+  },
+  {
+    "id": 8818,
+    "decision": "unclear",
+    "note": "No se muestra la nota de la página española 5."
+  },
+  {
+    "id": 8819,
+    "decision": "unclear",
+    "note": "No se muestra el pasaje español con la notación Err_N."
+  },
+  {
+    "id": 8820,
+    "decision": "unclear",
+    "note": "No se muestra la nota de la página española 5."
+  },
+  {
+    "id": 8821,
+    "decision": "unclear",
+    "note": "No se muestra la nota de la página española 5."
+  },
+  {
+    "id": 8210,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{dimensión combinatoria de $X$}",
+    "en_new": "dimensión combinatoria de $X$"
+  },
+  {
+    "id": 8211,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "(o simplemente \\emph{dimensión de $X$}, si no puede haber confusión)",
+    "en_new": "\\textup{(o simplemente} dimensión de $X$, \\textup{si no puede haber confusión)}"
+  },
+  {
+    "id": 8212,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{dimensión combinatoria de $X$ en $x$}",
+    "en_new": "dimensión combinatoria de $X$ en $x$"
+  },
+  {
+    "id": 8213,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "(o\nsimplemente \\emph{dimensión de $X$ en $x$})",
+    "en_new": "\\textup{(o\nsimplemente} dimensión de $X$ en $x$)"
+  },
+  {
+    "id": 8214,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{equidimensional}",
+    "en_new": "equidimensional"
+  },
+  {
+    "id": 8215,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "(igual entonces a $\\dim(X)$\npor (14.1.2.1))",
+    "en_new": "\\textup{(igual entonces a $\\dim(X)$\npor (14.1.2.1))}"
+  },
+  {
+    "id": 8216,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 2.1.2)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 2.1.2)"
+  },
+  {
+    "id": 8217,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "irreducible de $X$ está contenido en uno de los $X_i$ ($0_{\\mathrm I}$, 2.1.1)",
+    "en_new": "irreducible de $X$ está contenido en uno de los $X_i$ ($\\mathbf{0}_{\\mathrm I}$, 2.1.1)"
+  },
+  {
+    "id": 8218,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "$x$, e $Y_i$ ($1\\leq i\\leq n$) subconjuntos cerrados de $U$",
+    "en_new": "$x$, e $Y_i$ \\textup{($1\\leq i\\leq n$)} subconjuntos cerrados de $U$"
+  },
+  {
+    "id": 8220,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 2.1.6)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 2.1.6)"
+  },
+  {
+    "id": 8221,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8223,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "que existe en $Z_0$ un punto cerrado ($0_{\\mathrm I}$, 2.1.3).",
+    "en_new": "que existe en $Z_0$ un punto cerrado ($\\mathbf{0}_{\\mathrm I}$, 2.1.3)."
+  },
+  {
+    "id": 8224,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "componente irreducible de $X$ contiene un punto cerrado ($0_{\\mathrm I}$, 2.1.3),",
+    "en_new": "componente irreducible de $X$ contiene un punto cerrado ($\\mathbf{0}_{\\mathrm I}$, 2.1.3),"
+  },
+  {
+    "id": 8227,
+    "decision": "not_applicable",
+    "note": "Puntuación del título de subsección."
+  },
+  {
+    "id": 8228,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{codimensión combinatoria}",
+    "en_new": "codimensión combinatoria"
+  },
+  {
+    "id": 8229,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "(o simplemente \\emph{codimensión})",
+    "en_new": "\\textup{(o simplemente} codimensión)"
+  },
+  {
+    "id": 8230,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{codimensión de $Y$ en $X$}",
+    "en_new": "codimensión de $Y$ en $X$"
+  },
+  {
+    "id": 8231,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{equicodimensional}",
+    "en_new": "equicodimensional"
+  },
+  {
+    "id": 8236,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\emph{codimensión de $Y$ en $X$ en el punto $x$}",
+    "en_new": "codimensión de $Y$ en $X$ en el punto $x$"
+  },
+  {
+    "id": 8238,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 2.1.1); la conclusión resulta",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 2.1.1); la conclusión resulta"
+  },
+  {
+    "id": 8239,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "componentes irreducibles $Y_i$ ($1\\leq i\\leq n$) de $Y$ que contienen $x$,\n  y se tiene",
+    "en_new": "componentes irreducibles $Y_i$ \\textup{($1\\leq i\\leq n$)} de $Y$ que contienen $x$,\n  y se tiene"
+  },
+  {
+    "id": 8241,
+    "decision": "not_applicable",
+    "note": "Puntuación del título de subsección."
+  },
+  {
+    "id": 8243,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\item[\\rm(a)] Dos cadenas saturadas de subconjuntos cerrados irreducibles de $X$,",
+    "en_new": "\\item[\\rm a)] Dos cadenas saturadas de subconjuntos cerrados irreducibles de $X$,"
+  },
+  {
+    "id": 8244,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\item[\\rm(b)] Si $Y$, $Z$, $T$ son tres subconjuntos cerrados irreducibles de",
+    "en_new": "\\item[\\rm b)] Si $Y$, $Z$, $T$ son tres subconjuntos cerrados irreducibles de"
+  },
+  {
+    "id": 8245,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "Es inmediato que a) implica b). Recíprocamente, supongamos que se verifica b) y",
+    "en_new": "Es inmediato que \\emph{a)} implica \\emph{b)}. Recíprocamente, supongamos que se verifica \\emph{b)} y"
+  },
+  {
+    "id": 8637,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\item[\\rm(a)] Dos cadenas maximales de subconjuntos cerrados irreducibles de",
+    "en_new": "\\item[\\rm a)] Dos cadenas maximales de subconjuntos cerrados irreducibles de"
+  },
+  {
+    "id": 8638,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "\\item[\\rm(b)] $X$ es equidimensional, equicodimensional y catenario.",
+    "en_new": "\\item[\\rm b)] $X$ es equidimensional, equicodimensional y catenario."
+  },
+  {
+    "id": 8642,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "inmediato la equivalencia de a) y b), y prueban también que, si se verifica a),",
+    "en_new": "inmediato la equivalencia de \\emph{a)} y \\emph{b)}, y prueban también que, si se verifica \\emph{a)},"
+  },
+  {
+    "id": 8643,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "se concluye que c) implica b).",
+    "en_new": "se concluye que \\emph{c)} implica \\emph{b)}."
+  },
+  {
+    "id": 8645,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-14-es.tex",
+    "en_old": "2.1.3)), d) implica b).",
+    "en_new": "2.1.3)), \\emph{d)} implica \\emph{b)}."
+  },
+  {
+    "id": 8682,
+    "decision": "not_applicable",
+    "note": "Puntuación del título de subsección."
+  },
+  {
+    "id": 8648,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "la homotecia $f_M:x\\mapsto fx$ de $M$",
+    "en_new": "la homotecia $f_M:x\\leadsto fx$ de $M$"
+  },
+  {
+    "id": 8649,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "$f_M:x\\mapsto fx$ define",
+    "en_new": "$f_M:x\\leadsto fx$ define"
+  },
+  {
+    "id": 8650,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de numéro; el español emplea « núm. »."
+  },
+  {
+    "id": 8651,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de numéro; el español emplea « núm. »."
+  },
+  {
+    "id": 8652,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 1.3.2)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 1.3.2)"
+  },
+  {
+    "id": 8653,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "topología $(fA)$-preádica ($0_{\\mathrm I}$, 7.3.5)",
+    "en_new": "topología $(fA)$-preádica ($\\mathbf{0}_{\\mathrm I}$, 7.3.5)"
+  },
+  {
+    "id": 8654,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "\\emph{$M$-regular} (resp. \\emph{$M$-cuasirregular})",
+    "en_new": "$M$-regular (\\textup{resp.} $M$-cuasirregular)"
+  },
+  {
+    "id": 8656,
+    "decision": "not_applicable",
+    "note": "Cambio de estructura del entorno francés; no se modifica la estructura ni la etiqueta españolas."
+  },
+  {
+    "id": 8659,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8660,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($\\mathrm{II}$, 2.1.2)",
+    "en_new": "(\\textbf{II}, 2.1.2)"
+  },
+  {
+    "id": 8661,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8662,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de numéro; el español emplea « núm. »."
+  },
+  {
+    "id": 8663,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "\\gr_i(Q_k)=((M_i/M_{i+1})\\otimes_A(A/fA))T^{k-i}~;",
+    "en_new": "\\gr_i(Q_k)=((M_i/M_{i+1})\\otimes_A(A/fA))T^{k-i}=(M_i/(fM_i+M_{i+1}))T^{k-i}~;",
+    "note": "Se añade la igualdad omitida conservando la fórmula destacada española."
+  },
+  {
+    "id": 9132,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "$M_k=\\mathfrak L^kM$, donde $\\mathfrak L$ es un ideal de $A$"
+  },
+  {
+    "id": 8668,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "\\emph{$M$-regular} si, para $1\\leq i\\leq n$",
+    "en_new": "$M$-regular si, para $1\\leq i\\leq n$"
+  },
+  {
+    "id": 8669,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "$(f_i)$ es \\emph{$M$-cuasirregular} si el homomorfismo canónico $\\varphi$",
+    "en_new": "$(f_i)$ es $M$-cuasirregular si el homomorfismo canónico $\\varphi$"
+  },
+  {
+    "id": 8670,
+    "decision": "not_applicable",
+    "note": "Cambio de límite del entorno de definición; se conserva la estructura española."
+  },
+  {
+    "id": 8671,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8675,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "(\\gr_\\bullet(M)\\otimes(A/\\mathfrak{J}))\\otimes_A A[T_1,\\ldots,T_n]",
+    "en_new": "(\\gr_\\bullet(M)\\otimes(A/\\mathfrak{J}))\\otimes A[T_1,\\ldots,T_n]"
+  },
+  {
+    "id": 8679,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8680,
+    "decision": "not_applicable",
+    "note": "Paso de lista matemática destacada a texto en línea."
+  },
+  {
+    "id": 8681,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8743,
+    "decision": "not_applicable",
+    "note": "Paso a texto en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8744,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8745,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8748,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "es entonces separado para la topología $\\mathfrak{J}$-preádica\n($0_{\\mathrm I}$, 7.3.5).",
+    "en_new": "es entonces separado para la topología $\\mathfrak{J}$-preádica\n($\\mathbf{0}_{\\mathrm I}$, 7.3.5)."
+  },
+  {
+    "id": 8751,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 8752,
+    "decision": "not_applicable",
+    "note": "Paso a fórmula en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8753,
+    "decision": "not_applicable",
+    "note": "Paso a fórmula en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8754,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 6.1.1)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 6.1.1)"
+  },
+  {
+    "id": 8755,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 6.4.1)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 6.4.1)"
+  },
+  {
+    "id": 8756,
+    "decision": "not_applicable",
+    "note": "Paso a fórmula en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8757,
+    "decision": "not_applicable",
+    "note": "Paso a fórmula en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8758,
+    "decision": "not_applicable",
+    "note": "Paso a fórmula en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8759,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición de la fórmula y del intervalo."
+  },
+  {
+    "id": 8761,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición de la fórmula y del intervalo."
+  },
+  {
+    "id": 8762,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "es exacta ($0_{\\mathrm I}$, 6.1.2). Esto muestra",
+    "en_new": "es exacta ($\\mathbf{0}_{\\mathrm I}$, 6.1.2). Esto muestra"
+  },
+  {
+    "id": 8764,
+    "decision": "not_applicable",
+    "note": "Paso a fórmulas en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8765,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 6.2.1)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 6.2.1)"
+  },
+  {
+    "id": 8767,
+    "decision": "not_applicable",
+    "note": "Paso a fórmula en línea y ajuste del tamaño de paréntesis."
+  },
+  {
+    "id": 8772,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "Es claro que a) implica b); para demostrar que b) implica d), basta, en virtud",
+    "en_new": "Es claro que \\emph{a)} implica \\emph{b)}; para demostrar que \\emph{b)} implica \\emph{d)}, basta, en virtud"
+  },
+  {
+    "id": 8773,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "de (15.1.15), demostrar que b) implica que los $M_i$ son $A$-módulos planos",
+    "en_new": "de (15.1.15), demostrar que \\emph{b)} implica que los $M_i$ son $A$-módulos planos"
+  },
+  {
+    "id": 8774,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 10.2.7)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{III}}$, 10.2.7)"
+  },
+  {
+    "id": 8775,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "Es claro que c) es el caso particular de d)\nobtenido tomando $A'=k$.",
+    "en_new": "Es claro que \\emph{c)} es el caso particular de \\emph{d)}\nobtenido tomando $A'=k$."
+  },
+  {
+    "id": 8776,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "Queda, pues, probar que c) implica a).",
+    "en_new": "Queda, pues, probar que \\emph{c)} implica \\emph{a)}."
+  },
+  {
+    "id": 8778,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 10.2.4) que la multiplicación por $f_1$",
+    "en_new": "($\\mathbf{0}_{\\mathrm{III}}$, 10.2.4) que la multiplicación por $f_1$"
+  },
+  {
+    "id": 8779,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "se deduce de nuevo de ($0_{\\mathrm{III}}$, 10.2.4) que la\nmultiplicación por $f_{i+1}$",
+    "en_new": "se deduce de nuevo de ($\\mathbf{0}_{\\mathrm{III}}$, 10.2.4) que la\nmultiplicación por $f_{i+1}$"
+  },
+  {
+    "id": 8780,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "Se observará que la demostración de que c) implica a) no utiliza",
+    "en_new": "Se observará que la demostración de que \\emph{c)} implica \\emph{a)} no utiliza"
+  },
+  {
+    "id": 8784,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-15-es.tex",
+    "en_old": "\\item[\\textup{(iii)}] La suma de los sub-$(B\\otimes_A k)$-módulos",
+    "note": "La etiqueta ya está en redonda."
+  }
+]
+```

@@ -1,0 +1,906 @@
+```json
+[
+  {
+    "id": 1513,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.4.2.4}"
+  },
+  {
+    "id": 1471,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.4.2.2}"
+  },
+  {
+    "id": 1472,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 1473,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.4.4.1}"
+  },
+  {
+    "id": 1474,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 1475,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Se dice que $X$ es \\emph{afín sobre $S$}",
+    "en_new": "Se dice que $X$ es afín sobre $S$"
+  },
+  {
+    "id": 1476,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.4.2.3}"
+  },
+  {
+    "id": 1477,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.5.5.10}"
+  },
+  {
+    "id": 1478,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(dicho de otro modo, es un $S$-esquema)",
+    "en_new": "\\textup{(dicho de otro modo, es un $S$-\\emph{esquema})}"
+  },
+  {
+    "id": 1479,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.5.5.5}"
+  },
+  {
+    "id": 1480,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.5.5.8}"
+  },
+  {
+    "id": 1481,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(\\textbf{I},~1.2.2.2)"
+  },
+  {
+    "id": 1482,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.9.2.2}[a]"
+  },
+  {
+    "id": 1483,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.9.2.2}[a]",
+    "en_new": "\\sref[I]{I.9.2.2}[\\emph{a}]",
+    "note": "Se conserva la convención española para la letra del apartado."
+  },
+  {
+    "id": 1485,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\Hom(\\sh{A}(X),\\sh{A}(Y))$ \\sref{II.1.1.2}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1486,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 1487,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.2.4}"
+  },
+  {
+    "id": 1488,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.1.2.4}"
+  },
+  {
+    "id": 1489,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.6.1}"
+  },
+  {
+    "id": 1490,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.3.7}"
+  },
+  {
+    "id": 1491,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.3.1}"
+  },
+  {
+    "id": 1492,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{espectro de $\\sh{B}$}",
+    "en_new": "\\emph{espectro} de $\\sh{B}$"
+  },
+  {
+    "id": 1493,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "punto $0$ \\sref[I]{I.5.5.11}"
+  },
+  {
+    "id": 1494,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "con las notaciones de \\sref[I]{I.5.5.11}"
+  },
+  {
+    "id": 1496,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "sea de tipo finito \\sref[I]{I.9.6.2}.\n\\end{corollary}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1497,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "sea de tipo finito \\sref[I]{I.9.6.2}.\n\\end{corollary}"
+  },
+  {
+    "id": 1498,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Por definición \\sref[I]{I.9.6.2}"
+  },
+  {
+    "id": 1499,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "el corolario resulta de \\sref[I]{I.9.6.2} y \\sref[I]{I.6.3.3}"
+  },
+  {
+    "id": 1500,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.6.3.3}"
+  },
+  {
+    "id": 1501,
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase francesa."
+  },
+  {
+    "id": 1502,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.4.1.4}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1503,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.4.1.4}"
+  },
+  {
+    "id": 1504,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.5.1.1}"
+  },
+  {
+    "id": 1505,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.5.1.4}"
+  },
+  {
+    "id": 1506,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(resp. $\\sh{G}$)",
+    "en_new": "\\textup{(resp. $\\sh{G}$)}"
+  },
+  {
+    "id": 1507,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(resp. un $\\sh{O}_Y$-módulo)",
+    "en_new": "\\textup{(resp.} un $\\sh{O}_Y$-módulo\\textup{)}"
+  },
+  {
+    "id": 1509,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(\\sref{II.1.1.2} y \\sref{II.1.1.3})",
+    "en_new": "\\textup{(\\sref{II.1.1.2} y \\sref{II.1.1.3})}"
+  },
+  {
+    "id": 1510,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.2.5}"
+  },
+  {
+    "id": 1511,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.2.4}"
+  },
+  {
+    "id": 1512,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Si, además de las hipótesis de \\sref{II.1.4.1}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1844,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{(considerado como $\\sh{O}_S$-módulo o como $\\sh{B}$-módulo, lo cual es equivalente~\\sref[I]{I.9.6.1})}",
+    "note": "\\emph dentro de la proposición imprime el inciso en redonda."
+  },
+  {
+    "id": 1845,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "lo cual es equivalente~\\sref[I]{I.9.6.1}"
+  },
+  {
+    "id": 1846,
+    "decision": "not_applicable",
+    "note": "Agrupación tipográfica de referencias; el español usa referencias completas separadas."
+  },
+  {
+    "id": 1847,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.3.5}"
+  },
+  {
+    "id": 1848,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.1.4.3}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1849,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "una $A$-álgebra de tipo finito \\sref[I]{I.9.6.2}"
+  },
+  {
+    "id": 1850,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$M$ es un $B$-módulo \\sref[I]{I.1.3.13}"
+  },
+  {
+    "id": 1851,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$M$ sea de tipo finito \\sref[I]{I.1.3.13}"
+  },
+  {
+    "id": 1852,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{(y, por tanto, también sobre $S$~\\sref{II.1.3.5})}",
+    "note": "\\emph dentro de la proposición imprime el inciso en redonda."
+  },
+  {
+    "id": 1853,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{(y, por tanto, también sobre $S$)}",
+    "note": "\\emph dentro de la proposición imprime el inciso en redonda."
+  },
+  {
+    "id": 1854,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "En virtud de \\sref[I]{I.9.6.1}"
+  },
+  {
+    "id": 1855,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "también una $\\sh{O}_S$-álgebra cuasi-coherente \\sref[I]{I.9.6.1}"
+  },
+  {
+    "id": 1856,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.2.6.4}"
+  },
+  {
+    "id": 1858,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Se sabe entonces por \\sref[I]{I.1.3.13}"
+  },
+  {
+    "id": 1860,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.2.2}"
+  },
+  {
+    "id": 1861,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(resp. $\\sh{F}'$)",
+    "en_new": "\\textup{(resp. $\\sh{F}'$)}"
+  },
+  {
+    "id": 1862,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(resp. un $\\sh{O}_{X'}$-módulo cuasi-coherente)",
+    "en_new": "\\textup{(resp.} un $\\sh{O}_{X'}$-módulo cuasi-coherente)"
+  },
+  {
+    "id": 1863,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.9.1.2}"
+  },
+  {
+    "id": 1864,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmulas desplegadas a fórmulas en línea."
+  },
+  {
+    "id": 1865,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Por \\sref[0]{0.4.4.3}, se obtiene"
+  },
+  {
+    "id": 1867,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.9.1.3}"
+  },
+  {
+    "id": 1870,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(\\sref[I]{I.1.3.13} y \\sref[I]{I.1.6.3})"
+  },
+  {
+    "id": 1871,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(\\sref[I]{I.1.3.13} y \\sref[I]{I.1.6.3})",
+    "note": "Se conserva la convención española de referencias completas separadas."
+  },
+  {
+    "id": 1872,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "resulta de \\sref[I]{I.1.6.3} y \\sref[I]{I.1.3.12}"
+  },
+  {
+    "id": 1873,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.3.12}",
+    "note": "Se conserva la convención española de referencias completas separadas."
+  },
+  {
+    "id": 1874,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$X\\sqcup X'$",
+    "en_new": "$X\\amalg X'$"
+  },
+  {
+    "id": 1875,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.4.2.3}"
+  },
+  {
+    "id": 1876,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.4.1.2}"
+  },
+  {
+    "id": 1878,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "f^*(\\sh{K})\\sh{O}_X=(\\sh{K}\\sh{B})\\supertilde"
+  },
+  {
+    "id": 1879,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.6.9}"
+  },
+  {
+    "id": 1880,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.2.2}"
+  },
+  {
+    "id": 1881,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.1.5.1}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1883,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "y tomar $u=v^\\sharp$ \\sref[0]{0.4.4.3}"
+  },
+  {
+    "id": 1884,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\sh{F}\\to g'_*(g^{\\prime*}(\\sh{F}))$ \\sref[0]{0.4.4.3}"
+  },
+  {
+    "id": 1885,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.6.3}, \\sref[I]{I.1.6.5} y \\sref[I]{I.1.6.7}"
+  },
+  {
+    "id": 1886,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$S'=\\Spec(\\kres(s))$ ($s\\in S$)",
+    "en_new": "$S'=\\Spec(\\boldsymbol{k}(s))$ ($s\\in S$)"
+  },
+  {
+    "id": 1887,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.4.5}"
+  },
+  {
+    "id": 1888,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.6.2}"
+  },
+  {
+    "id": 1889,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[III]{III.4.2.4}"
+  },
+  {
+    "id": 1890,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "con $S'=\\Spec(\\kres(s))$",
+    "en_new": "con $S'=\\Spec(\\boldsymbol{k}(s))$"
+  },
+  {
+    "id": 1891,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "cuasi-coherentes $u^\\sharp:q^*(\\sh{B})\\to\\sh{B}'$ \\sref[0]{0.4.4.3}"
+  },
+  {
+    "id": 1892,
+    "decision": "not_applicable",
+    "note": "Dos puntos de la prosa francesa; no cambia el morfismo ni su significado."
+  },
+  {
+    "id": 1893,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.7.3}"
+  },
+  {
+    "id": 1894,
+    "decision": "not_applicable",
+    "note": "Énfasis tipográfico de una preposición francesa; el español dice «Por»."
+  },
+  {
+    "id": 1895,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.5.5.12}"
+  },
+  {
+    "id": 1896,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.3.11}"
+  },
+  {
+    "id": 1897,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.6.1.7}"
+  },
+  {
+    "id": 1898,
+    "decision": "not_applicable",
+    "note": "Mayúscula francesa."
+  },
+  {
+    "id": 1428,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{álgebra simétrica sobre $\\sh{A}$}"
+  },
+  {
+    "id": 1431,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "se tiene por definición \\sref[0]{0.4.3.1}"
+  },
+  {
+    "id": 1432,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.3.7.1}"
+  },
+  {
+    "id": 1433,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$t\\mapsto h'(\\psi(t))$",
+    "en_new": "$t\\to h'(\\psi(t))$"
+  },
+  {
+    "id": 1434,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.3.4}"
+  },
+  {
+    "id": 1435,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.4.1}"
+  },
+  {
+    "id": 1436,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.3.13}"
+  },
+  {
+    "id": 1437,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{fibrado vectorial sobre $S$ definido por $\\sh{E}$}",
+    "en_new": "fibrado vectorial sobre $S$ definido por $\\sh{E}$"
+  },
+  {
+    "id": 1438,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "al espectro \\sref{II.1.3.1}",
+    "note": "\\sref imprime también los paréntesis en redonda."
+  },
+  {
+    "id": 1439,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{$\\sh{O}_S$-álgebras $\\bb{S}(\\sh{E})\\to\\sh{A}(X)$}"
+  },
+  {
+    "id": 1440,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{$\\sh{O}_S$-módulos $\\sh{E}\\to\\sh{A}(X)=f_*(\\sh{O}_X)$}"
+  },
+  {
+    "id": 1441,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{abierto $U\\subset S$}"
+  },
+  {
+    "id": 1442,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.5.5}"
+  },
+  {
+    "id": 1443,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "equivalentemente, por \\sref[0]{0.4.4.3}, a los homomorfismos"
+  },
+  {
+    "id": 1444,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\kres(s)\\to K$",
+    "en_new": "$\\boldsymbol{k}(s)\\to K$"
+  },
+  {
+    "id": 1445,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.2.4.6}"
+  },
+  {
+    "id": 1446,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "la extensión $K$ de $\\kres(s)$",
+    "en_new": "la extensión $K$ de $\\boldsymbol{k}(s)$"
+  },
+  {
+    "id": 1447,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.4.5}"
+  },
+  {
+    "id": 1448,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "o equivalentemente, por \\sref[0]{0.4.4.3}, con el conjunto"
+  },
+  {
+    "id": 1449,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Pero, por definición \\sref[0]{0.4.3.1}, se tiene"
+  },
+  {
+    "id": 1450,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "=\\sh{E}^s\\otimes_{\\kres(s)}K,",
+    "en_new": "=\\sh{E}^s\\otimes_{\\boldsymbol{k}(s)}K,"
+  },
+  {
+    "id": 1451,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{$K$-espacio vectorial $\\sh{E}^s\\otimes_{\\kres(s)}K$}",
+    "en_new": "\\emph{$K$-espacio vectorial $\\sh{E}^s\\otimes_{\\boldsymbol{k}(s)}K$}"
+  },
+  {
+    "id": 1452,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\sh{E}^s$ o $K$ es de dimensión finita sobre $\\kres(s)$",
+    "en_new": "$\\sh{E}^s$ o $K$ es de dimensión finita sobre $\\boldsymbol{k}(s)$"
+  },
+  {
+    "id": 1453,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "este dual se identifica también con $\\dual{(\\sh{E}^s)}",
+    "en_new": "este dual se identifica también con $(\\sh{E}^s)\\check{}"
+  },
+  {
+    "id": 1454,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\otimes_{\\kres(s)}K$, denotando",
+    "en_new": "\\otimes_{\\boldsymbol{k}(s)}K$, denotando"
+  },
+  {
+    "id": 1455,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "denotando por $\\dual{(\\sh{E}^s)}$ el dual",
+    "en_new": "denotando por $(\\sh{E}^s)\\check{}$ el dual"
+  },
+  {
+    "id": 1456,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\kres(s)$-espacio vectorial $\\sh{E}^s$",
+    "en_new": "$\\boldsymbol{k}(s)$-espacio vectorial $\\sh{E}^s$"
+  },
+  {
+    "id": 1457,
+    "decision": "not_applicable",
+    "note": "Acentuación francesa."
+  },
+  {
+    "id": 1458,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.6.3.1}"
+  },
+  {
+    "id": 1459,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\bb{S}(\\sh{E}\\oplus\\sh{F})\\isoto\\bb{S}(\\sh{E})",
+    "en_new": "\\bb{S}(\\sh{E}\\oplus\\sh{F})\\simto\\bb{S}(\\sh{E})"
+  },
+  {
+    "id": 1460,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\bb{S}(g^*(\\sh{E}))\\isoto g^*(\\bb{S}(\\sh{E}))",
+    "en_new": "\\bb{S}(g^*(\\sh{E}))\\simto g^*(\\bb{S}(\\sh{E}))"
+  },
+  {
+    "id": 1461,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.3.3.15}"
+  },
+  {
+    "id": 1464,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(h+h')(s_1s_2\\cdots s_n)",
+    "en_new": "(h+h')(s_1s_2\\ldots s_n)"
+  },
+  {
+    "id": 1465,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(t\\cdot h)(s_1s_2\\cdots s_n)",
+    "en_new": "(t\\cdot h)(s_1s_2\\ldots s_n)"
+  },
+  {
+    "id": 1466,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "entonces $h\\mapsto h(z)$ es una aplicación de",
+    "en_new": "entonces $h\\to h(z)$ es una aplicación de"
+  },
+  {
+    "id": 1467,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "la aplicación $h\\mapsto h(z)$ de",
+    "en_new": "la aplicación $h\\to h(z)$ de"
+  },
+  {
+    "id": 1468,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.3.13}"
+  },
+  {
+    "id": 1469,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.9.6.5}"
+  },
+  {
+    "id": 1470,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "un módulo \\emph{graduado} sobre $S$"
+  },
+  {
+    "id": 1404,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "como \\emph{módulo graduado}",
+    "en_new": "como módulo \\emph{graduado}"
+  },
+  {
+    "id": 1405,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 1406,
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase francesa."
+  },
+  {
+    "id": 1407,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "de $S$-módulos \\emph{graduados} está provisto"
+  },
+  {
+    "id": 1411,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "ideal primo \\emph{graduado} del anillo graduado $S$"
+  },
+  {
+    "id": 1412,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\emph{$\\mathfrak{p}$ no contiene $S_+$}"
+  },
+  {
+    "id": 1415,
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": 1416,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\rad_+(\\mathfrak{J})=\\rad(\\mathfrak{J})\\cap S_+",
+    "note": "\\rad está definido como \\mathfrak{r}."
+  },
+  {
+    "id": 1417,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "su radical $\\rad_+(\\mathfrak{J})$ es un ideal",
+    "note": "\\rad está definido como \\mathfrak{r}."
+  },
+  {
+    "id": 1418,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "es un ideal \\emph{graduado}: pasando"
+  },
+  {
+    "id": 1421,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.1.4.6}"
+  },
+  {
+    "id": 1422,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.1.4.6}"
+  },
+  {
+    "id": 1423,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.1.4.1}"
+  },
+  {
+    "id": 1424,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.1.4.1}"
+  },
+  {
+    "id": 1425,
+    "decision": "not_applicable",
+    "note": "Presentación tipográfica equivalente de la congruencia; se conserva \\pmod."
+  },
+  {
+    "id": 1546,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[0]{0.1.4.5}"
+  },
+  {
+    "id": 1547,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref[I]{I.1.1.2}"
+  },
+  {
+    "id": 1548,
+    "decision": "not_applicable",
+    "note": "Punto final de la frase, sin cambio matemático."
+  }
+]
+```
+II_DIPLOMATIC/EGA_II_es_diplomatic.tex, (1.4.1): falta indicar que el $\sh{O}_Y$-módulo $\sh{G}$ también es cuasi-coherente.
+II_DIPLOMATIC/EGA_II_es_diplomatic.tex, demostración de (1.4.6): «el anillo $\sh{A}(Z)$» confunde el haz de álgebras $\sh{A}(Z)$ con el anillo $A(Z)$ del francés.

@@ -1,0 +1,3102 @@
+# Spanish hand pass, current_015: 149 items on 14 printed pages
+
+=================== PAGE 0\textsubscript{III} 5 ===================
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 4 -----
+\section{Funtores representables}
+\label{section:0.8}
+
+\subsection{Funtores representables}
+\label{subsection:0.8.1}
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 5 -----
+\oldpage[0\textsubscript{III}]{5}
+\begin{env}[8.1.1]
+\label{0.8.1.1}
+Denotamos por $\Set$ la categoría de conjuntos.
+Sea $\C$ una categoría; para dos objetos $X$, $Y$ de $\C$, ponemos $h_X(Y)=\Hom(Y,X)$; para cada morfismo $u:Y\to Y'$ de $\C$, denotamos por $h_X(u)$ la aplicación $v\mapsto vu$ de $\Hom(Y',X)$ en $\Hom(Y,X)$.
+Es inmediato que, con estas definiciones, $h_X:\C\to\Set$ es un \emph{funtor contravariante}, es decir, un objeto de la categoría $\CHom(\C\op,\Set)$ de funtores covariantes de la categoría $\C\op$ (la dual de la categoría $\C$) en la categoría $\Set$ (T, 1.7, (d) y \cite{III-29}).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2}
+Sea ahora $w:X\to X'$ un morfismo de $\C$; para cada $Y\in\C$ y cada $v\in\Hom(Y,X)=h_X(Y)$,
+tenemos $wv\in\Hom(Y,X')=h_{X'}(Y)$; denotamos por $h_w(Y)$ la aplicación $v\mapsto wv$ de
+$h_X(Y)$ en $h_{X'}(Y)$. Es inmediato que, para cada morfismo $u:Y\to Y'$ de $\C$, el
+diagrama
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+es conmutativo; en otros términos, $h_w$ es una \emph{transformación natural (o morfismo funtorial)
+$h_X\to h_{X'}$} (T, 1.2), y también un morfismo de la categoría $\CHom(\C\op,\Set)$ (T, 1.7, (d)). Las
+definiciones de $h_X$ y de $h_w$ constituyen, por tanto, la definición de un \emph{funtor covariante
+canónico}
+\[
+  h:\C\to\CHom(\C\op,\Set),\quad X\mapsto h_X.
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8.1.3}
+Sea $X$ un objeto de $\C$, y sea $F$ un funtor contravariante de $\C$ en $\Set$
+(un objeto de $\CHom(\C\op,\Set)$). Sea $g:h_X\to F$ una \emph{transformación natural}: para todo $Y\in\C$,
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 6 -----
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ es, pues, una aplicación $h_X(Y)\to F(Y)$ tal que, para cada morfismo $u:Y\to Y'$ de $\C$,
+el diagrama
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{g(Y')} &
+    h_X(Y)\ar[d]^{g(Y)}\\
+    F(Y')\ar[r]_{F(u)} &
+    F(Y)
+  }
+  \tag{8.1.3.1}\label{0.8.1.3.1}
+\]
+es conmutativo. En particular, tenemos una aplicación $g(X):h_X(X)=\Hom(X,X)\to F(X)$ y, por consiguiente, un elemento
+\[
+  \alpha(g)=(g(X))(1_X)\in F(X)
+  \tag{8.1.3.2}
+\]
+y, en consecuencia, una aplicación canónica
+\[
+  \alpha:\Hom(h_X,F)\to F(X).
+  \tag{8.1.3.3}
+\]
+
+Recíprocamente, consideremos un elemento $\xi\in F(X)$; para cada morfismo $v:Y\to X$ de $\C$, $F(v)$ es una
+aplicación $F(X)\to F(Y)$; consideremos la aplicación
+\[
+  v\mapsto(F(v))(\xi)
+  \tag{8.1.3.4}
+\]
+de $h_X(Y)$ en $F(Y)$; si denotamos esta aplicación por $(\beta(\xi))(Y)$,
+\[
+  \beta(\xi):h_X\to F
+  \tag{8.1.3.5}
+\]
+es una \emph{transformación natural}, pues para cada morfismo $u:Y\to Y'$ de $\C$ tenemos
+$(F(vu))(\xi)=(F(u)\circ F(v))(\xi)$, lo cual hace conmutativo (\hyperref[0.8.1.3.1]{8.1.3.1}) para $g=\beta(\xi)$.
+Hemos definido así una aplicación canónica
+\[
+  \beta:F(X)\to\Hom(h_X,F).
+  \tag{8.1.3.6}
+\]
+\end{env}
+
+\begin{proposition}[8.1.4]
+\label{0.8.1.4}
+Las aplicaciones $\alpha$ y $\beta$ son biyecciones inversas entre sí.
+\end{proposition}
+
+\begin{proof}
+Calculemos $\alpha(\beta(\xi))$ para $\xi\in F(X)$; para cada $Y\in\C$, $(\beta(\xi))(Y)$ es la aplicación
+$g_1(Y):v\mapsto(F(v))(\xi)$ de $h_X(Y)$ en $F(Y)$. Tenemos, pues,
+\[
+  \alpha(\beta(\xi))=(g_1(X))(1_X)=(F(1_X))(\xi)=1_{F(X)}(\xi)=\xi.
+\]
+Calculemos ahora $\beta(\alpha(g))$ para $g\in\Hom(h_X,F)$; para cada $Y\in\C$, $(\beta(\alpha(g)))(Y)$
+es la aplicación $v\mapsto(F(v))((g(X))(1_X))$; por la conmutatividad de (\hyperref[0.8.1.3.1]{8.1.3.1}), esta aplicación
+no es otra que $v\mapsto(g(Y))((h_X(v))(1_X))=(g(Y))(v)$, por definición de $h_X(v)$; en otros términos,
+es igual a $g(Y)$, lo que termina la demostración.
+\end{proof}
+
+\begin{env}[8.1.5]
+\label{0.8.1.5}
+Recordemos que una \emph{subcategoría} $\C'$ de una categoría $\C$ se define por la condición de que sus objetos
+sean objetos de $\C$, y de que, si $X'$, $Y'$ son dos objetos de $\C'$, el conjunto
+$\Hom_{\C'}(X',Y')$ de morfismos $X'\to Y'$ \emph{en $\C'$} sea un subconjunto del conjunto $\Hom_\C(X',Y')$ de
+morfismos $X'\to Y'$ \emph{en $\C$}, siendo la aplicación canónica de ``composición de morfismos''
+\[
+  \Hom_{\C'}(X',Y')\times\Hom_{\C'}(Y',Z')\to\Hom_{\C'}(X',Z')
+\]
+----- French corrections on page 0\textsubscript{III} 5 -----
+[id 4049]
+OLD: CHAPITRE 0 (suite)
+NEW: CHAPITRE 0 (\textit{suite})
+FRENCH CONTEXT (corrected): \clearpage
+\thispagestyle{plain}
+\markboth{PRÉLIMINAIRES}{PRÉLIMINAIRES}
+\oldpage[0\textsubscript{III}]{5}
+\phantomsection
+\label{chapter:0III-fr}
+
+\begin{center}
+{\large CHAPITRE 0 (\textit{suite})\footnotemark\par}
+\vspace{1.5em}
+{\Large\bfseries PRÉLIMINAIRES\par}
+\end{center}
+
+\footnotetext{Pour faciliter la recherche des références, on renverra
+désormais aux paragraphes du chapitre 0 publiés avec le chapitre I par le
+signe $\mathbf{0}_{\mathrm I}$.}
+
+[id 4050]
+OLD: signe $0_{\mathrm I}$
+NEW: signe $\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected): arge CHAPITRE 0 (\textit{suite})\footnotemark\par}
+\vspace{1.5em}
+{\Large\bfseries PRÉLIMINAIRES\par}
+\end{center}
+
+\footnotetext{Pour faciliter la recherche des références, on renverra
+désormais aux paragraphes du chapitre 0 publiés avec le chapitre I par le
+signe $\mathbf{0}_{\mathrm I}$.}
+
+\setcounter{section}{7}
+\section{Foncteurs représentables}
+\label{section:0.8-fr}
+
+\setcounter{subsection}{0}
+\subsection{Foncteurs représentables}
+\label{subsection:0.8.1-fr}
+
+\begin{env}[8.1.1]
+\label{0.8.1.1-fr}
+Nous désignerons par $\boldsymbol{\mathit
+
+[id 4051]
+OLD: par $\mathrm{Ens}$ la catégorie
+NEW: par $\boldsymbol{\mathit{Ens}}$ la catégorie
+FRENCH CONTEXT (corrected): $\mathbf{0}_{\mathrm I}$.}
+
+\setcounter{section}{7}
+\section{Foncteurs représentables}
+\label{section:0.8-fr}
+
+\setcounter{subsection}{0}
+\subsection{Foncteurs représentables}
+\label{subsection:0.8.1-fr}
+
+\begin{env}[8.1.1]
+\label{0.8.1.1-fr}
+Nous désignerons par $\boldsymbol{\mathit{Ens}}$ la catégorie des ensembles. Soit $\boldsymbol{C}$ une
+catégorie~; pour deux objets $X$, $Y$ de $\boldsymbol{C}$, nous poserons
+$h_X(Y)=\operatorname{Hom}(Y,X)$~; pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$,
+nous désignerons par $h_X(u)$ l'application $v\mapsto v
+
+[id 4052]
+OLD: Soit $C$ une
+NEW: Soit $\boldsymbol{C}$ une
+FRENCH CONTEXT (corrected): {Foncteurs représentables}
+\label{section:0.8-fr}
+
+\setcounter{subsection}{0}
+\subsection{Foncteurs représentables}
+\label{subsection:0.8.1-fr}
+
+\begin{env}[8.1.1]
+\label{0.8.1.1-fr}
+Nous désignerons par $\boldsymbol{\mathit{Ens}}$ la catégorie des ensembles. Soit $\boldsymbol{C}$ une
+catégorie~; pour deux objets $X$, $Y$ de $\boldsymbol{C}$, nous poserons
+$h_X(Y)=\operatorname{Hom}(Y,X)$~; pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$,
+nous désignerons par $h_X(u)$ l'application $v\mapsto vu$ de
+$\operatorname{Hom}(Y',X)$ dans $\o
+
+[id 4053]
+OLD: de $C$, nous poserons
+NEW: de $\boldsymbol{C}$, nous poserons
+FRENCH CONTEXT (corrected): ubsection}{0}
+\subsection{Foncteurs représentables}
+\label{subsection:0.8.1-fr}
+
+\begin{env}[8.1.1]
+\label{0.8.1.1-fr}
+Nous désignerons par $\boldsymbol{\mathit{Ens}}$ la catégorie des ensembles. Soit $\boldsymbol{C}$ une
+catégorie~; pour deux objets $X$, $Y$ de $\boldsymbol{C}$, nous poserons
+$h_X(Y)=\operatorname{Hom}(Y,X)$~; pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$,
+nous désignerons par $h_X(u)$ l'application $v\mapsto vu$ de
+$\operatorname{Hom}(Y',X)$ dans $\operatorname{Hom}(Y,X)$. Il est immédiat
+qu'avec ces définitions, $h_X:\bo
+
+[id 4054]
+OLD: dans $C$,
+nous désignerons
+NEW: dans $\boldsymbol{C}$,
+nous désignerons
+FRENCH CONTEXT (corrected): abel{0.8.1.1-fr}
+Nous désignerons par $\boldsymbol{\mathit{Ens}}$ la catégorie des ensembles. Soit $\boldsymbol{C}$ une
+catégorie~; pour deux objets $X$, $Y$ de $\boldsymbol{C}$, nous poserons
+$h_X(Y)=\operatorname{Hom}(Y,X)$~; pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$,
+nous désignerons par $h_X(u)$ l'application $v\mapsto vu$ de
+$\operatorname{Hom}(Y',X)$ dans $\operatorname{Hom}(Y,X)$. Il est immédiat
+qu'avec ces définitions, $h_X:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est un \emph{foncteur
+contravariant}, c'est-à-dire un objet de la 
+
+[id 4055]
+OLD: $h_X:C\to\mathrm{Ens}$
+NEW: $h_X:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$
+FRENCH CONTEXT (corrected): poserons
+$h_X(Y)=\operatorname{Hom}(Y,X)$~; pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$,
+nous désignerons par $h_X(u)$ l'application $v\mapsto vu$ de
+$\operatorname{Hom}(Y',X)$ dans $\operatorname{Hom}(Y,X)$. Il est immédiat
+qu'avec ces définitions, $h_X:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est un \emph{foncteur
+contravariant}, c'est-à-dire un objet de la catégorie, notée
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$, des foncteurs covariants de la
+catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, da
+
+[id 4056]
+OLD: notée
+$\operatorname{Hom}(C^0,\mathrm{Ens})$
+NEW: notée
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$
+FRENCH CONTEXT (corrected): )$ l'application $v\mapsto vu$ de
+$\operatorname{Hom}(Y',X)$ dans $\operatorname{Hom}(Y,X)$. Il est immédiat
+qu'avec ces définitions, $h_X:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est un \emph{foncteur
+contravariant}, c'est-à-dire un objet de la catégorie, notée
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$, des foncteurs covariants de la
+catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, dans la catégorie
+$\boldsymbol{\mathit{Ens}}$ (T, 1.7, \textit{d}) et [29]).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2-fr}
+Soit maintenant $w:X\to X'$ un 
+
+[id 4057]
+OLD: catégorie $C^0$, duale de la catégorie $C$, dans la catégorie
+$\mathrm{Ens}$
+NEW: catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, dans la catégorie
+$\boldsymbol{\mathit{Ens}}$
+FRENCH CONTEXT (corrected): u'avec ces définitions, $h_X:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est un \emph{foncteur
+contravariant}, c'est-à-dire un objet de la catégorie, notée
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$, des foncteurs covariants de la
+catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, dans la catégorie
+$\boldsymbol{\mathit{Ens}}$ (T, 1.7, \textit{d}) et [29]).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2-fr}
+Soit maintenant $w:X\to X'$ un morphisme dans $\boldsymbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h
+
+[id 4058]
+OLD: (T, 1.7, d) et [29])
+NEW: (T, 1.7, \textit{d}) et [29])
+FRENCH CONTEXT (corrected): -à-dire un objet de la catégorie, notée
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$, des foncteurs covariants de la
+catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, dans la catégorie
+$\boldsymbol{\mathit{Ens}}$ (T, 1.7, \textit{d}) et [29]).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2-fr}
+Soit maintenant $w:X\to X'$ un morphisme dans $\boldsymbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h_{X'}(Y)$~; désignons par $h_w
+
+[id 4059]
+OLD: morphisme dans $C$~; pour tout $Y\in C$ et
+NEW: morphisme dans $\boldsymbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+FRENCH CONTEXT (corrected): , des foncteurs covariants de la
+catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, dans la catégorie
+$\boldsymbol{\mathit{Ens}}$ (T, 1.7, \textit{d}) et [29]).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2-fr}
+Soit maintenant $w:X\to X'$ un morphisme dans $\boldsymbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h_{X'}(Y)$~; désignons par $h_w(Y)$
+l'application $v\mapsto wv$ de $h_X(Y)$ dans $h_{X'}(Y)$. Il est immédiat
+que pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramm
+
+[id 4060]
+OLD: $u:Y\to Y'$ dans $C$, le diagramme
+NEW: $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+FRENCH CONTEXT (corrected): symbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h_{X'}(Y)$~; désignons par $h_w(Y)$
+l'application $v\mapsto wv$ de $h_X(Y)$ dans $h_{X'}(Y)$. Il est immédiat
+que pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+est commutatif~; autrement dit, $h_w$ est un \emph{morphisme fonctoriel}
+$h_X\to h_{X'}$ (T, 1.2), ou encore un mo
+
+[id 4061]
+OLD: catégorie
+$\operatorname{Hom}(C^0,\mathrm{Ens})$
+NEW: catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$
+FRENCH CONTEXT (corrected): 
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+est commutatif~; autrement dit, $h_w$ est un \emph{morphisme fonctoriel}
+$h_X\to h_{X'}$ (T, 1.2), ou encore un morphisme dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ (T, 1.7, \textit{d})). Les définitions de
+$h_X$ et de $h_w$ constituent donc la définition d'un \emph{foncteur
+covariant canonique}
+\[
+  h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}}).
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\b
+
+[id 4062]
+OLD: (T, 1.7, d)). Les
+NEW: (T, 1.7, \textit{d})). Les
+FRENCH CONTEXT (corrected): '}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+est commutatif~; autrement dit, $h_w$ est un \emph{morphisme fonctoriel}
+$h_X\to h_{X'}$ (T, 1.2), ou encore un morphisme dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ (T, 1.7, \textit{d})). Les définitions de
+$h_X$ et de $h_w$ constituent donc la définition d'un \emph{foncteur
+covariant canonique}
+\[
+  h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}}).
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8
+
+[id 4063]
+OLD: h:C\to\operatorname{Hom}(C^0,\mathrm{Ens})
+NEW: h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})
+FRENCH CONTEXT (corrected): (T, 1.2), ou encore un morphisme dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ (T, 1.7, \textit{d})). Les définitions de
+$h_X$ et de $h_w$ constituent donc la définition d'un \emph{foncteur
+covariant canonique}
+\[
+  h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}}).
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8.1.3-fr}
+Soient $X$ un objet de $\boldsymbol{C}$, $F$ un foncteur contravariant de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$ (objet de $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{
+
+[id 4064]
+OLD: ,\qquad X\mapsto h_X.
+NEW: .
+FRENCH CONTEXT (corrected): \oldpage[I]{214}
+\begin{thebibliography}{22}
+
+\bibitem{I-1}
+H.~\textsc{Cartan} et C.~\textsc{Chevalley},
+Séminaire de l'École Normale Supérieure,
+8\textsuperscript{e} année (1955-56), \emph{Géométrie algébrique}.
+
+\bibitem{I-2}
+H.~\textsc{Cartan} and S.~\textsc{Eilenberg},
+\emph{Homological Algebra}, Princeton Math. Seri
+
+[id 4065]
+OLD: un objet de $C$, $F$ un foncteur contravariant de $C$ dans
+$\mathrm{Ens}$
+NEW: un objet de $\boldsymbol{C}$, $F$ un foncteur contravariant de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$
+FRENCH CONTEXT (corrected): $ et de $h_w$ constituent donc la définition d'un \emph{foncteur
+covariant canonique}
+\[
+  h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}}).
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8.1.3-fr}
+Soient $X$ un objet de $\boldsymbol{C}$, $F$ un foncteur contravariant de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$ (objet de $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Soit
+$g:h_X\to F$ un \emph{morphisme fonctoriel}~: pour tout $Y\in\boldsymbol{C}$,
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ est donc une application $h_X(Y)\to F(Y)$ telle que
+
+[id 4066]
+OLD: (objet de $\operatorname{Hom}(C^0,\mathrm{Ens})$)
+NEW: (objet de $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$)
+FRENCH CONTEXT (corrected): ldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}}).
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8.1.3-fr}
+Soient $X$ un objet de $\boldsymbol{C}$, $F$ un foncteur contravariant de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$ (objet de $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Soit
+$g:h_X\to F$ un \emph{morphisme fonctoriel}~: pour tout $Y\in\boldsymbol{C}$,
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ est donc une application $h_X(Y)\to F(Y)$ telle que pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix
+
+[id 4067]
+OLD: fonctoriel}~: pour tout $Y\in C$,
+NEW: fonctoriel}~: pour tout $Y\in\boldsymbol{C}$,
+FRENCH CONTEXT (corrected): el{0.8.1.3-fr}
+Soient $X$ un objet de $\boldsymbol{C}$, $F$ un foncteur contravariant de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$ (objet de $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Soit
+$g:h_X\to F$ un \emph{morphisme fonctoriel}~: pour tout $Y\in\boldsymbol{C}$,
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ est donc une application $h_X(Y)\to F(Y)$ telle que pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{g(Y')} &
+    h_X(Y)\ar[d]^{g(Y)}\\
+    F(Y')\ar[
+
+=================== PAGE 0\textsubscript{III} 6 ===================
+----- (Spanish page 0\textsubscript{III} 5: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 6: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 7 -----
+\oldpage[0\textsubscript{III}]{7}
+la restricción de la aplicación canónica
+\[
+  \Hom_\C(X',Y')\times\Hom_\C(Y',Z')\to\Hom_\C(X',Z').
+\]
+
+Decimos que $\C'$ es una subcategoría \emph{plena} de $\C$ si $\Hom_{\C'}(X',Y')=\Hom_\C(X',Y')$ para todo
+par de objetos de $\C'$. La subcategoría $\C''$ de $\C$ formada por los objetos de $\C$ isomorfos a
+objetos de $\C'$ es entonces también una subcategoría plena de $\C$, \emph{equivalente} (T, 1.2) a $\C'$, como se
+comprueba fácilmente.
+
+Un funtor covariante $F:\C_1\to\C_2$ se llama \emph{plenamente fiel} si, para todo par de objetos
+$X_1$, $Y_1$ de $\C_1$, la aplicación $u\mapsto F(u)$ de $\Hom(X_1,Y_1)$ en $\Hom(F(X_1),F(Y_1))$ es
+\emph{biyectiva}; esto implica que la subcategoría $F(\C_1)$ de $\C_2$ es \emph{plena}. Además,
+si dos objetos $X_1$, $X_1'$ tienen la misma imagen $X_2$, existe un único isomorfismo
+$u:X_1\to X_1'$ tal que $F(u)=1_{X_2}$. Para cada objeto $X_2$ de $F(\C_1)$, sea $G(X_2)$ uno de
+los objetos $X_1$ de $\C_1$ tales que $F(X_1)=X_2$ ($G$ se define mediante el axioma de elección); para
+cada morfismo $v:X_2\to Y_2$ de $F(\C_1)$, $G(v)$ será el único morfismo $u:G(X_2)\to G(Y_2)$ tal
+que $F(u)=v$; $G$ es entonces un \emph{funtor} de $F(\C_1)$ en $\C_1$; $FG$ es el funtor identidad de
+$F(\C_1)$, y lo anterior muestra que existe un isomorfismo de funtores $\vphi:1_{\C_1}\to GF$
+tal que $F$, $G$, $\vphi$ y la identidad $1_{F(\C_1)}\to FG$ definen una \emph{equivalencia} entre
+la categoría $\C_1$ y la subcategoría plena $F(\C_1)$ de $\C_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6}
+Aplicamos la Proposición \sref{0.8.1.4} al caso en que $F$ es $h_{X'}$, siendo $X'$ un
+objeto cualquiera de $\C$; la aplicación $\beta:\Hom(X,X')\to\Hom(h_X,h_{X'})$ no es otra que la aplicación
+$w\mapsto h_w$ definida en \sref{0.8.1.2}; puesto que esta aplicación es \emph{biyectiva}, vemos,
+con la terminología de \sref{0.8.1.5}, que:
+\end{env}
+
+\begin{proposition}[8.1.7]
+\label{0.8.1.7}
+El funtor canónico $h:\C\to\CHom(\C\op,\Set)$ es plenamente fiel.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8}
+Sea $F$ un funtor contravariante de $\C$ en $\Set$; decimos que $F$ es \emph{representable} si
+existe un objeto $X\in\C$ tal que $F$ es \emph{isomorfo} a $h_X$; de la
+Proposición \sref{0.8.1.7} se sigue que los datos de un $X\in\C$ y de un isomorfismo de funtores
+$g:h_X\to F$ determinan $X$ salvo isomorfismo único. La Proposición \sref{0.8.1.7} implica entonces
+que $h$ define una \emph{equivalencia} entre $\C$ y la subcategoría plena de
+$\CHom(\C\op,\Set)$ formada por los \emph{funtores contravariantes representables}. De la
+Proposición \sref{0.8.1.4} se sigue que el dato de una transformación natural $g:h_X\to F$ es
+equivalente al de un elemento $\xi\in F(X)$; decir que $g$ es un \emph{isomorfismo} equivale
+a la siguiente condición sobre $\xi$: \emph{para todo objeto $Y$ de $\C$, la aplicación
+$v\mapsto(F(v))(\xi)$ de $\Hom(Y,X)$ en $F(Y)$ es biyectiva}. Cuando $\xi$ satisface esta condición,
+decimos que el par $(X,\xi)$ \emph{representa} al funtor representable $F$. Por abuso de lenguaje,
+decimos también que el objeto $X\in\C$ representa a $F$ si existe un $\xi\in F(X)$ tal que
+$(X,\xi)$ representa a $F$, es decir, si $h_X$ es isomorfo a $F$.
+
+Sean $F$, $F'$ dos funtores contravariantes representables de $\C$ en $\Set$, y sean $h_X\to F$ y
+$h_{X'}\to F'$ dos isomorfismos de funtores. Se sigue entonces de \sref{0.8.1.6} que
+existe una correspondencia biyectiva canónica entre $\Hom(X,X')$ y el conjunto $\Hom(F,F')$ de
+transformaciones naturales $F\to F'$.
+\end{env}
+
+\begin{env}[8.1.9]
+\label{0.8.1.9}
+\textit{Ejemplo I. Límites proyectivos}.
+La noción de funtor contravariante representable comprende, en particular, la noción ``dual'' de la noción usual de ``solución de un problema universal''.
+----- French corrections on page 0\textsubscript{III} 6 -----
+[id 4068]
+OLD: $u:Y\to Y'$ dans $C$, le diagramme
+NEW: $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+FRENCH CONTEXT (corrected): symbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h_{X'}(Y)$~; désignons par $h_w(Y)$
+l'application $v\mapsto wv$ de $h_X(Y)$ dans $h_{X'}(Y)$. Il est immédiat
+que pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+est commutatif~; autrement dit, $h_w$ est un \emph{morphisme fonctoriel}
+$h_X\to h_{X'}$ (T, 1.2), ou encore un mo
+
+[id 4069]
+OLD: $v:Y\to X$ dans $C$, $F(v)$
+NEW: $v:Y\to X$ dans $\boldsymbol{C}$, $F(v)$
+FRENCH CONTEXT (corrected): )\to F(X)$, d'où un élément
+\[
+  \alpha(g)=(g(X))(1_X)\in F(X)
+  \tag{8.1.3.2}
+\]
+et par suite une application canonique
+\[
+  \alpha:\operatorname{Hom}(h_X,F)\to F(X).
+  \tag{8.1.3.3}
+\]
+
+Inversement, considérons un élément $\xi\in F(X)$~; pour tout morphisme
+$v:Y\to X$ dans $\boldsymbol{C}$, $F(v)$ est une application $F(X)\to F(Y)$~;
+considérons l'application
+\[
+  v\mapsto(F(v))(\xi)
+  \tag{8.1.3.4}
+\]
+de $h_X(Y)$ dans $F(Y)$~; si on désigne par $(\beta(\xi))(Y)$ cette
+application,
+\[
+  \beta(\xi):h_X\to F
+  \tag{8.1.3.5}
+\]
+est un \emph{morphisme fonc
+
+[id 4070]
+OLD: dans $C$,
+$(F(vu))
+NEW: dans $\boldsymbol{C}$,
+$(F(vu))
+FRENCH CONTEXT (corrected): l'application
+\[
+  v\mapsto(F(v))(\xi)
+  \tag{8.1.3.4}
+\]
+de $h_X(Y)$ dans $F(Y)$~; si on désigne par $(\beta(\xi))(Y)$ cette
+application,
+\[
+  \beta(\xi):h_X\to F
+  \tag{8.1.3.5}
+\]
+est un \emph{morphisme fonctoriel}, car on a pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$,
+$(F(vu))(\xi)=(F(u)\circ F(v))(\xi)$, ce qui vérifie la commutativité de
+(\hyperref[0.8.1.3.1-fr]{8.1.3.1}) pour $g=\beta(\xi)$. On a ainsi défini
+une application canonique
+\[
+  \beta:F(X)\to\operatorname{Hom}(h_X,F).
+  \tag{8.1.3.6}
+\]
+\end{env}
+
+\begin{proposition}[
+
+[id 4071]
+OLD: $\xi\in F(X)$~; pour tout $Y\in C$,
+NEW: $\xi\in F(X)$~; pour tout $Y\in\boldsymbol{C}$,
+FRENCH CONTEXT (corrected):   \beta:F(X)\to\operatorname{Hom}(h_X,F).
+  \tag{8.1.3.6}
+\]
+\end{env}
+
+\begin{proposition}[8.1.4]
+\label{0.8.1.4-fr}
+Les applications $\alpha$ et $\beta$ sont des bijections réciproques l'une de
+l'autre.
+\end{proposition}
+
+Calculons $\alpha(\beta(\xi))$ pour $\xi\in F(X)$~; pour tout $Y\in\boldsymbol{C}$,
+$(\beta(\xi))(Y)$ est l'application
+$g_1(Y):v\mapsto(F(v))(\xi)$ de $h_X(Y)$ dans $F(Y)$. On a donc
+\[
+  \alpha(\beta(\xi))=(g_1(X))(1_X)=(F(1_X))(\xi)
+  =1_{F(X)}(\xi)=\xi.
+\]
+Calculons maintenant $\beta(\alpha(g))$ pour
+$g\in\operatorname{Hom}(h_X,F)$~; pou
+
+[id 4072]
+OLD: $g\in\operatorname{Hom}(h_X,F)$~; pour tout $Y\in C$,
+NEW: $g\in\operatorname{Hom}(h_X,F)$~; pour tout $Y\in\boldsymbol{C}$,
+FRENCH CONTEXT (corrected): X)$~; pour tout $Y\in\boldsymbol{C}$,
+$(\beta(\xi))(Y)$ est l'application
+$g_1(Y):v\mapsto(F(v))(\xi)$ de $h_X(Y)$ dans $F(Y)$. On a donc
+\[
+  \alpha(\beta(\xi))=(g_1(X))(1_X)=(F(1_X))(\xi)
+  =1_{F(X)}(\xi)=\xi.
+\]
+Calculons maintenant $\beta(\alpha(g))$ pour
+$g\in\operatorname{Hom}(h_X,F)$~; pour tout $Y\in\boldsymbol{C}$,
+$(\beta(\alpha(g)))(Y)$ est l'application
+$v\mapsto(F(v))((g(X))(1_X))$~; en vertu de la commutativité de
+(\hyperref[0.8.1.3.1-fr]{8.1.3.1}), cette application n'est autre que
+$v\mapsto(g(Y))((h_X(v))(1_X))=(g(Y))(v)$ par définition de $h_X(v)$,
+autrement dit
+
+[id 4073]
+OLD: \emph{sous-catégorie} $C'$ d'une catégorie $C$ est
+NEW: \emph{sous-catégorie} $\boldsymbol{C}'$ d'une catégorie $\boldsymbol{C}$ est
+FRENCH CONTEXT (corrected): ef[0.8.1.3.1-fr]{8.1.3.1}), cette application n'est autre que
+$v\mapsto(g(Y))((h_X(v))(1_X))=(g(Y))(v)$ par définition de $h_X(v)$,
+autrement dit, elle est égale à $g(Y)$, ce qui démontre la proposition.
+
+\begin{env}[8.1.5]
+\label{0.8.1.5-fr}
+Rappelons qu'une \emph{sous-catégorie} $\boldsymbol{C}'$ d'une catégorie $\boldsymbol{C}$ est définie
+par la condition que ses objets soient des objets de $\boldsymbol{C}$, et que si $X'$,
+$Y'$ sont deux objets de $\boldsymbol{C}'$, l'ensemble
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une par
+
+[id 4074]
+OLD: des objets de $C$, et que si
+NEW: des objets de $\boldsymbol{C}$, et que si
+FRENCH CONTEXT (corrected): _X(v)$,
+autrement dit, elle est égale à $g(Y)$, ce qui démontre la proposition.
+
+\begin{env}[8.1.5]
+\label{0.8.1.5-fr}
+Rappelons qu'une \emph{sous-catégorie} $\boldsymbol{C}'$ d'une catégorie $\boldsymbol{C}$ est définie
+par la condition que ses objets soient des objets de $\boldsymbol{C}$, et que si $X'$,
+$Y'$ sont deux objets de $\boldsymbol{C}'$, l'ensemble
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une partie de l'ensemble $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emp
+
+[id 4075]
+OLD: deux objets de $C'$, l'ensemble
+NEW: deux objets de $\boldsymbol{C}'$, l'ensemble
+FRENCH CONTEXT (corrected): ontre la proposition.
+
+\begin{env}[8.1.5]
+\label{0.8.1.5-fr}
+Rappelons qu'une \emph{sous-catégorie} $\boldsymbol{C}'$ d'une catégorie $\boldsymbol{C}$ est définie
+par la condition que ses objets soient des objets de $\boldsymbol{C}$, et que si $X'$,
+$Y'$ sont deux objets de $\boldsymbol{C}'$, l'ensemble
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une partie de l'ensemble $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $\boldsymbol{C}$}, l'application canonique de
+<<~compo
+
+[id 4076]
+OLD: $\operatorname{Hom}_{C'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$C'$}
+NEW: $\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$}
+FRENCH CONTEXT (corrected): bel{0.8.1.5-fr}
+Rappelons qu'une \emph{sous-catégorie} $\boldsymbol{C}'$ d'une catégorie $\boldsymbol{C}$ est définie
+par la condition que ses objets soient des objets de $\boldsymbol{C}$, et que si $X'$,
+$Y'$ sont deux objets de $\boldsymbol{C}'$, l'ensemble
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une partie de l'ensemble $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $\boldsymbol{C}$}, l'application canonique de
+<<~composition des morphismes~>>
+\[
+  \operatorname{Hom}_{\mathbf{C}'}(X',Y')\times\operatorname{Hom}_{\ma
+
+[id 4077]
+OLD: $\operatorname{Hom}_C(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $C$}
+NEW: $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $\boldsymbol{C}$}
+FRENCH CONTEXT (corrected): ndition que ses objets soient des objets de $\boldsymbol{C}$, et que si $X'$,
+$Y'$ sont deux objets de $\boldsymbol{C}'$, l'ensemble
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une partie de l'ensemble $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $\boldsymbol{C}$}, l'application canonique de
+<<~composition des morphismes~>>
+\[
+  \operatorname{Hom}_{\mathbf{C}'}(X',Y')\times\operatorname{Hom}_{\mathbf{C}'}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}'}(X',Z')
+\]
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'
+
+[id 4078]
+OLD: \operatorname{Hom}_{C'}(X',Y')\times\operatorname{Hom}_{C'}(Y',Z')
+  \to\operatorname{Hom}_{C'}(X',Z')
+NEW: \operatorname{Hom}_{\mathbf{C}'}(X',Y')\times\operatorname{Hom}_{\mathbf{C}'}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}'}(X',Z')
+FRENCH CONTEXT (corrected): C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une partie de l'ensemble $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $\boldsymbol{C}$}, l'application canonique de
+<<~composition des morphismes~>>
+\[
+  \operatorname{Hom}_{\mathbf{C}'}(X',Y')\times\operatorname{Hom}_{\mathbf{C}'}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}'}(X',Z')
+\]
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une 
+
+=================== PAGE 0\textsubscript{III} 7 ===================
+----- (Spanish page 0\textsubscript{III} 6: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 7: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 8 -----
+\oldpage[0\textsubscript{III}]{8}
+Más generalmente, veremos que la noción de \emph{límite proyectivo} es un caso particular de la noción de funtor representable.
+Recordemos que, en una categoría $\C$, se define un \emph{sistema proyectivo} mediante el dato de un conjunto preordenado $I$, de una familia $(A_\alpha)_{\alpha\in I}$ de objetos de $\C$ y, para cada par de índices $(\alpha,\beta)$ tal que $\alpha\leq\beta$, de un morfismo $u_{\alpha\beta}:A_\beta\to A_\alpha$.
+Un \emph{límite proyectivo} de este sistema en $\C$ consiste en un objeto $B$ de $\C$ (denotado $\varprojlim A_\alpha$) y, para cada $\alpha\in I$, un morfismo $u_\alpha:B\to A_\alpha$ tales que: 1\textsuperscript{o}. $u_\alpha=u_{\alpha\beta}u_\beta$ para $\alpha\leq\beta$; 2\textsuperscript{o}. para todo objeto $X$ de $\C$ y toda familia $(v_\alpha)_{\alpha\in I}$ de morfismos $v_\alpha:X\to A_\alpha$ tal que $v_\alpha=u_{\alpha\beta}v_\beta$ para $\alpha\leq\beta$, existe un único morfismo $v:X\to B$ (denotado $\varprojlim v_\alpha$) tal que $v_\alpha=u_\alpha v$ para todo $\alpha\in I$ (T, 1.8).
+Esto puede interpretarse de la manera siguiente: los $u_{\alpha\beta}$ definen canónicamente aplicaciones
+\[
+  \overline{u}_{\alpha\beta}:\Hom(X,A_\beta)\to\Hom(X,A_\alpha)
+\]
+que definen un \emph{sistema proyectivo} de conjuntos $(\Hom(X,A_\alpha),\overline{u}_{\alpha\beta})$, y $(v_\alpha)$ es, por definición, un elemento del conjunto $\varprojlim\Hom(X,A_\alpha)$; está claro que $X\mapsto\varprojlim\Hom(X,A_\alpha)$ es un \emph{funtor contravariante} de $\C$ en $\Set$, y la existencia del límite proyectivo $B$ equivale a decir que $(v_\alpha)\mapsto\varprojlim v_\alpha$ es un \emph{isomorfismo} de funtores en $X$
+\[
+  \varprojlim\Hom(X,A_\alpha)\isoto\Hom(X,B),
+  \tag{8.1.9.1}
+\]
+es decir, que el funtor $X\mapsto\varprojlim\Hom(X,A_\alpha)$ es \emph{representable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10}
+\textit{Ejemplo II. Objetos finales}.
+Sea $\C$ una categoría, y sea $\{a\}$ un conjunto unitario.
+Consideremos el funtor contravariante $F:\C\to\Set$ que envía cada objeto $X$ de $\C$ al conjunto $\{a\}$, y cada morfismo $X\to X'$ de $\C$ a la única aplicación $\{a\}\to\{a\}$.
+Decir que este funtor es \emph{representable} significa que existe un objeto $e\in\C$ tal que, para todo $Y\in\C$, $\Hom(Y,e)=h_e(Y)$ es un \emph{conjunto unitario}; decimos que $e$ es un \emph{objeto final} de $\C$, y está claro que dos objetos finales de $\C$ son isomorfos (lo cual permite definir, en general mediante el axioma de elección, \emph{un} objeto final de $\C$, que denotamos entonces por $e_\C$).
+Por ejemplo, en la categoría $\Set$, los objetos finales son los conjuntos unitarios; en la categoría de \emph{álgebras aumentadas} sobre un cuerpo $K$ (donde los morfismos son los homomorfismos de álgebras compatibles con el aumento), $K$ es un objeto final; en la categoría de \emph{$S$-esquemas} \sref[I]{I.2.5.1}, $S$ es un objeto final.
+\end{env}
+
+\begin{env}[8.1.11]
+\label{0.8.1.11}
+Para dos objetos $X$ e $Y$ de una categoría $\C$, pongamos $h_X'(Y)=\Hom(X,Y)$ y, para todo morfismo $u:Y\to Y'$, sea $h_X'(u)$ la aplicación $v\mapsto uv$ de $\Hom(X,Y)$ en $\Hom(X,Y')$; $h_X'$ es entonces un \emph{funtor covariante $\C\to\Set$}, de modo que deducimos, como en \sref{0.8.1.2}, la definición de un funtor covariante canónico $h':\C\op\to\CHom(\C,\Set)$; un funtor \emph{covariante} $F$ de $\C$ en $\Set$, es decir, \emph{un} objeto de $\CHom(\C,\Set)$, es entonces \emph{representable} si existe un objeto $X\in\C$ (necesariamente único salvo isomorfismo único) tal que $F$ es \emph{isomorfo a $h_X'$}; dejamos al lector el desarrollo de las nociones ``duales'' de las anteriores, que esta vez comprenden la noción de \emph{límite inductivo}, y en particular la noción usual de ``solución de un problema universal''.
+\end{env}
+
+\subsection{Estructuras algebraicas en categorías}
+\label{subsection:0.8.2}
+
+\begin{env}[8.2.1]
+\label{0.8.2.1}
+----- French corrections on page 0\textsubscript{III} 7 -----
+[id 4079]
+OLD: \operatorname{Hom}_C(X',Y')\times\operatorname{Hom}_C(Y',Z')
+  \to\operatorname{Hom}_C(X',Z').
+NEW: \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+FRENCH CONTEXT (corrected): e
+<<~composition des morphismes~>>
+\[
+  \operatorname{Hom}_{\mathbf{C}'}(X',Y')\times\operatorname{Hom}_{\mathbf{C}'}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}'}(X',Z')
+\]
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une sous-catégorie \emph{pleine} de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ 
+
+[id 4080]
+OLD: On dit que $C'$ est une
+NEW: On dit que $\boldsymbol{C}'$ est une
+FRENCH CONTEXT (corrected): peratorname{Hom}_{\mathbf{C}'}(X',Z')
+\]
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une sous-catégorie \emph{pleine} de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+
+
+[id 4081]
+OLD: \emph{sous-catégorie pleine}
+NEW: sous-catégorie \emph{pleine}
+FRENCH CONTEXT (corrected): 
+\]
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une sous-catégorie \emph{pleine} de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes a
+
+[id 4082]
+OLD: de $C$ si
+$\operatorname{Hom}_{C'}(X',Y')=\operatorname{Hom}_C(X',Y')$ pour tout
+couple d'objets de $C'$.
+NEW: de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$.
+FRENCH CONTEXT (corrected): III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une sous-catégorie \emph{pleine} de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes aux objets de $\boldsymbol{C}'$ est encore alors une sous-catégorie pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme on 
+
+[id 4083]
+OLD: La sous-catégorie $C''$ de $C$ formée des objets de
+$C$ isomorphes aux objets de $C'$ est
+NEW: La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes aux objets de $\boldsymbol{C}'$ est
+FRENCH CONTEXT (corrected): peratorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une sous-catégorie \emph{pleine} de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes aux objets de $\boldsymbol{C}'$ est encore alors une sous-catégorie pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme on le vérifie sans peine.
+
+Un foncteur covariant $F:\boldsymbol{C}_1\to\boldsymbol{C}_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'
+
+[id 4084]
+OLD: pleine
+de $C$, \emph{équivalente} (T, 1.2) à $C'$ comme
+NEW: pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme
+FRENCH CONTEXT (corrected): peratorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes aux objets de $\boldsymbol{C}'$ est encore alors une sous-catégorie pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme on le vérifie sans peine.
+
+Un foncteur covariant $F:\boldsymbol{C}_1\to\boldsymbol{C}_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'objets $X_1$, $Y_1$ de $\boldsymbol{C}_1$, l'application
+$u\mapsto F(u)$ de $\operatorname{Hom}(X_1,Y_1)$ dans
+$\o
+
+[id 4085]
+OLD: $F:C_1\to C_2$
+NEW: $F:\boldsymbol{C}_1\to\boldsymbol{C}_2$
+FRENCH CONTEXT (corrected): dsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes aux objets de $\boldsymbol{C}'$ est encore alors une sous-catégorie pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme on le vérifie sans peine.
+
+Un foncteur covariant $F:\boldsymbol{C}_1\to\boldsymbol{C}_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'objets $X_1$, $Y_1$ de $\boldsymbol{C}_1$, l'application
+$u\mapsto F(u)$ de $\operatorname{Hom}(X_1,Y_1)$ dans
+$\operatorname{Hom}(F(X_1),F(Y_1))$ est \emph{bijective}~; cela entraîne que
+la sous-catégor
+
+[id 4086]
+OLD: $Y_1$ de $C_1$, l'application
+NEW: $Y_1$ de $\boldsymbol{C}_1$, l'application
+FRENCH CONTEXT (corrected): une sous-catégorie pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme on le vérifie sans peine.
+
+Un foncteur covariant $F:\boldsymbol{C}_1\to\boldsymbol{C}_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'objets $X_1$, $Y_1$ de $\boldsymbol{C}_1$, l'application
+$u\mapsto F(u)$ de $\operatorname{Hom}(X_1,Y_1)$ dans
+$\operatorname{Hom}(F(X_1),F(Y_1))$ est \emph{bijective}~; cela entraîne que
+la sous-catégorie $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ est \emph{pleine}. En outre, si deux
+objets $X_1$, $X'_1$ ont même
+
+[id 4087]
+OLD: la sous-catégorie $F(C_1)$ de $C_2$ est
+NEW: la sous-catégorie $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ est
+FRENCH CONTEXT (corrected): oldsymbol{C}_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'objets $X_1$, $Y_1$ de $\boldsymbol{C}_1$, l'application
+$u\mapsto F(u)$ de $\operatorname{Hom}(X_1,Y_1)$ dans
+$\operatorname{Hom}(F(X_1),F(Y_1))$ est \emph{bijective}~; cela entraîne que
+la sous-catégorie $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ est \emph{pleine}. En outre, si deux
+objets $X_1$, $X'_1$ ont même image $X_2$, il existe un isomorphisme unique
+$u:X_1\to X'_1$ tel que $F(u)=1_{X_2}$. Pour tout objet $X_2$ de $F(\boldsymbol{C}_1)$,
+soit alors $G(X_2)$ un des objets $X_1$ de $\boldsymbol{C}_1$ 
+
+[id 4088]
+OLD: objet $X_2$ de $F(C_1)$,
+NEW: objet $X_2$ de $F(\boldsymbol{C}_1)$,
+FRENCH CONTEXT (corrected): mph{bijective}~; cela entraîne que
+la sous-catégorie $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ est \emph{pleine}. En outre, si deux
+objets $X_1$, $X'_1$ ont même image $X_2$, il existe un isomorphisme unique
+$u:X_1\to X'_1$ tel que $F(u)=1_{X_2}$. Pour tout objet $X_2$ de $F(\boldsymbol{C}_1)$,
+soit alors $G(X_2)$ un des objets $X_1$ de $\boldsymbol{C}_1$ tel que $F(X_1)=X_2$
+($G$ étant défini au moyen de l'axiome de choix)~; pour tout morphisme
+$v:X_2\to Y_2$ dans $F(\boldsymbol{C}_1)$, $G(v)$ sera l'unique morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F
+
+[id 4089]
+OLD: des objets $X_1$ de $C_1$ tel que
+NEW: des objets $X_1$ de $\boldsymbol{C}_1$ tel que
+FRENCH CONTEXT (corrected): symbol{C}_1)$ de $\boldsymbol{C}_2$ est \emph{pleine}. En outre, si deux
+objets $X_1$, $X'_1$ ont même image $X_2$, il existe un isomorphisme unique
+$u:X_1\to X'_1$ tel que $F(u)=1_{X_2}$. Pour tout objet $X_2$ de $F(\boldsymbol{C}_1)$,
+soit alors $G(X_2)$ un des objets $X_1$ de $\boldsymbol{C}_1$ tel que $F(X_1)=X_2$
+($G$ étant défini au moyen de l'axiome de choix)~; pour tout morphisme
+$v:X_2\to Y_2$ dans $F(\boldsymbol{C}_1)$, $G(v)$ sera l'unique morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F(u)=v$~; $G$ est alors un \emph{foncteur} de
+$F(\boldsymbol{C}_1)$ dan
+
+[id 4090]
+OLD: dans $F(C_1)$, $G(v)$
+NEW: dans $F(\boldsymbol{C}_1)$, $G(v)$
+FRENCH CONTEXT (corrected): ue
+$u:X_1\to X'_1$ tel que $F(u)=1_{X_2}$. Pour tout objet $X_2$ de $F(\boldsymbol{C}_1)$,
+soit alors $G(X_2)$ un des objets $X_1$ de $\boldsymbol{C}_1$ tel que $F(X_1)=X_2$
+($G$ étant défini au moyen de l'axiome de choix)~; pour tout morphisme
+$v:X_2\to Y_2$ dans $F(\boldsymbol{C}_1)$, $G(v)$ sera l'unique morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F(u)=v$~; $G$ est alors un \emph{foncteur} de
+$F(\boldsymbol{C}_1)$ dans $\boldsymbol{C}_1$~; $FG$ est le foncteur identique dans $F(\boldsymbol{C}_1)$, et ce
+qui précède montre qu'il existe un isomorphism
+
+[id 4091]
+OLD: $F(C_1)$ dans $C_1$~; $FG$ est le foncteur identique dans $F(C_1)$, et ce
+NEW: $F(\boldsymbol{C}_1)$ dans $\boldsymbol{C}_1$~; $FG$ est le foncteur identique dans $F(\boldsymbol{C}_1)$, et ce
+FRENCH CONTEXT (corrected): \boldsymbol{C}_1$ tel que $F(X_1)=X_2$
+($G$ étant défini au moyen de l'axiome de choix)~; pour tout morphisme
+$v:X_2\to Y_2$ dans $F(\boldsymbol{C}_1)$, $G(v)$ sera l'unique morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F(u)=v$~; $G$ est alors un \emph{foncteur} de
+$F(\boldsymbol{C}_1)$ dans $\boldsymbol{C}_1$~; $FG$ est le foncteur identique dans $F(\boldsymbol{C}_1)$, et ce
+qui précède montre qu'il existe un isomorphisme de foncteurs
+$\varphi:\boldsymbol{\mathit{1}}_{\mathbf{C}_1}\to GF$ tel que $F$, $G$, $\varphi$ et l'identité
+$\boldsymbol{\mathit{1}}_{F(\mathbf{C}_1)}\to FG$ définissent une \emph{équivalence} de la catégorie 
+
+[id 4092]
+OLD: $\varphi:1_{C_1}\to GF$
+NEW: $\varphi:\boldsymbol{\mathit{1}}_{\mathbf{C}_1}\to GF$
+FRENCH CONTEXT (corrected): morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F(u)=v$~; $G$ est alors un \emph{foncteur} de
+$F(\boldsymbol{C}_1)$ dans $\boldsymbol{C}_1$~; $FG$ est le foncteur identique dans $F(\boldsymbol{C}_1)$, et ce
+qui précède montre qu'il existe un isomorphisme de foncteurs
+$\varphi:\boldsymbol{\mathit{1}}_{\mathbf{C}_1}\to GF$ tel que $F$, $G$, $\varphi$ et l'identité
+$\boldsymbol{\mathit{1}}_{F(\mathbf{C}_1)}\to FG$ définissent une \emph{équivalence} de la catégorie $\boldsymbol{C}_1$
+et de la sous-catégorie pleine $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ (T, 1.2).
+\end{env}
+
+\
+
+[id 4093]
+OLD: $1_{F(C_1)}\to FG$
+NEW: $\boldsymbol{\mathit{1}}_{F(\mathbf{C}_1)}\to FG$
+FRENCH CONTEXT (corrected): bol{C}_1)$ dans $\boldsymbol{C}_1$~; $FG$ est le foncteur identique dans $F(\boldsymbol{C}_1)$, et ce
+qui précède montre qu'il existe un isomorphisme de foncteurs
+$\varphi:\boldsymbol{\mathit{1}}_{\mathbf{C}_1}\to GF$ tel que $F$, $G$, $\varphi$ et l'identité
+$\boldsymbol{\mathit{1}}_{F(\mathbf{C}_1)}\to FG$ définissent une \emph{équivalence} de la catégorie $\boldsymbol{C}_1$
+et de la sous-catégorie pleine $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6-fr}
+Appliquons la prop. (\hyperref[0.8.1.4-fr]{8.1.4}) au c
+
+[id 4094]
+OLD: la catégorie $C_1$
+et de la sous-catégorie pleine $F(C_1)$ de $C_2$ (T, 1.2).
+NEW: la catégorie $\boldsymbol{C}_1$
+et de la sous-catégorie pleine $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ (T, 1.2).
+FRENCH CONTEXT (corrected): C}_1)$, et ce
+qui précède montre qu'il existe un isomorphisme de foncteurs
+$\varphi:\boldsymbol{\mathit{1}}_{\mathbf{C}_1}\to GF$ tel que $F$, $G$, $\varphi$ et l'identité
+$\boldsymbol{\mathit{1}}_{F(\mathbf{C}_1)}\to FG$ définissent une \emph{équivalence} de la catégorie $\boldsymbol{C}_1$
+et de la sous-catégorie pleine $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6-fr}
+Appliquons la prop. (\hyperref[0.8.1.4-fr]{8.1.4}) au cas où le foncteur $F$
+est $h_{X'}$, $X'$ étant un objet quelconque de $\boldsymbol{C}$~; l'application
+$\beta:\operatorname{Hom}(X,X')\to\operatorname{Hom}
+
+[id 4095]
+OLD: objet quelconque de $C$~;
+NEW: objet quelconque de $\boldsymbol{C}$~;
+FRENCH CONTEXT (corrected): e $\boldsymbol{C}_1$
+et de la sous-catégorie pleine $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6-fr}
+Appliquons la prop. (\hyperref[0.8.1.4-fr]{8.1.4}) au cas où le foncteur $F$
+est $h_{X'}$, $X'$ étant un objet quelconque de $\boldsymbol{C}$~; l'application
+$\beta:\operatorname{Hom}(X,X')\to\operatorname{Hom}(h_X,h_{X'})$ n'est
+autre ici que l'application $w\mapsto h_w$ définie dans
+(\hyperref[0.8.1.2-fr]{8.1.2})~; cette application étant \emph{bijective},
+on voit, avec la terminologie de (\hyperre
+
+[id 4096]
+OLD: $h:C\to\operatorname{Hom}(C^0,\mathrm{Ens})$ est pleinement
+NEW: $h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ est pleinement
+FRENCH CONTEXT (corrected): cation $w\mapsto h_w$ définie dans
+(\hyperref[0.8.1.2-fr]{8.1.2})~; cette application étant \emph{bijective},
+on voit, avec la terminologie de (\hyperref[0.8.1.5-fr]{8.1.5}), que~:
+\end{env}
+
+\begin{proposition}[8.1.7]
+\label{0.8.1.7-fr}
+Le foncteur canonique
+$h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ est pleinement fidèle.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8-fr}
+Soit $F$ un foncteur contravariant de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$~; on dit que
+$F$ est \emph{représentable} s'il existe un objet $X\in\boldsymbol{C}$ tel que $F$ soit
+\emph
+
+[id 4097]
+OLD: Soit $F$ un foncteur contravariant de $C$ dans $\mathrm{Ens}$~;
+NEW: Soit $F$ un foncteur contravariant de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$~;
+FRENCH CONTEXT (corrected): }), que~:
+\end{env}
+
+\begin{proposition}[8.1.7]
+\label{0.8.1.7-fr}
+Le foncteur canonique
+$h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ est pleinement fidèle.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8-fr}
+Soit $F$ un foncteur contravariant de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$~; on dit que
+$F$ est \emph{représentable} s'il existe un objet $X\in\boldsymbol{C}$ tel que $F$ soit
+\emph{isomorphe} à $h_X$~; il résulte de
+(\hyperref[0.8.1.7-fr]{8.1.7}) que la donnée d'un $X\in\boldsymbol{C}$ et d'un
+isomorphisme de foncteurs $g:h_X\to F$ d
+
+[id 4098]
+OLD: un objet $X\in C$ tel que $F$ soit
+NEW: un objet $X\in\boldsymbol{C}$ tel que $F$ soit
+FRENCH CONTEXT (corrected): mbol{C}^0,\boldsymbol{\mathit{Ens}})$ est pleinement fidèle.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8-fr}
+Soit $F$ un foncteur contravariant de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$~; on dit que
+$F$ est \emph{représentable} s'il existe un objet $X\in\boldsymbol{C}$ tel que $F$ soit
+\emph{isomorphe} à $h_X$~; il résulte de
+(\hyperref[0.8.1.7-fr]{8.1.7}) que la donnée d'un $X\in\boldsymbol{C}$ et d'un
+isomorphisme de foncteurs $g:h_X\to F$ détermine $X$ à un isomorphisme
+unique près. La prop. (\hyperref[0.8.1.7-fr]{8.1.7}) signifie encore
+
+[id 4099]
+OLD: d'un $X\in C$ et d'un
+NEW: d'un $X\in\boldsymbol{C}$ et d'un
+FRENCH CONTEXT (corrected): cteur contravariant de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$~; on dit que
+$F$ est \emph{représentable} s'il existe un objet $X\in\boldsymbol{C}$ tel que $F$ soit
+\emph{isomorphe} à $h_X$~; il résulte de
+(\hyperref[0.8.1.7-fr]{8.1.7}) que la donnée d'un $X\in\boldsymbol{C}$ et d'un
+isomorphisme de foncteurs $g:h_X\to F$ détermine $X$ à un isomorphisme
+unique près. La prop. (\hyperref[0.8.1.7-fr]{8.1.7}) signifie encore que $h$
+définit une \emph{équivalence} de $\boldsymbol{C}$ et de la sous-catégorie pleine de
+$\boldsymbol{\mathit{Hom}}
+
+[id 4100]
+OLD: \emph{équivalence} de $C$ et de la sous-catégorie pleine de
+$\operatorname{Hom}(C^0,\mathrm{Ens})$ formée
+NEW: \emph{équivalence} de $\boldsymbol{C}$ et de la sous-catégorie pleine de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ formée
+FRENCH CONTEXT (corrected): h_X$~; il résulte de
+(\hyperref[0.8.1.7-fr]{8.1.7}) que la donnée d'un $X\in\boldsymbol{C}$ et d'un
+isomorphisme de foncteurs $g:h_X\to F$ détermine $X$ à un isomorphisme
+unique près. La prop. (\hyperref[0.8.1.7-fr]{8.1.7}) signifie encore que $h$
+définit une \emph{équivalence} de $\boldsymbol{C}$ et de la sous-catégorie pleine de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ formée des \emph{foncteurs
+contravariants représentables}. Il résulte d'ailleurs de
+(\hyperref[0.8.1.4-fr]{8.1.4}) que la donnée d'un morphisme fonctoriel
+$g:h_X\to F$ équivaut à celle d'un élément $\xi\in F(X)$~; dire que $g$ est
+un \emph{isomorphisme} équivaut pou
+
+[id 4101]
+OLD: objet $Y$ de $C$ l'application
+NEW: objet $Y$ de $\boldsymbol{C}$ l'application
+FRENCH CONTEXT (corrected): }. Il résulte d'ailleurs de
+(\hyperref[0.8.1.4-fr]{8.1.4}) que la donnée d'un morphisme fonctoriel
+$g:h_X\to F$ équivaut à celle d'un élément $\xi\in F(X)$~; dire que $g$ est
+un \emph{isomorphisme} équivaut pour $\xi$ à la condition suivante~:
+\emph{pour tout objet $Y$ de $\boldsymbol{C}$ l'application
+$v\mapsto(F(v))(\xi)$ de $\operatorname{Hom}(Y,X)$ dans $F(Y)$ est
+bijective}. Lorsque $\xi$ vérifie cette condition, on dira que le couple
+$(X,\xi)$ \emph{représente} le foncteur représentable $F$. Par abus de
+langage, on dira aussi que l'objet $X\in\boldsym
+
+[id 4102]
+OLD: l'objet $X\in C$ représente
+NEW: l'objet $X\in\boldsymbol{C}$ représente
+FRENCH CONTEXT (corrected): bol{C}$ l'application
+$v\mapsto(F(v))(\xi)$ de $\operatorname{Hom}(Y,X)$ dans $F(Y)$ est
+bijective}. Lorsque $\xi$ vérifie cette condition, on dira que le couple
+$(X,\xi)$ \emph{représente} le foncteur représentable $F$. Par abus de
+langage, on dira aussi que l'objet $X\in\boldsymbol{C}$ représente $F$ s'il existe
+$\xi\in F(X)$ tel que $(X,\xi)$ représente $F$, autrement dit si $h_X$ est
+isomorphe à $F$.
+
+Soient $F$, $F'$ deux foncteurs contravariants représentables de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, $h_X\to F$ et $h_{X'}\to F'$ deux 
+
+[id 4103]
+OLD: représentables de $C$ dans
+$\mathrm{Ens}$, $h_X\to F$
+NEW: représentables de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, $h_X\to F$
+FRENCH CONTEXT (corrected): cteur représentable $F$. Par abus de
+langage, on dira aussi que l'objet $X\in\boldsymbol{C}$ représente $F$ s'il existe
+$\xi\in F(X)$ tel que $(X,\xi)$ représente $F$, autrement dit si $h_X$ est
+isomorphe à $F$.
+
+Soient $F$, $F'$ deux foncteurs contravariants représentables de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, $h_X\to F$ et $h_{X'}\to F'$ deux isomorphismes de
+foncteurs. Alors il résulte de (\hyperref[0.8.1.6-fr]{8.1.6}) qu'il y a une
+correspondance biunivoque canonique entre $\operatorname{Hom}(X,X')$ et
+l'ensemble $\operatorname{Hom}(F,F')$ des morphismes fonctoriels $F\to 
+
+=================== PAGE 0\textsubscript{III} 8 ===================
+----- (Spanish page 0\textsubscript{III} 7: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 8: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 9 -----
+\oldpage[0\textsubscript{III}]{9}
+Dados dos funtores contravariantes $F$ y $F'$ de $\C$ en $\Set$, recordemos que, para todo objeto $Y\in\C$, ponemos $(F\times F')(Y)=F(Y)\times F'(Y)$, y para todo morfismo $u:Y\to Y'$ de $\C$, ponemos $(F\times F')(u)=F(u)\times F'(u)$, que es la aplicación $(t,t')\mapsto(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ en $F(Y)\times F'(Y)$; $F\times F':\C\to\Set$ es así un \emph{funtor contravariante} (que no es otro que el \emph{producto} de los objetos $F$ y $F'$ en la categoría $\CHom(\C\op,\Set)$).
+Dado un objeto $X\in\C$, llamamos \emph{ley de composición interna} sobre $X$ a una \emph{transformación natural}
+\[
+\label{0.8.2.1.1}
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+En otros términos (T, 1.2), para todo objeto $Y\in\C$, $\gamma_X(Y)$ es una aplicación $h_X(Y)\times h_X(Y)\to h_X(Y)$ (por tanto, por definición, una \emph{ley de composición interna} sobre el conjunto $h_X(Y)$) con la condición de que, para todo morfismo $u:Y\to Y'$ de $\C$, el diagrama
+\[
+  \xymatrix{
+    h_X(Y')\times h_X(Y')\ar[rr]^{h_X(u)\times h_X(u)}\ar[dd]_{\gamma_X(Y')} & &
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y')\ar[rr]_{h_X(u)} & &
+    h_X(Y)
+  }
+\]
+sea conmutativo; esto implica que, para las leyes de composición $\gamma_X(Y)$ y $\gamma_X(Y')$, $h_X(u)$ es un \emph{homomorfismo} de $h_X(Y')$ en $h_X(Y)$.
+
+De manera análoga, dados dos objetos $Z$ y $X$ de $\C$, llamamos \emph{ley de composición externa sobre $X$, con $Z$ como dominio de operadores} a una transformación natural
+\[
+\label{0.8.2.1.2}
+  \omega_{X,Z}:h_Z\times h_X\to h_X.
+  \tag{8.2.1.2}
+\]
+
+Vemos como antes que, para todo $Y\in\C$, $\omega_{X,Z}(Y)$ es una ley de composición externa sobre $h_X(Y)$, con $h_Z(Y)$ como dominio de operadores, y tal que, para todo morfismo $u:Y\to Y'$, $h_X(u)$ y $h_Z(u)$ forman un \emph{dihomomorfismo} de $(h_Z(Y'),h_X(Y'))$ en $(h_Z(Y),h_X(Y))$.
+\end{env}
+
+\begin{env}[8.2.2]
+\label{0.8.2.2}
+Sea $X'$ un segundo objeto de $\C$, y supongamos dada una ley de composición interna $\gamma_{X'}$ sobre $X'$; decimos que un morfismo $w:X\to X'$ de $\C$ es un \emph{homomorfismo} para las leyes de composición si, para todo $Y\in\C$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ es un \emph{homomorfismo} para las leyes de composición $\gamma_X(Y)$ y $\gamma_{X'}(Y)$.
+Si $X''$ es un tercer
+----- French corrections on page 0\textsubscript{III} 8 -----
+[id 4104]
+OLD: dans une catégorie $C$, on définit
+NEW: dans une catégorie $\boldsymbol{C}$, on définit
+FRENCH CONTEXT (corrected): <~duale~>> de
+la notion usuelle de <<~solution d'un
+\oldpage[0\textsubscript{III}]{8}
+problème universel~>>. Plus généralement, nous allons voir que la notion de
+\emph{limite projective} est un cas particulier de celle de foncteur
+représentable. Rappelons que dans une catégorie $\boldsymbol{C}$, on définit un
+\emph{système projectif} par la donnée d'un ensemble préordonné $I$, d'une
+famille $(A_\alpha)_{\alpha\in I}$ d'objets de $\boldsymbol{C}$, et, pour tout couple
+d'indices $(\alpha,\beta)$ tel que $\alpha\leq\beta$, d'un morphisme
+$u_{\alpha\beta}:A_\beta\t
+
+[id 4105]
+OLD: d'objets de $C$, et, pour tout
+NEW: d'objets de $\boldsymbol{C}$, et, pour tout
+FRENCH CONTEXT (corrected): 
+\emph{limite projective} est un cas particulier de celle de foncteur
+représentable. Rappelons que dans une catégorie $\boldsymbol{C}$, on définit un
+\emph{système projectif} par la donnée d'un ensemble préordonné $I$, d'une
+famille $(A_\alpha)_{\alpha\in I}$ d'objets de $\boldsymbol{C}$, et, pour tout couple
+d'indices $(\alpha,\beta)$ tel que $\alpha\leq\beta$, d'un morphisme
+$u_{\alpha\beta}:A_\beta\to A_\alpha$. Une \emph{limite projective} de ce
+système dans $\boldsymbol{C}$ est constituée par un objet $B$ de $\boldsymbol{C}$ (noté
+$\varprojlim A_\alpha
+
+[id 4106]
+OLD: système dans $C$ est constituée par un objet $B$ de $C$ (noté
+NEW: système dans $\boldsymbol{C}$ est constituée par un objet $B$ de $\boldsymbol{C}$ (noté
+FRENCH CONTEXT (corrected): ensemble préordonné $I$, d'une
+famille $(A_\alpha)_{\alpha\in I}$ d'objets de $\boldsymbol{C}$, et, pour tout couple
+d'indices $(\alpha,\beta)$ tel que $\alpha\leq\beta$, d'un morphisme
+$u_{\alpha\beta}:A_\beta\to A_\alpha$. Une \emph{limite projective} de ce
+système dans $\boldsymbol{C}$ est constituée par un objet $B$ de $\boldsymbol{C}$ (noté
+$\varprojlim A_\alpha$), et, pour chaque $\alpha\in I$, un morphisme
+$u_\alpha:B\to A_\alpha$, tels que~: 1\textsuperscript{o}
+$u_\alpha=u_{\alpha\beta}u_\beta$ pour $\alpha\leq\beta$~;
+2\textsuperscript{o} Pour tout objet $X$ de $\boldsymbol{C}$ et toute fam
+
+[id 4107]
+OLD: Pour tout objet $X$ de $C$ et toute famille
+NEW: Pour tout objet $X$ de $\boldsymbol{C}$ et toute famille
+FRENCH CONTEXT (corrected): onstituée par un objet $B$ de $\boldsymbol{C}$ (noté
+$\varprojlim A_\alpha$), et, pour chaque $\alpha\in I$, un morphisme
+$u_\alpha:B\to A_\alpha$, tels que~: 1\textsuperscript{o}
+$u_\alpha=u_{\alpha\beta}u_\beta$ pour $\alpha\leq\beta$~;
+2\textsuperscript{o} Pour tout objet $X$ de $\boldsymbol{C}$ et toute famille
+$(v_\alpha)_{\alpha\in I}$ de morphismes $v_\alpha:X\to A_\alpha$, telle
+que $v_\alpha=u_{\alpha\beta}v_\beta$ pour $\alpha\leq\beta$, il existe un
+morphisme unique $v:X\to B$ (noté $\varprojlim v_\alpha$) tel que
+$v_\alpha=u_\alpha v$ pour tout $\alpha\in I$
+
+[id 4109]
+OLD: de $C$ dans $\mathrm{Ens}$, et l'existence
+NEW: de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, et l'existence
+FRENCH CONTEXT (corrected): ,A_\alpha),\overline{u}_{\alpha\beta})$, et
+$(v_\alpha)$ est par définition un élément de l'ensemble
+$\varprojlim_\alpha\operatorname{Hom}(X,A_\alpha)$~; il est clair que
+$X\mapsto\varprojlim\operatorname{Hom}(X,A_\alpha)$ est un
+\emph{foncteur contravariant} de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, et l'existence de
+la limite projective $B$ équivaut à dire que
+$(v_\alpha)\mapsto\varprojlim v_\alpha$ est un \emph{isomorphisme} de
+foncteurs en $X$
+\[
+  \varprojlim\operatorname{Hom}(X,A_\alpha)
+  \xrightarrow{\sim}\operatorname{Hom}(X,B)
+  \tag{8.1.9.1}
+\]
+autrement dit 
+
+[id 4112]
+OLD: Soient $C$ une catégorie
+NEW: Soient $\boldsymbol{C}$ une catégorie
+FRENCH CONTEXT (corrected): 
+  \xrightarrow{\sim}\operatorname{Hom}(X,B)
+  \tag{8.1.9.1}
+\]
+autrement dit que le foncteur
+$X\mapsto\varprojlim\operatorname{Hom}(X,A_\alpha)$ est
+\emph{représentable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10-fr}
+\textit{Exemples. II : Objet final.} Soient $\boldsymbol{C}$ une catégorie, $\{a\}$ un
+ensemble réduit à un seul élément. Considérons le foncteur contravariant
+$F:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{
+
+[id 4113]
+OLD: $F:C\to\mathrm{Ens}$ qui, à tout objet $X$ de $C$ fait
+NEW: $F:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait
+FRENCH CONTEXT (corrected): name{Hom}(X,A_\alpha)$ est
+\emph{représentable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10-fr}
+\textit{Exemples. II : Objet final.} Soient $\boldsymbol{C}$ une catégorie, $\{a\}$ un
+ensemble réduit à un seul élément. Considérons le foncteur contravariant
+$F:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{C}$ l'unique
+application $\{a\}\to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\bo
+
+[id 4114]
+OLD: $X\to X'$ dans $C$ l'unique
+NEW: $X\to X'$ dans $\boldsymbol{C}$ l'unique
+FRENCH CONTEXT (corrected): boldsymbol{C}$ une catégorie, $\{a\}$ un
+ensemble réduit à un seul élément. Considérons le foncteur contravariant
+$F:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{C}$ l'unique
+application $\{a\}\to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\boldsymbol{C}$,
+$\operatorname{Hom}(Y,\boldsymbol{e})=h_{\mathbf{e}}(Y)$ soit \emph{réduit à un
+
+[id 4115]
+OLD: un objet $e\in C$ tel que pour tout $Y\in C$,
+$\operatorname{Hom}(Y,e)=h_e(Y)$
+NEW: un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\boldsymbol{C}$,
+$\operatorname{Hom}(Y,\boldsymbol{e})=h_{\mathbf{e}}(Y)$
+FRENCH CONTEXT (corrected): dsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{C}$ l'unique
+application $\{a\}\to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\boldsymbol{C}$,
+$\operatorname{Hom}(Y,\boldsymbol{e})=h_{\mathbf{e}}(Y)$ soit \emph{réduit à un élément}~; on dit
+que $\boldsymbol{e}$ est un \emph{objet final} de $\boldsymbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axiome de choix, \emph{
+
+[id 4116]
+OLD: que $e$ est un \emph{objet final} de $C$, et il est clair que deux objets
+finaux de $C$ sont
+NEW: que $\boldsymbol{e}$ est un \emph{objet final} de $\boldsymbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont
+FRENCH CONTEXT (corrected): \to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\boldsymbol{C}$,
+$\operatorname{Hom}(Y,\boldsymbol{e})=h_{\mathbf{e}}(Y)$ soit \emph{réduit à un élément}~; on dit
+que $\boldsymbol{e}$ est un \emph{objet final} de $\boldsymbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axiome de choix, \emph{un} objet final de $\boldsymbol{C}$ qu'on note alors $\boldsymbol{e}_{\mathbf{C}}$). Par
+exemple, dans la catégorie $\boldsymbol{\mathit{Ens}}$, les objets finaux sont les
+e
+
+[id 4118]
+OLD: final de $C$ qu'on note alors $e_C$
+NEW: final de $\boldsymbol{C}$ qu'on note alors $\boldsymbol{e}_{\mathbf{C}}$
+FRENCH CONTEXT (corrected): h{réduit à un élément}~; on dit
+que $\boldsymbol{e}$ est un \emph{objet final} de $\boldsymbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axiome de choix, \emph{un} objet final de $\boldsymbol{C}$ qu'on note alors $\boldsymbol{e}_{\mathbf{C}}$). Par
+exemple, dans la catégorie $\boldsymbol{\mathit{Ens}}$, les objets finaux sont les
+ensembles réduits à un élément~; dans la catégorie des \emph{algèbres
+augmentées} sur un corps $K$ (où les morphismes sont les homomorphismes
+d'algèbres compatibles avec 
+
+[id 4119]
+OLD: dans la catégorie $\mathrm{Ens}$, les objets finaux
+NEW: dans la catégorie $\boldsymbol{\mathit{Ens}}$, les objets finaux
+FRENCH CONTEXT (corrected): symbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axiome de choix, \emph{un} objet final de $\boldsymbol{C}$ qu'on note alors $\boldsymbol{e}_{\mathbf{C}}$). Par
+exemple, dans la catégorie $\boldsymbol{\mathit{Ens}}$, les objets finaux sont les
+ensembles réduits à un élément~; dans la catégorie des \emph{algèbres
+augmentées} sur un corps $K$ (où les morphismes sont les homomorphismes
+d'algèbres compatibles avec les augmentations), $K$ est un objet final~;
+dans la catégorie des \emph{$S$-pré
+
+[id 4120]
+OLD: (I, 2.5.1)
+NEW: (\textbf{I}, 2.5.1)
+FRENCH CONTEXT (corrected): 
+ensembles réduits à un élément~; dans la catégorie des \emph{algèbres
+augmentées} sur un corps $K$ (où les morphismes sont les homomorphismes
+d'algèbres compatibles avec les augmentations), $K$ est un objet final~;
+dans la catégorie des \emph{$S$-préschémas} (\textbf{I}, 2.5.1), $S$ est un objet
+final.
+\end{env}
+
+\begin{env}[8.1.11]
+\label{0.8.1.11-fr}
+Pour deux objets $X$, $Y$ d'une catégorie $\boldsymbol{C}$, posons
+$h'_X(Y)=\operatorname{Hom}(X,Y)$ et pour tout morphisme $u:Y\to Y'$, soit
+$h'_X(u)$ l'application $v\mapsto uv$ de 
+
+[id 4121]
+OLD: d'une catégorie $C$, posons
+NEW: d'une catégorie $\boldsymbol{C}$, posons
+FRENCH CONTEXT (corrected): t les homomorphismes
+d'algèbres compatibles avec les augmentations), $K$ est un objet final~;
+dans la catégorie des \emph{$S$-préschémas} (\textbf{I}, 2.5.1), $S$ est un objet
+final.
+\end{env}
+
+\begin{env}[8.1.11]
+\label{0.8.1.11-fr}
+Pour deux objets $X$, $Y$ d'une catégorie $\boldsymbol{C}$, posons
+$h'_X(Y)=\operatorname{Hom}(X,Y)$ et pour tout morphisme $u:Y\to Y'$, soit
+$h'_X(u)$ l'application $v\mapsto uv$ de $\operatorname{Hom}(X,Y)$ dans
+$\operatorname{Hom}(X,Y')$~; $h'_X$ est alors un \emph{foncteur covariant}
+$\boldsymbol{C}\to\boldsymbol{\mathit
+
+[id 4122]
+OLD: $C\to\mathrm{Ens}$, d'où
+NEW: $\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$, d'où
+FRENCH CONTEXT (corrected): ne catégorie $\boldsymbol{C}$, posons
+$h'_X(Y)=\operatorname{Hom}(X,Y)$ et pour tout morphisme $u:Y\to Y'$, soit
+$h'_X(u)$ l'application $v\mapsto uv$ de $\operatorname{Hom}(X,Y)$ dans
+$\operatorname{Hom}(X,Y')$~; $h'_X$ est alors un \emph{foncteur covariant}
+$\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$, d'où l'on déduit comme dans
+(\hyperref[0.8.1.2-fr]{8.1.2}) la définition d'un foncteur covariant
+canonique $h':\boldsymbol{C}^0\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$~; un foncteur
+\emph{covariant} $F$ de $\boldsymbol{C}$ dans $\bol
+
+[id 4123]
+OLD: $h':C^0\to\operatorname{Hom}(C,\mathrm{Ens})$
+NEW: $h':\boldsymbol{C}^0\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$
+FRENCH CONTEXT (corrected):  $\operatorname{Hom}(X,Y)$ dans
+$\operatorname{Hom}(X,Y')$~; $h'_X$ est alors un \emph{foncteur covariant}
+$\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$, d'où l'on déduit comme dans
+(\hyperref[0.8.1.2-fr]{8.1.2}) la définition d'un foncteur covariant
+canonique $h':\boldsymbol{C}^0\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$~; un foncteur
+\emph{covariant} $F$ de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, autrement dit un objet de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$ est alors dit \emph{représentable}
+s'il existe un objet $X\in\boldsymbol{C
+
+[id 4124]
+OLD: un \emph{foncteur
+covariant} $F$
+NEW: un foncteur
+\emph{covariant} $F$
+FRENCH CONTEXT (corrected): r covariant}
+$\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$, d'où l'on déduit comme dans
+(\hyperref[0.8.1.2-fr]{8.1.2}) la définition d'un foncteur covariant
+canonique $h':\boldsymbol{C}^0\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$~; un foncteur
+\emph{covariant} $F$ de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, autrement dit un objet de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$ est alors dit \emph{représentable}
+s'il existe un objet $X\in\boldsymbol{C}$ (nécessairement unique à isomorp
+
+[id 4125]
+OLD: de $C$ dans $\mathrm{Ens}$, autrement dit un objet de
+$\operatorname{Hom}(C,\mathrm{Ens})$
+NEW: de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, autrement dit un objet de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$
+FRENCH CONTEXT (corrected): oldsymbol{\mathit{Ens}}$, d'où l'on déduit comme dans
+(\hyperref[0.8.1.2-fr]{8.1.2}) la définition d'un foncteur covariant
+canonique $h':\boldsymbol{C}^0\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$~; un foncteur
+\emph{covariant} $F$ de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, autrement dit un objet de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$ est alors dit \emph{représentable}
+s'il existe un objet $X\in\boldsymbol{C}$ (nécessairement unique à isomorphisme unique
+près) tel que $F$ soit \emph{isomorphe à $h'_X$}~; nous laissons au lecteur
+le soin de développer les considérations <<~duales~>> des pré
+
+[id 4126]
+OLD: un objet $X\in C$ (nécessairement
+NEW: un objet $X\in\boldsymbol{C}$ (nécessairement
+FRENCH CONTEXT (corrected): \boldsymbol{\mathit{Ens}})$~; un foncteur
+\emph{covariant} $F$ de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, autrement dit un objet de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$ est alors dit \emph{représentable}
+s'il existe un objet $X\in\boldsymbol{C}$ (nécessairement unique à isomorphisme unique
+près) tel que $F$ soit \emph{isomorphe à $h'_X$}~; nous laissons au lecteur
+le soin de développer les considérations <<~duales~>> des précédentes pour
+cette notion, qui couvre cette fois celle de \emph{limite inductive}, et en
+par
+
+[id 4127]
+OLD: \subsection{Structures algébriques dans les catégories}
+\label{subsection:0.8.2-fr}
+
+\begin{env}[8.2.1]
+\label{0.8.2.1-fr}
+
+NEW: 
+
+=================== PAGE 0\textsubscript{III} 9 ===================
+----- (Spanish page 0\textsubscript{III} 8: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 9: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 10 -----
+\oldpage[0\textsubscript{III}]{10}
+objeto de $\C$ provisto de una ley de composición interna $\gamma_{X''}$, y $w':X'\to X''$ es un morfismo de $\C$ que es un homomorfismo para $\gamma_{X'}$ y $\gamma_{X''}$, está claro que el morfismo $w'w:X\to X''$ es un homomorfismo para las leyes de composición $\gamma_X$ y $\gamma_{X''}$.
+Un isomorfismo $w:X\isoto X'$ de $\C$ se llama \emph{isomorfismo para las leyes de composición $\gamma_X$ y $\gamma_{X'}$} si $w$ es un homomorfismo para estas leyes de composición, y si su morfismo inverso $w^{-1}$ es un homomorfismo para las leyes de composición $\gamma_{X'}$ y $\gamma_X$.
+
+Definimos de manera análoga los \emph{dihomomorfismos} para pares de objetos de $\C$ provistos de leyes de composición externa.
+\end{env}
+
+\begin{env}[8.2.3]
+\label{0.8.2.3}
+Cuando una ley de composición interna $\gamma_X$ sobre un objeto $X\in\C$ es tal que $\gamma_X(Y)$ es una \emph{ley de grupo} sobre $h_X(Y)$ para \emph{todo} $Y\in\C$, decimos que $X$, provisto de esta ley, es un \emph{$\C$-grupo} o un \emph{objeto grupo de $\C$}.
+Definimos análogamente los \emph{$\C$-anillos}, \emph{$\C$-módulos}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4}
+Supongamos que el \emph{producto} $X\times X$ de un objeto $X\in\C$ por sí mismo existe en $\C$; por definición, tenemos entonces $h_{X\times X}=h_X\times h_X$ salvo isomorfismo canónico, pues es un caso particular del límite proyectivo \sref{0.8.1.9}; una ley de composición interna sobre $X$ puede, por tanto, considerarse como un morfismo funtorial $\gamma_X:h_{X\times X}\to h_X$, y determina así canónicamente \sref{0.8.1.6} un elemento $c_X\in\Hom(X\times X,X)$ tal que $h_{c_X}=\gamma_X$; en este caso, el dato de una ley de composición interna sobre $X$ equivale al dato de un morfismo $X\times X\to X$; cuando $\C$ es la categoría $\Set$, recuperamos la noción clásica de ley de composición interna sobre un conjunto.
+Tenemos un resultado análogo para una ley de composición externa cuando el producto $Z\times X$ existe en $\C$.
+\end{env}
+
+\begin{env}[8.2.5]
+\label{0.8.2.5}
+Con la notación anterior, supongamos además que $X\times X\times X$ existe en $\C$; la caracterización del producto como objeto que representa un funtor \sref{0.8.1.9} implica la existencia de isomorfismos canónicos
+\[
+  (X\times X)\times X\isoto X\times X\times X\isoto X\times(X\times X);
+\]
+si identificamos canónicamente $X\times X\times X$ con $(X\times X)\times X$, la aplicación $\gamma_X(Y)\times 1_{h_X(Y)}$ se identifica con $h_{c_X\times 1_X}(Y)$ para todo $Y\in\C$.
+En consecuencia, es equivalente decir que, para todo $Y\in\C$, la ley interna $\gamma_X(Y)$ es asociativa, o que el diagrama de aplicaciones
+\[
+  \xymatrix{
+    h_X(Y)\times h_X(Y)\times h_X(Y)\ar[rr]^{\gamma_X(Y)\times 1}\ar[dd]_{1\times\gamma_X(Y)} & &
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y)\times h_X(Y)\ar[rr]_{\gamma_X(Y)} & &
+    h_X(Y)
+  }
+\]
+----- French corrections on page 0\textsubscript{III} 9 -----
+[id 4129]
+OLD: $F'$ de $C$ dans
+$\mathrm{Ens}$, rappelons que pour tout objet $Y\in C$, on pose
+NEW: $F'$ de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, rappelons que pour tout objet $Y\in\boldsymbol{C}$, on pose
+FRENCH CONTEXT (corrected): le de <<~solution de problème universel~>>.
+\end{env}
+
+\oldpage[0\textsubscript{III}]{9}
+\subsection{Structures algébriques dans les catégories}
+\label{subsection:0.8.2-fr}
+
+\begin{env}[8.2.1]
+\label{0.8.2.1-fr}
+Étant donnés deux foncteurs contravariants $F$, $F'$ de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, rappelons que pour tout objet $Y\in\boldsymbol{C}$, on pose
+$(F\times F')(Y)=F(Y)\times F'(Y)$, et pour tout morphisme $u:Y\to Y'$ dans
+$\boldsymbol{C}$, on pose $(F\times F')(u)=F(u)\times F'(u)$ qui est l'application
+$(t,t')\mapsto(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ dans
+$F(Y)\times F'(Y)$~; $F\times F':\bo
+
+[id 4130]
+OLD: dans
+$C$, on pose
+NEW: dans
+$\boldsymbol{C}$, on pose
+FRENCH CONTEXT (corrected): 1]
+\label{0.8.2.1-fr}
+Étant donnés deux foncteurs contravariants $F$, $F'$ de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, rappelons que pour tout objet $Y\in\boldsymbol{C}$, on pose
+$(F\times F')(Y)=F(Y)\times F'(Y)$, et pour tout morphisme $u:Y\to Y'$ dans
+$\boldsymbol{C}$, on pose $(F\times F')(u)=F(u)\times F'(u)$ qui est l'application
+$(t,t')\mapsto(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ dans
+$F(Y)\times F'(Y)$~; $F\times F':\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est donc un
+\emph{foncteur contravariant} (qui n'est autre d'
+
+[id 4132]
+OLD: $F\times F':C\to\mathrm{Ens}$
+NEW: $F\times F':\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$
+FRENCH CONTEXT (corrected): ol{C}$, on pose
+$(F\times F')(Y)=F(Y)\times F'(Y)$, et pour tout morphisme $u:Y\to Y'$ dans
+$\boldsymbol{C}$, on pose $(F\times F')(u)=F(u)\times F'(u)$ qui est l'application
+$(t,t')\mapsto(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ dans
+$F(Y)\times F'(Y)$~; $F\times F':\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est donc un
+\emph{foncteur contravariant} (qui n'est autre d'ailleurs que le
+\emph{produit} des objets $F$, $F'$ dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+appell
+
+[id 4133]
+OLD: $\operatorname{Hom}(C^0,\mathrm{Ens})$). Étant donné un objet $X\in C$, nous
+NEW: $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+FRENCH CONTEXT (corrected): to(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ dans
+$F(Y)\times F'(Y)$~; $F\times F':\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est donc un
+\emph{foncteur contravariant} (qui n'est autre d'ailleurs que le
+\emph{produit} des objets $F$, $F'$ dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+appellerons \emph{loi de composition interne} sur $X$ un \emph{morphisme fonctoriel}
+\[
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+Autrement dit (T, 1.2), pour tout objet $Y\in\boldsymbol{C}$, $\gamma_X(Y)$ est une
+application $h_X(Y)\times h_X(Y)\t
+
+[id 4134]
+OLD: \emph{loi de composition interne sur $X$}
+NEW: \emph{loi de composition interne} sur $X$
+FRENCH CONTEXT (corrected): onc un
+\emph{foncteur contravariant} (qui n'est autre d'ailleurs que le
+\emph{produit} des objets $F$, $F'$ dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+appellerons \emph{loi de composition interne} sur $X$ un \emph{morphisme fonctoriel}
+\[
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+Autrement dit (T, 1.2), pour tout objet $Y\in\boldsymbol{C}$, $\gamma_X(Y)$ est une
+application $h_X(Y)\times h_X(Y)\to h_X(Y)$ (donc par définition une
+\emph{loi de compos
+
+[id 4135]
+OLD: un morphisme fonctoriel
+\[
+  \gamma_X
+NEW: un \emph{morphisme fonctoriel}
+\[
+  \gamma_X
+FRENCH CONTEXT (corrected): n'est autre d'ailleurs que le
+\emph{produit} des objets $F$, $F'$ dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+appellerons \emph{loi de composition interne} sur $X$ un \emph{morphisme fonctoriel}
+\[
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+Autrement dit (T, 1.2), pour tout objet $Y\in\boldsymbol{C}$, $\gamma_X(Y)$ est une
+application $h_X(Y)\times h_X(Y)\to h_X(Y)$ (donc par définition une
+\emph{loi de composition interne} sur l'ensemble $h_X(Y)$) soumi
+
+[id 4136]
+OLD: pour tout objet $Y\in C$, $\gamma_X(Y)$
+NEW: pour tout objet $Y\in\boldsymbol{C}$, $\gamma_X(Y)$
+FRENCH CONTEXT (corrected): \boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+appellerons \emph{loi de composition interne} sur $X$ un \emph{morphisme fonctoriel}
+\[
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+Autrement dit (T, 1.2), pour tout objet $Y\in\boldsymbol{C}$, $\gamma_X(Y)$ est une
+application $h_X(Y)\times h_X(Y)\to h_X(Y)$ (donc par définition une
+\emph{loi de composition interne} sur l'ensemble $h_X(Y)$) soumise à la
+condition que, pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')
+
+[id 4137]
+OLD: $u:Y\to Y'$ dans $C$, le diagramme
+NEW: $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+FRENCH CONTEXT (corrected): symbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h_{X'}(Y)$~; désignons par $h_w(Y)$
+l'application $v\mapsto wv$ de $h_X(Y)$ dans $h_{X'}(Y)$. Il est immédiat
+que pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+est commutatif~; autrement dit, $h_w$ est un \emph{morphisme fonctoriel}
+$h_X\to h_{X'}$ (T, 1.2), ou encore un mo
+
+[id 4138]
+OLD: $Z$, $X$ de $C$, on appelle
+NEW: $Z$, $X$ de $\boldsymbol{C}$, on appelle
+FRENCH CONTEXT (corrected): Y)}\\\\
+    h_X(Y')\ar[rr]_{h_X(u)} && h_X(Y)
+  }
+\]
+soit commutatif~; cela signifie que pour les lois de composition
+$\gamma_X(Y)$ et $\gamma_X(Y')$, $h_X(u)$ est un \emph{homomorphisme} de
+$h_X(Y')$ dans $h_X(Y)$.
+
+De la même façon, étant donnés deux objets $Z$, $X$ de $\boldsymbol{C}$, on appelle
+\emph{loi de composition externe sur $X$, ayant $Z$ comme domaine
+d'opérateurs}, un morphisme fonctoriel
+\[
+  \omega_{X,Z}:h_Z\times h_X\to h_X.
+  \tag{8.2.1.2}
+\]
+
+On voit comme ci-dessus que pour tout $Y\in\boldsymbol{C}$, $\omega_{X,Z}(Y)$ est une loi
+de c
+
+[id 4139]
+OLD: ci-dessus que pour tout $Y\in C$,
+NEW: ci-dessus que pour tout $Y\in\boldsymbol{C}$,
+FRENCH CONTEXT (corrected): la même façon, étant donnés deux objets $Z$, $X$ de $\boldsymbol{C}$, on appelle
+\emph{loi de composition externe sur $X$, ayant $Z$ comme domaine
+d'opérateurs}, un morphisme fonctoriel
+\[
+  \omega_{X,Z}:h_Z\times h_X\to h_X.
+  \tag{8.2.1.2}
+\]
+
+On voit comme ci-dessus que pour tout $Y\in\boldsymbol{C}$, $\omega_{X,Z}(Y)$ est une loi
+de composition externe sur $h_X(Y)$, ayant $h_Z(Y)$ comme domaine
+d'opérateurs, et telle que pour tout morphisme $u:Y\to Y'$, $h_X(u)$ et
+$h_Z(u)$ forment un \emph{dihomomorphisme} de
+$(h_Z(Y'),h_X(Y'))$ dans $(h_Z(Y),h_X(Y))$.
+\
+
+[id 4140]
+OLD: un second objet de $C$, et supposons
+NEW: un second objet de $\boldsymbol{C}$, et supposons
+FRENCH CONTEXT (corrected): $h_X(Y)$, ayant $h_Z(Y)$ comme domaine
+d'opérateurs, et telle que pour tout morphisme $u:Y\to Y'$, $h_X(u)$ et
+$h_Z(u)$ forment un \emph{dihomomorphisme} de
+$(h_Z(Y'),h_X(Y'))$ dans $(h_Z(Y),h_X(Y))$.
+\end{env}
+
+\begin{env}[8.2.2]
+\label{0.8.2.2-fr}
+Soit $X'$ un second objet de $\boldsymbol{C}$, et supposons donnée sur $X'$ une loi de
+composition interne $\gamma_{X'}$~; nous dirons qu'un morphisme
+$w:X\to X'$ dans $\boldsymbol{C}$ est un \emph{homomorphisme} pour ces lois de
+composition, si pour tout $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph
+
+[id 4141]
+OLD: $w:X\to X'$ dans $C$ est un
+NEW: $w:X\to X'$ dans $\boldsymbol{C}$ est un
+FRENCH CONTEXT (corrected): momorphisme} de
+$(h_Z(Y'),h_X(Y'))$ dans $(h_Z(Y),h_X(Y))$.
+\end{env}
+
+\begin{env}[8.2.2]
+\label{0.8.2.2-fr}
+Soit $X'$ un second objet de $\boldsymbol{C}$, et supposons donnée sur $X'$ une loi de
+composition interne $\gamma_{X'}$~; nous dirons qu'un morphisme
+$w:X\to X'$ dans $\boldsymbol{C}$ est un \emph{homomorphisme} pour ces lois de
+composition, si pour tout $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+\oldpage[0\textsubscript{I
+
+[id 4142]
+OLD: si pour tout $Y\in C$, $h_w(Y)
+NEW: si pour tout $Y\in\boldsymbol{C}$, $h_w(Y)
+FRENCH CONTEXT (corrected): abel{0.8.2.2-fr}
+Soit $X'$ un second objet de $\boldsymbol{C}$, et supposons donnée sur $X'$ une loi de
+composition interne $\gamma_{X'}$~; nous dirons qu'un morphisme
+$w:X\to X'$ dans $\boldsymbol{C}$ est un \emph{homomorphisme} pour ces lois de
+composition, si pour tout $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+\oldpage[0\textsubscript{III}]{10}
+objet de $\boldsymbol{C}$ muni d'une loi de composition interne $\gamma_{X''}$ et
+$w'
+
+[id 4143]
+OLD: est un
+homomorphisme pour les lois
+NEW: est un
+\emph{homomorphisme} pour les lois
+FRENCH CONTEXT (corrected): et supposons donnée sur $X'$ une loi de
+composition interne $\gamma_{X'}$~; nous dirons qu'un morphisme
+$w:X\to X'$ dans $\boldsymbol{C}$ est un \emph{homomorphisme} pour ces lois de
+composition, si pour tout $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+\oldpage[0\textsubscript{III}]{10}
+objet de $\boldsymbol{C}$ muni d'une loi de composition interne $\gamma_{X''}$ et
+$w':X'\to X''$ un morphisme dans $\boldsymbol{C}$ qui est un homom
+
+=================== PAGE 0\textsubscript{III} 10 ===================
+----- (Spanish page 0\textsubscript{III} 9: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 10: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 11 -----
+\oldpage[0\textsubscript{III}]{11}
+es conmutativo, o que el diagrama de morfismos
+\[
+  \xymatrix{
+    X\times X\times X\ar[rr]^{c_X\times 1_X}\ar[dd]_{1_X\times c_X} & &
+    X\times X\ar[dd]^{c_X}\\\\
+    X\times X\ar[rr]_{c_X} & &
+    X
+  }
+\]
+es conmutativo.
+\end{env}
+
+\begin{env}[8.2.6]
+\label{0.8.2.6}
+Bajo las hipótesis de \sref{0.8.2.5}, si queremos expresar, para todo $Y\in\C$, que la ley interna $\gamma_X(Y)$ es una \emph{ley de grupo}, es necesario, en primer lugar, que sea asociativa y, en segundo lugar, que exista una aplicación $\alpha_X(Y):h_X(Y)\to h_X(Y)$ con las propiedades de la operación de \emph{inverso} de un grupo; como hemos visto que, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ debe ser un homomorfismo de grupos $h_X(Y')\to h_X(Y)$, vemos primero que $\alpha_X:h_X\to h_X$ debe ser una \emph{transformación natural}.
+Por otra parte, se pueden expresar las propiedades características del inverso $s\mapsto s^{-1}$ de un grupo $G$ sin hacer intervenir el elemento identidad: basta comprobar que las dos aplicaciones compuestas
+\[
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,s^{-1}t)\mapsto s(s^{-1}t)
+\]
+\[
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,ts^{-1})\leadsto(ts^{-1})s
+\]
+son iguales a la segunda proyección $(s,t)\mapsto t$ de $G\times G$ en $G$.
+Por \sref{0.8.1.3}, tenemos $\alpha_X=h_{a_X}$, donde $a_X\in\Hom(X,X)$; la primera condición anterior expresa entonces que el morfismo compuesto
+\[
+  X\times X\xrightarrow{(1_X,a_X)\times 1_X}X\times X\times X\xrightarrow{1_X\times c_X}X\times X\xrightarrow{c_X}X
+\]
+es la segunda proyección $X\times X\to X$ en $\C$, y la segunda condición es análoga.
+\end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7}
+Supongamos ahora que existe un \emph{objeto final} $\boldsymbol e$ \sref{0.8.1.10} en $\C$.
+Supongamos siempre que $\gamma_X(Y)$ es una ley de grupo sobre $h_X(Y)$ para todo $Y\in\C$, y denotemos por $\eta_X(Y)$ el elemento identidad de $\gamma_X(Y)$.
+Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=\boldsymbol e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(\boldsymbol e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
+Pongamos $e_X=\eta_X(X)$, el elemento identidad del grupo $h_X(X)=\Hom(X,X)$; la conmutatividad del diagrama
+\[
+  \xymatrix{
+    h_X(\boldsymbol e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(\boldsymbol e)} &
+    h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
+    h_X(\boldsymbol e)\ar[r]_{h_X(\varepsilon)} &
+    h_X(Y)
+  }
+\]
+(cf. \sref{0.8.1.2}) muestra que, sobre el conjunto $h_X(Y)$, la aplicación $h_{e_X}(Y)$ no es otra que
+----- French corrections on page 0\textsubscript{III} 10 -----
+[id 3993]
+OLD: interne $\gamma_{X''}$, et
+NEW: interne $\gamma_{X''}$ et
+FRENCH CONTEXT (corrected): $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+\oldpage[0\textsubscript{III}]{10}
+objet de $\boldsymbol{C}$ muni d'une loi de composition interne $\gamma_{X''}$ et
+$w':X'\to X''$ un morphisme dans $\boldsymbol{C}$ qui est un homomorphisme pour
+$\gamma_{X'}$ et $\gamma_{X''}$, il est clair que le morphisme
+$w'w:X\to X''$ est un homomorphisme pour les lois de composition $\gamma_X$
+et $\gamma_{X''}$. Un isomorphisme $w:X\
+
+[id 3994]
+OLD: \emph{isomorphisme pour les lois de composition $\gamma_X$ et
+$\gamma_{X'}$}
+NEW: \emph{isomorphisme pour les lois de composition} $\gamma_X$ et
+$\gamma_{X'}$
+FRENCH CONTEXT (corrected):  est un homomorphisme pour
+$\gamma_{X'}$ et $\gamma_{X''}$, il est clair que le morphisme
+$w'w:X\to X''$ est un homomorphisme pour les lois de composition $\gamma_X$
+et $\gamma_{X''}$. Un isomorphisme $w:X\xrightarrow{\sim}X'$ dans $\boldsymbol{C}$ est
+appelé \emph{isomorphisme pour les lois de composition} $\gamma_X$ et
+$\gamma_{X'}$ si $w$ est un homomorphisme pour ces lois de composition, et
+si son morphisme réciproque $w^{-1}$ est un homomorphisme pour les lois de
+composition $\gamma_{X'}$ et $\gamma_X$.
+
+On définit de la même manière les \emph{dihomomorphismes} pour les couples
+d'obje
+
+[id 3995]
+OLD: \emph{loi de groupe}
+NEW: loi de \emph{groupe}
+FRENCH CONTEXT (corrected): mes} pour les couples
+d'objets de $\boldsymbol{C}$ munis de lois de composition externes.
+\end{env}
+
+\begin{env}[8.2.3]
+\label{0.8.2.3-fr}
+Lorsqu'une loi de composition interne $\gamma_X$ sur un objet $X\in \boldsymbol{C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-module
+
+[id 3996]
+OLD: catégorie $\mathrm{Ens}$
+NEW: catégorie \textbf{\textit{Ens}}
+FRENCH CONTEXT (corrected): [0.8.1.6-fr]{8.1.6}) un élément
+$c_X\in\operatorname{Hom}(X\times X,X)$ tel que $h_{c_X}=\gamma_X$~; dans
+ce cas, la donnée d'une loi de composition interne sur $X$ est donc
+équivalente à celle d'un morphisme $X\times X\to X$~; lorsque $\boldsymbol{C}$ est la
+catégorie \textbf{\textit{Ens}}, on retrouve la notion classique de loi de
+composition interne sur un ensemble. On a un résultat analogue pour une loi
+de composition externe lorsque le produit $Z\times X$ existe dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{env}[8.2.5]
+\label{0.8.2.5-fr}
+Avec le
+
+[id 3997]
+OLD: \emph{associative}
+NEW: associative
+FRENCH CONTEXT (corrected): es X\times X$ à $(X\times X)\times X$,
+l'application $\gamma_X(Y)\times 1_{h_X(Y)}$ s'identifie à
+$h_{c_X\times 1_X}(Y)$ pour tout $Y\in \boldsymbol{C}$. Il est par suite équivalent de
+dire que pour tout $Y\in \boldsymbol{C}$, la loi interne $\gamma_X(Y)$ est
+associative, ou que le diagramme d'applications
+\[
+  \xymatrix{
+    h_X(Y)\times h_X(Y)\times h_X(Y)
+      \ar[rr]^{\gamma_X(Y)\times 1}\ar[dd]_{1\times\gamma_X(Y)} &&
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y)\times h_X(Y)\ar[rr]_{\gamma_X(Y)} && h_X(Y)
+
+[id 3998]
+OLD: de $C$ muni d'une
+NEW: de $\boldsymbol{C}$ muni d'une
+FRENCH CONTEXT (corrected): hisme} pour ces lois de
+composition, si pour tout $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+\oldpage[0\textsubscript{III}]{10}
+objet de $\boldsymbol{C}$ muni d'une loi de composition interne $\gamma_{X''}$ et
+$w':X'\to X''$ un morphisme dans $\boldsymbol{C}$ qui est un homomorphisme pour
+$\gamma_{X'}$ et $\gamma_{X''}$, il est clair que le morphisme
+$w'w:X\to X''$ est un homomorphisme pour les lois de composition $\gamm
+
+[id 3999]
+OLD: dans $C$ qui
+NEW: dans $\boldsymbol{C}$ qui
+FRENCH CONTEXT (corrected):  un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+\oldpage[0\textsubscript{III}]{10}
+objet de $\boldsymbol{C}$ muni d'une loi de composition interne $\gamma_{X''}$ et
+$w':X'\to X''$ un morphisme dans $\boldsymbol{C}$ qui est un homomorphisme pour
+$\gamma_{X'}$ et $\gamma_{X''}$, il est clair que le morphisme
+$w'w:X\to X''$ est un homomorphisme pour les lois de composition $\gamma_X$
+et $\gamma_{X''}$. Un isomorphisme $w:X\xrightarrow{\sim}X'$ dans $\boldsymbol{C}$ est
+appelé 
+
+[id 4000]
+OLD: dans $C$ est
+NEW: dans $\boldsymbol{C}$ est
+FRENCH CONTEXT (corrected):  préordonné $I$, d'une
+famille $(A_\alpha)_{\alpha\in I}$ d'objets de $\boldsymbol{C}$, et, pour tout couple
+d'indices $(\alpha,\beta)$ tel que $\alpha\leq\beta$, d'un morphisme
+$u_{\alpha\beta}:A_\beta\to A_\alpha$. Une \emph{limite projective} de ce
+système dans $\boldsymbol{C}$ est constituée par un objet $B$ de $\boldsymbol{C}$ (noté
+$\varprojlim A_\alpha$), et, pour chaque $\alpha\in I$, un morphisme
+$u_\alpha:B\to A_\alpha$, tels que~: 1\textsuperscript{o}
+$u_\alpha=u_{\alpha\beta}u_\beta$ pour $\alpha\leq\beta$~;
+2\textsuperscript{o
+
+[id 4001]
+OLD: de $C$ munis
+NEW: de $\boldsymbol{C}$ munis
+FRENCH CONTEXT (corrected):  $w$ est un homomorphisme pour ces lois de composition, et
+si son morphisme réciproque $w^{-1}$ est un homomorphisme pour les lois de
+composition $\gamma_{X'}$ et $\gamma_X$.
+
+On définit de la même manière les \emph{dihomomorphismes} pour les couples
+d'objets de $\boldsymbol{C}$ munis de lois de composition externes.
+\end{env}
+
+\begin{env}[8.2.3]
+\label{0.8.2.3-fr}
+Lorsqu'une loi de composition interne $\gamma_X$ sur un objet $X\in \boldsymbol{C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in
+
+[id 4002]
+OLD: $X\in C$ est
+NEW: $X\in \boldsymbol{C}$ est
+FRENCH CONTEXT (corrected): _X$.
+
+On définit de la même manière les \emph{dihomomorphismes} pour les couples
+d'objets de $\boldsymbol{C}$ munis de lois de composition externes.
+\end{env}
+
+\begin{env}[8.2.3]
+\label{0.8.2.3-fr}
+Lorsqu'une loi de composition interne $\gamma_X$ sur un objet $X\in \boldsymbol{C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\
+
+[id 4003]
+OLD: $Y\in C$, on
+NEW: $Y\in \boldsymbol{C}$, on
+FRENCH CONTEXT (corrected): munis de lois de composition externes.
+\end{env}
+
+\begin{env}[8.2.3]
+\label{0.8.2.3-fr}
+Lorsqu'une loi de composition interne $\gamma_X$ sur un objet $X\in \boldsymbol{C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr
+
+[id 4004]
+OLD: un
+\emph{$C$-groupe} ou
+NEW: un
+\emph{$\boldsymbol{C}$-groupe} ou
+FRENCH CONTEXT (corrected): 8.2.3]
+\label{0.8.2.3-fr}
+Lorsqu'une loi de composition interne $\gamma_X$ sur un objet $X\in \boldsymbol{C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr}
+Supposons que le \emph{produit} $X\times X$ d'un objet $X\in \boldsymbo
+
+[id 4005]
+OLD: un \emph{$C$-objet en
+NEW: un \emph{$\boldsymbol{C}$-objet en
+FRENCH CONTEXT (corrected): loi de composition interne $\gamma_X$ sur un objet $X\in \boldsymbol{C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr}
+Supposons que le \emph{produit} $X\times X$ d'un objet $X\in \boldsymbol{C}$ par lui-même
+existe dans $\bo
+
+[id 4006]
+OLD: \emph{$C$-anneaux},
+NEW: \emph{$\boldsymbol{C}$-anneaux},
+FRENCH CONTEXT (corrected): {C}$ est
+telle que $\gamma_X(Y)$ soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr}
+Supposons que le \emph{produit} $X\times X$ d'un objet $X\in \boldsymbol{C}$ par lui-même
+existe dans $\boldsymbol{C}$~; par définition, on a alors
+$h_{X\times X}=h_X\times
+
+[id 4007]
+OLD: \emph{$C$-modules},
+NEW: \emph{$\boldsymbol{C}$-modules},
+FRENCH CONTEXT (corrected): soit une loi de \emph{groupe} sur $h_X(Y)$ pour
+\emph{tout} $Y\in \boldsymbol{C}$, on dit que $X$, muni de cette loi, est un
+\emph{$\boldsymbol{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr}
+Supposons que le \emph{produit} $X\times X$ d'un objet $X\in \boldsymbol{C}$ par lui-même
+existe dans $\boldsymbol{C}$~; par définition, on a alors
+$h_{X\times X}=h_X\times h_X$ à un isomorphisme canonique
+
+[id 4008]
+OLD: $X\in C$ par
+NEW: $X\in \boldsymbol{C}$ par
+FRENCH CONTEXT (corrected): l{C}$-groupe} ou un \emph{$\boldsymbol{C}$-objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr}
+Supposons que le \emph{produit} $X\times X$ d'un objet $X\in \boldsymbol{C}$ par lui-même
+existe dans $\boldsymbol{C}$~; par définition, on a alors
+$h_{X\times X}=h_X\times h_X$ à un isomorphisme canonique près, puisqu'il
+s'agit d'un cas particulier de limite projective
+(\hyperref[0.8.1.9-fr]{8.1.9})~; une loi de composition interne sur $
+
+[id 4009]
+OLD: dans $C$~; par
+NEW: dans $\boldsymbol{C}$~; par
+FRENCH CONTEXT (corrected): -objet en groupes}. On définit de même les
+\emph{$\boldsymbol{C}$-anneaux}, \emph{$\boldsymbol{C}$-modules}, etc.
+\end{env}
+
+\begin{env}[8.2.4]
+\label{0.8.2.4-fr}
+Supposons que le \emph{produit} $X\times X$ d'un objet $X\in \boldsymbol{C}$ par lui-même
+existe dans $\boldsymbol{C}$~; par définition, on a alors
+$h_{X\times X}=h_X\times h_X$ à un isomorphisme canonique près, puisqu'il
+s'agit d'un cas particulier de limite projective
+(\hyperref[0.8.1.9-fr]{8.1.9})~; une loi de composition interne sur $X$ peut
+donc être considérée comme un morphi
+
+[id 4010]
+OLD: lorsque $C$ est
+NEW: lorsque $\boldsymbol{C}$ est
+FRENCH CONTEXT (corrected): ne donc canoniquement
+(\hyperref[0.8.1.6-fr]{8.1.6}) un élément
+$c_X\in\operatorname{Hom}(X\times X,X)$ tel que $h_{c_X}=\gamma_X$~; dans
+ce cas, la donnée d'une loi de composition interne sur $X$ est donc
+équivalente à celle d'un morphisme $X\times X\to X$~; lorsque $\boldsymbol{C}$ est la
+catégorie \textbf{\textit{Ens}}, on retrouve la notion classique de loi de
+composition interne sur un ensemble. On a un résultat analogue pour une loi
+de composition externe lorsque le produit $Z\times X$ existe dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{env
+
+[id 4011]
+OLD: dans $C$.
+\end{env}
+NEW: dans $\boldsymbol{C}$.
+\end{env}
+FRENCH CONTEXT (corrected): times X\to X$~; lorsque $\boldsymbol{C}$ est la
+catégorie \textbf{\textit{Ens}}, on retrouve la notion classique de loi de
+composition interne sur un ensemble. On a un résultat analogue pour une loi
+de composition externe lorsque le produit $Z\times X$ existe dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{env}[8.2.5]
+\label{0.8.2.5-fr}
+Avec les notations précédentes, supposons en outre que $X\times X\times X$
+existe dans $\boldsymbol{C}$~; la caractérisation du produit comme objet représentant un
+foncteur (\hyperref[0.8.1.9-fr]{8.1.9}) entraîne l'exist
+
+[id 4012]
+OLD: dans $C$~; la
+NEW: dans $\boldsymbol{C}$~; la
+FRENCH CONTEXT (corrected): mble. On a un résultat analogue pour une loi
+de composition externe lorsque le produit $Z\times X$ existe dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{env}[8.2.5]
+\label{0.8.2.5-fr}
+Avec les notations précédentes, supposons en outre que $X\times X\times X$
+existe dans $\boldsymbol{C}$~; la caractérisation du produit comme objet représentant un
+foncteur (\hyperref[0.8.1.9-fr]{8.1.9}) entraîne l'existence d'isomorphismes
+canoniques
+\[
+  (X\times X)\times X\xrightarrow{\sim}X\times X\times X
+  \xrightarrow{\sim}X\times(X\times X)~;
+\]
+si on identi
+
+[id 4013]
+OLD: $Y\in C$. Il
+NEW: $Y\in \boldsymbol{C}$. Il
+FRENCH CONTEXT (corrected): es X)\times X\xrightarrow{\sim}X\times X\times X
+  \xrightarrow{\sim}X\times(X\times X)~;
+\]
+si on identifie canoniquement $X\times X\times X$ à $(X\times X)\times X$,
+l'application $\gamma_X(Y)\times 1_{h_X(Y)}$ s'identifie à
+$h_{c_X\times 1_X}(Y)$ pour tout $Y\in \boldsymbol{C}$. Il est par suite équivalent de
+dire que pour tout $Y\in \boldsymbol{C}$, la loi interne $\gamma_X(Y)$ est
+associative, ou que le diagramme d'applications
+\[
+  \xymatrix{
+    h_X(Y)\times h_X(Y)\times h_X(Y)
+      \ar[rr]^{\gamma_X(Y)\times 1}\ar[dd]_{1\times\gam
+
+[id 4014]
+OLD: $Y\in C$, la
+NEW: $Y\in \boldsymbol{C}$, la
+FRENCH CONTEXT (corrected): mes(X\times X)~;
+\]
+si on identifie canoniquement $X\times X\times X$ à $(X\times X)\times X$,
+l'application $\gamma_X(Y)\times 1_{h_X(Y)}$ s'identifie à
+$h_{c_X\times 1_X}(Y)$ pour tout $Y\in \boldsymbol{C}$. Il est par suite équivalent de
+dire que pour tout $Y\in \boldsymbol{C}$, la loi interne $\gamma_X(Y)$ est
+associative, ou que le diagramme d'applications
+\[
+  \xymatrix{
+    h_X(Y)\times h_X(Y)\times h_X(Y)
+      \ar[rr]^{\gamma_X(Y)\times 1}\ar[dd]_{1\times\gamma_X(Y)} &&
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y)\t
+
+=================== PAGE 0\textsubscript{III} 11 ===================
+----- (Spanish page 0\textsubscript{III} 10: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 11: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-8.tex, page 0\textsubscript{III} 12 -----
+\oldpage[0\textsubscript{III}]{12}
+$s\leadsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
+Comprobamos entonces que el hecho de que $\eta_X(Y)$ sea el elemento identidad de $\gamma_X(Y)$ para todo $Y\in\C$ equivale a decir que el morfismo compuesto
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X\xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+y su análogo en el que se intercambian $1_X$ y $e_X$, son ambos \emph{iguales} a $1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8}
+Naturalmente, se podrían ampliar con facilidad los ejemplos de estructuras algebraicas en categorías.
+El ejemplo de los grupos se ha tratado con suficiente detalle, pero en adelante dejaremos por lo general al lector el desarrollo de las nociones análogas para los ejemplos de estructuras algebraicas que encontremos.
+\end{env}
+----- Spanish, III1_CURRENT/ega0/ega0-9.tex, page 0\textsubscript{III} 12 -----
+\section{Conjuntos construibles}
+\label{section:0.9}
+
+\subsection{Conjuntos construibles}
+\label{subsection:0.9.1}
+
+\begin{definition}[9.1.1]
+\label{0.9.1.1}
+Decimos que una aplicación continua $f:X\to Y$ es \emph{cuasicompacta} si, para todo subconjunto abierto cuasicompacto $U$ de $Y$, $f^{-1}(U)$ es cuasicompacto.
+Decimos que un subconjunto $Z$ de un espacio topológico $X$ es \emph{retrocompacto} en $X$ si la inyección canónica $Z\to X$ es cuasicompacta; en otros términos, si para todo subconjunto abierto cuasicompacto $U$ de $X$, $U\cap Z$ es cuasicompacto.
+\end{definition}
+
+Un subconjunto \emph{cerrado} de $X$ es retrocompacto en $X$, pero un subconjunto cuasicompacto de $X$ no es necesariamente retrocompacto en $X$.
+Si $X$ es cuasicompacto, todo subconjunto abierto retrocompacto de $X$ es cuasicompacto.
+Está claro que toda unión \emph{finita} de conjuntos retrocompactos en $X$ es retrocompacta en $X$, pues toda unión finita de conjuntos cuasicompactos es cuasicompacta.
+Toda intersección finita de abiertos retrocompactos de $X$ es un abierto retrocompacto de $X$.
+En un espacio \emph{localmente noetheriano} $X$, todo conjunto cuasicompacto es un subespacio noetheriano y, en consecuencia, \emph{todo subconjunto} de $X$ es retrocompacto en $X$.
+
+\begin{definition}[9.1.2]
+\label{0.9.1.2}
+Dado un espacio topológico $X$, decimos que un subconjunto de $X$ es \emph{construible} si pertenece al menor conjunto de subconjuntos $\mathfrak{F}$ de $X$ que contiene todos los subconjuntos abiertos retrocompactos de $X$ y es estable por intersecciones finitas y complementarios (lo que implica que $\mathfrak{F}$ también es estable por uniones finitas).
+\end{definition}
+
+\begin{proposition}[9.1.3]
+\label{0.9.1.3}
+Para que un subconjunto de $X$ sea construible, es necesario y suficiente que sea una unión finita de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$.
+\end{proposition}
+
+\begin{proof}
+Está claro que la condición es suficiente.
+Para ver que es necesaria, consideremos el conjunto $\mathfrak{G}$ de las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$; basta ver que el complementario de todo conjunto de $\mathfrak{G}$ pertenece a $\mathfrak{G}$.
+Sea $Z=\bigcup_{i\in I}(U_i\cap\complement{V_i})$, donde $I$ es finito y los $U_i$ y $V_i$ son abiertos retrocompactos de $X$; tenemos
+$\complement{Z}=\bigcap_{i\in I}(V_i\cup\complement{U_i})$, de modo que $\complement{Z}$ es una unión finita de conjuntos que son intersecciones de cierto número de los $V_i$ y de cierto número de los $\complement{U_i}$, por tanto de la forma
+----- French corrections on page 0\textsubscript{III} 11 -----
+[id 4015]
+OLD: \emph{loi de
+groupe}
+NEW: loi de
+\emph{groupe}
+FRENCH CONTEXT (corrected): X}\\\\
+    X\times X\ar[rr]_{c_X} && X
+  }
+\]
+est commutatif.
+\end{env}
+
+\begin{env}[8.2.6]
+\label{0.8.2.6-fr}
+Sous les hypothèses de (\hyperref[0.8.2.5-fr]{8.2.5}), si on veut exprimer
+que pour tout $Y\in \boldsymbol{C}$, la loi interne $\gamma_X(Y)$ est une loi de
+\emph{groupe}, il faut d'une part exprimer qu'elle est associative, et de l'autre
+qu'il existe une application $\alpha_X(Y):h_X(Y)\to h_X(Y)$ ayant les
+propriétés de l'\emph{inverse} dans un groupe~; comme pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, on a vu que 
+
+[id 4017]
+OLD: (s,t)\mapsto(s,s^{-1},t)\mapsto(s,s^{-1}t)\mapsto s
+NEW: (s,t)\leadsto(s,s^{-1},t)\leadsto(s,s^{-1}t)\leadsto s
+FRENCH CONTEXT (corrected): _X$ doit
+être un \emph{morphisme fonctoriel}. On peut d'autre part exprimer les
+propriétés caractéristiques de l'inverse $s\leadsto s^{-1}$ dans un groupe
+$G$ sans faire intervenir l'élément neutre~: il suffit d'écrire que les deux
+applications composées
+\[
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,s^{-1}t)\leadsto s(s^{-1}t)
+\]
+\[
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,ts^{-1})\leadsto(ts^{-1})s
+\]
+sont égales à la seconde projection $(s,t)\leadsto t$ de $G\times G$ dans
+$G$. En vertu de (\hyperref[0.8.1.3-fr]{8.1.3}), on a
+$\alpha_X=h_{a_X}$, où $a_X\in\operatorname{Hom}
+
+[id 4023]
+OLD: \operatorname{Hom}(Y,e)
+NEW: \operatorname{Hom}(Y,\boldsymbol{e})
+FRENCH CONTEXT (corrected): 'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{C}$ l'unique
+application $\{a\}\to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\boldsymbol{C}$,
+$\operatorname{Hom}(Y,\boldsymbol{e})=h_{\mathbf{e}}(Y)$ soit \emph{réduit à un élément}~; on dit
+que $\boldsymbol{e}$ est un \emph{objet final} de $\boldsymbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axio
+
+[id 4028]
+OLD: $Y\in C$, la
+NEW: $Y\in \boldsymbol{C}$, la
+FRENCH CONTEXT (corrected): mes(X\times X)~;
+\]
+si on identifie canoniquement $X\times X\times X$ à $(X\times X)\times X$,
+l'application $\gamma_X(Y)\times 1_{h_X(Y)}$ s'identifie à
+$h_{c_X\times 1_X}(Y)$ pour tout $Y\in \boldsymbol{C}$. Il est par suite équivalent de
+dire que pour tout $Y\in \boldsymbol{C}$, la loi interne $\gamma_X(Y)$ est
+associative, ou que le diagramme d'applications
+\[
+  \xymatrix{
+    h_X(Y)\times h_X(Y)\times h_X(Y)
+      \ar[rr]^{\gamma_X(Y)\times 1}\ar[dd]_{1\times\gamma_X(Y)} &&
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y)\t
+
+[id 4029]
+OLD: dans $C$, on
+NEW: dans $\boldsymbol{C}$, on
+FRENCH CONTEXT (corrected): _X(Y)$ est une loi de
+\emph{groupe}, il faut d'une part exprimer qu'elle est associative, et de l'autre
+qu'il existe une application $\alpha_X(Y):h_X(Y)\to h_X(Y)$ ayant les
+propriétés de l'\emph{inverse} dans un groupe~; comme pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, on a vu que $h_X(u)$ doit être un homomorphisme de
+groupes $h_X(Y')\to h_X(Y)$, on voit d'abord que $\alpha_X:h_X\to h_X$ doit
+être un \emph{morphisme fonctoriel}. On peut d'autre part exprimer les
+propriétés caractéristiques de l'inverse $s\leadsto s^{-1}$ dans
+
+[id 4030]
+OLD: dans $C$, et
+NEW: dans $\boldsymbol{C}$, et
+FRENCH CONTEXT (corrected): orname{Hom}(X,X)$~; la première
+condition précédente exprime alors que le morphisme composé
+\[
+  X\times X\xrightarrow{(1_X,a_X)\times 1_X}X\times X\times X
+  \xrightarrow{1_X\times c_X}X\times X\xrightarrow{c_X}X
+\]
+est la seconde projection $X\times X\to X$ dans $\boldsymbol{C}$, et la seconde condition
+se traduit de même.
+\end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7-fr}
+Supposons maintenant qu'il existe dans $\boldsymbol{C}$ un \emph{objet final} $\boldsymbol{e}$
+(\hyperref[0.8.1.10-fr]{8.1.10}). Supposons toujours que $\gamma_X(Y)$ soi
+
+[id 4031]
+OLD: dans $C$ un
+NEW: dans $\boldsymbol{C}$ un
+FRENCH CONTEXT (corrected): imes X
+  \xrightarrow{1_X\times c_X}X\times X\xrightarrow{c_X}X
+\]
+est la seconde projection $X\times X\to X$ dans $\boldsymbol{C}$, et la seconde condition
+se traduit de même.
+\end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7-fr}
+Supposons maintenant qu'il existe dans $\boldsymbol{C}$ un \emph{objet final} $\boldsymbol{e}$
+(\hyperref[0.8.1.10-fr]{8.1.10}). Supposons toujours que $\gamma_X(Y)$ soit
+une loi de groupe sur $h_X(Y)$ pour tout $Y\in \boldsymbol{C}$, et désignons par
+$\eta_X(Y)$ l'élément neutre de $\gamma_X(Y)$. Comme, pour tout mo
+
+[id 4032]
+OLD: $Y\in C$, et
+NEW: $Y\in \boldsymbol{C}$, et
+FRENCH CONTEXT (corrected): end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7-fr}
+Supposons maintenant qu'il existe dans $\boldsymbol{C}$ un \emph{objet final} $\boldsymbol{e}$
+(\hyperref[0.8.1.10-fr]{8.1.10}). Supposons toujours que $\gamma_X(Y)$ soit
+une loi de groupe sur $h_X(Y)$ pour tout $Y\in \boldsymbol{C}$, et désignons par
+$\eta_X(Y)$ l'élément neutre de $\gamma_X(Y)$. Comme, pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, $h_X(u)$ est un homomorphisme de groupes, on a
+$\eta_X(Y)=(h_X(u))(\eta_X(Y'))$~; prenant en particulier $Y'=\boldsymbol{e}$, auquel cas
+
+[id 4033]
+OLD: dans $C$, $h_X(u)$
+NEW: dans $\boldsymbol{C}$, $h_X(u)$
+FRENCH CONTEXT (corrected): $\boldsymbol{e}$
+(\hyperref[0.8.1.10-fr]{8.1.10}). Supposons toujours que $\gamma_X(Y)$ soit
+une loi de groupe sur $h_X(Y)$ pour tout $Y\in \boldsymbol{C}$, et désignons par
+$\eta_X(Y)$ l'élément neutre de $\gamma_X(Y)$. Comme, pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, $h_X(u)$ est un homomorphisme de groupes, on a
+$\eta_X(Y)=(h_X(u))(\eta_X(Y'))$~; prenant en particulier $Y'=\boldsymbol{e}$, auquel cas
+$u$ est l'unique élément $\varepsilon$ de $\operatorname{Hom}(Y,\boldsymbol{e})$, on voit
+que l'élément $\eta_X(\boldsymbol{e})$ dé
+
+[id 4034]
+OLD: $Y\in C$. Posons
+NEW: $Y\in \boldsymbol{C}$. Posons
+FRENCH CONTEXT (corrected): a_X(Y)=(h_X(u))(\eta_X(Y'))$~; prenant en particulier $Y'=\boldsymbol{e}$, auquel cas
+$u$ est l'unique élément $\varepsilon$ de $\operatorname{Hom}(Y,\boldsymbol{e})$, on voit
+que l'élément $\eta_X(\boldsymbol{e})$ détermine complètement $\eta_X(Y)$ pour tout
+$Y\in \boldsymbol{C}$. Posons $e_X=\eta_X(X)$, élément neutre du groupe
+$h_X(X)=\operatorname{Hom}(X,X)$~; la commutativité du diagramme
+\[
+  \xymatrix{
+    h_X(\boldsymbol{e})\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(\boldsymbol{e})} &
+    h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
+    h_X(\boldsymbol{e
+
+=================== PAGE 0\textsubscript{III} 12 ===================
+----- (Spanish page 0\textsubscript{III} 11: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 12: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-9.tex, page 0\textsubscript{III} 13 -----
+\oldpage[0\textsubscript{III}]{13}
+$V\cap\complement{U}$, donde $U$ es la unión de cierto número de los $U_i$ y $V$ es la intersección de cierto número de los $V_i$; pero hemos observado antes que las uniones e intersecciones finitas de abiertos retrocompactos de $X$ son abiertos retrocompactos de $X$, de donde se sigue la conclusión.
+\end{proof}
+
+\begin{corollary}[9.1.4]
+\label{0.9.1.4}
+Todo subconjunto construible de $X$ es retrocompacto en $X$.
+\end{corollary}
+
+\begin{proof}
+Basta demostrar que, si $U$ y $V$ son abiertos retrocompactos de $X$, entonces $U\cap\complement{V}$ es retrocompacto en $X$; si $W$ es un abierto cuasicompacto de $X$, entonces $W\cap U\cap\complement{V}$ es cerrado en el espacio cuasicompacto $W\cap U$ y, por tanto, es cuasicompacto.
+\end{proof}
+
+En particular:
+\begin{corollary}[9.1.5]
+\label{0.9.1.5}
+Para que un subconjunto abierto $U$ de $X$ sea construible, es necesario y suficiente que sea retrocompacto en $X$.
+Para que un subconjunto cerrado $F$ de $X$ sea construible, es necesario y suficiente que el abierto $\complement{F}$ sea retrocompacto.
+\end{corollary}
+
+\begin{env}[9.1.6]
+\label{0.9.1.6}
+Un caso importante es aquel en que todo subconjunto abierto cuasicompacto de $X$ es retrocompacto; en otros términos, aquel en que la intersección de dos subconjuntos abiertos cuasicompactos de $X$ es cuasicompacta (cf.~\sref[I]{I.5.5.6}).
+Cuando $X$ es además cuasicompacto, esto implica que los subconjuntos abiertos retrocompactos de $X$ coinciden con los subconjuntos abiertos cuasicompactos de $X$, y que los subconjuntos construibles de $X$ son las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos cuasicompactos.
+\end{env}
+
+\begin{corollary}[9.1.7]
+\label{0.9.1.7}
+Para que un subconjunto de un espacio noetheriano $X$ sea construible, es necesario y suficiente que sea una unión finita de subconjuntos localmente cerrados de $X$.
+\end{corollary}
+
+\begin{proposition}[9.1.8]
+\label{0.9.1.8}
+Sea $X$ un espacio topológico y $U$ un subconjunto abierto de $X$.
+\begin{enumerate}
+  \item[{\rm(i)}] Si $T$ es un subconjunto construible de $X$, entonces $T\cap U$ es un subconjunto construible de $U$.
+  \item[{\rm(ii)}] Supongamos, además, que $U$ es retrocompacto en $X$. Para que un subconjunto $Z$ de $U$ sea construible en $X$, es necesario y suficiente que sea construible en $U$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[(i)] Mediante la Proposición \sref{0.9.1.3}, nos reducimos a demostrar que, si $T$ es un abierto retrocompacto de $X$, entonces $T\cap U$ es un abierto retrocompacto de $U$; en otros términos, para todo abierto cuasicompacto $W\subset U$, $T\cap U\cap W=T\cap W$ es cuasicompacto, lo que se sigue inmediatamente de la hipótesis.
+  \item[(ii)] La condición es necesaria por (i), por lo que queda demostrar que es suficiente.
+    Por la Proposición \sref{0.9.1.3}, basta considerar el caso en que $Z$ es un abierto retrocompacto \emph{en $U$}, pues entonces se seguirá que $U\setmin Z$ es construible en $X$, y si $Z$ y $Z'$ son dos abiertos retrocompactos \emph{en $U$}, entonces $Z\cap(U\setmin Z')$ será construible en $X$.
+    Si $W$ es un abierto cuasicompacto de $X$ y $Z$ un abierto retrocompacto de $U$, tenemos $Z\cap W=Z\cap(W\cap U)$, y por hipótesis $W\cap U$ es un abierto cuasicompacto de $U$; por tanto, $W\cap Z$ es cuasicompacto y, en consecuencia, $Z$ es un abierto retrocompacto de $X$, y \emph{a fortiori} construible en $X$.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[9.1.9]
+\label{0.9.1.9}
+Sea $X$ un espacio topológico y $(U_i)_{i\in I}$ un recubrimiento finito de $X$ por abiertos retrocompactos de $X$.
+Para que un subconjunto $Z$ de $X$ sea construible en $X$, es necesario y suficiente que $Z\cap U_i$ sea construible en $U_i$ para todo $i\in I$.
+\end{corollary}
+
+\begin{env}[9.1.10]
+\label{0.9.1.10}
+Supongamos, en particular, que $X$ es cuasicompacto y que todo punto
+----- French corrections on page 0\textsubscript{III} 12 -----
+[id 4036]
+OLD: \emph{égaux} à
+NEW: \emph{égaux à}
+FRENCH CONTEXT (corrected): ent neutre de
+$\gamma_X(Y)$ pour tout $Y\in \boldsymbol{C}$ équivaut à dire que le morphisme composé
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X
+  \xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+et l'analogue où on permute $1_X$ et $e_X$, sont tous deux \emph{égaux à}
+$1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8-fr}
+On pourrait bien entendu multiplier sans peine les exemples de structures
+algébriques dans les catégories. L'exemple des groupes a été traité avec
+assez de détails, mais par la suite nous laisserons géné
+
+[id 4037]
+OLD: \emph{quasi-compacte} si
+NEW: quasi-compacte si
+FRENCH CONTEXT (corrected):  sur $U$. En outre
+$f^{-1}(U)$ est quasi-compact par hypothèse, donc réunion d'un nombre fini
+d'ouverts $V(x_i)$, ce qui achève la démonstration.
+
+\begin{proposition}[6.6.4]
+\label{I.6.6.4-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Une immersion $X\to Y$ est quasi-compacte si elle est fermée,
+    ou si l'espace sous-jacent à $Y$ est localement noethérien ou si l'espace
+    sous-jacent à $X$ est noethérien.
+  \item[\textup{(ii)}] Le composé de deux morphismes quasi-compacts est quasi-compact.
+  \item[\textup{(iii)}] Si $f:X\to Y$ e
+
+[id 4038]
+OLD: \emph{rétrocompacte
+dans $X$}
+NEW: rétrocompacte
+dans $X$
+FRENCH CONTEXT (corrected): tion:0.9.1-fr}
+
+\begin{definition}[9.1.1]
+\label{0.9.1.1-fr}
+On dit qu'une application continue $f:X\to Y$ est quasi-compacte si
+pour tout ouvert quasi-compact $U$ de $Y$, $f^{-1}(U)$ est quasi-compact. On
+dit qu'une partie $Z$ d'un espace topologique $X$ est rétrocompacte
+dans $X$ si l'injection canonique $Z\to X$ est quasi-compacte, autrement dit
+si pour tout ouvert quasi-compact $U$ de $X$, $U\cap Z$ est quasi-compact.
+\end{definition}
+
+Une partie \emph{fermée} de $X$ est rétrocompacte dans $X$, mais une partie
+quasi-compacte de $X$ 
+
+[id 4039]
+OLD: \emph{constructible}
+NEW: constructible
+FRENCH CONTEXT (corrected):  élargi, des résultats principaux de (FAC) et d'un article ultérieur du même auteur~\cite{I-15}.
+Nous avons aussi retiré grand profit du \emph{Séminaire de Géométrie algébrique} de C.~Chevalley~\cite{I-1}; en particulier, l'usage systématique des <<~ensembles constructibles~>> introduits par lui, s'est révélé fort utile en théorie des schémas (cf. chap.~IV).
+Nous lui avons aussi emprunté l'étude des morphismes du point
+
+\oldpage[I]{8}
+de vue de la dimension (chap.~IV), qui se transcrit sans changement notable dans le cadre des 
+
+[id 4040]
+OLD: (ce qui implique que $\mathfrak{F}$ est aussi stable par réunion finie).
+NEW: \textup{(ce qui implique que $\mathfrak{F}$ est aussi} stable par réunion finie\textup{)}.
+FRENCH CONTEXT (corrected): topologique $X$, on dit qu'une partie de $X$ est
+constructible si elle appartient au plus petit ensemble de parties
+$\mathfrak{F}$ de $X$ contenant toutes les parties ouvertes rétrocompactes de
+$X$ et stable par intersection finie et passage au complémentaire
+\textup{(ce qui implique que $\mathfrak{F}$ est aussi} stable par réunion finie\textup{)}.
+\end{definition}
+
+\begin{proposition}[9.1.3]
+\label{0.9.1.3-fr}
+Pour qu'une partie de $X$ soit constructible, il faut et il suffit qu'elle
+soit réunion finie d'ensembles de la forme $U\cap\complement{V}$, où $U$ et
+$V$ sont des ouverts rétrocompacts dans $X$.
+
+[id 4041]
+OLD: $Y\in C$ équivaut
+NEW: $Y\in \boldsymbol{C}$ équivaut
+FRENCH CONTEXT (corrected):  l'ensemble $h_X(Y)$,
+l'application $h_{e_X}(Y)$ n'est autre que
+\oldpage[0\textsubscript{III}]{12}
+$s\leadsto\eta_X(Y)$ transformant tout élément en l'élément neutre. On
+vérifie alors que le fait que $\eta_X(Y)$ soit élément neutre de
+$\gamma_X(Y)$ pour tout $Y\in \boldsymbol{C}$ équivaut à dire que le morphisme composé
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X
+  \xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+et l'analogue où on permute $1_X$ et $e_X$, sont tous deux \emph{égaux à}
+$1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8-f
+
+=================== PAGE 0\textsubscript{III} 13 ===================
+----- (Spanish page 0\textsubscript{III} 12: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 13: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-9.tex, page 0\textsubscript{III} 14 -----
+\oldpage[0\textsubscript{III}]{14}
+de $X$ admite un sistema fundamental de entornos abiertos retrocompactos en $X$ (y \emph{a fortiori} cuasicompactos); entonces la condición para que un subconjunto $Z$ de $X$ sea construible en $X$ es de naturaleza \emph{local}; en otros términos, es necesario y suficiente que, para todo $x\in X$, exista un entorno abierto $V$ de $x$ tal que $V\cap Z$ sea construible en $V$.
+En efecto, si se satisface esta condición, entonces para todo $x\in X$ existe un entorno abierto $V$ de $x$ que es \emph{retrocompacto en $X$} y tal que $V\cap Z$ es construible en $V$, por las hipótesis sobre $X$ y por la Proposición \sref{0.9.1.8}[i]; basta entonces recubrir $X$ por un número finito de estos entornos y aplicar el Corolario \sref{0.9.1.9}.
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11}
+Sea $X$ un espacio topológico.
+Decimos que un subconjunto $T$ de $X$ es \emph{localmente construible} en $X$ si, para todo $x\in X$, existe un entorno abierto $V$ de $x$ tal que $T\cap V$ es construible en $V$.
+\end{definition}
+
+De la Proposición \sref{0.9.1.8}[i] se sigue que, si $V$ es tal que $V\cap T$ es construible en $V$, entonces para todo abierto $W\subset V$, $W\cap T$ es construible en $W$.
+Si $T$ es localmente construible en $X$, entonces, para todo abierto $U$ de $X$, $T\cap U$ es localmente construible en $U$, en virtud de la observación anterior.
+La misma observación muestra que el conjunto de subconjuntos localmente construibles de $X$ es estable por uniones finitas e intersecciones finitas; por otra parte, está claro que también es estable por paso al complementario.
+
+\begin{proposition}[9.1.12]
+\label{0.9.1.12}
+Sea $X$ un espacio topológico.
+Todo conjunto construible en $X$ es localmente construible en $X$.
+El recíproco es cierto si $X$ es cuasicompacto y si su topología admite una base formada por los conjuntos retrocompactos de $X$.
+\end{proposition}
+
+\begin{proof}
+La primera afirmación se sigue de la Definición \sref{0.9.1.11}, y la segunda de \sref{0.9.1.10}.
+\end{proof}
+
+\begin{corollary}[9.1.13]
+\label{0.9.1.13}
+Sea $X$ un espacio topológico cuya topología admite una base formada por los conjuntos retrocompactos de $X$.
+Entonces todo subconjunto $T$ localmente construible de $X$ es retrocompacto en $X$.
+\end{corollary}
+
+\begin{proof}
+Sea $U$ un abierto cuasicompacto de $X$; $T\cap U$ es localmente construible en $U$, luego construible en $U$ por la Proposición~\sref{0.9.1.12} y, en consecuencia, cuasicompacto por el Corolario \sref{0.9.1.4}.
+\end{proof}
+
+\subsection{Subconjuntos construibles de espacios noetherianos}
+\label{subsection:0.9.2}
+
+\begin{env}[9.2.1]
+\label{0.9.2.1}
+Hemos visto \sref{0.9.1.7} que, en un espacio noetheriano $X$, los subconjuntos construibles de $X$ son las \emph{uniones finitas de subconjuntos localmente cerrados} de $X$.
+
+La imagen inversa de un conjunto construible de $X$ por una aplicación continua de un espacio noetheriano $X'$ en $X$ es construible en $X'$.
+Si $Y$ es un subconjunto construible de un espacio noetheriano $X$, entonces los subconjuntos de $Y$ que son construibles como subespacios de $Y$ coinciden con los que son construibles como subespacios de $X$.
+\end{env}
+
+\begin{proposition}[9.2.2]
+\label{0.9.2.2}
+Sea $X$ un espacio noetheriano irreducible, y sea $E$ un subconjunto construible de $X$.
+Para que $E$ sea denso en todas partes en $X$, es necesario y suficiente que $E$ contenga un subconjunto abierto no vacío de $X$.
+\end{proposition}
+
+\begin{proof}
+----- French corrections on page 0\textsubscript{III} 13 -----
+[id 4042]
+OLD: {I, 5.5.6}
+NEW: {\textbf{I}, 5.5.6}
+FRENCH CONTEXT (corrected): triction à chaque $D_+(f)$ est le schéma
+affine qui vient d'être défini. En outre~:
+\end{env}
+
+\begin{proposition}[2.4.2]
+\label{II.2.4.2-fr}
+Le préschéma $\operatorname{Proj}(S)$ est un schéma.
+\end{proposition}
+
+\begin{proof}
+Il suffit (\hyperref[I.5.5.6-fr]{\textbf{I}, 5.5.6}) de montrer que, quels que soient
+$f$, $g$ homogènes dans $S_+$,
+$D_+(f)\cap D_+(g)=D_+(fg)$ est affine et que son anneau est engendré par
+les images canoniques des anneaux de $D_+(f)$ et $D_+(g)$~; le premier
+point est évident par définition, et le second ré
+
+[id 4043]
+OLD: \item[(i)] Si $T$
+NEW: \item[\textup{(i)}] Si $T$
+FRENCH CONTEXT (corrected): n $X$ soit constructible, il faut et
+il suffit qu'elle soit réunion finie de parties localement fermées de $X$.
+\end{corollary}
+
+\begin{proposition}[9.1.8]
+\label{0.9.1.8-fr}
+Soient $X$ un espace topologique, $U$ une partie ouverte de $X$.
+\begin{enumerate}
+  \item[\textup{(i)}] Si $T$ est une partie constructible de $X$, $T\cap U$ est une
+    partie constructible de $U$.
+  \item[\textup{(ii)}] Supposons en outre $U$ rétrocompact dans $X$. Pour qu'une
+    partie $Z$ de $U$ soit constructible dans $X$, il faut et il suffit
+    qu'elle soit c
+
+[id 4044]
+OLD: \item[(ii)] Supposons
+NEW: \item[\textup{(ii)}] Supposons
+FRENCH CONTEXT (corrected): nt tels que
+    $\psi(x)=\psi'(x)=y$, et que les $\mathscr{O}_s$-homomorphismes (locaux)
+    $\theta_x^\sharp$ et ${\theta'}_x^\sharp$ de $\mathscr{O}_y$ dans
+    $\mathscr{O}_x$ soient identiques, $f$ et $f'$ coïncident dans un
+    voisinage ouvert de $x$.
+  \item[\textup{(ii)}] Supposons en outre $S$ localement noethérien. Pour tout
+    $\mathscr{O}_s$-homomorphisme local
+    $\varphi:\mathscr{O}_y\to\mathscr{O}_x$, il existe un voisinage ouvert
+    $U$ de $x$ dans $X$ et un $S$-morphisme $f=(\psi,\theta)$ de $U$ dans $Y$
+    tels que $\psi(x
+
+=================== PAGE 0\textsubscript{III} 14 ===================
+----- (Spanish page 0\textsubscript{III} 13: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 14: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-9.tex, page 0\textsubscript{III} 15 -----
+\oldpage[0\textsubscript{III}]{15}
+La condición es evidentemente suficiente, pues todo abierto no vacío es denso en $X$.
+Recíprocamente, sea $E=\bigcup_{i=1}^n(U_i\cap F_i)$ un subconjunto construible de $X$, siendo los $U_i$ abiertos no vacíos y los $F_i$ cerrados en $X$; tenemos entonces $\overline{E}\subset\bigcup_i F_i$.
+En consecuencia, si $\overline{E}=X$, entonces $X$ es igual a uno de los $F_i$, luego $E\supset U_i$, lo que termina la demostración.
+\end{proof}
+
+Cuando $X$ admite un punto genérico $x$ \sref[0]{0.2.1.2}, la condición de la Proposición \sref{0.9.2.2} equivale a la relación $x\in E$.
+
+\begin{proposition}[9.2.3]
+\label{0.9.2.3}
+Sea $X$ un espacio noetheriano.
+Para que un subconjunto $E$ de $X$ sea construible, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$, $E\cap Y$ sea raro en $Y$ o contenga un subconjunto abierto no vacío de $Y$.
+\end{proposition}
+
+\begin{proof}
+La necesidad de la condición se sigue de que $E\cap Y$ debe ser un subconjunto construible de $Y$ y de la Proposición \sref{0.9.2.2}, pues un subconjunto no denso de $Y$ es necesariamente raro en el espacio irreducible $Y$ \sref[0]{0.2.1.1}.
+Para demostrar que la condición es suficiente, apliquemos el principio de inducción noetheriana \sref[0]{0.2.2.2} al conjunto $\mathfrak{F}$ de subconjuntos cerrados $Y$ de $X$ tales que $Y\cap E$ es construible (respecto de $Y$ o respecto de $X$, lo que es equivalente): podemos suponer así que, para todo subconjunto cerrado $Y\neq X$ de $X$, $E\cap Y$ es construible.
+Supongamos primero que $X$ no es irreducible, y sean $X_i$ ($1\leq i\leq m$) sus componentes irreducibles, necesariamente en número finito \sref[0]{0.2.2.5}; por hipótesis, los $E\cap X_i$ son construibles, luego también lo es su unión $E$.
+Supongamos ahora que $X$ es irreducible; entonces, por hipótesis, si $E$ es raro, se tiene $\overline{E}\neq X$ y $E=E\cap\overline{E}$ es construible; si $E$ contiene un subconjunto abierto no vacío $U$ de $X$, es la unión de $U$ y $E\cap(X\setmin U)$; pero $X\setmin U$ es un conjunto cerrado distinto de $X$, por lo que $E\cap(X\setmin U)$ es construible; en consecuencia, $E$ mismo es construible, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[9.2.4]
+\label{0.9.2.4}
+Sea $X$ un espacio noetheriano y $(E_\alpha)$ una familia filtrante creciente de subconjuntos construibles de $X$, tal que
+\begin{enumerate}
+  \item[\emph{(1.o)}] $X$ es la unión de la familia $(E_\alpha)$.
+  \item[\emph{(2.o)}] Todo subconjunto cerrado irreducible de $X$ está contenido en la adherencia de uno de los $E_\alpha$.
+\end{enumerate}
+
+Entonces existe un índice $\alpha$ tal que $X=E_\alpha$.
+
+Cuando todo subconjunto cerrado irreducible de $X$ admite un punto genérico, puede omitirse la hipótesis \emph{(2.o)}.
+\end{corollary}
+
+\begin{proof}
+Apliquemos el principio de inducción noetheriana \sref[0]{0.2.2.2} al conjunto $\mathfrak{M}$ de subconjuntos cerrados de $X$ contenidos en al menos uno de los $E_\alpha$; podemos suponer así que todo subconjunto cerrado $Y\neq X$ de $X$ está contenido en uno de los $E_\alpha$.
+La proposición es evidente si $X$ no es irreducible, porque cada una de las componentes irreducibles $X_i$ de $X$ ($1\leq i\leq m$) está contenida en un $E_{\alpha_i}$, y existe un $E_\alpha$ que contiene todos los $E_{\alpha_i}$.
+Supongamos ahora que $X$ es irreducible.
+Por hipótesis, existe un $\beta$ tal que $X=\overline{E_\beta}$, de modo que \sref{0.9.2.2} $E_\beta$ contiene un subconjunto abierto no vacío $U$ de $X$.
+Pero entonces el conjunto cerrado $X\setmin U$ está contenido en un $E_\gamma$, y basta tomar un $E_\alpha$ que contenga $E_\beta$ y $E_\gamma$.
+Cuando todo subconjunto cerrado irreducible $Y$ de $X$
+----- French corrections on page 0\textsubscript{III} 14 -----
+[id 4047]
+OLD: \emph{localement constructible dans $X$}
+NEW: localement constructible dans $X$
+FRENCH CONTEXT (corrected): {9.1.8, (i)})~; il suffit alors de recouvrir $X$ par un
+nombre fini de ces voisinages, et d'appliquer
+(\hyperref[0.9.1.9-fr]{9.1.9}).
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11-fr}
+Soit $X$ un espace topologique. On dit qu'une partie $T$ de $X$ est
+localement constructible dans $X$ si, pour tout $x\in X$, il existe
+un voisinage ouvert $V$ de $x$ tel que $T\cap V$ soit constructible dans $V$.
+\end{definition}
+
+Il résulte aussitôt de (\hyperref[0.9.1.8-fr]{9.1.8, (i)}) que si $V$ est
+tel que $V\cap T$ soit constructible dans $V$, alors po
+
+=================== PAGE 0\textsubscript{III} 15 ===================
+----- (Spanish page 0\textsubscript{III} 14: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 15: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-9.tex, page 0\textsubscript{III} 16 -----
+\oldpage[0\textsubscript{III}]{16}
+admite un punto genérico $y$, existe $\alpha$ tal que $y\in E_\alpha$, de modo que $Y=\overline{\{y\}}\subset\overline{E_\alpha}$, y la condición (2.o) es, por tanto, consecuencia de (1.o).
+\end{proof}
+
+\begin{proposition}[9.2.5]
+\label{0.9.2.5}
+Sea $X$ un espacio noetheriano, sea $x$ un punto de $X$ y sea $E$ un subconjunto construible de $X$.
+Para que $E$ sea un entorno de $x$, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$ que contenga $x$, $E\cap Y$ sea denso en $Y$ (si existe un punto genérico $y$ de $Y$, esto significa también \sref{0.9.2.2} que $y\in E$).
+\end{proposition}
+
+\begin{proof}
+La condición es evidentemente necesaria; demostraremos que es suficiente.
+Aplicando el principio de inducción noetheriana al conjunto $\mathfrak{M}$ de subconjuntos cerrados $Y$ de $X$ que contienen $x$ y tales que $E\cap Y$ es un entorno de $x$ en $Y$, podemos suponer que todo subconjunto cerrado $Y\neq X$ de $X$ que contiene $x$ pertenece a $\mathfrak{M}$.
+Si $X$ no es irreducible, cada una de las componentes irreducibles $X_i$ de $X$ que contienen $x$ es distinta de $X$, luego $E\cap X_i$ es un entorno de $x$ respecto de $X_i$; en consecuencia, $E$ es un entorno de $x$ en la unión de las componentes irreducibles de $X$ que contienen $x$, y como esta unión es un entorno de $x$ en $X$, también lo es $E$.
+Si $X$ es irreducible, $E$ es denso en $X$ por hipótesis, por lo que contiene un subconjunto abierto no vacío $U$ de $X$ \sref{0.9.2.2}; la proposición es entonces evidente si $x\in U$; en caso contrario, por hipótesis, $x$ es un punto interior de $E\cap(X\setmin U)$ relativo a $X\setmin U$, de modo que la adherencia de $X\setmin E$ en $X$ no contiene $x$, y el complementario de esta adherencia es un entorno de $x$ contenido en $E$, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[9.2.6]
+\label{0.9.2.6}
+Sea $X$ un espacio noetheriano y sea $E$ un subconjunto de $X$.
+Para que $E$ sea un abierto de $X$, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$ que interseca $E$, $E\cap Y$ contenga un subconjunto abierto no vacío de $Y$.
+\end{corollary}
+
+\begin{proof}
+La condición es evidentemente necesaria; recíprocamente, si se satisface, implica que $E$ es construible por la Proposición \sref{0.9.2.3}.
+Además, la Proposición \sref{0.9.2.5} muestra que $E$ es entonces un entorno de cada uno de sus puntos, de donde se sigue la conclusión.
+\end{proof}
+
+\subsection{Funciones construibles}
+\label{subsection:0.9.3}
+
+\begin{definition}[9.3.1]
+\label{0.9.3.1}
+Sea $h$ una aplicación de un espacio topológico $X$ en un conjunto $T$.
+Decimos que $h$ es \emph{construible} si $h^{-1}(t)$ es construible para todo $t\in T$, y vacío salvo para un número finito de valores de $t$; entonces, para todo subconjunto $S$ de $T$, $h^{-1}(S)$ es construible.
+Decimos que $h$ es \emph{localmente construible} si todo $x\in X$ posee un entorno abierto $V$ tal que $h|V$ es construible.
+\end{definition}
+
+Toda función construible es localmente construible; el recíproco es cierto cuando $X$ es cuasicompacto y admite una base formada por los abiertos retrocompactos de $X$ (en particular, cuando $X$ es noetheriano).
+
+\begin{proposition}[9.3.2]
+\label{0.9.3.2}
+Sea $h$ una aplicación de un espacio noetheriano $X$ en un conjunto $T$.
+Para que $h$ sea construible, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$, exista un subconjunto no vacío $U$ de $Y$, abierto respecto de $Y$, sobre el cual $h$ sea constante.
+\end{proposition}
+
+\begin{proof}
+La condición es necesaria: en efecto, por hipótesis, $h$ solo toma un número finito de valores $t_i$ sobre $Y$, y cada uno de los conjuntos $h^{-1}(t_i)\cap Y$ es construible en $Y$ \sref{0.9.2.1}; como no pueden ser todos subconjuntos raros del espacio $Y$, al menos uno de ellos contiene un abierto no vacío \sref{0.9.2.3}.
+----- French corrections on page 0\textsubscript{III} 15 -----
+[id 4286]
+OLD: [0.2.1.2-fr]{$0_{\mathrm I}$
+NEW: [0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected): erts non vides et les $F_i$ fermés dans $X$~; on a donc
+$\overline{E}\subset\bigcup_i F_i$. Par suite, si $\overline{E}=X$, $X$ est
+égal à l'un des $F_i$, donc $E\supset U_i$, ce qui achève la démonstration.
+
+Lorsque $X$ admet un point générique $x$
+(\hyperref[0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.2}), la condition de
+(\hyperref[0.9.2.2-fr]{9.2.2}) équivaut à la relation $x\in E$.
+
+\begin{proposition}[9.2.3]
+\label{0.9.2.3-fr}
+Soit $X$ un espace noethérien. Pour qu'une partie $E$ de $X$ soit
+constructible, il faut et il suffit que, pour toute part
+
+[id 4287]
+OLD: [0.2.1.1-fr]{$0_{\mathrm I}$
+NEW: [0.2.1.1-fr]{$\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected):  $Y$.
+\end{proposition}
+
+La nécessité de la condition provient de ce que $E\cap Y$ doit être une
+partie constructible de $Y$ et de (\hyperref[0.9.2.2-fr]{9.2.2}), car une
+partie non dense de $Y$ est nécessairement rare dans l'espace irréductible
+$Y$ (\hyperref[0.2.1.1-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.1}). Pour prouver que la
+condition est suffisante, appliquons le principe de récurrence noethérienne
+(\hyperref[0.2.2.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$ des parties fermées $Y$ de $X$ telles que $Y\cap E$ soit
+constructib
+
+[id 4288]
+OLD: {$0_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$
+NEW: {$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$
+FRENCH CONTEXT (corrected):  une
+partie non dense de $Y$ est nécessairement rare dans l'espace irréductible
+$Y$ (\hyperref[0.2.1.1-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.1}). Pour prouver que la
+condition est suffisante, appliquons le principe de récurrence noethérienne
+(\hyperref[0.2.2.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$ des parties fermées $Y$ de $X$ telles que $Y\cap E$ soit
+constructible (par rapport à $Y$ ou par rapport à $X$, ce qui revient au
+même)~: on peut donc supposer que pour toute partie fermée $Y\ne X$ de $X$,
+$E\cap Y$ est constructible. Supposons d'abord que $X
+
+[id 4289]
+OLD: [0.2.2.5-fr]{$0_{\mathrm I}$
+NEW: [0.2.2.5-fr]{$\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected): me)~: on peut donc supposer que pour toute partie fermée $Y\ne X$ de $X$,
+$E\cap Y$ est constructible. Supposons d'abord que $X$ ne soit pas
+irréductible, et soient $X_i$ ($1\leq i\leq m$) ses composantes
+irréductibles, nécessairement en nombre fini
+(\hyperref[0.2.2.5-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.5})~; par hypothèse, les
+$E\cap X_i$ sont constructibles, donc aussi leur réunion $E$. Supposons
+ensuite que $X$ soit irréductible~; alors, par hypothèse, ou bien $E$ est
+rare, donc $\overline{E}\ne X$ et $E=E\cap\overline{E}$ est constructible~;
+ou bien
+
+[id 4293]
+OLD: {$0_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{M}$
+NEW: {$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{M}$
+FRENCH CONTEXT (corrected): s il existe un indice $\alpha$ tel que $X=E_\alpha$.
+
+Lorsque toute partie fermée irréductible de $X$ admet un point générique,
+l'hypothèse $2^\circ$ peut être supprimée.
+\end{corollary}
+
+Appliquons le principe de récurrence noethérienne
+(\hyperref[0.2.2.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{M}$ des parties fermées de $X$ contenues dans l'un des $E_\alpha$
+au moins~; on peut donc supposer que toute partie fermée $Y\ne X$ de $X$ est
+contenue dans un des $E_\alpha$. La proposition est évidente si $X$ n'est pas
+irréductible, car chacune des composantes 
+
+[id 4294]
+OLD: $X=\overline{E_\beta}$
+NEW: $X=\overline{E}_\beta$
+FRENCH CONTEXT (corrected): irréductible, car chacune des composantes irréductibles $X_i$ de $X$
+($1\leq i\leq m$) est contenue dans un $E_{\alpha_i}$, et il existe un
+$E_\alpha$ contenant tous les $E_{\alpha_i}$. Supposons donc $X$
+irréductible. Par hypothèse, il existe $\beta$ tel que
+$X=\overline{E}_\beta$, donc (\hyperref[0.9.2.2-fr]{9.2.2}) $E_\beta$
+contient un ouvert non vide $U$ de $X$. Mais alors l'ensemble fermé
+$X\setmin U$ est contenu dans un $E_\gamma$, et il suffit de prendre
+$E_\alpha$ contenant $E_\beta$ et $E_\gamma$. Lorsque toute partie fermée
+i
+
+=================== PAGE 0\textsubscript{III} 16 ===================
+----- (Spanish page 0\textsubscript{III} 15: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 16: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-9.tex, page 0\textsubscript{III} 17 -----
+\oldpage[0\textsubscript{III}]{17}
+Para ver que la condición es suficiente, aplicamos el principio de inducción noetheriana al conjunto $\mathfrak{M}$ de subconjuntos cerrados $Y$ de $X$ tales que la restricción $h|Y$ es construible; podemos suponer así que, para todo subconjunto cerrado $Y\neq X$ de $X$,
+$h|Y$ es construible.
+Si $X$ no es irreducible, la restricción de $h$ a cada una de las componentes irreducibles (en número finito) $X_i$ de $X$ es construible, y se sigue entonces inmediatamente de la Definición \sref{0.9.3.1} que $h$ es construible.
+Si $X$ es irreducible, existe por hipótesis un subconjunto abierto no vacío $U$ de $X$ sobre el cual $h$ es constante; por otra parte, la restricción de $h$ a $X\setmin U$ es construible por hipótesis, y se sigue inmediatamente que $h$ es construible.
+\end{proof}
+
+\begin{corollary}[9.3.3]
+\label{0.9.3.3}
+Sea $X$ un espacio noetheriano en el que todo subconjunto cerrado irreducible admite un punto genérico.
+Si $h$ es una aplicación de $X$ en un conjunto $T$ tal que, para todo $t\in T$, $h^{-1}(t)$ es construible, entonces $h$ es construible.
+\end{corollary}
+
+\begin{proof}
+Si $Y$ es un subconjunto cerrado irreducible de $X$ e $y$ su punto genérico, entonces $Y\cap h^{-1}(h(y))$ es construible y contiene $y$; por tanto, \sref{0.9.2.2} este conjunto contiene un subconjunto abierto no vacío de $Y$, y basta aplicar la Proposición \sref{0.9.3.2}.
+\end{proof}
+
+\begin{proposition}[9.3.4]
+\label{0.9.3.4}
+Sea $X$ un espacio noetheriano en el que todo subconjunto cerrado irreducible admite un punto genérico, y sea $h$ una aplicación construible de $X$ en un conjunto ordenado.
+Para que $h$ sea semicontinua superiormente sobre $X$, es necesario y suficiente que, para todo $x\in X$ y toda generalización \sref[0]{0.2.1.2} $x'$ de $x$, se tenga $h(x')\leq h(x)$.
+\end{proposition}
+
+\begin{proof}
+La función $h$ solo toma un número finito de valores; por tanto, decir que es semicontinua superiormente significa que, para todo $x\in X$, el conjunto $E$ de los $y\in X$ tales que $h(y)\leq h(x)$ es un entorno de $x$.
+Por hipótesis, $E$ es un subconjunto construible de $X$; por otra parte, decir que un subconjunto cerrado irreducible $Y$ de $X$ contiene $x$ significa que su punto genérico $y$ es una generalización de $x$; la conclusión se sigue entonces de la Proposición \sref{0.9.2.5}.
+\end{proof}
+----- French corrections on page 0\textsubscript{III} 16 -----
+[id 4296]
+OLD: \subset\overline{E_\alpha}$
+NEW: \subset\overline{E}_\alpha$
+FRENCH CONTEXT (corrected): ma$, et il suffit de prendre
+$E_\alpha$ contenant $E_\beta$ et $E_\gamma$. Lorsque toute partie fermée
+irréductible $Y$ de $X$
+\oldpage[0\textsubscript{III}]{16}
+admet un point générique $y$, il existe $\alpha$ tel que $y\in E_\alpha$,
+donc $Y=\overline{\{y\}}\subset\overline{E}_\alpha$, et la condition
+$2^\circ$ est conséquence de $1^\circ$.
+
+\begin{proposition}[9.2.5]
+\label{0.9.2.5-fr}
+Soient $X$ un espace noethérien, $x$ un point de $X$, $E$ une partie
+constructible de $X$. Pour que $E$ soit un voisinage de $x$, il faut et il
+suffit que 
+
+[id 4297]
+OLD: aussi (\hyperref[0.9.2.2-fr]{9.2.2}) que
+NEW: aussi \textup{(\hyperref[0.9.2.2-fr]{9.2.2})} que
+FRENCH CONTEXT (corrected): e $X$, $E$ une partie
+constructible de $X$. Pour que $E$ soit un voisinage de $x$, il faut et il
+suffit que pour toute partie fermée irréductible $Y$ de $X$ contenant $x$,
+$E\cap Y$ soit dense dans $Y$ (s'il existe un point générique $y$ de $Y$,
+cela signifie aussi \textup{(\hyperref[0.9.2.2-fr]{9.2.2})} que $y\in E$).
+\end{proposition}
+
+La condition est évidemment nécessaire~; prouvons qu'elle est suffisante.
+Appliquant le principe de récurrence noethérienne à l'ensemble $\mathfrak{M}$
+des parties fermées $Y$ de $X$ contenant $x$ et telles que $E\cap Y$ soit un
+
+
+[id 4301]
+OLD: \emph{constructible} si
+NEW: constructible si
+FRENCH CONTEXT (corrected): oethérien} $X$, tout ensemble quasi-compact est un
+sous-espace noethérien, et par suite \emph{toute partie} de $X$ est
+rétrocompacte dans $X$.
+
+\begin{definition}[9.1.2]
+\label{0.9.1.2-fr}
+Étant donné un espace topologique $X$, on dit qu'une partie de $X$ est
+constructible si elle appartient au plus petit ensemble de parties
+$\mathfrak{F}$ de $X$ contenant toutes les parties ouvertes rétrocompactes de
+$X$ et stable par intersection finie et passage au complémentaire
+\textup{(ce qui implique que $\mathfrak{F}$ est aussi} stable par
+
+[id 4302]
+OLD: \emph{localement constructible}
+NEW: localement constructible
+FRENCH CONTEXT (corrected): {9.1.8, (i)})~; il suffit alors de recouvrir $X$ par un
+nombre fini de ces voisinages, et d'appliquer
+(\hyperref[0.9.1.9-fr]{9.1.9}).
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11-fr}
+Soit $X$ un espace topologique. On dit qu'une partie $T$ de $X$ est
+localement constructible dans $X$ si, pour tout $x\in X$, il existe
+un voisinage ouvert $V$ de $x$ tel que $T\cap V$ soit constructible dans $V$.
+\end{definition}
+
+Il résulte aussitôt de (\hyperref[0.9.1.8-fr]{9.1.8, (i)}) que si $V$ est
+tel que $V\cap T$ soit constructible dans $V$,
+
+=================== PAGE 0\textsubscript{III} 17 ===================
+----- (Spanish page 0\textsubscript{III} 16: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 17: shown above in this file) -----
+----- French corrections on page 0\textsubscript{III} 17 -----
+[id 4304]
+OLD: (\hyperref[0.2.1.2-fr]{$0_{\mathrm I}$, 2.1.2})
+NEW: \textup{(\hyperref[0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.2})}
+FRENCH CONTEXT (corrected): ans lequel toute partie fermée irréductible
+admet un point générique, $h$ une application constructible de $X$ dans un
+ensemble ordonné. Pour que $h$ soit semi-continue supérieurement dans $X$,
+il faut et il suffit que pour tout $x\in X$ et toute générisation
+\textup{(\hyperref[0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.2})} $x'$ de $x$, on ait
+$h(x')\leq h(x)$.
+\end{proposition}
+
+La fonction $h$ ne prend qu'un nombre fini de valeurs~; dire qu'elle est
+semi-continue supérieurement signifie donc que pour tout $x\in X$,
+l'ensemble $E$ des $y\in X$ tels que $h(y)\leq h(x)$ est un vo
+
+=================== PAGE 0\textsubscript{III} 18 ===================
+----- (Spanish page 0\textsubscript{III} 17: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 18: shown above in this file) -----
+----- French corrections on page 0\textsubscript{III} 18 -----
+[id 4305]
+OLD: vérifiée l'une des
+NEW: vérifiée l'\emph{une} des
+FRENCH CONTEXT (corrected): abel{0.10.1.1.2-fr}
+  \varphi:\operatorname{gr}_0(M)\otimes_{\operatorname{gr}_0(A)}
+  \operatorname{gr}(A)\longrightarrow\operatorname{gr}(M).
+  \tag{10.1.1.2}
+\]
+\end{env}
+
+\oldpage[0\textsubscript{III}]{18}
+\begin{env}[10.1.2]
+\label{0.10.1.2-fr}
+Supposons vérifiée l'\emph{une} des hypothèses suivantes~:
+\begin{enumerate}
+  \item[(i)] $\mathfrak{J}$ est nilpotent~;
+  \item[(ii)] $A$ est noethérien, $\mathfrak{J}$ est contenu dans le radical de
+    $A$, et $M$ est de type fini.
+\end{enumerate}
+Alors les propriétés suivantes sont équivale
+
+[id 4306]
+OLD: anneau local
+    \emph{noethérien}
+NEW: anneau \emph{local
+    noethérien}
+FRENCH CONTEXT (corrected): ts~:
+\begin{enumerate}
+  \item[(i)] $M$ est un module \emph{quelconque} sur un anneau local $A$ dont
+    l'idéal maximal $\mathfrak{J}$ est \emph{nilpotent} (par exemple un anneau
+    local artinien).
+  \item[(ii)] $M$ est un module \emph{de type fini} sur un anneau \emph{local
+    noethérien}.
+\end{enumerate}
+\end{env}
+
+\subsection{Critères locaux de platitude}
+\label{subsection:0.10.2-fr}
+
+\begin{env}[10.2.1]
+\label{0.10.2.1-fr}
+Les hypothèses et notations étant celles de
+(\hyperref[0.10.1.1-fr]{10.1.1}), considérons les conditions suivantes~:
+\b
+
+[id 4307]
+OLD: $\mathfrak{J}$-pré-adique.
+NEW: $\mathfrak{J}$-préadique.
+FRENCH CONTEXT (corrected):  $\mathscr{J}=\widetilde{\mathfrak{J}}$,
+où $\mathfrak{J}$ est un idéal de $A$, et $X'=V(\mathfrak{J})$,
+$(X',(\mathscr{O}_X)_{/X'})$ s'identifie canoniquement à
+$\operatorname{Spf}(\widehat A)$, où $\widehat A$ est le séparé complété de
+$A$ pour la topologie $\mathfrak{J}$-préadique.
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se borner à prouver la dernière assertion. On sait
+(\hyperref[0.7.3.3-fr]{\textbf{0}, 7.3.3}) que le séparé complété
+$\widehat{\mathfrak{J}}$ de $\mathfrak{J}$ pour la topologie
+$\mathfrak{J}$-préadique s'id
+
+[id 4308]
+OLD: $M$ un $B$-module de type fini
+NEW: $M$ un $B$-\emph{module} de type fini
+FRENCH CONTEXT (corrected): a topologie $\mathfrak{J}$-préadique.
+\end{env}
+
+\begin{env}[10.2.2]
+\label{0.10.2.2-fr}
+Soient $A$ un anneau noethérien, $B$ une $A$-algèbre commutative noethérienne,
+$\mathfrak{J}$ un idéal de $A$ tel que $\mathfrak{J}B$ soit contenu dans le
+radical de $B$, $M$ un $B$-\emph{module} de type fini. Alors, lorsque $M$ est
+considéré comme $A$-\emph{module}, les conditions $a)$, $b)$, $c)$, $d)$ de
+(\hyperref[0.10.2.1-fr]{10.2.1}) sont \emph{équivalentes}.
+
+\oldpage[0\textsubscript{III}]{19}
+Ce résultat s'applique surtout lorsque $A$ et $B$ sont des annea
+
+[id 4309]
+OLD: comme $A$-module, les conditions
+NEW: comme $A$-\emph{module}, les conditions
+FRENCH CONTEXT (corrected): bel{0.10.2.2-fr}
+Soient $A$ un anneau noethérien, $B$ une $A$-algèbre commutative noethérienne,
+$\mathfrak{J}$ un idéal de $A$ tel que $\mathfrak{J}B$ soit contenu dans le
+radical de $B$, $M$ un $B$-\emph{module} de type fini. Alors, lorsque $M$ est
+considéré comme $A$-\emph{module}, les conditions $a)$, $b)$, $c)$, $d)$ de
+(\hyperref[0.10.2.1-fr]{10.2.1}) sont \emph{équivalentes}.
+
+\oldpage[0\textsubscript{III}]{19}
+Ce résultat s'applique surtout lorsque $A$ et $B$ sont des anneaux
+\emph{locaux} noethériens, l'homomorphisme $A\to B$ un homomorphisme
+\e
+
+[id 4310]
+OLD: {10.2.1}) sont équivalentes.
+NEW: {10.2.1}) sont \emph{équivalentes}.
+FRENCH CONTEXT (corrected): ienne,
+$\mathfrak{J}$ un idéal de $A$ tel que $\mathfrak{J}B$ soit contenu dans le
+radical de $B$, $M$ un $B$-\emph{module} de type fini. Alors, lorsque $M$ est
+considéré comme $A$-\emph{module}, les conditions $a)$, $b)$, $c)$, $d)$ de
+(\hyperref[0.10.2.1-fr]{10.2.1}) sont \emph{équivalentes}.
+
+\oldpage[0\textsubscript{III}]{19}
+Ce résultat s'applique surtout lorsque $A$ et $B$ sont des anneaux
+\emph{locaux} noethériens, l'homomorphisme $A\to B$ un homomorphisme
+\emph{local}. Plus particulièrement, si $\mathfrak{J}$ est alors l'idéal
+\emph{maximal}
+
+[id 24594]
+OLD: et en outre si $M$ est \emph{idéalement séparé}
+NEW: et si en outre $M$ est \emph{idéalement séparé}
+FRENCH CONTEXT (corrected): module plat.
+\end{enumerate}
+On a alors les implications
+\[
+  a\Rightarrow b\Rightarrow c\Rightarrow d
+\]
+et si $\mathfrak{J}$ est \emph{nilpotent}, les quatre conditions $a)$, $b)$,
+$c)$, $d)$ sont \emph{équivalentes}. Il en est de même si $A$ est noethérien
+et si en outre $M$ est \emph{idéalement séparé}, c'est-à-dire que pour tout
+idéal $\mathfrak{a}$ de $A$, le $A$-module $\mathfrak{a}\otimes_A M$ est
+\emph{séparé} pour la topologie $\mathfrak{J}$-préadique.
+\end{env}
+
+\begin{env}[10.2.2]
+\label{0.10.2.2-fr}
+Soient $A$ un anneau noethérien, $B$ une $A$-algè
+

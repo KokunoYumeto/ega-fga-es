@@ -1,0 +1,3257 @@
+# Spanish hand pass, diplomatic_016: 145 items on 17 printed pages
+
+=================== PAGE 0\textsubscript{III} 12 ===================
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-8.tex, page 0\textsubscript{III} 11 -----
+\oldpage[0\textsubscript{III}]{11}
+es conmutativo, o que el diagrama de morfismos
+\[
+  \xymatrix{
+    X\times X\times X\ar[rr]^{c_X\times 1_X}\ar[dd]_{1_X\times c_X} & &
+    X\times X\ar[dd]^{c_X}\\\\
+    X\times X\ar[rr]_{c_X} & &
+    X
+  }
+\]
+es conmutativo.
+\end{env}
+
+\begin{env}[8.2.6]
+\label{0.8.2.6}
+Bajo las hipótesis de \sref{0.8.2.5}, si queremos expresar, para todo $Y\in\C$, que la ley interna $\gamma_X(Y)$ es una \emph{ley de grupo}, es necesario, en primer lugar, que sea asociativa y, en segundo lugar, que exista una aplicación $\alpha_X(Y):h_X(Y)\to h_X(Y)$ con las propiedades de la operación de \emph{inverso} de un grupo; como hemos visto que, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ debe ser un homomorfismo de grupos $h_X(Y')\to h_X(Y)$, vemos primero que $\alpha_X:h_X\to h_X$ debe ser una \emph{transformación natural}.
+Por otra parte, se pueden expresar las propiedades características del inverso $s\mapsto s^{-1}$ de un grupo $G$ sin hacer intervenir el elemento identidad: basta comprobar que las dos aplicaciones compuestas
+\[
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,s^{-1}t)\mapsto s(s^{-1}t)
+\]
+\[
+  (s,t)\leadsto(s,s^{-1},t)\leadsto(s,ts^{-1})\leadsto(ts^{-1})s
+\]
+son iguales a la segunda proyección $(s,t)\mapsto t$ de $G\times G$ en $G$.
+Por \sref{0.8.1.3}, tenemos $\alpha_X=h_{a_X}$, donde $a_X\in\Hom(X,X)$; la primera condición anterior expresa entonces que el morfismo compuesto
+\[
+  X\times X\xrightarrow{(1_X,a_X)\times 1_X}X\times X\times X\xrightarrow{1_X\times c_X}X\times X\xrightarrow{c_X}X
+\]
+es la segunda proyección $X\times X\to X$ en $\C$, y la segunda condición es análoga.
+\end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7}
+Supongamos ahora que existe un \emph{objeto final} $\boldsymbol e$ \sref{0.8.1.10} en $\C$.
+Supongamos siempre que $\gamma_X(Y)$ es una ley de grupo sobre $h_X(Y)$ para todo $Y\in\C$, y denotemos por $\eta_X(Y)$ el elemento identidad de $\gamma_X(Y)$.
+Como, para todo morfismo $u:Y\to Y'$ de $\C$, $h_X(u)$ es un homomorfismo de grupos, tenemos $\eta_X(Y)=(h_X(u))(\eta_X(Y'))$; tomando en particular $Y'=\boldsymbol e$, caso en el cual $u$ es el único elemento $\varepsilon$ de $\Hom(Y,e)$, vemos que el elemento $\eta_X(\boldsymbol e)$ determina por completo $\eta_X(Y)$ para todo $Y\in\C$.
+Pongamos $e_X=\eta_X(X)$, el elemento identidad del grupo $h_X(X)=\Hom(X,X)$; la conmutatividad del diagrama
+\[
+  \xymatrix{
+    h_X(\boldsymbol e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(\boldsymbol e)} &
+    h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
+    h_X(\boldsymbol e)\ar[r]_{h_X(\varepsilon)} &
+    h_X(Y)
+  }
+\]
+(cf. \sref{0.8.1.2}) muestra que, sobre el conjunto $h_X(Y)$, la aplicación $h_{e_X}(Y)$ no es otra que
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-8.tex, page 0\textsubscript{III} 12 -----
+\oldpage[0\textsubscript{III}]{12}
+$s\leadsto\eta_X(Y)$, que envía todo elemento al elemento identidad.
+Comprobamos entonces que el hecho de que $\eta_X(Y)$ sea el elemento identidad de $\gamma_X(Y)$ para todo $Y\in\C$ equivale a decir que el morfismo compuesto
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X\xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+y su análogo en el que se intercambian $1_X$ y $e_X$, son ambos \emph{iguales} a $1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8}
+Naturalmente, se podrían ampliar con facilidad los ejemplos de estructuras algebraicas en categorías.
+El ejemplo de los grupos se ha tratado con suficiente detalle, pero en adelante dejaremos por lo general al lector el desarrollo de las nociones análogas para los ejemplos de estructuras algebraicas que encontremos.
+\end{env}
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-9.tex, page 0\textsubscript{III} 12 -----
+\section{Conjuntos construibles}
+\label{section:0.9}
+
+\subsection{Conjuntos construibles}
+\label{subsection:0.9.1}
+
+\begin{definition}[9.1.1]
+\label{0.9.1.1}
+Decimos que una aplicación continua $f:X\to Y$ es \emph{cuasicompacta} si, para todo subconjunto abierto cuasicompacto $U$ de $Y$, $f^{-1}(U)$ es cuasicompacto.
+Decimos que un subconjunto $Z$ de un espacio topológico $X$ es \emph{retrocompacto} en $X$ si la inyección canónica $Z\to X$ es cuasicompacta; en otros términos, si para todo subconjunto abierto cuasicompacto $U$ de $X$, $U\cap Z$ es cuasicompacto.
+\end{definition}
+
+Un subconjunto \emph{cerrado} de $X$ es retrocompacto en $X$, pero un subconjunto cuasicompacto de $X$ no es necesariamente retrocompacto en $X$.
+Si $X$ es cuasicompacto, todo subconjunto abierto retrocompacto de $X$ es cuasicompacto.
+Está claro que toda unión \emph{finita} de conjuntos retrocompactos en $X$ es retrocompacta en $X$, pues toda unión finita de conjuntos cuasicompactos es cuasicompacta.
+Toda intersección finita de abiertos retrocompactos de $X$ es un abierto retrocompacto de $X$.
+En un espacio \emph{localmente noetheriano} $X$, todo conjunto cuasicompacto es un subespacio noetheriano y, en consecuencia, \emph{todo subconjunto} de $X$ es retrocompacto en $X$.
+
+\begin{definition}[9.1.2]
+\label{0.9.1.2}
+Dado un espacio topológico $X$, decimos que un subconjunto de $X$ es \emph{construible} si pertenece al menor conjunto de subconjuntos $\mathfrak{F}$ de $X$ que contiene todos los subconjuntos abiertos retrocompactos de $\mathfrak{F}$ y es estable por intersecciones finitas y complementarios (lo que implica que $\mathfrak{F}$ también es estable por uniones finitas).
+\end{definition}
+
+\begin{proposition}[9.1.3]
+\label{0.9.1.3}
+Para que un subconjunto de $X$ sea construible, es necesario y suficiente que sea una unión finita de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$.
+\end{proposition}
+
+\begin{proof}
+Está claro que la condición es suficiente.
+Para ver que es necesaria, consideremos el conjunto $\mathfrak{G}$ de las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos retrocompactos de $X$; basta ver que el complementario de todo conjunto de $\mathfrak{G}$ pertenece a $\mathfrak{G}$.
+Sea $Z=\bigcup_{i\in I}(U_i\cap\complement{V_i})$, donde $I$ es finito y los $U_i$ y $V_i$ son abiertos retrocompactos de $X$; tenemos
+$\complement{Z}=\bigcap_{i\in I}(V_i\cup\complement{U_i})$, de modo que $Z$ es una unión finita de conjuntos que son intersecciones de cierto número de los $V_i$ y de cierto número de los $\complement{U_i}$, por tanto de la forma
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-9.tex, page 0\textsubscript{III} 13 -----
+\oldpage[0\textsubscript{III}]{13}
+$V\cap\complement{U}$, donde $U$ es la unión de cierto número de los $U_i$ y $V$ es la intersección de cierto número de los $V_i$; pero hemos observado antes que las uniones e intersecciones finitas de abiertos retrocompactos de $X$ son abiertos retrocompactos de $X$, de donde se sigue la conclusión.
+\end{proof}
+
+\begin{corollary}[9.1.4]
+\label{0.9.1.4}
+Todo subconjunto construible de $X$ es retrocompacto en $X$.
+\end{corollary}
+
+\begin{proof}
+Basta demostrar que, si $U$ y $V$ son abiertos retrocompactos de $X$, entonces $U\cap\complement{V}$ es retrocompacto en $X$; si $W$ es un abierto cuasicompacto de $X$, entonces $W\cap U\cap\complement{V}$ es cerrado en el espacio cuasicompacto $W\cap U$ y, por tanto, es cuasicompacto.
+\end{proof}
+
+En particular:
+\begin{corollary}[9.1.5]
+\label{0.9.1.5}
+Para que un subconjunto abierto $U$ de $X$ sea construible, es necesario y suficiente que sea retrocompacto en $X$.
+Para que un subconjunto cerrado $F$ de $X$ sea construible, es necesario y suficiente que el abierto $\complement{F}$ sea retrocompacto.
+\end{corollary}
+
+\begin{env}[9.1.6]
+\label{0.9.1.6}
+Un caso importante es aquel en que todo subconjunto abierto cuasicompacto de $X$ es retrocompacto; en otros términos, aquel en que la intersección de dos subconjuntos abiertos cuasicompactos de $X$ es cuasicompacta (cf.~\sref[I]{I.5.5.6}).
+Cuando $X$ es además cuasicompacto, esto implica que los subconjuntos abiertos retrocompactos de $X$ coinciden con los subconjuntos abiertos cuasicompactos de $X$, y que los subconjuntos construibles de $X$ son las uniones finitas de conjuntos de la forma $U\cap\complement{V}$, donde $U$ y $V$ son abiertos cuasicompactos.
+\end{env}
+
+\begin{corollary}[9.1.7]
+\label{0.9.1.7}
+Para que un subconjunto de un espacio noetheriano $X$ sea construible, es necesario y suficiente que sea una unión finita de subconjuntos localmente cerrados de $X$.
+\end{corollary}
+
+\begin{proposition}[9.1.8]
+\label{0.9.1.8}
+Sea $X$ un espacio topológico y $U$ un subconjunto abierto de $X$.
+\begin{enumerate}
+  \item[{\rm(i)}] Si $T$ es un subconjunto construible de $X$, entonces $T\cap U$ es un subconjunto construible de $U$.
+  \item[{\rm(ii)}] Supongamos, además, que $U$ es retrocompacto en $X$. Para que un subconjunto $Z$ de $U$ sea construible en $X$, es necesario y suficiente que sea construible en $U$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[(i)] Mediante la Proposición \sref{0.9.1.3}, nos reducimos a demostrar que, si $T$ es un abierto retrocompacto de $X$, entonces $T\cap U$ es un abierto retrocompacto de $U$; en otros términos, para todo abierto cuasicompacto $W\subset U$, $T\cap U\cap W=T\cap W$ es cuasicompacto, lo que se sigue inmediatamente de la hipótesis.
+  \item[(ii)] La condición es necesaria por (i), por lo que queda demostrar que es suficiente.
+    Por la Proposición \sref{0.9.1.3}, basta considerar el caso en que $Z$ es un abierto retrocompacto \emph{en $U$}, pues entonces se seguirá que $U\setmin Z$ es construible en $X$, y si $Z$ y $Z'$ son dos abiertos retrocompactos \emph{en $U$}, entonces $Z\cap(U\setmin Z')$ será construible en $X$.
+    Si $W$ es un abierto cuasicompacto de $X$ y $Z$ un abierto retrocompacto de $U$, tenemos $Z\cap W=Z\cap(W\cap U)$, y por hipótesis $W\cap U$ es un abierto cuasicompacto de $U$; por tanto, $W\cap Z$ es cuasicompacto y, en consecuencia, $Z$ es un abierto retrocompacto de $X$, y \emph{a fortiori} construible en $X$.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[9.1.9]
+\label{0.9.1.9}
+Sea $X$ un espacio topológico y $(U_i)_{i\in I}$ un recubrimiento finito de $X$ por abiertos retrocompactos de $X$.
+Para que un subconjunto $Z$ de $X$ sea construible en $X$, es necesario y suficiente que $Z\cap U_i$ sea construible en $U_i$ para todo $i\in I$.
+\end{corollary}
+
+\begin{env}[9.1.10]
+\label{0.9.1.10}
+Supongamos, en particular, que $X$ es cuasicompacto y que todo punto
+----- French corrections on page 0\textsubscript{III} 12 -----
+[id 4010]
+OLD: \emph{égaux} à
+NEW: \emph{égaux à}
+FRENCH CONTEXT (corrected): ent neutre de
+$\gamma_X(Y)$ pour tout $Y\in \boldsymbol{C}$ équivaut à dire que le morphisme composé
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X
+  \xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+et l'analogue où on permute $1_X$ et $e_X$, sont tous deux \emph{égaux à}
+$1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8-fr}
+On pourrait bien entendu multiplier sans peine les exemples de structures
+algébriques dans les catégories. L'exemple des groupes a été traité avec
+assez de détails, mais par la suite nous laisserons géné
+
+[id 4011]
+OLD: \emph{quasi-compacte} si
+NEW: quasi-compacte si
+FRENCH CONTEXT (corrected):  sur $U$. En outre
+$f^{-1}(U)$ est quasi-compact par hypothèse, donc réunion d'un nombre fini
+d'ouverts $V(x_i)$, ce qui achève la démonstration.
+
+\begin{proposition}[6.6.4]
+\label{I.6.6.4-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Une immersion $X\to Y$ est quasi-compacte si elle est fermée,
+    ou si l'espace sous-jacent à $Y$ est localement noethérien ou si l'espace
+    sous-jacent à $X$ est noethérien.
+  \item[\textup{(ii)}] Le composé de deux morphismes quasi-compacts est quasi-compact.
+  \item[\textup{(iii)}] Si $f:X\to Y$ e
+
+[id 4012]
+OLD: \emph{rétrocompacte
+dans $X$}
+NEW: rétrocompacte
+dans $X$
+FRENCH CONTEXT (corrected): tion:0.9.1-fr}
+
+\begin{definition}[9.1.1]
+\label{0.9.1.1-fr}
+On dit qu'une application continue $f:X\to Y$ est quasi-compacte si
+pour tout ouvert quasi-compact $U$ de $Y$, $f^{-1}(U)$ est quasi-compact. On
+dit qu'une partie $Z$ d'un espace topologique $X$ est rétrocompacte
+dans $X$ si l'injection canonique $Z\to X$ est quasi-compacte, autrement dit
+si pour tout ouvert quasi-compact $U$ de $X$, $U\cap Z$ est quasi-compact.
+\end{definition}
+
+Une partie \emph{fermée} de $X$ est rétrocompacte dans $X$, mais une partie
+quasi-compacte de $X$ 
+
+[id 4013]
+OLD: \emph{constructible}
+NEW: constructible
+FRENCH CONTEXT (corrected):  élargi, des résultats principaux de (FAC) et d'un article ultérieur du même auteur~\cite{I-15}.
+Nous avons aussi retiré grand profit du \emph{Séminaire de Géométrie algébrique} de C.~Chevalley~\cite{I-1}; en particulier, l'usage systématique des <<~ensembles constructibles~>> introduits par lui, s'est révélé fort utile en théorie des schémas (cf. chap.~IV).
+Nous lui avons aussi emprunté l'étude des morphismes du point
+
+\oldpage[I]{8}
+de vue de la dimension (chap.~IV), qui se transcrit sans changement notable dans le cadre des 
+
+[id 4014]
+OLD: (ce qui implique que $\mathfrak{F}$ est aussi stable par réunion finie).
+NEW: \textup{(ce qui implique que $\mathfrak{F}$ est aussi} stable par réunion finie\textup{)}.
+FRENCH CONTEXT (corrected):  $X$, on dit qu'une partie de $X$ est
+constructible si elle appartient au plus petit ensemble de parties
+$\mathfrak{F}$ de $X$ contenant toutes les parties ouvertes rétrocompactes de
+$\mathfrak{F}$ et stable par intersection finie et passage au complémentaire
+\textup{(ce qui implique que $\mathfrak{F}$ est aussi} stable par réunion finie\textup{)}.
+\end{definition}
+
+\begin{proposition}[9.1.3]
+\label{0.9.1.3-fr}
+Pour qu'une partie de $X$ soit constructible, il faut et il suffit qu'elle
+soit réunion finie d'ensembles de la forme $U\cap\complement{V}$, où $U$ et
+$V$ sont des ouverts rétrocompacts dans $X$.
+
+[id 4016]
+OLD: $Y\in C$ équivaut
+NEW: $Y\in \boldsymbol{C}$ équivaut
+FRENCH CONTEXT (corrected):  l'ensemble $h_X(Y)$,
+l'application $h_{e_X}(Y)$ n'est autre que
+\oldpage[0\textsubscript{III}]{12}
+$s\leadsto\eta_X(Y)$ transformant tout élément en l'élément neutre. On
+vérifie alors que le fait que $\eta_X(Y)$ soit élément neutre de
+$\gamma_X(Y)$ pour tout $Y\in \boldsymbol{C}$ équivaut à dire que le morphisme composé
+\[
+  X\xrightarrow{(1_X,1_X)}X\times X
+  \xrightarrow{1_X\times e_X}X\times X\xrightarrow{c_X}X,
+\]
+et l'analogue où on permute $1_X$ et $e_X$, sont tous deux \emph{égaux à}
+$1_X$.
+\end{env}
+
+\begin{env}[8.2.8]
+\label{0.8.2.8-f
+
+=================== PAGE 0\textsubscript{III} 13 ===================
+----- (Spanish page 0\textsubscript{III} 12: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 13: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-9.tex, page 0\textsubscript{III} 14 -----
+\oldpage[0\textsubscript{III}]{14}
+de $X$ admite un sistema fundamental de entornos abiertos retrocompactos en $X$ (y \emph{a fortiori} cuasicompactos); entonces la condición para que un subconjunto $Z$ de $X$ sea construible en $X$ es de naturaleza \emph{local}; en otros términos, es necesario y suficiente que, para todo $x\in X$, exista un entorno abierto $V$ de $x$ tal que $V\cap Z$ sea construible en $V$.
+En efecto, si se satisface esta condición, entonces para todo $x\in X$ existe un entorno abierto $V$ de $x$ que es \emph{retrocompacto en $X$} y tal que $V\cap Z$ es construible en $V$, por las hipótesis sobre $X$ y por la Proposición \sref{0.9.1.8}[i]; basta entonces recubrir $X$ por un número finito de estos entornos y aplicar el Corolario \sref{0.9.1.9}.
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11}
+Sea $X$ un espacio topológico.
+Decimos que un subconjunto $T$ de $X$ es \emph{localmente construible} en $X$ si, para todo $x\in X$, existe un entorno abierto $V$ de $x$ tal que $T\cap V$ es construible en $V$.
+\end{definition}
+
+De la Proposición \sref{0.9.1.8}[i] se sigue que, si $V$ es tal que $V\cap T$ es construible en $V$, entonces para todo abierto $W\subset V$, $W\cap T$ es construible en $W$.
+Si $T$ es localmente construible en $X$, entonces, para todo abierto $U$ de $X$, $T\cap U$ es localmente construible en $U$, en virtud de la observación anterior.
+La misma observación muestra que el conjunto de subconjuntos localmente construibles de $X$ es estable por uniones finitas e intersecciones finitas; por otra parte, está claro que también es estable por paso al complementario.
+
+\begin{proposition}[9.1.12]
+\label{0.9.1.12}
+Sea $X$ un espacio topológico.
+Todo conjunto construible en $X$ es localmente construible en $X$.
+El recíproco es cierto si $X$ es cuasicompacto y si su topología admite una base formada por los conjuntos retrocompactos de $X$.
+\end{proposition}
+
+\begin{proof}
+La primera afirmación se sigue de la Definición \sref{0.9.1.11}, y la segunda de \sref{0.9.1.10}.
+\end{proof}
+
+\begin{corollary}[9.1.13]
+\label{0.9.1.13}
+Sea $X$ un espacio topológico cuya topología admite una base formada por los conjuntos retrocompactos de $X$.
+Entonces todo subconjunto $T$ localmente construible de $X$ es retrocompacto en $X$.
+\end{corollary}
+
+\begin{proof}
+Sea $U$ un abierto cuasicompacto de $X$; $T\cap U$ es localmente construible en $U$, luego construible en $U$ por la Proposición~\sref{0.9.1.12} y, en consecuencia, cuasicompacto por el Corolario \sref{0.9.1.4}.
+\end{proof}
+
+\subsection{Subconjuntos construibles de espacios noetherianos}
+\label{subsection:0.9.2}
+
+\begin{env}[9.2.1]
+\label{0.9.2.1}
+Hemos visto \sref{0.9.1.7} que, en un espacio noetheriano $X$, los subconjuntos construibles de $X$ son las \emph{uniones finitas de subconjuntos localmente cerrados} de $X$.
+
+La imagen inversa de un conjunto construible de $X$ por una aplicación continua de un espacio noetheriano $X'$ en $X$ es construible en $X'$.
+Si $Y$ es un subconjunto construible de un espacio noetheriano $X$, entonces los subconjuntos de $Y$ que son construibles como subespacios de $Y$ coinciden con los que son construibles como subespacios de $X$.
+\end{env}
+
+\begin{proposition}[9.2.2]
+\label{0.9.2.2}
+Sea $X$ un espacio noetheriano irreducible, y sea $E$ un subconjunto construible de $X$.
+Para que $E$ sea denso en todas partes en $X$, es necesario y suficiente que $E$ contenga un subconjunto abierto no vacío de $X$.
+\end{proposition}
+
+\begin{proof}
+----- French corrections on page 0\textsubscript{III} 13 -----
+[id 4017]
+OLD: {I, 5.5.6}
+NEW: {\textbf{I}, 5.5.6}
+FRENCH CONTEXT (corrected): triction à chaque $D_+(f)$ est le schéma
+affine qui vient d'être défini. En outre~:
+\end{env}
+
+\begin{proposition}[2.4.2]
+\label{II.2.4.2-fr}
+Le préschéma $\operatorname{Proj}(S)$ est un schéma.
+\end{proposition}
+
+\begin{proof}
+Il suffit (\hyperref[I.5.5.6-fr]{\textbf{I}, 5.5.6}) de montrer que, quels que soient
+$f$, $g$ homogènes dans $S_+$,
+$D_+(f)\cap D_+(g)=D_+(fg)$ est affine et que son anneau est engendré par
+les images canoniques des anneaux de $D_+(f)$ et $D_+(g)$~; le premier
+point est évident par définition, et le second ré
+
+[id 4018]
+OLD: \item[(i)] Si $T$
+NEW: \item[\textup{(i)}] Si $T$
+FRENCH CONTEXT (corrected): n $X$ soit constructible, il faut et
+il suffit qu'elle soit réunion finie de parties localement fermées de $X$.
+\end{corollary}
+
+\begin{proposition}[9.1.8]
+\label{0.9.1.8-fr}
+Soient $X$ un espace topologique, $U$ une partie ouverte de $X$.
+\begin{enumerate}
+  \item[\textup{(i)}] Si $T$ est une partie constructible de $X$, $T\cap U$ est une
+    partie constructible de $U$.
+  \item[\textup{(ii)}] Supposons en outre $U$ rétrocompact dans $X$. Pour qu'une
+    partie $Z$ de $U$ soit constructible dans $X$, il faut et il suffit
+    qu'elle soit c
+
+[id 4019]
+OLD: \item[(ii)] Supposons
+NEW: \item[\textup{(ii)}] Supposons
+FRENCH CONTEXT (corrected): nt tels que
+    $\psi(x)=\psi'(x)=y$, et que les $\mathscr{O}_s$-homomorphismes (locaux)
+    $\theta_x^\sharp$ et ${\theta'}_x^\sharp$ de $\mathscr{O}_y$ dans
+    $\mathscr{O}_x$ soient identiques, $f$ et $f'$ coïncident dans un
+    voisinage ouvert de $x$.
+  \item[\textup{(ii)}] Supposons en outre $S$ localement noethérien. Pour tout
+    $\mathscr{O}_s$-homomorphisme local
+    $\varphi:\mathscr{O}_y\to\mathscr{O}_x$, il existe un voisinage ouvert
+    $U$ de $x$ dans $X$ et un $S$-morphisme $f=(\psi,\theta)$ de $U$ dans $Y$
+    tels que $\psi(x
+
+=================== PAGE 0\textsubscript{III} 14 ===================
+----- (Spanish page 0\textsubscript{III} 13: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 14: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-9.tex, page 0\textsubscript{III} 15 -----
+\oldpage[0\textsubscript{III}]{15}
+La condición es evidentemente suficiente, pues todo abierto no vacío es denso en $X$.
+Recíprocamente, sea $E=\bigcup_{i=1}^n(U_i\cap F_{\boldsymbol i})$ un subconjunto construible de $X$, siendo los $U_i$ abiertos no vacíos y los $F_i$ cerrados en $X$; tenemos entonces $\overline{E}\subset\bigcup_i F_i$.
+En consecuencia, si $\overline{E}=X$, entonces $X$ es igual a uno de los $F_i$, luego $E\supset U_i$, lo que termina la demostración.
+\end{proof}
+
+Cuando $X$ admite un punto genérico $x$ \sref[0]{0.2.1.2}, la condición de la Proposición \sref{0.9.2.2} equivale a la relación $x\in E$.
+
+\begin{proposition}[9.2.3]
+\label{0.9.2.3}
+Sea $X$ un espacio noetheriano.
+Para que un subconjunto $E$ de $X$ sea construible, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$, $E\cap Y$ sea raro en $Y$ o contenga un subconjunto abierto no vacío de $Y$.
+\end{proposition}
+
+\begin{proof}
+La necesidad de la condición se sigue de que $E\cap Y$ debe ser un subconjunto construible de $Y$ y de la Proposición \sref{0.9.2.2}, pues un subconjunto no denso de $Y$ es necesariamente raro en el espacio irreducible $Y$ \sref[0]{0.2.1.1}.
+Para demostrar que la condición es suficiente, apliquemos el principio de inducción noetheriana \sref[0]{0.2.2.2} al conjunto $\mathfrak{F}$ de subconjuntos cerrados $Y$ de $X$ tales que $Y\cap E$ es construible (respecto de $Y$ o respecto de $X$, lo que es equivalente): podemos suponer así que, para todo subconjunto cerrado $Y\neq X$ de $X$, $E\cap Y$ es construible.
+Supongamos primero que $X$ no es irreducible, y sean $X_i$ ($1\leq i\leq m$) sus componentes irreducibles, necesariamente en número finito \sref[0]{0.2.2.5}; por hipótesis, los $E\cap X_i$ son construibles, luego también lo es su unión $E$.
+Supongamos ahora que $X$ es irreducible; entonces, por hipótesis, si $E$ es raro, se tiene $\overline{E}\neq X$ y $E=E\cap\overline{E}$ es construible; si $E$ contiene un subconjunto abierto no vacío $U$ de $E$, es la unión de $U$ y $E\cap(X\setmin U)$; pero $X\setmin U$ es un conjunto cerrado distinto de $X$, por lo que $E\cap(X\setmin U)$ es construible; en consecuencia, $E$ mismo es construible, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[9.2.4]
+\label{0.9.2.4}
+Sea $X$ un espacio noetheriano y $(E_\alpha)$ una familia filtrante creciente de subconjuntos construibles de $X$, tal que
+\begin{enumerate}
+  \item[\emph{(1.o)}] $X$ es la unión de la familia $(E_\alpha)$.
+  \item[\emph{(2.o)}] Todo subconjunto cerrado irreducible de $X$ está contenido en la adherencia de uno de los $E_\alpha$.
+\end{enumerate}
+
+Entonces existe un índice $\alpha$ tal que $X=E_\alpha$.
+
+Cuando todo subconjunto cerrado irreducible de $X$ admite un punto genérico, puede omitirse la hipótesis \emph{(2.o)}.
+\end{corollary}
+
+\begin{proof}
+Apliquemos el principio de inducción noetheriana \sref[0]{0.2.2.2} al conjunto $\mathfrak{M}$ de subconjuntos cerrados de $X$ contenidos en al menos uno de los $E_\alpha$; podemos suponer así que todo subconjunto cerrado $Y\neq X$ de $X$ está contenido en uno de los $E_\alpha$.
+La proposición es evidente si $X$ no es irreducible, porque cada una de las componentes irreducibles $X_i$ de $X$ ($1\leq i\leq m$) está contenida en un $E_{\alpha_i}$, y existe un $E_\alpha$ que contiene todos los $E_{\alpha_i}$.
+Supongamos ahora que $X$ es irreducible.
+Por hipótesis, existe un $\beta$ tal que $X=\overline{E_\beta}$, de modo que \sref{0.9.2.2} $E_\beta$ contiene un subconjunto abierto no vacío $U$ de $X$.
+Pero entonces el conjunto cerrado $X\setmin U$ está contenido en un $E_\gamma$, y basta tomar un $E_\alpha$ que contenga $E_\beta$ y $E_\gamma$.
+Cuando todo subconjunto cerrado irreducible $Y$ de $X$
+----- French corrections on page 0\textsubscript{III} 14 -----
+[id 4022]
+OLD: \emph{localement constructible dans $X$}
+NEW: localement constructible dans $X$
+FRENCH CONTEXT (corrected): {9.1.8, (i)})~; il suffit alors de recouvrir $X$ par un
+nombre fini de ces voisinages, et d'appliquer
+(\hyperref[0.9.1.9-fr]{9.1.9}).
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11-fr}
+Soit $X$ un espace topologique. On dit qu'une partie $T$ de $X$ est
+localement constructible dans $X$ si, pour tout $x\in X$, il existe
+un voisinage ouvert $V$ de $x$ tel que $T\cap V$ soit constructible dans $V$.
+\end{definition}
+
+Il résulte aussitôt de (\hyperref[0.9.1.8-fr]{9.1.8, (i)}) que si $V$ est
+tel que $V\cap T$ soit constructible dans $V$, alors po
+
+=================== PAGE 0\textsubscript{III} 15 ===================
+----- (Spanish page 0\textsubscript{III} 14: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 15: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-9.tex, page 0\textsubscript{III} 16 -----
+\oldpage[0\textsubscript{III}]{16}
+admite un punto genérico $y$, existe $\alpha$ tal que $y\in E_\alpha$, de modo que $Y=\overline{\{y\}}\subset\overline{E_\alpha}$, y la condición (2.o) es, por tanto, consecuencia de (1.o).
+\end{proof}
+
+\begin{proposition}[9.2.5]
+\label{0.9.2.5}
+Sea $X$ un espacio noetheriano, sea $x$ un punto de $X$ y sea $E$ un subconjunto construible de $X$.
+Para que $E$ sea un entorno de $x$, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$ que contenga $x$, $E\cap Y$ sea denso en $Y$ (si existe un punto genérico $y$ de $Y$, esto significa también \sref{0.9.2.2} que $y\in E$).
+\end{proposition}
+
+\begin{proof}
+La condición es evidentemente necesaria; demostraremos que es suficiente.
+Aplicando el principio de inducción noetheriana al conjunto $\mathfrak{M}$ de subconjuntos cerrados $Y$ de $X$ que contienen $x$ y tales que $E\cap Y$ es un entorno de $x$ en $Y$, podemos suponer que todo subconjunto cerrado $Y\neq X$ de $X$ que contiene $x$ pertenece a $\mathfrak{M}$.
+Si $X$ no es irreducible, cada una de las componentes irreducibles $X_i$ de $X$ que contienen $x$ es distinta de $X$, luego $E\cap X_i$ es un entorno de $x$ respecto de $X_i$; en consecuencia, $E$ es un entorno de $x$ en la unión de las componentes irreducibles de $X$ que contienen $x$, y como esta unión es un entorno de $x$ en $X$, también lo es $E$.
+Si $X$ es irreducible, $E$ es denso en $X$ por hipótesis, por lo que contiene un subconjunto abierto no vacío $U$ de $X$ \sref{0.9.2.2}; la proposición es entonces evidente si $x\in U$; en caso contrario, por hipótesis, $x$ es un punto interior de $E\cap(X\setmin U)$ relativo a $X\setmin U$, de modo que la adherencia de $X\setmin E$ en $X$ no contiene $x$, y el complementario de esta adherencia es un entorno de $x$ contenido en $E$, lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[9.2.6]
+\label{0.9.2.6}
+Sea $X$ un espacio noetheriano y sea $E$ un subconjunto de $X$.
+Para que $E$ sea un abierto de $X$, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$ que interseca $E$, $E\cap Y$ contenga un subconjunto abierto no vacío de $Y$.
+\end{corollary}
+
+\begin{proof}
+La condición es evidentemente necesaria; recíprocamente, si se satisface, implica que $E$ es construible por la Proposición \sref{0.9.2.3}.
+Además, la Proposición \sref{0.9.2.5} muestra que $E$ es entonces un entorno de cada uno de sus puntos, de donde se sigue la conclusión.
+\end{proof}
+
+\subsection{Funciones construibles}
+\label{subsection:0.9.3}
+
+\begin{definition}[9.3.1]
+\label{0.9.3.1}
+Sea $h$ una aplicación de un espacio topológico $X$ en un conjunto $T$.
+Decimos que $h$ es \emph{construible} si $h^{-1}(t)$ es construible para todo $t\in T$, y vacío salvo para un número finito de valores de $t$; entonces, para todo subconjunto $S$ de $T$, $h^{-1}(S)$ es construible.
+Decimos que $h$ es \emph{localmente construible} si todo $x\in X$ posee un entorno abierto $V$ tal que $h|V$ es construible.
+\end{definition}
+
+Toda función construible es localmente construible; el recíproco es cierto cuando $X$ es cuasicompacto y admite una base formada por los abiertos retrocompactos de $X$ (en particular, cuando $X$ es noetheriano).
+
+\begin{proposition}[9.3.2]
+\label{0.9.3.2}
+Sea $h$ una aplicación de un espacio noetheriano $X$ en un conjunto $T$.
+Para que $h$ sea construible, es necesario y suficiente que, para todo subconjunto cerrado irreducible $Y$ de $X$, exista un subconjunto no vacío $U$ de $Y$, abierto respecto de $Y$, sobre el cual $h$ sea constante.
+\end{proposition}
+
+\begin{proof}
+La condición es necesaria: en efecto, por hipótesis, $h$ solo toma un número finito de valores $t_i$ sobre $Y$, y cada uno de los conjuntos $h^{-1}(t_i)\cap Y$ es construible en $Y$ \sref{0.9.2.1}; como no pueden ser todos subconjuntos raros del espacio $Y$, al menos uno de ellos contiene un abierto no vacío \sref{0.9.2.3}.
+----- French corrections on page 0\textsubscript{III} 15 -----
+[id 4265]
+OLD: \bigcup_{i=1}^n
+NEW: \bigcup_{\boldsymbol{i}=\mathbf{1}}^n
+FRENCH CONTEXT (corrected): t dense dans $X$, il faut et il suffit que $E$
+contienne une partie ouverte non vide de $X$.
+\end{proposition}
+
+\oldpage[0\textsubscript{III}]{15}
+La condition est évidemment suffisante, tout ensemble ouvert non vide étant
+dense dans $X$. Inversement, soit
+$E=\bigcup_{\boldsymbol{i}=\mathbf{1}}^n(U_i\cap F_{\boldsymbol{i}})$ une partie constructible de $X$, les $U_i$
+étant ouverts non vides et les $F_i$ fermés dans $X$~; on a donc
+$\overline{E}\subset\bigcup_i F_i$. Par suite, si $\overline{E}=X$, $X$ est
+égal à l'un des $F_i$, donc $E\supset U_i$, ce
+
+[id 4267]
+OLD: [0.2.1.2-fr]{$0_{\mathrm I}$
+NEW: [0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected): erts non vides et les $F_i$ fermés dans $X$~; on a donc
+$\overline{E}\subset\bigcup_i F_i$. Par suite, si $\overline{E}=X$, $X$ est
+égal à l'un des $F_i$, donc $E\supset U_i$, ce qui achève la démonstration.
+
+Lorsque $X$ admet un point générique $x$
+(\hyperref[0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.2}), la condition de
+(\hyperref[0.9.2.2-fr]{9.2.2}) équivaut à la relation $x\in E$.
+
+\begin{proposition}[9.2.3]
+\label{0.9.2.3-fr}
+Soit $X$ un espace noethérien. Pour qu'une partie $E$ de $X$ soit
+constructible, il faut et il suffit que, pour toute part
+
+[id 4268]
+OLD: [0.2.1.1-fr]{$0_{\mathrm I}$
+NEW: [0.2.1.1-fr]{$\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected):  $Y$.
+\end{proposition}
+
+La nécessité de la condition provient de ce que $E\cap Y$ doit être une
+partie constructible de $Y$ et de (\hyperref[0.9.2.2-fr]{9.2.2}), car une
+partie non dense de $Y$ est nécessairement rare dans l'espace irréductible
+$Y$ (\hyperref[0.2.1.1-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.1}). Pour prouver que la
+condition est suffisante, appliquons le principe de récurrence noethérienne
+(\hyperref[0.2.2.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$ des parties fermées $Y$ de $X$ telles que $Y\cap E$ soit
+constructib
+
+[id 4269]
+OLD: {$0_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$
+NEW: {$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$
+FRENCH CONTEXT (corrected):  une
+partie non dense de $Y$ est nécessairement rare dans l'espace irréductible
+$Y$ (\hyperref[0.2.1.1-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.1}). Pour prouver que la
+condition est suffisante, appliquons le principe de récurrence noethérienne
+(\hyperref[0.2.2.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{F}$ des parties fermées $Y$ de $X$ telles que $Y\cap E$ soit
+constructible (par rapport à $Y$ ou par rapport à $X$, ce qui revient au
+même)~: on peut donc supposer que pour toute partie fermée $Y\ne X$ de $X$,
+$E\cap Y$ est constructible. Supposons d'abord que $X
+
+[id 4270]
+OLD: [0.2.2.5-fr]{$0_{\mathrm I}$
+NEW: [0.2.2.5-fr]{$\mathbf{0}_{\mathrm I}$
+FRENCH CONTEXT (corrected): me)~: on peut donc supposer que pour toute partie fermée $Y\ne X$ de $X$,
+$E\cap Y$ est constructible. Supposons d'abord que $X$ ne soit pas
+irréductible, et soient $X_i$ ($1\leq i\leq m$) ses composantes
+irréductibles, nécessairement en nombre fini
+(\hyperref[0.2.2.5-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.5})~; par hypothèse, les
+$E\cap X_i$ sont constructibles, donc aussi leur réunion $E$. Supposons
+ensuite que $X$ soit irréductible~; alors, par hypothèse, ou bien $E$ est
+rare, donc $\overline{E}\ne X$ et $E=E\cap\overline{E}$ est constructible~;
+ou bien
+
+[id 4274]
+OLD: {$0_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{M}$
+NEW: {$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{M}$
+FRENCH CONTEXT (corrected): s il existe un indice $\alpha$ tel que $X=E_\alpha$.
+
+Lorsque toute partie fermée irréductible de $X$ admet un point générique,
+l'hypothèse $2^\circ$ peut être supprimée.
+\end{corollary}
+
+Appliquons le principe de récurrence noethérienne
+(\hyperref[0.2.2.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.2.2}) à l'ensemble
+$\mathfrak{M}$ des parties fermées de $X$ contenues dans l'un des $E_\alpha$
+au moins~; on peut donc supposer que toute partie fermée $Y\ne X$ de $X$ est
+contenue dans un des $E_\alpha$. La proposition est évidente si $X$ n'est pas
+irréductible, car chacune des composantes 
+
+[id 4275]
+OLD: $X=\overline{E_\beta}$
+NEW: $X=\overline{E}_\beta$
+FRENCH CONTEXT (corrected): irréductible, car chacune des composantes irréductibles $X_i$ de $X$
+($1\leq i\leq m$) est contenue dans un $E_{\alpha_i}$, et il existe un
+$E_\alpha$ contenant tous les $E_{\alpha_i}$. Supposons donc $X$
+irréductible. Par hypothèse, il existe $\beta$ tel que
+$X=\overline{E}_\beta$, donc (\hyperref[0.9.2.2-fr]{9.2.2}) $E_\beta$
+contient un ouvert non vide $U$ de $X$. Mais alors l'ensemble fermé
+$X\setmin U$ est contenu dans un $E_\gamma$, et il suffit de prendre
+$E_\alpha$ contenant $E_\beta$ et $E_\gamma$. Lorsque toute partie fermée
+i
+
+=================== PAGE 0\textsubscript{III} 16 ===================
+----- (Spanish page 0\textsubscript{III} 15: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 16: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-9.tex, page 0\textsubscript{III} 17 -----
+\oldpage[0\textsubscript{III}]{17}
+Para ver que la condición es suficiente, aplicamos el principio de inducción noetheriana al conjunto $\mathfrak{M}$ de subconjuntos cerrados $Y$ de $X$ tales que la restricción $h|Y$ es construible; podemos suponer así que, para todo subconjunto cerrado $Y\neq X$ de $X$,
+$h|Y$ es construible.
+Si $X$ no es irreducible, la restricción de $h$ a cada una de las componentes irreducibles (en número finito) $X_i$ de $X$ es construible, y se sigue entonces inmediatamente de la Definición \sref{0.9.3.1} que $h$ es construible.
+Si $X$ es irreducible, existe por hipótesis un subconjunto abierto no vacío $U$ de $X$ sobre el cual $h$ es constante; por otra parte, la restricción de $h$ a $X\setmin U$ es construible por hipótesis, y se sigue inmediatamente que $h$ es construible.
+\end{proof}
+
+\begin{corollary}[9.3.3]
+\label{0.9.3.3}
+Sea $X$ un espacio noetheriano en el que todo subconjunto cerrado irreducible admite un punto genérico.
+Si $h$ es una aplicación de $X$ en un conjunto $T$ tal que, para todo $t\in T$, $h^{-1}(t)$ es construible, entonces $h$ es construible.
+\end{corollary}
+
+\begin{proof}
+Si $Y$ es un subconjunto cerrado irreducible de $X$ e $y$ su punto genérico, entonces $Y\cap h^{-1}(h(y))$ es construible y contiene $y$; por tanto, \sref{0.9.2.2} este conjunto contiene un subconjunto abierto no vacío de $Y$, y basta aplicar la Proposición \sref{0.9.3.2}.
+\end{proof}
+
+\begin{proposition}[9.3.4]
+\label{0.9.3.4}
+Sea $X$ un espacio noetheriano en el que todo subconjunto cerrado irreducible admite un punto genérico, y sea $h$ una aplicación construible de $X$ en un conjunto ordenado.
+Para que $h$ sea semicontinua superiormente sobre $X$, es necesario y suficiente que, para todo $x\in X$ y toda generalización \sref[0]{0.2.1.2} $x'$ de $x$, se tenga $h(x')\leq h(x)$.
+\end{proposition}
+
+\begin{proof}
+La función $h$ solo toma un número finito de valores; por tanto, decir que es semicontinua superiormente significa que, para todo $x\in X$, el conjunto $E$ de los $y\in X$ tales que $h(y)\leq h(x)$ es un entorno de $x$.
+Por hipótesis, $E$ es un subconjunto construible de $X$; por otra parte, decir que un subconjunto cerrado irreducible $Y$ de $X$ contiene $x$ significa que su punto genérico $y$ es una generalización de $x$; la conclusión se sigue entonces de la Proposición \sref{0.9.2.5}.
+\end{proof}
+----- French corrections on page 0\textsubscript{III} 16 -----
+[id 4277]
+OLD: \subset\overline{E_\alpha}$
+NEW: \subset\overline{E}_\alpha$
+FRENCH CONTEXT (corrected): ma$, et il suffit de prendre
+$E_\alpha$ contenant $E_\beta$ et $E_\gamma$. Lorsque toute partie fermée
+irréductible $Y$ de $X$
+\oldpage[0\textsubscript{III}]{16}
+admet un point générique $y$, il existe $\alpha$ tel que $y\in E_\alpha$,
+donc $Y=\overline{\{y\}}\subset\overline{E}_\alpha$, et la condition
+$2^\circ$ est conséquence de $1^\circ$.
+
+\begin{proposition}[9.2.5]
+\label{0.9.2.5-fr}
+Soient $X$ un espace noethérien, $x$ un point de $X$, $E$ une partie
+constructible de $X$. Pour que $E$ soit un voisinage de $x$, il faut et il
+suffit que 
+
+[id 4278]
+OLD: aussi (\hyperref[0.9.2.2-fr]{9.2.2}) que
+NEW: aussi \textup{(\hyperref[0.9.2.2-fr]{9.2.2})} que
+FRENCH CONTEXT (corrected): e $X$, $E$ une partie
+constructible de $X$. Pour que $E$ soit un voisinage de $x$, il faut et il
+suffit que pour toute partie fermée irréductible $Y$ de $X$ contenant $x$,
+$E\cap Y$ soit dense dans $Y$ (s'il existe un point générique $y$ de $Y$,
+cela signifie aussi \textup{(\hyperref[0.9.2.2-fr]{9.2.2})} que $y\in E$).
+\end{proposition}
+
+La condition est évidemment nécessaire~; prouvons qu'elle est suffisante.
+Appliquant le principe de récurrence noethérienne à l'ensemble $\mathfrak{M}$
+des parties fermées $Y$ de $X$ contenant $x$ et telles que $E\cap Y$ soit un
+
+
+[id 4282]
+OLD: \emph{constructible} si
+NEW: constructible si
+FRENCH CONTEXT (corrected): oethérien} $X$, tout ensemble quasi-compact est un
+sous-espace noethérien, et par suite \emph{toute partie} de $X$ est
+rétrocompacte dans $X$.
+
+\begin{definition}[9.1.2]
+\label{0.9.1.2-fr}
+Étant donné un espace topologique $X$, on dit qu'une partie de $X$ est
+constructible si elle appartient au plus petit ensemble de parties
+$\mathfrak{F}$ de $X$ contenant toutes les parties ouvertes rétrocompactes de
+$\mathfrak{F}$ et stable par intersection finie et passage au complémentaire
+\textup{(ce qui implique que $\mathfrak{F}$ est aussi}
+
+[id 4283]
+OLD: \emph{localement constructible}
+NEW: localement constructible
+FRENCH CONTEXT (corrected): {9.1.8, (i)})~; il suffit alors de recouvrir $X$ par un
+nombre fini de ces voisinages, et d'appliquer
+(\hyperref[0.9.1.9-fr]{9.1.9}).
+\end{env}
+
+\begin{definition}[9.1.11]
+\label{0.9.1.11-fr}
+Soit $X$ un espace topologique. On dit qu'une partie $T$ de $X$ est
+localement constructible dans $X$ si, pour tout $x\in X$, il existe
+un voisinage ouvert $V$ de $x$ tel que $T\cap V$ soit constructible dans $V$.
+\end{definition}
+
+Il résulte aussitôt de (\hyperref[0.9.1.8-fr]{9.1.8, (i)}) que si $V$ est
+tel que $V\cap T$ soit constructible dans $V$,
+
+=================== PAGE 0\textsubscript{III} 17 ===================
+----- (Spanish page 0\textsubscript{III} 16: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 17: shown above in this file) -----
+----- French corrections on page 0\textsubscript{III} 17 -----
+[id 4285]
+OLD: (\hyperref[0.2.1.2-fr]{$0_{\mathrm I}$, 2.1.2})
+NEW: \textup{(\hyperref[0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.2})}
+FRENCH CONTEXT (corrected): ans lequel toute partie fermée irréductible
+admet un point générique, $h$ une application constructible de $X$ dans un
+ensemble ordonné. Pour que $h$ soit semi-continue supérieurement dans $X$,
+il faut et il suffit que pour tout $x\in X$ et toute générisation
+\textup{(\hyperref[0.2.1.2-fr]{$\mathbf{0}_{\mathrm I}$, 2.1.2})} $x'$ de $x$, on ait
+$h(x')\leq h(x)$.
+\end{proposition}
+
+La fonction $h$ ne prend qu'un nombre fini de valeurs~; dire qu'elle est
+semi-continue supérieurement signifie donc que pour tout $x\in X$,
+l'ensemble $E$ des $y\in X$ tels que $h(y)\leq h(x)$ est un vo
+
+[id 4286]
+OLD: \operatorname{gr}_0(M)\otimes
+NEW: \operatorname{gr}_{\mathbf{0}}(M)\otimes
+FRENCH CONTEXT (corrected): operatorname{gr}_p(A)=\mathfrak{J}^p/\mathfrak{J}^{p+1}$,
+$\operatorname{gr}_p(M)=\mathfrak{J}^pM/\mathfrak{J}^{p+1}M$~; les $\varphi_p$ définissent
+un homomorphisme \emph{surjectif} de $\operatorname{gr}(A)$-modules gradués
+\[
+\label{0.10.1.1.2-fr}
+  \varphi:\operatorname{gr}_{\mathbf{0}}(M)\otimes_{\operatorname{gr}_0(A\boldsymbol{)}}
+  \operatorname{gr}(A)\longrightarrow\operatorname{gr}(M).
+  \tag{10.1.1.2}
+\]
+\end{env}
+
+\oldpage[0\textsubscript{III}]{18}
+\begin{env}[10.1.2]
+\label{0.10.1.2-fr}
+Supposons vérifiée l'\emph{une} des hypothèses suivantes
+
+[id 4287]
+OLD: _{\operatorname{gr}_0(A)}
+NEW: _{\operatorname{gr}_0(A\boldsymbol{)}}
+FRENCH CONTEXT (corrected): thfrak{J}^{p+1}$,
+$\operatorname{gr}_p(M)=\mathfrak{J}^pM/\mathfrak{J}^{p+1}M$~; les $\varphi_p$ définissent
+un homomorphisme \emph{surjectif} de $\operatorname{gr}(A)$-modules gradués
+\[
+\label{0.10.1.1.2-fr}
+  \varphi:\operatorname{gr}_{\mathbf{0}}(M)\otimes_{\operatorname{gr}_0(A\boldsymbol{)}}
+  \operatorname{gr}(A)\longrightarrow\operatorname{gr}(M).
+  \tag{10.1.1.2}
+\]
+\end{env}
+
+\oldpage[0\textsubscript{III}]{18}
+\begin{env}[10.1.2]
+\label{0.10.1.2-fr}
+Supposons vérifiée l'\emph{une} des hypothèses suivantes~:
+\begin{enumerate}
+  \item[(i)] $\ma
+
+=================== PAGE 0\textsubscript{III} 18 ===================
+----- (Spanish page 0\textsubscript{III} 17: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 18: shown above in this file) -----
+----- French corrections on page 0\textsubscript{III} 18 -----
+[id 4288]
+OLD: vérifiée l'une des
+NEW: vérifiée l'\emph{une} des
+FRENCH CONTEXT (corrected): arphi:\operatorname{gr}_{\mathbf{0}}(M)\otimes_{\operatorname{gr}_0(A\boldsymbol{)}}
+  \operatorname{gr}(A)\longrightarrow\operatorname{gr}(M).
+  \tag{10.1.1.2}
+\]
+\end{env}
+
+\oldpage[0\textsubscript{III}]{18}
+\begin{env}[10.1.2]
+\label{0.10.1.2-fr}
+Supposons vérifiée l'\emph{une} des hypothèses suivantes~:
+\begin{enumerate}
+  \item[(i)] $\mathfrak{J}$ est nilpotent~;
+  \item[(ii)] $A$ est noethérien, $\mathfrak{J}$ est contenu dans le radical de
+    $A$, et $M$ est de type fini.
+\end{enumerate}
+Alors les propriétés suivantes sont équivale
+
+[id 4289]
+OLD: anneau local
+    \emph{noethérien}
+NEW: anneau \emph{local
+    noethérien}
+FRENCH CONTEXT (corrected): ts~:
+\begin{enumerate}
+  \item[(i)] $M$ est un module \emph{quelconque} sur un anneau local $A$ dont
+    l'idéal maximal $\mathfrak{J}$ est \emph{nilpotent} (par exemple un anneau
+    local artinien).
+  \item[(ii)] $M$ est un module \emph{de type fini} sur un anneau \emph{local
+    noethérien}.
+\end{enumerate}
+\end{env}
+
+\subsection{Critères locaux de platitude}
+\label{subsection:0.10.2-fr}
+
+\begin{env}[10.2.1]
+\label{0.10.2.1-fr}
+Les hypothèses et notations étant celles de
+(\hyperref[0.10.1.1-fr]{10.1.1}), considérons les conditions suivantes~:
+\b
+
+[id 4290]
+OLD: $\mathfrak{J}$-pré-adique.
+NEW: $\mathfrak{J}$-préadique.
+FRENCH CONTEXT (corrected):  $\mathscr{J}=\widetilde{\mathfrak{J}}$,
+où $\mathfrak{J}$ est un idéal de $A$, et $X'=V(\mathfrak{J})$,
+$(X',(\mathscr{O}_X)_{/X'})$ s'identifie canoniquement à
+$\operatorname{Spf}(\widehat A)$, où $\widehat A$ est le séparé complété de
+$A$ pour la topologie $\mathfrak{J}$-préadique.
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se borner à prouver la dernière assertion. On sait
+(\hyperref[0.7.3.3-fr]{\textbf{0}, 7.3.3}) que le séparé complété
+$\widehat{\mathfrak{J}}$ de $\mathfrak{J}$ pour la topologie
+$\mathfrak{J}$-préadique s'id
+
+[id 4291]
+OLD: $M$ un $B$-module de type fini
+NEW: $M$ un $B$-\emph{module} de type fini
+FRENCH CONTEXT (corrected): a topologie $\mathfrak{J}$-préadique.
+\end{env}
+
+\begin{env}[10.2.2]
+\label{0.10.2.2-fr}
+Soient $A$ un anneau noethérien, $B$ une $A$-algèbre commutative noethérienne,
+$\mathfrak{J}$ un idéal de $A$ tel que $\mathfrak{J}B$ soit contenu dans le
+radical de $B$, $M$ un $B$-\emph{module} de type fini. Alors, lorsque $M$ est
+considéré comme $A$-\emph{module}, les conditions $a)$, $b)$, $c)$, $d)$ de
+(\hyperref[0.10.2.1-fr]{10.2.1}) sont \emph{équivalentes}.
+
+\oldpage[0\textsubscript{III}]{19}
+Ce résultat s'applique surtout lorsque $A$ et $B$ sont des annea
+
+[id 4292]
+OLD: comme $A$-module, les conditions
+NEW: comme $A$-\emph{module}, les conditions
+FRENCH CONTEXT (corrected): bel{0.10.2.2-fr}
+Soient $A$ un anneau noethérien, $B$ une $A$-algèbre commutative noethérienne,
+$\mathfrak{J}$ un idéal de $A$ tel que $\mathfrak{J}B$ soit contenu dans le
+radical de $B$, $M$ un $B$-\emph{module} de type fini. Alors, lorsque $M$ est
+considéré comme $A$-\emph{module}, les conditions $a)$, $b)$, $c)$, $d)$ de
+(\hyperref[0.10.2.1-fr]{10.2.1}) sont \emph{équivalentes}.
+
+\oldpage[0\textsubscript{III}]{19}
+Ce résultat s'applique surtout lorsque $A$ et $B$ sont des anneaux
+\emph{locaux} noethériens, l'homomorphisme $A\to B$ un homomorphisme
+\e
+
+[id 4293]
+OLD: {10.2.1}) sont équivalentes.
+NEW: {10.2.1}) sont \emph{équivalentes}.
+FRENCH CONTEXT (corrected): ienne,
+$\mathfrak{J}$ un idéal de $A$ tel que $\mathfrak{J}B$ soit contenu dans le
+radical de $B$, $M$ un $B$-\emph{module} de type fini. Alors, lorsque $M$ est
+considéré comme $A$-\emph{module}, les conditions $a)$, $b)$, $c)$, $d)$ de
+(\hyperref[0.10.2.1-fr]{10.2.1}) sont \emph{équivalentes}.
+
+\oldpage[0\textsubscript{III}]{19}
+Ce résultat s'applique surtout lorsque $A$ et $B$ sont des anneaux
+\emph{locaux} noethériens, l'homomorphisme $A\to B$ un homomorphisme
+\emph{local}. Plus particulièrement, si $\mathfrak{J}$ est alors l'idéal
+\emph{maximal}
+
+=================== PAGE 0\textsubscript{III} 22 ===================
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 23 -----
+\section{Suplemento sobre álgebra homológica}
+\label{section:0.11}
+
+\subsection{Repaso de las sucesiones espectrales}
+\label{subsection:0.11.1}
+
+\begin{env}[11.1.1]
+\label{0.11.1.1}
+En lo que sigue utilizamos una noción de sucesión espectral más general que la definida en (T, 2.4); conservando la notación de (T, 2.4), llamamos \emph{sucesión espectral} en una categoría abeliana $\cat{C}$ a un sistema $E$ constituido por las partes siguientes:
+\begin{enumerate}
+  \item[(a)] Una familia $(E_r^{pq})$ de objetos de $\cat{C}$ definida para $p,q\in\bb{Z}$ y $r\geq 2$.
+  \item[(b)] Una familia de morfismos $d_r^{pq}:E_r^{pq}\to E_r^{p+r,q-r+1}$ tales que $d_r^{p+r,q-r+1}d_r^{pq}=0$.
+    Ponemos $Z_{r+1}(E_r^{pq})=\Ker(d_r^{pq})$ y $B_{r+1}(E_r^{pq})=\Im(d_r^{p+r,q-r+1})$, de modo que
+    \[
+      B_{r+1}(E_r^{pq})\subset Z_{r+1}(E_r^{pq})\subset E_r^{pq}.
+    \]
+  \item[(c)] Una familia de isomorfismos $\alpha_r^{pq}:Z_{r+1}(E_r^{pq})/B_{r+1}(E_r^{pq})\isoto E_{r+1}^{pq}$.
+
+  Definimos entonces, para $k\geq r+1$, por inducción sobre $k$, los subobjetos $B_k(E_r^{pq})$ y $Z_k(E_r^{pq})$ como las imágenes inversas, por el morfismo canónico $E_r^{pq}\to E_r^{pq}/B_{r+1}(E_r^{pq})$ de los subobjetos de este cociente identificados mediante $\alpha_r^{pq}$ con los subobjetos $B_k(E_{r+1}^{pq})$ y $Z_k(E_{r+1}^{pq})$, respectivamente.
+Está claro que se tiene entonces, salvo isomorfismo,
+  \[
+  \label{0.11.1.1.1}
+    Z_k(E_r^{pq})/B_k(E_r^{pq})=E_k^{pq}\text{ para }k\geq r+1
+    \tag{11.1.1.1}
+  \]
+  y, si ponemos $B_r(E_r^{pq})=0$ y $Z_r(E_r^{pq})=E_r^{pq}$, se tienen las relaciones de inclusión
+  \[
+  \label{0.11.1.1.2}
+    0=B_r(E_r^{pq})\subset B_{r+1}(E_r^{pq})\subset B_{r+2}(E_r^{pq})\subset\cdots\subset Z_{r+2}(E_r^{pq})\subset Z_{r+1}(E_r^{pq})\subset Z_r(E_r^{pq})=E_r^{pq}.
+    \tag{11.1.1.2}
+  \]
+  Las otras partes de los datos de $E$ son entonces:
+  \item[(d)] Dos subobjetos $B_\infty(E_2^{pq})$ y $Z_\infty(E_2^{pq})$ de $E_2^{pq}$ tales que $B_\infty(E_2^{pq})\subset Z_\infty(E_2^{pq})$ y, para todo $k\geq 2$,
+    \[
+      B_k(E_2^{pq})\subset B_\infty(E_2^{pq})\text{ y }Z_\infty(E_2^{pq})\subset Z_k(E_2^{pq}).
+    \]
+    Ponemos
+    \[
+    \label{0.11.1.1.3}
+      E_\infty^{pq}=Z_\infty(E_2^{pq})/B_\infty(E_2^{pq}).
+      \tag{11.1.1.3}
+    \]
+  \item[(e)]
+----- French corrections on page 0\textsubscript{III} 22 -----
+[id 4322]
+OLD: {$0_{\mathrm I}$, 6.2.3}
+NEW: {$\mathbf{0}_{\mathrm I}$, 6.2.3}
+FRENCH CONTEXT (corrected): roduit tensoriel.
+
+Supposons maintenant que pour $\lambda<\mu$, on ait
+$\mathfrak m_\mu=\mathfrak m_\lambda A_\mu$ et que $A_\mu$ soit un
+$A_\lambda$-module plat. Alors $A'$ est un $A_\lambda$-module plat pour tout
+$\lambda$, en vertu de (\hyperref[0.6.2.3-fr]{$\mathbf{0}_{\mathrm I}$, 6.2.3})~;
+comme $A'$ et $A_\lambda$ sont des anneaux locaux et que
+$\mathfrak m'=\mathfrak m_\lambda A'$, $A'$ est même un
+$A_\lambda$-module \emph{fidèlement plat}
+(\hyperref[0.6.6.2-fr]{$\mathbf{0}_{\mathrm I}$, 6.6.2}). Supposons enfin, en outre,
+les $A_\lambda$ 
+
+[id 4323]
+OLD: {$0_{\mathrm I}$, 6.6.2}
+NEW: {$\mathbf{0}_{\mathrm I}$, 6.6.2}
+FRENCH CONTEXT (corrected): 
+$\lambda$, en vertu de (\hyperref[0.6.2.3-fr]{$\mathbf{0}_{\mathrm I}$, 6.2.3})~;
+comme $A'$ et $A_\lambda$ sont des anneaux locaux et que
+$\mathfrak m'=\mathfrak m_\lambda A'$, $A'$ est même un
+$A_\lambda$-module \emph{fidèlement plat}
+(\hyperref[0.6.6.2-fr]{$\mathbf{0}_{\mathrm I}$, 6.6.2}). Supposons enfin, en outre,
+les $A_\lambda$ \emph{noethériens}~; les topologies
+$\mathfrak m_\lambda$-préadiques sont alors séparées
+(\hyperref[0.7.3.5-fr]{$\mathbf{0}_{\mathrm I}$, 7.3.5})~; montrons qu'il en résulte
+d'abord que sur $A'$ la topologie $\math
+
+[id 4324]
+OLD: {$0_{\mathrm I}$, 6.5.2}
+NEW: {$\mathbf{0}_{\mathrm I}$, 6.5.2}
+FRENCH CONTEXT (corrected): \mathrm I}$, 6.2.3}), et comme
+$\mathfrak m'\widehat A'\ne\widehat A'$, $\widehat A'$ est un $A'$-module
+fidèlement plat (\hyperref[0.6.6.2-fr]{$\mathbf{0}_{\mathrm I}$, 6.6.2}), d'où on
+conclura finalement que $A'$ est \emph{noethérien}
+(\hyperref[0.6.5.2-fr]{$\mathbf{0}_{\mathrm I}$, 6.5.2}), ce qui achèvera la
+démonstration du lemme.
+
+On a $\widehat A'=\varprojlim_n A'/\mathfrak m'^{n}$~; en raison de ce que
+$A'$ est $A_\lambda$-plat, on a
+\[
+  \mathfrak m'^{n}/\mathfrak m'^{n+1}
+  =(\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1})
+    \otimes_
+
+[id 4325]
+OLD: {$0_{\mathrm I}$, 7.2.12}
+NEW: {$\mathbf{0}_{\mathrm I}$, 7.2.12}
+FRENCH CONTEXT (corrected): 
+comme $\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1}$ est un
+$K_\lambda$-espace vectoriel de dimension finie,
+$\mathfrak m'^{n}/\mathfrak m'^{n+1}$ est un $K$-espace vectoriel de
+dimension finie pour tout $n\geq0$. Il résulte donc de
+(\hyperref[0.7.2.12-fr]{$\mathbf{0}_{\mathrm I}$, 7.2.12}) et
+(\hyperref[0.7.2.8-fr]{$\mathbf{0}_{\mathrm I}$, 7.2.8}) que $\widehat A'$ est
+\emph{noethérien}. On sait en outre que l'idéal maximal de $\widehat A'$ est
+$\mathfrak m'\widehat A'$ et que
+$\widehat A'/\mathfrak m'^{n}\widehat A'$ est isomorphe à
+$A'/\mat
+
+[id 4326]
+OLD: {$0_{\mathrm I}$, 7.2.8}
+NEW: {$\mathbf{0}_{\mathrm I}$, 7.2.8}
+FRENCH CONTEXT (corrected): un
+$K_\lambda$-espace vectoriel de dimension finie,
+$\mathfrak m'^{n}/\mathfrak m'^{n+1}$ est un $K$-espace vectoriel de
+dimension finie pour tout $n\geq0$. Il résulte donc de
+(\hyperref[0.7.2.12-fr]{$\mathbf{0}_{\mathrm I}$, 7.2.12}) et
+(\hyperref[0.7.2.8-fr]{$\mathbf{0}_{\mathrm I}$, 7.2.8}) que $\widehat A'$ est
+\emph{noethérien}. On sait en outre que l'idéal maximal de $\widehat A'$ est
+$\mathfrak m'\widehat A'$ et que
+$\widehat A'/\mathfrak m'^{n}\widehat A'$ est isomorphe à
+$A'/\mathfrak m'^{n}$~; comme
+$A'/\mathfrak m'^{n}=(A_\lambda/\mathf
+
+[id 4327]
+OLD: noethérien. On sait
+NEW: \emph{noethérien}. On sait
+FRENCH CONTEXT (corrected): hfrak m'^{n}/\mathfrak m'^{n+1}$ est un $K$-espace vectoriel de
+dimension finie pour tout $n\geq0$. Il résulte donc de
+(\hyperref[0.7.2.12-fr]{$\mathbf{0}_{\mathrm I}$, 7.2.12}) et
+(\hyperref[0.7.2.8-fr]{$\mathbf{0}_{\mathrm I}$, 7.2.8}) que $\widehat A'$ est
+\emph{noethérien}. On sait en outre que l'idéal maximal de $\widehat A'$ est
+$\mathfrak m'\widehat A'$ et que
+$\widehat A'/\mathfrak m'^{n}\widehat A'$ est isomorphe à
+$A'/\mathfrak m'^{n}$~; comme
+$A'/\mathfrak m'^{n}=(A_\lambda/\mathfrak m_\lambda^n)
+\otimes_{A_\lambda}A'$, $A'/\math
+
+[id 4328]
+OLD: {$0_{\mathrm I}$, 6.2.1}
+NEW: {$\mathbf{0}_{\mathrm I}$, 6.2.1}
+FRENCH CONTEXT (corrected):  J B$. En outre,
+$B/\mathfrak L=(A'/\mathfrak J')_{\mathfrak J'}=(k[T])_{\mathfrak J'}$
+n'est autre que le corps des fractions $K$ de $k[T]$. Enfin, $B$ est un
+$A'$-module plat et $A'$ un $A$-module libre, donc $B$ est un $A$-module plat
+(\hyperref[0.6.2.1-fr]{$\mathbf{0}_{\mathrm I}$, 6.2.1}).
+\end{env}
+
+\begin{env}[10.3.1.2]
+\label{0.10.3.1.2-fr}
+Supposons ensuite que $K=k(t)=k[t]$, où $t$ est algébrique sur $k$~; soit
+$f\in k[T]$ le polynôme minimal de $t$~; il existe un polynôme unitaire
+$F\in A[T]$ dont l'image canonique dans $k[T]$ soit $f$.
+
+[id 4329]
+OLD: est $A_\lambda$-plat. C.Q.F.D.
+NEW: est $A_\lambda$-\emph{plat}. C.Q.F.D.
+FRENCH CONTEXT (corrected):  est un
+$(A_\lambda/\mathfrak m_\lambda^n)$-module plat
+(\hyperref[0.6.2.1-fr]{$\mathbf{0}_{\mathrm I}$, 6.2.1})~; le critère
+(\hyperref[0.10.2.2-fr]{10.2.2}) est donc applicable à la
+$A_\lambda$-algèbre noethérienne $\widehat A'$, et montre que $\widehat A'$
+est $A_\lambda$-\emph{plat}. C.Q.F.D.
+
+\begin{env}[10.3.1.4]
+\label{0.10.3.1.4-fr}
+Abordons maintenant le cas général. Il existe un ordinal $\gamma$ et pour
+tout ordinal $\lambda\leq\gamma$ un sous-corps $k_\lambda$ de $K$ contenant
+$k$, tels que~: $1^\circ$ Pour tout $\lambda<\gamma$, $k_{\lambd
+
+[id 4330]
+OLD: \xi\mapsto t_\xi
+NEW: \xi\to t_\xi
+FRENCH CONTEXT (corrected): da<\gamma$, $k_{\lambda+1}$ soit
+une extension de $k_\lambda$ engendrée par un seul élément~; $2^\circ$ Pour
+tout ordinal $\mu$ sans prédécesseur,
+$k_\mu=\bigcup_{\lambda<\mu}k_\lambda$~; $3^\circ$ $K=k_\gamma$. Il suffit en
+effet de considérer une bijection $\xi\to t_\xi$ de l'ensemble des
+ordinaux $\xi\leq\beta$ (pour un $\beta$ convenable) sur $K$, de définir
+$k_\lambda$ par induction transfinie (pour $\lambda\leq\beta$) comme la
+réunion des $k_\mu$ pour $\mu<\lambda$ si $\lambda$ n'a pas de prédécesseur,
+et, si $\lambda=\n
+
+[id 4331]
+OLD: $f_{\xi\zeta}$ est l'application canonique
+NEW: $f_{\zeta\xi}$ est l'application canonique
+FRENCH CONTEXT (corrected): <\xi$, et supposons en premier lieu que $\xi=\zeta+1$, de sorte
+que $k_\xi=k_\zeta(t)$. Si $t$ est transcendant sur $k_\zeta$, on définit
+$A_\xi$ suivant le procédé de (\hyperref[0.10.3.1.1-fr]{10.3.1.1}) comme
+égal à $(A_\zeta[t])_{\mathfrak J A_\zeta[t]}$~;
+$f_{\zeta\xi}$ est l'application canonique, et pour $\lambda<\zeta$, on prend
+$f_{\xi\lambda}=f_{\xi\zeta}\circ f_{\zeta\lambda}$~; la vérification des
+conditions (i) à (iii) est alors immédiate, vu ce qui a été démontré en
+(\hyperref[0.10.3.1.1-fr]{10.3.1.1}). Supposons ensuite $t$ algébrique, et
+soi
+
+=================== PAGE 0\textsubscript{III} 23 ===================
+----- (Spanish page 0\textsubscript{III} 22: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 23: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 24 -----
+\oldpage[0\textsubscript{III}]{24}
+    Una familia $(E^n)$ de objetos de $\cat{C}$, cada uno provisto de una \emph{filtración decreciente $(F^p(E^n))_{p\in\bb{Z}}$}.
+    Como de costumbre, denotamos por $\gr(E^n)$ el objeto graduado asociado al objeto filtrado $E^n$, suma directa de los $\gr_p(E^n)=F^p(E^n)/F^{p+1}(E^n)$.
+  \item[(f)] Para todo par $(p,q)\in\bb{Z}\times\bb{Z}$, un isomorfismo $\beta^{pq}:E_\infty^{pq}\isoto\gr_p(E^{p+q})$.
+\end{enumerate}
+
+La familia $(E^n)$, sin las filtraciones, se llama el \emph{término límite} (o \emph{límite}) de la sucesión espectral $E$.
+
+Supongamos que la categoría $\cat{C}$ admite sumas directas infinitas, o que para todo $r\geq 2$ y todo $n\in\bb{Z}$ existe solo un número finito de pares $(p,q)$ tales que $p+q=n$ y $E_r^{pq}\neq 0$ (basta que esto se cumpla para $r=2$).
+Entonces están definidos los $E_r^{(n)}=\sum_{p+q=n}E_r^{pq}$ y, si denotamos por $d_r^{(n)}$ el morfismo $E_r^{(n)}\to E_r^{(n+1)}$ cuya restricción a $E_r^{pq}$ es $d_r^{pq}$ para todo par $(p,q)$ tal que $p+q=n$, entonces $d_r^{(n+1)}\circ d_r^{(n)}=0$; en otras palabras, $(E_r^{(n)})_{n\in\bb{Z}}$ es un \emph{complejo $E_r^{(\bullet)}$} en $\cat{C}$, con diferencial de grado $+1$, y de (c) se deduce que $\HH^n(E_n^{(\bullet)})$ es \emph{isomorfo a $E_{r+1}^{(n)}$} para todo $r\geq 2$.
+\end{env}
+
+\begin{env}[11.1.2]
+\label{0.11.1.2}
+Un \emph{morfismo $u:E\to E'$} de una sucesión espectral $E$ en una sucesión espectral $E'=(E_r^{\prime pq},E^{\prime n})$ consiste en sistemas de morfismos $u_r^{pq}:E_r^{pq}\to E_r^{\prime pq}$ y $u^n:E^n\to E^{\prime n}$, siendo los $u^n$ compatibles con las filtraciones de $E^n$ y $E^{\prime n}$, y tales que los diagramas
+\[
+  \xymatrix{
+    E_r^{pq}\ar[r]^-{d_r^{pq}}\ar[d]_{u_r^{pq}} &
+    E_r^{p+r,q-r+1}\ar[d]^{u_r^{p+r,q-r+1}}\\
+    E_r^{\prime pq}\ar[r]_{d_r^{\prime pq}} &
+    E_r^{\prime p+r,q-r+1}
+  }
+\]
+sean conmutativos; además, pasando a los cocientes, $u_r^{pq}$ da un morfismo $\overline{u}_r^{pq}:Z_{r+1}(E_r^{pq})/B_{r+1}(E_r^{pq})\to Z_{r+1}(E_r^{\prime pq})/B_{r+1}(E_r^{\prime pq})$ y debe tenerse $\alpha_r^{\prime pq}\circ\overline{u}_r^{pq}=u_{r+1}^{pq}\circ\alpha_r^{pq}$; finalmente, debe tenerse $u_2^{pq}(B_\infty(E_2^{pq}))\subset B_\infty(E_2^{\prime pq})$ y $u_2^{pq}(Z_\infty(E_2^{pq}))\subset Z_\infty(E_2^{\prime pq})$; pasando a los cocientes, $u_2^{pq}$ da entonces un morfismo $u_\infty^{\prime pq}:E_\infty^{pq}\to E_\infty^{\prime pq}$, y el diagrama
+\[
+  \xymatrix{
+    E_\infty^{pq}\ar[r]^-{u_\infty^{\prime pq}}\ar[d]_{\beta^{pq}} &
+    E_\infty^{\prime pq}\ar[d]^{\beta^{\prime pq}}\\
+    \gr_p(E^{p+q})\ar[r]_{\gr_p(u^{p+q})} &
+    \gr_p(E^{\prime p+q})
+  }
+\]
+debe ser conmutativo.
+
+Las definiciones anteriores muestran, por inducción sobre $r$, que si los $u_2^{pq}$ son \emph{isomorfismos}, también lo son los $u_r^{pq}$ para $r\geq 2$; \emph{si además sabemos que $u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ y $u_2^{pq}(Z_\infty(E_2^{pq}))=Z_\infty(E_2^{\prime pq})$ y que los $u^n$ son isomorfismos}, entonces podemos concluir que $u$ es un \emph{isomorfismo}.
+\end{env}
+
+\begin{env}[11.1.3]
+\label{0.11.1.3}
+----- French corrections on page 0\textsubscript{III} 23 -----
+[id 4332]
+OLD: {$0_{\mathrm I}$, 7.3.3}
+NEW: {$\mathbf{0}_{\mathrm I}$, 7.3.3}
+FRENCH CONTEXT (corrected): ratorname{gr}(B).
+  \tag{10.3.1.5}
+\]
+
+D'autre part, on peut remplacer $B$ par son complété $\mathfrak J B$-adique
+$\widehat B$ sans changer les conclusions de
+(\hyperref[0.10.3.1-fr]{10.3.1}), puisque $\widehat B$ est un $B$-module plat
+(\hyperref[0.7.3.3-fr]{$\mathbf{0}_{\mathrm I}$, 7.3.3}), donc un $A$-module plat
+(\hyperref[0.6.2.1-fr]{$\mathbf{0}_{\mathrm I}$, 6.2.1}).
+
+On a en outre démontré le
+
+\begin{corollary}[10.3.2]
+\label{0.10.3.2-fr}
+Si $K$ est une extension de degré fini, on peut supposer que $B$ est une
+$A$-algèbre finie.
+\end{coro
+
+[id 4333]
+OLD: {$0_{\mathrm I}$, 6.2.1}
+NEW: {$\mathbf{0}_{\mathrm I}$, 6.2.1}
+FRENCH CONTEXT (corrected):  J B$. En outre,
+$B/\mathfrak L=(A'/\mathfrak J')_{\mathfrak J'}=(k[T])_{\mathfrak J'}$
+n'est autre que le corps des fractions $K$ de $k[T]$. Enfin, $B$ est un
+$A'$-module plat et $A'$ un $A$-module libre, donc $B$ est un $A$-module plat
+(\hyperref[0.6.2.1-fr]{$\mathbf{0}_{\mathrm I}$, 6.2.1}).
+\end{env}
+
+\begin{env}[10.3.1.2]
+\label{0.10.3.1.2-fr}
+Supposons ensuite que $K=k(t)=k[t]$, où $t$ est algébrique sur $k$~; soit
+$f\in k[T]$ le polynôme minimal de $t$~; il existe un polynôme unitaire
+$F\in A[T]$ dont l'image canonique dans $k[T]$ soit $f$.
+
+[id 4334]
+OLD: abélienne $\mathcal C$
+NEW: abélienne $\boldsymbol{C}$
+FRENCH CONTEXT (corrected): tion:0.11.1-fr}
+
+\begin{env}[11.1.1]
+\label{0.11.1.1-fr}
+Nous utiliserons dans la suite une notion de suite spectrale plus générale que
+celle définie dans (T, 2.4)~; gardant les notations de (T, 2.4), nous
+appellerons \emph{suite spectrale} dans une catégorie abélienne $\boldsymbol{C}$ un
+système E formé des éléments suivants~:
+\begin{enumerate}
+  \item[$a)$] Une famille $(E_r^{pq})$ d'objets de $\boldsymbol{C}$ définis pour
+    $p\in\mathbb Z$, $q\in\mathbb Z$ et $r\geq2$.
+  \item[$b)$] Une famille de morphismes
+    $d_r^{pq}:E_r^{pq}\to E
+
+[id 4335]
+OLD: \item[(a)]
+NEW: \item[$a)$]
+FRENCH CONTEXT (corrected):  proposition.
+\end{env}
+
+\subsection{Faisceaux cohérents}
+\label{subsection:0.5.3-fr}
+
+\begin{env}[5.3.1]
+\label{0.5.3.1-fr}
+On dit qu'un $\mathcal{O}_X$-Module $\mathcal{F}$ est \emph{cohérent} s'il
+vérifie les deux conditions suivantes~:
+\begin{enumerate}
+  \item[$a)$] $\mathcal{F}$ est de type fini.
+  \item[$b)$] Pour tout ouvert $U\subset X$, tout entier $n>0$, et tout
+    homomorphisme
+    $u:\mathcal{O}_X^n|U\to\mathcal{F}|U$, le noyau de $u$ est de type fini.
+\end{enumerate}
+On notera que ces deux conditions sont de ca
+
+[id 4336]
+OLD: \item[(b)]
+NEW: \item[$b)$]
+FRENCH CONTEXT (corrected):  cohérents}
+\label{subsection:0.5.3-fr}
+
+\begin{env}[5.3.1]
+\label{0.5.3.1-fr}
+On dit qu'un $\mathcal{O}_X$-Module $\mathcal{F}$ est \emph{cohérent} s'il
+vérifie les deux conditions suivantes~:
+\begin{enumerate}
+  \item[$a)$] $\mathcal{F}$ est de type fini.
+  \item[$b)$] Pour tout ouvert $U\subset X$, tout entier $n>0$, et tout
+    homomorphisme
+    $u:\mathcal{O}_X^n|U\to\mathcal{F}|U$, le noyau de $u$ est de type fini.
+\end{enumerate}
+On notera que ces deux conditions sont de caractère \emph{local}.
+
+Pour la plupart des dém
+
+[id 4337]
+OLD: \item[(c)]
+NEW: \item[$c)$]
+FRENCH CONTEXT (corrected): dule. Les propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[$a)$] Le foncteur $M\otimes_A N$ en $N$ est exact dans la catégorie
+    des $A$-modules~;
+  \item[$b)$] $\operatorname{Tor}_i^A(M,N)=0$ pour tout $i>0$ et tout
+    $A$-module $N$~;
+  \item[$c)$] $\operatorname{Tor}_1^A(M,N)=0$ pour tout $A$-module $N$.
+\end{enumerate}
+
+Lorsque $M$ vérifie ces conditions, on dit que $M$ est un
+$A$-\emph{module plat}. Il est clair que tout $A$-module libre est plat.
+
+Pour que $M$ soit un $A$-module plat, il suffit que 
+
+[id 4338]
+OLD: \item[(d)]
+NEW: \item[$d)$]
+FRENCH CONTEXT (corrected): t pour tout $A$-module $N$, la relation
+    $M\otimes N=0$ entraîne $N=0$~;
+  \item[$c)$] $M$ est plat et pour tout homomorphisme $v:N\to N'$ de
+    $A$-modules, la relation $1_M\otimes v=0$ entraîne $v=0$, $1_M$ étant
+    l'automorphisme identique de $M$~;
+  \item[$d)$] $M$ est plat et pour tout idéal maximal $\mathfrak{m}$ de
+    $A$, $\mathfrak{m}M\neq M$.
+\end{enumerate}
+
+Lorsque $M$ vérifie ces conditions, on dit que $M$ est un $A$-module
+\emph{fidèlement plat}~; $M$ est alors nécessairement un module
+\emph{fidèle}. En o
+
+[id 4339]
+OLD: d'objets de $\mathcal C$ définis
+NEW: d'objets de $\boldsymbol{C}$ définis
+FRENCH CONTEXT (corrected): rale que
+celle définie dans (T, 2.4)~; gardant les notations de (T, 2.4), nous
+appellerons \emph{suite spectrale} dans une catégorie abélienne $\boldsymbol{C}$ un
+système E formé des éléments suivants~:
+\begin{enumerate}
+  \item[$a)$] Une famille $(E_r^{pq})$ d'objets de $\boldsymbol{C}$ définis pour
+    $p\in\mathbb Z$, $q\in\mathbb Z$ et $r\geq2$.
+  \item[$b)$] Une famille de morphismes
+    $d_r^{pq}:E_r^{pq}\to E_r^{p+r,q-r+1}$ tels que
+    $d_r^{p+r,q-r+1}d_r^{pq}=0$. On pose
+    $Z_{r+1}(E_r^{pq})=\operatorname{Ker}(d_r^{pq})$,
+    $B_{r+1}(E_r^
+
+[id 4343]
+OLD: pour tout $k\geq2$,
+NEW: pour tout $k\geq2$
+FRENCH CONTEXT (corrected): }.
+  \tag{11.1.1.2}
+\]
+
+Les autres éléments de la donnée de E sont alors~:
+\begin{enumerate}
+  \item[$d)$] Deux sous-objets $B_\infty(E_2^{pq})$ et
+    $Z_\infty(E_2^{pq})$ de $E_2^{pq}$ tels que l'on ait
+    $B_\infty(E_2^{pq})\subset Z_\infty(E_2^{pq})$ et, pour tout $k\geq2$
+    \[
+      B_k(E_2^{pq})\subset B_\infty(E_2^{pq})
+      \qquad\text{et}\qquad
+      Z_\infty(E_2^{pq})\subset Z_k(E_2^{pq}).
+    \]
+    On pose
+    \[
+    \label{0.11.1.1.3-fr}
+      E_\infty^{pq}=Z_\infty(E_2^{pq})/B_\infty(E_2^{pq}).
+      \tag{11.1.1.3}
+
+[id 4344]
+OLD: \item[(e)]
+NEW: \item[$e)$]
+FRENCH CONTEXT (corrected): )}$ est \emph{exact}), et pour tout $A$-module $M$, l'homomorphisme
+    $x\to1\otimes x$ de $M$ dans $M_{(B)}$ est injectif.
+  \item[$d)$] Le $A$-module $B$ est plat et pour tout idéal $\mathfrak a$ de
+    $A$, on a $\varphi^{-1}(\mathfrak aB)=\mathfrak a$.
+  \item[$e)$] Le $A$-module $B$ est plat et pour tout idéal maximal
+    $\mathfrak m$ de $A$, il existe un idéal maximal $\mathfrak n$ de $B$ tel
+    que $\varphi^{-1}(\mathfrak n)=\mathfrak m$.
+\end{enumerate}
+
+Lorsque ces conditions ont lieu, on identifie $A$ à un sous-a
+
+=================== PAGE 0\textsubscript{III} 24 ===================
+----- (Spanish page 0\textsubscript{III} 23: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 24: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 25 -----
+\oldpage[0\textsubscript{III}]{25}
+Recordemos que si $(F^p(X))_{p\in\bb{Z}}$ es una \emph{filtración} (decreciente) de un objeto $X\in\cat{C}$, se dice que esta filtración es \emph{separada} si $\inf(F^p(X))=0$, \emph{discreta} si existe un $p$ tal que $F^p(X)=0$, \emph{exhaustiva} (o \emph{coseparada}) si $\sup(F^p(X))=X$, y \emph{codiscreta} si existe un $p$ tal que $F^p(X)=X$.
+
+Se dice que una sucesión espectral $E=(E_r^{pq},E^n)$ es \emph{débilmente convergente} si se tiene $B_\infty(E_2^{pq})=\sup_k(B_k(E_2^{pq}))$ y $Z_\infty(E_2^{pq})=\inf_k(Z_k(E_2^{pq}))$ (en otras palabras, los objetos $B_\infty(E_2^{pq})$ y $Z_\infty(E_2^{pq})$ están determinados por los datos (a)--(c) de la sucesión espectral $E$).
+Se dice que la sucesión espectral $E$ es \emph{regular} si es débilmente convergente y si, además:
+\begin{enumerate}
+  \item[$1^\circ$] Para todo par $(p,q)$, la sucesión decreciente $(Z_k(E_2^{pq}))_{k\geq 2}$ es \emph{estable}; la hipótesis de que $E$ es débilmente convergente implica entonces que $Z_\infty(E_2^{pq})=Z_k(E_2^{pq})$ para $k$ suficientemente grande (dependiendo de $p$ y $q$).
+  \item[$2^\circ$] Para todo $n$, la filtración $(F^p(E^n))_{p\in\bb{Z}}$ de $E^n$ es \emph{discreta} y \emph{exhaustiva}.
+\end{enumerate}
+
+Se dice que la sucesión espectral $E$ es \emph{corregular} si es débilmente convergente y si, además:
+\begin{enumerate}
+  \item[$3^\circ$] Para todo par $(p,q)$, la sucesión creciente $(B_k(E_2^{pq}))_{k\geq 2}$ es \emph{estable}, lo que implica que $B_\infty(E_2^{pq})=B_k(E_2^{pq})$ y, en consecuencia, $E_\infty^{pq}=\inf E_k^{pq}$.
+  \item[$4^\circ$] Para todo $n$, la filtración de $E^n$ es \emph{codiscreta}.
+\end{enumerate}
+
+Finalmente, se dice que $E$ es \emph{birregular} si es a la vez regular y corregular, es decir, si se cumplen las condiciones siguientes:
+\begin{enumerate}
+  \item[(a)] Para todo par $(p,q)$, las sucesiones $(B_k(E_2^{pq}))_{k\geq 2}$ y $(Z_k(E_2^{pq}))_{k\geq 2}$ son \emph{estables} y se tiene $B_\infty(E_2^{pq})=B_k(E_2^{pq})$ y $Z_\infty(E_2^{pq})=Z_k(E_2^{pq})$ para $k$ suficientemente grande (lo que implica que $E_\infty^{pq}=E_k^{pq}$).
+  \item[(b)] Para todo $n$, la filtración $(F^p(E^n))_{p\in\bb{Z}}$ es \emph{discreta} y \emph{codiscreta} (también se dice \emph{finita}).
+\end{enumerate}
+
+Las sucesiones espectrales definidas en (T, 2.4) son, por tanto, sucesiones espectrales birregulares.
+\end{env}
+
+\begin{env}[11.1.4]
+\label{0.11.1.4}
+Supongamos que en la categoría $\cat{C}$ existen los límites inductivos filtrantes y que el funtor $\varinjlim$ es \emph{exacto} (lo que equivale a decir que se satisface el axioma (AB~5) de (T, 1.5) (cf.~T, 1.8)).
+La condición de que la filtración $(F^p(X))_{p\in\bb{Z}}$ de un objeto $X\in\cat{C}$ sea exhaustiva se expresa entonces por $\varinjlim_{p\to-\infty}F^p(X)=X$.
+Si una sucesión espectral $E$ es débilmente convergente, se tiene $B_\infty(E_2^{pq})=\varinjlim_{k\to\infty}B_k(E_2^{pq})$; si además $u:E\to E'$ es un morfismo de $E$ en una sucesión espectral débilmente convergente $E'$ en $\cat{C}$, entonces se tiene $u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$, por la exactitud de $\varinjlim$.
+Además:
+\end{env}
+
+\begin{proposition}[11.1.5]
+\label{0.11.1.5}
+Sea $\cat{C}$ una categoría abeliana en la que los límites inductivos filtrantes son exactos, sean $E$ y $E'$ dos sucesiones espectrales regulares en $\cat{C}$, y sea $u:E\to E'$ un morfismo de sucesiones espectrales.
+Si los $u_2^{pq}$ son isomorfismos, entonces $u$ también lo es.
+\end{proposition}
+
+\begin{proof}
+Ya sabemos por \sref{0.11.1.2} que los $u_r^{pq}$ son isomorfismos y que
+\[
+  u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq});
+\]
+----- French corrections on page 0\textsubscript{III} 24 -----
+[id 4345]
+OLD: d'objets de $\mathcal C$, dont
+NEW: d'objets de $\boldsymbol{C}$, dont
+FRENCH CONTEXT (corrected):    Z_\infty(E_2^{pq})\subset Z_k(E_2^{pq}).
+    \]
+    On pose
+    \[
+    \label{0.11.1.1.3-fr}
+      E_\infty^{pq}=Z_\infty(E_2^{pq})/B_\infty(E_2^{pq}).
+      \tag{11.1.1.3}
+    \]
+  \item[$e)$]
+    \oldpage[0\textsubscript{III}]{24}
+    Une famille $(E^n)$ d'objets de $\boldsymbol{C}$, dont chacun est muni d'une
+    \emph{filtration décroissante} $(F^p(E^n))_{p\in\mathbb Z}$. On désigne
+    comme d'ordinaire par $\operatorname{gr}(E^n)$ l'objet gradué associé à
+    l'objet filtré $E^n$, somme directe des
+    $\operatorname{gr}_p(E^n)=F^p(E^n)/F^
+
+[id 4346]
+OLD: \item[(f)]
+NEW: \item[$f)$]
+FRENCH CONTEXT (corrected): i d'une
+    \emph{filtration décroissante} $(F^p(E^n))_{p\in\mathbb Z}$. On désigne
+    comme d'ordinaire par $\operatorname{gr}(E^n)$ l'objet gradué associé à
+    l'objet filtré $E^n$, somme directe des
+    $\operatorname{gr}_p(E^n)=F^p(E^n)/F^{p+1}(E^n)$.
+  \item[$f)$] Pour tout couple $(p,q)\in\mathbb Z\times\mathbb Z$, un
+    isomorphisme
+    $\beta^{pq}:E_\infty^{pq}\xrightarrow{\sim}
+    \operatorname{gr}_p(E^{p+q})$.
+\end{enumerate}
+
+La famille $(E^n)$, sans les filtrations, est appelée l'\emph{aboutissement}
+de la sui
+
+[id 4347]
+OLD: \emph{l'aboutissement}
+NEW: l'\emph{aboutissement}
+FRENCH CONTEXT (corrected): ^n)/F^{p+1}(E^n)$.
+  \item[$f)$] Pour tout couple $(p,q)\in\mathbb Z\times\mathbb Z$, un
+    isomorphisme
+    $\beta^{pq}:E_\infty^{pq}\xrightarrow{\sim}
+    \operatorname{gr}_p(E^{p+q})$.
+\end{enumerate}
+
+La famille $(E^n)$, sans les filtrations, est appelée l'\emph{aboutissement}
+de la suite spectrale E.
+
+Supposons que la catégorie $\boldsymbol{C}$ admette des sommes directes infinies,
+ou que pour tout $r\geq2$ et tout $n\in\mathbb Z$, les couples $(p,q)$ tels
+que $p+q=n$ et $E_r^{pq}\ne0$ soient en nombre fini (il suffit qu'il en soi
+
+[id 4348]
+OLD: catégorie $\mathcal C$ admette
+NEW: catégorie $\boldsymbol{C}$ admette
+FRENCH CONTEXT (corrected):  Z\times\mathbb Z$, un
+    isomorphisme
+    $\beta^{pq}:E_\infty^{pq}\xrightarrow{\sim}
+    \operatorname{gr}_p(E^{p+q})$.
+\end{enumerate}
+
+La famille $(E^n)$, sans les filtrations, est appelée l'\emph{aboutissement}
+de la suite spectrale E.
+
+Supposons que la catégorie $\boldsymbol{C}$ admette des sommes directes infinies,
+ou que pour tout $r\geq2$ et tout $n\in\mathbb Z$, les couples $(p,q)$ tels
+que $p+q=n$ et $E_r^{pq}\ne0$ soient en nombre fini (il suffit qu'il en soit
+ainsi pour $r=2$). Alors les
+\[
+  E_r^{(n)}=\sum_{p+q=n}E_r^{pq}
+\]
+sont déf
+
+[id 4349]
+OLD: dans $\mathcal C$, à opérateur
+NEW: dans $\boldsymbol{C}$, à opérateur
+FRENCH CONTEXT (corrected): (n)}$ le morphisme
+$E_r^{(n)}\to E_r^{(n+1)}$ dont la restriction à $E_r^{pq}$ est $d_r^{pq}$
+pour chaque couple $(p,q)$ tel que $p+q=n$, on a
+$d_r^{(n+1)}\circ d_r^{(n)}=0$, autrement dit $(E_r^{(n)})_{n\in\mathbb Z}$
+est un \emph{complexe $E_r^{(\bullet)}$} dans $\boldsymbol{C}$, à opérateur de
+dérivation de degré $+1$, et il résulte de \emph{c)} que
+$\mathrm H^n(E_n^{(\bullet)})$ est \emph{isomorphe à} $E_{r+1}^{(n)}$ pour tout
+$r\geq2$.
+\end{env}
+
+\begin{env}[11.1.2]
+\label{0.11.1.2-fr}
+Un \emph{morphisme $u:E\to E'$} d'une suite spectrale E da
+
+[id 4350]
+OLD: il résulte de c) que
+NEW: il résulte de \emph{c)} que
+FRENCH CONTEXT (corrected):  $E_r^{pq}$ est $d_r^{pq}$
+pour chaque couple $(p,q)$ tel que $p+q=n$, on a
+$d_r^{(n+1)}\circ d_r^{(n)}=0$, autrement dit $(E_r^{(n)})_{n\in\mathbb Z}$
+est un \emph{complexe $E_r^{(\bullet)}$} dans $\boldsymbol{C}$, à opérateur de
+dérivation de degré $+1$, et il résulte de \emph{c)} que
+$\mathrm H^n(E_n^{(\bullet)})$ est \emph{isomorphe à} $E_{r+1}^{(n)}$ pour tout
+$r\geq2$.
+\end{env}
+
+\begin{env}[11.1.2]
+\label{0.11.1.2-fr}
+Un \emph{morphisme $u:E\to E'$} d'une suite spectrale E dans une suite
+spectrale $E'=(E_r^{\prime pq},E^{\prime n})$ c
+
+[id 4352]
+OLD: est isomorphe à $E_{r+1}^{(n)}$
+NEW: est \emph{isomorphe à} $E_{r+1}^{(n)}$
+FRENCH CONTEXT (corrected): ue $p+q=n$, on a
+$d_r^{(n+1)}\circ d_r^{(n)}=0$, autrement dit $(E_r^{(n)})_{n\in\mathbb Z}$
+est un \emph{complexe $E_r^{(\bullet)}$} dans $\boldsymbol{C}$, à opérateur de
+dérivation de degré $+1$, et il résulte de \emph{c)} que
+$\mathrm H^n(E_n^{(\bullet)})$ est \emph{isomorphe à} $E_{r+1}^{(n)}$ pour tout
+$r\geq2$.
+\end{env}
+
+\begin{env}[11.1.2]
+\label{0.11.1.2-fr}
+Un \emph{morphisme $u:E\to E'$} d'une suite spectrale E dans une suite
+spectrale $E'=(E_r^{\prime pq},E^{\prime n})$ consiste en des systèmes de
+morphismes $u_r^{pq}:E_r^{pq}\to E_r^{\prim
+
+[id 4355]
+OLD: \operatorname{gr}_p(E^{p+q})
+      \ar[r]_{\operatorname{gr}_p(u^{p+q})}
+NEW: \operatorname{gr}_{\boldsymbol{p}}(E^{p+q})
+      \ar[r]_{\operatorname{gr}_{\boldsymbol{p}}(u^{p+q})}
+FRENCH CONTEXT (corrected): ts, $u_2^{pq}$ donne alors un morphisme
+$u_\infty^{\prime pq}:E_\infty^{pq}\to E_\infty^{\prime pq}$, et le diagramme
+\[
+  \xymatrix{
+    E_\infty^{pq}\ar[r]^-{u_\infty^{\prime pq}}\ar[d]_{\beta^{pq}} &
+    E_\infty^{\prime pq}\ar[d]^{\beta^{\prime pq}}\\
+    \operatorname{gr}_{\boldsymbol{p}}(E^{p+q})
+      \ar[r]_{\operatorname{gr}_{\boldsymbol{p}}(u^{p+q})} &
+    \operatorname{gr}_{\boldsymbol{p}}(E^{\prime\boldsymbol{p}+q})
+  }
+\]
+doit être commutatif.
+
+Les définitions précédentes montrent, par récurrence sur $r$, que si les
+$u_2^{pq}$ sont des \emph{isomorphismes}, il en est de même des $u_r^{pq}$
+pour $r\geq2
+
+[id 4356]
+OLD: \operatorname{gr}_p(E^{\prime p+q})
+NEW: \operatorname{gr}_{\boldsymbol{p}}(E^{\prime\boldsymbol{p}+q})
+FRENCH CONTEXT (corrected): iagramme
+\[
+  \xymatrix{
+    E_\infty^{pq}\ar[r]^-{u_\infty^{\prime pq}}\ar[d]_{\beta^{pq}} &
+    E_\infty^{\prime pq}\ar[d]^{\beta^{\prime pq}}\\
+    \operatorname{gr}_{\boldsymbol{p}}(E^{p+q})
+      \ar[r]_{\operatorname{gr}_{\boldsymbol{p}}(u^{p+q})} &
+    \operatorname{gr}_{\boldsymbol{p}}(E^{\prime\boldsymbol{p}+q})
+  }
+\]
+doit être commutatif.
+
+Les définitions précédentes montrent, par récurrence sur $r$, que si les
+$u_2^{pq}$ sont des \emph{isomorphismes}, il en est de même des $u_r^{pq}$
+pour $r\geq2$~; \emph{si l'on sait en outre} que
+$u_2^{pq}(B_\infty(E_2^{pq}))=B_
+
+[id 4357]
+OLD: \emph{si l'on sait en outre que}
+NEW: \emph{si l'on sait en outre} que
+FRENCH CONTEXT (corrected):    \operatorname{gr}_{\boldsymbol{p}}(E^{\prime\boldsymbol{p}+q})
+  }
+\]
+doit être commutatif.
+
+Les définitions précédentes montrent, par récurrence sur $r$, que si les
+$u_2^{pq}$ sont des \emph{isomorphismes}, il en est de même des $u_r^{pq}$
+pour $r\geq2$~; \emph{si l'on sait en outre} que
+$u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ et
+$u_2^{pq}(Z_\infty(E_2^{pq}))=Z_\infty(E_2^{\prime pq})$ et que les
+$u^n$ sont des \emph{isomorphismes}, alors on peut conclure que $u$ est un
+\emph{isomorphisme}.
+\end{env}
+
+\begin{env}[11.1.3]
+\lab
+
+[id 4358]
+OLD: \emph{et que les
+$u^n$ sont des isomorphismes}
+NEW: et que les
+$u^n$ sont des \emph{isomorphismes}
+FRENCH CONTEXT (corrected): ur $r$, que si les
+$u_2^{pq}$ sont des \emph{isomorphismes}, il en est de même des $u_r^{pq}$
+pour $r\geq2$~; \emph{si l'on sait en outre} que
+$u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ et
+$u_2^{pq}(Z_\infty(E_2^{pq}))=Z_\infty(E_2^{\prime pq})$ et que les
+$u^n$ sont des \emph{isomorphismes}, alors on peut conclure que $u$ est un
+\emph{isomorphisme}.
+\end{env}
+
+\begin{env}[11.1.3]
+\label{0.11.1.3-fr}
+\oldpage[0\textsubscript{III}]{25}
+Rappelons que si $(F^p(X))_{p\in\mathbb Z}$ est une \emph{filtration} (décroissante)
+d'un objet $X\in\boldsymbol{
+
+=================== PAGE 0\textsubscript{III} 25 ===================
+----- (Spanish page 0\textsubscript{III} 24: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 25: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 26 -----
+\oldpage[0\textsubscript{III}]{26}
+la hipótesis de que $E$ y $E'$ son regulares implica también que $u_2^{pq}(Z_\infty(E_2^{pq}))=Z_\infty(E_2^{\prime pq})$ y, como $u_2^{pq}$ es un isomorfismo, también lo es $u_\infty^{pq}$; concluimos así que $\gr_p(u^{p+q})$ es asimismo un isomorfismo.
+Pero, como las filtraciones de los $E^n$ y los $E^{\prime n}$ son discretas y exhaustivas, esto implica que los $u^n$ son también isomorfismos (Bourbaki, \emph{Alg. comm.}, cap.~III, \textsection2, n\textsuperscript{o}8, th.~1).
+\end{proof}
+
+\begin{env}[11.1.6]
+\label{0.11.1.6}
+De (\hyperref[0.11.1.1.2]{11.1.1.2}) y de la definición (\hyperref[0.11.1.1.3]{11.1.1.3}) se deduce que si, para una sucesión espectral $E$, se tiene $E_r^{pq}=0$, entonces $E_k^{pq}=0$ para $k\geq r$ y $E_\infty^{pq}=0$.
+Se dice que una sucesión espectral \emph{degenera} si existe un entero $r\geq 2$ y, para todo entero $n\in\bb{Z}$, un entero $q(n)$ tal que \emph{$E_r^{n-q,q}=0$ para todo $q\neq q(n)$}.
+De la observación anterior deducimos primero que también se tiene $E_k^{n-q,q}=0$ para $k\geq r$ (incluido $k=\infty$) y $q\neq q(n)$.
+Además, la definición de $E_{r+1}^{pq}$ muestra que se tiene $E_{r+1}^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$; si $E$ es \emph{débilmente convergente}, se tiene también $E_\infty^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$; en otras palabras, para todo $n\in\bb{Z}$, $\gr_p(E^n)=0$ para $p\neq q(n)$ y $\gr_{q(n)}(E^n)=E_r^{n-q(n),q(n)}$.
+Si además la filtración de $E^n$ es \emph{discreta} y \emph{exhaustiva}, entonces la sucesión espectral $E$ es \emph{regular}, y se tiene $E^n=E_r^{n-q(n),q(n)}$ salvo isomorfismo.
+\end{env}
+
+\begin{env}[11.1.7]
+\label{0.11.1.7}
+Supongamos que en la categoría $\cat{C}$ existen los límites inductivos filtrantes y son exactos, y sea $(E_\lambda,u_{\mu\lambda})$ un sistema inductivo (sobre un conjunto filtrante de índices) de sucesiones espectrales en $\cat{C}$.
+Entonces el \emph{límite inductivo} de este sistema inductivo existe en la categoría aditiva de las sucesiones espectrales de objetos de $\cat{C}$: para verlo, basta definir $E_r^{pq}$, $d_r^{pq}$, $\alpha_r^{pq}$, $B_\infty(E_2^{pq})$, $Z_\infty(E_2^{pq})$, $E^n$, $F^p(E^n)$ y $\beta^{pq}$ como los límites inductivos respectivos de los $E_{r,\lambda}^{pq}$, $d_{r,\lambda}^{pq}$, $\alpha_{r,\lambda}^{pq}$, $B_\infty(E_{2,\lambda}^{pq})$, $Z_\infty(E_{2,\lambda}^{pq})$, $E_\lambda^n$, $F^p(E_\lambda^n)$ y $\beta_\lambda^{pq}$; la verificación de las condiciones de \sref{0.11.1.1} se deduce de la exactitud del funtor $\varinjlim$ sobre $\cat{C}$.
+\end{env}
+
+\begin{remark}[11.1.8]
+\label{0.11.1.8}
+Supongamos que la categoría $\cat{C}$ es la categoría de los $A$-módulos sobre un anillo $A$ \emph{noetheriano} (resp. un anillo $A$).
+Las definiciones de \sref{0.11.1.1} muestran entonces que si, para un $r$ dado, los $E_r^{pq}$ son $A$-módulos \emph{de tipo finito} (resp. \emph{de longitud finita}), también lo son todos los módulos $E_s^{pq}$ para $s\geq r$ y, por tanto, también $E_\infty^{pq}$.
+Si además la filtración del término límite $(E^n)$ es \emph{discreta} y \emph{codiscreta} para todo $n$, concluimos que cada $E^n$ es también un $A$-módulo \emph{de tipo finito} (resp. \emph{de longitud finita}).
+\end{remark}
+
+\begin{env}[11.1.9]
+\label{0.11.1.9}
+Habremos de considerar condiciones que aseguren que una sucesión espectral $E$ sea birregular de manera ``uniforme'' en $p+q=n$.
+Utilizaremos entonces el lema siguiente:
+\end{env}
+
+\begin{lemma}[11.1.10]
+\label{0.11.1.10}
+Sea $(E_r^{pq})$ una familia de objetos de $\cat{C}$ relacionados por los datos \emph{(a)}, \emph{(b)} y \emph{(c)} de \sref{0.11.1.1}.
+Para un entero fijo $n$, las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[{\rm(a)}] Existe un entero $r(n)$ tal que, para $r\geq r(n)$, $p+q=n$ o $p+q=n-1$, los morfismos $d_r^{pq}$ son nulos.
+  \item[{\rm(b)}] Existe un entero $r(n)$ tal que, para $p+q=n$ o $p+q=n+1$, se tiene $B_r(E_2^{pq})=B_s(E_2^{pq})$ para $s\geq r\geq r(n)$.
+  \item[{\rm(c)}] Existe un entero $r(n)$ tal que, para $p+q=n$ o $p+q=n-1$, se tiene $Z_r(E_2^{pq})=Z_s(E_2^{pq})$ para $s\geq r\geq r(n)$.
+  \item[{\rm(d)}] Existe un entero $r(n)$ tal que, para $p+q=n$, se tiene $B_r(E_2^{pq})=B_s(E_2^{pq})$ y $Z_r(E_2^{pq})=Z_s(E_2^{pq})$ para $s\geq r\geq r(n)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+----- French corrections on page 0\textsubscript{III} 25 -----
+[id 4359]
+OLD: est une filtration (décroissante)
+NEW: est une \emph{filtration} (décroissante)
+FRENCH CONTEXT (corrected): nfty(E_2^{\prime pq})$ et que les
+$u^n$ sont des \emph{isomorphismes}, alors on peut conclure que $u$ est un
+\emph{isomorphisme}.
+\end{env}
+
+\begin{env}[11.1.3]
+\label{0.11.1.3-fr}
+\oldpage[0\textsubscript{III}]{25}
+Rappelons que si $(F^p(X))_{p\in\mathbb Z}$ est une \emph{filtration} (décroissante)
+d'un objet $X\in\boldsymbol{C}$, on dit que cette filtration est \emph{séparée}
+si $\inf(F^p(X))=0$, \emph{discrète} s'il existe un $p$ tel que $F^p(X)=0$,
+\emph{exhaustive} (ou \emph{co-séparée}) si $\sup(F^p(X))=X$,
+\emph{co-discrète} s'il existe $p$ tel qu
+
+[id 4360]
+OLD: $X\in\mathcal C$, on dit
+NEW: $X\in\boldsymbol{C}$, on dit
+FRENCH CONTEXT (corrected): ph{isomorphismes}, alors on peut conclure que $u$ est un
+\emph{isomorphisme}.
+\end{env}
+
+\begin{env}[11.1.3]
+\label{0.11.1.3-fr}
+\oldpage[0\textsubscript{III}]{25}
+Rappelons que si $(F^p(X))_{p\in\mathbb Z}$ est une \emph{filtration} (décroissante)
+d'un objet $X\in\boldsymbol{C}$, on dit que cette filtration est \emph{séparée}
+si $\inf(F^p(X))=0$, \emph{discrète} s'il existe un $p$ tel que $F^p(X)=0$,
+\emph{exhaustive} (ou \emph{co-séparée}) si $\sup(F^p(X))=X$,
+\emph{co-discrète} s'il existe $p$ tel que $F^p(X)=X$.
+
+Nous dirons qu'une suite 
+
+[id 4361]
+OLD: si l'on a
+\[
+  B_\infty(E_2^{pq})=\sup_k(B_k(E_2^{pq})),\qquad
+  Z_\infty(E_2^{pq})=\inf_k(Z_k(E_2^{pq}))
+\]
+(autrement dit
+NEW: si l'on a
+$B_\infty(E_2^{pq})=\sup_k(B_k(E_2^{pq}))$,
+$Z_\infty(E_2^{pq})=\inf_k(Z_k(E_2^{pq}))$
+(autrement dit
+FRENCH CONTEXT (corrected): emph{discrète} s'il existe un $p$ tel que $F^p(X)=0$,
+\emph{exhaustive} (ou \emph{co-séparée}) si $\sup(F^p(X))=X$,
+\emph{co-discrète} s'il existe $p$ tel que $F^p(X)=X$.
+
+Nous dirons qu'une suite spectrale $E=(E_r^{pq},E^n)$ est \emph{faiblement
+convergente} si l'on a
+$B_\infty(E_2^{pq})=\sup_k(B_k(E_2^{pq}))$,
+$Z_\infty(E_2^{pq})=\inf_k(Z_k(E_2^{pq}))$
+(autrement dit les objets $B_\infty(E_2^{pq})$ et $Z_\infty(E_2^{pq})$
+sont déterminés par les données \emph{a)} à \emph{c)} de la suite spectrale E). Nous dirons
+que la suite spectrale E est \emph{régulière} si elle est faiblement
+convergente et si en outre~:
+\begin{enumer
+
+[id 4362]
+OLD: données a) à c) de
+NEW: données \emph{a)} à \emph{c)} de
+FRENCH CONTEXT (corrected): uite spectrale $E=(E_r^{pq},E^n)$ est \emph{faiblement
+convergente} si l'on a
+$B_\infty(E_2^{pq})=\sup_k(B_k(E_2^{pq}))$,
+$Z_\infty(E_2^{pq})=\inf_k(Z_k(E_2^{pq}))$
+(autrement dit les objets $B_\infty(E_2^{pq})$ et $Z_\infty(E_2^{pq})$
+sont déterminés par les données \emph{a)} à \emph{c)} de la suite spectrale E). Nous dirons
+que la suite spectrale E est \emph{régulière} si elle est faiblement
+convergente et si en outre~:
+\begin{enumerate}
+  \item[$1^\circ$] Pour tout couple $(p,q)$, la suite décroissante
+    $(Z_k(E_2^{pq}))_{k\geq2}$ est \emph{
+
+[id 4363]
+OLD: \item[(a)]
+NEW: \item[\textit{a)}]
+FRENCH CONTEXT (corrected):  du point de vue birationnel qu'elle implique) être nuisible à celui qui désire se familiariser avec le point de vue et les techniques exposés ici.
+Par contre, nous supposerons que le lecteur a une bonne connaissance des sujets suivants~:
+
+\begin{enumerate}
+  \item[\textit{a)}] L'\emph{Algèbre commutative}, telle qu'elle est exposée par exemple dans les volumes en cours de préparation des \emph{Éléments} de N.~Bourbaki (et, en attendant la parution de ces volumes, dans Samuel-Zariski~\cite{I-13} et Samuel~\cite{I-11},~\cite{I-12}).
+
+
+[id 4364]
+OLD: \item[(b)]
+NEW: \item[\textit{b)}]
+FRENCH CONTEXT (corrected): '\emph{Algèbre commutative}, telle qu'elle est exposée par exemple dans les volumes en cours de préparation des \emph{Éléments} de N.~Bourbaki (et, en attendant la parution de ces volumes, dans Samuel-Zariski~\cite{I-13} et Samuel~\cite{I-11},~\cite{I-12}).
+  \item[\textit{b)}] L'\emph{Algèbre homologique}, pour laquelle nous renvoyons à Cartan-Eilenberg~\cite{I-2} (cité~(M)) et Godement~\cite{I-4} (cité~(G)), ainsi qu'à l'article récent de A.~Grothendieck~\cite{I-6} (cité~(T)).
+  \item[\textit{c)}] La \emph{Théorie des faisceaux}, 
+
+[id 4365]
+OLD: catégorie $\mathcal C$, les limites
+NEW: catégorie $\boldsymbol{C}$, les limites
+FRENCH CONTEXT (corrected): {co-discrète} (ce qu'on exprime aussi en disant
+    qu'elle est \emph{finie}).
+\end{enumerate}
+
+Les suites spectrales définies dans (T, 2.4) sont donc les suites spectrales
+birégulières.
+\end{env}
+
+\begin{env}[11.1.4]
+\label{0.11.1.4-fr}
+Supposons que dans la catégorie $\boldsymbol{C}$, les limites inductives filtrantes
+existent et que le foncteur $\varinjlim$ soit \emph{exact} (ce qui équivaut à
+dire que l'axiome AB 5) de (T, 1.5) est vérifié (cf. T, 1.8)). La condition
+que la filtration $(F^p(X))_{p\in\mathbb Z}$ d'un objet $X\in\boldsymbol{C}$ est
+ex
+
+[id 4366]
+OLD: $X\in\mathcal C$ est
+NEW: $X\in\boldsymbol{C}$ est
+FRENCH CONTEXT (corrected): boldsymbol{C}$, les limites inductives filtrantes
+existent et que le foncteur $\varinjlim$ soit \emph{exact} (ce qui équivaut à
+dire que l'axiome AB 5) de (T, 1.5) est vérifié (cf. T, 1.8)). La condition
+que la filtration $(F^p(X))_{p\in\mathbb Z}$ d'un objet $X\in\boldsymbol{C}$ est
+exhaustive s'écrit alors aussi
+$\varinjlim_{p\to-\infty}F^p(X)=X$. Si une suite spectrale E est faiblement
+convergente, on a
+$B_\infty(E_2^{pq})=\varinjlim_{k\to\infty}B_k(E_2^{pq})$~; si en outre
+$u:E\to E'$ est un morphisme de E dans une suite spectrale $E'
+
+[id 4367]
+OLD: $\mathcal C$ faiblement convergente
+NEW: $\boldsymbol{C}$ faiblement convergente
+FRENCH CONTEXT (corrected): ustive s'écrit alors aussi
+$\varinjlim_{p\to-\infty}F^p(X)=X$. Si une suite spectrale E est faiblement
+convergente, on a
+$B_\infty(E_2^{pq})=\varinjlim_{k\to\infty}B_k(E_2^{pq})$~; si en outre
+$u:E\to E'$ est un morphisme de E dans une suite spectrale $E'$ de
+$\boldsymbol{C}$ faiblement convergente, on a
+$u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ en raison de
+l'exactitude de $\varinjlim$. De plus~:
+\end{env}
+
+\begin{proposition}[11.1.5]
+\label{0.11.1.5-fr}
+Soient $\mathbf{C}$ une catégorie abélienne dans laquelle les limites
+inductives fil
+
+[id 4368]
+OLD: Soient $\mathcal C$ une
+NEW: Soient $\mathbf{C}$ une
+FRENCH CONTEXT (corrected): phisme de E dans une suite spectrale $E'$ de
+$\boldsymbol{C}$ faiblement convergente, on a
+$u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ en raison de
+l'exactitude de $\varinjlim$. De plus~:
+\end{env}
+
+\begin{proposition}[11.1.5]
+\label{0.11.1.5-fr}
+Soient $\mathbf{C}$ une catégorie abélienne dans laquelle les limites
+inductives filtrantes sont exactes, \textup{E}, $E'$ deux suites spectrales régulières
+de $\mathbf{C}$, $u:E\to E'$ un morphisme de suites spectrales. Si les
+$u_2^{pq}$ sont des isomorphismes, il en est de même de
+
+[id 4369]
+OLD: exactes, E, $E'$
+NEW: exactes, \textup{E}, $E'$
+FRENCH CONTEXT (corrected): pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ en raison de
+l'exactitude de $\varinjlim$. De plus~:
+\end{env}
+
+\begin{proposition}[11.1.5]
+\label{0.11.1.5-fr}
+Soient $\mathbf{C}$ une catégorie abélienne dans laquelle les limites
+inductives filtrantes sont exactes, \textup{E}, $E'$ deux suites spectrales régulières
+de $\mathbf{C}$, $u:E\to E'$ un morphisme de suites spectrales. Si les
+$u_2^{pq}$ sont des isomorphismes, il en est de même de $u$.
+\end{proposition}
+
+\begin{proof}
+Nous savons déjà (\hyperref[0.11.1.2-fr]{11.1.2}) que les $u
+
+[id 4370]
+OLD: de $\mathcal C$, $u
+NEW: de $\mathbf{C}$, $u
+FRENCH CONTEXT (corrected):  de
+l'exactitude de $\varinjlim$. De plus~:
+\end{env}
+
+\begin{proposition}[11.1.5]
+\label{0.11.1.5-fr}
+Soient $\mathbf{C}$ une catégorie abélienne dans laquelle les limites
+inductives filtrantes sont exactes, \textup{E}, $E'$ deux suites spectrales régulières
+de $\mathbf{C}$, $u:E\to E'$ un morphisme de suites spectrales. Si les
+$u_2^{pq}$ sont des isomorphismes, il en est de même de $u$.
+\end{proposition}
+
+\begin{proof}
+Nous savons déjà (\hyperref[0.11.1.2-fr]{11.1.2}) que les $u_r^{pq}$ sont des
+isomorphismes et que
+\[
+  u_2^{pq}(B
+
+=================== PAGE 0\textsubscript{III} 26 ===================
+----- (Spanish page 0\textsubscript{III} 25: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 26: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 27 -----
+\oldpage[0\textsubscript{III}]{27}
+Según las condiciones (a), (b) y (c) de \sref{0.11.1.1}, decir que $Z_{r+1}(E_2^{pq})=Z_r(E_2^{pq})$ equivale a decir que $d_r^{pq}=0$, y decir que $B_r(E_2^{p+r,q-r+1})=B_{r+1}(E_2^{p+r,q-r+1})$ equivale a decir que $d_r^{pq}=0$; el lema se deduce inmediatamente de esta observación.
+\end{proof}
+
+\subsection{La sucesión espectral de un complejo filtrado}
+\label{subsection:0.11.2}
+
+\begin{env}[11.2.1]
+\label{0.11.2.1}
+Sea $\cat{C}$ una categoría abeliana; convenimos en denotar mediante notaciones como $K^\bullet$ los \emph{complejos $(K^i)_{i\in\bb{Z}}$} de objetos de $\cat{C}$ cuyo diferencial es de grado $+1$, y mediante notaciones como $K_\bullet$ los complejos $(K_i)_{i\in\bb{Z}}$ de objetos de $\cat{C}$ cuyo diferencial es de grado $-1$.
+A todo complejo $K^\bullet=(K^i)$ cuyo diferencial $d$ es de grado $+1$ podemos asociarle un complejo $K_\bullet'=(K_i')$ poniendo $K_i'=K^{-i}$, siendo el diferencial $K_i'\to K_{i-1}'$ el operador $d:K^{-i}\to K^{-i+1}$; y \emph{viceversa}, lo que permitirá, según las circunstancias, considerar uno u otro de los tipos de complejos y traducir todo resultado de uno de los tipos en resultados para el otro.
+Denotamos análogamente mediante notaciones como $K^{\bullet\bullet}=(K^{ij})$ (resp. $K_{\bullet\bullet}=(K_{ij})$) los \emph{bicomplejos} (o \emph{complejos dobles}) de objetos de $\cat{C}$ en los que los \emph{dos} diferenciales son de grado $+1$ (resp. $-1$); todavía se puede pasar de un tipo al otro cambiando los signos de los índices, y tenemos notaciones y observaciones análogas para los multicomplejos cualesquiera.
+Las notaciones $K^\bullet$ y $K_\bullet$ se utilizarán también para \emph{objetos $\bb{Z}$-graduados} de $\cat{C}$, que no son necesariamente complejos (pueden considerarse como tales para los diferenciales \emph{nulos}); por ejemplo, escribimos $\HH^\bullet(K^\bullet)=(\HH^i(K^\bullet))_{i\in\bb{Z}}$ para la \emph{cohomología} de un complejo $K^\bullet$ cuyo diferencial es de grado $+1$, y $\HH_\bullet(K_\bullet)=(\HH_i(K_\bullet))_{i\in\bb{Z}}$ para la \emph{homología} de un complejo $K_\bullet$ cuyo diferencial es de grado $-1$; cuando se pasa de $K^\bullet$ a $K_\bullet'$ por el procedimiento descrito anteriormente, se tiene $\HH_i(K_\bullet')=\HH^{-i}(K^\bullet)$.
+
+Recordemos en este caso que, para un complejo $K^\bullet$ (resp. $K_\bullet$), escribiremos en general $Z^i(K^\bullet)=\Ker(K^i\to K^{i+1})$ (``objeto de cociclos'') y $B^i(K^\bullet)=\Im(K^{i-1}\to K^i)$ (``objeto de cobordes'') (resp. $Z_i(K_\bullet)=\Ker(K_i\to K_{i-1})$ (``objeto de ciclos'') y $B_i(K_\bullet)=\Im(K_{i+1}\to K_i))$ (``objeto de bordes'')), de modo que $\HH^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp. $\HH_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+
+Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) es un complejo en $\cat{C}$ y $T:\cat{C}\to\cat{C}'$ un funtor de $\cat{C}$ en una categoría abeliana $\cat{C}'$, denotamos por $T(K^\bullet)$ (resp. $T(K_\bullet)$) el complejo $(T(K^i))$ (resp. $(T(K_i))$) en $\cat{C}'$.
+
+No repasaremos la definición de los \emph{$\partial$-funtores} (T, 2.1), salvo para observar que se dice \emph{también} $\partial$-funtor en lugar de $\partial^*$-funtor cuando el morfismo $\partial$ disminuye el grado en una unidad, aclarando el contexto este punto si puede haber confusión.
+
+Finalmente, se dice que un \emph{objeto graduado $(A_i)_{i\in\bb{Z}}$} de $\cat{C}$ está \emph{acotado inferiormente} (resp. \emph{superiormente}) si existe un $i_0$ tal que $A_i=0$ para $i<i_0$ (resp. $i>i_0$).
+\end{env}
+
+\begin{env}[11.2.2]
+\label{0.11.2.2}
+Sea $K^\bullet$ un complejo en $\cat{C}$ cuyo diferencial $d$ es de grado $+1$, y supongamos que está provisto de una \emph{filtración $F(K^\bullet)=(F^p(K^\bullet))_{p\in\bb{Z}}$} formada por subobjetos \emph{graduados}
+----- French corrections on page 0\textsubscript{III} 26 -----
+[id 4371]
+OLD: $E_r^{n-q,q}=0$ pour tout
+NEW: $E_r^{n-q,q}=0$ \emph{pour tout}
+FRENCH CONTEXT (corrected): .3}) que si, dans une suite spectrale E, on a
+$E_r^{pq}=0$, on a $E_k^{pq}=0$ pour $k\geq r$ et $E_\infty^{pq}=0$. On dit
+qu'une suite spectrale est \emph{dégénérée} s'il existe un entier $r\geq2$ et,
+pour tout entier $n\in\mathbb Z$, un entier $q(n)$ tel que
+$E_r^{n-q,q}=0$ \emph{pour tout} $q\ne q(n)$. On déduit d'abord de la remarque
+précédente que l'on a aussi $E_k^{n-q,q}=0$ pour $k\geq r$ (y compris
+$k=\infty$) et $q\ne q(n)$. En outre, la définition de $E_{r+1}^{pq}$ montre
+que l'on a
+$E_{r+1}^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$~; si E est \e
+
+[id 4372]
+OLD: si E est faiblement convergente,
+NEW: si E est \emph{faiblement convergente},
+FRENCH CONTEXT (corrected): {pour tout} $q\ne q(n)$. On déduit d'abord de la remarque
+précédente que l'on a aussi $E_k^{n-q,q}=0$ pour $k\geq r$ (y compris
+$k=\infty$) et $q\ne q(n)$. En outre, la définition de $E_{r+1}^{pq}$ montre
+que l'on a
+$E_{r+1}^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$~; si E est \emph{faiblement convergente},
+on a donc aussi
+$E_\infty^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$~; autrement dit, pour tout
+$n\in\mathbb Z$, $\operatorname{gr}_p(E^n)=0$ pour $p\ne q(n)$ et
+$\operatorname{gr}_{q(n)}(E^n)=E_r^{n-q(n),q(n)}$. Si en outre la filtration
+de $E^n$ est \emph{discrète} e
+
+[id 4373]
+OLD: $E^n$ est discrète et exhaustive,
+NEW: $E^n$ est \emph{discrète} et \emph{exhaustive},
+FRENCH CONTEXT (corrected): ph{faiblement convergente},
+on a donc aussi
+$E_\infty^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$~; autrement dit, pour tout
+$n\in\mathbb Z$, $\operatorname{gr}_p(E^n)=0$ pour $p\ne q(n)$ et
+$\operatorname{gr}_{q(n)}(E^n)=E_r^{n-q(n),q(n)}$. Si en outre la filtration
+de $E^n$ est \emph{discrète} et \emph{exhaustive}, la suite E est \emph{régulière} et on a
+$E^n=E_r^{n-q(n),q(n)}$ à un isomorphisme près.
+\end{env}
+
+\begin{env}[11.1.7]
+\label{0.11.1.7-fr}
+Supposons que dans la catégorie $\boldsymbol{C}$ les limites inductives filtrantes
+existent et soient exactes, et soit $
+
+[id 4374]
+OLD: la suite E est régulière et on a
+NEW: la suite E est \emph{régulière} et on a
+FRENCH CONTEXT (corrected): infty^{n-q(n),q(n)}=E_r^{n-q(n),q(n)}$~; autrement dit, pour tout
+$n\in\mathbb Z$, $\operatorname{gr}_p(E^n)=0$ pour $p\ne q(n)$ et
+$\operatorname{gr}_{q(n)}(E^n)=E_r^{n-q(n),q(n)}$. Si en outre la filtration
+de $E^n$ est \emph{discrète} et \emph{exhaustive}, la suite E est \emph{régulière} et on a
+$E^n=E_r^{n-q(n),q(n)}$ à un isomorphisme près.
+\end{env}
+
+\begin{env}[11.1.7]
+\label{0.11.1.7-fr}
+Supposons que dans la catégorie $\boldsymbol{C}$ les limites inductives filtrantes
+existent et soient exactes, et soit $(E_\lambda,u_{\mu\lambda})$ un système
+i
+
+[id 4375]
+OLD: catégorie $\mathcal C$ les limites
+NEW: catégorie $\boldsymbol{C}$ les limites
+FRENCH CONTEXT (corrected): )=E_r^{n-q(n),q(n)}$. Si en outre la filtration
+de $E^n$ est \emph{discrète} et \emph{exhaustive}, la suite E est \emph{régulière} et on a
+$E^n=E_r^{n-q(n),q(n)}$ à un isomorphisme près.
+\end{env}
+
+\begin{env}[11.1.7]
+\label{0.11.1.7-fr}
+Supposons que dans la catégorie $\boldsymbol{C}$ les limites inductives filtrantes
+existent et soient exactes, et soit $(E_\lambda,u_{\mu\lambda})$ un système
+inductif (suivant un ensemble d'indices filtrant) de suites spectrales de
+$\boldsymbol{C}$. Alors la \emph{limite inductive} de ce système inductif existe
+dans l
+
+[id 4376]
+OLD: $\mathcal C$. Alors
+NEW: $\boldsymbol{C}$. Alors
+FRENCH CONTEXT (corrected): 1.1.7]
+\label{0.11.1.7-fr}
+Supposons que dans la catégorie $\boldsymbol{C}$ les limites inductives filtrantes
+existent et soient exactes, et soit $(E_\lambda,u_{\mu\lambda})$ un système
+inductif (suivant un ensemble d'indices filtrant) de suites spectrales de
+$\boldsymbol{C}$. Alors la \emph{limite inductive} de ce système inductif existe
+dans la catégorie additive des suites spectrales d'objets de $\boldsymbol{C}$~:
+il suffit pour le voir de définir $E_r^{pq}$, $d_r^{pq}$, $\alpha_r^{pq}$,
+$B_\infty(E_2^{pq})$, $Z_\infty(E_2^{pq})$, $E^
+
+[id 4377]
+OLD: d'objets de $\mathcal C$~:
+NEW: d'objets de $\boldsymbol{C}$~:
+FRENCH CONTEXT (corrected): xactes, et soit $(E_\lambda,u_{\mu\lambda})$ un système
+inductif (suivant un ensemble d'indices filtrant) de suites spectrales de
+$\boldsymbol{C}$. Alors la \emph{limite inductive} de ce système inductif existe
+dans la catégorie additive des suites spectrales d'objets de $\boldsymbol{C}$~:
+il suffit pour le voir de définir $E_r^{pq}$, $d_r^{pq}$, $\alpha_r^{pq}$,
+$B_\infty(E_2^{pq})$, $Z_\infty(E_2^{pq})$, $E^n$, $F^p(E^n)$ et
+$\beta^{pq}$ comme limites inductives respectives de $E_{r,\lambda}^{pq}$,
+$d_{r,\lambda}^{pq}$, $\alpha_{r,\lambda}^{p
+
+[id 4378]
+OLD: $\varinjlim$ dans $\mathcal C$.
+NEW: $\varinjlim$ dans $\boldsymbol{C}$.
+FRENCH CONTEXT (corrected): pq}$, $\alpha_{r,\lambda}^{pq}$,
+$B_\infty(E_{2,\lambda}^{pq})$, $Z_\infty(E_{2,\lambda}^{pq})$,
+$E_\lambda^n$, $F^p(E_\lambda^n)$ et $\beta_\lambda^{pq}$~; la vérification
+des conditions de (\hyperref[0.11.1.1-fr]{11.1.1}) résulte de l'exactitude du
+foncteur $\varinjlim$ dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{remark}[11.1.8]
+\label{0.11.1.8-fr}
+Supposons que la catégorie $\boldsymbol{C}$ soit la catégorie des $A$-modules sur
+un anneau \emph{noethérien} $A$ (resp. sur un anneau $A$). Alors, les
+définitions de (\hyperref[0.11.1.1-fr]{11.1.1}) montr
+
+[id 4379]
+OLD: catégorie $\mathcal C$ soit
+NEW: catégorie $\boldsymbol{C}$ soit
+FRENCH CONTEXT (corrected): ^n$, $F^p(E_\lambda^n)$ et $\beta_\lambda^{pq}$~; la vérification
+des conditions de (\hyperref[0.11.1.1-fr]{11.1.1}) résulte de l'exactitude du
+foncteur $\varinjlim$ dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{remark}[11.1.8]
+\label{0.11.1.8-fr}
+Supposons que la catégorie $\boldsymbol{C}$ soit la catégorie des $A$-modules sur
+un anneau \emph{noethérien} $A$ (resp. sur un anneau $A$). Alors, les
+définitions de (\hyperref[0.11.1.1-fr]{11.1.1}) montrent que si pour un $r$
+donné, les $E_r^{pq}$ sont des $A$-modules \emph{de type fini} (resp. de
+\emph{l
+
+[id 4380]
+OLD: est discrète et co-discrète pour tout
+NEW: est \emph{discrète} et \emph{co-discrète} pour tout
+FRENCH CONTEXT (corrected): i pour un $r$
+donné, les $E_r^{pq}$ sont des $A$-modules \emph{de type fini} (resp. de
+\emph{longueur finie}), il en est de même de tous les modules $E_s^{pq}$ pour
+$s\geq r$, ainsi que des $E_\infty^{pq}$. Si en outre la filtration de
+l'aboutissement $(E^n)$ est \emph{discrète} et \emph{co-discrète} pour tout $n$, on en
+conclut que chacun des $E_n$ est aussi un $A$-module \emph{de type fini}
+(resp. de \emph{longueur finie}).
+\end{remark}
+
+\begin{env}[11.1.9]
+\label{0.11.1.9-fr}
+Nous aurons à considérer des conditions assurant qu'une suite spectrale E est
+biréguliè
+
+[id 4381]
+OLD: chacun des $E^n$
+NEW: chacun des $E_n$
+FRENCH CONTEXT (corrected): } (resp. de
+\emph{longueur finie}), il en est de même de tous les modules $E_s^{pq}$ pour
+$s\geq r$, ainsi que des $E_\infty^{pq}$. Si en outre la filtration de
+l'aboutissement $(E^n)$ est \emph{discrète} et \emph{co-discrète} pour tout $n$, on en
+conclut que chacun des $E_n$ est aussi un $A$-module \emph{de type fini}
+(resp. de \emph{longueur finie}).
+\end{remark}
+
+\begin{env}[11.1.9]
+\label{0.11.1.9-fr}
+Nous aurons à considérer des conditions assurant qu'une suite spectrale E est
+birégulière de façon «~uniforme~» en $p+q=n$. On 
+
+[id 4382]
+OLD: d'objets de $\mathcal C$ liés
+NEW: d'objets de $\mathbf{C}$ liés
+FRENCH CONTEXT (corrected): 0.11.1.9-fr}
+Nous aurons à considérer des conditions assurant qu'une suite spectrale E est
+birégulière de façon «~uniforme~» en $p+q=n$. On utilisera alors le lemme
+suivant~:
+\end{env}
+
+\begin{lemma}[11.1.10]
+\label{0.11.1.10-fr}
+Soit $(E_r^{pq})$ une famille d'objets de $\mathbf{C}$ liés par les données
+\textup{a), b), c)} de \textup{(\hyperref[0.11.1.1-fr]{11.1.1})}. Pour un entier fixé $n$, les
+propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un entier $r(n)$ tel que pour $r\geq r(n)$,
+    $p+q=n$ ou
+
+[id 4383]
+OLD: données
+a), b), c) de
+NEW: données
+\textup{a), b), c)} de
+FRENCH CONTEXT (corrected): des conditions assurant qu'une suite spectrale E est
+birégulière de façon «~uniforme~» en $p+q=n$. On utilisera alors le lemme
+suivant~:
+\end{env}
+
+\begin{lemma}[11.1.10]
+\label{0.11.1.10-fr}
+Soit $(E_r^{pq})$ une famille d'objets de $\mathbf{C}$ liés par les données
+\textup{a), b), c)} de \textup{(\hyperref[0.11.1.1-fr]{11.1.1})}. Pour un entier fixé $n$, les
+propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un entier $r(n)$ tel que pour $r\geq r(n)$,
+    $p+q=n$ ou $p+q=n-1$, les morphismes $d_r^{pq}$ s
+
+[id 4384]
+OLD: (\hyperref[0.11.1.1-fr]{11.1.1}). Pour
+NEW: \textup{(\hyperref[0.11.1.1-fr]{11.1.1})}. Pour
+FRENCH CONTEXT (corrected): suite spectrale E est
+birégulière de façon «~uniforme~» en $p+q=n$. On utilisera alors le lemme
+suivant~:
+\end{env}
+
+\begin{lemma}[11.1.10]
+\label{0.11.1.10-fr}
+Soit $(E_r^{pq})$ une famille d'objets de $\mathbf{C}$ liés par les données
+\textup{a), b), c)} de \textup{(\hyperref[0.11.1.1-fr]{11.1.1})}. Pour un entier fixé $n$, les
+propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un entier $r(n)$ tel que pour $r\geq r(n)$,
+    $p+q=n$ ou $p+q=n-1$, les morphismes $d_r^{pq}$ soient tous nuls.
+  \item[\textup{b)}] Il existe 
+
+[id 4385]
+OLD: \item[(a)]
+NEW: \item[\textup{a)}]
+FRENCH CONTEXT (corrected): .4-fr}
+
+\begin{theorem}[1.4.1]
+\label{I.1.4.1-fr}
+Soient $X$ le spectre premier d'un anneau $A$, $V$ une partie ouverte
+quasi-compacte de $X$, $\mathscr{F}$ un $(\mathscr{O}_X|V)$-Module. Les
+quatre conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un $A$-module $M$ tel que $\mathscr{F}$ soit
+  isomorphe à $\widetilde{M}|V$.
+  \item[\textup{b)}] Il existe un recouvrement ouvert fini $(V_i)$ de $V$ par des
+  ensembles de la forme $D(f_i)$ ($f_i\in A$) contenus dans $V$, tels que,
+  pour tout $i
+
+[id 4386]
+OLD: \item[(b)]
+NEW: \item[\textup{b)}]
+FRENCH CONTEXT (corrected): ie ouverte
+quasi-compacte de $X$, $\mathscr{F}$ un $(\mathscr{O}_X|V)$-Module. Les
+quatre conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un $A$-module $M$ tel que $\mathscr{F}$ soit
+  isomorphe à $\widetilde{M}|V$.
+  \item[\textup{b)}] Il existe un recouvrement ouvert fini $(V_i)$ de $V$ par des
+  ensembles de la forme $D(f_i)$ ($f_i\in A$) contenus dans $V$, tels que,
+  pour tout $i$, $\mathscr{F}|V_i$ soit isomorphe à un faisceau de la forme
+  $\widetilde{M}_i$, où $M_i$ est un $A_{f_i}$-
+
+[id 4387]
+OLD: \item[(c)]
+NEW: \item[\textup{c)}]
+FRENCH CONTEXT (corrected):  un recouvrement ouvert fini $(V_i)$ de $V$ par des
+  ensembles de la forme $D(f_i)$ ($f_i\in A$) contenus dans $V$, tels que,
+  pour tout $i$, $\mathscr{F}|V_i$ soit isomorphe à un faisceau de la forme
+  $\widetilde{M}_i$, où $M_i$ est un $A_{f_i}$-module.
+  \item[\textup{c)}] Le faisceau $\mathscr{F}$ est quasi-cohérent
+  \textup{(\hyperref[0.5.1.3-fr]{\textbf{0}, 5.1.3})}.
+  \item[\textup{d)}] Les deux propriétés suivantes ont lieu~:
+  \begin{enumerate}
+    \item[\textup{d\,1)}] Pour tout $f\in A$ tel que $D(f)\subset V$ et toute
+
+[id 4388]
+OLD: \item[(d)]
+NEW: \item[\textup{d)}]
+FRENCH CONTEXT (corrected):  que,
+  pour tout $i$, $\mathscr{F}|V_i$ soit isomorphe à un faisceau de la forme
+  $\widetilde{M}_i$, où $M_i$ est un $A_{f_i}$-module.
+  \item[\textup{c)}] Le faisceau $\mathscr{F}$ est quasi-cohérent
+  \textup{(\hyperref[0.5.1.3-fr]{\textbf{0}, 5.1.3})}.
+  \item[\textup{d)}] Les deux propriétés suivantes ont lieu~:
+  \begin{enumerate}
+    \item[\textup{d\,1)}] Pour tout $f\in A$ tel que $D(f)\subset V$ et toute
+    section $s\in\Gamma(D(f),\mathscr{F})$, il existe un entier $n\geq0$ tel
+    que $f^n s$ se prolonge en une section 
+
+=================== PAGE 0\textsubscript{III} 27 ===================
+----- (Spanish page 0\textsubscript{III} 26: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 27: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 28 -----
+\oldpage[0\textsubscript{III}]{28}
+de $K^\bullet$, es decir, $F^p(K^\bullet)=(K^i\cap F^p(K^\bullet))_{i\in\bb{Z}}$; suponemos además que $d(F^p(K^\bullet))\subset F^p(K^\bullet)$ para todo $p\in\bb{Z}$.
+Recordemos rápidamente cómo se define \emph{funtorialmente} una sucesión espectral $E(K^\bullet)$ a partir de $K^\bullet$ (M,~XV,~4 y G,~I,~4.3).
+Para $r\geq 2$, el morfismo canónico $F^p(K^\bullet)/F^{p+r}(K^\bullet)\to F^p(K^\bullet)/F^{p+1}(K^\bullet)$ define un morfismo en cohomología
+\[
+  \HH^{p+q}(F^p(K^\bullet)/F^{p+r}(K^\bullet))\to\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))
+\]
+
+Denotamos por $Z_r^{pq}(K^\bullet)$ la imagen de este morfismo.
+Análogamente, de la sucesión exacta
+\[
+  0\to F^p(K^\bullet)/F^{p+1}(K^\bullet)\to F^{p-r+1}(K^\bullet)/F^{p+1}(K^\bullet)\to F^{p-r+1}(K^\bullet)/F^p(K^\bullet)\to 0,
+\]
+deducimos de la sucesión exacta de cohomología un morfismo
+\[
+  \HH^{p+q-1}(F^{p-r+1}(K^\bullet)/F^p(K^\bullet))\to\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet)),
+\]
+y denotamos por $B_r^{pq}(K^\bullet)$ la imagen de este morfismo; se demuestra que $B_r^{pq}(K^\bullet)\subset Z_r^{pq}(K^\bullet)$ y se toma $E_r^{pq}(K^\bullet)=Z_r^{pq}(K^\bullet)/B_r^{pq}(K^\bullet)$; no precisaremos la definición de los $d_r^{pq}$ ni de los $\alpha_r^{pq}$.
+
+Observemos aquí que todos los $Z_r^{pq}(K^\bullet)$ y $B_p^{pq}(K^\bullet)$, para $p$ y $q$ fijos, son subobjetos del mismo objeto $\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))$, que denotamos por $Z_1^{pq}(K^\bullet)$; ponemos $B_1^{pq}(K^\bullet)=0$, de modo que las definiciones anteriores de $Z_r^{pq}(K^\bullet)$ y $B_r^{pq}(K^\bullet)$ valen también para $r=1$; ponemos asimismo $E_1^{pq}(K^\bullet)=Z_1^{pq}(K^\bullet)$.
+Definimos $d_1^{pq}$ y $\alpha_1^{pq}$ de modo que se satisfagan las condiciones de \sref{0.11.1.1} para $r=1$.
+Por otra parte, definimos los subobjetos $Z_\infty^{pq}(K^\bullet)$ como la imagen del morfismo
+\[
+  \HH^{p+q}(F^p(K^\bullet))\to\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))=E_1^{pq}(K^\bullet),
+\]
+y $B_\infty^{pq}(K^\bullet)$ como la imagen del morfismo
+\[
+  \HH^{p+q-1}(K^\bullet/F^p(K^\bullet))\to\HH^{p+q}(F^p(K^\bullet)/F^{p+1}(K^\bullet))=E_1^{pq}(K^\bullet),
+\]
+inducido como antes por la sucesión exacta de cohomología.
+Definimos $Z_\infty(E_2^{pq}(K^\bullet))$ y $B_\infty(E_2^{pq}(K^\bullet))$ como las imágenes canónicas en $E_2^{pq}(K^\bullet)$ de $Z_\infty^{pq}(K^\bullet)$ y $B_\infty^{pq}(K^\bullet)$.
+
+Finalmente, denotamos por $F^p(\HH^n(K^\bullet))$ la imagen en $\HH^n(K^\bullet)$ del morfismo $\HH^n(F^p(K^\bullet))\to\HH^n(K^\bullet)$ inducido por la inyección canónica $F^p(K^\bullet)\to K^\bullet$; por la sucesión exacta de cohomología, este es también el núcleo del morfismo $\HH^n(K^\bullet)\to\HH^n(K^\bullet/F^p(K^\bullet))$.
+Esto define una filtración sobre $E^n(K^\bullet)=\HH^n(K^\bullet)$; no daremos aquí la definición de los isomorfismos $\beta^{pq}$.
+\end{env}
+
+\begin{env}[11.2.3]
+\label{0.11.2.3}
+El carácter \emph{funtorial} de $E(K^\bullet)$ se entiende del modo siguiente: dados dos complejos \emph{filtrados} $K^\bullet$ y $K^{\prime\bullet}$ en $\cat{C}$ y un morfismo de complejos $u:K^\bullet\to K^{\prime\bullet}$ \emph{compatible con las filtraciones}, se inducen de manera evidente los morfismos $u_r^{pq}$ (para $r\geq 1$) y $u^n$, y se demuestra que estos morfismos son compatibles con los $d_r^{pq}$, $\alpha_r^{pq}$ y $\beta^{pq}$ en el sentido de \sref{0.11.1.2}, y definen así un morfismo bien definido $E(u):E(K^\bullet)\to E(K^{\prime\bullet})$ de sucesiones espectrales.
+Además, se demuestra que si $u$ y $v$ son morfismos $K^\bullet\to K^{\prime\bullet}$ del tipo anterior, \emph{homótopos de orden $\leq k$}, entonces $u_r^{pq}=v_r^{pq}$ para $r>k$ y $u^n=v^n$ para todo $n$ (M,~XV,~3.1).
+\end{env}
+
+\begin{env}[11.2.4]
+\label{0.11.2.4}
+----- French corrections on page 0\textsubscript{III} 27 -----
+[id 4389]
+OLD: conditions a), b), c) de
+NEW: conditions \emph{a), b), c)} de
+FRENCH CONTEXT (corrected): up{d)}] Il existe un entier $r(n)$ tel que pour $p+q=n$, on ait
+    $B_r(E_2^{pq})=B_s(E_2^{pq})$ et $Z_r(E_2^{pq})=Z_s(E_2^{pq})$ pour
+    $s\geq r\geq r(n)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\oldpage[0\textsubscript{III}]{27}
+En effet, d'après les conditions \emph{a), b), c)} de
+(\hyperref[0.11.1.1-fr]{11.1.1}), dire que
+$Z_{r+1}(E_2^{pq})=Z_r(E_2^{pq})$ équivaut à dire que $d_r^{pq}=0$, et dire
+que
+$B_r(E_2^{p+r,q-r+1})=B_{r+1}(E_2^{p+r,q-r+1})$ équivaut aussi à dire que
+$d_r^{pq}=0$~; le lemme résulte aussitôt de cette remarque.
+\e
+
+[id 4390]
+OLD: abélienne $\mathcal C$, nous
+NEW: abélienne $\boldsymbol{C}$, nous
+FRENCH CONTEXT (corrected): +r,q-r+1})$ équivaut aussi à dire que
+$d_r^{pq}=0$~; le lemme résulte aussitôt de cette remarque.
+\end{proof}
+\subsection{La suite spectrale d'un complexe filtré}
+\label{subsection:0.11.2-fr}
+
+\begin{env}[11.2.1]
+\label{0.11.2.1-fr}
+Étant donnée une catégorie abélienne $\boldsymbol{C}$, nous conviendrons de
+désigner par des notations telles que $K^\bullet$ les \emph{complexes}
+$(K^i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$ dans lesquels l'opérateur de
+dérivation est de degré $+1$, par des notations telles que $K_\bullet$ les
+complexes $(K_i
+
+[id 4391]
+OLD: $(K^i)_{i\in\mathbb Z}$ d'objets de $\mathcal C$
+NEW: $(K^i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$
+FRENCH CONTEXT (corrected): n{La suite spectrale d'un complexe filtré}
+\label{subsection:0.11.2-fr}
+
+\begin{env}[11.2.1]
+\label{0.11.2.1-fr}
+Étant donnée une catégorie abélienne $\boldsymbol{C}$, nous conviendrons de
+désigner par des notations telles que $K^\bullet$ les \emph{complexes}
+$(K^i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$ dans lesquels l'opérateur de
+dérivation est de degré $+1$, par des notations telles que $K_\bullet$ les
+complexes $(K_i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$ dans lesquels
+l'opérateur de dérivation est de degré $-1$. A tout complexe
+$K^\bullet=(K^i)$
+
+[id 4392]
+OLD: $(K_i)_{i\in\mathbb Z}$ d'objets de $\mathcal C$
+NEW: $(K_i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$
+FRENCH CONTEXT (corrected):  nous conviendrons de
+désigner par des notations telles que $K^\bullet$ les \emph{complexes}
+$(K^i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$ dans lesquels l'opérateur de
+dérivation est de degré $+1$, par des notations telles que $K_\bullet$ les
+complexes $(K_i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$ dans lesquels
+l'opérateur de dérivation est de degré $-1$. A tout complexe
+$K^\bullet=(K^i)$ dont l'opérateur de dérivation $d$ est de degré $+1$, on
+peut associer un complexe $K'_\bullet=(K'_i)$ en posant $K'_i=K^{-i}$,
+l'opérateur de dérivation $K'_i\to K'_
+
+[id 4393]
+OLD: À tout complexe
+NEW: A tout complexe
+FRENCH CONTEXT (corrected):  Z}$ d'objets de $\boldsymbol{C}$ dans lesquels l'opérateur de
+dérivation est de degré $+1$, par des notations telles que $K_\bullet$ les
+complexes $(K_i)_{i\in\mathbb Z}$ d'objets de $\boldsymbol{C}$ dans lesquels
+l'opérateur de dérivation est de degré $-1$. A tout complexe
+$K^\bullet=(K^i)$ dont l'opérateur de dérivation $d$ est de degré $+1$, on
+peut associer un complexe $K'_\bullet=(K'_i)$ en posant $K'_i=K^{-i}$,
+l'opérateur de dérivation $K'_i\to K'_{i-1}$ étant l'opérateur
+$d:K^{-i}\to K^{-i+1}$~; et \emph{vice versa}, ce 
+
+[id 4394]
+OLD: d'objets de
+$\mathcal C$ dans
+NEW: d'objets de
+$\boldsymbol{C}$ dans
+FRENCH CONTEXT (corrected): érer l'un ou l'autre type de complexes et de traduire
+tout résultat pour l'un des types en résultats pour l'autre. Nous désignerons
+de même par des notations telles que $K^{\bullet\bullet}=(K^{ij})$ (resp.
+$K_{\bullet\bullet}=(K_{ij})$) des \emph{bicomplexes} d'objets de
+$\boldsymbol{C}$ dans lesquels les \emph{deux} opérateurs de dérivation sont de
+degré $+1$ (resp. $-1$)~; on passe encore de l'un à l'autre type en changeant
+les signes des indices, et on a des notations et remarques analogues pour des
+multicomplexes quelconques. La notation $K^\b
+
+[id 4395]
+OLD: gradués} de $\mathcal C$, de type
+NEW: gradués} de $\boldsymbol{C}$, de type
+FRENCH CONTEXT (corrected):  $+1$ (resp. $-1$)~; on passe encore de l'un à l'autre type en changeant
+les signes des indices, et on a des notations et remarques analogues pour des
+multicomplexes quelconques. La notation $K^\bullet$ ou $K_\bullet$ sera aussi
+utilisée pour des \emph{objets gradués} de $\boldsymbol{C}$, de type $\mathbb Z$,
+qui ne sont pas nécessairement des complexes (ou que l'on peut considérer
+comme tels pour des opérateurs de dérivation \emph{nuls})~; par exemple, nous
+écrirons
+$\mathrm H^\bullet(K^\bullet)=(\mathrm H^i(K^\bullet))_{i\in\mathbb Z}$ la
+\emph{coho
+
+[id 4396]
+OLD: dérivation nuls)
+NEW: dérivation \emph{nuls})
+FRENCH CONTEXT (corrected): plexes quelconques. La notation $K^\bullet$ ou $K_\bullet$ sera aussi
+utilisée pour des \emph{objets gradués} de $\boldsymbol{C}$, de type $\mathbb Z$,
+qui ne sont pas nécessairement des complexes (ou que l'on peut considérer
+comme tels pour des opérateurs de dérivation \emph{nuls})~; par exemple, nous
+écrirons
+$\mathrm H^\bullet(K^\bullet)=(\mathrm H^i(K^\bullet))_{i\in\mathbb Z}$ la
+\emph{cohomologie} d'un complexe $K^\bullet$ dont l'opérateur de dérivation
+est de degré $+1$, par
+$\mathrm H_\bullet(K_\bullet)=(\mathrm H_i(K_\bullet))_{
+
+[id 4398]
+OLD: complexe dans
+$\mathcal C$, et
+NEW: complexe dans
+$\boldsymbol{C}$, et
+FRENCH CONTEXT (corrected): _i(K_\bullet)=\operatorname{Im}(K_{i+1}\to K_i))$ («~objet des
+bords~»)) de sorte que
+$\mathrm H^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp.
+$\mathrm H_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+
+Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) est un complexe dans
+$\boldsymbol{C}$, et $T:\boldsymbol{C}\to\boldsymbol{C}'$ un foncteur de $\boldsymbol{C}$
+dans une catégorie abélienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons
+
+[id 4399]
+OLD: $T:\mathcal C\to\mathcal C'$
+NEW: $T:\boldsymbol{C}\to\boldsymbol{C}'$
+FRENCH CONTEXT (corrected): i+1}\to K_i))$ («~objet des
+bords~»)) de sorte que
+$\mathrm H^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp.
+$\mathrm H_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+
+Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) est un complexe dans
+$\boldsymbol{C}$, et $T:\boldsymbol{C}\to\boldsymbol{C}'$ un foncteur de $\boldsymbol{C}$
+dans une catégorie abélienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons pas sur la définition des \emph{$\pa
+
+[id 4400]
+OLD: foncteur de $\mathcal C$
+dans
+NEW: foncteur de $\boldsymbol{C}$
+dans
+FRENCH CONTEXT (corrected):  sorte que
+$\mathrm H^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp.
+$\mathrm H_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+
+Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) est un complexe dans
+$\boldsymbol{C}$, et $T:\boldsymbol{C}\to\boldsymbol{C}'$ un foncteur de $\boldsymbol{C}$
+dans une catégorie abélienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons pas sur la définition des \emph{$\partial$-foncteurs} (T, 2.1),
+sauf pour
+
+[id 4401]
+OLD: abélienne $\mathcal C'$, nous
+NEW: abélienne $\boldsymbol{C}'$, nous
+FRENCH CONTEXT (corrected): )/B^i(K^\bullet)$ (resp.
+$\mathrm H_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+
+Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) est un complexe dans
+$\boldsymbol{C}$, et $T:\boldsymbol{C}\to\boldsymbol{C}'$ un foncteur de $\boldsymbol{C}$
+dans une catégorie abélienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons pas sur la définition des \emph{$\partial$-foncteurs} (T, 2.1),
+sauf pour signaler que nous dirons \emph{aussi} $\partial
+
+[id 4402]
+OLD: dans $\mathcal C'$.
+NEW: dans $\boldsymbol{C}'$.
+FRENCH CONTEXT (corrected): est un complexe dans
+$\boldsymbol{C}$, et $T:\boldsymbol{C}\to\boldsymbol{C}'$ un foncteur de $\boldsymbol{C}$
+dans une catégorie abélienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons pas sur la définition des \emph{$\partial$-foncteurs} (T, 2.1),
+sauf pour signaler que nous dirons \emph{aussi} $\partial$-foncteur au lieu de
+$\partial^*$-foncteur lorsque le morphisme $\partial$ diminue le degré d'une
+unité, le contexte de
+
+[id 4403]
+OLD: des $\partial$-foncteurs (T, 2.1)
+NEW: des \emph{$\partial$-foncteurs} (T, 2.1)
+FRENCH CONTEXT (corrected): oldsymbol{C}'$ un foncteur de $\boldsymbol{C}$
+dans une catégorie abélienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons pas sur la définition des \emph{$\partial$-foncteurs} (T, 2.1),
+sauf pour signaler que nous dirons \emph{aussi} $\partial$-foncteur au lieu de
+$\partial^*$-foncteur lorsque le morphisme $\partial$ diminue le degré d'une
+unité, le contexte devant chaque fois préciser ce point s'il peut y avoir
+doute.
+
+Enfin, nous dirons q
+
+[id 4404]
+OLD: dirons aussi $\partial$-foncteur
+NEW: dirons \emph{aussi} $\partial$-foncteur
+FRENCH CONTEXT (corrected): ienne $\boldsymbol{C}'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\boldsymbol{C}'$.
+
+Nous ne revenons pas sur la définition des \emph{$\partial$-foncteurs} (T, 2.1),
+sauf pour signaler que nous dirons \emph{aussi} $\partial$-foncteur au lieu de
+$\partial^*$-foncteur lorsque le morphisme $\partial$ diminue le degré d'une
+unité, le contexte devant chaque fois préciser ce point s'il peut y avoir
+doute.
+
+Enfin, nous dirons qu'un \emph{objet gradué} $(A_i)_{i\in\mathbb Z}$ de
+$\boldsymbol{C}$ 
+
+[id 4405]
+OLD: $\mathcal C$ est \emph{limité
+NEW: $\boldsymbol{C}$ est \emph{limité
+FRENCH CONTEXT (corrected): partial$-foncteur au lieu de
+$\partial^*$-foncteur lorsque le morphisme $\partial$ diminue le degré d'une
+unité, le contexte devant chaque fois préciser ce point s'il peut y avoir
+doute.
+
+Enfin, nous dirons qu'un \emph{objet gradué} $(A_i)_{i\in\mathbb Z}$ de
+$\boldsymbol{C}$ est \emph{limité inférieurement} (resp. \emph{supérieurement})
+s'il existe $i_0$ tel que $A_i=0$ pour $i<i_0$ (resp. $i>i_0$).
+\end{env}
+
+\begin{env}[11.2.2]
+\label{0.11.2.2-fr}
+Soit $K^\bullet$ un complexe de $\boldsymbol{C}$ dont l'opérateur de dérivation
+$d$ est de degré $
+
+[id 4406]
+OLD: complexe de $\mathcal C$ dont
+NEW: complexe de $\boldsymbol{C}$ dont
+FRENCH CONTEXT (corrected): mph{objet gradué} $(A_i)_{i\in\mathbb Z}$ de
+$\boldsymbol{C}$ est \emph{limité inférieurement} (resp. \emph{supérieurement})
+s'il existe $i_0$ tel que $A_i=0$ pour $i<i_0$ (resp. $i>i_0$).
+\end{env}
+
+\begin{env}[11.2.2]
+\label{0.11.2.2-fr}
+Soit $K^\bullet$ un complexe de $\boldsymbol{C}$ dont l'opérateur de dérivation
+$d$ est de degré $+1$, et supposons-le muni d'une \emph{filtration}
+$F(K^\bullet)=(F^p(K^\bullet))_{p\in\mathbb Z}$ formé de sous-
+\oldpage[0\textsubscript{III}]{28}
+objets \emph{gradués} de $K^\bullet$, autrement dit
+$F^p(K^\bullet)
+
+=================== PAGE 0\textsubscript{III} 28 ===================
+----- (Spanish page 0\textsubscript{III} 27: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 28: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 29 -----
+\oldpage[0\textsubscript{III}]{29}
+Supongamos que los límites inductivos filtrantes en $\cat{C}$ son exactos.
+Entonces, si la filtración $(F^p(K^\bullet))$ de $K^\bullet$ es \emph{exhaustiva}, también lo es la filtración $(F^p(\HH^n(K^\bullet)))$ para todo $n$, pues por hipótesis se tiene $K^\bullet=\varinjlim_{p\to-\infty}F^p(K^\bullet)$ y la hipótesis sobre $\cat{C}$ implica que la cohomología conmuta con los límites inductivos.
+Además, por la misma razón, se tiene $B_\infty(E_2^{pq}(K^\bullet))=\sup_k B_k(E_2^{pq}(K^\bullet))$.
+Se dice que la filtración $(F^p(K^\bullet))$ de $K^\bullet$ es \emph{regular} si para todo $n$ existe un entero $u(n)$ tal que $\HH^n(F^p(K^\bullet))=0$ para $p>u(n)$.
+Este es, en particular, el caso cuando la filtración de $K^\bullet$ es \emph{discreta}.
+Cuando la filtración de $K^\bullet$ es regular y exhaustiva, y los límites inductivos filtrantes son exactos en $\cat{C}$, se tiene (M,~XV,~4) que la sucesión espectral $E(K^\bullet)$ es \emph{regular}.
+\end{env}
+
+\subsection{Las sucesiones espectrales de un bicomplejo}
+\label{subsection:0.11.3}
+
+\begin{env}[11.3.1]
+\label{0.11.3.1}
+En cuanto a las convenciones para los bicomplejos, seguimos las de~(T,~2.4) antes que las de~(M), suponiéndose así que los dos diferenciales $d'$ y $d''$ (de grado~$+1$) de un tal bicomplejo $K^{\bullet\bullet}=(K^{ij})$ son \emph{permutables}.
+Supongamos que se satisface \emph{una} de las dos condiciones siguientes:
+\begin{enumerate}
+   \item Existen \emph{sumas directas infinitas} en $\cat{C}$;
+   \item Para todo $n\in\bb{Z}$, solo hay un número \emph{finito} de pares $(p,q)$ tales que $p+q=n$ y $K^{pq}\neq 0$.
+ \end{enumerate}
+Entonces el bicomplejo $K^{\bullet\bullet}$ define un \emph{complejo} (simple) $(K^{\prime n})_{n\in\bb{Z}}$ con $K^{\prime n}=\sum_{i+j=n}K^{ij}$, viniendo dado el diferencial $d$ (de grado~$+1$) de este complejo por $dx=d'x+(-1)^i d''x$ para $x\in K^{ij}$.
+Cuando hablemos más adelante del \emph{complejo (simple) definido por un bicomplejo $K^{\bullet\bullet}$}, se sobreentenderá siempre que se satisface una de las condiciones anteriores.
+Adoptamos las convenciones análogas para los multicomplejos.
+
+Denotamos por $K^{i,\bullet}$ (resp.~$K^{\bullet,j}$) el complejo simple $(K^{ij})_{j\in\bb{Z}}$ (resp.~$(K^{ij})_{i\in\bb{Z}}$), y por $Z_\mathrm{II}^p(K^{i,\bullet})$, $B_\mathrm{II}^p(K^{i,\bullet})$, $\HH_\mathrm{II}^p(K^{i,\bullet})$ (resp.~$Z_\mathrm{I}^p(K^{\bullet,j})$, $B_\mathrm{I}^p(K^{\bullet,j})$, $\HH_\mathrm{I}^p(K^{\bullet,j})$) sus objetos de cociclos, de cobordes y de cohomología de grado $p$, respectivamente;
+el diferencial $d':K^{i,\bullet}\to K^{i+1,\bullet}$ es un morfismo de complejos, que da así un operador sobre los cociclos, los cobordes y la cohomología,
+\begin{align*}
+  d'&:Z_\mathrm{II}^p(K^{i,\bullet})\to Z_\mathrm{II}^p(K^{i+1,\bullet})
+\\d'&:B_\mathrm{II}^p(K^{i,\bullet})\to B_\mathrm{II}^p(K^{i+1,\bullet})
+\\d'&:\HH_\mathrm{II}^p(K^{i,\bullet})\to\HH_\mathrm{II}^p(K^{i+1,\bullet})
+\end{align*}
+y está claro que, para estos operadores, $(Z_\mathrm{II}^p(K^{i,\bullet}))_{i\in\bb{Z}}$, $(B_\mathrm{II}^p(K^{i,\bullet}))_{i\in\bb{Z}}$ y $(\HH_\mathrm{II}^p(K^{i,\bullet}))_{i\in\bb{Z}}$ son complejos;
+denotamos el complejo $(\HH_\mathrm{II}^p(K^{i,\bullet}))_{i\in\bb{Z}}$ por $\HH_\mathrm{II}^p(K^{\bullet\bullet})$, y sus objetos de cociclos, cobordes y cohomología de grado $q$ por $Z_\mathrm{I}^q(\HH_\mathrm{II}^p(K^{\bullet\bullet}))$, $B_\mathrm{I}^q(\HH_\mathrm{II}^p(K^{\bullet\bullet}))$ y $\HH_\mathrm{I}^q(\HH_\mathrm{II}^p(K^{\bullet\bullet}))$.
+Definimos análogamente los complejos $\HH_\mathrm{I}^p(K^{\bullet\bullet})$ y sus objetos de cohomología $\HH_\mathrm{II}^q(\HH_\mathrm{I}^p(K^{\bullet\bullet}))$.
+Recordemos, no obstante, que $\HH^n(K^{\bullet\bullet})$ denota el objeto de grado $n$ de la cohomología del complejo \emph{(simple)} definido por $K^{\bullet\bullet}$.
+\end{env}
+
+\begin{env}[11.3.2]
+\label{0.11.3.2}
+Sobre el complejo definido por un bicomplejo $K^{\bullet\bullet}$ pueden considerarse dos filtraciones canónicas, $(F_\mathrm{I}^p(K^{\bullet\bullet}))$ y $(F_\mathrm{II}^p(K^{\bullet\bullet}))$, dadas por
+\[
+\label{0.11.3.2.1}
+  F_\mathrm{I}^p(K^{\bullet\bullet})
+  = \left(\sum_{i+j=n,i\geq p}K^{ij}\right)_{n\in\bb{Z}}
+  \quad\text{y}\quad
+  F_\mathrm{II}^p(K^{\bullet\bullet})
+  = \left(\sum_{i+j=n,j\geq p}K^{ij}\right)_{n\in\bb{Z}}
+  \tag{11.3.2.1}
+\]
+----- French corrections on page 0\textsubscript{III} 28 -----
+[id 4407]
+OLD: objets gradués de $K^\bullet$
+NEW: objets \emph{gradués} de $K^\bullet$
+FRENCH CONTEXT (corrected): {0.11.2.2-fr}
+Soit $K^\bullet$ un complexe de $\boldsymbol{C}$ dont l'opérateur de dérivation
+$d$ est de degré $+1$, et supposons-le muni d'une \emph{filtration}
+$F(K^\bullet)=(F^p(K^\bullet))_{p\in\mathbb Z}$ formé de sous-
+\oldpage[0\textsubscript{III}]{28}
+objets \emph{gradués} de $K^\bullet$, autrement dit
+$F^p(K^\bullet)=(K^i\cap F^p(K^\bullet))_{i\in\mathbb Z}$~; en outre, on
+suppose que $d(F^p(K^\bullet))\subset F^p(K^\bullet)$ pour tout
+$p\in\mathbb Z$. Rappelons alors rapidement comment on définit
+\emph{fonctoriellement} une suite spectrale 
+
+[id 4410]
+OLD: de $\mathcal C$, et un morphisme
+NEW: de $\boldsymbol{C}$, et un morphisme
+FRENCH CONTEXT (corrected): la définition des isomorphismes $\beta^{pq}$.
+\end{env}
+
+\begin{env}[11.2.3]
+\label{0.11.2.3-fr}
+Le caractère \emph{fonctoriel} de $E(K^\bullet)$ doit s'entendre de la façon
+suivante~: étant donné deux complexes \emph{filtrés} $K^\bullet$,
+$K^{\prime\bullet}$ de $\boldsymbol{C}$, et un morphisme de complexes
+$u:K^\bullet\to K^{\prime\bullet}$ \emph{compatible avec les filtrations}, on
+en déduit de façon évidente les morphismes $u_r^{pq}$ (pour $r\geq1$) et
+$u^n$, et on montre que ces morphismes sont compatibles avec les $d_r^{pq}$,
+$\alpha_r^{pq}$ et
+
+=================== PAGE 0\textsubscript{III} 29 ===================
+----- (Spanish page 0\textsubscript{III} 28: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 29: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 30 -----
+\oldpage[0\textsubscript{III}]{30}
+que, por definición, son subobjetos graduados del complejo (simple) definido por $K^{\bullet\bullet}$ y hacen así de este complejo un complejo filtrado;
+además, está claro que estas filtraciones son \emph{exhaustivas} y \emph{separadas}.
+
+A cada una de estas filtraciones le corresponde una sucesión espectral~\sref{0.11.2.2};
+denotamos por $'E(K^{\bullet\bullet})$ y $''E(K^{\bullet\bullet})$ las sucesiones espectrales correspondientes a $(F_\mathrm{I}^p(K^{\bullet\bullet}))$ y $(F_\mathrm{II}^p(K^{\bullet\bullet}))$, respectivamente, llamadas \emph{sucesiones espectrales del bicomplejo $K^{\bullet\bullet}$}, y que tienen ambas por término límite la cohomología $(\HH^n(K^{\bullet\bullet}))$.
+Se demuestra además~(M,~XV,~6) que se tiene
+\[
+\label{0.11.3.2.2}
+  'E_2^{pq}(K^{\bullet\bullet})
+  = \HH_\mathrm{I}^p(\HH_\mathrm{II}^p(K^{\bullet\bullet}))
+  \quad\text{y}\quad
+  ''E_2^{pq}(K^{\bullet\bullet})
+  = \HH_\mathrm{II}^q(\HH_\mathrm{I}^p(K^{\bullet\bullet})).
+  \tag{11.3.2.2}
+\]
+
+Todo morfismo $u:K^{\bullet\bullet}\to K^{\prime\bullet\bullet}$ de bicomplejos es \emph{ipso facto} compatible con las filtraciones del mismo tipo de $K^{\bullet\bullet}$ y $K^{\prime\bullet\bullet}$, y define así un morfismo para cada una de las dos sucesiones espectrales;
+además, dos morfismos \emph{homótopos} definen una homotopía \emph{de orden $\leq 1$} de los complejos (simples) filtrados correspondientes, y por tanto el \emph{mismo} morfismo para cada una de las dos sucesiones espectrales~(M,~XV,~6.1).
+\end{env}
+
+\begin{proposition}[11.3.3]
+\label{0.11.3.3}
+Sea $K^{\bullet\bullet}=(K^{ij})$ un bicomplejo en una categoría abeliana $\cat{C}$.
+\begin{enumerate}
+  \item[{\rm(i)}] Si existen $i_0$ y $j_0$ tales que $K^{ij}=0$ para $i<i_0$ o $j<j_0$ (resp.~$i>i_0$ o $j>j_0$), entonces las dos sucesiones espectrales $'E(K^{\bullet\bullet})$ y $''E(K^{\bullet\bullet})$ son birregulares.
+  \item[{\rm(ii)}] Si existen $i_0$ e $i_1$ tales que $K^{ij}=0$ para $i<i_0$ o $i>i_1$ \textup{(resp.}~si existen $j_0$ y $j_1$ tales que $K^{ij}=0$ para $j<j_0$ o $j>j_1$), entonces las dos sucesiones espectrales $'E(K^{\bullet\bullet})$ y $''E(K^{\bullet\bullet})$ son birregulares.
+\end{enumerate}
+Supongamos además que los límites inductivos filtrantes existen y son exactos en $\cat{C}$. Entonces:
+\begin{enumerate}
+  \item[{\rm(iii)}] Si existe $i_0$ tal que $K^{ij}=0$ para $i>i_0$ \textup{(resp.}~si existe $j_0$ tal que $K^{ij}=0$ para $j<j_0$), entonces la sucesión espectral $'E(K^{\bullet\bullet})$ es regular.
+  \item[{\rm(iv)}] Si existe $i_0$ tal que $K^{ij}=0$ para $i<i_0$ \textup{(resp.}~si existe $j_0$ tal que $K^{ij}=0$ para $j>j_0$), entonces la sucesión espectral $''E(K^{\bullet\bullet})$ es regular.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La proposición se deduce inmediatamente de las definiciones~\sref{0.11.1.3} y de~\sref{0.11.2.4}, así como de las observaciones siguientes relativas a la filtración $F_\mathrm{I}$ (y de las observaciones análogas que se deducen para $F_\mathrm{II}$ intercambiando los papeles de los dos índices en $K^{\bullet\bullet}$):
+\begin{enumerate}
+  \item[{$1^{\circ}$}] Si existe $i_0$ tal que $K^{ij}=0$ para $i>i_0$, entonces la filtración $F_\mathrm{I}(K^{\bullet\bullet})$ es \emph{discreta}.
+  \item[{$2^{\circ}$}] Si existe $i_0$ tal que $K^{ij}=0$ para $i<i_0$, entonces la filtración $F_\mathrm{I}(K^{\bullet\bullet})$ es \emph{codiscreta}.
+    Se deduce inmediatamente que ocurre lo mismo para la filtración correspondiente $F_\mathrm{I}(\HH^n(K^{\bullet\bullet}))$ para todo $n$.
+    Además, la definición de los $B_{r}^{pq}$ correspondientes a la filtración $F_\mathrm{I}(K^{\bullet\bullet})$ \sref{0.11.2.2} muestra que, para todo par $(p,q)$, la sucesión $(B_{r}^{pq})_{r\geq 2}$ es estable.
+  \item[{$3^{\circ}$}] Si existe $j_0$ tal que $K^{ij}=0$ para $j<j_0$, entonces se tiene
+    \[
+      F_\mathrm{I}^{p+r}(K^{\bullet\bullet})
+      \cap (\sum_{i+j=n}K^{ij})
+      = 0
+    \]
+    desde que $p+r+j_{0}>n$, luego $Z_{r}^{pq} = Z_\infty(E_2^{pq})$ para $r>q-j_{0}+1$.
+    Por otra parte, $\HH^{n}(F_\mathrm{I}^{p}(K^{\bullet\bullet})) = 0$ para $p>n-j_{0}+1$.
+  \item[{$4^{\circ}$}] Si existe $j_0$ tal que $K^{ij}=0$ para $j>j_0$, entonces se tiene
+    \[
+      F_\mathrm{I}^{p-r+1}(K^{\bullet\bullet})
+      \cap (\sum_{i+j=n}K^{ij})
+      = \sum_{i+j=n}K^{ij}
+    \]
+    
+----- French corrections on page 0\textsubscript{III} 29 -----
+[id 4411]
+OLD: dans $\mathcal C$ les limites
+NEW: dans $\boldsymbol{C}$ les limites
+FRENCH CONTEXT (corrected): ullet\to K^{\prime\bullet}$ du type précédent, \emph{homotopes d'ordre
+$\leq k$}, alors $u_r^{pq}=v_r^{pq}$ pour $r>k$ et $u^n=v^n$ pour tout $n$
+(M, XV, 3.1).
+\end{env}
+
+\begin{env}[11.2.4]
+\label{0.11.2.4-fr}
+\oldpage[0\textsubscript{III}]{29}
+Supposons que dans $\boldsymbol{C}$ les limites inductives filtrantes soient
+exactes. Alors, si la filtration $(F^p(K^\bullet))$ de $K^\bullet$ est
+\emph{exhaustive}, il en est de même de la filtration
+$(F^p(\mathrm H^n(K^\bullet)))$ pour tout $n$, car on a par hypothèse
+$K^\bullet=\varinjlim_{p\to-\infty}
+
+[id 4412]
+OLD: $\mathcal C$ entraîne
+NEW: $\boldsymbol{C}$ entraîne
+FRENCH CONTEXT (corrected): es. Alors, si la filtration $(F^p(K^\bullet))$ de $K^\bullet$ est
+\emph{exhaustive}, il en est de même de la filtration
+$(F^p(\mathrm H^n(K^\bullet)))$ pour tout $n$, car on a par hypothèse
+$K^\bullet=\varinjlim_{p\to-\infty}F^p(K^\bullet)$ et l'hypothèse sur
+$\boldsymbol{C}$ entraîne que la cohomologie commute aux limites inductives. En
+outre, on a, pour la même raison,
+$B_\infty(E_2^{pq}(K^\bullet))=\sup_k B_k(E_2^{pq}(K^\bullet))$. On dit que
+la filtration $(F^p(K^\bullet))$ de $K^\bullet$ est \emph{régulière} si pour
+tout $n$ il existe
+
+[id 4413]
+OLD: dans $\mathcal C$ sont
+NEW: dans $\boldsymbol{C}$ sont
+FRENCH CONTEXT (corrected): r $u(n)$ tel que
+$\mathrm H^n(F^p(K^\bullet))=0$ pour $p>u(n)$. Il en est ainsi en particulier
+lorsque la filtration de $K^\bullet$ est \emph{discrète}. Lorsque la
+filtration de $K^\bullet$ est régulière et exhaustive, et que les limites
+inductives filtrantes dans $\boldsymbol{C}$ sont exactes, on montre (M, XV, 4)
+que la suite spectrale $E(K^\bullet)$ est \emph{régulière}.
+\end{env}
+
+\subsection{Les suites spectrales d'un bicomplexe}
+\label{subsection:0.11.3-fr}
+
+\begin{env}[11.3.1]
+\label{0.11.3.1-fr}
+En ce qui concerne les conventions re
+
+[id 4414]
+OLD: vérifiées l'une des
+NEW: vérifiées l'\emph{une} des
+FRENCH CONTEXT (corrected): concerne les conventions relatives aux bicomplexes, nous suivons
+celles de (T, 2.4) plutôt que celles de (M), les deux dérivations $d'$, $d''$
+(de degré $+1$) d'un tel bicomplexe
+$K^{\bullet\bullet}=(K^{ij})$ étant donc supposées \emph{permutables}.
+Supposons vérifiées l'\emph{une} des deux conditions suivantes~:
+$1^\circ$ Les \emph{sommes directes infinies} existent dans $\boldsymbol{C}$~;
+$2^\circ$ Pour tout $n\in\mathbb Z$, il n'y a qu'un nombre
+    \emph{fini} de couples $(p,q)$ tels que $p+q=n$ et $K^{pq}\ne0$.
+Alors, le bicomplexe $K^
+
+[id 4415]
+OLD: \begin{enumerate}
+  \item[$1^\circ$] Les
+NEW: $1^\circ$ Les
+FRENCH CONTEXT (corrected): begin{env}[1.3.13]
+\label{I.1.3.13-fr}
+Soit maintenant $B$ une $A$-algèbre (commutative)~; cela peut s'interpréter
+en disant que $B$ est un $A$-module et qu'on s'est donné un élément $e\in B$
+et un $A$-homomorphisme
+$\varphi:B\otimes_A B\to B$, de sorte que~: $1^\circ$ Les diagrammes
+\[
+  \xymatrix{
+    B\otimes_A B\otimes_A B\ar[r]^{\varphi\otimes 1}
+      \ar[d]_{1\otimes\varphi} &
+    B\otimes_A B\ar[d]^\varphi & &
+    B\otimes_A B\ar[rr]^\sigma\ar[rd]_\varphi & &
+    B\otimes_A B\ar[dl]^\varphi\\
+    B\otimes_A B\ar[r]_\var
+
+[id 4416]
+OLD: sommes directes infinies
+NEW: \emph{sommes directes infinies}
+FRENCH CONTEXT (corrected): es de (T, 2.4) plutôt que celles de (M), les deux dérivations $d'$, $d''$
+(de degré $+1$) d'un tel bicomplexe
+$K^{\bullet\bullet}=(K^{ij})$ étant donc supposées \emph{permutables}.
+Supposons vérifiées l'\emph{une} des deux conditions suivantes~:
+$1^\circ$ Les \emph{sommes directes infinies} existent dans $\boldsymbol{C}$~;
+$2^\circ$ Pour tout $n\in\mathbb Z$, il n'y a qu'un nombre
+    \emph{fini} de couples $(p,q)$ tels que $p+q=n$ et $K^{pq}\ne0$.
+Alors, le bicomplexe $K^{\bullet\bullet}$ définit un \emph{complexe} (simple)
+$(K^{\prime n})_{n\i
+
+[id 4417]
+OLD: existent dans $\mathcal C
+NEW: existent dans $\boldsymbol{C}
+FRENCH CONTEXT (corrected):  de (M), les deux dérivations $d'$, $d''$
+(de degré $+1$) d'un tel bicomplexe
+$K^{\bullet\bullet}=(K^{ij})$ étant donc supposées \emph{permutables}.
+Supposons vérifiées l'\emph{une} des deux conditions suivantes~:
+$1^\circ$ Les \emph{sommes directes infinies} existent dans $\boldsymbol{C}$~;
+$2^\circ$ Pour tout $n\in\mathbb Z$, il n'y a qu'un nombre
+    \emph{fini} de couples $(p,q)$ tels que $p+q=n$ et $K^{pq}\ne0$.
+Alors, le bicomplexe $K^{\bullet\bullet}$ définit un \emph{complexe} (simple)
+$(K^{\prime n})_{n\in\mathbb Z}$, avec
+$K^{\prime 
+
+[id 4418]
+OLD: $.
+  \item[$2^\circ$] Pour
+NEW: $~;
+$2^\circ$ Pour
+FRENCH CONTEXT (corrected):  $d'$, $d''$
+(de degré $+1$) d'un tel bicomplexe
+$K^{\bullet\bullet}=(K^{ij})$ étant donc supposées \emph{permutables}.
+Supposons vérifiées l'\emph{une} des deux conditions suivantes~:
+$1^\circ$ Les \emph{sommes directes infinies} existent dans $\boldsymbol{C}$~;
+$2^\circ$ Pour tout $n\in\mathbb Z$, il n'y a qu'un nombre
+    \emph{fini} de couples $(p,q)$ tels que $p+q=n$ et $K^{pq}\ne0$.
+Alors, le bicomplexe $K^{\bullet\bullet}$ définit un \emph{complexe} (simple)
+$(K^{\prime n})_{n\in\mathbb Z}$, avec
+$K^{\prime n}=\sum_{i+j=n}K^{
+
+[id 4419]
+OLD: $K^{pq}\ne0$.
+\end{enumerate}
+
+NEW: $K^{pq}\ne0$.
+
+FRENCH CONTEXT (corrected): .
+Supposons vérifiées l'\emph{une} des deux conditions suivantes~:
+$1^\circ$ Les \emph{sommes directes infinies} existent dans $\boldsymbol{C}$~;
+$2^\circ$ Pour tout $n\in\mathbb Z$, il n'y a qu'un nombre
+    \emph{fini} de couples $(p,q)$ tels que $p+q=n$ et $K^{pq}\ne0$.
+Alors, le bicomplexe $K^{\bullet\bullet}$ définit un \emph{complexe} (simple)
+$(K^{\prime n})_{n\in\mathbb Z}$, avec
+$K^{\prime n}=\sum_{i+j=n}K^{ij}$, l'opérateur de dérivation $d$ (de degré
+$+1$) de ce complexe étant donné par
+$dx=d'x+(-1)^i d''x$ pour $x\in
+
+[id 4420]
+OLD: définit un complexe (simple)
+NEW: définit un \emph{complexe} (simple)
+FRENCH CONTEXT (corrected): uivantes~:
+$1^\circ$ Les \emph{sommes directes infinies} existent dans $\boldsymbol{C}$~;
+$2^\circ$ Pour tout $n\in\mathbb Z$, il n'y a qu'un nombre
+    \emph{fini} de couples $(p,q)$ tels que $p+q=n$ et $K^{pq}\ne0$.
+Alors, le bicomplexe $K^{\bullet\bullet}$ définit un \emph{complexe} (simple)
+$(K^{\prime n})_{n\in\mathbb Z}$, avec
+$K^{\prime n}=\sum_{i+j=n}K^{ij}$, l'opérateur de dérivation $d$ (de degré
+$+1$) de ce complexe étant donné par
+$dx=d'x+(-1)^i d''x$ pour $x\in K^{ij}$. Lorsque nous parlerons par la suite
+du \emph{complexe} (simple) \em
+
+[id 4421]
+OLD: la suite
+du complexe (simple)
+NEW: la suite
+du \emph{complexe} (simple)
+FRENCH CONTEXT (corrected): et}$ définit un \emph{complexe} (simple)
+$(K^{\prime n})_{n\in\mathbb Z}$, avec
+$K^{\prime n}=\sum_{i+j=n}K^{ij}$, l'opérateur de dérivation $d$ (de degré
+$+1$) de ce complexe étant donné par
+$dx=d'x+(-1)^i d''x$ pour $x\in K^{ij}$. Lorsque nous parlerons par la suite
+du \emph{complexe} (simple) \emph{défini par un bicomplexe $K^{\bullet\bullet}$}, il
+sera toujours sous-entendu que l'une des conditions précédentes est satisfaite.
+On adoptera des conventions analogues pour les multicomplexes.
+
+On désigne par $K^{i,\bullet}$ (resp. $K^{\bullet,j}$) le 
+
+[id 4422]
+OLD: ses $p$-èmes objets
+NEW: ses $p$\textsuperscript{es} objets
+FRENCH CONTEXT (corrected): ij})_{i\in\mathbb Z}$), par
+$Z_{\mathrm{II}}^p(K^{i,\bullet})$, $B_{\mathrm{II}}^p(K^{i,\bullet})$,
+$\mathrm H_{\mathrm{II}}^p(K^{i,\bullet})$ (resp.
+$Z_{\mathrm I}^p(K^{\bullet,j})$, $B_{\mathrm I}^p(K^{\bullet,j})$,
+$\mathrm H_{\mathrm I}^p(K^{\bullet,j})$) ses $p$\textsuperscript{es} objets des cocycles,
+des cobords et de cohomologie respectivement~; la dérivation
+$d':K^{i,\bullet}\to K^{i+1,\bullet}$ est un morphisme de complexes, qui
+donne donc un opérateur dans les cocycles, les cobords et la cohomologie,
+\[
+\begin{aligned}
+  d'&:Z_{\mathrm{I
+
+[id 4426]
+OLD: ses $q$-èmes objets
+NEW: ses $q$\textsuperscript{es} objets
+FRENCH CONTEXT (corrected): ^{i,\bullet}))_{i\in\mathbb Z}$ et
+$(\mathrm H_{\mathrm{II}}^p(K^{i,\bullet}))_{i\in\mathbb Z}$ sont des
+complexes~; nous désignerons le complexe
+$(\mathrm H_{\mathrm{II}}^p(K^{i,\bullet}))_{i\in\mathbb Z}$ par
+$\mathrm H_{\mathrm{II}}^p(K^{\bullet\bullet})$, ses $q$\textsuperscript{es} objets de
+cocycles, de cobords et de cohomologie par
+$Z_{\mathrm I}^q(\mathrm H_{\mathrm{II}}^p(K^{\bullet\bullet}))$,
+$B_{\mathrm I}^q(\mathrm H_{\mathrm{II}}^p(K^{\bullet\bullet}))$ et
+$\mathrm H_{\mathrm I}^q(\mathrm H_{\mathrm{II}}^p(K^{\bullet\bullet}))$.
+On dé
+
+[id 4427]
+OLD: $n$-ème objet
+NEW: $n$\textsuperscript{e} objet
+FRENCH CONTEXT (corrected): )$.
+On définit de même les complexes
+$\mathrm H_{\mathrm I}^p(K^{\bullet\bullet})$ et leurs objets de cohomologie
+$\mathrm H_{\mathrm{II}}^q(\mathrm H_{\mathrm I}^p(K^{\bullet\bullet}))$.
+Rappelons d'autre part que $\mathrm H^n(K^{\bullet\bullet})$ désigne le
+$n$\textsuperscript{e} objet de cohomologie du complexe \emph{(simple)} défini par
+$K^{\bullet\bullet}$.
+\end{env}
+
+\begin{env}[11.3.2]
+\label{0.11.3.2-fr}
+Sur le complexe défini par un bicomplexe $K^{\bullet\bullet}$, on peut
+considérer deux filtrations canoniques
+$(F_{\mathrm I}^p(K^{\
+
+[id 4428]
+OLD: complexe (simple) défini par
+NEW: complexe \emph{(simple)} défini par
+FRENCH CONTEXT (corrected): _{\mathrm I}^p(K^{\bullet\bullet})$ et leurs objets de cohomologie
+$\mathrm H_{\mathrm{II}}^q(\mathrm H_{\mathrm I}^p(K^{\bullet\bullet}))$.
+Rappelons d'autre part que $\mathrm H^n(K^{\bullet\bullet})$ désigne le
+$n$\textsuperscript{e} objet de cohomologie du complexe \emph{(simple)} défini par
+$K^{\bullet\bullet}$.
+\end{env}
+
+\begin{env}[11.3.2]
+\label{0.11.3.2-fr}
+Sur le complexe défini par un bicomplexe $K^{\bullet\bullet}$, on peut
+considérer deux filtrations canoniques
+$(F_{\mathrm I}^p(K^{\bullet\bullet}))$ et
+$(F_{\mathrm{II}}^p(K^{\bullet\bu
+
+[id 4429]
+OLD: \sum_{\substack{i+j=n\\i\geq p}}
+NEW: \sum_{i+j=n,\,i\geq p}
+FRENCH CONTEXT (corrected): ini par un bicomplexe $K^{\bullet\bullet}$, on peut
+considérer deux filtrations canoniques
+$(F_{\mathrm I}^p(K^{\bullet\bullet}))$ et
+$(F_{\mathrm{II}}^p(K^{\bullet\bullet}))$ données par
+\[
+\label{0.11.3.2.1-fr}
+  F_{\mathrm I}^p(K^{\bullet\bullet})
+  =\left(\sum_{i+j=n,\,i\geq p}K^{ij}\right)_{n\in\mathbb Z},
+  \qquad
+  F_{\mathrm{II}}^p(K^{\bullet\bullet})
+  =\left(\sum_{i+j=n,\,j\geq p}K^{ij}\right)_{n\in\mathbb Z}
+  \tag{11.3.2.1}
+\]
+\oldpage[0\textsubscript{III}]{30}
+qui, par définition, sont bien des sous-objets gradués du comple
+
+[id 4430]
+OLD: \sum_{\substack{i+j=n\\j\geq p}}
+NEW: \sum_{i+j=n,\,j\geq p}
+FRENCH CONTEXT (corrected): {\bullet\bullet}))$ et
+$(F_{\mathrm{II}}^p(K^{\bullet\bullet}))$ données par
+\[
+\label{0.11.3.2.1-fr}
+  F_{\mathrm I}^p(K^{\bullet\bullet})
+  =\left(\sum_{i+j=n,\,i\geq p}K^{ij}\right)_{n\in\mathbb Z},
+  \qquad
+  F_{\mathrm{II}}^p(K^{\bullet\bullet})
+  =\left(\sum_{i+j=n,\,j\geq p}K^{ij}\right)_{n\in\mathbb Z}
+  \tag{11.3.2.1}
+\]
+\oldpage[0\textsubscript{III}]{30}
+qui, par définition, sont bien des sous-objets gradués du complexe (simple)
+défini par $K^{\bullet\bullet}$, et font donc de ce complexe un complexe
+filtré~; par ailleurs, il 
+
+[id 4431]
+OLD: _{n\in\mathbb Z}.
+  \tag
+NEW: _{n\in\mathbb Z}
+  \tag
+FRENCH CONTEXT (corrected): {II}}^p(K^{\bullet\bullet}))$ données par
+\[
+\label{0.11.3.2.1-fr}
+  F_{\mathrm I}^p(K^{\bullet\bullet})
+  =\left(\sum_{i+j=n,\,i\geq p}K^{ij}\right)_{n\in\mathbb Z},
+  \qquad
+  F_{\mathrm{II}}^p(K^{\bullet\bullet})
+  =\left(\sum_{i+j=n,\,j\geq p}K^{ij}\right)_{n\in\mathbb Z}
+  \tag{11.3.2.1}
+\]
+\oldpage[0\textsubscript{III}]{30}
+qui, par définition, sont bien des sous-objets gradués du complexe (simple)
+défini par $K^{\bullet\bullet}$, et font donc de ce complexe un complexe
+filtré~; par ailleurs, il est clair que ces filtrations sont \
+
+=================== PAGE 0\textsubscript{III} 30 ===================
+----- (Spanish page 0\textsubscript{III} 29: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 30: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 31 -----
+\oldpage[0\textsubscript{III}]{31}
+    desde que $p-r+1+j_{0}<n$, luego $B_{r}^{pq} = B_\infty(E_2^{pq})$ para $r<j_{0}-q+1$.
+    Por otra parte, $\HH^{n}(F_\mathrm{I}^{p}(K^{\bullet\bullet})) = \HH^{n}(K^{\bullet\bullet})$ para $p+j_{0}<n-1$.
+\end{enumerate}
+\end{proof}
+
+\begin{env}[11.3.4]
+\label{0.11.3.4}
+Supongamos que el bicomplejo $K^{\bullet\bullet}=(K^{ij})$ es tal que $K^{ij}=0$ para $i<0$ o $j<0$.
+Sabemos que se puede definir, para todo $p\in\bb{Z}$, un ``homomorfismo de borde'' canónico.
+\[
+\label{0.11.3.4.1}
+  'E_2^{p0}(K^{\bullet\bullet})
+  \rightarrow \HH^{p}(K^{\bullet\bullet})
+\tag{11.3.4.1}
+\]
+(M,~XV,~6).
+Recordemos que esto se debe, por una parte, a la sucesión espectral
+$'E(K^{\bullet\bullet})$, pues $Z_r^{p0}=Z_{\mathrm{I}}^{p}(Z_{\mathrm{II}}^{0}(K^{\bullet\bullet}))$ para $2\leq r \leq +\infty$, y, por otra parte, a que $\HH^{p}(F_\mathrm{I}^{p+1}(K^{\bullet\bullet})) = 0$, de modo que el isomorfismo $\beta^{p0}:\ 'E_\infty^{p0} \simto \HH^{p}(F_\mathrm{I}^p)/\HH^{p}(F_\mathrm{I}^{p+1})$ da un homomorfismo $'E_\infty^{p0} \rightarrow \HH^{p}(F_\mathrm{I}^p(K^{\bullet\bullet})) \rightarrow \HH^{p}(K^{\bullet\bullet})$.
+La igualdad de todos los $Z_r^{p0}$ permite definir homomorfismos canónicos $'E_r^{p0} \rightarrow 'E_s^{p0}$ para $r \leq s$ y, en particular, un homomorfismo $'E_2^{p0} \rightarrow 'E_\infty^{p0}$, de donde, por composición, el homomorfismo de borde $'E_2^{p0}(K^{\bullet\bullet}) \rightarrow \HH^{p}(K^{\bullet\bullet})$.
+Además, se verifica inmediatamente que el homomorfismo de borde así definido envía la clase módulo $B_2^{p0}$ de un elemento $z\in Z_\mathrm{II}^0(K^{\bullet\bullet})\subset K^{p0}$ tal que $d'z=0$ en la clase de $z$ módulo $B_\infty^{p0}$ en $'E_\infty^{p0}$, y después en la clase de cohomología de $z$ en $\HH^p(K^{\bullet\bullet})$.
+Vemos, pues, finalmente que el \emph{homomorfismo de borde} \sref{0.11.3.4.1} \emph{proviene, al pasar a la cohomología, de la inyección canónica} $Z_\mathrm{II}^0(K^{\bullet\bullet}) \rightarrow K^{\bullet\bullet}$ (donde $K^{\bullet\bullet}$ se considera como complejo simple).
+Interpretamos naturalmente del mismo modo el homomorfismo de borde
+\[
+\label{0.11.3.4.2}
+  ''E_2^{p0}(K^{\bullet\bullet})
+  \rightarrow \HH^{p}(K^{\bullet\bullet})
+\tag{11.3.4.2}
+\]
+como proveniente de la inyección canónica $Z_\mathrm{I}^0(K^{\bullet\bullet}) \rightarrow K^{\bullet\bullet}$.
+\end{env}
+
+\begin{env}[11.3.5]
+\label{0.11.3.5}
+Sea ahora $K_{\bullet\bullet} = (K_{ij})$ un bicomplejo en $\cat{C}$ cuyos dos operadores diferenciales son de grado~$-1$.
+Escribimos entonces $K_{i,\bullet}$ (resp. $K_{\bullet,j}$) para designar el complejo simple $(K_{ij})_{j\in\bb{Z}}$ (resp. $(K_{ij})_{i\in\bb{Z}}$), $\HH_{p}^\mathrm{II}(K_{i, \bullet})$ (resp. $\HH_{p}^\mathrm{I}(K_{\bullet, j})$) para designar el objeto de homología de grado $p$, $\HH_{p}^\mathrm{II}(K_{\bullet\bullet})$ (resp. $\HH_{p}^\mathrm{I}(K_{\bullet\bullet})$) para designar el complejo $(\HH_{p}^\mathrm{II}(K_{i, \bullet}))_{i \in\bb{Z}}$ (resp. $(\HH_{p}^\mathrm{I}(K_{\bullet, j}))_{j \in\bb{Z}}$), y $\HH_q^\mathrm{I}(\HH_{p}^\mathrm{II}(K_{\bullet\bullet}))$ (resp. $\HH_q^\mathrm{II}(\HH_{p}^\mathrm{I}(K_{\bullet\bullet}))$) para designar el objeto de homología de grado $q$;
+utilizamos notaciones análogas para los objetos de ciclos y los objetos de bordes;
+finalmente, denotaremos por $\HH_n(K_{\bullet\bullet})$ el objeto de homología de grado $n$ (cuando exista) del complejo simple (con un operador diferencial de grado~$-1$) definido por $K_{\bullet\bullet}$.
+Sea $K'^{\bullet\bullet}=(K'^{ij})$, con $K'^{ij}=K_{-i,-j}$, el bicomplejo con operadores diferenciales de grado~$+1$ asociado a $K_{\bullet\bullet}$.
+Por definición, las \emph{sucesiones espectrales} de $K_{\bullet\bullet}$ son las de $K'^{\bullet\bullet}$, que denotamos por $'E(K_{\bullet\bullet})$ y $''E(K_{\bullet\bullet})$, cambiando, sin embargo, la notación al poner
+\[
+  'E_{pq}^{r}(K_{\bullet\bullet})
+  = 'E_{r}^{-p,-q}(K'^{\bullet\bullet})
+  \quad\text{y}\quad
+  ''E_{pq}^{r}(K_{\bullet\bullet})
+  = ''E_{r}^{-p,-q}(K'^{\bullet\bullet}), 
+\]
+para $2\leq r \leq \infty$.
+Con esta notación, se tiene
+\[
+  'E_{pq}^{2}(K_{\bullet\bullet})
+  = \HH_{p}^\mathrm{I}(\HH_{q}^\mathrm{II}(K_{\bullet\bullet}))
+  \quad\text{y}\quad
+  ''E_{pq}^{2}(K_{\bullet\bullet})
+  = \HH_{q}^\mathrm{II}(\HH_{p}^\mathrm{I}(K_{\bullet\bullet})).
+\]
+Para evitar errores de signo, será preferible, en general, volver al complejo $K'^{\bullet\bullet}$ para las relaciones entre estas sucesiones espectrales y sus convergencias.
+Señalemos, no obstante, los criterios correspondientes a \sref{0.11.3.3}:
+\end{env}
+
+\begin{env}[11.3.6]
+\label{0.11.3.6}
+Las sucesiones espectrales $'E(K_{\bullet\bullet})$ y $''E(K_{\bullet\bullet})$ son \emph{birregulares} en los casos siguientes:
+\begin{enumerate}
+  \item[\textit{a)}] Existen $i_0$ y $j_0$ tales que $K_{ij}=0$ para $i>i_0$ o $j>j_0$ (resp. para $i<i_0$
+    
+----- French corrections on page 0\textsubscript{III} 30 -----
+[id 4432]
+OLD: sont exhaustives et
+séparées.
+NEW: sont \emph{exhaustives} et
+\emph{séparées}.
+FRENCH CONTEXT (corrected):   \tag{11.3.2.1}
+\]
+\oldpage[0\textsubscript{III}]{30}
+qui, par définition, sont bien des sous-objets gradués du complexe (simple)
+défini par $K^{\bullet\bullet}$, et font donc de ce complexe un complexe
+filtré~; par ailleurs, il est clair que ces filtrations sont \emph{exhaustives} et
+\emph{séparées}.
+
+Il correspond à chacune de ces filtrations une suite spectrale
+(\hyperref[0.11.2.2-fr]{11.2.2})~; nous désignerons par
+$'E(K^{\bullet\bullet})$ et $''E(K^{\bullet\bullet})$ les suites spectrales
+correspondant à $(F_{\mathrm I}^p(K^{\bullet\bullet}))$ et
+$(F_
+
+[id 4434]
+OLD: =\mathrm H_{\mathrm{II}}^q(\mathrm H_{\mathrm I}^p(K^{\bullet\bullet})).
+NEW: =\mathrm H_{\mathrm{II}}^p(\mathrm H_{\mathrm I}^p(K^{\bullet\bullet})).
+FRENCH CONTEXT (corrected): logie
+$(\mathrm H^n(K^{\bullet\bullet}))$. On montre en outre (M, XV, 6) que l'on a
+\[
+\label{0.11.3.2.2-fr}
+  'E_2^{pq}(K^{\bullet\bullet})
+  =\mathrm H_{\mathrm I}^p(\mathrm H_{\mathrm{II}}^p(K^{\bullet\bullet})),
+  \qquad
+  ''E_2^{pq}(K^{\bullet\bullet})
+  =\mathrm H_{\mathrm{II}}^p(\mathrm H_{\mathrm I}^p(K^{\bullet\bullet})).
+  \tag{11.3.2.2}
+\]
+
+Tout morphisme $u:K^{\bullet\bullet}\to K^{\prime\bullet\bullet}$ de
+bicomplexes est \emph{ipso facto} compatible avec les filtrations de même
+type de $K^{\bullet\bullet}$ et $K^{\prime\bullet\bullet}$, donc définit un
+morphisme pour chac
+
+[id 4435]
+OLD: abélienne
+$\mathcal C$.
+NEW: abélienne
+$\boldsymbol{C}$.
+FRENCH CONTEXT (corrected): } des
+complexes (simples) filtrés correspondant, donc le \emph{même} morphisme pour
+chacune des deux suites spectrales (M, XV, 6.1).
+\end{env}
+
+\begin{proposition}[11.3.3]
+\label{0.11.3.3-fr}
+Soit $K^{\bullet\bullet}=(K^{ij})$ un bicomplexe dans une catégorie abélienne
+$\boldsymbol{C}$.
+\begin{enumerate}
+  \item[\textup{(i)}] S'il existe $i_0$ et $j_0$ tels que $K^{ij}=0$ pour $i<i_0$ ou
+    $j<j_0$ \textup{(resp.} $i>i_0$ ou $j>j_0$), les deux suites spectrales
+    $'E(K^{\bullet\bullet})$ et $''E(K^{\bullet\bullet})$ sont
+    birégulières.
+
+[id 4436]
+OLD: \item[(i)]
+NEW: \item[\textup{(i)}]
+FRENCH CONTEXT (corrected): et laissées au lecteur. On
+notera que cette propriété (pour $B$ et les $b_j$ arbitraires)
+\emph{caractérise} l'anneau topologique $A\{T_1,\ldots,T_r\}$ à un
+isomorphisme unique près.
+\end{env}
+
+\begin{proposition}[7.5.4]
+\label{0.7.5.4-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Si $A$ est un anneau admissible, il en est de même de
+  $A'=A\{T_1,\ldots,T_r\}$.
+  \item[\textup{(ii)}] Soient $A$ un anneau adique, $\mathfrak J$ un idéal de définition
+  de $A$ tel que $\mathfrak J/\mathfrak J^2$ soit de type fini
+\oldpage[0\textsubscript{
+
+[id 4437]
+OLD: (resp. $i>i_0$ ou $j>j_0$)
+NEW: \textup{(resp.} $i>i_0$ ou $j>j_0$)
+FRENCH CONTEXT (corrected): 
+\begin{proposition}[11.3.3]
+\label{0.11.3.3-fr}
+Soit $K^{\bullet\bullet}=(K^{ij})$ un bicomplexe dans une catégorie abélienne
+$\boldsymbol{C}$.
+\begin{enumerate}
+  \item[\textup{(i)}] S'il existe $i_0$ et $j_0$ tels que $K^{ij}=0$ pour $i<i_0$ ou
+    $j<j_0$ \textup{(resp.} $i>i_0$ ou $j>j_0$), les deux suites spectrales
+    $'E(K^{\bullet\bullet})$ et $''E(K^{\bullet\bullet})$ sont
+    birégulières.
+  \item[\textup{(ii)}] S'il existe $i_0$ et $i_1$ tels que $K^{ij}=0$ pour $i<i_0$ ou
+    $i>i_1$ \textup{(resp.} s'il existe $j_0$ et $j_1$ tels que 
+
+[id 4438]
+OLD: \item[(ii)]
+NEW: \item[\textup{(ii)}]
+FRENCH CONTEXT (corrected): ise} l'anneau topologique $A\{T_1,\ldots,T_r\}$ à un
+isomorphisme unique près.
+\end{env}
+
+\begin{proposition}[7.5.4]
+\label{0.7.5.4-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Si $A$ est un anneau admissible, il en est de même de
+  $A'=A\{T_1,\ldots,T_r\}$.
+  \item[\textup{(ii)}] Soient $A$ un anneau adique, $\mathfrak J$ un idéal de définition
+  de $A$ tel que $\mathfrak J/\mathfrak J^2$ soit de type fini
+\oldpage[0\textsubscript{I}]{71}
+  sur $A/\mathfrak J$. Si on pose $\mathfrak J'=\mathfrak JA'$, $A'$ est alors
+  un anneau $\math
+
+[id 4440]
+OLD: dans $\mathcal C$ les limites
+NEW: dans $\boldsymbol{C}$ les limites
+FRENCH CONTEXT (corrected): ullet\to K^{\prime\bullet}$ du type précédent, \emph{homotopes d'ordre
+$\leq k$}, alors $u_r^{pq}=v_r^{pq}$ pour $r>k$ et $u^n=v^n$ pour tout $n$
+(M, XV, 3.1).
+\end{env}
+
+\begin{env}[11.2.4]
+\label{0.11.2.4-fr}
+\oldpage[0\textsubscript{III}]{29}
+Supposons que dans $\boldsymbol{C}$ les limites inductives filtrantes soient
+exactes. Alors, si la filtration $(F^p(K^\bullet))$ de $K^\bullet$ est
+\emph{exhaustive}, il en est de même de la filtration
+$(F^p(\mathrm H^n(K^\bullet)))$ pour tout $n$, car on a par hypothèse
+$K^\bullet=\varinjlim_{p\to-\infty}
+
+[id 4441]
+OLD: \item[(iii)]
+NEW: \item[\textup{(iii)}]
+FRENCH CONTEXT (corrected): ersion $X\to Y$ est quasi-compacte si elle est fermée,
+    ou si l'espace sous-jacent à $Y$ est localement noethérien ou si l'espace
+    sous-jacent à $X$ est noethérien.
+  \item[\textup{(ii)}] Le composé de deux morphismes quasi-compacts est quasi-compact.
+  \item[\textup{(iii)}] Si $f:X\to Y$ est un $S$-morphisme quasi-compact, il en est de
+    même de $f_{(S')}:X_{(S')}\to Y_{(S')}$ pour toute extension $g:S'\to S$
+    du préschéma de base.
+  \item[\textup{(iv)}] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+    quasi-compa
+
+[id 4443]
+OLD: \item[(iv)]
+NEW: \item[\textup{(iv)}]
+FRENCH CONTEXT (corrected): )}] Le composé de deux morphismes quasi-compacts est quasi-compact.
+  \item[\textup{(iii)}] Si $f:X\to Y$ est un $S$-morphisme quasi-compact, il en est de
+    même de $f_{(S')}:X_{(S')}\to Y_{(S')}$ pour toute extension $g:S'\to S$
+    du préschéma de base.
+  \item[\textup{(iv)}] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+    quasi-compacts, $f\times_S g$ est quasi-compact.
+  \item[\textup{(v)}] Si le composé de deux morphismes $f:X\to Y$, $g:Y\to Z$ est
+    quasi-compact et si $g$ est séparé, ou l'espace sous-jacent à $X$
+
+[id 4445]
+OLD: est discrète.
+NEW: est \emph{discrète}.
+FRENCH CONTEXT (corrected): ^\bullet))$. On dit que
+la filtration $(F^p(K^\bullet))$ de $K^\bullet$ est \emph{régulière} si pour
+tout $n$ il existe un entier $u(n)$ tel que
+$\mathrm H^n(F^p(K^\bullet))=0$ pour $p>u(n)$. Il en est ainsi en particulier
+lorsque la filtration de $K^\bullet$ est \emph{discrète}. Lorsque la
+filtration de $K^\bullet$ est régulière et exhaustive, et que les limites
+inductives filtrantes dans $\boldsymbol{C}$ sont exactes, on montre (M, XV, 4)
+que la suite spectrale $E(K^\bullet)$ est \emph{régulière}.
+\end{env}
+
+\subsection{Les suites s
+
+[id 4446]
+OLD: est co-discrète.
+NEW: est \emph{co-discrète}.
+FRENCH CONTEXT (corrected): 1^\circ$] S'il existe $i_0$ tel que $K^{ij}=0$ pour $i>i_0$, la
+    filtration $F_{\mathrm I}(K^{\bullet\bullet})$ est \emph{discrète}.
+  \item[$2^\circ$] S'il existe $i_0$ tel que $K^{ij}=0$ pour $i<i_0$, la
+    filtration $F_{\mathrm I}(K^{\bullet\bullet})$ est \emph{co-discrète}. On en
+    déduit aussitôt qu'il en est de même de la filtration correspondante
+    $F_{\mathrm I}(\mathrm H^n(K^{\bullet\bullet}))$ pour tout $n$~; en
+    outre, la définition de $B_r^{pq}$ correspondant à la filtration
+    $F_{\mathrm I}(K^{\bullet\bullet})$
+
+=================== PAGE 0\textsubscript{III} 31 ===================
+----- (Spanish page 0\textsubscript{III} 30: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 31: shown above in this file) -----
+----- Spanish, III1_DIPLOMATIC/ega0/ega0-11.tex, page 0\textsubscript{III} 32 -----
+\oldpage[0\textsubscript{III}]{32}
+    o $j<j_0$);
+  \item[\textit{b)}] Existen $i_0$ e $i_1$ tales que $K_{ij}=0$ para $i<i_0$ y $i>i_1$;
+  \item[\textit{c)}] Existen $j_0$ y $j_1$ tales que $K_{ij}=0$ para $j<j_0$ y $j>j_1$.
+\end{enumerate}
+
+La sucesión $'E(K_{\bullet\bullet})$ es \emph{regular} si existe $i_0$ tal que $K_{ij}=0$ para $i<i_0$, o si existe $j_0$ tal que $K_{ij}=0$ para $j>j_0$.
+
+La sucesión $''E(K_{\bullet\bullet})$ es \emph{regular} si existe $i_0$ tal que $K_{ij}=0$ para $i>i_0$, o si existe $j_0$ tal que $K_{ij}=0$ para $j<j_0$.
+\end{env}
+
+
+\subsection{Hipercohomología de un funtor con respecto a un complejo $K^{\bullet}$}
+\label{subsection:0.11.4}
+
+\begin{env}[11.4.1]
+\label{0.11.4.1}
+Sea $\cat{C}$ una categoría abeliana.
+Recordemos que se ha definido una \emph{resolución por la derecha} (o \emph{resolución cohomológica}) de un objeto $A$ de $\cat{C}$ como un complejo de objetos de $\cat{C}$, cuyo operador diferencial es de grado $+1$,
+\[
+  0 \rightarrow L^0 \rightarrow L^1 \rightarrow L^2 \rightarrow \ldots
+\]
+provisto de un morfismo $\varepsilon: A \rightarrow L^0$, llamado la \emph{aumentación} de la resolución, que puede considerarse como un morfismo de complejos
+\[
+  \xymatrix{
+    0 \ar[r]
+    & A \ar[r] \ar[d]_{\varepsilon}
+    & 0 \ar[r] \ar[d]
+    & 0 \ar[r] \ar[d]
+    & \ldots
+  \\0 \ar[r]
+    & L^0 \ar[r]
+    & L^1 \ar[r]
+    & L^2 \ar[r]
+    & \ldots
+  }
+\]
+tal que la sucesión
+\[
+  0 \rightarrow A \xrightarrow{\varepsilon} L^0 \rightarrow L^1 \longrightarrow \ldots
+\]
+sea exacta.
+Análogamente, una \emph{resolución por la izquierda} (o \emph{resolución homológica}) de $A$ es un complejo $0 \leftarrow L_0 \leftarrow L_1 \leftarrow L_2 \leftarrow \ldots$ de objetos de $\cat{C}$, cuyo operador diferencial es de grado~$-1$, provisto de una \emph{aumentación} $L_0 \xrightarrow{\varepsilon} A$ tal que la sucesión
+\[
+  0 \leftarrow A \xleftarrow{\varepsilon} L_0 \leftarrow L_1 \leftarrow \ldots
+\]
+sea exacta.
+
+Cuando la resolución por la derecha $(L_i)_{i\geq 0}$ de un objeto $A$ es tal que $L_i=0$ para $i\geq n+1$, se dice que esta resolución es \emph{de longitud $\leq n$}.
+Se define análogamente una resolución por la izquierda de longitud $\leq n$.
+Una resolución que es de longitud $\leq n$ para algún entero $n$ se dice \emph{finita}.
+
+Una resolución de $A$ se llama \emph{proyectiva} (resp. \emph{inyectiva}) si los objetos de $\cat{C}$ distintos de $A$ que la componen son \emph{proyectivos} (resp. \emph{inyectivos}).
+Cuando $\cat{C}$ es la categoría de los módulos (a izquierda, por ejemplo) sobre un anillo, se dice que una resolución de $A$ es \emph{plana} (resp. \emph{libre}) cuando los módulos distintos de $A$ que la componen son \emph{planos} (resp. \emph{libres}).
+\end{env}
+
+\begin{env}[11.4.2]
+\label{0.11.4.2}
+Sea $K^\bullet = (K^i)_{i\in\bb{Z}}$ un complejo de objetos de $\cat{C}$, cuyo operador diferencial es de grado~$+1$.
+Se define una \emph{resolución de Cartan--Eilenberg por la derecha} de $K^\bullet$ como un par formado por un bicomplejo $L^{\bullet\bullet} = (L^{ij})$ con operadores diferenciales de grado~$+1$ y tal que $L^{ij}=0$ para $j<0$, y un morfismo de complejos simples $\varepsilon: K^\bullet \rightarrow L^{\bullet, 0}$, de modo que se cumplan las condiciones siguientes:
+----- French corrections on page 0\textsubscript{III} 31 -----
+[id 4448]
+OLD: \emph{l'edge-homomorphisme
+(\hyperref[0.11.3.4.1-fr]{11.3.4.1}) provient, par passage à la cohomologie,
+de l'injection canonique}
+NEW: l'\emph{edge-homomorphisme}
+(\hyperref[0.11.3.4.1-fr]{11.3.4.1}) \emph{provient, par passage à la cohomologie,
+de l'injection canonique}
+FRENCH CONTEXT (corrected): K^{p0}$ tel que $d'z=0$,
+l'edge-homomorphisme ainsi défini fait correspondre dans $'E_\infty^{p0}$ la
+classe de $z$ mod. $B_\infty^{p0}$, puis à cette dernière la classe de
+cohomologie de $z$ dans $\mathrm H^p(K^{\bullet\bullet})$. On voit donc
+finalement que l'\emph{edge-homomorphisme}
+(\hyperref[0.11.3.4.1-fr]{11.3.4.1}) \emph{provient, par passage à la cohomologie,
+de l'injection canonique}
+$Z_{\mathrm{II}}^0(K^{\bullet\bullet})\to K^{\bullet\bullet}$ (où
+$K^{\bullet\bullet}$ est considéré comme complexe simple). On interprète
+naturellement de même l'edge-homomorphisme
+\[
+\label{0.11.3.4.2-fr}
+  ''E_2^{p0}(K^{\bullet\bullet})\longrightarrow
+  \m
+
+[id 4449]
+OLD: $\mathcal C$ dont
+NEW: $\boldsymbol{C}$ dont
+FRENCH CONTEXT (corrected): adué} $(A_i)_{i\in\mathbb Z}$ de
+$\boldsymbol{C}$ est \emph{limité inférieurement} (resp. \emph{supérieurement})
+s'il existe $i_0$ tel que $A_i=0$ pour $i<i_0$ (resp. $i>i_0$).
+\end{env}
+
+\begin{env}[11.2.2]
+\label{0.11.2.2-fr}
+Soit $K^\bullet$ un complexe de $\boldsymbol{C}$ dont l'opérateur de dérivation
+$d$ est de degré $+1$, et supposons-le muni d'une \emph{filtration}
+$F(K^\bullet)=(F^p(K^\bullet))_{p\in\mathbb Z}$ formé de sous-
+\oldpage[0\textsubscript{III}]{28}
+objets \emph{gradués} de $K^\bullet$, autrement dit
+$F^p(K^\bullet)
+
+[id 4450]
+OLD: son $p$-ème objet
+NEW: son $p$\textsuperscript{e} objet
+FRENCH CONTEXT (corrected): ation sont de degré $-1$. Nous
+écrirons alors $K_{i,\bullet}$ (resp. $K_{\bullet,j}$) le complexe simple
+$(K_{ij})_{j\in\mathbb Z}$ (resp. $(K_{ij})_{i\in\mathbb Z}$),
+$\mathrm H_p^{\mathrm{II}}(K_{i,\bullet})$ (resp.
+$\mathrm H_p^{\mathrm I}(K_{\bullet,j})$) son $p$\textsuperscript{e} objet d'homologie,
+$\mathrm H_p^{\mathrm{II}}(K_{\bullet\bullet})$ (resp.
+$\mathrm H_p^{\mathrm I}(K_{\bullet\bullet})$) le complexe
+$(\mathrm H_p^{\mathrm{II}}(K_{i,\bullet}))_{i\in\mathbb Z}$ (resp.
+$(\mathrm H_p^{\mathrm I}(K_{\bullet,j}))_{j\in\mathbb Z}$),
+$\m
+
+[id 4451]
+OLD: son $q$-ème objet
+NEW: son $q$\textsuperscript{e} objet
+FRENCH CONTEXT (corrected): II}}(K_{i,\bullet}))_{i\in\mathbb Z}$ (resp.
+$(\mathrm H_p^{\mathrm I}(K_{\bullet,j}))_{j\in\mathbb Z}$),
+$\mathrm H_q^{\mathrm I}(\mathrm H_p^{\mathrm{II}}(K_{\bullet\bullet}))$
+(resp.
+$\mathrm H_q^{\mathrm{II}}(\mathrm H_p^{\mathrm I}(K_{\bullet\bullet}))$)
+son $q$\textsuperscript{e} objet d'homologie~; notations analogues pour les objets des cycles
+et objets des bords~; enfin, $\mathrm H_n(K_{\bullet\bullet})$ désignera
+(lorsqu'il existe) le $n$\textsuperscript{e} objet d'homologie du complexe simple (à
+opérateur de dérivation de degré $-1$) d
+
+[id 4452]
+OLD: le $n$-ème objet
+NEW: le $n$\textsuperscript{e} objet
+FRENCH CONTEXT (corrected): $\mathrm H_q^{\mathrm{II}}(\mathrm H_p^{\mathrm I}(K_{\bullet\bullet}))$)
+son $q$\textsuperscript{e} objet d'homologie~; notations analogues pour les objets des cycles
+et objets des bords~; enfin, $\mathrm H_n(K_{\bullet\bullet})$ désignera
+(lorsqu'il existe) le $n$\textsuperscript{e} objet d'homologie du complexe simple (à
+opérateur de dérivation de degré $-1$) défini par $K_{\bullet\bullet}$.
+
+Soit $K^{\prime\bullet\bullet}=(K^{\prime ij})$ avec
+$K^{\prime ij}=K_{-i,-j}$ le bicomplexe à opérateurs de dérivation de degrés
+$+1$ associé à $K_{\bu
+
+[id 4453]
+OLD: =\mathrm H_q^{\mathrm{II}}(\mathrm H_p^{\mathrm I}(K_{\bullet\bullet})).
+NEW: =\mathrm H_p^{\mathrm{II}}(\mathrm H_p^{\mathrm I}(K_{\bullet\bullet})).
+FRENCH CONTEXT (corrected): bullet})
+  =''E_r^{-p,-q}(K^{\prime\bullet\bullet})
+\]
+pour $2\leq r\leq\infty$. Avec ces notations, on a
+\[
+  'E_{pq}^2(K_{\bullet\bullet})
+  =\mathrm H_p^{\mathrm I}(\mathrm H_q^{\mathrm{II}}(K_{\bullet\bullet})),
+  \qquad
+  ''E_{pq}^2(K_{\bullet\bullet})
+  =\mathrm H_p^{\mathrm{II}}(\mathrm H_p^{\mathrm I}(K_{\bullet\bullet})).
+\]
+Pour éviter des erreurs de signe, il sera en général préférable, pour les
+relations entre ces suites spectrales et leur aboutissement, de revenir au
+complexe $K^{\prime\bullet\bullet}$. Notons toutefois les critères
+correspondant à (\hyperref[0.11.3.3-fr]{
+

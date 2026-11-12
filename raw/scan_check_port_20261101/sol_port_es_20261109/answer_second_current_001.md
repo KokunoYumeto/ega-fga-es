@@ -1,0 +1,244 @@
+```json
+[
+  {
+    "id": 1967,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "para que $X$ sea de tipo finito sobre $S$, es necesario y suficiente que la $\\sh{O}_S$-álgebra cuasi-coherente $\\sh{A}(X)$ sea de tipo finito \\sref[I]{I.9.6.2}.",
+    "note": "El pasaje está en 1.3.7; \\sref[I] ya imprime el capítulo I en negrita."
+  },
+  {
+    "id": 2003,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "ni siquiera cuando $S'=\\Spec(\\kres(s))$ ($s\\in S$) y $S'\\to S$ es el morfismo canónico \\sref[I]{I.2.4.5}",
+    "note": "La macro \\kres ya representa la k negrita del cuerpo residual."
+  },
+  {
+    "id": 1554,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\rad_+(\\mathfrak{J})$ es un ideal \\emph{graduado}: pasando al anillo cociente",
+    "note": "El término español ya lleva el énfasis."
+  },
+  {
+    "id": 1800,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(M_{[\\vphi]})\\supertilde|D_+(f'g') \\simto (\\Phi_{fg})_*(\\widetilde{M}|D_+(fg))",
+    "note": "La fórmula desplegada ya utiliza \\supertilde."
+  },
+  {
+    "id": 2052,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el $\\sh{O}_{X_U}$-módulo cuasi-coherente $(\\Gamma(U,\\sh{M}))\\supertilde$;"
+  },
+  {
+    "id": 2576,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "al \\emph{dual} del espacio vectorial sobre $K$ $\\sh{E}^y\\otimes_{\\kres(y)}K$.",
+    "note": "La macro \\kres ya representa la k negrita."
+  },
+  {
+    "id": 5507,
+    "decision": "unclear",
+    "note": "En 4.2.7 se cita III.2.1.15, no III.2.1.14; falta contexto francés para confirmar que sea la misma remisión."
+  },
+  {
+    "id": 2598,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\sh{E}\\otimes_{\\sh{O}_Y}\\sh{F}=(E\\otimes_A F)^\\sim$ \\sref[I]{I.1.3.12};",
+    "note": "\\sref[I] ya imprime el capítulo I en negrita."
+  },
+  {
+    "id": 3157,
+    "decision": "unclear",
+    "note": "La remisión sobre la clausura en 4.4.7 es I.9.5.10; no aparece I.9.5.11 ni el contexto francés sobre U_j y V_j."
+  },
+  {
+    "id": 5509,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Existe un sub-$\\sh{O}_Y$-módulo cuasi-coherente $\\sh{E}$ de $q_*(\\sh{L})$, \\emph{de tipo finito}, que posee las propiedades enunciadas en la condición~\\textup{(a')}.",
+    "note": "En 4.4.6(b'), \\emph{de tipo finito} ya produce redonda dentro del enunciado en cursiva."
+  },
+  {
+    "id": 2948,
+    "decision": "unclear",
+    "note": "El pasaje está localizado, pero cambiar el destino de \\sref{II.4.4.1} a 0.4.4.1 exigiría modificar una clave, lo que las reglas prohíben."
+  },
+  {
+    "id": 2421,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "correspondiente al homomorfismo identidad $\\sh{A}(X)\\to\\sh{A}(X)$ \\sref{II.1.2.7} es una inmersión abierta.",
+    "note": "El pasaje es 5.1.6(b): la remisión ya se compone en redonda mediante \\sref, sin paréntesis externos en cursiva."
+  },
+  {
+    "id": 5511,
+    "decision": "unclear",
+    "note": "6.5.5.1 aparece como fórmula, no como remisión. La remisión cercana en el corolario 6.5.7 es a 6.5.5.3."
+  },
+  {
+    "id": 3255,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sigma_i:\\shHom_{\\sh{O}_X}(\\sh{E},\\sh{E})\\to\\sh{R}(X)\n  \\qquad(1\\leq i\\leq n)",
+    "en_new": "\\sigma_i:\\shHom_{\\sh{O}_X}(\\sh{E},\\sh{E})\\to\\sh{R}(X)\n  \\qquad\\textup{($1\\leq i\\leq n$)}",
+    "note": "Se añade la marca explícita de redonda exigida para el paréntesis del lema."
+  },
+  {
+    "id": 3578,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "que es cuasicoherente \\sref[I]{I.9.2.2}[a].",
+    "en_new": "que es cuasicoherente \\sref[I]{I.9.2.2}[\\emph{a}].",
+    "note": "Se restaura el énfasis del inciso conservando la macro española."
+  },
+  {
+    "id": 3590,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es la \\emph{imagen inversa} del subpreesquema de los vértices $Y$ de $C$.",
+    "note": "El artículo «la» ya queda fuera del énfasis."
+  },
+  {
+    "id": 3698,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula desplegada a fórmula en línea; el énfasis de «produit» permanece idéntico."
+  },
+  {
+    "id": 3377,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "En virtud del criterio~\\sref{II.4.5.2}[a],",
+    "en_new": "En virtud del criterio~\\sref{II.4.5.2}[\\emph{a}],",
+    "note": "El inciso no lleva todavía el énfasis restaurado en francés."
+  },
+  {
+    "id": 3962,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "para todo $\\sh{O}_{X'}$-módulo cuasi-coherente $\\sh{F}'$ \\sref[I]{I.9.2.2}[b].",
+    "en_new": "para todo $\\sh{O}_{X'}$-módulo cuasi-coherente $\\sh{F}'$ \\sref[I]{I.9.2.2}[\\emph{b}].",
+    "note": "Se restaura el énfasis del inciso b."
+  },
+  {
+    "id": 5514,
+    "decision": "unclear",
+    "note": "El corolario 1.8.10 remite a 1.8.9.1. La fórmula 1.8.8.1 está presente, pero no la remisión indicada por el cambio francés."
+  },
+  {
+    "id": 4050,
+    "decision": "unclear",
+    "note": "El texto español proporcionado empieza con el §8 y no incluye la nota introductoria que define la notación 0_I."
+  },
+  {
+    "id": 4130,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-8.tex",
+    "en_old": "para todo morfismo $u:Y\\to Y'$ de $\\C$, ponemos $(F\\times F')(u)=F(u)\\times F'(u)$",
+    "note": "La macro \\C ya da el símbolo de categoría en negrita."
+  },
+  {
+    "id": 4305,
+    "decision": "unclear",
+    "note": "Solo se aporta el final del §9; no se incluye el texto español de 10.1.2."
+  },
+  {
+    "id": 4306,
+    "decision": "unclear",
+    "note": "No se proporciona el pasaje del §10 sobre módulos de tipo finito sobre anillos locales noetherianos."
+  },
+  {
+    "id": 4308,
+    "decision": "unclear",
+    "note": "El texto español de 10.2.2 no está incluido en el bloque."
+  },
+  {
+    "id": 4309,
+    "decision": "unclear",
+    "note": "El texto español de 10.2.2 no está incluido en el bloque."
+  },
+  {
+    "id": 4310,
+    "decision": "unclear",
+    "note": "El texto español de 10.2.2 no está incluido en el bloque."
+  },
+  {
+    "id": 24594,
+    "decision": "not_applicable",
+    "note": "Solo cambia el orden de palabras francés; el contenido y el énfasis de «idéalement séparé» no cambian."
+  },
+  {
+    "id": 4335,
+    "decision": "unclear",
+    "note": "No se aporta el pasaje español del §10.3.1 que contiene la referencia a 0_I, 6.2.3; solo comienza el §11."
+  },
+  {
+    "id": 4336,
+    "decision": "unclear",
+    "note": "No se aporta el pasaje español del §10.3.1 que contiene la referencia a 0_I, 6.6.2."
+  },
+  {
+    "id": 4337,
+    "decision": "unclear",
+    "note": "No se aporta el pasaje español del §10.3.1 que contiene la referencia a 0_I, 6.5.2."
+  },
+  {
+    "id": 4338,
+    "decision": "unclear",
+    "note": "No se aporta el pasaje español del §10.3.1 que contiene la referencia a 0_I, 7.2.12."
+  },
+  {
+    "id": 4339,
+    "decision": "unclear",
+    "note": "No se aporta el pasaje español del §10.3.1 que contiene la referencia a 0_I, 7.2.8."
+  },
+  {
+    "id": 4340,
+    "decision": "unclear",
+    "note": "Falta la demostración española del §10.3.1 donde se afirma que el completado es noetheriano."
+  },
+  {
+    "id": 4341,
+    "decision": "unclear",
+    "note": "No se incluye el texto español de 10.3.1.1; las páginas aportadas pertenecen al §11."
+  },
+  {
+    "id": 4342,
+    "decision": "unclear",
+    "note": "No se incluye el final de la demostración española de 10.3.1.3."
+  },
+  {
+    "id": 4343,
+    "decision": "unclear",
+    "note": "No se incluye el texto español de 10.3.1.4 ni la biyección indicada."
+  },
+  {
+    "id": 4344,
+    "decision": "unclear",
+    "note": "El pasaje español del §10.3 sobre el completado de B no está incluido; se aporta el §11."
+  },
+  {
+    "id": 4345,
+    "decision": "unclear",
+    "note": "No se incluye el texto español de 10.3.1.1 que contiene esta referencia."
+  },
+  {
+    "id": 4374,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-11.tex",
+    "en_old": "sean $E$ y $E'$ dos sucesiones espectrales regulares en $\\cat{C}$, y sea $u:E\\to E'$ un morfismo de sucesiones espectrales.",
+    "en_new": "sean \\textup{E} y $E'$ dos sucesiones espectrales regulares en $\\cat{C}$, y sea $u:E\\to E'$ un morfismo de sucesiones espectrales.",
+    "note": "El francés exige una E de texto en redonda; $E$ se imprime en cursiva matemática."
+  }
+]
+```
+
+II_CURRENT/EGA_II_es_current.tex, 2.8.5: en el diagrama de esquemas, `\\Spec(A)` contiene un salto de fila seguido de «Spec», sin la barra del operador `\Spec`.
+II_CURRENT/EGA_II_es_current.tex, (8.7.7.1): queda sin traducir el inglés `\text{for }`.
+II_CURRENT/EGA_II_es_current.tex, adenda I.7.3.8: el énfasis de «dominante» queda cortado antes de la última letra en `\emph{dominant}e`.

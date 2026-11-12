@@ -1,0 +1,4202 @@
+# Spanish hand pass, current_035: 145 items on 11 printed pages
+
+=================== PAGE III 185 ===================
+----- Spanish, III2/units/III.7.3.es.tex, page III 184 -----
+\oldpage[III]{184}
+
+\begin{env}[7.3.8]
+\label{III.7.3.8}
+Sea $A$ un anillo conmutativo, sea $B$ una $A$-álgebra, no
+necesariamente conmutativa, y sea $T_\bullet$ un funtor homológico
+covariante de $\cat{Ab}_A$ en $\cat{Ab}$. Se sigue de las
+definiciones de \sref{III.7.1.3} que el funtor de $\cat{Ab}_B$ en
+$\cat{Ab}$ obtenido por extensión de escalares de $A$ a $B$,
+denotado por
+\[
+  T_\bullet^{(B)}=\bigl(T_i^{(B)}\bigr),
+\]
+es también un funtor homológico.
+\end{env}
+
+\begin{corollary}[7.3.9]
+\label{III.7.3.9}
+Supongamos que $T_\bullet$ satisface las condiciones generales de
+\sref{III.7.3.7} y conmuta con los límites inductivos. Supongamos
+además que $A$ es un dominio entero y que cada $T_n(A)$ es un
+$A$-módulo de presentación finita. Entonces, para todo entero $N$,
+existe un $f\in A\setmin\{0\}$ tal que
+\[
+  T_p^{(A_f)}:\cat{Ab}_{A_f}\longrightarrow\cat{Ab}
+\]
+es exacto para $p\leq N$.
+\end{corollary}
+
+\begin{proof}
+Por hipótesis, $T_i$ es exacto para $i\leq i_0$, de modo que
+$T_i(A)$ es plano para estos valores de $i$. Por la condición (b) de
+\sref{III.7.3.7}, basta elegir $f$ de modo que
+\[
+  T_p^{(A_f)}(A_f)=T_p(A_f)
+\]
+sea un $A_f$-módulo libre para $i_0<p\leq N$. Ahora bien,
+\[
+  T_p(A_f)=\bigl(T_p(A)\bigr)_f,
+\]
+pues $T_p$ conmuta con los límites inductivos \sref{III.7.1.4}. Si
+$x$ es el punto genérico de $\Spec(A)$, entonces
+$\bigl(T_p(A)\bigr)_x$ es un espacio vectorial de dimensión finita
+sobre el cuerpo de fracciones de $A$. Como cada $T_p(A)$ es de
+presentación finita, existe un $f$ con la propiedad deseada
+(Bourbaki, \emph{Alg\`ebre commutative}, chap.~II, \S~5,
+no.~1, cor.\ de la prop.~2).
+
+Si solo hay un número finito de índices $i$ tales que $T_i\neq0$,
+se puede elegir $f\in A\setmin\{0\}$ de modo que todos los
+$T_p^{(A_f)}$ sean exactos.
+\end{proof}
+
+\begin{corollary}[7.3.10]
+\label{III.7.3.10}
+Supongamos que $T_\bullet$ satisface las condiciones generales de
+\sref{III.7.3.7} y conmuta con los límites inductivos, que $A$ es
+conmutativo y noetheriano, y que cada $T_n(A)$ es un $A$-módulo de
+tipo finito. Entonces, para todo entero $N$, existe un abierto denso
+$U$ de $\Spec(A)$ tal que, para todo entero $p\leq N$, la función
+\[
+  x\longmapsto
+  \operatorname{rank}_{\kres(x)}
+  \bigl(T_p(\kres(x))\bigr)
+\]
+es constante en $U$.
+\end{corollary}
+
+\begin{proof}
+Sea $\mathfrak p$ un ideal primo minimal de $A$. El anillo
+$B=A/\mathfrak p$ es un dominio entero, y $\Spec(B)$ se identifica
+con una componente irreducible del espacio topológico $\Spec(A)$.
+Probaremos por inducción sobre $p\leq N$ que existe un
+$f_p\in B\setmin\{0\}$ tal que, si $B'=B_{f_p}$, entonces
+$T_i^{(B')}$ es exacto y $T_i(B')$ es un $B'$-módulo de tipo finito
+para $i\leq p$.
+
+La afirmación es cierta para $p\leq i_0$ por hipótesis, tomando
+$f_p=1$, de modo que $B'=B=A/\mathfrak p$. En efecto, $T_p$ es
+entonces exacto, y $T_p(B)$ es isomorfo a
+\[
+  T_p(A)/T_p(\mathfrak p);
+\]
+por tanto, es un $A$-módulo y, \emph{a fortiori}, un $B$-módulo de
+tipo finito.
+
+Para el paso de inducción, sea $f_p$ la imagen canónica en $B$ de un
+elemento $g_p\in A$, y pongamos $A'=A_{g_p}$. Entonces
+\[
+  B'=A'/\mathfrak p',
+\]
+donde $\mathfrak p'$ es el ideal primo minimal
+$\mathfrak pA_{g_p}$ de $A'$. Puesto que
+\[
+  T_i(A_{g_p})=\bigl(T_i(A)\bigr)_{g_p},
+\]
+los $T_i(A')$ son $A'$-módulos de tipo finito. Así,
+$T_\bullet^{(A')}$ satisface las mismas hipótesis que $T_\bullet$,
+con $i_0$ sustituido por $p$.
+
+Podemos, por tanto, reducirnos al caso $A'=A$, en el que $T_p$ es
+exacto. La sucesión exacta
+\[
+  0\longrightarrow\mathfrak p
+  \longrightarrow A
+  \longrightarrow A/\mathfrak p
+  \longrightarrow0
+\]
+da entonces una sucesión exacta
+\[
+  T_{p+1}(A)
+  \longrightarrow
+  T_{p+1}(A/\mathfrak p)
+  \xrightarrow{\partial}
+  T_p(\mathfrak p)
+  \longrightarrow
+  T_p(A).
+\]
+Como $T_p$ es exacto, la última flecha es inyectiva. Por
+consiguiente, $T_{p+1}(A/\mathfrak p)$ es un cociente de
+$T_{p+1}(A)$ y es, por tanto, de tipo finito.
+
+La demostración de \sref{III.7.3.9} solo ha utilizado la hipótesis
+de tipo finito sobre $T_i(A)$ para $i\leq N$. Podemos, por tanto,
+aplicar ese corolario al dominio entero $B$, al funtor
+$T_\bullet^{(B)}$ y a $N=p+1$, lo que completa la inducción. Existe,
+en consecuencia, un $f_N\in B\setmin\{0\}$ tal que $\Spec(B_{f_N})$ es un
+abierto $V$, denso en $\Spec(B)$, que no interseca ninguna otra
+componente irreducible de $\Spec(A)$.
+----- Spanish, III2/units/III.7.3.es.tex, page III 185 -----
+\oldpage[III]{185}
+
+Si se ha probado la afirmación para $B_{f_N}$, existe un abierto
+denso $W$ de $V$ en el que las funciones del enunciado son
+constantes, pues
+\[
+  A_x=(B_{f_N})_x
+  \qquad(x\in W).
+\]
+Repitiendo el mismo razonamiento para cada componente irreducible de
+$\Spec(A)$ se prueba el corolario. Podemos, por tanto, reducirnos al
+caso en que $A$ es un dominio entero. El razonamiento de
+\sref{III.7.3.9} da entonces un $f\in A\setmin\{0\}$ tal que los
+$T_p(A_f)$ son $A_f$-módulos \emph{libres} de tipo finito para $p\leq N$.
+La conclusión resulta de \sref{III.7.3.4}.
+\end{proof}
+
+\begin{proposition}[7.3.11]
+\label{III.7.3.11}
+Sea $A$ un anillo local conmutativo de cuerpo residual $k$, y sea
+$T_\bullet$ un funtor homológico covariante de $\cat{Ab}_A$ en
+$\cat{Ab}$ que conmuta con las sumas directas. Supongamos que
+existe un $i_0$ tal que $T_i$ es exacto para $i\leq i_0$, y que cada
+$T_n(A)$ es un $A$-módulo de presentación finita. Las condiciones
+equivalentes (a), (b) y (c) de \sref{III.7.3.7} implican las dos
+condiciones siguientes, y son equivalentes a ellas cuando $A$ es
+además reducido:
+\begin{enumerate}
+  \item[(d)] para todo $x\in\Spec(A)$,
+    \[
+      \operatorname{rank}_{\kres(x)}
+      T_q(\kres(x))
+      =
+      \operatorname{rank}_k T_q(k)
+      \qquad(q\leq p);
+    \]
+  \item[($\mathrm{d}'$)] para todo punto genérico $x_j$ de una
+    componente irreducible de $\Spec(A)$,
+    \[
+      \operatorname{rank}_{\kres(x_j)}
+      T_q(\kres(x_j))
+      =
+      \operatorname{rank}_k T_q(k)
+      \qquad(q\leq p).
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Puesto que $T_q(A)$ es un $A$-módulo de presentación finita, la
+condición (b) de \sref{III.7.3.7} equivale a decir que $T_q(A)$ es
+libre para $q\leq p$ (Bourbaki, \emph{Alg\`ebre commutative},
+chap.~II, \S~3, no.~2, cor.~2 de la prop.~5). La condición (c)
+implica
+\[
+  T_q(\kres(x))
+  =
+  T_q(A)\otimes_A\kres(x)
+  \qquad(q\leq p).
+\]
+Así, las condiciones equivalentes de \sref{III.7.3.7} implican (d),
+y es inmediato que (d) implica ($\mathrm{d}'$).
+
+Queda por mostrar que ($\mathrm{d}'$) implica (a) cuando $A$ es
+reducido. Razonamos por inducción sobre $q\leq p$, pues $T_q$ es
+exacto para $q\leq i_0$. Supongamos que $T_k$ es exacto para
+$k\leq q<p$. Mostraremos que $T_{q+1}(A)$ es un $A$-módulo \emph{libre}.
+Por la hipótesis de inducción, el homomorfismo canónico
+\[
+  T_{q+1}(A)\otimes_A M
+  \longrightarrow
+  T_{q+1}(M)
+\]
+es un isomorfismo para todo $A$-módulo $M$, por la condición (c) de
+\sref{III.7.3.7} y \sref{III.7.3.3}. Aplicando esto a
+$M=\kres(x_j)$ y $M=k$, la condición ($\mathrm{d}'$) da
+\[
+  \operatorname{rank}_{\kres(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\kres(x_j)\bigr)
+  =
+  \operatorname{rank}_k T_{q+1}(k)
+\]
+para todo $j$. Se sigue que $T_{q+1}(A)$ es libre (Bourbaki,
+\emph{Alg\`ebre commutative}, chap.~II, \S~3, no.~2, prop.~7), lo
+que completa la demostración.
+\end{proof}
+
+Los resultados precedentes se mejorarán considerablemente para los
+funtores homológicos del tipo particular que estudiaremos en
+\sref{III.7.4}: los criterios de exactitud así obtenidos solo hacen
+intervenir uno de los $T_p$.
+----- Spanish, III2/units/III.7.4.es.tex, page III 185 -----
+\subsection{\texorpdfstring{Criterios de exactitud para los funtores
+$H_\bullet(P_\bullet\otimes_A M)$.}{Criterios de exactitud para los funtores H.(P. tensor M)}}
+\label{subsection:III.7.4}
+\label{III.7.4}
+
+\begin{env}[7.4.1]
+\label{III.7.4.1}
+Sean $A$ un anillo (no necesariamente conmutativo) y $P_\bullet$ un complejo
+de $A$-módulos planos a derecha. Como el funtor
+$M\mapsto P_k\otimes_A M$ es entonces exacto en $\cat{Ab}_A$ para todo $k$,
+el $\partial$-funtor
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.eq}
+\]
+----- Spanish, III2/units/III.7.4.es.tex, page III 186 -----
+\oldpage[III]{186}
+es un funtor homológico de $\cat{Ab}_A$ en $\cat{Ab}$,
+evidentemente $A$-lineal cuando $A$ es conmutativo
+\sref{III.7.1.2}, y conmuta con los límites inductivos.
+
+Si $A$ es conmutativo, entonces, para toda $A$-álgebra $B$, el funtor
+homológico $T_\bullet^{(B)}$ \sref{III.7.3.8} viene dado, por definición, por
+\[
+  T_\bullet^{(B)}(N)
+  =
+  H_\bullet(P_\bullet\otimes_A N_{[\rho]})
+  \tag{7.4.1.2}\label{III.7.4.1.2.eq}
+\]
+donde $\rho:A\to B$ es el homomorfismo que define la estructura de álgebra de
+$B$; como también se puede escribir
+\[
+  P_\bullet\otimes_A N_{[\rho]}
+  =P_\bullet\otimes_A(B\otimes_B N)_{[\rho]}
+  =(P_\bullet\otimes_A B)\otimes_B N,
+\]
+se ve que
+\[
+  T_\bullet^{(B)}(N)=H_\bullet(P'_\bullet\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.eq}
+\]
+para todo $B$-módulo $N$, siendo $P'_\bullet$ el complejo
+$P_\bullet\otimes_A B$ de $B$-módulos planos
+\sref[0]{0.6.2.1}.
+\end{env}
+
+\begin{proposition}[7.4.2]
+\label{III.7.4.2}
+Bajo las condiciones generales de \sref{III.7.4.1}, y para un entero dado
+$p\in\bb Z$, las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_p$ es exacto por la izquierda (o, lo que es lo mismo,
+    $T_{p+1}$ es exacto por la derecha);
+  \item[(b)]
+    \[
+      Z'_p(P_\bullet)
+      =
+      \Coker(P_{p+1}\longrightarrow P_p)
+    \]
+    es un $A$-módulo plano a derecha;
+  \item[(c)] existe un complejo $P'_\bullet$ de $A$-módulos planos a derecha
+    tal que la diferencial
+    \[
+      d_{p+1}:P'_{p+1}\longrightarrow P'_p
+    \]
+    sea nula, y un isomorfismo de funtores homológicos de
+    $H_\bullet(P_\bullet\otimes_A M)$ sobre
+    $H_\bullet(P'_\bullet\otimes_A M)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Por definición, se tiene una sucesión exacta funtorial en $M$
+\[
+  0\longrightarrow T_p(M)
+  \longrightarrow Z'_p(P_\bullet\otimes M)
+  \longrightarrow P_{p-1}\otimes M
+\]
+donde
+\[
+  Z'_p(P_\bullet\otimes M)
+  =
+  \Coker(P_{p+1}\otimes M\longrightarrow P_p\otimes M)
+  =
+  Z'_p(P_\bullet)\otimes M
+\]
+en virtud de la exactitud por la derecha del producto tensorial. Para todo
+homomorfismo $f:M\to N$, se tiene, por tanto, un diagrama conmutativo
+\[
+\xymatrix@C=30pt@R=38pt{
+  0\ar[r]
+  &T_p(M)\ar[r]\ar[d]_u
+  &Z'_p(P_\bullet)\otimes M\ar[r]\ar[d]_v
+  &P_{p-1}\otimes M\ar[d]_w
+  \\
+  0\ar[r]
+  &T_p(N)\ar[r]
+  &Z'_p(P_\bullet)\otimes N\ar[r]
+  &P_{p-1}\otimes N
+}
+\tag{7.4.2.1}\label{III.7.4.2.1.eq}
+\]
+cuyas filas son exactas. Si $f$ es un monomorfismo, lo mismo ocurre con $w$,
+puesto que $P_{p-1}$ es plano; si $T_p$ es exacto por la izquierda, $u$ es
+también un monomorfismo; se concluye que $v$ es un monomorfismo, lo cual
+implica que $Z'_p(P_\bullet)$ es plano. Recíprocamente, si es así, $v$ es un
+monomorfismo para todo monomorfismo $f:M\to N$, luego el diagrama
+\eqref{III.7.4.2.1.eq} muestra que $u$ es un monomorfismo, y, por consiguiente,
+$T_p$ (que ya es semiexacto) es exacto por la izquierda. Así, (a) y (b) son
+equivalentes. Es inmediato que (c) implica (a), pues si
+$d_{p+1}:P'_{p+1}\to P'_p$ es nula, y
+$0\to M'\to M\to M''\to0$ es una sucesión exacta de $A$-módulos, el
+homomorfismo de borde en la sucesión exacta
+\[
+  H_{p+1}(P_\bullet\otimes M'')
+  \xrightarrow{\partial}H_p(P_\bullet\otimes M')
+  \longrightarrow H_p(P_\bullet\otimes M)
+\]
+----- French corrections on page III 185 -----
+[id 7671]
+OLD: où $A$ est intègre;
+NEW: où $A$ est \emph{intègre};
+FRENCH CONTEXT (corrected): $ dans
+lequel les fonctions de l'énoncé seront constantes, puisque
+$A_x=(B_{f_N})_x$ pour tout $x\in W$. En faisant le même raisonnement pour
+toute composante irréductible de $\operatorname{Spec}(A)$, le corollaire sera
+démontré. On peut donc se borner au cas où $A$ est \emph{intègre}; le raisonnement de
+(7.3.9) prouve alors l'existence d'un $f\in A\setmin\{0\}$ tel que les $T_p(A_f)$
+soient des $A_f$-modules \emph{libres} de type fini pour $p\leq N$, ce qui entraîne
+la conclusion de (7.3.10) en vertu de (7.3.4).
+\end{proof}
+
+\begin{proposi
+
+[id 7674]
+OLD: $\mathbf{Ab}_A$ dans $\mathbf{Ab}$,
+commutant
+NEW: $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$,
+commutant
+FRENCH CONTEXT (corrected):  \emph{libres} de type fini pour $p\leq N$, ce qui entraîne
+la conclusion de (7.3.10) en vertu de (7.3.4).
+\end{proof}
+
+\begin{proposition}[7.3.11]
+Soient $A$ un anneau commutatif local, $k$ son corps résiduel, $T_\bullet$ un
+foncteur homologique covariant de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$,
+commutant aux sommes directes. On suppose qu'il existe $i_0$ tel que $T_i$ soit
+exact pour $i\leq i_0$, et que tous les $T_n(A)$ soient des $A$-modules de
+présentation finie. Alors les conditions équivalentes $a)$, $b)$, $c)$ de
+\textup{(7.3.7)} impliquent les deux sui
+
+[id 7675]
+OLD: (7.3.7) impliquent les deux
+NEW: \textup{(7.3.7)} impliquent les deux
+FRENCH CONTEXT (corrected): Ab}_A$ dans $\boldsymbol{Ab}$,
+commutant aux sommes directes. On suppose qu'il existe $i_0$ tel que $T_i$ soit
+exact pour $i\leq i_0$, et que tous les $T_n(A)$ soient des $A$-modules de
+présentation finie. Alors les conditions équivalentes $a)$, $b)$, $c)$ de
+\textup{(7.3.7)} impliquent les deux suivantes, et leur sont équivalentes lorsque
+l'anneau est en outre réduit :
+\begin{enumerate}
+  \item[d)] Pour tout $x\in\operatorname{Spec}(A)$, on a
+    $\operatorname{rang}_{\mathbf{k}(x)}T_q(\boldsymbol{k}(x))=\operatorname{rang}_kT_q(k)$
+    pour $q\leq 
+
+[id 7676]
+OLD: on a
+    \[
+      \operatorname{rang}_{\kappa(x)}T_q(\kappa(x))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+
+NEW: on a
+    $\operatorname{rang}_{\mathbf{k}(x)}T_q(\boldsymbol{k}(x))=\operatorname{rang}_kT_q(k)$
+    pour $q\leq p$.
+
+FRENCH CONTEXT (corrected): de
+présentation finie. Alors les conditions équivalentes $a)$, $b)$, $c)$ de
+\textup{(7.3.7)} impliquent les deux suivantes, et leur sont équivalentes lorsque
+l'anneau est en outre réduit :
+\begin{enumerate}
+  \item[d)] Pour tout $x\in\operatorname{Spec}(A)$, on a
+    $\operatorname{rang}_{\mathbf{k}(x)}T_q(\boldsymbol{k}(x))=\operatorname{rang}_kT_q(k)$
+    pour $q\leq p$.
+  \item[$d'$)] Pour tout point générique $x_j$ d'une composante irréductible
+    de $\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\mathbf{k}(x_j)}T_q(\boldsymbol{k}(x_j))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq
+
+[id 7677]
+OLD: \operatorname{rang}_{\kappa(x_j)}T_q
+NEW: \operatorname{rang}_{\mathbf{k}(x_j)}T_q
+FRENCH CONTEXT (corrected): ame{Spec}(A)$, on a
+    $\operatorname{rang}_{\mathbf{k}(x)}T_q(\boldsymbol{k}(x))=\operatorname{rang}_kT_q(k)$
+    pour $q\leq p$.
+  \item[$d'$)] Pour tout point générique $x_j$ d'une composante irréductible
+    de $\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\mathbf{k}(x_j)}T_q(\boldsymbol{k}(x_j))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $T_q(A)$ est un $A$-module de présentation finie, la condition $b)$ de
+(7.3.7) équivaut à dire que $T_
+
+[id 7678]
+OLD: (\kappa(x_j))
+      =
+NEW: (\boldsymbol{k}(x_j))
+      =
+FRENCH CONTEXT (corrected): ang}_{\mathbf{k}(x)}T_q(\boldsymbol{k}(x))=\operatorname{rang}_kT_q(k)$
+    pour $q\leq p$.
+  \item[$d'$)] Pour tout point générique $x_j$ d'une composante irréductible
+    de $\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\mathbf{k}(x_j)}T_q(\boldsymbol{k}(x_j))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $T_q(A)$ est un $A$-module de présentation finie, la condition $b)$ de
+(7.3.7) équivaut à dire que $T_q(A)$ est un $A$-module \emph
+
+[id 7679]
+OLD: $A$-module libre pour $q\leq p$
+NEW: $A$-module \emph{libre} pour $q\leq p$
+FRENCH CONTEXT (corrected): k}(x_j))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $T_q(A)$ est un $A$-module de présentation finie, la condition $b)$ de
+(7.3.7) équivaut à dire que $T_q(A)$ est un $A$-module \emph{libre} pour $q\leq p$
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5); la condition $c)$ implique que
+$T_q(\boldsymbol{k}(x))=T_q(A)\otimes_A\boldsymbol{k}(x)$ pour $q\leq p$,
+donc les conditions équivalentes de (7.3.7) impliquent $d)$, 
+
+[id 7680]
+OLD: implique que
+\[
+  T_q(\kappa(x))=T_q(A)\otimes_A\kappa(x)
+  \quad\text{pour }q\leq p,
+\]
+donc
+NEW: implique que
+$T_q(\boldsymbol{k}(x))=T_q(A)\otimes_A\boldsymbol{k}(x)$ pour $q\leq p$,
+donc
+FRENCH CONTEXT (corrected): A)$ est un $A$-module de présentation finie, la condition $b)$ de
+(7.3.7) équivaut à dire que $T_q(A)$ est un $A$-module \emph{libre} pour $q\leq p$
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5); la condition $c)$ implique que
+$T_q(\boldsymbol{k}(x))=T_q(A)\otimes_A\boldsymbol{k}(x)$ pour $q\leq p$,
+donc les conditions équivalentes de (7.3.7) impliquent $d)$, et il est trivial
+que $d)$ entraîne $d')$. Reste à prouver que $d')$ implique $a)$ lorsque $A$
+est \emph{réduit}. Raisonnons par récurrence sur $q\leq p$, puisque $T_q$ est exact
+pour $q\leq i_0$. Suppos
+
+[id 7681]
+OLD: est réduit. Raisonnons
+NEW: est \emph{réduit}. Raisonnons
+FRENCH CONTEXT (corrected): a condition $c)$ implique que
+$T_q(\boldsymbol{k}(x))=T_q(A)\otimes_A\boldsymbol{k}(x)$ pour $q\leq p$,
+donc les conditions équivalentes de (7.3.7) impliquent $d)$, et il est trivial
+que $d)$ entraîne $d')$. Reste à prouver que $d')$ implique $a)$ lorsque $A$
+est \emph{réduit}. Raisonnons par récurrence sur $q\leq p$, puisque $T_q$ est exact
+pour $q\leq i_0$. Supposons donc $T_k$ exact pour $k\leq q<p$ et montrons que
+$T_{q+1}(A)$ est un $A$-module \emph{libre}. En vertu de l'hypothèse de récurrence,
+$T_{q+1}(A)\otimes_A M$ est isomorphe à $T_
+
+[id 7683]
+OLD: $M=\kappa(x_j)$
+NEW: $M=\boldsymbol{k}(x_j)$
+FRENCH CONTEXT (corrected): q q<p$ et montrons que
+$T_{q+1}(A)$ est un $A$-module \emph{libre}. En vertu de l'hypothèse de récurrence,
+$T_{q+1}(A)\otimes_A M$ est isomorphe à $T_{q+1}(M)$ pour tout $A$-module $M$,
+par la condition $c)$ de (7.3.7) et (7.3.3); appliquant cette propriété à
+$M=\boldsymbol{k}(x_j)$ et $M=k$, on trouve, en vertu de l'hypothèse $d')$, que
+\[
+  \operatorname{rang}_{\mathbf{k}(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\boldsymbol{k}(x_j)\bigr)
+  =
+  \operatorname{rang}_kT_{q+1}(k)
+\]
+pour tout $i$; mais cela implique que $T_{q+1}(A)$ est libre (Bour
+
+[id 7684]
+OLD: \operatorname{rang}_{\kappa(x_j)}
+
+NEW: \operatorname{rang}_{\mathbf{k}(x_j)}
+
+FRENCH CONTEXT (corrected): othèse de récurrence,
+$T_{q+1}(A)\otimes_A M$ est isomorphe à $T_{q+1}(M)$ pour tout $A$-module $M$,
+par la condition $c)$ de (7.3.7) et (7.3.3); appliquant cette propriété à
+$M=\boldsymbol{k}(x_j)$ et $M=k$, on trouve, en vertu de l'hypothèse $d')$, que
+\[
+  \operatorname{rang}_{\mathbf{k}(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\boldsymbol{k}(x_j)\bigr)
+  =
+  \operatorname{rang}_kT_{q+1}(k)
+\]
+pour tout $i$; mais cela implique que $T_{q+1}(A)$ est libre (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, prop. 7), ce qui
+achève la démonstr
+
+[id 7685]
+OLD: \otimes_A\kappa(x_j)\bigr)
+NEW: \otimes_A\boldsymbol{k}(x_j)\bigr)
+FRENCH CONTEXT (corrected): phe à $T_{q+1}(M)$ pour tout $A$-module $M$,
+par la condition $c)$ de (7.3.7) et (7.3.3); appliquant cette propriété à
+$M=\boldsymbol{k}(x_j)$ et $M=k$, on trouve, en vertu de l'hypothèse $d')$, que
+\[
+  \operatorname{rang}_{\mathbf{k}(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\boldsymbol{k}(x_j)\bigr)
+  =
+  \operatorname{rang}_kT_{q+1}(k)
+\]
+pour tout $i$; mais cela implique que $T_{q+1}(A)$ est libre (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, prop. 7), ce qui
+achève la démonstration.
+\end{proof}
+
+Les résultats précédents seront 
+
+[id 7686]
+OLD: qu'un seul
+des
+NEW: qu'\emph{un seul}
+des
+FRENCH CONTEXT (corrected):  qui
+achève la démonstration.
+\end{proof}
+
+Les résultats précédents seront considérablement améliorés pour les foncteurs
+homologiques de type particulier que nous allons étudier dans (7.4); on
+obtiendra en effet des critères d'exactitude ne faisant intervenir qu'\emph{un seul}
+des $T_p$.
+
+\subsection{Critères d'exactitude pour les foncteurs
+$H_\bullet(P_\bullet\otimes_A M)$.}
+\label{subsection:III.7.4.fr}
+
+\begin{env}[7.4.1]
+Soient $A$ un anneau (non nécessairement commutatif), $P_\bullet$ un complexe
+de $A$-modules à droite \emph{plat
+
+[id 7688]
+OLD: à droite plats. Comme
+NEW: à droite \emph{plats}. Comme
+FRENCH CONTEXT (corrected): '\emph{un seul}
+des $T_p$.
+
+\subsection{Critères d'exactitude pour les foncteurs
+$H_\bullet(P_\bullet\otimes_A M)$.}
+\label{subsection:III.7.4.fr}
+
+\begin{env}[7.4.1]
+Soient $A$ un anneau (non nécessairement commutatif), $P_\bullet$ un complexe
+de $A$-modules à droite \emph{plats}. Comme le foncteur
+$M\leadsto P_k\otimes_A M$ est alors exact dans $\boldsymbol{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]
+\oldpage[III]{186}
+est un \emph{foncteur homologiq
+
+[id 7689]
+OLD: $M\mapsto P_k\otimes_A M$
+NEW: $M\leadsto P_k\otimes_A M$
+FRENCH CONTEXT (corrected): ritères d'exactitude pour les foncteurs
+$H_\bullet(P_\bullet\otimes_A M)$.}
+\label{subsection:III.7.4.fr}
+
+\begin{env}[7.4.1]
+Soient $A$ un anneau (non nécessairement commutatif), $P_\bullet$ un complexe
+de $A$-modules à droite \emph{plats}. Comme le foncteur
+$M\leadsto P_k\otimes_A M$ est alors exact dans $\boldsymbol{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]
+\oldpage[III]{186}
+est un \emph{foncteur homologique} de $\boldsymbol{Ab}_A$ dans $\bolds
+
+[id 7690]
+OLD: dans $\mathbf{Ab}_A$ pour tout $k$
+NEW: dans $\boldsymbol{Ab}_A$ pour tout $k$
+FRENCH CONTEXT (corrected): \bullet(P_\bullet\otimes_A M)$.}
+\label{subsection:III.7.4.fr}
+
+\begin{env}[7.4.1]
+Soient $A$ un anneau (non nécessairement commutatif), $P_\bullet$ un complexe
+de $A$-modules à droite \emph{plats}. Comme le foncteur
+$M\leadsto P_k\otimes_A M$ est alors exact dans $\boldsymbol{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]
+\oldpage[III]{186}
+est un \emph{foncteur homologique} de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$,
+évidemment $A$-linéaire lorsque $A$ est com
+
+=================== PAGE III 186 ===================
+----- (Spanish page III 185: shown above in this file) -----
+----- (Spanish page III 186: shown above in this file) -----
+----- Spanish, III2/units/III.7.4.es.tex, page III 187 -----
+\oldpage[III]{187}
+es nulo por definición \emph{(M, IV, 1)}, luego $T_p$ es exacto por la
+izquierda. Demostremos recíprocamente que (b) implica (c). Si
+\[
+  Z_{p+1}(P_\bullet)=\Ker(P_{p+1}\longrightarrow P_p),
+\]
+se tiene una sucesión exacta
+\[
+  0\longrightarrow Z_{p+1}(P_\bullet)\longrightarrow P_{p+1}
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0
+\]
+en la cual $P_{p+1}$ y $Z'_p(P_\bullet)$ son planos, luego
+$Z_{p+1}(P_\bullet)$ es plano \sref[0]{0.6.1.2}. Tomaremos
+\[
+  P'_i=P_i\quad\text{para }i\ne p\text{ y }i\ne p+1,
+  \qquad
+  P'_p=Z'_p(P_\bullet)
+  \qquad\text{et}\qquad
+  P'_{p+1}=Z_{p+1}(P_\bullet);
+\]
+como diferencial $d'_i:P'_i\to P'_{i-1}$, se tomará la del complejo
+$P_\bullet$ para $i\ne p$ e $i\ne p+1$, $0$ para $i=p+1$ y, para $i=p$,
+el homomorfismo $Z'_p(P_\bullet)\to P_{p-1}$ deducido de $d_p$ por paso al
+cociente. Como los $P_i$ son planos, se tiene
+\[
+  Z'_i(P_\bullet\otimes M)=Z'_i(P_\bullet)\otimes M,
+  \qquad
+  Z_i(P_\bullet\otimes M)=Z_i(P_\bullet)\otimes M
+\]
+y
+\[
+  B_i(P_\bullet\otimes M)=B_i(P_\bullet)\otimes M
+\]
+(poniendo $B_i(P_\bullet)=\Im(P_{i+1}\to P_i)$); se deducen inmediatamente,
+para todo $M$, isomorfismos funtoriales
+\[
+  H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)
+\]
+para todo $i$, y la comprobación de que se trata de un isomorfismo de
+$\partial$-funtores resulta sin dificultad de la definición de $\partial$
+\emph{(M, IV, 1)}.
+\end{proof}
+
+Obsérvese que las condiciones de \sref{III.7.4.2} implican también que
+$B_p(P_\bullet)$ es plano, pues se tiene una sucesión exacta
+\[
+  0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0,
+\]
+en la cual $P_p$ y $Z'_p(P_\bullet)$ son planos
+\sref[0]{0.6.1.2}.
+
+\begin{corollary}[7.4.3]
+\label{III.7.4.3}
+Supongamos que $A$ es un anillo noetheriano regular de dimensión $1$ (es
+decir, un producto de anillos de Dedekind \sref[0]{0.17.1.3} y
+\sref[0]{0.17.3.7}, por ejemplo un anillo de ideales principales). Entonces,
+para que $T_p$ sea exacto por la izquierda, es necesario y suficiente que
+$T_p(A)$ sea un $A$-módulo plano. Para que $T_p$ sea exacto, es necesario y
+suficiente que $T_p(A)$ y $T_{p-1}(A)$ sean $A$-módulos planos.
+\end{corollary}
+
+\begin{proof}
+Recordemos que, para un módulo $M$ sobre un anillo de Dedekind, es equivalente
+decir que $M$ es plano o que es libre de torsión \sref[0]{0.6.3.3} y
+\sref[0]{0.6.3.4}; bajo las hipótesis de \sref{III.7.4.3}, todo submódulo de un
+$A$-módulo plano es, por tanto, plano.
+
+La segunda aserción de \sref{III.7.4.3} resulta de la primera, puesto que decir
+que $T_p$ es exacto significa que $T_p$ y $T_{p-1}$ son exactos por la
+izquierda. Para demostrar la primera aserción, observemos que se tiene una
+sucesión exacta
+\[
+  0\longrightarrow H_p(P_\bullet)\longrightarrow Z'_p(P_\bullet)
+  \longrightarrow B_{p-1}(P_\bullet)\longrightarrow0
+\]
+en la cual $B_{p-1}(P_\bullet)$ es un $A$-módulo plano, por ser un submódulo
+del $A$-módulo plano $P_{p-1}$. Por tanto, es equivalente decir que
+$H_p(P_\bullet)$ es plano o que $Z'_p(P_\bullet)$ es plano
+\sref[0]{0.6.1.2}.
+\end{proof}
+
+Las aplicaciones más importantes de \sref{III.7.4.2} son las siguientes:
+
+\begin{proposition}[7.4.4]
+\label{III.7.4.4}
+Sean $A$ un anillo noetheriano y $P_\bullet$ un complejo de $A$-módulos
+planos; se supone, o bien que los $P_i$ son de tipo finito, o bien que los
+$H_i(P_\bullet)$ son $A$-módulos de tipo finito y que existe $i_0$ tal que
+$H_i(P_\bullet)=0$ para $i<i_0$. Sea $T$ el funtor homológico definido por
+\eqref{III.7.4.1.1.eq}. Entonces, el conjunto $U$ de los
+$y\in\Spec(A)$ tales que $(T_p)_y$ \sref{III.7.1.4} sea exacto por la derecha
+(resp. exacto por la izquierda, exacto) es abierto en $\Spec(A)$.
+\end{proposition}
+
+\begin{proof}
+En la segunda hipótesis sobre $P_\bullet$, se puede reemplazar $P_\bullet$ por
+un complejo $P'_\bullet$ de
+----- French corrections on page III 186 -----
+[id 7691]
+OLD: est un foncteur homologique de
+NEW: est un \emph{foncteur homologique} de
+FRENCH CONTEXT (corrected): es à droite \emph{plats}. Comme le foncteur
+$M\leadsto P_k\otimes_A M$ est alors exact dans $\boldsymbol{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]
+\oldpage[III]{186}
+est un \emph{foncteur homologique} de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$,
+évidemment $A$-linéaire lorsque $A$ est commutatif (7.1.2), et commutant aux
+limites inductives.
+
+Si $A$ est commutatif, alors, pour toute $A$-algèbre $B$, le foncteur
+homologique $T_\bullet^{(B)}$ (7.3.8) est donné
+
+[id 7692]
+OLD: $\mathbf{Ab}_A$ dans $\mathbf{Ab}$,
+évidemment
+NEW: $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$,
+évidemment
+FRENCH CONTEXT (corrected): cteur
+$M\leadsto P_k\otimes_A M$ est alors exact dans $\boldsymbol{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]
+\oldpage[III]{186}
+est un \emph{foncteur homologique} de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$,
+évidemment $A$-linéaire lorsque $A$ est commutatif (7.1.2), et commutant aux
+limites inductives.
+
+Si $A$ est commutatif, alors, pour toute $A$-algèbre $B$, le foncteur
+homologique $T_\bullet^{(B)}$ (7.3.8) est donné par définition par
+\[
+  T_\bullet^{(B)}(N)
+  =
+  H_\bu
+
+[id 7693]
+OLD: écrire
+\[
+  P_\bullet\otimes_A N_{[\rho]}
+  =P_\bullet\otimes_A(B\otimes_B N)_{[\rho]}
+  =(P_\bullet\otimes_A B)\otimes_B N,
+\]
+on voit
+NEW: écrire
+$P_\bullet\otimes_A N_{[\rho]}=P_\bullet\otimes_A(B\otimes_B N)_{[\rho]}=(P_\bullet\otimes_A B)\otimes_B N$,
+on voit
+FRENCH CONTEXT (corrected): let^{(B)}$ (7.3.8) est donné par définition par
+\[
+  T_\bullet^{(B)}(N)
+  =
+  H_\bullet(P_\bullet\otimes_A N_{[\rho]})
+  \tag{7.4.1.2}\label{III.7.4.1.2.fr}
+\]
+où $\rho:A\to B$ est l'homomorphisme définissant la structure d'algèbre de
+$B$; comme on peut aussi écrire
+$P_\bullet\otimes_A N_{[\rho]}=P_\bullet\otimes_A(B\otimes_B N)_{[\rho]}=(P_\bullet\otimes_A B)\otimes_B N$,
+on voit que l'on a
+\[
+  T_\bullet^{(B)}(N)=H_\bullet(P'_\bullet\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.fr}
+\]
+pour tout $B$-module $N$, $P'_\bullet$ étant le complexe
+$P_\bullet\otimes_A B$ de $B$-modules \emph{plats} (\textbf{0}\textsubscript{I}, 6.2.1).
+\end
+
+[id 7694]
+OLD: de $B$-modules plats
+NEW: de $B$-modules \emph{plats}
+FRENCH CONTEXT (corrected): s_A(B\otimes_B N)_{[\rho]}=(P_\bullet\otimes_A B)\otimes_B N$,
+on voit que l'on a
+\[
+  T_\bullet^{(B)}(N)=H_\bullet(P'_\bullet\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.fr}
+\]
+pour tout $B$-module $N$, $P'_\bullet$ étant le complexe
+$P_\bullet\otimes_A B$ de $B$-modules \emph{plats} (\textbf{0}\textsubscript{I}, 6.2.1).
+\end{env}
+
+\begin{proposition}[7.4.2]
+Sous les conditions générales de \textup{(7.4.1)}, et pour un entier $p\in\mathbf Z$
+donné, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact 
+
+[id 7695]
+OLD: (0\textsubscript{I}, 6.2.1)
+NEW: (\textbf{0}\textsubscript{I}, 6.2.1)
+FRENCH CONTEXT (corrected): P_\bullet\otimes_A B)\otimes_B N$,
+on voit que l'on a
+\[
+  T_\bullet^{(B)}(N)=H_\bullet(P'_\bullet\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.fr}
+\]
+pour tout $B$-module $N$, $P'_\bullet$ étant le complexe
+$P_\bullet\otimes_A B$ de $B$-modules \emph{plats} (\textbf{0}\textsubscript{I}, 6.2.1).
+\end{env}
+
+\begin{proposition}[7.4.2]
+Sous les conditions générales de \textup{(7.4.1)}, et pour un entier $p\in\mathbf Z$
+donné, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à gauche \textup{(ou, ce qui revient 
+
+[id 7696]
+OLD: générales de (7.4.1), et pour
+NEW: générales de \textup{(7.4.1)}, et pour
+FRENCH CONTEXT (corrected): et\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.fr}
+\]
+pour tout $B$-module $N$, $P'_\bullet$ étant le complexe
+$P_\bullet\otimes_A B$ de $B$-modules \emph{plats} (\textbf{0}\textsubscript{I}, 6.2.1).
+\end{env}
+
+\begin{proposition}[7.4.2]
+Sous les conditions générales de \textup{(7.4.1)}, et pour un entier $p\in\mathbf Z$
+donné, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à gauche \textup{(ou, ce qui revient au même,} $T_{p+1}$
+    est exact à droite).
+  \item[b)] $Z'_p(P_\bullet)=\operatorname{Coker}(P_{
+
+[id 7697]
+OLD: (ou, ce qui revient au même, $T_{p+1}$
+NEW: \textup{(ou, ce qui revient au même,} $T_{p+1}$
+FRENCH CONTEXT (corrected): {0}\textsubscript{I}, 6.2.1).
+\end{env}
+
+\begin{proposition}[7.4.2]
+Sous les conditions générales de \textup{(7.4.1)}, et pour un entier $p\in\mathbf Z$
+donné, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à gauche \textup{(ou, ce qui revient au même,} $T_{p+1}$
+    est exact à droite).
+  \item[b)] $Z'_p(P_\bullet)=\operatorname{Coker}(P_{p+1}\longrightarrow P_p)$
+    est un $A$-module à droite plat.
+  \item[c)] Il existe un complexe $P'_\bullet$ de $A$-modules à droite plats
+    tel que la différentielle
+    \[
+    
+
+[id 7698]
+OLD: \item[b)]
+    \[
+      Z'_p(P_\bullet)
+      =
+      \operatorname{Coker}(P_{p+1}\longrightarrow P_p)
+    \]
+    est un
+NEW: \item[b)] $Z'_p(P_\bullet)=\operatorname{Coker}(P_{p+1}\longrightarrow P_p)$
+    est un
+FRENCH CONTEXT (corrected): s conditions générales de \textup{(7.4.1)}, et pour un entier $p\in\mathbf Z$
+donné, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à gauche \textup{(ou, ce qui revient au même,} $T_{p+1}$
+    est exact à droite).
+  \item[b)] $Z'_p(P_\bullet)=\operatorname{Coker}(P_{p+1}\longrightarrow P_p)$
+    est un $A$-module à droite plat.
+  \item[c)] Il existe un complexe $P'_\bullet$ de $A$-modules à droite plats
+    tel que la différentielle
+    \[
+      d_{p+1}:P'_{p+1}\longrightarrow P'_p
+    \]
+    soit nulle, et un isomorphisme de foncteurs homologiques de
+    $
+
+[id 7700]
+OLD: où
+\[
+  Z'_p(P_\bullet\otimes M)
+  =
+  \operatorname{Coker}(P_{p+1}\otimes M\longrightarrow P_p\otimes M)
+  =
+  Z'_p(P_\bullet)\otimes M
+\]
+en vertu
+NEW: où
+$Z'_p(P_\bullet\otimes M)=\operatorname{Coker}(P_{p+1}\otimes M\longrightarrow P_p\otimes M)=Z'_p(P_\bullet)\otimes M$
+en vertu
+FRENCH CONTEXT (corrected): ur
+    $H_\bullet(P'_\bullet\otimes_A M)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Par définition, on a une suite exacte fonctorielle en $M$
+\[
+  0\longrightarrow T_p(M)
+  \longrightarrow Z'_p(P_\bullet\otimes M)
+  \longrightarrow P_{p-1}\otimes M
+\]
+où
+$Z'_p(P_\bullet\otimes M)=\operatorname{Coker}(P_{p+1}\otimes M\longrightarrow P_p\otimes M)=Z'_p(P_\bullet)\otimes M$
+en vertu de l'exactitude à droite du produit tensoriel. Pour tout homomorphisme
+$f:M\to N$, on a donc un diagramme commutatif
+\[
+\xymatrix@C=30pt@R=38pt{
+  0\ar[r]
+  &T_p(M)\ar[r]\ar[d]_u
+  &Z'_p(P_\bullet)\otimes M\ar[r]\ar[d]_v
+  &P_{p-1}\otimes M\ar[d]_w
+  \\
+  0\a
+
+[id 7701]
+OLD: $d'_{p+1}:P'_{p+1}\to P'_p$
+NEW: $d_{p+1}:P_{p+1}\to P_p$
+FRENCH CONTEXT (corrected): orphisme pour tout monomorphisme $f:M\to N$, donc le diagramme
+(7.4.2.1) montre que $u$ est un monomorphisme, et par suite $T_p$ (qui est déjà
+semi-exact) est exact à gauche. Ainsi $a)$ et $b)$ sont équivalentes. Il est
+immédiat que $c)$ entraîne $a)$, car si
+$d_{p+1}:P_{p+1}\to P_p$ est nulle, et
+$0\to M'\to M\to M''\to0$ est une suite exacte de $A$-modules, l'opérateur
+bord dans la suite exacte
+\[
+  H_{p+1}(P_\bullet\otimes M'')
+  \xrightarrow{\partial}H_p(P_\bullet\otimes M')
+  \longrightarrow H_p(P_\bullet\otimes M)
+\]
+\oldpage[III]{1
+
+=================== PAGE III 187 ===================
+----- (Spanish page III 186: shown above in this file) -----
+----- (Spanish page III 187: shown above in this file) -----
+----- Spanish, III2/units/III.7.4.es.tex, page III 188 -----
+\oldpage[III]{188}
+$A$-módulos libres de tipo finito para el cual el funtor
+$H_\bullet(P'_\bullet\otimes_A M)$ es isomorfo (como $\partial$-funtor) a
+$T_\bullet(M)$ \sref[0]{0.11.9.3}. Por tanto, siempre se puede reducir a la
+primera hipótesis, y, en este caso, los $Z'_i(P_\bullet)$ son de tipo finito;
+además, basta limitarse a demostrar las aserciones relativas a la exactitud por
+la izquierda (cf. \sref{III.7.4.2}, (a)). Dicho esto, sea $x\in U$; como el
+funtor $M\mapsto M_x$ es exacto, se tiene
+\[
+  (Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x),
+\]
+y (teniendo en cuenta \eqref{III.7.4.1.3.eq}) la hipótesis implica, en virtud
+de \sref{III.7.4.2}, (b), que $(Z'_p(P_\bullet))_x$ es un $A_x$-módulo plano,
+luego libre, pues es de tipo finito y $A_x$ es un anillo local noetheriano
+(Bourbaki, \emph{Algèbre commutative}, cap.~II, \S~3,
+n\textsuperscript{o}~2, cor.~2 de la prop.~5). Se deduce que existe $f\in A$
+tal que $(Z'_p(P_\bullet))_f$ es libre sobre $A_f$ (Bourbaki,
+\emph{Algèbre commutative}, cap.~II, \S~5, n\textsuperscript{o}~1, cor.~de la
+prop.~2), y, \emph{a fortiori}, $(Z'_p(P_\bullet))_y$ es libre sobre $A_y$ para
+todo $y\in D(f)$, lo cual termina la demostración en virtud de
+\sref{III.7.4.2}, (b).
+\end{proof}
+
+\begin{corollary}[7.4.5]
+\label{III.7.4.5}
+Bajo las hipótesis de \sref{III.7.4.4}, supongamos además que $A$ es un
+dominio entero.
+Entonces, el conjunto $U$ de los $x\in\Spec(A)$ tales que $(T_p)_x$ sea
+exacto es abierto no vacío.
+\end{corollary}
+
+\begin{proof}
+En efecto, basta demostrar que $(T_p)_x$ es exacto para el punto genérico $x$
+de $\Spec(A)$, lo cual es inmediato, pues $A_x$ es un cuerpo, y, por tanto,
+todo funtor aditivo sobre $\cat{Ab}_{A_x}$ es exacto.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+\label{III.7.4.6}
+Bajo las hipótesis generales de \sref{III.7.4.4}, las condiciones (a), (b) y
+(c) de \sref{III.7.4.2} son también equivalentes a:
+\begin{enumerate}
+  \item[(d)] existe un $A$-módulo $Q$ y un isomorfismo funtorial
+    \[
+      T_p(M)\xrightarrow{\sim}\Hom_A(Q,M).
+      \tag{7.4.6.1}\label{III.7.4.6.1.eq}
+    \]
+    Además, el $A$-módulo $Q$ queda determinado, salvo isomorfismo único, por
+    esta propiedad, y es de tipo finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La unicidad de $Q$ es un caso particular de la unicidad de un objeto
+representante de un funtor representable \sref[0]{0.8.1.5}. Es claro que el
+segundo miembro de \eqref{III.7.4.6.1.eq} es exacto por la izquierda.
+Recíprocamente, para demostrar la existencia de $Q$, cuando $T_p$ es exacto
+por la izquierda, primero se puede, como en \sref{III.7.4.4}, reducir al caso
+en que los $P_i$ son planos y de tipo finito, luego (puesto que $A$ es
+noetheriano) proyectivos de tipo finito (Bourbaki,
+\emph{Algèbre commutative}, cap.~II, \S~5, n\textsuperscript{o}~2, cor.~del
+teor.~1). El \emph{dual} $\check P_i$ de $P_i$ es entonces también un $A$-módulo
+proyectivo de tipo finito, $P_i$ es canónicamente isomorfo al dual de
+$\check P_i$, y el homomorfismo canónico
+\[
+  P_i\otimes_A M\longrightarrow\Hom_A(\check P_i,M)
+\]
+es biyectivo (Bourbaki, \emph{Algèbre}, cap.~II, 3.\textsuperscript{a} ed.,
+\S~4, n\textsuperscript{o}~2, prop.~2). Por otra parte, se sabe por
+\sref{III.7.4.2}, (c), que se puede suponer que
+$d_{p+1}:P_{p+1}\to P_p$ es nula, de modo que se tiene una sucesión exacta
+\[
+  0\longrightarrow T_p(M)\xrightarrow{u}P_p\otimes M
+  \xrightarrow{v}P_{p-1}\otimes M
+\]
+donde $v=d_p\otimes1$. Pongamos entonces $Q'=\Ker(d_p)$, de modo que se tiene
+la sucesión exacta
+\[
+  0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1},
+\]
+de donde, por transposición, la sucesión exacta
+\[
+  \check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+  \xrightarrow{{}^t w}\check Q'\longrightarrow0.
+\]
+Vamos a ver que
+\[
+  Q=\check Q'=\Coker({}^t d_p)
+\]
+responde a la cuestión. En efecto, se tiene la sucesión exacta
+\[
+  0\longrightarrow\Hom_A(Q,M)
+  \longrightarrow\Hom_A(\check P_p,M)
+  \xrightarrow{v'}\Hom_A(\check P_{p-1},M)
+\]
+----- French corrections on page III 187 -----
+[id 7355]
+OLD: \[
+  Z_{p+1}(P_\bullet)=\operatorname{Ker}(P_{p+1}\longrightarrow P_p),
+\]
+NEW: $Z_{p+1}(P_\bullet)=\operatorname{Ker}(P_{p+1}\longrightarrow P_p)$,
+FRENCH CONTEXT (corrected): 
+  H_{p+1}(P_\bullet\otimes M'')
+  \xrightarrow{\partial}H_p(P_\bullet\otimes M')
+  \longrightarrow H_p(P_\bullet\otimes M)
+\]
+\oldpage[III]{187}
+est nul par définition (M, IV, 1), donc $T_p$ est exact à gauche. Montrons
+inversement que $b)$ implique $c)$. Si
+$Z_{p+1}(P_\bullet)=\operatorname{Ker}(P_{p+1}\longrightarrow P_p)$,
+on a une suite exacte
+\[
+  0\longrightarrow Z_{p+1}(P_\bullet)\longrightarrow P_{p+1}
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0
+\]
+dans laquelle $P_{p+1}$ et $Z'_p(P_\bullet)$ sont plats, donc
+$Z_{p+1}(P_\bullet)$ est plat ($\mathbf{0}_{\mathrm I}$, 6
+
+[id 7357]
+OLD: Z_i(P_\bullet)\otimes M
+\]
+et
+\[
+  B_i(P_\bullet\otimes M)
+NEW: Z_i(P_\bullet)\otimes M
+  \quad\text{et}\quad
+  B_i(P_\bullet\otimes M)
+FRENCH CONTEXT (corrected):  p$ et $i\ne p+1$, $0$ pour $i=p+1$ et pour $i=p$
+l'homomorphisme $Z'_p(P_\bullet)\to P_{p-1}$ déduit de $d_p$ par passage au
+quotient. Comme les $P_i$ sont plats, on a
+\[
+  Z'_i(P_\bullet\otimes M)=Z'_i(P_\bullet)\otimes M,
+  \qquad
+  Z_i(P_\bullet\otimes M)=Z_i(P_\bullet)\otimes M
+  \quad\text{et}\quad
+  B_i(P_\bullet\otimes M)=B_i(P_\bullet)\otimes M
+\]
+(en posant $B_i(P_\bullet)=\operatorname{Im}(P_{i+1}\to P_i)$); on en conclut
+aussitôt pour tout $M$ des isomorphismes fonctoriels
+$H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)$
+pour tout $i$, et la vérification
+
+[id 7358]
+OLD: \[
+  H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)
+\]
+NEW: $H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)$
+FRENCH CONTEXT (corrected): uad
+  Z_i(P_\bullet\otimes M)=Z_i(P_\bullet)\otimes M
+  \quad\text{et}\quad
+  B_i(P_\bullet\otimes M)=B_i(P_\bullet)\otimes M
+\]
+(en posant $B_i(P_\bullet)=\operatorname{Im}(P_{i+1}\to P_i)$); on en conclut
+aussitôt pour tout $M$ des isomorphismes fonctoriels
+$H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)$
+pour tout $i$, et la vérification du fait qu'il s'agit d'un isomorphisme de
+$\partial$-foncteurs découle sans peine de la définition de $\partial$
+(M, IV, 1).
+\end{proof}
+
+On remarquera que les conditions de (7.4.2) impliquent aussi que
+$B_p(P_\bullet)$ est \
+
+[id 7359]
+OLD: est plat ($0_{\mathrm I}$, 6.1.2)
+NEW: est plat ($\mathbf{0}_{\mathrm I}$, 6.1.2)
+FRENCH CONTEXT (corrected): me{Ker}(P_{p+1}\longrightarrow P_p)$,
+on a une suite exacte
+\[
+  0\longrightarrow Z_{p+1}(P_\bullet)\longrightarrow P_{p+1}
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0
+\]
+dans laquelle $P_{p+1}$ et $Z'_p(P_\bullet)$ sont plats, donc
+$Z_{p+1}(P_\bullet)$ est plat ($\mathbf{0}_{\mathrm I}$, 6.1.2). On va prendre
+\[
+  P'_i=P_i\quad\text{pour }i\ne p\text{ et }i\ne p+1,
+  \qquad
+  P'_p=Z'_p(P_\bullet)
+  \qquad\text{et}\qquad
+  P'_{p+1}=Z_{p+1}(P_\bullet);
+\]
+pour différentielle $d'_i:P'_i\to P'_{i-1}$, on prendra celle du complexe
+$P_\bullet$ pour $i\ne 
+
+[id 7360]
+OLD: $B_p(P_\bullet)$ est plat, car
+NEW: $B_p(P_\bullet)$ est \emph{plat}, car
+FRENCH CONTEXT (corrected): (P'_\bullet\otimes M)$
+pour tout $i$, et la vérification du fait qu'il s'agit d'un isomorphisme de
+$\partial$-foncteurs découle sans peine de la définition de $\partial$
+(M, IV, 1).
+\end{proof}
+
+On remarquera que les conditions de (7.4.2) impliquent aussi que
+$B_p(P_\bullet)$ est \emph{plat}, car on a une suite exacte
+$0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+\longrightarrow Z'_p(P_\bullet)\longrightarrow0$,
+dans laquelle $P_p$ et $Z'_p(P_\bullet)$ sont plats ($\mathbf{0}_{\mathrm I}$, 6.1.2).
+
+\begin{corollary}[7.4.3]
+Supposons que $A$ soit
+
+[id 7361]
+OLD: \[
+  0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0,
+\]
+NEW: $0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+\longrightarrow Z'_p(P_\bullet)\longrightarrow0$,
+FRENCH CONTEXT (corrected): fait qu'il s'agit d'un isomorphisme de
+$\partial$-foncteurs découle sans peine de la définition de $\partial$
+(M, IV, 1).
+\end{proof}
+
+On remarquera que les conditions de (7.4.2) impliquent aussi que
+$B_p(P_\bullet)$ est \emph{plat}, car on a une suite exacte
+$0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+\longrightarrow Z'_p(P_\bullet)\longrightarrow0$,
+dans laquelle $P_p$ et $Z'_p(P_\bullet)$ sont plats ($\mathbf{0}_{\mathrm I}$, 6.1.2).
+
+\begin{corollary}[7.4.3]
+Supposons que $A$ soit un anneau noethérien régulier de dimension $1$
+\textup{(autrement dit un \emph{produit d'anneaux de Dedekind}
+($\mathbf{0}_
+
+[id 7362]
+OLD: sont plats ($0_{\mathrm I}$, 6.1.2)
+NEW: sont plats ($\mathbf{0}_{\mathrm I}$, 6.1.2)
+FRENCH CONTEXT (corrected): quera que les conditions de (7.4.2) impliquent aussi que
+$B_p(P_\bullet)$ est \emph{plat}, car on a une suite exacte
+$0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+\longrightarrow Z'_p(P_\bullet)\longrightarrow0$,
+dans laquelle $P_p$ et $Z'_p(P_\bullet)$ sont plats ($\mathbf{0}_{\mathrm I}$, 6.1.2).
+
+\begin{corollary}[7.4.3]
+Supposons que $A$ soit un anneau noethérien régulier de dimension $1$
+\textup{(autrement dit un \emph{produit d'anneaux de Dedekind}
+($\mathbf{0}_{\mathrm{IV}}$, 17.1.3 et 17.3.7), par exemple un anneau \emph{principal})}. Alors,
+po
+
+[id 7363]
+OLD: (autrement dit un produit d'anneaux de Dedekind
+($0_{\mathrm{IV}}$, 17.1.3 et 17.3.7), par exemple un anneau principal)
+NEW: \textup{(autrement dit un \emph{produit d'anneaux de Dedekind}
+($\mathbf{0}_{\mathrm{IV}}$, 17.1.3 et 17.3.7), par exemple un anneau \emph{principal})}
+FRENCH CONTEXT (corrected): bullet)\longrightarrow P_p
+\longrightarrow Z'_p(P_\bullet)\longrightarrow0$,
+dans laquelle $P_p$ et $Z'_p(P_\bullet)$ sont plats ($\mathbf{0}_{\mathrm I}$, 6.1.2).
+
+\begin{corollary}[7.4.3]
+Supposons que $A$ soit un anneau noethérien régulier de dimension $1$
+\textup{(autrement dit un \emph{produit d'anneaux de Dedekind}
+($\mathbf{0}_{\mathrm{IV}}$, 17.1.3 et 17.3.7), par exemple un anneau \emph{principal})}. Alors,
+pour que $T_p$ soit exact à gauche, il faut et il suffit que $T_p(A)$ soit un
+$A$-module plat. Pour que $T_p$ soit exact, il faut et il suffit que $T_p(A)$
+et $T_{p-1}(A)$ soient des $A$-modules plats.
+\end{corollary}
+
+\begin{proof}
+Rappelons que pour
+
+[id 7364]
+OLD: $M$ est plat ou
+NEW: $M$ est \emph{plat} ou
+FRENCH CONTEXT (corrected): p(A)$ soit un
+$A$-module plat. Pour que $T_p$ soit exact, il faut et il suffit que $T_p(A)$
+et $T_{p-1}(A)$ soient des $A$-modules plats.
+\end{corollary}
+
+\begin{proof}
+Rappelons que pour un module $M$ sur un anneau de Dedekind, il revient au même
+de dire que $M$ est \emph{plat} ou qu'il est \emph{sans torsion} ($\mathbf{0}_{\mathrm I}$, 6.3.3 et
+6.3.4); sous les hypothèses de (7.4.3), tout sous-module d'un $A$-module plat
+est donc plat.
+
+La seconde assertion de (7.4.3) résulte de la première, puisque dire que $T_p$
+est exact signifie q
+
+[id 7365]
+OLD: est sans torsion
+NEW: est \emph{sans torsion}
+FRENCH CONTEXT (corrected): rphisme $m\to f.m$ s'écrit $1\otimes u$, où $u$ est la
+multiplication $a\to f.a$ dans $A$ et $M$ est identifié à
+$M\otimes_A A$~; si $u$ est injective, il en est donc de même de
+$1\otimes u$ puisque $M$ est plat. En particulier, si $A$ est
+\emph{intègre}, $M$ est \emph{sans torsion}.
+
+Inversement, supposons $A$ intègre, $M$ sans torsion, et supposons que pour
+tout idéal maximal $\mathfrak{m}$ de $A$, $A_\mathfrak{m}$ soit un
+\emph{anneau de valuation discrète}~; alors $M$ est $A$-\emph{plat}. Il suffit en
+effet (6.3.3) de prouver que $M_
+
+[id 7366]
+OLD: ($0_{\mathrm I}$, 6.3.3
+NEW: ($\mathbf{0}_{\mathrm I}$, 6.3.3
+FRENCH CONTEXT (corrected): N$, $M$ (resp. $N$) étant
+un $B$-module (resp. un $C$-module). Supposons par exemple que $\mathscr F$
+soit $S$-plat, ce qui signifie que pour tout $s\in S$, $M_s$ est un
+$A_s$-module plat ($\mathbf{0}_{\mathrm I}$, 6.7.1); par suite $M$ est un $A$-module plat
+($\mathbf{0}_{\mathrm I}$, 6.3.3), et l'on sait que
+$\operatorname{Tor}_n^A(M,N)=0$ pour $n>0$ et pour tout $C$-module $N$
+($\mathbf{0}_{\mathrm I}$, 6.1.1), d'où la conclusion par (6.4.1.1).
+\end{proof}
+
+\begin{namedtheorem}[6.5.9]{Corollaire}
+Soient $X$, $Y$ deux $S$-préschémas, $\mathscr 
+
+[id 7367]
+OLD: est un $A$-module plat, en tant
+NEW: est un $A$-module \emph{plat}, en tant
+FRENCH CONTEXT (corrected): p-1}$ sont exacts à gauche. Pour démontrer
+la première assertion, notons que l'on a une suite exacte
+\[
+  0\longrightarrow H_p(P_\bullet)\longrightarrow Z'_p(P_\bullet)
+  \longrightarrow B_{p-1}(P_\bullet)\longrightarrow0
+\]
+dans laquelle $B_{p-1}(P_\bullet)$ est un $A$-module \emph{plat}, en tant que
+sous-module du $A$-module plat $P_{p-1}$. Il est donc équivalent de dire que
+$H_p(P_\bullet)$ est plat ou que $Z'_p(P_\bullet)$ est plat
+($\mathbf{0}_{\mathrm I}$, 6.1.2).
+\end{proof}
+
+Les applications les plus importantes de (7.4.2) sont les suivantes :
+
+
+[id 7368]
+OLD: plat
+($0_{\mathrm I}$, 6.1.2)
+NEW: plat
+($\mathbf{0}_{\mathrm I}$, 6.1.2)
+FRENCH CONTEXT (corrected): grightarrow B_{p-1}(P_\bullet)\longrightarrow0
+\]
+dans laquelle $B_{p-1}(P_\bullet)$ est un $A$-module \emph{plat}, en tant que
+sous-module du $A$-module plat $P_{p-1}$. Il est donc équivalent de dire que
+$H_p(P_\bullet)$ est plat ou que $Z'_p(P_\bullet)$ est plat
+($\mathbf{0}_{\mathrm I}$, 6.1.2).
+\end{proof}
+
+Les applications les plus importantes de (7.4.2) sont les suivantes :
+
+\begin{proposition}[7.4.4]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats :
+on suppose, soit que les $P_i$ sont de type fini, soit que les
+$H_i
+
+[id 7369]
+OLD: $A$-modules plats;
+NEW: $A$-modules plats :
+FRENCH CONTEXT (corrected): _\bullet)$ est plat ou que $Z'_p(P_\bullet)$ est plat
+($\mathbf{0}_{\mathrm I}$, 6.1.2).
+\end{proof}
+
+Les applications les plus importantes de (7.4.2) sont les suivantes :
+
+\begin{proposition}[7.4.4]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats :
+on suppose, soit que les $P_i$ sont de type fini, soit que les
+$H_i(P_\bullet)$ sont des $A$-modules de type fini et qu'il existe $i_0$ tel
+que $H_i(P_\bullet)=0$ pour $i<i_0$. Soit $T$ le foncteur homologique défini
+par \textup{(7.4.1.1)}. Alors l'ensemble $
+
+[id 7370]
+OLD: par (7.4.1.1).
+NEW: par \textup{(7.4.1.1)}.
+FRENCH CONTEXT (corrected): bullet$ un complexe de $A$-modules plats :
+on suppose, soit que les $P_i$ sont de type fini, soit que les
+$H_i(P_\bullet)$ sont des $A$-modules de type fini et qu'il existe $i_0$ tel
+que $H_i(P_\bullet)=0$ pour $i<i_0$. Soit $T$ le foncteur homologique défini
+par \textup{(7.4.1.1)}. Alors l'ensemble $U$ des
+$y\in\operatorname{Spec}(A)$ tels que $(T_p)_y$ \textup{(7.1.4)} soit exact à droite
+\textup{(resp. \emph{exact à gauche, exact})} est ouvert dans $\operatorname{Spec}(A)$.
+\end{proposition}
+
+\begin{proof}
+Dans la seconde hypothèse su
+
+[id 7371]
+OLD: $(T_p)_y$ (7.1.4)
+NEW: $(T_p)_y$ \textup{(7.1.4)}
+FRENCH CONTEXT (corrected): fini, soit que les
+$H_i(P_\bullet)$ sont des $A$-modules de type fini et qu'il existe $i_0$ tel
+que $H_i(P_\bullet)=0$ pour $i<i_0$. Soit $T$ le foncteur homologique défini
+par \textup{(7.4.1.1)}. Alors l'ensemble $U$ des
+$y\in\operatorname{Spec}(A)$ tels que $(T_p)_y$ \textup{(7.1.4)} soit exact à droite
+\textup{(resp. \emph{exact à gauche, exact})} est ouvert dans $\operatorname{Spec}(A)$.
+\end{proposition}
+
+\begin{proof}
+Dans la seconde hypothèse sur $P_\bullet$, on peut remplacer $P_\bullet$ par
+un complexe $P'_\bullet$ de
+\oldpage[III]
+
+[id 7372]
+OLD: (resp. exact à gauche, exact)
+NEW: \textup{(resp. \emph{exact à gauche, exact})}
+FRENCH CONTEXT (corrected): $-modules de type fini et qu'il existe $i_0$ tel
+que $H_i(P_\bullet)=0$ pour $i<i_0$. Soit $T$ le foncteur homologique défini
+par \textup{(7.4.1.1)}. Alors l'ensemble $U$ des
+$y\in\operatorname{Spec}(A)$ tels que $(T_p)_y$ \textup{(7.1.4)} soit exact à droite
+\textup{(resp. \emph{exact à gauche, exact})} est ouvert dans $\operatorname{Spec}(A)$.
+\end{proposition}
+
+\begin{proof}
+Dans la seconde hypothèse sur $P_\bullet$, on peut remplacer $P_\bullet$ par
+un complexe $P'_\bullet$ de
+\oldpage[III]{188}
+$A$-modules libres de type fini pour lequel le foncteur
+$H_\
+
+=================== PAGE III 188 ===================
+----- (Spanish page III 187: shown above in this file) -----
+----- (Spanish page III 188: shown above in this file) -----
+----- Spanish, III2/units/III.7.4.es.tex, page III 189 -----
+\oldpage[III]{189}
+donde $v'=\Hom({}^t d_p,1)$; al identificar canónicamente
+$P_i\otimes M$ con $\Hom(\check P_i,M)$, $v'$ se identifica, por tanto, con
+$v=d_p\otimes1$, y se obtiene así el isomorfismo funtorial
+\[
+  T_p(M)\xrightarrow{\sim}\Hom_A(Q,M)
+\]
+buscado. Además, $Q$, por ser un cociente de $\check P_p$, es de tipo finito.
+\end{proof}
+
+\begin{proposition}[7.4.7]
+\label{III.7.4.7}
+Supongamos verificadas las condiciones generales de \sref{III.7.4.4}. Entonces,
+para todo $A$-módulo $M$ de tipo finito:
+\begin{enumerate}
+  \item[\textup{(i)}] los $T_i(M)$ son $A$-módulos de tipo finito;
+  \item[\textup{(ii)}] para todo ideal $\mathfrak m$ de $A$, el homomorfismo canónico
+    \[
+      (T_i(M))^{\widehat{\,}}
+      \longrightarrow
+      \varprojlim_n T_i\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+      \tag{7.4.7.1}\label{III.7.4.7.1.eq}
+    \]
+    (donde el primer miembro es el completado separado de $T_i(M)$ para la
+    topología $\mathfrak m$-ádica) es biyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Como en \sref{III.7.4.4}, se reduce primero al caso en que los $P_i$ son de
+tipo finito; como $A$ es noetheriano, los submódulos de los
+$P_i\otimes_A M$ son de tipo finito, de donde se deduce trivialmente la
+aserción (i). En cuanto a la aserción (ii), resulta más generalmente del lema
+siguiente:
+\end{proof}
+
+\begin{lemma}[7.4.7.2]
+\label{III.7.4.7.2}
+Sean $A$ un anillo noetheriano y $u:E\to F$ un homomorfismo de $A$-módulos de
+tipo finito. Para todo $A$-módulo $M$ de tipo finito, pongamos
+\[
+  K(M)=\Ker(u\otimes1_M),
+  \qquad
+  C(M)=\Coker(u\otimes1_M);
+\]
+entonces, los homomorfismos canónicos
+\[
+  (K(M))^{\widehat{\,}}\longrightarrow\varprojlim_n K(M_n),
+  \qquad
+  (C(M))^{\widehat{\,}}\longrightarrow\varprojlim_n C(M_n)
+  \tag{7.4.7.3}\label{III.7.4.7.3.eq}
+\]
+(donde se ha puesto
+$M_n=M\otimes_A(A/\mathfrak m^{n+1})=M/\mathfrak m^{n+1}M$) son biyectivos
+para todo ideal $\mathfrak m$ de $A$.
+\end{lemma}
+
+\begin{proof}
+Como $E\otimes M$ y $F\otimes M$ son de tipo finito, y el funtor
+$M\leadsto\widehat M$ es exacto en la categoría de los $A$-módulos de tipo
+finito \sref[0]{0.7.3.3}, $(K(M))^{\widehat{\,}}$ y $(C(M))^{\widehat{\,}}$ son,
+respectivamente, el núcleo y el conúcleo de
+\[
+  \widehat{(u\otimes1)}:
+  \widehat{(E\otimes M)}\longrightarrow\widehat{(F\otimes M)}.
+\]
+La exactitud por la izquierda del funtor $\varprojlim$ muestra, por tanto, que
+$(K(M))^{\widehat{\,}}=\varprojlim_n K(M_n)$; por otra parte, la exactitud por la
+derecha del producto tensorial prueba que
+$C(M_n)=C(M)\otimes_A(A/\mathfrak m^{n+1})$, luego
+$(C(M))^{\widehat{\,}}=\varprojlim_n C(M_n)$ por definición.
+\end{proof}
+
+\begin{remark}[7.4.8]
+\label{III.7.4.8}
+Teniendo en cuenta \sref{III.6.10.5} y \sref{III.6.10.6}, se ve que, bajo una
+hipótesis suplementaria de planitud, \sref{III.7.4.7} vuelve a dar el hecho de
+que (4.1.7.1) es un isomorfismo, es decir, lo esencial del «primer teorema de
+comparación» para los morfismos propios; además, el enunciado se aplica ya no
+solo a un $\sh{O}_X$-módulo coherente, sino a un complejo de tales módulos.
+Sería interesante obtener un enunciado que comprendiese a la vez
+\sref{III.7.4.7} y (4.1.7.1) como casos particulares. Obsérvese que, cuando los
+$P_i$ son de tipo finito, la demostración de \sref{III.7.4.7} no utiliza el
+hecho de que sean módulos planos; convendría examinar si la conclusión de
+\sref{III.7.4.7} sigue siendo válida cuando no se supone que los $P_i$ sean
+planos ni de tipo finito, sino que se supone que los $H_i(P_\bullet)$ son de
+tipo finito para todo $i$ y nulos para $i<i_0$. ¿Es posible entonces reemplazar
+$P_\bullet$ por un complejo $P'_\bullet$ de $A$-módulos de tipo finito tal que
+los funtores $H_\bullet(P_\bullet\otimes M)$ y
+$H_\bullet(P'_\bullet\otimes M)$ (que ya no son homológicos) sigan siendo
+isomorfos?
+\end{remark}
+----- Spanish, III2/units/III.7.5.es.tex, page III 189 -----
+
+----- French corrections on page III 188 -----
+[id 7373]
+OLD: (0, 11.9.3)
+NEW: (\textbf{0}, 11.9.3)
+FRENCH CONTEXT (corrected): thèse sur $P_\bullet$, on peut remplacer $P_\bullet$ par
+un complexe $P'_\bullet$ de
+\oldpage[III]{188}
+$A$-modules libres de type fini pour lequel le foncteur
+$H_\bullet(P'_\bullet\otimes_A M)$ est isomorphe (en tant que
+$\partial$-foncteur) à $T_\bullet(M)$ (\textbf{0}, 11.9.3). On peut donc toujours se
+ramener à la première hypothèse et dans ce cas les $Z'_i(P_\bullet)$ sont de
+type fini; en outre, on peut se borner à démontrer les assertions relatives à
+l'exactitude à gauche (cf. (7.4.2, $a)$)). Cela étant, soit $x\in U$; comme le
+
+[id 7374]
+OLD: (cf. (7.4.2, $a)$).
+NEW: (cf. (7.4.2, $a)$)).
+FRENCH CONTEXT (corrected): partial$-foncteur) à $T_\bullet(M)$ (\textbf{0}, 11.9.3). On peut donc toujours se
+ramener à la première hypothèse et dans ce cas les $Z'_i(P_\bullet)$ sont de
+type fini; en outre, on peut se borner à démontrer les assertions relatives à
+l'exactitude à gauche (cf. (7.4.2, $a)$)). Cela étant, soit $x\in U$; comme le
+foncteur $M\leadsto M_x$ est exact, on a
+$(Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x)$,
+et (en tenant compte de (7.4.1.3)) l'hypothèse entraîne, en vertu de
+(7.4.2, $b)$) que $(Z'_p(P_\bullet))_x$ est un $A_x$-module plat, donc
+
+[id 7376]
+OLD: \[
+  (Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x),
+\]
+NEW: $(Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x)$,
+FRENCH CONTEXT (corrected): emière hypothèse et dans ce cas les $Z'_i(P_\bullet)$ sont de
+type fini; en outre, on peut se borner à démontrer les assertions relatives à
+l'exactitude à gauche (cf. (7.4.2, $a)$)). Cela étant, soit $x\in U$; comme le
+foncteur $M\leadsto M_x$ est exact, on a
+$(Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x)$,
+et (en tenant compte de (7.4.1.3)) l'hypothèse entraîne, en vertu de
+(7.4.2, $b)$) que $(Z'_p(P_\bullet))_x$ est un $A_x$-module plat, donc \emph{libre}
+puisqu'il est de type fini et que $A_x$ est un anneau local noethérien
+(Bourbaki, \emph{Alg. comm.}, chap.
+
+[id 7377]
+OLD: donc libre
+puisqu'il
+NEW: donc \emph{libre}
+puisqu'il
+FRENCH CONTEXT (corrected): $)). Cela étant, soit $x\in U$; comme le
+foncteur $M\leadsto M_x$ est exact, on a
+$(Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x)$,
+et (en tenant compte de (7.4.1.3)) l'hypothèse entraîne, en vertu de
+(7.4.2, $b)$) que $(Z'_p(P_\bullet))_x$ est un $A_x$-module plat, donc \emph{libre}
+puisqu'il est de type fini et que $A_x$ est un anneau local noethérien
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5). On en conclut qu'il y a un $f\in A$ tel que
+$(Z'_p(P_\bullet))_f$ soit libre sur $A_f$ (Bourbaki, \emph{A
+
+[id 7378]
+OLD: Sous les hypothèses de (7.4.4), supposons
+NEW: Sous les hypothèses de \textup{(7.4.4)}, supposons
+FRENCH CONTEXT (corrected): mph{Alg. comm.},
+chap. II, \S 5, n\textsuperscript{o} 1, cor. de la prop. 2), et \emph{a
+fortiori} $(Z'_p(P_\bullet))_y$ est libre sur $A_y$ pour tout $y\in D(f)$, ce
+qui achève la démonstration en vertu de (7.4.2, $b)$).
+\end{proof}
+
+\begin{corollary}[7.4.5]
+Sous les hypothèses de \textup{(7.4.4)}, supposons en outre que $A$ soit intègre. Alors
+l'ensemble $U$ des $x\in\operatorname{Spec}(A)$ tels que $(T_p)_x$ soit exact
+est ouvert non vide.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet de prouver que $(T_p)_x$ est exact pour le point \emph{générique}
+$x$ de 
+
+[id 7379]
+OLD: point générique
+NEW: point \emph{générique}
+FRENCH CONTEXT (corrected): de \textup{(7.4.4)}, supposons en outre que $A$ soit intègre. Alors
+l'ensemble $U$ des $x\in\operatorname{Spec}(A)$ tels que $(T_p)_x$ soit exact
+est ouvert non vide.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet de prouver que $(T_p)_x$ est exact pour le point \emph{générique}
+$x$ de $\operatorname{Spec}(A)$, ce qui est immédiat puisque $A_x$ est un
+corps, donc tout foncteur additif sur $\boldsymbol{Ab}_{A_x}$ est exact.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+Sous les hypothèses générales de \textup{(7.4.4)}, les conditions $a)$, 
+
+[id 7380]
+OLD: $\mathbf{Ab}_{A_x}$
+NEW: $\boldsymbol{Ab}_{A_x}$
+FRENCH CONTEXT (corrected): soit exact
+est ouvert non vide.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet de prouver que $(T_p)_x$ est exact pour le point \emph{générique}
+$x$ de $\operatorname{Spec}(A)$, ce qui est immédiat puisque $A_x$ est un
+corps, donc tout foncteur additif sur $\boldsymbol{Ab}_{A_x}$ est exact.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+Sous les hypothèses générales de \textup{(7.4.4)}, les conditions $a)$, $b)$ et $c)$ \textup{de
+(7.4.2)} sont aussi équivalentes à :
+\begin{enumerate}
+  \item[d)] Il existe un $A$-module $Q$ et un isomorphism
+
+[id 7381]
+OLD: générales de (7.4.4), les conditions
+NEW: générales de \textup{(7.4.4)}, les conditions
+FRENCH CONTEXT (corrected): e $(T_p)_x$ est exact pour le point \emph{générique}
+$x$ de $\operatorname{Spec}(A)$, ce qui est immédiat puisque $A_x$ est un
+corps, donc tout foncteur additif sur $\boldsymbol{Ab}_{A_x}$ est exact.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+Sous les hypothèses générales de \textup{(7.4.4)}, les conditions $a)$, $b)$ et $c)$ \textup{de
+(7.4.2)} sont aussi équivalentes à :
+\begin{enumerate}
+  \item[d)] Il existe un $A$-module $Q$ et un isomorphisme fonctoriel
+    \[
+      T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M).
+      \tag{7.4.6.1}\label{III.7.4.6.1.fr
+
+[id 7382]
+OLD: $c)$ de
+(7.4.2) sont aussi
+NEW: $c)$ \textup{de
+(7.4.2)} sont aussi
+FRENCH CONTEXT (corrected): $\operatorname{Spec}(A)$, ce qui est immédiat puisque $A_x$ est un
+corps, donc tout foncteur additif sur $\boldsymbol{Ab}_{A_x}$ est exact.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+Sous les hypothèses générales de \textup{(7.4.4)}, les conditions $a)$, $b)$ et $c)$ \textup{de
+(7.4.2)} sont aussi équivalentes à :
+\begin{enumerate}
+  \item[d)] Il existe un $A$-module $Q$ et un isomorphisme fonctoriel
+    \[
+      T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M).
+      \tag{7.4.6.1}\label{III.7.4.6.1.fr}
+    \]
+    En outre, le $A$-module $Q$ est déter
+
+[id 7383]
+OLD: (0, 8.1.5)
+NEW: (\textbf{0}, 8.1.5)
+FRENCH CONTEXT (corrected): $A$-module $Q$ est déterminé à isomorphisme unique près par
+    cette propriété, et il est de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'unicité de $Q$ est un cas particulier de l'unicité d'un objet représentatif
+d'un foncteur représentable (\textbf{0}, 8.1.5). Il est clair que le second membre de
+(7.4.6.1) est exact à gauche. Inversement, pour démontrer l'existence de $Q$,
+lorsque $T_p$ est exact à gauche, on peut d'abord, comme dans (7.4.4), se
+ramener au cas où les $P_i$ sont plats et de type fini, donc (puisque
+
+[id 7384]
+OLD: noethérien) projectifs
+NEW: noethérien) \emph{projectifs}
+FRENCH CONTEXT (corrected): clair que le second membre de
+(7.4.6.1) est exact à gauche. Inversement, pour démontrer l'existence de $Q$,
+lorsque $T_p$ est exact à gauche, on peut d'abord, comme dans (7.4.4), se
+ramener au cas où les $P_i$ sont plats et de type fini, donc (puisque $A$ est
+noethérien) \emph{projectifs} de type fini (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S 5, n\textsuperscript{o} 2, cor. du th. 1). Le \emph{dual} $\check P_i$ de $P_i$
+est alors aussi un $A$-module projectif de type fini, $P_i$ est canoniquement
+isomorphe au dual de $\check P_i$, et l'homom
+
+[id 7386]
+OLD: \[
+  P_i\otimes_A M\longrightarrow\operatorname{Hom}_A(\check P_i,M)
+\]
+NEW: $P_i\otimes_A M\longrightarrow\operatorname{Hom}_A(\check P_i,M)$
+FRENCH CONTEXT (corrected): baki, \emph{Alg. comm.}, chap. II,
+\S 5, n\textsuperscript{o} 2, cor. du th. 1). Le \emph{dual} $\check P_i$ de $P_i$
+est alors aussi un $A$-module projectif de type fini, $P_i$ est canoniquement
+isomorphe au dual de $\check P_i$, et l'homomorphisme canonique
+$P_i\otimes_A M\longrightarrow\operatorname{Hom}_A(\check P_i,M)$
+est bijectif (Bourbaki, \emph{Alg.}, chap. II, 3\textsuperscript{e} éd.,
+\S 4, n\textsuperscript{o} 2, prop. 2). On sait d'autre part (7.4.2, $c)$)
+qu'on peut supposer que $d_{p+1}:P_{p+1}\to P_p$ est nulle, donc que l'on a une
+suite exacte
+\[
+  0\longrightar
+
+[id 7387]
+OLD: \[
+  0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1},
+\]
+NEW: $0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1}$,
+FRENCH CONTEXT (corrected): e $d_{p+1}:P_{p+1}\to P_p$ est nulle, donc que l'on a une
+suite exacte
+\[
+  0\longrightarrow T_p(M)\xrightarrow{u}P_p\otimes M
+  \xrightarrow{v}P_{p-1}\otimes M
+\]
+où $v=d_p\otimes1$. Posons alors $Q'=\operatorname{Ker}(d_p)$, de sorte qu'on
+a la suite exacte
+$0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1}$,
+d'où, par transposition, la suite exacte
+$\check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+\xrightarrow{{}^t w}\check Q'\longrightarrow0$.
+Nous allons voir que
+$Q=\check Q'=\operatorname{Coker}({}^t d_p)$
+répond à la question. En effet, on a la suite exacte
+\[
+
+
+[id 7388]
+OLD: \[
+  \check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+  \xrightarrow{{}^t w}\check Q'\longrightarrow0.
+\]
+NEW: $\check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+\xrightarrow{{}^t w}\check Q'\longrightarrow0$.
+FRENCH CONTEXT (corrected): arrow{u}P_p\otimes M
+  \xrightarrow{v}P_{p-1}\otimes M
+\]
+où $v=d_p\otimes1$. Posons alors $Q'=\operatorname{Ker}(d_p)$, de sorte qu'on
+a la suite exacte
+$0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1}$,
+d'où, par transposition, la suite exacte
+$\check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+\xrightarrow{{}^t w}\check Q'\longrightarrow0$.
+Nous allons voir que
+$Q=\check Q'=\operatorname{Coker}({}^t d_p)$
+répond à la question. En effet, on a la suite exacte
+\[
+  0\longrightarrow\operatorname{Hom}(Q,M)
+  \longrightarrow\operatorname{Hom}(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}(\check P
+
+[id 7389]
+OLD: \[
+  Q=\check Q'=\operatorname{Coker}({}^t d_p)
+\]
+NEW: $Q=\check Q'=\operatorname{Coker}({}^t d_p)$
+FRENCH CONTEXT (corrected): )$, de sorte qu'on
+a la suite exacte
+$0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1}$,
+d'où, par transposition, la suite exacte
+$\check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+\xrightarrow{{}^t w}\check Q'\longrightarrow0$.
+Nous allons voir que
+$Q=\check Q'=\operatorname{Coker}({}^t d_p)$
+répond à la question. En effet, on a la suite exacte
+\[
+  0\longrightarrow\operatorname{Hom}(Q,M)
+  \longrightarrow\operatorname{Hom}(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}(\check P_{p-1},M)
+\]
+\oldpage[III]{189}
+où $v'=\operatorname{Hom}({}^t d_p
+
+[id 7390]
+OLD: 0\longrightarrow\operatorname{Hom}_A(Q,M)
+  \longrightarrow\operatorname{Hom}_A(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}_A(\check P_{p-1},M)
+NEW: 0\longrightarrow\operatorname{Hom}(Q,M)
+  \longrightarrow\operatorname{Hom}(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}(\check P_{p-1},M)
+FRENCH CONTEXT (corrected): 'où, par transposition, la suite exacte
+$\check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+\xrightarrow{{}^t w}\check Q'\longrightarrow0$.
+Nous allons voir que
+$Q=\check Q'=\operatorname{Coker}({}^t d_p)$
+répond à la question. En effet, on a la suite exacte
+\[
+  0\longrightarrow\operatorname{Hom}(Q,M)
+  \longrightarrow\operatorname{Hom}(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}(\check P_{p-1},M)
+\]
+\oldpage[III]{189}
+où $v'=\operatorname{Hom}({}^t d_p,1)$; lorsqu'on identifie canoniquement
+$P_i\otimes M$ à $\operatorname{Hom}(\check P_i,M)$, $v'$ s'identifie donc à
+$v=d_p\otimes1$, et l'on a par suite l'isomorphisme fonctoriel
+$T_p(M)\xrightarrow{\si
+
+=================== PAGE III 189 ===================
+----- (Spanish page III 188: shown above in this file) -----
+----- (Spanish page III 189: shown above in this file) -----
+----- Spanish, III2/units/III.7.5.es.tex, page III 190 -----
+\oldpage[III]{190}
+\subsection{Caso de los anillos locales noetherianos}
+\label{subsection:III.7.5}
+
+\begin{env}[7.5.1]
+\label{III.7.5.1}
+Sean $A$ un anillo local noetheriano y $\mathfrak m$ su ideal
+maximal. Para todo $A$-módulo $M$, designemos por $\widehat M$ su
+completado separado para la topología $\mathfrak m$-ádica, el cual es
+isomorfo a
+\[
+  \varprojlim_n
+  \bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+  =
+  \varprojlim_n
+  \bigl(M/\mathfrak m^{n+1}M\bigr).
+\]
+Sea $T$ un funtor covariante aditivo de $\cat{Ab}_A$ en
+$\cat{Ab}$. Los homomorfismos canónicos
+\sref{III.7.2.3.1}
+\[
+  T(M)\otimes_A(A/\mathfrak m^{n+1})
+  \longrightarrow
+  T\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+\]
+forman evidentemente un sistema proyectivo de $A$-homomorfismos. Por
+paso al límite dan, por tanto, un $\widehat A$-homomorfismo funtorial
+en $M$
+\[
+  (T(M))^{\widehat{\,}}
+  \longrightarrow
+  \varprojlim_n T(M_n),
+  \tag{7.5.1.1}\label{III.7.5.1.1.eq}
+\]
+donde se ha puesto
+\[
+  M_n=M\otimes_A(A/\mathfrak m^{n+1}),
+  \qquad
+  A_n=A/\mathfrak m^{n+1}.
+\]
+\end{env}
+
+\begin{proposition}[7.5.2]
+\label{III.7.5.2}
+Sean $A$ un anillo local noetheriano de ideal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ su cuerpo residual y $T$ un funtor covariante
+aditivo de $\cat{Ab}_A$ en $\cat{Ab}$, semiexacto y que conmuta con
+los límites inductivos. Supongamos además que, para todo $A$-módulo
+de tipo finito $M$, $T(M)$ es un $A$-módulo de tipo finito y que el
+homomorfismo canónico \eqref{III.7.5.1.1.eq} es un isomorfismo. En
+estas condiciones, las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T$ es exacto por la derecha;
+  \item[(b)] para todo $n$, el funtor $N\mapsto T(N)$ es exacto por
+    la derecha en la categoría de los $A_n$-módulos de tipo finito;
+    equivalentemente, $T$ es exacto por la derecha en la categoría
+    de los $A$-módulos de longitud finita;
+  \item[(c)] el homomorfismo canónico
+    \[
+      T(\varepsilon):T(A)\longrightarrow T(k)
+    \]
+    es sobreyectivo;
+  \item[(d)] para todo $n$ suficientemente grande, el homomorfismo
+    canónico
+    \[
+      T(A_n)\longrightarrow T(k)
+    \]
+    es sobreyectivo.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Es claro que (a) implica (b). Demostremos el recíproco. Sea
+$u:M\to N$ un epimorfismo de $A$-módulos; debemos probar que $T(u)$
+es un epimorfismo. Como $T$ conmuta con los límites inductivos y los
+límites inductivos filtrantes son exactos en la categoría de los
+módulos, basta considerar el caso en que $M$ y $N$ son de tipo
+finito.
+
+Los módulos $T(M)$ y $T(N)$ son entonces de tipo finito. Como $A$ es
+noetheriano y local, basta probar que
+\[
+  (T(u))^{\widehat{\,}}:
+  (T(M))^{\widehat{\,}}
+  \longrightarrow
+  \widehat{T(N)}
+\]
+es sobreyectivo \sref[0]{0.7.3.5} y \sref[0]{0.6.4.1}. Por hipótesis,
+$(T(M))^{\widehat{\,}}$ y $\widehat{T(N)}$ son, respectivamente,
+\[
+  \varprojlim_n T(M_n)
+  \quad\hbox{y}\quad
+  \varprojlim_n T(N_n).
+\]
+Así, $(T(u))^{\widehat{\,}}$ es el límite inverso del sistema proyectivo de
+homomorfismos
+\[
+  T(u\otimes 1_{A_n}):T(M_n)\longrightarrow T(N_n).
+\]
+La condición (b) significa precisamente que estos homomorfismos son
+sobreyectivos. Además, $T(M_n)$ es un $A_n$-módulo de tipo finito y
+$A_n$ es artiniano. Se sigue que $(T(u))^{\widehat{\,}}$ es sobreyectivo
+\sref[0]{0.13.1.2} y \sref[0]{0.13.2.2}.
+
+Es claro que (a) implica (c), y (c) implica (d). Finalmente,
+\sref{III.7.2.7} muestra que (b) y (d) son equivalentes, pues $T$ es
+semiexacto en $\cat{Ab}_{A_n}$. Esto termina la demostración.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+\label{III.7.5.3}
+Bajo las hipótesis generales de \sref{III.7.5.2}, si $T(k)=0$,
+entonces $T(M)=0$ para todo $A$-módulo $M$.
+\end{corollary}
+
+\begin{proof}
+----- French corrections on page III 189 -----
+[id 7391]
+OLD: \[
+  T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M)
+\]
+NEW: $T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M)$
+FRENCH CONTEXT (corrected): {Hom}(\check P_{p-1},M)
+\]
+\oldpage[III]{189}
+où $v'=\operatorname{Hom}({}^t d_p,1)$; lorsqu'on identifie canoniquement
+$P_i\otimes M$ à $\operatorname{Hom}(\check P_i,M)$, $v'$ s'identifie donc à
+$v=d_p\otimes1$, et l'on a par suite l'isomorphisme fonctoriel
+$T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M)$
+cherché. En outre, $Q$, étant un quotient de $\check P_p$, est de type fini.
+\end{proof}
+
+\begin{proposition}[7.4.7]
+Supposons vérifiées les conditions générales de \textup{(7.4.4)}. Alors, pour tout
+$A$-module $M$ de type fini :
+\begin{enumerate}
+  \item[\te
+
+[id 7392]
+OLD: générales de (7.4.4). Alors
+NEW: générales de \textup{(7.4.4)}. Alors
+FRENCH CONTEXT (corrected): otimes1$, et l'on a par suite l'isomorphisme fonctoriel
+$T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M)$
+cherché. En outre, $Q$, étant un quotient de $\check P_p$, est de type fini.
+\end{proof}
+
+\begin{proposition}[7.4.7]
+Supposons vérifiées les conditions générales de \textup{(7.4.4)}. Alors, pour tout
+$A$-module $M$ de type fini :
+\begin{enumerate}
+  \item[\textup{(i)}] Les $T_i(M)$ sont des $A$-modules de type fini.
+  \item[\textup{(ii)}] Pour tout idéal $\mathfrak m$ de $A$, l'homomorphisme canonique
+    \[
+      (T_i(M))^{\widehat{\,}}
+      
+
+[id 7396]
+OLD: \[
+  K(M)=\operatorname{Ker}(u\otimes1_M),
+  \qquad
+  C(M)=\operatorname{Coker}(u\otimes1_M);
+\]
+NEW: $K(M)=\operatorname{Ker}(u\otimes1_M)$,
+$C(M)=\operatorname{Coker}(u\otimes1_M)$;
+FRENCH CONTEXT (corrected): ertion (i). Quant à l'assertion (ii), elle résulte plus
+généralement du lemme suivant :
+\end{proof}
+
+\begin{lemma}[7.4.7.2]
+Soient $A$ un anneau noethérien, $u:E\to F$ un homomorphisme de $A$-modules de
+type fini. Pour tout $A$-module $M$ de type fini, posons
+$K(M)=\operatorname{Ker}(u\otimes1_M)$,
+$C(M)=\operatorname{Coker}(u\otimes1_M)$;
+alors les homomorphismes canoniques
+\[
+  (K(M))^{\widehat{\,}}\longrightarrow\varprojlim_n K(M_n),
+  \qquad
+  (C(M))^{\widehat{\,}}\longrightarrow\varprojlim_n C(M_n)
+  \tag{7.4.7.3}\label{III.7.4.7.3.fr}
+\]
+(où l'on a posé
+$M_n=M\otimes_A(A/\mathfrak m^{n+1}
+
+[id 7400]
+OLD: est exact dans la catégorie
+NEW: est \emph{exact} dans la catégorie
+FRENCH CONTEXT (corrected):  catégorie des $(\mathcal O_Y|U)$-Modules~; en effet, cette
+fibre s'identifie canoniquement à
+$\mathcal G_y\otimes_{\mathcal O_y}\mathcal F_x$, et notre assertion résulte
+de la définition. En particulier, si $f$ est un morphisme \emph{plat}, le foncteur
+$f^*$ est \emph{exact} dans la catégorie des $\mathcal O_Y$-Modules.
+\end{env}
+
+\begin{env}[6.7.3]
+\label{0.6.7.3-fr}
+Inversement, supposons le faisceau d'anneaux $\mathcal O_Y$ \emph{cohérent}, et
+supposons que pour \emph{tout} voisinage ouvert $U$ de $y$, le foncteur
+$(f^*(\mathcal G)\otimes_{\mat
+
+[id 7401]
+OLD: ($0_{\mathrm I}$, 7.3.3)
+NEW: ($\mathbf{0}_{\mathrm I}$, 7.3.3)
+FRENCH CONTEXT (corrected): \mathfrak m^{n+1}M$) sont bijectifs
+pour tout idéal $\mathfrak m$ de $A$.
+\end{lemma}
+
+\begin{proof}
+Comme $E\otimes M$ et $F\otimes M$ sont de type fini, et que le foncteur
+$M\leadsto\widehat M$ est \emph{exact} dans la catégorie des $A$-modules de type fini
+($\mathbf{0}_{\mathrm I}$, 7.3.3), $(K(M))^{\widehat{\,}}$ et $(C(M))^{\widehat{\,}}$ sont
+respectivement le noyau et le conoyau de
+$(u\otimes1)^{\widehat{\,}}:(E\otimes M)^{\widehat{\,}}\longrightarrow(F\otimes M)^{\widehat{\,}}$.
+L'exactitude à gauche du foncteur $\varprojlim$ montre donc q
+
+[id 7402]
+OLD: $\widehat{K(M)}$ et $\widehat{C(M)}$ sont
+NEW: $(K(M))^{\widehat{\,}}$ et $(C(M))^{\widehat{\,}}$ sont
+FRENCH CONTEXT (corrected): 
+pour tout idéal $\mathfrak m$ de $A$.
+\end{lemma}
+
+\begin{proof}
+Comme $E\otimes M$ et $F\otimes M$ sont de type fini, et que le foncteur
+$M\leadsto\widehat M$ est \emph{exact} dans la catégorie des $A$-modules de type fini
+($\mathbf{0}_{\mathrm I}$, 7.3.3), $(K(M))^{\widehat{\,}}$ et $(C(M))^{\widehat{\,}}$ sont
+respectivement le noyau et le conoyau de
+$(u\otimes1)^{\widehat{\,}}:(E\otimes M)^{\widehat{\,}}\longrightarrow(F\otimes M)^{\widehat{\,}}$.
+L'exactitude à gauche du foncteur $\varprojlim$ montre donc que
+$(K(M))^{\widehat{\,}}=\varprojlim K(M_n)$; d'autre pa
+
+[id 7403]
+OLD: \[
+  \widehat{(u\otimes1)}:
+  \widehat{(E\otimes M)}\longrightarrow\widehat{(F\otimes M)}.
+\]
+NEW: $(u\otimes1)^{\widehat{\,}}:(E\otimes M)^{\widehat{\,}}\longrightarrow(F\otimes M)^{\widehat{\,}}$.
+FRENCH CONTEXT (corrected):  M$ sont de type fini, et que le foncteur
+$M\leadsto\widehat M$ est \emph{exact} dans la catégorie des $A$-modules de type fini
+($\mathbf{0}_{\mathrm I}$, 7.3.3), $(K(M))^{\widehat{\,}}$ et $(C(M))^{\widehat{\,}}$ sont
+respectivement le noyau et le conoyau de
+$(u\otimes1)^{\widehat{\,}}:(E\otimes M)^{\widehat{\,}}\longrightarrow(F\otimes M)^{\widehat{\,}}$.
+L'exactitude à gauche du foncteur $\varprojlim$ montre donc que
+$(K(M))^{\widehat{\,}}=\varprojlim K(M_n)$; d'autre part, l'exactitude à droite du
+produit tensoriel prouve que
+$C(M_n)=C(M)\otimes_A(A/\mathfrak m^{n+1})$, donc
+$(C(M))^{\widehat{\,}}=\varprojli
+
+[id 7406]
+OLD: à un complexe de tels
+NEW: à un \emph{complexe} de tels
+FRENCH CONTEXT (corrected):  supplémentaire, (7.4.7) redonne le fait que (4.1.7.1) est un
+isomorphisme, c'est-à-dire l'essentiel du « premier théorème de comparaison »
+pour les morphismes propres; en outre, l'énoncé s'applique non plus seulement
+à un $\mathscr O_X$-Module cohérent, mais à un \emph{complexe} de tels Modules. Il
+serait intéressant d'obtenir un énoncé comprenant à la fois (7.4.7) et
+(4.1.7.1) comme cas particuliers. On notera que lorsque les $P_i$ sont de type
+fini, la démonstration de (7.4.7) n'utilise pas le fait que ce sont des modules
+plats; il y aurai
+
+[id 24646]
+OLD: Pour tout $A$-module de type fini, posons
+NEW: Pour tout $A$-module $M$ de type fini, posons
+FRENCH CONTEXT (corrected):  M$ sont de type fini,
+d'où trivialement l'assertion (i). Quant à l'assertion (ii), elle résulte plus
+généralement du lemme suivant :
+\end{proof}
+
+\begin{lemma}[7.4.7.2]
+Soient $A$ un anneau noethérien, $u:E\to F$ un homomorphisme de $A$-modules de
+type fini. Pour tout $A$-module $M$ de type fini, posons
+$K(M)=\operatorname{Ker}(u\otimes1_M)$,
+$C(M)=\operatorname{Coker}(u\otimes1_M)$;
+alors les homomorphismes canoniques
+\[
+  (K(M))^{\widehat{\,}}\longrightarrow\varprojlim_n K(M_n),
+  \qquad
+  (C(M))^{\widehat{\,}}\longrightarrow\varprojlim_n C(M_n)
+  \tag{7.4
+
+=================== PAGE III 190 ===================
+----- (Spanish page III 189: shown above in this file) -----
+----- (Spanish page III 190: shown above in this file) -----
+----- Spanish, III2/units/III.7.5.es.tex, page III 191 -----
+\oldpage[III]{191}
+Como $k$ es el único $A$-módulo simple, de
+\eqref{III.7.3.5.4.eq} se deduce que $T(E)=0$ para todo $A$-módulo
+de longitud finita $E$. Si $M$ es de tipo finito, entonces
+\[
+  (T(M))^{\widehat{\,}}
+  \simeq
+  \varprojlim_n T(M_n).
+\]
+Cada $M_n$ es de longitud finita, de modo que
+$(T(M))^{\widehat{\,}}=0$. Por hipótesis, $T(M)$ es de tipo finito y se
+inyecta en $(T(M))^{\widehat{\,}}$ \sref[0]{0.7.3.5}; por consiguiente,
+$T(M)=0$. Finalmente, para un $A$-módulo arbitrario $M$, el módulo
+$T(M)$ es el límite inductivo de los $T(N_\alpha)$, donde los
+$N_\alpha$ recorren los submódulos de tipo finito de $M$. Esto
+termina la demostración.
+\end{proof}
+
+\begin{proposition}[7.5.4]
+\label{III.7.5.4}
+Sean $A$ un anillo local noetheriano de ideal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ su cuerpo residual y $T_\bullet$ un funtor
+homológico de $\cat{Ab}_A$ en $\cat{Ab}$ que conmuta con los límites
+inductivos. Supongamos además que, para todo $i$ y todo $A$-módulo
+de tipo finito $M$, $T_i(M)$ es de tipo finito y el homomorfismo
+canónico
+\[
+  \widehat{T_i(M)}
+  \longrightarrow
+  \varprojlim_n T_i(M_n)
+\]
+es biyectivo. Para un entero dado $p$, las condiciones siguientes
+son equivalentes:
+\begin{enumerate}
+  \item[(a)] $T_p$ es exacto;
+  \item[(b)] $T_p$ es exacto por la derecha y $T_p(A)$ es un
+    $A$-módulo libre;
+  \item[(c)] los homomorfismos canónicos
+    \[
+      T_{p+1}(A)\longrightarrow T_{p+1}(k),
+      \qquad
+      T_p(A)\longrightarrow T_p(k)
+    \]
+    son sobreyectivos;
+  \item[(d)] para todo $n$, los homomorfismos canónicos
+    \[
+      T_{p+1}(A_n)\longrightarrow T_{p+1}(k),
+      \qquad
+      T_p(A_n)\longrightarrow T_p(k)
+    \]
+    son sobreyectivos;
+  \item[(e)] para todo $n$, el funtor $N\mapsto T_p(N)$ es exacto
+    en la categoría de los $A_n$-módulos de tipo finito.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Por \sref{III.7.3.3}, la condición (a) equivale a decir que
+$T_{p+1}$ y $T_p$ son exactos por la derecha. Como $T_\bullet$ es
+un funtor homológico en $\cat{Ab}_{A_n}$, el mismo razonamiento que
+en \sref{III.7.3.1} muestra que (e) equivale a decir que $T_p$ y
+$T_{p+1}$ son exactos por la derecha en la categoría de los
+$A_n$-módulos de tipo finito. Se deduce de \sref{III.7.5.2} que (a)
+y (e) son equivalentes; la misma proposición da también la
+equivalencia de (a), (c) y (d).
+
+Finalmente, todo módulo plano de tipo finito sobre el anillo local
+$A$ es \emph{libre} (Bourbaki, \emph{Algèbre commutative}, cap.~II,
+\S~3, n\textsuperscript{o}~2, cor.~2 de la prop.~5). La equivalencia
+de (a) y (b) resulta entonces de \sref{III.7.3.1} y
+\sref{III.7.3.3}.
+\end{proof}
+
+\begin{corollary}[7.5.5]
+\label{III.7.5.5}
+Supongamos verificadas las hipótesis generales de
+\sref{III.7.5.4}.
+\begin{enumerate}
+  \item[\textup{(i)}] Si $T_p(k)=0$, entonces $T_p=0$, el funtor $T_{p+1}$
+    es exacto por la derecha y $T_{p-1}$ es exacto por la izquierda.
+  \item[\textup{(ii)}] Si $T_{p-1}(k)=T_{p+1}(k)=0$, entonces $T_p$ es
+    exacto, el homomorfismo canónico
+    \[
+      T_p(A)\otimes_A M
+      \longrightarrow
+      T_p(M)
+    \]
+    es biyectivo y $T_p(A)$ es un $A$-módulo libre.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La aserción (i) se deduce inmediatamente de \sref{III.7.5.3}, pues
+$T_p$ es semiexacto; la última aserción resulta de la definición de
+funtor homológico. Teniendo en cuenta \sref{III.7.3.3}, (i) da de
+inmediato las dos primeras aserciones de (ii), y el hecho de que
+$T_p(A)$ sea libre resulta de \sref{III.7.5.4}.
+\end{proof}
+
+\begin{corollary}[7.5.6]
+\label{III.7.5.6}
+Supongamos verificadas las hipótesis generales de
+\sref{III.7.5.4}, y supongamos además que $A$ es un anillo de
+valuación discreta.
+\begin{enumerate}
+  \item[\textup{(i)}] El funtor $T_p$ es exacto por la derecha si y solo si
+    $T_{p-1}(A)$ es un $A$-módulo libre.
+  \item[\textup{(ii)}] El funtor $T_p$ es exacto si y solo si $T_p(A)$ y
+    $T_{p-1}(A)$ son $A$-módulos libres.
+\end{enumerate}
+\end{corollary}
+----- French corrections on page III 190 -----
+[id 7407]
+OLD: \subsection{Cas des anneaux locaux noethériens}
+NEW: \subsection{Cas des anneaux locaux noethériens.}
+FRENCH CONTEXT (corrected): emplacer $P_\bullet$ par un complexe
+$P'_\bullet$ de $A$-modules de type fini tel que les foncteurs
+$H_\bullet(P_\bullet\otimes M)$ et $H_\bullet(P'_\bullet\otimes M)$ (qui ne
+sont plus homologiques) soient encore isomorphes ?
+\end{remark}
+
+\oldpage[III]{190}
+\subsection{Cas des anneaux locaux noethériens.}
+\label{subsection:III.7.5.fr}
+
+\begin{env}[7.5.1]
+Soient $A$ un anneau local noethérien, $\mathfrak m$ son idéal maximal, et pour
+tout $A$-module $M$, désignons par $\widehat M$ son séparé complété pour la
+topologie $\mathfrak m$-préadique, isomorphe à
+$\varp
+
+[id 7408]
+OLD: \[
+  \varprojlim_n\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+  =
+  \varprojlim_n\bigl(M/\mathfrak m^{n+1}M\bigr).
+\]
+NEW: $\varprojlim\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)=\varprojlim\bigl(M/\mathfrak m^{n+1}M\bigr)$.
+FRENCH CONTEXT (corrected): iens.}
+\label{subsection:III.7.5.fr}
+
+\begin{env}[7.5.1]
+Soient $A$ un anneau local noethérien, $\mathfrak m$ son idéal maximal, et pour
+tout $A$-module $M$, désignons par $\widehat M$ son séparé complété pour la
+topologie $\mathfrak m$-préadique, isomorphe à
+$\varprojlim\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)=\varprojlim\bigl(M/\mathfrak m^{n+1}M\bigr)$.
+Soit $T$ un foncteur covariant additif de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$;
+les homomorphismes canoniques (7.2.3.1)
+\[
+  T(M)\otimes_A(A/\mathfrak m^{n+1})
+  \longrightarrow
+  T\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+\]
+forment évidemment un sys
+
+[id 7409]
+OLD: de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$;
+NEW: de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$;
+FRENCH CONTEXT (corrected):  $A$-module $M$, désignons par $\widehat M$ son séparé complété pour la
+topologie $\mathfrak m$-préadique, isomorphe à
+$\varprojlim\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)=\varprojlim\bigl(M/\mathfrak m^{n+1}M\bigr)$.
+Soit $T$ un foncteur covariant additif de $\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$;
+les homomorphismes canoniques (7.2.3.1)
+\[
+  T(M)\otimes_A(A/\mathfrak m^{n+1})
+  \longrightarrow
+  T\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+\]
+forment évidemment un système projectif de $A$-homomorphismes, qui donnent donc
+à la limite un $\widehat A$-hom
+
+[id 7411]
+OLD: \[
+  M_n=M\otimes_A(A/\mathfrak m^{n+1}),
+  \qquad
+  A_n=A/\mathfrak m^{n+1}.
+\]
+NEW: $M_n=M\otimes_A(A/\mathfrak m^{n+1})$, $A_n=A/\mathfrak m^{n+1}$.
+FRENCH CONTEXT (corrected): ent évidemment un système projectif de $A$-homomorphismes, qui donnent donc
+à la limite un $\widehat A$-homomorphisme fonctoriel en $M$
+\[
+  (T(M))^{\widehat{\,}}
+  \longrightarrow
+  \varprojlim_n T(M_n)
+  \tag{7.5.1.1}\label{III.7.5.1.1.fr}
+\]
+où l'on a posé
+$M_n=M\otimes_A(A/\mathfrak m^{n+1})$, $A_n=A/\mathfrak m^{n+1}$.
+\end{env}
+
+\begin{proposition}[7.5.2]
+Soient $A$ un anneau local noethérien d'idéal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ son corps résiduel, $T$ un foncteur covariant additif de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, semi-exact et commutant aux limites
+induc
+
+[id 7412]
+OLD: (7.5.1.1) est un isomorphisme
+NEW: \textup{(7.5.1.1)} est un isomorphisme
+FRENCH CONTEXT (corrected): uel, $T$ un foncteur covariant additif de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, semi-exact et commutant aux limites
+inductives. On suppose en outre que pour tout $A$-module de type fini $M$,
+$T(M)$ est un $A$-module de type fini et que l'homomorphisme canonique
+\textup{(7.5.1.1)} est un isomorphisme. Sous ces conditions, les propriétés suivantes
+sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T$ est exact à droite.
+  \item[b)] Pour tout $n$, le foncteur $N\leadsto T(N)$ est exact à droite dans
+    la catégorie des $A_n$-modules de type fini \textup{(c
+
+[id 7414]
+OLD: (ce qui revient à dire que $T$
+    est exact à droite dans la catégorie des $A$-modules de longueur finie)
+NEW: \textup{(ce qui revient à dire que $T$
+    est exact à droite dans la catégorie des $A$-modules \emph{de longueur finie})}
+FRENCH CONTEXT (corrected): omorphisme. Sous ces conditions, les propriétés suivantes
+sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T$ est exact à droite.
+  \item[b)] Pour tout $n$, le foncteur $N\leadsto T(N)$ est exact à droite dans
+    la catégorie des $A_n$-modules de type fini \textup{(ce qui revient à dire que $T$
+    est exact à droite dans la catégorie des $A$-modules \emph{de longueur finie})}.
+  \item[c)] L'homomorphisme canonique
+    $T(\varepsilon):T(A)\longrightarrow T(k)$
+    est surjectif.
+  \item[d)] Pour tout $n$ assez grand, l'homomorphisme canonique
+    $T(A_n)\longrightarrow T(k)$
+    est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\be
+
+[id 7415]
+OLD: \[
+      T(\varepsilon):T(A)\longrightarrow T(k)
+    \]
+NEW: $T(\varepsilon):T(A)\longrightarrow T(k)$
+FRENCH CONTEXT (corrected): teur $N\leadsto T(N)$ est exact à droite dans
+    la catégorie des $A_n$-modules de type fini \textup{(ce qui revient à dire que $T$
+    est exact à droite dans la catégorie des $A$-modules \emph{de longueur finie})}.
+  \item[c)] L'homomorphisme canonique
+    $T(\varepsilon):T(A)\longrightarrow T(k)$
+    est surjectif.
+  \item[d)] Pour tout $n$ assez grand, l'homomorphisme canonique
+    $T(A_n)\longrightarrow T(k)$
+    est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que \emph{a)} entraîne \emph{b)}. Montrons que \emph{b)} entr
+
+[id 7416]
+OLD: \[
+      T(A_n)\longrightarrow T(k)
+    \]
+NEW: $T(A_n)\longrightarrow T(k)$
+FRENCH CONTEXT (corrected): T$
+    est exact à droite dans la catégorie des $A$-modules \emph{de longueur finie})}.
+  \item[c)] L'homomorphisme canonique
+    $T(\varepsilon):T(A)\longrightarrow T(k)$
+    est surjectif.
+  \item[d)] Pour tout $n$ assez grand, l'homomorphisme canonique
+    $T(A_n)\longrightarrow T(k)$
+    est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que \emph{a)} entraîne \emph{b)}. Montrons que \emph{b)} entraîne \emph{a)}, c'est-à-dire que
+si $u:M\to N$ est un épimorphisme de $A$-modules, $T(u)$ est un épimorphisme.
+Comme 
+
+[id 7417]
+OLD: Il est clair que a) entraîne b). Montrons que b) entraîne a),
+NEW: Il est clair que \emph{a)} entraîne \emph{b)}. Montrons que \emph{b)} entraîne \emph{a)},
+FRENCH CONTEXT (corrected): )] L'homomorphisme canonique
+    $T(\varepsilon):T(A)\longrightarrow T(k)$
+    est surjectif.
+  \item[d)] Pour tout $n$ assez grand, l'homomorphisme canonique
+    $T(A_n)\longrightarrow T(k)$
+    est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que \emph{a)} entraîne \emph{b)}. Montrons que \emph{b)} entraîne \emph{a)}, c'est-à-dire que
+si $u:M\to N$ est un épimorphisme de $A$-modules, $T(u)$ est un épimorphisme.
+Comme $T$ commute aux limites inductives et que le foncteur $\varinjlim$ est
+exact dans la catégorie des modules (pour des ensembles d'indices filtrants),
+on peut s
+
+[id 7418]
+OLD: \[
+  \widehat{T(u)}:
+  \widehat{T(M)}
+  \longrightarrow
+  \widehat{T(N)}
+\]
+NEW: $(T(u))^{\widehat{\,}}:(T(M))^{\widehat{\,}}\longrightarrow(T(N))^{\widehat{\,}}$
+FRENCH CONTEXT (corrected): im$ est
+exact dans la catégorie des modules (pour des ensembles d'indices filtrants),
+on peut se borner au cas où $M$ et $N$ sont de type fini. Comme $T(M)$ et
+$T(N)$ sont alors de type fini, et que $A$ est un anneau local noethérien, il
+suffit de montrer que
+$(T(u))^{\widehat{\,}}:(T(M))^{\widehat{\,}}\longrightarrow(T(N))^{\widehat{\,}}$
+est surjectif ($\mathbf{0}_{\mathrm I}$, 7.3.5 et $\mathbf{0}_{\mathrm I}$, 6.4.1). Par hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du 
+
+[id 7419]
+OLD: ($0_{\mathrm I}$, 7.3.5 et
+NEW: ($\mathbf{0}_{\mathrm I}$, 7.3.5 et
+FRENCH CONTEXT (corrected):  borner au cas où $M$ et $N$ sont de type fini. Comme $T(M)$ et
+$T(N)$ sont alors de type fini, et que $A$ est un anneau local noethérien, il
+suffit de montrer que
+$(T(u))^{\widehat{\,}}:(T(M))^{\widehat{\,}}\longrightarrow(T(N))^{\widehat{\,}}$
+est surjectif ($\mathbf{0}_{\mathrm I}$, 7.3.5 et $\mathbf{0}_{\mathrm I}$, 6.4.1). Par hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A
+
+[id 7420]
+OLD: $0_{\mathrm I}$, 6.4.1)
+NEW: $\mathbf{0}_{\mathrm I}$, 6.4.1)
+FRENCH CONTEXT (corrected):  type fini. Comme $T(M)$ et
+$T(N)$ sont alors de type fini, et que $A$ est un anneau local noethérien, il
+suffit de montrer que
+$(T(u))^{\widehat{\,}}:(T(M))^{\widehat{\,}}\longrightarrow(T(N))^{\widehat{\,}}$
+est surjectif ($\mathbf{0}_{\mathrm I}$, 7.3.5 et $\mathbf{0}_{\mathrm I}$, 6.4.1). Par hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)
+
+[id 7421]
+OLD: $\widehat{T(M)}$ et $\widehat{T(N)}$ sont respectivement
+NEW: $(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement
+FRENCH CONTEXT (corrected): type fini, et que $A$ est un anneau local noethérien, il
+suffit de montrer que
+$(T(u))^{\widehat{\,}}:(T(M))^{\widehat{\,}}\longrightarrow(T(N))^{\widehat{\,}}$
+est surjectif ($\mathbf{0}_{\mathrm I}$, 7.3.5 et $\mathbf{0}_{\mathrm I}$, 6.4.1). Par hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M
+
+[id 7422]
+OLD: $\varprojlim_n T(M_n)$
+et $\varprojlim_n T(N_n)$
+NEW: $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$
+FRENCH CONTEXT (corrected): rer que
+$(T(u))^{\widehat{\,}}:(T(M))^{\widehat{\,}}\longrightarrow(T(N))^{\widehat{\,}}$
+est surjectif ($\mathbf{0}_{\mathrm I}$, 7.3.5 et $\mathbf{0}_{\mathrm I}$, 6.4.1). Par hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_
+
+[id 7424]
+OLD: \[
+  T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n).
+\]
+NEW: $T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+FRENCH CONTEXT (corrected): m I}$, 7.3.5 et $\mathbf{0}_{\mathrm I}$, 6.4.1). Par hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.
+
+[id 7425]
+OLD: Or, b) signifie
+NEW: Or, \emph{b)} signifie
+FRENCH CONTEXT (corrected): ar hypothèse,
+$(T(M))^{\widehat{\,}}$ et $(T(N))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que 
+
+[id 7426]
+OLD: sont surjectifs;
+NEW: sont \emph{surjectifs};
+FRENCH CONTEXT (corrected): ))^{\widehat{\,}}$ sont respectivement $\varprojlim T(M_n)$
+et $\varprojlim T(N_n)$, donc $(T(u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\vare
+
+[id 7427]
+OLD: anneau artinien par
+NEW: anneau \emph{artinien} par
+FRENCH CONTEXT (corrected): (u))^{\widehat{\,}}$ est limite du système projectif
+d'homomorphismes
+$T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \e
+
+[id 7429]
+OLD: ($0_{\mathrm I}$, 13.1.2 et
+NEW: (\textbf{0}, 13.1.2 et
+FRENCH CONTEXT (corrected): n)\longrightarrow T(N_n)$.
+Or, \emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque
+
+[id 7430]
+OLD: Il est clair que a) entraîne c)
+NEW: Il est clair que \emph{a)} entraîne \emph{c)}
+FRENCH CONTEXT (corrected): emph{b)} signifie que ces homomorphismes sont \emph{surjectifs}; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qu
+
+[id 7431]
+OLD: \[
+  T(A)\longrightarrow T(A_n)\longrightarrow T(k),
+\]
+NEW: $T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+FRENCH CONTEXT (corrected): n $A_n$-module de type fini, et $A_n$ est un anneau \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générale
+
+[id 7432]
+OLD: c) implique d);
+NEW: \emph{c)} implique \emph{d)};
+FRENCH CONTEXT (corrected): u \emph{artinien} par hypothèse; on
+en conclut que $(T(u))^{\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de \textup{(7.5.2)}, si $T(k
+
+[id 7433]
+OLD: que b) et d) sont
+NEW: que \emph{b)} et \emph{d)} sont
+FRENCH CONTEXT (corrected): {\widehat{\,}}$ est surjectif (\textbf{0}, 13.1.2 et
+13.2.2). Il est clair que \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de \textup{(7.5.2)}, si $T(k)=0$, alors $T(M)=0$ pour tout
+$A$-module $M$.
+\end{corollary
+
+[id 7434]
+OLD: $\mathbf{Ab}_{A_n}$
+NEW: $\boldsymbol{Ab}_{A_n}$
+FRENCH CONTEXT (corrected): e \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de \textup{(7.5.2)}, si $T(k)=0$, alors $T(M)=0$ pour tout
+$A$-module $M$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{191}
+Comme $k$ est le seul $A$-module 
+
+[id 7435]
+OLD: générales de (7.5.2), si
+NEW: générales de \textup{(7.5.2)}, si
+FRENCH CONTEXT (corrected): w T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de \textup{(7.5.2)}, si $T(k)=0$, alors $T(M)=0$ pour tout
+$A$-module $M$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{191}
+Comme $k$ est le seul $A$-module simple, on déduit de (7.3.5.4) que $T(E)=0$
+pour tout $A$-module de longueur finie $E$. Si maintenant $M$ est de type fini,
+$
+
+=================== PAGE III 191 ===================
+----- (Spanish page III 190: shown above in this file) -----
+----- (Spanish page III 191: shown above in this file) -----
+----- Spanish, III2/units/III.7.5.es.tex, page III 192 -----
+\oldpage[III]{192}
+\begin{proof}
+Es claro que (ii) implica (i) (cf.\ \sref{III.7.3.3}). Para probar
+(i), sea $f$ un generador del ideal maximal de $A$, es decir, un
+uniformizador de $A$. Un $A$-módulo de tipo finito $M$ es libre,
+equivalentemente plano, si y solo si la homotecia
+\[
+  h_f:M\longrightarrow M,\qquad x\longmapsto fx,
+\]
+es inyectiva, pues en la situación presente esto equivale a decir
+que $M$ es sin torsión \sref[0]{0.6.3.4}. La sucesión exacta
+\[
+  0
+  \longrightarrow A
+  \xrightarrow{h_f}
+  A
+  \longrightarrow k
+  \longrightarrow 0
+\]
+da la sucesión exacta de homología
+\[
+  T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow T_{p-1}(A)
+  \xrightarrow{h_f}
+  T_{p-1}(A)
+\]
+Así, $T_{p-1}(A)$ es libre si y solo si
+$T_p(A)\to T_p(k)$ es sobreyectivo, y la conclusión resulta de
+\sref{III.7.5.2}.
+\end{proof}
+
+\begin{remark}[7.5.7]
+\label{III.7.5.7}
+En virtud de \sref{III.7.4.7}, las hipótesis generales de
+\sref{III.7.4.4} implican que el funtor homológico $T_\bullet$
+definido por \eqref{III.7.4.1.1.eq} satisface las hipótesis generales
+de \sref{III.7.5.4}. En este caso, \sref{III.7.5.6} está, por tanto,
+contenido en \sref{III.7.4.3}.
+\end{remark}
+----- French corrections on page III 191 -----
+[id 7437]
+OLD: $\varprojlim_n T(M_n)$, et comme
+NEW: $\varprojlim T(M_n)$, et comme
+FRENCH CONTEXT (corrected): -module $M$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{191}
+Comme $k$ est le seul $A$-module simple, on déduit de (7.3.5.4) que $T(E)=0$
+pour tout $A$-module de longueur finie $E$. Si maintenant $M$ est de type fini,
+$(T(M))^{\widehat{\,}}$ est isomorphe à $\varprojlim T(M_n)$, et comme les $M_n$ sont
+de longueur finie, on a $(T(M))^{\widehat{\,}}=0$; comme $T(M)$ est de type fini par
+hypothèse, il est isomorphe à un sous-module de $(T(M))^{\widehat{\,}}$
+($\mathbf{0}_{\mathrm I}$, 7.3.5), donc on a $T(M)=0$. Enfin, pour un $A$-module $M$
+qu
+
+[id 7440]
+OLD: ($0_{\mathrm I}$, 7.3.5)
+NEW: ($\mathbf{0}_{\mathrm I}$, 7.3.5)
+FRENCH CONTEXT (corrected): st de type fini,
+$(T(M))^{\widehat{\,}}$ est isomorphe à $\varprojlim T(M_n)$, et comme les $M_n$ sont
+de longueur finie, on a $(T(M))^{\widehat{\,}}=0$; comme $T(M)$ est de type fini par
+hypothèse, il est isomorphe à un sous-module de $(T(M))^{\widehat{\,}}$
+($\mathbf{0}_{\mathrm I}$, 7.3.5), donc on a $T(M)=0$. Enfin, pour un $A$-module $M$
+quelconque, $T(M)$ est limite inductive des $T(N_\alpha)$ pour les sous-modules
+de type fini $N_\alpha$ de $M$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[7.5.4]
+Soient $A$ un anneau loc
+
+[id 7441]
+OLD: \[
+  \widehat{T_i(M)}
+  \longrightarrow
+  \varprojlim_n T_i(M_n)
+\]
+NEW: $(T_i(M))^{\widehat{\,}}\longrightarrow\varprojlim T_i(M_n)$
+FRENCH CONTEXT (corrected):  son corps résiduel, $T_\bullet$ un foncteur homologique de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux limites inductives. On suppose
+en outre que pour tout $i$ et tout $A$-module $M$ de type fini, $T_i(M)$ est de
+type fini et l'homomorphisme canonique
+$(T_i(M))^{\widehat{\,}}\longrightarrow\varprojlim T_i(M_n)$
+est bijectif. Pour un entier $p$ donné, les conditions suivantes sont alors
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact.
+  \item[b)] $T_p$ est exact à droite, et $T_p(A)$ est un $A$-module libre.
+  \item[c)] Les homomorphismes canoniques
+    
+
+[id 7442]
+OLD: \[
+      T_{p+1}(A)\longrightarrow T_{p+1}(k)
+      \quad\text{et}\quad
+      T_p(A)\longrightarrow T_p(k)
+    \]
+NEW: $T_{p+1}(A)\longrightarrow T_{p+1}(k)$ et $T_p(A)\longrightarrow T_p(k)$
+FRENCH CONTEXT (corrected): 
+est bijectif. Pour un entier $p$ donné, les conditions suivantes sont alors
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact.
+  \item[b)] $T_p$ est exact à droite, et $T_p(A)$ est un $A$-module libre.
+  \item[c)] Les homomorphismes canoniques
+    $T_{p+1}(A)\longrightarrow T_{p+1}(k)$ et $T_p(A)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[d)] Pour tout $n$, les homomorphismes canoniques
+    $T_{p+1}(A_n)\longrightarrow T_{p+1}(k)$ et $T_p(A_n)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[e)] Pour tout $n$, le foncteur $N\leadsto T_p(N)$ est exact dans la
+   
+
+[id 7443]
+OLD: \[
+      T_{p+1}(A_n)\longrightarrow T_{p+1}(k)
+      \quad\text{et}\quad
+      T_p(A_n)\longrightarrow T_p(k)
+    \]
+NEW: $T_{p+1}(A_n)\longrightarrow T_{p+1}(k)$ et $T_p(A_n)\longrightarrow T_p(k)$
+FRENCH CONTEXT (corrected): $ est exact à droite, et $T_p(A)$ est un $A$-module libre.
+  \item[c)] Les homomorphismes canoniques
+    $T_{p+1}(A)\longrightarrow T_{p+1}(k)$ et $T_p(A)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[d)] Pour tout $n$, les homomorphismes canoniques
+    $T_{p+1}(A_n)\longrightarrow T_{p+1}(k)$ et $T_p(A_n)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[e)] Pour tout $n$, le foncteur $N\leadsto T_p(N)$ est exact dans la
+    catégorie des $A_n$-modules de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On sait (7.3.3) que \emph{a)} équivaut à dire que $T_{p+1}$ et $T_p
+
+[id 7444]
+OLD: $N\mapsto T_p(N)$
+NEW: $N\leadsto T_p(N)$
+FRENCH CONTEXT (corrected): 1}(k)$ et $T_p(A)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[d)] Pour tout $n$, les homomorphismes canoniques
+    $T_{p+1}(A_n)\longrightarrow T_{p+1}(k)$ et $T_p(A_n)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[e)] Pour tout $n$, le foncteur $N\leadsto T_p(N)$ est exact dans la
+    catégorie des $A_n$-modules de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On sait (7.3.3) que \emph{a)} équivaut à dire que $T_{p+1}$ et $T_p$ sont exacts à
+droite; comme $T_\bullet$ est un foncteur homologique dans la c
+
+[id 7445]
+OLD: que a) équivaut
+NEW: que \emph{a)} équivaut
+FRENCH CONTEXT (corrected): row T_{p+1}(k)$ et $T_p(A_n)\longrightarrow T_p(k)$
+    sont surjectifs.
+  \item[e)] Pour tout $n$, le foncteur $N\leadsto T_p(N)$ est exact dans la
+    catégorie des $A_n$-modules de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On sait (7.3.3) que \emph{a)} équivaut à dire que $T_{p+1}$ et $T_p$ sont exacts à
+droite; comme $T_\bullet$ est un foncteur homologique dans la catégorie
+$\boldsymbol{Ab}_{A_n}$, le même raisonnement que dans (7.3.1) montre que \emph{e)}
+équivaut à dire que $T_p$ et $T_{p+1}$ sont exacts à droite
+
+[id 7446]
+OLD: $\mathbf{Ab}_{A_n}$
+NEW: $\boldsymbol{Ab}_{A_n}$
+FRENCH CONTEXT (corrected): e \emph{a)} entraîne \emph{c)}, et comme $T(\varepsilon)$ se factorise
+en
+$T(A)\longrightarrow T(A_n)\longrightarrow T(k)$,
+\emph{c)} implique \emph{d)}; enfin, il résulte de (7.2.7) que \emph{b)} et \emph{d)} sont équivalentes
+puisque $T$ est semi-exact dans $\boldsymbol{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de \textup{(7.5.2)}, si $T(k)=0$, alors $T(M)=0$ pour tout
+$A$-module $M$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{191}
+Comme $k$ est le seul $A$-module 
+
+[id 7447]
+OLD: montre que e)
+équivaut
+NEW: montre que \emph{e)}
+équivaut
+FRENCH CONTEXT (corrected): umerate}
+\end{proposition}
+
+\begin{proof}
+On sait (7.3.3) que \emph{a)} équivaut à dire que $T_{p+1}$ et $T_p$ sont exacts à
+droite; comme $T_\bullet$ est un foncteur homologique dans la catégorie
+$\boldsymbol{Ab}_{A_n}$, le même raisonnement que dans (7.3.1) montre que \emph{e)}
+équivaut à dire que $T_p$ et $T_{p+1}$ sont exacts à droite dans la catégorie
+des $A_n$-modules de type fini. On déduit donc de (7.5.2) que \emph{a)} et \emph{e)} sont
+équivalentes; l'équivalence de \emph{a)}, \emph{c)} et \emph{d)} résulte aussi de (7.5.2). Enfin, on
+
+[id 7448]
+OLD: que a) et e) sont
+NEW: que \emph{a)} et \emph{e)} sont
+FRENCH CONTEXT (corrected):  foncteur homologique dans la catégorie
+$\boldsymbol{Ab}_{A_n}$, le même raisonnement que dans (7.3.1) montre que \emph{e)}
+équivaut à dire que $T_p$ et $T_{p+1}$ sont exacts à droite dans la catégorie
+des $A_n$-modules de type fini. On déduit donc de (7.5.2) que \emph{a)} et \emph{e)} sont
+équivalentes; l'équivalence de \emph{a)}, \emph{c)} et \emph{d)} résulte aussi de (7.5.2). Enfin, on
+sait que tout $A$-module plat de type fini est \emph{libre} (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5); l'équ
+
+[id 7449]
+OLD: l'équivalence de a), c) et d) résulte
+NEW: l'équivalence de \emph{a)}, \emph{c)} et \emph{d)} résulte
+FRENCH CONTEXT (corrected): symbol{Ab}_{A_n}$, le même raisonnement que dans (7.3.1) montre que \emph{e)}
+équivaut à dire que $T_p$ et $T_{p+1}$ sont exacts à droite dans la catégorie
+des $A_n$-modules de type fini. On déduit donc de (7.5.2) que \emph{a)} et \emph{e)} sont
+équivalentes; l'équivalence de \emph{a)}, \emph{c)} et \emph{d)} résulte aussi de (7.5.2). Enfin, on
+sait que tout $A$-module plat de type fini est \emph{libre} (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5); l'équivalence de \emph{a)} et \emph{b)} résulte alors de (7.3.1) et (7.3.3).
+\
+
+[id 7451]
+OLD: l'équivalence de a) et b) résulte
+NEW: l'équivalence de \emph{a)} et \emph{b)} résulte
+FRENCH CONTEXT (corrected): uasi-fini.
+\end{enumerate}
+\end{corollary}
+
+L'équivalence de \emph{a)} et \emph{c)} résulte de
+(\hyperref[II.6.2.1-fr]{6.2.1}). D'autre part, comme $f^{-1}(f(x))$ est un
+$\boldsymbol{k}(f(x))$-préschéma algébrique (\hyperref[I.6.4.11-fr]{\textbf{I}, 6.4.11}),
+l'équivalence de \emph{a)} et \emph{b)} résulte de (\hyperref[I.6.4.4-fr]{\textbf{I}, 6.4.4}).
+
+\begin{definition}[6.2.3]
+\label{II.6.2.3-fr}
+Lorsque $f:X\to Y$ est un morphisme de type fini vérifiant les conditions
+équivalentes de \textup{(\hyperref[II.6.2.2-fr]{6.2.2})}, on dit que $f$ est
+quasi-fini, ou
+
+[id 7452]
+OLD: conditions générales de (7.5.4).
+NEW: conditions générales de \textup{(7.5.4)}.
+FRENCH CONTEXT (corrected):  type fini est \emph{libre} (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5); l'équivalence de \emph{a)} et \emph{b)} résulte alors de (7.3.1) et (7.3.3).
+\end{proof}
+
+\begin{corollary}[7.5.5]
+Supposons vérifiées les conditions générales de \textup{(7.5.4)}.
+\begin{enumerate}
+  \item[\textup{(i)}] Si $T_p(k)=0$, on a $T_p=0$, $T_{p+1}$ est exact à droite et
+    $T_{p-1}$ est exact à gauche.
+  \item[\textup{(ii)}] Si $T_{p-1}(k)=T_{p+1}(k)=0$, $T_p$ est exact,
+    l'homomorphisme canonique
+    \[
+      T_p(A)\otim
+
+[id 7455]
+OLD: hypothèses générales de (7.5.4), et
+NEW: hypothèses générales de \textup{(7.5.4)}, et
+FRENCH CONTEXT (corrected): n résultant de la définition d'un foncteur homologique. On conclut
+aussitôt de (i) les deux premières assertions de (ii), compte tenu de (7.3.3);
+le fait que $T_p(A)$ soit libre résulte de (7.5.4).
+\end{proof}
+
+\begin{corollary}[7.5.6]
+Supposons vérifiées les hypothèses générales de \textup{(7.5.4)}, et supposons de plus
+que $A$ soit un anneau de valuation discrète.
+\begin{enumerate}
+  \item[\textup{(i)}] Pour que $T_p$ soit exact à droite, il faut et il suffit que
+    $T_{p-1}(A)$ soit un $A$-module libre.
+  \item[\textup{(ii)}] Pour que $T_p$ soit exact, i
+
+=================== PAGE III 192 ===================
+----- (Spanish page III 191: shown above in this file) -----
+----- (Spanish page III 192: shown above in this file) -----
+----- Spanish, III2/units/III.7.6.es.tex, page III 193 -----
+\oldpage[III]{193}
+El complejo $P_\bullet\otimes_A B$ está formado por $B$-módulos
+planos \sref[0]{0.6.2.1}, y para todo $B$-módulo $N$ se tiene
+\[
+  H_\bullet(P_\bullet\otimes_A N)
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr),
+\]
+y, por tanto,
+\[
+  T_p^{(B)}(N)
+  =
+  H_p\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr).
+\]
+Aplicando \sref{III.7.4.2} a $T_p^{(B)}$, vemos que la hipótesis de
+que $T_p^{(B)}$ es exacto por la derecha equivale a que
+$Z'_{p-1}(P_\bullet\otimes_A B)$ sea un $B$-módulo plano.
+
+El criterio precedente nos lleva a examinar más de cerca el caso de
+los anillos de valuación discreta.
+\end{proof}
+
+\begin{proposition}[7.6.3]
+\label{III.7.6.3}
+Bajo las hipótesis de \sref{III.7.4.1}, supongamos que $A$ es un
+anillo noetheriano regular de dimensión $1$ (es decir, que $A$ es
+noetheriano y, para todo $x\in\Spec(A)$, el anillo $A_x$ es un cuerpo
+o un anillo de valuación discreta). Entonces, para todo entero $p$ y
+todo $A$-módulo $M$, se tiene una sucesión exacta canónica, funtorial
+en $M$,
+\[
+  0
+  \longrightarrow T_p(A)\otimes_A M
+  \xrightarrow{t_M} T_p(M)
+  \longrightarrow
+  \Tor_1^A\bigl(T_{p-1}(A),M\bigr)
+  \longrightarrow 0.
+  \tag{7.6.3.1}\label{III.7.6.3.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En lo que sigue, para simplificar la notación omitiremos el complejo
+$P_\bullet$ de las notaciones homológicas usuales
+$H_p(P_\bullet)$, $B_p(P_\bullet)$, $Z_p(P_\bullet)$ y
+$Z'_p(P_\bullet)$. Se tienen las tres sucesiones exactas
+\begin{gather*}
+  0\longrightarrow H_p\longrightarrow Z'_p
+  \longrightarrow B_{p-1}\longrightarrow 0,\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}
+  \longrightarrow H_{p-1}\longrightarrow 0,\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}
+  \longrightarrow B_{p-2}\longrightarrow 0.
+\end{gather*}
+Como $P_{p-1}$ y $P_{p-2}$ son planos, también lo son sus
+submódulos respectivos $B_{p-1}$, $Z_{p-1}$ y $B_{p-2}$: para todo
+$x\in\Spec(A)$, los $A_x$-módulos planos y los $A_x$-módulos sin
+torsión son los mismos. Tensorizando por $M$ se obtienen, por tanto,
+las sucesiones exactas
+\[
+  0=\Tor_1^A(B_{p-1},M)
+  \longrightarrow H_p\otimes_A M
+  \longrightarrow Z'_p\otimes_A M
+  \xrightarrow{u}B_{p-1}\otimes_A M
+  \longrightarrow 0,
+  \tag{7.6.3.2}\label{III.7.6.3.2}
+\]
+\[
+  0=\Tor_1^A(Z_{p-1},M)
+  \longrightarrow \Tor_1^A(H_{p-1},M)
+  \longrightarrow B_{p-1}\otimes_A M
+  \xrightarrow{v} Z_{p-1}\otimes_A M,
+  \tag{7.6.3.3}\label{III.7.6.3.3}
+\]
+y
+\[
+  0=\Tor_1^A(B_{p-2},M)
+  \longrightarrow Z_{p-1}\otimes_A M
+  \xrightarrow{w}P_{p-1}\otimes_A M.
+  \tag{7.6.3.4}\label{III.7.6.3.4}
+\]
+
+Por definición,
+\[
+  T_p(M)=
+  \Ker(d_p\otimes 1)/\Im(d_{p+1}\otimes 1).
+\]
+Es, por tanto, el núcleo del homomorfismo
+\[
+  (P_p\otimes_A M)/\Im(d_{p+1}\otimes 1)
+  \longrightarrow P_{p-1}\otimes_A M
+\]
+inducido por $d_p\otimes 1$. Por la definición
+$Z'_p=P_p/B_p$, este homomorfismo también puede escribirse
+$Z'_p\otimes_A M\to P_{p-1}\otimes_A M$; es el compuesto
+\[
+  Z'_p\otimes_A M
+  \xrightarrow{u}B_{p-1}\otimes_A M
+  \xrightarrow{v}Z_{p-1}\otimes_A M
+  \xrightarrow{w}P_{p-1}\otimes_A M.
+\]
+Como $w$ es inyectivo por \eqref{III.7.6.3.4}, se tiene una sucesión
+exacta
+\[
+  0\longrightarrow\Ker u\longrightarrow T_p(M)
+  \longrightarrow\Ker v\longrightarrow 0.
+\]
+En vista de \eqref{III.7.6.3.2} y \eqref{III.7.6.3.3}, y puesto que
+$H_p=T_p(A)$ por definición, esta es precisamente
+\eqref{III.7.6.3.1}.
+\end{proof}
+
+\begin{remarks}[7.6.4]
+\label{III.7.6.4}
+\textnormal{(i)}
+El grupo $H_\bullet(P_\bullet\otimes_A M)$ es la homología del
+bicomplejo $P_\bullet\otimes_A M$, donde $M$ se considera como un
+complejo concentrado en grado $0$. Es, por consiguiente,
+\sref{III.6.3.6}\sref{III.6.3.2} el objeto al que converge la sucesión
+espectral regular cuyo término $E_2$ es
+\[
+  E^2_{pq}
+  =
+  \Tor_p^A\bigl(H_q(P_\bullet),M\bigr)
+  =
+  \Tor_p^A\bigl(T_q(A),M\bigr).
+\]
+----- French corrections on page III 192 -----
+[id 7552]
+OLD: $h_f:x\mapsto fx$
+NEW: $h_f:x\to fx$
+FRENCH CONTEXT (corrected): ique (ii) (cf. (7.3.3)). Pour prouver (i), remarquons
+que si $f$ est un générateur de l'idéal maximal de $A$ (« uniformisante » de
+$A$), pour qu'un $A$-module de type fini $M$ soit libre (ou plat, ce qui revient
+au même), il faut et il suffit que l'homothétie $h_f:x\to fx$ de $M$ soit
+injective, car cela équivaut ici à dire que $M$ est sans torsion
+($\mathbf{0}_{\mathrm I}$, 6.3.4). Considérons alors la suite exacte
+$0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0$,
+qui fournit la suite exacte d'homologie
+
+
+[id 7553]
+OLD: ($0_{\mathrm I}$, 6.3.4)
+NEW: ($\mathbf{0}_{\mathrm I}$, 6.3.4)
+FRENCH CONTEXT (corrected): al maximal de $A$ (« uniformisante » de
+$A$), pour qu'un $A$-module de type fini $M$ soit libre (ou plat, ce qui revient
+au même), il faut et il suffit que l'homothétie $h_f:x\to fx$ de $M$ soit
+injective, car cela équivaut ici à dire que $M$ est sans torsion
+($\mathbf{0}_{\mathrm I}$, 6.3.4). Considérons alors la suite exacte
+$0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0$,
+qui fournit la suite exacte d'homologie
+\[
+  T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow T_{p-1}(A)
+  \xrightarrow{h_f}T_{p-1}(A)
+\]
+
+On voit que
+
+[id 7554]
+OLD: la suite exacte
+\[
+  0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0,
+\]
+qui fournit
+NEW: la suite exacte
+$0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0$,
+qui fournit
+FRENCH CONTEXT (corrected): 'un $A$-module de type fini $M$ soit libre (ou plat, ce qui revient
+au même), il faut et il suffit que l'homothétie $h_f:x\to fx$ de $M$ soit
+injective, car cela équivaut ici à dire que $M$ est sans torsion
+($\mathbf{0}_{\mathrm I}$, 6.3.4). Considérons alors la suite exacte
+$0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0$,
+qui fournit la suite exacte d'homologie
+\[
+  T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow T_{p-1}(A)
+  \xrightarrow{h_f}T_{p-1}(A)
+\]
+
+On voit que $T_{p-1}(A)$ est libre si et seulement si
+$T_p(A)\to T_p(k)$ est surjectif; la conclusion résulte alors de (7.5.2).
+\en
+
+[id 7557]
+OLD: d'exactitude de Grauert}
+NEW: d'exactitude de Grauert.}
+FRENCH CONTEXT (corrected):  le foncteur homologique $T_\bullet$ défini par (7.4.1.1)
+satisfait aux hypothèses générales de (7.5.4). Dans ce cas, (7.5.6) est donc
+contenu dans (7.4.3).
+\end{remark}
+
+\subsection{Descente des propriétés d'exactitude. Théorème de semi-continuité
+et critère d'exactitude de Grauert.}
+\label{subsection:III.7.6.fr}
+
+\begin{proposition}[7.6.1]
+Sous les conditions de \textup{(7.4.1)}, soit $B$ une $A$-algèbre commutative. Si $T_p$
+est exact à droite \textup{(resp.} exact à gauche, exact) il en est de même de
+$T_p^{(B)}$; la réciproque est vra
+
+[id 7558]
+OLD: de (7.4.1), soit $B$
+NEW: de \textup{(7.4.1)}, soit $B$
+FRENCH CONTEXT (corrected):  Dans ce cas, (7.5.6) est donc
+contenu dans (7.4.3).
+\end{remark}
+
+\subsection{Descente des propriétés d'exactitude. Théorème de semi-continuité
+et critère d'exactitude de Grauert.}
+\label{subsection:III.7.6.fr}
+
+\begin{proposition}[7.6.1]
+Sous les conditions de \textup{(7.4.1)}, soit $B$ une $A$-algèbre commutative. Si $T_p$
+est exact à droite \textup{(resp.} exact à gauche, exact) il en est de même de
+$T_p^{(B)}$; la réciproque est vraie lorsque $B$ est un $A$-module fidèlement
+plat.
+\end{proposition}
+
+\begin{proof}
+La première assertion est
+
+[id 7559]
+OLD: (resp. exact à gauche, exact) il en
+NEW: \textup{(resp.} exact à gauche, exact) il en
+FRENCH CONTEXT (corrected):  des propriétés d'exactitude. Théorème de semi-continuité
+et critère d'exactitude de Grauert.}
+\label{subsection:III.7.6.fr}
+
+\begin{proposition}[7.6.1]
+Sous les conditions de \textup{(7.4.1)}, soit $B$ une $A$-algèbre commutative. Si $T_p$
+est exact à droite \textup{(resp.} exact à gauche, exact) il en est de même de
+$T_p^{(B)}$; la réciproque est vraie lorsque $B$ est un $A$-module fidèlement
+plat.
+\end{proposition}
+
+\begin{proof}
+La première assertion est un cas particulier d'une assertion triviale de
+(7.1.3). Inversement, supposons d'abord que $B$ soit u
+
+[id 7560]
+OLD: $A$-module plat. On a
+NEW: $A$-module \emph{plat}. On a
+FRENCH CONTEXT (corrected): st de même de
+$T_p^{(B)}$; la réciproque est vraie lorsque $B$ est un $A$-module fidèlement
+plat.
+\end{proposition}
+
+\begin{proof}
+La première assertion est un cas particulier d'une assertion triviale de
+(7.1.3). Inversement, supposons d'abord que $B$ soit un $A$-module \emph{plat}. On a
+alors, pour tout $A$-module $M$,
+$H_\bullet(P_\bullet\otimes_A(M\otimes_A B))=(H_\bullet(P_\bullet\otimes_A M))\otimes_A B$,
+ce qui s'écrit aussi, pour tout $p$,
+\[
+  T_p(M)\otimes_A B
+  =
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1.fr}
+\]
+à un iso
+
+[id 7561]
+OLD: $M$,
+\[
+  H_\bullet\bigl(P_\bullet\otimes_A(M\otimes_A B)\bigr)
+  =
+  \bigl(H_\bullet(P_\bullet\otimes_A M)\bigr)\otimes_A B,
+\]
+ce qui
+NEW: $M$,
+$H_\bullet(P_\bullet\otimes_A(M\otimes_A B))=(H_\bullet(P_\bullet\otimes_A M))\otimes_A B$,
+ce qui
+FRENCH CONTEXT (corrected): e $B$ est un $A$-module fidèlement
+plat.
+\end{proposition}
+
+\begin{proof}
+La première assertion est un cas particulier d'une assertion triviale de
+(7.1.3). Inversement, supposons d'abord que $B$ soit un $A$-module \emph{plat}. On a
+alors, pour tout $A$-module $M$,
+$H_\bullet(P_\bullet\otimes_A(M\otimes_A B))=(H_\bullet(P_\bullet\otimes_A M))\otimes_A B$,
+ce qui s'écrit aussi, pour tout $p$,
+\[
+  T_p(M)\otimes_A B
+  =
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1.fr}
+\]
+à un isomorphisme canonique près. Supposons $T_p^{(B)}$ exact à droite (resp.
+exact à gauche, exact); comme $M\leadsto M_{(B)}$ est un fonct
+
+[id 7562]
+OLD: $M\mapsto M_{(B)}$
+NEW: $M\leadsto M_{(B)}$
+FRENCH CONTEXT (corrected): otimes_A M))\otimes_A B$,
+ce qui s'écrit aussi, pour tout $p$,
+\[
+  T_p(M)\otimes_A B
+  =
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1.fr}
+\]
+à un isomorphisme canonique près. Supposons $T_p^{(B)}$ exact à droite (resp.
+exact à gauche, exact); comme $M\leadsto M_{(B)}$ est un foncteur exact, le
+premier membre de (7.6.1.1) est un foncteur exact à droite (resp. exact à
+gauche, exact) en $M$; si maintenant $B$ est fidèlement plat sur $A$, on en
+déduit que $T_p$ a la même propriété d'exactitude ($\mathbf{0}_{\mathrm I}$, 6.4.1)
+
+[id 7563]
+OLD: ($0_{\mathrm I}$, 6.4.1)
+NEW: ($\mathbf{0}_{\mathrm I}$, 6.4.1)
+FRENCH CONTEXT (corrected): exact); comme $M\leadsto M_{(B)}$ est un foncteur exact, le
+premier membre de (7.6.1.1) est un foncteur exact à droite (resp. exact à
+gauche, exact) en $M$; si maintenant $B$ est fidèlement plat sur $A$, on en
+déduit que $T_p$ a la même propriété d'exactitude ($\mathbf{0}_{\mathrm I}$, 6.4.1).
+\end{proof}
+
+\begin{proposition}[7.6.2]
+Sous les conditions de \textup{(7.4.1)}, on suppose en outre que $A$ soit un anneau
+noethérien réduit et que les $P_i$ soient des $A$-modules de type fini. Pour que
+$T_p$ soit exact à droite \textup{(resp.} exact à gau
+
+[id 7564]
+OLD: de (7.4.1), on suppose
+NEW: de \textup{(7.4.1)}, on suppose
+FRENCH CONTEXT (corrected): foncteur exact à droite (resp. exact à
+gauche, exact) en $M$; si maintenant $B$ est fidèlement plat sur $A$, on en
+déduit que $T_p$ a la même propriété d'exactitude ($\mathbf{0}_{\mathrm I}$, 6.4.1).
+\end{proof}
+
+\begin{proposition}[7.6.2]
+Sous les conditions de \textup{(7.4.1)}, on suppose en outre que $A$ soit un anneau
+noethérien réduit et que les $P_i$ soient des $A$-modules de type fini. Pour que
+$T_p$ soit exact à droite \textup{(resp.} exact à gauche, exact), il faut et il suffit
+que, pour toute $A$-algèbre $B$ qui est un anneau de valuat
+
+[id 7565]
+OLD: (resp. exact à gauche, exact), il faut
+NEW: \textup{(resp.} exact à gauche, exact), il faut
+FRENCH CONTEXT (corrected): hbf{0}_{\mathrm I}$, 6.4.1).
+\end{proof}
+
+\begin{proposition}[7.6.2]
+Sous les conditions de \textup{(7.4.1)}, on suppose en outre que $A$ soit un anneau
+noethérien réduit et que les $P_i$ soient des $A$-modules de type fini. Pour que
+$T_p$ soit exact à droite \textup{(resp.} exact à gauche, exact), il faut et il suffit
+que, pour toute $A$-algèbre $B$ qui est un anneau de valuation discrète,
+$T_p^{(B)}$ le soit.
+\end{proposition}
+
+\begin{proof}
+En vertu de (7.3.1) et (7.3.3), on peut se borner à considérer l'exactitude à
+droite, et il n'y a naturellement qu'à pr
+
+[id 7566]
+OLD: ($0$, 10.2.8)
+NEW: ($\mathbf{0}$, 10.2.8)
+FRENCH CONTEXT (corrected): t il n'y a naturellement qu'à prouver la suffisance de la condition
+(7.6.1). En vertu de (7.4.2), il suffit de montrer que
+$Z'_{p-1}(P_\bullet)$ est un $A$-module plat; comme $P_{p-1}$ est de type fini,
+$Z'_{p-1}(P_\bullet)$ est aussi de type fini; le critère ($\mathbf{0}$, 10.2.8) montre
+qu'il suffit alors que $Z'_{p-1}(P_\bullet)\otimes_A B$ soit un $B$-module plat
+pour toute $A$-algèbre $B$ qui est un anneau de valuation discrète. Or, comme
+$P_\bullet$ est un complexe de $A$-modules plats, on a
+\[
+  Z'_{p-1}(P_\bullet)\otimes_A B
+  =
+
+=================== PAGE III 193 ===================
+----- (Spanish page III 192: shown above in this file) -----
+----- (Spanish page III 193: shown above in this file) -----
+----- Spanish, III2/units/III.7.6.es.tex, page III 194 -----
+\oldpage[III]{194}
+La hipótesis sobre $A$ implica que $\Tor_p^A(E,F)=0$ para $p\geq 2$
+y para $A$-módulos cualesquiera $E,F$ \sref[0]{0.17.2.2}. Se sabe
+(M, XV) que esto implica la exactitud de
+\[
+  0\longrightarrow E^2_{0,q}
+  \longrightarrow H_q(P_\bullet\otimes_A M)
+  \longrightarrow E^2_{1,q-1}
+  \longrightarrow 0,
+\]
+que es precisamente \eqref{III.7.6.3.1}.
+
+\medskip
+\textnormal{(ii)}
+Teniendo en cuenta \sref{III.7.3.1}, la sucesión exacta
+\eqref{III.7.6.3.1} recupera \sref{III.7.4.3} como caso particular.
+\end{remarks}
+
+\begin{corollary}[7.6.5]
+\label{III.7.6.5}
+Bajo las hipótesis de \sref{III.7.4.1}, supongamos que $A$ es un
+anillo de valuación discreta, con cuerpo de fracciones $K$ y cuerpo
+residual $k$, y que los $T_i(A)$ son $A$-módulos de tipo finito.
+Entonces
+\[
+  \operatorname{rank}_k T_p(k)
+  \geq
+  \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rank}_A T_p(A)
+  =
+  \operatorname{rank}_K T_p(K).
+  \tag{7.6.5.1}\label{III.7.6.5.1}
+\]
+Además, los dos términos extremos de esta desigualdad son iguales si
+y solo si $T_p$ es exacto o, equivalentemente, si y solo si $T_p(A)$
+y $T_{p-1}(A)$ son $A$-módulos libres.
+\end{corollary}
+
+\begin{proof}
+Tómese $M=k$ en la sucesión exacta \eqref{III.7.6.3.1}. Como los
+términos son espacios vectoriales sobre $k$, se obtiene
+\[
+  \operatorname{rank}_k T_p(k)
+  =
+  \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+  +
+  \operatorname{rank}_k
+  \Tor_1^A\bigl(T_{p-1}(A),k\bigr).
+\]
+Por otra parte, como $T_p(A)$ es un módulo de tipo finito sobre el
+anillo local íntegro $A$, se tiene (Bourbaki,
+\emph{Alg\`ebre commutative}, cap.~II, \S~3,
+n\textsuperscript{o}~2, cor.~1 de la prop.~4)
+\[
+  \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rank}_A T_p(A)
+  =
+  \operatorname{rank}_K\bigl(T_p(A)\otimes_A K\bigr),
+  \tag{7.6.5.2}\label{III.7.6.5.2}
+\]
+y los dos miembros de \eqref{III.7.6.5.2} son iguales si y solo si
+$T_p(A)$ es un $A$-módulo libre (\emph{loc.\ cit.}, prop.~7). Como
+$K$ es un $A$-módulo plano, también se tiene, por definición,
+\[
+  T_p(A)\otimes_A K
+  =
+  H_p(P_\bullet)\otimes_A K
+  =
+  H_p(P_\bullet\otimes_A K)
+  =
+  T_p(K).
+\]
+Esto demuestra \eqref{III.7.6.5.1}. También muestra que la igualdad
+solo puede darse si, en primer lugar, $T_p(A)$ es libre y, en segundo
+lugar,
+\[
+  \Tor_1^A\bigl(T_{p-1}(A),k\bigr)=0,
+\]
+siendo esta última condición equivalente a que $T_{p-1}(A)$ sea
+libre \sref[0]{0.10.1.3}. Finalmente, para los módulos de tipo finito
+sobre $A$, la planitud y la libertad son equivalentes (Bourbaki,
+\emph{Alg\`ebre commutative}, cap.~II, \S~3,
+n\textsuperscript{o}~2, cor.~2 de la prop.~5), y el resultado se
+deduce de \sref{III.7.4.3}.
+\end{proof}
+
+\begin{env}[7.6.6]
+\label{III.7.6.6}
+Manteniéndose las hipótesis de \sref{III.7.4.1}, para todo
+$x\in\Spec(A)$ pongamos
+\[
+  d_p(x)=d_p^T(x)
+  =
+  \operatorname{rank}_{\kres(x)}T_p(\kres(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+\label{III.7.6.7}
+Sea $\varphi:A\to A'$ un homomorfismo de anillos, y sea
+\[
+  f={}^a\!\varphi:\Spec(A')\longrightarrow\Spec(A)
+\]
+la aplicación correspondiente \sref[I]{I.1.2.1}. Si
+$T'_\bullet=T_\bullet^{(A')}$ \sref{III.7.1.3}, entonces
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1}
+\]
+\end{lemma}
+----- French corrections on page III 193 -----
+[id 7567]
+OLD: ($0_{\mathrm I}$, 6.2.1)
+NEW: ($\mathbf{0}_{\mathrm I}$, 6.2.1)
+FRENCH CONTEXT (corrected): otimes\ldots\otimes_A M_{\bullet\bullet\bullet}^{(n)}$
+et $\mathscr Q'_\bullet=\widetilde{Q}'_\bullet$. Comme, par hypothèse, les
+anneaux $A_i$ sont des $A$-modules \emph{plats}, les
+$M_{\bullet\bullet\bullet}^{(i)}$ sont des tricomplexes de $A$-modules plats
+($\mathbf{0}_{\mathrm I}$, 6.2.1), et il en est de même de
+$M_{\bullet\bullet\bullet}$; en outre, si $B$ est l'anneau de $Y$, produit
+tensoriel des $A_i$, $M_{\bullet\bullet\bullet}$ est un tricomplexe de
+$B$-\emph{modules}; le complexe
+$\mathscr R_\bullet=(M_{\bullet\bullet\bullet})^\sim$ de
+
+[id 7568]
+OLD: $N$, on a
+\[
+  H_\bullet(P_\bullet\otimes_A N)
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr),
+\]
+donc
+\[
+  T_p^{(B)}(N)
+  =
+  H_p\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr);
+\]
+appliquant
+NEW: $N$, on a
+$H_\bullet(P_\bullet\otimes_A N)=H_\bullet((P_\bullet\otimes_A B)\otimes_B N)$,
+donc $T_p^{(B)}(N)=H_p((P_\bullet\otimes_A B)\otimes_B N)$;
+appliquant
+FRENCH CONTEXT (corrected): $ est un complexe de $A$-modules plats, on a
+\[
+  Z'_{p-1}(P_\bullet)\otimes_A B
+  =
+  Z'_{p-1}(P_\bullet\otimes_A B);
+\]
+\oldpage[III]{193}
+$P_\bullet\otimes_A B$ est un complexe de $B$-modules plats
+($\mathbf{0}_{\mathrm I}$, 6.2.1), et pour tout $B$-module $N$, on a
+$H_\bullet(P_\bullet\otimes_A N)=H_\bullet((P_\bullet\otimes_A B)\otimes_B N)$,
+donc $T_p^{(B)}(N)=H_p((P_\bullet\otimes_A B)\otimes_B N)$;
+appliquant (7.4.2) à $T_p^{(B)}$, on voit que l'hypothèse que $T_p^{(B)}$ est
+exact à droite est équivalente au fait que $Z'_{p-1}(P_\bullet\otimes_A B)$ est
+un $B$-module plat.
+
+Le critère précédent amène à étudier de plus près le cas des anneaux de
+valuation discrète 
+
+[id 7569]
+OLD: de (7.4.1), supposons
+NEW: de \textup{(7.4.1)}, supposons
+FRENCH CONTEXT (corrected): $ est
+exact à droite est équivalente au fait que $Z'_{p-1}(P_\bullet\otimes_A B)$ est
+un $B$-module plat.
+
+Le critère précédent amène à étudier de plus près le cas des anneaux de
+valuation discrète :
+\end{proof}
+
+\begin{proposition}[7.6.3]
+Sous les conditions de \textup{(7.4.1)}, supposons que $A$ soit un anneau noethérien
+régulier de dimension 1 (autrement dit, que $A$ est noethérien et que, pour tout
+$x\in\operatorname{Spec}(A)$, $A_x$ est un corps ou un anneau de valuation
+discrète). Alors, pour tout entier $p$ et tout $A$-module $M$, on a u
+
+[id 7570]
+OLD: B_{p-1}
+  \longrightarrow0,\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}\longrightarrow H_{p-1}
+  \longrightarrow0,\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}\longrightarrow B_{p-2}
+  \longrightarrow0.
+NEW: B_{p-1}
+  \longrightarrow0\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}\longrightarrow H_{p-1}
+  \longrightarrow0\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}\longrightarrow B_{p-2}
+  \longrightarrow0
+FRENCH CONTEXT (corrected): fier la mention du complexe
+$P_\bullet$ dans les notations homologiques usuelles $H_p(P_\bullet)$,
+$B_p(P_\bullet)$, $Z_p(P_\bullet)$ et $Z'_p(P_\bullet)$. On a les trois suites
+exactes
+\begin{gather*}
+  0\longrightarrow H_p\longrightarrow Z'_p\longrightarrow B_{p-1}
+  \longrightarrow0\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}\longrightarrow H_{p-1}
+  \longrightarrow0\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}\longrightarrow B_{p-2}
+  \longrightarrow0
+\end{gather*}
+
+Comme $P_{p-1}$ et $P_{p-2}$ sont plats, il en est de même de leurs
+\emph{sous-modules} respectifs $B_{p-1}$, $Z_{p-1}$ et $B_{p-2}$ puisqu'il y a
+identité entre $A_x$-modules plats et $A_x$-modules sans torsion (pour tout
+$x\in\operatorname{Sp
+
+[id 7572]
+OLD: sous-modules respectifs
+NEW: \emph{sous-modules} respectifs
+FRENCH CONTEXT (corrected): ightarrow B_{p-1}\longrightarrow Z_{p-1}\longrightarrow H_{p-1}
+  \longrightarrow0\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}\longrightarrow B_{p-2}
+  \longrightarrow0
+\end{gather*}
+
+Comme $P_{p-1}$ et $P_{p-2}$ sont plats, il en est de même de leurs
+\emph{sous-modules} respectifs $B_{p-1}$, $Z_{p-1}$ et $B_{p-2}$ puisqu'il y a
+identité entre $A_x$-modules plats et $A_x$-modules sans torsion (pour tout
+$x\in\operatorname{Spec}(A)$); par tensorisation avec $M$, on a donc les suites
+exactes
+\[
+  0=\operatorname{Tor}_1^A(B_{p-1},M)
+  \lon
+
+[id 7574]
+OLD: l'homomorphisme
+\[
+  (P_p\otimes M)/\operatorname{Im}(d_{p+1}\otimes1)
+  \longrightarrow P_{p-1}\otimes M
+\]
+obtenu
+NEW: l'homomorphisme
+$(P_p\otimes M)/\operatorname{Im}(d_{p+1}\otimes1)\longrightarrow P_{p-1}\otimes M$
+obtenu
+FRENCH CONTEXT (corrected): peratorname{Tor}_1^A(B_{p-2},M)
+  \longrightarrow Z_{p-1}\otimes M
+  \xrightarrow{w}P_{p-1}\otimes M.
+  \tag{7.6.3.4}\label{III.7.6.3.4.fr}
+\]
+
+Par définition,
+$T_p(M)=\operatorname{Ker}(d_p\otimes1)/\operatorname{Im}(d_{p+1}\otimes1)$;
+c'est donc le noyau de l'homomorphisme
+$(P_p\otimes M)/\operatorname{Im}(d_{p+1}\otimes1)\longrightarrow P_{p-1}\otimes M$
+obtenu à partir de $d_p\otimes1$ par passage au quotient, homomorphisme qui
+s'écrit aussi $Z'_p\otimes M\to P_{p-1}\otimes M$ par définition de
+$Z'_p=P_p/B_p$; or, cet homomorphisme peut être considéré comme le composé
+\[
+  Z'_p\otimes M
+  \xrightarrow{u}B_{p-1}\oti
+
+=================== PAGE III 194 ===================
+----- (Spanish page III 193: shown above in this file) -----
+----- (Spanish page III 194: shown above in this file) -----
+----- Spanish, III2/units/III.7.6.es.tex, page III 195 -----
+\oldpage[III]{195}
+\begin{proof}
+Para $x'\in\Spec(A')$, pongamos $x=f(x')$. Entonces
+\begin{align*}
+  H_\bullet(P_\bullet\otimes_A\kres(x'))
+  &=
+  H_\bullet\bigl(
+    (P_\bullet\otimes_A\kres(x))
+    \otimes_{\kres(x)}\kres(x')
+  \bigr)\\
+  &=
+  H_\bullet(P_\bullet\otimes_A\kres(x))
+  \otimes_{\kres(x)}\kres(x'),
+\end{align*}
+porque $\kres(x')$ es plano sobre $\kres(x)$. Esto demuestra
+\eqref{III.7.6.7.1}.
+\end{proof}
+
+\begin{lemma}[7.6.8]
+\label{III.7.6.8}
+Si $A$ es noetheriano y $P_\bullet$ está formado por $A$-módulos de
+tipo finito, la función $x\mapsto d_p^T(x)$ sobre $\Spec(A)$ es
+constructible.
+\end{lemma}
+
+\begin{proof}
+Para toda parte cerrada irreducible $Y$ de $X=\Spec(A)$, debemos
+probar que existe un abierto no vacío $U$ de $Y$ en el cual $d_p$ es
+constante \sref[0]{0.9.2.2}. Escribamos
+$Y=\Spec(A/\mathfrak a)$, donde $\mathfrak a$ es un ideal de $A$ tal
+que $A/\mathfrak a$ es reducido. Por \sref{III.7.6.7}, podemos
+reducirnos al caso en que $Y=X$ y $A$ es un anillo noetheriano
+íntegro; la aserción resulta entonces de \sref{III.7.4.5}.
+\end{proof}
+
+\begin{theorem}[7.6.9]
+\label{III.7.6.9}
+Sean $A$ un anillo noetheriano, $P_\bullet$ un complejo de
+$A$-módulos planos de tipo finito y
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+\]
+el funtor homológico definido por $P_\bullet$. Para
+$x\in\Spec(A)$, pongamos
+\[
+  d_p(x)=\operatorname{rank}_{\kres(x)}T_p(\kres(x)).
+\]
+Entonces:
+\begin{enumerate}
+  \item[(i)] La función $d_p$ es constructible y semicontinua
+    superiormente sobre $\Spec(A)$.
+  \item[\textup{(ii)}] Si $T_p$ es exacto, $d_p$ es continua (y, por tanto,
+    localmente constante) sobre $\Spec(A)$. El recíproco es cierto
+    cuando $A$ es reducido.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\textnormal{(i)}
+La constructibilidad se demostró en \sref{III.7.6.8}. Para probar la
+semicontinuidad superior, basta, por tanto, \sref[0]{0.9.2.4},
+demostrar que, si $x'\neq x$ es una generalización de $x$ en
+$\Spec(A)$, entonces $d_p(x')\leq d_p(x)$. Existe un anillo de
+valuación discreta $B$ y un morfismo
+\[
+  f:\Spec(B)\longrightarrow\Spec(A)
+\]
+tales que, si $a$ es el punto cerrado de $\Spec(B)$ y $b$ su punto
+genérico, entonces $f(a)=x$ y $f(b)=x'$
+\sref[II]{II.7.1.9}. Por \eqref{III.7.6.7.1}, nos reducimos a probar
+$d_p(a)\geq d_p(b)$ sobre $\Spec(B)$, que es precisamente
+\eqref{III.7.6.5.1}.\footnote{El principio de demostrar
+\textnormal{(i)} por reducción al caso de un anillo de valuación
+discreta nos fue comunicado oralmente por Hironaka.}
+
+\medskip
+\textnormal{(ii)}
+La primera aserción ya se demostró en \sref{III.7.3.4}. Para el
+recíproco, utilícese el criterio valuativo \sref{III.7.6.2}. En vista
+de \eqref{III.7.6.7.1}, nos reducimos al caso en que $A$ es un anillo
+de valuación discreta. Como $\Spec(A)$ tiene entonces solamente dos
+puntos, la hipótesis de que $d_p$ es constante implica que $T_p$ es
+exacto, por \sref{III.7.6.5}.
+\end{proof}
+
+\begin{corollary}[7.6.10]
+\label{III.7.6.10}
+Sean $A$ un anillo noetheriano, $\mathfrak p_i$ $(1\leq i\leq r)$
+sus ideales primos minimales, y $k_i$ el cuerpo residual de
+$A_{\mathfrak p_i}$.
+\begin{enumerate}
+  \item[(i)] Para todo $x\in\Spec(A)$, existe un índice $i$ tal que
+    \[
+      d_p(x)\geq
+      \operatorname{rank}_{k_i}T_p(k_i).
+      \tag{7.6.10.1}\label{III.7.6.10.1}
+    \]
+\end{enumerate}
+En particular, si $A$ es un anillo íntegro y $K$ es su cuerpo de
+fracciones, entonces
+\[
+  d_p(x)\geq\operatorname{rank}_K T_p(K)
+  \tag{7.6.10.2}\label{III.7.6.10.2}
+\]
+para todo $x\in\Spec(A)$.
+----- French corrections on page III 194 -----
+[id 7577]
+OLD: ($0_{\mathrm{IV}}$, 17.2.2)
+NEW: ($\mathbf{0}_{\mathrm{IV}}$, 17.2.2)
+FRENCH CONTEXT (corrected): ^A\bigl(H_q(P_\bullet),M\bigr)
+      =
+      \operatorname{Tor}_p^A\bigl(T_q(A),M\bigr).
+    \]
+    \oldpage[III]{194}
+
+    Or, l'hypothèse sur l'anneau $A$ entraîne que
+    $\operatorname{Tor}_p^A(E,F)=0$ pour $p\geq2$ et pour des $A$-modules
+    quelconques ($\mathbf{0}_{\mathrm{IV}}$, 17.2.2); on sait (M, XV) que cela entraîne
+    l'exactitude de la suite
+    \[
+      0\longrightarrow E^2_{0,q}
+      \longrightarrow H_q(P_\bullet\otimes_A M)
+      \longrightarrow E^2_{1,q-1}
+      \longrightarrow0
+    \]
+    qui n'est autre que (7.6.3.1).
+  \item[
+
+[id 7578]
+OLD: de (7.4.1), supposons
+NEW: de \textup{(7.4.1)}, supposons
+FRENCH CONTEXT (corrected): $ est
+exact à droite est équivalente au fait que $Z'_{p-1}(P_\bullet\otimes_A B)$ est
+un $B$-module plat.
+
+Le critère précédent amène à étudier de plus près le cas des anneaux de
+valuation discrète :
+\end{proof}
+
+\begin{proposition}[7.6.3]
+Sous les conditions de \textup{(7.4.1)}, supposons que $A$ soit un anneau noethérien
+régulier de dimension 1 (autrement dit, que $A$ est noethérien et que, pour tout
+$x\in\operatorname{Spec}(A)$, $A_x$ est un corps ou un anneau de valuation
+discrète). Alors, pour tout entier $p$ et tout $A$-module $M$, on a u
+
+[id 7581]
+OLD: on a par définition
+\[
+  T_p(A)\otimes_A K
+  =
+  H_p(P_\bullet)\otimes_A K
+  =
+  H_p(P_\bullet\otimes_A K)
+  =
+  T_p(K).
+\]
+On a donc bien
+NEW: on a par définition
+$T_p(A)\otimes_A K=H_p(P_\bullet)\otimes_A K=H_p(P_\bullet\otimes_A K)=T_p(K)$.
+On a donc bien
+FRENCH CONTEXT (corrected): T_p(A)\otimes_A K\bigr)
+  \tag{7.6.5.2}\label{III.7.6.5.2.fr}
+\]
+et en outre les deux membres de (7.6.5.2) sont égaux si et seulement si $T_p(A)$
+est un $A$-module libre (\emph{loc. cit.}, prop. 7). On notera d'ailleurs que
+puisque $K$ est un $A$-module plat, on a par définition
+$T_p(A)\otimes_A K=H_p(P_\bullet)\otimes_A K=H_p(P_\bullet\otimes_A K)=T_p(K)$.
+On a donc bien l'inégalité (7.6.5.1) et on voit en outre que l'égalité n'est
+possible que si : 1\textsuperscript{o} $T_p(A)$ est libre;
+2\textsuperscript{o} $\operatorname{Tor}_1^A(T_{p-1}(A),k)=0$, condition qui
+équivaut, comme on sait ($\mathbf{0}$, 10.1.3), au fait que $
+
+[id 7582]
+OLD: ($0$, 10.1.3)
+NEW: ($\mathbf{0}$, 10.1.3)
+FRENCH CONTEXT (corrected): t\otimes_A K)=T_p(K)$.
+On a donc bien l'inégalité (7.6.5.1) et on voit en outre que l'égalité n'est
+possible que si : 1\textsuperscript{o} $T_p(A)$ est libre;
+2\textsuperscript{o} $\operatorname{Tor}_1^A(T_{p-1}(A),k)=0$, condition qui
+équivaut, comme on sait ($\mathbf{0}$, 10.1.3), au fait que $T_{p-1}(A)$ est un
+$A$-module libre. Enfin, comme les $T_i(A)$ sont des $A$-modules de type fini,
+il revient au même de dire qu'ils sont plats ou libres (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5),
+
+[id 7583]
+OLD: $x\in\operatorname{Spec}(A)$,
+\[
+NEW: $x\in\operatorname{Spec}(A)$
+\[
+FRENCH CONTEXT (corrected):  dire qu'ils sont plats ou libres (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5), et on conclut par (7.4.3).
+\end{proof}
+
+\begin{env}[7.6.6]
+Les hypothèses étant toujours celles de (7.4.1), nous poserons, pour tout
+$x\in\operatorname{Spec}(A)$
+\[
+  d_p(x)=d_p^T(x)=\operatorname{rang}_{\mathbf{k}(x)}T_p(\boldsymbol{k}(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1.fr}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+Soit $\varphi:A\to A'$ un homomorphisme d'anneaux, et soit
+\[
+  f={}^a\!\varphi:
+  \operatorname{Spec}(A')\lo
+
+[id 7584]
+OLD: \operatorname{rang}_{\kappa(x)}T_p(\kappa(x)).
+NEW: \operatorname{rang}_{\mathbf{k}(x)}T_p(\boldsymbol{k}(x)).
+FRENCH CONTEXT (corrected): {Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5), et on conclut par (7.4.3).
+\end{proof}
+
+\begin{env}[7.6.6]
+Les hypothèses étant toujours celles de (7.4.1), nous poserons, pour tout
+$x\in\operatorname{Spec}(A)$
+\[
+  d_p(x)=d_p^T(x)=\operatorname{rang}_{\mathbf{k}(x)}T_p(\boldsymbol{k}(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1.fr}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+Soit $\varphi:A\to A'$ un homomorphisme d'anneaux, et soit
+\[
+  f={}^a\!\varphi:
+  \operatorname{Spec}(A')\longrightarrow\operatorname{Spec}(A)
+\]
+l'application correspondante \textup{(\
+
+[id 7585]
+OLD: (I, 1.2.1)
+NEW: \textup{(\textbf{I}, 1.2.1)}
+FRENCH CONTEXT (corrected): ol{k}(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1.fr}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+Soit $\varphi:A\to A'$ un homomorphisme d'anneaux, et soit
+\[
+  f={}^a\!\varphi:
+  \operatorname{Spec}(A')\longrightarrow\operatorname{Spec}(A)
+\]
+l'application correspondante \textup{(\textbf{I}, 1.2.1)}. Si l'on pose
+$T'_\bullet=T_\bullet^{(A')}$ \textup{(7.1.3)}, on a
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1.fr}
+\]
+\end{lemma}
+
+\begin{proof}
+\oldpage[III]{195}
+En effet, pour tout $x'\in\operatorname{Spec}(A')$, on a, en posant
+$x=f(x')$
+
+[id 7586]
+OLD: (7.1.3), on a
+NEW: \textup{(7.1.3)}, on a
+FRENCH CONTEXT (corrected): ma}[7.6.7]
+Soit $\varphi:A\to A'$ un homomorphisme d'anneaux, et soit
+\[
+  f={}^a\!\varphi:
+  \operatorname{Spec}(A')\longrightarrow\operatorname{Spec}(A)
+\]
+l'application correspondante \textup{(\textbf{I}, 1.2.1)}. Si l'on pose
+$T'_\bullet=T_\bullet^{(A')}$ \textup{(7.1.3)}, on a
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1.fr}
+\]
+\end{lemma}
+
+\begin{proof}
+\oldpage[III]{195}
+En effet, pour tout $x'\in\operatorname{Spec}(A')$, on a, en posant
+$x=f(x')$,
+\[
+  H_\bullet(P_\bullet\otimes_A\boldsymbol{k}(x'))
+  =
+  H_\bul
+
+=================== PAGE III 195 ===================
+----- (Spanish page III 194: shown above in this file) -----
+----- (Spanish page III 195: shown above in this file) -----
+----- Spanish, III2/units/III.7.6.es.tex, page III 196 -----
+\subsection{Descenso de las propiedades de exactitud. Teorema de
+semicontinuidad y criterio de exactitud de Grauert}
+\label{subsection:III.7.6}
+\label{III.7.6}
+
+\begin{proposition}[7.6.1]
+\label{III.7.6.1}
+Bajo las hipótesis de \sref{III.7.4.1}, sea $B$ una $A$-álgebra
+conmutativa. Si $T_p$ es exacto por la derecha (respectivamente,
+exacto por la izquierda, exacto), lo mismo ocurre con $T_p^{(B)}$;
+el recíproco es cierto cuando $B$ es un $A$-módulo fielmente plano.
+\end{proposition}
+
+\begin{proof}
+La primera aserción es un caso particular de una aserción trivial de
+\sref{III.7.1.3}. Recíprocamente, supongamos primero que $B$ es un
+$A$-módulo plano. Entonces, para todo $A$-módulo $M$,
+\[
+  H_\bullet\bigl(P_\bullet\otimes_A(M\otimes_A B)\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A M)\otimes_A B,
+\]
+lo cual también puede escribirse, para todo $p$,
+\[
+  T_p(M)\otimes_A B
+  \simeq
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1}
+\]
+salvo isomorfismo canónico. Supongamos que $T_p^{(B)}$ es exacto por
+la derecha (respectivamente, exacto por la izquierda, exacto). Como
+$M\mapsto M_{(B)}$ es un funtor exacto, el miembro izquierdo de
+\eqref{III.7.6.1.1} es un funtor exacto por la derecha
+(respectivamente, exacto por la izquierda, exacto) en $M$. Si ahora
+$B$ es fielmente plano sobre $A$, se sigue que $T_p$ tiene la misma
+propiedad de exactitud \sref[0]{0.6.4.1}.
+\end{proof}
+
+\long\def\egaIIISubsectionSevenSixEleven{%
+\begin{remark}[7.6.11]
+\label{III.7.6.11}
+Cabe preguntarse si \sref{III.7.6.9}[(i)] puede reforzarse mediante la
+desigualdad
+\[
+  \operatorname{rank}_{\kres(x)}T_p(\kres(x))
+  \geq
+  \operatorname{rank}_{\kres(x)}
+  \bigl(T_p(A)\otimes_A\kres(x)\bigr)
+  \tag{7.6.11.1}\label{III.7.6.11.1}
+\]
+para todo $x\in\Spec(A)$. Esta desigualdad se verifica cuando $A$ es
+un anillo de valuación discreta y $x$ es su ideal maximal
+\sref{III.7.6.5}. Limitémonos ahora al caso en que $A$ es un anillo
+local noetheriano, de ideal maximal $\mathfrak m$ y cuerpo residual
+$k$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] Para todo complejo $P_\bullet$ de $A$-módulos planos de
+    tipo finito,
+    \[
+      \operatorname{rank}_k T_p(k)
+      \geq
+      \operatorname{rank}_k\bigl(T_p(A)\otimes_A k\bigr)
+      \qquad\text{para todo entero }p.
+      \tag{7.6.11.2}\label{III.7.6.11.2}
+    \]
+  \item[\emph{b)}] Para todo $A$-módulo $M$ de tipo finito,
+    \[
+      \operatorname{rank}_k(M\otimes_A k)
+      \geq
+      \operatorname{rank}_k(\check M\otimes_A k).
+      \tag{7.6.11.3}\label{III.7.6.11.3}
+    \]
+  \item[\emph{c)}] Para todo $A$-módulo $N$ de tipo finito,
+    \[
+      \operatorname{rank}_k\Tor_1^A(N,k)
+      \geq
+      \operatorname{rank}_k\Tor_2^A(N,k).
+      \tag{7.6.11.4}\label{III.7.6.11.4}
+    \]
+\end{enumerate}
+Equivalentemente, por cambio de dimensión (M, V, 7.2), puede
+exigirse, para todo $i\geq1$
+\[
+  \operatorname{rank}_k\Tor_i^A(N,k)
+  \geq
+  \operatorname{rank}_k\Tor_{i+1}^A(N,k).
+  \tag{7.6.11.5}\label{III.7.6.11.5}
+\]
+
+Demos brevemente algunas indicaciones sobre la demostración. Para ver
+que \textnormal{a)} implica \textnormal{b)}, considérese una sucesión
+exacta
+\[
+  L_1\xrightarrow{d}L_0\longrightarrow M\longrightarrow0,
+\]
+donde $L_0$ y $L_1$ son libres de tipo finito, y aplíquese
+\textnormal{a)} al complejo
+\[
+  P_1\xrightarrow{{}^t d}P_0,
+  \qquad
+  P_0=\check L_1,\quad P_1=\check L_0,
+\]
+siendo nulos todos sus demás términos. Entonces
+\[
+  T_1(A)=\check M
+\]
+y
+\[
+  T_1(k)
+  =
+  \Hom_A(M,k)
+  =
+  \Hom_k(M/\mathfrak mM,k).
+\]
+Así, $T_1(k)$ es el dual del espacio vectorial $M\otimes_A k$ y tiene
+el mismo rango. Para probar que \textnormal{b)} implica
+\textnormal{c)}, establezcamos primero el lema siguiente.
+
+\begin{lemma}[7.6.11.6]
+\label{III.7.6.11.6}
+Dado un complejo de $A$-módulos planos
+\[
+  \cdots\longrightarrow0\longrightarrow
+  P_1\xrightarrow{d}P_0
+  \longrightarrow0\longrightarrow\cdots,
+\]
+se tiene una sucesión exacta
+\[
+  0\longrightarrow\Tor_2^A(Z'_0,k)
+  \longrightarrow T_1(A)\otimes_A k
+  \longrightarrow T_1(k)
+  \longrightarrow\Tor_1^A(Z'_0,k)
+  \longrightarrow0.
+  \tag{7.6.11.7}\label{III.7.6.11.7}
+\]
+\end{lemma}
+----- Spanish, III2/units/III.7.6.es.tex, page III 196 -----
+\oldpage[III]{196}
+\begin{enumerate}
+  \item[(ii)] Supongamos además que $A$ es local y reducido, y sea
+    $k$ su cuerpo residual. Entonces $T_p$ es exacto si y solo si
+    \[
+      \operatorname{rank}_k T_p(k)
+      =
+      \operatorname{rank}_{k_i}T_p(k_i)
+      \qquad(1\leq i\leq r).
+      \tag{7.6.10.3}\label{III.7.6.10.3}
+    \]
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La aserción \textnormal{(i)} es inmediata: todo entorno de $x$
+contiene uno de los $\mathfrak p_i$, y basta aplicar la definición de
+semicontinuidad. Si $A$ es local, el único entorno del ideal maximal
+$\mathfrak m$ en $\Spec(A)$ es todo $\Spec(A)$; por tanto,
+\[
+  d_p(x)\leq\operatorname{rank}_k T_p(k)
+\]
+para todo $x\in\Spec(A)$. Junto con \textnormal{(i)}, esto muestra que
+\eqref{III.7.6.10.3} implica que $d_p$ es constante sobre
+$\Spec(A)$ y, por tanto, que $T_p$ es exacto por
+\sref{III.7.6.9}[(ii)]. El recíproco se deduce inmediatamente del
+mismo resultado.
+\end{proof}
+
+\egaIIISubsectionSevenSixEleven
+----- French corrections on page III 195 -----
+[id 7587]
+OLD:   H_\bullet(P_\bullet\otimes_A\kappa(x'))
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A\kappa(x))
+    \otimes_{\kappa(x)}\kappa(x')\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A\kappa(x))
+    \otimes_{\kappa(x)}\kappa(x'),
+NEW:   H_\bullet(P_\bullet\otimes_A\boldsymbol{k}(x'))
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A\boldsymbol{k}(x))
+    \otimes_{\mathbf{k}(x)}\boldsymbol{k}(x')\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A\boldsymbol{k}(x))
+    \otimes_{\mathbf{k}(x)}\boldsymbol{k}(x'),
+FRENCH CONTEXT (corrected): l'on pose
+$T'_\bullet=T_\bullet^{(A')}$ \textup{(7.1.3)}, on a
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1.fr}
+\]
+\end{lemma}
+
+\begin{proof}
+\oldpage[III]{195}
+En effet, pour tout $x'\in\operatorname{Spec}(A')$, on a, en posant
+$x=f(x')$,
+\[
+  H_\bullet(P_\bullet\otimes_A\boldsymbol{k}(x'))
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A\boldsymbol{k}(x))
+    \otimes_{\mathbf{k}(x)}\boldsymbol{k}(x')\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A\boldsymbol{k}(x))
+    \otimes_{\mathbf{k}(x)}\boldsymbol{k}(x'),
+\]
+puisque $\boldsymbol{k}(x')$ est plat sur $\boldsymbol{k}(x)$, d'où la relation (7.6.7.1).
+\end{proof}
+
+\begin{lemma}[7.6.8]
+Si l'anneau $A$ est noethérien et le complexe $P_\bullet$ formé de $A$-modules
+de type fini, la fonction $x\leadsto d_p^T(x)$ sur $
+
+[id 7588]
+OLD: puisque $\kappa(x')$ est plat sur $\kappa(x)$
+NEW: puisque $\boldsymbol{k}(x')$ est plat sur $\boldsymbol{k}(x)$
+FRENCH CONTEXT (corrected): \bullet(P_\bullet\otimes_A\boldsymbol{k}(x'))
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A\boldsymbol{k}(x))
+    \otimes_{\mathbf{k}(x)}\boldsymbol{k}(x')\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A\boldsymbol{k}(x))
+    \otimes_{\mathbf{k}(x)}\boldsymbol{k}(x'),
+\]
+puisque $\boldsymbol{k}(x')$ est plat sur $\boldsymbol{k}(x)$, d'où la relation (7.6.7.1).
+\end{proof}
+
+\begin{lemma}[7.6.8]
+Si l'anneau $A$ est noethérien et le complexe $P_\bullet$ formé de $A$-modules
+de type fini, la fonction $x\leadsto d_p^T(x)$ sur $\operatorname{Spec}(A)$ est
+constructible.
+\end{lemma}
+
+\begin{pr
+
+[id 7589]
+OLD: $x\mapsto d_p^T(x)$
+NEW: $x\leadsto d_p^T(x)$
+FRENCH CONTEXT (corrected): {k}(x)}\boldsymbol{k}(x'),
+\]
+puisque $\boldsymbol{k}(x')$ est plat sur $\boldsymbol{k}(x)$, d'où la relation (7.6.7.1).
+\end{proof}
+
+\begin{lemma}[7.6.8]
+Si l'anneau $A$ est noethérien et le complexe $P_\bullet$ formé de $A$-modules
+de type fini, la fonction $x\leadsto d_p^T(x)$ sur $\operatorname{Spec}(A)$ est
+constructible.
+\end{lemma}
+
+\begin{proof}
+Il faut prouver que pour toute partie fermée irréductible $Y$ de
+$X=\operatorname{Spec}(A)$, il existe un ouvert non vide $U$ de $Y$ dans lequel
+$d_p$ est constante ($\mathbf{0}$, 9.2.
+
+[id 7590]
+OLD: ($0$, 9.2.2)
+NEW: ($\mathbf{0}$, 9.2.2)
+FRENCH CONTEXT (corrected): x\leadsto d_p^T(x)$ sur $\operatorname{Spec}(A)$ est
+constructible.
+\end{lemma}
+
+\begin{proof}
+Il faut prouver que pour toute partie fermée irréductible $Y$ de
+$X=\operatorname{Spec}(A)$, il existe un ouvert non vide $U$ de $Y$ dans lequel
+$d_p$ est constante ($\mathbf{0}$, 9.2.2); comme
+$Y=\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a$ est un idéal de $A$ tel
+que $A/\mathfrak a$ soit réduit, on peut, en vertu de (7.6.7), se borner au cas
+où $Y=X$ et où $A$ est un anneau noethérien \emph{intègre}; mais alors l'assertion
+résulte 
+
+[id 7591]
+OLD: noethérien intègre; mais
+NEW: noethérien \emph{intègre}; mais
+FRENCH CONTEXT (corrected):  $Y$ dans lequel
+$d_p$ est constante ($\mathbf{0}$, 9.2.2); comme
+$Y=\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a$ est un idéal de $A$ tel
+que $A/\mathfrak a$ soit réduit, on peut, en vertu de (7.6.7), se borner au cas
+où $Y=X$ et où $A$ est un anneau noethérien \emph{intègre}; mais alors l'assertion
+résulte de (7.4.5).
+\end{proof}
+
+\begin{theorem}[7.6.9]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats de
+type fini, $T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)$ le foncteur homologique
+défini par $P_\bullet$
+
+[id 7592]
+OLD: soit
+\[
+  d_p(x)=\operatorname{rang}_{\kappa(x)}T_p(\kappa(x)).
+\]
+Alors :
+NEW: soit
+$d_p(x)=\operatorname{rang}_{\mathbf{k}(x)}T_p(\boldsymbol{k}(x))$.
+Alors :
+FRENCH CONTEXT (corrected): d{proof}
+
+\begin{theorem}[7.6.9]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats de
+type fini, $T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)$ le foncteur homologique
+défini par $P_\bullet$; pour tout $x\in\operatorname{Spec}(A)$, soit
+$d_p(x)=\operatorname{rang}_{\mathbf{k}(x)}T_p(\boldsymbol{k}(x))$.
+Alors :
+\begin{enumerate}
+  \item[\textup{(i)}] La fonction $d_p$ est constructible et semi-continue
+    supérieurement dans $\operatorname{Spec}(A)$.
+  \item[\textup{(ii)}] Si $T_p$ est exact, $d_p$ est continue (donc localement constante)
+    dans $\operatorname{Sp
+
+[id 7593]
+OLD: \item[(i)] La fonction
+NEW: \item[\textup{(i)}] La fonction
+FRENCH CONTEXT (corrected): les plats de
+type fini, $T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)$ le foncteur homologique
+défini par $P_\bullet$; pour tout $x\in\operatorname{Spec}(A)$, soit
+$d_p(x)=\operatorname{rang}_{\mathbf{k}(x)}T_p(\boldsymbol{k}(x))$.
+Alors :
+\begin{enumerate}
+  \item[\textup{(i)}] La fonction $d_p$ est constructible et semi-continue
+    supérieurement dans $\operatorname{Spec}(A)$.
+  \item[\textup{(ii)}] Si $T_p$ est exact, $d_p$ est continue (donc localement constante)
+    dans $\operatorname{Spec}(A)$; la réciproque est vraie lorsque l'anneau $A
+
+[id 7595]
+OLD: ($0$, 9.2.4)
+NEW: ($\mathbf{0}$, 9.2.4)
+FRENCH CONTEXT (corrected):  $\operatorname{Spec}(A)$; la réciproque est vraie lorsque l'anneau $A$
+    est réduit.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] La première assertion a été démontrée dans (7.6.8). Pour prouver
+    la seconde, il suffit donc ($\mathbf{0}$, 9.2.4) de montrer que si $x'\ne x$ est une
+    générisation de $x$ dans $\operatorname{Spec}(A)$, on a
+    $d_p(x')\leq d_p(x)$. Or, il existe alors un anneau de valuation discrète
+    $B$ et un morphisme
+    $f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spe
+
+[id 7596]
+OLD: un morphisme
+    \[
+      f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)
+    \]
+    tels que
+NEW: un morphisme
+    $f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)$
+    tels que
+FRENCH CONTEXT (corrected): (7.6.8). Pour prouver
+    la seconde, il suffit donc ($\mathbf{0}$, 9.2.4) de montrer que si $x'\ne x$ est une
+    générisation de $x$ dans $\operatorname{Spec}(A)$, on a
+    $d_p(x')\leq d_p(x)$. Or, il existe alors un anneau de valuation discrète
+    $B$ et un morphisme
+    $f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)$
+    tels que, si $a$ désigne le point fermé de $\operatorname{Spec}(B)$ et $b$
+    son point générique, on ait $f(a)=x$ et $f(b)=x'$ (\textbf{II}, 7.1.9). En vertu de
+    la formule (7.6.7.1), on voit qu'on est ramené à démontrer l'inégalité
+    $d_p(a)\geq d_p(b)$ dans $
+
+[id 7597]
+OLD: (II, 7.1.9)
+NEW: (\textbf{II}, 7.1.9)
+FRENCH CONTEXT (corrected): rs un anneau de valuation discrète
+    $B$ et un morphisme
+    $f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)$
+    tels que, si $a$ désigne le point fermé de $\operatorname{Spec}(B)$ et $b$
+    son point générique, on ait $f(a)=x$ et $f(b)=x'$ (\textbf{II}, 7.1.9). En vertu de
+    la formule (7.6.7.1), on voit qu'on est ramené à démontrer l'inégalité
+    $d_p(a)\geq d_p(b)$ dans $\operatorname{Spec}(B)$; mais cela n'est autre que
+    l'inégalité (7.6.5.1)\footnote{Le principe de démonstration de (i) par
+    réduction a
+
+[id 7598]
+OLD: \item[(i)] Pour tout
+NEW: \item[\textup{(i)}] Pour tout
+FRENCH CONTEXT (corrected): neaux locaux $M$ et $N$ sont
+\emph{apparentés}.
+
+\begin{proposition}[8.1.5]
+\label{I.8.1.5-fr}
+Soient $A$, $B$ deux sous-anneaux d'un corps $R$, $C$ le sous-anneau de $R$
+engendré par $A\cup B$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{(i)}] Pour tout anneau local $Q$ contenant $A$ et $B$, on a
+    $A_\mathfrak p=B_\mathfrak q$, en posant
+    $\mathfrak p=\mathfrak m(Q)\cap A$,
+    $\mathfrak q=\mathfrak m(Q)\cap B$.
+  \item[\textup{(ii)}] Pour tout idéal premier $\mathfrak r$ de $C$, on a
+    $A_\mathfrak
+

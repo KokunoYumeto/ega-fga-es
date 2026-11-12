@@ -1,0 +1,3896 @@
+# Spanish hand pass, current_023: 148 items on 8 printed pages
+
+=================== PAGE III 102 ===================
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 101 -----
+\oldpage[III]{101}
+
+Como $X$ está recubierto por los $r+1$ abiertos afines $D_+(T_i)$, la afirmación (ii) se deduce de \sref{III.1.4.12}.
+La afirmación (iv) ya fue demostrada en \sref[II]{II.2.7.9}.
+
+Demostremos ahora simultáneamente (i) y (iii).
+Se cumplen para $\sh{F}=\sh{O}_X(m)$ por \sref{III.2.1.13} y, por tanto, también cuando $\sh{F}$ es suma directa de un número finito de $\sh{O}_X$-módulos de la forma $\sh{O}_X(m_j)$.
+Son trivialmente ciertas para $q>r$ por (ii).
+Procedemos por inducción descendente sobre $q$.
+
+El haz $\sh{F}$ es isomorfo a un cociente de una suma directa $\sh{E}$ de un número finito de haces $\sh{O}_X(m_j)$ \sref[II]{II.2.7.10}.
+Existe, pues, una sucesión exacta
+\[
+  0\longrightarrow\sh{R}\longrightarrow\sh{E}
+   \longrightarrow\sh{F}\longrightarrow0,
+\]
+donde $\sh{R}$ es coherente \sref[0]{0.5.3.3} y $\sh{E}$ satisface (i) y (iii).
+Como el cambio de grado es exacto, para todo $n\in\bb{Z}$ se tiene también una sucesión exacta
+\[
+  0\longrightarrow\sh{R}(n)\longrightarrow\sh{E}(n)
+   \longrightarrow\sh{F}(n)\longrightarrow0
+\]
+y, por tanto, una sucesión exacta de cohomología
+\[
+  \HH^{q-1}(X,\sh{E}(n))
+  \longrightarrow\HH^{q-1}(X,\sh{F}(n))
+  \longrightarrow\HH^q(X,\sh{R}(n)).
+\]
+Como $\sh{E}(n)$ es una suma directa de haces $\sh{O}_X(n+m_j)$ \sref[II]{II.2.5.14}, el módulo $\HH^{q-1}(X,\sh{E}(n))$ es de tipo finito.
+Análogamente, el módulo $\HH^q(X,\sh{R}(n))$ es de tipo finito por la hipótesis de inducción.
+Como $A$ es noetheriano, se deduce que $\HH^{q-1}(X,\sh{F}(n))$ es de tipo finito, lo que demuestra (i).
+
+Por la hipótesis de inducción podemos elegir $N$ de modo que $\HH^q(X,\sh{R}(n))=0$ para $n\geq N$.
+Podemos elegir asimismo $N$ de modo que $\HH^{q-1}(X,\sh{E}(n))=0$ para $n\geq N$, puesto que $\sh{E}$ satisface (iii).
+La sucesión exacta de cohomología da entonces
+\[
+  \HH^{q-1}(X,\sh{F}(n))=0
+  \qquad(n\geq N),
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[2.2.3]
+\label{III.2.2.3}
+Bajo las hipótesis de \sref{III.2.2.1}, sea
+\[
+  \sh{F}\longrightarrow\sh{G}\longrightarrow\sh{H}
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes.
+Existe un entero $N$ tal que, para $n\geq N$, la sucesión
+\[
+  f_*(\sh{F}(n))
+  \longrightarrow f_*(\sh{G}(n))
+  \longrightarrow f_*(\sh{H}(n))
+\]
+es exacta.
+\end{corollary}
+
+\begin{proof}
+Sean $\sh{F}'$, $\sh{G}'$ y $\sh{G}''$, respectivamente, el núcleo, la imagen y el conúcleo de $\sh{F}\to\sh{G}$.
+Entonces $\sh{G}'$ es el núcleo y $\sh{G}''$ la imagen de $\sh{G}\to\sh{H}$; sea $\sh{H}''$ el conúcleo de este último homomorfismo.
+Todos estos $\sh{O}_X$-módulos son coherentes \sref[0]{0.5.3.4}.
+Como el cambio de grado es exacto, basta demostrar que, para $n$ suficientemente grande, cada una de las sucesiones
+\begin{align*}
+  0&\longrightarrow f_*(\sh{F}'(n))
+    \longrightarrow f_*(\sh{F}(n))
+    \longrightarrow f_*(\sh{G}'(n))
+    \longrightarrow0\\
+  0&\longrightarrow f_*(\sh{G}'(n))
+    \longrightarrow f_*(\sh{G}(n))
+    \longrightarrow f_*(\sh{G}''(n))
+    \longrightarrow0\\
+  0&\longrightarrow f_*(\sh{G}''(n))
+    \longrightarrow f_*(\sh{H}(n))
+    \longrightarrow f_*(\sh{H}''(n))
+    \longrightarrow0
+\end{align*}
+es exacta.
+Por consiguiente, podemos suponer que
+\[
+  0\longrightarrow\sh{F}\longrightarrow\sh{G}
+   \longrightarrow\sh{H}\longrightarrow0
+\]
+es exacta.
+La sucesión de cohomología es entonces
+\[
+  0\longrightarrow f_*(\sh{F}(n))
+  \longrightarrow f_*(\sh{G}(n))
+  \longrightarrow f_*(\sh{H}(n))
+  \longrightarrow \RR^1f_*(\sh{F}(n))
+  \longrightarrow\ldots,
+\]
+y la conclusión se deduce de \sref{III.2.2.1}, (ii).
+\end{proof}
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 102 -----
+\oldpage[III]{102}
+
+\begin{corollary}[2.2.4]
+\label{III.2.2.4}
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo de tipo finito y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible amplio respecto de $f$.
+Para todo $\sh{O}_X$-módulo $\sh{F}$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}
+  \qquad(n\in\bb{Z}).
+\]
+Sea
+\[
+  \sh{F}\longrightarrow\sh{G}\longrightarrow\sh{H}
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes tal que el soporte de $\operatorname{Im}(\sh{F}\to\sh{G})$ sea propio sobre $Y$ \sref[II]{II.5.4.10}.
+Entonces existe un entero $N$ tal que, para $n\geq N$, la sucesión
+\[
+  f_*(\sh{F}(n))
+  \longrightarrow f_*(\sh{G}(n))
+  \longrightarrow f_*(\sh{H}(n))
+\]
+es exacta.
+\end{corollary}
+
+\begin{proof}
+El razonamiento del comienzo de \sref{III.2.2.1} muestra que, si el corolario es cierto para $\sh{L}^{\otimes d}$, donde $d>0$, entonces es cierto para $\sh{L}$.
+Podemos, por tanto, suponer que $\sh{L}$ es muy amplio respecto de $f$ \sref[II]{II.4.6.11}.
+Podemos entonces identificar $X$ con un subconjunto abierto de un $Y$-preesquema
+\[
+  Z=\Proj(\sh{S}),
+\]
+donde $\sh{S}$ es una $\sh{O}_Y$-álgebra cuasicoherente graduada en grados positivos, $\sh{S}_1$ es de tipo finito y engendra $\sh{S}$, y
+\[
+  \sh{L}=i^*(\sh{O}_Z(1)),
+\]
+siendo $i:X\to Z$ la inmersión canónica \sref[II]{II.4.4.7}.
+
+Pongamos
+\[
+  \sh{G}_1=\Im(\sh{F}\to\sh{G})
+  =\Ker(\sh{G}\to\sh{H}),
+\]
+que es coherente. Como se tiene la sucesión exacta
+\[
+  0\to\sh{G}_1(n)\to\sh{G}(n)\to\sh{H}(n)
+\]
+y el funtor $f_*$ es exacto por la izquierda, la sucesión
+\[
+  0\to f_*(\sh{G}_1(n))\to f_*(\sh{G}(n))
+  \to f_*(\sh{H}(n))
+\]
+es exacta para todo $n$; basta, pues, demostrar que, para $n$ suficientemente grande, la sucesión
+\[
+  f_*(\sh{F}(n))\to f_*(\sh{G}_1(n))\to0
+\]
+es exacta. En otras palabras, podemos reducirnos al caso en que $\sh{H}=0$ y el soporte de $\sh{G}$ es propio sobre $Y$, y por tanto \emph{cerrado en $Z$} (\textbf{II}, 5.4.10). En consecuencia, $\sh{G}'=i_*(\sh{G})$ es un $\sh{O}_Z$-módulo coherente tal que $\sh{G}'|X=\sh{G}$. Sabemos por (I, 9.4.3) que existe un $\sh{O}_Z$-módulo coherente $\sh{F}'$ tal que $\sh{F}'|X=\sh{F}$. Además, como $X$ es abierto en $Z$ y $\Supp(\sh{G})\subset X$ es cerrado en $Z$, se define inmediatamente un homomorfismo sobreyectivo $u':\sh{F}'\to\sh{G}'$ cuya restricción a $X$ es el homomorfismo sobreyectivo dado $u:\sh{F}\to\sh{G}$, tomando $u'|U=0$ para todo abierto $U$ de $Z$ que no interseque $\Supp(\sh{G})$, y $u'|U=u|U$ para todo abierto $U\subset X$.
+
+Como al comienzo de la demostración de (2.2.2), podemos reducirnos al caso en que $Y$ es afín; se trata entonces de demostrar que, para $n$ suficientemente grande,
+\[
+  \Gamma(u):\Gamma(X,\sh{F}(n))
+  \to\Gamma(X,\sh{G}(n))
+\]
+es sobreyectivo. Se tiene el diagrama conmutativo
+\[
+  \xymatrix@C=35mm@R=12mm{
+    \Gamma(Z,\sh{F}'(n)) \ar[r]^{\Gamma(u')} \ar[d]_v &
+    \Gamma(Z,\sh{G}'(n)) \ar[d]^w \\
+    \Gamma(X,\sh{F}(n)) \ar[r]_{\Gamma(u)} &
+    \Gamma(X,\sh{G}(n)).
+  }
+\]
+La definición de $\sh{G}'$ muestra que $w$ es \emph{biyectivo}; por otra parte, en virtud de (2.2.3), $\Gamma(u')$ es \emph{sobreyectivo} para $n$ suficientemente grande, y lo mismo ocurre, por tanto, con $\Gamma(u)$.
+\end{proof}
+
+\begin{env}[2.2.5]
+\label{III.2.2.5}
+\emph{Observaciones.}
+
+(i) La afirmación (i) de \sref{III.2.2.1} sigue siendo cierta si solo se supone que $Y$ es \emph{localmente noetheriano}.
+En efecto, la propiedad es manifiestamente local sobre $Y$.
+Además, las hipótesis de \sref{III.2.2.1} implican que, para todo subconjunto abierto $U\subset Y$, la restricción de $f$ a $f^{-1}(U)$ es un morfismo proyectivo
+\[
+  f^{-1}(U)\longrightarrow U
+\]
+\sref[II]{II.5.5.5}[iii], y $\sh{L}|_{f^{-1}(U)}$ es amplio para este morfismo \sref[II]{II.4.6.4}.
+
+(ii) La afirmación (iii) de \sref{III.2.2.1} sigue siendo válida, como hemos visto, si solo se supone que $X$ es un esquema cuasicompacto, o un preesquema cuyo espacio subyacente es noetheriano, y que $f:X\to Y$ es cuasicompacto \sref[II]{II.4.6.8}.
+Conviene observar, sin embargo, que incluso cuando $Y$ es el \emph{espectro de un cuerpo} $K$ y $f$ es \emph{cuasiproyectivo}, la afirmación (ii) de \sref{III.2.2.1} puede dejar de cumplirse.
+
+Por ejemplo, sea
+\[
+  X'=\Spec(K[T_0,\ldots,T_r])
+\]
+y sea $X$ la unión de los subconjuntos abiertos afines $D(T_i)$ de $X'$, para $0\leq i\leq r$.
+Como la inmersión $X\to X'$ es cuasicompacta, el morfismo estructural $f:X\to Y$ es cuasiafín \sref[II]{II.5.1.10} y, por tanto, $\sh{O}_X$ es muy amplio respecto de $f$ \sref[II]{II.5.1.6}.
+Pero
+\[
+  \Gamma(X,\sh{O}_X)
+  =\bigcap_{i=0}^r(K[T_0,\ldots,T_r])_{T_i}
+  =K[T_0,\ldots,T_r]
+\]
+por \sref[I]{I.8.2.1.1}.
+Se deduce de \sref{III.1.4.3.1} y \sref{III.1.1.3.5} que
+\[
+  \HH^r(X,\sh{O}_X^{\otimes n})
+  =\HH^r(X,\sh{O}_X)
+  \neq0
+\]
+para todo $n$.
+
+(iii) Bajo las hipótesis de (2.2.4) relativas a $X$, $Y$, $f$ y $\sh{L}$, es inmediato que, si $\sh{H}$ es un $\sh{O}_X$-módulo coherente cuyo soporte es \emph{propio sobre $Y$}, un razonamiento análogo al de (2.2.4) muestra que existe un entero $N$ tal que, para $n\geq N$,
+\[
+  \RR^i f_*(\sh{H}(n))=0
+\]
+para todo $i>0$. Se deduce de la sucesión exacta de cohomología que, si $u:\sh{F}\to\sh{G}$ es un homomorfismo de $\sh{O}_X$-módulos coherentes tal que $\Ker(u)$ y $\Coker(u)$ tienen soportes \emph{propios sobre $Y$}, existe un entero $N$ tal que, para $n\geq N$, el homomorfismo correspondiente
+\[
+  \RR^i f_*(\sh{F}(n))\to\RR^i f_*(\sh{G}(n))
+\]
+es \emph{biyectivo} para todo $i>0$.
+\end{env}
+
+
+\subsection{Aplicación a los haces graduados de álgebras y de módulos}
+\label{subsection:III.2.3}
+
+\begin{theorem}[2.3.1]
+\label{III.2.3.1}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, graduada en grados positivos, sea
+\[
+  X=\Proj(\sh{S}),
+\]
+y sea $q:X\to Y$ el morfismo estructural.
+Sea $\sh{M}$ un $\sh{S}$-módulo graduado cuasicoherente que satisface la condición \textup{\textbf{(TF)}}.
+Existe entonces un entero $N$ tal que, para $n\geq N$, el homomorfismo canónico \sref[II]{II.8.14.5.1}
+\[
+  \alpha_n:\sh{M}_n
+  \longrightarrow q_*\bigl(\shProj_0(\sh{M}(n))\bigr)
+  =q_*\bigl((\shProj(\sh{M}))_n\bigr)
+\]
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 103 -----
+\oldpage[III]{103}
+es biyectivo.
+En otras palabras, el homomorfismo canónico
+\[
+  \alpha:\sh{M}\longrightarrow\bbGamma_*(\shProj(\sh{M}))
+\]
+es un \textbf{(TN)}-isomorfismo.
+\end{theorem}
+
+\begin{proof}
+Podemos restringirnos al caso en que $\sh{M}$ es un $\sh{S}$-módulo de tipo finito \sref[II]{II.3.4.2}.
+Como $Y$ es cuasicompacto, existe un entero $d>0$ tal que $\sh{S}^{(d)}$ está engendrada por el $\sh{O}_Y$-módulo cuasicoherente $\sh{S}_d$, que es de tipo finito \sref[II]{II.3.1.10} y, por tanto, coherente porque $Y$ es noetheriano.
+Ahora bien, $\sh{M}$ es la suma directa de los $\sh{M}^{(d,k)}$, para $0\leq k<d$, y cada $\sh{M}^{(d,k)}$ es un $\sh{S}^{(d)}$-módulo cuasicoherente de tipo finito, por \sref[II]{II.2.1.6}[iii].
+Como la cuestión es local sobre $Y$, basta manifiestamente demostrar que cada homomorfismo canónico
+\[
+  \alpha:\sh{M}^{(d,k)}
+  \longrightarrow
+  \bbGamma_*\bigl((\shProj(\sh{M}))^{(d,k)}\bigr)
+\]
+es un \textbf{(TN)}-isomorfismo.
+Teniendo en cuenta \sref[II]{II.8.14.13}, y en particular el diagrama \sref[II]{II.8.14.13.4}, quedamos así reducidos a demostrar el teorema cuando $\sh{S}$ está engendrada por $\sh{S}_1$ y $\sh{S}_1$ es un $\sh{O}_Y$-módulo coherente.
+
+Como $Y$ es noetheriano, el razonamiento utilizado al comienzo de la demostración de \sref{III.2.2.2} muestra que podemos reducirnos al caso
+\[
+  Y=\Spec(A),\qquad
+  \sh{S}=\widetilde{S},\qquad
+  \sh{M}=\widetilde{M},
+\]
+donde $A$ es un anillo noetheriano, $S_1$ es un $A$-módulo de tipo finito y $M$ es un $S$-módulo graduado de tipo finito.
+Mostraremos que basta entonces demostrar el teorema para $M=S$.
+En efecto, en el caso general existe una sucesión exacta
+\[
+  L'\longrightarrow L\longrightarrow M\longrightarrow0,
+\]
+donde $L$ y $L'$ son sumas directas de módulos graduados de la forma $S(m)$.
+Si el resultado se cumple para $M=S$, se cumple también para $M=S(m)$ y, por tanto, para $L$ y $L'$.
+Consideremos el diagrama conmutativo
+\[
+  \xymatrix{
+    \widetilde{L'_n}\ar[r]\ar[d]_{\alpha_n} &
+    \widetilde L_n\ar[r]\ar[d]_{\alpha_n} &
+    \widetilde M_n\ar[r]\ar[d]_{\alpha_n} &
+    0\\
+    q_*(\widetilde{L'}(n))\ar[r] &
+    q_*(\widetilde{L}(n))\ar[r] &
+    q_*(\widetilde{M}(n))\ar[r] &
+    0 .
+  }
+\]
+----- French corrections on page III 102 -----
+[id 5899]
+OLD: soit exacte.
+\end{corollary}
+
+\begin{proof}
+Le même
+NEW: est exacte.
+\end{corollary}
+
+\begin{proof}
+Le même
+FRENCH CONTEXT (corrected): t de
+$\operatorname{Im}(\mathcal F\to\mathcal G)$ soit propre sur $Y$ \textup{(\textbf{II}, 5.4.10)}. Il existe alors
+un entier $N$ tel que, pour $n\geq N$, la suite
+\[
+f_*(\mathcal F(n))\longrightarrow f_*(\mathcal G(n))
+\longrightarrow f_*(\mathcal H(n))
+\]
+est exacte.
+\end{corollary}
+
+\begin{proof}
+Le même raisonnement qu'au début de
+(\hyperref[III.2.2.1-fr]{2.2.1}) montre que si le corollaire est vrai
+pour $\mathcal L^{\otimes d}$ $(d>0)$, il l'est aussi pour $\mathcal L$~;
+on peut donc se borner au cas où $\mathcal L$ est très ample pour $f$
+(\textbf{II}, 4.6
+
+[id 5900]
+OLD: (II, 4.6.11)
+NEW: (\textbf{II}, 4.6.11)
+FRENCH CONTEXT (corrected): tés (ii) et (iii)
+aient lieu pour le $\mathcal O_X$-Module
+$\mathcal F\otimes\mathcal L^{\otimes r}$~; prenant pour $N$ le plus grand
+des $dN_r$, (ii) et (iii) auront lieu pour $n\geq N$. On peut donc
+supposer $\mathcal L$ \emph{très ample} relativement à $f$ (\textbf{II}, 4.6.11)~; il
+existe par suite une $Y$-immersion ouverte dominante
+$i:X\to P$, où $P=\operatorname{Proj}(\mathcal S)$, où $\mathcal S$ est
+une $\mathcal O_Y$-Algèbre quasi-cohérente graduée à degrés positifs, dans
+laquelle $\mathcal S_1$ est de type fini et engendre $
+
+[id 5901]
+OLD: (II, 4.4.7)
+NEW: (\textbf{II}, 4.4.7)
+FRENCH CONTEXT (corrected): =\operatorname{Proj}(\mathcal S)$, où $\mathcal S$ est
+une $\mathcal O_Y$-Algèbre quasi-cohérente graduée à degrés positifs, dans
+laquelle $\mathcal S_1$ est de type fini et engendre $\mathcal S$~; en
+outre, $\mathcal L$ est isomorphe à $i^*(\mathcal O_P(1))$ (\textbf{II}, 4.4.7).
+Mais comme $f$ est propre, il en est de même de $i$ (\textbf{II}, 5.4.4), donc
+$i$ est un \emph{isomorphisme} $X\xrightarrow{\sim}P$. On peut donc se borner au
+cas où $X=\operatorname{Proj}(\mathcal S)$ et
+$\mathcal L=\mathcal O_X(1)$. Le th. (2.2.1) est alo
+
+[id 5904]
+OLD: (II, 4.6.4)
+NEW: (\textbf{II}, 4.6.4)
+FRENCH CONTEXT (corrected):  les
+hypothèses de (\hyperref[III.2.2.1-fr]{2.2.1}) impliquent que pour tout
+ouvert $U\subset Y$, la restriction de $f$ à $f^{-1}(U)$ est un morphisme
+projectif $f^{-1}(U)\to U$ (\textbf{II}, 5.5.5, (iii)) et
+$\mathcal L|f^{-1}(U)$ est ample pour ce morphisme (\textbf{II}, 4.6.4).
+
+(ii) L'assertion (iii) de (\hyperref[III.2.2.1-fr]{2.2.1}) est encore
+valable, comme on l'a vu, lorsque l'on suppose seulement que $X$ est un
+schéma quasi-compact ou un préschéma dont l'espace sous-jacent est
+noethérien, et $f:X\to Y$ un morphisme quasi-com
+
+[id 5905]
+OLD: (II, 4.6.8)
+NEW: (\textbf{II}, 4.6.8)
+FRENCH CONTEXT (corrected): i) L'assertion (iii) de (\hyperref[III.2.2.1-fr]{2.2.1}) est encore
+valable, comme on l'a vu, lorsque l'on suppose seulement que $X$ est un
+schéma quasi-compact ou un préschéma dont l'espace sous-jacent est
+noethérien, et $f:X\to Y$ un morphisme quasi-compact (\textbf{II}, 4.6.8). Mais il
+faut noter que même lorsqu'on suppose que $Y$ est le \emph{spectre d'un
+corps} $K$ et que $f$ est \emph{quasi-projectif}, l'assertion (ii) de
+(\hyperref[III.2.2.1-fr]{2.2.1}) n'est plus nécessairement vérifiée. Par
+exemple, soit $X'=\operatorname{Spe
+
+[id 5908]
+OLD: (I, 8.2.1.1)
+NEW: (\textbf{I}, 8.2.1.1)
+FRENCH CONTEXT (corrected): 
+$f:X\to Y$ est quasi-affine (\textbf{II}, 5.1.10), donc $\mathcal O_X$ est très
+ample pour $f$ (\textbf{II}, 5.1.6). Mais l'anneau
+$\Gamma(X,\mathcal O_X)$ s'identifie à l'intersection des anneaux de
+fractions $(K[T_0,\ldots,T_r])_{T_i}$ pour $0\leq i\leq r$
+(\textbf{I}, 8.2.1.1), c'est-à-dire à $K[T_0,\ldots,T_r]$. Par suite, il résulte
+des formules (1.4.3.1) et (1.1.3.5) que l'on a
+$H^r(X,\mathcal O_X^{\otimes n})=H^r(X,\mathcal O_X)\neq0$ pour tout
+$n$.
+(iii) Sous les hypothèses de (2.2.4) concernant $X$, $Y$, $f$ et $\mathcal L$,
+
+
+[id 5910]
+OLD: (II, 8.14.5.1)
+NEW: \textup{(\textbf{II}, 8.14.5.1)}
+FRENCH CONTEXT (corrected):  $X=\operatorname{Proj}(\mathcal S)$,
+$q:X\to Y$ le morphisme structural, $\mathcal M$ un $\mathcal S$-Module
+gradué quasi-cohérent vérifiant la condition \textup{\textbf{(TF)}}. Alors il existe
+un entier $N$ tel que, pour $n\geq N$, l'homomorphisme canonique
+\textup{(\textbf{II}, 8.14.5.1)}
+\[
+\alpha_n:\mathcal M_n\longrightarrow
+q_*(\shProj_0(\mathcal M(n)))
+=q_*((\shProj(\mathcal M))_n)
+\]
+\oldpage[III]{103}
+soit bijectif. En d'autres termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un
+
+[id 14439]
+OLD: soit propre sur $Y$ (II, 5.4.10).
+NEW: soit propre sur $Y$ \textup{(\textbf{II}, 5.4.10)}.
+FRENCH CONTEXT (corrected): al F\otimes_{\mathcal O_X}\mathcal L^{\otimes n}$
+(pour $n\in\mathbb Z$). Soit
+$\mathcal F\to\mathcal G\to\mathcal H$ une suite exacte de
+$\mathcal O_X$-Modules cohérents,
+\oldpage[III]{102}
+telle que le support de
+$\operatorname{Im}(\mathcal F\to\mathcal G)$ soit propre sur $Y$ \textup{(\textbf{II}, 5.4.10)}. Il existe alors
+un entier $N$ tel que, pour $n\geq N$, la suite
+\[
+f_*(\mathcal F(n))\longrightarrow f_*(\mathcal G(n))
+\longrightarrow f_*(\mathcal H(n))
+\]
+est exacte.
+\end{corollary}
+
+\begin{proof}
+Le même raisonnement qu'au début de
+(\hyperref[III.2.2.1-f
+
+[id 14440]
+OLD: propres sur $Y$ (II, 5.4.10)
+NEW: propres sur $Y$ \textup{(\textbf{II}, 5.4.10)}
+
+[id 14441]
+OLD: i_*(\mathcal F(n))$, et de même
+NEW: i_*(\mathcal F(n))$ et de même
+
+=================== PAGE III 103 ===================
+----- (Spanish page III 102: shown above in this file) -----
+----- (Spanish page III 103: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 104 -----
+\oldpage[III]{104}
+La segunda fila es exacta por \sref{III.2.2.3} cuando $n$ es suficientemente grande.
+Lo mismo ocurre con la primera fila y, como las dos flechas verticales de la izquierda son isomorfismos, también lo es la tercera.
+
+Queda, pues, demostrar el teorema para $M=S$.
+Supongamos primero que
+\[
+  S=A[T_0,\ldots,T_r],
+\]
+donde los $T_i$ son indeterminadas.
+En este caso, la afirmación es precisamente \sref{III.2.1.11}[ii].
+En el caso general, $S$ se identifica con un cociente de un anillo
+\[
+  S'=A[T_0,\ldots,T_r]
+\]
+por un ideal graduado, de modo que $X$ es un subesquema cerrado de
+\[
+  X'=\bb{P}_A^r
+\]
+\sref[II]{II.2.9.2}.
+Si $j:X\to X'$ es la inyección canónica, entonces $j_*(\widetilde{S}(n))$ es el $\sh{O}_{X'}$-módulo
+\[
+  (\shProj(\widetilde{S}))(n),
+\]
+donde $S$ se considera como $S'$-módulo graduado; esto se deduce inmediatamente de \sref[II]{II.2.8.7}.
+Como $j_*(\widetilde{S}(n))$ es un $\sh{O}_{X'}$-módulo que satisface \textbf{(TF)}, el homomorfismo canónico
+\[
+  \alpha_n:S_n\longrightarrow
+  \Gamma\bigl(X',j_*(\widetilde{S}(n))\bigr)
+\]
+es biyectivo para todo $n$ suficientemente grande, por el caso polinómico que acabamos de demostrar.
+Esto termina la demostración, puesto que
+\[
+  \Gamma\bigl(X',j_*(\widetilde{S}(n))\bigr)
+  =\Gamma(X,\widetilde{S}(n)).
+\]
+\end{proof}
+
+\begin{corollary}[2.3.2]
+\label{III.2.3.2}
+Bajo las hipótesis de \sref{III.2.3.1}, sea
+\[
+  \sh{S}_X=\bigoplus_{n\in\bb{Z}}\sh{O}_X(n),
+\]
+y sea $\sh{F}$ un $\sh{S}_X$-módulo graduado cuasicoherente de tipo finito.
+Entonces $\bbGamma_*(\sh{F})$ satisface la condición \textbf{(TF)}.
+\end{corollary}
+
+\begin{proof}
+En la demostración de \sref{III.2.3.1} vimos que $X$, que es isomorfo a $\Proj(\sh{S}^{(d)})$ \sref[II]{II.3.1.8}, es de tipo finito sobre $Y$ \sref[II]{II.3.4.1}.
+Se deduce de \sref[II]{II.8.14.9} que $\sh{F}$ es isomorfo a un $\sh{S}_X$-módulo graduado de la forma $\shProj(\sh{M})$, donde $\sh{M}$ es un $\sh{S}$-módulo graduado cuasicoherente de tipo finito.
+Por \sref{III.2.3.1}, $\bbGamma_*(\sh{F})$ es \textbf{(TN)}-isomorfo a $\sh{M}$ y, por consiguiente, satisface \textbf{(TF)}.
+\end{proof}
+
+\begin{env}[2.3.3]
+\label{III.2.3.3}
+\emph{Escolio.}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra graduada que satisface las hipótesis de \sref{III.2.3.1}, y sea $X=\Proj(\sh{S})$.
+Sea $\cat{K}_{\sh{S}}$ la categoría abeliana de los $\sh{S}$-módulos graduados cuasicoherentes que satisfacen \textbf{(TF)}, y sea $\cat{K}'_{\sh{S}}$ la subcategoría de $\cat{K}_{\sh{S}}$ formada por los $\sh{S}$-módulos que satisfacen \textbf{(TN)}.
+Por último, sea $\cat{K}_X$ la categoría de los $\sh{S}_X$-módulos graduados cuasicoherentes $\sh{F}$ de tipo finito; como $\sh{S}_X$ es periódica \sref[II]{II.8.14.4} y \sref[II]{II.8.14.12}, esto equivale a exigir que los $\sh{F}_i$ sean $\sh{O}_X$-módulos coherentes.
+
+Por \sref[II]{II.8.14.8}, \sref[II]{II.8.14.10} y \sref{III.2.3.2}, los funtores
+\[
+  \sh{M}\leadsto\shProj(\sh{M}),
+  \qquad
+  \sh{F}\leadsto\bbGamma_*(\sh{F})
+\]
+definen una equivalencia (T, I, 1.2) entre la categoría cociente
+\[
+  \cat{K}_{\sh{S}}/\cat{K}'_{\sh{S}}
+\]
+(T, I, 1.11) y la categoría $\cat{K}_X$.
+Cuando $\sh{S}$ está engendrada por $\sh{S}_1$, la categoría $\cat{K}_X$ puede sustituirse por la categoría de los $\sh{O}_X$-módulos coherentes \sref[II]{II.8.14.12}.
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4}
+Sea $Y$ un preesquema noetheriano.
+
+(i) Sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, graduada en grados positivos.
+Pongamos
+\[
+  X=\Proj(\sh{S}),\qquad
+  \sh{S}_X=\shProj(\sh{S})
+  =\bigoplus_{n\in\bb{Z}}\sh{O}_X(n).
+\]
+Entonces $\sh{S}_X$ es una $\sh{O}_X$-álgebra graduada cuasicoherente periódica \sref[II]{II.8.14.12}, sus componentes homogéneas
+\[
+  (\sh{S}_X)_n=\sh{O}_X(n)
+\]
+son $\sh{O}_X$-módulos coherentes y, si $d>0$ es un período de $\sh{S}_X$, entonces
+\[
+  (\sh{S}_X)_d=\sh{O}_X(d)
+\]
+es $Y$-amplio como $\sh{O}_X$-módulo invertible.
+Además, el homomorfismo canónico
+\[
+  \alpha:\sh{S}\longrightarrow\bbGamma_*(\sh{S}_X)
+\]
+es un \textbf{(TN)}-isomorfismo.
+
+(ii) Recíprocamente, sea $q:X\to Y$ un morfismo proyectivo y sea $\sh{S}'$ una $\sh{O}_X$-álgebra graduada cuyas componentes homogéneas $\sh{S}'_n$, para $n\in\bb{Z}$, son $\sh{O}_X$-módulos coherentes.
+Supongamos que $\sh{S}'$ tiene un período $d>0$ tal que $\sh{S}'_d$ es un $\sh{O}_X$-módulo invertible amplio para $q$.
+Entonces
+\[
+  \sh{S}=\bigoplus_{n\geq0}q_*(\sh{S}'_n)
+\]
+es una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, graduada en grados positivos, y existe un $Y$-isomorfismo
+\[
+  r:X\simto\Proj(\sh{S})
+\]
+tal que $r^*(\shProj(\sh{S}))$ es isomorfo a $\sh{S}'$ como $\sh{O}_X$-álgebra graduada.
+\end{proposition}
+
+\begin{proof}
+(i) Casi todas las afirmaciones ya han sido demostradas; la última es un caso particular de \sref{III.2.3.2}.
+La periodicidad de $\sh{S}_X$ fue demostrada en \sref[II]{II.8.14.14}, y la afirmación de que existe un período $d>0$ para el cual $\sh{O}_X(d)$ es invertible y $Y$-amplio es precisamente \sref[II]{II.4.6.18}.
+Finalmente, para $0\leq k<d$, $(\sh{S}_X)^{(d,k)}$ es un $(\sh{S}_X)^{(d)}$-módulo de tipo finito \sref[II]{II.8.14.14}.
+Se deduce que cada $(\sh{S}_X)_n$ es un $\sh{O}_X$-módulo cuasicoherente de tipo finito \sref[II]{II.2.1.6}[ii]; como $\sh{O}_X$ es coherente, también lo es cada $(\sh{S}_X)_n$.
+
+(ii) Tras sustituir el período $d$ por uno de sus múltiplos, podemos suponer que
+\[
+  \sh{L}=\sh{S}'_d
+\]
+es muy amplio respecto de $q$ \sref[II]{II.4.6.11}.
+Por hipótesis,
+\[
+  \sh{S}'^{(d)}
+  =\bigoplus_{n\in\bb{Z}}\sh{L}^{\otimes n},
+\]
+y, por tanto,
+\[
+  \sh{S}^{(d)}
+  =\bigoplus_{n\geq0}q_*(\sh{L}^{\otimes n}).
+\]
+Por \sref[II]{II.3.1.8} y \sref[II]{II.3.2.9}, existe un $Y$-isomorfismo
+\[
+  s:X'=\Proj(\sh{S})\simto
+  X''=\Proj(\sh{S}^{(d)})
+\]
+tal que
+----- French corrections on page III 103 -----
+[id 5911]
+OLD: est un \textbf{(TN)}-isomorphisme.
+\end{theorem}
+NEW: est un \textup{\textbf{(TN)}}-isomorphisme.
+\end{theorem}
+FRENCH CONTEXT (corrected): .5.1)}
+\[
+\alpha_n:\mathcal M_n\longrightarrow
+q_*(\shProj_0(\mathcal M(n)))
+=q_*((\shProj(\mathcal M))_n)
+\]
+\oldpage[III]{103}
+soit bijectif. En d'autres termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un \textup{\textbf{(TN)}}-isomorphisme.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $\mathcal M$ est un $\mathcal S$-Module de
+type fini (\textbf{II}, 3.4.2).
+
+Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module quasi-cohérent
+
+[id 5912]
+OLD: (II, 3.4.2)
+NEW: (\textbf{II}, 3.4.2)
+FRENCH CONTEXT (corrected): s termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un \textup{\textbf{(TN)}}-isomorphisme.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $\mathcal M$ est un $\mathcal S$-Module de
+type fini (\textbf{II}, 3.4.2).
+
+Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module quasi-cohérent $\mathcal S_d$, ce dernier étant de
+type fini (\textbf{II}, 3.1.10), donc cohérent puisque $Y$ est noethérien.
+Remar
+
+[id 5914]
+OLD: (II, 3.1.10)
+NEW: (\textbf{II}, 3.1.10)
+FRENCH CONTEXT (corrected): athcal M$ est un $\mathcal S$-Module de
+type fini (\textbf{II}, 3.4.2).
+
+Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module quasi-cohérent $\mathcal S_d$, ce dernier étant de
+type fini (\textbf{II}, 3.1.10), donc cohérent puisque $Y$ est noethérien.
+Remarquons maintenant que $\mathcal M$ est somme directe des
+$\mathcal M^{(d,k)}$ pour $0\leq k<d$ et que chacun des
+$\mathcal M^{(d,k)}$ est un $\mathcal S^{(d)}$-Module quasi-cohérent de
+type fini, ainsi qu'il résu
+
+[id 5915]
+OLD: (II, 2.1.6, (iii))
+NEW: (\textbf{II}, 2.1.6, (iii))
+FRENCH CONTEXT (corrected): cohérent puisque $Y$ est noethérien.
+Remarquons maintenant que $\mathcal M$ est somme directe des
+$\mathcal M^{(d,k)}$ pour $0\leq k<d$ et que chacun des
+$\mathcal M^{(d,k)}$ est un $\mathcal S^{(d)}$-Module quasi-cohérent de
+type fini, ainsi qu'il résulte de (\textbf{II}, 2.1.6, (iii)), la question étant
+locale sur $Y$. Or, il suffit évidemment de prouver que chacun des
+homomorphismes canoniques
+\[
+\alpha:\mathcal M^{(d,k)}
+\longrightarrow\bbGamma_*((\shProj(\mathcal M))^{(d,k)})
+\]
+est un \textbf{(TN)}-isomorphisme. Compte tenu de (\textbf
+
+[id 5916]
+OLD: (II, 8.14.13)
+NEW: (\textbf{II}, 8.14.13)
+FRENCH CONTEXT (corrected): , (iii)), la question étant
+locale sur $Y$. Or, il suffit évidemment de prouver que chacun des
+homomorphismes canoniques
+\[
+\alpha:\mathcal M^{(d,k)}
+\longrightarrow\bbGamma_*((\shProj(\mathcal M))^{(d,k)})
+\]
+est un \textbf{(TN)}-isomorphisme. Compte tenu de (\textbf{II}, 8.14.13) (et
+notamment du diagramme (8.14.13.4)), on voit qu'on est ramené à prouver le
+théorème lorsque $\mathcal S$ est engendrée par $\mathcal S_1$ et que
+$\mathcal S_1$ est un $\mathcal O_Y$-Module cohérent.
+Comme $Y$ est noethérien, le même raisonnement qu'au déb
+
+[id 5917]
+OLD: 8.14.13), et
+notamment du diagramme (8.14.13.4), on
+NEW: 8.14.13) (et
+notamment du diagramme (8.14.13.4)), on
+FRENCH CONTEXT (corrected): uestion étant
+locale sur $Y$. Or, il suffit évidemment de prouver que chacun des
+homomorphismes canoniques
+\[
+\alpha:\mathcal M^{(d,k)}
+\longrightarrow\bbGamma_*((\shProj(\mathcal M))^{(d,k)})
+\]
+est un \textbf{(TN)}-isomorphisme. Compte tenu de (\textbf{II}, 8.14.13) (et
+notamment du diagramme (8.14.13.4)), on voit qu'on est ramené à prouver le
+théorème lorsque $\mathcal S$ est engendrée par $\mathcal S_1$ et que
+$\mathcal S_1$ est un $\mathcal O_Y$-Module cohérent.
+Comme $Y$ est noethérien, le même raisonnement qu'au début de
+(\hyperref[III.2.2.2-fr]{2.2.2}) montr
+
+[id 5919]
+OLD: \widetilde {L'_n}
+NEW: \widetilde{L}'_n
+FRENCH CONTEXT (corrected): ongrightarrow M\longrightarrow0,
+\]
+où $L$ et $L'$ sont des sommes directes de modules gradués de la forme
+$S(m)$. Si le résultat est vrai pour $M=S$, il l'est aussi pour $M=S(m)$,
+donc pour $L$ et $L'$. Considérons alors le diagramme commutatif
+\[
+\xymatrix{
+\widetilde{L}'_n\ar[r]\ar[d]_{\alpha_n} &
+\widetilde{L}_n\ar[r]\ar[d]_{\alpha_n} &
+\widetilde{M}_n\ar[r]\ar[d]_{\alpha_n} & 0\\
+q_*(\widetilde {L'}(n))\ar[r] &
+q_*(\widetilde L(n))\ar[r] &
+q_*(\widetilde M(n))\ar[r] & 0
+}
+\]
+
+La deuxième ligne est exacte en vertu de
+(\hyperre
+
+[id 5924]
+OLD: & 0 .
+}
+NEW: & 0
+}
+FRENCH CONTEXT (corrected): alors le diagramme commutatif
+\[
+\xymatrix{
+\widetilde{L}'_n\ar[r]\ar[d]_{\alpha_n} &
+\widetilde{L}_n\ar[r]\ar[d]_{\alpha_n} &
+\widetilde{M}_n\ar[r]\ar[d]_{\alpha_n} & 0\\
+q_*(\widetilde {L'}(n))\ar[r] &
+q_*(\widetilde L(n))\ar[r] &
+q_*(\widetilde M(n))\ar[r] & 0
+}
+\]
+
+La deuxième ligne est exacte en vertu de
+(\hyperref[III.2.2.3-fr]{2.2.3}), dès que $n$ est assez grand~; comme il
+en est de même de la première et que les deux flèches verticales de gauche
+sont des isomorphismes, il en est de même de la troisième.
+
+Cela é
+
+[id 5926]
+OLD: (II, 2.9.2)
+NEW: (\textbf{II}, 2.9.2)
+FRENCH CONTEXT (corrected): erminées)~; dans ce cas, notre assertion
+n'est autre que (\hyperref[III.2.1.11-fr]{2.1.11}, (ii)). Dans le cas
+général, $S$ s'identifie à un quotient d'un anneau
+$S'=A[T_0,\ldots,T_r]$ par un idéal gradué, donc $X$ à un sous-schéma
+fermé de $X'=\mathbf P_A^r$ (\textbf{II}, 2.9.2). Si $j$ est l'injection canonique
+$X\to X'$, $j_*(\widetilde S(n))$ n'est autre que le
+$\mathcal O_{X'}$-Module $(\shProj(\widetilde S))(n)$ où $S$ est considéré
+comme un $S'$-module gradué~; cela résulte en effet aussitôt de
+(\textbf{II}, 2.8.7). Comme $j_*(
+
+[id 5927]
+OLD: (II, 2.8.7)
+NEW: (\textbf{II}, 2.8.7)
+FRENCH CONTEXT (corrected): athbf P_A^r$ (\textbf{II}, 2.9.2). Si $j$ est l'injection canonique
+$X\to X'$, $j_*(\widetilde S(n))$ n'est autre que le
+$\mathcal O_{X'}$-Module $(\shProj(\widetilde S))(n)$ où $S$ est considéré
+comme un $S'$-module gradué~; cela résulte en effet aussitôt de
+(\textbf{II}, 2.8.7). Comme $j_*(\widetilde S(n))$ est un
+$\mathcal O_{X'}$-Module vérifiant \textbf{(TF)}, l'homomorphisme canonique
+$\alpha_n:S_n\to\Gamma(X',j_*(\widetilde S(n)))$ est bijectif pour $n$
+assez grand, en vertu de ce qui précède~; cela achève la démonstration,
+pui
+
+[id 24629]
+OLD: $\mathcal M$ est un $\mathcal S$-module de
+NEW: $\mathcal M$ est un $\mathcal S$-Module de
+FRENCH CONTEXT (corrected): ))_n)
+\]
+\oldpage[III]{103}
+soit bijectif. En d'autres termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un \textup{\textbf{(TN)}}-isomorphisme.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $\mathcal M$ est un $\mathcal S$-Module de
+type fini (\textbf{II}, 3.4.2).
+
+Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module quasi-cohérent $\mathcal S_d$, ce dernier étant de
+type fini (\textbf{II}, 3.1.10), donc cohérent pu
+
+=================== PAGE III 104 ===================
+----- (Spanish page III 103: shown above in this file) -----
+----- (Spanish page III 104: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 105 -----
+\oldpage[III]{105}
+\[
+  s^*(\sh{O}_{X''}(n))=\sh{O}_{X'}(nd)
+\]
+para todo $n$ \sref[II]{II.3.5.2}.
+Estableceremos, por tanto, la existencia de un $Y$-isomorfismo $X\simto X'$ demostrando la afirmación siguiente.
+
+\begin{env}[2.3.4.1]
+\label{III.2.3.4.1}
+Sea $Y$ un preesquema noetheriano, sea $q:X\to Y$ un morfismo proyectivo y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible muy amplio para $q$.
+Entonces
+\[
+  \sh{S}=\bigoplus_{n\geq0}q_*(\sh{L}^{\otimes n})
+\]
+es una $\sh{O}_Y$-álgebra graduada cuasicoherente de tipo finito tal que
+\[
+  \sh{S}_n=\sh{S}_1^n
+\]
+para todo $n$ suficientemente grande, y existe un $Y$-isomorfismo
+\[
+  r:X\simto P=\Proj(\sh{S})
+\]
+tal que
+\[
+  \sh{L}=r^*(\sh{O}_P(1)).
+\]
+\end{env}
+
+Como $q$ es proyectivo, se deduce de \sref[II]{II.5.4.4} y \sref[II]{II.4.4.7} que existe un $Y$-isomorfismo
+\[
+  r':X\simto P'=\Proj(\sh{T}),
+\]
+donde $\sh{T}$ es una $\sh{O}_Y$-álgebra cuasicoherente, $\sh{T}_1$ es de tipo finito y engendra $\sh{T}$, y
+\[
+  \sh{L}=r'^*(\sh{O}_{P'}(1)).
+\]
+Si $q':P'\to Y$ es el morfismo estructural, entonces
+\[
+  \sh{S}=\bigoplus_{n\geq0}q'_*(\sh{O}_{P'}(n)).
+\]
+Por \sref{III.2.3.1}, el homomorfismo canónico
+\[
+  \alpha_n:\sh{T}_n\longrightarrow
+  \sh{S}_n=q'_*(\sh{O}_{P'}(n))
+\]
+es biyectivo para todo $n$ suficientemente grande.
+Como $\sh{T}_n=\sh{T}_1^n$, se deduce \emph{a fortiori} que $\sh{S}_n=\sh{S}_1^n$ para todo $n$ suficientemente grande.
+
+El homomorfismo canónico $\alpha:\sh{T}\to\sh{S}$ de $\sh{O}_Y$-álgebras graduadas es un \textbf{(TN)}-isomorfismo.
+Por consiguiente,
+\phantomsection\label{III.2.3.5.1}
+\[
+  \Phi=\Proj(\alpha):\Proj(\sh{S})\longrightarrow\Proj(\sh{T})
+\]
+es un isomorfismo \sref[II]{II.3.6.1}.
+Además, \sref[II]{II.3.5.2} y el hecho de que los $\sh{T}$-módulos graduados obtenidos de $\sh{S}(n)$ por restricción de escalares son \textbf{(TN)}-isomorfos a $\sh{T}(n)$ dan
+\[
+  \Phi_*(\sh{O}_P(n))=\sh{O}_{P'}(n)
+\]
+para todo $n$ \sref[II]{II.3.4.2}.
+Solo queda mostrar que $\sh{S}$ es de tipo finito sobre $\sh{O}_Y$.
+Los módulos
+\[
+  \sh{S}_n=q'_*(\sh{O}_{P'}(n))
+\]
+son coherentes por \sref{III.2.2.1}; y si $\sh{S}_n=\sh{S}_1^n$ para $n\geq n_0$, entonces $\sh{S}$ está engendrada por el módulo coherente
+\[
+  \bigoplus_{i\leq n_0}\sh{S}_i.
+\]
+Esto demuestra la afirmación \sref[I]{I.9.6.2}.
+
+Volvamos a la demostración de \sref{III.2.3.4}, conservando su notación.
+Hemos demostrado que existe un $Y$-isomorfismo
+\[
+  r'':X\simto X''
+\]
+tal que
+\[
+  r''_*(\sh{L}^{\otimes n})=\sh{O}_{X''}(n)
+\]
+para todo $n\in\bb{Z}$.
+Sea $q'':X''\to Y$ el morfismo estructural.
+El álgebra $\sh{S}'$ es la suma directa de los $\sh{S}'^{(d)}$-módulos graduados $\sh{S}'^{(d,k)}$.
+Cada uno de ellos es un $\sh{S}'^{(d)}$-módulo cuasicoherente de tipo finito, por la periodicidad de $\sh{S}'$ y la hipótesis de que los $\sh{S}'_n$ son $\sh{O}_X$-módulos de tipo finito \sref[II]{II.8.14.12}.
+Pongamos
+\[
+  \sh{F}^{(k)}=r''_*(\sh{S}'^{(d,k)}),
+\]
+de modo que los $\sh{F}^{(k)}$ son $\sh{S}_{X''}$-módulos graduados cuasicoherentes de tipo finito.
+Por \sref[II]{II.8.14.8}, el homomorfismo canónico
+\[
+  \beta:\shProj\bigl(\bbGamma_*(\sh{F}^{(k)})\bigr)
+  \longrightarrow\sh{F}^{(k)}
+\]
+es un isomorfismo de $\sh{S}_{X''}$-módulos.
+Por otra parte,
+\[
+  q''_*\bigl((\sh{F}^{(k)})_n\bigr)
+  =q_*\bigl((\sh{S}'^{(d,k)})_n\bigr),
+\]
+y para $n\geq0$ el último $\sh{O}_Y$-módulo es, por definición, igual a $(\sh{S}^{(d,k)})_n$.
+En otras palabras, la inyección canónica
+\[
+  \sh{S}^{(d,k)}
+  \longrightarrow\bbGamma_*(\sh{F}^{(k)})
+\]
+es un \textbf{(TN)}-isomorfismo.
+Por tanto,
+\[
+  \shProj(\sh{S}^{(d,k)})
+  =\shProj\bigl(\bbGamma_*(\sh{F}^{(k)})\bigr),
+\]
+y, en consecuencia,
+\[
+  r''{}^*\bigl(\shProj(\sh{S}^{(d,k)})\bigr)
+  \simeq\sh{S}'^{(d,k)}.
+\]
+Queda observar que, salvo isomorfismo canónico,
+\[
+  \shProj(\sh{S}^{(d,k)})
+  =s_*\bigl((\shProj(\sh{S}))^{(d,k)}\bigr)
+\]
+\sref[II]{II.8.14.13.1}; esto demuestra que $r^*(\shProj(\sh{S}))$ es isomorfo a $\sh{S}'$.
+
+Finalmente, por \sref{III.2.3.2}, cada $\bbGamma_*(\sh{F}^{(k)})$ satisface la condición \textbf{(TF)} y, por tanto, también la satisface cada $\sh{S}^{(d,k)}$.
+Además, los $\sh{S}_n=q_*(\sh{S}'_n)$ son coherentes por \sref{III.2.2.1}, porque los $\sh{S}'_n$ son coherentes.
+Se deduce inmediatamente que los $\sh{S}^{(d,k)}$ son $\sh{S}^{(d)}$-módulos de tipo finito.
+Como \sref{III.2.3.4.1} muestra que $\sh{S}^{(d)}$ es una $\sh{O}_Y$-álgebra de tipo finito, $\sh{S}$ es asimismo una $\sh{O}_Y$-álgebra de tipo finito.
+\end{proof}
+----- French corrections on page III 104 -----
+[id 5928]
+OLD: hypothèses de (\hyperref[III.2.3.1-fr]{2.3.1}), soit
+NEW: hypothèses de \textup{(\hyperref[III.2.3.1-fr]{2.3.1})}, soit
+FRENCH CONTEXT (corrected): e S(n)))$ est bijectif pour $n$
+assez grand, en vertu de ce qui précède~; cela achève la démonstration,
+puisque
+$\Gamma(X',j_*(\widetilde S(n)))=\Gamma(X,\widetilde S(n))$.
+\end{proof}
+
+\oldpage[III]{104}
+\begin{corollary}[2.3.2]
+\label{III.2.3.2-fr}
+Sous les hypothèses de \textup{(\hyperref[III.2.3.1-fr]{2.3.1})}, soit
+\[
+\mathcal S_X=\bigoplus_{n\in\mathbb Z}\mathcal O_X(n),
+\]
+et soit $\mathcal F$ un $\mathcal S_X$-Module gradué quasi-cohérent de
+type fini. Alors $\bbGamma_*(\mathcal F)$ vérifie la condition
+\textup{\textbf{(TF)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu d
+
+[id 5929]
+OLD: la condition
+\textbf{(TF)}.
+NEW: la condition
+\textup{\textbf{(TF)}}.
+FRENCH CONTEXT (corrected): .2-fr}
+Sous les hypothèses de \textup{(\hyperref[III.2.3.1-fr]{2.3.1})}, soit
+\[
+\mathcal S_X=\bigoplus_{n\in\mathbb Z}\mathcal O_X(n),
+\]
+et soit $\mathcal F$ un $\mathcal S_X$-Module gradué quasi-cohérent de
+type fini. Alors $\bbGamma_*(\mathcal F)$ vérifie la condition
+\textup{\textbf{(TF)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu dans la démonstration de
+(\hyperref[III.2.3.1-fr]{2.3.1}) que $X$, qui est isomorphe à
+$\operatorname{Proj}(\mathcal S^{(d)})$ (\textbf{II}, 3.1.8) est de type fini sur
+$Y$ (\textbf{II}, 3.4.1). Il résulte alors de (\tex
+
+[id 5930]
+OLD: (II, 3.1.8)
+NEW: (\textbf{II}, 3.1.8)
+FRENCH CONTEXT (corrected): ent de
+type fini. Alors $\bbGamma_*(\mathcal F)$ vérifie la condition
+\textup{\textbf{(TF)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu dans la démonstration de
+(\hyperref[III.2.3.1-fr]{2.3.1}) que $X$, qui est isomorphe à
+$\operatorname{Proj}(\mathcal S^{(d)})$ (\textbf{II}, 3.1.8) est de type fini sur
+$Y$ (\textbf{II}, 3.4.1). Il résulte alors de (\textbf{II}, 8.14.9) que $\mathcal F$ est
+isomorphe à un $\mathcal S_X$-Module gradué de la forme
+$\shProj(\mathcal M)$, où $\mathcal M$ est un $\mathcal S$-Module gradué
+quasi-cohérent de ty
+
+[id 5931]
+OLD: ), est de type fini sur
+NEW: ) est de type fini sur
+FRENCH CONTEXT (corrected): lors $\bbGamma_*(\mathcal F)$ vérifie la condition
+\textup{\textbf{(TF)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu dans la démonstration de
+(\hyperref[III.2.3.1-fr]{2.3.1}) que $X$, qui est isomorphe à
+$\operatorname{Proj}(\mathcal S^{(d)})$ (\textbf{II}, 3.1.8) est de type fini sur
+$Y$ (\textbf{II}, 3.4.1). Il résulte alors de (\textbf{II}, 8.14.9) que $\mathcal F$ est
+isomorphe à un $\mathcal S_X$-Module gradué de la forme
+$\shProj(\mathcal M)$, où $\mathcal M$ est un $\mathcal S$-Module gradué
+quasi-cohérent de type fini. En vertu de
+
+
+[id 5932]
+OLD: (II, 3.4.1)
+NEW: (\textbf{II}, 3.4.1)
+FRENCH CONTEXT (corrected): )$ vérifie la condition
+\textup{\textbf{(TF)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu dans la démonstration de
+(\hyperref[III.2.3.1-fr]{2.3.1}) que $X$, qui est isomorphe à
+$\operatorname{Proj}(\mathcal S^{(d)})$ (\textbf{II}, 3.1.8) est de type fini sur
+$Y$ (\textbf{II}, 3.4.1). Il résulte alors de (\textbf{II}, 8.14.9) que $\mathcal F$ est
+isomorphe à un $\mathcal S_X$-Module gradué de la forme
+$\shProj(\mathcal M)$, où $\mathcal M$ est un $\mathcal S$-Module gradué
+quasi-cohérent de type fini. En vertu de
+(\hyperref[III.2.3.1-fr]{
+
+[id 5933]
+OLD: (II, 8.14.9)
+NEW: (\textbf{II}, 8.14.9)
+FRENCH CONTEXT (corrected): F)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu dans la démonstration de
+(\hyperref[III.2.3.1-fr]{2.3.1}) que $X$, qui est isomorphe à
+$\operatorname{Proj}(\mathcal S^{(d)})$ (\textbf{II}, 3.1.8) est de type fini sur
+$Y$ (\textbf{II}, 3.4.1). Il résulte alors de (\textbf{II}, 8.14.9) que $\mathcal F$ est
+isomorphe à un $\mathcal S_X$-Module gradué de la forme
+$\shProj(\mathcal M)$, où $\mathcal M$ est un $\mathcal S$-Module gradué
+quasi-cohérent de type fini. En vertu de
+(\hyperref[III.2.3.1-fr]{2.3.1}), $\bbGamma_*(\mathcal F)$ est
+\text
+
+[id 5934]
+OLD: isomorphe à $\mathcal M$ et par suite
+NEW: isomorphe à $\mathcal M$, et par suite
+FRENCH CONTEXT (corrected): thcal F$ est
+isomorphe à un $\mathcal S_X$-Module gradué de la forme
+$\shProj(\mathcal M)$, où $\mathcal M$ est un $\mathcal S$-Module gradué
+quasi-cohérent de type fini. En vertu de
+(\hyperref[III.2.3.1-fr]{2.3.1}), $\bbGamma_*(\mathcal F)$ est
+\textbf{(TN)}-isomorphe à $\mathcal M$, et par suite vérifie
+\textbf{(TF)}.
+\end{proof}
+
+\begin{env}[2.3.3]
+\label{III.2.3.3-fr}
+\emph{Scholie.} --- Soient $Y$ un préschéma noethérien, $\mathcal S$ une
+$\mathcal O_Y$-Algèbre graduée vérifiant les conditions de
+(\hyperref[III.2.3.1-fr]{2.3.1}) et $X=\operatornam
+
+[id 5935]
+OLD: Soient $K_{\mathcal S}$
+NEW: Soient $\boldsymbol{K}_{\mathcal S}$
+FRENCH CONTEXT (corrected): .
+\end{proof}
+
+\begin{env}[2.3.3]
+\label{III.2.3.3-fr}
+\emph{Scholie.} --- Soient $Y$ un préschéma noethérien, $\mathcal S$ une
+$\mathcal O_Y$-Algèbre graduée vérifiant les conditions de
+(\hyperref[III.2.3.1-fr]{2.3.1}) et $X=\operatorname{Proj}(\mathcal S)$.
+Soient $\boldsymbol{K}_{\mathcal S}$ la catégorie abélienne des $\mathcal S$-Modules
+gradués quasi-cohérents vérifiant \textbf{(TF)}, $\boldsymbol{K}'_{\mathcal S}$ la
+sous-catégorie de $\boldsymbol{K}_{\mathcal S}$ formée des $\mathcal S$-Modules
+vérifiant \textbf{(TN)}~; enfin, soit $\boldsymb
+
+[id 5936]
+OLD: $K'_{\mathcal S}$ la
+NEW: $\boldsymbol{K}'_{\mathcal S}$ la
+FRENCH CONTEXT (corrected): cal O_Y$-Algèbre graduée vérifiant les conditions de
+(\hyperref[III.2.3.1-fr]{2.3.1}) et $X=\operatorname{Proj}(\mathcal S)$.
+Soient $\boldsymbol{K}_{\mathcal S}$ la catégorie abélienne des $\mathcal S$-Modules
+gradués quasi-cohérents vérifiant \textbf{(TF)}, $\boldsymbol{K}'_{\mathcal S}$ la
+sous-catégorie de $\boldsymbol{K}_{\mathcal S}$ formée des $\mathcal S$-Modules
+vérifiant \textbf{(TN)}~; enfin, soit $\boldsymbol{K}_X$ la catégorie des
+$\mathcal S_X$-Modules gradués quasi-cohérents de type fini $\mathcal F$
+(ce qui revient à dire, puisque 
+
+[id 5937]
+OLD: de $K_{\mathcal S}$ formée
+NEW: de $\boldsymbol{K}_{\mathcal S}$ formée
+FRENCH CONTEXT (corrected):  de
+(\hyperref[III.2.3.1-fr]{2.3.1}) et $X=\operatorname{Proj}(\mathcal S)$.
+Soient $\boldsymbol{K}_{\mathcal S}$ la catégorie abélienne des $\mathcal S$-Modules
+gradués quasi-cohérents vérifiant \textbf{(TF)}, $\boldsymbol{K}'_{\mathcal S}$ la
+sous-catégorie de $\boldsymbol{K}_{\mathcal S}$ formée des $\mathcal S$-Modules
+vérifiant \textbf{(TN)}~; enfin, soit $\boldsymbol{K}_X$ la catégorie des
+$\mathcal S_X$-Modules gradués quasi-cohérents de type fini $\mathcal F$
+(ce qui revient à dire, puisque $\mathcal S_X$ est périodique
+(\textbf{II}, 8.14.4 et 8
+
+[id 5938]
+OLD: soit $K_X$ la
+NEW: soit $\boldsymbol{K}_X$ la
+FRENCH CONTEXT (corrected): }_{\mathcal S}$ la catégorie abélienne des $\mathcal S$-Modules
+gradués quasi-cohérents vérifiant \textbf{(TF)}, $\boldsymbol{K}'_{\mathcal S}$ la
+sous-catégorie de $\boldsymbol{K}_{\mathcal S}$ formée des $\mathcal S$-Modules
+vérifiant \textbf{(TN)}~; enfin, soit $\boldsymbol{K}_X$ la catégorie des
+$\mathcal S_X$-Modules gradués quasi-cohérents de type fini $\mathcal F$
+(ce qui revient à dire, puisque $\mathcal S_X$ est périodique
+(\textbf{II}, 8.14.4 et 8.14.12), que les $\mathcal F_i$ sont des
+$\mathcal O_X$-Modules cohérents). Alors les
+
+[id 5939]
+OLD: (II, 8.14.4 et 8.14.12)
+NEW: (\textbf{II}, 8.14.4 et 8.14.12)
+FRENCH CONTEXT (corrected): l{K}_{\mathcal S}$ formée des $\mathcal S$-Modules
+vérifiant \textbf{(TN)}~; enfin, soit $\boldsymbol{K}_X$ la catégorie des
+$\mathcal S_X$-Modules gradués quasi-cohérents de type fini $\mathcal F$
+(ce qui revient à dire, puisque $\mathcal S_X$ est périodique
+(\textbf{II}, 8.14.4 et 8.14.12), que les $\mathcal F_i$ sont des
+$\mathcal O_X$-Modules cohérents). Alors les foncteurs
+\[
+\mathcal M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsy
+
+[id 5941]
+OLD: \text{dans }K_{\mathcal S}
+NEW: \text{dans }\boldsymbol{K}_{\mathcal S}
+FRENCH CONTEXT (corrected): ents de type fini $\mathcal F$
+(ce qui revient à dire, puisque $\mathcal S_X$ est périodique
+(\textbf{II}, 8.14.4 et 8.14.12), que les $\mathcal F_i$ sont des
+$\mathcal O_X$-Modules cohérents). Alors les foncteurs
+\[
+\mathcal M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} 
+
+[id 5942]
+OLD: ,
+\qquad
+
+NEW: 
+\quad\text{et}\quad
+
+FRENCH CONTEXT (corrected): revient à dire, puisque $\mathcal S_X$ est périodique
+(\textbf{II}, 8.14.4 et 8.14.12), que les $\mathcal F_i$ sont des
+$\mathcal O_X$-Modules cohérents). Alors les foncteurs
+\[
+\mathcal M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mat
+
+[id 5944]
+OLD: \text{dans }K_X
+NEW: \text{dans }\boldsymbol{K}_X
+FRENCH CONTEXT (corrected):  8.14.4 et 8.14.12), que les $\mathcal F_i$ sont des
+$\mathcal O_X$-Modules cohérents). Alors les foncteurs
+\[
+\mathcal M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie
+
+[id 5945]
+OLD: (II, 8.14.8 et 8.14.10)
+NEW: (\textbf{II}, 8.14.8 et 8.14.10)
+FRENCH CONTEXT (corrected): thcal O_X$-Modules cohérents). Alors les foncteurs
+\[
+\mathcal M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par 
+
+[id 5946]
+OLD:  et de
+(\hyperref[III.2.3.2-fr]
+NEW:  et
+(\hyperref[III.2.3.2-fr]
+FRENCH CONTEXT (corrected): lors les foncteurs
+\[
+\mathcal M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remp
+
+[id 5947]
+OLD: {2.3.2}), 
+NEW: {2.3.2}) 
+FRENCH CONTEXT (corrected): al M\leadsto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\b
+
+[id 5948]
+OLD: une équivalence (T, I, 1.2) de la
+catégorie quotient
+NEW: \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient}
+FRENCH CONTEXT (corrected): sto\shProj(\mathcal M)
+\quad\text{dans }\boldsymbol{K}_{\mathcal S}
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohére
+
+[id 5949]
+OLD: $K_{\mathcal S}/K'_{\mathcal S}$
+NEW: $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$
+FRENCH CONTEXT (corrected): 
+\quad\text{et}\quad
+\mathcal F\leadsto\bbGamma_*(\mathcal F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[
+
+[id 5950]
+OLD: (T, I, 1.11) avec la
+catégorie
+NEW: (T, I, 1.11) \emph{avec la
+catégorie}
+FRENCH CONTEXT (corrected): F)
+\quad\text{dans }\boldsymbol{K}_X
+\]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4-fr}
+Soit $Y$ u
+
+[id 5951]
+OLD: $K_X$. Lorsque
+NEW: $\boldsymbol{K}_X$. Lorsque
+FRENCH CONTEXT (corrected): ]
+définissent, en vertu de (\textbf{II}, 8.14.8 et 8.14.10) et
+(\hyperref[III.2.3.2-fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4-fr}
+Soit $Y$ un préschéma noethérien.
+\beg
+
+[id 5952]
+OLD: remplacer $K_X$ par
+NEW: remplacer $\boldsymbol{K}_X$ par
+FRENCH CONTEXT (corrected): -fr]{2.3.2}) \emph{une équivalence} (T, I, 1.2) \emph{de la
+catégorie quotient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4-fr}
+Soit $Y$ un préschéma noethérien.
+\begin{enumerate}
+\item[{\rm(i)}] Soit $\mathcal S$ une $\mathcal O_Y$-Algèbre graduée à
+deg
+
+[id 5953]
+OLD: cohérents (II, 8.14.12)
+NEW: cohérents (\textbf{II}, 8.14.12)
+FRENCH CONTEXT (corrected): tient} $\boldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4-fr}
+Soit $Y$ un préschéma noethérien.
+\begin{enumerate}
+\item[{\rm(i)}] Soit $\mathcal S$ une $\mathcal O_Y$-Algèbre graduée à
+degrés positifs, quasi-cohérente de type fini. Soient
+$X=\operatorname{Proj}
+
+[id 5954]
+OLD: quasi-cohérente et de type fini. Soient
+NEW: quasi-cohérente de type fini. Soient
+FRENCH CONTEXT (corrected): des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4-fr}
+Soit $Y$ un préschéma noethérien.
+\begin{enumerate}
+\item[{\rm(i)}] Soit $\mathcal S$ une $\mathcal O_Y$-Algèbre graduée à
+degrés positifs, quasi-cohérente de type fini. Soient
+$X=\operatorname{Proj}(\mathcal S)$, et
+\[
+\mathcal S_X=\shProj(\mathcal S)
+=\bigoplus_{n\in\mathbb Z}\mathcal O_X(n).
+\]
+Alors $\mathcal S_X$ est une $\mathcal O_X$-Algèbre graduée périodique
+\textup{(\textbf{II}, 8.14.12)} dont les composants homogènes
+$(\m
+
+[id 5955]
+OLD: (II, 8.14.12) dont
+NEW: \textup{(\textbf{II}, 8.14.12)} dont
+FRENCH CONTEXT (corrected): re graduée à
+degrés positifs, quasi-cohérente de type fini. Soient
+$X=\operatorname{Proj}(\mathcal S)$, et
+\[
+\mathcal S_X=\shProj(\mathcal S)
+=\bigoplus_{n\in\mathbb Z}\mathcal O_X(n).
+\]
+Alors $\mathcal S_X$ est une $\mathcal O_X$-Algèbre graduée périodique
+\textup{(\textbf{II}, 8.14.12)} dont les composants homogènes
+$(\mathcal S_X)_n=\mathcal O_X(n)$ sont des $\mathcal O_X$-Modules
+cohérents, et si $d>0$ est une période de $\mathcal S_X$,
+$(\mathcal S_X)_d=\mathcal O_X(d)$ est un $\mathcal O_X$-Module
+inversible $Y$-ample. En outre, l'homomorphis
+
+[id 5956]
+OLD: est un \textbf{(TN)}-isomorphisme.
+NEW: est un \textup{\textbf{(TN)}}-isomorphisme.
+FRENCH CONTEXT (corrected): .5.1)}
+\[
+\alpha_n:\mathcal M_n\longrightarrow
+q_*(\shProj_0(\mathcal M(n)))
+=q_*((\shProj(\mathcal M))_n)
+\]
+\oldpage[III]{103}
+soit bijectif. En d'autres termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un \textup{\textbf{(TN)}}-isomorphisme.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $\mathcal M$ est un $\mathcal S$-Module de
+type fini (\textbf{II}, 3.4.2).
+
+Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module 
+
+[id 5957]
+OLD: en (II, 8.14.14)
+NEW: en (\textbf{II}, 8.14.14)
+FRENCH CONTEXT (corrected): thcal S'$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Toutes les assertions ont pratiquement déjà été démontrées, la
+dernière n'étant autre qu'un cas particulier de
+(\hyperref[III.2.3.1-fr]{2.3.1}). Le fait que $\mathcal S_X$ est
+périodique a été vu en (\textbf{II}, 8.14.14) et le fait qu'il y a une période
+$d>0$ telle que $\mathcal O_X(d)$ soit inversible et $Y$-ample n'est
+autre que (\textbf{II}, 4.6.18). Enfin, pour $0\leq k<d$,
+$(\mathcal S_X)^{(d,k)}$ est un $(\mathcal S_X)^{(d)}$-Module de type fini
+(\textbf{II}, 8.14.14), 
+
+[id 5958]
+OLD: (II, 4.6.18)
+NEW: (\textbf{II}, 4.6.18)
+FRENCH CONTEXT (corrected): étant autre qu'un cas particulier de
+(\hyperref[III.2.3.1-fr]{2.3.1}). Le fait que $\mathcal S_X$ est
+périodique a été vu en (\textbf{II}, 8.14.14) et le fait qu'il y a une période
+$d>0$ telle que $\mathcal O_X(d)$ soit inversible et $Y$-ample n'est
+autre que (\textbf{II}, 4.6.18). Enfin, pour $0\leq k<d$,
+$(\mathcal S_X)^{(d,k)}$ est un $(\mathcal S_X)^{(d)}$-Module de type fini
+(\textbf{II}, 8.14.14), donc chacun des $(\mathcal S_X)_n$ est un
+$\mathcal O_X$-Module quasi-cohérent de type fini en vertu de
+(\textbf{II}, 2.1.6, (ii)), la
+
+[id 5959]
+OLD: fini
+(II, 8.14.14)
+NEW: fini
+(\textbf{II}, 8.14.14)
+FRENCH CONTEXT (corrected):  vu en (\textbf{II}, 8.14.14) et le fait qu'il y a une période
+$d>0$ telle que $\mathcal O_X(d)$ soit inversible et $Y$-ample n'est
+autre que (\textbf{II}, 4.6.18). Enfin, pour $0\leq k<d$,
+$(\mathcal S_X)^{(d,k)}$ est un $(\mathcal S_X)^{(d)}$-Module de type fini
+(\textbf{II}, 8.14.14), donc chacun des $(\mathcal S_X)_n$ est un
+$\mathcal O_X$-Module quasi-cohérent de type fini en vertu de
+(\textbf{II}, 2.1.6, (ii)), la question étant locale~; comme $\mathcal O_X$ est
+cohérent, il en est de même des $(\mathcal S_X)_n$.
+
+(ii) Quitte à remplac
+
+[id 5960]
+OLD: de type fini, en vertu de
+NEW: de type fini en vertu de
+FRENCH CONTEXT (corrected): o Y$ est de type fini.
+\end{corollary}
+
+En effet, on peut supposer $S$ noethérien~; si $\varphi:X\to S$,
+$\psi:Y\to S$ sont les morphismes structuraux, on a $\varphi=\psi\circ f$, et
+$X$ est noethérien en vertu de (\hyperref[I.6.3.7-fr]{6.3.7})~; $f$ est donc
+de type fini en vertu de (\hyperref[I.6.3.6-fr]{6.3.6}).
+
+\begin{proposition}[6.3.10]
+\label{I.6.3.10-fr}
+Soit $f:X\to Y$ un morphisme de type fini. Pour que $f$ soit surjectif, il faut
+et il suffit que, pour tout corps \textup{algébriquement clos} $\Omega$, l'application
+$X(\Omega)\
+
+[id 5961]
+OLD: (II, 2.1.6, (ii))
+NEW: (\textbf{II}, 2.1.6, (ii))
+FRENCH CONTEXT (corrected): utre que (\textbf{II}, 4.6.18). Enfin, pour $0\leq k<d$,
+$(\mathcal S_X)^{(d,k)}$ est un $(\mathcal S_X)^{(d)}$-Module de type fini
+(\textbf{II}, 8.14.14), donc chacun des $(\mathcal S_X)_n$ est un
+$\mathcal O_X$-Module quasi-cohérent de type fini en vertu de
+(\textbf{II}, 2.1.6, (ii)), la question étant locale~; comme $\mathcal O_X$ est
+cohérent, il en est de même des $(\mathcal S_X)_n$.
+
+(ii) Quitte à remplacer la période $d$ par un de ses multiples, on peut
+supposer que $\mathcal L=\mathcal S'_d$ est un $\mathcal O_X$-Module
+\emph{très a
+
+[id 5962]
+OLD: ~; la question étant locale, comme
+NEW: , la question étant locale~; comme
+FRENCH CONTEXT (corrected): .18). Enfin, pour $0\leq k<d$,
+$(\mathcal S_X)^{(d,k)}$ est un $(\mathcal S_X)^{(d)}$-Module de type fini
+(\textbf{II}, 8.14.14), donc chacun des $(\mathcal S_X)_n$ est un
+$\mathcal O_X$-Module quasi-cohérent de type fini en vertu de
+(\textbf{II}, 2.1.6, (ii)), la question étant locale~; comme $\mathcal O_X$ est
+cohérent, il en est de même des $(\mathcal S_X)_n$.
+
+(ii) Quitte à remplacer la période $d$ par un de ses multiples, on peut
+supposer que $\mathcal L=\mathcal S'_d$ est un $\mathcal O_X$-Module
+\emph{très ample} relativement à $q$ (\textbf{
+
+[id 5963]
+OLD: (II, 4.6.11)
+NEW: (\textbf{II}, 4.6.11)
+FRENCH CONTEXT (corrected): tés (ii) et (iii)
+aient lieu pour le $\mathcal O_X$-Module
+$\mathcal F\otimes\mathcal L^{\otimes r}$~; prenant pour $N$ le plus grand
+des $dN_r$, (ii) et (iii) auront lieu pour $n\geq N$. On peut donc
+supposer $\mathcal L$ \emph{très ample} relativement à $f$ (\textbf{II}, 4.6.11)~; il
+existe par suite une $Y$-immersion ouverte dominante
+$i:X\to P$, où $P=\operatorname{Proj}(\mathcal S)$, où $\mathcal S$ est
+une $\mathcal O_Y$-Algèbre quasi-cohérente graduée à degrés positifs, dans
+laquelle $\mathcal S_1$ est de type fini et engendre $
+
+[id 5964]
+OLD: (II, 3.1.8 et 3.2.9)
+NEW: (\textbf{II}, 3.1.8 et 3.2.9)
+FRENCH CONTEXT (corrected): ule
+\emph{très ample} relativement à $q$ (\textbf{II}, 4.6.11). On a en outre
+\[
+\mathcal S'^{(d)}=\bigoplus_{n\in\mathbb Z}\mathcal L^{\otimes n}
+\quad\text{par hypothèse, donc}\quad
+\mathcal S^{(d)}=\bigoplus_{n\geq0}q_*(\mathcal L^{\otimes n})~;
+\]
+on sait (\textbf{II}, 3.1.8 et 3.2.9) qu'il y a un $Y$-isomorphisme $s$ de
+$X'=\operatorname{Proj}(\mathcal S)$ sur
+$X''=\operatorname{Proj}(\mathcal S^{(d)})$ tel que
+\oldpage[III]{105}
+\[
+s^*(\mathcal O_{X''}(n))=\mathcal O_{X'}(nd).
+\]
+On établira donc l'existence d'un $Y$-isomorphisme $X\xrig
+
+=================== PAGE III 105 ===================
+----- (Spanish page III 104: shown above in this file) -----
+----- (Spanish page III 105: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 106 -----
+\oldpage[III]{106}
+\begin{proposition}[2.3.5]
+\label{III.2.3.5}
+Sea $Y$ un preesquema noetheriano integral, sea $X$ un preesquema integral y sea
+\[
+  f:X\longrightarrow Y
+\]
+un morfismo proyectivo birracional.
+Existe entonces un ideal fraccionario coherente
+\[
+  \sh{J}\subset\sh{R}(Y)
+\]
+\sref[II]{II.8.1.2} tal que $X$ es $Y$-isomorfo al preesquema obtenido por explosión de $\sh{J}$ \sref[II]{II.8.1.3}.
+Además, existe un subconjunto abierto $U$ de $Y$ tal que la restricción de $f$ a $f^{-1}(U)$ es un isomorfismo de $f^{-1}(U)$ sobre $U$ (cf.\ \textbf{I}, 6.5.5), y tal que $\sh{J}|U$ es invertible.
+\end{proposition}
+
+\begin{proof}
+Existe un $\sh{O}_X$-módulo invertible $\sh{L}$ muy amplio para $f$ \sref[II]{II.4.4.2} y \sref[II]{II.5.3.2}.
+Aplicando \sref{III.2.3.4.1}, identificamos $X$ con $\Proj(\sh{S})$, donde
+\[
+  \sh{S}=\bigoplus_{n\geq0}f_*(\sh{L}^{\otimes n}).
+\]
+Los módulos $f_*(\sh{L}^{\otimes n})$ son sin torsión sobre $\sh{O}_Y$ \sref[I]{I.7.4.5}.
+Por tanto, $\sh{S}$ se identifica canónicamente con un sub-$\sh{O}_Y$-módulo de
+\[
+  \sh{S}\otimes_{\sh{O}_Y}\sh{R}(Y)
+\]
+\sref[I]{I.7.4.1}.
+Este último es un haz simple \sref[I]{I.7.3.6} y está, por tanto, determinado por su restricción a un subconjunto abierto no vacío.
+
+Elijamos un subconjunto abierto no vacío $U'\subset U$ sobre el cual $\sh{L}|f^{-1}(U')$ sea isomorfo a $\sh{O}_X|f^{-1}(U')$ y, por tanto, a $\sh{O}_Y|U'$.
+Las restricciones $f_*(\sh{L}^{\otimes n})|U'$ son entonces isomorfas a $\sh{O}_Y|U'$.
+Se sigue que
+\[
+  \sh{S}\otimes_{\sh{O}_Y}\sh{R}(Y)
+  \simeq\sh{R}(Y)[T],
+\]
+donde $T$ es una indeterminada.
+Por \sref{III.2.3.4.1}, $\sh{S}$ es \textbf{(TN)}-isomorfa a la sub-$\sh{O}_Y$-álgebra engendrada por la imagen canónica de $f_*(\sh{L})$ en esta álgebra de polinomios.
+Bajo la identificación mostrada, dicha imagen es $\sh{J}\cdot T$, donde $\sh{J}$ es un sub-$\sh{O}_Y$-módulo coherente de $\sh{R}(Y)$ \sref{III.2.2.1}.
+Su restricción a $U'$ es isomorfa a $\sh{O}_Y|U'$ y, reduciendo $U$ si es necesario, $\sh{J}|U$ es invertible.
+Por consiguiente,
+\[
+  \sh{S}\quad\text{es \textbf{(TN)}-isomorfa a}\quad
+  \bigoplus_{n\geq0}\sh{J}^n,
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{corollary}[2.3.6]
+\label{III.2.3.6}
+Bajo las hipótesis de \sref{III.2.3.5}, supongamos además que para todo sub-$\sh{O}_Y$-módulo coherente no nulo
+\[
+  \sh{J}\subset\sh{R}(Y)
+\]
+existe un $\sh{O}_Y$-módulo invertible $\sh{L}$ tal que
+\[
+  \Gamma\bigl(Y,\sh{L}\otimes_{\sh{O}_Y}
+  \shHom(\sh{J},\sh{O}_Y)\bigr)\neq0.
+\]
+Entonces, en el enunciado de \sref{III.2.3.5}, puede tomarse $\sh{J}$ como un ideal de $\sh{O}_Y$.
+Esta condición adicional se satisface siempre si existe un $\sh{O}_Y$-módulo amplio.
+\end{corollary}
+
+\begin{proof}
+En efecto, por \sref[0]{0.5.4.2},
+\[
+  \sh{L}\otimes\shHom(\sh{J},\sh{O}_Y)
+  =\shHom\bigl(\sh{L}^{-1},\shHom(\sh{J},\sh{O}_Y)\bigr)
+  =\shHom(\sh{J}\otimes\sh{L}^{-1},\sh{O}_Y).
+\]
+La hipótesis dice, por tanto, que existe un homomorfismo no nulo
+\[
+  u:\sh{J}\otimes\sh{L}^{-1}\longrightarrow\sh{O}_Y.
+\]
+Para todo $y\in Y$, el módulo $(\sh{J}\otimes\sh{L}^{-1})_y$ se identifica con un sub-$\sh{O}_y$-módulo del cuerpo de fracciones $\sh{R}(Y)_y$ de $\sh{O}_y$ \sref[I]{I.7.1.5}.
+Así, $u_y$ es necesariamente inyectivo, y $u$ identifica $\sh{J}\otimes\sh{L}^{-1}$ con un ideal $\sh{J}'$ de $\sh{O}_Y$.
+Pero
+\[
+  \Proj\left(\bigoplus_{n\geq0}\sh{J}^n\right)
+  \quad\text{y}\quad
+  \Proj\left(\bigoplus_{n\geq0}
+  (\sh{J}\otimes\sh{L}^{-1})^n\right)
+\]
+son $Y$-isomorfos \sref[II]{II.3.1.8}; esto demuestra la primera aserción.
+
+Para la segunda, observemos que
+\[
+  \sh{F}=\shHom_{\sh{O}_Y}(\sh{J},\sh{O}_Y)
+\]
+es coherente y no nulo, pues existe un subconjunto abierto $U$ de $Y$ sobre el cual $\sh{J}|U$ es invertible.
+Si $\sh{L}$ es un $\sh{O}_Y$-módulo amplio, existe un entero $n$ tal que
+\[
+  \sh{F}(n)=\sh{F}\otimes\sh{L}^{\otimes n}
+\]
+está engendrado por sus secciones sobre $Y$ \sref[II]{II.4.5.5}.
+\emph{A fortiori},
+\[
+  \Gamma(Y,\sh{F}(n))\neq0,
+\]
+lo que demuestra la aserción.
+\end{proof}
+
+\begin{corollary}[2.3.7]
+\label{III.2.3.7}
+Sean $X$ e $Y$ esquemas integrales proyectivos sobre un cuerpo $k$, y sea
+\[
+  f:X\longrightarrow Y
+\]
+un $k$-morfismo birracional.
+Entonces $X$ es $k$-isomorfo a un $Y$-esquema obtenido por explosión de un subesquema cerrado $Y'$ de $Y$, no necesariamente reducido.
+\end{corollary}
+
+\begin{proof}
+----- French corrections on page III 105 -----
+[id 5965]
+OLD: \begin{env}[2.3.4.1]
+NEW: \begin{proposition}[2.3.4.1]
+FRENCH CONTEXT (corrected): e
+$X'=\operatorname{Proj}(\mathcal S)$ sur
+$X''=\operatorname{Proj}(\mathcal S^{(d)})$ tel que
+\oldpage[III]{105}
+\[
+s^*(\mathcal O_{X''}(n))=\mathcal O_{X'}(nd).
+\]
+On établira donc l'existence d'un $Y$-isomorphisme $X\xrightarrow{\sim}X'$
+si l'on prouve la
+
+\begin{proposition}[2.3.4.1]
+\label{III.2.3.4.1-fr}
+Soient $Y$ un préschéma noethérien, $q:X\to Y$ un morphisme projectif,
+$\mathcal L$ un $\mathcal O_X$-Module inversible très ample pour $q$.
+Alors $\mathcal S=\bigoplus_{n\geq0}q_*(\mathcal L^{\otimes n})$ est une
+$\mathcal O_Y$-Algèbre
+
+[id 5966]
+OLD: \end{env}
+NEW: \end{proposition}
+FRENCH CONTEXT (corrected): ut et il suffit qu'il existe un entier
+    $n>0$ tel que ${\mathfrak J'}^n\subset\mathfrak J$.
+  \item[{\upshape(ii)}] Pour qu'un $x\in A$ soit contenu dans un idéal de
+    définition, il faut et il suffit qu'il soit topologiquement nilpotent.
+\end{enumerate}
+\end{proposition}
+
+(i) Si ${\mathfrak J'}^n\subset\mathfrak J$, pour tout voisinage ouvert $V$ de
+$0$ dans $A$, il existe $m$ tel que $\mathfrak J^m\subset V$, donc
+${\mathfrak J'}^{mn}\subset V$.
+
+(ii) La condition est évidemment nécessaire~; elle est suffisante, car si elle
+
+
+[id 5967]
+OLD: (II, 5.4.4 et 4.4.7)
+NEW: (\textbf{II}, 5.4.4 et 4.4.7)
+FRENCH CONTEXT (corrected): que
+$\mathcal S_n=\mathcal S_1^n$ pour $n$ assez grand, et il existe un
+$Y$-isomorphisme $r:X\xrightarrow{\sim}P=\operatorname{Proj}(\mathcal S)$
+tel que $\mathcal L=r^*(\mathcal O_P(1))$.
+\end{proposition}
+
+Comme $q$ est un morphisme projectif, il résulte de (\textbf{II}, 5.4.4 et 4.4.7)
+qu'il existe un $Y$-isomorphisme
+$r':X\xrightarrow{\sim}P'=\operatorname{Proj}(\mathcal T)$, où
+$\mathcal T$ est une $\mathcal O_Y$-Algèbre quasi-cohérente telle que
+$\mathcal T_1$ soit un $\mathcal O_Y$-Module de type fini et engendre $\mathcal T$, et l'on a
+
+[id 5968]
+OLD: quasi-cohérente,
+$\mathcal T_1$ est de type fini et engendre $\mathcal T$, et
+$\mathcal L=r'^*
+NEW: quasi-cohérente telle que
+$\mathcal T_1$ soit un $\mathcal O_Y$-Module de type fini et engendre $\mathcal T$, et l'on a
+$\mathcal L=r'^*
+FRENCH CONTEXT (corrected): \mathcal O_P(1))$.
+\end{proposition}
+
+Comme $q$ est un morphisme projectif, il résulte de (\textbf{II}, 5.4.4 et 4.4.7)
+qu'il existe un $Y$-isomorphisme
+$r':X\xrightarrow{\sim}P'=\operatorname{Proj}(\mathcal T)$, où
+$\mathcal T$ est une $\mathcal O_Y$-Algèbre quasi-cohérente telle que
+$\mathcal T_1$ soit un $\mathcal O_Y$-Module de type fini et engendre $\mathcal T$, et l'on a
+$\mathcal L=r'^*(\mathcal O_{P'}(1))$. On a alors
+\[
+\mathcal S=\bigoplus_{n\geq0}q'_*(\mathcal O_{P'}(n)),
+\]
+où $q':P'\to Y$ est le morphisme
+structural, et il résulte de (\hyperref[III.2.3.1-fr]{2.3.1}) que pour $n$ assez grand, l'homomorphisme canonique
+$\alpha_n:\mathcal
+
+[id 5969]
+OLD: $. Si $q':P'\to Y$ est le morphisme
+structural, on a
+\[
+\mathcal S=\bigoplus_{n\geq0}q'_*(\mathcal O_{P'}(n)).
+\]
+En vertu de (\hyperref[III.2.3.1-fr]{2.3.1}), l'homomorphisme canonique
+
+NEW: $. On a alors
+\[
+\mathcal S=\bigoplus_{n\geq0}q'_*(\mathcal O_{P'}(n)),
+\]
+où $q':P'\to Y$ est le morphisme
+structural, et il résulte de (\hyperref[III.2.3.1-fr]{2.3.1}) que pour $n$ assez grand, l'homomorphisme canonique
+
+FRENCH CONTEXT (corrected): :X\xrightarrow{\sim}P'=\operatorname{Proj}(\mathcal T)$, où
+$\mathcal T$ est une $\mathcal O_Y$-Algèbre quasi-cohérente telle que
+$\mathcal T_1$ soit un $\mathcal O_Y$-Module de type fini et engendre $\mathcal T$, et l'on a
+$\mathcal L=r'^*(\mathcal O_{P'}(1))$. On a alors
+\[
+\mathcal S=\bigoplus_{n\geq0}q'_*(\mathcal O_{P'}(n)),
+\]
+où $q':P'\to Y$ est le morphisme
+structural, et il résulte de (\hyperref[III.2.3.1-fr]{2.3.1}) que pour $n$ assez grand, l'homomorphisme canonique
+$\alpha_n:\mathcal T_n\to\mathcal S_n=q_*(\mathcal L^{\otimes n})$ est
+\emph{bijectif}~; comme $\mathcal T_n=\mathcal T_1^n$, on a
+\emph{a fortiori} $\mathcal S_n=\mathcal S_1^n$ dès que $n$ est assez
+grand. En outre, comme l'homomorphisme canonique
+$\alpha:\m
+
+[id 5970]
+OLD: $\alpha_n:\mathcal T_n\to\mathcal S_n=q'_*(\mathcal O_{P'}(n))$ est
+bijectif pour $n$ assez grand~;
+NEW: $\alpha_n:\mathcal T_n\to\mathcal S_n=q_*(\mathcal L^{\otimes n})$ est
+\emph{bijectif}~;
+FRENCH CONTEXT (corrected): a
+$\mathcal L=r'^*(\mathcal O_{P'}(1))$. On a alors
+\[
+\mathcal S=\bigoplus_{n\geq0}q'_*(\mathcal O_{P'}(n)),
+\]
+où $q':P'\to Y$ est le morphisme
+structural, et il résulte de (\hyperref[III.2.3.1-fr]{2.3.1}) que pour $n$ assez grand, l'homomorphisme canonique
+$\alpha_n:\mathcal T_n\to\mathcal S_n=q_*(\mathcal L^{\otimes n})$ est
+\emph{bijectif}~; comme $\mathcal T_n=\mathcal T_1^n$, on a
+\emph{a fortiori} $\mathcal S_n=\mathcal S_1^n$ dès que $n$ est assez
+grand. En outre, comme l'homomorphisme canonique
+$\alpha:\mathcal T\to\mathcal S$ de $\mathcal O_Y$-Algèbres graduées est
+un \textbf{(TN)}-isomorph
+
+[id 5971]
+OLD: En outre, l'homomorphisme canonique
+NEW: En outre, comme l'homomorphisme canonique
+FRENCH CONTEXT (corrected): que pour $n$ assez grand, l'homomorphisme canonique
+$\alpha_n:\mathcal T_n\to\mathcal S_n=q_*(\mathcal L^{\otimes n})$ est
+\emph{bijectif}~; comme $\mathcal T_n=\mathcal T_1^n$, on a
+\emph{a fortiori} $\mathcal S_n=\mathcal S_1^n$ dès que $n$ est assez
+grand. En outre, comme l'homomorphisme canonique
+$\alpha:\mathcal T\to\mathcal S$ de $\mathcal O_Y$-Algèbres graduées est
+un \textbf{(TN)}-isomorphisme,
+\phantomsection\label{III.2.3.5.1-fr}
+\[
+\Phi=\operatorname{Proj}(\alpha):
+\operatorname{Proj}(\mathcal S)\longrightarrow
+\operatorname{Proj}(\mathcal T)
+\
+
+[id 5972]
+OLD: \textbf{(TN)}-isomorphisme~; par suite
+
+NEW: \textbf{(TN)}-isomorphisme,
+
+FRENCH CONTEXT (corrected):  est
+\emph{bijectif}~; comme $\mathcal T_n=\mathcal T_1^n$, on a
+\emph{a fortiori} $\mathcal S_n=\mathcal S_1^n$ dès que $n$ est assez
+grand. En outre, comme l'homomorphisme canonique
+$\alpha:\mathcal T\to\mathcal S$ de $\mathcal O_Y$-Algèbres graduées est
+un \textbf{(TN)}-isomorphisme,
+\phantomsection\label{III.2.3.5.1-fr}
+\[
+\Phi=\operatorname{Proj}(\alpha):
+\operatorname{Proj}(\mathcal S)\longrightarrow
+\operatorname{Proj}(\mathcal T)
+\]
+est un isomorphisme (\textbf{II}, 3.6.1) et on a
+$\Phi_*(\widetilde{\mathcal S}(n))=(\mathcal S(n))\sup
+
+[id 5973]
+OLD: (II, 3.6.1)
+NEW: (\textbf{II}, 3.6.1)
+FRENCH CONTEXT (corrected): \mathcal S$ de $\mathcal O_Y$-Algèbres graduées est
+un \textbf{(TN)}-isomorphisme,
+\phantomsection\label{III.2.3.5.1-fr}
+\[
+\Phi=\operatorname{Proj}(\alpha):
+\operatorname{Proj}(\mathcal S)\longrightarrow
+\operatorname{Proj}(\mathcal T)
+\]
+est un isomorphisme (\textbf{II}, 3.6.1) et on a
+$\Phi_*(\widetilde{\mathcal S}(n))=(\mathcal S(n))\supertilde_{[\alpha]}$ (\textbf{II}, 3.5.2)~; mais comme
+les $\mathcal T$-Modules gradués $(\mathcal S(n))_{[\alpha]}$ et $\mathcal T(n)$ sont \textbf{(TN)}-isomorphes, on a
+\[
+\Phi_*(\mathcal O_P(n))
+
+[id 5974]
+OLD: . En outre, il résulte de 
+NEW:  et on a
+$\Phi_*(\widetilde{\mathcal S}(n))=(\mathcal S(n))\supertilde_{[\alpha]}$ 
+FRENCH CONTEXT (corrected): hcal O_Y$-Algèbres graduées est
+un \textbf{(TN)}-isomorphisme,
+\phantomsection\label{III.2.3.5.1-fr}
+\[
+\Phi=\operatorname{Proj}(\alpha):
+\operatorname{Proj}(\mathcal S)\longrightarrow
+\operatorname{Proj}(\mathcal T)
+\]
+est un isomorphisme (\textbf{II}, 3.6.1) et on a
+$\Phi_*(\widetilde{\mathcal S}(n))=(\mathcal S(n))\supertilde_{[\alpha]}$ (\textbf{II}, 3.5.2)~; mais comme
+les $\mathcal T$-Modules gradués $(\mathcal S(n))_{[\alpha]}$ et $\mathcal T(n)$ sont \textbf{(TN)}-isomorphes, on a
+\[
+\Phi_*(\mathcal O_P(n))=\mathcal O_{P'}(n)
+\]
+pour tout $n$ (\textbf{II}, 3.4.2)~; pour achever de prouver
+
+[id 5975]
+OLD: (II, 3.5.2)
+NEW: (\textbf{II}, 3.5.2)
+FRENCH CONTEXT (corrected): l{III.2.3.5.1-fr}
+\[
+\Phi=\operatorname{Proj}(\alpha):
+\operatorname{Proj}(\mathcal S)\longrightarrow
+\operatorname{Proj}(\mathcal T)
+\]
+est un isomorphisme (\textbf{II}, 3.6.1) et on a
+$\Phi_*(\widetilde{\mathcal S}(n))=(\mathcal S(n))\supertilde_{[\alpha]}$ (\textbf{II}, 3.5.2)~; mais comme
+les $\mathcal T$-Modules gradués $(\mathcal S(n))_{[\alpha]}$ et $\mathcal T(n)$ sont \textbf{(TN)}-isomorphes, on a
+\[
+\Phi_*(\mathcal O_P(n))=\mathcal O_{P'}(n)
+\]
+pour tout $n$ (\textbf{II}, 3.4.2)~; pour achever de prouver
+(\hyperref[III.2.3.
+
+[id 5976]
+OLD:  et
+du fait que les $\mathcal T$-Modules gradués obtenus à partir des
+$\mathcal S(n)$ par restriction des scalaires sont \textbf{(TN)}-isomorphes
+aux $\mathcal T(n)$ que
+
+NEW: ~; mais comme
+les $\mathcal T$-Modules gradués $(\mathcal S(n))_{[\alpha]}$ et $\mathcal T(n)$ sont \textbf{(TN)}-isomorphes, on a
+
+FRENCH CONTEXT (corrected): 
+\Phi=\operatorname{Proj}(\alpha):
+\operatorname{Proj}(\mathcal S)\longrightarrow
+\operatorname{Proj}(\mathcal T)
+\]
+est un isomorphisme (\textbf{II}, 3.6.1) et on a
+$\Phi_*(\widetilde{\mathcal S}(n))=(\mathcal S(n))\supertilde_{[\alpha]}$ (\textbf{II}, 3.5.2)~; mais comme
+les $\mathcal T$-Modules gradués $(\mathcal S(n))_{[\alpha]}$ et $\mathcal T(n)$ sont \textbf{(TN)}-isomorphes, on a
+\[
+\Phi_*(\mathcal O_P(n))=\mathcal O_{P'}(n)
+\]
+pour tout $n$ (\textbf{II}, 3.4.2)~; pour achever de prouver
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}), il reste à montrer que $\mathcal S$
+est une $\mathcal O_Y$-Algèbre de type fini~; or les
+$\mathcal S_n=q'_*(\mat
+
+[id 5977]
+OLD: (II, 3.4.2)
+NEW: (\textbf{II}, 3.4.2)
+FRENCH CONTEXT (corrected): s termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un \textup{\textbf{(TN)}}-isomorphisme.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $\mathcal M$ est un $\mathcal S$-Module de
+type fini (\textbf{II}, 3.4.2).
+
+Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module quasi-cohérent $\mathcal S_d$, ce dernier étant de
+type fini (\textbf{II}, 3.1.10), donc cohérent puisque $Y$ est noethérien.
+Remar
+
+[id 5978]
+OLD: ). Pour achever de prouver
+NEW: )~; pour achever de prouver
+FRENCH CONTEXT (corrected): n))\supertilde_{[\alpha]}$ (\textbf{II}, 3.5.2)~; mais comme
+les $\mathcal T$-Modules gradués $(\mathcal S(n))_{[\alpha]}$ et $\mathcal T(n)$ sont \textbf{(TN)}-isomorphes, on a
+\[
+\Phi_*(\mathcal O_P(n))=\mathcal O_{P'}(n)
+\]
+pour tout $n$ (\textbf{II}, 3.4.2)~; pour achever de prouver
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}), il reste à montrer que $\mathcal S$
+est une $\mathcal O_Y$-Algèbre de type fini~; or les
+$\mathcal S_n=q'_*(\mathcal O_{P'}(n))$ sont des
+$\mathcal O_Y$-Modules \emph{cohérents} en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1}
+
+[id 5979]
+OLD: $\mathcal O_Y$-Modules cohérents en vertu de
+NEW: $\mathcal O_Y$-Modules \emph{cohérents} en vertu de
+FRENCH CONTEXT (corrected): =\mathcal O_{P'}(n)
+\]
+pour tout $n$ (\textbf{II}, 3.4.2)~; pour achever de prouver
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}), il reste à montrer que $\mathcal S$
+est une $\mathcal O_Y$-Algèbre de type fini~; or les
+$\mathcal S_n=q'_*(\mathcal O_{P'}(n))$ sont des
+$\mathcal O_Y$-Modules \emph{cohérents} en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1}) et comme
+$\mathcal S_1^n=\mathcal S_n$ pour $n\geq n_0$, $\mathcal S$ est
+engendrée par $\bigoplus_{i\leq n_0}\mathcal S_i$, qui est cohérent,
+d'où notre assertion (\textbf{I}, 9.6.2).
+
+Revenons à la démonstration de
+(\hyperre
+
+[id 5980]
+OLD: {2.2.1}), et si
+$\mathcal S_n=\mathcal S_1^n$ pour
+NEW: {2.2.1}) et comme
+$\mathcal S_1^n=\mathcal S_n$ pour
+FRENCH CONTEXT (corrected): prouver
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}), il reste à montrer que $\mathcal S$
+est une $\mathcal O_Y$-Algèbre de type fini~; or les
+$\mathcal S_n=q'_*(\mathcal O_{P'}(n))$ sont des
+$\mathcal O_Y$-Modules \emph{cohérents} en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1}) et comme
+$\mathcal S_1^n=\mathcal S_n$ pour $n\geq n_0$, $\mathcal S$ est
+engendrée par $\bigoplus_{i\leq n_0}\mathcal S_i$, qui est cohérent,
+d'où notre assertion (\textbf{I}, 9.6.2).
+
+Revenons à la démonstration de
+(\hyperref[III.2.3.4-fr]{2.3.4}), dont nous reprenons les notations. Nous
+avons démont
+
+[id 5981]
+OLD: qui est cohérent~;
+d'où
+NEW: qui est cohérent,
+d'où
+FRENCH CONTEXT (corrected): 
+$\mathcal S_n=q'_*(\mathcal O_{P'}(n))$ sont des
+$\mathcal O_Y$-Modules \emph{cohérents} en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1}) et comme
+$\mathcal S_1^n=\mathcal S_n$ pour $n\geq n_0$, $\mathcal S$ est
+engendrée par $\bigoplus_{i\leq n_0}\mathcal S_i$, qui est cohérent,
+d'où notre assertion (\textbf{I}, 9.6.2).
+
+Revenons à la démonstration de
+(\hyperref[III.2.3.4-fr]{2.3.4}), dont nous reprenons les notations. Nous
+avons démontré l'existence d'un $Y$-isomorphisme $r'':X\xrightarrow{\sim}X''$
+tel que $r''_*(\mathcal L^{\otimes n})
+
+[id 5982]
+OLD: (I, 9.6.2)
+NEW: (\textbf{I}, 9.6.2)
+FRENCH CONTEXT (corrected): $ sont des
+$\mathcal O_Y$-Modules \emph{cohérents} en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1}) et comme
+$\mathcal S_1^n=\mathcal S_n$ pour $n\geq n_0$, $\mathcal S$ est
+engendrée par $\bigoplus_{i\leq n_0}\mathcal S_i$, qui est cohérent,
+d'où notre assertion (\textbf{I}, 9.6.2).
+
+Revenons à la démonstration de
+(\hyperref[III.2.3.4-fr]{2.3.4}), dont nous reprenons les notations. Nous
+avons démontré l'existence d'un $Y$-isomorphisme $r'':X\xrightarrow{\sim}X''$
+tel que $r''_*(\mathcal L^{\otimes n})=\mathcal O_{X''}(n)$ pour tout
+$n\i
+
+[id 5983]
+OLD: (II, 8.14.12)
+NEW: (\textbf{II}, 8.14.12)
+FRENCH CONTEXT (corrected): oldsymbol{K}_{\mathcal S}/\boldsymbol{K}'_{\mathcal S}$ (T, I, 1.11) \emph{avec la
+catégorie} $\boldsymbol{K}_X$. Lorsque $\mathcal S$ est engendrée par $\mathcal S_1$,
+on peut remplacer $\boldsymbol{K}_X$ par la catégorie des $\mathcal O_X$-Modules
+cohérents (\textbf{II}, 8.14.12).
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{III.2.3.4-fr}
+Soit $Y$ un préschéma noethérien.
+\begin{enumerate}
+\item[{\rm(i)}] Soit $\mathcal S$ une $\mathcal O_Y$-Algèbre graduée à
+degrés positifs, quasi-cohérente de type fini. Soient
+$X=\operatorname{Proj}
+
+[id 5984]
+OLD: (II, 8.14.8)
+NEW: (\textbf{II}, 8.14.8)
+FRENCH CONTEXT (corrected): $\mathcal S'_n$ sont des $\mathcal O_X$-Modules de type fini
+(\textbf{II}, 8.14.12). Posons
+$\mathcal F^{(k)}=r''_*(\mathcal S'^{(d,k)})$, de sorte que les
+$\mathcal F^{(k)}$ sont des $\mathcal S_{X''}$-Modules gradués
+quasi-cohérents de type fini~; par suite (\textbf{II}, 8.14.8), l'homomorphisme
+canonique
+\[
+\beta:\shProj(\bbGamma_*(\mathcal F^{(k)}))
+\longrightarrow\mathcal F^{(k)}
+\]
+est un isomorphisme de $\mathcal S_{X''}$-Modules. Mais on a
+$q''_*((\mathcal F^{(k)})_n)=q_*((\mathcal S'^{(d,k)})_n)$ et pour
+$n\geq0$, ce dernier $
+
+[id 5985]
+OLD: _n)$, et pour
+$n\geq0$ ce dernier
+NEW: _n)$ et pour
+$n\geq0$, ce dernier
+FRENCH CONTEXT (corrected): i~; par suite (\textbf{II}, 8.14.8), l'homomorphisme
+canonique
+\[
+\beta:\shProj(\bbGamma_*(\mathcal F^{(k)}))
+\longrightarrow\mathcal F^{(k)}
+\]
+est un isomorphisme de $\mathcal S_{X''}$-Modules. Mais on a
+$q''_*((\mathcal F^{(k)})_n)=q_*((\mathcal S'^{(d,k)})_n)$ et pour
+$n\geq0$, ce dernier $\mathcal O_Y$-Module est par définition égal à
+$(\mathcal S^{(d,k)})_n$. Autrement dit, l'injection canonique
+$\mathcal S^{(d,k)}\to\bbGamma_*(\mathcal F^{(k)})$ est un
+\textbf{(TN)}-isomorphisme, donc (\textbf{II}, 3.4.2) on a
+\[
+\shProj(\mathcal S^{(d,k)})
+
+[id 5986]
+OLD: \textbf{(TN)}-isomorphisme~; donc
+
+NEW: \textbf{(TN)}-isomorphisme, donc (\textbf{II}, 3.4.2) on a
+
+FRENCH CONTEXT (corrected): a
+$q''_*((\mathcal F^{(k)})_n)=q_*((\mathcal S'^{(d,k)})_n)$ et pour
+$n\geq0$, ce dernier $\mathcal O_Y$-Module est par définition égal à
+$(\mathcal S^{(d,k)})_n$. Autrement dit, l'injection canonique
+$\mathcal S^{(d,k)}\to\bbGamma_*(\mathcal F^{(k)})$ est un
+\textbf{(TN)}-isomorphisme, donc (\textbf{II}, 3.4.2) on a
+\[
+\shProj(\mathcal S^{(d,k)})
+=\shProj(\bbGamma_*(\mathcal F^{(k)})),
+\]
+et par suite
+$r''{}^*(\shProj(\mathcal S^{(d,k)}))=\mathcal S'^{(d,k)}$.
+Il reste à remarquer que
+\[
+\shProj(\mathcal S^{(d,k)})
+=s_*((\shProj(\mathcal S))^{(d,k)})
+\]
+à un isomorphisme 
+
+[id 5987]
+OLD: \simeq\mathcal S'^{(d,k)}
+NEW: =\mathcal S'^{(d,k)}
+FRENCH CONTEXT (corrected): jection canonique
+$\mathcal S^{(d,k)}\to\bbGamma_*(\mathcal F^{(k)})$ est un
+\textbf{(TN)}-isomorphisme, donc (\textbf{II}, 3.4.2) on a
+\[
+\shProj(\mathcal S^{(d,k)})
+=\shProj(\bbGamma_*(\mathcal F^{(k)})),
+\]
+et par suite
+$r''{}^*(\shProj(\mathcal S^{(d,k)}))=\mathcal S'^{(d,k)}$.
+Il reste à remarquer que
+\[
+\shProj(\mathcal S^{(d,k)})
+=s_*((\shProj(\mathcal S))^{(d,k)})
+\]
+à un isomorphisme canonique près (\textbf{II}, 8.14.13.1) pour avoir démontré l'isomorphisme de
+$r^*(\shProj(\mathcal S))$ et de $\mathcal S'$.
+Enfin, en vertu de
+
+[id 5988]
+OLD: remarquer que, à un isomorphisme canonique près,
+
+NEW: remarquer que
+
+FRENCH CONTEXT (corrected):  est un second
+ouvert affine contenant $y$, il existe un troisième ouvert affine $W$
+contenant $y$ et tel que $W\subset V\cap V'$
+(\hyperref[I.2.1.3-fr]{2.1.3})~; on peut donc se limiter au cas où
+$V\subset V'$, et si $B'$ est l'anneau de $V'$, tout revient à remarquer que
+le diagramme
+\phantomsection\label{I.2.4.1.diagram-fr}
+\[
+  \xymatrix{
+    B'\ar[rr]\ar[dr] & & B\ar[dl]\\
+    & \mathscr{O}_y
+  }
+\]
+est commutatif (\hyperref[0.1.5.1-fr]{\textbf{0}, 1.5.1}). Le morphisme
+\[
+  \operatorname{Spec}(\mathscr{O}_y)\to Y
+\]
+ainsi 
+
+[id 5989]
+OLD: \]
+(
+NEW: \]
+à un isomorphisme canonique près (
+FRENCH CONTEXT (corrected): tbf{II}, 3.4.2) on a
+\[
+\shProj(\mathcal S^{(d,k)})
+=\shProj(\bbGamma_*(\mathcal F^{(k)})),
+\]
+et par suite
+$r''{}^*(\shProj(\mathcal S^{(d,k)}))=\mathcal S'^{(d,k)}$.
+Il reste à remarquer que
+\[
+\shProj(\mathcal S^{(d,k)})
+=s_*((\shProj(\mathcal S))^{(d,k)})
+\]
+à un isomorphisme canonique près (\textbf{II}, 8.14.13.1) pour avoir démontré l'isomorphisme de
+$r^*(\shProj(\mathcal S))$ et de $\mathcal S'$.
+Enfin, en vertu de (\hyperref[III.2.3.2-fr]{2.3.2}), chacun des
+$\bbGamma_*(\mathcal F^{(k)})$ vérifie la condition \textbf{(TF)}, donc il
+en est de m
+
+[id 5990]
+OLD: (II, 8.14.13.1)
+NEW: (\textbf{II}, 8.14.13.1)
+FRENCH CONTEXT (corrected): hcal S^{(d,k)})
+=\shProj(\bbGamma_*(\mathcal F^{(k)})),
+\]
+et par suite
+$r''{}^*(\shProj(\mathcal S^{(d,k)}))=\mathcal S'^{(d,k)}$.
+Il reste à remarquer que
+\[
+\shProj(\mathcal S^{(d,k)})
+=s_*((\shProj(\mathcal S))^{(d,k)})
+\]
+à un isomorphisme canonique près (\textbf{II}, 8.14.13.1) pour avoir démontré l'isomorphisme de
+$r^*(\shProj(\mathcal S))$ et de $\mathcal S'$.
+Enfin, en vertu de (\hyperref[III.2.3.2-fr]{2.3.2}), chacun des
+$\bbGamma_*(\mathcal F^{(k)})$ vérifie la condition \textbf{(TF)}, donc il
+en est de même de chacun des $\mat
+
+[id 5992]
+OLD: en outre, les
+$\mathcal S_n=q_*(\mathcal S'_n)$ sont cohérents en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1}), puisque les $\mathcal S'_n$ sont
+cohérents. On en conclut aussitôt
+NEW: en outre, comme les $\mathcal S'_n$
+sont cohérents, il en est de même des $\mathcal S_n=q_*(\mathcal S'_n)$ par
+(\hyperref[III.2.2.1-fr]{2.2.1}), et on en conclut aussitôt
+FRENCH CONTEXT (corrected): ré l'isomorphisme de
+$r^*(\shProj(\mathcal S))$ et de $\mathcal S'$.
+Enfin, en vertu de (\hyperref[III.2.3.2-fr]{2.3.2}), chacun des
+$\bbGamma_*(\mathcal F^{(k)})$ vérifie la condition \textbf{(TF)}, donc il
+en est de même de chacun des $\mathcal S^{(d,k)}$~; en outre, comme les $\mathcal S'_n$
+sont cohérents, il en est de même des $\mathcal S_n=q_*(\mathcal S'_n)$ par
+(\hyperref[III.2.2.1-fr]{2.2.1}), et on en conclut aussitôt que les $\mathcal S^{(d,k)}$ sont des
+$\mathcal S^{(d)}$-Modules de type fini. Comme on a vu dans
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}) que $\mathcal S^{(d)}$ est une
+$\mathcal O_Y$-Algèbre de type fini, on en conclut bien que $\mathcal S$ est aussi une
+$\math
+
+[id 5993]
+OLD: $\mathcal S^{(d)}$-Modules de type fini~; comme
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}) montre que $\mathcal S^{(d)}$ est une
+$\mathcal O_Y$-Algèbre de type fini, il en est de même de $\mathcal S$.
+NEW: $\mathcal S^{(d)}$-Modules de type fini. Comme on a vu dans
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}) que $\mathcal S^{(d)}$ est une
+$\mathcal O_Y$-Algèbre de type fini, on en conclut bien que $\mathcal S$ est aussi une
+$\mathcal O_Y$-Algèbre de type fini.
+FRENCH CONTEXT (corrected):  est de même de chacun des $\mathcal S^{(d,k)}$~; en outre, comme les $\mathcal S'_n$
+sont cohérents, il en est de même des $\mathcal S_n=q_*(\mathcal S'_n)$ par
+(\hyperref[III.2.2.1-fr]{2.2.1}), et on en conclut aussitôt que les $\mathcal S^{(d,k)}$ sont des
+$\mathcal S^{(d)}$-Modules de type fini. Comme on a vu dans
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}) que $\mathcal S^{(d)}$ est une
+$\mathcal O_Y$-Algèbre de type fini, on en conclut bien que $\mathcal S$ est aussi une
+$\mathcal O_Y$-Algèbre de type fini.
+\end{proof}
+
+\oldpage[III]{106}
+\begin{proposition}[2.3.5]
+\label{III.2.3.5-fr}
+Soient $Y$ un préschéma intègre noethérien, $X$ un préschéma intègre,
+$f:X\to Y$ un morphisme \textup{projectif birationnel}. Il existe alors un Idéal
+fractionnaire cohérent $\mat
+
+=================== PAGE III 106 ===================
+----- (Spanish page III 105: shown above in this file) -----
+----- (Spanish page III 106: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 107 -----
+\oldpage[III]{107}
+En efecto, $f$ es proyectivo \sref[II]{II.5.5.5}[v], y como $Y$ es proyectivo sobre $k$, se satisface la condición adicional de \sref{III.2.3.6}.
+Basta, por tanto, tomar el subesquema cerrado $Y'$ de $Y$ definido por el ideal coherente $\sh{J}$ de \sref{III.2.3.6}.
+\end{proof}
+
+\begin{env}[2.3.8]
+\label{III.2.3.8}
+\emph{Observación.}
+En el Capítulo~IV, al estudiar la noción de divisor, veremos que si, en el enunciado de \sref{III.2.3.5}, se supone que los anillos locales $\sh{O}_y$, para $y\in Y$, son factoriales---como ocurre, por ejemplo, cuando $Y$ es no singular---, entonces $X$ puede obtenerse de $Y$ por explosión de un subpreesquema cerrado $Y'$ de $Y$ cuyo espacio subyacente está contenido en $Y-U$.
+\end{env}
+
+
+\subsection{Una generalización del teorema fundamental}
+\label{subsection:III.2.4}
+
+\begin{theorem}[2.4.1]
+\label{III.2.4.1}
+Sea $Y$ un preesquema noetheriano, sea $\sh{S}$ una $\sh{O}_Y$-álgebra cuasicoherente de tipo finito, sea
+\[
+  f:X\longrightarrow Y
+\]
+un morfismo proyectivo, pongamos $\sh{S}'=f^*(\sh{S})$, y sea $\sh{M}$ un $\sh{S}'$-módulo cuasicoherente de tipo finito.
+Entonces:
+\begin{enumerate}
+  \item[\textup{(i)}] Para todo $p\in\bb Z$, $\RR^p f_*(\sh{M})$ es un $\sh{S}$-módulo de tipo finito.
+
+  \item[\textup{(ii)}] Supongamos además que $\sh{L}$ es un $\sh{O}_X$-módulo invertible amplio para $f$ y, para todo $n\in\bb Z$, pongamos
+  \[
+    \sh{M}(n)=\sh{M}\otimes\sh{L}^{\otimes n}.
+  \]
+  Existe un entero $N$ tal que, para $n\geq N$,
+  \[
+  \label{III.2.4.1.1}
+    \RR^p f_*(\sh{M}(n))=0
+    \tag{2.4.1.1}
+  \]
+  para todo $p>0$, y el homomorfismo canónico
+  \[
+    f^*\bigl(f_*(\sh{M}(n))\bigr)\longrightarrow\sh{M}(n)
+  \]
+  \sref[0]{0.4.4.3} es sobreyectivo.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Pongamos
+\[
+  Y'=\Spec(\sh{S}),\qquad X'=\Spec(\sh{S}'),
+\]
+de modo que $X'=X\times_Y Y'$ \sref[II]{II.1.5.5}.
+Sean
+\[
+  g:Y'\longrightarrow Y,\qquad g':X'\longrightarrow X
+\]
+los morfismos estructurales, que son afines por definición, y sea
+\[
+  f'=f_{(Y')}:X'\longrightarrow Y'.
+\]
+Tenemos así un diagrama conmutativo
+\[
+  \xymatrix{
+    X\ar[d]_f &
+    X'\ar[l]_{g'}\ar[d]^{f'}\ar[dl]^{h}\\
+    Y &
+    Y'\ar[l]^{g},
+  }
+\]
+donde $f'$ es proyectivo \sref[II]{II.5.5.5}[iii] y
+\[
+  h=f\circ g'=g\circ f'.
+\]
+
+\emph{(i)} Sea $\widetilde{\sh{M}}$ el $\sh{O}_{X'}$-módulo asociado al $\sh{S}'$-módulo cuasicoherente $\sh{M}$ cuando se considera $X'$ como un $X$-esquema afín \sref[II]{II.1.4.3}; así,
+\[
+  \sh{M}=g'_*(\widetilde{\sh{M}}).
+\]
+Como $\sh{M}$ es un $\sh{S}'$-módulo de tipo finito, $\widetilde{\sh{M}}$ es un $\sh{O}_{X'}$-módulo de tipo finito \sref[II]{II.1.4.5}.
+Además, $h$ es de tipo finito, puesto que $g$ y $f'$ son de tipo finito \sref[II]{II.1.3.7} y \sref[I]{I.6.3.4}[ii].
+Por tanto, $X'$ es noetheriano \sref[I]{I.6.3.7}, y $\widetilde{\sh{M}}$ es, en consecuencia, coherente.
+
+Como $g'$ es afín, el homomorfismo canónico
+\[
+  \RR^p f_*(\sh{M})
+  \longrightarrow
+  \RR^p h_*(\widetilde{\sh{M}})
+\]
+es biyectivo \sref{III.1.3.4}.
+Es, además, un homomorfismo de $\sh{S}$-módulos.
+En efecto, el homomorfismo canónico
+\[
+\label{III.2.4.1.2}
+  g'_*(\sh{O}_{X'})
+  \otimes_{\sh{O}_X}
+  g'_*(\widetilde{\sh{M}})
+  \longrightarrow
+  g'_*(\widetilde{\sh{M}})
+  \tag{2.4.1.2}
+\]
+define la estructura de $\sh{S}'$-módulo sobre $\sh{M}$, puesto que
+\[
+  \sh{S}'=g'_*(\sh{O}_{X'}).
+\]
+Da lugar canónicamente a un homomorfismo
+\[
+  f_*\bigl(g'_*(\sh{O}_{X'})\bigr)
+  \otimes
+  \RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr)
+  \longrightarrow
+  \RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr).
+\]
+----- French corrections on page III 106 -----
+[id 5994]
+OLD: morphisme projectif birationnel.
+NEW: morphisme \textup{projectif birationnel}.
+FRENCH CONTEXT (corrected): pe fini, on en conclut bien que $\mathcal S$ est aussi une
+$\mathcal O_Y$-Algèbre de type fini.
+\end{proof}
+
+\oldpage[III]{106}
+\begin{proposition}[2.3.5]
+\label{III.2.3.5-fr}
+Soient $Y$ un préschéma intègre noethérien, $X$ un préschéma intègre,
+$f:X\to Y$ un morphisme \textup{projectif birationnel}. Il existe alors un Idéal
+fractionnaire cohérent $\mathcal J\subset\mathcal R(Y)$ \textup{(\textbf{II}, 8.1.2)} tel
+que $X$ soit $Y$-isomorphe au préschéma obtenu en faisant éclater
+$\mathcal J$ \textup{(\textbf{II}, 8.1.3)}. En outre, il existe un ouvert $U$ 
+
+[id 5995]
+OLD: (II, 8.1.2)
+NEW: \textup{(\textbf{II}, 8.1.2)}
+FRENCH CONTEXT (corrected): 106}
+\begin{proposition}[2.3.5]
+\label{III.2.3.5-fr}
+Soient $Y$ un préschéma intègre noethérien, $X$ un préschéma intègre,
+$f:X\to Y$ un morphisme \textup{projectif birationnel}. Il existe alors un Idéal
+fractionnaire cohérent $\mathcal J\subset\mathcal R(Y)$ \textup{(\textbf{II}, 8.1.2)} tel
+que $X$ soit $Y$-isomorphe au préschéma obtenu en faisant éclater
+$\mathcal J$ \textup{(\textbf{II}, 8.1.3)}. En outre, il existe un ouvert $U$ de $Y$ tel que
+la restriction de $f$ à $f^{-1}(U)$ soit un isomorphisme de $f^{-1}(U)$
+sur $U$ \textup{(cf. \te
+
+[id 5996]
+OLD: (II, 8.1.3)
+NEW: \textup{(\textbf{II}, 8.1.3)}
+FRENCH CONTEXT (corrected):  intègre,
+$f:X\to Y$ un morphisme \textup{projectif birationnel}. Il existe alors un Idéal
+fractionnaire cohérent $\mathcal J\subset\mathcal R(Y)$ \textup{(\textbf{II}, 8.1.2)} tel
+que $X$ soit $Y$-isomorphe au préschéma obtenu en faisant éclater
+$\mathcal J$ \textup{(\textbf{II}, 8.1.3)}. En outre, il existe un ouvert $U$ de $Y$ tel que
+la restriction de $f$ à $f^{-1}(U)$ soit un isomorphisme de $f^{-1}(U)$
+sur $U$ \textup{(cf. \textbf{I}, 6.5.5)}, et que $\mathcal J|U$ soit inversible.
+\end{proposition}
+
+\begin{proof}
+Comme il existe un $\ma
+
+[id 5997]
+OLD: (cf. I, 6.5.5)
+NEW: \textup{(cf. \textbf{I}, 6.5.5)}
+FRENCH CONTEXT (corrected): tbf{II}, 8.1.2)} tel
+que $X$ soit $Y$-isomorphe au préschéma obtenu en faisant éclater
+$\mathcal J$ \textup{(\textbf{II}, 8.1.3)}. En outre, il existe un ouvert $U$ de $Y$ tel que
+la restriction de $f$ à $f^{-1}(U)$ soit un isomorphisme de $f^{-1}(U)$
+sur $U$ \textup{(cf. \textbf{I}, 6.5.5)}, et que $\mathcal J|U$ soit inversible.
+\end{proposition}
+
+\begin{proof}
+Comme il existe un $\mathcal O_X$-Module inversible $\mathcal L$ très
+ample pour $f$ (\textbf{II}, 4.4.2 et 5.3.2), on peut appliquer
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}), et on voit que
+
+[id 5998]
+OLD: (II, 4.4.2 et 5.3.2)
+NEW: (\textbf{II}, 4.4.2 et 5.3.2)
+FRENCH CONTEXT (corrected): ion de $f$ à $f^{-1}(U)$ soit un isomorphisme de $f^{-1}(U)$
+sur $U$ \textup{(cf. \textbf{I}, 6.5.5)}, et que $\mathcal J|U$ soit inversible.
+\end{proposition}
+
+\begin{proof}
+Comme il existe un $\mathcal O_X$-Module inversible $\mathcal L$ très
+ample pour $f$ (\textbf{II}, 4.4.2 et 5.3.2), on peut appliquer
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1}), et on voit que $X$ s'identifie à
+$\operatorname{Proj}(\mathcal S)$, où
+$\mathcal S=\bigoplus_{n\geq0}f_*(\mathcal L^{\otimes n})$. On sait en
+outre que les $f_*(\mathcal L^{\otimes n})$ sont des
+$\mathc
+
+[id 5999]
+OLD: (I, 7.4.5)
+NEW: (\textbf{I}, 7.4.5)
+FRENCH CONTEXT (corrected): f[III.2.3.4.1-fr]{2.3.4.1}), et on voit que $X$ s'identifie à
+$\operatorname{Proj}(\mathcal S)$, où
+$\mathcal S=\bigoplus_{n\geq0}f_*(\mathcal L^{\otimes n})$. On sait en
+outre que les $f_*(\mathcal L^{\otimes n})$ sont des
+$\mathcal O_Y$-Modules sans torsion (\textbf{I}, 7.4.5), donc il en est de même du
+$\mathcal O_Y$-Module $\mathcal S$, et par suite $\mathcal S$ s'identifie
+canoniquement à un sous-$\mathcal O_Y$-Module de
+$\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$ (\textbf{I}, 7.4.1)~; ce dernier
+est un faisceau \emph{simple
+
+[id 6000]
+OLD: (I, 7.4.1)
+NEW: (\textbf{I}, 7.4.1)
+FRENCH CONTEXT (corrected): t des
+$\mathcal O_Y$-Modules sans torsion (\textbf{I}, 7.4.5), donc il en est de même du
+$\mathcal O_Y$-Module $\mathcal S$, et par suite $\mathcal S$ s'identifie
+canoniquement à un sous-$\mathcal O_Y$-Module de
+$\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$ (\textbf{I}, 7.4.1)~; ce dernier
+est un faisceau \emph{simple} (\textbf{I}, 7.3.6) qui est connu lorsqu'on connaît
+sa restriction à un ouvert non vide, par exemple à un ouvert non vide
+$U'\subset U$ tel que $\mathcal L|f^{-1}(U')$ soit isomorphe à
+$\mathcal O_X|f^{-1}(U')$. Comm
+
+[id 6001]
+OLD: (I, 7.3.6)
+NEW: (\textbf{I}, 7.3.6)
+FRENCH CONTEXT (corrected): donc il en est de même du
+$\mathcal O_Y$-Module $\mathcal S$, et par suite $\mathcal S$ s'identifie
+canoniquement à un sous-$\mathcal O_Y$-Module de
+$\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$ (\textbf{I}, 7.4.1)~; ce dernier
+est un faisceau \emph{simple} (\textbf{I}, 7.3.6) qui est connu lorsqu'on connaît
+sa restriction à un ouvert non vide, par exemple à un ouvert non vide
+$U'\subset U$ tel que $\mathcal L|f^{-1}(U')$ soit isomorphe à
+$\mathcal O_X|f^{-1}(U')$. Comme par hypothèse les
+$f_*(\mathcal L^{\otimes n})|U'$ sont alors
+
+[id 6002]
+OLD: si on identifie ce dernier
+faisceau à
+NEW: si on identifie $\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$
+à
+FRENCH CONTEXT (corrected): ]$, où $T$ est une
+indéterminée, et $\mathcal S$ est \textbf{(TN)}-isomorphe à la
+sous-$\mathcal O_Y$-Algèbre engendrée par l'image canonique de
+$f_*(\mathcal L)$ dans $\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1})~; mais si on identifie $\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$
+à $\mathcal R(Y)[T]$, l'image de $f_*(\mathcal L)$ s'identifie à
+$\mathcal J.T$, où $\mathcal J$ est un sous-$\mathcal O_Y$-Module
+cohérent (\hyperref[III.2.2.1-fr]{2.2.1}) de $\mathcal R(Y)$, dont la
+restriction à $U'$ est isomorphe à $\mathcal O_Y|U'$, et qui
+
+[id 6003]
+OLD: $\mathcal J T$
+NEW: $\mathcal J.T$
+FRENCH CONTEXT (corrected): ge canonique de
+$f_*(\mathcal L)$ dans $\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$
+(\hyperref[III.2.3.4.1-fr]{2.3.4.1})~; mais si on identifie $\mathcal S\otimes_{\mathcal O_Y}\mathcal R(Y)$
+à $\mathcal R(Y)[T]$, l'image de $f_*(\mathcal L)$ s'identifie à
+$\mathcal J.T$, où $\mathcal J$ est un sous-$\mathcal O_Y$-Module
+cohérent (\hyperref[III.2.2.1-fr]{2.2.1}) de $\mathcal R(Y)$, dont la
+restriction à $U'$ est isomorphe à $\mathcal O_Y|U'$, et qui par suite
+est tel que $\mathcal J|U$ soit inversible. On voit alors que $\mat
+
+[id 6004]
+OLD: hypothèses de (\hyperref[III.2.3.5-fr]{2.3.5}), supposons
+NEW: hypothèses de \textup{(\hyperref[III.2.3.5-fr]{2.3.5})}, supposons
+FRENCH CONTEXT (corrected): '$, et qui par suite
+est tel que $\mathcal J|U$ soit inversible. On voit alors que $\mathcal S$
+est \textbf{(TN)}-isomorphe à $\bigoplus_{n\geq0}\mathcal J^n$, ce qui
+achève la démonstration.
+\end{proof}
+
+\begin{corollary}[2.3.6]
+\label{III.2.3.6-fr}
+Sous les hypothèses de \textup{(\hyperref[III.2.3.5-fr]{2.3.5})}, supposons en
+outre que, pour tout sous-$\mathcal O_Y$-Module cohérent
+$\mathcal J\neq0$ de $\mathcal R(Y)$, il existe un
+$\mathcal O_Y$-Module inversible $\mathcal L$ tel que
+\[
+\Gamma(Y,\mathcal L\otimes_{\mathcal O_Y}
+\mathcal{H}om(\mathcal J,\mathcal O_Y))\neq0~;
+\]
+
+[id 6005]
+OLD: l'énoncé de (\hyperref[III.2.3.5-fr]{2.3.5}), on peut
+NEW: l'énoncé de \textup{(\hyperref[III.2.3.5-fr]{2.3.5})}, on peut
+FRENCH CONTEXT (corrected): , pour tout sous-$\mathcal O_Y$-Module cohérent
+$\mathcal J\neq0$ de $\mathcal R(Y)$, il existe un
+$\mathcal O_Y$-Module inversible $\mathcal L$ tel que
+\[
+\Gamma(Y,\mathcal L\otimes_{\mathcal O_Y}
+\mathcal{H}om(\mathcal J,\mathcal O_Y))\neq0~;
+\]
+alors, dans l'énoncé de \textup{(\hyperref[III.2.3.5-fr]{2.3.5})}, on peut supposer
+que $\mathcal J$ est un Idéal de $\mathcal O_Y$. Cette condition
+supplémentaire est toujours vérifiée s'il existe un
+$\mathcal O_Y$-Module ample.
+\end{corollary}
+
+\begin{proof}
+En effet, on a (\textbf{0}\textsubscript{I}, 5.4.2)
+\[
+\mathcal L\otimes\
+
+[id 6006]
+OLD: (0\textsubscript{I}, 5.4.2)
+NEW: (\textbf{0}\textsubscript{I}, 5.4.2)
+FRENCH CONTEXT (corrected): oncé de \textup{(\hyperref[III.2.3.5-fr]{2.3.5})}, on peut supposer
+que $\mathcal J$ est un Idéal de $\mathcal O_Y$. Cette condition
+supplémentaire est toujours vérifiée s'il existe un
+$\mathcal O_Y$-Module ample.
+\end{corollary}
+
+\begin{proof}
+En effet, on a (\textbf{0}\textsubscript{I}, 5.4.2)
+\[
+\mathcal L\otimes\mathcal{H}om(\mathcal J,\mathcal O_Y)
+=\mathcal{H}om(\mathcal L^{-1},\mathcal{H}om(\mathcal J,\mathcal O_Y))
+=\mathcal{H}om(\mathcal J\otimes\mathcal L^{-1},\mathcal O_Y)~;
+\]
+l'hypothèse signifie donc qu'il y a un homomorphisme non nul $
+
+[id 6007]
+OLD: $\mathcal R(Y)_y$
+NEW: $(\mathcal R(Y))_y$
+FRENCH CONTEXT (corrected): \]
+l'hypothèse signifie donc qu'il y a un homomorphisme non nul $u$ de
+$\mathcal J\otimes\mathcal L^{-1}$ dans $\mathcal O_Y$. Comme, pour tout
+$y\in Y$, $(\mathcal J\otimes\mathcal L^{-1})_y$ s'identifie à un
+sous-$\mathcal O_y$-Module du corps des fractions $(\mathcal R(Y))_y$ de
+$\mathcal O_y$ (\textbf{I}, 7.1.5), $u_y$ est nécessairement injectif, donc $u$
+est un isomorphisme de $\mathcal J\otimes\mathcal L^{-1}$ sur un Idéal
+$\mathcal J'$ de $\mathcal O_Y$. Mais comme
+\[
+\operatorname{Proj}\left(\bigoplus_{n\geq0}\mathcal J^n\ri
+
+[id 6008]
+OLD: (I, 7.1.5)
+NEW: (\textbf{I}, 7.1.5)
+FRENCH CONTEXT (corrected):  un homomorphisme non nul $u$ de
+$\mathcal J\otimes\mathcal L^{-1}$ dans $\mathcal O_Y$. Comme, pour tout
+$y\in Y$, $(\mathcal J\otimes\mathcal L^{-1})_y$ s'identifie à un
+sous-$\mathcal O_y$-Module du corps des fractions $(\mathcal R(Y))_y$ de
+$\mathcal O_y$ (\textbf{I}, 7.1.5), $u_y$ est nécessairement injectif, donc $u$
+est un isomorphisme de $\mathcal J\otimes\mathcal L^{-1}$ sur un Idéal
+$\mathcal J'$ de $\mathcal O_Y$. Mais comme
+\[
+\operatorname{Proj}\left(\bigoplus_{n\geq0}\mathcal J^n\right)
+\quad\text{et}\quad
+\operatorname
+
+[id 6009]
+OLD: (II, 3.1.8)
+NEW: (\textbf{II}, 3.1.8)
+FRENCH CONTEXT (corrected): ent de
+type fini. Alors $\bbGamma_*(\mathcal F)$ vérifie la condition
+\textup{\textbf{(TF)}}.
+\end{corollary}
+
+\begin{proof}
+On a vu dans la démonstration de
+(\hyperref[III.2.3.1-fr]{2.3.1}) que $X$, qui est isomorphe à
+$\operatorname{Proj}(\mathcal S^{(d)})$ (\textbf{II}, 3.1.8) est de type fini sur
+$Y$ (\textbf{II}, 3.4.1). Il résulte alors de (\textbf{II}, 8.14.9) que $\mathcal F$ est
+isomorphe à un $\mathcal S_X$-Module gradué de la forme
+$\shProj(\mathcal M)$, où $\mathcal M$ est un $\mathcal S$-Module gradué
+quasi-cohérent de ty
+
+[id 6010]
+OLD: (II, 4.5.5)
+NEW: (\textbf{II}, 4.5.5)
+FRENCH CONTEXT (corrected): 'il existe un ouvert $U$ de $Y$ tel que
+$\mathcal J|U$ soit inversible. Si $\mathcal L$ est un
+$\mathcal O_Y$-Module ample, il existe un entier $n$ tel que
+$\mathcal F(n)=\mathcal F\otimes\mathcal L^{\otimes n}$ soit engendré par
+ses sections au-dessus de $Y$ (\textbf{II}, 4.5.5)~; \emph{a fortiori}, on a
+$\Gamma(Y,\mathcal F(n))\neq0$, d'où la conclusion.
+\end{proof}
+
+\begin{corollary}[2.3.7]
+\label{III.2.3.7-fr}
+Soient $X$ et $Y$ deux schémas intègres, projectifs sur un corps $k$, et
+soit $f:X\to Y$ un $k$-morphisme birationnel. Alo
+
+=================== PAGE III 107 ===================
+----- (Spanish page III 106: shown above in this file) -----
+----- (Spanish page III 107: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 108 -----
+\oldpage[III]{108}
+Por \sref[0]{0.12.2.2}, y dado que \eqref{III.2.4.1.2} se obtiene a su vez, aplicando \sref[0]{0.4.2.2.1}, del homomorfismo
+\[
+  \sh{O}_{X'}\otimes\widetilde{\sh{M}}
+  \longrightarrow\widetilde{\sh{M}}
+\]
+que define la estructura de $\sh{O}_{X'}$-módulo sobre $\widetilde{\sh{M}}$, el diagrama
+\[
+  \xymatrix{
+    f_*\bigl(g'_*(\sh{O}_{X'})\bigr)
+    \otimes\RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr)
+    \ar[r]\ar[d] &
+    \RR^p f_*\bigl(g'_*(\widetilde{\sh{M}})\bigr)\ar[d]\\
+    h_*(\sh{O}_{X'})
+    \otimes\RR^p h_*(\widetilde{\sh{M}})
+    \ar[r] &
+    \RR^p h_*(\widetilde{\sh{M}})
+  }
+\]
+es conmutativo \sref[0]{0.12.2.6}.
+Componiendo las flechas horizontales con el homomorfismo inducido por el homomorfismo canónico
+\[
+  \sh{S}
+  \longrightarrow f_*(f^*(\sh{S}))
+  =f_*(\sh{S}')
+  =f_*\bigl(g'_*(\sh{O}_{X'})\bigr)
+  =h_*(\sh{O}_{X'}),
+\]
+obtenemos la aserción.
+
+Por otra parte, como $g$ es afín y $f'$ es separado y cuasicompacto, el homomorfismo canónico
+\[
+  \RR^p h_*(\widetilde{\sh{M}})
+  \longrightarrow
+  g_*\bigl(\RR^p f'_*(\widetilde{\sh{M}})\bigr)
+\]
+es biyectivo \sref{III.1.4.14}.
+Como antes, es un isomorfismo de $\sh{S}$-módulos, esta vez utilizando la conmutatividad de \sref[0]{0.12.2.6.2}.
+Ahora bien, $f'$ es proyectivo y $\widetilde{\sh{M}}$ es coherente, por lo que $\RR^p f'_*(\widetilde{\sh{M}})$ es un $\sh{O}_{Y'}$-módulo coherente por \sref{III.2.2.1}.
+Se sigue que
+\[
+  g_*\bigl(\RR^p f'_*(\widetilde{\sh{M}})\bigr)
+\]
+es un $\sh{S}$-módulo de tipo finito \sref[II]{II.1.4.5}.
+
+\emph{(ii)} Pongamos
+\[
+  \sh{L}'=g'^*(\sh{L}),
+\]
+un $\sh{O}_{X'}$-módulo invertible.
+Para todo $n\in\bb Z$, salvo isomorfismo canónico,
+\[
+  g'_*\bigl(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}\bigr)
+  =
+  g'_*(\widetilde{\sh{M}})\otimes\sh{L}^{\otimes n}
+  =
+  \sh{M}(n)
+\]
+\sref[0]{0.5.4.10}.
+Aplicando el razonamiento de \emph{(i)} a
+\[
+  \widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}
+\]
+muestra que
+\[
+  \RR^p f_*
+  \bigl(g'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \simeq
+  g_*\bigl(\RR^p f'_*
+  (\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr).
+\]
+Ahora bien, $\sh{L}'$ es amplio para $f'$ \sref[II]{II.4.6.13}[iii].
+Se deduce de \sref{III.2.2.1} que existe un entero $N$ tal que
+\[
+  \RR^p f'_*
+  \bigl(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}\bigr)=0
+\]
+para todo $p>0$ y todo $n\geq N$.
+Esto demuestra \eqref{III.2.4.1.1}.
+
+Se deduce una vez más de \sref{III.2.2.1} que puede elegirse $N$ de modo que, para $n\geq N$, el homomorfismo canónico
+\[
+  f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \longrightarrow
+  \widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n}
+\]
+sea sobreyectivo.
+Como $g'_*$ es exacto \sref[II]{II.1.4.4}, el homomorfismo correspondiente
+\[
+  g'_*\Bigl(
+    f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr)
+  \longrightarrow
+  g'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})
+  =\sh{M}(n)
+\]
+es sobreyectivo.
+Pero \sref[II]{II.1.5.2} da
+\[
+  g'_*\Bigl(
+    f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr)
+  =
+  f^*\Bigl(
+    g_*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr),
+\]
+y $g_*\circ f'_*=f_*\circ g'_*$.
+Por consiguiente,
+\[
+  g'_*\Bigl(
+    f'^*\bigl(f'_*(\widetilde{\sh{M}}\otimes\sh{L}'^{\otimes n})\bigr)
+  \Bigr)
+  =
+  f^*\bigl(f_*(\sh{M}(n))\bigr),
+\]
+lo que termina la demostración.
+\end{proof}
+
+\begin{env}[2.4.2]
+\label{III.2.4.2}
+Aplicaremos \sref{III.2.4.1}, en particular, cuando $\sh{S}$ sea una $\sh{O}_Y$-álgebra graduada en grados positivos y
+\[
+  \sh{M}=\bigoplus_{k\in\bb Z}\sh{M}_k
+\]
+sea un $\sh{S}'$-módulo graduado.
+----- French corrections on page III 107 -----
+[id 5793]
+OLD: (II, 5.5.5, (v))
+NEW: (\textbf{II}, 5.5.5, (v))
+FRENCH CONTEXT (corrected):  et
+soit $f:X\to Y$ un $k$-morphisme birationnel. Alors $X$ est $k$-isomorphe
+à un $Y$-schéma obtenu en faisant éclater un sous-schéma fermé $Y'$
+(non nécessairement réduit) de $Y$.
+\end{corollary}
+
+\oldpage[III]{107}
+\begin{proof}
+En effet, $f$ est projectif (\textbf{II}, 5.5.5, (v)) et comme $Y$ est projectif
+sur $k$, la condition supplémentaire de
+(\hyperref[III.2.3.6-fr]{2.3.6}) est vérifiée~; il suffit alors de
+considérer le sous-schéma fermé $Y'$ de $Y$ défini par l'Idéal cohérent
+$\mathcal J$ du cor. (\hyperref[III.2.3.6-fr]{2.3.6})
+
+[id 5794]
+OLD: $Y-U$
+NEW: $Y\setmin U$
+FRENCH CONTEXT (corrected): , on suppose que les anneaux
+$\mathcal O_y$ $(y\in Y)$ sont factoriels (ce qui est le cas par exemple
+si $Y$ est non singulier), alors $X$ peut se déduire de $Y$ en faisant
+éclater un sous-préschéma fermé $Y'$ de $Y$ dont l'espace sous-jacent est
+contenu dans $Y\setmin U$.
+\end{env}
+
+\subsection{Une généralisation du théorème fondamental}
+\label{subsection:III.2.4-fr}
+
+\begin{theorem}[2.4.1]
+\label{III.2.4.1-fr}
+Soient $Y$ un préschéma noethérien, $\mathcal S$ une
+$\mathcal O_Y$-Algèbre quasi-cohérente de type fini. Soient
+$f:
+
+[id 5797]
+OLD: canonique
+\[
+f^*(f_*(\mathcal M(n)))\longrightarrow\mathcal M(n)
+\]
+NEW: canonique
+$f^*(f_*(\mathcal M(n)))\longrightarrow\mathcal M(n)$
+FRENCH CONTEXT (corrected): $f$, et posons
+$\mathcal M(n)=\mathcal M\otimes\mathcal L^{\otimes n}$ pour tout
+$n\in\mathbb Z$. Il existe un entier $N$ tel que, pour $n\geq N$, on ait
+\[
+R^pf_*(\mathcal M(n))=0
+\tag{2.4.1.1}\label{III.2.4.1.1-fr}
+\]
+pour tout $p>0$, et que l'homomorphisme canonique
+$f^*(f_*(\mathcal M(n)))\longrightarrow\mathcal M(n)$
+\textup{(\textbf{0}\textsubscript{I}, 4.4.3)} soit surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Posons $Y'=\operatorname{Spec}(\mathcal S)$,
+$X'=\operatorname{Spec}(\mathcal S')$ de sorte que
+$X'=X\times_Y Y'$ (\textbf{II}, 1.5.5)~; soient $g:Y'\to
+
+[id 5798]
+OLD: (0\textsubscript{I}, 4.4.3)
+NEW: \textup{(\textbf{0}\textsubscript{I}, 4.4.3)}
+FRENCH CONTEXT (corrected): es n}$ pour tout
+$n\in\mathbb Z$. Il existe un entier $N$ tel que, pour $n\geq N$, on ait
+\[
+R^pf_*(\mathcal M(n))=0
+\tag{2.4.1.1}\label{III.2.4.1.1-fr}
+\]
+pour tout $p>0$, et que l'homomorphisme canonique
+$f^*(f_*(\mathcal M(n)))\longrightarrow\mathcal M(n)$
+\textup{(\textbf{0}\textsubscript{I}, 4.4.3)} soit surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Posons $Y'=\operatorname{Spec}(\mathcal S)$,
+$X'=\operatorname{Spec}(\mathcal S')$ de sorte que
+$X'=X\times_Y Y'$ (\textbf{II}, 1.5.5)~; soient $g:Y'\to Y$,
+$g':X'\to X$ les morphismes structuraux, 
+
+[id 5799]
+OLD: (II, 1.5.5)
+NEW: (\textbf{II}, 1.5.5)
+FRENCH CONTEXT (corrected): al M(n)))\longrightarrow\mathcal M(n)$
+\textup{(\textbf{0}\textsubscript{I}, 4.4.3)} soit surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Posons $Y'=\operatorname{Spec}(\mathcal S)$,
+$X'=\operatorname{Spec}(\mathcal S')$ de sorte que
+$X'=X\times_Y Y'$ (\textbf{II}, 1.5.5)~; soient $g:Y'\to Y$,
+$g':X'\to X$ les morphismes structuraux, qui sont affines par
+définition, et $f'=f_{(Y')}:X'\to Y'$~; on a donc un diagramme
+commutatif
+\[
+\xymatrix{
+X\ar[d]_f & X'\ar[l]_{g'}\ar[d]^{f'}\ar[dl]^{h}\\
+Y & Y'\ar[l]^{g}
+}
+\]
+et le morphisme
+
+[id 5800]
+OLD: (II, 5.5.5, (iii))
+NEW: (\textbf{II}, 5.5.5, (iii))
+FRENCH CONTEXT (corrected): noethérien}~; en
+effet, la propriété est évidemment locale sur $Y$~; d'autre part, les
+hypothèses de (\hyperref[III.2.2.1-fr]{2.2.1}) impliquent que pour tout
+ouvert $U\subset Y$, la restriction de $f$ à $f^{-1}(U)$ est un morphisme
+projectif $f^{-1}(U)\to U$ (\textbf{II}, 5.5.5, (iii)) et
+$\mathcal L|f^{-1}(U)$ est ample pour ce morphisme (\textbf{II}, 4.6.4).
+
+(ii) L'assertion (iii) de (\hyperref[III.2.2.1-fr]{2.2.1}) est encore
+valable, comme on l'a vu, lorsque l'on suppose seulement que $X$ est un
+schéma quasi-compact ou un préschéma don
+
+[id 5801]
+OLD: (II, 1.4.3)
+NEW: (\textbf{II}, 1.4.3)
+FRENCH CONTEXT (corrected): me $f'$ est projectif (\textbf{II}, 5.5.5, (iii))~; posons
+$h=f\circ g'=g\circ f'$.
+
+(i) Soit $\widetilde{\mathcal M}$ le $\mathcal O_{X'}$-Module associé au
+$\mathcal S'$-Module quasi-cohérent $\mathcal M$, quand $X'$ est
+considéré comme un $X$-schéma affine (\textbf{II}, 1.4.3), de sorte que l'on a
+$\mathcal M=g'_*(\widetilde{\mathcal M})$~; comme $\mathcal M$ est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ 
+
+[id 5802]
+OLD: (II, 1.4.5)
+NEW: (\textbf{II}, 1.4.5)
+FRENCH CONTEXT (corrected): $ est
+considéré comme un $X$-schéma affine (\textbf{II}, 1.4.3), de sorte que l'on a
+$\mathcal M=g'_*(\widetilde{\mathcal M})$~; comme $\mathcal M$ est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (\textbf{II}, 1.3.7 et \textbf{I}, 6.3.4, (ii)), $X'$ est
+noethérien (\textbf{I}, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+
+[id 5803]
+OLD: (II, 1.3.7
+NEW: (\textbf{II}, 1.3.7
+FRENCH CONTEXT (corrected): 'on a
+$\mathcal M=g'_*(\widetilde{\mathcal M})$~; comme $\mathcal M$ est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (\textbf{II}, 1.3.7 et \textbf{I}, 6.3.4, (ii)), $X'$ est
+noethérien (\textbf{I}, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+$R^pf_*(\mathcal M)\to R^ph_*(\widetilde{\mathcal M})$ est bijectif
+(\hyperre
+
+[id 5806]
+OLD: de $\mathcal S$-Modules~;
+NEW: de $\mathcal S$-\emph{Modules}~;
+FRENCH CONTEXT (corrected): \widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+$R^pf_*(\mathcal M)\to R^ph_*(\widetilde{\mathcal M})$ est bijectif
+(\hyperref[III.1.3.4-fr]{1.3.4}). En outre, cet homomorphisme est un
+homomorphisme de $\mathcal S$-\emph{Modules}~; en effet, de l'homomorphisme
+canonique
+\[
+g'_*(\mathcal O_{X'})\otimes_{\mathcal O_X}
+g'_*(\widetilde{\mathcal M})\longrightarrow
+g'_*(\widetilde{\mathcal M})
+\tag{2.4.1.2}\label{III.2.4.1.2-fr}
+\]
+qui définit la structure de $\mathcal S'$-Module de $\mathcal
+
+[id 5807]
+OLD: R^pf_*(g'_*(\widetilde{\mathcal M})).
+\]
+NEW: R^pf_*(g'_*(\widetilde{\mathcal M}))
+\]
+FRENCH CONTEXT (corrected): r}
+\]
+qui définit la structure de $\mathcal S'$-Module de $\mathcal M$ (en se
+rappelant que $\mathcal S'=g'_*(\mathcal O_{X'})$), on déduit
+canoniquement un homomorphisme
+\[
+f_*(g'_*(\mathcal O_{X'}))\otimes
+R^pf_*(g'_*(\widetilde{\mathcal M}))\longrightarrow
+R^pf_*(g'_*(\widetilde{\mathcal M}))
+\]
+
+\oldpage[III]{108}
+(\textbf{0}, 12.2.2), et comme (\hyperref[III.2.4.1.2-fr]{2.4.1.2}) provient
+lui-même (par application de (\textbf{0}\textsubscript{I}, 4.2.2.1)) de
+l'homomorphisme
+$\mathcal O_{X'}\otimes\widetilde{\mathcal M}
+\longrightarrow\widetilde{\m
+
+=================== PAGE III 108 ===================
+----- (Spanish page III 107: shown above in this file) -----
+----- (Spanish page III 108: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 109 -----
+\oldpage[III]{109}
+Bajo las mismas hipótesis de finitud sobre $\sh{S}$ y $\sh{M}$, se deduce de \sref{III.2.4.1} que
+\[
+  \bigoplus_{k\in\bb Z}\RR^p f_*(\sh{M}_k)
+\]
+es un $\sh{S}$-módulo de tipo finito para todo $p$.
+Bajo las hipótesis adicionales de \sref{III.2.4.1}[ii], existe además un entero $N$ tal que, para $n\geq N$,
+\[
+  \RR^p f_*(\sh{M}_k(n))=0
+\]
+para todo $p>0$ y todo $k\in\bb Z$, y el homomorfismo canónico
+\[
+  f^*\bigl(f_*(\sh{M}_k(n))\bigr)
+  \longrightarrow
+  \sh{M}_k(n)
+\]
+es sobreyectivo para todo $k\in\bb Z$.
+\end{env}
+
+
+\subsection{Característica de Euler--Poincar\'e y polinomio de Hilbert}
+\label{subsection:III.2.5}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1}
+Sea $A$ un anillo artiniano y sea $X$ un $A$-esquema proyectivo sobre
+\[
+  Y=\Spec(A).
+\]
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $A$-módulos
+\[
+  \HH^i(X,\sh{F})\qquad(i\geq0)
+\]
+son de tipo finito \sref{III.2.2.1} y, por tanto, tienen longitud finita, puesto que $A$ es artiniano.
+Además, \sref{III.2.2.1} muestra que $\HH^i(X,\sh{F})=0$ salvo para un número finito de $i\geq0$.
+Así, el entero
+\[
+\label{III.2.5.1.1}
+  \chi_A(\sh{F})
+  =
+  \sum_{i=0}^{\infty}
+  (-1)^i\operatorname{length}_A\bigl(\HH^i(X,\sh{F})\bigr)
+  \tag{2.5.1.1}
+\]
+está definido para todo $\sh{O}_X$-módulo coherente $\sh{F}$.
+Cuando $A$ es un anillo local artiniano, $\chi_A(\sh{F})$ se llama la \emph{característica de Euler--Poincar\'e} de $\sh{F}$ con respecto a $A$.
+Para $\sh{F}=\sh{O}_X$, el entero $\chi_A(\sh{O}_X)$ se llama el \emph{género aritmético} de $X$ con respecto a $A$.
+\end{env}
+
+\begin{proposition}[2.5.2]
+\label{III.2.5.2}
+Sea
+\[
+  0\longrightarrow\sh{F}'
+  \longrightarrow\sh{F}
+  \longrightarrow\sh{F}''
+  \longrightarrow0
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes.
+Entonces
+\[
+\label{III.2.5.2.1}
+  \chi_A(\sh{F})
+  =
+  \chi_A(\sh{F}')+\chi_A(\sh{F}'').
+  \tag{2.5.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Los módulos de cohomología de $\sh{F}$, $\sh{F}'$ y $\sh{F}''$ se anulan en todos los grados suficientemente grandes.
+Existe, por tanto, un entero $r>0$ para el cual la sucesión exacta larga de cohomología tiene la forma
+\[
+  0\longrightarrow\HH^0(X,\sh{F}')
+  \longrightarrow\HH^0(X,\sh{F})
+  \longrightarrow\HH^0(X,\sh{F}'')
+  \longrightarrow\HH^1(X,\sh{F}')
+  \longrightarrow\cdots
+\]
+\[
+  \ldots\longrightarrow\HH^r(X,\sh{F}')
+  \longrightarrow\HH^r(X,\sh{F})
+  \longrightarrow\HH^r(X,\sh{F}'')
+  \longrightarrow0.
+\]
+En una sucesión exacta de $A$-módulos de longitud finita con términos nulos en ambos extremos, la suma alternada de las longitudes es nula \sref[0]{0.11.10.1}.
+La aplicación de este hecho da inmediatamente \eqref{III.2.5.2.1}.
+\end{proof}
+
+El resultado de \sref{III.2.5.2} se aplica siempre que $X$ sea un $A$-esquema cuasicompacto y que los $A$-módulos $\HH^i(X,\sh{F})$ sean de tipo finito para todo $\sh{O}_X$-módulo coherente $\sh{F}$ \sref{III.1.4.12}.
+
+\begin{theorem}[2.5.3]
+\label{III.2.5.3}
+Sea $A$ un anillo local artiniano, sea $X$ un esquema proyectivo sobre
+\[
+  Y=\Spec(A),
+\]
+sea $\sh{L}$ un $\sh{O}_X$-módulo invertible muy amplio relativo a $Y$, y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Para todo $n\in\bb Z$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}.
+\]
+\begin{enumerate}
+  \item[\textup{(i)}] Existe un único polinomio $P\in\bb Q[T]$ tal que
+  \[
+    \chi_A(\sh{F}(n))=P(n)
+  \]
+  para todo $n\in\bb Z$.
+  El polinomio $P$ se llama el \emph{polinomio de Hilbert} de $\sh{F}$ con respecto a $A$.
+
+  \item[\textup{(ii)}] Para todo $n$ suficientemente grande,
+  \[
+    \chi_A(\sh{F}(n))
+    =
+    \operatorname{length}_A\Gamma(X,\sh{F}(n)).
+  \]
+
+  \item[\textup{(iii)}] El coeficiente del término de mayor grado de $\chi_A(\sh{F}(n))$ es no negativo.
+\end{enumerate}
+\end{theorem}
+
+Además, demostraremos en el Capítulo~IV, en la sección dedicada a la dimensión, que \emph{el grado de $\chi_A(\sh{F}(n))$ es igual a la dimensión del soporte de $\sh{F}$}.
+
+\begin{proof}
+Para todo $n$ suficientemente grande, se tiene
+\[
+  \HH^i(X,\sh{F}(n))=0
+\]
+para todo $i>0$ \sref{III.2.2.1}.
+----- French corrections on page III 108 -----
+[id 5808]
+OLD: (0, 12.2.2)
+NEW: (\textbf{0}, 12.2.2)
+FRENCH CONTEXT (corrected): sible. Alors~:
+\begin{enumerate}
+\item[{\rm(i)}] On a un isomorphisme canonique
+\begin{equation}
+\label{III.2.1.16.1-fr}
+\tag{2.1.16.1}
+\rho:R^rf_*(\boldsymbol\omega)\xleftarrow{\sim}\mathcal O_Y.
+\end{equation}
+\item[{\rm(ii)}] L'accouplement par cup-produit (\textbf{0}, 12.2.2)
+\begin{equation}
+\label{III.2.1.16.2-fr}
+\tag{2.1.16.2}
+R^rf_*(\mathcal O_X(n))\times R^0f_*(\boldsymbol\omega(-n))
+\longrightarrow R^rf_*(\boldsymbol\omega)
+\end{equation}
+composé avec l'isomorphisme $\rho^{-1}$, définit un \emph{isomorphisme}
+de $R^rf_*(\ma
+
+[id 5809]
+OLD: (0\textsubscript{I}, 4.2.2.1)
+NEW: (\textbf{0}\textsubscript{I}, 4.2.2.1)
+FRENCH CONTEXT (corrected): isme
+\[
+f_*(g'_*(\mathcal O_{X'}))\otimes
+R^pf_*(g'_*(\widetilde{\mathcal M}))\longrightarrow
+R^pf_*(g'_*(\widetilde{\mathcal M}))
+\]
+
+\oldpage[III]{108}
+(\textbf{0}, 12.2.2), et comme (\hyperref[III.2.4.1.2-fr]{2.4.1.2}) provient
+lui-même (par application de (\textbf{0}\textsubscript{I}, 4.2.2.1)) de
+l'homomorphisme
+$\mathcal O_{X'}\otimes\widetilde{\mathcal M}
+\longrightarrow\widetilde{\mathcal M}$
+définissant la structure de $\mathcal O_{X'}$-Module de
+$\widetilde{\mathcal M}$, le diagramme
+\[
+\xymatrix{
+f_*(g'_*(\mathcal O_{X'}))\otimes
+R^pf_*(g'_*
+
+[id 5810]
+OLD: l'homomorphisme
+\[
+\mathcal O_{X'}\otimes\widetilde{\mathcal M}
+\longrightarrow\widetilde{\mathcal M}
+\]
+NEW: l'homomorphisme
+$\mathcal O_{X'}\otimes\widetilde{\mathcal M}
+\longrightarrow\widetilde{\mathcal M}$
+FRENCH CONTEXT (corrected): ^pf_*(g'_*(\widetilde{\mathcal M}))\longrightarrow
+R^pf_*(g'_*(\widetilde{\mathcal M}))
+\]
+
+\oldpage[III]{108}
+(\textbf{0}, 12.2.2), et comme (\hyperref[III.2.4.1.2-fr]{2.4.1.2}) provient
+lui-même (par application de (\textbf{0}\textsubscript{I}, 4.2.2.1)) de
+l'homomorphisme
+$\mathcal O_{X'}\otimes\widetilde{\mathcal M}
+\longrightarrow\widetilde{\mathcal M}$
+définissant la structure de $\mathcal O_{X'}$-Module de
+$\widetilde{\mathcal M}$, le diagramme
+\[
+\xymatrix{
+f_*(g'_*(\mathcal O_{X'}))\otimes
+R^pf_*(g'_*(\widetilde{\mathcal M}))
+\ar[r]\ar[d] &
+R^pf_*(g'_*(\widetilde{\mathcal M}))\ar[d]\\
+h_*(\mathcal O_{X'}
+
+[id 5811]
+OLD: (0, 12.2.6)
+NEW: (\textbf{0}, 12.2.6)
+FRENCH CONTEXT (corrected): xymatrix{
+f_*(g'_*(\mathcal O_{X'}))\otimes
+R^pf_*(g'_*(\widetilde{\mathcal M}))
+\ar[r]\ar[d] &
+R^pf_*(g'_*(\widetilde{\mathcal M}))\ar[d]\\
+h_*(\mathcal O_{X'})\otimes R^ph_*(\widetilde{\mathcal M})
+\ar[r] & R^ph_*(\widetilde{\mathcal M})
+}
+\]
+est commutatif (\textbf{0}, 12.2.6)~; composant les flèches horizontales avec
+l'homomorphisme provenant de l'homomorphisme canonique
+$\mathcal S\longrightarrow f_*(f^*(\mathcal S))=f_*(\mathcal S')
+=f_*(g'_*(\mathcal O_{X'}))=h_*(\mathcal O_{X'})$,
+on obtient notre assertion. D'autre part, puis
+
+[id 5812]
+OLD: canonique
+\[
+\mathcal S\longrightarrow f_*(f^*(\mathcal S))=f_*(\mathcal S')
+=f_*(g'_*(\mathcal O_{X'}))=h_*(\mathcal O_{X'}),
+\]
+NEW: canonique
+$\mathcal S\longrightarrow f_*(f^*(\mathcal S))=f_*(\mathcal S')
+=f_*(g'_*(\mathcal O_{X'}))=h_*(\mathcal O_{X'})$,
+FRENCH CONTEXT (corrected): \widetilde{\mathcal M}))\ar[d]\\
+h_*(\mathcal O_{X'})\otimes R^ph_*(\widetilde{\mathcal M})
+\ar[r] & R^ph_*(\widetilde{\mathcal M})
+}
+\]
+est commutatif (\textbf{0}, 12.2.6)~; composant les flèches horizontales avec
+l'homomorphisme provenant de l'homomorphisme canonique
+$\mathcal S\longrightarrow f_*(f^*(\mathcal S))=f_*(\mathcal S')
+=f_*(g'_*(\mathcal O_{X'}))=h_*(\mathcal O_{X'})$,
+on obtient notre assertion. D'autre part, puisque $g$ est affine et que
+$f'$ est séparé et quasi-compact, l'homomorphisme canonique
+$R^ph_*(\widetilde{\mathcal M})\to
+g_*(R^pf'_*(\widetilde{\mathcal M}))$ est bijectif
+(\hyperref[III.1.4.14-fr]{1.4.14}), et on
+
+[id 5813]
+OLD: $\mathcal S$-Modules (en utilisant
+NEW: $\mathcal S$-\emph{Modules} (en utilisant
+FRENCH CONTEXT (corrected): est affine et que
+$f'$ est séparé et quasi-compact, l'homomorphisme canonique
+$R^ph_*(\widetilde{\mathcal M})\to
+g_*(R^pf'_*(\widetilde{\mathcal M}))$ est bijectif
+(\hyperref[III.1.4.14-fr]{1.4.14}), et on démontre comme ci-dessus que
+c'est un isomorphisme de $\mathcal S$-\emph{Modules} (en utilisant cette fois la
+commutativité de (\textbf{0}, 12.2.6.2)). Or, $f'$ étant projectif et
+$\widetilde{\mathcal M}$ cohérent,
+$R^pf'_*(\widetilde{\mathcal M})$ est un
+$\mathcal O_{Y'}$-Module cohérent en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1})~; on en conclut que
+
+
+[id 5814]
+OLD: (0, 12.2.6.2)
+NEW: (\textbf{0}, 12.2.6.2)
+FRENCH CONTEXT (corrected): ique
+$R^ph_*(\widetilde{\mathcal M})\to
+g_*(R^pf'_*(\widetilde{\mathcal M}))$ est bijectif
+(\hyperref[III.1.4.14-fr]{1.4.14}), et on démontre comme ci-dessus que
+c'est un isomorphisme de $\mathcal S$-\emph{Modules} (en utilisant cette fois la
+commutativité de (\textbf{0}, 12.2.6.2)). Or, $f'$ étant projectif et
+$\widetilde{\mathcal M}$ cohérent,
+$R^pf'_*(\widetilde{\mathcal M})$ est un
+$\mathcal O_{Y'}$-Module cohérent en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1})~; on en conclut que
+$g_*(R^pf'_*(\widetilde{\mathcal M}))$ est un $\mathca
+
+[id 5815]
+OLD: Module de type
+fini
+NEW: Module \emph{de type
+fini}
+FRENCH CONTEXT (corrected): , $f'$ étant projectif et
+$\widetilde{\mathcal M}$ cohérent,
+$R^pf'_*(\widetilde{\mathcal M})$ est un
+$\mathcal O_{Y'}$-Module cohérent en vertu de
+(\hyperref[III.2.2.1-fr]{2.2.1})~; on en conclut que
+$g_*(R^pf'_*(\widetilde{\mathcal M}))$ est un $\mathcal S$-Module \emph{de type
+fini} (\textbf{II}, 1.4.5).
+
+(ii) Soit $\mathcal L'=g'^*(\mathcal L)$, qui est un
+$\mathcal O_{X'}$-Module inversible~; pour tout $n\in\mathbb Z$, on a
+$g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otim
+
+[id 5816]
+OLD: (II, 1.4.5)
+NEW: (\textbf{II}, 1.4.5)
+FRENCH CONTEXT (corrected): $ est
+considéré comme un $X$-schéma affine (\textbf{II}, 1.4.3), de sorte que l'on a
+$\mathcal M=g'_*(\widetilde{\mathcal M})$~; comme $\mathcal M$ est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (\textbf{II}, 1.3.7 et \textbf{I}, 6.3.4, (ii)), $X'$ est
+noethérien (\textbf{I}, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+
+[id 5817]
+OLD: \[
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otimes n}
+=\mathcal M(n)
+\]
+NEW: $g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otimes n}
+=\mathcal M(n)$
+FRENCH CONTEXT (corrected): 2.2.1})~; on en conclut que
+$g_*(R^pf'_*(\widetilde{\mathcal M}))$ est un $\mathcal S$-Module \emph{de type
+fini} (\textbf{II}, 1.4.5).
+
+(ii) Soit $\mathcal L'=g'^*(\mathcal L)$, qui est un
+$\mathcal O_{X'}$-Module inversible~; pour tout $n\in\mathbb Z$, on a
+$g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otimes n}
+=\mathcal M(n)$
+(\textbf{0}\textsubscript{I}, 5.4.10) à un isomorphisme près~; on peut appliquer
+à $\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$ le
+raisonnement fait dans (i) pour $\widetilde{\mathcal M}$, qui prouve que
+$R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\ma
+
+[id 5818]
+OLD: (0\textsubscript{I}, 5.4.10)
+NEW: (\textbf{0}\textsubscript{I}, 5.4.10)
+FRENCH CONTEXT (corrected): 
+
+(ii) Soit $\mathcal L'=g'^*(\mathcal L)$, qui est un
+$\mathcal O_{X'}$-Module inversible~; pour tout $n\in\mathbb Z$, on a
+$g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otimes n}
+=\mathcal M(n)$
+(\textbf{0}\textsubscript{I}, 5.4.10) à un isomorphisme près~; on peut appliquer
+à $\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$ le
+raisonnement fait dans (i) pour $\widetilde{\mathcal M}$, qui prouve que
+$R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$
+est isomorphe 
+
+[id 5819]
+OLD: \[
+R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))
+\quad\hbox{est isomorphe à}\quad
+g_*(R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})).
+\]
+NEW: $R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$
+est isomorphe à
+$g_*(R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$.
+FRENCH CONTEXT (corrected): \otimes\mathcal L^{\otimes n}
+=\mathcal M(n)$
+(\textbf{0}\textsubscript{I}, 5.4.10) à un isomorphisme près~; on peut appliquer
+à $\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$ le
+raisonnement fait dans (i) pour $\widetilde{\mathcal M}$, qui prouve que
+$R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$
+est isomorphe à
+$g_*(R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$.
+Or $\mathcal L'$ est ample pour $f'$ (\textbf{II}, 4.6.13, (iii)), donc il résulte
+de (\hyperref[III.2.2.1-fr]{2.2.1}) qu'il existe un entier $N$ tel que
+$R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})=0$
+pour tout $p>0$ et tout $n\geq N$, ce q
+
+[id 5820]
+OLD: (II, 4.6.13, (iii))
+NEW: (\textbf{II}, 4.6.13, (iii))
+FRENCH CONTEXT (corrected): nnement fait dans (i) pour $\widetilde{\mathcal M}$, qui prouve que
+$R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$
+est isomorphe à
+$g_*(R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$.
+Or $\mathcal L'$ est ample pour $f'$ (\textbf{II}, 4.6.13, (iii)), donc il résulte
+de (\hyperref[III.2.2.1-fr]{2.2.1}) qu'il existe un entier $N$ tel que
+$R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})=0$
+pour tout $p>0$ et tout $n\geq N$, ce qui prouve
+(\hyperref[III.2.4.1.1-fr]{2.4.1.1}). Enfin, il résulte 
+
+[id 5821]
+OLD: \[
+R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})=0
+\]
+NEW: $R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})=0$
+FRENCH CONTEXT (corrected): l L'^{\otimes n}))$
+est isomorphe à
+$g_*(R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$.
+Or $\mathcal L'$ est ample pour $f'$ (\textbf{II}, 4.6.13, (iii)), donc il résulte
+de (\hyperref[III.2.2.1-fr]{2.2.1}) qu'il existe un entier $N$ tel que
+$R^pf'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})=0$
+pour tout $p>0$ et tout $n\geq N$, ce qui prouve
+(\hyperref[III.2.4.1.1-fr]{2.4.1.1}). Enfin, il résulte encore de
+(\hyperref[III.2.2.1-fr]{2.2.1}) qu'on peut supposer $N$ tel que pour
+$n\geq N$, l'homomorphisme canonique
+$f'^*(f'_*(\widetilde{\mathcal M}\oti
+
+[id 5822]
+OLD: \[
+f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))
+\longrightarrow\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}
+\]
+NEW: $f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))
+\longrightarrow\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$
+FRENCH CONTEXT (corrected):  M}\otimes\mathcal L'^{\otimes n})=0$
+pour tout $p>0$ et tout $n\geq N$, ce qui prouve
+(\hyperref[III.2.4.1.1-fr]{2.4.1.1}). Enfin, il résulte encore de
+(\hyperref[III.2.2.1-fr]{2.2.1}) qu'on peut supposer $N$ tel que pour
+$n\geq N$, l'homomorphisme canonique
+$f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))
+\longrightarrow\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$
+soit surjectif~; comme $g'_*$ est un foncteur exact (\textbf{II}, 1.4.4),
+l'homomorphisme correspondant
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+\longrightarrow
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=\mat
+
+[id 5823]
+OLD: (II, 1.4.4)
+NEW: (\textbf{II}, 1.4.4)
+FRENCH CONTEXT (corrected): u'on peut supposer $N$ tel que pour
+$n\geq N$, l'homomorphisme canonique
+$f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))
+\longrightarrow\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$
+soit surjectif~; comme $g'_*$ est un foncteur exact (\textbf{II}, 1.4.4),
+l'homomorphisme correspondant
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+\longrightarrow
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=\mathcal M(n)
+\]
+est surjectif. Or, on a
+$g'_*(f'^*(f'_*(\widetilde{\mathcal 
+
+[id 5824]
+OLD: \[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+=f^*(g_*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+\]
+NEW: $g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+=f^*(g_*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))$
+FRENCH CONTEXT (corrected):  foncteur exact (\textbf{II}, 1.4.4),
+l'homomorphisme correspondant
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+\longrightarrow
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=\mathcal M(n)
+\]
+est surjectif. Or, on a
+$g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+=f^*(g_*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))$
+(\textbf{II}, 1.5.2) et comme $g_*\circ f'_* = f_*\circ g'_*$, on voit
+finalement que l'on a
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})))
+=f^*(f_*(g'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))=f^*(f_*(\mathcal M(n)
+
+[id 5825]
+OLD: (II, 1.5.2)
+NEW: (\textbf{II}, 1.5.2)
+FRENCH CONTEXT (corrected): ongrightarrow
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=\mathcal M(n)
+\]
+est surjectif. Or, on a
+$g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+=f^*(g_*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))$
+(\textbf{II}, 1.5.2) et comme $g_*\circ f'_* = f_*\circ g'_*$, on voit
+finalement que l'on a
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})))
+=f^*(f_*(g'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))=f^*(f_*(\mathcal M(n))),
+\]
+ce qui achève 
+
+[id 5826]
+OLD: Algèbre graduée à degrés
+NEW: Algèbre \emph{graduée} à degrés
+FRENCH CONTEXT (corrected): mes
+\mathcal L'^{\otimes n})))=f^*(f_*(\mathcal M(n))),
+\]
+ce qui achève la démonstration.
+\end{proof}
+
+\begin{env}[2.4.2]
+\label{III.2.4.2-fr}
+Nous aurons en particulier à appliquer
+(\hyperref[III.2.4.1-fr]{2.4.1}) lorsque $\mathcal S$ est une
+$\mathcal O_Y$-Algèbre \emph{graduée} à degrés positifs,
+$\mathcal M=\bigoplus_{k\in\mathbb Z}\mathcal M_k$ un
+$\mathcal S'$-Module \emph{gradué}. Alors (avec les
+
+\oldpage[III]{109}
+mêmes hypothèses de finitude sur $\mathcal S$ et $\mathcal M$) on conclut
+de (\hyperref[III.2.4.1-fr]{2.4.1}) que
+$\bigoplu
+
+[id 5827]
+OLD: Module gradué. Alors
+NEW: Module \emph{gradué}. Alors
+FRENCH CONTEXT (corrected): {env}[2.4.2]
+\label{III.2.4.2-fr}
+Nous aurons en particulier à appliquer
+(\hyperref[III.2.4.1-fr]{2.4.1}) lorsque $\mathcal S$ est une
+$\mathcal O_Y$-Algèbre \emph{graduée} à degrés positifs,
+$\mathcal M=\bigoplus_{k\in\mathbb Z}\mathcal M_k$ un
+$\mathcal S'$-Module \emph{gradué}. Alors (avec les
+
+\oldpage[III]{109}
+mêmes hypothèses de finitude sur $\mathcal S$ et $\mathcal M$) on conclut
+de (\hyperref[III.2.4.1-fr]{2.4.1}) que
+$\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)$
+est un $\mathcal S$-Module \emph{de type fini} pour tout $p$, et (s
+
+=================== PAGE III 109 ===================
+----- (Spanish page III 108: shown above in this file) -----
+----- (Spanish page III 109: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 110 -----
+\oldpage[III]{110}
+Por consiguiente,
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \operatorname{length}_A\HH^0(X,\sh{F}(n))
+  =
+  \operatorname{length}_A\Gamma(X,\sh{F}(n))
+\]
+para todo $n$ suficientemente grande, lo que demuestra \emph{(ii)}.
+Se sigue que $\chi_A(\sh{F}(n))\geq0$ para todo $n$ suficientemente grande y, por tanto, \emph{(iii)} se deduce de \emph{(i)}.
+La aserción de unicidad de \emph{(i)} es inmediata, por lo que queda demostrar la existencia de $P$.
+
+Mostremos primero que podemos suponer
+\[
+  \mathfrak{m}\sh{F}=0,
+\]
+donde $\mathfrak{m}$ es el ideal maximal de $A$.
+En efecto, existe un entero $s>0$ tal que $\mathfrak{m}^s=0$ y, por tanto, $\sh{F}(n)$ posee la filtración finita
+\[
+  \sh{F}(n)
+  \supset\mathfrak{m}\sh{F}(n)
+  \supset\cdots
+  \supset\mathfrak{m}^{s-1}\sh{F}(n)
+  \supset0.
+\]
+Una inducción que utiliza \eqref{III.2.5.2.1} da
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \sum_{k=1}^{s}
+  \chi_A\left(
+    \mathfrak{m}^{k-1}\sh{F}(n)/
+    \mathfrak{m}^{k}\sh{F}(n)
+  \right).
+\]
+Pero
+\[
+  \mathfrak{m}^{k-1}\sh{F}(n)/
+  \mathfrak{m}^{k}\sh{F}(n)
+  =
+  \sh{F}'_k(n),
+  \qquad
+  \sh{F}'_k=
+  \mathfrak{m}^{k-1}\sh{F}/\mathfrak{m}^{k}\sh{F},
+\]
+lo que demuestra la reducción.
+
+Supongamos, pues, que $\mathfrak{m}\sh{F}=0$.
+Sea $X'$ el subesquema cerrado de $X$ obtenido como imagen inversa, por el morfismo estructural
+\[
+  X\longrightarrow\Spec(A),
+\]
+del único punto cerrado de $\Spec(A)$, y sea $j:X'\to X$ la inyección canónica.
+Entonces
+\[
+  \sh{F}=j_*(\sh{F}')
+\]
+para un $\sh{O}_{X'}$-módulo coherente $\sh{F}'$, y $X'$ es proyectivo sobre $\Spec(K)$, donde
+\[
+  K=A/\mathfrak{m}.
+\]
+Si $\sh{L}'=j^*(\sh{L})$, entonces $\sh{L}'$ es muy amplio relativo a $\Spec(K)$ \sref[II]{II.4.4.10}, y
+\[
+  \sh{F}(n)=j_*(\sh{F}'(n)),
+  \qquad
+  \sh{F}'(n)
+  =
+  \sh{F}'\otimes_{\sh{O}_{X'}}\sh{L}'^{\otimes n}
+\]
+\sref[0]{0.5.4.10}.
+Se sigue que
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \chi_K(\sh{F}'(n))
+\]
+(G, II, 4.9.1), y quedamos reducidos al caso en que $A$ es un cuerpo.
+
+Ahora puede considerarse $X$ como un subesquema cerrado de
+\[
+  P=\mathbf{P}_A^r
+\]
+para un $r$ conveniente \sref[II]{II.5.5.4}[ii].
+Si $i:X\to P$ es la inyección canónica, el mismo razonamiento da
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \chi_A\bigl(i_*(\sh{F})(n)\bigr).
+\]
+Podemos, por tanto, limitarnos al caso
+\[
+  X=\mathbf{P}_A^r=\Proj(S),
+  \qquad
+  S=A[T_0,\ldots,T_r],
+\]
+donde $A$ es un cuerpo.
+
+En este caso, $\sh{F}=\widetilde{M}$ para un $S$-módulo graduado $M$ de tipo finito \sref[II]{II.2.7.8}.
+Por el teorema de las sicigias de Hilbert (M, VIII, 6.5), $M$ posee una resolución finita por $S$-módulos \emph{libres} graduados de tipo finito:
+\[
+  0\longrightarrow L_q
+  \longrightarrow L_{q-1}
+  \longrightarrow\cdots
+  \longrightarrow L_1
+  \longrightarrow M
+  \longrightarrow0.
+\]
+Como el funtor $\widetilde{M}$ es exacto \sref[II]{II.2.5.4}, obtenemos una sucesión exacta
+\[
+  0\longrightarrow\widetilde{L}_q
+  \longrightarrow\widetilde{L}_{q-1}
+  \longrightarrow\cdots
+  \longrightarrow\widetilde{L}_1
+  \longrightarrow\widetilde{M}
+  \longrightarrow0,
+\]
+y, por tanto, para todo $n\in\bb Z$, una sucesión exacta
+\[
+  0\longrightarrow\widetilde{L}_q(n)
+  \longrightarrow\widetilde{L}_{q-1}(n)
+  \longrightarrow\cdots
+  \longrightarrow\widetilde{L}_1(n)
+  \longrightarrow\widetilde{M}(n)
+  \longrightarrow0.
+\]
+Una inducción sobre $q$, utilizando \sref{III.2.5.2}, da
+\[
+  \chi_A(\widetilde{M}(n))
+  =
+  \sum_{j=1}^{q}
+  (-1)^{j+1}\chi_A(\widetilde{L}_j(n)).
+\]
+Para demostrar \emph{(i)}, quedamos, por tanto, reducidos al caso en que $M$ es graduado, \emph{libre} y de tipo finito y, por consiguiente, al caso
+\[
+  M=S(h)
+\]
+para algún $h\in\bb Z$.
+Entonces
+\[
+  \widetilde{M}(n)
+  =
+  \widetilde{M(n)}
+  =
+  \widetilde{S(n+h)}
+\]
+\sref[II]{II.2.5.15}, de modo que el teorema se deduce del lema siguiente.
+\end{proof}
+----- French corrections on page III 109 -----
+[id 5828]
+OLD: \[
+\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)
+\]
+NEW: $\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)$
+FRENCH CONTEXT (corrected):  à degrés positifs,
+$\mathcal M=\bigoplus_{k\in\mathbb Z}\mathcal M_k$ un
+$\mathcal S'$-Module \emph{gradué}. Alors (avec les
+
+\oldpage[III]{109}
+mêmes hypothèses de finitude sur $\mathcal S$ et $\mathcal M$) on conclut
+de (\hyperref[III.2.4.1-fr]{2.4.1}) que
+$\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)$
+est un $\mathcal S$-Module \emph{de type fini} pour tout $p$, et (sous les
+hypothèses supplémentaires de (\hyperref[III.2.4.1-fr]{2.4.1}, (ii)))
+qu'il existe $N$ tel que pour $n\geq N$, on ait
+$R^pf_*(\mathcal M_k(n))=0$ pour tout $p>0$ et \emph{tout} $k\in\m
+
+[id 5829]
+OLD: de type fini pour tout $p$
+NEW: \emph{de type fini} pour tout $p$
+FRENCH CONTEXT (corrected): \mathcal S'$-Module \emph{gradué}. Alors (avec les
+
+\oldpage[III]{109}
+mêmes hypothèses de finitude sur $\mathcal S$ et $\mathcal M$) on conclut
+de (\hyperref[III.2.4.1-fr]{2.4.1}) que
+$\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)$
+est un $\mathcal S$-Module \emph{de type fini} pour tout $p$, et (sous les
+hypothèses supplémentaires de (\hyperref[III.2.4.1-fr]{2.4.1}, (ii)))
+qu'il existe $N$ tel que pour $n\geq N$, on ait
+$R^pf_*(\mathcal M_k(n))=0$ pour tout $p>0$ et \emph{tout} $k\in\mathbb Z$, et
+que l'homomorphisme canonique
+$f^*(f_*(\mathcal 
+
+[id 5830]
+OLD: et tout $k\in\mathbb Z$, et
+NEW: et \emph{tout} $k\in\mathbb Z$, et
+FRENCH CONTEXT (corrected): }R^pf_*(\mathcal M_k)$
+est un $\mathcal S$-Module \emph{de type fini} pour tout $p$, et (sous les
+hypothèses supplémentaires de (\hyperref[III.2.4.1-fr]{2.4.1}, (ii)))
+qu'il existe $N$ tel que pour $n\geq N$, on ait
+$R^pf_*(\mathcal M_k(n))=0$ pour tout $p>0$ et \emph{tout} $k\in\mathbb Z$, et
+que l'homomorphisme canonique
+$f^*(f_*(\mathcal M_k(n)))\to\mathcal M_k(n)$ soit surjectif pour \emph{tout}
+$k\in\mathbb Z$.
+\end{env}
+
+\subsection{Caractéristique d'Euler-Poincaré et polynôme de Hilbert}
+\label{subsection:III.2.5-fr}
+
+\begin{env}[2.5.1]
+\lab
+
+[id 5831]
+OLD: surjectif pour tout
+$k\in\mathbb Z$.
+NEW: surjectif pour \emph{tout}
+$k\in\mathbb Z$.
+FRENCH CONTEXT (corrected): entaires de (\hyperref[III.2.4.1-fr]{2.4.1}, (ii)))
+qu'il existe $N$ tel que pour $n\geq N$, on ait
+$R^pf_*(\mathcal M_k(n))=0$ pour tout $p>0$ et \emph{tout} $k\in\mathbb Z$, et
+que l'homomorphisme canonique
+$f^*(f_*(\mathcal M_k(n)))\to\mathcal M_k(n)$ soit surjectif pour \emph{tout}
+$k\in\mathbb Z$.
+\end{env}
+
+\subsection{Caractéristique d'Euler-Poincaré et polynôme de Hilbert}
+\label{subsection:III.2.5-fr}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1-fr}
+Soient $A$ un anneau \emph{artinien}, $X$ un $A$-schéma \emph{projectif} sur
+$Y=\operatorname{Spec}(A)$. Pou
+
+[id 5832]
+OLD: un anneau artinien, $X$
+NEW: un anneau \emph{artinien}, $X$
+FRENCH CONTEXT (corrected): ue
+$f^*(f_*(\mathcal M_k(n)))\to\mathcal M_k(n)$ soit surjectif pour \emph{tout}
+$k\in\mathbb Z$.
+\end{env}
+
+\subsection{Caractéristique d'Euler-Poincaré et polynôme de Hilbert}
+\label{subsection:III.2.5-fr}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1-fr}
+Soient $A$ un anneau \emph{artinien}, $X$ un $A$-schéma \emph{projectif} sur
+$Y=\operatorname{Spec}(A)$. Pour tout $\mathcal O_X$-Module cohérent
+$\mathcal F$, les $H^i(X,\mathcal F)$ $(i\geq0)$ sont des $A$-modules de
+type fini (\hyperref[III.2.2.1-fr]{2.2.1}), donc ici \emph{de longueur finie}
+puis
+
+[id 5833]
+OLD: $A$-schéma projectif sur
+NEW: $A$-schéma \emph{projectif} sur
+FRENCH CONTEXT (corrected): athcal M_k(n)$ soit surjectif pour \emph{tout}
+$k\in\mathbb Z$.
+\end{env}
+
+\subsection{Caractéristique d'Euler-Poincaré et polynôme de Hilbert}
+\label{subsection:III.2.5-fr}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1-fr}
+Soient $A$ un anneau \emph{artinien}, $X$ un $A$-schéma \emph{projectif} sur
+$Y=\operatorname{Spec}(A)$. Pour tout $\mathcal O_X$-Module cohérent
+$\mathcal F$, les $H^i(X,\mathcal F)$ $(i\geq0)$ sont des $A$-modules de
+type fini (\hyperref[III.2.2.1-fr]{2.2.1}), donc ici \emph{de longueur finie}
+puisque $A$ est artinien. On sait en ou
+
+[id 5834]
+OLD: donc ici de longueur finie
+NEW: donc ici \emph{de longueur finie}
+FRENCH CONTEXT (corrected): ent $A$ un anneau \emph{artinien}, $X$ un $A$-schéma \emph{projectif} sur
+$Y=\operatorname{Spec}(A)$. Pour tout $\mathcal O_X$-Module cohérent
+$\mathcal F$, les $H^i(X,\mathcal F)$ $(i\geq0)$ sont des $A$-modules de
+type fini (\hyperref[III.2.2.1-fr]{2.2.1}), donc ici \emph{de longueur finie}
+puisque $A$ est artinien. On sait en outre
+(\hyperref[III.2.2.1-fr]{2.2.1}) que $H^i(X,\mathcal F)=0$ sauf pour un
+nombre fini de valeurs de $i\geq0$~; le nombre entier
+\[
+\chi_A(\mathcal F)=\sum_{i=0}^{\infty}(-1)^i
+\operatorname{long}(H^i(X,\mathcal F))
+\ta
+
+[id 5835]
+OLD: un anneau local artinien, on dit
+NEW: un \emph{anneau local artinien}, on dit
+FRENCH CONTEXT (corrected): fini de valeurs de $i\geq0$~; le nombre entier
+\[
+\chi_A(\mathcal F)=\sum_{i=0}^{\infty}(-1)^i
+\operatorname{long}(H^i(X,\mathcal F))
+\tag{2.5.1.1}\label{III.2.5.1.1-fr}
+\]
+est donc défini pour tout $\mathcal O_X$-Module cohérent $\mathcal F$.
+Lorsque $A$ est un \emph{anneau local artinien}, on dit que $\chi_A(\mathcal F)$
+est la \emph{caractéristique d'Euler-Poincaré de} $\mathcal F$ \emph{(par rapport à
+l'anneau} $A$). Pour $\mathcal F=\mathcal O_X$, on dit que
+$\chi_A(\mathcal O_X)$ est le \emph{genre arithmétique de} $X$ (par rapport à
+$A$).
+\end{en
+
+[id 5836]
+OLD: la caractéristique d'Euler-Poincaré de $\mathcal F$ (par rapport à
+l'anneau $A$)
+NEW: la \emph{caractéristique d'Euler-Poincaré de} $\mathcal F$ \emph{(par rapport à
+l'anneau} $A$)
+FRENCH CONTEXT (corrected): \sum_{i=0}^{\infty}(-1)^i
+\operatorname{long}(H^i(X,\mathcal F))
+\tag{2.5.1.1}\label{III.2.5.1.1-fr}
+\]
+est donc défini pour tout $\mathcal O_X$-Module cohérent $\mathcal F$.
+Lorsque $A$ est un \emph{anneau local artinien}, on dit que $\chi_A(\mathcal F)$
+est la \emph{caractéristique d'Euler-Poincaré de} $\mathcal F$ \emph{(par rapport à
+l'anneau} $A$). Pour $\mathcal F=\mathcal O_X$, on dit que
+$\chi_A(\mathcal O_X)$ est le \emph{genre arithmétique de} $X$ (par rapport à
+$A$).
+\end{env}
+
+\begin{proposition}[2.5.2]
+\label{III.2.5.2-fr}
+Soit
+$0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarr
+
+[id 5837]
+OLD: le genre arithmétique de $X$
+NEW: le \emph{genre arithmétique de} $X$
+FRENCH CONTEXT (corrected): hcal F$.
+Lorsque $A$ est un \emph{anneau local artinien}, on dit que $\chi_A(\mathcal F)$
+est la \emph{caractéristique d'Euler-Poincaré de} $\mathcal F$ \emph{(par rapport à
+l'anneau} $A$). Pour $\mathcal F=\mathcal O_X$, on dit que
+$\chi_A(\mathcal O_X)$ est le \emph{genre arithmétique de} $X$ (par rapport à
+$A$).
+\end{env}
+
+\begin{proposition}[2.5.2]
+\label{III.2.5.2-fr}
+Soit
+$0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarrow\mathcal F''\longrightarrow0$
+une suite exacte de $\mathcal O_X$-Modules cohérents~; on a alors
+\[
+\chi_A
+
+[id 5838]
+OLD: \[
+0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarrow\mathcal F''\longrightarrow0
+\]
+NEW: $0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarrow\mathcal F''\longrightarrow0$
+FRENCH CONTEXT (corrected): emph{Module};
+c'est ce $\mathcal O_Y$-Module que nous noterons $R^p f_*(\mathcal F)$,
+$R^p f_*$ étant ainsi défini comme un foncteur additif de $\boldsymbol{C}(X)$ dans
+$\boldsymbol{C}(Y)$. En outre, les $R^p f_*$ forment un \emph{$\partial$-foncteur}, car si
+$0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarrow\mathcal F''\longrightarrow0$
+est une suite exacte de $\mathcal O_X$-Modules, la description des
+$R^p\psi_*$ et de la structure de $\mathcal O_Y$-Module sur
+$R^p\psi_*(\mathcal F)$ donnée ci-dessus montre aussitôt que
+l'homomorphisme
+$\partial:R^p\psi_*(\mathcal F'')\longrightarrow
+R^{p+1
+
+[id 5841]
+OLD: (0, 11.10.1)
+NEW: (\textbf{0}, 11.10.1)
+FRENCH CONTEXT (corrected): (X,\mathcal F')\to\ldots
+\]
+\[
+\ldots\to H^r(X,\mathcal F')\to H^r(X,\mathcal F)
+\to H^r(X,\mathcal F'')\to0.
+\]
+Or, on sait que dans une suite exacte de $A$-modules de longueur finie,
+ayant des 0 aux deux extrémités, la somme alternée des longueurs est
+nulle (\textbf{0}, 11.10.1)~; appliquant ce résultat, on trouve immédiatement la
+formule (\hyperref[III.2.5.2.1-fr]{2.5.2.1}).
+\end{proof}
+
+On notera que le résultat de (\hyperref[III.2.5.2-fr]{2.5.2}) s'applique
+toutes les fois que l'on sait que $X$ est un $A$-schéma quasi-compact et
+q
+
+[id 5842]
+OLD: sont de type fini pour tout
+NEW: sont \emph{de type fini} pour tout
+FRENCH CONTEXT (corrected): médiatement la
+formule (\hyperref[III.2.5.2.1-fr]{2.5.2.1}).
+\end{proof}
+
+On notera que le résultat de (\hyperref[III.2.5.2-fr]{2.5.2}) s'applique
+toutes les fois que l'on sait que $X$ est un $A$-schéma quasi-compact et
+que les $A$-modules $H^i(X,\mathcal F)$ sont \emph{de type fini} pour tout
+$\mathcal O_X$-Module cohérent $\mathcal F$
+(\hyperref[III.1.4.12-fr]{1.4.12}).
+
+\begin{theorem}[2.5.3]
+\label{III.2.5.3-fr}
+Soient $A$ un anneau local artinien, $X$ un schéma projectif sur
+$Y=\operatorname{Spec}(A)$, $\mathcal L$ un $\mathcal O_X$-Module
+inv
+
+[id 5844]
+OLD: (on dit que $P$
+est le polynôme de Hilbert de $\mathcal F$ par rapport à $A$)
+NEW: \textup{(on dit que $P$
+est le \emph{polynôme de Hilbert} de $\mathcal F$ par rapport à $A$)}
+FRENCH CONTEXT (corrected): nt~; on pose
+$\mathcal F(n)=\mathcal F\otimes_{\mathcal O_X}\mathcal L^{\otimes n}$
+pour tout $n\in\mathbb Z$.
+\begin{enumerate}
+\item[\textup{(i)}] Il existe un polynôme unique $P\in\mathbb Q[T]$ tel que
+$\chi_A(\mathcal F(n))=P(n)$ pour tout $n\in\mathbb Z$ \textup{(on dit que $P$
+est le \emph{polynôme de Hilbert} de $\mathcal F$ par rapport à $A$)}.
+\item[\textup{(ii)}] Pour $n$ assez grand, on a
+$\chi_A(\mathcal F(n))=\operatorname{long}_A
+\Gamma(X,\mathcal F(n))$.
+\item[\textup{(iii)}] Le terme de plus haut degré de $\chi_A(\mathcal F(n))$ a un
+coefficient $\geq0$.
+\end{enumerate}
+\end{theorem}
+
+Ajout
+
+[id 5847]
+OLD: que le degré de
+$\chi_A(\mathcal F(n))$ est égal à la dimension du support de
+NEW: que \emph{le degré de
+$\chi_A(\mathcal F(n))$ est égal à la dimension du support de}
+FRENCH CONTEXT (corrected): (X,\mathcal F(n))$.
+\item[\textup{(iii)}] Le terme de plus haut degré de $\chi_A(\mathcal F(n))$ a un
+coefficient $\geq0$.
+\end{enumerate}
+\end{theorem}
+
+Ajoutons qu'au chap. IV, dans le paragraphe consacré à la notion de
+dimension, nous démontrerons en outre que \emph{le degré de
+$\chi_A(\mathcal F(n))$ est égal à la dimension du support de}
+$\mathcal F$.
+
+\begin{proof}
+Comme on a $H^i(X,\mathcal F(n))=0$ pour tout $i>0$ dès que $n$ est
+assez grand (\hyperref[III.2.2.1-fr]{2.2.1}),
+
+\oldpage[III]{110}
+on a
+$\chi_A(\mathcal F(n))=\operatorname{long}H^0(X,\mathcal F(n))
+=\operatorname{long}\Gamma(X
+
+[id 24630]
+OLD: (\hyperref[III.2.4.1-fr]{2.4.1}), (ii))
+NEW: (\hyperref[III.2.4.1-fr]{2.4.1}, (ii)))
+FRENCH CONTEXT (corrected): ypothèses de finitude sur $\mathcal S$ et $\mathcal M$) on conclut
+de (\hyperref[III.2.4.1-fr]{2.4.1}) que
+$\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)$
+est un $\mathcal S$-Module \emph{de type fini} pour tout $p$, et (sous les
+hypothèses supplémentaires de (\hyperref[III.2.4.1-fr]{2.4.1}, (ii)))
+qu'il existe $N$ tel que pour $n\geq N$, on ait
+$R^pf_*(\mathcal M_k(n))=0$ pour tout $p>0$ et \emph{tout} $k\in\mathbb Z$, et
+que l'homomorphisme canonique
+$f^*(f_*(\mathcal M_k(n)))\to\mathcal M_k(n)$ soit surjectif pour \emph{tout}
+$k\in\mathbb Z$.
+\end{en
+

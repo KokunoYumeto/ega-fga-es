@@ -1,0 +1,4273 @@
+# Spanish hand pass, current_002: 146 items on 22 printed pages
+
+=================== PAGE II 27 ===================
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 26 -----
+\oldpage[II]{26}
+para todo $n>0$.
+En efecto, si $\mathfrak{p}\in\Proj(S)$ contiene los elementos homogéneos de $\mathfrak{J}$ de grado $\geq n$, como por hipótesis existe un elemento homogéneo $f\in S_d$ que no está contenido en $\mathfrak{p}$, para todo $m\geq0$ y todo $x\in S_m\cap\mathfrak{J}$ se tiene $f^rx\in\mathfrak{J}\cap S_{m+rd}$ para todo $r\geq0$; para todos salvo un número finito de valores de $r$, $m+rd\geq n$, y por tanto $f^rx\in\mathfrak{p}\cap S_{m+rd}$, lo que implica $x\in\mathfrak{p}\cap S_m$ \sref{II.2.1.8}.
+
+Finalmente, para todo ideal graduado $\mathfrak{J}$ de $S$, se tiene
+\[
+  V_+(\mathfrak{J})=V_+(\rad_+(\mathfrak{J})).
+\tag{2.3.2.5}
+\]
+\end{env}
+
+\begin{env}[2.3.3]
+\label{II.2.3.3}
+Por definición, los $V_+(E)$ son los subconjuntos cerrados de $X=\Proj(S)$ para la topología inducida por la topología espectral de $\Spec(S)$, que llamaremos también \emph{topología espectral} sobre $X$.
+Para todo $f\in S$, ponemos
+\[
+\label{II.2.3.3.1}
+  D_+(f)=D(f)\cap\Proj(S)=\Proj(S)\setmin V_+(f)
+\tag{2.3.3.1}
+\]
+y, por consiguiente, para cualesquiera dos elementos $f,g$ de $S$ \sref[I]{I.1.1.9.1},
+\[
+\label{II.2.3.3.2}
+  D_+(fg)=D_+(f)\cap D_+(g).
+\tag{2.3.3.2}
+\]
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{II.2.3.4}
+Cuando $f$ recorre el conjunto de los elementos homogéneos de $S_+$, los $D_+(f)$ forman una base de la topología de $X=\Proj(S)$.
+\end{proposition}
+
+\begin{proof}
+Resulta, en efecto, de \sref{II.2.3.2.2} y \sref{II.2.3.2.4} que todo subconjunto cerrado de $X$ es intersección de conjuntos de la forma $V_+(f)$, donde $f$ es homogéneo de grado $>0$.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 26-27.
+
+\begin{env}[2.3.5]
+\label{II.2.3.5}
+Sea $f$ un elemento \emph{homogéneo} de $S_+$, de grado $d>0$.
+Para todo ideal primo graduado $\mathfrak{p}$ de $S$ que no contenga $f$, se sabe que el conjunto de los $x/f^n$, donde $x\in\mathfrak{p}$ y $n\geq0$, es un ideal primo del anillo de fracciones $S_f$ \sref[0]{0.1.2.6}; su intersección con $S_{(f)}$ es, por tanto, un ideal primo de $S_{(f)}$, que denotamos por $\psi_f(\mathfrak{p})$: es el conjunto de los $x/f^n$ para $n\geq0$ y $x\in\mathfrak{p}\cap S_{nd}$.
+Se ha definido así una aplicación
+\[
+  \psi_f:D_+(f)\to\Spec(S_{(f)}).
+\]
+Además, si $g\in S_e$ es otro elemento homogéneo de $S_+$, se tiene un diagrama conmutativo
+\[
+\label{II.2.3.5.1}
+  \xymatrix{
+    D_+(f) \ar[r]^{\psi_f}
+    & \Spec(S_{(f)})
+  \\D_+(fg) \ar[u] \ar[r]_{\psi_{fg}}
+    & \Spec(S_{(fg)}) \ar[u]
+  }
+\tag{2.3.5.1}
+\]
+donde la flecha vertical de la izquierda es la inclusión y la de la derecha es la aplicación ${}^a\!\omega_{fg,f}$ inducida por el homomorfismo canónico $\omega=\omega_{fg,f}:S_{(f)}\to S_{(fg)}$ \sref[I]{I.1.2.1}.
+En efecto, si $x/f^n\in\omega^{-1}(\psi_{fg}(\mathfrak{p}))$, con $fg\notin\mathfrak{p}$, entonces, por definición, $g^nx/(fg)^n\in\psi_{fg}(\mathfrak{p})$, y por tanto $g^nx\in\mathfrak{p}$, de donde $x\in\mathfrak{p}$; el recíproco es evidente.
+\end{env}
+
+\begin{proposition}[2.3.6]
+\label{II.2.3.6}
+La aplicación $\psi_f$ es un homeomorfismo de $D_+(f)$ sobre $\Spec(S_{(f)})$.
+\end{proposition}
+
+\begin{proof}
+En primer lugar, $\psi_f$ es continua; en efecto, si $h\in S_{nd}$, entonces $h/f^n\in\psi_f(\mathfrak{p})$ si y solo si $h\in\mathfrak{p}$, y por tanto $\psi_f^{-1}(D(h/f^n))=D_+(hf)$; nuestra afirmación resulta entonces de \sref{II.2.3.3.2}.
+Además, los $D_+(hf)$, donde $h$ recorre los conjuntos $S_{nd}$, forman una base de la topología de $D_+(f)$, en virtud de \sref{II.2.3.4} y \sref{II.2.3.3.2}.
+Lo
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 27 -----
+\oldpage[II]{27}
+anterior demuestra, teniendo en cuenta el axioma $(T_0)$, válido en $D_+(f)$ y en $\Spec(S_{(f)})$, que $\psi_f$ es inyectiva y que la aplicación inversa $\psi_f(D_+(f))\to D_+(f)$ es continua.
+Finalmente, para ver que $\psi_f$ es sobreyectiva, observemos que, si $\mathfrak{q}_0$ es un ideal primo de $S_{(f)}$ y, para todo $n>0$, denotamos por $\mathfrak{p}_n$ el conjunto de los $x\in S_n$ tales que $x^d/f^n\in\mathfrak{q}_0$, entonces los $\mathfrak{p}_n$ verifican las condiciones de \sref{II.2.1.9}.
+En efecto, si $x,y\in S_n$ son tales que $x^d/f^n,y^d/f^n\in\mathfrak{q}_0$, se tiene $(x+y)^{2d}/f^{2n}\in\mathfrak{q}_0$, de donde $(x+y)^d/f^n\in\mathfrak{q}_0$, pues $\mathfrak{q}_0$ es primo.
+Esto demuestra que los $\mathfrak{p}_n$ son subgrupos de los $S_n$, y la verificación de las demás condiciones de \sref{II.2.1.9} es inmediata, teniendo en cuenta que $\mathfrak{q}_0$ es primo.
+Si $\mathfrak{p}$ es el ideal primo graduado de $S$ definido de este modo, se tiene efectivamente $\psi_f(\mathfrak{p})=\mathfrak{q}_0$, pues, para $x\in S_{nd}$, las relaciones $x/f^n\in\mathfrak{q}_0$ y $x^d/f^{nd}\in\mathfrak{q}_0$ son equivalentes, al ser $\mathfrak{q}_0$ primo.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 27.
+
+\begin{corollary}[2.3.7]
+\label{II.2.3.7}
+Para que $D_+(f)=\emp$, es necesario y suficiente que $f$ sea nilpotente.
+\end{corollary}
+
+\begin{proof}
+Para que $\Spec(S_{(f)})=\emp$, es necesario y suficiente que $S_{(f)}=0$, o, lo que es equivalente, que $1=0$ en $S_f$, lo que significa por definición que $f$ es nilpotente.
+\end{proof}
+
+\begin{corollary}[2.3.8]
+\label{II.2.3.8}
+Sea $E$ un subconjunto de $S_+$.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm(a)] $V_+(E)=X=\Proj(S)$.
+  \item[\rm(b)] Todo elemento de $E$ es nilpotente.
+  \item[\rm(c)] Las componentes homogéneas de todo elemento de $E$ son nilpotentes.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Es claro que (c) implica (b), y que (b) implica (a).
+Si $\mathfrak{J}$ es el ideal graduado de $S$ generado por $E$, la condición (a) equivale a exigir que $V_+(\mathfrak{J})=X$; \emph{a fortiori}, (a) implica que todo elemento homogéneo $f\in\mathfrak{J}$ verifica $V_+(f)=X$, y por tanto $f$ es nilpotente en virtud de \sref{II.2.3.7}.
+\end{proof}
+
+\begin{corollary}[2.3.9]
+\label{II.2.3.9}
+Si $\mathfrak{J}$ es un ideal graduado de $S_+$, entonces $\rad_+(\mathfrak{J})$ es la intersección de los ideales primos graduados de $S_+$ que contienen $\mathfrak{J}$.
+\end{corollary}
+
+\begin{proof}
+Considerando el anillo graduado $S/\mathfrak{J}$, podemos reducirnos al caso $\mathfrak{J}=0$.
+Hay que demostrar que, si $f\in S_+$ no es nilpotente, existe un ideal primo graduado de $S$ que no contiene $f$; pero al menos una de las componentes homogéneas de $f$ no es nilpotente, y puede suponerse, por tanto, que $f$ es homogéneo.
+La afirmación resulta entonces de \sref{II.2.3.7}.
+\end{proof}
+
+\begin{env}[2.3.10]
+\label{II.2.3.10}
+Para todo subconjunto $Y$ de $X=\Proj(S)$, sea $\mathfrak{j}_+(Y)$ el conjunto de los $f\in S_+$ tales que $Y\subset V_+(f)$; esto equivale a decir que $\mathfrak{j}_+(Y)=\mathfrak{j}(Y)\cap S_+$.
+Entonces $\mathfrak{j}_+(Y)$ es un ideal de $S_+$ igual a su radical en $S_+$.
+\end{env}
+
+\begin{proposition}[2.3.11]
+\label{II.2.3.11}
+\begin{enumerate}
+  \item[\rm(i)] Para todo subconjunto $E$ de $S_+$, $\mathfrak{j}_+(V_+(E))$ es el radical en $S_+$ del ideal graduado de $S_+$ generado por $E$.
+  \item[\rm(ii)] Para todo subconjunto $Y$ de $X$, $V_+(\mathfrak{j}_+(Y))=\overline{Y}$, donde $\overline{Y}$ es la clausura de $Y$ en $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm(i)] Si $\mathfrak{J}$ es el ideal graduado de $S_+$ generado por $E$, se tiene $V_+(E)=V_+(\mathfrak{J})$, y la afirmación resulta entonces de \sref{II.2.3.9}.
+  \item[\rm(ii)] Como $V_+(\mathfrak{J})=\bigcap_{f\in\mathfrak{J}}V_+(f)$, la relación $Y\subset V_+(\mathfrak{J})$ implica $Y\subset V_+(f)$ para todo $f\in\mathfrak{J}$ y, por consiguiente, $\mathfrak{j}_+(Y)\supset\mathfrak{J}$, de donde $V_+(\mathfrak{j}_+(Y))\subset V_+(\mathfrak{J})$; esto demuestra (ii) por la definición de los subconjuntos cerrados.
+\end{enumerate}
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 27-28.
+
+\begin{corollary}[2.3.12]
+\label{II.2.3.12}
+Los subconjuntos cerrados $Y$ de $X=\Proj(S)$ se corresponden biyectivamente con los ideales graduados de $S_+$ iguales a su radical en $S_+$ mediante las aplicaciones que invierten las inclusiones $Y\mapsto\mathfrak{j}_+(Y)$ y $\mathfrak{J}\mapsto V_+(\mathfrak{J})$.
+A la unión $Y_1\cup Y_2$ de dos subconjuntos cerrados de $X$ corresponde
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 28 -----
+\oldpage[II]{28}
+$\mathfrak{j}_+(Y_1)\cap\mathfrak{j}_+(Y_2)$, y a la intersección de una familia arbitraria $(Y_\lambda)$ de subconjuntos cerrados corresponde el radical en $S_+$ de la suma de los $\mathfrak{j}_+(Y_\lambda)$.
+\end{corollary}
+
+\begin{corollary}[2.3.13]
+\label{II.2.3.13}
+Sea $\mathfrak{J}$ un ideal graduado de $S_+$.
+Para que $V_+(\mathfrak{J})=\emp$, es necesario y suficiente que todo elemento $f$ de $S_+$ tenga alguna potencia $f^n$ en $\mathfrak{J}$.
+\end{corollary}
+
+El corolario anterior puede expresarse también en cualquiera de las dos formas equivalentes siguientes:
+
+\begin{corollary}[2.3.14]
+Sea $(f_\alpha)$ una familia de elementos homogéneos de $S_+$.
+Para que los $D_+(f_\alpha)$ formen una cubierta de $X=\Proj(S)$, es necesario y suficiente que todo elemento de $S_+$ tenga alguna potencia en el ideal generado por los $f_\alpha$.
+\label{II.2.3.14}
+\end{corollary}
+
+\begin{corollary}[2.3.15]
+\label{II.2.3.15}
+Sea $(f_\alpha)$ una familia de elementos homogéneos de $S_+$, y sea $f$ un elemento de $S_+$.
+Entonces son equivalentes:
+\begin{enumerate}
+  \item[\rm(a)] $D_+(f)\subset\bigcup_\alpha D_+(f_\alpha)$;
+  \item[\rm(b)] $V_+(f)\supset\bigcap_\alpha V_+(f_\alpha)$;
+  \item[\rm(c)] $f$ tiene alguna potencia en el ideal generado por los $f_\alpha$.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}[2.3.16]
+\label{II.2.3.16}
+Para que $X=\Proj(S)$ sea vacío, es necesario y suficiente que todo elemento de $S_+$ sea nilpotente.
+\end{corollary}
+
+\begin{corollary}[2.3.17]
+\label{II.2.3.17}
+En la correspondencia biyectiva descrita en \sref{II.2.3.12}, a los subconjuntos cerrados \emph{irreducibles} de $X$ corresponden los ideales graduados \emph{primos} de $S_+$.
+\end{corollary}
+
+\begin{proof}
+Si $Y=Y_1\cup Y_2$, donde $Y_1$ e $Y_2$ son subconjuntos cerrados propios de $Y$, se tiene
+\[
+  \mathfrak{j}_+(Y)=\mathfrak{j}_+(Y_1)\cap\mathfrak{j}_+(Y_2),
+\]
+siendo los ideales $\mathfrak{j}_+(Y_1)$ y $\mathfrak{j}_+(Y_2)$ distintos de $\mathfrak{j}_+(Y)$; por tanto, $\mathfrak{j}_+(Y)$ no es primo.
+Recíprocamente, si $\mathfrak{J}$ es un ideal graduado no primo de $S_+$, existen $f,g\in S_+$ tales que $f\notin\mathfrak{J}$ y $g\notin\mathfrak{J}$, pero $fg\in\mathfrak{J}$.
+Entonces $V_+(f)\not\supset V_+(\mathfrak{J})$ y $V_+(g)\not\supset V_+(\mathfrak{J})$, pero $V_+(\mathfrak{J})\subset V_+(f)\cup V_+(g)$ por \sref{II.2.3.2.3}; se concluye así que $V_+(\mathfrak{J})$ es la unión de los subconjuntos cerrados $V_+(f)\cap V_+(\mathfrak{J})$ y $V_+(g)\cap V_+(\mathfrak{J})$, que son distintos de $V_+(\mathfrak{J})$.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 28-29.
+
+\subsection{La estructura de esquema sobre $\mathrm{Proj}(S)$}
+\label{subsection:II.2.4}
+
+\begin{env}[2.4.1]
+\label{II.2.4.1}
+Sean $f$ y $g$ dos elementos homogéneos de $S_+$; consideremos los esquemas afines
+\[
+  Y_f=\Spec(S_{(f)}),\qquad
+  Y_g=\Spec(S_{(g)}),\qquad
+  Y_{fg}=\Spec(S_{(fg)}).
+\]
+En virtud de \sref{II.2.2.2}, el morfismo
+\[
+  w_{fg,f}=({}^a\!\omega_{fg,f},\widetilde{\omega}_{fg,f})
+\]
+de $Y_{fg}$ en $Y_f$, correspondiente al homomorfismo canónico $\omega_{fg,f}:S_{(f)}\to S_{(fg)}$, es una \emph{inmersión abierta} \sref[I]{I.1.3.6}.
+Mediante el homeomorfismo inverso de $\psi_f:D_+(f)\to Y_f$ \sref{II.2.3.6}, puede transportarse a $D_+(f)$ la estructura de esquema afín de $Y_f$; en virtud de la conmutatividad del diagrama \sref{II.2.3.5.1}, el esquema afín $D_+(fg)$ se identifica así con el esquema inducido sobre el subconjunto abierto $D_+(fg)$ del espacio subyacente al esquema afín $D_+(f)$.
+Es claro entonces, teniendo en cuenta \sref{II.2.3.4}, que $X=\Proj(S)$ queda provisto de una estructura de \emph{preesquema} única cuya restricción a cada $D_+(f)$ es el esquema afín que acaba de definirse.
+Además:
+\end{env}
+
+\begin{proposition}[2.4.2]
+\label{II.2.4.2}
+El preesquema $\Proj(S)$ es un esquema.
+\end{proposition}
+
+\begin{proof}
+Basta \sref[I]{I.5.5.6} demostrar que, cualesquiera que sean $f,g$ homogéneos en $S_+$, $D_+(f)\cap D_+(g)=D_+(fg)$ es afín y su anillo está generado por las imágenes canónicas de los anillos de $D_+(f)$ y $D_+(g)$.
+El primer punto es evidente por definición, y el segundo resulta de \sref{II.2.2.4}.
+\end{proof}
+----- French corrections on page II 27 -----
+[id 1684]
+OLD: \item[\rm a)]
+NEW: \item[\textit{a)}]
+FRENCH CONTEXT (corrected):  du point de vue birationnel qu'elle implique) être nuisible à celui qui désire se familiariser avec le point de vue et les techniques exposés ici.
+Par contre, nous supposerons que le lecteur a une bonne connaissance des sujets suivants~:
+
+\begin{enumerate}
+  \item[\textit{a)}] L'\emph{Algèbre commutative}, telle qu'elle est exposée par exemple dans les volumes en cours de préparation des \emph{Éléments} de N.~Bourbaki (et, en attendant la parution de ces volumes, dans Samuel-Zariski~\cite{I-13} et Samuel~\cite{I-11},~\cite{I-12}).
+
+
+[id 1685]
+OLD: \item[\rm b)]
+NEW: \item[\textit{b)}]
+FRENCH CONTEXT (corrected): '\emph{Algèbre commutative}, telle qu'elle est exposée par exemple dans les volumes en cours de préparation des \emph{Éléments} de N.~Bourbaki (et, en attendant la parution de ces volumes, dans Samuel-Zariski~\cite{I-13} et Samuel~\cite{I-11},~\cite{I-12}).
+  \item[\textit{b)}] L'\emph{Algèbre homologique}, pour laquelle nous renvoyons à Cartan-Eilenberg~\cite{I-2} (cité~(M)) et Godement~\cite{I-4} (cité~(G)), ainsi qu'à l'article récent de A.~Grothendieck~\cite{I-6} (cité~(T)).
+  \item[\textit{c)}] La \emph{Théorie des faisceaux}, 
+
+[id 1686]
+OLD: \item[\rm c)]
+NEW: \item[\textit{c)}]
+FRENCH CONTEXT (corrected): muel~\cite{I-11},~\cite{I-12}).
+  \item[\textit{b)}] L'\emph{Algèbre homologique}, pour laquelle nous renvoyons à Cartan-Eilenberg~\cite{I-2} (cité~(M)) et Godement~\cite{I-4} (cité~(G)), ainsi qu'à l'article récent de A.~Grothendieck~\cite{I-6} (cité~(T)).
+  \item[\textit{c)}] La \emph{Théorie des faisceaux}, où nos principales références seront~(G) et~(T); cette dernière théorie fournit le langage indispensable pour interpréter en termes <<~géométriques~>> les notions essentielles de l'Algèbre commutative, et pour les <<~globalise
+
+[id 1687]
+OLD: que c) entraîne b) et que b) entraîne a).
+NEW: que \emph{c)} entraîne \emph{b)} et que \emph{b)} entraîne \emph{a)}.
+FRENCH CONTEXT (corrected): \item[\textit{a)}] $V_+(E)=X=\operatorname{Proj}(S)$.
+  \item[\textit{b)}] Tout élément de $E$ est nilpotent.
+  \item[\textit{c)}] Les composants homogènes de tout élément de $E$ sont
+    nilpotents.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que \emph{c)} entraîne \emph{b)} et que \emph{b)} entraîne \emph{a)}. Si $\mathfrak{J}$ est
+l'idéal gradué de $S$ engendré par $E$, la condition \emph{a)} équivaut à
+$V_+(\mathfrak{J})=X$~; \emph{a fortiori}, \emph{a)} entraîne que tout élément
+homogène $f\in\mathfrak{J}$ est tel que $V_+(f)=X$, donc $f$ est nilpotent
+en vertu 
+
+[id 1688]
+OLD: la condition a) équivaut
+NEW: la condition \emph{a)} équivaut
+FRENCH CONTEXT (corrected): es composants homogènes de tout élément de $E$ sont
+    nilpotents.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que \emph{c)} entraîne \emph{b)} et que \emph{b)} entraîne \emph{a)}. Si $\mathfrak{J}$ est
+l'idéal gradué de $S$ engendré par $E$, la condition \emph{a)} équivaut à
+$V_+(\mathfrak{J})=X$~; \emph{a fortiori}, \emph{a)} entraîne que tout élément
+homogène $f\in\mathfrak{J}$ est tel que $V_+(f)=X$, donc $f$ est nilpotent
+en vertu de (\hyperref[II.2.3.7-fr]{2.3.7}).
+\end{proof}
+
+\begin{corollary}[2.3.9]
+\label{II.2.3.9-fr}
+
+
+[id 1689]
+OLD: \emph{a fortiori}, a) entraîne
+NEW: \emph{a fortiori}, \emph{a)} entraîne
+FRENCH CONTEXT (corrected): lpotents.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que \emph{c)} entraîne \emph{b)} et que \emph{b)} entraîne \emph{a)}. Si $\mathfrak{J}$ est
+l'idéal gradué de $S$ engendré par $E$, la condition \emph{a)} équivaut à
+$V_+(\mathfrak{J})=X$~; \emph{a fortiori}, \emph{a)} entraîne que tout élément
+homogène $f\in\mathfrak{J}$ est tel que $V_+(f)=X$, donc $f$ est nilpotent
+en vertu de (\hyperref[II.2.3.7-fr]{2.3.7}).
+\end{proof}
+
+\begin{corollary}[2.3.9]
+\label{II.2.3.9-fr}
+Si $\mathfrak{J}$ est un idéal gradué de $S_+$,
+$\mathfrak{r}_+(
+
+[id 1690]
+OLD: $r_+(\mathfrak{J})$
+NEW: $\mathfrak{r}_+(\mathfrak{J})$
+FRENCH CONTEXT (corrected): ak{J})\cap S_+$~; en particulier, la
+racine de $0$ dans $S_+$ est encore appelée le \emph{nilradical} de $S_+$ et
+notée $\mathfrak{N}_+$~: c'est donc l'ensemble des éléments nilpotents de
+$S_+$. Si $\mathfrak{J}$ est un idéal \emph{gradué} de $S_+$, sa racine
+$\mathfrak{r}_+(\mathfrak{J})$ est un idéal \emph{gradué}~: en passant à l'anneau quotient
+$S/\mathfrak{J}$, on peut se ramener au cas $\mathfrak{J}=0$, et tout
+revient à voir que si $x=x_h+x_{h+1}+\ldots+x_k$ est nilpotent, il en est de
+même des $x_i\in S_i$ ($1\leq h\leq i\leq k$)~; on p
+
+[id 1691]
+OLD: $Y\longmapsto\mathfrak{j}_+(Y)$
+NEW: $Y\to\mathfrak{j}_+(Y)$
+FRENCH CONTEXT (corrected): 
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[2.3.12]
+\label{II.2.3.12-fr}
+Les parties fermées $Y$ de $X=\operatorname{Proj}(S)$ et les idéaux gradués
+de $S_+$ égaux à leur racine dans $S_+$ se correspondent biunivoquement par
+les applications décroissantes
+$Y\to\mathfrak{j}_+(Y)$, $\mathfrak{J}\to
+V_+(\mathfrak{J})$~; à la réunion $Y_1\cup Y_2$ de deux parties fermées de
+$X$ correspond
+\oldpage[II]{28}
+$\mathfrak{j}_+(Y_1)\cap\mathfrak{j}_+(Y_2)$, et à l'intersection d'une
+famille quelconque $(Y_\lambda)$ de parties fermées correspond
+
+[id 1692]
+OLD: \mathfrak{J}\longmapsto
+V_+(\mathfrak{J})$
+NEW: \mathfrak{J}\to
+V_+(\mathfrak{J})$
+FRENCH CONTEXT (corrected): f}
+
+\begin{corollary}[2.3.12]
+\label{II.2.3.12-fr}
+Les parties fermées $Y$ de $X=\operatorname{Proj}(S)$ et les idéaux gradués
+de $S_+$ égaux à leur racine dans $S_+$ se correspondent biunivoquement par
+les applications décroissantes
+$Y\to\mathfrak{j}_+(Y)$, $\mathfrak{J}\to
+V_+(\mathfrak{J})$~; à la réunion $Y_1\cup Y_2$ de deux parties fermées de
+$X$ correspond
+\oldpage[II]{28}
+$\mathfrak{j}_+(Y_1)\cap\mathfrak{j}_+(Y_2)$, et à l'intersection d'une
+famille quelconque $(Y_\lambda)$ de parties fermées correspond la racine
+dans $S_+$ de la somme des
+
+=================== PAGE II 28 ===================
+----- (Spanish page II 27: shown above in this file) -----
+----- (Spanish page II 28: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 29 -----
+\oldpage[II]{29}
+Siempre que hablemos del espectro primo homogéneo $\Proj(S)$ como de un \emph{esquema}, se entenderá que está provisto de la estructura que acaba de definirse.
+
+\begin{example}[2.4.3]
+\label{II.2.4.3}
+Sea $S=K[T_1,T_2]$, donde $K$ es un cuerpo, $T_1$ y $T_2$ son indeterminadas, y $S$ está graduado por el grado total.
+Resulta de \sref{II.2.3.14} que $\Proj(S)$ es la unión de $D_+(T_1)$ y $D_+(T_2)$; se ve inmediatamente que estos esquemas afines son canónicamente isomorfos a $\Spec(K[T])$, y que $\Proj(S)$ se obtiene pegando estos dos esquemas afines como se describe en \sref[I]{I.2.3.2} (cf. \sref{II.7.4.14}).
+\end{example}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 29.
+
+\begin{proposition}[2.4.4]
+\label{II.2.4.4}
+Sea $S$ un anillo graduado en grados positivos, y sea $X$ el esquema $\Proj(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\mathfrak{N}_+$ es el nilradical de $S_+$ \sref{II.2.1.10}, el esquema $X_\red$ es canónicamente isomorfo a $\Proj(S/\mathfrak{N}_+)$; en particular, si $S$ es esencialmente reducido, $\Proj(S)$ es reducido.
+  \item[\rm(ii)] Supongamos que $S$ es esencialmente reducido. Entonces, para que $X$ sea íntegro, es necesario y suficiente que $S$ sea esencialmente íntegro.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm(i)] Sea $\overline{S}$ el anillo graduado $S/\mathfrak{N}_+$, y denotemos por $x\to\overline{x}$ el homomorfismo canónico $S\to\overline{S}$ de grado $0$.
+  Para todo $f\in S_d$ ($d>0$), el homomorfismo canónico $S_f\to\overline{S}_{\overline{f}}$ \sref[0]{0.1.5.1} es sobreyectivo y de grado $0$ y, por restricción, da por tanto un homomorfismo sobreyectivo $S_{(f)}\to\overline{S}_{(\overline{f})}$.
+  Si se supone $f\notin\mathfrak{N}_+$, se comprueba inmediatamente que $\overline{S}_{(\overline{f})}$ es reducido y que el núcleo del homomorfismo anterior es el nilradical de $S_{(f)}$, es decir,
+  \[
+    \overline{S}_{(\overline{f})}=(S_{(f)})_\red.
+  \]
+  A este homomorfismo corresponde, por tanto, una inmersión cerrada $D_+(\overline{f})\to D_+(f)$ que identifica $D_+(\overline{f})$ con $(D_+(f))_\red$ \sref[I]{I.5.1.2} y que es, en particular, un homeomorfismo de los espacios subyacentes a estos dos esquemas afines.
+  Además, si $g\notin\mathfrak{N}_+$ es otro elemento homogéneo de $S_+$, el diagrama
+  \[
+    \xymatrix{
+      S_{(f)} \ar[r] \ar[d]
+      & \overline{S}_{(\overline{f})} \ar[d]
+    \\S_{(fg)} \ar[r]
+      & \overline{S}_{(\overline f\overline g)}
+    }
+  \]
+  es conmutativo.
+  Como, además, los $D_+(f)$, para $f$ homogéneo de grado $>0$ con $f\notin\mathfrak{N}_+$, forman una cubierta de $X=\Proj(S)$ \sref{II.2.3.7}, se ve que los morfismos $D_+(\overline{f})\to D_+(f)$ son las restricciones de una inmersión cerrada $\Proj(\overline{S})\to\Proj(S)$ que es un homeomorfismo de los espacios subyacentes; de aquí resulta la conclusión \sref[I]{I.5.1.2}.
+  \item[\rm(ii)] Supongamos que $S$ es esencialmente íntegro, es decir, que $(0)$ es un ideal primo graduado de $S_+$ distinto de $S_+$; entonces $X$ es reducido por (i) e irreducible por \sref{II.2.3.17}.
+  Recíprocamente, supongamos que $S$ es esencialmente reducido y que $X$ es íntegro.
+  Para todo $f\neq0$ homogéneo en $S_+$ se tiene entonces $D_+(f)\neq\emp$ \sref{II.2.3.7}; la hipótesis de que $X$ es irreducible implica que $D_+(f)\cap D_+(g)\neq\emp$ para $f,g\neq0$ homogéneos en $S_+$.
+  Por tanto, $fg\neq0$ en virtud de \sref{II.2.3.3.2}, y se concluye que $S_+$ no tiene divisores de cero, de donde resulta la primera afirmación.
+\end{enumerate}
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 29-30.
+
+\begin{env}[2.4.5]
+\label{II.2.4.5}
+Dado un anillo conmutativo $A$, recordemos que se dice que un anillo graduado $S$ es una \emph{$A$-álgebra graduada} si está provisto de una estructura de $A$-álgebra tal que cada uno de sus subgrupos $S_n$ sea un $A$-módulo.
+Para ello basta, por lo demás, que $S_0$ sea
+----- French corrections on page II 28 -----
+[id 1693]
+OLD: \begin{enumerate}
+  \item[\rm a)] $D_+(f)\subset\bigcup_\alpha D_+(f_\alpha)$~;
+  \item[\rm b)] $V_+(f)\supset\bigcap_\alpha V_+(f_\alpha)$~;
+  \item[\rm c)] une puissance de $f$ appartient à l'idéal engendré par les
+    $f_\alpha$.
+\end{enumerate}
+NEW: \textit{a)} $D_+(f)\subset\bigcup_\alpha D_+(f_\alpha)$~;
+\textit{b)} $V_+(f)\supset\bigcap_\alpha V_+(f_\alpha)$~;
+\textit{c)} une puissance de $f$ appartient à l'idéal engendré par les
+$f_\alpha$.
+FRENCH CONTEXT (corrected): _+$
+ait une puissance dans l'idéal engendré par les $f_\alpha$.
+\end{corollary}
+
+\begin{corollary}[2.3.15]
+\label{II.2.3.15-fr}
+Soient $(f_\alpha)$ une famille d'éléments homogènes de $S_+$, $f$ un
+élément de $S_+$. Les relations suivantes sont équivalentes~:
+\textit{a)} $D_+(f)\subset\bigcup_\alpha D_+(f_\alpha)$~;
+\textit{b)} $V_+(f)\supset\bigcap_\alpha V_+(f_\alpha)$~;
+\textit{c)} une puissance de $f$ appartient à l'idéal engendré par les
+$f_\alpha$.
+\end{corollary}
+
+\begin{corollary}[2.3.16]
+\label{II.2.3.16-fr}
+Pour que $X=\operatorname{Proj}(S)$ soit vide, il faut et il suffit que tout
+élément de $S_+$ soit nilpotent.
+\end{corollary}
+
+\begin{corollary}[2.3.17]
+\label{II.2.3.17-fr}
+Dans la correspondanc
+
+[id 1694]
+OLD: (\hyperref[II.2.3.12-fr]{2.3.12})
+NEW: \textup{(\hyperref[II.2.3.12-fr]{2.3.12})}
+FRENCH CONTEXT (corrected): orollary}[2.3.16]
+\label{II.2.3.16-fr}
+Pour que $X=\operatorname{Proj}(S)$ soit vide, il faut et il suffit que tout
+élément de $S_+$ soit nilpotent.
+\end{corollary}
+
+\begin{corollary}[2.3.17]
+\label{II.2.3.17-fr}
+Dans la correspondance biunivoque décrite dans
+\textup{(\hyperref[II.2.3.12-fr]{2.3.12})}, aux parties fermées irréductibles de $X$
+correspondent les idéaux gradués \emph{premiers} dans $S_+$.
+\end{corollary}
+
+\begin{proof}
+En effet, si $Y=Y_1\cup Y_2$, où $Y_1$ et $Y_2$ sont fermés et distincts de
+$Y$, on a
+\[
+  \mathfrak{j}_+(Y)
+  =\mathfrak{j}_
+
+[id 1695]
+OLD: gradués premiers dans
+NEW: gradués \emph{premiers} dans
+FRENCH CONTEXT (corrected):  tout
+élément de $S_+$ soit nilpotent.
+\end{corollary}
+
+\begin{corollary}[2.3.17]
+\label{II.2.3.17-fr}
+Dans la correspondance biunivoque décrite dans
+\textup{(\hyperref[II.2.3.12-fr]{2.3.12})}, aux parties fermées irréductibles de $X$
+correspondent les idéaux gradués \emph{premiers} dans $S_+$.
+\end{corollary}
+
+\begin{proof}
+En effet, si $Y=Y_1\cup Y_2$, où $Y_1$ et $Y_2$ sont fermés et distincts de
+$Y$, on a
+\[
+  \mathfrak{j}_+(Y)
+  =\mathfrak{j}_+(Y_1)\cap\mathfrak{j}_+(Y_2)
+\]
+les idéaux $\mathfrak{j}_+(Y_1)$ et $\mathfrak{j}_+(Y_2)$ étant
+
+[id 1696]
+OLD: (\hyperref[I.1.3.6-fr]{I, 1.3.6})
+NEW: (\hyperref[I.1.3.6-fr]{\textbf{I}, 1.3.6})
+FRENCH CONTEXT (corrected): (fg)})$. En vertu de
+(\hyperref[II.2.2.2-fr]{2.2.2}), le morphisme
+$w_{fg,f}=({}^a\omega_{fg,f},\widetilde{\omega}_{fg,f})$ de $Y_{fg}$ dans
+$Y_f$, correspondant à l'homomorphisme canonique
+$\omega_{fg,f}:S_{(f)}\to S_{(fg)}$, est une \emph{immersion ouverte}
+(\hyperref[I.1.3.6-fr]{\textbf{I}, 1.3.6}). Au moyen de l'homéomorphisme réciproque
+de $\psi_f:D_+(f)\to Y_f$ (\hyperref[II.2.3.6-fr]{2.3.6}), on peut
+transporter à $D_+(f)$ la structure de schéma affine de $Y_f$~; en vertu de
+la commutativité du diagramme (\hyperref[II.2.3.5.1-fr]{2.3.5.1}), le
+schém
+
+[id 1697]
+OLD: (\hyperref[I.5.5.6-fr]{I, 5.5.6})
+NEW: (\hyperref[I.5.5.6-fr]{\textbf{I}, 5.5.6})
+FRENCH CONTEXT (corrected): réschéma}, dont la restriction à chaque $D_+(f)$ est le schéma
+affine qui vient d'être défini. En outre~:
+\end{env}
+
+\begin{proposition}[2.4.2]
+\label{II.2.4.2-fr}
+Le préschéma $\operatorname{Proj}(S)$ est un schéma.
+\end{proposition}
+
+\begin{proof}
+Il suffit (\hyperref[I.5.5.6-fr]{\textbf{I}, 5.5.6}) de montrer que, quels que soient
+$f$, $g$ homogènes dans $S_+$,
+$D_+(f)\cap D_+(g)=D_+(fg)$ est affine et que son anneau est engendré par
+les images canoniques des anneaux de $D_+(f)$ et $D_+(g)$~; le premier
+point est évident par définition, et le second rés
+
+=================== PAGE II 29 ===================
+----- (Spanish page II 28: shown above in this file) -----
+----- (Spanish page II 29: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 30 -----
+\oldpage[II]{30}
+una $A$-álgebra; dicho de otro modo, se define sobre $S$ una estructura de $A$-álgebra graduada definiendo una estructura de $A$-álgebra sobre $S_0$ y poniendo $\alpha.x=(\alpha.1)x$ para $\alpha\in A$ y $x\in S_n$.
+\end{env}
+
+\begin{proposition}[2.4.6]
+\label{II.2.4.6}
+Supongamos que $S$ es una $A$-álgebra graduada.
+Entonces, sobre $X=\Proj(S)$, el haz estructural $\sh{O}_X$ es un haz de $A$-álgebras (considerándose $A$ como haz constante sobre $X$); dicho de otro modo, $X$ es un esquema sobre $\Spec(A)$.
+\end{proposition}
+
+\begin{proof}
+Basta observar que, para todo $f$ homogéneo en $S_+$, $S_{(f)}$ es un álgebra sobre $A$, y que el diagrama
+\[
+  \xymatrix{
+    S_{(f)} \ar[rr] && S_{(fg)}
+  \\ & A \ar[ul] \ar[ur] &
+  }
+\]
+es conmutativo para $f,g$ homogéneos en $S_+$.
+\end{proof}
+
+\begin{proposition}[2.4.7]
+\label{II.2.4.7}
+Sea $S$ un anillo graduado en grados positivos.
+\begin{enumerate}
+  \item[\rm(i)] Para todo entero $d>0$, existe un isomorfismo canónico del esquema $\Proj(S)$ al esquema $\Proj(S^{(d)})$.
+  \item[\rm(ii)] Sea $S'$ el anillo graduado tal que $S'_0=\bb{Z}$ y $S'_n=S_n$ (considerado como $\bb{Z}$-módulo) para $n>0$. Existe entonces un isomorfismo canónico del esquema $\Proj(S)$ al esquema $\Proj(S')$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm(i)] Demostremos primero que la aplicación $\mathfrak{p}\to\mathfrak{p}\cap S^{(d)}$ es una biyección de $\Proj(S)$ sobre $\Proj(S^{(d)})$.
+  En efecto, supongamos dado un ideal primo graduado $\mathfrak{p}'\in\Proj(S^{(d)})$, y pongamos $\mathfrak{p}_{nd}=\mathfrak{p}'\cap S_{nd}$ ($n\geq0$).
+  Para todo $n>0$ que no sea múltiplo de $d$, definamos $\mathfrak{p}_n$ como el conjunto de los $x\in S_n$ tales que $x^d\in\mathfrak{p}_{nd}$.
+  Si $x,y\in\mathfrak{p}_n$, se tiene $(x+y)^{2d}\in\mathfrak{p}_{2nd}$ y, por tanto, $(x+y)^d\in\mathfrak{p}_{nd}$, pues $\mathfrak{p}'$ es primo.
+  Es inmediato que los $\mathfrak{p}_n$ así definidos para todo $n\geq0$ verifican las condiciones de \sref{II.2.1.9}; existe, por tanto, un único ideal primo $\mathfrak{p}\in\Proj(S)$ tal que $\mathfrak{p}\cap S^{(d)}=\mathfrak{p}'$.
+  Como, para todo $f$ homogéneo en $S_+$, se tiene $V_+(f)=V_+(f^d)$ \sref{II.2.3.2.3}, se ve que la biyección anterior es un \emph{homeomorfismo} de espacios topológicos.
+  Finalmente, con las mismas notaciones, $S_{(f)}$ y $S_{(f^d)}$ se identifican canónicamente \sref{II.2.2.2}; por consiguiente, $\Proj(S)$ y $\Proj(S^{(d)})$ se identifican canónicamente como \emph{esquemas}.
+  \item[\rm(ii)] Si a cada $\mathfrak{p}\in\Proj(S)$ se asocia el único ideal primo $\mathfrak{p}'\in\Proj(S')$ tal que $\mathfrak{p}'\cap S_n=\mathfrak{p}\cap S_n$ para todo $n>0$ \sref{II.2.1.9}, es claro que se ha definido un homeomorfismo canónico $\Proj(S)\simto\Proj(S')$ de los espacios subyacentes, pues $V_+(f)$ es el mismo conjunto para $S$ y $S'$ cuando $f$ es un elemento homogéneo de $S_+$.
+  Como, además, $S_{(f)}=S'_{(f)}$, $\Proj(S)$ y $\Proj(S')$ se identifican como \emph{esquemas}.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[2.4.8]
+\label{II.2.4.8}
+Si $S$ es una $A$-álgebra graduada y $S'_A$ es la $A$-álgebra graduada tal que $(S'_A)_0=A$ y $(S'_A)_n=S_n$ para $n>0$, existe un isomorfismo canónico de $\Proj(S)$ a $\Proj(S'_A)$.
+\end{corollary}
+
+\begin{proof}
+En efecto, estos dos esquemas son ambos canónicamente isomorfos a $\Proj(S')$, con las notaciones de \sref{II.2.4.7}[(ii)].
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 30-31.
+
+\subsection{El haz asociado a un módulo graduado}
+\label{subsection:II.2.5}
+
+\begin{env}[2.5.1]
+\label{II.2.5.1}
+Sea $M$ un $S$-módulo \emph{graduado}.
+Para todo $f$ homogéneo en $S_+$, $M_{(f)}$ es entonces un $S_{(f)}$-módulo y le corresponde, por tanto, un haz cuasi-coherente asociado $(M_{(f)})\supertilde$ sobre el esquema afín $\Spec(S_{(f)})$, identificado con $D_+(f)$ \sref[I]{I.1.3.4}.
+\end{env}
+----- French corrections on page II 29 -----
+[id 1698]
+OLD: (\hyperref[I.2.3.2-fr]{I, 2.3.2})
+NEW: (\hyperref[I.2.3.2-fr]{\textbf{I}, 2.3.2})
+FRENCH CONTEXT (corrected): 3.14}) que $\operatorname{Proj}(S)$ est réunion
+de $D_+(T_1)$ et $D_+(T_2)$~; on voit aussitôt que ces schémas affines sont
+canoniquement isomorphes à $K[T]$, et que $\operatorname{Proj}(S)$
+s'obtient par le recollement de ces deux schémas affines décrit dans
+(\hyperref[I.2.3.2-fr]{\textbf{I}, 2.3.2}) (cf.
+(\hyperref[II.7.4.14-fr]{7.4.14})).
+\end{example}
+
+\begin{proposition}[2.4.4]
+\label{II.2.4.4-fr}
+Soit $S$ un anneau gradué à degrés positifs, et soit $X$ le schéma
+$\operatorname{Proj}(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\mathfrak{N}_+$ est le ni
+
+[id 1699]
+OLD: (\hyperref[II.2.1.10-fr]{2.1.10})
+NEW: \textup{(\hyperref[II.2.1.10-fr]{2.1.10})}
+FRENCH CONTEXT (corrected): 4.14-fr]{7.4.14})).
+\end{example}
+
+\begin{proposition}[2.4.4]
+\label{II.2.4.4-fr}
+Soit $S$ un anneau gradué à degrés positifs, et soit $X$ le schéma
+$\operatorname{Proj}(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\mathfrak{N}_+$ est le nilradical de $S_+$
+    \textup{(\hyperref[II.2.1.10-fr]{2.1.10})}, le schéma $X_{\mathrm{red}}$ est
+    canoniquement isomorphe à $\operatorname{Proj}(S/\mathfrak{N}_+)$~; en
+    particulier, si $S$ est essentiellement réduit,
+    $\operatorname{Proj}(S)$ est réduit.
+  \item[\rm(ii)] Supposons $S$ essentiellement réduit. Al
+
+[id 1700]
+OLD: essentiellement réduite,
+NEW: essentiellement réduit,
+FRENCH CONTEXT (corrected): n{enumerate}
+  \item[\rm(i)] Si $\mathfrak{N}_+$ est le nilradical de $S_+$
+    \textup{(\hyperref[II.2.1.10-fr]{2.1.10})}, le schéma $X_{\mathrm{red}}$ est
+    canoniquement isomorphe à $\operatorname{Proj}(S/\mathfrak{N}_+)$~; en
+    particulier, si $S$ est essentiellement réduit,
+    $\operatorname{Proj}(S)$ est réduit.
+  \item[\rm(ii)] Supposons $S$ essentiellement réduit. Alors, pour que $X$
+    soit intègre, il faut et il suffit que $S$ soit essentiellement intègre.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+
+[id 1702]
+OLD: (\hyperref[0.1.5.1-fr]{0, 1.5.1})
+NEW: (\hyperref[0.1.5.1-fr]{\textbf{0}, 1.5.1})
+FRENCH CONTEXT (corrected): idetilde{A}')$ et $\Gamma(D(f),\widetilde{A})$
+s'identifient respectivement à $A'_{f'}$ et $A_f$
+(\hyperref[I.1.3.6-fr]{1.3.6} et \hyperref[I.1.3.7-fr]{1.3.7}). Or,
+l'homomorphisme $\varphi$ définit canoniquement un homomorphisme
+$\varphi_{f'}:A'_{f'}\to A_f$
+(\hyperref[0.1.5.1-fr]{\textbf{0}, 1.5.1}), autrement dit on a un homomorphisme
+d'anneaux
+\[
+  \Gamma(D(f'),\widetilde{A}')\to
+  \Gamma({}^a\varphi^{-1}(D(f')),\widetilde{A})
+  =\Gamma(D(f'),{}^a\varphi_*(\widetilde{A}))
+\]
+
+\oldpage[I]{94}
+En outre, ces homomorphismes satisfont aux conditions de comp
+
+[id 1703]
+OLD: À cet
+NEW: A cet
+FRENCH CONTEXT (corrected):  $f\notin\mathfrak{N}_+$, on vérifie immédiatement que
+    $\overline{S}_{(\overline{f})}$ est réduit, et que le noyau de
+    l'homomorphisme précédent est le nilradical de $S_{(f)}$, autrement dit
+    $\overline{S}_{(\overline{f})}=(S_{(f)})_{\mathrm{red}}$. A cet
+    homomorphisme correspond donc une immersion fermée
+    $D_+(\overline{f})\to D_+(f)$ qui identifie $D_+(\overline{f})$ à
+    $(D_+(f))_{\mathrm{red}}$ (\hyperref[I.5.1.2-fr]{\textbf{I}, 5.1.2}), et est en
+    particulier un homéomorphisme des espaces sous
+
+[id 1704]
+OLD: $(D_+(f))_{\mathrm{red}}$ (\hyperref[I.5.1.2-fr]{I, 5.1.2})
+NEW: $(D_+(f))_{\mathrm{red}}$ (\hyperref[I.5.1.2-fr]{\textbf{I}, 5.1.2})
+FRENCH CONTEXT (corrected): phisme précédent est le nilradical de $S_{(f)}$, autrement dit
+    $\overline{S}_{(\overline{f})}=(S_{(f)})_{\mathrm{red}}$. A cet
+    homomorphisme correspond donc une immersion fermée
+    $D_+(\overline{f})\to D_+(f)$ qui identifie $D_+(\overline{f})$ à
+    $(D_+(f))_{\mathrm{red}}$ (\hyperref[I.5.1.2-fr]{\textbf{I}, 5.1.2}), et est en
+    particulier un homéomorphisme des espaces sous-jacents à ces deux
+    schémas affines. En outre, si $g\notin\mathfrak{N}_+$ est un second
+    élément homogène de $S_+$, le diagramme
+    \[
+      \xymatrix{
+        S_{(f)}\ar[r]\ar[d]
+        & 
+
+[id 1706]
+OLD: la conclusion
+    (\hyperref[I.5.1.2-fr]{I, 5.1.2})
+NEW: la conclusion
+    (\hyperref[I.5.1.2-fr]{\textbf{I}, 5.1.2})
+FRENCH CONTEXT (corrected): [II.2.3.7-fr]{2.3.7}), on voit
+    que les morphismes $D_+(\overline{f})\to D_+(f)$ sont les restrictions
+    d'une immersion fermée
+    $\operatorname{Proj}(\overline{S})\to\operatorname{Proj}(S)$ qui est
+    un homéomorphisme des espaces sous-jacents~; d'où la conclusion
+    (\hyperref[I.5.1.2-fr]{\textbf{I}, 5.1.2}).
+  \item[\rm(ii)] Supposons que $S$ soit essentiellement intègre, autrement
+    dit que $(0)$ soit un idéal gradué premier de $S_+$ distinct de $S_+$~;
+    alors $X$ est réduit en vertu de (i) et irréductible en vertu de
+    (\hyperref[II.2.3.17-fr]{2.3.17}).
+
+=================== PAGE II 30 ===================
+----- (Spanish page II 29: shown above in this file) -----
+----- (Spanish page II 30: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 31 -----
+\oldpage[II]{31}
+\begin{proposition}[2.5.2]
+\label{II.2.5.2}
+Existe sobre $X=\Proj(S)$ un único $\sh{O}_X$-módulo cuasi-coherente $\widetilde{M}$ tal que, para $f$ homogéneo en $S_+$, se tenga $\Gamma(D_+(f),\widetilde{M})=M_{(f)}$, siendo el homomorfismo de restricción $\Gamma(D_+(f),\widetilde{M})\to\Gamma(D_+(fg),\widetilde{M})$, para $f,g$ homogéneos en $S_+$, el homomorfismo canónico $M_{(f)}\to M_{(fg)}$ \sref{II.2.2.3}.
+\end{proposition}
+
+\begin{proof}
+Supongamos $f\in S_d$ y $g\in S_e$.
+Como $D_+(fg)$ se identifica con el espectro primo de $(S_{(f)})_{g^d/f^e}$ en virtud de \sref{II.2.2.2}, la restricción a $D_+(fg)$ del haz $(M_{(f)})\supertilde$ sobre $D_+(f)$ se identifica canónicamente con el haz asociado al módulo $(M_{(f)})_{g^d/f^e}$ \sref[I]{I.1.3.6} y, por tanto, también con $(M_{(fg)})\supertilde$ \sref{II.2.2.2}.
+Se concluye así que existe un isomorfismo canónico
+\[
+  \theta_{g,f}:(M_{(f)})\supertilde|D_+(fg)
+  \simto(M_{(g)})\supertilde|D_+(fg)
+\]
+tal que, si $h$ es un tercer elemento homogéneo de $S_+$, se tiene $\theta_{f,h}=\theta_{f,g}\circ\theta_{g,h}$ en $D_+(fgh)$.
+Por consiguiente \sref[0]{0.3.3.1}, existe un $\sh{O}_X$-módulo cuasi-coherente $\sh{F}$ sobre $X$ y, para cada $f$ homogéneo en $S_+$, un isomorfismo $\eta_f$ de $\sh{F}|D_+(f)$ sobre $(M_{(f)})\supertilde$ tal que $\theta_{g,f}=\eta_g\circ\eta_f^{-1}$.
+Si se considera entonces el haz $\sh{G}$ asociado al prehaz (sobre la base de la topología de $X$ formada por los $D_+(f)$) definido por $D_+(f)\mapsto M_{(f)}$, tomando como homomorfismos de restricción los homomorfismos canónicos $M_{(f)}\to M_{(fg)}$, lo anterior demuestra que $\sh{F}$ y $\sh{G}$ son isomorfos, teniendo en cuenta \sref[I]{I.1.3.7}.
+El haz $\sh{G}$ se denota por $\widetilde{M}$ y verifica efectivamente las condiciones del enunciado.
+En particular, se tiene $\widetilde{S}=\sh{O}_X$.
+\end{proof}
+
+\begin{definition}[2.5.3]
+\label{II.2.5.3}
+Se dice que el $\sh{O}_X$-módulo cuasi-coherente $\widetilde{M}$ definido en \sref{II.2.5.2} está \emph{asociado} al $S$-módulo graduado $M$.
+\end{definition}
+
+Recordemos que los $S$-módulos graduados forman una categoría cuando se restringen los homomorfismos arbitrarios de módulos graduados a los homomorfismos \emph{de grado $0$}.
+Con esta convención:
+
+\begin{proposition}[2.5.4]
+\label{II.2.5.4}
+El funtor $M\mapsto\widetilde{M}$ es un funtor covariante aditivo exacto de la categoría de los $S$-módulos graduados en la de los $\sh{O}_X$-módulos cuasi-coherentes, y conmuta con los límites directos y las sumas directas.
+\end{proposition}
+
+\begin{proof}
+Como estas propiedades son locales, basta demostrarlas para los haces de la forma $\widetilde{M}|D_+(f)=(M_{(f)})\supertilde$.
+Ahora bien, el funtor de localización $M\mapsto M_f$, el funtor de grado cero $N\mapsto N_0$ sobre los $S_f$-módulos graduados, y el funtor de haz asociado $P\mapsto\widetilde{P}$ sobre los $S_{(f)}$-módulos poseen estas tres propiedades: exactitud y conmutación con los límites directos y las sumas directas \sref[I]{I.1.3.5} \sref[I]{I.1.3.9}; de aquí resulta la proposición.
+\end{proof}
+
+Denotamos por $\widetilde{u}$ el homomorfismo $\widetilde{M}\to\widetilde{N}$ correspondiente a un homomorfismo $u:M\to N$ de grado $0$.
+Se deduce inmediatamente de \sref{II.2.5.4} que los resultados de \sref[I]{I.1.3.9} y \sref[I]{I.1.3.10} siguen siendo válidos para los $S$-módulos graduados y los homomorfismos de grado $0$ (con el sentido dado aquí a $\widetilde{M}$), pues las demostraciones son puramente formales.
+
+\begin{proposition}[2.5.5]
+\label{II.2.5.5}
+Para todo $\mathfrak{p}\in X=\Proj(S)$, se tiene $\widetilde{M}_\mathfrak{p}=M_{(\mathfrak{p})}$.
+\end{proposition}
+
+\begin{proof}
+Por definición, $\widetilde{M}_\mathfrak{p}=\varinjlim\Gamma(D_+(f),\widetilde{M})$, donde $f$ recorre el conjunto de los elementos homogéneos de $S_+$ tales que $f\notin\mathfrak{p}$.
+Como $\Gamma(D_+(f),\widetilde{M})=M_{(f)}$, la proposición resulta de la definición de $M_{(\mathfrak{p})}$ \sref{II.2.2.7}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 32.
+----- French corrections on page II 30 -----
+[id 1709]
+OLD: est un homéomorphisme d'espaces
+NEW: est un \emph{homéomorphisme} d'espaces
+FRENCH CONTEXT (corrected): emier unique
+    $\mathfrak{p}\in\operatorname{Proj}(S)$ tel que
+    $\mathfrak{p}\cap S^{(d)}=\mathfrak{p}'$. Comme pour tout $f$ homogène
+    dans $S_+$, on a
+    $V_+(f)=V_+(f^d)$ (\hyperref[II.2.3.2.3-fr]{2.3.2.3}), on voit que la
+    bijection précédente est un \emph{homéomorphisme} d'espaces topologiques.
+    Enfin, avec les mêmes notations, $S_{(f)}$ et
+    $S_{(f^d)}$ s'identifient canoniquement
+    (\hyperref[II.2.2.2-fr]{2.2.2}), donc $\operatorname{Proj}(S)$ et
+    $\operatorname{Proj}(S^{(d)})$ s'identifient canoniquement en tant que
+    \e
+
+[id 1711]
+OLD: canoniquement en tant que
+    schémas.
+NEW: canoniquement en tant que
+    \emph{schémas}.
+FRENCH CONTEXT (corrected):  \emph{homéomorphisme} d'espaces topologiques.
+    Enfin, avec les mêmes notations, $S_{(f)}$ et
+    $S_{(f^d)}$ s'identifient canoniquement
+    (\hyperref[II.2.2.2-fr]{2.2.2}), donc $\operatorname{Proj}(S)$ et
+    $\operatorname{Proj}(S^{(d)})$ s'identifient canoniquement en tant que
+    \emph{schémas}.
+  \item[\rm(ii)] Si, à tout
+    $\mathfrak{p}\in\operatorname{Proj}(S)$ on fait correspondre l'unique
+    idéal premier $\mathfrak{p}'\in\operatorname{Proj}(S')$ tel que
+    $\mathfrak{p}'\cap S_n=\mathfrak{p}\cap S_n$ pour tout $n>0$
+    (\hyperref[II.2.1.9-
+
+[id 1712]
+OLD: s'identifient en tant que schémas.
+NEW: s'identifient en tant que \emph{schémas}.
+FRENCH CONTEXT (corrected): w{\sim}\operatorname{Proj}(S')$ des
+    espaces sous-jacents, car $V_+(f)$ est le même ensemble pour $S$ et
+    $S'$ lorsque $f$ est un élément homogène de $S_+$. Comme en outre
+    $S_{(f)}=S'_{(f)}$, $\operatorname{Proj}(S)$ et
+    $\operatorname{Proj}(S')$ s'identifient en tant que \emph{schémas}.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[2.4.8]
+\label{II.2.4.8-fr}
+Si $S$ est une $A$-algèbre graduée, $S'_A$ la $A$-algèbre graduée telle que
+$(S'_A)_0=A$, $(S'_A)_n=S_n$ pour $n>0$, il existe un isomorphisme canonique
+de $\operatorname{Proj}(S)$ sur 
+
+[id 1713]
+OLD: un $S$-module gradué. Pour
+NEW: un $S$-module \emph{gradué}. Pour
+FRENCH CONTEXT (corrected): ont isomorphes canoniquement à
+$\operatorname{Proj}(S')$, avec les notations de
+(\hyperref[II.2.4.7-fr]{2.4.7, (ii)}).
+\end{proof}
+
+\subsection{Faisceau associé à un module gradué.}
+\label{subsection:II.2.5-fr}
+
+\begin{env}[2.5.1]
+\label{II.2.5.1-fr}
+Soit $M$ un $S$-module \emph{gradué}. Pour tout $f$ homogène dans $S_+$,
+$M_{(f)}$ est un $S_{(f)}$-module, et il lui correspond donc un faisceau
+quasi-cohérent associé $(M_{(f)})\supertilde$ sur le schéma affine
+$\operatorname{Spec}(S_{(f)})$, identifié à $D_+(f)$
+(\hyperref[I.1.3.4-fr]{\textbf{I}, 1
+
+[id 1715]
+OLD: {I, 1.3.4}
+NEW: {\textbf{I}, 1.3.4}
+FRENCH CONTEXT (corrected): mathcal{E})$ est associée
+à la $A$-algèbre $\mathbf{S}(M)$.
+\end{proposition}
+
+\begin{proof}
+En effet, pour tout $f\in A$,
+$\mathbf{S}(M_f)=(\mathbf{S}(M))_f$
+(\hyperref[II.1.7.3-fr]{1.7.3}) et la proposition résulte donc des définitions
+(\hyperref[I.1.3.4-fr]{\textbf{I}, 1.3.4}).
+\end{proof}
+
+\begin{corollary}[1.7.7]
+\label{II.1.7.7-fr}
+Si $S$ est un préschéma, $\mathcal{E}$ un $\mathcal{O}_S$-Module
+quasi-cohérent, la $\mathcal{O}_S$-Algèbre $\mathbf{S}(\mathcal{E})$ est
+quasi-cohérente. Si en outre $\mathcal{E}$ est de type fini, 
+
+=================== PAGE II 31 ===================
+----- (Spanish page II 30: shown above in this file) -----
+----- (Spanish page II 31: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 32 -----
+\oldpage[II]{32}
+En particular, el \emph{anillo local $(\sh{O}_X)_\mathfrak{p}$} no es otro que el anillo $S_{(\mathfrak{p})}$, conjunto de las fracciones $x/f$ donde $f$ es homogéneo en $S_+$ y no pertenece a $\mathfrak{p}$, y $x$ es homogéneo del mismo grado que $f$.
+
+Más particularmente, si $S$ es \emph{esencialmente íntegro}, de modo que $\Proj(S)=X$ es \emph{íntegro} \sref{II.2.4.4}, y si $\xi=(0)$ es el punto genérico de $X$, el \emph{cuerpo de funciones racionales $R(X)=\sh{O}_\xi$} es el cuerpo formado por los elementos $fg^{-1}$, donde $f,g$ son homogéneos del mismo grado en $S_+$ y $g\neq0$.
+
+\begin{proposition}[2.5.6]
+\label{II.2.5.6}
+Si, para todo $z\in M$ y todo $f$ homogéneo en $S_+$, existe alguna potencia de $f$ que anula $z$, entonces $\widetilde{M}=0$.
+Esta condición suficiente es también necesaria cuando la $S_0$-álgebra $S$ está generada por el conjunto $S_1$ de los elementos homogéneos de grado $1$.
+\end{proposition}
+
+\begin{proof}
+La condición $\widetilde{M}=0$ equivale a $M_{(f)}=0$ para todo $f$ homogéneo en $S_+$.
+Por otra parte, si $f\in S_d$, decir que $M_{(f)}=0$ significa que, para todo $z\in M$ homogéneo y de grado múltiplo de $d$, existe una potencia $f^n$ tal que $f^nz=0$.
+Si $M_{(f)}=0$ para todo $f\in S_1$, la condición del enunciado queda, por tanto, verificada para todo $f\in S_1$; queda \emph{a fortiori} verificada para todo $f$ homogéneo en $S_+$ cuando $S_1$ genera $S$, pues todo elemento homogéneo de $S_+$ es entonces combinación lineal de productos de elementos de $S_1$.
+\end{proof}
+
+\begin{proposition}[2.5.7]
+\label{II.2.5.7}
+Sea $d>0$ un entero, y sea $f\in S_d$.
+Entonces, para todo $n\in\bb{Z}$, el $(\sh{O}_X|D_+(f))$-módulo $(S(nd))\supertilde|D_+(f)$ es canónicamente isomorfo a $\sh{O}_X|D_+(f)$.
+\end{proposition}
+
+\begin{proof}
+En efecto, la multiplicación por el elemento invertible $(f/1)^n$ de $S_f$ es una biyección de $S_{(f)}=(S_f)_0$ sobre
+\[
+  (S_f)_{nd}=(S_f(nd))_0=(S(nd)_f)_0=S(nd)_{(f)}.
+\]
+Dicho de otro modo, los $S_{(f)}$-módulos $S_{(f)}$ y $S(nd)_{(f)}$ son canónicamente isomorfos, de donde resulta la proposición.
+\end{proof}
+
+\begin{corollary}[2.5.8]
+\label{II.2.5.8}
+Sobre el subconjunto abierto $U=\bigcup_{f\in S_d}D_+(f)$, la restricción del $\sh{O}_X$-módulo $(S(nd))\supertilde$ es un $(\sh{O}_X|U)$-módulo invertible \sref[0]{0.5.4.1}.
+\end{corollary}
+
+\begin{corollary}[2.5.9]
+\label{II.2.5.9}
+Si el ideal $S_+$ de $S$ está generado por el conjunto $S_1$ de los elementos homogéneos de grado $1$, el $\sh{O}_X$-módulo $(S(n))\supertilde$ es invertible para todo $n\in\bb{Z}$.
+\end{corollary}
+
+\begin{proof}
+Basta observar que $X=\bigcup_{f\in S_1}D_+(f)$ en virtud de la hipótesis \sref{II.2.3.14}, y aplicar \sref{II.2.5.8} con $U=X$.
+\end{proof}
+
+\begin{env}[2.5.10]
+\label{II.2.5.10}
+Pondremos, en todo lo que sigue de esta sección,
+\[
+\label{II.2.5.10.1}
+  \sh{O}_X(n)=(S(n))\supertilde
+\tag{2.5.10.1}
+\]
+para todo $n\in\bb{Z}$ y, para todo subconjunto abierto $U$ de $X$ y todo $(\sh{O}_X|U)$-módulo $\sh{F}$,
+\[
+\label{II.2.5.10.2}
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X|U}(\sh{O}_X(n)|U)
+\tag{2.5.10.2}
+\]
+para todo $n\in\bb{Z}$.
+Si el ideal $S_+$ está generado por $S_1$, el funtor $\sh{F}\mapsto\sh{F}(n)$ es \emph{exacto} para todo $n\in\bb{Z}$, pues $\sh{O}_X(n)$ es entonces un $\sh{O}_X$-módulo \emph{invertible}.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 32-34.
+
+\begin{env}[2.5.11]
+\label{II.2.5.11}
+Sean $M,N$ dos $S$-módulos graduados.
+Para todo $f\in S_d$ ($d>0$), se define un homomorfismo canónico funtorial de $S_{(f)}$-módulos
+\[
+\label{II.2.5.11.1}
+  \lambda_f:M_{(f)}\otimes_{S_{(f)}}N_{(f)}
+  \to(M\otimes_S N)_{(f)}
+\tag{2.5.11.1}
+\]
+----- French corrections on page II 31 -----
+[id 1717]
+OLD: {I, 1.3.6}
+NEW: {\textbf{I}, 1.3.6}
+FRENCH CONTEXT (corrected): \hyperref[II.2.2.2-fr]{2.2.2}), le morphisme
+$w_{fg,f}=({}^a\omega_{fg,f},\widetilde{\omega}_{fg,f})$ de $Y_{fg}$ dans
+$Y_f$, correspondant à l'homomorphisme canonique
+$\omega_{fg,f}:S_{(f)}\to S_{(fg)}$, est une \emph{immersion ouverte}
+(\hyperref[I.1.3.6-fr]{\textbf{I}, 1.3.6}). Au moyen de l'homéomorphisme réciproque
+de $\psi_f:D_+(f)\to Y_f$ (\hyperref[II.2.3.6-fr]{2.3.6}), on peut
+transporter à $D_+(f)$ la structure de schéma affine de $Y_f$~; en vertu de
+la commutativité du diagramme (\hyperref[II.2.3.5.1-fr]{2.3.5.1}), le
+sché
+
+[id 1721]
+OLD: {0, 3.3.1}
+NEW: {\textbf{0}, 3.3.1}
+FRENCH CONTEXT (corrected): \cap V_\mu)~;
+\]
+on prendra ensuite pour $\mathscr{G}'_\lambda$ le
+sous-$(\mathscr{O}_X|U_\lambda)$-Module de $\mathscr{F}|U_\lambda$ tel que
+$\mathscr{G}'_\lambda|U_\mu=\mathscr{G}'_\mu$ et
+$\mathscr{G}'_\lambda|V_\mu=\mathscr{G}''_\mu$
+(\hyperref[0.3.3.1-fr]{\textbf{0}, 3.3.1}). Or, comme $V_\mu$ est affine, l'existence
+de $\mathscr{G}''_\mu$ est assurée par (9.4.3) dès que l'on a démontré que
+$U_\mu\cap V_\mu$ est quasi-compact ; mais $U_\mu\cap V_\mu$ est réunion de
+$U\cap V_\mu$ et de $W_\mu\cap V_\mu$, qui sont tous deux quasi-
+
+[id 1723]
+OLD: {I, 1.3.7}
+NEW: {\textbf{I}, 1.3.7}
+FRENCH CONTEXT (corrected): rphisme
+canonique qui, à tout produit tensoriel $z\otimes a$ ($z\in M$, $a\in A$)
+fait correspondre $a\cdot z$~; cela résulte aussitôt des définitions
+(\hyperref[0.3.7.1-fr]{\textbf{0}, 3.7.1},
+\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3}, et
+\hyperref[I.1.3.7-fr]{\textbf{I}, 1.3.7}).
+
+On en conclut (\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3} et
+\hyperref[0.3.5.4.4-fr]{3.5.4.4}) que si
+$v:N'\to M_{[\varphi]}$ est un $A'$-homomorphisme, on a
+$\widetilde{v}^{\sharp}=(v\otimes 1)^{\sim}$.
+\end{env}
+
+\begin{env}[1.6.8]
+\label{I.1.6.8-fr}
+Soien
+
+[id 1724]
+OLD: \emph{associé}
+NEW: associé
+FRENCH CONTEXT (corrected): {0.3.5.6-fr}
+Prenons en particulier pour $\psi$ l'application identique
+$1_X:X\to X$. Alors si l'image réciproque par $\psi$ d'un préfaisceau
+$\mathcal{F}$ sur $X$ à valeurs dans $\boldsymbol{K}$ existe, on dit que cette
+image réciproque est le \emph{faisceau associé au préfaisceau $\mathcal{F}$}.
+Tout morphisme $u:\mathcal{F}\to\mathcal{F}'$ de $\mathcal{F}$ dans un
+\emph{faisceau} $\mathcal{F}'$ à valeurs dans $\boldsymbol{K}$ se factorise donc
+de façon unique en
+\[
+  \mathcal{F}\xrightarrow{\rho_{\mathcal{F}}}
+  1_X^*(
+
+[id 1725]
+OLD: $M\mapsto\widetilde{M}$
+NEW: $\widetilde{M}$ en $M$
+FRENCH CONTEXT (corrected): x$ déduit
+canoniquement de $u$. Si $P$ est un troisième $A$-module, $v$ un
+homomorphisme $N\to P$ et $w=v\circ u$, il est immédiat que
+$w_x=v_x\circ u_x$, donc $\widetilde{w}=\widetilde{v}\circ\widetilde{u}$. On
+a donc bien défini un \emph{foncteur covariant} $\widetilde{M}$ en $M$, de la
+catégorie des $A$-modules dans celle des $\widetilde{A}$-Modules. \emph{Ce
+foncteur est exact}, car pour tout $x\in X$, $M_x$ est un foncteur exact en
+$M$ (\hyperref[0.1.3.2-fr]{\textbf{0}, 1.3.2})~; en outre, on a
+$\operatorname{Supp}(M)=\operatorname
+
+[id 1727]
+OLD: $M\mapsto M_f$
+NEW: $M_f$ en $M$
+FRENCH CONTEXT (corrected): ules quasi-cohérents, qui commute aux limites
+inductives et aux sommes directes.
+\end{proposition}
+
+\begin{proof}
+En effet, ces propriétés étant locales, il suffit de les vérifier sur les
+faisceaux
+$\widetilde{M}|D_+(f)=(M_{(f)})\supertilde$~; or, le foncteur
+$M_f$ en $M$, le foncteur $N_0$ en $N$ (dans la catégorie des
+$S_f$-modules gradués) et le foncteur $\widetilde{P}$ en $P$ (dans la
+catégorie des $S_{(f)}$-modules) ont tous trois les propriétés d'exactitude
+et de permutabilité aux limites inductives et aux sommes directe
+
+[id 1728]
+OLD: $N\mapsto N_0$
+NEW: $N_0$ en $N$
+FRENCH CONTEXT (corrected): commute aux limites
+inductives et aux sommes directes.
+\end{proposition}
+
+\begin{proof}
+En effet, ces propriétés étant locales, il suffit de les vérifier sur les
+faisceaux
+$\widetilde{M}|D_+(f)=(M_{(f)})\supertilde$~; or, le foncteur
+$M_f$ en $M$, le foncteur $N_0$ en $N$ (dans la catégorie des
+$S_f$-modules gradués) et le foncteur $\widetilde{P}$ en $P$ (dans la
+catégorie des $S_{(f)}$-modules) ont tous trois les propriétés d'exactitude
+et de permutabilité aux limites inductives et aux sommes directes
+(\hyperref[I.1.3.5-fr]{\
+
+[id 1729]
+OLD: $P\mapsto\widetilde{P}$
+NEW: $\widetilde{P}$ en $P$
+FRENCH CONTEXT (corrected): \begin{proof}
+En effet, ces propriétés étant locales, il suffit de les vérifier sur les
+faisceaux
+$\widetilde{M}|D_+(f)=(M_{(f)})\supertilde$~; or, le foncteur
+$M_f$ en $M$, le foncteur $N_0$ en $N$ (dans la catégorie des
+$S_f$-modules gradués) et le foncteur $\widetilde{P}$ en $P$ (dans la
+catégorie des $S_{(f)}$-modules) ont tous trois les propriétés d'exactitude
+et de permutabilité aux limites inductives et aux sommes directes
+(\hyperref[I.1.3.5-fr]{\textbf{I}, 1.3.5} et
+\hyperref[I.1.3.9-fr]{1.3.9})~; d'où la proposition.
+\end{proof
+
+[id 1730]
+OLD: {I, 1.3.5}
+NEW: {\textbf{I}, 1.3.5}
+FRENCH CONTEXT (corrected): athcal{M}}$ est un foncteur covariant additif exact en
+$\mathcal{M}$, qui commute aux limites inductives et aux sommes directes.
+\end{corollary}
+
+On est en effet aussitôt ramené au cas où $S$ est affine, et le corollaire
+résulte alors de (\hyperref[I.1.3.5-fr]{\textbf{I}, 1.3.5},
+\hyperref[I.1.3.9-fr]{1.3.9} et
+\hyperref[I.1.3.11-fr]{1.3.11}).
+
+\begin{corollary}[1.4.5]
+\label{II.1.4.5-fr}
+Sous les hypothèses de \textup{(\hyperref[II.1.4.3-fr]{1.4.3})}, pour que
+$\widetilde{\mathcal{M}}$ soit un $\mathcal{O}_X$-Module de type fini, il
+
+[id 1731]
+OLD: {I, 1.3.9})~;
+NEW: {1.3.9})~;
+FRENCH CONTEXT (corrected): D(f)$ soit
+isomorphe au conoyau d'un homomorphisme
+$\widetilde{A}_f^{(I)}\to\widetilde{A}_f^{(J)}$, donc au faisceau associé au
+module $N$, conoyau de l'homomorphisme
+$A_f^{(I)}\to A_f^{(J)}$ correspondant
+(\hyperref[I.1.3.8-fr]{1.3.8} et \hyperref[I.1.3.9-fr]{1.3.9})~; comme $V$
+est quasi-compact, il est clair que \textit{c}) entraîne \textit{b}).
+\oldpage[I]{91}
+Pour prouver que \textit{b}) entraîne \textit{d}\,1) et \textit{d}\,2),
+supposons d'abord que $V=D(g)$ pour un $g\in A$, et que $\mathscr{F}$ soit
+isomorphe à un f
+
+[id 1732]
+OLD: {I, 1.3.9} et
+NEW: {\textbf{I}, 1.3.9} et
+FRENCH CONTEXT (corrected):  la proposition.
+\end{proof}
+
+On notera $\widetilde{u}$ l'homomorphisme
+$\widetilde{M}\to\widetilde{N}$ correspondant à un homomorphisme de degré
+$0$, $u:M\to N$. On déduit aussitôt de
+(\hyperref[II.2.5.4-fr]{2.5.4}) que les résultats de
+(\hyperref[I.1.3.9-fr]{\textbf{I}, 1.3.9} et
+\hyperref[I.1.3.10-fr]{1.3.10}) sont encore valables pour les
+$S$-modules gradués et les homomorphismes de degré $0$ (avec le sens donné
+ici à $\widetilde{M}$), les démonstrations étant purement formelles.
+
+\begin{proposition}[2.5.5]
+\label{II.2.5.5-fr}
+Pour 
+
+[id 1733]
+OLD: {I, 1.3.10}
+NEW: {1.3.10}
+FRENCH CONTEXT (corrected): \emph{quasi-cohérent}
+d'un $\mathscr{O}_X$-Module \emph{cohérent} $\mathscr{F}$ est alors
+\emph{cohérent}, car la question est de nouveau locale, et il suffit
+d'appliquer (\hyperref[I.1.5.1-fr]{1.5.1}),
+(\hyperref[I.1.4.1-fr]{1.4.1}) et
+(\hyperref[I.1.3.10-fr]{1.3.10}), joints au fait qu'un sous-module (resp.
+module quotient) d'un module de type fini sur un anneau noethérien est de
+type fini. Plus particulièrement, tout \emph{faisceau d'idéaux
+quasi-cohérent} de $\mathscr{O}_X$ est \emph{cohérent}.
+
+Si un préschéma $X$ est
+
+=================== PAGE II 32 ===================
+----- (Spanish page II 31: shown above in this file) -----
+----- (Spanish page II 32: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 33 -----
+\oldpage[II]{33}
+componiendo el homomorfismo $M_{(f)}\otimes_{S_{(f)}}N_{(f)}\to M_f\otimes_{S_f}N_f$ (procedente de las inyecciones $M_{(f)}\to M_f$, $N_{(f)}\to N_f$ y $S_{(f)}\to S_f$) con el isomorfismo canónico $M_f\otimes_{S_f}N_f\simto(M\otimes_S N)_f$ \sref[0]{0.1.3.4}, y observando que, por la definición del producto tensorial de dos módulos graduados, este último isomorfismo conserva los grados.
+Para $x\in M_{md}$ e $y\in N_{nd}$ ($m,n\geq0$), se tiene, por tanto,
+\[
+  \lambda_f((x/f^m)\otimes(y/f^n))=(x\otimes y)/f^{m+n}.
+\]
+
+Resulta inmediatamente de esta definición que, si $g\in S_e$ ($e>0$), el diagrama
+\[
+  \xymatrix{
+    M_{(f)}\otimes_{S_{(f)}}N_{(f)} \ar[r]^{\lambda_f} \ar[d]
+    & (M\otimes_S N)_{(f)} \ar[d]
+  \\M_{(fg)}\otimes_{S_{(fg)}}N_{(fg)} \ar[r]_{\lambda_{fg}}
+    & (M\otimes_S N)_{(fg)}
+  }
+\]
+(donde la flecha vertical de la derecha es el homomorfismo canónico y la de la izquierda procede de los homomorfismos canónicos) es conmutativo.
+Los homomorfismos $\lambda_f$ inducen, por tanto, un homomorfismo canónico funtorial de $\sh{O}_X$-módulos
+\[
+\label{II.2.5.11.2}
+  \lambda:\widetilde{M}\otimes_{\sh{O}_X}\widetilde{N}
+  \to(M\otimes_S N)\supertilde.
+\tag{2.5.11.2}
+\]
+
+Consideremos, en particular, dos ideales graduados $\mathfrak{J},\mathfrak{K}$ de $S$.
+Como $\widetilde{\mathfrak{J}}$ y $\widetilde{\mathfrak{K}}$ son haces de ideales de $\sh{O}_X$, se tiene un homomorfismo canónico $\widetilde{\mathfrak{J}}\otimes_{\sh{O}_X}\widetilde{\mathfrak{K}}\to\sh{O}_X$; el diagrama
+\[
+\label{II.2.5.11.3}
+  \xymatrix{
+    \widetilde{\mathfrak{J}}\otimes_{\sh{O}_X}\widetilde{\mathfrak{K}} \ar[rr]^\lambda \ar[dr]
+    &&(\mathfrak{J}\otimes_S\mathfrak{K})\supertilde \ar[dl]
+  \\&\sh{O}_X&
+  }
+\tag{2.5.11.3}
+\]
+es entonces conmutativo.
+En efecto, podemos reducirnos a verificarlo sobre cada subconjunto abierto $D_+(f)$ (para $f$ homogéneo en $S_+$), y esto resulta inmediatamente de la definición \sref{II.2.5.11.1} de $\lambda_f$ y de \sref[I]{I.1.3.13}.
+
+Observemos finalmente que, si $M,N,P$ son tres $S$-módulos graduados, el diagrama
+\[
+\label{II.2.5.11.4}
+  \xymatrix{
+    \widetilde{M}\otimes_{\sh{O}_X}\widetilde{N}\otimes_{\sh{O}_X}\widetilde{P} \ar[r]^{\lambda\otimes1} \ar[d]_{1\otimes\lambda}
+    &(M\otimes_S N)\supertilde\otimes_{\sh{O}_X}\widetilde{P} \ar[d]^\lambda
+  \\widetilde{M}\otimes_{\sh{O}_X}(N\otimes_S P)\supertilde \ar[r]_\lambda
+    &(M\otimes_S N\otimes_S P)\supertilde
+  }
+\tag{2.5.11.4}
+\]
+----- French corrections on page II 32 -----
+[id 1734]
+OLD: \emph{l'anneau local $(\mathcal{O}_X)_\mathfrak{p}$}
+NEW: l'\emph{anneau local} $(\mathcal{O}_X)_\mathfrak{p}$
+FRENCH CONTEXT (corrected): emble des
+éléments homogènes de $S_+$ tels que $f\notin\mathfrak{p}$~; comme
+$\Gamma(D_+(f),\widetilde{M})=M_{(f)}$, la proposition résulte de la
+définition de $M_{(\mathfrak{p})}$
+(\hyperref[II.2.2.7-fr]{2.2.7}).
+\end{proof}
+\oldpage[II]{32}
+
+En particulier, l'\emph{anneau local} $(\mathcal{O}_X)_\mathfrak{p}$ n'est
+autre que l'anneau $S_{(\mathfrak{p})}$, ensemble des fractions $x/f$, où
+$f$ est homogène dans $S_+$ et n'appartient pas à $\mathfrak{p}$, et $x$
+homogène est de même degré que $f$.
+
+Plus particulièrement, si $S$ est \emph{essentiellement intègre}, de 
+
+[id 1736]
+OLD: \[
+  U=\bigcup_{f\in S_d}D_+(f),
+\]
+
+NEW: $U=\bigcup_{f\in S_d}D_+(f)$,
+
+FRENCH CONTEXT (corrected): (S_f)_0$ sur
+$(S_f)_{nd}=(S_f(nd))_0=(S(nd)_f)_0=S(nd)_{(f)}$~; autrement dit, les
+$S_{(f)}$-modules $S_{(f)}$ et $S(nd)_{(f)}$ sont canoniquement
+isomorphes, d'où la proposition.
+\end{proof}
+
+\begin{corollary}[2.5.8]
+\label{II.2.5.8-fr}
+Sur l'ensemble ouvert
+$U=\bigcup_{f\in S_d}D_+(f)$,
+la restriction du $\mathcal{O}_X$-Module $(S(nd))\supertilde$ est un
+$(\mathcal{O}_X|U)$-Module inversible
+(\hyperref[0.5.4.1-fr]{\textbf{0}, 5.4.1}).
+\end{corollary}
+
+\begin{corollary}[2.5.9]
+\label{II.2.5.9-fr}
+Si l'idéal $S_+$ de $S$ est engendré par l'ense
+
+[id 1738]
+OLD: {0, 5.4.1}
+NEW: {\textbf{0}, 5.4.1}
+FRENCH CONTEXT (corrected): 1.7.5-fr]{1.7.5}).
+
+\begin{remark}[2.4.8]
+\label{I.2.4.8-fr}
+Soient $X$ un schéma local, $a$ son unique point fermé. Comme tout ouvert
+affine contenant $a$ est nécessairement $X$ tout entier, tout
+$\mathscr{O}_X$-Module \emph{inversible}
+(\hyperref[0.5.4.1-fr]{\textbf{0}, 5.4.1}) est nécessairement \emph{isomorphe à
+$\mathscr{O}_X$} (ou, comme on dit encore, est \emph{trivial}). Cette propriété
+n'a pas lieu en général pour un schéma affine quelconque
+$\operatorname{Spec}(A)$~; on verra au chap.~V que si $A$ est un anneau normal,
+elle
+
+[id 1741]
+OLD: un $\mathcal{O}_X$-Module inversible.
+NEW: un $\mathcal{O}_X$-Module \emph{inversible}.
+FRENCH CONTEXT (corrected): {F}\otimes_{\mathcal{O}_X|U}(\mathcal{O}_X(n)|U)
+\tag{2.5.10.2}
+\]
+pour tout $n\in\mathbf{Z}$. Si l'idéal $S_+$ est engendré par $S_1$, le
+foncteur $\mathcal{F}(n)$ est \emph{exact} en
+$\mathcal{F}$ pour tout $n\in\mathbf{Z}$, car $\mathcal{O}_X(n)$ est alors
+un $\mathcal{O}_X$-Module \emph{inversible}.
+\end{env}
+
+\begin{env}[2.5.11]
+\label{II.2.5.11-fr}
+Soient $M$ et $N$ deux $S$-modules gradués. Pour tout $f\in S_d$ ($d>0$)
+on définit un homomorphisme canonique fonctoriel de $S_{(f)}$-modules
+\[
+\label{II.2.5.11.1-fr}
+  \lambda_f:M_{(f)}\otimes_{S_{(f)}}N_
+
+=================== PAGE II 33 ===================
+----- (Spanish page II 32: shown above in this file) -----
+----- (Spanish page II 33: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 34 -----
+\oldpage[II]{34}
+es conmutativo.
+Basta de nuevo verificarlo sobre cada subconjunto abierto $D_+(f)$, y esto resulta inmediatamente de las definiciones y de \sref[I]{I.1.3.13}.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 34-35.
+
+\begin{env}[2.5.12]
+\label{II.2.5.12}
+Bajo las hipótesis de \sref{II.2.5.11}, se define un homomorfismo canónico funtorial de $S_{(f)}$-módulos
+\[
+\label{II.2.5.12.1}
+  \mu_f:(\Hom_S(M,N))_{(f)}
+  \to\Hom_{S_{(f)}}(M_{(f)},N_{(f)})
+\tag{2.5.12.1}
+\]
+haciendo corresponder a $u/f^n$, donde $u$ es un homomorfismo de grado $nd$, el homomorfismo $M_{(f)}\to N_{(f)}$ que transforma $x/f^m$ ($x\in M_{md}$) en $u(x)/f^{m+n}$.
+Para $g\in S_e$ ($e>0$), se tiene de nuevo un diagrama conmutativo:
+\[
+  \xymatrix{
+    (\Hom_S(M,N))_{(f)} \ar[r]^{\mu_f} \ar[d]
+    & \Hom_{S_{(f)}}(M_{(f)},N_{(f)}) \ar[d]
+  \\(\Hom_S(M,N))_{(fg)} \ar[r]_{\mu_{fg}}
+    & \Hom_{S_{(fg)}}(M_{(fg)},N_{(fg)})
+  }
+\]
+(donde la flecha vertical de la izquierda es el homomorfismo canónico y la de la derecha procede de los homomorfismos canónicos).
+Se concluye así de nuevo, teniendo en cuenta \sref[I]{I.1.3.8}, que los $\mu_f$ definen un homomorfismo canónico funtorial de $\sh{O}_X$-módulos
+\[
+\label{II.2.5.12.2}
+  \mu:(\Hom_S(M,N))\supertilde
+  \to\shHom_{\sh{O}_X}(\widetilde{M},\widetilde{N}).
+\tag{2.5.12.2}
+\]
+\end{env}
+
+\begin{proposition}[2.5.13]
+\label{II.2.5.13}
+Supongamos que el ideal $S_+$ está generado por $S_1$.
+Entonces, el homomorfismo $\lambda$ \sref{II.2.5.11.2} es un isomorfismo; lo mismo ocurre con el homomorfismo $\mu$ \sref{II.2.5.12.2} cuando el $S$-módulo graduado $M$ admite una presentación finita \sref{II.2.1.1}.
+\end{proposition}
+
+\begin{proof}
+Como $X$ es la unión de los $D_+(f)$ para $f\in S_1$ \sref{II.2.3.14}, nos reducimos a demostrar que $\lambda_f$ y $\mu_f$ son isomorfismos, bajo las hipótesis consideradas, cuando $f$ es homogéneo y \emph{de grado $1$}.
+Ahora bien, puede definirse entonces una aplicación $\bb{Z}$-bilineal $M_m\times N_n\to M_{(f)}\otimes_{S_{(f)}}N_{(f)}$ haciendo corresponder a $(x,y)$ el elemento $(x/f^m)\otimes(y/f^n)$ (si $m<0$, se escribe $x/f^m$ para significar $f^{-m}x/1$).
+Estas aplicaciones definen una aplicación $\bb{Z}$-lineal $M\otimes_\bb{Z}N\to M_{(f)}\otimes_{S_{(f)}}N_{(f)}$ y, si $s\in S_q$, esta aplicación transforma $(sx)\otimes y$ en
+\[
+  (s/f^q)((x/f^m)\otimes(y/f^n))
+\]
+para $x\in M_m$ e $y\in N_n$.
+Se obtiene así un dihomomorfismo de módulos
+\[
+  \gamma_f:M\otimes_S N\to M_{(f)}\otimes_{S_{(f)}}N_{(f)}
+\]
+relativo al homomorfismo canónico $S\to S_{(f)}$ que transforma $s\in S_q$ en $s/f^q$.
+Supongamos además que, para un elemento $\sum_i(x_i\otimes y_i)$ de $M\otimes_S N$, donde $x_i,y_i$ son homogéneos de grados respectivos $m_i,n_i$, se tiene
+\[
+  f^r\sum_i(x_i\otimes y_i)=0,
+\]
+es decir, $\sum_i(f^rx_i\otimes y_i)=0$.
+Se deduce entonces de \sref[0]{0.1.3.4} que
+\[
+  \sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0,
+\]
+es decir, $\gamma_f(\sum_i(x_i\otimes y_i))=0$.
+Por consiguiente, $\gamma_f$ se factoriza en
+\[
+  M\otimes_S N\to(M\otimes_S N)_f
+  \xrightarrow{\gamma'_f}M_{(f)}\otimes_{S_{(f)}}N_{(f)}.
+\]
+Si $\lambda'_f$ es la restricción de $\gamma'_f$
+----- French corrections on page II 33 -----
+[id 1743]
+OLD: {0, 1.3.4}
+NEW: {\textbf{0}, 1.3.4}
+FRENCH CONTEXT (corrected): identifie canoniquement à
+$M_f\otimes_{A_f}N_f$ en vertu de (\hyperref[I.1.3.7-fr]{1.3.7}) et
+(\hyperref[I.1.3.6-fr]{1.3.6}). On sait par ailleurs que le $A_f$-module
+$M_f\otimes_{A_f}N_f$ est canoniquement isomorphe à $(M\otimes_A N)_f$
+(\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}), qui lui-même est canoniquement isomorphe à
+$\Gamma(D(f),(M\otimes_A N)\supertilde)$
+(\hyperref[I.1.3.7-fr]{1.3.7} et \hyperref[I.1.3.6-fr]{1.3.6}). En outre, on
+vérifie aussitôt que les isomorphismes canoniques
+\[
+  \mathscr{F}(D(f))\xrightarrow{\sim}\Gamma
+
+[id 1745]
+OLD: \widetilde{\mathfrak{J}\otimes_S\mathfrak{K}}
+NEW: (\mathfrak{J}\otimes_S\mathfrak{K})\supertilde
+FRENCH CONTEXT (corrected): ique
+$\widetilde{\mathfrak{J}}\otimes_{\mathcal{O}_X}
+\widetilde{\mathfrak{K}}\to\mathcal{O}_X$~; le diagramme
+\[
+\label{II.2.5.11.3-fr}
+  \xymatrix{
+    \widetilde{\mathfrak{J}}\otimes_{\mathcal{O}_X}
+    \widetilde{\mathfrak{K}}\ar[rr]^\lambda\ar[dr]
+    && (\mathfrak{J}\otimes_S\mathfrak{K})\supertilde\ar[dl]\\
+    & \mathcal{O}_X &
+  }
+\tag{2.5.11.3}
+\]
+est alors commutatif. On se ramène en effet à le vérifier dans chaque
+ouvert $D_+(f)$ ($f$ homogène dans $S_+$) et cela résulte aussitôt de la
+définition (\hyperref[II.2.5.11.1-fr]{2.5.11.1}) de $\lambda_f$
+
+[id 1746]
+OLD: {I, 1.3.13}
+NEW: {\textbf{I}, 1.3.13}
+FRENCH CONTEXT (corrected): é au cas où $S=\operatorname{Spec}(A)$ est un schéma
+affine. Alors $\mathcal{B}=\widetilde{B}$, où $B$ est une $A$-algèbre de type
+fini (\hyperref[I.9.6.2-fr]{\textbf{I}, 9.6.2}), et
+$\mathcal{M}=\widetilde{M}$, où $M$ est un $B$-module
+(\hyperref[I.1.3.13-fr]{\textbf{I}, 1.3.13})~; \emph{sur le préschéma $X$},
+$\mathcal{O}_X$ est associé à l'anneau $B$ et
+$\widetilde{\mathcal{M}}$ au $B$-module $M$~; pour que
+$\widetilde{\mathcal{M}}$ soit de type fini, il faut et il suffit donc que
+$M$ soit de type fini (\hyperref[I.1.3.13-fr]{\text
+
+[id 1748]
+OLD: \widetilde{N\otimes_S P}
+NEW: (N\otimes_S P)\supertilde
+FRENCH CONTEXT (corrected): \otimes_{\mathcal{O}_X}\widetilde{N}
+    \otimes_{\mathcal{O}_X}\widetilde{P}
+    \ar[r]^{\lambda\otimes1}\ar[d]_{1\otimes\lambda}
+    & (M\otimes_S N)\supertilde\otimes_{\mathcal{O}_X}\widetilde{P}
+    \ar[d]^\lambda\\
+    \widetilde{M}\otimes_{\mathcal{O}_X}(N\otimes_S P)\supertilde
+    \ar[r]_\lambda
+    & (M\otimes_S N\otimes_S P)\supertilde
+  }
+\tag{2.5.11.4}
+\]
+\oldpage[II]{34}
+est commutatif. Il suffit encore de le vérifier dans chaque $D_+(f)$ et
+cela découle aussitôt des définitions et de
+(\hyperref[I.1.3.13-fr]{\textbf{I}, 1.3.13
+
+[id 1749]
+OLD: \widetilde{M\otimes_S N\otimes_S P}
+NEW: (M\otimes_S N\otimes_S P)\supertilde
+FRENCH CONTEXT (corrected): mathcal{O}_X}\widetilde{P}
+    \ar[r]^{\lambda\otimes1}\ar[d]_{1\otimes\lambda}
+    & (M\otimes_S N)\supertilde\otimes_{\mathcal{O}_X}\widetilde{P}
+    \ar[d]^\lambda\\
+    \widetilde{M}\otimes_{\mathcal{O}_X}(N\otimes_S P)\supertilde
+    \ar[r]_\lambda
+    & (M\otimes_S N\otimes_S P)\supertilde
+  }
+\tag{2.5.11.4}
+\]
+\oldpage[II]{34}
+est commutatif. Il suffit encore de le vérifier dans chaque $D_+(f)$ et
+cela découle aussitôt des définitions et de
+(\hyperref[I.1.3.13-fr]{\textbf{I}, 1.3.13}).
+\end{env}
+
+\begin{env}[2.5.12]
+\label{II.2.5.12-fr}
+Sous l
+
+=================== PAGE II 34 ===================
+----- (Spanish page II 33: shown above in this file) -----
+----- (Spanish page II 34: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 35 -----
+\oldpage[II]{35}
+a $(M\otimes_S N)_{(f)}$, se verifica inmediatamente que $\lambda_f$ y $\lambda'_f$ son $S_{(f)}$-homomorfismos recíprocos, de donde resulta la primera parte de la proposición.
+
+Para demostrar la segunda parte, supongamos que $M$ es el conúcleo de un homomorfismo $P\to Q$ de $S$-módulos graduados, siendo $P,Q$ sumas directas de un número finito de módulos de la forma $S(n)$.
+Utilizando la exactitud por la izquierda del funtor $L\to\Hom_S(L,N)$ y la exactitud del funtor $M\mapsto M_{(f)}$, nos reducimos inmediatamente a demostrar que $\mu_f$ es un isomorfismo cuando $M=S(n)$.
+Ahora bien, para todo $z$ homogéneo en $N$, sea $u_z$ el homomorfismo de $S(n)$ en $N$ tal que $u_z(1)=z$; se ve inmediatamente que $\eta:z\mapsto u_z$ es un isomorfismo de grado $0$ de $N(-n)$ sobre $\Hom_S(S(n),N)$.
+Le corresponde un isomorfismo
+\[
+  \eta_f:(N(-n))_{(f)}\to(\Hom_S(S(n),N))_{(f)}.
+\]
+
+Por otra parte, sea $\eta'_f$ el isomorfismo $N_{(f)}\to\Hom_{S_{(f)}}(S(n)_{(f)},N_{(f)})$ que hace corresponder a cada $z'\in N_{(f)}$ el homomorfismo $v_{z'}$ tal que
+\[
+  v_{z'}(s/f^k)=sz'/f^{n+k}
+\]
+para $s\in S_{n+k}=(S(n))_k$.
+Se comprueba fácilmente que la aplicación compuesta
+\[
+  (N(-n))_{(f)}
+  \xrightarrow{\eta_f}(\Hom_S(S(n),N))_{(f)}
+  \xrightarrow{\mu_f}\Hom_{S_{(f)}}(S(n)_{(f)},N_{(f)})
+  \xrightarrow{{\eta'_f}^{-1}}N_{(f)}
+\]
+es el isomorfismo $z/f^h\mapsto z/f^{h-n}$ de $(N(-n))_{(f)}$ sobre $N_{(f)}$; por tanto, $\mu_f$ es un isomorfismo.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 35-36.
+
+Si el ideal $S_+$ está generado por $S_1$, se deduce de \sref{II.2.5.13} que, para todo ideal graduado $\mathfrak{J}$ de $S$ y todo $S$-módulo graduado $M$, se tiene
+\[
+\label{II.2.5.13.1}
+  \widetilde{\mathfrak{J}}.\widetilde{M}
+  =(\mathfrak{J}\cdot M)\supertilde
+\tag{2.5.13.1}
+\]
+salvo isomorfismo canónico.
+Esto resulta, en efecto, de la conmutatividad del diagrama
+\[
+  \xymatrix{
+    \widetilde{\mathfrak{J}}\otimes_{\sh{O}_X}\widetilde{M} \ar[rr]^\lambda \ar[dr]
+    &&(\mathfrak{J}\otimes_S M)\supertilde \ar[dl]
+  \\&\widetilde{M}&
+  }
+\]
+que se verifica como el de \sref{II.2.5.11.3}.
+
+\begin{corollary}[2.5.14]
+\label{II.2.5.14}
+Supongamos que $S$ está generado por $S_1$.
+Para cualesquiera $m,n\in\bb{Z}$, se tiene entonces:
+\[
+\label{II.2.5.14.1}
+  \sh{O}_X(m)\otimes_{\sh{O}_X}\sh{O}_X(n)=\sh{O}_X(m+n)
+\tag{2.5.14.1}
+\]
+\[
+\label{II.2.5.14.2}
+  \sh{O}_X(n)=(\sh{O}_X(1))^{\otimes n}
+\tag{2.5.14.2}
+\]
+salvo isomorfismos canónicos.
+\end{corollary}
+
+\begin{proof}
+La primera fórmula resulta de \sref{II.2.5.13} y de la existencia del isomorfismo canónico de grado $0$
+\[
+  S(m)\otimes_S S(n)\simto S(m+n),
+\]
+que transforma el elemento $1\otimes1$ (donde el primer $1$ está en $(S(m))_{-m}$ y el segundo en $(S(n))_{-n}$) en el elemento $1\in(S(m+n))_{-(m+n)}$.
+Basta entonces demostrar la segunda fórmula para $n=-1$ y, en virtud de \sref{II.2.5.13}, esto se reduce a ver que $\Hom_S(S(1),S)$ es canónicamente isomorfo a $S(-1)$, lo que resulta inmediatamente de las definiciones \sref{II.2.1.2} y del hecho de que $S(1)$ es un $S$-módulo cíclico.
+\end{proof}
+----- French corrections on page II 34 -----
+[id 1751]
+OLD: {I, 1.3.13}
+NEW: {\textbf{I}, 1.3.13}
+FRENCH CONTEXT (corrected): é au cas où $S=\operatorname{Spec}(A)$ est un schéma
+affine. Alors $\mathcal{B}=\widetilde{B}$, où $B$ est une $A$-algèbre de type
+fini (\hyperref[I.9.6.2-fr]{\textbf{I}, 9.6.2}), et
+$\mathcal{M}=\widetilde{M}$, où $M$ est un $B$-module
+(\hyperref[I.1.3.13-fr]{\textbf{I}, 1.3.13})~; \emph{sur le préschéma $X$},
+$\mathcal{O}_X$ est associé à l'anneau $B$ et
+$\widetilde{\mathcal{M}}$ au $B$-module $M$~; pour que
+$\widetilde{\mathcal{M}}$ soit de type fini, il faut et il suffit donc que
+$M$ soit de type fini (\hyperref[I.1.3.13-fr]{\text
+
+[id 1752]
+OLD: {I, 1.3.8}
+NEW: {\textbf{I}, 1.3.8}
+FRENCH CONTEXT (corrected): fg)}
+    \ar[r]_{\mu_{fg}}
+    & \operatorname{Hom}_{S_{(fg)}}(M_{(fg)},N_{(fg)})
+  }
+\]
+(la flèche de gauche étant l'homomorphisme canonique, celle de droite
+provenant des homomorphismes canoniques). On en conclut encore (compte
+tenu de (\hyperref[I.1.3.8-fr]{\textbf{I}, 1.3.8})) que les $\mu_f$ définissent un
+homomorphisme canonique fonctoriel de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.5.12.2-fr}
+  \mu:(\operatorname{Hom}_S(M,N))\supertilde
+  \longrightarrow
+  \mathcal{H}om_{\mathcal{O}_X}(\widetilde{M},\widetilde{N}).
+\tag{2.5.12.2
+
+[id 1753]
+OLD: \widetilde{\operatorname{Hom}_S(M,N)}
+NEW: (\operatorname{Hom}_S(M,N))\supertilde
+FRENCH CONTEXT (corrected): e de droite
+provenant des homomorphismes canoniques). On en conclut encore (compte
+tenu de (\hyperref[I.1.3.8-fr]{\textbf{I}, 1.3.8})) que les $\mu_f$ définissent un
+homomorphisme canonique fonctoriel de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.5.12.2-fr}
+  \mu:(\operatorname{Hom}_S(M,N))\supertilde
+  \longrightarrow
+  \mathcal{H}om_{\mathcal{O}_X}(\widetilde{M},\widetilde{N}).
+\tag{2.5.12.2}
+\]
+\end{env}
+
+\begin{proposition}[2.5.13]
+\label{II.2.5.13-fr}
+Supposons l'idéal $S_+$ engendré par $S_1$. Alors l'homomorphisme
+$\lambda$ (\hyperref[II.2.5.11.2-fr
+
+[id 1754]
+OLD: \[
+  M_m\times N_n\longrightarrow
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)}
+\]
+
+NEW: $M_m\times N_n\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$
+
+FRENCH CONTEXT (corrected): in S_1$
+(\hyperref[II.2.3.14-fr]{2.3.14}), on est ramené à prouver que $\lambda_f$
+et $\mu_f$ sont des isomorphismes, sous les hypothèses envisagées, lorsque
+$f$ est homogène et \emph{de degré $1$}. Or, on définit alors une
+application $\mathbf{Z}$-bilinéaire
+$M_m\times N_n\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$
+en faisant correspondre à $(x,y)$ l'élément
+$(x/f^m)\otimes(y/f^n)$ (lorsque $m<0$, nous écrivons $x/f^m$ pour
+$f^{-m}x/1$)~; ces applications définissent une application
+$\mathbf{Z}$-linéaire
+$M\otimes_{\mathbf{Z}}N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(
+
+[id 1755]
+OLD: \[
+  M\otimes_{\mathbf{Z}}N\longrightarrow
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)},
+\]
+
+NEW: $M\otimes_{\mathbf{Z}}N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+
+FRENCH CONTEXT (corrected): ire
+$M_m\times N_n\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$
+en faisant correspondre à $(x,y)$ l'élément
+$(x/f^m)\otimes(y/f^n)$ (lorsque $m<0$, nous écrivons $x/f^m$ pour
+$f^{-m}x/1$)~; ces applications définissent une application
+$\mathbf{Z}$-linéaire
+$M\otimes_{\mathbf{Z}}N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+et si $s\in S_q$, cette application transforme $(sx)\otimes y$ en
+$(s/f^q)\bigl((x/f^m)\otimes(y/f^n)\bigr)$
+(pour $x\in M_m$, $y\in N_n$). On en déduit donc un di-homomorphisme de
+modules
+$\gamma_f:M\otimes_S N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+
+[id 1756]
+OLD: \[
+  (s/f^q)\bigl((x/f^m)\otimes(y/f^n)\bigr)
+\]
+
+NEW: $(s/f^q)\bigl((x/f^m)\otimes(y/f^n)\bigr)$
+
+FRENCH CONTEXT (corrected): sque $m<0$, nous écrivons $x/f^m$ pour
+$f^{-m}x/1$)~; ces applications définissent une application
+$\mathbf{Z}$-linéaire
+$M\otimes_{\mathbf{Z}}N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+et si $s\in S_q$, cette application transforme $(sx)\otimes y$ en
+$(s/f^q)\bigl((x/f^m)\otimes(y/f^n)\bigr)$
+(pour $x\in M_m$, $y\in N_n$). On en déduit donc un di-homomorphisme de
+modules
+$\gamma_f:M\otimes_S N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+relatif à l'homomorphisme canonique $S\to S_{(f)}$ (transformant
+$s\in S_q$ en $s/f^q$). Supposons en outre 
+
+[id 1757]
+OLD: \[
+  \gamma_f:M\otimes_S N\longrightarrow
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)},
+\]
+
+NEW: $\gamma_f:M\otimes_S N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+
+FRENCH CONTEXT (corrected): \otimes_{\mathbf{Z}}N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+et si $s\in S_q$, cette application transforme $(sx)\otimes y$ en
+$(s/f^q)\bigl((x/f^m)\otimes(y/f^n)\bigr)$
+(pour $x\in M_m$, $y\in N_n$). On en déduit donc un di-homomorphisme de
+modules
+$\gamma_f:M\otimes_S N\longrightarrow M_{(f)}\otimes_{S_{(f)}}N_{(f)}$,
+relatif à l'homomorphisme canonique $S\to S_{(f)}$ (transformant
+$s\in S_q$ en $s/f^q$). Supposons en outre que pour un élément
+$\sum_i(x_i\otimes y_i)$ de $M\otimes_S N$ ($x_i$, $y_i$ homogènes de
+degrés respectifs $m_i$, $n_i$) on ait
+$f^r\sum_i(x_i\otimes y
+
+[id 1758]
+OLD: \[
+  f^r\sum_i(x_i\otimes y_i)=0,
+\]
+
+NEW: $f^r\sum_i(x_i\otimes y_i)=0$,
+
+FRENCH CONTEXT (corrected): mes_{S_{(f)}}N_{(f)}$,
+relatif à l'homomorphisme canonique $S\to S_{(f)}$ (transformant
+$s\in S_q$ en $s/f^q$). Supposons en outre que pour un élément
+$\sum_i(x_i\otimes y_i)$ de $M\otimes_S N$ ($x_i$, $y_i$ homogènes de
+degrés respectifs $m_i$, $n_i$) on ait
+$f^r\sum_i(x_i\otimes y_i)=0$,
+autrement dit $\sum_i(f^rx_i\otimes y_i)=0$. On en déduit en vertu de
+(\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}) que l'on a
+$\sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0$,
+c'est-à-dire $\gamma_f(\sum_i(x_i\otimes y_i))=0$. Par suite $\gamma_f$
+se factorise e
+
+[id 1759]
+OLD: {0, 1.3.4}
+NEW: {\textbf{0}, 1.3.4}
+FRENCH CONTEXT (corrected): identifie canoniquement à
+$M_f\otimes_{A_f}N_f$ en vertu de (\hyperref[I.1.3.7-fr]{1.3.7}) et
+(\hyperref[I.1.3.6-fr]{1.3.6}). On sait par ailleurs que le $A_f$-module
+$M_f\otimes_{A_f}N_f$ est canoniquement isomorphe à $(M\otimes_A N)_f$
+(\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}), qui lui-même est canoniquement isomorphe à
+$\Gamma(D(f),(M\otimes_A N)\supertilde)$
+(\hyperref[I.1.3.7-fr]{1.3.7} et \hyperref[I.1.3.6-fr]{1.3.6}). En outre, on
+vérifie aussitôt que les isomorphismes canoniques
+\[
+  \mathscr{F}(D(f))\xrightarrow{\sim}\Gamma
+
+[id 1760]
+OLD: \[
+  \sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0,
+\]
+
+NEW: $\sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0$,
+
+FRENCH CONTEXT (corrected): m_i(x_i\otimes y_i)$ de $M\otimes_S N$ ($x_i$, $y_i$ homogènes de
+degrés respectifs $m_i$, $n_i$) on ait
+$f^r\sum_i(x_i\otimes y_i)=0$,
+autrement dit $\sum_i(f^rx_i\otimes y_i)=0$. On en déduit en vertu de
+(\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}) que l'on a
+$\sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0$,
+c'est-à-dire $\gamma_f(\sum_i(x_i\otimes y_i))=0$. Par suite $\gamma_f$
+se factorise en
+$M\otimes_S N\longrightarrow(M\otimes_S N)_f\xrightarrow{\gamma'_f}M_{(f)}\otimes_{S_{(f)}}N_{(f)}$~;
+si $\lambda'_f$ est la restriction de $\gamma'_f$
+\oldpage[II]{35}
+à $
+
+[id 1761]
+OLD: \[
+  M\otimes_S N\longrightarrow(M\otimes_S N)_f
+  \xrightarrow{\gamma'_f}
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)}~;
+\]
+
+NEW: $M\otimes_S N\longrightarrow(M\otimes_S N)_f\xrightarrow{\gamma'_f}M_{(f)}\otimes_{S_{(f)}}N_{(f)}$~;
+
+FRENCH CONTEXT (corrected): trement dit $\sum_i(f^rx_i\otimes y_i)=0$. On en déduit en vertu de
+(\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}) que l'on a
+$\sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0$,
+c'est-à-dire $\gamma_f(\sum_i(x_i\otimes y_i))=0$. Par suite $\gamma_f$
+se factorise en
+$M\otimes_S N\longrightarrow(M\otimes_S N)_f\xrightarrow{\gamma'_f}M_{(f)}\otimes_{S_{(f)}}N_{(f)}$~;
+si $\lambda'_f$ est la restriction de $\gamma'_f$
+\oldpage[II]{35}
+à $(M\otimes_S N)_{(f)}$, on vérifie aussitôt que $\lambda_f$ et
+$\lambda'_f$ sont des $S_{(f)}$-homomorphismes réciproques, d'où la
+première partie de la proposition.
+
+Pour démontrer la second
+
+=================== PAGE II 35 ===================
+----- (Spanish page II 34: shown above in this file) -----
+----- (Spanish page II 35: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 36 -----
+\oldpage[II]{36}
+\begin{corollary}[2.5.15]
+\label{II.2.5.15}
+Supongamos que $S$ está generado por $S_1$.
+Entonces, para todo $S$-módulo graduado $M$ y todo $n\in\bb{Z}$, se tiene
+\[
+\label{II.2.5.15.1}
+  (M(n))\supertilde=\widetilde{M}(n)
+\tag{2.5.15.1}
+\]
+salvo isomorfismo canónico.
+\end{corollary}
+
+\begin{proof}
+Esto resulta de las definiciones \sref{II.2.5.10.2} y \sref{II.2.5.10.1}, de la Proposición \sref{II.2.5.13}, y de la existencia de un isomorfismo canónico $M(n)\simto M\otimes_S S(n)$ de grado $0$ que hace corresponder a todo $z\in(M(n))_h=M_{n+h}$ el elemento
+\[
+  z\otimes1\in M_{n+h}\otimes(S(n))_{-n}
+  \subset(M\otimes_S S(n))_h.
+\]
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 36.
+
+\begin{env}[2.5.16]
+\label{II.2.5.16}
+Denotemos por $S'$ el anillo graduado tal que $S'_0=\bb{Z}$ y $S'_n=S_n$ para $n>0$.
+Entonces, si $f\in S_d$ ($d>0$), se tiene $(S(n))_{(f)}=(S'(n))_{(f)}$ para todo $n\in\bb{Z}$, pues un elemento de $(S'(n))_{(f)}$ es de la forma $x/f^k$, con $x\in S'_{n+kd}$ ($k>0$), y siempre puede tomarse $k$ tal que $n+kd\neq0$.
+Como $X=\Proj(S)$ y $X'=\Proj(S')$ se identifican canónicamente \sref{II.2.4.7}[(ii)], se ve que, para todo $n\in\bb{Z}$, $\sh{O}_X(n)$ y $\sh{O}_{X'}(n)$ son las imágenes uno de otro por la identificación anterior.
+
+Observemos, además, que, para todo $d>0$ y todo $n\in\bb{Z}$, se tiene
+\[
+  (S^{(d)}(n))_h=S_{(n+h)d}=(S(nd))_{hd}
+\]
+para $f\in S_d$, y por tanto $(S^{(d)}(n))_{(f)}=(S(nd))_{(f)}$.
+Se sabe que los esquemas $X=\Proj(S)$ y $X^{(d)}=\Proj(S^{(d)})$ se identifican canónicamente \sref{II.2.4.7}[(i)].
+Lo anterior muestra que, si la $S_0$-álgebra $S^{(d)}$ está generada por $S_d$, entonces $\sh{O}_X(nd)$ y $\sh{O}_{X^{(d)}}(n)$ son las imágenes uno de otro por esta identificación, para todo $n\in\bb{Z}$.
+\end{env}
+
+\begin{proposition}[2.5.17]
+\label{II.2.5.17}
+Sea $d>0$ un entero, y sea $U=\bigcup_{f\in S_d}D_+(f)$.
+Entonces, para todo entero $n$, la restricción a $U$ del homomorfismo canónico
+\[
+  \sh{O}_X(nd)\otimes_{\sh{O}_X}\sh{O}_X(-nd)\to\sh{O}_X
+\]
+es un isomorfismo.
+\end{proposition}
+
+\begin{proof}
+En virtud de \sref{II.2.5.16}, podemos limitarnos al caso $d=1$, y la conclusión resulta entonces de la demostración de \sref{II.2.5.13}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 36-37.
+
+\subsection{El $S$-módulo graduado asociado a un haz sobre $\operatorname{Proj}(S)$}
+\label{subsection:II.2.6}
+
+\emph{En toda esta sección se supone que el ideal $S_+$ de $S$ está generado por el conjunto $S_1$ de los elementos homogéneos de grado $1$.}
+
+\begin{env}[2.6.1]
+\label{II.2.6.1}
+El $\sh{O}_X$-módulo $\sh{O}_X(1)$ es \emph{invertible} \sref{II.2.5.9}; se pone entonces, para todo $\sh{O}_X$-módulo $\sh{F}$ \sref[0]{0.5.4.6},
+\[
+\label{II.2.6.1.1}
+  \Gamma_\bullet(\sh{F})
+  =\Gamma_\bullet(\sh{O}_X(1),\sh{F})
+  =\bigoplus_{n\in\bb{Z}}\Gamma(X,\sh{F}(n))
+\tag{2.6.1.1}
+\]
+teniendo en cuenta \sref{II.2.5.14.2}.
+Recordemos \sref[0]{0.5.4.6} que $\Gamma_\bullet(\sh{O}_X)$ está provisto de una estructura de \emph{anillo graduado}, y $\Gamma_\bullet(\sh{F})$ de una estructura de \emph{$\Gamma_\bullet(\sh{O}_X)$-módulo graduado}.
+
+Como $\sh{O}_X(n)$ es localmente libre, $\Gamma_\bullet(\sh{F})$ es un funtor covariante aditivo \emph{exacto por la izquierda} en $\sh{F}$; en particular, si $\sh{J}$ es un haz de ideales de $\sh{O}_X$, $\Gamma_\bullet(\sh{J})$ se identifica canónicamente con un \emph{ideal graduado} de $\Gamma_\bullet(\sh{O}_X)$.
+\end{env}
+
+\begin{env}[2.6.2]
+\label{II.2.6.2}
+Sea $M$ un $S$-módulo graduado.
+Para todo $f\in S_d$ ($d>0$), $x\mapsto x/1$ es un homomorfismo de grupos abelianos $M_0\to M_{(f)}$ y, como $M_{(f)}$ se identifica canónicamente
+----- French corrections on page II 35 -----
+[id 1880]
+OLD: l'isomorphisme
+\[
+  N_{(f)}\longrightarrow
+  \operatorname{Hom}_{S_{(f)}}\bigl(S(n)_{(f)},N_{(f)}\bigr)
+\]
+qui,
+NEW: l'isomorphisme
+$N_{(f)}\to\operatorname{Hom}_{S_{(f)}}(S(n)_{(f)},N_{(f)})$
+qui,
+FRENCH CONTEXT (corrected): z\to u_z$ est un isomorphisme de degré $0$ de
+$N(-n)$ sur $\operatorname{Hom}_S(S(n),N)$. Il lui correspond un
+isomorphisme
+\[
+  \eta_f:\bigl(N(-n)\bigr)_{(f)}
+  \longrightarrow
+  \bigl(\operatorname{Hom}_S(S(n),N)\bigr)_{(f)}.
+\]
+D'autre part, soit $\eta'_f$ l'isomorphisme
+$N_{(f)}\to\operatorname{Hom}_{S_{(f)}}(S(n)_{(f)},N_{(f)})$
+qui, à tout $z'\in N_{(f)}$ fait correspondre l'homomorphisme $v_{z'}$ tel
+que $v_{z'}(s/f^k)=sz'/f^{n+k}$ (pour
+$s\in S_{n+k}=(S(n))_k$). On constate aisément que l'application composée
+\[
+  \bigl(N(-n)\bigr)_{(f)}
+  \xrightarrow{\eta_f}
+  \bigl(\operatorname{Hom
+
+[id 1882]
+OLD: z/f^h\mapsto z/f^{h-n}
+NEW: z/f^h\to z/f^{h-n}
+FRENCH CONTEXT (corrected): ation composée
+\[
+  \bigl(N(-n)\bigr)_{(f)}
+  \xrightarrow{\eta_f}
+  \bigl(\operatorname{Hom}_S(S(n),N)\bigr)_{(f)}
+  \xrightarrow{\mu_f}
+  \operatorname{Hom}_{S_{(f)}}\bigl(S(n)_{(f)},N_{(f)}\bigr)
+  \xrightarrow{{\eta'_f}^{-1}}N_{(f)}
+\]
+est l'isomorphisme $z/f^h\to z/f^{h-n}$ de
+$\bigl(N(-n)\bigr)_{(f)}$ sur $N_{(f)}$, donc $\mu_f$ est un isomorphisme.
+\end{proof}
+
+Si l'idéal $S_+$ est engendré par $S_1$, on déduit de
+(\hyperref[II.2.5.13-fr]{2.5.13}) que pour tout idéal gradué $\mathfrak{J}$
+de $S$ et tout $S$-module gradué $M$,
+
+[id 1884]
+OLD: =\widetilde{\mathfrak{J}\cdot M}
+NEW: =(\mathfrak{J}.M)\supertilde
+FRENCH CONTEXT (corrected): sme.
+\end{proof}
+
+Si l'idéal $S_+$ est engendré par $S_1$, on déduit de
+(\hyperref[II.2.5.13-fr]{2.5.13}) que pour tout idéal gradué $\mathfrak{J}$
+de $S$ et tout $S$-module gradué $M$, on a
+\[
+\label{II.2.5.13.1-fr}
+  \widetilde{\mathfrak{J}}.\widetilde{M}
+  =(\mathfrak{J}.M)\supertilde
+\tag{2.5.13.1}
+\]
+à un isomorphisme canonique près~; cela résulte en effet de la commutativité
+du diagramme
+\[
+  \xymatrix{
+    \widetilde{\mathfrak{J}}\otimes_{\mathcal{O}_X}\widetilde{M}
+    \ar[rr]^\lambda\ar[dr]
+    && (\mathfrak{J}\otimes_S M)\supertilde
+
+[id 1885]
+OLD: \widetilde{\mathfrak{J}\otimes_S M}
+NEW: (\mathfrak{J}\otimes_S M)\supertilde
+FRENCH CONTEXT (corrected): de{M}
+  =(\mathfrak{J}.M)\supertilde
+\tag{2.5.13.1}
+\]
+à un isomorphisme canonique près~; cela résulte en effet de la commutativité
+du diagramme
+\[
+  \xymatrix{
+    \widetilde{\mathfrak{J}}\otimes_{\mathcal{O}_X}\widetilde{M}
+    \ar[rr]^\lambda\ar[dr]
+    && (\mathfrak{J}\otimes_S M)\supertilde\ar[dl]\\
+    & \widetilde{M} &
+  }
+\]
+que l'on vérifie comme celle de
+(\hyperref[II.2.5.11.3-fr]{2.5.11.3}).
+
+\begin{corollary}[2.5.14]
+\label{II.2.5.14-fr}
+Supposons $S$ engendrée par $S_1$. Quels que soient $m$, $n$ dans
+$\mathbf{Z}$, on a alors~:
+\[
+\label
+
+[id 1886]
+OLD: _{-m-n}
+NEW: _{-(m+n)}
+FRENCH CONTEXT (corrected): et de
+l'existence de l'isomorphisme canonique de degré $0$,
+$S(m)\otimes_S S(n)\xrightarrow{\sim}S(m+n)$, qui, à l'élément
+$1\otimes 1$ (où le premier facteur $1$ est dans $(S(m))_{-m}$ et le second
+dans $(S(n))_{-n}$) fait correspondre l'élément
+$1\in(S(m+n))_{-(m+n)}$. Il suffit ensuite de démontrer la seconde formule
+pour $n=-1$, et en vertu de (\hyperref[II.2.5.13-fr]{2.5.13}), cela revient
+à voir que $\operatorname{Hom}_S(S(1),S)$ est canoniquement isomorphe à
+$S(-1)$, vérification immédiate en remontant aux définition
+
+=================== PAGE II 36 ===================
+----- (Spanish page II 35: shown above in this file) -----
+----- (Spanish page II 36: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 37 -----
+\oldpage[II]{37}
+con $\Gamma(D_+(f),\widetilde{M})$, se obtiene así un homomorfismo de grupos abelianos
+\[
+  \alpha_0^f:M_0\to\Gamma(D_+(f),\widetilde{M}).
+\]
+Es claro que, para todo $g\in S_e$ ($e>0$), el diagrama
+\[
+  \xymatrix{
+    & \Gamma(D_+(f),\widetilde{M}) \ar[dd]
+  \\M_0 \ar[ur]^{\alpha_0^f} \ar[dr]_{\alpha_0^{fg}}
+  \\& \Gamma(D_+(fg),\widetilde{M})
+  }
+\]
+es conmutativo.
+Esto significa que, para todo $x\in M_0$, las secciones $\alpha_0^f(x)$ y $\alpha_0^g(x)$ de $\widetilde{M}$ coinciden sobre $D_+(f)\cap D_+(g)$ y, por consiguiente, existe una única sección $\alpha_0(x)\in\Gamma(X,\widetilde{M})$ cuya restricción a cada $D_+(f)$ es $\alpha_0^f(x)$.
+Se ha definido así, sin utilizar la hipótesis de que $S$ esté generado por $S_1$, un homomorfismo de grupos abelianos
+\[
+\label{II.2.6.2.1}
+  \alpha_0:M_0\to\Gamma(X,\widetilde{M}).
+\tag{2.6.2.1}
+\]
+
+Aplicando este resultado al $S$-módulo graduado $M(n)$, para cada $n\in\bb{Z}$, se obtiene, para cada $n\in\bb{Z}$, un homomorfismo de grupos abelianos
+\[
+\label{II.2.6.2.2}
+  \alpha_n:M_n=(M(n))_0\to\Gamma(X,\widetilde{M}(n))
+\tag{2.6.2.2}
+\]
+teniendo en cuenta \sref{II.2.5.15}; de aquí se obtiene un homomorfismo funtorial (de grado $0$) de grupos abelianos graduados
+\[
+\label{II.2.6.2.3}
+  \alpha:M\to\Gamma_\bullet(\widetilde{M})
+\tag{2.6.2.3}
+\]
+(denotado también por $\alpha_M$) que coincide con $\alpha_n$ sobre cada $M_n$.
+
+Si se toma, en particular, $M=S$, se comprueba inmediatamente, teniendo en cuenta la definición \sref[0]{0.5.4.6} de la multiplicación en $\Gamma_\bullet(\sh{O}_X)$, que $\alpha:S\to\Gamma_\bullet(\sh{O}_X)$ es un homomorfismo de anillos graduados y que, para todo $S$-módulo graduado $M$, \sref{II.2.6.2.3} es un dihomomorfismo de módulos graduados.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 37-38.
+
+\begin{proposition}[2.6.3]
+\label{II.2.6.3}
+Para todo $f\in S_d$ ($d>0$), $D_+(f)$ es idéntico al conjunto de los $\mathfrak{p}\in X$ donde la sección $\alpha_d(f)$ de $\sh{O}_X(d)$ no se anula \sref[0]{0.5.5.2}.
+\end{proposition}
+
+\begin{proof}
+Como $X=\bigcup_{g\in S_1}D_+(g)$ por hipótesis, basta demostrar que, para todo $g\in S_1$, el conjunto de los $\mathfrak{p}\in D_+(g)$ donde $\alpha_d(f)$ no se anula es idéntico a $D_+(fg)$.
+Ahora bien, la restricción de $\alpha_d(f)$ a $D_+(g)$ es, por definición, la sección que corresponde al elemento $f/1$ de $(S(d))_{(g)}$.
+Mediante el isomorfismo canónico $(S(d))_{(g)}\simto S_{(g)}$ \sref{II.2.5.7}, esta sección de $\sh{O}_X(d)$ sobre $D_+(g)$ se identifica con la sección de $\sh{O}_X$ sobre $D_+(g)$ que corresponde al elemento $f/g^d$ de $S_{(g)}$.
+Decir que esta sección se anula en $\mathfrak{p}\in D_+(g)$ significa que $f/g^d\in\mathfrak{q}$, donde $\mathfrak{q}$ es el ideal primo de $S_{(g)}$ correspondiente a $\mathfrak{p}$ \sref{II.2.3.6}; por definición, esto equivale a $f\in\mathfrak{p}$, de donde resulta la proposición.
+\end{proof}
+
+\begin{env}[2.6.4]
+\label{II.2.6.4}
+Sea ahora $\sh{F}$ un $\sh{O}_X$-módulo, y pongamos $M=\Gamma_\bullet(\sh{F})$.
+En virtud de la existencia del homomorfismo de anillos graduados $\alpha:S\to\Gamma_\bullet(\sh{O}_X)$, puede considerarse $M$ como un $S$-módulo graduado.
+Para todo $f\in S_d$ ($d>0$), resulta de \sref{II.2.6.3} que la restricción a $D_+(f)$ de la sección $\alpha_d(f)$ de $\sh{O}_X(d)$ es invertible.
+Lo mismo ocurre, por tanto, con la restricción a $D_+(f)$ de la sección $\alpha_{nd}(f^n)$ de $\sh{O}_X(nd)$, para todo $n>0$.
+Sea entonces $z\in M_{nd}=\Gamma(X,\sh{F}(nd))$ ($n>0$).
+Si existe un entero $k\geq0$ tal que la restricción a $D_+(f)$ de $f^kz$, es decir, la
+----- French corrections on page II 36 -----
+[id 1888]
+OLD: $\mathcal{F}$
+(\hyperref[0.5.4.6-fr]{0,
+NEW: $\mathcal{F}$
+(\hyperref[0.5.4.6-fr]{\textbf{0},
+FRENCH CONTEXT (corrected): endré
+par l'ensemble $S_1$ des éléments homogènes de degré $1$.}
+
+\begin{env}[2.6.1]
+\label{II.2.6.1-fr}
+Le $\mathcal{O}_X$-Module $\mathcal{O}_X(1)$ est alors
+\emph{inversible} (\hyperref[II.2.5.9-fr]{2.5.9})~; on pose alors, pour tout
+$\mathcal{O}_X$-Module $\mathcal{F}$
+(\hyperref[0.5.4.6-fr]{\textbf{0}, 5.4.6})
+\[
+\label{II.2.6.1.1-fr}
+  \Gamma_*(\mathcal{F})
+  =\Gamma_*(\mathcal{O}_X(1),\mathcal{F})
+  =\bigoplus_{n\in\mathbf{Z}}\Gamma(X,\mathcal{F}(n))
+\tag{2.6.1.1}
+\]
+compte tenu de (\hyperref[II.2.5.14.2-fr]{2.5.14.2}). Rappelons
+(\hyperref[0.5.4.6-fr]{\t
+
+[id 1889]
+OLD: 5.4.6}),
+\[
+NEW: 5.4.6})
+\[
+FRENCH CONTEXT (corrected):  de degré $1$.}
+
+\begin{env}[2.6.1]
+\label{II.2.6.1-fr}
+Le $\mathcal{O}_X$-Module $\mathcal{O}_X(1)$ est alors
+\emph{inversible} (\hyperref[II.2.5.9-fr]{2.5.9})~; on pose alors, pour tout
+$\mathcal{O}_X$-Module $\mathcal{F}$
+(\hyperref[0.5.4.6-fr]{\textbf{0}, 5.4.6})
+\[
+\label{II.2.6.1.1-fr}
+  \Gamma_*(\mathcal{F})
+  =\Gamma_*(\mathcal{O}_X(1),\mathcal{F})
+  =\bigoplus_{n\in\mathbf{Z}}\Gamma(X,\mathcal{F}(n))
+\tag{2.6.1.1}
+\]
+compte tenu de (\hyperref[II.2.5.14.2-fr]{2.5.14.2}). Rappelons
+(\hyperref[0.5.4.6-fr]{\textbf{0}, 5
+
+[id 1890]
+OLD: Rappelons
+(\hyperref[0.5.4.6-fr]{0,
+NEW: Rappelons
+(\hyperref[0.5.4.6-fr]{\textbf{0},
+FRENCH CONTEXT (corrected): 
+(\hyperref[0.5.4.6-fr]{\textbf{0}, 5.4.6})
+\[
+\label{II.2.6.1.1-fr}
+  \Gamma_*(\mathcal{F})
+  =\Gamma_*(\mathcal{O}_X(1),\mathcal{F})
+  =\bigoplus_{n\in\mathbf{Z}}\Gamma(X,\mathcal{F}(n))
+\tag{2.6.1.1}
+\]
+compte tenu de (\hyperref[II.2.5.14.2-fr]{2.5.14.2}). Rappelons
+(\hyperref[0.5.4.6-fr]{\textbf{0}, 5.4.6}) que $\Gamma_*(\mathcal{O}_X)$ est muni
+d'une structure d'\emph{anneau gradué}, et $\Gamma_*(\mathcal{F})$ d'une
+structure de
+\emph{module gradué} sur $\Gamma_*(\mathcal{O}_X)$.
+
+Puisque $\mathcal{O}_X(n)$ est localement libre, $\Gamma_*(\mathcal{F})$
+
+
+[id 1891]
+OLD: \mapsto
+NEW: \to
+FRENCH CONTEXT (corrected): nneau non nécessairement commutatif, par $A$-module nous entendrons toujours un module \emph{à gauche}, sauf mention expresse du contraire.
+\end{env}
+
+\begin{env}[1.0.2]
+\label{0.1.0.2-fr}
+Soient $A$, $B$ deux anneaux non nécessairement commutatifs, $\varphi:A\to B$ un homomorphisme.
+Tout $B$-module à gauche (resp. à droite) $M$ peut être muni d'une structure de $A$-module à gauche (resp. à droite) en posant $a.m=\varphi(a).m$ (resp. $m.a=m.\varphi(a)$); lorsqu'il sera nécessaire de distinguer sur $M$ les structures d
+
+[id 1892]
+OLD: canoni-
+
+
+NEW: canoni%
+
+FRENCH CONTEXT (corrected): ph{idéal gradué} de $\Gamma_*(\mathcal{O}_X)$.
+\end{env}
+
+\begin{env}[2.6.2]
+\label{II.2.6.2-fr}
+Soit $M$ un $S$-module gradué~; pour tout $f\in S_d$ ($d>0$),
+$x\to x/1$ est un homomorphisme de groupes abéliens
+$M_0\to M_{(f)}$, et comme $M_{(f)}$ s'identifie canoni%
+\oldpage[II]{37}
+quement à $\Gamma(D_+(f),\widetilde{M})$, on obtient ainsi un
+homomorphisme de groupes abéliens
+$\alpha_0^f:M_0\to\Gamma(D_+(f),\widetilde{M})$.
+Il est clair que, pour tout $g\in S_e$ ($e>0$), le diagramme
+\[
+  \xymatrix{
+    & \Gamma(D_+(f),\
+
+=================== PAGE II 37 ===================
+----- (Spanish page II 36: shown above in this file) -----
+----- (Spanish page II 37: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 38 -----
+\oldpage[II]{38}
+sección $(z|D_+(f))(\alpha_{kd}(f^k)|D_+(f))$ de $\sh{F}((n+k)d)$, sea nula, entonces, por la observación anterior, se tiene también $z|D_+(f)=0$.
+Esto muestra que se ha definido un $S_{(f)}$-homomorfismo $\beta_f:M_{(f)}\to\Gamma(D_+(f),\sh{F})$ haciendo corresponder al elemento $z/f^n$ la sección
+\[
+  (z|D_+(f))(\alpha_{nd}(f^n)|D_+(f))^{-1}
+\]
+de $\sh{F}$ sobre $D_+(f)$.
+Se comprueba inmediatamente que el diagrama
+\[
+\label{II.2.6.4.1}
+  \xymatrix{
+    M_{(f)} \ar[r]^{\beta_f} \ar[d]
+    & \Gamma(D_+(f),\sh{F}) \ar[d]
+  \\M_{(fg)} \ar[r]_{\beta_{fg}}
+    & \Gamma(D_+(fg),\sh{F})
+  }
+\tag{2.6.4.1}
+\]
+es conmutativo para $g\in S_e$ ($e>0$).
+Si se recuerda que $M_{(f)}$ se identifica canónicamente con $\Gamma(D_+(f),\widetilde{M})$ y que los $D_+(f)$ forman una base de la topología de $X$ \sref{II.2.3.4}, se ve que los $\beta_f$ proceden de un único homomorfismo canónico de $\sh{O}_X$-módulos
+\[
+\label{II.2.6.4.2}
+  \beta:(\Gamma_\bullet(\sh{F}))\supertilde\to\sh{F}
+\tag{2.6.4.2}
+\]
+(denotado también por $\beta_{\sh{F}}$), que es evidentemente funtorial.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 38.
+
+\begin{proposition}[2.6.5]
+\label{II.2.6.5}
+Sea $M$ un $S$-módulo graduado, y sea $\sh{F}$ un $\sh{O}_X$-módulo.
+Entonces, los homomorfismos compuestos
+\[
+\label{II.2.6.5.1}
+  \widetilde{M}
+  \xrightarrow{\widetilde{\alpha}}(\Gamma_\bullet(\widetilde{M}))\supertilde
+  \xrightarrow{\beta}\widetilde{M}
+\tag{2.6.5.1}
+\]
+\[
+\label{II.2.6.5.2}
+  \Gamma_\bullet(\sh{F})
+  \xrightarrow{\alpha}\Gamma_\bullet((\Gamma_\bullet(\sh{F}))\supertilde)
+  \xrightarrow{\Gamma_\bullet(\beta)}\Gamma_\bullet(\sh{F})
+\tag{2.6.5.2}
+\]
+son los isomorfismos identidad.
+\end{proposition}
+
+\begin{proof}
+La verificación de \sref{II.2.6.5.1} es local: sobre un abierto $D_+(f)$, resulta inmediatamente de las definiciones y del hecho de que $\beta$, aplicado a haces cuasi-coherentes, está determinado por su acción sobre las secciones por encima de $D_+(f)$ \sref[I]{I.1.3.8}.
+La afirmación \sref{II.2.6.5.2} se verifica separadamente en cada grado.
+Si se pone $M=\Gamma_\bullet(\sh{F})$, se tiene $M_n=\Gamma(X,\sh{F}(n))$ y
+\[
+  (\Gamma_\bullet(\widetilde{M}))_n
+  =\Gamma(X,\widetilde{M}(n))
+  =\Gamma(X,(M(n))\supertilde).
+\]
+Ahora bien, si $f\in S_1$ y $z\in M_n$, $\alpha_n^f(z)$ es el elemento $z/1$ de $(M(n))_{(f)}$, igual a $(f/1)^n(z/f^n)$.
+Le corresponde mediante $\beta_f$ la sección
+\[
+  \Big((\alpha_1(f))^n|D_+(f)\Big)
+  \Big((z|D_+(f))((\alpha_1(f))^n|D_+(f))^{-1}\Big)
+\]
+sobre $D_+(f)$, es decir, la restricción de $z$ a $D_+(f)$, lo que termina la demostración de \sref{II.2.6.5.2}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 38-40.
+
+\subsection{Condiciones de finitud}
+\label{subsection:II.2.7}
+
+\begin{proposition}[2.7.1]
+\label{II.2.7.1}
+\begin{enumerate}
+  \item[{\rm(i)}] Si $S$ es un anillo graduado noetheriano, entonces $X=\Proj(S)$ es un esquema noetheriano.
+  \item[{\rm(ii)}] Si $S$ es una $A$-álgebra graduada de tipo finito, entonces $X=\Proj(S)$ es un esquema de tipo finito sobre $Y=\Spec(A)$.
+\end{enumerate}
+\end{proposition}
+----- French corrections on page II 37 -----
+[id 1894]
+OLD: abéliens
+\[
+  \alpha_0^f:M_0\longrightarrow\Gamma(D_+(f),\widetilde{M}).
+\]
+Il est clair
+NEW: abéliens
+$\alpha_0^f:M_0\to\Gamma(D_+(f),\widetilde{M})$.
+Il est clair
+FRENCH CONTEXT (corrected): -module gradué~; pour tout $f\in S_d$ ($d>0$),
+$x\to x/1$ est un homomorphisme de groupes abéliens
+$M_0\to M_{(f)}$, et comme $M_{(f)}$ s'identifie canoni%
+\oldpage[II]{37}
+quement à $\Gamma(D_+(f),\widetilde{M})$, on obtient ainsi un
+homomorphisme de groupes abéliens
+$\alpha_0^f:M_0\to\Gamma(D_+(f),\widetilde{M})$.
+Il est clair que, pour tout $g\in S_e$ ($e>0$), le diagramme
+\[
+  \xymatrix{
+    & \Gamma(D_+(f),\widetilde{M})\ar[dd]\\
+    M_0\ar[ur]^{\alpha_0^f}\ar[dr]_{\alpha_0^{fg}}\\
+    & \Gamma(D_+(fg),\widetilde{M})
+  }
+\]
+est commutatif~; cela signifie que pour tout $x\in M_0$
+
+[id 1895]
+OLD: {0, 5.4.6}
+NEW: {\textbf{0}, 5.4.6}
+FRENCH CONTEXT (corrected): ébrique~:
+
+\begin{corollary}[9.3.2]
+\label{I.9.3.2-fr}
+Les hypothèses étant celles de \textup{(9.3.1)}, considérons l'anneau gradué
+$A_* = \Gamma_*(\mathscr{L})$ et le $A_*$-module gradué
+$M_* = \Gamma_*(\mathscr{L},\mathscr{F})$
+\textup{(\hyperref[0.5.4.6-fr]{\textbf{0}, 5.4.6})}. Si $f\in A_n$, où $n\in\mathbb{Z}$, alors
+on a un isomorphisme canonique
+\[
+  \Gamma(X_f,\mathscr{F})\xrightarrow{\sim}((M_*)_f)_0
+\]
+\textup{(sous-groupe du module de fractions $(M_*)_f$ formé des éléments de degré
+$0$)}.
+\end{corollary}
+
+\begin{corollary
+
+[id 1896]
+OLD: (\hyperref[0.5.5.2-fr]{0, 5.5.2})
+NEW: \textup{(\hyperref[0.5.5.2-fr]{\textbf{0}, 5.5.2})}
+FRENCH CONTEXT (corrected): ) est un di-homomorphisme de modules
+gradués.
+\end{env}
+
+\begin{proposition}[2.6.3]
+\label{II.2.6.3-fr}
+Pour tout $f\in S_d$ ($d>0$), $D_+(f)$ est identique à l'ensemble des
+$\mathfrak{p}\in X$ où la section $\alpha_d(f)$ de $\mathcal{O}_X(d)$ ne
+s'annule pas \textup{(\hyperref[0.5.5.2-fr]{\textbf{0}, 5.5.2})}.
+\end{proposition}
+
+\begin{proof}
+Comme $X=\bigcup_{g\in S_1}D_+(g)$ par hypothèse, il suffit de vérifier que
+pour tout $g\in S_1$, l'ensemble des $\mathfrak{p}\in D_+(g)$ où
+$\alpha_d(f)$ ne s'annule pas est identique à $D_+(fg)$. Or, la restriction
+de $\alp
+
+[id 24623]
+OLD: un $\mathcal{O}_X$ module, et posons
+NEW: un $\mathcal{O}_X$-Module, et posons
+FRENCH CONTEXT (corrected): {q}$ est l'idéal premier de $S_{(g)}$
+correspondant à $\mathfrak{p}$ (\hyperref[II.2.3.6-fr]{2.3.6})~; par
+définition cela veut dire que $f\in\mathfrak{p}$, d'où la proposition.
+\end{proof}
+
+\begin{env}[2.6.4]
+\label{II.2.6.4-fr}
+Soit maintenant $\mathcal{F}$ un $\mathcal{O}_X$-Module, et posons
+$M=\Gamma_*(\mathcal{F})$~; en vertu de l'existence de l'homomorphisme
+d'anneaux gradués $\alpha:S\to\Gamma_*(\mathcal{O}_X)$, $M$ peut être
+considéré comme un $S$-module gradué. Pour tout $f\in S_d$ ($d>0$), il
+résulte de (\hyperref[II.2.6.3-fr]{2.6.3}) que 
+
+=================== PAGE II 38 ===================
+----- (Spanish page II 37: shown above in this file) -----
+----- (Spanish page II 38: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 39 -----
+\oldpage[II]{39}
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[{\rm(i)}] Si $S$ es noetheriano, el ideal $S_+$ admite un sistema finito de generadores homogéneos $f_i$ ($1\leq i\leq p$); por tanto, \sref{II.2.3.14}, el espacio subyacente $X$ es la unión de los $D_+(f_i)=\Spec(S_{(f_i)})$, y todo se reduce entonces a ver que cada uno de los $S_{(f_i)}$ es noetheriano, lo que resulta de \sref{II.2.2.6}.
+  \item[{\rm(ii)}] La hipótesis implica que $S_0$ es una $A$-álgebra de tipo finito y que $S$ es una $S_0$-álgebra de tipo finito, de modo que $S_+$ es un ideal de tipo finito \sref{II.2.1.4}.
+    Nos reducimos entonces, como en (i), a demostrar que, para todo $f\in S_d$, $S_{(f)}$ es una $A$-álgebra de tipo finito.
+    En virtud de \sref{II.2.2.5}, basta demostrar que $S^{(d)}$ es una $A$-álgebra de tipo finito, lo que resulta de \sref{II.2.1.6}.
+\end{enumerate}
+\end{proof}
+
+\begin{env}[2.7.2]
+\label{II.2.7.2}
+En lo que sigue, consideraremos las siguientes condiciones de finitud para un $S$-módulo graduado $M$:
+\begin{enumerate}
+  \item[{\rm(TF)}] Existe un entero $n$ tal que el submódulo $\bigoplus_{k\geq n}M_k$ es un $S$-módulo de tipo finito.
+  \item[{\rm(TN)}] Existe un entero $n$ tal que $M_k=0$ para $k\geq n$.
+\end{enumerate}
+
+Si $M$ satisface (TN), se tiene $M_{(f)}=0$ para todo $f$ homogéneo en $S_+$ y, por tanto, $\widetilde{M}=0$.
+
+Sean $M$ y $N$ dos $S$-módulos graduados; se dice que un homomorfismo $u:M\to N$ de grado $0$ es (TN)-\emph{inyectivo} (resp. (TN)-\emph{sobreyectivo}, (TN)-\emph{biyectivo}) si existe un entero $n$ tal que $u_k:M_k\to N_k$ es inyectivo (resp. sobreyectivo, biyectivo) para $k\geq n$.
+Decir que $u$ es (TN)-inyectivo (resp. (TN)-sobreyectivo) se reduce, pues, a decir que $\Ker u$ (resp. $\Coker u$) satisface (TN).
+En virtud de \sref{II.2.5.4}, si $u$ es (TN)-inyectivo (resp. (TN)-sobreyectivo, (TN)-biyectivo), entonces $\widetilde{u}$ es inyectivo (resp. sobreyectivo, biyectivo); si $u$ es (TN)-biyectivo, se dice también que $u$ es un (TN)-\emph{isomorfismo}.
+\end{env}
+
+\begin{proposition}[2.7.3]
+\label{II.2.7.3}
+Sea $S$ un anillo graduado tal que el ideal $S_+$ sea de tipo finito, y sea $M$ un $S$-módulo graduado.
+\begin{enumerate}
+  \item[{\rm(i)}] Si $M$ satisface la condición (TF), el $\sh{O}_X$-módulo $\widetilde{M}$ es de tipo finito.
+  \item[{\rm(ii)}] Supongamos que $M$ satisface (TF); para que $\widetilde{M}=0$, es necesario y suficiente que $M$ satisfaga (TN).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Acabamos de ver que la condición (TN) implica que $\widetilde{M}=0$.
+Si $M$ satisface (TF), el submódulo graduado $M'=\bigoplus_{k\geq n}M_k$, que es por hipótesis de tipo finito, es tal que $M/M'$ satisface (TN); por consiguiente, $(M/M')\supertilde=0$, y la exactitud del funtor $\widetilde{M}$ \sref{II.2.5.4} implica que $\widetilde{M}=\widetilde M'$; para demostrar que $\widetilde{M}$ es de tipo finito, podemos reducirnos, pues, al caso en que $M$ es \emph{de tipo finito}.
+Como la cuestión es local, basta demostrar que $M_{(f)}$ es un $S_{(f)}$-módulo de tipo finito \sref[I]{I.1.3.9}; pero $M^{(d)}$ es un $S^{(d)}$-módulo de tipo finito \sref{II.2.1.6}[iii], y nuestra afirmación resulta entonces de \sref{II.2.2.5}.
+
+Supongamos ahora que $M$ satisface (TF) y que $\widetilde{M}=0$; entonces, con las mismas notaciones que antes, se tiene $\widetilde M'=0$, y la condición (TN) para $M'$ equivale a la condición (TN) para $M$, de modo que, para demostrar que $\widetilde{M}=0$ implica que $M$ satisface (TN), podemos limitarnos de nuevo al caso en que $M$ está generado por un número finito de elementos homogéneos $x_i$ ($1\leq i\leq p$); sea, por otra parte, $(f_j)_{1\leq j\leq q}$ un sistema de generadores homogéneos del ideal $S_+$.
+Por hipótesis, $M_{(f_j)}=0$ para todo $j$ y, por tanto, existe un entero $n$ tal que $f_j^nx_i=0$ cualesquiera que sean $i$ y $j$.
+Sea $n_j$ el grado de $f_j$, y sea $m$ el mayor valor de $\sum_j r_jn_j$ sobre el conjunto finito de sistemas de enteros no negativos $(r_j)$ tales que $\sum_jr_j\leq nq$; es claro entonces
+----- French corrections on page II 38 -----
+[id 1897]
+OLD: alors, en raison
+NEW: alors en raison
+FRENCH CONTEXT (corrected): t $n>0$. Soit alors
+$z\in M_{nd}=\Gamma(X,\mathcal{F}(nd))$ ($n>0$)~; s'il existe un entier
+$k\geq0$ tel que la restriction à $D_+(f)$ de $f^kz$, c'est-à-dire la
+\oldpage[II]{38}
+section
+$(z|D_+(f))(\alpha_d(f^k)|D_+(f))$ de $\mathcal{F}((n+k)d)$, soit nulle,
+alors en raison de la remarque précédente, on a aussi $z|D_+(f)=0$. Cela
+montre que l'on définit un $S_{(f)}$-homomorphisme
+$\beta_f:M_{(f)}\to\Gamma(D_+(f),\mathcal{F})$ en faisant correspondre à
+l'élément $z/f^n$ la section
+$(z|D_+(f))(\alpha_d(f^n)|D_+(f))^{-1}$ de $\math
+
+[id 1898]
+OLD: \beta:\widetilde{\Gamma_*(\mathcal{F})}
+NEW: \beta:(\Gamma_*(\mathcal{F}))\supertilde
+FRENCH CONTEXT (corrected): ement à $\Gamma(D_+(f),\widetilde{M})$ et que les
+$D_+(f)$ forment une base de la topologie de $X$
+(\hyperref[II.2.3.4-fr]{2.3.4}), on voit que les $\beta_f$ proviennent d'un
+unique homomorphisme canonique de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.6.4.2-fr}
+  \beta:(\Gamma_*(\mathcal{F}))\supertilde
+  \longrightarrow\mathcal{F}
+\tag{2.6.4.2}
+\]
+(aussi noté $\beta_{\mathcal{F}}$) qui est évidemment fonctoriel.
+\end{env}
+
+\begin{proposition}[2.6.5]
+\label{II.2.6.5-fr}
+Soient $M$ un $S$-module gradué, $\mathcal{F}$ un $\mathcal{O}_X$-Module~;
+alors les homo
+
+[id 1899]
+OLD: \widetilde{\Gamma_*(\widetilde{M})}
+NEW: (\Gamma_*(\widetilde{M}))\supertilde
+FRENCH CONTEXT (corrected): mment fonctoriel.
+\end{env}
+
+\begin{proposition}[2.6.5]
+\label{II.2.6.5-fr}
+Soient $M$ un $S$-module gradué, $\mathcal{F}$ un $\mathcal{O}_X$-Module~;
+alors les homomorphismes composés
+\[
+\label{II.2.6.5.1-fr}
+  \widetilde{M}\xrightarrow{\widetilde{\alpha}}
+  (\Gamma_*(\widetilde{M}))\supertilde
+  \xrightarrow{\beta}\widetilde{M}
+\tag{2.6.5.1}
+\]
+\[
+\label{II.2.6.5.2-fr}
+  \Gamma_*(\mathcal{F})\xrightarrow{\alpha}
+  \Gamma_*((\Gamma_*(\mathcal{F}))\supertilde)
+  \xrightarrow{\Gamma_*(\beta)}\Gamma_*(\mathcal{F})
+\tag{2.6.5.2}
+\]
+sont les isomorphisme
+
+[id 1900]
+OLD: \Gamma_*(\widetilde{\Gamma_*(\mathcal{F})})
+NEW: \Gamma_*((\Gamma_*(\mathcal{F}))\supertilde)
+FRENCH CONTEXT (corrected):  homomorphismes composés
+\[
+\label{II.2.6.5.1-fr}
+  \widetilde{M}\xrightarrow{\widetilde{\alpha}}
+  (\Gamma_*(\widetilde{M}))\supertilde
+  \xrightarrow{\beta}\widetilde{M}
+\tag{2.6.5.1}
+\]
+\[
+\label{II.2.6.5.2-fr}
+  \Gamma_*(\mathcal{F})\xrightarrow{\alpha}
+  \Gamma_*((\Gamma_*(\mathcal{F}))\supertilde)
+  \xrightarrow{\Gamma_*(\beta)}\Gamma_*(\mathcal{F})
+\tag{2.6.5.2}
+\]
+sont les isomorphismes identiques.
+\end{proposition}
+
+\begin{proof}
+La vérification de (\hyperref[II.2.6.5.1-fr]{2.6.5.1}) est locale~: dans un
+ouvert $D_+(f)$, elle résulte aussitôt des dé
+
+[id 1901]
+OLD: {I, 1.3.8}
+NEW: {\textbf{I}, 1.3.8}
+FRENCH CONTEXT (corrected): fg)}
+    \ar[r]_{\mu_{fg}}
+    & \operatorname{Hom}_{S_{(fg)}}(M_{(fg)},N_{(fg)})
+  }
+\]
+(la flèche de gauche étant l'homomorphisme canonique, celle de droite
+provenant des homomorphismes canoniques). On en conclut encore (compte
+tenu de (\hyperref[I.1.3.8-fr]{\textbf{I}, 1.3.8})) que les $\mu_f$ définissent un
+homomorphisme canonique fonctoriel de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.5.12.2-fr}
+  \mu:(\operatorname{Hom}_S(M,N))\supertilde
+  \longrightarrow
+  \mathcal{H}om_{\mathcal{O}_X}(\widetilde{M},\widetilde{N}).
+\tag{2.5.12.2
+
+=================== PAGE II 39 ===================
+----- (Spanish page II 38: shown above in this file) -----
+----- (Spanish page II 39: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 40 -----
+\oldpage[II]{40}
+que, si $k>m$, se tiene $S_kx_i=0$ para todo $i$; si $h$ es el mayor de los grados de los $x_i$, se concluye que $M_k=0$ para $k>h+m$, lo que termina la demostración.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 40.
+
+\begin{corollary}[2.7.4]
+\label{II.2.7.4}
+Sea $S$ un anillo graduado tal que el ideal $S_+$ sea de tipo finito; para que $X=\Proj(S)=\emp$, es necesario y suficiente que exista $n$ tal que $S_k=0$ para $k\geq n$.
+\end{corollary}
+
+\begin{proof}
+La condición $X=\emp$ equivale, en efecto, a $\sh{O}_X=\widetilde{S}=0$, y $S$ es un $S$-módulo monógeno.
+\end{proof}
+
+\begin{theorem}[2.7.5]
+\label{II.2.7.5}
+Supongamos que el ideal $S_+$ está generado por un número finito de elementos homogéneos de grado $1$; sea $X=\Proj(S)$.
+Entonces, para todo $\sh{O}_X$-módulo cuasi-coherente $\sh{F}$, el homomorfismo canónico $\beta:(\Gamma_\bullet(\sh{F}))\supertilde\to\sh{F}$ \sref{II.2.6.4} es un isomorfismo.
+\end{theorem}
+
+\begin{proof}
+Si $S_+$ está generado por un número finito de elementos $f_i\in S_1$, entonces $X$ es la unión de los subespacios $\Spec(S_{(f_i)})$ \sref{II.2.3.6}, que son cuasi-compactos, y por tanto $X$ es cuasi-compacto; además, $X$ es un esquema \sref{II.2.4.2}; según \sref[I]{I.9.3.2}, \sref{II.2.5.14.2} y \sref{II.2.6.3}, se tiene, para todo $f\in S_d$ ($d>0$), un isomorfismo canónico $(\Gamma_\bullet(\sh{F}))_{(\alpha_d(f))}\simto\Gamma(D_+(f),\sh{F})$; por otra parte, por definición, $(\Gamma_\bullet(\sh{F}))_{(\alpha_d(f))}$ (donde $\Gamma_\bullet(\sh{F})$ se considera como $\Gamma_\bullet(\sh{O}_X)$-módulo) no es otro que $(\Gamma_\bullet(\sh{F}))_{(f)}$ (donde $\Gamma_\bullet(\sh{F})$ se considera como $S$-módulo); si nos remitimos a la definición \sref[I]{I.9.3.1} del isomorfismo canónico anterior, se ve que coincide con el homomorfismo $\beta_f$, de donde resulta el teorema.
+\end{proof}
+
+\begin{remark}[2.7.6]
+\label{II.2.7.6}
+Si se supone que el anillo graduado $S$ es \emph{noetheriano}, la condición de \sref{II.2.7.5} se cumple \emph{ipso facto} en cuanto se supone que el ideal $S_+$ está generado por el conjunto $S_1$ de los elementos homogéneos de grado $1$.
+\end{remark}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 40-41.
+
+\begin{corollary}[2.7.7]
+\label{II.2.7.7}
+Bajo las hipótesis de \sref{II.2.7.5}, todo $\sh{O}_X$-módulo cuasi-coherente $\sh{F}$ es isomorfo a un $\sh{O}_X$-módulo de la forma $\widetilde{M}$, donde $M$ es un $S$-módulo graduado.
+\end{corollary}
+
+\begin{corollary}[2.7.8]
+\label{II.2.7.8}
+Bajo las hipótesis de \sref{II.2.7.5}, todo $\sh{O}_X$-módulo cuasi-coherente de tipo finito $\sh{F}$ es isomorfo a un $\sh{O}_X$-módulo de la forma $\widetilde{N}$, donde $N$ es un $S$-módulo graduado de tipo finito.
+\end{corollary}
+
+\begin{proof}
+Podemos suponer que $\sh{F}=\widetilde{M}$, donde $M$ es un $S$-módulo graduado \sref{II.2.7.7}.
+Sea $(f_\lambda)_{\lambda\in L}$ un sistema de generadores homogéneos de $M$; para todo subconjunto finito $H$ de $L$, sea $M_H$ el submódulo graduado de $M$ generado por los $f_\lambda$ tales que $\lambda\in H$; es claro que $M$ es el límite directo de sus submódulos $M_H$ y, por tanto, $\sh{F}$ es el límite directo de sus sub-$\sh{O}_X$-módulos $\widetilde M_H$ \sref{II.2.5.4}.
+Pero, como $\sh{F}$ es de tipo finito y el espacio subyacente de $X$ es cuasi-compacto, resulta de \sref[0]{0.5.2.3} que $\sh{F}=\widetilde M_H$ para algún subconjunto finito $H$ de $L$.
+\end{proof}
+
+\begin{corollary}[2.7.9]
+\label{II.2.7.9}
+Bajo las hipótesis de \sref{II.2.7.5}, sea $\sh{F}$ un $\sh{O}_X$-módulo cuasi-coherente de tipo finito.
+Existe entonces un entero $n_0$ tal que, para todo $n\geq n_0$, $\sh{F}(n)$ es isomorfo a un cociente de un $\sh{O}_X$-módulo de la forma $\sh{O}_X^k$ (para cierto $k>0$ que depende de $n$) y, por consiguiente, está generado por un número finito de sus secciones sobre $X$ \sref[0]{0.5.1.1}.
+\end{corollary}
+
+\begin{proof}
+En virtud de \sref{II.2.7.8}, podemos suponer que $\sh{F}=\widetilde{M}$, donde $M$ es un cociente de una suma directa finita de $S$-módulos de la forma $S(m_i)$; en virtud de \sref{II.2.5.4}, podemos, pues, limitarnos al caso en que $M=S(m)$, de modo que $\sh{F}(n)=(S(m+n))\supertilde=\sh{O}_X(m+n)$ \sref{II.2.5.15}.
+Basta entonces demostrar
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 41.
+----- French corrections on page II 39 -----
+[id 1903]
+OLD: Il existe un entier $n$ tel que le sous-module
+    $\bigoplus_{k\geq n}M_k$ soit un $S$-module de type fini.
+NEW: \emph{Il existe un entier $n$ tel que le sous-module
+    $\bigoplus_{k\geq n}M_k$ soit un $S$-module de type fini.}
+FRENCH CONTEXT (corrected): qui résulte de
+    (\hyperref[II.2.1.6-fr]{2.1.6}).
+\end{enumerate}
+\end{proof}
+
+\begin{env}[2.7.2]
+\label{II.2.7.2-fr}
+Nous considérerons dans ce qui suit les conditions de finitude suivantes pour
+un $S$-module gradué $M$~:
+\begin{enumerate}
+  \item[\rm(TF)] \emph{Il existe un entier $n$ tel que le sous-module
+    $\bigoplus_{k\geq n}M_k$ soit un $S$-module de type fini.}
+  \item[\rm(TN)] \emph{Il existe un entier $n$ tel que $M_k=0$ pour $k\geq n$.}
+\end{enumerate}
+
+Si $M$ vérifie (TN), on a $M_{(f)}=0$ pour tout $f$ homogène dans $S_+$,
+donc $\widetilde{M}=0$.
+
+Soient $M$, $N$ deux $S$-modules gradués~; on dit qu'un homomorp
+
+[id 1904]
+OLD: Il existe un entier $n$ tel que $M_k=0$ pour $k\geq n$.
+NEW: \emph{Il existe un entier $n$ tel que $M_k=0$ pour $k\geq n$.}
+FRENCH CONTEXT (corrected): erons dans ce qui suit les conditions de finitude suivantes pour
+un $S$-module gradué $M$~:
+\begin{enumerate}
+  \item[\rm(TF)] \emph{Il existe un entier $n$ tel que le sous-module
+    $\bigoplus_{k\geq n}M_k$ soit un $S$-module de type fini.}
+  \item[\rm(TN)] \emph{Il existe un entier $n$ tel que $M_k=0$ pour $k\geq n$.}
+\end{enumerate}
+
+Si $M$ vérifie (TN), on a $M_{(f)}=0$ pour tout $f$ homogène dans $S_+$,
+donc $\widetilde{M}=0$.
+
+Soient $M$, $N$ deux $S$-modules gradués~; on dit qu'un homomorphisme
+$u:M\to N$ de degré $0$ est (TN)-\emph{injectif} (resp.
+(TN)-\emph{surject
+
+[id 1905]
+OLD: la condition (TF),
+NEW: la condition \textup{(TF)},
+FRENCH CONTEXT (corrected): f, on dit encore que $u$
+est un (TN)-\emph{isomorphisme}.
+\end{env}
+
+\begin{proposition}[2.7.3]
+\label{II.2.7.3-fr}
+Soient $S$ un anneau gradué tel que l'idéal $S_+$ soit de type fini, $M$ un
+$S$-module gradué.
+\begin{enumerate}
+  \item[\rm(i)] Si $M$ vérifie la condition \textup{(TF)}, le $\mathcal{O}_X$-Module
+    $\widetilde{M}$ est de type fini.
+  \item[\rm(ii)] Supposons que $M$ vérifie \textup{(TF)}~; pour que $\widetilde{M}=0$,
+    il faut et il suffit que $M$ vérifie \textup{(TN)}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On 
+
+[id 1906]
+OLD: vérifie (TF)~; pour que
+NEW: vérifie \textup{(TF)}~; pour que
+FRENCH CONTEXT (corrected): un anneau gradué tel que l'idéal $S_+$ soit de type fini, $M$ un
+$S$-module gradué.
+\begin{enumerate}
+  \item[\rm(i)] Si $M$ vérifie la condition \textup{(TF)}, le $\mathcal{O}_X$-Module
+    $\widetilde{M}$ est de type fini.
+  \item[\rm(ii)] Supposons que $M$ vérifie \textup{(TF)}~; pour que $\widetilde{M}=0$,
+    il faut et il suffit que $M$ vérifie \textup{(TN)}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On vient de voir que la condition (TN) implique $\widetilde{M}=0$. Si $M$
+vérifie (TF), le sous-module gradué $M'=\bigoplus_{k\geq n}M_
+
+[id 1907]
+OLD: il suffit que $M$ vérifie (TN).
+NEW: il suffit que $M$ vérifie \textup{(TN)}.
+FRENCH CONTEXT (corrected): $-module gradué.
+\begin{enumerate}
+  \item[\rm(i)] Si $M$ vérifie la condition \textup{(TF)}, le $\mathcal{O}_X$-Module
+    $\widetilde{M}$ est de type fini.
+  \item[\rm(ii)] Supposons que $M$ vérifie \textup{(TF)}~; pour que $\widetilde{M}=0$,
+    il faut et il suffit que $M$ vérifie \textup{(TN)}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On vient de voir que la condition (TN) implique $\widetilde{M}=0$. Si $M$
+vérifie (TF), le sous-module gradué $M'=\bigoplus_{k\geq n}M_k$ qui est par
+hypothèse de type fini, est tel que $M/M'$ satisfasse à (TN)
+
+[id 1911]
+OLD: au cas où $M$ est de type fini.
+NEW: au cas où $M$ est \emph{de type fini}.
+FRENCH CONTEXT (corrected): el que $M/M'$ satisfasse à (TN)~; on a par suite
+$(M/M')\supertilde=0$, et l'exactitude du foncteur
+$\widetilde{M}$ (\hyperref[II.2.5.4-fr]{2.5.4}) entraîne
+$\widetilde{M}=\widetilde{M}'$~; pour prouver que $\widetilde{M}$ est de type
+fini, on est donc ramené au cas où $M$ est \emph{de type fini}. La question étant
+locale, il suffit de prouver que $M_{(f)}$ est un $S_{(f)}$-module de type
+fini (\hyperref[I.1.3.9-fr]{\textbf{I}, 1.3.9})~; mais $M^{(d)}$ est un
+$S^{(d)}$-module de type fini (\hyperref[II.2.1.6-fr]{2.1.6, (iii)}) et notre
+assertion résult
+
+[id 1912]
+OLD: {I, 1.3.9}
+NEW: {\textbf{I}, 1.3.9}
+FRENCH CONTEXT (corrected):  la proposition.
+\end{proof}
+
+On notera $\widetilde{u}$ l'homomorphisme
+$\widetilde{M}\to\widetilde{N}$ correspondant à un homomorphisme de degré
+$0$, $u:M\to N$. On déduit aussitôt de
+(\hyperref[II.2.5.4-fr]{2.5.4}) que les résultats de
+(\hyperref[I.1.3.9-fr]{\textbf{I}, 1.3.9} et
+\hyperref[I.1.3.10-fr]{1.3.10}) sont encore valables pour les
+$S$-modules gradués et les homomorphismes de degré $0$ (avec le sens donné
+ici à $\widetilde{M}$), les démonstrations étant purement formelles.
+
+\begin{proposition}[2.5.5]
+\label{II.2.5.5-fr}
+Po
+
+=================== PAGE II 40 ===================
+----- (Spanish page II 39: shown above in this file) -----
+----- (Spanish page II 40: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 41 -----
+\oldpage[II]{41}
+  \begin{lemma}[2.7.9.1]
+  \label{II.2.7.9.1}
+  Bajo las hipótesis de \sref{II.2.7.5}, para todo $n\geq0$, existe un entero $k$ (que depende de $n$) y un homomorfismo sobreyectivo $\sh{O}_X^k\to\sh{O}_X(n)$.
+  \end{lemma}
+
+Basta \sref{II.2.7.2} demostrar que, para un $k$ conveniente, existe un homomorfismo (TN)-sobreyectivo $u$ \emph{de grado $0$} del $S$-módulo graduado producto $S^k$ en $S(n)$.
+Ahora bien, $(S(n))_0=S_n$ y, por hipótesis, $S_h=S_1^h$ para todo $h>0$, de modo que $SS_n=S_n+S_{n+1}+\ldots$.
+Como $S_n$ es un $S_0$-módulo de tipo finito (\sref{II.2.1.5} y \sref{II.2.1.6}[i]), consideremos un sistema de generadores $(a_i)_{1\leq i\leq k}$ de este módulo; el homomorfismo $u$ hará corresponder al $i$-ésimo elemento de la base canónica de $S^k$ el elemento $a_i$ ($1\leq i\leq k$); como $\Coker u$ se identifica entonces con $(S(n))_{-n}+\ldots+(S(n))_{-1}$, $u$ responde efectivamente a la cuestión.
+\end{proof}
+
+\begin{corollary}[2.7.10]
+\label{II.2.7.10}
+Bajo las hipótesis de \sref{II.2.7.5}, sea $\sh{F}$ un $\sh{O}_X$-módulo cuasi-coherente de tipo finito.
+Existe entonces un entero $n_0$ tal que, para todo $n\geq n_0$, $\sh{F}$ es isomorfo a un cociente de un $\sh{O}_X$-módulo de la forma $(\sh{O}_X(-n))^k$ (para cierto $k$ que depende de $n$).
+\end{corollary}
+
+\begin{proposition}[2.7.11]
+\label{II.2.7.11}
+Supongamos que se cumplen las hipótesis de \sref{II.2.7.5}, y sea $M$ un $S$-módulo graduado.
+Entonces:
+\begin{enumerate}
+  \item[{\rm(i)}] El homomorfismo canónico $\widetilde{\alpha}:\widetilde{M}\to(\Gamma_\bullet(\widetilde{M}))\supertilde$ es un isomorfismo.
+  \item[{\rm(ii)}] Sea $\sh{G}$ un sub-$\sh{O}_X$-módulo cuasi-coherente de $\widetilde{M}$, y sea $N$ el sub-$S$-módulo graduado de $M$ dado por la imagen inversa de $\Gamma_\bullet(\sh{G})$ mediante $\alpha$.
+    Entonces $\widetilde{N}=\sh{G}$ (identificándose $\widetilde{N}$, en virtud de \sref{II.2.5.4}, con un sub-$\sh{O}_X$-módulo de $\widetilde{M}$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Como $\beta:(\Gamma_\bullet(\widetilde{M}))\supertilde\to\widetilde{M}$ es un isomorfismo (en virtud de \sref{II.2.7.5}), $\widetilde{\alpha}$ es el isomorfismo inverso (en virtud de \sref{II.2.6.5.1}), de donde resulta (i).
+Sea $P$ el submódulo graduado $\alpha(M)$ de $\Gamma_\bullet(\widetilde{M})$;
+como $\widetilde{M}$ es un funtor exacto \sref{II.2.5.4}, la imagen de $\widetilde{M}$ mediante $\widetilde{\alpha}$ es igual a $\widetilde{P}$ y, por tanto, en virtud de (i), $\widetilde{P}=(\Gamma_\bullet(\widetilde{M}))\supertilde$.
+Pongamos $Q=\Gamma_\bullet(\sh{G})\cap P$; en virtud de lo que precede y de \sref{II.2.5.4}, se tiene $\widetilde{Q}=(\Gamma_\bullet(\sh{G}))\supertilde$, y la restricción de $\beta$ a $\widetilde{Q}$ es, pues, un \emph{isomorfismo} de este $\sh{O}_X$-módulo sobre $\sh{G}$ por \sref{II.2.7.5}.
+Pero, por definición de $N$ y por \sref{II.2.5.4}, la restricción del isomorfismo $\widetilde{\alpha}$ a $\widetilde{N}$ es un isomorfismo de $\widetilde{N}$ sobre $\widetilde{Q}$, de donde resulta la conclusión por \sref{II.2.6.5.1}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 41-42.
+
+\subsection{Comportamientos funtoriales}
+\label{subsection:II.2.8}
+
+\begin{env}[2.8.1]
+\label{II.2.8.1}
+Sean $S$ y $S'$ dos anillos graduados en grados positivos, y sea $\vphi:S'\to S$ un homomorfismo de anillos graduados.
+Designaremos por $G(\vphi)$ la parte abierta de $X=\Proj(S)$ complementaria de $V_+(\vphi(S'_+))$ o, lo que equivale a lo mismo, la unión de los $D_+(\vphi(f'))$, donde $f'$ recorre el conjunto de los elementos homogéneos de $S'_+$.
+La restricción a $G(\vphi)$ de la aplicación continua ${}^a\vphi$ de $\Spec(S)$ en $\Spec(S')$ \sref[I]{I.1.2.1} es, pues, una aplicación continua de $G(\vphi)$ en $\Proj(S')$, que seguiremos denotando, por abuso de lenguaje, por ${}^a\vphi$.
+Si $f'\in S'_+$ es homogéneo, se tiene
+\[
+\label{II.2.8.1.1}
+  {}^a\vphi^{-1}(D_+(f')) = D_+(\vphi(f'))
+\tag{2.8.1.1}
+\]
+teniendo en cuenta que ${}^a\vphi$ aplica $G(\vphi)$ en $\Proj(S')$, así como \sref[I]{I.1.2.2.2}.
+El homomorfismo $\vphi$ define también canónicamente (con las mismas notaciones) un homomorfismo de anillos graduados $S'_{f'}\to S_f$, de donde se obtiene, por restricción a los elementos de grado $0$,
+----- French corrections on page II 40 -----
+[id 1762]
+OLD: \beta:\widetilde{\Gamma_*(\mathcal{F})}
+NEW: \beta:(\Gamma_*(\mathcal{F}))\supertilde
+FRENCH CONTEXT (corrected): ement à $\Gamma(D_+(f),\widetilde{M})$ et que les
+$D_+(f)$ forment une base de la topologie de $X$
+(\hyperref[II.2.3.4-fr]{2.3.4}), on voit que les $\beta_f$ proviennent d'un
+unique homomorphisme canonique de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.6.4.2-fr}
+  \beta:(\Gamma_*(\mathcal{F}))\supertilde
+  \longrightarrow\mathcal{F}
+\tag{2.6.4.2}
+\]
+(aussi noté $\beta_{\mathcal{F}}$) qui est évidemment fonctoriel.
+\end{env}
+
+\begin{proposition}[2.6.5]
+\label{II.2.6.5-fr}
+Soient $M$ un $S$-module gradué, $\mathcal{F}$ un $\mathcal{O}_X$-Module~;
+alors les homo
+
+[id 1763]
+OLD: (\hyperref[II.2.6.4-fr]{2.6.4})
+NEW: \textup{(\hyperref[II.2.6.4-fr]{2.6.4})}
+FRENCH CONTEXT (corrected): S_+$ est engendré par un nombre fini d'éléments
+homogènes de degré $1$~; soit $X=\operatorname{Proj}(S)$. Alors, pour tout
+$\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$, l'homomorphisme
+canonique $\beta:(\Gamma_*(\mathcal{F}))\supertilde
+\to\mathcal{F}$ \textup{(\hyperref[II.2.6.4-fr]{2.6.4})} est un isomorphisme.
+\end{theorem}
+
+\begin{proof}
+En effet, si $S_+$ est engendré par un nombre fini d'éléments $f_i\in S_1$,
+$X$ est réunion des sous-espaces $\operatorname{Spec}(S_{(f_i)})$
+(\hyperref[II.2.3.6-fr]{2.3.6}) qui sont quasi-compacts, donc est
+q
+
+[id 1764]
+OLD: {I, 9.3.2}
+NEW: {\textbf{I}, 9.3.2}
+FRENCH CONTEXT (corrected): éments $f_i\in S_1$,
+$X$ est réunion des sous-espaces $\operatorname{Spec}(S_{(f_i)})$
+(\hyperref[II.2.3.6-fr]{2.3.6}) qui sont quasi-compacts, donc est
+quasi-compact~; en outre $X$ est un schéma
+(\hyperref[II.2.4.2-fr]{2.4.2})~; d'après
+(\hyperref[I.9.3.2-fr]{\textbf{I}, 9.3.2}),
+(\hyperref[II.2.5.14.2-fr]{2.5.14.2}) et
+(\hyperref[II.2.6.3-fr]{2.6.3}) on a, pour tout $f\in S_d$ ($d>0$), un
+isomorphisme canonique
+$(\Gamma_*(\mathcal{F}))_{(\alpha_d(f))}\xrightarrow{\sim}
+\Gamma(D_+(f),\mathcal{F})$~; d'ailleurs, par définition,
+$(\Ga
+
+[id 1765]
+OLD: {I, 9.3.1}
+NEW: {\textbf{I}, 9.3.1}
+FRENCH CONTEXT (corrected): lpha_d(f))}$ (où $\Gamma_*(\mathcal{F})$ est
+considéré comme $\Gamma_*(\mathcal{O}_X)$-module) n'est autre que
+$(\Gamma_*(\mathcal{F}))_{(f)}$ (où $\Gamma_*(\mathcal{F})$ est considéré
+comme $S$-module)~; si on se reporte à la définition
+(\hyperref[I.9.3.1-fr]{\textbf{I}, 9.3.1}) de l'isomorphisme canonique précédent, on
+voit qu'il coïncide avec l'homomorphisme $\beta_f$, d'où le théorème.
+\end{proof}
+
+\begin{remark}[2.7.6]
+\label{II.2.7.6-fr}
+Si on suppose l'anneau gradué $S$ \emph{noethérien}, la condition de
+(\hyperref[II.2.7.5-fr
+
+[id 1766]
+OLD: II.2.7.7-fr}
+Sous les hypothèses de (\hyperref[II.2.7.5-fr]{2.7.5})
+NEW: II.2.7.7-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}
+FRENCH CONTEXT (corrected): au gradué $S$ \emph{noethérien}, la condition de
+(\hyperref[II.2.7.5-fr]{2.7.5}) est vérifiée \emph{ipso facto} dès que l'on
+suppose l'idéal $S_+$ engendré par l'ensemble $S_1$ des éléments homogènes de
+degré $1$.
+\end{remark}
+
+\begin{corollary}[2.7.7]
+\label{II.2.7.7-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, tout
+$\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$ est isomorphe à un
+$\mathcal{O}_X$-Module de la forme $\widetilde{M}$, où $M$ est un $S$-module
+gradué.
+\end{corollary}
+
+\begin{corollary}[2.7.8]
+\label{II.2.7.8-fr}
+Sous les hypothèses de \textup{(\hy
+
+[id 1767]
+OLD: II.2.7.8-fr}
+Sous les hypothèses de (\hyperref[II.2.7.5-fr]{2.7.5})
+NEW: II.2.7.8-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}
+FRENCH CONTEXT (corrected): èses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, tout
+$\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$ est isomorphe à un
+$\mathcal{O}_X$-Module de la forme $\widetilde{M}$, où $M$ est un $S$-module
+gradué.
+\end{corollary}
+
+\begin{corollary}[2.7.8]
+\label{II.2.7.8-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, tout
+$\mathcal{O}_X$-Module quasi-cohérent de type fini $\mathcal{F}$ est
+isomorphe à un $\mathcal{O}_X$-Module de la forme $\widetilde{N}$, où $N$ est
+un $S$-module gradué de type fini.
+\end{corollary}
+
+\begin{proof}
+On peut supposer $\mathcal{F}=\widetilde
+
+[id 1769]
+OLD: {0, 5.2.3}
+NEW: {\textbf{0}, 5.2.3}
+FRENCH CONTEXT (corrected): peratorname{Coker}\widetilde{v}$ et $\operatorname{Im}\widetilde{v}$
+des $\widetilde{B}$-Modules). Si $N$ est un $B$-module, $\widetilde{N}$ est
+un $\widetilde{B}$-Module de type fini si et seulement si $N$ est un
+$B$-module de type fini (\hyperref[0.5.2.3-fr]{\textbf{0}, 5.2.3}).
+\oldpage[I]{90}
+Si $M$, $N$ sont deux $B$-modules, le $\widetilde{B}$-Module
+$\widetilde{M}\otimes_{\widetilde{B}}\widetilde{N}$ s'identifie
+canoniquement à $(M\otimes_B N)\supertilde$~; de même
+$\mathscr{H}\!om_{\widetilde{B}}(\widetilde{M},\widetilde{N})$
+
+[id 1771]
+OLD: II.2.7.9-fr}
+Sous les hypothèses de (\hyperref[II.2.7.5-fr]{2.7.5})
+NEW: II.2.7.9-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}
+FRENCH CONTEXT (corrected): 4}). Mais comme $\mathcal{F}$
+est de type fini et l'espace sous-jacent $X$ quasi-compact, il résulte de
+(\hyperref[0.5.2.3-fr]{\textbf{0}, 5.2.3}) que $\mathcal{F}=\widetilde{M}_H$ pour une
+partie finie $H$ de $L$.
+\end{proof}
+
+\begin{corollary}[2.7.9]
+\label{II.2.7.9-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, soit $\mathcal{F}$ un
+$\mathcal{O}_X$-Module quasi-cohérent de type fini. Il existe alors un entier
+$n_0$ tel que, pour tout $n\geq n_0$, $\mathcal{F}(n)$ soit isomorphe à un
+quotient d'un $\mathcal{O}_X$-Module de la forme $\mathcal{O}_X^k$ ($k>0$
+dépendant
+
+[id 1772]
+OLD: (\hyperref[0.5.1.1-fr]{0, 5.1.1})
+NEW: \textup{(\hyperref[0.5.1.1-fr]{\textbf{0}, 5.1.1})}
+FRENCH CONTEXT (corrected): ors un entier
+$n_0$ tel que, pour tout $n\geq n_0$, $\mathcal{F}(n)$ soit isomorphe à un
+quotient d'un $\mathcal{O}_X$-Module de la forme $\mathcal{O}_X^k$ ($k>0$
+dépendant de $n$), et par suite est engendré par un nombre fini de ses sections
+au-dessus de $X$ \textup{(\hyperref[0.5.1.1-fr]{\textbf{0}, 5.1.1})}.
+\end{corollary}
+
+\begin{proof}
+En vertu de (\hyperref[II.2.7.8-fr]{2.7.8}), on peut supposer que
+$\mathcal{F}=\widetilde{M}$, où $M$ est quotient d'une somme directe finie de
+$S$-modules de la forme $S(m_i)$~; en vertu de
+(\hyperref[II.2.5.4-fr]{2.5.4}) on p
+
+=================== PAGE II 41 ===================
+----- (Spanish page II 40: shown above in this file) -----
+----- (Spanish page II 41: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 42 -----
+\oldpage[II]{42}
+un homomorfismo $S'_{(f')}\to S_{(f)}$, que denotaremos por $\vphi_{(f)}$; le corresponde \sref[I]{I.1.6.1} un morfismo de esquemas afines $({}^a\vphi_{(f)},\widetilde{\vphi}_{(f)}):\Spec(S_{(f)})\to\Spec(S'_{(f')})$.
+Si se identifica canónicamente $\Spec(S_{(f)})$ con el esquema inducido por $\Proj(S)$ sobre $D_+(f)$ \sref{II.2.3.6}, se ha definido así un morfismo $\Phi_f:D_+(f)\to D_+(f')$, y ${}^a\vphi_{(f)}$ se identifica con la restricción de ${}^a\vphi$ a $D_+(f)$.
+Por otra parte, es inmediato que, si $g'$ es otro elemento homogéneo de $S'_+$ y $g=\vphi(g')$, el diagrama
+\[
+  \xymatrix{
+    D_+(f) \ar[r]^{\Phi_f}
+    & D_+(f')
+  \\D_+(fg) \ar[u] \ar[r]_{\Phi_{fg}}
+    & D_+(f'g') \ar[u]
+  }
+\]
+es conmutativo, en virtud de la conmutatividad del diagrama
+\[
+  \xymatrix{
+    S'_{(f')} \ar[r]^{\vphi_{(f)}} \ar[d]_{\omega_{f'g',f'}}
+    & S_{(f)} \ar[d]^{\omega_{fg,f}}
+  \\S'_{(f'g')} \ar[r]_{\vphi_{(fg)}}
+    & S_{(fg)}
+  }
+\]
+Teniendo en cuenta la definición de $G(\vphi)$ y \sref{II.2.3.3.2}, se ve, pues, que:
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 42-43.
+
+\begin{proposition}[2.8.2]
+\label{II.2.8.2}
+Dado un homomorfismo de anillos graduados $\vphi:S'\to S$, existe un único morfismo $({}^a\vphi,\widetilde{\vphi})$ del preesquema inducido $G(\vphi)$ en $\Proj(S')$ (llamado \emph{asociado a $\vphi$} y denotado por $\Proj(\vphi)$) tal que, para todo elemento homogéneo $f'\in S'_+$, la restricción de este morfismo a $D_+(\vphi(f'))$ coincide con el morfismo asociado al homomorfismo $S'_{(f')}\to S_{(\vphi(f'))}$ correspondiente a $\vphi$.
+\end{proposition}
+
+\begin{proof}
+Con las notaciones anteriores, si $f'\in S'_d$, el diagrama
+\[
+\label{II.2.8.2.1}
+  \xymatrix{
+    S'_{(f')} \ar[r]^{\vphi_{(f)}} \ar[d]_{\wr}
+    & S_{(f)} \ar[d]_{\wr}
+  \\ {S'}^{(d)}/(f'-1){S'}^{(d)} \ar[r]
+    & S^{(d)}/(f-1)S^{(d)}
+  }
+\tag{2.8.2.1}
+\]
+es conmutativo (siendo las flechas verticales los isomorfismos de \sref{II.2.2.5}).
+\end{proof}
+
+\begin{corollary}[2.8.3]
+\label{II.2.8.3}
+\begin{enumerate}
+  \item[{\rm(i)}] El morfismo $\Proj(\vphi)$ es afín.
+  \item[{\rm(ii)}] Si $\Ker(\vphi)$ es nilpotente (y, en particular, si $\vphi$ es inyectivo), el morfismo $\Proj(\vphi)$ es dominante.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La afirmación (i) es consecuencia inmediata de \sref{II.2.8.2} y \sref{II.2.8.1.1}.
+La afirmación (ii) resulta de que, si $\Ker(\vphi)$ es nilpotente, para todo $f'$ homogéneo en $S'_+$ se comprueba inmediatamente que $\Ker(\vphi_f)$ (con $f=\vphi(f')$) es nilpotente y, por tanto, también lo es $\Ker(\vphi_{(f)})$; se aplican entonces \sref{II.2.8.2} y \sref[I]{I.1.2.7}.
+\end{proof}
+----- French corrections on page II 41 -----
+[id 1774]
+OLD: (\hyperref[II.2.7.5-fr]{2.7.5}), pour tout
+NEW: \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, pour tout
+FRENCH CONTEXT (corrected): ) on peut donc se borner au cas où $M=S(m)$,
+donc $\mathcal{F}(n)=(S(m+n))\supertilde
+=\mathcal{O}_X(m+n)$ (\hyperref[II.2.5.15-fr]{2.5.15}). Il suffira donc de
+démontrer le
+
+\oldpage[II]{41}
+\begin{lemma}[2.7.9.1]
+\label{II.2.7.9.1-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, pour tout $n\geq0$,
+il existe un entier $k$ (dépendant de $n$) et un homomorphisme surjectif
+$\mathcal{O}_X^k\to\mathcal{O}_X(n)$.
+\end{lemma}
+
+Il suffit en effet (\hyperref[II.2.7.2-fr]{2.7.2}) de montrer que, pour un $k$
+convenable, il y a un homomorphisme (TN)-surje
+
+[id 1777]
+OLD: (\hyperref[II.2.7.5-fr]{2.7.5}), soit $\mathcal{F}$
+NEW: \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, soit $\mathcal{F}$
+FRENCH CONTEXT (corrected):  type fini et l'espace sous-jacent $X$ quasi-compact, il résulte de
+(\hyperref[0.5.2.3-fr]{\textbf{0}, 5.2.3}) que $\mathcal{F}=\widetilde{M}_H$ pour une
+partie finie $H$ de $L$.
+\end{proof}
+
+\begin{corollary}[2.7.9]
+\label{II.2.7.9-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.7.5-fr]{2.7.5})}, soit $\mathcal{F}$ un
+$\mathcal{O}_X$-Module quasi-cohérent de type fini. Il existe alors un entier
+$n_0$ tel que, pour tout $n\geq n_0$, $\mathcal{F}(n)$ soit isomorphe à un
+quotient d'un $\mathcal{O}_X$-Module de la forme $\mathcal{O}_X^k$ ($k>0$
+dépendant de $n$), et par sui
+
+[id 1778]
+OLD: (\hyperref[II.2.7.5-fr]{2.7.5}) et soit $M$
+NEW: \textup{(\hyperref[II.2.7.5-fr]{2.7.5})} et soit $M$
+FRENCH CONTEXT (corrected): , pour tout $n\geq n_0$, $\mathcal{F}$ soit isomorphe à un quotient
+d'un $\mathcal{O}_X$-Module de la forme $(\mathcal{O}_X(-n))^k$ ($k$
+dépendant de $n$).
+\end{corollary}
+
+\begin{proposition}[2.7.11]
+\label{II.2.7.11-fr}
+Supposons vérifiées les hypothèses de
+\textup{(\hyperref[II.2.7.5-fr]{2.7.5})} et soit $M$ un $S$-module gradué. Alors~:
+\begin{enumerate}
+  \item[\rm(i)] L'homomorphisme canonique
+    $\widetilde{\alpha}:\widetilde{M}\to
+    (\Gamma_*(\widetilde{M}))\supertilde$ est un isomorphisme.
+  \item[\rm(ii)] Soit $\mathcal{G}$ un sous-$\mathcal{O}_X$-Modul
+
+[id 1779]
+OLD: \widetilde{\Gamma_*(\widetilde{M})}$ est un isomorphisme.
+NEW: (\Gamma_*(\widetilde{M}))\supertilde$ est un isomorphisme.
+FRENCH CONTEXT (corrected): ion}[2.7.11]
+\label{II.2.7.11-fr}
+Supposons vérifiées les hypothèses de
+\textup{(\hyperref[II.2.7.5-fr]{2.7.5})} et soit $M$ un $S$-module gradué. Alors~:
+\begin{enumerate}
+  \item[\rm(i)] L'homomorphisme canonique
+    $\widetilde{\alpha}:\widetilde{M}\to
+    (\Gamma_*(\widetilde{M}))\supertilde$ est un isomorphisme.
+  \item[\rm(ii)] Soit $\mathcal{G}$ un sous-$\mathcal{O}_X$-Module
+    quasi-cohérent de $\widetilde{M}$, et soit $N$ le sous-$S$-module gradué
+    de $M$, image réciproque de $\Gamma_*(\mathcal{G})$ par $\alpha$. Alors
+    on a $\widetilde{N}=\mathcal{G}$ ($
+
+[id 1780]
+OLD: (\hyperref[II.2.5.4-fr]{2.5.4}), à un
+NEW: \textup{(\hyperref[II.2.5.4-fr]{2.5.4})}, à un
+FRENCH CONTEXT (corrected): athcal{O}_X$-Module
+    quasi-cohérent de $\widetilde{M}$, et soit $N$ le sous-$S$-module gradué
+    de $M$, image réciproque de $\Gamma_*(\mathcal{G})$ par $\alpha$. Alors
+    on a $\widetilde{N}=\mathcal{G}$ ($\widetilde{N}$ étant identifié, en
+    vertu de \textup{(\hyperref[II.2.5.4-fr]{2.5.4})}, à un
+    sous-$\mathcal{O}_X$-Module de $\widetilde{M}$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $\beta:(\Gamma_*(\widetilde{M}))\supertilde
+\to\widetilde{M}$ est un isomorphisme en vertu de
+(\hyperref[II.2.7.5-fr]{2.7.5}), $\widetilde{\alpha}$ est
+
+[id 1781]
+OLD: \beta:\widetilde{\Gamma_*(\widetilde{M})}
+NEW: \beta:(\Gamma_*(\widetilde{M}))\supertilde
+FRENCH CONTEXT (corrected):  $\alpha$. Alors
+    on a $\widetilde{N}=\mathcal{G}$ ($\widetilde{N}$ étant identifié, en
+    vertu de \textup{(\hyperref[II.2.5.4-fr]{2.5.4})}, à un
+    sous-$\mathcal{O}_X$-Module de $\widetilde{M}$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $\beta:(\Gamma_*(\widetilde{M}))\supertilde
+\to\widetilde{M}$ est un isomorphisme en vertu de
+(\hyperref[II.2.7.5-fr]{2.7.5}), $\widetilde{\alpha}$ est l'isomorphisme
+réciproque en vertu de (\hyperref[II.2.6.5.1-fr]{2.6.5.1}), d'où (i). Soit
+$P$ le sous-module gradué $\alpha(M)$ de $\Gamma_*(\widetilde
+
+[id 1782]
+OLD: $M\mapsto\widetilde{M}$ est un foncteur
+NEW: $\widetilde{M}$ est un foncteur
+FRENCH CONTEXT (corrected): etilde{M})\text{),}
+\]
+l'application canonique, de sorte que pour tout $x\in D(f)$ et tout
+$\xi\in M_f$, on a
+\begin{equation}
+  (\theta_f(\xi))_x=\rho_x^f(\xi).
+  \tag{1.3.4.1}\label{I.1.3.4.1-fr}
+\end{equation}
+
+\begin{proposition}[1.3.5]
+\label{I.1.3.5-fr}
+$\widetilde{M}$ est un foncteur covariant exact en $M$, de la catégorie des
+$A$-modules dans la catégorie des $\widetilde{A}$-Modules.
+\end{proposition}
+
+En effet, soient $M$, $N$ deux $A$-modules, $u$ un homomorphisme
+$M\to N$~; pour tout $f\in A$, il correspond canoniquement à $u$ un
+homo
+
+[id 1783]
+OLD: \widetilde{P}=\widetilde{\Gamma_*(\widetilde{M})}
+NEW: \widetilde{P}=(\Gamma_*(\widetilde{M}))\supertilde
+FRENCH CONTEXT (corrected): i). Soit
+$P$ le sous-module gradué $\alpha(M)$ de $\Gamma_*(\widetilde{M})$~; comme
+$\widetilde{M}$ est un foncteur exact
+(\hyperref[II.2.5.4-fr]{2.5.4}), l'image de $\widetilde{M}$ par
+$\widetilde{\alpha}$ est égale à $\widetilde{P}$, donc, en vertu de (i),
+$\widetilde{P}=(\Gamma_*(\widetilde{M}))\supertilde$. Posons
+$Q=\Gamma_*(\mathcal{G})\cap P$~; en vertu de ce qui précède et de
+(\hyperref[II.2.5.4-fr]{2.5.4}), on a
+$\widetilde{Q}=(\Gamma_*(\mathcal{G}))\supertilde$, donc la
+restriction de $\beta$ à $\widetilde{Q}$ est un \emph{isomorphisme} de ce
+$\mathcal{O
+
+[id 1784]
+OLD: \widetilde{Q}=\widetilde{\Gamma_*(\mathcal{G})}
+NEW: \widetilde{Q}=(\Gamma_*(\mathcal{G}))\supertilde
+FRENCH CONTEXT (corrected): $\widetilde{M}$ par
+$\widetilde{\alpha}$ est égale à $\widetilde{P}$, donc, en vertu de (i),
+$\widetilde{P}=(\Gamma_*(\widetilde{M}))\supertilde$. Posons
+$Q=\Gamma_*(\mathcal{G})\cap P$~; en vertu de ce qui précède et de
+(\hyperref[II.2.5.4-fr]{2.5.4}), on a
+$\widetilde{Q}=(\Gamma_*(\mathcal{G}))\supertilde$, donc la
+restriction de $\beta$ à $\widetilde{Q}$ est un \emph{isomorphisme} de ce
+$\mathcal{O}_X$-Module sur $\mathcal{G}$ par
+(\hyperref[II.2.7.5-fr]{2.7.5}). Mais par définition de $N$ et
+(\hyperref[II.2.5.4-fr]{2.5.4}), la restriction de l'isomorphisme
+$
+
+[id 1785]
+OLD: {I, 1.2.1}
+NEW: {\textbf{I}, 1.2.1}
+FRENCH CONTEXT (corrected): rname{Spec}(S_{(fg)})\ar[u]
+  }
+  \tag{2.3.5.1}
+\]
+où la flèche verticale de gauche est l'inclusion, et celle de droite est
+l'application ${}^a\omega_{fg,f}$ déduite de l'homomorphisme canonique
+$\omega=\omega_{fg,f}:S_{(f)}\to S_{(fg)}$
+(\hyperref[I.1.2.1-fr]{\textbf{I}, 1.2.1}). En effet, si
+$x/f^n\in\omega^{-1}(\psi_{fg}(\mathfrak{p}))$, où
+$fg\notin\mathfrak{p}$, on a par définition
+$g^n x/(fg)^n\in\psi_{fg}(\mathfrak{p})$, donc
+$g^n x\in\mathfrak{p}$ et par suite $x\in\mathfrak{p}$, et la réciproque
+est évidente.
+\end{env}
+
+\beg
+
+[id 1786]
+OLD: {I, 1.2.2.2}
+NEW: {\textbf{I}, 1.2.2.2}
+FRENCH CONTEXT (corrected): fines et
+alors $f=({}^a\varphi,\widetilde{\varphi})$, où $\varphi:A\to B$ est un
+homomorphisme. Comme les $D(g)$, où $g\in A$, forment une base de $S$, on est
+ramené au cas où $U=D(g)$~; mais on sait alors que
+$f^{-1}(U)=D(\varphi(g))$ (\hyperref[I.1.2.2.2-fr]{\textbf{I}, 1.2.2.2}), d'où la
+proposition.
+
+\begin{proposition}[1.2.6]
+\label{II.1.2.6-fr}
+Soient $X$ un $S$-schéma affine au-dessus de $S$, $f:X\to S$ le morphisme
+structural. Pour tout $\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$,
+$f_*(\mathcal{F})$ est un $\mathcal{O}_
+
+=================== PAGE II 42 ===================
+----- (Spanish page II 41: shown above in this file) -----
+----- (Spanish page II 42: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 43 -----
+\oldpage[II]{43}
+Observemos que, en general, hay morfismos de $\Proj(S)$ en $\Proj(S')$ que no son afines y que, por consiguiente, no provienen de homomorfismos de anillos graduados $S'\to S$; un ejemplo es el morfismo estructural $\Proj(S)\to\Spec(A)$ cuando $A$ es un cuerpo (identificándose entonces $\Spec(A)$ con $\Proj(A[T])$, cf.~\sref{II.3.1.7}); esto resulta, en efecto, de \sref[I]{I.2.3.2}.
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 43.
+
+\begin{env}[2.8.4]
+\label{II.2.8.4}
+Sea $S''$ un tercer anillo graduado en grados positivos, sea $\vphi':S''\to S'$ un homomorfismo de anillos graduados, y pongamos $\vphi''=\vphi\circ\vphi'$.
+En virtud de \sref{II.2.8.1.1} y de la fórmula ${}^a\vphi''=({}^a\vphi')\circ({}^a\vphi)$, se comprueba inmediatamente que $G(\vphi'')\subset G(\vphi)$ y que, si $\Phi$, $\Phi'$ y $\Phi''$ son los morfismos asociados respectivamente a $\vphi$, $\vphi'$ y $\vphi''$, se tiene $\Phi''=\Phi'\circ(\Phi|G(\vphi''))$.
+\end{env}
+
+\begin{env}[2.8.5]
+\label{II.2.8.5}
+Supongamos que $S$ (resp. $S'$) es una $A$-álgebra graduada (resp. una $A'$-álgebra graduada), y sea $\psi:A'\to A$ un homomorfismo de anillos tal que el diagrama
+\[
+\label{II.2.8.5.1}
+  \xymatrix{
+    A' \ar[r]^{\psi} \ar[d]
+    & A \ar[d]
+  \\S' \ar[r]_{\vphi}
+    & S
+  }
+  \tag{2.8.5.1}
+\]
+sea conmutativo.
+Se pueden considerar entonces $G(\vphi)$ (resp. $\Proj(S')$) como un esquema sobre $\Spec(A)$ (resp. $\Spec(A')$); si $\Phi$ (resp. $\Psi$) es el morfismo asociado a $\vphi$ (resp. a $\psi$), el diagrama
+\[
+  \xymatrix{
+    G(\vphi) \ar[r]^{\Phi} \ar[d]
+    & \Proj(S') \ar[d]
+  \\Spec(A) \ar[r]_{\Psi}
+    & \Spec(A')
+  }
+\]
+es conmutativo: basta, en efecto, demostrarlo para la restricción de $\Phi$ a $D_+(f)$, donde $f=\vphi(f')$, con $f'$ homogéneo en $S'_+$; esto resulta entonces de la conmutatividad del diagrama
+\[
+  \xymatrix{
+    A' \ar[r]^{\psi} \ar[d]
+    & A \ar[d]
+  \\S'_{(f')} \ar[r]_{\vphi_{(f)}}
+    & S_{(f)}
+  }
+\]
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 43-44.
+
+\begin{env}[2.8.6]
+\label{II.2.8.6}
+Sea ahora $M$ un $S$-módulo graduado, y consideremos el $S'$-módulo $M_{[\vphi]}$, que está evidentemente graduado.
+Sea $f'$ homogéneo en $S'_+$, y sea $f=\vphi(f')$; se sabe \sref[0]{0.1.5.2} que existe un isomorfismo canónico $(M_{[\vphi]})_{f'}\simto(M_f)_{[\vphi_f]}$, y es inmediato que este isomorfismo conserva los grados, de donde se obtiene un isomorfismo canónico $(M_{[\vphi]})_{(f')}\simto(M_{(f)})_{[\vphi_{(f)}]}$.
+A este isomorfismo corresponde canónicamente un isomorfismo de haces $(M_{[\vphi]})\supertilde|D_+(f')\simto(\Phi_f)_*(\widetilde{M}|D_+(f))$ (\sref{II.2.5.2} y \sref[I]{I.1.6.3}).
+Además,
+----- French corrections on page II 42 -----
+[id 1788]
+OLD: {I, 1.6.1}
+NEW: {\textbf{I}, 1.6.1}
+FRENCH CONTEXT (corrected): montrons l'existence
+de $X$. Pour tout ouvert affine $U\subset S$, soit $X_U$ le préschéma
+$\operatorname{Spec}(\Gamma(U,\mathcal{B}))$~; comme
+$\Gamma(U,\mathcal{B})$ est une $\Gamma(U,\mathcal{O}_S)$-algèbre, $X_U$
+est un $S$-préschéma (\hyperref[I.1.6.1-fr]{\textbf{I}, 1.6.1}). En outre, comme
+$\mathcal{B}$ est quasi-cohérente, la $\mathcal{O}_S$-Algèbre
+$\mathcal{A}(X_U)$ s'identifie canoniquement à $\mathcal{B}|U$
+(\hyperref[I.1.3.7-fr]{\textbf{I}, 1.3.7},
+\hyperref[I.1.3.13-fr]{1.3.13} et
+\hyperref[I.1.6.3-fr]{1.6.3}). Soit $V$
+
+[id 1789]
+OLD: (dit 
+NEW: \textup{(dit} 
+FRENCH CONTEXT (corrected): :
+\end{env}
+
+\begin{proposition}[2.8.2]
+\label{II.2.8.2-fr}
+Étant donné un homomorphisme d'anneaux gradués $\varphi:S'\to S$, il existe
+un morphisme et un seul $({}^a\varphi,\widetilde{\varphi})$ du préschéma
+induit $G(\varphi)$ dans $\operatorname{Proj}(S')$ \textup{(dit} associé à
+$\varphi$ et noté $\operatorname{Proj}(\varphi)$), tel que pour tout élément
+homogène $f'\in S'_+$, la restriction de ce morphisme à
+$D_+(\varphi(f'))$ coïncide avec le morphisme associé à l'homomorphisme
+$S'_{(f')}\to S_{(\varphi(f'))}$ correspondan
+
+[id 1790]
+OLD: \emph{associé à
+$\varphi$}
+NEW: associé à
+$\varphi$
+FRENCH CONTEXT (corrected): begin{proposition}[2.8.2]
+\label{II.2.8.2-fr}
+Étant donné un homomorphisme d'anneaux gradués $\varphi:S'\to S$, il existe
+un morphisme et un seul $({}^a\varphi,\widetilde{\varphi})$ du préschéma
+induit $G(\varphi)$ dans $\operatorname{Proj}(S')$ \textup{(dit} associé à
+$\varphi$ et noté $\operatorname{Proj}(\varphi)$), tel que pour tout élément
+homogène $f'\in S'_+$, la restriction de ce morphisme à
+$D_+(\varphi(f'))$ coïncide avec le morphisme associé à l'homomorphisme
+$S'_{(f')}\to S_{(\varphi(f'))}$ correspondant à $\varphi$.
+\end
+
+[id 1793]
+OLD: {I, 1.2.7}
+NEW: {\textbf{I}, 1.2.7}
+FRENCH CONTEXT (corrected): $f'$ homogène dans
+$S'_+$, on vérifie aussitôt que $\operatorname{Ker}(\varphi_f)$ (avec
+$f=\varphi(f')$) est nilpotent, donc aussi
+$\operatorname{Ker}(\varphi_{(f)})$~; la conclusion résulte donc de
+(\hyperref[II.2.8.2-fr]{2.8.2}) et de
+(\hyperref[I.1.2.7-fr]{\textbf{I}, 1.2.7}).
+\end{proof}
+
+\oldpage[II]{43}
+On notera qu'il y a en général des morphismes de $\operatorname{Proj}(S)$
+dans $\operatorname{Proj}(S')$ qui ne sont pas affines, et ne proviennent
+donc pas d'homomorphismes d'anneaux gradués $S'\to S$~; un exemple est le
+morph
+
+=================== PAGE II 43 ===================
+----- (Spanish page II 42: shown above in this file) -----
+----- (Spanish page II 43: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 44 -----
+\oldpage[II]{44}
+si $g'$ es otro elemento homogéneo de $S'_+$ y $g=\vphi(g')$, el diagrama
+\[
+  \xymatrix{
+    (M_{[\vphi]})_{(f')} \ar[r]^{\sim} \ar[d]
+    & (M_{(f)})_{[\vphi_{(f)}]} \ar[d]
+  \\(M_{[\vphi]})_{(f'g')} \ar[r]^{\sim}
+    & (M_{(fg)})_{[\vphi_{(fg)}]}
+  }
+\]
+es conmutativo, de donde se concluye inmediatamente que el isomorfismo
+\[
+  (M_{[\vphi]})\supertilde|D_+(f'g') \simto (\Phi_{fg})_*(\widetilde{M}|D_+(fg))
+\]
+es la restricción a $D_+(f'g')$ del isomorfismo $(M_{[\vphi]})\supertilde|D_+(f')\simto(\Phi_f)_*(\widetilde{M}|D_+(f))$.
+Como $\Phi_f$ es la restricción a $D_+(f)$ del morfismo $\Phi$, se ve, teniendo en cuenta \sref{II.2.8.1.1} y poniendo $X'=\Proj(S')$, que:
+\end{env}
+
+\begin{proposition}[2.8.7]
+\label{II.2.8.7}
+Existe un isomorfismo canónico funtorial del $\sh{O}_{X'}$-módulo $(M_{[\vphi]})\supertilde$ sobre el $\sh{O}_{X'}$-módulo $\Phi_*(\widetilde{M}|G(\vphi))$.
+\end{proposition}
+
+Se deduce inmediatamente una aplicación canónica funtorial del conjunto de los $\vphi$-morfismos $M'\to M$ de un $S'$-módulo graduado en el $S$-módulo graduado $M$, en el conjunto de los $\Phi$-morfismos $\widetilde M'\to\widetilde{M}|G(\vphi)$.
+Con las notaciones de \sref{II.2.8.4}, si $M''$ es un $S''$-módulo graduado, al compuesto de un $\vphi$-morfismo $M'\to M$ y de un $\vphi'$-morfismo $M''\to M'$ corresponde canónicamente el compuesto de $\widetilde M'|G(\vphi')\to\widetilde{M}|G(\vphi'')$ y $\widetilde M''\to\widetilde M'|G(\vphi')$.
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 44-45.
+
+\begin{proposition}[2.8.8]
+\label{II.2.8.8}
+Bajo las hipótesis de \sref{II.2.8.1}, sea $M'$ un $S'$-módulo graduado.
+Existe entonces un homomorfismo canónico funtorial $\nu$ del $(\sh{O}_X|G(\vphi))$-módulo $\Phi^*(\widetilde M')$ en el $(\sh{O}_X|G(\vphi))$-módulo $(M'\otimes_{S'}S)\supertilde|G(\vphi)$.
+Si el ideal $S'_+$ está generado por $S'_1$, entonces $\nu$ es un isomorfismo.
+\end{proposition}
+
+\begin{proof}
+En efecto, para $f'\in S'_d$ ($d>0$), se define un homomorfismo canónico funtorial de $S_{(f)}$-módulos (donde $f=\vphi(f')$)
+\[
+\label{II.2.8.8.1}
+  \nu_f: M'_{(f')}\otimes_{S'_{(f')}}S_{(f)} \to (M'\otimes_{S'}S)_{(f)}
+\tag{2.8.8.1}
+\]
+componiendo el homomorfismo $M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}\to M'_{f'}\otimes_{S'_{f'}}S_f$ con el isomorfismo canónico $M'_{f'}\otimes_{S'_{f'}}S_f\simto(M'\otimes_{S'}S)_f$ \sref[0]{0.1.5.4}, y observando que este último conserva los grados.
+Se comprueba inmediatamente la compatibilidad de los $\nu_f$ con los operadores de restricción de $D_+(f)$ a $D_+(fg)$ (para todo $g'\in S'_+$ y $g=\vphi(g')$), de donde se obtiene la definición del homomorfismo
+\[
+  \nu: \Phi^*(\widetilde M') \to (M'\otimes_{S'}S)\supertilde|G(\vphi)
+\]
+teniendo en cuenta \sref[I]{I.1.6.5}.
+Para demostrar la segunda afirmación, basta probar que $\nu_f$ es un isomorfismo para todo $f'\in S'_1$, pues $G(\vphi)$ es entonces la unión de los $D_+(\vphi(f'))$.
+Se define primero una aplicación $\bb{Z}$-bilineal $M'_m\times S_n\to M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}$ haciendo corresponder a $(x',s)$ el elemento $(x'/{f'}^m)\otimes(s/f^n)$ (con el convenio de que $x'/{f'}^m$ es ${f'}^{-m}x'/1$ cuando $m<0$).
+----- French corrections on page II 43 -----
+[id 1794]
+OLD: (cf. (\hyperref[II.3.1.7-fr]{3.1.7})))
+NEW: (cf. \hyperref[II.3.1.7-fr]{3.1.7}))
+FRENCH CONTEXT (corrected): , et ne proviennent
+donc pas d'homomorphismes d'anneaux gradués $S'\to S$~; un exemple est le
+morphisme structural $\operatorname{Proj}(S)\to\operatorname{Spec}(A)$ quand
+$A$ est un corps ($\operatorname{Spec}(A)$ étant identifié à
+$\operatorname{Proj}(A[T])$ (cf. \hyperref[II.3.1.7-fr]{3.1.7}))~; cela
+résulte en effet de (\hyperref[I.2.3.2-fr]{\textbf{I}, 2.3.2}).
+
+\begin{env}[2.8.4]
+\label{II.2.8.4-fr}
+Soient $S''$ un troisième anneau gradué à degrés positifs,
+$\varphi':S''\to S'$ un homomorphisme d'anneaux gradués, et posons
+$\varphi''=\varphi\cir
+
+[id 1795]
+OLD: {I, 2.3.2}
+NEW: {\textbf{I}, 2.3.2}
+FRENCH CONTEXT (corrected): ame{Proj}(S)$ est réunion
+de $D_+(T_1)$ et $D_+(T_2)$~; on voit aussitôt que ces schémas affines sont
+canoniquement isomorphes à $K[T]$, et que $\operatorname{Proj}(S)$
+s'obtient par le recollement de ces deux schémas affines décrit dans
+(\hyperref[I.2.3.2-fr]{\textbf{I}, 2.3.2}) (cf.
+(\hyperref[II.7.4.14-fr]{7.4.14})).
+\end{example}
+
+\begin{proposition}[2.4.4]
+\label{II.2.4.4-fr}
+Soit $S$ un anneau gradué à degrés positifs, et soit $X$ le schéma
+$\operatorname{Proj}(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\mathfrak{N}_+$ est le n
+
+[id 1796]
+OLD: {0, 1.5.2}
+NEW: {\textbf{0}, 1.5.2}
+FRENCH CONTEXT (corrected): de{M}')$ et $\Gamma(D(f),\widetilde{M})$
+s'identifient respectivement aux modules $M'_{f'}$ et $M_f$ (sur
+$A'_{f'}$ et $A_f$ respectivement)~; en outre, le $A'_{f'}$-module
+$(M_f)_{[\varphi_{f'}]}$ est canoniquement isomorphe à $M'_{f'}$
+(\hyperref[0.1.5.2-fr]{\textbf{0}, 1.5.2}). On a donc un isomorphisme fonctoriel de
+$\Gamma(D(f'),\widetilde{A}')$-modules~:
+$\Gamma(D(f'),\widetilde{M}')\xrightarrow{\sim}
+\Gamma({}^a\varphi^{-1}(D(f')),\widetilde{M})_{[\varphi_{f'}]}$ et ces
+isomorphismes satisfont aux conditions de compatibilité u
+
+[id 1797]
+OLD: \widetilde{M_{[\varphi]}}|D_+(f')
+NEW: (M_{[\varphi]})\supertilde|D_+(f')
+FRENCH CONTEXT (corrected): arphi_f]}$, et il est
+immédiat que cet isomorphisme conserve les degrés, donc il y a un isomorphisme
+canonique
+$(M_{[\varphi]})_{(f')}\xrightarrow{\sim}
+(M_{(f)})_{[\varphi_{(f)}]}$. Il correspond canoniquement à cet isomorphisme
+un isomorphisme de faisceaux
+$(M_{[\varphi]})\supertilde|D_+(f')
+\xrightarrow{\sim}(\Phi_f)_*(\widetilde{M}|D_+(f))$
+(\hyperref[II.2.5.2-fr]{2.5.2} et
+\hyperref[I.1.6.3-fr]{\textbf{I}, 1.6.3}). En outre,
+\oldpage[II]{44}
+si $g'$ est un second élément homogène de $S'_+$ et $g=\varphi(g')$, le
+diagramme
+\[
+  \xymatrix{
+    (
+
+[id 1798]
+OLD: {I, 1.6.3}
+NEW: {\textbf{I}, 1.6.3}
+FRENCH CONTEXT (corrected): cal{G})
+  =\mathcal{A}(\mathcal{F})\otimes_{\mathcal{A}(X)}\mathcal{A}(\mathcal{G})
+  \tag{1.4.8.1}\label{II.1.4.8.1-fr}
+\]
+à un isomorphisme canonique fonctoriel près. Si de plus $\mathcal{F}$ admet
+une présentation finie, il résulte de
+(\hyperref[I.1.6.3-fr]{\textbf{I}, 1.6.3} et
+\hyperref[I.1.3.12-fr]{1.3.12}) que
+\[
+  \mathcal{A}(\mathcal{H}om_X(\mathcal{F},\mathcal{G}))
+  =\mathcal{H}om_{\mathcal{A}(X)}
+    (\mathcal{A}(\mathcal{F}),\mathcal{A}(\mathcal{G}))
+  \tag{1.4.8.2}\label{II.1.4.8.2-fr}
+\]
+à un isomorphisme canonique prè
+
+=================== PAGE II 44 ===================
+----- (Spanish page II 43: shown above in this file) -----
+----- (Spanish page II 44: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 45 -----
+\oldpage[II]{45}
+Se comprueba, como en la demostración de \sref{II.2.5.13}, que esta aplicación da lugar a un dihomomorfismo de módulos
+\[
+  \eta_f: M'\otimes_{S'}S \to M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}.
+\]
+Además, si, para $r>0$, se tiene $f^r\sum_i(x'_i\otimes s_i)=0$, esto se escribe también $\sum_i({f'}^rx'_i\otimes s_i)=0$, de donde, por \sref[0]{0.1.5.4}, $\sum_i({f'}^rx'_i/{f'}^{m_i+r})\otimes(s_i/f^{n_i})=0$, es decir, $\eta_f(\sum_i x'_i\otimes s_i)=0$, lo que demuestra que $\eta_f$ se factoriza en $M'\otimes_{S'}S\to(M'\otimes_{S'}S)_f\xrightarrow{\eta'_f}M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}$; se comprueba finalmente que $\eta'_f$ y $\nu_f$ son isomorfismos inversos entre sí.
+
+En particular, resulta de \sref{II.2.1.2.1} que se tiene un homomorfismo canónico
+\[
+\label{II.2.8.8.2}
+  \Phi^*(\sh{O}_{X'}(n)) \simto \sh{O}_X(n)|G(\vphi)
+\tag{2.8.8.2}
+\]
+para todo $n\in\bb{Z}$.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 45.
+
+\begin{env}[2.8.9]
+\label{II.2.8.9}
+Sean $A$ y $A'$ dos anillos, y sea $\psi:A'\to A$ un homomorfismo de anillos que define un morfismo $\Psi:\Spec(A)\to\Spec(A')$.
+Sea $S'$ una $A'$-álgebra graduada en grados positivos, y pongamos $S=S'\otimes_{A'}A$, que es evidentemente una $A$-álgebra graduada por los $S'_n\otimes_{A'}A$; la aplicación $\vphi:s'\mapsto s'\otimes1$ es entonces un homomorfismo de anillos graduados que hace conmutativo el diagrama \sref{II.2.8.5.1}.
+Como $S_+$ es aquí el $A$-módulo generado por $\vphi(S'_+)$, se tiene $G(\vphi)=\Proj(S)=X$; por tanto, poniendo $X'=\Proj(S')$, se obtiene el diagrama conmutativo
+\[
+\label{II.2.8.9.1}
+  \xymatrix{
+    X \ar[r]^{\Phi} \ar[d]_p
+    & X' \ar[d]
+  \\Y \ar[r]_{\Psi}
+    & Y'
+  }
+\tag{2.8.9.1}
+\]
+
+Sea ahora $M'$ un $S'$-módulo graduado, y pongamos $M=M'\otimes_{A'}A=M'\otimes_{S'}S$.
+En estas condiciones:
+\end{env}
+
+\begin{proposition}[2.8.10]
+\label{II.2.8.10}
+El diagrama \sref{II.2.8.9.1} identifica el esquema $X$ con el producto $X'\times_{Y'}Y$; además, el homomorfismo canónico $\nu:\Phi^*(\widetilde M')\to\widetilde{M}$ \sref{II.2.8.8} es un isomorfismo.
+\end{proposition}
+
+\begin{proof}
+La primera afirmación quedará demostrada si se prueba que, para todo $f'$ homogéneo en $S'_+$, poniendo $f=\vphi(f')$, las restricciones de $\Phi$ y $p$ a $D_+(f)$ identifican este esquema con el producto $D_+(f')\times_{Y'}Y$ \sref[I]{I.3.2.6.2}; dicho de otro modo, basta \sref[I]{I.3.2.2} demostrar que $S_{(f)}$ se identifica canónicamente con $S'_{(f')}\otimes_{A'}A$, lo que resulta inmediatamente del isomorfismo canónico, que conserva los grados, $S_f\simto S'_{f'}\otimes_{A'}A$ \sref[0]{0.1.5.4}.
+La segunda afirmación resulta entonces de que $M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}$ se identifica, por lo anterior, con $M'_{(f')}\otimes_{A'}A$, y este último con $M_{(f)}$, pues $M_f$ se identifica canónicamente con $M'_{f'}\otimes_{A'}A$ mediante un isomorfismo que conserva los grados.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 45-46.
+
+\begin{corollary}[2.8.11]
+\label{II.2.8.11}
+Para todo entero $n\in\bb{Z}$, $\widetilde{M}(n)$ se identifica con $\Phi^*(\widetilde M'(n))=\widetilde M'(n)\otimes_{Y'}\sh{O}_Y$; en particular, $\sh{O}_X(n)=\Phi^*(\sh{O}_{X'}(n))=\sh{O}_{X'}(n)\otimes_{Y'}\sh{O}_Y$.
+\end{corollary}
+
+\begin{proof}
+Esto resulta de \sref{II.2.8.10} y \sref{II.2.5.15}.
+\end{proof}
+----- French corrections on page II 44 -----
+[id 1800]
+OLD: \widetilde{M_{[\varphi]}}|D_+(f'g')
+NEW: (M_{[\varphi]})\supertilde|D_+(f'g')
+FRENCH CONTEXT (corrected): ramme
+\[
+  \xymatrix{
+    (M_{[\varphi]})_{(f')}\ar[r]^{\sim}\ar[d]
+    & (M_{(f)})_{[\varphi_{(f)}]}\ar[d]\\
+    (M_{[\varphi]})_{(f'g')}\ar[r]^{\sim}
+    & (M_{(fg)})_{[\varphi_{(fg)}]}
+  }
+\]
+est commutatif, d'où on conclut aussitôt que l'isomorphisme
+\[
+  (M_{[\varphi]})\supertilde|D_+(f'g')
+  \xrightarrow{\sim}(\Phi_{fg})_*(\widetilde{M}|D_+(fg))
+\]
+est la restriction à $D_+(f'g')$ de l'isomorphisme
+$(M_{[\varphi]})\supertilde|D_+(f')
+\xrightarrow{\sim}(\Phi_f)_*(\widetilde{M}|D_+(f))$. Comme $\Phi_f$ est la
+restriction à $D_+(f)$ du morphisme $
+
+[id 1801]
+OLD: \widetilde{M_{[\varphi]}}|D_+(f')
+NEW: (M_{[\varphi]})\supertilde|D_+(f')
+FRENCH CONTEXT (corrected): arphi_f]}$, et il est
+immédiat que cet isomorphisme conserve les degrés, donc il y a un isomorphisme
+canonique
+$(M_{[\varphi]})_{(f')}\xrightarrow{\sim}
+(M_{(f)})_{[\varphi_{(f)}]}$. Il correspond canoniquement à cet isomorphisme
+un isomorphisme de faisceaux
+$(M_{[\varphi]})\supertilde|D_+(f')
+\xrightarrow{\sim}(\Phi_f)_*(\widetilde{M}|D_+(f))$
+(\hyperref[II.2.5.2-fr]{2.5.2} et
+\hyperref[I.1.6.3-fr]{\textbf{I}, 1.6.3}). En outre,
+\oldpage[II]{44}
+si $g'$ est un second élément homogène de $S'_+$ et $g=\varphi(g')$, le
+diagramme
+\[
+  \xymatrix{
+    (
+
+[id 1802]
+OLD: $\widetilde{M_{[\varphi]}}$ sur le
+NEW: $(M_{[\varphi]})\supertilde$ sur le
+FRENCH CONTEXT (corrected): rphisme $\Phi$, on voit donc, compte tenu de
+(\hyperref[II.2.8.1.1-fr]{2.8.1.1}), et en posant
+$X'=\operatorname{Proj}(S')$~:
+\end{env}
+
+\begin{proposition}[2.8.7]
+\label{II.2.8.7-fr}
+Il existe un isomorphisme canonique fonctoriel du $\mathcal{O}_{X'}$-Module
+$(M_{[\varphi]})\supertilde$ sur le
+$\mathcal{O}_{X'}$-Module $\Phi_*(\widetilde{M}|G(\varphi))$.
+\end{proposition}
+
+On en déduit aussitôt une application canonique fonctorielle de l'ensemble
+des $\varphi$-morphismes $M'\to M$ d'un $S'$-module gradué dans le $S$-module
+gradué $M$, dans l'ensemb
+
+[id 1807]
+OLD: (\hyperref[II.2.8.1-fr]{2.8.1})
+NEW: \textup{(\hyperref[II.2.8.1-fr]{2.8.1})}
+FRENCH CONTEXT (corrected): d'un $\varphi'$-morphisme
+$M''\to M'$ correspond canoniquement le composé de
+$\widetilde{M}'|G(\varphi')\to\widetilde{M}|G(\varphi'')$ et de
+$\widetilde{M}''\to\widetilde{M}'|G(\varphi')$.
+
+\begin{proposition}[2.8.8]
+\label{II.2.8.8-fr}
+Sous les hypothèses de \textup{(\hyperref[II.2.8.1-fr]{2.8.1})}, soit $M'$ un
+$S'$-module gradué. Il existe un homomorphisme canonique fonctoriel $\nu$ du
+$(\mathcal{O}_X|G(\varphi))$-Module $\Phi^*(\widetilde{M}')$ dans le
+$(\mathcal{O}_X|G(\varphi))$-Module
+$(M'\otimes_{S'}S)\supertilde|G(\varphi)$. Si l'idéal $S'_+$
+es
+
+[id 1810]
+OLD: {0, 1.5.4}
+NEW: {\textbf{0}, 1.5.4}
+FRENCH CONTEXT (corrected): entifiée à $g/f^q$ ($g\in A$)~; alors,
+par définition, on a
+$h_x(s'_{x'}\otimes t_x)=t_x\cdot s_x$
+(\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3}). Mais on peut identifier canoniquement
+$N_f$ à
+$N'_{f'}\otimes_{A'_{f'}}(A_f)_{[\varphi_{f'}]}$
+(\hyperref[0.1.5.4-fr]{\textbf{0}, 1.5.4})~; $s$ correspond alors à l'élément
+$(n'/{f'}^p)\otimes 1$, et la section $y\to t_y\cdot s_y$ à
+$(n'/{f'}^p)\otimes(g/f^q)$. Les diagrammes de compatibilité de
+(\hyperref[0.1.5.6-fr]{\textbf{0}, 1.5.6}) montrent que $h_x$ n'est autre que
+l'isomorphisme canoni
+
+[id 1813]
+OLD: {I, 1.6.5}
+NEW: {\textbf{I}, 1.6.5}
+FRENCH CONTEXT (corrected): urs
+de restriction de $D_+(f)$ à $D_+(fg)$ (pour un second $g'\in S'_+$ et
+$g=\varphi(g')$), d'où la définition de l'homomorphisme
+\[
+  \nu:\Phi^*(\widetilde{M}')
+  \longrightarrow(M'\otimes_{S'}S)\supertilde|G(\varphi)
+\]
+compte tenu de (\hyperref[I.1.6.5-fr]{\textbf{I}, 1.6.5}). Pour prouver la seconde
+assertion, il suffit de montrer que $\nu_f$ est un isomorphisme pour tout
+$f'\in S'_1$, puisque $G(\varphi)$ est alors réunion des
+$D_+(\varphi(f'))$. On définit d'abord une application $\mathbf{Z}$-bilinéaire
+$M'_m\times S_n\to M'_{
+
+=================== PAGE II 45 ===================
+----- (Spanish page II 44: shown above in this file) -----
+----- (Spanish page II 45: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 46 -----
+\oldpage[II]{46}
+
+\begin{env}[2.8.12]
+\label{II.2.8.12}
+Bajo las hipótesis de \sref{II.2.8.9}, para $f'\in S'_d$ ($d>0$) y $f=\vphi(f')$, el diagrama
+\[
+\label{II.2.8.12.1}
+  \xymatrix{
+    M'_{(f')} \ar[r]^-{\sim} \ar[d]
+    & {M'}^{(d)}/(f'-1){M'}^{(d)} \ar[d]
+  \\M_{(f)} \ar[r]^-{\sim}
+    & M^{(d)}/(f-1)M^{(d)}
+  }
+  \tag{2.8.12.1}
+\]
+(cf. \sref{II.2.2.5}) es conmutativo.
+\end{env}
+
+\begin{env}[2.8.13]
+\label{II.2.8.13}
+Conservemos las notaciones y las hipótesis de \sref{II.2.8.9}, y sea $\sh{F}'$ un $\sh{O}_{X'}$-módulo; si se pone $\sh{F}=\Phi^*(\sh{F}')$, se tiene, para todo $n\in\bb{Z}$, $\sh{F}(n)=\Phi^*(\sh{F}'(n))$, en virtud de \sref{II.2.8.11} y \sref[0]{0.4.3.3}.
+Por consiguiente, según \sref[0]{0.3.7.1}, se tiene un homomorfismo canónico
+\[
+  \Gamma(\rho): \Gamma(X',\sh{F}'(n)) \to \Gamma(X,\sh{F}(n))
+\]
+que da un dihomomorfismo canónico de módulos graduados
+\[
+  \Gamma_*(\sh{F}') \to \Gamma_*(\sh{F}).
+\]
+
+Supongamos que el ideal $S_+$ está generado por $S_1$ y que $\sh{F}'=\widetilde M'$, de modo que $\sh{F}=\widetilde{M}$ con $M=M'\otimes_{A'}A$.
+Si $f'$ es homogéneo en $S'_+$ y $f=\vphi(f')$, se ha visto que $M_{(f)}=M'_{(f')}\otimes_{A'}A$, y el diagrama
+\[
+  \xymatrix{
+    M'_0 \ar[r] \ar[d]
+    & M'_{(f')} \ar[d]
+    & =\Gamma(D_+(f'),\widetilde M')
+  \\M_0 \ar[r]
+    & M_{(f)}
+    & =\Gamma(D_+(f),\widetilde{M})
+  }
+\]
+es, pues, conmutativo; se concluye inmediatamente de esta observación y de la definición del homomorfismo $\alpha$ \sref{II.2.6.2} que el diagrama
+\[
+\label{II.2.8.13.1}
+  \xymatrix{
+    M' \ar[r]^-{\alpha_{M'}} \ar[d]
+    & \Gamma_*(\widetilde M') \ar[d]
+  \\M \ar[r]_-{\alpha_M}
+    & \Gamma_*(\widetilde{M})
+  }
+\tag{2.8.13.1}
+\]
+es conmutativo.
+Del mismo modo, el diagrama
+\[
+\label{II.2.8.13.2}
+  \xymatrix{
+    (\Gamma_*(\sh{F}'))\supertilde \ar[r]^-{\beta_{\sh{F}'}} \ar[d]
+    & \sh{F}' \ar[d]
+  \\(\Gamma_*(\sh{F}))\supertilde \ar[r]_-{\beta_{\sh{F}}}
+    & \sh{F}
+  }
+\tag{2.8.13.2}
+\]
+es conmutativo (siendo la flecha vertical de la derecha el $\Phi$-morfismo canónico $\sh{F}'\to\Phi^*(\sh{F}')=\sh{F}$).
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 47.
+----- French corrections on page II 45 -----
+[id 1816]
+OLD: par
+(\hyperref[0.1.5.4-fr]{0,
+NEW: par
+(\hyperref[0.1.5.4-fr]{\textbf{0},
+FRENCH CONTEXT (corrected): n donne naissance à un
+di-homomorphisme de modules
+\[
+  \eta_f:M'\otimes_{S'}S
+  \longrightarrow M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}.
+\]
+En outre, si, pour $r>0$, on a
+$f^r\sum_i(x'_i\otimes s_i)=0$, cela s'écrit aussi
+$\sum_i({f'}^rx'_i\otimes s_i)=0$, d'où, par
+(\hyperref[0.1.5.4-fr]{\textbf{0}, 1.5.4}),
+$\sum_i({f'}^rx'_i/{f'}^{m_i+r})\otimes(s_i/f^{n_i})=0$, c'est-à-dire
+$\eta_f(\sum_i x'_i\otimes s_i)=0$, ce qui prouve que $\eta_f$ se factorise
+en
+\[
+  M'\otimes_{S'}S\longrightarrow(M'\otimes_{S'}S)_f
+  \xrightarrow{\eta'_f}M'_{(f')}\otimes_{S'_{(
+
+[id 1817]
+OLD: \varphi:s'\mapsto s'\otimes1
+NEW: \varphi:s'\to s'\otimes1
+FRENCH CONTEXT (corrected): finissant un morphisme
+$\Psi:\operatorname{Spec}(A)\to\operatorname{Spec}(A')$. Soit $S'$ une
+$A'$-algèbre graduée à degrés positifs, et posons $S=S'\otimes_{A'}A$, qui
+est de façon évidente une $A$-algèbre graduée par les $S'_n\otimes_{A'}A$~;
+l'application $\varphi:s'\to s'\otimes1$ est alors un homomorphisme
+d'anneaux gradués rendant commutatif le diagramme
+(\hyperref[II.2.8.5.1-fr]{2.8.5.1}). Comme ici $S_+$ est le $A$-module
+engendré par $\varphi(S'_+)$, on a $G(\varphi)=\operatorname{Proj}(S)=X$~;
+d'où, en posant $X'=\operatorname{P
+
+[id 1818]
+OLD: (\hyperref[II.2.8.9.1-fr]{2.8.9.1})
+NEW: \textup{(\hyperref[II.2.8.9.1-fr]{2.8.9.1})}
+FRENCH CONTEXT (corrected): {\Phi}\ar[d]_p & X'\ar[d]\\
+    Y\ar[r]_{\Psi} & Y'
+  }
+\tag{2.8.9.1}
+\]
+
+Soit maintenant $M'$ un $S'$-module gradué, et posons
+$M=M'\otimes_{A'}A=M'\otimes_{S'}S$. Dans ces conditions~:
+\end{env}
+
+\begin{proposition}[2.8.10]
+\label{II.2.8.10-fr}
+Le diagramme \textup{(\hyperref[II.2.8.9.1-fr]{2.8.9.1})} identifie le schéma $X$ au
+produit $X'\times_{Y'}Y$~; en outre, l'homomorphisme canonique
+$\nu:\Phi^*(\widetilde{M}')\to\widetilde{M}$
+\textup{(\hyperref[II.2.8.8-fr]{2.8.8})} est un isomorphisme.
+\end{proposition}
+
+\begin{proof}
+La première assertion sera dé
+
+[id 1820]
+OLD: (\hyperref[II.2.8.8-fr]{2.8.8})
+NEW: \textup{(\hyperref[II.2.8.8-fr]{2.8.8})}
+FRENCH CONTEXT (corrected): ions~:
+\end{env}
+
+\begin{proposition}[2.8.10]
+\label{II.2.8.10-fr}
+Le diagramme \textup{(\hyperref[II.2.8.9.1-fr]{2.8.9.1})} identifie le schéma $X$ au
+produit $X'\times_{Y'}Y$~; en outre, l'homomorphisme canonique
+$\nu:\Phi^*(\widetilde{M}')\to\widetilde{M}$
+\textup{(\hyperref[II.2.8.8-fr]{2.8.8})} est un isomorphisme.
+\end{proposition}
+
+\begin{proof}
+La première assertion sera démontrée si l'on prouve que pour tout $f'$
+homogène dans $S'_+$, en posant $f=\varphi(f')$, les restrictions de $\Phi$
+et de $p$ à $D_+(f)$ identifient ce schéma au produit
+$D_+
+
+[id 1821]
+OLD: [I.3.2.6.2-fr]{I,
+NEW: [I.3.2.6.2-fr]{\textbf{I},
+FRENCH CONTEXT (corrected): roposition}
+
+\begin{proof}
+La première assertion sera démontrée si l'on prouve que pour tout $f'$
+homogène dans $S'_+$, en posant $f=\varphi(f')$, les restrictions de $\Phi$
+et de $p$ à $D_+(f)$ identifient ce schéma au produit
+$D_+(f')\times_{Y'}Y$ (\hyperref[I.3.2.6.2-fr]{\textbf{I}, 3.2.6.2})~; autrement
+dit, il suffit (\hyperref[I.3.2.2-fr]{\textbf{I}, 3.2.2}) de prouver que $S_{(f)}$
+s'identifie canoniquement à $S'_{(f')}\otimes_{A'}A$, ce qui est immédiat
+en vertu de l'existence de l'isomorphisme canonique
+$S_f\xrightarrow{\sim}S'_{f'
+
+[id 1822]
+OLD: [I.3.2.2-fr]{I,
+NEW: [I.3.2.2-fr]{\textbf{I},
+FRENCH CONTEXT (corrected): thcal{O}_S$-Algèbre $(A\otimes_B A')\supertilde$, donc l'anneau
+$A(Z)$ s'identifie à $A\otimes_B A'$ et les morphismes $p$, $p'$ correspondent
+aux homomorphismes canoniques $A\to A\otimes_B A'$,
+$A'\to A\otimes_B A'$. La proposition résulte alors de
+(\hyperref[I.3.2.2-fr]{\textbf{I}, 3.2.2}).
+
+\begin{corollary}[1.4.7]
+\label{II.1.4.7-fr}
+Soit $\mathcal{F}$ \textup{(resp. $\mathcal{F}'$)} un $\mathcal{O}_X$-Module \textup{(resp.} un
+$\mathcal{O}_{X'}$-Module) quasi-cohérent~; alors
+$\mathcal{A}(\mathcal{F}\otimes_Y\mathcal{F}')$ s'identifi
+
+[id 1823]
+OLD: [0.1.5.4-fr]{0, 1.5.4}). La seconde
+NEW: [0.1.5.4-fr]{\textbf{0}, 1.5.4}). La seconde
+FRENCH CONTEXT (corrected): [I.3.2.2-fr]{\textbf{I}, 3.2.2}) de prouver que $S_{(f)}$
+s'identifie canoniquement à $S'_{(f')}\otimes_{A'}A$, ce qui est immédiat
+en vertu de l'existence de l'isomorphisme canonique
+$S_f\xrightarrow{\sim}S'_{f'}\otimes_{A'}A$ conservant les degrés
+(\hyperref[0.1.5.4-fr]{\textbf{0}, 1.5.4}). La seconde assertion résulte de ce que
+$M'_{(f')}\otimes_{S'_{(f')}}S_{(f)}$ s'identifie d'après ce qui précède à
+$M'_{(f')}\otimes_{A'}A$, et ce dernier à $M_{(f)}$, puisque $M_f$
+s'identifie canoniquement à $M'_{f'}\otimes_{A'}A$ par un isomorphisme
+conservant les deg
+
+[id 1825]
+OLD: \Phi^*(\widetilde{M'(n)})=\widetilde{M'(n)}\otimes_{Y'}
+NEW: \Phi^*(\widetilde{M}'(n))=\widetilde{M}'(n)\otimes_{Y'}
+FRENCH CONTEXT (corrected): e dernier à $M_{(f)}$, puisque $M_f$
+s'identifie canoniquement à $M'_{f'}\otimes_{A'}A$ par un isomorphisme
+conservant les degrés.
+\end{proof}
+
+\begin{corollary}[2.8.11]
+\label{II.2.8.11-fr}
+Pour tout entier $n\in\mathbf{Z}$, $\widetilde{M}(n)$ s'identifie à
+$\Phi^*(\widetilde{M}'(n))=\widetilde{M}'(n)\otimes_{Y'}\mathcal{O}_Y$~;
+en particulier
+$\mathcal{O}_X(n)=\Phi^*(\mathcal{O}_{X'}(n))
+=\mathcal{O}_{X'}(n)\otimes_{Y'}\mathcal{O}_Y$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de (\hyperref[II.2.8.10-fr]{2.8.10}) et de
+(\hyperref[II.2.5.15-fr]{2.5.15}).
+\end{proof}
+
+
+=================== PAGE II 46 ===================
+----- (Spanish page II 45: shown above in this file) -----
+----- (Spanish page II 46: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 47 -----
+\oldpage[II]{47}
+
+\begin{env}[2.8.14]
+\label{II.2.8.14}
+Conservando todavía las notaciones y las hipótesis de \sref{II.2.8.9}, sea $N'$ otro $S'$-módulo graduado, y sea $N=N'\otimes_{A'}A$.
+Es inmediato que los dihomomorfismos canónicos $M'\to M$ y $N'\to N$ dan un dihomomorfismo $M'\otimes_{S'}N'\to M\otimes_S N$ (relativo al homomorfismo canónico de anillos $S'\to S$) y, por consiguiente, también un $S$-homomorfismo de grado $0$, $(M'\otimes_{S'}N')\otimes_{A'}A\to M\otimes_S N$, al que corresponde (teniendo en cuenta \sref{II.2.8.10}) un homomorfismo de $\sh{O}_X$-módulos
+\[
+\label{II.2.8.14.1}
+  \Phi^*((M'\otimes_{S'}N')\supertilde) \to (M\otimes_S N)\supertilde.
+\tag{2.8.14.1}
+\]
+
+Además, se comprueba inmediatamente que el diagrama
+\[
+\label{II.2.8.14.2}
+  \xymatrix{
+    \Phi^*(\widetilde M'\otimes_{\sh{O}_{X'}}\widetilde N') \ar[r]^\sim \ar[d]_{\Phi^*(\lambda)}
+    & \widetilde{M}\otimes_{\sh{O}_X}\widetilde{N} \ar[d]^\lambda
+    & =\Phi^*(\widetilde M')\otimes_{\sh{O}_X}\Phi^*(\widetilde N')
+  \\Phi^*((M'\otimes_{S'}N')\supertilde) \ar[r]
+    & (M\otimes_S N)\supertilde
+  }
+\tag{2.8.14.2}
+\]
+es conmutativo, siendo la primera fila el isomorfismo canónico \sref[0]{0.4.3.3}.
+Si el ideal $S'_+$ está generado por $S'_1$, es claro que $S_+$ está generado por $S_1$, y las dos flechas verticales de \sref{II.2.8.14.2} son entonces isomorfismos \sref{II.2.5.13}; lo mismo ocurre, por tanto, con \sref{II.2.8.14.1}.
+
+Se tiene igualmente un dihomomorfismo canónico $\Hom_{S'}(M',N')\to\Hom_S(M,N)$ haciendo corresponder a un homomorfismo $u'$ de grado $k$ el homomorfismo $u'\otimes1$, que también es de grado $k$; de aquí se deduce de nuevo un $S$-homomorfismo de grado $0$
+\[
+  (\Hom_{S'}(M',N'))\otimes_{A'}A \to \Hom_S(M,N)
+\]
+de donde se obtiene un homomorfismo de $\sh{O}_X$-módulos
+\[
+\label{II.2.8.14.3}
+  \Phi^*((\Hom_{S'}(M',N'))\supertilde) \to (\Hom_S(M,N))\supertilde.
+\tag{2.8.14.3}
+\]
+
+Además, el diagrama
+\[
+  \xymatrix{
+    \Phi^*((\Hom_{S'}(M',N'))\supertilde) \ar[r] \ar[d]_{\Phi^*(\mu)}
+    & (\Hom_S(M,N))\supertilde \ar[d]^\mu
+  \\Phi^*(\shHom_{\sh{O}_{X'}}(\widetilde M',\widetilde N')) \ar[r]
+    & \shHom_{\sh{O}_X}(\widetilde{M},\widetilde{N})
+  }
+\]
+es conmutativo (siendo la segunda fila horizontal el homomorfismo canónico \sref[0]{0.4.4.6}).
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 48.
+----- French corrections on page II 46 -----
+[id 1826]
+OLD: [0.4.3.3-fr]{0,
+NEW: [0.4.3.3-fr]{\textbf{0},
+FRENCH CONTEXT (corrected): et des relations $(f,g)_S^*\circ p^*=f^*$ et
+$(f,g)_S^*\circ q^*=g^*$ (\hyperref[0.3.5.5-fr]{\textbf{0}, 3.5.5}), et du fait
+qu'une image réciproque d'un produit tensoriel de faisceaux algébriques est
+le produit tensoriel de leurs images réciproques
+(\hyperref[0.4.3.3-fr]{\textbf{0}, 4.3.3}).
+\end{proof}
+
+\begin{corollary}[9.1.5]
+\label{I.9.1.5-fr}
+Soient $f:X\to X'$, $g:Y\to Y'$ deux $S$-morphismes, $\mathscr{F}'$ \textup{(resp.
+$\mathscr{G}'$)} un $\mathscr{O}_{X'}$-Module \textup{(resp.}
+$\mathscr{O}_{Y'}$-Module) quasi-cohérent. On a 
+
+[id 1827]
+OLD: [0.3.7.1-fr]{0,
+NEW: [0.3.7.1-fr]{\textbf{0},
+FRENCH CONTEXT (corrected):  est donc un \emph{morphisme}
+d'espaces annelés
+\[
+  \Phi:(X,\mathscr{O}_X)\to(X',\mathscr{O}_{X'})
+\]
+(\hyperref[0.4.1.1-fr]{\textbf{0}, 4.1.1}).
+
+Notons en outre que, si on pose $x'={}^a\varphi(x)$, l'homomorphisme
+$\widetilde{\varphi}_x^{\sharp}$ (\hyperref[0.3.7.1-fr]{\textbf{0}, 3.7.1}) n'est autre
+que l'homomorphisme
+\[
+  \varphi_x:A'_{x'}\to A_x
+\]
+déduit canoniquement de $\varphi:A'\to A$
+(\hyperref[0.1.5.1-fr]{\textbf{0}, 1.5.1}). En effet, tout $z'\in A'_{x'}$
+s'écrit $g'/f'$, où $f'$, $g'$ sont dans $A'$ et
+$f'\notin\mathfrak{j
+
+[id 1828]
+OLD: \Gamma_\bullet(\mathcal{F}')\longrightarrow
+  \Gamma_\bullet(\mathcal{F}).
+NEW: \Gamma_*(\mathcal{F}')\longrightarrow
+  \Gamma_*(\mathcal{F}).
+FRENCH CONTEXT (corrected): tbf{0}, 4.3.3}). Par suite
+(\hyperref[0.3.7.1-fr]{\textbf{0}, 3.7.1}), on a un homomorphisme canonique
+\[
+  \Gamma(\rho):\Gamma(X',\mathcal{F}'(n))
+  \longrightarrow\Gamma(X,\mathcal{F}(n))
+\]
+ce qui donne un di-homomorphisme canonique de modules gradués
+\[
+  \Gamma_*(\mathcal{F}')\longrightarrow
+  \Gamma_*(\mathcal{F}).
+\]
+
+Supposons l'idéal $S_+$ engendré par $S_1$, et
+$\mathcal{F}'=\widetilde{M}'$, donc $\mathcal{F}=\widetilde{M}$ avec
+$M=M'\otimes_{A'}A$. Si $f'$ est homogène dans $S'_+$ et
+$f=\varphi(f')$, on a vu que
+$M_{(f)}=M'_{(f')}\otimes_{A'}A$, et le diagramme
+\[
+
+
+[id 1834]
+OLD: \widetilde{\Gamma_\bullet(\mathcal{F}')}
+NEW: (\Gamma_*(\mathcal{F}'))\supertilde
+FRENCH CONTEXT (corrected): el{II.2.8.13.1-fr}
+  \xymatrix{
+    M'\ar[r]^{\alpha_{M'}}\ar[d]
+    & \Gamma_*(\widetilde{M}')\ar[d]\\
+    M\ar[r]_{\alpha_M}
+    & \Gamma_*(\widetilde{M})
+  }
+\tag{2.8.13.1}
+\]
+est commutatif. De même, le diagramme
+\[
+\label{II.2.8.13.2-fr}
+  \xymatrix{
+    (\Gamma_*(\mathcal{F}'))\supertilde\ar[r]^{\beta_{\mathcal{F}'}}
+      \ar[d]
+    & \mathcal{F}'\ar[d]\\
+    (\Gamma_*(\mathcal{F}))\supertilde\ar[r]_{\beta_{\mathcal{F}}}
+    & \mathcal{F}
+  }
+\tag{2.8.13.2}
+\]
+est commutatif (la flèche verticale de droite étant le $\Phi$-morphisme
+canonique
+$
+
+[id 1835]
+OLD: \widetilde{\Gamma_\bullet(\mathcal{F})}
+NEW: (\Gamma_*(\mathcal{F}))\supertilde
+FRENCH CONTEXT (corrected): à $\Gamma(D_+(f),\widetilde{M})$ et que les
+$D_+(f)$ forment une base de la topologie de $X$
+(\hyperref[II.2.3.4-fr]{2.3.4}), on voit que les $\beta_f$ proviennent d'un
+unique homomorphisme canonique de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.6.4.2-fr}
+  \beta:(\Gamma_*(\mathcal{F}))\supertilde
+  \longrightarrow\mathcal{F}
+\tag{2.6.4.2}
+\]
+(aussi noté $\beta_{\mathcal{F}}$) qui est évidemment fonctoriel.
+\end{env}
+
+\begin{proposition}[2.6.5]
+\label{II.2.6.5-fr}
+Soient $M$ un $S$-module gradué, $\mathcal{F}$ un $\mathcal{O}_X$-Module~;
+alors les homo
+
+[id 1836]
+OLD: =\mathcal{F}$).
+NEW: =\mathcal{F}$)
+FRENCH CONTEXT (corrected):  \ar[d]
+    & \mathcal{F}'\ar[d]\\
+    (\Gamma_*(\mathcal{F}))\supertilde\ar[r]_{\beta_{\mathcal{F}}}
+    & \mathcal{F}
+  }
+\tag{2.8.13.2}
+\]
+est commutatif (la flèche verticale de droite étant le $\Phi$-morphisme
+canonique
+$\mathcal{F}'\to\Phi^*(\mathcal{F}')=\mathcal{F}$)
+\end{env}
+
+\oldpage[II]{47}
+
+\begin{env}[2.8.14]
+\label{II.2.8.14-fr}
+Conservant toujours les hypothèses et notations de
+(\hyperref[II.2.8.9-fr]{2.8.9}), soit $N'$ un second $S'$-module gradué, et
+soit $N=N'\otimes_{A'}A$. Il est immédiat que les di-homomorph
+
+=================== PAGE II 47 ===================
+----- (Spanish page II 46: shown above in this file) -----
+----- (Spanish page II 47: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 48 -----
+\oldpage[II]{48}
+
+\begin{env}[2.8.15]
+\label{II.2.8.15}
+Con las notaciones y las hipótesis de \sref{II.2.8.1}, resulta de \sref{II.2.4.7} que no se cambia el morfismo $\Phi$, salvo isomorfismo, cuando se sustituyen $S_0$ y $S'_0$ por $\bb{Z}$ y $\vphi_0$ por la aplicación identidad y, por tanto, cuando se sustituyen $S$ y $S'$ por $S^{(d)}$ y ${S'}^{(d)}$, respectivamente ($d>0$), y $\vphi$ por su restricción $\vphi^{(d)}$ a $S^{(d)}$.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 48.
+
+\subsection{Subesquemas cerrados de un esquema $\operatorname{Proj}(S)$}
+\label{subsection:II.2.9}
+
+\begin{env}[2.9.1]
+\label{II.2.9.1}
+Si $\vphi:S\to S'$ es un homomorfismo de anillos graduados, se dice que $\vphi$ es (TN)-\emph{sobreyectivo} (resp. (TN)-\emph{inyectivo}, (TN)-\emph{biyectivo}) si existe un entero $n$ tal que, para $k\geq n$, $\vphi_k:S_k\to S'_k$ es \emph{sobreyectivo} (resp. \emph{inyectivo}, \emph{biyectivo}).
+Resulta entonces de \sref{II.2.8.15} que el estudio de $\Phi$ puede reducirse al caso en que $\vphi$ es sobreyectivo (resp. inyectivo, biyectivo).
+En lugar de decir que $\vphi$ es (TN)-biyectivo, se dice también que es un (TN)-\emph{isomorfismo}.
+\end{env}
+
+\begin{proposition}[2.9.2]
+\label{II.2.9.2}
+Sea $S$ un anillo graduado en grados positivos, y sea $X=\Proj(S)$.
+\begin{enumerate}
+  \item[{\rm(i)}] Si $\vphi:S\to S'$ es un homomorfismo (TN)-sobreyectivo de anillos graduados, el morfismo correspondiente $\Phi$ \sref{II.2.8.1} está definido sobre todo $\Proj(S')$ y es una inmersión cerrada de $\Proj(S')$ en $X$.
+    Si $\mathfrak{J}$ es el núcleo de $\vphi$, el subesquema cerrado de $X$ asociado a $\Phi$ está definido por el haz cuasi-coherente de ideales $\widetilde{\mathfrak{J}}$ de $\sh{O}_X$.
+  \item[{\rm(ii)}] Supongamos además que el ideal $S_+$ está generado por un número finito de elementos homogéneos de grado $1$.
+    Sea $X'$ un subesquema cerrado de $X$, definido por un haz cuasi-coherente de ideales $\sh{J}$ de $\sh{O}_X$.
+    Sea $\mathfrak{J}$ el ideal graduado de $S$, imagen inversa de $\Gamma_*(\sh{J})$ mediante el homomorfismo canónico $\alpha:S\to\Gamma_*(\sh{O}_X)$ \sref{II.2.6.2}, y pongamos $S'=S/\mathfrak{J}$.
+    Entonces $X'$ es el subesquema asociado a la inmersión cerrada $\Proj(S')\to X$ correspondiente al homomorfismo canónico de anillos graduados $S\to S'$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[{\rm(i)}] Puede suponerse que $\vphi$ es sobreyectivo \sref{II.2.9.1}.
+    Como, por hipótesis, $\vphi(S_+)$ genera $S'_+$, se tiene $G(\vphi)=\Proj(S')$.
+    Por otra parte, la segunda afirmación se verifica localmente sobre $X$; sea, pues, $f$ un elemento homogéneo de $S_+$, y pongamos $f'=\vphi(f)$.
+    Como $\vphi$ es un homomorfismo sobreyectivo de anillos graduados, se comprueba inmediatamente que $\vphi_{(f')}:S_{(f)}\to S'_{(f')}$ es sobreyectivo y que su núcleo es $\mathfrak{J}_{(f)}$, lo que termina de demostrar (i) \sref[I]{I.4.2.3}.
+  \item[{\rm(ii)}] En virtud de (i), nos reducimos a comprobar que el homomorfismo $\widetilde{j}:\widetilde{\mathfrak{J}}\to\sh{O}_X$ deducido de la inyección canónica $j:\mathfrak{J}\to S$ es un isomorfismo de $\widetilde{\mathfrak{J}}$ sobre $\sh{J}$, lo que resulta de \sref{II.2.7.11}.
+\end{enumerate}
+\end{proof}
+
+Observemos que $\mathfrak{J}$ es el \emph{mayor} de los ideales graduados $\mathfrak{J}'$ de $S$ tales que $\widetilde{j}(\widetilde{\mathfrak{J'}})=\sh{J}$, pues se comprueba inmediatamente, remontándose a las definiciones \sref{II.2.6.2}, que esta relación implica $\alpha(\mathfrak{J}')\subset\Gamma_*(\sh{J})$.
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 48-49.
+
+\begin{corollary}[2.9.3]
+\label{II.2.9.3}
+Supongamos que se cumplen las hipótesis de \sref{II.2.9.2}[(i)] y, además, que el ideal $S_+$ está generado por $S_1$; entonces $\Phi^*((S(n))\supertilde)$ es canónicamente isomorfo a $(S'(n))\supertilde$ para todo $n\in\bb{Z}$ y, por consiguiente, $\Phi^*(\sh{F}(n))$ es canónicamente isomorfo a $\Phi^*(\sh{F})(n)$ para todo $\sh{O}_X$-módulo $\sh{F}$.
+\end{corollary}
+
+\begin{proof}
+Es un caso particular de \sref{II.2.8.8}, teniendo en cuenta \sref{II.2.5.10.2}.
+\end{proof}
+
+\begin{corollary}[2.9.4]
+\label{II.2.9.4}
+Supongamos que se cumplen las hipótesis de \sref{II.2.9.2}[(ii)].
+Para que el subpreesquema cerrado $X'$ de $X$ sea íntegro, es necesario y suficiente que el ideal graduado $\mathfrak{J}$ sea primo en $S$.
+\end{corollary}
+----- French corrections on page II 47 -----
+[id 1845]
+OLD: [0.4.3.3-fr]{0,
+NEW: [0.4.3.3-fr]{\textbf{0},
+FRENCH CONTEXT (corrected): et des relations $(f,g)_S^*\circ p^*=f^*$ et
+$(f,g)_S^*\circ q^*=g^*$ (\hyperref[0.3.5.5-fr]{\textbf{0}, 3.5.5}), et du fait
+qu'une image réciproque d'un produit tensoriel de faisceaux algébriques est
+le produit tensoriel de leurs images réciproques
+(\hyperref[0.4.3.3-fr]{\textbf{0}, 4.3.3}).
+\end{proof}
+
+\begin{corollary}[9.1.5]
+\label{I.9.1.5-fr}
+Soient $f:X\to X'$, $g:Y\to Y'$ deux $S$-morphismes, $\mathscr{F}'$ \textup{(resp.
+$\mathscr{G}'$)} un $\mathscr{O}_{X'}$-Module \textup{(resp.}
+$\mathscr{O}_{Y'}$-Module) quasi-cohérent. On a 
+
+[id 1846]
+OLD: (\widetilde{\operatorname{Hom}_{S'}(M',N')})
+
+NEW: ((\operatorname{Hom}_{S'}(M',N'))\supertilde)
+
+FRENCH CONTEXT (corrected):  est aussi de degré $k$~; on en déduit encore un
+$S$-homomorphisme de degré~$0$
+\[
+  (\operatorname{Hom}_{S'}(M',N'))\otimes_{A'}A
+  \longrightarrow\operatorname{Hom}_S(M,N)
+\]
+d'où un homomorphisme de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.8.14.3-fr}
+  \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)
+  \longrightarrow(\operatorname{Hom}_S(M,N))\supertilde.
+\tag{2.8.14.3}
+\]
+
+En outre, le diagramme
+\[
+  \xymatrix{
+    \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)\ar[r]
+      \ar[d]_{\Phi^*(\mu)}
+    & (\operatorname{Hom}_S(M,N))\supertilde\ar[d]^{\mu}
+
+[id 1847]
+OLD: \longrightarrow\widetilde{\operatorname{Hom}_S(M,N)}.
+NEW: \longrightarrow(\operatorname{Hom}_S(M,N))\supertilde.
+FRENCH CONTEXT (corrected): 
+$S$-homomorphisme de degré~$0$
+\[
+  (\operatorname{Hom}_{S'}(M',N'))\otimes_{A'}A
+  \longrightarrow\operatorname{Hom}_S(M,N)
+\]
+d'où un homomorphisme de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.8.14.3-fr}
+  \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)
+  \longrightarrow(\operatorname{Hom}_S(M,N))\supertilde.
+\tag{2.8.14.3}
+\]
+
+En outre, le diagramme
+\[
+  \xymatrix{
+    \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)\ar[r]
+      \ar[d]_{\Phi^*(\mu)}
+    & (\operatorname{Hom}_S(M,N))\supertilde\ar[d]^{\mu}\\
+    \Phi^*(\mathcal{H}om_{\mathcal{O}_{X'}}
+      (\w
+
+[id 1848]
+OLD: (\widetilde{\operatorname{Hom}_{S'}(M',N')})\ar[r]
+NEW: ((\operatorname{Hom}_{S'}(M',N'))\supertilde)\ar[r]
+FRENCH CONTEXT (corrected): N)
+\]
+d'où un homomorphisme de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.8.14.3-fr}
+  \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)
+  \longrightarrow(\operatorname{Hom}_S(M,N))\supertilde.
+\tag{2.8.14.3}
+\]
+
+En outre, le diagramme
+\[
+  \xymatrix{
+    \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)\ar[r]
+      \ar[d]_{\Phi^*(\mu)}
+    & (\operatorname{Hom}_S(M,N))\supertilde\ar[d]^{\mu}\\
+    \Phi^*(\mathcal{H}om_{\mathcal{O}_{X'}}
+      (\widetilde{M}',\widetilde{N}'))\ar[r]
+    & \mathcal{H}om_{\mathcal{O}_X}(\widetilde{M},\widetilde{N})
+  }
+\]
+est commutat
+
+[id 1849]
+OLD: & \widetilde{\operatorname{Hom}_S(M,N)}\ar[d]
+NEW: & (\operatorname{Hom}_S(M,N))\supertilde\ar[d]
+FRENCH CONTEXT (corrected): \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)
+  \longrightarrow(\operatorname{Hom}_S(M,N))\supertilde.
+\tag{2.8.14.3}
+\]
+
+En outre, le diagramme
+\[
+  \xymatrix{
+    \Phi^*((\operatorname{Hom}_{S'}(M',N'))\supertilde)\ar[r]
+      \ar[d]_{\Phi^*(\mu)}
+    & (\operatorname{Hom}_S(M,N))\supertilde\ar[d]^{\mu}\\
+    \Phi^*(\mathcal{H}om_{\mathcal{O}_{X'}}
+      (\widetilde{M}',\widetilde{N}'))\ar[r]
+    & \mathcal{H}om_{\mathcal{O}_X}(\widetilde{M},\widetilde{N})
+  }
+\]
+est commutatif (la seconde ligne horizontale étant l'homomorphisme canonique
+(\hyperref[0.
+
+[id 1852]
+OLD: [0.4.4.6-fr]{0,
+NEW: [0.4.4.6-fr]{\textbf{0},
+FRENCH CONTEXT (corrected): [1.6.8]
+\label{I.1.6.8-fr}
+Soient $N'_1$, $N'_2$ deux $A'$-modules, $N'_1$ étant supposé avoir une
+\emph{présentation finie}~; il résulte alors de
+(\hyperref[I.1.6.7-fr]{1.6.7}) et
+(\hyperref[I.1.3.12-fr]{1.3.12, (ii)}) que l'homomorphisme canonique
+(\hyperref[0.4.4.6-fr]{\textbf{0}, 4.4.6})
+\[
+  \Phi^*\bigl(\mathscr{H}\!om_{\widetilde{A}'}
+    (\widetilde{N}'_1,\widetilde{N}'_2)\bigr)
+  \longrightarrow
+  \mathscr{H}\!om_{\widetilde A}
+    \bigl(\Phi^*(\widetilde{N}'_1),\Phi^*(\widetilde{N}'_2)\bigr)
+\]
+n'est autre que $\widetilde{\gamma}
+
+=================== PAGE II 48 ===================
+----- (Spanish page II 47: shown above in this file) -----
+----- (Spanish page II 48: shown above in this file) -----
+----- Spanish, II_CURRENT/EGA_II_es_current.tex, page II 49 -----
+\oldpage[II]{49}
+
+\begin{proof}
+Como $X'$ es isomorfo a $\Proj(S/\mathfrak{J})$, la condición es suficiente en virtud de \sref{II.2.4.4}.
+Para ver que es necesaria, consideremos la sucesión exacta $0\to\sh{J}\to\sh{O}_X\to\sh{O}_X/\sh{J}$, que da la sucesión exacta
+\[
+  0 \to \Gamma_*(\sh{J}) \to \Gamma_*(\sh{O}_X) \to \Gamma_*(\sh{O}_X/\sh{J}).
+\]
+
+Basta demostrar que, si $f\in S_m$ y $g\in S_n$ son tales que la imagen en $\Gamma_*(\sh{O}_X/\sh{J})$ de $\alpha_{n+m}(fg)$ es nula, entonces una de las imágenes de $\alpha_m(f)$ o de $\alpha_n(g)$ es nula.
+Ahora bien, por definición, estas imágenes son secciones de $(\sh{O}_X/\sh{J})$-módulos invertibles $\sh{L}=(\sh{O}_X/\sh{J})(m)$ y $\sh{L}'=(\sh{O}_X/\sh{J})(n)$ sobre el esquema íntegro $X'$; la hipótesis implica que el producto de estas dos secciones es nulo en $\sh{L}\otimes\sh{L}'$ (\sref{II.2.9.3} y \sref{II.2.5.14.1}) y, por tanto, una de ellas es nula en virtud de \sref[I]{I.7.4.4}.
+\end{proof}
+
+\begin{corollary}[2.9.5]
+\label{II.2.9.5}
+Sean $A$ un anillo, $M$ un $A$-módulo, $S$ una $A$-álgebra graduada generada por el conjunto $S_1$ de los elementos homogéneos de grado $1$, $u:M\to S_1$ un homomorfismo sobreyectivo de $A$-módulos, y $\overline{u}:\bb{S}(M)\to S$ el homomorfismo (de $A$-álgebras) del álgebra simétrica $\bb{S}(M)$ de $M$ en $S$ que prolonga $u$.
+Entonces el morfismo correspondiente a $\overline{u}$ es una inmersión cerrada de $\Proj(S)$ en $\Proj(\bb{S}(M))$.
+\end{corollary}
+
+\begin{proof}
+En efecto, $\overline{u}$ es sobreyectivo por hipótesis, y basta aplicar \sref{II.2.9.2}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 49-50.
+
+\section{Espectro homogéneo de un haz de álgebras graduadas}
+\label{section:II.3}
+
+\subsection{Espectro homogéneo de una $\mathcal{O}_Y$-álgebra graduada cuasi-coherente}
+\label{subsection:II.3.1}
+\label{II.3.1}
+
+\begin{env}[3.1.1]
+\label{II.3.1.1}
+Sean $Y$ un preesquema, $\sh{S}$ una $\sh{O}_Y$-álgebra graduada y $\sh{M}$ un $\sh{S}$-módulo graduado.
+Si $\sh{S}$ es \emph{cuasi-coherente}, cada una de sus componentes homogéneas $\sh{S}_n$ es un $\sh{O}_Y$-módulo \emph{cuasi-coherente}, pues es imagen de $\sh{S}$ mediante un homomorfismo de $\sh{S}$ en sí misma (\sref[I]{I.1.3.8} y \sref[I]{I.1.3.9}); del mismo modo, si $\sh{M}$ es cuasi-coherente como $\sh{O}_Y$-módulo, sus componentes homogéneas $\sh{M}_n$ también lo son, y recíprocamente.
+Para un entero $d>0$, se denota por $\sh{S}^{(d)}$ la suma directa de los $\sh{O}_Y$-módulos $\sh{S}_{nd}$ ($n\in\bb{Z}$), que es cuasi-coherente si $\sh{S}$ lo es \sref[I]{I.1.3.9}; para todo entero $k$ tal que $0\leq k\leq d-1$, se denota por $\sh{M}^{(d,k)}$ (o $\sh{M}^{(d)}$, para $k=0$) la suma directa de los $\sh{M}_{nd+k}$ ($n\in\bb{Z}$), que es un $\sh{S}^{(d)}$-módulo graduado y es cuasi-coherente si $\sh{S}$ y $\sh{M}$ son cuasi-coherentes \sref[I]{I.9.6.1}.
+Se denota por $\sh{M}(n)$ el $\sh{S}$-módulo graduado tal que $(\sh{M}(n))_k=\sh{M}_{n+k}$ para todo $k\in\bb{Z}$; si $\sh{S}$ y $\sh{M}$ son cuasi-coherentes, $\sh{M}(n)$ es un $\sh{S}$-módulo graduado cuasi-coherente \sref[I]{I.9.6.1}.
+
+Se dice que $\sh{M}$ es un $\sh{S}$-módulo graduado \emph{de tipo finito} (resp. que admite una \emph{presentación finita}) si, para todo $y\in Y$, existe un entorno abierto $U$ de $y$ y enteros $n_i$ (resp. enteros $m_i$ y $n_j$) tales que existe un homomorfismo sobreyectivo de grado $0$, $\bigoplus_{i=1}^r(\sh{S}(n_i)|U)\to\sh{M}|U$ (resp. tales que $\sh{M}|U$ es isomorfo al conúcleo de un homomorfismo de grado $0$, $\bigoplus_{i=1}^r(\sh{S}(m_i)|U)\to\bigoplus_{j=1}^s(\sh{S}(n_j)|U)$).
+
+Sea $U$ un abierto afín de $Y$, y sea $A=\Gamma(U,\sh{O}_Y)$ su anillo; por hipótesis, la $(\sh{O}_Y|U)$-álgebra graduada $\sh{S}|U$ es isomorfa a $\widetilde{S}$, donde $S=\Gamma(U,\sh{S})$ es una $A$-álgebra graduada \sref[I]{I.1.4.3};
+----- French corrections on page II 48 -----
+[id 1853]
+OLD: homomorphisme (TN)-surjectif
+NEW: homomorphisme \textup{(TN)}-surjectif
+FRENCH CONTEXT (corrected): , on dit aussi
+que c'est alors un (TN)-\emph{isomorphisme}.
+\end{env}
+
+\begin{proposition}[2.9.2]
+\label{II.2.9.2-fr}
+Soit $S$ un anneau gradué à degrés positifs et soit
+$X=\operatorname{Proj}(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\varphi:S\to S'$ est un homomorphisme \textup{(TN)}-surjectif
+    d'anneaux gradués, le morphisme correspondant $\Phi$
+    \textup{(\hyperref[II.2.8.1-fr]{2.8.1})} est défini dans
+    $\operatorname{Proj}(S')$ tout entier et est une immersion fermée de
+    $\operatorname{Proj}(S')$ dans $X$. Si $\mathfrak{J}$ est le noy
+
+[id 1854]
+OLD: (\hyperref[II.2.8.1-fr]{2.8.1}) est
+NEW: \textup{(\hyperref[II.2.8.1-fr]{2.8.1})} est
+FRENCH CONTEXT (corrected): label{II.2.9.2-fr}
+Soit $S$ un anneau gradué à degrés positifs et soit
+$X=\operatorname{Proj}(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\varphi:S\to S'$ est un homomorphisme \textup{(TN)}-surjectif
+    d'anneaux gradués, le morphisme correspondant $\Phi$
+    \textup{(\hyperref[II.2.8.1-fr]{2.8.1})} est défini dans
+    $\operatorname{Proj}(S')$ tout entier et est une immersion fermée de
+    $\operatorname{Proj}(S')$ dans $X$. Si $\mathfrak{J}$ est le noyau de
+    $\varphi$, le sous-schéma fermé de $X$ associé à $\Phi$ est défini par
+    le faisceau d'idéaux 
+
+[id 1857]
+OLD: (\hyperref[II.2.6.2-fr]{2.6.2}), et posons
+NEW: \textup{(\hyperref[II.2.6.2-fr]{2.6.2})}, et posons
+FRENCH CONTEXT (corrected):  de $X$, défini par un faisceau quasi-cohérent d'idéaux $\mathcal{J}$ de
+    $\mathcal{O}_X$. Soit $\mathfrak{J}$ l'idéal gradué de $S$, image
+    réciproque de $\Gamma_*(\mathcal{J})$ par l'homomorphisme canonique
+    $\alpha:S\to\Gamma_*(\mathcal{O}_X)$
+    \textup{(\hyperref[II.2.6.2-fr]{2.6.2})}, et posons
+    $S'=S/\mathfrak{J}$. Alors $X'$ est le sous-schéma associé à
+    l'immersion fermée $\operatorname{Proj}(S')\to X$ correspondant à
+    l'homomorphisme canonique d'anneaux gradués $S\to S'$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate
+
+[id 1858]
+OLD: [I.4.2.3-fr]{I,
+NEW: [I.4.2.3-fr]{\textbf{I},
+FRENCH CONTEXT (corrected): els que, pour tout $\alpha$, le
+préschéma induit par $X$ sur l'ensemble ouvert $f^{-1}(S_\alpha)$ soit affine.
+\end{definition}
+
+\begin{example}[1.2.2]
+\label{II.1.2.2-fr}
+Tout sous-préschéma fermé de $S$ est un $S$-préschéma affine au-dessus de $S$
+(\hyperref[I.4.2.3-fr]{\textbf{I}, 4.2.3} et
+\hyperref[I.4.2.4-fr]{4.2.4}).
+\end{example}
+
+\begin{remark}[1.2.3]
+\label{II.1.2.3-fr}
+Un préschéma $X$ affine au-dessus de $S$ n'est pas nécessairement un schéma
+affine, comme le montre l'exemple $X=S$ (\hyperref[II.1.2.2-fr]{1.2.2}).
+D'autre part
+
+[id 1859]
+OLD: \widetilde{j}(\widetilde{\mathfrak{J}'})
+NEW: \widetilde{j}(\widetilde{\mathfrak{J}}')
+FRENCH CONTEXT (corrected): n
+    isomorphisme de $\widetilde{\mathfrak{J}}$ sur $\mathcal{J}$, ce qui
+    résulte de (\hyperref[II.2.7.11-fr]{2.7.11}).
+\end{enumerate}
+\end{proof}
+
+On notera que $\mathfrak{J}$ est le \emph{plus grand} des idéaux gradués
+$\mathfrak{J}'$ de $S$ tels que
+$\widetilde{j}(\widetilde{\mathfrak{J}}')=\mathcal{J}$, car on vérifie
+immédiatement en remontant aux définitions
+(\hyperref[II.2.6.2-fr]{2.6.2}) que cette relation implique
+$\alpha(\mathfrak{J}')\subset\Gamma_*(\mathcal{J})$.
+
+\begin{corollary}[2.9.3]
+\label{II.2.9.3-fr}
+On suppose vérifiées les hyp
+
+[id 1861]
+OLD: (\hyperref[II.2.9.2-fr]{2.9.2}, (i))
+NEW: \textup{(\hyperref[II.2.9.2-fr]{2.9.2}, (i))}
+FRENCH CONTEXT (corrected): }$, car on vérifie
+immédiatement en remontant aux définitions
+(\hyperref[II.2.6.2-fr]{2.6.2}) que cette relation implique
+$\alpha(\mathfrak{J}')\subset\Gamma_*(\mathcal{J})$.
+
+\begin{corollary}[2.9.3]
+\label{II.2.9.3-fr}
+On suppose vérifiées les hypothèses de
+\textup{(\hyperref[II.2.9.2-fr]{2.9.2}, (i))} et en outre que l'idéal $S_+$ est
+engendré par $S_1$~; alors $\Phi^*((S(n))\supertilde)$ est canoniquement
+isomorphe à $(S'(n))\supertilde$ pour tout $n\in\mathbf{Z}$, et par suite
+$\Phi^*(\mathcal{F}(n))$ à $\Phi^*(\mathcal{F})(n)$ pour tout
+$\mathcal{O}_X$-
+
+[id 1864]
+OLD: (\hyperref[II.2.9.2-fr]{2.9.2}, (ii))
+NEW: \textup{(\hyperref[II.2.9.2-fr]{2.9.2}, (ii))}
+FRENCH CONTEXT (corrected): e $\mathcal{F}$.
+\end{corollary}
+
+\begin{proof}
+C'est un cas particulier de (\hyperref[II.2.8.8-fr]{2.8.8}), compte tenu de
+(\hyperref[II.2.5.10.2-fr]{2.5.10.2}).
+\end{proof}
+
+\begin{corollary}[2.9.4]
+\label{II.2.9.4-fr}
+On suppose vérifiées les hypothèses de
+\textup{(\hyperref[II.2.9.2-fr]{2.9.2}, (ii))}. Pour que le sous-préschéma fermé $X'$
+de $X$ soit intègre, il faut et il suffit que l'idéal gradué
+$\mathfrak{J}$ soit premier dans $S$.
+\end{corollary}
+
+\oldpage[II]{49}
+
+\begin{proof}
+Comme $X'$ est isomorphe à $\operatorname{Proj}(S/\mathfrak{J})$, la
+con
+

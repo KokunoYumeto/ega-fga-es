@@ -1,0 +1,879 @@
+```json
+[
+  {
+    "id": 5052,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5053,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.5.3.4}."
+  },
+  {
+    "id": 5054,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.6.7.6.1}."
+  },
+  {
+    "id": 5055,
+    "decision": "not_applicable",
+    "note": "Supresión del punto final del diagrama, sin cambio matemático."
+  },
+  {
+    "id": 5056,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmulas destacadas a fórmulas en línea."
+  },
+  {
+    "id": 5057,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5058,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 5059,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "arbitrario de $\\sh{O}_X$-módulos",
+    "en_new": "\\emph{arbitrario} de $\\sh{O}_X$-módulos"
+  },
+  {
+    "id": 5060,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Los $\\sh{O}_Y$-módulos de hipercohomología\n$\\RR^p f_*(\\sh{K}^\\bullet)$",
+    "en_new": "Los $\\sh{O}_Y$-módulos de hipercohomología\n$\\bb{R}^p f_*(\\sh{K}^\\bullet)$"
+  },
+  {
+    "id": 5061,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "se denotarán también\n$\\sh{H}^p(f,\\sh{K}^\\bullet)$, o simplemente"
+  },
+  {
+    "id": 5062,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\sh{H}^p_f(\\sh{K}^\\bullet)$."
+  },
+  {
+    "id": 5063,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Recordemos que $\\sh{H}^\\bullet(f,\\sh{K}^\\bullet)$ es la cohomología del"
+  },
+  {
+    "id": 5064,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Recordemos que $\\sh{H}^\\bullet(f,\\sh{K}^\\bullet)$ es la cohomología del\nbicomplejo de $\\sh{O}_Y$-módulos $f_*(\\sh{L}^{\\bullet\\bullet})$,\ndonde $\\sh{L}^{\\bullet\\bullet}$ es una resolución inyectiva de\nCartan--Eilenberg de $\\sh{K}^\\bullet$ en la categoría de\n$\\sh{O}_X$-módulos.\nEs el término límite de dos sucesiones espectrales cuyos términos $E_2$",
+    "note": "La segunda mención se sustituye por «Es»."
+  },
+  {
+    "id": 5065,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  {}'\\mathcal E_2^{pq}\n  =\\sh{H}^p\\bigl(\\sh{H}^q(f,\\sh{K}^\\bullet)\\bigr)\n\\end{equation}\ny\n\\begin{equation}\n\\label{0.12.4.1.2}\n\\tag{12.4.1.2}\n  {}''\\mathcal E_2^{pq}",
+    "note": "No repite los nombres completos de las sucesiones; sus términos ya usan \\mathcal E."
+  },
+  {
+    "id": 5068,
+    "decision": "not_applicable",
+    "note": "Supresión del punto final de la fórmula."
+  },
+  {
+    "id": 5070,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Recordemos también que la primera sucesión espectral es siempre regular.",
+    "note": "Se refiere a la primera sucesión sin repetir su símbolo."
+  },
+  {
+    "id": 5071,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Ambas sucesiones espectrales son birregulares cuando $\\sh{K}^\\bullet$ está\nacotado inferiormente,",
+    "note": "Se refiere a ambas sucesiones sin repetir sus símbolos."
+  },
+  {
+    "id": 5072,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "caso particular de $\\sh{H}^\\bullet(f,\\sh{K}^\\bullet)$, donde $f$ es un"
+  },
+  {
+    "id": 5073,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Para todo entero $p\\in\\bb{Z}$, el $\\sh{O}_Y$-módulo",
+    "note": "La cursiva ya procede del entorno proposition."
+  },
+  {
+    "id": 5074,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\bb{H}^p\\bigl(f^{-1}(U),\\sh{K}^\\bullet\\bigr)\n\\]\nsobre $Y$.\n\\end{proposition}"
+  },
+  {
+    "id": 5075,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\sh{H}^p(f,\\sh{K}^\\bullet)$ es canónicamente isomorfo al haz"
+  },
+  {
+    "id": 5076,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  U\\longmapsto\n  \\bb{H}^p\\bigl(f^{-1}(U),\\sh{K}^\\bullet\\bigr)",
+    "en_new": "  U\\leadsto\n  \\bb{H}^p\\bigl(f^{-1}(U),\\sh{K}^\\bullet\\bigr)"
+  },
+  {
+    "id": 5077,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  U\\longmapsto\n  \\HH^p\\bigl(\\Gamma(U,f_*(\\sh{L}^{\\bullet\\bullet}))\\bigr)",
+    "en_new": "  U\\leadsto\n  \\HH^p\\bigl(\\Gamma(U,f_*(\\sh{L}^{\\bullet\\bullet}))\\bigr)"
+  },
+  {
+    "id": 5078,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5079,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "La hipercohomología $\\sh{H}^\\bullet(f,\\sh{K}^\\bullet)$ es un\nfuntor cohomológico de $\\sh{K}^\\bullet$ en cada uno de los casos\nsiguientes:"
+  },
+  {
+    "id": 5080,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "funtor cohomológico de $\\sh{K}^\\bullet$ en cada uno de los casos\nsiguientes:\n\\begin{enumerate}"
+  },
+  {
+    "id": 5081,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "La hipercohomología $\\sh{H}^\\bullet(f,\\sh{K}^\\bullet)$ es un\nfuntor cohomológico"
+  },
+  {
+    "id": 5082,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\item[\\rm{a)}] $\\sh{K}^\\bullet$ varía en la categoría de complejos\n    acotados inferiormente;"
+  },
+  {
+    "id": 5083,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\item[\\rm{b)}] existe un entero $m$ tal que todo\n    $\\sh{O}_X$-módulo admite una resolución flácida de longitud $\\leq m$;"
+  },
+  {
+    "id": 5084,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\item[\\rm{c)}] $X$ es un espacio noetheriano."
+  },
+  {
+    "id": 5085,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Los casos~a) y~b) son casos particulares",
+    "en_new": "Los casos~\\emph{a)} y~\\emph{b)} son casos particulares"
+  },
+  {
+    "id": 5086,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "El caso~c), por otra parte, se sigue",
+    "en_new": "El caso~\\emph{c)}, por otra parte, se sigue"
+  },
+  {
+    "id": 5087,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{K}^\\bullet)$ cuya",
+    "en_new": "$\\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{K}^\\bullet)$ cuya"
+  },
+  {
+    "id": 5088,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\check{\\mathrm{C}}^i(\\mathfrak{U},\\sh{K}^j)$, el grupo de",
+    "en_new": "$\\mathrm{C}^i(\\mathfrak{U},\\sh{K}^j)$, el grupo de"
+  },
+  {
+    "id": 5089,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\emph{hipercohomología del recubrimiento $\\mathfrak{U}$ con\ncoeficientes en $\\sh{K}^\\bullet$}",
+    "en_new": "\\emph{hipercohomología} del recubrimiento $\\mathfrak{U}$ con\ncoeficientes en $\\sh{K}^\\bullet$"
+  },
+  {
+    "id": 5090,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "\\bigl(\\check{\\mathrm{C}}^\\bullet\n    (\\mathfrak{U},\\sh{K}^\\bullet)\\bigr).",
+    "en_new": "\\bigl(\\mathrm{C}^\\bullet\n    (\\mathfrak{U},\\sh{K}^\\bullet)\\bigr)."
+  },
+  {
+    "id": 5091,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Sea $\\sh{K}^\\bullet=(\\sh{K}^i)$ un complejo de\n$\\sh{O}_X$-módulos.\nExiste un funtor espectral regular de $\\sh{K}^\\bullet$ con\ntérmino límite $\\bb{H}^\\bullet(X,\\sh{K}^\\bullet)$ y término $E_2$"
+  },
+  {
+    "id": 5092,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  E_2^{pq}\n  =\n  \\CHH^p\\bigl(\\mathfrak{U},h^q(\\sh{K}^\\bullet)\\bigr),",
+    "en_new": "  \\bb{E}_2^{pq}\n  =\n  \\bb{H}^p\\bigl(\\mathfrak{U},h^q(\\sh{K}^\\bullet)\\bigr),",
+    "note": "Incluye también la corrección 5093."
+  },
+  {
+    "id": 5093,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  E_2^{pq}\n  =\n  \\CHH^p\\bigl(\\mathfrak{U},h^q(\\sh{K}^\\bullet)\\bigr),",
+    "note": "covered by 5092"
+  },
+  {
+    "id": 5095,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "donde $h^q(\\sh{K}^\\bullet)$ denota el complejo de prehaces"
+  },
+  {
+    "id": 5096,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Esta sucesión espectral es birregular si $\\sh{K}^\\bullet$ está acotado\ninferiormente.\n\\end{proposition}"
+  },
+  {
+    "id": 5097,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  V\\longmapsto\\HH^q(V,\\sh{K}^\\bullet)",
+    "en_new": "  V\\leadsto\\HH^q(V,\\sh{K}^\\bullet)"
+  },
+  {
+    "id": 5098,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\check{\\mathrm{C}}^\\bullet\n  (\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})\n  =\n  \\bigl(\\check{\\mathrm{C}}^i\n    (\\mathfrak{U},\\sh{L}^{jk})\\bigr).",
+    "en_new": "  \\mathrm{C}^\\bullet\n  (\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})\n  =\n  \\bigl(\\mathrm{C}^i\n    (\\mathfrak{U},\\sh{L}^{jk})\\bigr)."
+  },
+  {
+    "id": 5099,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\CHH^q(\\mathfrak{U},\\sh{L}^{jk})=0",
+    "en_new": "  \\bb{H}^q(\\mathfrak{U},\\sh{L}^{jk})=0"
+  },
+  {
+    "id": 5100,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\HH^n\\bigl(\n    \\check{\\mathrm{C}}^\\bullet\n      (\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})\n  \\bigr)\n  \\isoto\n  \\HH^n\\bigl(\\Gamma(X,\\sh{L}^{\\bullet\\bullet})\\bigr)",
+    "en_new": "  \\HH^n\\bigl(\n    \\mathrm{C}^\\bullet\n      (\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})\n  \\bigr)\n  \\isoto\n  \\HH^n\\bigl(\\Gamma(X,\\sh{L}^{\\bullet\\bullet})\\bigr)"
+  },
+  {
+    "id": 5101,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\HH^n\\bigl(\n    \\check{\\mathrm{C}}^\\bullet\n      (\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})\n  \\bigr)\n  \\isoto\n  \\bb{H}^n(X,\\sh{K}^\\bullet).",
+    "en_new": "  \\HH^n\\bigl(\n    \\mathrm{C}^\\bullet\n      (\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})\n  \\bigr)\n  \\isoto\n  \\bb{H}^n(X,\\sh{K}^\\bullet)."
+  },
+  {
+    "id": 5102,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\HH^q\\bigl(\n    \\check{\\mathrm{C}}^i\n      (\\mathfrak{U},\\sh{L}^{j,\\bullet})\n  \\bigr)",
+    "en_new": "  \\HH^q\\bigl(\n    \\mathrm{C}^i\n      (\\mathfrak{U},\\sh{L}^{j,\\bullet})\n  \\bigr)"
+  },
+  {
+    "id": 5103,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\check{\\mathrm{C}}^i(\\mathfrak{U},h^q(\\sh{K}^j))$.",
+    "en_new": "$\\mathrm{C}^i(\\mathfrak{U},h^q(\\sh{K}^j))$."
+  },
+  {
+    "id": 5104,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "Si, para todo símplex $\\sigma$ del nervio de $\\mathfrak{U}$ y\ntodo entero $i$, se tiene\n\\[\n  \\HH^q(U_\\sigma,\\sh{K}^i)=0\n  \\qquad(q>0),\n\\]\nentonces existe un isomorfismo canónico"
+  },
+  {
+    "id": 5105,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\check{\\mathrm{C}}^\\bullet\n(\\mathfrak{U},h^q(\\sh{K}^j))=0$",
+    "en_new": "$\\mathrm{C}^\\bullet\n(\\mathfrak{U},h^q(\\sh{K}^j))=0$"
+  },
+  {
+    "id": 5108,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5109,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\sh{H}^n(g,f_*(\\sh{K}^\\bullet))\n  \\longrightarrow\n  \\sh{H}^n(h,\\sh{K}^\\bullet),"
+  },
+  {
+    "id": 5110,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "  \\sh{H}^n(h,\\sh{K}^\\bullet)\n  \\longrightarrow\n  g_*\\bigl(\\sh{H}^n(f,\\sh{K}^\\bullet)\\bigr)."
+  },
+  {
+    "id": 5112,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 5113,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Sea $\\cat{C}$ una categoría abeliana en la que existan los productos"
+  },
+  {
+    "id": 5114,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Entonces existe el ínfimo de una familia de subobjetos de un objeto de\n$\\cat{C}$,"
+  },
+  {
+    "id": 5115,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "todo sistema proyectivo de objetos de $\\cat{C}$ posee un\nlímite proyectivo;"
+  },
+  {
+    "id": 7873,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-12.tex",
+    "en_old": "$\\check{\\mathrm{C}}^\\bullet\n(\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})$\ncomo un bicomplejo",
+    "en_new": "$\\mathrm{C}^\\bullet\n(\\mathfrak{U},\\sh{L}^{\\bullet\\bullet})$\ncomo un bicomplejo"
+  },
+  {
+    "id": 5117,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Sea $(A_\\alpha,f_{\\alpha\\beta})$ un sistema proyectivo de objetos de\n$\\cat{C}$ cuyo conjunto de índices"
+  },
+  {
+    "id": 5118,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\cat{C}$ cuyo conjunto de índices $\\mathrm{I}$ está filtrado por la derecha.",
+    "en_new": "$\\cat{C}$ cuyo conjunto de índices $\\mathrm{I}$ está \\emph{filtrado} por la derecha."
+  },
+  {
+    "id": 5119,
+    "decision": "not_applicable",
+    "note": "Puntuación de la redacción francesa."
+  },
+  {
+    "id": 5120,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5121,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Para un sistema proyectivo $(A_\\alpha,f_{\\alpha\\beta})$ en $\\cat{C}$,"
+  },
+  {
+    "id": 5124,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\emph{artinianos} en $\\cat{C}$,"
+  },
+  {
+    "id": 5125,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "La condición (ML) puede formularse también cuando $\\cat{C}$ es, por\nejemplo, la categoría de conjuntos."
+  },
+  {
+    "id": 5126,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 5127,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Sea\n\\[\n  0\\longrightarrow A_\\alpha\n  \\xrightarrow{u_\\alpha}B_\\alpha",
+    "note": "La cursiva ya procede del entorno proposition."
+  },
+  {
+    "id": 5128,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "una sucesión exacta de sistemas proyectivos de grupos abelianos, relativos\nal mismo conjunto de índices filtrado $\\mathrm{I}$."
+  },
+  {
+    "id": 5129,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Si $(B_\\alpha)$ satisface {\\rm(ML)}, entonces también $(C_\\alpha)$."
+  },
+  {
+    "id": 5130,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Si $(A_\\alpha)$ y $(C_\\alpha)$ satisfacen {\\rm(ML)}, entonces también\n  $(B_\\alpha)$."
+  },
+  {
+    "id": 5131,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5415,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5416,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "  y_\\alpha\n  =\n  g_{\\alpha\\lambda}\n  \\bigl(y_\\lambda+u_\\lambda(x_\\lambda)\\bigr)\n  \\in g_{\\alpha\\lambda}(B_\\lambda),",
+    "note": "Ya omite la igualdad intermedia eliminada."
+  },
+  {
+    "id": 5417,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Sea $\\mathrm{I}$ un conjunto ordenado filtrado que posee un subconjunto\ncofinal numerable, y sea"
+  },
+  {
+    "id": 5418,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "una sucesión exacta de sistemas proyectivos de grupos abelianos indexados\npor $\\mathrm{I}$.\nSi $(A_\\alpha)$ satisface {\\rm(ML)}, entonces la sucesión"
+  },
+  {
+    "id": 5419,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Si $(A_\\alpha)$ satisface {\\rm(ML)}, entonces la sucesión"
+  },
+  {
+    "id": 5420,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "es exacta.\n\\end{proposition}"
+  },
+  {
+    "id": 5421,
+    "decision": "not_applicable",
+    "note": "Presentación en línea y longitud de la flecha."
+  },
+  {
+    "id": 5423,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Bajo las hipótesis sobre $\\mathrm{I}$ de \\sref{0.13.2.2}, sea\n$(\\mathrm{K}^\\bullet_\\alpha)_{\\alpha\\in\\mathrm{I}}$ un sistema proyectivo\nde complejos de grupos abelianos"
+  },
+  {
+    "id": 5424,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Bajo las hipótesis sobre $\\mathrm{I}$ de \\sref{0.13.2.2}, sea",
+    "note": "\\sref ya imprime la referencia entre paréntesis rectos."
+  },
+  {
+    "id": 5426,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Si, para todo grado $n$, el sistema proyectivo de grupos abelianos\n$(\\mathrm{K}^n_\\alpha)_{\\alpha\\in\\mathrm{I}}$ satisface {\\rm(ML)},\nentonces todo $h_n$ es sobreyectivo.\nSi, además, el sistema proyectivo\n$(\\HH^{n-1}(\\mathrm{K}^\\bullet_\\alpha))_{\\alpha\\in\\mathrm{I}}$\nsatisface {\\rm(ML)}, entonces $h_n$ es biyectivo."
+  },
+  {
+    "id": 5427,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$(\\mathrm{K}^n_\\alpha)_{\\alpha\\in\\mathrm{I}}$ satisface {\\rm(ML)},\nentonces todo $h_n$ es sobreyectivo."
+  },
+  {
+    "id": 5428,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$(\\HH^{n-1}(\\mathrm{K}^\\bullet_\\alpha))_{\\alpha\\in\\mathrm{I}}$\nsatisface {\\rm(ML)}, entonces $h_n$ es biyectivo."
+  },
+  {
+    "id": 5429,
+    "decision": "not_applicable",
+    "note": "Altura tipográfica de los puntos suspensivos del diagrama."
+  },
+  {
+    "id": 5430,
+    "decision": "not_applicable",
+    "note": "Supresión del punto final de la fórmula."
+  },
+  {
+    "id": 5433,
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": 5438,
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": 5439,
+    "decision": "not_applicable",
+    "note": "Raya de separación en la presentación francesa."
+  },
+  {
+    "id": 5440,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm(i)}]\n  El argumento de \\sref{0.13.2.2}"
+  },
+  {
+    "id": 5441,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[\\textbf{(ML')}]",
+    "en_new": "\\item[(ML$'$)]"
+  },
+  {
+    "id": 5442,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm(ii)}]\n  Se pueden introducir los funtores derivados por la derecha"
+  },
+  {
+    "id": 5443,
+    "decision": "not_applicable",
+    "note": "Traslado del encabezamiento y del inicio de la proposición a la página siguiente."
+  },
+  {
+    "id": 5445,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Sea $X$ un espacio topológico, sea\n$(\\sh{F}_k)_{k\\in\\bb{N}}$ un sistema proyectivo de haces de\ngrupos abelianos sobre $X$, y pongamos\n$\\sh{F}=\\varprojlim_k\\sh{F}_k$.\nSupongamos que se cumplen las condiciones siguientes:"
+  },
+  {
+    "id": 5446,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\sh{F}=\\varprojlim_k\\sh{F}_k$.",
+    "en_new": "$\\sh{F}=\\varprojlim\\sh{F}_k$."
+  },
+  {
+    "id": 5447,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Existe una base $\\mathfrak{B}$ de la topología de $X$ tal que,\n  para todo $U\\in\\mathfrak{B}$ y todo $i\\geq0$, el sistema\n  proyectivo\n  $(\\HH^i(U,\\sh{F}_k))_{k\\in\\bb{N}}$ satisface (ML)."
+  },
+  {
+    "id": 5448,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$(\\HH^i(U,\\sh{F}_k))_{k\\in\\bb{N}}$ satisface (ML).",
+    "en_new": "$(\\HH^i(U,\\sh{F}_k))_{k\\in\\bb{N}}$ satisface \\textup{(ML)}."
+  },
+  {
+    "id": 5449,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Para todo $x\\in X$ y todo $i>0$, se tiene"
+  },
+  {
+    "id": 5450,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5451,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "donde $U$ recorre los entornos de $x$ pertenecientes a\n  $\\mathfrak{B}$."
+  },
+  {
+    "id": 5452,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Los homomorfismos\n  $u_{hk}:\\sh{F}_k\\longrightarrow\\sh{F}_h$ $(h\\leq k)$ que definen el\n  sistema proyectivo $(\\sh{F}_k)$ son sobreyectivos."
+  },
+  {
+    "id": 5454,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Bajo estas condiciones, para todo $i>0$, el homomorfismo canónico"
+  },
+  {
+    "id": 5455,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "es sobreyectivo. Si, además, para un valor dado de $i$ el sistema\nproyectivo\n$(\\HH^{i-1}(X,\\sh{F}_k))_{k\\in\\bb{N}}$ satisface (ML), entonces $h_i$ es\nbiyectivo."
+  },
+  {
+    "id": 5456,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$(\\HH^{i-1}(X,\\sh{F}_k))_{k\\in\\bb{N}}$ satisface (ML), entonces $h_i$ es",
+    "en_new": "$(\\HH^{i-1}(X,\\sh{F}_k))_{k\\in\\bb{N}}$ satisface \\textup{(ML)}, entonces $h_i$ es"
+  },
+  {
+    "id": 5457,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "son flácidos; mostraremos entonces que",
+    "en_new": "son \\emph{flácidos}; mostraremos entonces que"
+  },
+  {
+    "id": 5458,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "así como los núcleos\n$\\sh{N}_{hk}$",
+    "en_new": "así como los \\emph{núcleos}\n$\\sh{N}_{hk}$"
+  },
+  {
+    "id": 5459,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Basta demostrar que, para todo subconjunto abierto $U$ de $X$",
+    "en_new": "Basta demostrar que, para \\emph{todo} subconjunto abierto $U$ de $X$"
+  },
+  {
+    "id": 5460,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "  \\CHH^i(\\mathfrak{U},\\sh{F})=0\n  \\qquad (i>0).",
+    "en_new": "  \\HH^i(\\mathfrak{U},\\sh{F})=0\n  \\qquad (i>0)."
+  },
+  {
+    "id": 5461,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\CHH^i(\\mathfrak{U},\\sh{F}_k)=0$ para todo $i>0$",
+    "en_new": "$\\HH^i(\\mathfrak{U},\\sh{F}_k)=0$ para todo $i>0$"
+  },
+  {
+    "id": 5462,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F}_k)$ de cocadenas",
+    "en_new": "$\\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F}_k)$ de cocadenas"
+  },
+  {
+    "id": 5463,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "  \\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F}_k)\n  \\longrightarrow\n  \\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F}_h)\n  \\qquad(h\\leq k)",
+    "en_new": "  \\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F}_k)\n  \\longrightarrow\n  \\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F}_h)\n  \\qquad(h\\leq k)"
+  },
+  {
+    "id": 5464,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "son sobreyectivas.\nPor definición, basta mostrar",
+    "en_new": "son \\emph{sobreyectivas}.\nPor definición, basta mostrar"
+  },
+  {
+    "id": 5465,
+    "decision": "not_applicable",
+    "note": "Presentación en línea y longitud de las flechas."
+  },
+  {
+    "id": 5466,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$(\\check{\\mathrm{C}}^\\bullet(\\mathfrak{U},\\sh{F}_k))_{k\\in\\bb{N}}$",
+    "en_new": "$(\\mathrm{C}^\\bullet(\\mathfrak{U},\\sh{F}_k))_{k\\in\\bb{N}}$"
+  },
+  {
+    "id": 5467,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$(\\CHH^i(\\mathfrak{U},\\sh{F}_k))_{k\\in\\bb{N}}$",
+    "en_new": "$(\\HH^i(\\mathfrak{U},\\sh{F}_k))_{k\\in\\bb{N}}$"
+  },
+  {
+    "id": 5468,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\CHH^0(\\mathfrak{U},\\sh{F}_k)=\\Gamma(U,\\sh{F}_k)$",
+    "en_new": "$\\HH^0(\\mathfrak{U},\\sh{F}_k)=\\Gamma(U,\\sh{F}_k)$"
+  },
+  {
+    "id": 5469,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "  \\CHH^i(\\mathfrak{U},\\sh{F})\n  =\n  \\varprojlim_k\\CHH^i(\\mathfrak{U},\\sh{F}_k)\n  =0",
+    "en_new": "  \\HH^i(\\mathfrak{U},\\sh{F})\n  =\n  \\varprojlim_k\\HH^i(\\mathfrak{U},\\sh{F}_k)\n  =0"
+  },
+  {
+    "id": 5470,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\emph{resolución canónica}"
+  },
+  {
+    "id": 5471,
+    "decision": "not_applicable",
+    "note": "Redistribución de la frase alrededor del salto de página francés."
+  },
+  {
+    "id": 5473,
+    "decision": "not_applicable",
+    "note": "Presentación en línea y longitud de las flechas."
+  },
+  {
+    "id": 5474,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\sh{A}\\longmapsto\\sh{C}^i(X,\\sh{A})$",
+    "en_new": "$\\sh{A}\\leadsto\\sh{C}^i(X,\\sh{A})$"
+  },
+  {
+    "id": 5475,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "$\\sh{G}^\\bullet=(\\sh{G}^i)_{i\\geq0}$ es una resolución del haz",
+    "en_new": "$\\sh{G}^\\bullet=(\\sh{G}^i)_{i\\geq0}$ es una \\emph{resolución} del haz"
+  },
+  {
+    "id": 5476,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Como $\\HH^j(X,\\sh{G}^i)=0$ para $j>0$, la cohomología",
+    "en_new": "Como $\\HH^j(X,\\sh{G}^\\bullet)=0$ para $j>0$, la cohomología"
+  },
+  {
+    "id": 5480,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "  U\\longmapsto\\HH^i\\bigl(\\Gamma(U,\\sh{G}^\\bullet)\\bigr)",
+    "en_new": "  U\\leadsto\\HH^i\\bigl(\\Gamma(U,\\sh{G}^\\bullet)\\bigr)"
+  },
+  {
+    "id": 5481,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5482,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "(0\\textsubscript{I}, \\EGAUnavailableHyperref{0.3.2.6}{3.2.6}).\nVimos",
+    "en_new": "(\\textbf{0}\\textsubscript{I}, \\EGAUnavailableHyperref{0.3.2.6}{3.2.6}).\nVimos"
+  },
+  {
+    "id": 5483,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "son sobreyectivas. Por otra parte,",
+    "en_new": "son \\emph{sobreyectivas}. Por otra parte,"
+  },
+  {
+    "id": 5484,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 5485,
+    "decision": "not_applicable",
+    "note": "Redistribución entre fórmulas en línea y destacadas."
+  },
+  {
+    "id": 5486,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "alguna (0\\textsubscript{I}, \\EGAUnavailableHyperref{0.3.2.6}{3.2.6}).",
+    "en_new": "alguna (\\textbf{0}\\textsubscript{I}, \\EGAUnavailableHyperref{0.3.2.6}{3.2.6})."
+  },
+  {
+    "id": 5487,
+    "decision": "not_applicable",
+    "note": "Raya de separación en la presentación francesa."
+  },
+  {
+    "id": 5488,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm(i)}]\n  El enunciado de \\sref{0.13.3.1} solo tiene interés para $i>0$,"
+  },
+  {
+    "id": 5489,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm(ii)}]\n  Las condiciones~{\\rm(i)} y~{\\rm(ii)} de \\sref{0.13.3.1} se satisfacen,"
+  },
+  {
+    "id": 5490,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "son sobreyectivas. Este es el caso más frecuente en el que se aplica",
+    "en_new": "son \\emph{sobreyectivas}. Este es el caso más frecuente en el que se aplica"
+  },
+  {
+    "id": 5491,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "categoría abeliana $\\cat{C}$.\nDecimos que está \\emph{acotado inferiormente}"
+  },
+  {
+    "id": 5493,
+    "decision": "not_applicable",
+    "note": "Reorganización tipográfica de las dos ramas, sin cambio de fórmula."
+  },
+  {
+    "id": 5495,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Sea $\\bb{A}=(A_k)_{k\\in\\bb{Z}}$ un sistema proyectivo acotado\ninferiormente en una categoría abeliana $\\cat{C}$.\nLas condiciones siguientes son equivalentes:"
+  },
+  {
+    "id": 5496,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "inferiormente en una categoría abeliana $\\cat{C}$.\nLas condiciones siguientes son equivalentes:"
+  },
+  {
+    "id": 5497,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm a)}] $\\bb{A}$ satisface (ML).",
+    "note": "La cursiva ya procede del entorno proposition."
+  },
+  {
+    "id": 5498,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm a)}] $\\bb{A}$ satisface (ML).",
+    "en_new": "\\item[{\\rm a)}] $\\bb{A}$ satisface \\textup{(ML)}."
+  },
+  {
+    "id": 5499,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "\\item[{\\rm b)}] Para todo $p\\in\\bb{Z}$, el sistema proyectivo\n  $(\\mathrm{gr}^p(A_k))_{k\\in\\bb{Z}}$ es esencialmente constante."
+  },
+  {
+    "id": 5501,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega0/ega0-13.tex",
+    "en_old": "Además, cuando se cumplen estas condiciones, existe, para todo\n$p\\in\\bb{Z}$, un isomorfismo canónico"
+  }
+]
+```
+III1_CURRENT/ega0/ega0-12.tex, página 61: «de\n  de bicomplejos de haces» contiene un «de» duplicado.
+III1_CURRENT/ega0/ega0-13.tex, página 68: «es\nes sobreyectiva» contiene un «es» duplicado.

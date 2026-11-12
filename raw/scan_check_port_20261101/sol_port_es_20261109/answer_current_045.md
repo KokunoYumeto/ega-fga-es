@@ -1,0 +1,1011 @@
+```json
+[
+  {
+    "id": 9344,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "que $w$ es inyectivo, lo\nque termina la demostración.",
+    "en_new": "que $w$ es \\emph{inyectivo}, lo\nque termina la demostración."
+  },
+  {
+    "id": 9345,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "Entonces, en la conclusión de (19.8.8, (ii)), se pueden sustituir",
+    "en_new": "Entonces, en la conclusión de \\textup{(19.8.8, (ii))}, se pueden sustituir"
+  },
+  {
+    "id": 9347,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "$p.1$ es un elemento de $\\mathfrak m$, y existen otros"
+  },
+  {
+    "id": 9349,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "que, junto con $p.1$, forman una\nbase de $\\mathfrak m$ sobre $K$."
+  },
+  {
+    "id": 9357,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "$\\gr(u):\\gr_\\bullet(W)\\to\\gr_\\bullet(A)$ es sobreyectivo",
+    "en_new": "$\\gr(u):\\gr_\\bullet(W)\\to\\gr_\\bullet(A)$ es \\emph{sobreyectivo}"
+  },
+  {
+    "id": 9358,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 9359,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "topológica discreta $C$ y todo ideal nilpotente $\\mathfrak J$ de $C$, todo\n$A$-homomorfismo continuo $u_0:B\\to C/\\mathfrak J$ que se factoriza como\n$B\\xrightarrow{u}C\\to C/\\mathfrak J$, donde $u$ es un $\\Lambda$-homomorfismo\ncontinuo",
+    "en_new": "topológica discreta $C$ y todo ideal nilpotente $\\mathfrak J$ de $C$, todo\n$A$-homomorfismo continuo $u_0:B\\to C/\\mathfrak J$ que se factoriza como\n$B\\xrightarrow{u}C\\to C/\\mathfrak J$, donde $u$ es un \\textup{$\\Lambda$-homomorfismo}\ncontinuo"
+  },
+  {
+    "id": 9360,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "$v$ es un $A$-homomorfismo continuo.\n\\end{definition}",
+    "en_new": "$v$ es un \\textup{$A$-homomorfismo} continuo.\n\\end{definition}"
+  },
+  {
+    "id": 9372,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "(cf.~18.4.2)",
+    "en_new": "\\textup{(cf.~18.4.2)}"
+  },
+  {
+    "id": 9373,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la fórmula."
+  },
+  {
+    "id": 9375,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "$\\Lambda$-trivial; el resto de la demostración permanece entonces inalterado.",
+    "en_new": "$\\Lambda$-\\emph{trivial}; el resto de la demostración permanece entonces inalterado."
+  },
+  {
+    "id": 9376,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "Cuando $\\Lambda$, $A$ y $B$ son anillos discretos, el criterio (19.9.8) se",
+    "en_new": "Cuando $\\Lambda$, $A$ y $B$ son anillos \\emph{discretos}, el criterio (19.9.8) se"
+  },
+  {
+    "id": 9735,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "$A\\xrightarrow{\\rho}B\\xrightarrow{v}E$ debe ser el homomorfismo estructural"
+  },
+  {
+    "id": 9736,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "extensión de \\emph{tipo finito} $K$",
+    "en_new": "extensión \\emph{de tipo finito} $K$"
+  },
+  {
+    "id": 9738,
+    "decision": "not_applicable",
+    "note": "Puntuación gramatical francesa."
+  },
+  {
+    "id": 9739,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-19b-es.tex",
+    "en_old": "suponer $u$ y $p$ sobreyectivos.",
+    "en_new": "suponer $u$ y $p$ \\emph{sobreyectivos}."
+  },
+  {
+    "id": 9798,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "sus relaciones con la noción de álgebra formalmente lisa y, en",
+    "en_new": "sus relaciones con la noción de álgebra \\emph{formalmente lisa} y, en"
+  },
+  {
+    "id": 9800,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 9782,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Sean $A$ un anillo (no necesariamente conmutativo), $B$, $E$, $C$",
+    "en_new": "Sean $A$ un anillo \\textup{(no necesariamente conmutativo)}, $B$, $E$, $C$"
+  },
+  {
+    "id": 9788,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{$A$-derivación de $B$ en $L$}",
+    "en_new": "$A$-derivación de $B$ en $L$"
+  },
+  {
+    "id": 9789,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "las condiciones (i) y \\textup{(ii)}",
+    "en_new": "las condiciones \\textup{(i)} y \\textup{(ii)}"
+  },
+  {
+    "id": 9791,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\textup{(ii)} de \\sref{0.20.1.1-es}.\n\\end{definition}",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 9792,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Se deduce de \\sref{0.20.1.1-es} que el \\emph{núcleo}",
+    "en_new": "Se deduce de \\hyperref[0.20.1.1-es]{\\textup{(20.1.1.1)}} que el \\emph{núcleo}",
+    "note": "Se corrige el número impreso conservando la clave del enlace."
+  },
+  {
+    "id": 9793,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es un sub-$A$-anillo de $B$.",
+    "en_new": "es un \\emph{sub-}$A$-\\emph{anillo} de $B$."
+  },
+  {
+    "id": 9794,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\mathbf{Z}$-derivación, es decir, una aplicación",
+    "en_new": "$\\mathbf{Z}$-\\emph{derivación}, es decir, una aplicación"
+  },
+  {
+    "id": 9795,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$P$-derivación: esto es evidente",
+    "en_new": "$P$-\\emph{derivación}: esto es evidente"
+  },
+  {
+    "id": 9797,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "y $L$ un $B$-módulo, entonces, para toda",
+    "en_new": "y $L$ un $B$-\\emph{módulo}, entonces, para toda"
+  },
+  {
+    "id": 14449,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "si $D$ es nula en $\\rho(A)$ y verifica",
+    "en_new": "si $D$ es \\emph{nula en} $\\rho(A)$ y verifica"
+  },
+  {
+    "id": 14450,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "si $D$ es nula en $\\rho(A)$ y verifica",
+    "note": "covered by 14449"
+  },
+  {
+    "id": 9747,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(cf. 18.2.3)",
+    "en_new": "\\textup{(cf. 18.2.3)}"
+  },
+  {
+    "id": 9801,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 9759,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.20.2.1.1-es} es un\nhomomorfismo de $A$-módulos.",
+    "en_new": "\\sref{0.20.2.1.1-es} es un\nhomomorfismo de $A$-\\emph{módulos}."
+  },
+  {
+    "id": 9761,
+    "decision": "not_applicable",
+    "note": "Puntuación gramatical francesa."
+  },
+  {
+    "id": 9764,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "para todo homomorfismo $w:L\\to L'$ de $B$-bimódulos.",
+    "en_new": "para todo homomorfismo $w:L\\to L'$ de $B$-\\emph{bimódulos}."
+  },
+  {
+    "id": 9765,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "&\\to\\operatorname{Exan}_B(C,L)",
+    "en_new": "&\\xrightarrow{\\partial}\\operatorname{Exan}_B(C,L)"
+  },
+  {
+    "id": 9771,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(cf.\n\\sref{0.20.1.5-es})",
+    "en_new": "\\textup{(cf.\n\\sref{0.20.1.5-es})}"
+  },
+  {
+    "id": 9772,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Además, la sucesión exacta \\sref{0.20.2.2.1-es} es",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 9780,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\mathbf{Z}$-derivación de $B$ en $L$ \\sref{0.20.1.5-es}",
+    "en_new": "$\\mathbf{Z}$-\\emph{derivación} de $B$ en $L$ \\sref{0.20.1.5-es}"
+  },
+  {
+    "id": 9781,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "que $D$ es una $A$-derivación o también",
+    "en_new": "que $D$ es una $A$-\\emph{derivación} o también"
+  },
+  {
+    "id": 9802,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "&\\to\\operatorname{Exalcom}_B(C,L)",
+    "en_new": "&\\xrightarrow{\\partial}\\operatorname{Exalcom}_B(C,L)"
+  },
+  {
+    "id": 9803,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(resp.\n\\sref{0.20.2.3-es})",
+    "en_new": "\\textup{(resp.\n\\sref{0.20.2.3-es})}"
+  },
+  {
+    "id": 9805,
+    "decision": "not_applicable",
+    "note": "Reorganiza el entorno francés; no se cambia la estructura española."
+  },
+  {
+    "id": 9808,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 9809,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "la categoría de los $A$-anillos topológicos se define",
+    "en_new": "la categoría de los $A$-\\emph{anillos topológicos} se define"
+  },
+  {
+    "id": 9824,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\mathfrak{J}_0B\\subset\\mathfrak K_0$ y\n$B\\mathfrak{J}_0\\subset\\mathfrak K_0$"
+  },
+  {
+    "id": 9826,
+    "decision": "not_applicable",
+    "note": "Puntuación gramatical francesa."
+  },
+  {
+    "id": 9827,
+    "decision": "not_applicable",
+    "note": "Solo elimina una coma francesa."
+  },
+  {
+    "id": 24668,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "pares $(\\mathfrak{J},\\mathfrak K)$ de ideales bilaterales\ntales que",
+    "en_new": "pares $(\\mathfrak{J},\\mathfrak K)$ de ideales bilaterales abiertos\ntales que"
+  },
+  {
+    "id": 9828,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "&\\to\\operatorname{Exantop}_B(C,L)",
+    "en_new": "&\\xrightarrow{\\partial}\\operatorname{Exantop}_B(C,L)"
+  },
+  {
+    "id": 9829,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "&\\to\\operatorname{Exalcotop}_B(C,L)",
+    "en_new": "&\\xrightarrow{\\partial}\\operatorname{Exalcotop}_B(C,L)"
+  },
+  {
+    "id": 9830,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Bajo las hipótesis de \\sref{0.20.3.5-es} (resp.\n\\sref{0.20.3.6-es})",
+    "en_new": "Bajo las hipótesis de \\hyperref[0.20.3.5-es]{\\textup{(20.3.6)}} \\textup{(resp.\n\\hyperref[0.20.3.6-es]{\\textup{(20.3.7)}})}",
+    "note": "Incluye 24669; se conservan las claves de los enlaces."
+  },
+  {
+    "id": 9832,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 9833,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "En todo lo que sigue de este parágrafo y en los tres siguientes, todos los\nanillos se suponen \\emph{conmutativos}.",
+    "en_new": "\\textit{En todo lo que sigue de este parágrafo y en los tres siguientes, todos los\nanillos se suponen conmutativos.}"
+  },
+  {
+    "id": 24669,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Bajo las hipótesis de \\sref{0.20.3.5-es} (resp.\n\\sref{0.20.3.6-es})",
+    "note": "covered by 9830"
+  },
+  {
+    "id": 9834,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{$B$-álgebra aumentada de partes principales de orden $1$ de\n$B$ respecto de $A$}",
+    "en_new": "$B$-álgebra aumentada de partes principales de orden $1$ de\n$B$ respecto de $A$"
+  },
+  {
+    "id": 9835,
+    "decision": "not_applicable",
+    "note": "Reorganiza el entorno francés; no se cambia la estructura española."
+  },
+  {
+    "id": 9836,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{$1$-diferenciales} (o simplemente de las \\emph{diferenciales}) de $B$",
+    "en_new": "$1$-diferenciales \\textup{(o simplemente de las} diferenciales) de $B$"
+  },
+  {
+    "id": 9849,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "-x.(z\\otimes1\\setmin 1\\otimes z)(y\\otimes1\\setmin 1\\otimes y)",
+    "en_new": "\\setmin x.(z\\otimes1\\setmin 1\\otimes z)(y\\otimes1\\setmin 1\\otimes y)"
+  },
+  {
+    "id": 9862,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{diferencial exterior de $B$ relativa a $A$}",
+    "en_new": "diferencial exterior de $B$ relativa a $A$"
+  },
+  {
+    "id": 9863,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{diferencial de $x$}",
+    "en_new": "diferencial de $x$"
+  },
+  {
+    "id": 10141,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{formalmente proyectivo}",
+    "en_new": "formalmente proyectivo"
+  },
+  {
+    "id": 10142,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.19.3.5-es}, (iii)",
+    "en_new": "(\\ref{0.19.3.5-es}, (iii))"
+  },
+  {
+    "id": 10143,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.19.3.5-es}, (ii)",
+    "en_new": "(\\ref{0.19.3.5-es}, (ii))"
+  },
+  {
+    "id": 10144,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "entonces, para todo ideal abierto $\\mathfrak{R}$ de $B$,\n$\\Omega^1_{B/A}\\otimes_B(B/\\mathfrak{R})\n=\\Omega^1_{B/A}/\\mathfrak{R}.\\Omega^1_{B/A}$ es un\n$(B/\\mathfrak{R})$-módulo proyectivo.",
+    "en_new": "entonces, para todo ideal abierto $\\mathfrak{K}$ de $B$,\n$\\Omega^1_{B/A}\\otimes_B(B/\\mathfrak{K})\n=\\Omega^1_{B/A}/\\mathfrak{K}.\\Omega^1_{B/A}$ es un\n$(B/\\mathfrak{K})$-módulo proyectivo."
+  },
+  {
+    "id": 10145,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es un anillo artiniano, todo",
+    "en_new": "es un anillo \\emph{artiniano}, todo"
+  },
+  {
+    "id": 10146,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "($\\mathbf{0_{III}}$, 10.1.3)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{III}}$, 10.1.3)"
+  },
+  {
+    "id": 10147,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\Omega^1_{B/A}$ es un $B$-módulo libre, y los $dX_\\alpha$",
+    "en_new": "$\\Omega^1_{B/A}$ es un $B$-módulo \\emph{libre}, y los $dX_\\alpha$"
+  },
+  {
+    "id": 10151,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.20.4.8-es}, (ii).",
+    "en_new": "(\\ref{0.20.4.8-es}, (ii))."
+  },
+  {
+    "id": 10152,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "una extensión separable del de $A$.",
+    "en_new": "una extensión \\emph{separable} del de $A$."
+  },
+  {
+    "id": 24670,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "las $B$-derivaciones de $B=D_A(L)$",
+    "en_new": "las $A$-derivaciones de $B=D_A(L)$"
+  },
+  {
+    "id": 10165,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "que es un homomorfismo de $C$-módulos.",
+    "en_new": "que es un \\emph{homomorfismo de $C$-módulos}."
+  },
+  {
+    "id": 10169,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "un homomorfismo de $B'$-módulos\n\\begin{equation}",
+    "en_new": "un homomorfismo de \\emph{$B'$-módulos}\n\\begin{equation}"
+  },
+  {
+    "id": 10171,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "el homomorfismo canónico \\sref{0.20.5.4.1-es}",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 9866,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "estos homomorfismos no son\notros (salvo una identificación canónica) que los homomorfismos\n\\sref{0.20.2.1.2-es} y \\sref{0.20.2.1.3-es} respectivamente.",
+    "en_new": "estos homomorfismos \\emph{no son\notros} (salvo una identificación canónica) \\emph{que los homomorfismos}\n\\sref{0.20.2.1.2-es} \\emph{y} \\sref{0.20.2.1.3-es} respectivamente."
+  },
+  {
+    "id": 9867,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(cf. \\sref{0.19.9.1-es})",
+    "en_new": "\\textup{(cf. \\sref{0.19.9.1-es})}"
+  },
+  {
+    "id": 9868,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es exacta; teniendo en cuenta \\sref{0.20.5.6-es} y",
+    "en_new": "es \\emph{exacta}; teniendo en cuenta \\sref{0.20.5.6-es} y"
+  },
+  {
+    "id": 9869,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la fórmula."
+  },
+  {
+    "id": 9870,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\operatorname{Hom}_C(\\Omega^1_{C/B},L)=0$ para todo $C$-módulo $L$, por tanto",
+    "en_new": "$\\operatorname{Hom}_C(\\Omega^1_{C/B},L)=0$ para \\emph{todo} $C$-módulo $L$, por tanto"
+  },
+  {
+    "id": 9871,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.19.10.3-es}, (ii).",
+    "en_new": "(\\ref{0.19.10.3-es}, (ii))."
+  },
+  {
+    "id": 9872,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.20.4.13-es}, (i) y de",
+    "en_new": "(\\ref{0.20.4.13-es}, (i)) y de"
+  },
+  {
+    "id": 9873,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es un homomorfismo de $C$-módulos, pues",
+    "en_new": "es un homomorfismo de $C$-\\emph{módulos}, pues"
+  },
+  {
+    "id": 9874,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$d(xy)\\equiv xdy\\pmod{\\mathfrak K.\\Omega^1_{B/A}}$",
+    "note": "El ideal ya es K; \\pmod conserva la convención española equivalente."
+  },
+  {
+    "id": 9887,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$u(\\mathfrak K)\\subset\\mathfrak K'$ y $C'=B'/\\mathfrak K'$"
+  },
+  {
+    "id": 9898,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\mathfrak K^2/\\mathfrak K^4\\otimes_E C\\longrightarrow",
+    "en_new": "\\mathfrak K^2/\\mathfrak K^4\\otimes_E C\\xrightarrow{\\delta'}"
+  },
+  {
+    "id": 9900,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es \\emph{exacta y escindida}, y equivale también",
+    "en_new": "es \\emph{exacta} y \\emph{escindida}, y equivale también"
+  },
+  {
+    "id": 9901,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "a) y b) (cf. (18.3.6.2)).",
+    "en_new": "\\emph{a)} y \\emph{b)} (cf. (18.3.6.2))."
+  },
+  {
+    "id": 9902,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "El hecho de que b) implique c) proviene",
+    "en_new": "El hecho de que \\emph{b)} implique \\emph{c)} proviene"
+  },
+  {
+    "id": 9903,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Recíprocamente, c)\nimplica b), pues toda $B$-extensión de",
+    "en_new": "Recíprocamente, \\emph{c)}\nimplica \\emph{b)}, pues toda $B$-\\emph{extensión} de"
+  },
+  {
+    "id": 9904,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(considerada como $B$-extensión)",
+    "en_new": "(considerada como $B$-\\emph{extensión})"
+  },
+  {
+    "id": 9915,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "El hecho de que c) implique b) se deduce",
+    "en_new": "El hecho de que \\emph{c)} implique \\emph{b)} se deduce"
+  },
+  {
+    "id": 9917,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\mathfrak K/\\mathfrak K^2\\xrightarrow{d_{E/A}}\n  \\Omega^1_{E/A}\\xrightarrow{h}\\mathfrak K/\\mathfrak K^2",
+    "note": "Los símbolos ya son K; no se traslada el cambio de disposición."
+  },
+  {
+    "id": 9918,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$h\\mapsto h\\otimes1$",
+    "en_new": "$h\\leadsto h\\otimes1$"
+  },
+  {
+    "id": 9934,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "de $\\mathfrak K$ y $C=B/\\mathfrak K$; se sabe que"
+  },
+  {
+    "id": 10032,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{módulo de imperfección del $B$-álgebra $C$ relativo a\n$A$}",
+    "en_new": "\\emph{módulo de imperfección} del $B$-álgebra $C$ relativo a\n$A$"
+  },
+  {
+    "id": 10033,
+    "decision": "not_applicable",
+    "note": "Reorganiza el entorno francés; no se cambia la estructura española."
+  },
+  {
+    "id": 10034,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 10035,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(y, en\nparticular, si $C$ es un $B$-álgebra formalmente lisa)",
+    "en_new": "\\textup{(y, en\nparticular, si $C$ es un $B$-álgebra \\emph{formalmente lisa})}"
+  },
+  {
+    "id": 10036,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(es decir, que el homomorfismo canónico\n$\\Omega^1_k\\otimes_k K\\to\\Omega^1_K$ sea inyectivo o también (20.4.8), que\ntoda derivación de $k$ en $K$ se prolongue a una derivación de $K$\nen sí mismo)",
+    "en_new": "\\textup{(es decir, que el homomorfismo canónico\n$\\Omega^1_k\\otimes_k K\\to\\Omega^1_K$ sea \\emph{inyectivo} o también (20.4.8), que\ntoda derivación de $k$ en $K$ \\emph{se prolongue} a una derivación de $K$\nen sí mismo)}"
+  },
+  {
+    "id": 10037,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$k$-álgebra formalmente lisa (19.6.1)",
+    "en_new": "$k$-álgebra \\emph{formalmente lisa} (19.6.1)"
+  },
+  {
+    "id": 10038,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$P$-álgebra\nformalmente lisa, y equivale",
+    "en_new": "$P$-\\emph{álgebra\nformalmente lisa}, y equivale"
+  },
+  {
+    "id": 10039,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$k$-álgebra formalmente lisa o un",
+    "en_new": "$k$-\\emph{álgebra formalmente lisa} o un"
+  },
+  {
+    "id": 10040,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$k$-álgebra formalmente lisa\nrelativamente a $P$. Finalmente",
+    "en_new": "$k$-\\emph{álgebra formalmente lisa\nrelativamente a} $P$. Finalmente"
+  },
+  {
+    "id": 10044,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$C'$-homomorfismo\n\\begin{equation}",
+    "en_new": "$C'$-\\emph{homomorfismo}\n\\begin{equation}"
+  },
+  {
+    "id": 10054,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(20.6.5.2), se obtiene, pues, un $C$-homomorfismo canónico",
+    "en_new": "(20.6.5.2), se obtiene, pues, un $C$-\\emph{homomorfismo canónico}"
+  },
+  {
+    "id": 10056,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "se llama \\emph{homomorfismo característico de $E$}, y se",
+    "en_new": "se llama homomorfismo característico de $E$, y se"
+  },
+  {
+    "id": 10062,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la fórmula."
+  },
+  {
+    "id": 10065,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "permitiría aún definir $\\chi_E$ como la",
+    "en_new": "permitiría aún \\emph{definir} $\\chi_E$ como la"
+  },
+  {
+    "id": 10074,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "el homomorfismo canónico (20.6.7.1) es\nbiyectivo.",
+    "en_new": "el homomorfismo canónico \\textup{(20.6.7.1)} es\nbiyectivo."
+  },
+  {
+    "id": 10077,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\textup{(ii)} de (20.6.11).",
+    "en_new": "\\textup{(ii)} de \\textup{(20.6.11)}."
+  },
+  {
+    "id": 10078,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "un $C$-módulo proyectivo, el homomorfismo (20.6.12.1) es biyectivo.",
+    "en_new": "un $C$-módulo proyectivo, el homomorfismo \\textup{(20.6.12.1)} es biyectivo."
+  },
+  {
+    "id": 10079,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$B$, $C$ son $\\Lambda$-álgebras y que $u$, $v$ son",
+    "en_new": "$B$, $C$ son $\\Lambda$-\\emph{álgebras} y que $u$, $v$ son"
+  },
+  {
+    "id": 10080,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\Lambda$-homomorfismos, lo que equivale",
+    "en_new": "$\\Lambda$-\\emph{homomorfismos}, lo que equivale"
+  },
+  {
+    "id": 10176,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "homotópico a 0; pongamos finalmente",
+    "en_new": "\\emph{homotópico a} 0; pongamos finalmente"
+  },
+  {
+    "id": 10178,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Definamos ahora una sucesión exacta de complejos, \\emph{escindida}",
+    "en_new": "Definamos ahora una \\emph{sucesión exacta} de complejos, \\emph{escindida}"
+  },
+  {
+    "id": 10182,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la fórmula."
+  },
+  {
+    "id": 10183,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(cf.\\ (21.4.4) y\n  (21.7.5))",
+    "en_new": "\\textup{(cf.\\ (21.4.4) y\n  (21.7.5))}"
+  },
+  {
+    "id": 10184,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.20.6.19-es}, (i) que",
+    "en_new": "(\\ref{0.20.6.19-es}, (i)) que"
+  },
+  {
+    "id": 10186,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "($\\mathbf{0_I}$, 6.1.2), y la sucesión",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 6.1.2), y la sucesión"
+  },
+  {
+    "id": 10187,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "exacta en virtud de ($\\mathbf{0_I}$, 6.1.2).",
+    "en_new": "exacta en virtud de ($\\mathbf{0}_{\\mathrm I}$, 6.1.2)."
+  },
+  {
+    "id": 10189,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\mathfrak K$ un ideal de $B$ y $C$ el anillo cociente $B/\\mathfrak K$."
+  },
+  {
+    "id": 10200,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$B/\\mathfrak K^2$ sea $\\Lambda$-trivial; obsérvese",
+    "en_new": "$B/\\mathfrak K^2$ sea $\\Lambda$-\\emph{trivial}; obsérvese"
+  },
+  {
+    "id": 10085,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$C'=B'/\\mathfrak K'$ por $\\mathfrak K'/\\mathfrak K'^2$."
+  },
+  {
+    "id": 10090,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Bajo las hipótesis de \\sref{0.20.6.22-es}, supongamos además",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10091,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "de \\sref{0.20.6.18-es}, (ii).",
+    "en_new": "de (\\ref{0.20.6.18-es}, (ii))."
+  },
+  {
+    "id": 10093,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\to\\operatorname{Exalcom}_{B/\\Lambda}(C,L)",
+    "en_new": "\\xrightarrow{\\partial}\\operatorname{Exalcom}_{B/\\Lambda}(C,L)"
+  },
+  {
+    "id": 10094,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "definidos en (18.3.6.4) y",
+    "en_new": "definidos en \\textup{(18.3.6.4)} y"
+  },
+  {
+    "id": 10095,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(18.3.6.2), y $\\partial$ se define",
+    "en_new": "\\textup{(18.3.6.2)}, y $\\partial$ se define"
+  },
+  {
+    "id": 10096,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "se define como en \\sref{0.20.2.2-es}.",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10103,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 10104,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "topológico, teniendo en cuenta que $\\mathrm{P}^1_{B/A}$",
+    "en_new": "\\emph{topológico}, teniendo en cuenta que $\\mathrm{P}^1_{B/A}$"
+  },
+  {
+    "id": 10105,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(cf.\\ \\sref{0.19.1.5-es})",
+    "en_new": "\\textup{(cf.\\ \\sref{0.19.1.5-es})}"
+  },
+  {
+    "id": 10106,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\sref{0.19.9.1-es} (y \\emph{a fortiori}",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10107,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(y \\emph{a fortiori} basta que $C$ sea una\n$B$-álgebra formalmente lisa)",
+    "en_new": "\\textup{(y} a fortiori \\textup{basta que $C$ sea una\n$B$-álgebra formalmente lisa)}"
+  },
+  {
+    "id": 10110,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$B$ sea formalmente no ramificada \\sref{0.19.10.2-es}",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10116,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "(o también que $B_0$ sea una $A_0$-álgebra",
+    "en_new": "\\textup{(o también que $B_0$ sea una} $A_0$-álgebra"
+  },
+  {
+    "id": 10117,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "bimorfismo formal \\sref{0.19.1.2-es}.\n\\end{proposition}",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10119,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\mathfrak K_\\lambda$ de $C$, el homomorfismo \\sref{0.20.7.3.1-es} es",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10120,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\mathfrak K$ un ideal de $B$, $C$ el anillo topológico cociente\n$B/\\mathfrak K$"
+  },
+  {
+    "id": 10121,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\item[\\rm(i)] En la sucesión exacta \\sref{0.20.5.12.1-es}",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10123,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "izquierda \\sref{0.19.1.5-es}, es necesario",
+    "note": "\\sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 10124,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es sobreyectivo. Ahora bien, teniendo en cuenta \\sref{0.18.4.3-es}",
+    "en_new": "es \\emph{sobreyectivo}. Ahora bien, teniendo en cuenta \\sref{0.18.4.3-es}"
+  },
+  {
+    "id": 10130,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$(A/\\mathfrak{M}')$-trivial.\n\\end{proof}",
+    "en_new": "$(A/\\mathfrak{M}')$-trivial. En particular:\n\\end{proof}"
+  },
+  {
+    "id": 24673,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "el homomorfismo \\sref{0.20.7.8.1-es} no es otro que",
+    "en_new": "el homomorfismo \\hyperref[0.20.7.8.1-es]{\\textup{(20.7.11.1)}} no es otro que",
+    "note": "Se corrige el número impreso conservando la clave del enlace."
+  },
+  {
+    "id": 24674,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "Si, en \\sref{0.20.6.23-es}, se supone",
+    "en_new": "Si, en \\hyperref[0.20.6.23-es]{\\textup{(20.6.25)}}, se supone",
+    "note": "Se corrige el número impreso conservando la clave del enlace."
+  },
+  {
+    "id": 10261,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "el homomorfismo \\sref{0.20.7.14.1-es} es sobreyectivo, como se",
+    "en_new": "el homomorfismo \\sref{0.20.7.14.1-es} es \\emph{sobreyectivo}, como se"
+  },
+  {
+    "id": 10263,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "es sobreyectivo para todo par $(\\mathfrak{M}',\\mathfrak{N}')$.",
+    "en_new": "es \\emph{sobreyectivo} para todo par $(\\mathfrak{M}',\\mathfrak{N}')$."
+  },
+  {
+    "id": 10264,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "\\emph{separado y completo}",
+    "en_new": "\\emph{separado} y \\emph{completo}"
+  },
+  {
+    "id": 10266,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "($\\mathbf{0}_{\\mathrm I}$, 7.1.9)",
+    "en_new": "\\textup{($\\mathbf{0}_{\\mathrm I}$, 7.1.9)}"
+  },
+  {
+    "id": 10267,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-20-es.tex",
+    "en_old": "$\\widehat{\\Omega}^1_{B/A}$ es un $\\widehat B$-módulo de tipo finito.",
+    "en_new": "$\\widehat{\\Omega}^1_{B/A}$ es un $B$-módulo de tipo finito."
+  }
+]
+```
+IV1_CURRENT/ega4/ega0-20-es.tex, 20.4.5, p. 125: «Para demostrar la segunda aserción, escribamos Denotemos…» contiene un «escribamos» sobrante.
+IV1_CURRENT/ega4/ega0-20-es.tex, 20.4.13 (i), p. 127: la referencia a (20.4.8.1) debería remitir a la propiedad universal (20.4.8.2).
+IV1_CURRENT/ega4/ega0-20-es.tex, 20.5.8, p. 132: la referencia (20.5.3.3) no corresponde al homomorfismo mostrado; corresponde (20.5.2.4).
+IV1_CURRENT/ega4/ega0-20-es.tex, 20.7.17, p. 152: «si $B$ y $C$ son \emph{metrizable}» requiere el plural «metrizables».
+IV1_CURRENT/ega4/ega0-20-es.tex: aparecen repetidamente «un $A$-álgebra», «un $B$-álgebra» y «del $B$-álgebra», donde corresponden «una» y «de la».

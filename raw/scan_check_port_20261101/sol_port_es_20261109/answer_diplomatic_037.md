@@ -1,0 +1,982 @@
+```json
+[
+  {
+    "id": 8591,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-16-es.tex",
+    "en_old": "=\\operatorname{Spec}(A/\\mathfrak{p})$ ($0_{\\mathrm I}$, 1.7.5)",
+    "en_new": "=\\operatorname{Spec}(A/\\mathfrak{p})$ ($\\mathbf{0}_{\\mathrm I}$, 1.7.5)"
+  },
+  {
+    "id": 8593,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-16-es.tex",
+    "en_old": "es \\emph{catenario}.",
+    "en_new": "es catenario."
+  },
+  {
+    "id": 8594,
+    "decision": "not_applicable",
+    "note": "Variante ortográfica francesa del nombre; se conserva Cohen-Macaulay."
+  },
+  {
+    "id": 8615,
+    "decision": "not_applicable",
+    "note": "Puntuación del título francés."
+  },
+  {
+    "id": 8618,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "\\longrightarrow\\operatorname{gr}^*_{\\mathfrak{m}}(A)",
+    "en_new": "\\longrightarrow\\operatorname{gr}^\\bullet_{\\mathfrak{m}}(A)"
+  },
+  {
+    "id": 8619,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "por lo que b) y c) son\nequivalentes.",
+    "en_new": "por lo que \\emph{b)} y \\emph{c)} son\nequivalentes."
+  },
+  {
+    "id": 8595,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 7.3.5)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 7.3.5)"
+  },
+  {
+    "id": 8596,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "las condiciones a) y d)\nson equivalentes",
+    "en_new": "las condiciones \\emph{a)} y \\emph{d)}\nson equivalentes"
+  },
+  {
+    "id": 8597,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "se ve que d) implica c).",
+    "en_new": "se ve que \\emph{d)} implica \\emph{c)}."
+  },
+  {
+    "id": 8598,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Queda demostrar que c) implica a).",
+    "en_new": "Queda demostrar que \\emph{c)} implica \\emph{a)}."
+  },
+  {
+    "id": 8601,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "\\mathrm{G}=\\operatorname{gr}^*_{\\mathfrak{m}}(A)",
+    "en_new": "\\mathrm{G}=\\operatorname{gr}^\\bullet_{\\mathfrak{m}}(A)"
+  },
+  {
+    "id": 8603,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "\\operatorname{long}(\\mathrm{S}_{s-h})=\\binom{s-h+n\\setmin 1}{n\\setmin 1}",
+    "en_new": "\\operatorname{long}(\\mathrm{S}_{s-h})=\\binom{s\\setmin h+n\\setmin 1}{n\\setmin 1}"
+  },
+  {
+    "id": 8604,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "\\leq\\binom{s+n\\setmin 1}{n\\setmin 1}-\\binom{s-h+n\\setmin 1}{n\\setmin 1}.",
+    "en_new": "\\leq\\binom{s+n\\setmin 1}{n\\setmin 1}\\setmin\\binom{s\\setmin h+n\\setmin 1}{n\\setmin 1}."
+  },
+  {
+    "id": 8607,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "(17.1.1) es \\emph{regular}.",
+    "en_new": "\\textup{(17.1.1)} es \\emph{regular}."
+  },
+  {
+    "id": 8608,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "es \\emph{regular}.\n\\end{definition}",
+    "en_new": "es regular.\n\\end{definition}"
+  },
+  {
+    "id": 8610,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "regular, $\\operatorname{gr}^*_{\\mathfrak{m}}(A)$ es íntegro",
+    "en_new": "regular, $\\operatorname{gr}^\\bullet_{\\mathfrak{m}}(A)$ es íntegro"
+  },
+  {
+    "id": 8611,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; se conserva la convención española."
+  },
+  {
+    "id": 8612,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; se conserva la convención española."
+  },
+  {
+    "id": 8613,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; se conserva la convención española."
+  },
+  {
+    "id": 8622,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "\\emph{sistema regular de parámetros de $A$}",
+    "en_new": "sistema regular de parámetros de $A$"
+  },
+  {
+    "id": 8624,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "La existencia de tal sistema equivale a que $A$ sea regular (17.1.1)",
+    "en_new": "La existencia de tal sistema equivale a que $A$ sea \\emph{regular} (17.1.1)"
+  },
+  {
+    "id": 8626,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$(x_i)$ es una sucesión $A$-regular\nmaximal",
+    "en_new": "$(x_i)$ es una sucesión $A$-\\emph{regular}\nmaximal"
+  },
+  {
+    "id": 8628,
+    "decision": "not_applicable",
+    "note": "La redonda afecta a la abreviatura francesa «mod.»; el español escribe «módulo» sin abreviar."
+  },
+  {
+    "id": 8629,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "La equivalencia de a)\ny a') es inmediata",
+    "en_new": "La equivalencia de \\emph{a)}\ny \\emph{a')} es inmediata"
+  },
+  {
+    "id": 8630,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Para ver que a) implica b),",
+    "en_new": "Para ver que \\emph{a)} implica \\emph{b)},"
+  },
+  {
+    "id": 8631,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "la hipótesis a) implica que",
+    "en_new": "la hipótesis \\emph{a)} implica que"
+  },
+  {
+    "id": 8632,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "lo que demuestra b) en virtud de (17.1.1, b)).",
+    "en_new": "lo que demuestra \\emph{b)} en virtud de (17.1.1, \\emph{b)})."
+  },
+  {
+    "id": 8633,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "para demostrar que b) implica a),",
+    "en_new": "para demostrar que \\emph{b)} implica \\emph{a)},"
+  },
+  {
+    "id": 8634,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$\\mathfrak{m}$ no divisor de cero forma parte de un sistema de parámetros",
+    "note": "«Cero» expresa el mismo número; no cambia la condición matemática."
+  },
+  {
+    "id": 8635,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Ya se ha visto (17.1.7) que b) implica a).",
+    "en_new": "Ya se ha visto (17.1.7) que \\emph{b)} implica \\emph{a)}."
+  },
+  {
+    "id": 8637,
+    "decision": "not_applicable",
+    "note": "Puntuación del título francés."
+  },
+  {
+    "id": 8641,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; el español emplea «núm.»."
+  },
+  {
+    "id": 8642,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$A$-módulo monógeno $N$, se tenga $\\operatorname{Ext}^{n+1}_A(N,M)=0$.",
+    "en_new": "$A$-módulo \\textup{monógeno} $N$, se tenga $\\operatorname{Ext}^{n+1}_A(N,M)=0$."
+  },
+  {
+    "id": 8643,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$A$-módulo monógeno $N$, se tenga $\\operatorname{Ext}^{n+1}_A(M,N)=0$.",
+    "en_new": "$A$-módulo \\textup{monógeno} $N$, se tenga $\\operatorname{Ext}^{n+1}_A(M,N)=0$."
+  },
+  {
+    "id": 8644,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "y, si $M$ es \\emph{de tipo finito},",
+    "en_new": "y, si $M$ es de tipo finito,"
+  },
+  {
+    "id": 8645,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; el español emplea «núm.»."
+  },
+  {
+    "id": 8646,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; el español emplea «núm.»."
+  },
+  {
+    "id": 8647,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$M\\mapsto k\\otimes_A M$",
+    "en_new": "$M\\leadsto k\\otimes_A M$"
+  },
+  {
+    "id": 8648,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; el español emplea «núm.»."
+  },
+  {
+    "id": 8649,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Bajo las hipótesis de (17.2.6), sea",
+    "en_new": "Bajo las hipótesis de \\textup{(17.2.6)}, sea"
+  },
+  {
+    "id": 8650,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "tipo finito (o solamente monógeno), se tiene",
+    "en_new": "tipo finito \\textup{(o solamente} monógeno\\textup{)}, se tiene"
+  },
+  {
+    "id": 8651,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "donde $\\mathfrak{m}$ recorre el espectro de $A$ (o el conjunto de los ideales\nmaximales de $A$).",
+    "en_new": "donde $\\mathfrak{m}$ recorre el espectro de $A$ \\textup{(}o el conjunto de los ideales\nmaximales de $A$\\textup{)}."
+  },
+  {
+    "id": 8653,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "($0_{\\rm I}$, 6.4.1)",
+    "en_new": "($\\mathbf{0}_{\\rm I}$, 6.4.1)"
+  },
+  {
+    "id": 8837,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$\\sup_{x\\in X}(\\operatorname{dim.inj}(\\mathscr{F}_x))$. Se llama",
+    "en_new": "$\\sup_{x\\in X}(\\operatorname{dim.inj}(\\mathscr{F}_x))$). Se llama"
+  },
+  {
+    "id": 8838,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "es nulo en todos los grados",
+    "en_new": "es \\emph{nulo} en todos los grados"
+  },
+  {
+    "id": 8842,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; se conserva la convención española."
+  },
+  {
+    "id": 8843,
+    "decision": "not_applicable",
+    "note": "Coma de la redacción francesa."
+  },
+  {
+    "id": 8844,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; se conserva la convención española."
+  },
+  {
+    "id": 8850,
+    "decision": "not_applicable",
+    "note": "Abreviatura francesa de número; el español emplea «n.º»."
+  },
+  {
+    "id": 8857,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$k=A/\\mathfrak{m}$ (resp. $k'=B/\\mathfrak{n}$) el cuerpo residual",
+    "en_new": "$k=A/\\mathfrak{m}$ \\textup{(resp. $k'=B/\\mathfrak{n}$)} el cuerpo residual"
+  },
+  {
+    "id": 8865,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "(en cuyo caso esta propiedad se\n    verifica para \\emph{todo} sistema regular de parámetros de $A$)",
+    "en_new": "\\textup{(en cuyo caso esta propiedad se\n    verifica para \\emph{todo} sistema regular de parámetros de $A$)}"
+  },
+  {
+    "id": 8867,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "las condiciones b), d) y e) equivalen,",
+    "en_new": "las condiciones \\emph{b)}, \\emph{d)} y \\emph{e)} equivalen,"
+  },
+  {
+    "id": 8873,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Ahora bien, b') y e') son equivalentes",
+    "en_new": "Ahora bien, \\emph{b')} y \\emph{e')} son equivalentes"
+  },
+  {
+    "id": 8874,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "como d')\nimplica e') (16.4.1)",
+    "en_new": "como \\emph{d')}\nimplica \\emph{e')} (16.4.1)"
+  },
+  {
+    "id": 8875,
+    "decision": "not_applicable",
+    "note": "Grafía exclusivamente francesa."
+  },
+  {
+    "id": 8877,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "de b) y d) implica trivialmente c),",
+    "en_new": "de \\emph{b)} y \\emph{d)} implica trivialmente \\emph{c)},"
+  },
+  {
+    "id": 8878,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "en virtud de (i), c) implica d);",
+    "en_new": "en virtud de (i), \\emph{c)} implica \\emph{d)};"
+  },
+  {
+    "id": 8879,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "la equivalencia de b), c), d) y e).",
+    "en_new": "la equivalencia de \\emph{b)}, \\emph{c)}, \\emph{d)} y \\emph{e)}."
+  },
+  {
+    "id": 8880,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "es claro que\nb) implica a), pues",
+    "en_new": "es claro que\n\\emph{b)} implica \\emph{a)}, pues"
+  },
+  {
+    "id": 8881,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Queda, pues, probar que a)\nimplica e).",
+    "en_new": "Queda, pues, probar que \\emph{a)}\nimplica \\emph{e)}."
+  },
+  {
+    "id": 8883,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "-\\operatorname{rg}_{k'}\\psi(V\\otimes_k k').",
+    "en_new": "\\setmin\\operatorname{rg}_{k'}\\psi(V\\otimes_k k')."
+  },
+  {
+    "id": 8885,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "-\\operatorname{rg}_{k'}\\psi(V\\otimes_k k')\n\\]",
+    "en_new": "\\setmin\\operatorname{rg}_{k'}\\psi(V\\otimes_k k')\n\\]"
+  },
+  {
+    "id": 8886,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "La condición a) implica, por tanto,",
+    "en_new": "La condición \\emph{a)} implica, por tanto,"
+  },
+  {
+    "id": 8887,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "queda así demostrado que a) implica e).",
+    "en_new": "queda así demostrado que \\emph{a)} implica \\emph{e)}."
+  },
+  {
+    "id": 8889,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "$\\operatorname{prof}(M/xM)=m-1$",
+    "en_new": "$\\operatorname{prof}(M/xM)=m\\setmin 1$"
+  },
+  {
+    "id": 8890,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "(o,\n  equivalentemente (16.1.5), que $\\dim(B)=\\dim(A)$)",
+    "en_new": "\\textup{(o,\n  equivalentemente (16.1.5), que $\\dim(B)=\\dim(A)$)}"
+  },
+  {
+    "id": 8891,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "un $A$-módulo de Cohen-Macaulay (16.5.3)",
+    "en_new": "un $A$-\\emph{módulo} de Cohen-Macaulay (16.5.3)"
+  },
+  {
+    "id": 8892,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "puesto que\n$\\dim(B)=\\dim(A)$ (16.1.5).",
+    "en_new": "puesto que\n$\\dim B=\\dim A$ (16.1.5)."
+  },
+  {
+    "id": 8894,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "Para que $A$ sea regular, basta,",
+    "en_new": "Para que $A$ sea regular, \\emph{basta},"
+  },
+  {
+    "id": 8895,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 6.3.1)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 6.3.1)"
+  },
+  {
+    "id": 8896,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-17-es.tex",
+    "en_old": "para todo ideal máximo\n$\\mathfrak{n}$",
+    "en_new": "para todo ideal \\emph{máximo}\n$\\mathfrak{n}$"
+  },
+  {
+    "id": 9122,
+    "decision": "not_applicable",
+    "note": "Puntuación del título francés."
+  },
+  {
+    "id": 9123,
+    "decision": "not_applicable",
+    "note": "Redistribución del diagrama; las flechas españolas ya tienen los mismos orígenes y destinos."
+  },
+  {
+    "id": 9070,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 8.1.9)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{III}}$, 8.1.9)"
+  },
+  {
+    "id": 9071,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "si $\\mathfrak K$ es el núcleo de\n$g$, el núcleo $\\mathfrak K'$ de $p_1:G\\to E$"
+  },
+  {
+    "id": 9073,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$(0,y)$ donde $y\\in\\mathfrak K$",
+    "en_new": "$(0,y)$ donde $y\\in K$"
+  },
+  {
+    "id": 9074,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$i_2:\\mathfrak K'\\to\\mathfrak K$ de $p_2$"
+  },
+  {
+    "id": 9075,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathfrak{J}\\times\\mathfrak K=\\mathfrak{J}'\\oplus\\mathfrak K'$"
+  },
+  {
+    "id": 9079,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\mathfrak K'\\ar[r]^{i_2}_{\\sim}",
+    "en_new": "\\mathfrak K'\\ar[r]^{\\overset{i_2}{\\sim}}"
+  },
+  {
+    "id": 9082,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\ar[d]_{i_1}_{\\sim}",
+    "en_new": "\\ar[d]_{i_1}^{\\wr}"
+  },
+  {
+    "id": 9085,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\emph{ideal de aumentación}. Se dice",
+    "note": "El énfasis ya abarca solo el término."
+  },
+  {
+    "id": 9086,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "un $A$-homomorfismo de $A$-anillos $s:B\\to E$",
+    "en_new": "un $A$-\\emph{homomorfismo de} $A$-\\emph{anillos} $s:B\\to E$"
+  },
+  {
+    "id": 9087,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "La sucesión exacta de $A$-bimódulos",
+    "en_new": "La sucesión exacta de $A$-\\emph{bimódulos}"
+  },
+  {
+    "id": 9088,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "que se llama \\emph{imagen inversa} por $g:F\\to B$",
+    "note": "El énfasis ya abarca solo el término."
+  },
+  {
+    "id": 9090,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "una estructura de $G$-bimódulo, procedente",
+    "en_new": "una estructura de $G$-\\emph{bimódulo}, procedente"
+  },
+  {
+    "id": 9091,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "se tiene además una inyección",
+    "en_new": "se tiene además una \\emph{inyección}"
+  },
+  {
+    "id": 9093,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "que es un homomorfismo de\n$G$-bimódulos.",
+    "en_new": "que es un \\emph{homomorfismo de}\n$G$-\\emph{bimódulos}."
+  },
+  {
+    "id": 9095,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "    & & 0\\ar[d] & & \\\\\n    & & \\mathfrak K\\ar[ld]^\\theta\\ar[d] & & \\\\",
+    "en_new": "    & & & 0\\ar[d] & \\\\\n    & & & \\mathfrak K\\ar[ld]_\\theta\\ar[d] & \\\\",
+    "note": "La inclusión debe llegar a F y theta debe llegar a G."
+  },
+  {
+    "id": 9098,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathfrak K$) una estructura de $G$-bimódulo. Sea",
+    "en_new": "$\\mathfrak K$) una estructura de $G$-\\emph{bimódulo}. Sea"
+  },
+  {
+    "id": 9100,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\theta:\\mathfrak K\\to G$ un homomorfismo de $G$-bimódulos que haga",
+    "en_new": "$\\theta:\\mathfrak K\\to G$ un homomorfismo de $G$-\\emph{bimódulos} que haga"
+  },
+  {
+    "id": 9103,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$h(\\theta(\\mathfrak K))=\\mathfrak K$"
+  },
+  {
+    "id": 9107,
+    "decision": "not_applicable",
+    "note": "Puntuación del título francés."
+  },
+  {
+    "id": 9109,
+    "decision": "already",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "no depende del elemento $x$ de $f^{-1}(b)$",
+    "note": "La pertenencia a la fibra ya está expresada en palabras."
+  },
+  {
+    "id": 9112,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\emph{la extensión trivial tipo}",
+    "en_new": "la \\emph{extensión trivial tipo}"
+  },
+  {
+    "id": 9113,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$A$-trivial, siendo la aplicación canónica",
+    "en_new": "$A$-\\emph{trivial}, siendo la aplicación canónica"
+  },
+  {
+    "id": 9114,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$A$-equivalente a $D_B(L)$.",
+    "en_new": "$A$-\\emph{equivalente} a $D_B(L)$."
+  },
+  {
+    "id": 9115,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "siendo $u$ y $v$ $A$-homomorfismos \\emph{de anillos}",
+    "en_new": "siendo $u$ y $v$ $A$-homomorfismos de \\emph{anillos}"
+  },
+  {
+    "id": 9116,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$F=E'\\times_{B'}B$ \\emph{la imagen inversa} por $v$",
+    "en_new": "$F=E'\\times_{B'}B$ la \\emph{imagen inversa} por $v$"
+  },
+  {
+    "id": 9119,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "se ha visto (18.1.3) que $i$ es biyectivo",
+    "en_new": "se ha visto (18.1.3) que $i$ es \\emph{biyectivo}"
+  },
+  {
+    "id": 9120,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "es una $A$-extensión de $B$ por $L'$, que",
+    "en_new": "\\emph{es una} $A$-\\emph{extensión de} $B$ \\emph{por} $L'$, que"
+  },
+  {
+    "id": 9121,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\emph{imagen\ninversa por $v$} de la extensión",
+    "en_new": "\\emph{imagen\ninversa} por $v$ de la extensión"
+  },
+  {
+    "id": 9172,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "se deduce de él un morfismo \\emph{imagen inversa por $v$}",
+    "en_new": "se deduce de él un morfismo \\emph{imagen inversa} por $v$"
+  },
+  {
+    "id": 9177,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "este se \\emph{factoriza a través de} la imagen",
+    "en_new": "este se \\emph{factoriza} a través de la imagen"
+  },
+  {
+    "id": 9180,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "    0\\ar[r] & L\\ar[r]^j\\ar[d]_{w_0} & E\\ar[r]^f\\ar[d]_{u_0}\n      & B\\ar[r]\\ar[d]^{1_B} & 0\\\\\n    0\\ar[r] & L_0\\ar[r]\\ar[d]_{i\\wr} & F\\ar[r]^{p_2}\\ar[d]_{p_1}\n      & B\\ar[r]\\ar[d]^v & 0\\\\",
+    "en_new": "    0\\ar[r] & L\\ar[r]^j\\ar[d]_{w_0} & E\\ar[r]^f\\ar[d]_{u_0}\n      & B\\ar[r]\\ar[d]^{1_B} & 0\\\\\n    0\\ar[r] & L_0\\ar[r]\\ar[d]_{i\\wr} & F\\ar[r]^{p_2}\\ar[d]_{p_1}\n      & B\\ar[r]\\ar[d]^{\\boldsymbol{v}} & 0\\\\"
+  },
+  {
+    "id": 9187,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$A$-extensiones $A$-equivalentes de $B$ por $L$, es necesario",
+    "en_new": "$A$-extensiones $A$-\\emph{equivalentes} de $B$ por $L$, es necesario"
+  },
+  {
+    "id": 9188,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "exista una $A$-equivalencia $u$",
+    "en_new": "exista una $A$-\\emph{equivalencia} $u$"
+  },
+  {
+    "id": 9189,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 8.1.11)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{III}}$, 8.1.11)"
+  },
+  {
+    "id": 9192,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$w:L\\to L'$ un homomorfismo de $B$-bimódulos. Sea $H$",
+    "en_new": "$w:L\\to L'$ un homomorfismo de $B$-\\emph{bimódulos}. Sea $H$"
+  },
+  {
+    "id": 9193,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "una estructura de $A$-anillo y definir una $A$-extensión",
+    "en_new": "una estructura de $A$-\\emph{anillo} y definir una $A$-\\emph{extensión}"
+  },
+  {
+    "id": 9196,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "homomorfismo de $G$-bimódulos (considerándose $L$",
+    "en_new": "homomorfismo de $G$-\\emph{bimódulos} (considerándose $L$"
+  },
+  {
+    "id": 9201,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "y $w(z)f(x)=w(zf(x))$ por definición de la estructura de $B$-bimódulo\nsobre $L'$;",
+    "en_new": "y $j(z)x=j(zf(x))$ y\n$w(z)x=w(zf(x))$;"
+  },
+  {
+    "id": 9202,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "    & & 0\\ar[d] & & \\\\\n    & & L\\ar[ld]_\\theta\\ar[d]^j & & \\\\",
+    "en_new": "    & & & 0\\ar[d] & \\\\\n    & & & L\\ar[ld]_\\theta\\ar[d]^j & \\\\",
+    "note": "j debe llegar a E y theta debe llegar a G."
+  },
+  {
+    "id": 9206,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "este se \\emph{factoriza\na través de} la $A$-extensión",
+    "en_new": "este se \\emph{factoriza}\na través de la $A$-extensión"
+  },
+  {
+    "id": 9209,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "L'_0\\ar[r]_{j_2}\\ar[d]^{j_0}_{\\wr}",
+    "en_new": "L'_0\\ar[r]_{j_2}\\ar[d]_{j_0\\wr}"
+  },
+  {
+    "id": 9212,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "(es decir, el conjunto de los\n$A$-homomorfismos inversos por la derecha de la aumentación $E\\to B$)",
+    "en_new": "\\textup{(es decir, el conjunto de los\n$A$-homomorfismos inversos por la derecha de la aumentación $E\\to B$)}"
+  },
+  {
+    "id": 9215,
+    "decision": "not_applicable",
+    "note": "Puntuación del título francés."
+  },
+  {
+    "id": 9216,
+    "decision": "not_applicable",
+    "note": "Paso de fórmulas destacadas a fórmulas en línea."
+  },
+  {
+    "id": 9217,
+    "decision": "not_applicable",
+    "note": "Cambio de redacción francesa sin cambio de la construcción matemática."
+  },
+  {
+    "id": 9219,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "($\\mathrm{I}$, 3.3.9)",
+    "en_new": "(\\textbf{I}, 3.3.9)"
+  },
+  {
+    "id": 9222,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "Si $\\mathbf C_B$ designa",
+    "en_new": "Si $\\boldsymbol{C}_B$ designa"
+  },
+  {
+    "id": 9224,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$s:L\\times L\\to L$ de $B$-bimódulos",
+    "en_new": "$s:L\\times L\\to L$ de $B$-\\emph{bimódulos}"
+  },
+  {
+    "id": 9225,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "Designemos por $\\mathbf K$ la categoría",
+    "en_new": "Designemos por $\\boldsymbol{K}$ la categoría"
+  },
+  {
+    "id": 9126,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "de la categoría $\\mathbf K$ en la categoría",
+    "en_new": "de la categoría $\\boldsymbol{K}$ en la categoría"
+  },
+  {
+    "id": 9127,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathbf{Ab}$ de los grupos conmutativos",
+    "en_new": "$\\boldsymbol{Ab}$ de los grupos conmutativos"
+  },
+  {
+    "id": 9129,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "de los morfismos en $\\mathbf K$, se puede",
+    "en_new": "de los morfismos en $\\boldsymbol{K}$, se puede"
+  },
+  {
+    "id": 9130,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$w:L\\to L'$ es un homomorfismo de $B$-bimódulos, el diagrama",
+    "en_new": "$w:L\\to L'$ es un homomorfismo de $B$-\\emph{bimódulos}, el diagrama"
+  },
+  {
+    "id": 9133,
+    "decision": "not_applicable",
+    "note": "Cambio del límite de un entorno; se conserva la estructura española exigida."
+  },
+  {
+    "id": 9134,
+    "decision": "unclear",
+    "note": "La fórmula carece de la numeración indicada, pero la corrección completa exige quitar el entorno y trasladar label, cambios prohibidos por las reglas."
+  },
+  {
+    "id": 9135,
+    "decision": "not_applicable",
+    "note": "Paso de una fórmula destacada a una fórmula en línea."
+  },
+  {
+    "id": 9139,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "Se define entonces un isomorfismo canónico de grupos conmutativos",
+    "en_new": "Se define entonces un \\textup{isomorfismo} canónico de grupos conmutativos"
+  },
+  {
+    "id": 9140,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "(que es \\emph{a fortiori} un\n$B$-homomorfismo)",
+    "en_new": "\\textup{(que es \\emph{a fortiori} un\n$B$-homomorfismo)}"
+  },
+  {
+    "id": 9141,
+    "decision": "not_applicable",
+    "note": "Paso de una sucesión destacada a una sucesión en línea."
+  },
+  {
+    "id": 9147,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "es $F$-trivial, lo que",
+    "en_new": "es $F$-\\emph{trivial}, lo que"
+  },
+  {
+    "id": 9148,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\ar[r]^{\\eta_L}\\ar[d]_{\\operatorname{Hom}(1,h)}",
+    "en_new": "\\ar[r]^{\\overset{\\eta_L}{\\sim}}\\ar[d]_{\\operatorname{Hom}(1,h)}"
+  },
+  {
+    "id": 9149,
+    "decision": "not_applicable",
+    "note": "Puntuación del título francés."
+  },
+  {
+    "id": 9150,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathbf K'$ la subcategoría",
+    "en_new": "$\\boldsymbol{K}'$ la subcategoría"
+  },
+  {
+    "id": 9151,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "categoría $\\mathbf K$ definida en",
+    "en_new": "categoría $\\boldsymbol{K}$ definida en"
+  },
+  {
+    "id": 9153,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\emph{funtor covariante} de $\\mathbf K'$",
+    "en_new": "\\emph{funtor covariante} de $\\boldsymbol{K}'$"
+  },
+  {
+    "id": 9154,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "en $\\mathbf{Ab}$. Los\nresultados",
+    "en_new": "en $\\boldsymbol{Ab}$. Los\nresultados"
+  },
+  {
+    "id": 9157,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathbf K''$ es la subcategoría",
+    "en_new": "$\\boldsymbol{K}''$ es la subcategoría"
+  },
+  {
+    "id": 9158,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "plena de $\\mathbf K'$ formada",
+    "en_new": "plena de $\\boldsymbol{K}'$ formada"
+  },
+  {
+    "id": 9160,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "\\emph{funtor covariante} de $\\mathbf K''$",
+    "en_new": "\\emph{funtor covariante} de $\\boldsymbol{K}''$"
+  },
+  {
+    "id": 9161,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "en $\\mathbf{Ab}$. También se",
+    "en_new": "en $\\boldsymbol{Ab}$. También se"
+  },
+  {
+    "id": 9164,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "f(x,y)=xg(y)-g(xy)+g(x)y",
+    "en_new": "f(x,y)=xg(y)\\setmin g(xy)+g(x)y"
+  },
+  {
+    "id": 9166,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathbf P_\\bullet=(\\mathbf P_n)_{n\\geqslant0}$",
+    "en_new": "$P_\\bullet=(P_n)_{n\\geqslant0}$"
+  },
+  {
+    "id": 9167,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "$\\mathbf P_n=B^{\\otimes(n+1)}",
+    "en_new": "$P_n=B^{\\otimes(n+1)}"
+  },
+  {
+    "id": 9168,
+    "decision": "apply",
+    "en_file": "IV1_DIPLOMATIC/ega4/ega0-18-es.tex",
+    "en_old": "=B\\otimes_A B\\otimes_A\\ldots\\otimes_A B$",
+    "en_new": "=B\\otimes_A B\\otimes\\ldots\\otimes_A B$"
+  }
+]
+```
+IV1_DIPLOMATIC/ega4/ega0-17-es.tex, 17.3.9: donde se afirma que $C$ es cociente de $S'^{-1}B'$, debe tratarse de $S^{-1}C$.
+IV1_DIPLOMATIC/ega4/ega0-18-es.tex, 18.1.7: la propiedad universal del producto fibrado proporciona $u:G\to G'$, no $u:G'\to G$; también están invertidas las direcciones de los homomorfismos graduados posteriores.
+IV1_DIPLOMATIC/ega4/ega0-18-es.tex, 18.2.1: en $z'(x+z)=zx$, el segundo miembro debe ser $z'x$.
+IV1_DIPLOMATIC/ega4/ega0-18-es.tex, 18.4.3: la sucesión exacta escrita $0\to E\to L\to B\to0$ tiene intercambiados $E$ y $L$.
+IV1_DIPLOMATIC/ega4/ega0-18-es.tex, 18.4.4: la aplicación $g:y\longmapsto h'(1\otimes y)$ es $A$-lineal, no necesariamente $B$-lineal.

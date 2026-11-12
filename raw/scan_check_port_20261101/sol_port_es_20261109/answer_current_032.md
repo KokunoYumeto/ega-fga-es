@@ -1,0 +1,856 @@
+```json
+[
+  {
+    "id": 6684,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "  (\\Gamma_f)^{\\widehat{\\,}}\n  =\\widehat{i}\\circ\\widehat{g}\n  =j\\circ w\n  =\\Gamma_h."
+  },
+  {
+    "id": 6686,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.10.9.8}"
+  },
+  {
+    "id": 6688,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$X\\leadsto\\widehat{X}$ es, por tanto, plenamente fiel",
+    "en_new": "$X\\leadsto\\widehat{X}$ es, por tanto, \\emph{plenamente fiel}"
+  },
+  {
+    "id": 6689,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[0]{0.8.1.6}"
+  },
+  {
+    "id": 6690,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "subcategoría plena de la segunda.",
+    "en_new": "\\emph{subcategoría} plena de la segunda."
+  },
+  {
+    "id": 6691,
+    "decision": "not_applicable",
+    "note": "Cambio de entorno y presentación del escolio."
+  },
+  {
+    "id": 6692,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "dar un $S$-morfismo $f:X\\to Y$ equivale a dar",
+    "en_new": "dar un $S$-morfismo $f:X\\to Y$ \\emph{equivale} a dar"
+  },
+  {
+    "id": 6693,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Se deduce de \\sref{III.5.4.1} y \\sref[I]{I.10.12.3} que"
+  },
+  {
+    "id": 6694,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "ádico $(S_n)$ \\sref[I]{I.10.12.2} de"
+  },
+  {
+    "id": 6695,
+    "decision": "not_applicable",
+    "note": "Cierre del cambio de entorno de 6691."
+  },
+  {
+    "id": 6696,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "que \\emph{no son algebraizables}, así como existen espacios analíticos"
+  },
+  {
+    "id": 6697,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$f^{-1}(y)$ sea finita para todo $y\\in\\mathfrak{Y}$",
+    "en_new": "$f^{-1}(y)$ sea \\emph{finita} para todo $y\\in\\mathfrak{Y}$"
+  },
+  {
+    "id": 7460,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.6.es.tex",
+    "en_old": "  \\mathbf{Tor}_\\bullet^S\n  (X^{(1)},X^{(2)};\\mathscr F^{(1)},\\mathscr F^{(2)}),",
+    "en_new": "  \\operatorname{Tor}_\\bullet^S\n  (X^{(1)},X^{(2)};\\mathscr F^{(1)},\\mathscr F^{(2)}),"
+  },
+  {
+    "id": 7461,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.6.es.tex",
+    "en_old": "  \\mathbf{Tor}_q^S\n  (X^{(1)},X^{(2)};\\mathscr P_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})",
+    "en_new": "  \\operatorname{Tor}_q^S\n  (X^{(1)},X^{(2)};\\mathscr P_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})"
+  },
+  {
+    "id": 7462,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.6.es.tex",
+    "en_old": "  \\mathbf{Tor}_q^S\n  (X^{(1)},X^{(2)};\\mathscr P_h^{(1)},\\mathscr P_k^{(2)}).",
+    "en_new": "  \\operatorname{Tor}_q^S\n  (X^{(1)},X^{(2)};\\mathscr P_h^{(1)},\\mathscr P_k^{(2)})."
+  },
+  {
+    "id": 7463,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7464,
+    "decision": "not_applicable",
+    "note": "Fórmulas en línea en lugar de destacadas."
+  },
+  {
+    "id": 7465,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7466,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.6.es.tex",
+    "en_old": "es un $S$-esquema \\emph{afín},",
+    "en_new": "es un $S$-\\emph{esquema afín},"
+  },
+  {
+    "id": 7468,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.6.es.tex",
+    "en_old": "la categoría de las sucesiones espectrales de\n$(B_1\\otimes_A B_2)$-módulos. Si se pone",
+    "en_new": "la categoría de las sucesiones espectrales de\n$(B_1\\otimes_A B_2)$-\\emph{módulos}. Si se pone"
+  },
+  {
+    "id": 7470,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7471,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7474,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7475,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7477,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "son morfismos \\emph{separados y cuasicompactos}.",
+    "en_new": "son morfismos \\emph{separados} y \\emph{cuasicompactos}."
+  },
+  {
+    "id": 7478,
+    "decision": "not_applicable",
+    "note": "Puntuación gramatical francesa."
+  },
+  {
+    "id": 7481,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "satisfacen las condiciones de pegado ($0_{\\mathrm I}$, 3.3.1).",
+    "en_new": "satisfacen las condiciones de pegado ($\\mathbf{0}_{\\mathrm I}$, 3.3.1)."
+  },
+  {
+    "id": 24643,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.6.es.tex",
+    "en_old": "Se puede considerar que los isomorfismos (6.6.7, $t$) definen sistemas",
+    "en_new": "Se puede considerar que los isomorfismos (6.6.7, $t$)) definen sistemas",
+    "note": "Conserva el paréntesis que forma parte de la etiqueta."
+  },
+  {
+    "id": 6364,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "en particular, $X$ es proyectivo\nsobre $S$.",
+    "en_new": "en particular, $X$ es \\emph{proyectivo}\nsobre $S$.",
+    "note": "La traducción no utiliza el paréntesis francés."
+  },
+  {
+    "id": 6365,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "es sobreyectivo. Elijamos $n\\geq n_0$ suficientemente grande",
+    "en_new": "es \\emph{sobreyectivo}. Elijamos $n\\geq n_0$ suficientemente grande"
+  },
+  {
+    "id": 6366,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\sh{L}_0^{\\otimes n}$ sea muy amplio para $S_0$",
+    "en_new": "$\\sh{L}_0^{\\otimes n}$ sea \\emph{muy amplio} para $S_0$"
+  },
+  {
+    "id": 6368,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6369,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6370,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6371,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.9.1.5}"
+  },
+  {
+    "id": 6372,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6373,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\widetilde{u}_0^{\\,\\sharp}$ es sobreyectivo",
+    "en_new": "$\\widetilde{u}_0^{\\,\\sharp}$ es \\emph{sobreyectivo}"
+  },
+  {
+    "id": 6375,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\widetilde{u}_k^{\\,\\sharp}$ es sobreyectivo.",
+    "en_new": "$\\widetilde{u}_k^{\\,\\sharp}$ es \\emph{sobreyectivo}."
+  },
+  {
+    "id": 6377,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6379,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$(g_k)$ es un sistema inductivo ádico $(S_k)$",
+    "en_new": "$(g_k)$ es un \\emph{sistema inductivo ádico} $(S_k)$"
+  },
+  {
+    "id": 6380,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.10.12.2}. Los $g_k$ definen, por consiguiente, un"
+  },
+  {
+    "id": 6382,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "implica que $g_0$ es una inmersión cerrada",
+    "en_new": "implica que $g_0$ es una \\emph{inmersión cerrada}"
+  },
+  {
+    "id": 6384,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.10.8.10}"
+  },
+  {
+    "id": 6385,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6386,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref{III.5.1.7}. Como los\n$\\widetilde{u}_k^{\\,\\sharp}$ son sobreyectivos,",
+    "en_new": "\\sref{III.5.1.7}. Como\n$\\widetilde{u}_0^{\\,\\sharp}$ es sobreyectivo,"
+  },
+  {
+    "id": 6387,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.10.11.5}"
+  },
+  {
+    "id": 6391,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.10.10.2}"
+  },
+  {
+    "id": 6392,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\sref[I]{I.10.14.2}"
+  },
+  {
+    "id": 7486,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7487,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7488,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7489,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7490,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "es un morfismo \\emph{separado y cuasicompacto}. Los",
+    "en_new": "es un morfismo separado y cuasicompacto. Los"
+  },
+  {
+    "id": 6393,
+    "decision": "not_applicable",
+    "note": "Puntuación del título."
+  },
+  {
+    "id": 6394,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$Z$ de $T$, propio sobre $Y$, tal que, si",
+    "en_new": "$Z$ de $T$, \\emph{propio} sobre $Y$, tal que, si"
+  },
+  {
+    "id": 7497,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "    \\mathscr{T}\\!or_p^S\n    \\bigl(\\mathscr H^{-q_1}(f_1,\\mathscr P_\\bullet^{(1)}),",
+    "en_new": "    \\mathscr{T}\\!or_p^S\n    \\bigl(\\mathcal H^{-q_1}(f_1,\\mathscr P_\\bullet^{(1)}),"
+  },
+  {
+    "id": 7498,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "          \\mathscr H^{-q_2}(f_2,\\mathscr P_\\bullet^{(2)})\\bigr),\\\\\n  {}^{(b)}",
+    "en_new": "          \\mathcal H^{-q_2}(f_2,\\mathscr P_\\bullet^{(2)})\\bigr),\\\\\n  {}^{(b)}"
+  },
+  {
+    "id": 7499,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  {}^{(b)}\\mathscr E_{pq}^2\n  &=\\mathscr H^{-p}\\bigl(f_1\\times_S f_2,\n    \\mathscr T\\!or_q^S",
+    "en_new": "  {}^{(b)}\\mathscr E_{pq}^2\n  &=\\mathscr H^{-p}\\bigl(f_1\\times_S f_2,\n    \\boldsymbol{\\mathscr T\\!or}_q^S"
+  },
+  {
+    "id": 7500,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  {}^{(a')}\\mathscr E_{pq}^2\n  &=\\bigoplus_{q_1+q_2=q}\n    \\mathscr T\\!or_p^S",
+    "en_new": "  {}^{(a')}\\mathscr E_{pq}^2\n  &=\\bigoplus_{q_1+q_2=q}\n    \\boldsymbol{\\mathscr T\\!or}_p^S"
+  },
+  {
+    "id": 7501,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  {}^{(b')}\\mathscr E_{pq}^2\n  &=\\mathscr H^{-p}\\bigl(f_1\\times_S f_2,",
+    "en_new": "  {}^{(b')}\\mathscr E_{pq}^2\n  &=\\mathcal H^{-p}\\bigl(f_1\\times_S f_2,"
+  },
+  {
+    "id": 7504,
+    "decision": "not_applicable",
+    "note": "Cambio del límite del entorno y de la presentación; no se altera la estructura española."
+  },
+  {
+    "id": 7505,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "para todo morfismo $f:X\\to Y$ \\emph{cuasicompacto y separado} y todo complejo",
+    "en_new": "para todo morfismo $f:X\\to Y$ \\emph{cuasicompacto} y \\emph{separado} y todo complejo"
+  },
+  {
+    "id": 7507,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{-n}(f,\\mathscr P_\\bullet)\n  \\qquad",
+    "en_new": "  \\mathcal H^{-n}(f,\\mathscr P_\\bullet)\n  \\qquad"
+  },
+  {
+    "id": 7509,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "igual a $A$, y la conclusión se deduce de ($0_{\\mathrm I}$, 11.7.5).",
+    "en_new": "igual a $A$, y la conclusión se deduce de (\\textbf{0}, 11.7.5)."
+  },
+  {
+    "id": 7510,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "$\\mathscr H^{-n}(f,\\mathscr P_\\bullet\\otimes_{\\mathscr O_Y}\\mathscr F)$",
+    "en_new": "$\\mathcal H^{-n}(f,\\mathscr P_\\bullet\\otimes_{\\mathscr O_Y}\\mathscr F)$"
+  },
+  {
+    "id": 7512,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr{T}\\!or_\\bullet^S\n  (\\mathscr P_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)}).",
+    "en_new": "  \\boldsymbol{\\mathscr{T}\\!or}_\\bullet^S\n  (\\mathscr P_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})."
+  },
+  {
+    "id": 7514,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "un isomorfismo sobre los términos $E_2$ ($0_{\\mathrm I}$, 11.1.5). Esto",
+    "en_new": "un isomorfismo sobre los términos $E_2$ (\\textbf{0}, 11.1.5). Esto"
+  },
+  {
+    "id": 7515,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7516,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7519,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7520,
+    "decision": "not_applicable",
+    "note": "Separación de fórmulas en línea."
+  },
+  {
+    "id": 7521,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7522,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{-n}(f_1,\\mathscr P_\\bullet^{(1)})\n  \\longrightarrow",
+    "en_new": "  \\mathcal H^{-n}(f_1,\\mathscr P_\\bullet^{(1)})\n  \\longrightarrow"
+  },
+  {
+    "id": 7523,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{-n}(f_1,\\mathscr Q_\\bullet^{(1)})\n  \\quad",
+    "en_new": "  \\mathcal H^{-n}(f_1,\\mathscr Q_\\bullet^{(1)})\n  \\quad"
+  },
+  {
+    "id": 7524,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr{T}\\!or_n^S\n  (\\mathscr P_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})",
+    "en_new": "  \\boldsymbol{\\mathscr{T}\\!or}_n^S\n  (\\mathscr P_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})"
+  },
+  {
+    "id": 7525,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr{T}\\!or_n^S\n  (\\mathscr Q_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})",
+    "en_new": "  \\boldsymbol{\\mathscr{T}\\!or}_n^S\n  (\\mathscr Q_\\bullet^{(1)},\\mathscr P_\\bullet^{(2)})"
+  },
+  {
+    "id": 7526,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "términos $E_2$ ($0_{\\mathrm I}$, 11.1.5).",
+    "en_new": "términos $E_2$ (\\textbf{0}, 11.1.5)."
+  },
+  {
+    "id": 7527,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7528,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7529,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 7530,
+    "decision": "not_applicable",
+    "note": "Cierre de fórmula en línea."
+  },
+  {
+    "id": 7531,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 11.3.2); el paso al caso general",
+    "en_new": "(\\textbf{0}, 11.3.2); el paso al caso general"
+  },
+  {
+    "id": 7533,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{-n}\\bigl(f_1\\times_S f_2,",
+    "en_new": "  \\mathcal H^{-n}\\bigl(f_1\\times_S f_2,"
+  },
+  {
+    "id": 7534,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 11.7.1). Por otra parte, los módulos",
+    "en_new": "(\\textbf{0}, 11.7.1). Por otra parte, los módulos"
+  },
+  {
+    "id": 7536,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "(1.4.15.1); de ($0_{\\mathrm I}$, 11.7.5) se deduce entonces",
+    "en_new": "(1.4.15.1); de (\\textbf{0}, 11.7.5) se deduce entonces"
+  },
+  {
+    "id": 6396,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\section*{BIBLIOGRAFÍA (continuación)}",
+    "en_new": "\\section*{BIBLIOGRAFÍA \\textit{(continuación)}}"
+  },
+  {
+    "id": 6400,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Applications, C. R. Acad. Sci. Paris, vol. CCLII,",
+    "en_new": "Applications, \\emph{C. R. Acad. Sci. Paris}, vol. CCLII,"
+  },
+  {
+    "id": 7538,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 11.8.5)",
+    "en_new": "(\\textbf{0}, 11.8.5)"
+  },
+  {
+    "id": 7539,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 11.8.6)",
+    "en_new": "(\\textbf{0}, 11.8.6)"
+  },
+  {
+    "id": 7540,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 11.8.7)",
+    "en_new": "(\\textbf{0}, 11.8.7)"
+  },
+  {
+    "id": 7542,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "$ o todos los módulos\n",
+    "en_new": "$ \\textup{o} todos los módulos\n"
+  },
+  {
+    "id": 7543,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "\nmódulos $\\mathscr H^{-n}(f_1,",
+    "en_new": "\nmódulos $\\mathcal H^{-n}(f_1,"
+  },
+  {
+    "id": 7544,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "\n$\\mathscr H^{-n}(f_2,\\mathscr P_\\bullet^{(2)})$",
+    "en_new": "\n$\\mathcal H^{-n}(f_2,\\mathscr P_\\bullet^{(2)})$"
+  },
+  {
+    "id": 7546,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{-q_1}(f_1,\\mathscr P_\\bullet^{(1)})\n  \\otimes_S",
+    "en_new": "  \\mathcal H^{-q_1}(f_1,\\mathscr P_\\bullet^{(1)})\n  \\otimes_S"
+  },
+  {
+    "id": 7547,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{-q_2}(f_2,\\mathscr P_\\bullet^{(2)}).\n  \\tag{6.7.7.1}",
+    "en_new": "  \\mathcal H^{-q_2}(f_2,\\mathscr P_\\bullet^{(2)}).\n  \\tag{6.7.7.1}"
+  },
+  {
+    "id": 7548,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 11.1.6), pues esta sucesión",
+    "en_new": "(\\textbf{0}, 11.1.6), pues esta sucesión"
+  },
+  {
+    "id": 7549,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "    El complejo $\\mathscr P_\\bullet^{(1)}$ o el complejo",
+    "en_new": "    El complejo $\\mathscr P_\\bullet^{(1)}$ \\textup{o} el complejo"
+  },
+  {
+    "id": 6405,
+    "decision": "unclear",
+    "note": "La notación española es \\Set; falta su definición para comprobar la negrita cursiva."
+  },
+  {
+    "id": 6407,
+    "decision": "unclear",
+    "note": "Se usa \\C; falta su definición para comprobar si ya imprime C en negrita."
+  },
+  {
+    "id": 6421,
+    "decision": "unclear",
+    "note": "Se usa \\RR; falta su definición para comprobar si ya imprime R en negrita."
+  },
+  {
+    "id": 6423,
+    "decision": "unclear",
+    "note": "Se usa \\RR; falta su definición para comprobar si ya imprime R en negrita."
+  },
+  {
+    "id": 6425,
+    "decision": "unclear",
+    "note": "Se usa \\LL; falta su definición para comprobar si ya imprime L en negrita."
+  },
+  {
+    "id": 6427,
+    "decision": "unclear",
+    "note": "Se usa \\LL; falta su definición para comprobar si ya imprime L en negrita."
+  },
+  {
+    "id": 6429,
+    "decision": "unclear",
+    "note": "Se usa \\LL; falta su definición para comprobar si ya imprime L en negrita."
+  },
+  {
+    "id": 6430,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "\\LL_\\bullet T(K_{\\bullet\\bullet})$ ($T$ un funtor covariante aditivo):\n0, 11.7.2.",
+    "en_new": "\\LL_\\bullet T(K_{\\bullet\\bullet})$ ($T$ un funtor covariante aditivo):\n\\textbf 0, 11.7.2."
+  },
+  {
+    "id": 6436,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\chi(M^\\bullet)$ ($M^\\bullet$ un complejo finito de módulos de longitud finita):\n0, 11.10.1.",
+    "en_new": "$\\chi(M^\\bullet)$ ($M^\\bullet$ un complejo finito de módulos de longitud finita):\n\\textbf 0, 11.10.1."
+  },
+  {
+    "id": 6440,
+    "decision": "unclear",
+    "note": "Se usa \\sh{H}; falta la definición de \\sh para comprobar si coincide con \\mathscr H."
+  },
+  {
+    "id": 6441,
+    "decision": "unclear",
+    "note": "Se usa \\sh{H}; falta la definición de \\sh para comprobar si coincide con \\mathscr H."
+  },
+  {
+    "id": 6442,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "${}'E(f,\\sh{K}^\\bullet)$,\n${}''E(f,\\sh{K}^\\bullet)$",
+    "en_new": "${}'\\mathcal E(f,\\sh{K}^\\bullet)$,\n${}''\\mathcal E(f,\\sh{K}^\\bullet)$"
+  },
+  {
+    "id": 6444,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\sh{K}^\\bullet$ un complejo de $\\sh{O}_X$-módulos, $V$ abierto en $X$):\n0, 12.4.2.",
+    "en_new": "$\\sh{K}^\\bullet$ un complejo de $\\sh{O}_X$-módulos, $V$ abierto en $X$):\n\\textbf 0, 12.4.2."
+  },
+  {
+    "id": 6445,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\operatorname{gr}^\\bullet(A)$ ($A$ un sistema proyectivo que satisface (ML)):\n0, 13.4.2.",
+    "en_new": "$\\mathbf{gr}^\\bullet(\\mathbf A)$ ($\\mathbf A$ un sistema proyectivo que satisface (ML)):\n\\textbf 0, 13.4.2."
+  },
+  {
+    "id": 6446,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\operatorname{gr}^\\bullet(A)$ ($A$ un sistema proyectivo que satisface (ML)):\n0, 13.4.2.",
+    "note": "covered by 6445"
+  },
+  {
+    "id": 6447,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$\\operatorname{gr}^\\bullet(A)$ ($A$ un sistema proyectivo que satisface (ML)):\n0, 13.4.2.",
+    "note": "covered by 6445"
+  },
+  {
+    "id": 6454,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "$H^\\bullet(\\mathfrak U,\\sh{F}(*))$"
+  },
+  {
+    "id": 6903,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "$ o todos\n    los módulos",
+    "en_new": "$ \\textup{o} todos\n    los módulos",
+    "note": "Ocurrencia del teorema 6.7.8, distinta de 7542."
+  },
+  {
+    "id": 6904,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "  \\mathscr H^{n_2}(f_2,\\mathscr P_\\bullet^{(2)}).\n  \\tag{6.7.8.1}",
+    "en_new": "  \\mathscr H^{n_2}(f_2,\\mathscr P_\\bullet^{(2)})\n  \\tag{6.7.8.1}"
+  },
+  {
+    "id": 6905,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa entre condiciones; el español utiliza una enumeración."
+  },
+  {
+    "id": 6906,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa entre condiciones; el español utiliza una enumeración."
+  },
+  {
+    "id": 6910,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "se concluye por ($0_{\\mathrm I}$, 11.1.8).",
+    "en_new": "se concluye por (\\textbf{0}, 11.1.8)."
+  },
+  {
+    "id": 6912,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "siendo los morfismos $f'_i$ \\emph{separados y\ncuasicompactos}.",
+    "en_new": "siendo los morfismos $f'_i$ \\emph{separados} y\n\\emph{cuasicompactos}."
+  },
+  {
+    "id": 6913,
+    "decision": "not_applicable",
+    "note": "Ajuste gramatical del tiempo verbal francés."
+  },
+  {
+    "id": 6914,
+    "decision": "not_applicable",
+    "note": "Ajuste gramatical del tiempo verbal francés."
+  },
+  {
+    "id": 14445,
+    "decision": "unclear",
+    "note": "La entrada h_w(Y) usa \\C; falta su definición para comprobar la negrita."
+  },
+  {
+    "id": 14446,
+    "decision": "unclear",
+    "note": "No se identifica una ocurrencia distinta de «morphismes de C)» en las páginas españolas."
+  },
+  {
+    "id": 6457,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Algebraizable ($\\sh{O}_X$-módulo):",
+    "en_new": "Algebraizable ($\\sh{O}_{\\widehat X}$-módulo):"
+  },
+  {
+    "id": 6461,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Aplicación cuasicompacta: \\textbf 0, 9.1.1."
+  },
+  {
+    "id": 6476,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Codiscreta, coseparada, discreta, exhaustiva, finita, separada\n(filtración): \\textbf 0, 11.1.3."
+  },
+  {
+    "id": 6480,
+    "decision": "unclear",
+    "note": "La fórmula usa \\C, \\CHom, \\op y \\Set; faltan sus definiciones para comprobar la tipografía corregida."
+  },
+  {
+    "id": 6481,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Funtor covariante canónico $\\C\\to\\CHom(\\C\\op,\\Set)$: \\textbf 0, 8.1.2."
+  },
+  {
+    "id": 6485,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Hipercohomología de un funtor respecto de un complejo $K^\\bullet$:\n0, 11.4.3.",
+    "en_new": "Hipercohomología de un funtor respecto de un complejo $K^\\bullet$:\n\\textbf 0, 11.4.3."
+  },
+  {
+    "id": 6487,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Hiperhomología de un funtor respecto de un complejo $K_\\bullet$:\n0, 11.6.2.",
+    "en_new": "Hiperhomología de un funtor respecto de un complejo $K_\\bullet$:\n\\textbf 0, 11.6.2."
+  },
+  {
+    "id": 6491,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-5.tex",
+    "en_old": "Ley de composición externa (interna) sobre los objetos de una categoría: \\textbf 0, 8.2.1."
+  },
+  {
+    "id": 6915,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6916,
+    "decision": "not_applicable",
+    "note": "Fórmula en línea en lugar de destacada."
+  },
+  {
+    "id": 6917,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "($0_{\\mathrm I}$, 4.4.3.2)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 4.4.3.2)"
+  },
+  {
+    "id": 6918,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "homomorfismo de $A$-módulos\n\\begin{env}[6.7.10.4]",
+    "en_new": "homomorfismo de $A$-\\emph{módulos}\n\\begin{env}[6.7.10.4]"
+  },
+  {
+    "id": 6919,
+    "decision": "apply",
+    "en_file": "III2/units/III.6.7.es.tex",
+    "en_old": "   u_1^*(\\mathscr P_\\bullet^{(1)}),u_2^*(\\mathscr P_\\bullet^{(2)})).\n  \\tag{6.7.10.4}",
+    "en_new": "   u_1^*(\\mathscr P_\\bullet^{(1)}),u_2^*(\\mathscr P_\\bullet^{(2)}))\n  \\tag{6.7.10.4}"
+  }
+]
+```
+
+III1_CURRENT/ega3/ega3-5.tex, demostración de 5.4.4: las referencias `\sref[0]{0.4.8.11}`, `\sref[0]{0.4.8.6}` y `\sref[0]{0.4.8.7}` remiten al capítulo 0 en lugar del capítulo III.
+III1_CURRENT/ega3/ega3-5.tex, demostración de 5.4.5: en la fórmula de `\widetilde{u}_0^{\,\sharp}` obtenida por cocientes, los índices de `\sh{G}_0` y `\sh{L}_0` deberían ser `k`, como en el francés.
+III1_CURRENT/ega3/ega3-5.tex, demostración de 5.4.5: `\sref[0]{0.4.8.10}` remite al capítulo 0 en lugar del capítulo III.
+III2/units/III.6.7.es.tex, 6.7.1: la resolución de Cartan–Eilenberg y sus fórmulas utilizan `M_{\bullet\bullet}` y `M'_{\bullet\bullet}` donde el francés utiliza tres índices `\bullet`.

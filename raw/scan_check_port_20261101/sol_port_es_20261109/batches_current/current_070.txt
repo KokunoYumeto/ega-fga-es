@@ -1,0 +1,2426 @@
+# Spanish hand pass, current_070: 148 items on 12 printed pages
+
+=================== PAGE IV-4 90 ===================
+----- Spanish, IV4/ega4/ega4-17-es/components/12_17_12.tex, page IV-4 89 -----
+\oldpage[IV-4]{89}
+
+$S$-isomorfismo del preesquema $G$, la «traslación por la izquierda» $\tau_s$, que transforma los puntos de la sección unidad de $G$ en los puntos de $s(S)$; se concluye que $G$ es liso sobre $S$ en los puntos de $s(S)$.
+\end{examples}
+
+\begin{remark}[17.12.8]
+\label{IV.17.12.8}
+Un $S$-preesquema en grupos $G$, de tipo finito (e incluso finito) sobre un preesquema localmente noetheriano $S$, puede ser diferencialmente liso sobre $S$ sin ser liso (ni siquiera \emph{plano}) sobre $S$. Tomemos, por ejemplo, como $S$ el espectro del álgebra de números duales $D=k[T]/T^2k[T]$ sobre un cuerpo $k$, y como $G$ el espectro de la $D$-álgebra producto directo $E=D\oplus k$. Se define en $G$ una estructura de $S$-esquema en grupos definiendo una «aplicación diagonal» $\delta$, homomorfismo de $E$ en $E\otimes_DE$: si $e'$, $e''$ son los idempotentes, imágenes canónicas de la unidad $1$ de $D$ en los factores $D$ y $k$ de $E$, se comprueba fácilmente que se obtiene una aplicación diagonal de este tipo tomando
+\[
+\delta(e')=e'\otimes e'+e''\otimes e'',\qquad
+\delta(e'')=e'\otimes e''+e''\otimes e'.
+\]
+La sección unidad del esquema en grupos $G$ corresponde al homomorfismo $E\to D$ que es la identidad en $D$ y $0$ en $k$; es un isomorfismo de $S$ sobre una componente conexa de $G$, y \emph{a fortiori} $G$ es diferencialmente liso sobre $S$ (17.12.7), pero está claro que $G$ no es $S$-plano.
+\end{remark}
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 89 -----
+\subsection{Morfismos transversales.}
+\label{subsection:IV.17.13}
+\label{IV.17.13}
+
+\begin{env}[17.13.1]
+\label{IV.17.13.1}
+Sean $S$ un preesquema, $X$, $Y$, $X'$ tres $S$-preesquemas, $i:Y\to X$ una $S$-inmersión, $f:X'\to X$ un $S$-morfismo. Pongamos $Y'=Y\times_XX'$, y sean $g:Y'\to Y$, $j:Y'\to X'$ las proyecciones canónicas, de modo que se tiene el diagrama conmutativo
+\[
+\label{IV.17.13.1.1}
+\tag{17.13.1.1}
+\xymatrix{
+  Y \ar[d]_i & Y' \ar[l]_g \ar[d]^j\\
+  X & X' \ar[l]^f
+}
+\]
+y que $j$ es una $S$-inmersión. Se tiene entonces un diagrama conmutativo de $\sh{O}_{Y'}$-módulos cuasicoherentes
+\[
+\label{IV.17.13.1.2}
+\tag{17.13.1.2}
+\begin{tikzcd}
+  g^*(\sh{N}_{Y/X}) \ar{r} \ar{d}[swap]{\operatorname{gr}_1(g)} & f^*(\Omega^1_{X/S})\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} \ar{d} & g^*(\Omega^1_{Y/S}) \ar{r} \ar{d} & 0\\
+  \sh{N}_{Y'/X'} \ar{r} & \Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} & \Omega^1_{Y'/S} \ar{r} & 0
+\end{tikzcd}
+\]
+donde la fila inferior es la sucesión exacta (16.4.21) aplicada a $j$, la fila superior proviene de la misma sucesión exacta para $i$, mediante la aplicación del funtor exacto por la derecha $g^*$ (que, por tanto, la deja exacta); $\operatorname{gr}_1(g)$ se define en (16.2.1), y la conmutatividad de los dos cuadrados resulta de (\textbf 0, 20.5.7.3) y (\textbf 0, 20.5.11.3).
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 90 -----
+\oldpage[IV-4]{90}
+
+Además, se ha visto en (16.2.2, (iii)) que $\operatorname{gr}_1(g)$ es aquí sobreyectivo, por lo que se deduce de (17.13.1.2) la sucesión exacta
+\[
+\label{IV.17.13.1.3}
+\tag{17.13.1.3}
+g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0.
+\]
+\end{env}
+
+\begin{proposition}[17.13.2]
+\label{IV.17.13.2}
+Con las notaciones de \textup{(17.13.1)}, sea $x'$ un punto de $Y'$, $x=g(x')$ su imagen en $Y$; supongamos que $X$ e $Y$ son lisos sobre $S$ en el punto $x$, y que $X'$ es liso sobre $S$ en el punto $x'$. Sean $m$, $m-c$ las dimensiones relativas de $X$ e $Y$ sobre $S$ en el punto $x$ \textup{(17.10.1)}, y $n$ la de $X'$ sobre $S$ en el punto $x'$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $Y'$ es liso sobre $S$ en el punto $x'$ y de dimensión relativa $n-c$.
+  \item[\textup{b)}] El homomorfismo $\alpha\otimes1:g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}k(x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')$ deducido del homomorfismo $\alpha$ de \textup{(17.13.1.3)} es inyectivo.
+\end{enumerate}
+Sea $s$ la imagen canónica de $x$ en $S$, y supongamos que $x'$ es racional sobre $\boldsymbol k(s)$. Entonces las condiciones a) y b) son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo transpuesto de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} es sobreyectivo.
+\end{enumerate}
+Además, cuando las condiciones a) y b) se cumplen en $x'$, se cumplen en una vecindad de $x'$ en $Y'$; sustituyendo, si es preciso, $X'$ por una vecindad de $x'$, el homomorfismo
+\[
+\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}
+\]
+es biyectivo, y la sucesión
+\[
+\label{IV.17.13.2.1}
+\tag{17.13.2.1}
+0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+\]
+obtenida añadiendo un $0$ a \textup{(17.13.1.3)}, es exacta.
+\end{proposition}
+
+El hecho de que, si las condiciones equivalentes a) y b) se cumplen en el punto $x'$, se cumplen también en una vecindad de $x'$ en $Y'$, resulta de que el conjunto de los puntos donde un morfismo es liso es abierto (17.3.7) y de (17.10.2).
+
+En virtud de (17.12.1), aplicado a $X'$ e $Y'$, decir que $Y'$ es liso sobre $S$ en el punto $x'$ equivale a decir que el homomorfismo
+\[
+\delta\otimes1:\sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}k(x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')
+\]
+es inyectivo, teniendo en cuenta (\textbf 0, 19.1.12) y que $\Omega^1_{X'/S}$ es un $\sh{O}_{X'}$-módulo localmente libre en el punto $x'$ (17.2.3); como entonces $\Omega^1_{Y'/S}$ es también un $\sh{O}_{Y'}$-módulo localmente libre en una vecindad de $x'$ y la sucesión
+\[
+\label{IV.17.13.2.2}
+\tag{17.13.2.2}
+0\to\sh{N}_{Y'/X'}\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+\]
+es exacta (17.2.5), decir que $Y'$ es de dimensión relativa $n-c$ sobre $S$ en el punto $x'$ significa, por (17.10.2), que $\sh{N}_{Y'/X'}$ (que es localmente libre en una vecindad de $x'$) es de rango $c$ en el punto $x'$. Pero, en virtud de las hipótesis sobre $X$ e $Y$ en el punto $x$, y por el mismo razonamiento, $\sh{N}_{Y/X}$ es localmente libre y de rango $c$ en el punto $x$, por lo que $g^*(\sh{N}_{Y/X})$ es también localmente libre y de rango $c$ en el punto $x'$. Como el homomorfismo $\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}$ es sobreyectivo, las condiciones anteriores equivalen a decir que este homomorfismo es
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 91 -----
+\oldpage[IV-4]{91}
+
+biyectivo en el punto $x'$ (Bourbaki, \emph{Alg. comm.}, cap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6), y, por tanto, también en una vecindad de $x'$ (0$_{\mathrm I}$, 5.2.7); esto implica evidentemente b), así como la última afirmación del enunciado, en virtud de la exactitud de (17.13.2.2). Recíprocamente, como $\alpha\otimes1$ se factoriza en
+\[
+g^*(\sh{N}_{Y/X})\otimes\boldsymbol k(x')\xrightarrow{\operatorname{gr}_1(g)\otimes1}\sh{N}_{Y'/X'}\otimes\boldsymbol k(x')\xrightarrow{\delta\otimes1}\Omega^1_{X'/S}\otimes\boldsymbol k(x')
+\]
+y $\operatorname{gr}_1(g)$ es sobreyectivo, decir que $\alpha\otimes1$ es inyectivo implica que $\delta\otimes1$ lo es y que $\operatorname{gr}_1(g)\otimes1$ es biyectivo. Se concluye de (17.12.1) que $Y'$ es liso sobre $S$ en el punto $x'$, y que $\operatorname{gr}_1(g)$ es biyectivo en una vecindad de $x'$ (Bourbaki, \emph{loc. cit.}). Además, como la sucesión (17.13.2.2) es entonces exacta, y $\sh{N}_{Y'/X'}$, isomorfo a $g^*(\sh{N}_{Y/X})$, es de rango $c$ en el punto $x'$, $\Omega^1_{Y'/S}$ es de rango $n-c$ en este punto, lo que termina de demostrar la equivalencia de a) y b), en virtud de (17.10.2).
+
+Queda por demostrar la equivalencia de b) y b') cuando $x'$ es racional sobre $\boldsymbol k(s)$ (lo que implica que también lo es $x$); entonces $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol k(x')$ se identifica con $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x)$, y puesto que la sucesión
+\[
+0\to\sh{N}_{Y/X}\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\Omega^1_{Y/S}\to0
+\]
+es exacta en el punto $x$ y está formada por $\sh{O}_Y$-módulos localmente libres, el dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x)$ se identifica con el espacio cociente $\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)$ (16.5.12); de ahí la equivalencia de b) y b').
+
+\begin{definition}[17.13.3]
+\label{IV.17.13.3}
+Con las notaciones de \textup{(17.13.1)}, se dice que el morfismo $f$ es transversal a $Y$ en el punto $x'$, relativamente a $S$, si $X$ e $Y$ son lisos sobre $S$ en el punto $x$, $X'$ es liso sobre $S$ en el punto $x'$, y si se satisfacen las condiciones equivalentes \textup{a), b)} de \textup{(17.13.2)}.
+\end{definition}
+
+Cuando no hay riesgo de confusión, se omite la mención del preesquema $S$ y se dice simplemente que $f$ es transversal a $Y$ en el punto $x'$.
+
+\begin{remarks}[17.13.4]
+\label{IV.17.13.4}
+(i) Supongamos que $X$, $Y$ y $X'$ son \emph{planos y localmente de presentación finita} sobre $S$. Para todo $s\in S$, denotemos por $X_s$, $Y_s$, $X'_s$, $Y'_s$ las fibras de $X$, $Y$, $X'$, $Y'$ en el punto $s$, y por $f_s:X'_s\to X_s$ el morfismo deducido de $f$ por cambio de base. Resulta entonces de (17.5.1)\footnote{El texto impreso cita (17.5.9), pero no existe tal apartado; el criterio de lisura por fibras utilizado aquí es (17.5.1).} que, para que $f$ sea un morfismo transversal a $Y$ en el punto $x'$, es necesario y suficiente que, si $s$ es la imagen de $x$ en $S$, $f_s$ sea transversal a $Y_s$ en el punto $x'$, relativamente a $\boldsymbol k(s)$.
+
+(ii) Se ha visto en (17.13.2) que el conjunto de los puntos $x'\in Y'$ donde $f$ es transversal a $Y$ es \emph{abierto} en $Y'$; si, además, $Y'$ es \emph{propio} sobre $S$, se deduce que el conjunto de los $s\in S$ tales que $f$ sea transversal a $Y$ en todos los puntos de $Y'_s$, relativamente a $S$, es \emph{abierto} en $S$.
+
+Cuando $X$, $Y$ y $X'$ son planos y localmente de presentación finita sobre $S$, resulta de (i) que el conjunto de los $x'\in Y'$ tales que $f_s$ sea transversal a $Y_s$ en el punto $x'$ (siendo $s$ la imagen de $x'$ en $S$), relativamente a $\boldsymbol k(s)$, es \emph{abierto} en $Y'$. Si, además, $Y'$ es propio sobre $S$, el conjunto de los $s\in S$ tales que $f_s$ sea transversal a $Y_s$ en todos los puntos de $Y'_s$ (relativamente a $\boldsymbol k(s)$) es \emph{abierto} en $S$.
+
+(iii) Puesto que la propiedad de ser liso sobre $S$, así como la noción de dimensión relativa a $S$ en un punto, son estables por todo cambio de base $S'\to S$ ((17.3.3) y (4.2.7)), lo mismo ocurre con la propiedad de que un morfismo $f:X'\to X$ sea transversal a un subpreesquema de $X$ en un punto, relativamente a $S$.
+----- French corrections on page IV-4 90 -----
+[id 20186]
+OLD: \xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0.
+NEW: \xrightarrow{\alpha}\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0.
+FRENCH CONTEXT (corrected):  de (\textbf{0}, 20.5.7.3) et (\textbf{0}, 20.5.11.3).
+
+\oldpage[IV-4]{90}
+
+On a vu en outre (16.2.2, (iii)) que $\operatorname{gr}_1(g)$ est ici surjectif, donc on déduit de (17.13.1.2) la suite exacte
+\[
+\label{IV.17.13.1.3}
+\tag{17.13.1.3}
+g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0.
+\]
+\end{env}
+
+\begin{proposition}[17.13.2]
+\label{IV.17.13.2}
+Les notations étant celles de \textup{(17.13.1)}, soient $x'$ un point de $Y'$, $x=g(x')$ son image dans $Y$; supposons $X$ et $Y$ lisses sur $S$ au point $x$, $X'$ lisse sur $S$ au point $x'$. Soi
+
+[id 20188]
+OLD: soit $x'$ un point
+NEW: soient $x'$ un point
+FRENCH CONTEXT (corrected): ation finie et si $g$ est localement de type fini, alors $f$ est
+  localement de présentation finie.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'assertion (i) est triviale. Pour démontrer (iii), on peut se limiter au cas
+où $S=Y$ (\textbf{I}, 3.3.11)~; soient $x'$ un point de $X_{(S')}$, $s'$ et $x$ ses
+projections sur $S'$ et $X$ respectivement, $s$ la projection commune de $s'$
+et $x$ sur $S$. Par hypothèse, il y a un voisinage ouvert affine $V$ (resp.
+$U$) de $s$ (resp. $x$) tels que l'image de $U$ soit contenue dans $V$ et 
+
+[id 20192]
+OLD: g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}k(x')
+NEW: g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')
+FRENCH CONTEXT (corrected): p{(17.10.1)}, $n$ celle de $X'$ sur $S$ au point $x'$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $Y'$ est lisse sur $S$ au point $x'$ et de dimension relative $n-c$.
+  \item[\textup{b)}] L'homomorphisme $\alpha\otimes1:g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')$ déduit de l'homomorphisme $\alpha$ de \textup{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Al
+
+[id 20193]
+OLD: (x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')$ déduit
+NEW: (x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')$ déduit
+
+[id 20194]
+OLD: _{\sh{O}_{X'}}k(x')$ déduit
+NEW: _{\sh{O}_{X'}}\boldsymbol{k}(x')$ déduit
+FRENCH CONTEXT (corrected):  équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $Y'$ est lisse sur $S$ au point $x'$ et de dimension relative $n-c$.
+  \item[\textup{b)}] L'homomorphisme $\alpha\otimes1:g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')$ déduit de l'homomorphisme $\alpha$ de \textup{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalente
+
+[id 20198]
+OLD: Alors les conditions a) et b) sont aussi
+NEW: Alors les conditions \textup{a)} et \textup{b)} sont aussi
+FRENCH CONTEXT (corrected): ')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')$ déduit de l'homomorphisme $\alpha$ de \textup{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(c
+
+[id 20199]
+OLD: \item[b')] L'homomorphisme transposé
+NEW: \item[\textup{b$'$)}] L'homomorphisme transposé
+FRENCH CONTEXT (corrected): up{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \t
+
+[id 20201]
+OLD: \otimes_{\sh{O}_Y}k(x
+NEW: \otimes_{\sh{O}_Y}\boldsymbol{k}(x
+FRENCH CONTEXT (corrected):  soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \textup{b)} sont vérifiées en $x'$, elles le sont dans un voisinage de $x'$ dans $Y'$; en remplaçant 
+
+[id 20204]
+OLD: lorsque les conditions a) et b) sont vérifiées en
+NEW: lorsque les conditions \textup{a)} et \textup{b)} sont vérifiées en
+FRENCH CONTEXT (corrected): textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \textup{b)} sont vérifiées en $x'$, elles le sont dans un voisinage de $x'$ dans $Y'$; en remplaçant au besoin $X'$ par un voisinage de $x'$, l'homomorphisme
+\[
+\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}
+\]
+est bijectif, et la suite
+\[
+\label{IV.17.13.2.1}
+\tag{17.13.2.1}
+0
+
+[id 20205]
+OLD: 0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+NEW: 0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0
+FRENCH CONTEXT (corrected): n $x'$, elles le sont dans un voisinage de $x'$ dans $Y'$; en remplaçant au besoin $X'$ par un voisinage de $x'$, l'homomorphisme
+\[
+\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}
+\]
+est bijectif, et la suite
+\[
+\label{IV.17.13.2.1}
+\tag{17.13.2.1}
+0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0
+\]
+obtenue en ajoutant un $0$ à \textup{(17.13.1.3)}, est exacte.
+\end{proposition}
+
+Le fait que si les conditions équivalentes \emph{a)} et \emph{b)} sont vérifiées au point $x'$, elles le sont aussi au voisinage de $x'$ dans $Y'$, résulte de ce que l'ensemb
+
+[id 20207]
+OLD: équivalentes a) et b) sont vérifiées au point
+NEW: équivalentes \emph{a)} et \emph{b)} sont vérifiées au point
+FRENCH CONTEXT (corrected): 17.13.2.1}
+\tag{17.13.2.1}
+0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0
+\]
+obtenue en ajoutant un $0$ à \textup{(17.13.1.3)}, est exacte.
+\end{proposition}
+
+Le fait que si les conditions équivalentes \emph{a)} et \emph{b)} sont vérifiées au point $x'$, elles le sont aussi au voisinage de $x'$ dans $Y'$, résulte de ce que l'ensemble des points où un morphisme est lisse est ouvert (17.3.7) et de (17.10.2).
+
+En vertu de (17.12.1) appliqué à $X'$ et $Y'$, dire que $Y'$ est lisse sur $S$ au point $x'$ équi
+
+[id 20208]
+OLD: (x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')
+\]
+NEW: (x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')
+\]
+
+[id 20209]
+OLD: \sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}k(x')
+NEW: \sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')
+FRENCH CONTEXT (corrected): ns $Y'$, résulte de ce que l'ensemble des points où un morphisme est lisse est ouvert (17.3.7) et de (17.10.2).
+
+En vertu de (17.12.1) appliqué à $X'$ et $Y'$, dire que $Y'$ est lisse sur $S$ au point $x'$ équivaut à dire que l'homomorphisme
+\[
+\delta\otimes1:\sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')
+\]
+est injectif, compte tenu de (\textbf{0}, 19.1.12) et de ce que $\varOmega^1_{X'/S}$ est un $\sh{O}_{X'}$-Module localement libre au point $x'$ (17.2.3); comme alors $\varOmega^1_{Y'/S}$ est aussi
+
+[id 20210]
+OLD: _{\sh{O}_{X'}}k(x')
+\]
+NEW: _{\sh{O}_{X'}}\boldsymbol{k}(x')
+\]
+FRENCH CONTEXT (corrected): vert (17.3.7) et de (17.10.2).
+
+En vertu de (17.12.1) appliqué à $X'$ et $Y'$, dire que $Y'$ est lisse sur $S$ au point $x'$ équivaut à dire que l'homomorphisme
+\[
+\delta\otimes1:\sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')
+\]
+est injectif, compte tenu de (\textbf{0}, 19.1.12) et de ce que $\varOmega^1_{X'/S}$ est un $\sh{O}_{X'}$-Module localement libre au point $x'$ (17.2.3); comme alors $\varOmega^1_{Y'/S}$ est aussi un $\sh{O}_{Y'}$-Module localement libre au voisinage de $x'$ 
+
+[id 20212]
+OLD: de ce que $\Omega^1_{X'/S}$ est un
+NEW: de ce que $\varOmega^1_{X'/S}$ est un
+FRENCH CONTEXT (corrected): '$ est lisse sur $S$ au point $x'$ équivaut à dire que l'homomorphisme
+\[
+\delta\otimes1:\sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')
+\]
+est injectif, compte tenu de (\textbf{0}, 19.1.12) et de ce que $\varOmega^1_{X'/S}$ est un $\sh{O}_{X'}$-Module localement libre au point $x'$ (17.2.3); comme alors $\varOmega^1_{Y'/S}$ est aussi un $\sh{O}_{Y'}$-Module localement libre au voisinage de $x'$ et que la suite
+\[
+\label{IV.17.13.2.2}
+\tag{17.13.2.2}
+0\to\sh{N}_{Y'/X'}\to\varOmega^1_{X'
+
+[id 20213]
+OLD: comme alors $\Omega^1_{Y'/S}$
+NEW: comme alors $\varOmega^1_{Y'/S}$
+FRENCH CONTEXT (corrected): X'}\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\boldsymbol{k}(x')
+\]
+est injectif, compte tenu de (\textbf{0}, 19.1.12) et de ce que $\varOmega^1_{X'/S}$ est un $\sh{O}_{X'}$-Module localement libre au point $x'$ (17.2.3); comme alors $\varOmega^1_{Y'/S}$ est aussi un $\sh{O}_{Y'}$-Module localement libre au voisinage de $x'$ et que la suite
+\[
+\label{IV.17.13.2.2}
+\tag{17.13.2.2}
+0\to\sh{N}_{Y'/X'}\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0
+\]
+est exacte (17.2.5), dire que $
+
+[id 20214]
+OLD: 0\to\sh{N}_{Y'/X'}\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+NEW: 0\to\sh{N}_{Y'/X'}\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0
+FRENCH CONTEXT (corrected): e ce que $\varOmega^1_{X'/S}$ est un $\sh{O}_{X'}$-Module localement libre au point $x'$ (17.2.3); comme alors $\varOmega^1_{Y'/S}$ est aussi un $\sh{O}_{Y'}$-Module localement libre au voisinage de $x'$ et que la suite
+\[
+\label{IV.17.13.2.2}
+\tag{17.13.2.2}
+0\to\sh{N}_{Y'/X'}\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\varOmega^1_{Y'/S}\to0
+\]
+est exacte (17.2.5), dire que $Y'$ est de dimension relative $n-c$ sur $S$ au point $x'$ signifie, par (17.10.2), que $\sh{N}_{Y'/X'}$ (qui est localement libre au voisinage de $x'$) est de rang $c$ au point $x'$. Mais en vertu des hypothèses sur $X$ et $Y
+
+=================== PAGE IV-4 91 ===================
+----- (Spanish page IV-4 90: shown above in this file) -----
+----- (Spanish page IV-4 91: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 92 -----
+\oldpage[IV-4]{92}
+
+(iv) La condición b) de (17.13.2) expresa también que el homomorfismo $\alpha:g^*(\sh{N}_{Y/X})\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ es \emph{universalmente inyectivo} relativamente a $Y'$ (11.9.18).\footnote{El texto fuente cita (11.9.18); la caracterización de los homomorfismos universalmente inyectivos utilizada aquí es la observación (11.9.18).}
+\end{remarks}
+
+\begin{env}[17.13.5]
+\label{IV.17.13.5}
+Consideremos ahora un preesquema $S$, tres $S$-preesquemas $X$, $Y$, $Z$, dos $S$-morfismos $f:Y\to X$, $g:Z\to X$; pongamos $T=Y\times_XZ$; se sabe entonces (\textbf I, 5.3.5) que se tiene un diagrama conmutativo
+\[
+\label{IV.17.13.5.1}
+\tag{17.13.5.1}
+\xymatrix{
+  X \ar[d]_{\Delta} & Y\times_X Z=T \ar[l] \ar[d]^{j}\\
+  X\times_S X & Y\times_S Z \ar[l]^{u}
+}
+\]
+que hace de $T$ el producto de los $(X\times_SX)$-preesquemas $X$ e $Y\times_SZ$, donde $u=f\times_Sg$. Como $\Delta$ es una $S$-inmersión (\textbf I, 5.3.9), se está en la situación del diagrama (17.13.1.1); lo que corresponde a $\Omega^1_{X'/S}$ en (17.13.1) es entonces $(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_{Y\times_SZ})$, en virtud de (16.4.23). Por otra parte, lo que corresponde al $\sh{O}_Y$-módulo $\sh{N}_{Y/X}$ en (17.13.1) es aquí, por definición, $\Omega^1_{X/S}$ (16.3.1); corresponde, por tanto, a (17.13.1.3) una sucesión exacta
+\[
+\label{IV.17.13.5.2}
+\tag{17.13.5.2}
+\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+\]
+donde quedan por precisar los homomorfismos $\rho$ y $\sigma$. Teniendo en cuenta, en primer lugar, (16.4.23) y (\textbf 0, 20.5.2), se ve que, si $p:T\to Y$, $q:T\to Z$ son las proyecciones canónicas, se tiene, con las notaciones de (16.4.19),
+\[
+\label{IV.17.13.5.3}
+\tag{17.13.5.3}
+\sigma=p_{T/Y/S}+q_{T/Z/S}.
+\]
+Por otra parte, para calcular $\rho$, utilicemos la conmutatividad del cuadrado izquierdo de (17.13.1.2), lo que, en el caso presente, reduce primero a explicitar el homomorfismo canónico
+\[
+\rho':\Omega^1_{X/S}\to\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X
+\]
+definido en (16.4.21), aplicado a la inmersión $\Delta$. Se puede reducir al caso en que $S=\Spec(A)$, $X=\Spec(B)$ son afines, y entonces $\rho'$ corresponde al homomorfismo $\delta$ de (\textbf 0, 20.5.11.2), donde hay que sustituir $B$ por $B\otimes_AB$ y $C$ por $B=(B\otimes_AB)/\mathfrak J_{B/A}$. Se ve entonces que $\delta$ hace corresponder a la clase de $x\otimes1-1\otimes x\pmod{\mathfrak J_{B/A}^2}$ (para un $x\in B$) la imagen de
+\[
+(x\otimes1-1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1-1\otimes x)
+\]
+en $\Omega^1_{(B\otimes_AB)/A}\otimes_{(B\otimes_AB)}B$; pero el elemento anterior puede escribirse
+\[
+\begin{split}
+&((x\otimes1)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1))\\
+&\quad-((1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(1\otimes x))
+\end{split}
+\]
+y se ve, por tanto, que $\rho'$ es la diferencia de los dos homomorfismos $\pi^{(1)}$ y $\pi^{(2)}$ de $\Omega^1_{X/S}$ en $\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X$, correspondientes, respectivamente, a la primera y a la segunda proyección de $X\times_SX$ en $X$, por (16.4.3.3). Para obtener $\rho$, hay que considerar primero el homomorfismo
+\[
+\rho'':\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{Y\times_SZ}\to\Omega^1_{(Y\times_SZ)/S}
+\]
+correspondiente, por (16.4.3.3), al morfismo $u$ de (17.13.5.1), y luego, tras tensorizar por $\sh{O}_T$, formar el compuesto $(\rho''\otimes1)\circ(\rho'\otimes1)$; resulta de lo anterior que se tiene, con las notaciones de (16.4.18)
+\[
+\label{IV.17.13.5.4}
+\tag{17.13.5.4}
+\rho=(f_{Y/X/S}\otimes1_{\sh{O}_T})\oplus(-g_{Z/X/S}\otimes1_{\sh{O}_T}).
+\]
+----- French corrections on page IV-4 91 -----
+[id 20217]
+OLD: bijectif au point $x'$ (Bourbaki
+NEW: \emph{bijectif} au point $x'$ (Bourbaki
+FRENCH CONTEXT (corrected): (\sh{N}_{Y/X})$ est aussi localement libre et de rang $c$ au point $x'$. Comme l'homomorphisme $\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}$ est surjectif, les conditions précédentes équivalent à dire que cet homomorphisme est
+\oldpage[IV-4]{91}
+\emph{bijectif} au point $x'$ (Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6), donc aussi dans un voisinage de $x'$ ($\mathbf{0}_{\mathrm I}$, 5.2.7); cela entraîne évidemment \emph{b)}, ainsi que la dernière assertion de l'énoncé, en vertu de l'exactitude d
+
+[id 20218]
+OLD: (0$_{\mathrm I}$, 5.2.7)
+NEW: ($\mathbf{0}_{\mathrm I}$, 5.2.7)
+FRENCH CONTEXT (corrected): }), donc libre (\textbf{0}, 10.1.3),
+puisqu'il s'agit d'un $\mathscr O_y$-module de type fini en vertu de (7.7.4) ;
+puisque $\mathcal H^{-p}(f,\mathscr P^\bullet)$ est un $\mathscr O_Y$-Module
+cohérent (7.7.4), il est localement libre dans un voisinage de $y$
+($\mathbf{0}_{\mathrm I}$, 5.2.7). Inversement, il est clair que \emph{d)} entraîne \emph{a)} par
+définition du foncteur $\mathscr T_p^U$ (7.7.2.2).
+\end{proof}
+
+\begin{proposition}[7.8.5]
+Sous les hypothèses de \textup{(7.8.4)}, les conditions suivantes sont équivalentes :
+\begin{enumerate}
+
+
+[id 20219]
+OLD: évidemment b), ainsi
+NEW: évidemment \emph{b)}, ainsi
+FRENCH CONTEXT (corrected): t à dire que cet homomorphisme est
+\oldpage[IV-4]{91}
+\emph{bijectif} au point $x'$ (Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6), donc aussi dans un voisinage de $x'$ ($\mathbf{0}_{\mathrm I}$, 5.2.7); cela entraîne évidemment \emph{b)}, ainsi que la dernière assertion de l'énoncé, en vertu de l'exactitude de (17.13.2.2). Inversement, comme $\alpha\otimes1$ se factorise en
+\[
+g^*(\sh{N}_{Y/X})\otimes\boldsymbol{k}(x')\xrightarrow{\operatorname{gr}_1(g)\otimes1}\sh{N}_{Y'/X'}\otimes\boldsymbol{k}(x'
+
+[id 20220]
+OLD: \xrightarrow{\delta\otimes1}\Omega^1_{X'/S}
+NEW: \xrightarrow{\delta\otimes1}\varOmega^1_{X'/S}
+FRENCH CONTEXT (corrected): que la dernière assertion de l'énoncé, en vertu de l'exactitude de (17.13.2.2). Inversement, comme $\alpha\otimes1$ se factorise en
+\[
+g^*(\sh{N}_{Y/X})\otimes\boldsymbol{k}(x')\xrightarrow{\operatorname{gr}_1(g)\otimes1}\sh{N}_{Y'/X'}\otimes\boldsymbol{k}(x')\xrightarrow{\delta\otimes1}\varOmega^1_{X'/S}\otimes\boldsymbol{k}(x')
+\]
+et que $\operatorname{gr}_1(g)$ est surjectif, dire que $\alpha\otimes1$ est injectif entraîne que $\delta\otimes1$ l'est et que $\operatorname{gr}_1(g)\otimes1$ est bijectif. On en conclut (17.12.1) que $Y'$ est lisse sur $S$ au p
+
+[id 20224]
+OLD: l'équivalence de a) et b), en vertu
+NEW: l'équivalence de \emph{a)} et \emph{b)}, en vertu
+FRENCH CONTEXT (corrected):  de $x'$ (Bourbaki, \emph{loc. cit.}). En outre, comme la suite (17.13.2.2) est alors exacte, et que $\sh{N}_{Y'/X'}$, isomorphe à $g^*(\sh{N}_{Y/X})$, est de rang $c$ au point $x'$, $\varOmega^1_{Y'/S}$ est de rang $n-c$ en ce point, ce qui achève de prouver l'équivalence de \emph{a)} et \emph{b)}, en vertu de (17.10.2).
+
+Reste à montrer l'équivalence de \emph{b)} et \emph{b')} lorsque $x'$ est rationnel sur $\boldsymbol{k}(s)$ (ce qui implique qu'il en est de même de $x$); alors $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')$ s'identifie à $\sh{N}_{Y
+
+[id 20225]
+OLD: $\Omega^1_{Y'/S}$ est de rang
+NEW: $\varOmega^1_{Y'/S}$ est de rang
+FRENCH CONTEXT (corrected): au point $x'$, et que $\operatorname{gr}_1(g)$ est bijectif dans un voisinage de $x'$ (Bourbaki, \emph{loc. cit.}). En outre, comme la suite (17.13.2.2) est alors exacte, et que $\sh{N}_{Y'/X'}$, isomorphe à $g^*(\sh{N}_{Y/X})$, est de rang $c$ au point $x'$, $\varOmega^1_{Y'/S}$ est de rang $n-c$ en ce point, ce qui achève de prouver l'équivalence de \emph{a)} et \emph{b)}, en vertu de (17.10.2).
+
+Reste à montrer l'équivalence de \emph{b)} et \emph{b')} lorsque $x'$ est rationnel sur $\boldsymbol{k}(s)$ (ce qui implique qu'il en est de même de $
+
+[id 20226]
+OLD: l'équivalence de b) et b') lorsque
+NEW: l'équivalence de \emph{b)} et \emph{b')} lorsque
+FRENCH CONTEXT (corrected): lors exacte, et que $\sh{N}_{Y'/X'}$, isomorphe à $g^*(\sh{N}_{Y/X})$, est de rang $c$ au point $x'$, $\varOmega^1_{Y'/S}$ est de rang $n-c$ en ce point, ce qui achève de prouver l'équivalence de \emph{a)} et \emph{b)}, en vertu de (17.10.2).
+
+Reste à montrer l'équivalence de \emph{b)} et \emph{b')} lorsque $x'$ est rationnel sur $\boldsymbol{k}(s)$ (ce qui implique qu'il en est de même de $x$); alors $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')$ s'identifie à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$, et puisque la suite
+\[
+0\to\sh{N}_{Y/X}
+
+[id 20230]
+OLD: à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x
+NEW: à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x
+FRENCH CONTEXT (corrected): )}, en vertu de (17.10.2).
+
+Reste à montrer l'équivalence de \emph{b)} et \emph{b')} lorsque $x'$ est rationnel sur $\boldsymbol{k}(s)$ (ce qui implique qu'il en est de même de $x$); alors $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')$ s'identifie à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$, et puisque la suite
+\[
+0\to\sh{N}_{Y/X}\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\varOmega^1_{Y/S}\to0
+\]
+est exacte au point $x$ et formée de $\sh{O}_Y$-Modules localement libres, le dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$ s'ident
+
+[id 20231]
+OLD: 0\to\sh{N}_{Y/X}\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\Omega^1_{Y/S}\to0
+NEW: 0\to\sh{N}_{Y/X}\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\varOmega^1_{Y/S}\to0
+FRENCH CONTEXT (corrected): mph{b')} lorsque $x'$ est rationnel sur $\boldsymbol{k}(s)$ (ce qui implique qu'il en est de même de $x$); alors $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}\boldsymbol{k}(x')$ s'identifie à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$, et puisque la suite
+\[
+0\to\sh{N}_{Y/X}\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\varOmega^1_{Y/S}\to0
+\]
+est exacte au point $x$ et formée de $\sh{O}_Y$-Modules localement libres, le dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$ s'identifie à l'espace quotient $\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)$ (16.5.12); d'où l'équivalence de \emph{b)} et 
+
+[id 20232]
+OLD: dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x)$
+NEW: dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$
+FRENCH CONTEXT (corrected): ')$ s'identifie à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$, et puisque la suite
+\[
+0\to\sh{N}_{Y/X}\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\varOmega^1_{Y/S}\to0
+\]
+est exacte au point $x$ et formée de $\sh{O}_Y$-Modules localement libres, le dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$ s'identifie à l'espace quotient $\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)$ (16.5.12); d'où l'équivalence de \emph{b)} et \emph{b')}.
+
+\begin{definition}[17.13.3]
+\EGAReaderTarget{ega4.c04.def.17-13-3}{IV.17.13.3}
+Avec les notations de \textup{(17.13.1)}, on di
+
+[id 20233]
+OLD: d'où l'équivalence de b) et b').
+NEW: d'où l'équivalence de \emph{b)} et \emph{b')}.
+FRENCH CONTEXT (corrected): _X}\sh{O}_Y\to\varOmega^1_{Y/S}\to0
+\]
+est exacte au point $x$ et formée de $\sh{O}_Y$-Modules localement libres, le dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x)$ s'identifie à l'espace quotient $\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)$ (16.5.12); d'où l'équivalence de \emph{b)} et \emph{b')}.
+
+\begin{definition}[17.13.3]
+\EGAReaderTarget{ega4.c04.def.17-13-3}{IV.17.13.3}
+Avec les notations de \textup{(17.13.1)}, on dit que le morphisme $f$ est transversal à $Y$ au point $x'$, relativement à $S$, si $X$ et $Y$ sont lisses sur $S$ au point $x$, $X'$
+
+[id 20238]
+OLD: à $Y$ en tous les points
+NEW: à $Y$ en \emph{tous} les points
+FRENCH CONTEXT (corrected):  $\boldsymbol{k}(s)$.
+
+(ii) On a vu dans (17.13.2) que l'ensemble des points $x'\in Y'$ où $f$ est transversal à $Y$ est \emph{ouvert} dans $Y'$; si $Y'$ est de plus \emph{propre} sur $S$, on en déduit que l'ensemble des $s\in S$ tels que $f$ soit transversal à $Y$ en \emph{tous} les points de $Y'_s$, relativement à $S$, est \emph{ouvert} dans $S$.
+Lorsque $X$, $Y$ et $X'$ sont plats et localement de présentation finie sur $S$, il résulte de (i) que l'ensemble des $x'\in Y'$ tels que $f_s$ soit transversal à $Y_s$ au point $x'$ ($s$ image de $x'
+
+=================== PAGE IV-4 92 ===================
+----- (Spanish page IV-4 91: shown above in this file) -----
+----- (Spanish page IV-4 92: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 93 -----
+\oldpage[IV-4]{93}
+
+Dicho esto, la aplicación de (17.13.2) a la situación del diagrama (17.13.5.1) (teniendo en cuenta (17.3.3, (iv)), que implica que $X\times_SX$ es liso sobre $S$ en $(x,x)$ si $X$ lo es)\footnote{El texto impreso dice que $X\times_SX$ es liso «en $x$»; el punto correspondiente de $X\times_SX$ es $\Delta(x)=(x,x)$.} da el corolario siguiente.
+\end{env}
+
+\begin{corollary}[17.13.6]
+\label{IV.17.13.6}
+Sean $S$ un preesquema, $X$, $Y$, $Z$ tres $S$-preesquemas $f:Y\to X$, $g:Z\to X$ dos $S$-morfismos; pongamos $T=Y\times_XZ$, y sean $p:T\to Y$, $q:T\to Z$ las proyecciones canónicas. Sea $t$ un punto de $T$, $y=p(t)$, $z=q(t)$, $x=f(y)=g(z)$. Supongamos que $X$ es liso sobre $S$ en el punto $x$, de dimensión relativa $m$, que $Y$ (resp. $Z$) es liso sobre $S$ en el punto $y$ (resp. $z$), de dimensión relativa $m+a$ (resp. $m+b$), siendo $a$ y $b$ positivos o negativos. Entonces las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $T$ es liso sobre $S$ en el punto $t$, de dimensión relativa $m+a+b$.
+  \item[\textup{b)}] El homomorfismo
+  \[
+  \rho\otimes1:\Omega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol k(t)\to
+  (\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol k(t))\oplus
+  (\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol k(t))
+  \]
+  donde $\rho$ viene dado por \textup{(17.13.5.4)}, es inyectivo.
+  \item[\textup{c)}] El morfismo $u:Y\times_SZ\to X\times_SX$ es transversal a la diagonal de $X\times_SX$ en el punto $t$.\footnote{El texto impreso escribe $Y\times_SZ\to X\times_SX$; aquí $T$ ya denota $Y\times_XZ$, mientras que el morfismo transversal es $u:Y\times_SZ\to X\times_SX$ del diagrama (17.13.5.1).}
+\end{enumerate}
+Si $t$ es racional sobre el cuerpo residual de su imagen $s$ en $S$, estas condiciones son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo
+  \[
+  \label{IV.17.13.6.1}
+  \tag{17.13.6.1}
+  \mathrm{T}_y(f)-\mathrm{T}_z(g):\mathrm{T}_{Y/S}(y)\oplus\mathrm{T}_{Z/S}(z)\to\mathrm{T}_{X/S}(x)
+  \]
+  (cf. (16.5.13.5))\footnote{El texto impreso cita (16.5.12.5); el morfismo tangente empleado está definido en (16.5.13.5).} es sobreyectivo.
+\end{enumerate}
+Además, cuando las condiciones a) y b) se cumplen en $t$, se cumplen en una vecindad de $t$ en $T$, y, restringiendo $T$ a tal vecindad, la sucesión
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+\]
+(donde $\sigma$ viene dado por (17.13.5.3)) es exacta.
+
+El único punto que queda por demostrar en (17.13.6) concierne a \emph{b')}, y resulta de que, bajo la hipótesis de que $t$ es racional sobre $\boldsymbol k(s)$, el homomorfismo $\rho\otimes1$ es \emph{transpuesto} de $\mathrm{T}_y(f)-\mathrm{T}_z(g)$, en virtud de (17.13.5.4).
+
+Cuando se satisfacen las condiciones equivalentes de (17.13.6), se dice que $f$ y $g$ forman un \emph{par de morfismos transversales en el punto $t$, relativamente} a $S$; también aquí se omite a menudo la mención de $S$.
+\end{corollary}
+
+\begin{env}[17.13.7]
+\label{IV.17.13.7}
+Consideremos, en particular, el caso en que $Y$ y $Z$ son \emph{subpreesquemas de} $X$, siendo $f$ y $g$ las inyecciones canónicas; $T$ es entonces el subpreesquema «intersección»
+----- French corrections on page IV-4 92 -----
+[id 20242]
+OLD: La condition b) de
+NEW: La condition \emph{b)} de
+FRENCH CONTEXT (corrected): S$ en un point, étant stables par tout changement de base $S'\to S$ ((17.3.3) et (4.2.7)), il en est de même de la propriété pour un morphisme $f:X'\to X$ d'être transversal à un sous-préschéma de $X$ en un point, relativement à $S$.
+
+\oldpage[IV-4]{92}
+
+(iv) La condition \emph{b)} de (17.13.2) exprime encore que l'homomorphisme $\alpha:g^*(\sh{N}_{Y/X})\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ est \emph{universellement injectif} relativement à $Y'$ (11.9.18).
+\end{remarks}
+
+\begin{env}[17.13.5]
+\label{IV.17.13.5}
+Considérons 
+
+[id 20243]
+OLD: \to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ est
+NEW: \to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ est
+FRENCH CONTEXT (corrected):  est de même de la propriété pour un morphisme $f:X'\to X$ d'être transversal à un sous-préschéma de $X$ en un point, relativement à $S$.
+
+\oldpage[IV-4]{92}
+
+(iv) La condition \emph{b)} de (17.13.2) exprime encore que l'homomorphisme $\alpha:g^*(\sh{N}_{Y/X})\to\varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ est \emph{universellement injectif} relativement à $Y'$ (11.9.18).
+\end{remarks}
+
+\begin{env}[17.13.5]
+\label{IV.17.13.5}
+Considérons maintenant un préschéma $S$, trois $S$-préschémas $X$, $Y$, $Z$, deux $S$-morphismes $f:Y\to X$, $g:Z\to X$; posons $T=Y\times_XZ
+
+[id 20249]
+OLD: correspond à $\Omega^1_{X'/S}$ dans
+NEW: correspond à $\varOmega^1_{X'/S}$ dans
+FRENCH CONTEXT (corrected): }\\
+  X\times_S X & Y\times_S Z \ar[l]^{u}
+}
+\]
+faisant de $T$ le produit des $(X\times_SX)$-préschémas $X$ et $Y\times_SZ$, où $u=f\times_Sg$. Comme $\Delta$ est une $S$-immersion (\textbf{I}, 5.3.9), on est dans la situation du diagramme (17.13.1.1); ce qui correspond à $\varOmega^1_{X'/S}$ dans (17.13.1) est alors $(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_{Y\times_SZ})$ en vertu de (16.4.23). D'autre part, ce qui correspond au $\sh{O}_Y$-Module $\sh{N}_{Y/X}$ dans (17.13.1) est ici par 
+
+[id 20250]
+OLD: $(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\Omega^1_{Z/S}
+NEW: $(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\varOmega^1_{Z/S}
+FRENCH CONTEXT (corrected): $T$ le produit des $(X\times_SX)$-préschémas $X$ et $Y\times_SZ$, où $u=f\times_Sg$. Comme $\Delta$ est une $S$-immersion (\textbf{I}, 5.3.9), on est dans la situation du diagramme (17.13.1.1); ce qui correspond à $\varOmega^1_{X'/S}$ dans (17.13.1) est alors $(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_{Y\times_SZ})$ en vertu de (16.4.23). D'autre part, ce qui correspond au $\sh{O}_Y$-Module $\sh{N}_{Y/X}$ dans (17.13.1) est ici par définition $\varOmega^1_{X/S}$ (16.3.1); il correspond donc à (17.13.1.3) une suite exacte
+\[
+\label{I
+
+[id 20251]
+OLD: par définition $\Omega^1_{X/S}$
+NEW: par définition $\varOmega^1_{X/S}$
+FRENCH CONTEXT (corrected): dans (17.13.1) est alors $(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_{Y\times_SZ})$ en vertu de (16.4.23). D'autre part, ce qui correspond au $\sh{O}_Y$-Module $\sh{N}_{Y/X}$ dans (17.13.1) est ici par définition $\varOmega^1_{X/S}$ (16.3.1); il correspond donc à (17.13.1.3) une suite exacte
+\[
+\label{IV.17.13.5.2}
+\tag{17.13.5.2}
+\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+
+[id 20252]
+OLD: \Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+NEW: \varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\varOmega^1_{T/S}\to0
+FRENCH CONTEXT (corrected): imes_SZ})$ en vertu de (16.4.23). D'autre part, ce qui correspond au $\sh{O}_Y$-Module $\sh{N}_{Y/X}$ dans (17.13.1) est ici par définition $\varOmega^1_{X/S}$ (16.3.1); il correspond donc à (17.13.1.3) une suite exacte
+\[
+\label{IV.17.13.5.2}
+\tag{17.13.5.2}
+\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\varOmega^1_{T/S}\to0
+\]
+où il reste à préciser les homomorphismes $\rho$ et $\sigma$. Tenant compte d'abord de (16.4.23) et de (\textbf{0}, 20.5.2), on voit que si $p:T\to Y$, $q:T\to Z$ sont les projections canoniques, on a, avec les notations de (16.4.19),
+\[
+\label{IV.17.13.5.
+
+[id 20255]
+OLD: \rho':\Omega^1_{X/S}\to\Omega^1_{(X\times_SX)/S}
+NEW: \rho':\varOmega^1_{X/S}\to\varOmega^1_{(X\times_SX)/S}
+FRENCH CONTEXT (corrected): ),
+\[
+\label{IV.17.13.5.3}
+\tag{17.13.5.3}
+\sigma=p_{T/Y/S}+q_{T/Z/S}.
+\]
+
+D'autre part, pour évaluer $\rho$, utilisons la commutativité du carré de gauche dans (17.13.1.2), ce qui, dans le cas présent, ramène d'abord à expliciter l'homomorphisme canonique
+\[
+\rho':\varOmega^1_{X/S}\to\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X
+\]
+défini dans (16.4.21) appliqué à l'immersion $\Delta$. On peut se borner au cas où $S=\Spec(A)$, $X=\Spec(B)$ sont affines, et alors $\rho'$ correspond à l'homomorphisme $\delta$ de (\textbf{0}, 20.5.11.2), où il faut r
+
+[id 20257]
+OLD: x\pmod{\mathfrak J_{B/A}^2}$
+NEW: x$ mod. $\mathfrak J_{B/A}^2$
+FRENCH CONTEXT (corrected): ines, et alors $\rho'$ correspond à l'homomorphisme $\delta$ de (\textbf{0}, 20.5.11.2), où il faut remplacer $B$ par $B\otimes_AB$ et $C$ par $B=(B\otimes_AB)/\mathfrak J_{B/A}$. On voit alors que $\delta$ fait correspondre à la classe de $x\otimes1-1\otimes x$ mod. $\mathfrak J_{B/A}^2$ (pour un $x\in B$) l'image de
+\[
+(x\otimes1-1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1-1\otimes x)
+\]
+dans $\Omega^1_{(B\otimes_AB)/A}\otimes_{(B\otimes_AB)}B$; mais l'élément précédent peut s'écrire
+\[
+\begin{split}
+&((x\otimes1)\otimes(1\oti
+
+[id 20259]
+OLD: de $\Omega^1_{X/S}$ dans $\Omega^1_{(X\times_SX)/S}
+NEW: de $\varOmega^1_{X/S}$ dans $\varOmega^1_{(X\times_SX)/S}
+FRENCH CONTEXT (corrected): egin{split}
+&((x\otimes1)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1))\\
+&\quad-((1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(1\otimes x))
+\end{split}
+\]
+et on voit donc que $\rho'$ est la différence des deux homomorphismes $\pi^{(1)}$ et $\pi^{(2)}$ de $\varOmega^1_{X/S}$ dans $\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X$, correspondant respectivement à la première et la seconde projection de $X\times_SX$ dans $X$, par (16.4.3.3). Pour obtenir $\rho$, il faut d'abord consi%
+\oldpage[IV-4]{93}
+dérer l'homomorphisme
+$\rho'':\varOmega^1_{(X\t
+
+[id 20260]
+OLD: à la première et à la seconde
+NEW: à la première et la seconde
+FRENCH CONTEXT (corrected): )\otimes(1\otimes x))
+\end{split}
+\]
+et on voit donc que $\rho'$ est la différence des deux homomorphismes $\pi^{(1)}$ et $\pi^{(2)}$ de $\varOmega^1_{X/S}$ dans $\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X$, correspondant respectivement à la première et la seconde projection de $X\times_SX$ dans $X$, par (16.4.3.3). Pour obtenir $\rho$, il faut d'abord consi%
+\oldpage[IV-4]{93}
+dérer l'homomorphisme
+$\rho'':\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{(Y\times_SZ)}\to\varOmega^1_{(Y\times_SZ)/S}$ co
+
+[id 20261]
+OLD: \[
+\rho'':\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{Y\times_SZ}\to\Omega^1_{(Y\times_SZ)/S}
+\]
+
+NEW: $\rho'':\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{Y\times_SZ}\to\Omega^1_{(Y\times_SZ)/S}$ 
+
+[id 20262]
+OLD: \sh{O}_{Y\times_SZ}\to
+NEW: \sh{O}_{(Y\times_SZ)}\to
+FRENCH CONTEXT (corrected): correspondant respectivement à la première et la seconde projection de $X\times_SX$ dans $X$, par (16.4.3.3). Pour obtenir $\rho$, il faut d'abord consi%
+\oldpage[IV-4]{93}
+dérer l'homomorphisme
+$\rho'':\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{(Y\times_SZ)}\to\varOmega^1_{(Y\times_SZ)/S}$ correspondant par (16.4.3.3) au morphisme $u$ de (17.13.5.1), puis, après tensorisation par $\sh{O}_T$, former le composé $(\rho''\otimes1)\circ(\rho'\otimes1)$; il résulte de ce qui précède que l'on a, avec les notations de (16.4
+
+[id 20263]
+OLD: \rho'':\Omega^1_{(X\times_SX)/S}
+NEW: \rho'':\varOmega^1_{(X\times_SX)/S}
+FRENCH CONTEXT (corrected): Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X$, correspondant respectivement à la première et la seconde projection de $X\times_SX$ dans $X$, par (16.4.3.3). Pour obtenir $\rho$, il faut d'abord consi%
+\oldpage[IV-4]{93}
+dérer l'homomorphisme
+$\rho'':\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{(Y\times_SZ)}\to\varOmega^1_{(Y\times_SZ)/S}$ correspondant par (16.4.3.3) au morphisme $u$ de (17.13.5.1), puis, après tensorisation par $\sh{O}_T$, former le composé $(\rho''\otimes1)\circ(\rho'\otimes1)$; il résulte de c
+
+[id 20264]
+OLD: \to\Omega^1_{(Y\times_SZ)/S}
+NEW: \to\varOmega^1_{(Y\times_SZ)/S}
+FRENCH CONTEXT (corrected): ivement à la première et la seconde projection de $X\times_SX$ dans $X$, par (16.4.3.3). Pour obtenir $\rho$, il faut d'abord consi%
+\oldpage[IV-4]{93}
+dérer l'homomorphisme
+$\rho'':\varOmega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{(Y\times_SZ)}\to\varOmega^1_{(Y\times_SZ)/S}$ correspondant par (16.4.3.3) au morphisme $u$ de (17.13.5.1), puis, après tensorisation par $\sh{O}_T$, former le composé $(\rho''\otimes1)\circ(\rho'\otimes1)$; il résulte de ce qui précède que l'on a, avec les notations de (16.4.18)
+\[
+\label{IV.17.13.5.4}
+
+=================== PAGE IV-4 93 ===================
+----- (Spanish page IV-4 92: shown above in this file) -----
+----- (Spanish page IV-4 93: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 94 -----
+\oldpage[IV-4]{94}
+
+$\inf(Y,Z)$ de $X$ (\textbf I, 4.4.3), y se tiene $t=y=z=x$. En lugar de decir que el par $(f,g)$ es transversal en el punto $x$, se dice entonces que $Y$ y $Z$ \emph{se cortan transversalmente en el punto $x$} (relativamente a $S$). Denotando por $X_s$, $Y_s$, $Z_s$, $T_s$ las fibras de $X$, $Y$, $Z$, $T$ en el punto $s$, imagen de $x$ en $S$, y teniendo en cuenta (5.2.3), (5.1.9) y (\textbf 0, 16.5.12), se ve que, para que esto ocurra (cuando $X$, $Y$, $Z$ son lisos sobre $S$ en el punto $x$), es necesario y suficiente que $T$ sea liso sobre $S$ en el punto $x$, y que se tenga la relación
+\[
+\label{IV.17.13.7.1}
+\tag{17.13.7.1}
+\operatorname{codim}_x(T_s,X_s)=\operatorname{codim}_x(Y_s,X_s)+\operatorname{codim}_x(Z_s,X_s).
+\]
+\end{env}
+
+\begin{proposition}[17.13.8]
+\label{IV.17.13.8}
+Sean $S$ un preesquema, $X$ un $S$-preesquema localmente de presentación finita sobre $S$, $Y$, $Z$ dos subpreesquemas de $X$, $T=\inf(Y,Z)$ el subpreesquema «intersección» de $Y$ y $Z$, $x$ un punto de $T$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] La inyección canónica $i:Y\to X$ es un morfismo transversal a $Z$ en el punto $x$, relativamente a $S$ \textup{(17.13.3)}.
+  \item[a')] La inyección canónica $j:Z\to X$ es un morfismo transversal a $Y$ en el punto $x$, relativamente a $S$.
+  \item[a'')] $Y$ y $Z$ se cortan transversalmente en el punto $x$, relativamente a $S$.
+  \item[\textup{b)}] $X$, $Y$, $Z$ son lisos sobre $S$ en el punto $x$, y el homomorfismo $\rho$ \textup{(17.13.5.4)} es tal que
+  \[
+  \rho\otimes1:\Omega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol k(x)\to
+  (\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol k(x))\oplus
+  (\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol k(x))
+  \]
+  es inyectivo.
+\end{enumerate}
+Cuando $x$ es racional sobre $\boldsymbol k(s)$ (siendo $s$ la imagen de $x$ en $S$), estas condiciones son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo
+  \[
+  \mathrm{T}_x(i)-\mathrm{T}_x(j):\mathrm{T}_{Y/S}(x)\oplus\mathrm{T}_{Z/S}(x)\to\mathrm{T}_{X/S}(x)
+  \]
+  es sobreyectivo.
+\end{enumerate}
+Además, cuando las condiciones equivalentes a) a b) se cumplen en el punto $x$, se cumplen en una vecindad de $x$ en $T$, y, restringiendo $X$ a una vecindad de $x$, la sucesión (17.13.6.2) es exacta, y se tiene un isomorfismo canónico
+\[
+\label{IV.17.13.8.1}
+\tag{17.13.8.1}
+\sh{N}_{T/X}\xrightarrow{\sim}
+(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\sh{N}_{Z/X}\otimes_{\sh{O}_Z}\sh{O}_T).
+\]
+\end{proposition}
+
+Las condiciones \emph{a)}, \emph{a')}, \emph{a'')} implican todas que $X$, $Y$, $Z$ son lisos sobre $S$ en el punto $x$. Sean además $m$, $m-a$, $m-b$ las dimensiones relativas de $X$, $Y$, $Z$ sobre $S$ en el punto $x$. Resulta entonces de (17.13.2), aplicado sustituyendo $X'$ por $Z$ e $Y'$ por $T=Y\times_XZ$, que las condiciones a), a') equivalen ambas a decir que $T$ es liso sobre $S$ en el punto $x$ y de dimensión relativa $m-a-b$ en este punto; pero, en virtud de (17.13.7), esto significa precisamente que se cumple la condición a''), de donde resulta la equivalencia de a), a') y a''). La equivalencia de a'') y b) (o b') cuando $x$ es racional sobre $\boldsymbol k(s)$) se ha demostrado en (17.13.6), así como el hecho de que, si estas condiciones se satisfacen en el punto $x$, se satisfacen en una vecindad de $x$, y la exactitud de la sucesión (17.13.6.2) en tal vecindad. Queda por definir el isomorfismo canónico (17.13.8.1).
+----- French corrections on page IV-4 93 -----
+[id 20268]
+OLD: donne le corollaire suivant.
+NEW: donne le
+FRENCH CONTEXT (corrected): omme la limite projective (pour $V\subset U$) des morphismes
+canoniques $\mathcal{F}'(U')\to\mathcal{F}(V)$, autrement dit l'unique
+morphisme $\mathcal{F}'(U')\to\mathcal{F}'(U)$, qui, composé avec les
+morphismes canoniques $\mathcal{F}'(U)\to\mathcal{F}(V)$, donne les morphismes
+canoniques $\mathcal{F}'(U')\to\mathcal{F}(V)$~; la vérification de la
+transitivité des $\rho'_U{}^{U'}$ est alors immédiate. De plus, si
+$U\in\mathfrak{B}$, le morphisme canonique
+$\mathcal{F}'(U)\to\mathcal{F}(U)$ est un isomorphisme, permettant
+
+[id 20270]
+OLD: $Y$ (resp. $Z$) lisse sur $S$ au point $y$ (resp. $z$), de dimension relative $m+a$ (resp. $m+b$)
+NEW: $Y$ \textup{(resp. $Z$)} lisse sur $S$ au point $y$ \textup{(resp. $z$)}, de dimension relative $m+a$ \textup{(resp. $m+b$)}
+FRENCH CONTEXT (corrected): $, $g:Z\to X$ deux $S$-morphismes; posons $T=Y\times_XZ$, et soient $p:T\to Y$, $q:T\to Z$ les projections canoniques. Soient $t$ un point de $T$, $y=p(t)$, $z=q(t)$, $x=f(y)=g(z)$. Supposons que $X$ soit lisse sur $S$ au point $x$, de dimension relative $m$, $Y$ \textup{(resp. $Z$)} lisse sur $S$ au point $y$ \textup{(resp. $z$)}, de dimension relative $m+a$ \textup{(resp. $m+b$)}, $a$ et $b$ étant positifs ou négatifs. Alors les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOm
+
+[id 20273]
+OLD: \rho\otimes1:\Omega^1_{X/S}
+NEW: \rho\otimes1:\varOmega^1_{X/S}
+FRENCH CONTEXT (corrected): xtup{(resp. $m+b$)}, $a$ et $b$ étant positifs ou négatifs. Alors les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(t))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(t))
+  \]
+  où $\rho$ est donné par \textup{(17.13.5.4)}, est injectif.
+  \item[\textup{c)}] Le morphisme 
+
+[id 20274]
+OLD: \to
+  (\Omega^1_{Y/S}
+NEW: \to
+  (\varOmega^1_{Y/S}
+FRENCH CONTEXT (corrected):  les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(t))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(t))
+  \]
+  où $\rho$ est donné par \textup{(17.13.5.4)}, est injectif.
+  \item[\textup{c)}] Le morphisme $Y\times_SZ\to X\times_SX$ est transversal à la diagonale d
+
+[id 20275]
+OLD: \oplus
+  (\Omega^1_{Z/S}
+NEW: \oplus
+  (\varOmega^1_{Z/S}
+FRENCH CONTEXT (corrected): e}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(t))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(t))
+  \]
+  où $\rho$ est donné par \textup{(17.13.5.4)}, est injectif.
+  \item[\textup{c)}] Le morphisme $Y\times_SZ\to X\times_SX$ est transversal à la diagonale de $X\times_SX$ au point $t$.
+\end{enumerate}
+
+Si $t$ est ration
+
+[id 20282]
+OLD: \item[b')] L'homomorphisme
+NEW: \item[\textup{b$'$)}] L'homomorphisme
+FRENCH CONTEXT (corrected): up{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup
+
+[id 20283]
+OLD: (cf. (16.5.12.5)) est surjectif
+NEW: \textup{(cf. (16.5.12.5))} est surjectif
+FRENCH CONTEXT (corrected): nditions sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme
+  \[
+  \label{IV.17.13.6.1}
+  \tag{17.13.6.1}
+  \mathrm{T}_y(f)-\mathrm{T}_z(g):\mathrm{T}_{Y/S}(y)\oplus\mathrm{T}_{Z/S}(z)\to\mathrm{T}_{X/S}(x)
+  \]
+  \textup{(cf. (16.5.12.5))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \textup{b)} sont vérifiées en $t$, elles le sont dans un voisinage de $t$ dans $T$, et en restreignant $T$ à un tel voisinage, la suite
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\varOmega^1_{X
+
+[id 20285]
+OLD: les conditions a) et b) sont vérifiées en $t$
+NEW: les conditions \textup{a)} et \textup{b)} sont vérifiées en $t$
+FRENCH CONTEXT (corrected): extup{b$'$)}] L'homomorphisme
+  \[
+  \label{IV.17.13.6.1}
+  \tag{17.13.6.1}
+  \mathrm{T}_y(f)-\mathrm{T}_z(g):\mathrm{T}_{Y/S}(y)\oplus\mathrm{T}_{Z/S}(z)\to\mathrm{T}_{X/S}(x)
+  \]
+  \textup{(cf. (16.5.12.5))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \textup{b)} sont vérifiées en $t$, elles le sont dans un voisinage de $t$ dans $T$, et en restreignant $T$ à un tel voisinage, la suite
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+
+[id 20286]
+OLD: 0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+NEW: 0\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\varOmega^1_{T/S}\to0
+FRENCH CONTEXT (corrected): 5))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \textup{b)} sont vérifiées en $t$, elles le sont dans un voisinage de $t$ dans $T$, et en restreignant $T$ à un tel voisinage, la suite
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\varOmega^1_{T/S}\to0
+\]
+\textup{(}où $\sigma$ est donné par \textup{(17.13.5.3))} est exacte.
+\end{corollary}
+
+Le seul point qui reste à prouver dans (17.13.6) concerne \emph{b')}, et résulte de ce que, sous l'hypothèse que $t$ est rationnel sur $\boldsymbol{k}(s)$, l'homomorphis
+
+[id 20287]
+OLD: (où $\sigma$ est donné par (17.13.5.3))
+NEW: \textup{(}où $\sigma$ est donné par \textup{(17.13.5.3))}
+FRENCH CONTEXT (corrected): , la suite
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\varOmega^1_{T/S}\to0
+\]
+\textup{(}où $\sigma$ est donné par \textup{(17.13.5.3))} est exacte.
+\end{corollary}
+
+Le seul point qui reste à prouver dans (17.13.6) concerne \emph{b')}, et résulte de ce que, sous l'hypothèse que $t$ est rationnel sur $\boldsymbol{k}(s)$, l'homomorphisme $\rho\otimes1$ est \emph{transposé} de $\mathrm{T}_y(f)-\m
+
+[id 20288]
+OLD: est exacte.
+
+Le seul point
+NEW: est exacte.
+\end{corollary}
+
+Le seul point
+FRENCH CONTEXT (corrected): rOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\varOmega^1_{T/S}\to0
+\]
+\textup{(}où $\sigma$ est donné par \textup{(17.13.5.3))} est exacte.
+\end{corollary}
+
+Le seul point qui reste à prouver dans (17.13.6) concerne \emph{b')}, et résulte de ce que, sous l'hypothèse que $t$ est rationnel sur $\boldsymbol{k}(s)$, l'homomorphisme $\rho\otimes1$ est \emph{transposé} de $\mathrm{T}_y(f)-\mathrm{T}_z(g)$, en vertu de (17.13.5.4).
+
+L
+
+[id 20291]
+OLD: relativement} à $S$;
+NEW: relativement à} $S$;
+FRENCH CONTEXT (corrected): hisme $\rho\otimes1$ est \emph{transposé} de $\mathrm{T}_y(f)-\mathrm{T}_z(g)$, en vertu de (17.13.5.4).
+
+Lorsque les conditions équivalentes de (17.13.6) sont satisfaites, on dit que $f$ et $g$ forment un \emph{couple de morphismes transversaux au point $t$, relativement à} $S$; ici encore, on supprime souvent la mention de $S$.
+
+\begin{env}[17.13.7]
+\EGAReaderTarget{ega4.c04.statement.17-13-7}{IV.17.13.7}
+Considérons en particulier le cas où $Y$ et $Z$ sont des \emph{sous-préschémas de} $X$, $f$ et $g$ étant les injections canonique
+
+[id 20292]
+OLD: la mention de $S$.
+\end{corollary}
+NEW: la mention de $S$.
+FRENCH CONTEXT (corrected): {T}_y(f)-\mathrm{T}_z(g)$, en vertu de (17.13.5.4).
+
+Lorsque les conditions équivalentes de (17.13.6) sont satisfaites, on dit que $f$ et $g$ forment un \emph{couple de morphismes transversaux au point $t$, relativement à} $S$; ici encore, on supprime souvent la mention de $S$.
+
+\begin{env}[17.13.7]
+\EGAReaderTarget{ega4.c04.statement.17-13-7}{IV.17.13.7}
+Considérons en particulier le cas où $Y$ et $Z$ sont des \emph{sous-préschémas de} $X$, $f$ et $g$ étant les injections canoniques; $T$ est alors le sous-préschéma « intersection »
+
+=================== PAGE IV-4 94 ===================
+----- (Spanish page IV-4 93: shown above in this file) -----
+----- (Spanish page IV-4 94: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 95 -----
+\oldpage[IV-4]{95}
+
+Denotemos por $\alpha$ y $-\beta$ los homomorfismos que figuran en el segundo miembro de (17.13.5.4), y por $\gamma$ y $\delta$ los que figuran en el segundo miembro de (17.13.5.2). Decir que la sucesión (17.13.6.2)
+\[
+0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\Omega^1_{T/S}\to0
+\]
+es exacta significa que, en la categoría de los $\sh{O}_T$-módulos, $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ se identifica canónicamente con el \emph{producto fibrado} de $\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ y $\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T$ sobre $\Omega^1_{T/S}$, para los homomorfismos $\gamma$ y $\delta$. El mismo razonamiento que en (\textbf 0, 18.1.2 y 18.1.3), sustituyendo respectivamente los anillos y los ideales biláteros por módulos y submódulos, proporciona un diagrama conmutativo
+{\scriptsize
+\[
+\begin{tikzcd}[column sep=small,row sep=large]
+0 \ar[dr] & & 0 \ar[d] & 0 \ar[d] & \\
+& (\sh{N}_{Y/X}\otimes\sh{O}_T)\oplus(\sh{N}_{Z/X}\otimes\sh{O}_T)
+  \ar[r] \ar[d] \ar[dr,"\iota"]
+& \sh{N}_{Z/X}\otimes\sh{O}_T \ar[r,"\sim"] \ar[d]
+& \sh{N}_{T/Y} \ar[d] & \\
+0 \ar[r] & \sh{N}_{Y/X}\otimes\sh{O}_T \ar[r] \ar[d,"\wr"]
+& \Omega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta" swap] \ar[dr,"\varepsilon"]
+& \Omega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \Omega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta" swap] \ar[d]
+& \Omega^1_{T/S} \ar[r] \ar[d] \ar[dr] & 0\\
+& & 0 & 0 & 0
+\end{tikzcd}
+\]
+}
+donde las 3\textsuperscript{a} y 4\textsuperscript{a} filas y columnas son exactas en virtud de las hipótesis de lisura. El hecho de que el homomorfismo compuesto $\varepsilon=\gamma\circ\alpha=\delta\circ\beta$ sea el homomorfismo correspondiente a la inyección canónica $T\to X$ resulta de (\textbf 0, 20.5.2.7). Como la diagonal del diagrama anterior es exacta, $\operatorname{Ker}(\varepsilon)$ se identifica canónicamente con $\sh{N}_{T/X}$, teniendo en cuenta que $T$ es liso sobre $S$ (17.2.5); por tanto, se tiene un isomorfismo canónico (17.13.8.1), inverso de $\iota$.
+
+\begin{env}[17.13.9]
+\label{IV.17.13.9}
+Se pueden generalizar los resultados de (17.13.5) y (17.13.6) a un número finito cualquiera de $S$-morfismos $f_i:Y_i\to X$ ($i\in I$, siendo $I$ un conjunto finito). Para ello, denotemos por $X^I$ el producto de la familia $(X_i)_{i\in I}$ de $S$-preesquemas todos idénticos a $X$ (\textbf I, 3.3.5), y sean $p_i$ ($i\in I$) las proyecciones canónicas. El \emph{morfismo diagonal} $\Delta:X\to X^I$ se define (como en (\textbf I, 5.3.1)) como el único $S$-morfismo tal que $p_i\circ\Delta=1_X$ para todo $i\in I$. Es una $X$-sección de $X^I$ para el morfismo $p_1$, y, por tanto, (\textbf I, 5.3.11) una \emph{inmersión}.
+----- French corrections on page IV-4 94 -----
+[id 20297]
+OLD: $Y$ et $Z$ \emph{se coupent
+NEW: $Y$ \emph{et} $Z$ \emph{se coupent
+FRENCH CONTEXT (corrected): , $f$ et $g$ étant les injections canoniques; $T$ est alors le sous-préschéma « intersection »
+\oldpage[IV-4]{94}
+$\inf(Y,Z)$ de $X$ (\textbf{I}, 4.4.3), et l'on a $t=y=z=x$. Au lieu de dire que le couple $(f,g)$ est transversal au point $x$, on dit alors que $Y$ \emph{et} $Z$ \emph{se coupent transversalement au point $x$} (relativement à $S$). Notant $X_s$, $Y_s$, $Z_s$, $T_s$ les fibres de $X$, $Y$, $Z$, $T$ au point $s$, image de $x$ dans $S$, et tenant compte de (5.2.3), (5.1.9) et (\textbf{0}, 16.5.12), on voit que pour qu'il en soit ainsi (l
+
+[id 20299]
+OLD: $T$ soit lisse sur
+NEW: $T$ soit \emph{lisse} sur
+FRENCH CONTEXT (corrected):  $T_s$ les fibres de $X$, $Y$, $Z$, $T$ au point $s$, image de $x$ dans $S$, et tenant compte de (5.2.3), (5.1.9) et (\textbf{0}, 16.5.12), on voit que pour qu'il en soit ainsi (lorsque $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$), il faut et il suffit que $T$ soit \emph{lisse} sur $S$ au point $x$, et que l'on ait la relation
+\[
+\label{IV.17.13.7.1}
+\tag{17.13.7.1}
+\operatorname{codim}_x(T_s,X_s)=\operatorname{codim}_x(Y_s,X_s)+\operatorname{codim}_x(Z_s,X_s).
+\]
+\end{env}
+
+\begin{proposition}[17.13.8]
+\label{IV.17.13.8}
+Soient $S$ un 
+
+[id 20302]
+OLD: \item[a')] L'injection
+NEW: \item[\textup{a$'$)}] L'injection
+FRENCH CONTEXT (corrected):  « intersection » de $Y$ et $Z$, $x$ un point de $T$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] L'injection canonique $i:Y\to X$ est un morphisme transversal à $Z$ au point $x$, relativement à $S$ \textup{(17.13.3)}.
+  \item[\textup{a$'$)}] L'injection canonique $j:Z\to X$ est un morphisme transversal à $Y$ au point $x$, relativement à $S$.
+  \item[\textup{a$''$)}] $Y$ et $Z$ se coupent transversalement au point $x$, relativement à $S$.
+  \item[\textup{b)}] $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$, et
+
+[id 20303]
+OLD: \item[a'')] $Y$ et $Z$
+NEW: \item[\textup{a$''$)}] $Y$ et $Z$
+FRENCH CONTEXT (corrected): extup{a)}] L'injection canonique $i:Y\to X$ est un morphisme transversal à $Z$ au point $x$, relativement à $S$ \textup{(17.13.3)}.
+  \item[\textup{a$'$)}] L'injection canonique $j:Z\to X$ est un morphisme transversal à $Y$ au point $x$, relativement à $S$.
+  \item[\textup{a$''$)}] $Y$ et $Z$ se coupent transversalement au point $x$, relativement à $S$.
+  \item[\textup{b)}] $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$, et l'homomorphisme $\rho$ \textup{(17.13.5.4)} est tel que
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}
+
+[id 20306]
+OLD: \rho\otimes1:\Omega^1_{X/S}
+NEW: \rho\otimes1:\varOmega^1_{X/S}
+FRENCH CONTEXT (corrected): xtup{(resp. $m+b$)}, $a$ et $b$ étant positifs ou négatifs. Alors les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(t))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(t))
+  \]
+  où $\rho$ est donné par \textup{(17.13.5.4)}, est injectif.
+  \item[\textup{c)}] Le morphisme 
+
+[id 20307]
+OLD: \to
+  (\Omega^1_{Y/S}
+NEW: \to
+  (\varOmega^1_{Y/S}
+FRENCH CONTEXT (corrected):  les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(t))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(t))
+  \]
+  où $\rho$ est donné par \textup{(17.13.5.4)}, est injectif.
+  \item[\textup{c)}] Le morphisme $Y\times_SZ\to X\times_SX$ est transversal à la diagonale d
+
+[id 20308]
+OLD: \oplus
+  (\Omega^1_{Z/S}
+NEW: \oplus
+  (\varOmega^1_{Z/S}
+FRENCH CONTEXT (corrected): e}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\varOmega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(t))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(t))
+  \]
+  où $\rho$ est donné par \textup{(17.13.5.4)}, est injectif.
+  \item[\textup{c)}] Le morphisme $Y\times_SZ\to X\times_SX$ est transversal à la diagonale de $X\times_SX$ au point $t$.
+\end{enumerate}
+
+Si $t$ est ration
+
+[id 20314]
+OLD: ($s$ image de $x$ dans $S$)
+NEW: \textup{(}$s$ image de $x$ dans $S$\textup{)}
+FRENCH CONTEXT (corrected): Omega^1_{X/S}\otimes_{\sh{O}_X}\boldsymbol{k}(x)\to
+  (\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))\oplus
+  (\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\boldsymbol{k}(x))
+  \]
+  est injectif.
+\end{enumerate}
+
+Lorsque $x$ est rationnel sur $\boldsymbol{k}(s)$ \textup{(}$s$ image de $x$ dans $S$\textup{)} ces conditions sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme
+  \[
+  \mathrm{T}_x(i)-\mathrm{T}_x(j):\mathrm{T}_{Y/S}(x)\oplus\mathrm{T}_{Z/S}(x)\to\mathrm{T}_{X/S}(x)
+  \]
+  est surjectif.
+\end{enumerate}
+
+En
+
+[id 20315]
+OLD: \item[b')] L'homomorphisme
+NEW: \item[\textup{b$'$)}] L'homomorphisme
+FRENCH CONTEXT (corrected): up{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup
+
+[id 20317]
+OLD: équivalentes a) à b) sont
+NEW: équivalentes \textup{a)} à \textup{b)} sont
+FRENCH CONTEXT (corrected): valentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme
+  \[
+  \mathrm{T}_x(i)-\mathrm{T}_x(j):\mathrm{T}_{Y/S}(x)\oplus\mathrm{T}_{Z/S}(x)\to\mathrm{T}_{X/S}(x)
+  \]
+  est surjectif.
+\end{enumerate}
+
+En outre, lorsque les conditions équivalentes \textup{a)} à \textup{b)} sont vérifiées au point $x$, elles le sont dans un voisinage de $x$ dans $T$, et en restreignant $X$ à un voisinage de $x$, la suite \textup{(17.13.6.2)} est exacte, et l'on a un isomorphisme canonique
+\[
+\label{IV.17.13.8.1}
+\tag{17.13.8.1}
+\sh{N}_{T/X}\xrightarr
+
+[id 20318]
+OLD: la suite (17.13.6.2) est exacte
+NEW: la suite \textup{(17.13.6.2)} est exacte
+FRENCH CONTEXT (corrected): x)\to\mathrm{T}_{X/S}(x)
+  \]
+  est surjectif.
+\end{enumerate}
+
+En outre, lorsque les conditions équivalentes \textup{a)} à \textup{b)} sont vérifiées au point $x$, elles le sont dans un voisinage de $x$ dans $T$, et en restreignant $X$ à un voisinage de $x$, la suite \textup{(17.13.6.2)} est exacte, et l'on a un isomorphisme canonique
+\[
+\label{IV.17.13.8.1}
+\tag{17.13.8.1}
+\sh{N}_{T/X}\xrightarrow{\sim}
+(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\sh{N}_{Z/X}\otimes_{\sh{O}_Z}\sh{O}_T).
+\]
+\end{proposition}
+
+Les conditions \emph{a)}, \emph{a')}, \e
+
+[id 20320]
+OLD: que les conditions a), a') équivalent
+NEW: que les conditions \emph{a)}, \emph{a')} équivalent
+FRENCH CONTEXT (corrected): liquent toutes que $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$. Soient en outre, $m$, $m-a$, $m-b$ les dimensions relatives de $X$, $Y$, $Z$ sur $S$ au point $x$. Il résulte alors de (17.13.2) appliqué en remplaçant $X'$ par $Z$ et $Y'$ par $T=Y\times_XZ$, que les conditions \emph{a)}, \emph{a')} équivalent toutes deux à dire que $T$ est lisse sur $S$ au point $x$ et de dimension relative $m-a-b$ en ce point; mais en vertu de (17.13.7), cela signifie précisément que la condition \emph{a'')} est vérifiée, d'où l'équivalence de \emph{a)}, \emph{a')} et \emph{a'')}
+
+[id 20321]
+OLD: la condition a'') est vérifiée, d'où l'équivalence de a), a') et a'').
+NEW: la condition \emph{a'')} est vérifiée, d'où l'équivalence de \emph{a)}, \emph{a')} et \emph{a'')}.
+FRENCH CONTEXT (corrected): çant $X'$ par $Z$ et $Y'$ par $T=Y\times_XZ$, que les conditions \emph{a)}, \emph{a')} équivalent toutes deux à dire que $T$ est lisse sur $S$ au point $x$ et de dimension relative $m-a-b$ en ce point; mais en vertu de (17.13.7), cela signifie précisément que la condition \emph{a'')} est vérifiée, d'où l'équivalence de \emph{a)}, \emph{a')} et \emph{a'')}. L'équivalence de \emph{a'')} et de \emph{b)} (ou \emph{b')} lorsque $x$ est rationnel sur $\boldsymbol{k}(s)$) a été prouvée dans (17.13.6), ainsi que le fait que si ces conditions sont satisfaites au point $x$, elles le sont dans un voisinage de $x$, et l'ex
+
+[id 20322]
+OLD: L'équivalence de a'') et de b) (ou b') lorsque
+NEW: L'équivalence de \emph{a'')} et de \emph{b)} (ou \emph{b')} lorsque
+FRENCH CONTEXT (corrected): outes deux à dire que $T$ est lisse sur $S$ au point $x$ et de dimension relative $m-a-b$ en ce point; mais en vertu de (17.13.7), cela signifie précisément que la condition \emph{a'')} est vérifiée, d'où l'équivalence de \emph{a)}, \emph{a')} et \emph{a'')}. L'équivalence de \emph{a'')} et de \emph{b)} (ou \emph{b')} lorsque $x$ est rationnel sur $\boldsymbol{k}(s)$) a été prouvée dans (17.13.6), ainsi que le fait que si ces conditions sont satisfaites au point $x$, elles le sont dans un voisinage de $x$, et l'exactitude de la suite (17.13.6.2) dans un tel voisinage. Reste à défi
+
+=================== PAGE IV-4 95 ===================
+----- (Spanish page IV-4 94: shown above in this file) -----
+----- (Spanish page IV-4 95: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 96 -----
+\oldpage[IV-4]{96}
+
+Sea entonces $Y$ el producto de los $S$-preesquemas $Y_i$ (para los morfismos compuestos $Y_i\xrightarrow{f_i}X\to S$), y $T$ el producto de los $X$-preesquemas $Y_i$ (para los morfismos $f_i$). Se demuestra, como en (\textbf I, 5.3.5), que se tiene un diagrama conmutativo
+\[
+\label{IV.17.13.9.1}
+\tag{17.13.9.1}
+\xymatrix{
+  X \ar[d]_{\Delta} & T \ar[l]_-v \ar[d]^{j}\\
+  X^I & Y \ar[l]^{u}
+}
+\]
+(donde $u$ es el producto (sobre $S$) de los $f_i$), que hace de $T$ el producto de los $X^I$-preesquemas $X$ e $Y$.
+
+Por recurrencia sobre el número de elementos de $I$, resulta de (16.4.23) que $\Omega^1_{X^I/S}$ (resp. $\Omega^1_{Y/S}$) se identifica canónicamente con la suma directa de los $p_i^*(\Omega^1_{X/S})$ (resp. de los $q_i^*(\Omega^1_{Y_i/S})$, si $q_i:Y\to Y_i$ son las proyecciones canónicas).
+
+Supongamos ahora que $X$ es \emph{liso} sobre $S$ en un punto $x$ (y, por tanto, en una vecindad de este punto). Lo mismo ocurre entonces con $X^I$ en este punto (17.3.3, (iv)), y, restringiendo $X$ a una vecindad de $x$, se tiene, por (17.2.5), una sucesión exacta de $\sh{O}_X$-módulos localmente libres
+\[
+0\to\mathscr Gr_1(\Delta)\to(\Omega^1_{X/S})^I\to\Omega^1_{X/S}\to0.
+\]
+Pongamos $\sh{J}=\mathscr Gr_1(\Delta)$; se deduce de la sucesión anterior una sucesión exacta de $\sh{O}_T$-módulos localmente libres
+\[
+\label{IV.17.13.9.1-seq}
+\tag{17.13.9.1}
+0\to\sh{J}\otimes_{\sh{O}_X}\sh{O}_T\to(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+\]
+que corresponde a la primera fila del diagrama (17.13.1.2), y donde $\sigma$ no es otro que el homomorfismo canónico que hace corresponder a cada familia de secciones $(t_i)_{i\in I}$ de $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ sobre un abierto de $T$ su \emph{suma}.
+
+Por otra parte, lo que corresponde aquí a la segunda flecha vertical del diagrama (17.13.1.2) es el homomorfismo
+\[
+\label{IV.17.13.9.2}
+\tag{17.13.9.2}
+\tau:(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)
+\]
+que, a toda familia $(t'_i\otimes1)_{i\in I}$, donde los $t'_i$ son aquí secciones sobre un abierto de $X$ de $\Omega^1_{X/S}$, asocia la suma de los $((f_i)_{Y_i/X/S}(t'_i))\otimes1$, con la notación de (16.4.18). El homomorfismo $\rho$ que corresponde al homomorfismo $\alpha$ de (17.13.1.3) es, por tanto, la \emph{restricción} a $\sh{J}\otimes_{\sh{O}_X}\sh{O}_T$ del homomorfismo $\tau$ anterior.
+
+Precisadas estas hipótesis y notaciones, se puede aplicar a la situación de (17.13.9.1) la prop. (17.13.2), lo que da el
+\end{env}
+
+\begin{corollary}[17.13.10]
+\label{IV.17.13.10}
+Bajo las hipótesis generales de \textup{(17.13.9)}, sea $t$ un punto de $T$, $y_i$ ($i\in I$) sus proyecciones en los $Y_i$, y $x$ el punto de $X$ igual a cada uno de los $f_i(y_i)$. Supongamos que $X$ es liso sobre $S$ en el punto $x$ y de dimensión relativa $d$, y que cada uno de los $Y_i$ es liso sobre $S$ en el punto $y_i$; sea $d+c_i$ (siendo $c_i$ un entero positivo o negativo) la dimensión relativa de $Y_i$ en el punto $y_i$. Entonces las condiciones siguientes son equivalentes:
+----- French corrections on page IV-4 95 -----
+[id 20324]
+OLD: 0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\Omega^1_{T/S}\to0
+NEW: 0\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\varOmega^1_{T/S}\to0
+FRENCH CONTEXT (corrected):  à définir l'isomorphisme canonique (17.13.8.1).
+
+\oldpage[IV-4]{95}
+
+Notons $\alpha$ et $-\beta$ les homomorphismes figurant au second membre de (17.13.5.4), $\gamma$ et $\delta$ ceux figurant au second membre de (17.13.5.2). Dire que la suite (17.13.6.2)
+\[
+0\to\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\varOmega^1_{T/S}\to0
+\]
+est exacte signifie que, dans la catégorie des $\sh{O}_T$-Modules, $\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ s'identifie canoniquement au \emph{produit fibré} de $\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ et $\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O
+
+[id 20325]
+OLD: $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ s'identifie canoniquement au \emph{produit fibré} de $\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ et $\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T$ sur $\Omega^1_{T/S}$
+NEW: $\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ s'identifie canoniquement au \emph{produit fibré} de $\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ et $\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T$ sur $\varOmega^1_{T/S}$
+FRENCH CONTEXT (corrected): sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\varOmega^1_{T/S}\to0
+\]
+est exacte signifie que, dans la catégorie des $\sh{O}_T$-Modules, $\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ s'identifie canoniquement au \emph{produit fibré} de $\varOmega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ et $\varOmega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T$ sur $\varOmega^1_{T/S}$, pour les homomorphismes $\gamma$ et $\delta$. Le même raisonnement que dans (\textbf{0}, 18.1.2 et 18.1.3), où l'on remplace anneaux et idéaux bilatères respectivement par Modules et sous-Modules, fournit un diagramme commutatif
+{\scriptsize
+\[
+\begin{tikzcd
+
+[id 20332]
+OLD: & \Omega^1_{X/S}\otimes\sh{O}_T
+NEW: & \varOmega^1_{X/S}\otimes\sh{O}_T
+FRENCH CONTEXT (corrected):  \ar[d] & 0 \ar[d] & \\
+& (\sh{N}_{Y/X}\otimes\sh{O}_T)\oplus(\sh{N}_{Z/X}\otimes\sh{O}_T)
+  \ar[r] \ar[d] \ar[dr,"\iota"]
+& \sh{N}_{Z/X}\otimes\sh{O}_T \ar[r,"\sim"] \ar[d]
+& \sh{N}_{T/Y} \ar[d] & \\
+0 \ar[r] & \sh{N}_{Y/X}\otimes\sh{O}_T \ar[r] \ar[d,"\wr"]
+& \varOmega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta" swap] \ar[dr,"\varepsilon"]
+& \varOmega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \varOmega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta" swap] \ar[d]
+& \varOmega^1_{T/S} \ar[r] \ar[d] \ar[dr] &
+
+[id 20333]
+OLD: & \Omega^1_{Y/S}\otimes\sh{O}_T
+NEW: & \varOmega^1_{Y/S}\otimes\sh{O}_T
+FRENCH CONTEXT (corrected): \ar[r] \ar[d] \ar[dr,"\iota"]
+& \sh{N}_{Z/X}\otimes\sh{O}_T \ar[r,"\sim"] \ar[d]
+& \sh{N}_{T/Y} \ar[d] & \\
+0 \ar[r] & \sh{N}_{Y/X}\otimes\sh{O}_T \ar[r] \ar[d,"\wr"]
+& \varOmega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta" swap] \ar[dr,"\varepsilon"]
+& \varOmega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \varOmega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta" swap] \ar[d]
+& \varOmega^1_{T/S} \ar[r] \ar[d] \ar[dr] & 0\\
+& & 0 & 0 & 0
+\end{tikzcd}
+\]
+}
+où les 3\textsuperscript{e} et 4\textsuperscript{e} lign
+
+[id 20334]
+OLD: & \Omega^1_{Z/S}\otimes\sh{O}_T
+NEW: & \varOmega^1_{Z/S}\otimes\sh{O}_T
+FRENCH CONTEXT (corrected):  \ar[d] & \\
+0 \ar[r] & \sh{N}_{Y/X}\otimes\sh{O}_T \ar[r] \ar[d,"\wr"]
+& \varOmega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta" swap] \ar[dr,"\varepsilon"]
+& \varOmega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \varOmega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta" swap] \ar[d]
+& \varOmega^1_{T/S} \ar[r] \ar[d] \ar[dr] & 0\\
+& & 0 & 0 & 0
+\end{tikzcd}
+\]
+}
+où les 3\textsuperscript{e} et 4\textsuperscript{e} lignes et colonnes sont exactes en vertu des hypothèses de lissité. Le fait que l'homomorphisme com
+
+[id 20335]
+OLD: & \Omega^1_{T/S} \ar[r]
+NEW: & \varOmega^1_{T/S} \ar[r]
+FRENCH CONTEXT (corrected): d,"\wr"]
+& \varOmega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta" swap] \ar[dr,"\varepsilon"]
+& \varOmega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \varOmega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta" swap] \ar[d]
+& \varOmega^1_{T/S} \ar[r] \ar[d] \ar[dr] & 0\\
+& & 0 & 0 & 0
+\end{tikzcd}
+\]
+}
+où les 3\textsuperscript{e} et 4\textsuperscript{e} lignes et colonnes sont exactes en vertu des hypothèses de lissité. Le fait que l'homomorphisme composé $\varepsilon=\gamma\circ\alpha=\delta\circ\beta$ s
+
+=================== PAGE IV-4 96 ===================
+----- (Spanish page IV-4 95: shown above in this file) -----
+----- (Spanish page IV-4 96: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 97 -----
+\oldpage[IV-4]{97}
+
+\begin{enumerate}
+  \item[\textup{a)}] $T$ es liso sobre $S$ en el punto $t$, de dimensión relativa $d+\sum_{i\in I}c_i$.
+  \item[\textup{b)}] El homomorfismo
+  \[
+  \rho\otimes1:\sh{J}\otimes_{\sh{O}_X}\boldsymbol k(t)\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\boldsymbol k(t))
+  \]
+  es inyectivo.
+\end{enumerate}
+Cuando $t$ es racional sobre el cuerpo $\boldsymbol k(s)$ (donde $s$ es la imagen de $t$ en $S$), estas condiciones son también equivalentes a la siguiente:
+\begin{enumerate}
+  \item[b')] El homomorfismo transpuesto de $\rho\otimes1$
+  \[
+  \bigoplus_{i\in I}\mathrm{T}_{Y_i/S}(y_i)\to(\mathrm{T}_{X/S}(x))^I/\delta(\mathrm{T}_{X/S}(x))
+  \]
+  (donde $\delta$ es la aplicación diagonal) es sobreyectivo.\footnote{El texto impreso pone $\mathrm{T}_{Y_i/X}(y_i)$ en el miembro izquierdo; el transpuesto de $\rho\otimes1$ tiene como dominio la suma directa de los espacios tangentes relativos $\mathrm{T}_{Y_i/S}(y_i)$.}
+\end{enumerate}
+Basta observar que $X^I$ es liso sobre $S$ y de dimensión relativa $d.\operatorname{Card}(I)$, e $Y$ es liso sobre $S$ y de dimensión relativa $d.\operatorname{Card}(I)+\sum_{i\in I}c_i$.
+
+Cuando se cumplen las condiciones equivalentes de (17.13.10), se dice también que los $f_i$ forman una \emph{familia de morfismos transversales en el punto $t$, relativamente} a $S$. Se ve asimismo que el conjunto de los puntos $t\in T$ donde esto ocurre es \emph{abierto} en $T$. La observación (17.13.4, (ii))\footnote{El texto impreso remite a (17.13.4, (ii)); la afirmación de apertura bajo la hipótesis de ser propio es la observación (ii).} muestra entonces que, si $X$ y los $Y_i$ son planos y localmente de presentación finita sobre $S$, y, además, $T$ es \emph{propio} sobre $S$, el conjunto de los $s\in S$ tales que los $f_i$ formen una familia de morfismos transversales en \emph{todos} los puntos de $T_s$, relativamente a $S$, es \emph{abierto} en $S$.
+\end{corollary}
+
+\begin{env}[17.13.11]
+\label{IV.17.13.11}
+Consideremos, en particular, el caso, que generaliza (17.13.7), en que los $Y_i$ ($i\in I$) son \emph{subpreesquemas} de $X$, siendo los $f_i$ las inyecciones canónicas, de modo que $T=\inf_{i\in I}(Y_i)$ es también el subpreesquema «intersección» de los $Y_i$, y $t=y_i=x$ para todo $i$; en lugar de decir que los $f_i$ forman una familia de morfismos transversales en el punto $x$, se dice también que \emph{los $Y_i$ se cortan transversalmente en el punto $x$} (relativamente a $S$). La condición \emph{a)} de (17.13.10) se expresa asimismo mediante la relación que generaliza (17.13.7.1)
+\[
+\label{IV.17.13.11.1}
+\tag{17.13.11.1}
+\operatorname{codim}_x(T_s,X_s)=\sum_{i\in I}\operatorname{codim}_x((Y_i)_s,X_s).
+\]
+Además, se tiene la propiedad siguiente, que extiende (17.13.8.1), y proporciona otra demostración de ella cuando $I$ tiene 2 elementos:
+\end{env}
+
+\begin{corollary}[17.13.12]
+\label{IV.17.13.12}
+Cuando los $Y_i$ se cortan transversalmente en el punto $x$, se tiene un isomorfismo canónico
+\[
+\label{IV.17.13.12.1}
+\tag{17.13.12.1}
+\sh{N}_{T/X}\xrightarrow{\sim}\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T).
+\]
+\end{corollary}
+
+Se puede reducir al caso en que los $Y_i$ son subpreesquemas cerrados de $X$, definidos por ideales cuasicoherentes $\sh{J}_i$, de modo que $T$ está definido por el ideal $\sh{J}=\sum_i\sh{J}_i$. Por definición del haz conormal a una inmersión (16.1.3), el homomorfismo canónico $\bigoplus_i\sh{J}_i\to\sh{J}$ da, al pasar a los cocientes, un homomorfismo \emph{sobreyectivo}
+\[
+\label{IV.17.13.12.2}
+\tag{17.13.12.2}
+\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)\to\sh{N}_{T/X}.
+\]
+----- French corrections on page IV-4 96 -----
+[id 20340]
+OLD: des $S$-préschémas $Y_i$
+NEW: des $S$-\emph{préschémas} $Y_i$
+FRENCH CONTEXT (corrected): omme dans (\textbf{I}, 5.3.1)) comme l'unique $S$-morphisme tel que $p_i\circ\Delta=1_X$ pour tout $i\in I$. C'est une $X$-section de $X^I$ pour le morphisme $p_1$, donc (\textbf{I}, 5.3.11) une \emph{immersion}.
+
+\oldpage[IV-4]{96}
+
+Soit alors $Y$ le produit des $S$-\emph{préschémas} $Y_i$ (pour les morphismes composés $Y_i\xrightarrow{f_i}X\to S$), $T$ le produit des $X$-\emph{préschémas} $Y_i$ (pour les morphismes $f_i$). On prouve comme dans (\textbf{I}, 5.3.5) que l'on a un diagramme commutatif
+\[
+\label{IV.17.13.9.1}
+\tag{17.13.9.1}
+\xymat
+
+[id 20341]
+OLD: des $X$-préschémas $Y_i$
+NEW: des $X$-\emph{préschémas} $Y_i$
+FRENCH CONTEXT (corrected):  C'est une $X$-section de $X^I$ pour le morphisme $p_1$, donc (\textbf{I}, 5.3.11) une \emph{immersion}.
+
+\oldpage[IV-4]{96}
+
+Soit alors $Y$ le produit des $S$-\emph{préschémas} $Y_i$ (pour les morphismes composés $Y_i\xrightarrow{f_i}X\to S$), $T$ le produit des $X$-\emph{préschémas} $Y_i$ (pour les morphismes $f_i$). On prouve comme dans (\textbf{I}, 5.3.5) que l'on a un diagramme commutatif
+\[
+\label{IV.17.13.9.1}
+\tag{17.13.9.1}
+\xymatrix{
+  X \ar[d]_{\Delta} & T \ar[l]_-v \ar[d]^{j}\\
+  X^I & Y \ar[l]^{u}
+}
+\]
+(où $u$ est le produit (sur $S
+
+[id 20344]
+OLD: que $\Omega^1_{X^I/S}$ (resp. $\Omega^1_{Y/S}$) s'identifie canoniquement à la somme directe des $p_i^*(\Omega^1_{X/S})$ (resp. des $q_i^*(\Omega^1
+NEW: que $\varOmega^1_{X^I/S}$ (resp. $\varOmega^1_{Y/S}$) s'identifie canoniquement à la somme directe des $p_i^*(\varOmega^1_{X/S})$ (resp. des $q_i^*(\varOmega^1
+FRENCH CONTEXT (corrected): ymatrix{
+  X \ar[d]_{\Delta} & T \ar[l]_-v \ar[d]^{j}\\
+  X^I & Y \ar[l]^{u}
+}
+\]
+(où $u$ est le produit (sur $S$) des $f_i$), qui fait de $T$ le produit des $X^I$-préschémas $X$ et $Y$.
+
+Par récurrence sur le nombre d'éléments de $I$, il résulte de (16.4.23) que $\varOmega^1_{X^I/S}$ (resp. $\varOmega^1_{Y/S}$) s'identifie canoniquement à la somme directe des $p_i^*(\varOmega^1_{X/S})$ (resp. des $q_i^*(\varOmega^1_{Y_i/S})$, si $q_i:Y\to Y_i$ sont les projections canoniques).
+
+Supposons maintenant que $X$ soit \emph{lisse} sur $S$ en un point $x$ (donc dans un voisinage de ce point). Il en est alors de même de $X^I$ en ce point (17.3.3, (iv)), et restreignant $X$ à un 
+
+[id 20346]
+OLD: (\Omega^1_{X/S})^I\to\Omega^1_{X/S}\to0.
+NEW: (\varOmega^1_{X/S})^I\to\varOmega^1_{X/S}\to0.
+FRENCH CONTEXT (corrected): point $x$ (donc dans un voisinage de ce point). Il en est alors de même de $X^I$ en ce point (17.3.3, (iv)), et restreignant $X$ à un voisinage de $x$, on a donc (17.2.5) une suite exacte de $\sh{O}_X$-Modules localement libres
+\[
+0\to\mathscr{G}r_1(\Delta)\to(\varOmega^1_{X/S})^I\to\varOmega^1_{X/S}\to0.
+\]
+Posons $\sh{J}=\mathscr{G}r_1(\Delta)$; on déduit de la suite précédente une suite exacte de $\sh{O}_T$-Modules localement libres
+\[
+\label{IV.17.13.9.1-seq}
+\tag{17.13.9.1}
+0\to\sh{J}\otimes_{\sh{O}_X}\sh{O}_T\to(\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{
+
+[id 20348]
+OLD: (\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+NEW: (\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+FRENCH CONTEXT (corrected): arOmega^1_{X/S})^I\to\varOmega^1_{X/S}\to0.
+\]
+Posons $\sh{J}=\mathscr{G}r_1(\Delta)$; on déduit de la suite précédente une suite exacte de $\sh{O}_T$-Modules localement libres
+\[
+\label{IV.17.13.9.1-seq}
+\tag{17.13.9.1}
+0\to\sh{J}\otimes_{\sh{O}_X}\sh{O}_T\to(\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+\]
+qui correspond à la première ligne du diagramme (17.13.1.2), et où $\sigma$ n'est autre que l'homomorphisme canonique qui, à chaque famille de sections $(t_i)_{i\in I}$ de $\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus d'un ouvert de $T$, fait cor
+
+[id 20349]
+OLD: de $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus
+NEW: de $\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus
+FRENCH CONTEXT (corrected): s_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+\]
+qui correspond à la première ligne du diagramme (17.13.1.2), et où $\sigma$ n'est autre que l'homomorphisme canonique qui, à chaque famille de sections $(t_i)_{i\in I}$ de $\varOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus d'un ouvert de $T$, fait correspondre sa \emph{somme}.
+
+D'autre part, ce qui correspond ici à la seconde flèche verticale du diagramme (17.13.1.2) est l'homomorphisme
+\[
+\label{IV.17.13.9.2}
+\tag{17.13.9.2}
+\tau:(\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T
+
+[id 20350]
+OLD: \tau:(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}
+NEW: \tau:(\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\varOmega^1_{Y_i/S}
+FRENCH CONTEXT (corrected): arOmega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus d'un ouvert de $T$, fait correspondre sa \emph{somme}.
+
+D'autre part, ce qui correspond ici à la seconde flèche verticale du diagramme (17.13.1.2) est l'homomorphisme
+\[
+\label{IV.17.13.9.2}
+\tag{17.13.9.2}
+\tau:(\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\varOmega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)
+\]
+qui, à toute famille $(t'_i\otimes1)_{i\in I}$, où ici les $t'_i$ sont des sections au-dessus d'un ouvert de $X$ de $\varOmega^1_{X/S}$, associe la somme des $((f_i)_{Y_i/X/S}(t'_i))\otimes1$, avec la notation de (16.4.18). L
+
+[id 20351]
+OLD: de $X$ de $\Omega^1_{X/S}$, associe
+NEW: de $X$ de $\varOmega^1_{X/S}$, associe
+FRENCH CONTEXT (corrected): 7.13.9.2}
+\tag{17.13.9.2}
+\tau:(\varOmega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\varOmega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)
+\]
+qui, à toute famille $(t'_i\otimes1)_{i\in I}$, où ici les $t'_i$ sont des sections au-dessus d'un ouvert de $X$ de $\varOmega^1_{X/S}$, associe la somme des $((f_i)_{Y_i/X/S}(t'_i))\otimes1$, avec la notation de (16.4.18). L'homomorphisme $\rho$ qui correspond à l'homomorphisme $\alpha$ de (17.13.1.3) est donc la \emph{restriction} à $\sh{J}\otimes_{\sh{O}_X}\sh{O}_T$ de l'homomorphisme $\tau$ précéd
+
+[id 20353]
+OLD: ($i\in I$) ses projections
+NEW: \textup{($i\in I$)} ses projections
+FRENCH CONTEXT (corrected): n peut appliquer à la situation de (17.13.9.1) la prop. (17.13.2), ce qui donne le
+\end{env}
+
+\begin{corollary}[17.13.10]
+\EGAReaderTarget{ega4.c04.cor.17-13-10}{IV.17.13.10}
+Sous les hypothèses générales de \textup{(17.13.9)}, soit $t$ un point de $T$, $y_i$ \textup{($i\in I$)} ses projections dans les $Y_i$, $x$ le point de $X$ égal à chacun des $f_i(y_i)$. Supposons que $X$ soit lisse sur $S$ au point $x$ et de dimension relative $d$, et que chacun des $Y_i$ soit lisse sur $S$ au point $y_i$; soit $d+c_i$ \textup{(}$c_i$ entier positif ou négatif
+
+[id 20354]
+OLD: ($c_i$ entier positif ou négatif)
+NEW: \textup{(}$c_i$ entier positif ou négatif\textup{)}
+FRENCH CONTEXT (corrected): $y_i$ \textup{($i\in I$)} ses projections dans les $Y_i$, $x$ le point de $X$ égal à chacun des $f_i(y_i)$. Supposons que $X$ soit lisse sur $S$ au point $x$ et de dimension relative $d$, et que chacun des $Y_i$ soit lisse sur $S$ au point $y_i$; soit $d+c_i$ \textup{(}$c_i$ entier positif ou négatif\textup{)} la dimension relative de $Y_i$ au point $y_i$. Alors les conditions suivantes sont équivalentes:
+
+\oldpage[IV-4]{97}
+
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $d+\sum_{i\in I}c_i$.
+  \item[\textup{b)}] L
+
+=================== PAGE IV-4 97 ===================
+----- (Spanish page IV-4 96: shown above in this file) -----
+----- (Spanish page IV-4 97: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/13_17_13.tex, page IV-4 98 -----
+\oldpage[IV-4]{98}
+
+Pero aquí los $\sh{O}_T$-módulos de los dos miembros de (17.13.12.2) son localmente libres y \emph{del mismo rango} $\sum_i c_i$ (si $c_i$ es el rango de $\sh{N}_{Y_i/X}$), en virtud de (17.2.5) y de la condición \emph{a)} de (17.13.10); se concluye, por tanto, de Bourbaki, \emph{Alg. comm.}, cap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6, que (17.13.12.2) es biyectivo, y (17.13.12.1) es el isomorfismo inverso.
+----- Spanish, IV4/ega4/ega4-17-es/components/14_17_14.tex, page IV-4 98 -----
+\subsection{Caracterizaciones locales e infinitesimales de los morfismos lisos, de los morfismos no ramificados y de los morfismos étale.}
+\label{subsection:IV.17.14}
+
+\begin{proposition}[17.14.1]
+\label{IV.17.14.1}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita, $x$ un punto de $X$, $y=f(x)$. Para que $f$ sea liso (resp. no ramificado, resp. étale) en el punto $x$, es necesario y suficiente que se satisfaga la condición siguiente:
+
+Para todo esquema local $Y'=\operatorname{Spec}(A')$ con punto cerrado $y'$, todo morfismo $h:Y'\to Y$ tal que $h(y')=y$, todo subesquema cerrado $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, donde el ideal $\mathfrak{J}'$ es de cuadrado nulo, y todo $Y$-morfismo $g_0:Y'_0\to X$ tal que $g_0(y')=x$, existe al menos un (resp. a lo sumo uno, resp. uno y solo uno) $Y$-morfismo $g:Y'\to X$ tal que $g_0$ sea su restricción a $Y'_0$.
+\end{proposition}
+
+Teniendo en cuenta las definiciones (17.1.1 y 17.3.1), se trata de demostrar que la condición del enunciado es \emph{suficiente} para que $f$ sea liso (resp. no ramificado) en el punto $x$.
+
+(i) \emph{Caso de los morfismos lisos.} Se puede reducir al caso en que $Y=\operatorname{Spec}(A)$ y $X=\operatorname{Spec}(C)$ son afines, con $C=B/\mathfrak{R}$, donde $B=A[T_1,\ldots,T_n]$ es una $A$-álgebra de polinomios y $\mathfrak{R}$ un ideal de tipo finito de $B$. Para demostrar que $f$ es liso en el punto $x$, basta establecer que $\sh{O}_{X,x}$ es una $\sh{O}_{Y,y}$-álgebra formalmente lisa para las topologías discretas (17.5.1). Ahora bien, se tiene $\sh{O}_{X,x}=B_{\mathfrak q}/\mathfrak KB_{\mathfrak q}$, donde $\mathfrak q$ es un ideal primo de $B$, y, si $\mathfrak p$ es la imagen inversa de $\mathfrak q$ en $A$, $B_{\mathfrak q}$ es una $A_{\mathfrak p}$-álgebra formalmente lisa para las topologías discretas (\textbf 0, 19.3.2 y 19.3.5). Por aplicación del criterio jacobiano (\textbf 0, 22.6.1 y 20.5.12), basta, pues, ver que $B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ es una extensión $A_{\mathfrak p}$-trivial de $B_{\mathfrak q}/\mathfrak KB_{\mathfrak q}$ por $\mathfrak KB_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$. Pero esto resulta precisamente de la hipótesis aplicada a $A'=B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ y $\mathfrak{J}'=\mathfrak KB_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ y al morfismo $g_0$ correspondiente al automorfismo identidad de $A'/\mathfrak{J}'=\sh{O}_{X,x}$.
+
+(ii) \emph{Caso de los morfismos no ramificados.} Pongamos aquí $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, y observemos que, en virtud de (17.4.1, \emph{c)}), basta demostrar que $\Omega^1_{B/A}=(\Omega^1_{X/Y})_x=0$. Ahora bien, con las notaciones de (\textbf 0, 20.4.1), el anillo $C=\mathrm P^1_{B/A}=(B\otimes_A B)/\mathfrak{J}^2$ es local, puesto que lo es $C/(\mathfrak{J}/\mathfrak{J}^2)$, isomorfo a $B$. La hipótesis, aplicada a $A'=C$ y $\mathfrak{J}'=\mathfrak{J}/\mathfrak{J}^2$, muestra, por definición, que la aplicación $d_{B/A}:B\to\Omega^1_{B/A}$ es nula (\textbf 0, 20.4.6), y, por tanto, que $\Omega^1_{B/A}=0$ por (\textbf 0, 20.4.7).
+
+\begin{proposition}[17.14.2]
+\label{IV.17.14.2}
+Sean $Y$ un preesquema localmente noetheriano, $f:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=f(x)$. Para que $f$ sea liso (resp. no ramificado, resp. étale) en el punto $x$, es necesario y suficiente que satisfaga la condición de \textup{(17.14.1)}, suponiendo además que el anillo local $A'$ es artiniano, que $\mathfrak m'\mathfrak{J}'=0$, donde $\mathfrak m'$ es el ideal maximal de $A'$, y que el cuerpo residual $A'/\mathfrak m'$ de $A'$ es igual a $\boldsymbol k(x)$.
+\end{proposition}
+
+Se trata nuevamente de demostrar que estas condiciones son suficientes en el caso de los morfismos lisos y en el de los morfismos no ramificados.
+----- French corrections on page IV-4 97 -----
+[id 20357]
+OLD: (t)\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}
+NEW: (t)\to\bigoplus_{i\in I}(\varOmega^1_{Y_i/S}
+FRENCH CONTEXT (corrected): antes sont équivalentes:
+
+\oldpage[IV-4]{97}
+
+\begin{enumerate}
+  \item[\textup{a)}] $T$ est lisse sur $S$ au point $t$, de dimension relative $d+\sum_{i\in I}c_i$.
+  \item[\textup{b)}] L'homomorphisme
+  \[
+  \rho\otimes1:\sh{J}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to\bigoplus_{i\in I}(\varOmega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\boldsymbol{k}(t))
+  \]
+  est injectif.
+\end{enumerate}
+
+Lorsque $t$ est rationnel sur le corps $\boldsymbol{k}(s)$ \textup{(}où $s$ est l'image de $t$ dans $S$\textup{)}, ces conditions sont aussi équivalentes à la suivante:
+\begin{enume
+
+[id 20362]
+OLD: (où $s$ est l'image de $t$ dans $S$)
+NEW: \textup{(}où $s$ est l'image de $t$ dans $S$\textup{)}
+FRENCH CONTEXT (corrected): )}] L'homomorphisme
+  \[
+  \rho\otimes1:\sh{J}\otimes_{\sh{O}_X}\boldsymbol{k}(t)\to\bigoplus_{i\in I}(\varOmega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\boldsymbol{k}(t))
+  \]
+  est injectif.
+\end{enumerate}
+
+Lorsque $t$ est rationnel sur le corps $\boldsymbol{k}(s)$ \textup{(}où $s$ est l'image de $t$ dans $S$\textup{)}, ces conditions sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\rho\otimes1$
+  \[
+  \bigoplus_{i\in I}\mathrm{T}_{Y_i/X}(y_i)\to(\mathrm{T}_{X/S}(x))^I/\delta(\mathrm{T}_{X/S}(x))
+  \]
+  (où $\de
+
+[id 20363]
+OLD: \item[b')] L'homomorphisme transposé
+NEW: \item[\textup{b$'$)}] L'homomorphisme transposé
+FRENCH CONTEXT (corrected): up{(17.13.1.3)} est injectif.
+\end{enumerate}
+
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $\boldsymbol{k}(s)$. Alors les conditions \textup{a)} et \textup{b)} sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{b$'$)}] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\boldsymbol{k}(x))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  \textup{(cf. (16.5.12))} est surjectif.
+\end{enumerate}
+
+De plus, lorsque les conditions \textup{a)} et \t
+
+[id 20364]
+OLD: \end{enumerate}
+Il suffit
+NEW: \end{enumerate}
+\end{corollary}
+
+Il suffit
+FRENCH CONTEXT (corrected): neau de Cohen-Macaulay.
+Alors, si $\operatorname{coprof}(\mathcal O_y)\leq n$ \textup{(resp.} si
+$\mathcal O_y$ est un anneau de Cohen-Macaulay), on a
+$\operatorname{coprof}(\mathcal O_x)\leq n$ \textup{(resp.} $\mathcal O_x$ est un
+anneau de Cohen-Macaulay).
+\end{enumerate}
+\end{corollary}
+
+Il suffit d'appliquer (6.3.2) pour $M=A=\mathcal O_y$ et
+$N=B=\mathcal O_x$.
+
+\begin{corollary}[6.3.6]
+\label{IV.2.s6.3.6-fr}
+Soit $A$ un anneau de Cohen-Macaulay. Alors
+$A'=A[T_1,\ldots,T_n]$ ($T_i$ indéterminées) est un anneau de
+Cohen-Macaulay.
+\end{corollary}
+
+En e
+
+[id 20366]
+OLD: d\cdot\operatorname{Card}(I)+\sum
+NEW: d.\operatorname{Card}(I)+\sum
+FRENCH CONTEXT (corrected): m{T}_{X/S}(x))
+  \]
+  (où $\delta$ est l'application diagonale) est surjectif.
+\end{enumerate}
+\end{corollary}
+
+Il suffit de remarquer que $X^I$ est lisse sur $S$ et de dimension relative $d.\operatorname{Card}(I)$, et $Y$ lisse sur $S$ de dimension relative $d.\operatorname{Card}(I)+\sum_{i\in I}c_i$.
+
+Lorsque les conditions équivalentes de (17.13.10) sont vérifiées, on dit encore que les $f_i$ forment une \emph{famille de morphismes transversaux au point $t$, relativement à} $S$. On voit encore que l'ensemble des points $t\in T$ où cela a li
+
+[id 20367]
+OLD: relativement} à $S$. On voit
+NEW: relativement à} $S$. On voit
+FRENCH CONTEXT (corrected): ard}(I)$, et $Y$ lisse sur $S$ de dimension relative $d.\operatorname{Card}(I)+\sum_{i\in I}c_i$.
+
+Lorsque les conditions équivalentes de (17.13.10) sont vérifiées, on dit encore que les $f_i$ forment une \emph{famille de morphismes transversaux au point $t$, relativement à} $S$. On voit encore que l'ensemble des points $t\in T$ où cela a lieu est \emph{ouvert} dans $T$. La remarque (17.13.4, (ii)) montre alors que si $X$ et les $Y_i$ sont plats et localement de présentation finie sur $S$, et de plus si $T$ est \emph{propre} sur $S$, l'ensemb
+
+[id 20369]
+OLD: \emph{ouvert} dans $S$.
+\end{corollary}
+NEW: \emph{ouvert} dans $S$.
+FRENCH CONTEXT (corrected): es points $x'\in Y'$ où $f$ est transversal à $Y$ est \emph{ouvert} dans $Y'$; si $Y'$ est de plus \emph{propre} sur $S$, on en déduit que l'ensemble des $s\in S$ tels que $f$ soit transversal à $Y$ en \emph{tous} les points de $Y'_s$, relativement à $S$, est \emph{ouvert} dans $S$.
+Lorsque $X$, $Y$ et $X'$ sont plats et localement de présentation finie sur $S$, il résulte de (i) que l'ensemble des $x'\in Y'$ tels que $f_s$ soit transversal à $Y_s$ au point $x'$ ($s$ image de $x'$ dans $S$), relativement à $\boldsymbol{k}(s)$, est \emph{
+
+=================== PAGE IV-4 98 ===================
+----- (Spanish page IV-4 97: shown above in this file) -----
+----- (Spanish page IV-4 98: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/14_17_14.tex, page IV-4 99 -----
+\oldpage[IV-4]{99}
+
+(i) \emph{Caso de los morfismos lisos.} Si se pone $A=\sh{O}_{Y,y}$ y $B=\sh{O}_{X,x}$, se trata aquí de demostrar, teniendo en cuenta (17.5.3), que $B$ es una $A$-álgebra formalmente lisa para las topologías preádicas. Ahora bien, en virtud de (\textbf 0, 22.1.4), esto se deduce de la hipótesis cuando se sustituye en ella la condición $\mathfrak m'\mathfrak{J}'=0$ por $\mathfrak{J}'\subset\mathfrak m'$. Pero, como $\mathfrak m'$ es nilpotente, se ve que la condición del enunciado ya es suficiente considerando los anillos $A'/\mathfrak m'^j\mathfrak{J}'$\footnote{El texto fuente escribe $\mathfrak m'^{,j}$ aquí y $\mathfrak m'^{j}/\mathfrak m'^{j+1}$ en (17.14.3); la coma espuria se elimina, como exigen la filtración por potencias y el testigo inglés mantenido.} y razonando por recurrencia sobre $j$, como en (\textbf 0, 19.4.3).
+
+(ii) \emph{Caso de los morfismos no ramificados.} Retomemos las notaciones de la demostración de (17.14.1, (ii)); para demostrar que el ideal $\mathfrak{J}/\mathfrak{J}^2$ de $C$ es nulo, observemos que $C$ es entonces un anillo local noetheriano, pues es un anillo local del anillo de un abierto afín de un subpreesquema de $X\times_YX$, que es localmente de tipo finito sobre $X$, y, por tanto, también sobre $Y$. Si $\mathfrak r$ es el ideal maximal de $C$, basta, pues, verificar que se tiene $\mathfrak{J}/\mathfrak{J}^2\subset\mathfrak r^n$ para todo $n$ (0$_{\mathrm I}$, 7.3.5), o también que $\mathfrak r^n=\mathfrak r^n+(\mathfrak{J}/\mathfrak{J}^2)$. Con las notaciones de (\textbf 0, 20.4.6), esto significa también que, para todo $n$, las dos aplicaciones compuestas $B\xrightarrow{p_1}C\to C/\mathfrak r^n$ y $B\xrightarrow{p_2}C\to C/\mathfrak r^n$ son idénticas; pero, como $C/\mathfrak r^n$ es artiniano, esta identidad resulta de la hipótesis aplicada, por recurrencia sobre $n$, a $A'=C/\mathfrak r^n$ y $\mathfrak{J}'=(\mathfrak r^n+(\mathfrak{J}/\mathfrak{J}^2))/\mathfrak r^n$.
+
+\begin{remark}[17.14.3]
+\label{IV.17.14.3}
+Obsérvese que, bajo las hipótesis de (17.14.2), si, además, el cuerpo $\boldsymbol k(x)$ es una extensión \emph{finita} de $\boldsymbol k(y)$, entonces los $A'$-módulos $\mathfrak m'^j/\mathfrak m'^{j+1}$ son $\boldsymbol k(y)$-espacios vectoriales de dimensión finita, y, por tanto, \emph{a fortiori}, $A'$ es una $\sh{O}_{Y,y}$-álgebra finita.
+\end{remark}
+----- Spanish, IV4/ega4/ega4-17-es/components/15_17_15.tex, page IV-4 99 -----
+\subsection{Caso de los preesquemas sobre un cuerpo de base.}
+\label{subsection:IV.17.15}
+
+Recordemos primero (6.7.7, 6.7.8 y 6.8.1) la
+
+\begin{proposition}[17.15.1]
+\label{IV.17.15.1}
+Sean $k$ un cuerpo y $X$ un preesquema localmente de tipo finito sobre $k$. Para que $X$ sea liso en un punto $x$, es necesario y suficiente que, para toda extensión radicial $k'$ de $k$ (o solamente para toda extensión finita radicial de $k$), el anillo local $\sh{O}_{X,x}\otimes_k k'$ sea regular. Si $\boldsymbol k(x)$ es una extensión separable de $k$ (en particular, si $k$ es perfecto), esto equivale a decir que $\sh{O}_{X,x}$ es regular.
+\end{proposition}
+
+\begin{corollary}[17.15.2]
+\label{IV.17.15.2}
+Bajo las condiciones de \textup{(17.15.1)}, para que $X$ sea liso sobre $k$, es necesario y suficiente que $X$ sea geométricamente regular sobre $k$ \textup{(6.7.6)}, lo que implica que $X$ es regular. Si $k$ es perfecto, entonces $X$ es liso sobre $k$ si y solo si $X$ es regular.
+\end{corollary}
+
+\begin{proposition}[17.15.3]
+\label{IV.17.15.3}
+Sean $k$ un cuerpo, $X$ un preesquema localmente de tipo finito sobre $k$, $x$ un punto de $X$, $n=\dim_x(X)$. Sea $(g_i)_{1\leq i\leq n}$ una familia de $n$ secciones de $\sh{O}_X$ sobre $X$, y sea $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ el morfismo correspondiente al $k$-homomorfismo $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ que transforma $T_i$ en $g_i$ \textup{(\textbf I, 2.2.4)}. Las condiciones siguientes son equivalentes (e implican que $X$ es liso sobre $k$ en el punto $x$ y, por consiguiente, regular en el punto $x$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ es étale en el punto $x$.
+  \item[\textup{b)}] Las imágenes de los $d_{X/k}g_i$ forman una base del $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/k})_x$.
+  \item[\textup{c)}] Las imágenes de los $d_{X/k}g_i$ generan el $\sh{O}_{X,x}$-módulo $(\Omega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ es étale en el punto $x$, $X$ es liso sobre $k$ en el punto $x$ puesto que $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ es liso sobre $k$ (17.3.8); el hecho de que a) implique b) es, pues, un caso particular de (17.11.3). Como b) implica trivialmente c), queda por ver que c) implica a). Observemos primero
+----- French corrections on page IV-4 98 -----
+[id 20374]
+OLD: \emph{de même rang}
+NEW: de \emph{même rang}
+FRENCH CONTEXT (corrected): phisme \emph{surjectif}
+\[
+\label{IV.17.13.12.2}
+\tag{17.13.12.2}
+\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)\to\sh{N}_{T/X}.
+\]
+\oldpage[IV-4]{98}
+Mais ici les $\sh{O}_T$-Modules des deux membres de (17.13.12.2) sont localement libres et de \emph{même rang} $\sum_i c_i$ (si $c_i$ est le rang de $\sh{N}_{Y_i/X}$), en vertu de (17.2.5) et de la condition \emph{a)} de (17.13.10); on conclut donc de Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6, que (17.13.12.2) est bijectif,
+
+[id 20376]
+OLD: Soit $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que
+NEW: Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que
+FRENCH CONTEXT (corrected): me réciproque.
+
+\subsection{Caractérisations locales et infinitésimales des morphismes lisses, des morphismes non ramifiés et des morphismes étales.}
+\EGAReaderTarget{ega4.c04.subsec.17-14}{subsection:IV.17.14}
+
+\begin{proposition}[17.14.1]
+\label{IV.17.14.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit que la condition suivante soit vérifiée:
+
+Pour tout \textup{schéma local} $Y'=\operatorname{Spec}(A')$ de point fermé $y'$, tout morphisme $h:Y'\to Y
+
+[id 20377]
+OLD: (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit que
+NEW: \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit que
+FRENCH CONTEXT (corrected): és et des morphismes étales.}
+\EGAReaderTarget{ega4.c04.subsec.17-14}{subsection:IV.17.14}
+
+\begin{proposition}[17.14.1]
+\label{IV.17.14.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit que la condition suivante soit vérifiée:
+
+Pour tout \textup{schéma local} $Y'=\operatorname{Spec}(A')$ de point fermé $y'$, tout morphisme $h:Y'\to Y$ tel que $h(y')=y$, tout sous-schéma fermé $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, où l'idéal $\mat
+
+[id 20378]
+OLD: Pour tout schéma local
+NEW: Pour tout \textup{schéma local}
+FRENCH CONTEXT (corrected): 1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit que la condition suivante soit vérifiée:
+
+Pour tout \textup{schéma local} $Y'=\operatorname{Spec}(A')$ de point fermé $y'$, tout morphisme $h:Y'\to Y$ tel que $h(y')=y$, tout sous-schéma fermé $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, où l'idéal $\mathfrak{J}'$ est de carré nul, et tout $Y$-morphisme $g_0:Y'_0\to X$ tel
+
+[id 20379]
+OLD: (resp. au plus un, resp. un et un seul)
+NEW: \textup{(resp.} au plus un, \textup{resp.} un et un seul\textup{)}
+FRENCH CONTEXT (corrected): ermé $y'$, tout morphisme $h:Y'\to Y$ tel que $h(y')=y$, tout sous-schéma fermé $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, où l'idéal $\mathfrak{J}'$ est de carré nul, et tout $Y$-morphisme $g_0:Y'_0\to X$ tel que $g_0(y')=x$, il existe au moins un \textup{(resp.} au plus un, \textup{resp.} un et un seul\textup{)} $Y$-morphisme $g:Y'\to X$ dont $g_0$ soit la restriction à $Y'_0$.
+\end{proposition}
+
+Compte tenu des définitions (17.1.1 et 17.3.1), il s'agit de montrer que la condition de l'énoncé est \emph{suffisante} pour que $f$ soit lisse (resp. non ramifié) au point 
+
+[id 20381]
+OLD: $C=B/\mathfrak{R}$, où $B=A[T_1,\ldots,T_n]$ est une $A$-algèbre de polynômes et $\mathfrak{R}$ un idéal
+NEW: $C=B/\mathfrak{K}$, où $B=A[T_1,\ldots,T_n]$ est une $A$-algèbre de polynômes et $\mathfrak{K}$ un idéal
+FRENCH CONTEXT (corrected): montrer que la condition de l'énoncé est \emph{suffisante} pour que $f$ soit lisse (resp. non ramifié) au point $x$.
+
+(i) \emph{Cas des morphismes lisses.} On peut se borner au cas où $Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(C)$ sont affines, avec $C=B/\mathfrak{K}$, où $B=A[T_1,\ldots,T_n]$ est une $A$-algèbre de polynômes et $\mathfrak{K}$ un idéal de type fini de $B$. Pour prouver que $f$ est lisse au point $x$, il suffit d'établir que $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement lisse pour les topologies discrètes (17.5.1). Or on a $\sh{O}_{X,x}=B_{\mathfrak q}/\mathfrak{K}B_{\mathfrak q
+
+[id 20383]
+OLD: voir que $B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ est une extension $A_{\mathfrak p}$-triviale de $B_{\mathfrak q}/\mathfrak{R}B_{\mathfrak q}$ par $\mathfrak{R}B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$
+NEW: voir que $B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ est une extension $A_{\mathfrak p}$-triviale de $B_{\mathfrak q}/\mathfrak{K}B_{\mathfrak q}$ par $\mathfrak{K}B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$
+FRENCH CONTEXT (corrected): ge réciproque de $\mathfrak q$ dans $A$, $B_{\mathfrak q}$ est une $A_{\mathfrak p}$-algèbre formellement lisse pour les topologies discrètes (\textbf{0}, 19.3.2 et 19.3.5). Par application du critère jacobien (\textbf{0}, 22.6.1 et 20.5.12) il suffit donc de voir que $B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ est une extension $A_{\mathfrak p}$-triviale de $B_{\mathfrak q}/\mathfrak{K}B_{\mathfrak q}$ par $\mathfrak{K}B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$. Mais cela résulte précisément de l'hypothèse appliquée à $A'=B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ et $\mathfrak{J}'=\mathfrak{K}B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ et au morphisme $g_0$ correspondant à l'automorphisme identique de $A'/\m
+
+[id 20384]
+OLD: $A'=B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ et $\mathfrak{J}'=\mathfrak{R}B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$
+NEW: $A'=B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ et $\mathfrak{J}'=\mathfrak{K}B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$
+FRENCH CONTEXT (corrected): \mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ est une extension $A_{\mathfrak p}$-triviale de $B_{\mathfrak q}/\mathfrak{K}B_{\mathfrak q}$ par $\mathfrak{K}B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$. Mais cela résulte précisément de l'hypothèse appliquée à $A'=B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ et $\mathfrak{J}'=\mathfrak{K}B_{\mathfrak q}/\mathfrak{K}^2B_{\mathfrak q}$ et au morphisme $g_0$ correspondant à l'automorphisme identique de $A'/\mathfrak{J}'=\sh{O}_{X,x}$.
+
+(ii) \emph{Cas des morphismes non ramifiés.} Posons ici $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, et notons qu'en vertu de (17.4.1, \emph{c)}), il suffit de montrer
+
+[id 20389]
+OLD: (\Omega^1_{X/Y})_x=0
+NEW: (\varOmega^1_{X/Y})_x=0
+FRENCH CONTEXT (corrected): item[\textup{b$''$)}] Pour tout morphisme $g:Y'\to Y$, et tout point $y'\in Y'$ au-dessus de $y=f(x)$, toute $Y'$-section $s'$ de $X'=X\times_Y Y'$ telle que $x'=s'(y')$ soit au-dessus de $x$ est un isomorphisme local au point $y'$.
+  \item[\textup{c)}] On a $(\varOmega^1_{X/Y})_x=0$.
+  \item[\textup{d)}] Le $\boldsymbol{k}(y)$-préschéma $f^{-1}(y)$ est non ramifié sur $\boldsymbol{k}(y)$ au point $x$.
+  \item[\textup{d$'$)}] Le point $x$ est isolé dans $X_y=f^{-1}(y)$ \textup{(autrement dit (\textbf{Err}$_{\mathrm{III}}$, 20), le morphi
+
+[id 20394]
+OLD: \label{IV.17.14.2}
+Soient $Y$ un préschéma localement noethérien
+NEW: \label{IV.17.14.2}
+Soient $Y$ un préschéma \textup{localement noethérien}
+FRENCH CONTEXT (corrected): ypothèse appliquée à $A'=C$ et $\mathfrak{J}'=\mathfrak{J}/\mathfrak{J}^2$ montre par définition que l'application $d_{B/A}:B\to\Omega^1_{B/A}$ est nulle (\textbf{0}, 20.4.6), donc que $\Omega^1_{B/A}=0$ par (\textbf{0}, 20.4.7).
+
+\begin{proposition}[17.14.2]
+\label{IV.17.14.2}
+Soient $Y$ un préschéma \textup{localement noethérien}, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit qu'il vérifie la condition de \textup{(17.14.1)} où l'on su
+
+[id 20395]
+OLD: (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit qu'il
+NEW: \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit qu'il
+FRENCH CONTEXT (corrected): c que $\Omega^1_{B/A}=0$ par (\textbf{0}, 20.4.7).
+
+\begin{proposition}[17.14.2]
+\label{IV.17.14.2}
+Soient $Y$ un préschéma \textup{localement noethérien}, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit qu'il vérifie la condition de \textup{(17.14.1)} où l'on suppose de plus que l'anneau local $A'$ est \textup{artinien}, que $\mathfrak m'\mathfrak{J}'=0$, où $\mathfrak m'$ est l'idéal maximal de $A'$, et que le corps résiduel $A'/\mathfrak m'$ de $A'$ est \textup{
+
+[id 20397]
+OLD: $A'$ est artinien
+NEW: $A'$ est \textup{artinien}
+FRENCH CONTEXT (corrected): ent de type fini, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse \textup{(resp.} non ramifié, \textup{resp.} étale\textup{)} au point $x$, il faut et il suffit qu'il vérifie la condition de \textup{(17.14.1)} où l'on suppose de plus que l'anneau local $A'$ est \textup{artinien}, que $\mathfrak m'\mathfrak{J}'=0$, où $\mathfrak m'$ est l'idéal maximal de $A'$, et que le corps résiduel $A'/\mathfrak m'$ de $A'$ est \textup{égal à} $\boldsymbol{k}(x)$.
+\end{proposition}
+
+Il s'agit encore de montrer que ces conditions sont suffisantes d
+
+[id 20398]
+OLD: $A'$ est égal à
+NEW: $A'$ est \textup{égal à}
+FRENCH CONTEXT (corrected): t il suffit qu'il vérifie la condition de \textup{(17.14.1)} où l'on suppose de plus que l'anneau local $A'$ est \textup{artinien}, que $\mathfrak m'\mathfrak{J}'=0$, où $\mathfrak m'$ est l'idéal maximal de $A'$, et que le corps résiduel $A'/\mathfrak m'$ de $A'$ est \textup{égal à} $\boldsymbol{k}(x)$.
+\end{proposition}
+
+Il s'agit encore de montrer que ces conditions sont suffisantes dans le cas des morphismes lisses et le cas des morphismes non ramifiés.
+
+\oldpage[IV-4]{99}
+
+(i) \emph{Cas des morphismes lisses.} Si l'on pose $A=\sh{O}_
+
+=================== PAGE IV-4 99 ===================
+----- (Spanish page IV-4 98: shown above in this file) -----
+----- (Spanish page IV-4 99: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/15_17_15.tex, page IV-4 100 -----
+\oldpage[IV-4]{100}
+
+que la hipótesis entraña que el homomorfismo $(f^*(\Omega^1_{Y/k}))_x\to(\Omega^1_{X/k})_x$ es sobreyectivo; por tanto, reemplazando $X$ por una vecindad abierta de $x$, podemos suponer que el homomorfismo $f^*(\Omega^1_{Y/k})\to\Omega^1_{X/k}$ es sobreyectivo (Bourbaki, \emph{Alg. comm.}, cap. II, § 5, n\textsuperscript{o} 1, prop. 2); por consiguiente $f$ es \emph{no ramificado} (17.2.2). Veamos primero que podemos reducirnos al caso en que $x$ es \emph{racional sobre $k$}. En efecto, si ponemos $k'=\boldsymbol k(x)$, $X'=X\otimes_k k'$, $Y'=Y\otimes_k k'=\operatorname{Spec}(k'[T_1,\ldots,T_n])$, existe un punto $x'\in X'$ por encima de $x$ tal que $\boldsymbol k(x')=k'$. Para probar que $f$ es étale en el punto $x$, basta demostrar que $f'=f_{(k')}:X'\to Y'$ es étale en el punto $x'$ (17.7.1, (ii)); además $f'$ es no ramificado (17.3.3, (iii)) y se tiene $\dim_{x'}(X')=n$ (4.2.7). De la misma manera, reemplazando $k'$ por una extensión algebraicamente cerrada de $k'$, podemos suponer que $k$ es \emph{algebraicamente cerrado}. Pongamos entonces $y=f(x)$, $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$; como el cuerpo residual de $B$ es igual a $k$, lo mismo ocurre con el de $A$, de modo que $x$ (resp. $y$) es un punto cerrado de $X$ (resp. $Y$) (\textbf I, 6.4.2) y, por consiguiente, $\dim(A)=\dim(B)=n$. Puesto que $f$ es no ramificado, el homomorfismo $\widehat A\to\widehat B$ es sobreyectivo (17.4.4, f'')); pero como $\dim(\widehat A)=\dim(\widehat B)=n$, y $\widehat A$, al ser un anillo regular, es íntegro, el homomorfismo $\widehat A\to\widehat B$ es también inyectivo (\textbf 0, 16.3.10). Por tanto, este homomorfismo es biyectivo, lo que termina de demostrar que $f$ es étale en el punto $x$ (17.6.3, \emph{e'')}).
+
+\begin{corollary}[17.15.4]
+\label{IV.17.15.4}
+Bajo las hipótesis generales de (17.15.3), supongamos además que $\boldsymbol k(x)$ sea una extensión finita y separable de $k$ y que los gérmenes $(g_i)_x$ pertenezcan a $\mathfrak m_x$. Entonces las condiciones \textup{a), b), c)} de \textup{(17.15.3)} son también equivalentes a cada una de las siguientes:
+\begin{enumerate}
+  \item[\textup{d)}] Los $n$ gérmenes $(g_i)_x$ generan el ideal maximal $\mathfrak m_x$ de $\sh{O}_{X,x}$.
+  \item[d')] El anillo $\sh{O}_{X,x}$ es regular y los $(g_i)_x$ forman un sistema regular de parámetros para este anillo \textup{(\textbf 0, 17.1.6)}.
+\end{enumerate}
+\end{corollary}
+
+En efecto, d') implica trivialmente d). Por otra parte, como $\boldsymbol k(x)$ es una extensión finita y separable de $k$, se tiene $\Omega^1_{\mathbf k(x)/k}=0$ (\textbf 0, 20.6.20) y $\boldsymbol k(x)=\sh{O}_{X,x}/\mathfrak m_x$ es una $k$-álgebra formalmente lisa para las topologías discretas (\textbf 0, 19.6.1), por lo que la sucesión exacta (\textbf 0, 20.5.14.1) se aplica a $A=k$, $B=\sh{O}_{X,x}$, $\mathfrak K=\mathfrak m_x$, y proporciona un isomorfismo canónico
+\[
+\delta:\mathfrak m_x/\mathfrak m_x^2\xrightarrow{\sim}(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}\boldsymbol k(x).
+\]
+De aquí se deduce primero la equivalencia de las condiciones c) y d), teniendo en cuenta el lema de Nakayama. Por otra parte, si $f$ es étale en el punto $x$, el anillo $\sh{O}_{X,x}$ es regular y de dimensión $n$, puesto que $x$ es un punto cerrado de $X$ (\textbf I, 6.4.2), y $n$ elementos de $\mathfrak m_x$ que generan este ideal maximal forman entonces necesariamente un sistema regular de parámetros para $\sh{O}_{X,x}$ (\textbf 0, 17.1.6), lo que prueba que a) implica d').
+
+\begin{proposition}[17.15.5]
+\label{IV.17.15.5}
+Sean $k$ un cuerpo, $X$ un preesquema localmente de tipo finito sobre $k$, $x$ un punto de $X$, $n=\dim_x(X)$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $X$ es liso sobre $k$ en el punto $x$.
+  \item[\textup{b)}] $X$ es diferencialmente liso sobre $k$ en el punto $x$.
+  \item[\textup{c)}] $(\Omega^1_{X/k})_x$ es un $\sh{O}_{X,x}$-módulo libre de rango $n$.
+  \item[\textup{d)}] $(\Omega^1_{X/k})_x$ es un $\sh{O}_{X,x}$-módulo que admite un sistema de $n$ generadores.
+----- French corrections on page IV-4 99 -----
+[id 20401]
+OLD: que $B$ est une $A$-algèbre formellement lisse pour les topologies préadiques.
+NEW: que $B$ est une $A$-algèbre formellement lisse \emph{pour les topologies préadiques}.
+FRENCH CONTEXT (corrected): nditions sont suffisantes dans le cas des morphismes lisses et le cas des morphismes non ramifiés.
+
+\oldpage[IV-4]{99}
+
+(i) \emph{Cas des morphismes lisses.} Si l'on pose $A=\sh{O}_{Y,y}$ et $B=\sh{O}_{X,x}$, il s'agit ici de prouver, compte tenu de (17.5.3), que $B$ est une $A$-algèbre formellement lisse \emph{pour les topologies préadiques}. Or, en vertu de (\textbf{0}, 22.1.4), cela découle de l'hypothèse lorsqu'on remplace dans celle-ci la condition $\mathfrak m'\mathfrak{J}'=0$ par $\mathfrak{J}'\subset\mathfrak m'$. Mais comme $\mathfrak m'$ est nilpotent, on voit que la condition de l'énoncé
+
+[id 20403]
+OLD: A'/\mathfrak m'^{,j}\mathfrak{J}'
+NEW: A'/\mathfrak m'^{j}\mathfrak{J}'
+FRENCH CONTEXT (corrected): le de l'hypothèse lorsqu'on remplace dans celle-ci la condition $\mathfrak m'\mathfrak{J}'=0$ par $\mathfrak{J}'\subset\mathfrak m'$. Mais comme $\mathfrak m'$ est nilpotent, on voit que la condition de l'énoncé est déjà suffisante en considérant les anneaux $A'/\mathfrak m'^{j}\mathfrak{J}'$ et en raisonnant par récurrence sur $j$ comme dans (\textbf{0}, 19.4.3).
+
+(ii) \emph{Cas des morphismes non ramifiés.} Reprenons les notations de la démonstration de (17.14.1, (ii)); pour prouver que l'idéal $\mathfrak{J}/\mathfrak{J}^2$ de $C$ est nul, noto
+
+[id 20406]
+OLD: (0$_{\mathrm I}$, 7.3.5)
+NEW: ($\mathbf{0}_{\mathrm I}$, 7.3.5)
+FRENCH CONTEXT (corrected): st de type fini,
+$(T(M))^{\widehat{\,}}$ est isomorphe à $\varprojlim T(M_n)$, et comme les $M_n$ sont
+de longueur finie, on a $(T(M))^{\widehat{\,}}=0$; comme $T(M)$ est de type fini par
+hypothèse, il est isomorphe à un sous-module de $(T(M))^{\widehat{\,}}$
+($\mathbf{0}_{\mathrm I}$, 7.3.5), donc on a $T(M)=0$. Enfin, pour un $A$-module $M$
+quelconque, $T(M)$ est limite inductive des $T(N_\alpha)$ pour les sous-modules
+de type fini $N_\alpha$ de $M$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[7.5.4]
+Soient $A$ un anneau loc
+
+[id 20412]
+OLD: $\sh{O}_{Y,y}$-algèbre finie.
+NEW: $\sh{O}_{Y,y}$-algèbre \emph{finie}.
+FRENCH CONTEXT (corrected): 4.2), si de plus le corps $\boldsymbol{k}(x)$ est une extension \emph{finie} de $\boldsymbol{k}(y)$, alors les $A'$-modules $\mathfrak m'^{j}/\mathfrak m'^{j+1}$ sont des $\boldsymbol{k}(y)$-espaces vectoriels de rang fini, donc \emph{a fortiori} $A'$ est une $\sh{O}_{Y,y}$-algèbre \emph{finie}.
+\end{remark}
+
+\subsection{Cas des préschémas sur un corps de base.}
+\EGAReaderTarget{ega4.c04.subsec.17-15}{subsection:IV.17.15}
+
+Rappelons d'abord (6.7.7, 6.7.8 et 6.8.1) la
+
+\begin{proposition}[17.15.1]
+\label{IV.17.15.1}
+Soient $k$ un corps, $X$ un présché
+
+[id 20413]
+OLD: (ou seulement pour toute extension finie radicielle de $k$)
+NEW: \textup{(ou seulement pour toute extension} finie radicielle \textup{de} $k$\textup{)}
+FRENCH CONTEXT (corrected): rd (6.7.7, 6.7.8 et 6.8.1) la
+
+\begin{proposition}[17.15.1]
+\label{IV.17.15.1}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$. Pour que $X$ soit lisse en un point $x$, il faut et il suffit que pour toute extension radicielle $k'$ de $k$ \textup{(ou seulement pour toute extension} finie radicielle \textup{de} $k$\textup{)}, l'anneau local $\sh{O}_{X,x}\otimes_k k'$ soit régulier. Si $\boldsymbol{k}(x)$ est une extension séparable de $k$ \textup{(en particulier si} $k$ \textup{est} parfait\textup{)}, il revient au même de dire que $\sh{O}_{X,x}$ est régulier.
+\end{proposition}
+
+
+
+[id 20415]
+OLD: (en particulier si $k$ est parfait)
+NEW: \textup{(en particulier si} $k$ \textup{est} parfait\textup{)}
+FRENCH CONTEXT (corrected): l suffit que pour toute extension radicielle $k'$ de $k$ \textup{(ou seulement pour toute extension} finie radicielle \textup{de} $k$\textup{)}, l'anneau local $\sh{O}_{X,x}\otimes_k k'$ soit régulier. Si $\boldsymbol{k}(x)$ est une extension séparable de $k$ \textup{(en particulier si} $k$ \textup{est} parfait\textup{)}, il revient au même de dire que $\sh{O}_{X,x}$ est régulier.
+\end{proposition}
+
+\begin{corollary}[17.15.2]
+\label{IV.17.15.2}
+Sous les conditions de \textup{(17.15.1)}, pour que $X$ soit lisse sur $k$, il faut et il suffit que $X$ soit géométriquement régulie
+
+[id 20419]
+OLD: et par suite régulier au point $x$)
+NEW: \textup{et par suite} régulier \textup{au point} $x$)
+FRENCH CONTEXT (corrected): 1,\ldots,T_n])$ le morphisme correspondant au $k$-homomorphisme $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$ \textup{(\textbf{I}, 2.2.4)}. Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ \textup{et par suite} régulier \textup{au point} $x$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ est étale au point $x$.
+  \item[\textup{b)}] Les images des $d_{X/k}g_i$ forment une base du $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+  \item[\textup{c)}] Les images des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x
+
+[id 20420]
+OLD: \item[a)] $f$ est étale au point $x$.
+  \item[b)] Les images
+NEW: \item[\textup{a)}] $f$ est étale au point $x$.
+  \item[\textup{b)}] Les images
+FRENCH CONTEXT (corrected): ts,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$ \textup{(\textbf{I}, 2.2.4)}. Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ \textup{et par suite} régulier \textup{au point} $x$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ est étale au point $x$.
+  \item[\textup{b)}] Les images des $d_{X/k}g_i$ forment une base du $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+  \item[\textup{c)}] Les images des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$,
+
+[id 20422]
+OLD: forment une base du $\sh{O}_{X,x}$-module $(\Omega^1_{X/k})_x$
+NEW: forment une base du $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$
+FRENCH CONTEXT (corrected): itions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ \textup{et par suite} régulier \textup{au point} $x$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ est étale au point $x$.
+  \item[\textup{b)}] Les images des $d_{X/k}g_i$ forment une base du $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+  \item[\textup{c)}] Les images des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$, $X$ est lisse sur $k$ au point $x$ puisque $Y=\operatorname{Spec}(k[T_1,\ldots,T_n
+
+[id 20423]
+OLD: engendrent le $\sh{O}_{X,x}$-module $(\Omega^1_{X/k})_x$
+NEW: engendrent le $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$
+FRENCH CONTEXT (corrected): ier \textup{au point} $x$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ est étale au point $x$.
+  \item[\textup{b)}] Les images des $d_{X/k}g_i$ forment une base du $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+  \item[\textup{c)}] Les images des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$, $X$ est lisse sur $k$ au point $x$ puisque $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ est lisse sur $k$ (17.3.8); le fait que \emph{a)} entraîne \emph{b)} est donc un cas particulier de (17.11
+
+[id 20424]
+OLD: le fait que a) entraîne b) est donc
+NEW: le fait que \emph{a)} entraîne \emph{b)} est donc
+FRENCH CONTEXT (corrected): s des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x}$-module $(\varOmega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$, $X$ est lisse sur $k$ au point $x$ puisque $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ est lisse sur $k$ (17.3.8); le fait que \emph{a)} entraîne \emph{b)} est donc un cas particulier de (17.11.3). Comme \emph{b)} entraîne trivialement \emph{c)}, il reste à voir que \emph{c)} implique \emph{a)}. Notons d'abord
+\oldpage[IV-4]{100}
+que l'hypothèse entraîne que l'homomorphisme $(f^*(\varOmega^1_{Y/k}))_x\to(\varOmega^1_{X/k
+
+[id 20425]
+OLD: Comme b) entraîne trivialement c), il reste à voir que c) implique a).
+NEW: Comme \emph{b)} entraîne trivialement \emph{c)}, il reste à voir que \emph{c)} implique \emph{a)}.
+FRENCH CONTEXT (corrected): d{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$, $X$ est lisse sur $k$ au point $x$ puisque $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ est lisse sur $k$ (17.3.8); le fait que \emph{a)} entraîne \emph{b)} est donc un cas particulier de (17.11.3). Comme \emph{b)} entraîne trivialement \emph{c)}, il reste à voir que \emph{c)} implique \emph{a)}. Notons d'abord
+\oldpage[IV-4]{100}
+que l'hypothèse entraîne que l'homomorphisme $(f^*(\varOmega^1_{Y/k}))_x\to(\varOmega^1_{X/k})_x$ est surjectif, donc, en remplaçant $X$ par un voisinage ouvert de $x$, on peut supposer que l'homomorphisme $f^*(\varOmega^1_{
+
+=================== PAGE IV-4 100 ===================
+----- (Spanish page IV-4 99: shown above in this file) -----
+----- (Spanish page IV-4 100: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/15_17_15.tex, page IV-4 101 -----
+\oldpage[IV-4]{101}
+
+  \item[\textup{e)}] Existe una extensión perfecta $k'$ de $k$ y una vecindad abierta $U$ de $x$ en $X$ tales que el preesquema $U\otimes_k k'$ sea regular.
+\end{enumerate}
+\end{proposition}
+
+El hecho de que $X$ sea liso sobre $k$ en el punto $x$ entraña la existencia de una vecindad abierta $U$ de $x$ que sea lisa sobre $k$, por lo que $U\otimes_k k'$ es regular para toda extensión $k'$ de $k$ (17.15.2), lo que prueba que a) implica e). Recíprocamente, e) implica a), pues entonces $U\otimes_k k'$ es liso sobre $k'$ (17.15.2), y por tanto $U$ es liso sobre $k$ (17.7.1, (ii)).
+
+Ya hemos demostrado que a) implica c) (17.10.2); c) implica d) trivialmente y el hecho de que d) implique a) resulta de (\textbf 0, 20.4.7) y (17.15.3, \emph{c)}).
+
+Finalmente, ya hemos visto que a) implica b) (17.12.4). Recíprocamente, para demostrar que b) implica a), podemos reducirnos al caso en que $x$ es racional sobre $k$, considerando, como en la demostración de (17.15.3), un punto $x'$ de $X'=X\otimes_k k'$ por encima de $x$ y tal que $\boldsymbol k(x')=k'=\boldsymbol k(x)$, utilizando de nuevo (17.7.1, (ii)) y el hecho de que, si $X$ es diferencialmente liso en el punto $x$, $X'$ es diferencialmente liso en el punto $x'$ (16.10.4). Suponiendo, pues, que $x$ es racional sobre $k$, el hecho de que $f$ sea liso en $x$ resulta entonces de la hipótesis b) y de (17.12.5), aplicado a la $k$-sección $u:\operatorname{Spec}(k)\to X$ tal que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Sea $X$ un preesquema de tipo finito sobre un cuerpo $k$. Para que $X$ sea liso sobre $k$, es necesario y suficiente que el $\sh{O}_X$-Módulo $\Omega^1_{X/k}$ sea localmente libre y que los anillos locales en los puntos maximales de $X$ sean cuerpos, extensiones separables de $k$ (esta última condición se verifica automáticamente si $k$ es un cuerpo perfecto y $X$ un preesquema reducido).
+\end{corollary}
+
+Las condiciones son necesarias, pues si $X$ es liso sobre $k$, resulta de (17.10.2) que $\Omega^1_{X/k}$ es localmente libre; por otra parte, $X$ es regular, por tanto \emph{a fortiori} reducido, y en todo punto maximal $x$ de $X$, $\sh{O}_{X,x}$ es un cuerpo, que debe ser una $k$-álgebra formalmente lisa para las topologías discretas (17.5.1), y por consiguiente una extensión separable de $k$ (\textbf 0, 19.6.1).
+
+Las condiciones son suficientes. En efecto, podemos reducirnos al caso en que $X$ es conexo, por lo que $\Omega^1_{X/k}$ es localmente libre de rango constante $n$. Para todo punto maximal $x$ de $X$, se tiene entonces $\operatorname{rg}_{\mathbf k(x)}\Omega^1_{\mathbf k(x)/k}=n$, puesto que $\sh{O}_{X,x}=k(x)$; como por hipótesis $\boldsymbol k(x)$ es una extensión separable de $k$, se tiene $\Upsilon_{\mathbf k(x)/k}=0$ (\textbf 0, 20.6.3), por lo que $\deg.\operatorname{tr}_k \boldsymbol k(x)=n$ por la igualdad de Cartier (\textbf 0, 21.7.1). Todas las componentes irreducibles de $X$ tienen, pues, la misma dimensión $n$ (5.2.1), y concluimos que $X$ es liso sobre $k$ en todo punto en virtud de que c) implica a) en (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ es de característica 0, entonces, para que $X$ sea liso sobre $k$ en el punto $x$, es necesario y suficiente que $(\Omega^1_{X/k})_x$ sea un $\sh{O}_{X,x}$-módulo libre.
+\end{corollary}
+
+Esto resulta de (16.12.2) y de la equivalencia de b) y a) en (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Sean $k$ un cuerpo, $X$ un preesquema localmente de tipo finito sobre $k$, $x$ un punto de $X$; pongamos $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$, de modo que $n\setmin r=\deg.\operatorname{tr}_k \boldsymbol k(x)$ \textup{(5.2.3)}. Sea $(g_i)_{1\leq i\leq n}$ una familia de $n$ secciones de $\sh{O}_X$ sobre $X$, tales que $(g_i)_x\in\mathfrak m_x$ para $1\leq i\leq r$; sea $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ el morfismo correspondiente al $k$-homomorfismo $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ que transforma $T_i$ en $g_i$. Las condiciones siguientes son equivalentes (e implican que $X$ es liso sobre $k$ en el punto $x$ y que $\boldsymbol k(x)$ es una extensión separable de $k$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ es étale en el punto $x$.
+----- French corrections on page IV-4 100 -----
+[id 20524]
+OLD: $(f^*(\Omega^1_{Y/k}))_x\to(\Omega^1_{X/k})_x$
+NEW: $(f^*(\varOmega^1_{Y/k}))_x\to(\varOmega^1_{X/k})_x$
+FRENCH CONTEXT (corrected):  fait que \emph{a)} entraîne \emph{b)} est donc un cas particulier de (17.11.3). Comme \emph{b)} entraîne trivialement \emph{c)}, il reste à voir que \emph{c)} implique \emph{a)}. Notons d'abord
+\oldpage[IV-4]{100}
+que l'hypothèse entraîne que l'homomorphisme $(f^*(\varOmega^1_{Y/k}))_x\to(\varOmega^1_{X/k})_x$ est surjectif, donc, en remplaçant $X$ par un voisinage ouvert de $x$, on peut supposer que l'homomorphisme $f^*(\varOmega^1_{Y/k})\to\varOmega^1_{X/k}$ est surjectif (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 1, prop. 2); par suite $f$
+
+[id 20525]
+OLD: $f^*(\Omega^1_{Y/k})\to\Omega^1_{X/k}$
+NEW: $f^*(\varOmega^1_{Y/k})\to\varOmega^1_{X/k}$
+FRENCH CONTEXT (corrected): mplique \emph{a)}. Notons d'abord
+\oldpage[IV-4]{100}
+que l'hypothèse entraîne que l'homomorphisme $(f^*(\varOmega^1_{Y/k}))_x\to(\varOmega^1_{X/k})_x$ est surjectif, donc, en remplaçant $X$ par un voisinage ouvert de $x$, on peut supposer que l'homomorphisme $f^*(\varOmega^1_{Y/k})\to\varOmega^1_{X/k}$ est surjectif (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 1, prop. 2); par suite $f$ est \emph{non ramifié} (17.2.2). Nous allons voir d'abord qu'on peut se borner au cas où $x$ est \emph{rationnel sur $k$}. En effet, si l'on pose $k'=\b
+
+[id 20529]
+OLD: est surjectif (17.4.4, f''))
+NEW: est \emph{surjectif} (17.4.4, \emph{f'')})
+FRENCH CONTEXT (corrected): s résiduel de $B$ est égal à $k$, il en est de même de celui de $A$, donc $x$ (resp. $y$) est un point fermé de $X$ (resp. $Y$) (\textbf{I}, 6.4.2) et l'on a par suite $\dim(A)=\dim(B)=n$. Puisque $f$ est non ramifié, l'homomorphisme $\widehat A\to\widehat B$ est \emph{surjectif} (17.4.4, \emph{f'')}); mais comme $\dim(\widehat A)=\dim(\widehat B)=n$, et que $\widehat A$, étant un anneau régulier, est intègre, l'homomorphisme $\widehat A\to\widehat B$ est aussi \emph{injectif} (\textbf{0}, 16.3.10). Cet homomorphisme est donc bijectif, ce qui achève de pro
+
+[id 20530]
+OLD: est aussi injectif
+NEW: est aussi \emph{injectif}
+FRENCH CONTEXT (corrected): en
+vertu de III), les homomorphismes $A_\mu\to A$ sont injectifs et que $P_\mu$
+est un $A_\mu$-module \emph{plat}, l'homomorphisme canonique
+$P_\mu\to N=P_\mu\otimes_{A_\mu}A$ est \emph{injectif}~; on conclut donc du
+diagramme commutatif précédent que $w_\mu$ est aussi \emph{injectif}, donc bijectif,
+et par suite $N_\mu$ est un $A_\mu$-module \emph{plat} pour $\mu\geq\lambda$, ce qui
+achève de prouver (11.2.9).
+\end{proof}
+
+\begin{remark}[11.2.10]
+\label{IV.11.2.10-fr}
+Nous ignorons si la généralisation de (11.2.6, (i)) analogue au th. de 
+
+[id 20533]
+OLD: générales de (17.15.3), supposons
+NEW: générales de \textup{(17.15.3)}, supposons
+FRENCH CONTEXT (corrected): e $\widehat A\to\widehat B$ est aussi \emph{injectif} (\textbf{0}, 16.3.10). Cet homomorphisme est donc bijectif, ce qui achève de prouver que $f$ est étale au point $x$ (17.6.3, \emph{e'')}).
+
+\begin{corollary}[17.15.4]
+\label{IV.17.15.4}
+Sous les hypothèses générales de \textup{(17.15.3)}, supposons en outre que $\boldsymbol{k}(x)$ soit une extension \textup{finie} et \textup{séparable} de $k$ et que les germes $(g_i)_x$ appartiennent à $\mathfrak m_x$. Alors les conditions \textup{a), b), c)} de \textup{(17.15.3)} équivalent aussi à chacune des suivante
+
+[id 20535]
+OLD: finie et séparable de $k$ et que les germes
+NEW: \textup{finie} et \textup{séparable} de $k$ et que les germes
+FRENCH CONTEXT (corrected): est donc bijectif, ce qui achève de prouver que $f$ est étale au point $x$ (17.6.3, \emph{e'')}).
+
+\begin{corollary}[17.15.4]
+\label{IV.17.15.4}
+Sous les hypothèses générales de \textup{(17.15.3)}, supposons en outre que $\boldsymbol{k}(x)$ soit une extension \textup{finie} et \textup{séparable} de $k$ et que les germes $(g_i)_x$ appartiennent à $\mathfrak m_x$. Alors les conditions \textup{a), b), c)} de \textup{(17.15.3)} équivalent aussi à chacune des suivantes:
+\begin{enumerate}
+  \item[\textup{d)}] Les $n$ germes $(g_i)_x$ engendrent l'idéal maximal $\mathfrak m_x$ de $
+
+[id 20538]
+OLD: \item[d')] L'anneau
+NEW: \item[\textup{d$'$)}] L'anneau
+FRENCH CONTEXT (corrected): iennent à $\mathfrak m_x$. Alors les conditions \textup{a), b), c)} de \textup{(17.15.3)} équivalent aussi à chacune des suivantes:
+\begin{enumerate}
+  \item[\textup{d)}] Les $n$ germes $(g_i)_x$ engendrent l'idéal maximal $\mathfrak m_x$ de $\sh{O}_{X,x}$.
+  \item[\textup{d$'$)}] L'anneau $\sh{O}_{X,x}$ est régulier et les $(g_i)_x$ forment un système régulier de paramètres pour cet anneau \textup{(\textbf{0}, 17.1.6)}.
+\end{enumerate}
+\end{corollary}
+
+En effet, \emph{d')} entraîne trivialement \emph{d)}. D'autre part, comme $\boldsymbol{k}(x)
+
+[id 20540]
+OLD: En effet, d') entraîne trivialement d).
+NEW: En effet, \emph{d')} entraîne trivialement \emph{d)}.
+FRENCH CONTEXT (corrected): gendrent l'idéal maximal $\mathfrak m_x$ de $\sh{O}_{X,x}$.
+  \item[\textup{d$'$)}] L'anneau $\sh{O}_{X,x}$ est régulier et les $(g_i)_x$ forment un système régulier de paramètres pour cet anneau \textup{(\textbf{0}, 17.1.6)}.
+\end{enumerate}
+\end{corollary}
+
+En effet, \emph{d')} entraîne trivialement \emph{d)}. D'autre part, comme $\boldsymbol{k}(x)$ est une extension finie et séparable de $k$, on a $\Omega^1_{\mathbf{k}(x)/k}=0$ (\textbf{0}, 20.6.20) et $\boldsymbol{k}(x)=\sh{O}_{X,x}/\mathfrak m_x$ est une $k$-algèbre formellement lisse pour les topologies discrèt
+
+[id 20548]
+OLD: \xrightarrow{\sim}(\Omega^1_{X/k})_x
+NEW: \xrightarrow{\sim}(\varOmega^1_{X/k})_x
+FRENCH CONTEXT (corrected): formellement lisse pour les topologies discrètes (\textbf{0}, 19.6.1), donc la suite exacte (\textbf{0}, 20.5.14.1) s'applique à $A=k$, $B=\sh{O}_{X,x}$, $\mathfrak{K}=\mathfrak m_x$, et fournit un isomorphisme canonique
+\[
+\delta:\mathfrak m_x/\mathfrak m_x^2\xrightarrow{\sim}(\varOmega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}\boldsymbol{k}(x).
+\]
+De là on déduit d'abord l'équivalence des conditions \emph{c)} et \emph{d)}, compte tenu du lemme de Nakayama. D'autre part, si $f$ est étale au point $x$, l'anneau $\sh{O}_{X,x}$ est régulier et de dimension $n$, pu
+
+[id 20550]
+OLD: des conditions c) et d), compte
+NEW: des conditions \emph{c)} et \emph{d)}, compte
+FRENCH CONTEXT (corrected): lique à $A=k$, $B=\sh{O}_{X,x}$, $\mathfrak{K}=\mathfrak m_x$, et fournit un isomorphisme canonique
+\[
+\delta:\mathfrak m_x/\mathfrak m_x^2\xrightarrow{\sim}(\varOmega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}\boldsymbol{k}(x).
+\]
+De là on déduit d'abord l'équivalence des conditions \emph{c)} et \emph{d)}, compte tenu du lemme de Nakayama. D'autre part, si $f$ est étale au point $x$, l'anneau $\sh{O}_{X,x}$ est régulier et de dimension $n$, puisque $x$ est un point fermé de $X$ (\textbf{I}, 6.4.2), et $n$ éléments de $\mathfrak m_x$ qui engendrent cet idéal maximal fo
+
+[id 20553]
+OLD: ce qui prouve que a) entraîne d').
+NEW: ce qui prouve que \emph{a)} entraîne \emph{d')}.
+FRENCH CONTEXT (corrected): gulier et de dimension $n$, puisque $x$ est un point fermé de $X$ (\textbf{I}, 6.4.2), et $n$ éléments de $\mathfrak m_x$ qui engendrent cet idéal maximal forment alors nécessairement un système régulier de paramètres pour $\sh{O}_{X,x}$ (\textbf{0}, 17.1.6), ce qui prouve que \emph{a)} entraîne \emph{d')}.
+
+\begin{proposition}[17.15.5]
+\label{IV.17.15.5}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$, $n=\dim_x(X)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $X$ est lisse sur $k
+
+[id 20557]
+OLD: $(\Omega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module libre
+NEW: $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module libre
+FRENCH CONTEXT (corrected): ur $k$, $x$ un point de $X$, $n=\dim_x(X)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $X$ est lisse sur $k$ au point $x$.
+  \item[\textup{b)}] $X$ est différentiellement lisse sur $k$ au point $x$.
+  \item[\textup{c)}] $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module libre de rang $n$.
+  \item[\textup{d)}] $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module admettant un système de $n$ générateurs.
+
+\oldpage[IV-4]{101}
+
+  \item[\textup{e)}] Il existe une extension parfaite $k'$ de $k$ et un voisinage ouvert $U$ de $x$ dans $X$ 
+
+[id 20559]
+OLD: $(\Omega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module admettant
+NEW: $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module admettant
+FRENCH CONTEXT (corrected): n{enumerate}
+  \item[\textup{a)}] $X$ est lisse sur $k$ au point $x$.
+  \item[\textup{b)}] $X$ est différentiellement lisse sur $k$ au point $x$.
+  \item[\textup{c)}] $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module libre de rang $n$.
+  \item[\textup{d)}] $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module admettant un système de $n$ générateurs.
+
+\oldpage[IV-4]{101}
+
+  \item[\textup{e)}] Il existe une extension parfaite $k'$ de $k$ et un voisinage ouvert $U$ de $x$ dans $X$ tels que le préschéma $U\otimes_k k'$ soit régulier.
+\end{enumerate}
+\end{proposition}
+
+Le fait q
+
+=================== PAGE IV-4 101 ===================
+----- (Spanish page IV-4 100: shown above in this file) -----
+----- (Spanish page IV-4 101: shown above in this file) -----
+----- Spanish, IV4/ega4/ega4-17-es/components/15_17_15.tex, page IV-4 102 -----
+\oldpage[IV-4]{102}
+
+  \item[\textup{b)}] Los gérmenes $(g_i)_x$ para $1\leq i\leq r$ generan $\mathfrak m_x$ (y por consiguiente forman un sistema regular de parámetros para $\sh{O}_{X,x}$ (0, 17.1.6)) y las imágenes en $\Omega^1_{\mathbf k(x)/k}$ de los elementos $(d_{X/k}g_i)_x$ para $r+1\leq i\leq n$ generan $\Omega^1_{\mathbf k(x)/k}$.
+\end{enumerate}
+\end{proposition}
+
+Se tiene en efecto (\textbf 0, 20.5.12.1) la sucesión exacta de $\boldsymbol k(x)$-módulos
+\[
+\label{IV.17.15.8.1}
+\tag{17.15.8.1}
+\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)\to\Omega^1_{\mathbf k(x)/k}\to0
+\]
+y la condición b) entraña, por tanto, que los $(d_{X/k}g_i)_x$ generan $(\Omega^1_{X/k})_x$ teniendo en cuenta el lema de Nakayama; el hecho de que b) implica a) resulta, pues, de (17.15.3). Recíprocamente, si \emph{a)} se verifica, los $(d_{X/k}g_i)_x$ para $1\leq i\leq n$ forman una base de $(\Omega^1_{X/k})_x$ en virtud de (17.15.3). Si $t_i$ ($1\leq i\leq n$) es la imagen de $(g_i)_x$ en $\boldsymbol k(x)$, se deduce de lo anterior que los $dt_i$ generan $\Omega^1_{\mathbf k(x)/k}$ para $1\leq i\leq n$, y como por hipótesis $t_i=0$ para $1\leq i\leq r$, los $dt_i$ para $r+1\leq i\leq n$ generan ya $\Omega^1_{\mathbf k(x)/k}$. Como $\deg.\operatorname{tr}_k \boldsymbol k(x)=n\setmin r$, se sigue de la igualdad de Cartier (\textbf 0, 21.7.1) que $\Upsilon_{\mathbf k(x)/k}=0$, por lo que $\boldsymbol k(x)$ es una extensión separable de $k$ (\textbf 0, 20.6.3), y la sucesión de $\boldsymbol k(x)$-espacios vectoriales
+\[
+\label{IV.17.15.8.2}
+\tag{17.15.8.2}
+0\to\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)\to\Omega^1_{\mathbf k(x)/k}\to0
+\]
+es exacta ((\textbf 0, 20.5.14) y (\textbf 0, 19.6.1)); además los $dt_i$ para $r+1\leq i\leq n$ forman una base de $\Omega^1_{\mathbf k(x)/k}$, por lo que ninguno de los $t_i$ tales que $r+1\leq i\leq n$ puede ser nulo. Esto demuestra que las imágenes de los $(g_i)_x$ en $\mathfrak m_x/\mathfrak m_x^2$ para $1\leq i\leq r$ generan necesariamente $\mathfrak m_x/\mathfrak m_x^2$, y por consiguiente los $(g_i)_x$ para $1\leq i\leq r$ generan $\mathfrak m_x$ en virtud del lema de Nakayama, lo que termina de probar que a) implica b).
+
+\begin{corollary}[17.15.9]
+\label{IV.17.15.9}
+Sean $X$ un preesquema localmente de tipo finito sobre un cuerpo $k$, $x$ un punto de $X$ y pongamos $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] El anillo $\sh{O}_{X,x}$ es regular y $\boldsymbol k(x)$ es una extensión separable de $k$.
+  \item[\textup{b)}] $X$ es liso sobre $k$ en el punto $x$, y el homomorfismo canónico
+  \[
+  \mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}\boldsymbol k(x)
+  \]
+  es inyectivo.
+  \item[\textup{c)}] Existen $n$ secciones $g_i$ de $\sh{O}_X$ sobre una vecindad abierta $U$ de $x$ tales que $(g_i)_x\in\mathfrak m_x$ para $1\leq i\leq r$ y que el morfismo $U\to\operatorname{Spec}(k[T_1,\ldots,T_n])$ correspondiente a los $g_i$ (cf. (17.15.8)) sea étale en el punto $x$.
+  \item[\textup{d)}] Existen $n$ secciones $g_i$ \textup{(}$1\leq i\leq n$\textup{)} de $\sh{O}_X$ sobre una vecindad abierta $U$ de $x$, tales que los $(g_i)_x$ para $1\leq i\leq r$ generan $\mathfrak m_x$ y que las imágenes en $\Omega^1_{\mathbf k(x)/k}$ de los $(d_{U/k}g_i)_x$ para $r+1\leq i\leq n$ generan $\Omega^1_{\mathbf k(x)/k}$.
+\end{enumerate}
+\end{corollary}
+
+La equivalencia de c) y d) resulta de (17.15.8). Además, se ha visto en la demostración de (17.15.8) que la condición c) implica que $X$ es liso sobre $k$ en el punto $x$ y que la sucesión (17.15.8.2) es exacta, por lo que c) implica b). La condición b) entraña que el anillo $\sh{O}_{X,x}$ es regular, por lo que $\mathfrak m_x/\mathfrak m_x^2$ es de rango $r$; además, $(\Omega^1_{X/k})_x$ es entonces un $\sh{O}_{X,x}$-módulo libre de rango $n$ (17.10.2); como la sucesión (17.15.8.2) es exacta por hipótesis, $\Omega^1_{\mathbf k(x)/k}$ es de rango $n\setmin r=\deg.\operatorname{tr}_k \boldsymbol k(x)$ y la igualdad de Cartier muestra que $\Upsilon_{\mathbf k(x)/k}=0$, por lo que $\boldsymbol k(x)$ es separable sobre $k$ (\textbf 0, 20.6.3); así b) implica a). Finalmente, si a)
+----- French corrections on page IV-4 101 -----
+[id 20561]
+OLD: pour toute extension
+NEW: pour \emph{toute} extension
+FRENCH CONTEXT (corrected): est connexe, il en est de même de $f^{-1}(y)$, qui en est l'image par un
+morphisme de projection (\textbf{I}, 3.4.7). Nous dirons que, pour un morphisme
+$f:X\to Y$ de préschémas et un point $y\in Y$, la fibre $f^{-1}(y)$ est
+\emph{géométriquement connexe}, si pour \emph{toute} extension $k$ de $\boldsymbol{k}(y)$, le
+préschéma
+$f^{-1}(y)\otimes_{\boldsymbol{k}(y)}k=X\times_Y\operatorname{Spec}(k)$ est connexe.
+\oldpage[III]{132}
+Sous les hypothèses de (\hyperref[III.4.3.2-fr]{4.3.2}), on peut alors en
+renforcer la conclusion~: les fibres $f^
+
+[id 20562]
+OLD: ce qui prouve que a) implique e). Inversement e) implique a), car
+NEW: ce qui prouve que \emph{a)} implique \emph{e)}. Inversement \emph{e)} implique \emph{a)}, car
+FRENCH CONTEXT (corrected): soit régulier.
+\end{enumerate}
+\end{proposition}
+
+Le fait que $X$ soit lisse sur $k$ au point $x$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ qui est lisse sur $k$, donc $U\otimes_k k'$ est régulier pour \emph{toute} extension $k'$ de $k$ (17.15.2), ce qui prouve que \emph{a)} implique \emph{e)}. Inversement \emph{e)} implique \emph{a)}, car alors $U\otimes_k k'$ est lisse sur $k'$ (17.15.2), donc $U$ est lisse sur $k$ (17.7.1, (ii)).
+
+On a déjà prouvé que \emph{a)} entraîne \emph{c)} (17.10.2); \emph{c)} implique \emph{d)} trivialement et le fait que \emph{d)} implique \emph{a)} résulte de (\tex
+
+[id 20563]
+OLD: que a) entraîne c) (17.10.2); c) implique d) trivialement et le fait que d) implique a) résulte
+NEW: que \emph{a)} entraîne \emph{c)} (17.10.2); \emph{c)} implique \emph{d)} trivialement et le fait que \emph{d)} implique \emph{a)} résulte
+FRENCH CONTEXT (corrected): r pour \emph{toute} extension $k'$ de $k$ (17.15.2), ce qui prouve que \emph{a)} implique \emph{e)}. Inversement \emph{e)} implique \emph{a)}, car alors $U\otimes_k k'$ est lisse sur $k'$ (17.15.2), donc $U$ est lisse sur $k$ (17.7.1, (ii)).
+
+On a déjà prouvé que \emph{a)} entraîne \emph{c)} (17.10.2); \emph{c)} implique \emph{d)} trivialement et le fait que \emph{d)} implique \emph{a)} résulte de (\textbf{0}, 20.4.7) et (17.15.3, \emph{c)}).
+
+Enfin, on a déjà vu que \emph{a)} implique \emph{b)} (17.12.4). Inversement, pour prouver que \emph{b)} entraîne \emph{a)}, on peut se borner au cas où $x$ est \emph{rationnel sur $k$}, en considérant, comme d
+
+[id 20566]
+OLD: vu que a) implique b) (17.12.4). Inversement, pour prouver que b) entraîne a), on
+NEW: vu que \emph{a)} implique \emph{b)} (17.12.4). Inversement, pour prouver que \emph{b)} entraîne \emph{a)}, on
+FRENCH CONTEXT (corrected): U$ est lisse sur $k$ (17.7.1, (ii)).
+
+On a déjà prouvé que \emph{a)} entraîne \emph{c)} (17.10.2); \emph{c)} implique \emph{d)} trivialement et le fait que \emph{d)} implique \emph{a)} résulte de (\textbf{0}, 20.4.7) et (17.15.3, \emph{c)}).
+
+Enfin, on a déjà vu que \emph{a)} implique \emph{b)} (17.12.4). Inversement, pour prouver que \emph{b)} entraîne \emph{a)}, on peut se borner au cas où $x$ est \emph{rationnel sur $k$}, en considérant, comme dans la démonstration de (17.15.3), un point $x'$ de $X'=X\otimes_k k'$ au-dessus de $x$ et tel que $\boldsymbol{k}(x')=k'=\boldsymbol{k}(x)$, utilisant encore (17.7.1, (ii)) et 
+
+[id 20567]
+OLD: où $x$ est rationnel sur $k$, en considérant
+NEW: où $x$ est \emph{rationnel sur $k$}, en considérant
+FRENCH CONTEXT (corrected): ialement et le fait que \emph{d)} implique \emph{a)} résulte de (\textbf{0}, 20.4.7) et (17.15.3, \emph{c)}).
+
+Enfin, on a déjà vu que \emph{a)} implique \emph{b)} (17.12.4). Inversement, pour prouver que \emph{b)} entraîne \emph{a)}, on peut se borner au cas où $x$ est \emph{rationnel sur $k$}, en considérant, comme dans la démonstration de (17.15.3), un point $x'$ de $X'=X\otimes_k k'$ au-dessus de $x$ et tel que $\boldsymbol{k}(x')=k'=\boldsymbol{k}(x)$, utilisant encore (17.7.1, (ii)) et le fait que si $X$ est différentiellement lisse au point $x$, $X'$ est dif
+
+[id 20569]
+OLD: l'hypothèse b) et de
+NEW: l'hypothèse \emph{b)} et de
+FRENCH CONTEXT (corrected): symbol{k}(x)$, utilisant encore (17.7.1, (ii)) et le fait que si $X$ est différentiellement lisse au point $x$, $X'$ est différentiellement lisse au point $x'$ (16.10.4). Supposant donc $x$ rationnel sur $k$, le fait que $f$ soit lisse en $x$ résulte alors de l'hypothèse \emph{b)} et de (17.12.5) appliqué à la $k$-section $u:\operatorname{Spec}(k)\to X$ telle que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Soit $X$ un préschéma de type fini sur un corps $k$. Pour que $X$ soit lisse sur $k$, il faut et il
+
+[id 20570]
+OLD: le $\sh{O}_X$-Module $\Omega^1_{X/k}$ soit
+NEW: le $\sh{O}_X$-Module $\varOmega^1_{X/k}$ soit
+FRENCH CONTEXT (corrected): ppliqué à la $k$-section $u:\operatorname{Spec}(k)\to X$ telle que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Soit $X$ un préschéma de type fini sur un corps $k$. Pour que $X$ soit lisse sur $k$, il faut et il suffit que le $\sh{O}_X$-Module $\varOmega^1_{X/k}$ soit localement libre, et que les anneaux locaux aux points maximaux de $X$ soient des corps, extensions séparables de $k$ \textup{(cette dernière condition étant automatiquement vérifiée si $k$ est un corps \emph{parfait} et $X$ un préschéma \emph{réduit})}.
+\end
+
+[id 20571]
+OLD: (cette dernière condition étant automatiquement vérifiée si $k$ est un corps parfait et $X$ un préschéma réduit)
+NEW: \textup{(cette dernière condition étant automatiquement vérifiée si $k$ est un corps \emph{parfait} et $X$ un préschéma \emph{réduit})}
+FRENCH CONTEXT (corrected): schéma de type fini sur un corps $k$. Pour que $X$ soit lisse sur $k$, il faut et il suffit que le $\sh{O}_X$-Module $\varOmega^1_{X/k}$ soit localement libre, et que les anneaux locaux aux points maximaux de $X$ soient des corps, extensions séparables de $k$ \textup{(cette dernière condition étant automatiquement vérifiée si $k$ est un corps \emph{parfait} et $X$ un préschéma \emph{réduit})}.
+\end{corollary}
+
+Les conditions sont nécessaires, car si $X$ est lisse sur $k$, il résulte de (17.10.2) que $\varOmega^1_{X/k}$ est localement libre; d'autre part, $X$ est régulier, donc \emph{a fortiori} réduit, donc en tout point maximal $x$ de $X$, $\sh{O
+
+[id 20572]
+OLD: (17.10.2) que $\Omega^1_{X/k}$ est localement libre
+NEW: (17.10.2) que $\varOmega^1_{X/k}$ est localement libre
+FRENCH CONTEXT (corrected): extensions séparables de $k$ \textup{(cette dernière condition étant automatiquement vérifiée si $k$ est un corps \emph{parfait} et $X$ un préschéma \emph{réduit})}.
+\end{corollary}
+
+Les conditions sont nécessaires, car si $X$ est lisse sur $k$, il résulte de (17.10.2) que $\varOmega^1_{X/k}$ est localement libre; d'autre part, $X$ est régulier, donc \emph{a fortiori} réduit, donc en tout point maximal $x$ de $X$, $\sh{O}_{X,x}$ est un corps, qui doit être une $k$-algèbre formellement lisse pour les topologies discrètes (17.5.1), donc une extension séparable de $k$ (\
+
+[id 20574]
+OLD: donc $\Omega^1_{X/k}$ localement libre
+NEW: donc $\varOmega^1_{X/k}$ localement libre
+FRENCH CONTEXT (corrected): {O}_{X,x}$ est un corps, qui doit être une $k$-algèbre formellement lisse pour les topologies discrètes (17.5.1), donc une extension séparable de $k$ (\textbf{0}, 19.6.1).
+
+Les conditions sont suffisantes. On peut en effet se borner au cas où $X$ est connexe, donc $\varOmega^1_{X/k}$ localement libre de rang constant $n$. Pour tout point maximal $x$ de $X$, on a alors $\operatorname{rg}_{\mathbf{k}(x)}\Omega^1_{\mathbf{k}(x)/k}=n$ puisque $\sh{O}_{X,x}=\boldsymbol{k}(x)$; comme par hypothèse $\boldsymbol{k}(x)$ est une extension séparable de $k$, on a $\U
+
+[id 20575]
+OLD: \operatorname{rg}_{k(x)}\Omega^1_{k(x)/k}
+NEW: \operatorname{rg}_{\mathbf{k}(x)}\Omega^1_{\mathbf{k}(x)/k}
+FRENCH CONTEXT (corrected): , donc une extension séparable de $k$ (\textbf{0}, 19.6.1).
+
+Les conditions sont suffisantes. On peut en effet se borner au cas où $X$ est connexe, donc $\varOmega^1_{X/k}$ localement libre de rang constant $n$. Pour tout point maximal $x$ de $X$, on a alors $\operatorname{rg}_{\mathbf{k}(x)}\Omega^1_{\mathbf{k}(x)/k}=n$ puisque $\sh{O}_{X,x}=\boldsymbol{k}(x)$; comme par hypothèse $\boldsymbol{k}(x)$ est une extension séparable de $k$, on a $\Upsilon_{\mathbf{k}(x)/k}=0$ (\textbf{0}, 20.6.3), donc $\deg.\operatorname{tr}_k \boldsymbol{k}(x)=n$ par l'égalité de Cartier (\t
+
+[id 20576]
+OLD: puisque $\sh{O}_{X,x}=k(x)$; comme par hypothèse $k(x)$ est
+NEW: puisque $\sh{O}_{X,x}=\boldsymbol{k}(x)$; comme par hypothèse $\boldsymbol{k}(x)$ est
+FRENCH CONTEXT (corrected): s conditions sont suffisantes. On peut en effet se borner au cas où $X$ est connexe, donc $\varOmega^1_{X/k}$ localement libre de rang constant $n$. Pour tout point maximal $x$ de $X$, on a alors $\operatorname{rg}_{\mathbf{k}(x)}\Omega^1_{\mathbf{k}(x)/k}=n$ puisque $\sh{O}_{X,x}=\boldsymbol{k}(x)$; comme par hypothèse $\boldsymbol{k}(x)$ est une extension séparable de $k$, on a $\Upsilon_{\mathbf{k}(x)/k}=0$ (\textbf{0}, 20.6.3), donc $\deg.\operatorname{tr}_k \boldsymbol{k}(x)=n$ par l'égalité de Cartier (\textbf{0}, 21.7.1). Toutes les composantes irréductibles de $X$ ont donc même dimension $n
+
+[id 20581]
+OLD: et l'on conclut que
+NEW: et on conclut que
+FRENCH CONTEXT (corrected): n\mathfrak{J}M$, d'où finalement
+$f_n^kx\in\mathfrak{J}^{k+1}M$. On termine le raisonnement comme dans
+(15.1.2)~: sur $M/\mathfrak{J}''M$, la filtration
+$\mathfrak{J}$-préadique est identique à la filtration
+$(f_nA)$-préadique, donc est séparée par hypothèse, et on conclut que
+l'homothétie de rapport $f_n$ dans $M/\mathfrak{J}''M$ est injective, ce qui
+achève de montrer que la suite $(f_i)_{1\leq i\leq n}$ est $M$-régulière.
+\end{proof}
+
+\begin{corollary}[15.1.10]
+\label{0.15.1.10-fr}
+Avec les notations de \textup{(15.1.9)}, suppos
+
+[id 20582]
+OLD: de ce que c) entraîne a) dans
+NEW: de ce que \emph{c)} entraîne \emph{a)} dans
+FRENCH CONTEXT (corrected): tbf{0}, 20.6.3), donc $\deg.\operatorname{tr}_k \boldsymbol{k}(x)=n$ par l'égalité de Cartier (\textbf{0}, 21.7.1). Toutes les composantes irréductibles de $X$ ont donc même dimension $n$ (5.2.1), et on conclut que $X$ est lisse sur $k$ en tout point en vertu de ce que \emph{c)} entraîne \emph{a)} dans (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique \textup{0}, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\varOmega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cel
+
+[id 20583]
+OLD: de caractéristique 0, alors
+NEW: de caractéristique \textup{0}, alors
+FRENCH CONTEXT (corrected): ). Toutes les composantes irréductibles de $X$ ont donc même dimension $n$ (5.2.1), et on conclut que $X$ est lisse sur $k$ en tout point en vertu de ce que \emph{c)} entraîne \emph{a)} dans (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique \textup{0}, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\varOmega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cela résulte de (16.12.2) et de l'équivalence de \emph{b)} et \emph{a)} dans (17.15.5).
+
+\begin{proposition}[
+
+[id 20584]
+OLD: que $(\Omega^1_{X/k})_x$ soit un
+NEW: que $(\varOmega^1_{X/k})_x$ soit un
+FRENCH CONTEXT (corrected):  est lisse sur $k$ en tout point en vertu de ce que \emph{c)} entraîne \emph{a)} dans (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique \textup{0}, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\varOmega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cela résulte de (16.12.2) et de l'équivalence de \emph{b)} et \emph{a)} dans (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ u
+
+[id 20585]
+OLD: l'équivalence de b) et a) dans
+NEW: l'équivalence de \emph{b)} et \emph{a)} dans
+FRENCH CONTEXT (corrected): }[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique \textup{0}, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\varOmega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cela résulte de (16.12.2) et de l'équivalence de \emph{b)} et \emph{a)} dans (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$; posons $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$, de sorte que $n\setmin r=\deg.\operatorname{tr}_k \boldsymbol
+

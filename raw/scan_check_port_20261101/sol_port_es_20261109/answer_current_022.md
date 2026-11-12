@@ -1,0 +1,901 @@
+```json
+[
+  {
+    "id": 4668,
+    "decision": "not_applicable",
+    "note": "Solo se elimina una coma de puntuación del texto francés."
+  },
+  {
+    "id": 4669,
+    "decision": "not_applicable",
+    "note": "Solo se elimina una coma de puntuación del texto francés."
+  },
+  {
+    "id": 4673,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\HH^p(X\\setmin Y,\\sh{F})"
+  },
+  {
+    "id": 4986,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.5.5.2}"
+  },
+  {
+    "id": 4987,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.3.3}"
+  },
+  {
+    "id": 4989,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.5.5.3}"
+  },
+  {
+    "id": 4992,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.1.6.1}"
+  },
+  {
+    "id": 4995,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Entonces, para todo $(\\sh{O}_X|U)$-módulo cuasi-coherente $\\sh{G}$, se tiene $\\HH^p(\\mathfrak{U},\\sh{G})=0$ para $p>0$; si además $U=X$, el homomorfismo canónico (\\hyperref[III.1.2.3.2]{1.2.3.2}) $\\Gamma(X,\\sh{G})\\to\\HH^0(\\mathfrak{U},\\sh{G})$ es biyectivo.",
+    "en_new": "Entonces, para todo $(\\sh{O}_X|U)$-módulo cuasi-coherente $\\sh{F}$, se tiene $\\HH^p(\\mathfrak{U},\\sh{F})=0$ para $p>0$; si además $U=X$, el homomorfismo canónico \\textup{(\\hyperref[III.1.2.3.2]{1.2.3.2})} $\\Gamma(X,\\sh{F})\\to\\HH^0(\\mathfrak{U},\\sh{F})$ es biyectivo.",
+    "note": "Incluye también los cambios de letra de 24627 y 24628."
+  },
+  {
+    "id": 4996,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.7}"
+  },
+  {
+    "id": 4997,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.11}"
+  },
+  {
+    "id": 24627,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Entonces, para todo $(\\sh{O}_X|U)$-módulo cuasi-coherente $\\sh{G}$",
+    "note": "covered by 4995"
+  },
+  {
+    "id": 24628,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "$\\HH^p(\\mathfrak{U},\\sh{G})=0$ para $p>0$; si además $U=X$, el homomorfismo canónico (\\hyperref[III.1.2.3.2]{1.2.3.2}) $\\Gamma(X,\\sh{G})\\to\\HH^0(\\mathfrak{U},\\sh{G})$",
+    "note": "covered by 4995"
+  },
+  {
+    "id": 5003,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.1.10}"
+  },
+  {
+    "id": 5004,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.6}"
+  },
+  {
+    "id": 5005,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "un morfismo afín \\sref[II]{II.1.6.1}.",
+    "en_new": "un morfismo afín \\textup{\\sref[II]{II.1.6.1}}."
+  },
+  {
+    "id": 5007,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.3.2}"
+  },
+  {
+    "id": 5008,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.1.3.1)",
+    "en_new": "\\textup{(\\textbf{0},~12.1.3.1)}"
+  },
+  {
+    "id": 5009,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.1.7}"
+  },
+  {
+    "id": 5010,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.11.1.6}"
+  },
+  {
+    "id": 5011,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.2.5.1)",
+    "en_new": "\\textup{(\\textbf{0},~12.2.5.1)}"
+  },
+  {
+    "id": 5012,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.2.5}"
+  },
+  {
+    "id": 5013,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.5.5.6}"
+  },
+  {
+    "id": 5014,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(notación de \\sref{III.1.2.1}) sean afines.",
+    "en_new": "(notación de \\textup{\\sref{III.1.2.1}}) sean afines."
+  },
+  {
+    "id": 5015,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Entonces (con las notaciones de \\sref{III.1.2.1}), para todo",
+    "en_new": "Entonces (con las notaciones de \\textup{\\sref{III.1.2.1}}), para todo"
+  },
+  {
+    "id": 5018,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "$A_*=\\Gamma_*(\\sh{L})$ \\sref[0]{0.5.4.6};",
+    "en_new": "$A_*=\\Gamma_*(\\sh{L})$ \\textup{\\sref[0]{0.5.4.6}};"
+  },
+  {
+    "id": 5019,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5022,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "los $U_i\\cap X_f$ son abiertos afines \\sref[I]{I.1.3.6}"
+  },
+  {
+    "id": 5023,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5024,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5025,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.3.2}"
+  },
+  {
+    "id": 5027,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.9}[ii]"
+  },
+  {
+    "id": 5028,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "$M\\mapsto M_{(f)}$",
+    "en_new": "$M\\leadsto M_{(f)}$"
+  },
+  {
+    "id": 5030,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "las hipótesis de la Proposición~\\sref{III.1.4.5} y, además,",
+    "en_new": "las hipótesis de la Proposición~\\textup{\\sref{III.1.4.5}} y, además,"
+  },
+  {
+    "id": 5031,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5032,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\item[{\\rm(i)}] Supóngase que el abierto $X_f$ es afín."
+  },
+  {
+    "id": 5033,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\item[{\\rm(ii)}] Recíprocamente, supóngase que $X_f$ es cuasicompacto"
+  },
+  {
+    "id": 5034,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.5.2.1}"
+  },
+  {
+    "id": 5035,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.4.2}"
+  },
+  {
+    "id": 5036,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{II},~4.5.13.2)"
+  },
+  {
+    "id": 5284,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.5.5.6}"
+  },
+  {
+    "id": 5285,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.2.6}"
+  },
+  {
+    "id": 5286,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.5.5.10}"
+  },
+  {
+    "id": 5287,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.2.2}"
+  },
+  {
+    "id": 5288,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.4.1.1}"
+  },
+  {
+    "id": 5289,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(G, II, 5.2) es entonces",
+    "en_new": "\\textup{(G, II, 5.2)} es entonces"
+  },
+  {
+    "id": 5291,
+    "decision": "not_applicable",
+    "note": "Desplaza el final del entorno proof; es una diferencia de estructura y presentación."
+  },
+  {
+    "id": 5292,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Bajo las hipótesis de la Proposición~\\sref{III.1.4.10}, para todo abierto afín",
+    "en_new": "Bajo las hipótesis de la Proposición~\\textup{\\sref{III.1.4.10}}, para todo abierto afín"
+  },
+  {
+    "id": 5293,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Supóngase que se satisfacen las hipótesis de la Proposición~\\sref{III.1.4.10} y, además, que $Y$ es cuasicompacto.",
+    "en_new": "Supóngase que se satisfacen las hipótesis de la Proposición~\\textup{\\sref{III.1.4.10}} y, además, que $Y$ es cuasicompacto."
+  },
+  {
+    "id": 5294,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Supóngase que se satisfacen las hipótesis de la Proposición~\\sref{III.1.4.10} y, además, que $Y=\\Spec(A)$ es afín.",
+    "en_new": "Supóngase que se satisfacen las hipótesis de la Proposición~\\textup{\\sref{III.1.4.10}} y, además, que $Y=\\Spec(A)$ es afín."
+  },
+  {
+    "id": 5295,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.7}"
+  },
+  {
+    "id": 5296,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.2.5.2)",
+    "en_new": "\\textup{(\\textbf{0},~12.2.5.2)}"
+  },
+  {
+    "id": 5297,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.2.5} es, por tanto, biyectivo"
+  },
+  {
+    "id": 5298,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "un morfismo plano de preesquemas \\sref[0]{0.6.7.1};",
+    "en_new": "un morfismo plano de preesquemas \\textup{\\sref[0]{0.6.7.1}};"
+  },
+  {
+    "id": 5300,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "    Y'\\ar[l]^{v}.\n  }\n  \\tag{1.4.15.1}",
+    "note": "El punto ya está al final del diagrama."
+  },
+  {
+    "id": 5301,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~4.4.3.2)"
+  },
+  {
+    "id": 5303,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0}~,12.2.5.1 y 12.2.5.2)"
+  },
+  {
+    "id": 5305,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\emph{hipótesis alguna} sobre $v$"
+  },
+  {
+    "id": 5306,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "sea $f$-plano \\sref[0]{0.6.7.1}, es necesario y suficiente",
+    "en_new": "sea $f$-plano \\textup{\\sref[0]{0.6.7.1}}, es necesario y suficiente"
+  },
+  {
+    "id": 5307,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Esto se deduce de la definición \\sref[0]{0.6.7.1}"
+  },
+  {
+    "id": 5308,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.6.3.3}"
+  },
+  {
+    "id": 5309,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.4}"
+  },
+  {
+    "id": 5310,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(cf.~\\sref[0]{0.12.2.5})"
+  },
+  {
+    "id": 5311,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.1.3.1)"
+  },
+  {
+    "id": 5312,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\HH^q(X',{v'}^*(\\sh{F}))\\ar[rr]^{{v'}^*(\\rho_q)}",
+    "en_new": "\\HH^q(X',{v'}^*(\\sh{F}))\\ar[rr]_{{v'}^*(\\rho_q)}"
+  },
+  {
+    "id": 5313,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.4.4.3}"
+  },
+  {
+    "id": 5314,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5315,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.6.2}[iii]"
+  },
+  {
+    "id": 5316,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.1.4.2}"
+  },
+  {
+    "id": 5317,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\HH^q(X,\\sh{F})\\ar[r]^{\\theta_q} &",
+    "en_new": "\\HH^q(X,\\sh{F})\\ar[r]_{\\theta_q} &"
+  },
+  {
+    "id": 5318,
+    "decision": "not_applicable",
+    "note": "Solo añade dos puntos de puntuación al texto francés."
+  },
+  {
+    "id": 5319,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de las definiciones y de los límites."
+  },
+  {
+    "id": 5320,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.6.5}"
+  },
+  {
+    "id": 5321,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.6.1.1}"
+  },
+  {
+    "id": 5322,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.3.2.2}"
+  },
+  {
+    "id": 5323,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.5.2.1}"
+  },
+  {
+    "id": 5324,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "condiciones (d1) y (d2) de \\sref[I]{I.1.4.1} (con $V=X$)"
+  },
+  {
+    "id": 5325,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "condiciones (d1) y (d2)",
+    "en_new": "condiciones (\\textit{d}1) y (\\textit{d}2)"
+  },
+  {
+    "id": 5326,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "La verificación de (d2) es inmediata",
+    "en_new": "La verificación de (\\textit{d}2) es inmediata"
+  },
+  {
+    "id": 5327,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "$f^m v(t)=v(f^m t)=0$ \\sref[I]{I.1.4.1}, y, como"
+  },
+  {
+    "id": 5328,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "luego por \\sref[I]{I.1.4.1} existe un entero"
+  },
+  {
+    "id": 5329,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "$z\\in\\Gamma(X,\\sh{H})$ \\sref[I]{I.1.4.1}."
+  },
+  {
+    "id": 5330,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{I},~5.1.9.2)"
+  },
+  {
+    "id": 5334,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "consideremos el anillo graduado \\sref[0]{0.5.4.6}"
+  },
+  {
+    "id": 5341,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "Consideremos ahora el $S$-módulo graduado \\sref[0]{0.5.4.6}"
+  },
+  {
+    "id": 5525,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "Compruébese ahora (d1)",
+    "en_new": "Compruébese ahora (\\textit{d}1)"
+  },
+  {
+    "id": 5526,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-1.tex",
+    "en_old": "La verificación de (d2) es inmediata",
+    "note": "covered by 5326"
+  },
+  {
+    "id": 5343,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[I]{I.9.3.1}"
+  },
+  {
+    "id": 5346,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "isomorfismo de $S$-módulos \\emph{graduados}"
+  },
+  {
+    "id": 5348,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\vphi_{kh}:M_{i_0 i_1\\cdots i_p}^{(h)}\\to M_{i_0 i_1\\cdots i_p}^{(k)}"
+  },
+  {
+    "id": 5349,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "una estructura de $S$-módulo graduado sobre $\\varinjlim_n C_n^p(M)$",
+    "en_new": "una estructura de $S$-módulo \\emph{graduado} sobre $\\varinjlim_n C_n^p(M)$"
+  },
+  {
+    "id": 5350,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "donde el isomorfismo \\emph{conserva los grados}"
+  },
+  {
+    "id": 5351,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "a una misma componente homogénea $M_m$ de $M$",
+    "en_new": "a una \\emph{misma} componente homogénea $M_m$ de $M$"
+  },
+  {
+    "id": 6011,
+    "decision": "unclear",
+    "note": "La definición de \\shProj no aparece en los fragmentos españoles; no se puede comprobar la tipografía de la macro."
+  },
+  {
+    "id": 5353,
+    "decision": "not_applicable",
+    "note": "Solo se elimina una coma de puntuación del texto francés."
+  },
+  {
+    "id": 5354,
+    "decision": "not_applicable",
+    "note": "Solo se elimina una coma de puntuación del texto francés."
+  },
+  {
+    "id": 5355,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5356,
+    "decision": "not_applicable",
+    "note": "Solo se elimina una coma de puntuación del texto francés."
+  },
+  {
+    "id": 5357,
+    "decision": "not_applicable",
+    "note": "Solo se elimina una coma de puntuación del texto francés."
+  },
+  {
+    "id": 5358,
+    "decision": "not_applicable",
+    "note": "Cambio de presentación de la fórmula y de la altura de los puntos suspensivos, sin cambio matemático."
+  },
+  {
+    "id": 5359,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.5.2}"
+  },
+  {
+    "id": 5361,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[0]{0.1.3.2}"
+  },
+  {
+    "id": 5364,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\HH^{p+1}((\\mathbf{f}),M'') \\ar[r]^-\\partial &",
+    "en_new": "\\HH^{p+1}((\\mathbf{f}),M'') \\ar[r]_-\\partial &"
+  },
+  {
+    "id": 5366,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "en ese caso, todo $\\sh{O}_X$-módulo cuasicoherente",
+    "en_new": "en ese caso, \\emph{todo} $\\sh{O}_X$-módulo cuasicoherente"
+  },
+  {
+    "id": 5367,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.7.7}"
+  },
+  {
+    "id": 5370,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\mathrm{T}_{\\mathbf{p}}",
+    "en_new": "\\mathbf{T}_{\\mathbf{p}}",
+    "note": "Se traslada la negrita del símbolo; se conserva la disposición española."
+  },
+  {
+    "id": 5371,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la fórmula y de la condición sobre n y m."
+  },
+  {
+    "id": 5373,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\xi_{\\mathbf{p}}^{(n)}=\\xi_{p_0,\\dots,p_r}^{(n)}",
+    "en_new": "\\xi_{\\mathbf{p}}^{(n)}=\\xi_{p_0\\dots p_r}^{(n)}"
+  },
+  {
+    "id": 5375,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "la clase de $\\mathrm{T}_0^{n-p_0}\\ldots\\mathrm{T}_r^{n-p_r}$ módulo $(\\mathbf{T}^n)$.",
+    "note": "La indicación de módulo ya está en el texto, no como una congruencia."
+  },
+  {
+    "id": 5376,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\xi_{\\mathbf{p}}=\\xi_{p_0,\\dots,p_r}$ en el límite inductivo",
+    "en_new": "\\xi_{\\mathbf{p}}=\\xi_{p_0\\dots p_r}$ en el límite inductivo"
+  },
+  {
+    "id": 5379,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "con base los elementos $\\xi_{p_0,\\dots,p_r}$ tales que",
+    "en_new": "con base los elementos $\\xi_{p_0\\dots p_r}$ tales que"
+  },
+  {
+    "id": 5381,
+    "decision": "not_applicable",
+    "note": "La puntuación depende de la frase francesa; la versión española termina la oración y comienza «En efecto»."
+  },
+  {
+    "id": 5382,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "Además, está claro que\n\\[\n  M/(\\mathrm{T}_0^nM+\\ldots+\\mathrm{T}_{i-1}^nM)\n  =\\bigl(S/(\\mathrm{T}_0^nS+\\ldots+\\mathrm{T}_{i-1}^nS)\\bigr)\\otimes_A N,\n\\]\npuesto que",
+    "en_new": "Además, está claro que $M/(\\mathrm{T}_0^nM+\\ldots+\\mathrm{T}_{i-1}^nM)$ se identifica con el producto tensorial $\\bigl(S/(\\mathrm{T}_0^nS+\\ldots+\\mathrm{T}_{i-1}^nS)\\bigr)\\otimes_A N$,\npuesto que",
+    "note": "Sustituye la igualdad literal por la identificación indicada en francés."
+  },
+  {
+    "id": 5384,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.4.1.1}"
+  },
+  {
+    "id": 5385,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.6.2}"
+  },
+  {
+    "id": 5386,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "con base los elementos $\\xi_{p_0,\\dots,p_r}$, donde",
+    "en_new": "con base los elementos $\\xi_{p_0\\dots p_r}$, donde"
+  },
+  {
+    "id": 5387,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "el elemento $\\xi_{p_0,\\dots,p_r}$ tiene grado",
+    "en_new": "el elemento $\\xi_{p_0\\dots p_r}$ tiene grado"
+  },
+  {
+    "id": 5389,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\mathrm{T}_i\\xi_{p_0,\\dots,p_r}\n    =",
+    "en_new": "\\mathrm{T}_i\\xi_{p_0\\dots p_r}\n    ="
+  },
+  {
+    "id": 5390,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de en línea a desplegada."
+  },
+  {
+    "id": 5391,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.3.14}"
+  },
+  {
+    "id": 5392,
+    "decision": "not_applicable",
+    "note": "La conjunción afectada no aparece en español: las dos condiciones del par se separan por una coma."
+  },
+  {
+    "id": 5393,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.3.3.2}"
+  },
+  {
+    "id": 5394,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\alpha:\\bb{S}_{\\sh{O}_Y}(\\sh{E})",
+    "note": "El álgebra simétrica ya lleva la tipografía especial de la edición española."
+  },
+  {
+    "id": 5396,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5397,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[0]{0.12.2.2}"
+  },
+  {
+    "id": 5398,
+    "decision": "not_applicable",
+    "note": "Traslada el encabezamiento de subsección respecto del salto de página francés."
+  },
+  {
+    "id": 5527,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\bigl(\\bb{S}_{\\sh{O}_Y}(\\sh{E})\\bigr)_{-n}",
+    "note": "La corrección afecta solo a la tipografía de S, ya distinguida en español; la discrepancia del índice se señala al final."
+  },
+  {
+    "id": 5528,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\bigl(\\bb{S}_{\\sh{O}_Y}(\\sh{E})\\bigr)_{-n}",
+    "note": "El álgebra simétrica ya lleva la tipografía especial de la edición española."
+  },
+  {
+    "id": 5400,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la definición y de su condición sobre n."
+  },
+  {
+    "id": 5401,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5402,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5403,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de la fórmula, de desplegada a en línea."
+  },
+  {
+    "id": 5404,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "$\\sh{L}$ es muy amplio respecto de $f$",
+    "en_new": "$\\sh{L}$ es \\emph{muy amplio} respecto de $f$"
+  },
+  {
+    "id": 5405,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.4.6.11}"
+  },
+  {
+    "id": 5406,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.4.4.7}"
+  },
+  {
+    "id": 5407,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.5.4.4}"
+  },
+  {
+    "id": 5408,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "y, por tanto, es un isomorfismo $X\\simto P$.",
+    "en_new": "y, por tanto, es un \\emph{isomorfismo} $X\\simto P$."
+  },
+  {
+    "id": 5409,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.3.4.7}"
+  },
+  {
+    "id": 5410,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.3.6.2}"
+  },
+  {
+    "id": 5411,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.3.4.5} y \\sref[II]{II.3.5.2}"
+  },
+  {
+    "id": 5413,
+    "decision": "not_applicable",
+    "note": "Solo cambia la presentación de las fórmulas, de desplegadas a en línea."
+  },
+  {
+    "id": 5889,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.7.9}"
+  },
+  {
+    "id": 5890,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.7.10}"
+  },
+  {
+    "id": 5891,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[0]{0.5.3.3}"
+  },
+  {
+    "id": 5893,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[II]{II.2.5.14}"
+  },
+  {
+    "id": 5894,
+    "decision": "apply",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "Bajo las hipótesis de \\sref{III.2.2.1}, sea",
+    "en_new": "Bajo las hipótesis de \\textup{\\sref{III.2.2.1}}, sea"
+  },
+  {
+    "id": 5895,
+    "decision": "already",
+    "en_file": "III1_CURRENT/ega3/ega3-2.tex",
+    "en_old": "\\sref[0]{0.5.3.4}"
+  }
+]
+```
+III1_CURRENT/ega3/ega3-1.tex, III 90, demostración de (1.4.5): aparece `\sh{F}\otimes\sh{L}^m` donde el francés tiene la potencia tensorial `\sh{F}\otimes\sh{L}^{\otimes m}`; el id 5023 solo cambia la presentación.
+III1_CURRENT/ega3/ega3-2.tex, III 99, observación (2.1.16)(ii): el índice final del álgebra simétrica es `-n`, frente a `-n-r-1` en el contexto francés corregido de 5527; los edits 5527 y 5528 solo modifican la tipografía de S.

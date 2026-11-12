@@ -1,0 +1,909 @@
+```json
+[
+  {
+    "id": 1865,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "0 \\to \\Gamma_*(\\sh{J}) \\to \\Gamma_*(\\sh{O}_X) \\to \\Gamma_*(\\sh{O}_X/\\sh{J})."
+  },
+  {
+    "id": 1867,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "una de ellas es nula en virtud de \\sref[I]{I.7.4.4}."
+  },
+  {
+    "id": 1868,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref[I]{I.1.3.8} y \\sref[I]{I.1.3.9})",
+    "note": "Se conserva la convención española de referencias con \\sref."
+  },
+  {
+    "id": 1869,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "mediante un homomorfismo de $\\sh{S}$ en sí misma (\\sref[I]{I.1.3.8} y \\sref[I]{I.1.3.9})"
+  },
+  {
+    "id": 1870,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "que es cuasi-coherente si $\\sh{S}$ lo es \\sref[I]{I.1.3.9};"
+  },
+  {
+    "id": 1871,
+    "decision": "not_applicable",
+    "note": "Coma de la sintaxis francesa."
+  },
+  {
+    "id": 1872,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "y es cuasi-coherente si $\\sh{S}$ y $\\sh{M}$ son cuasi-coherentes \\sref[I]{I.9.6.1}."
+  },
+  {
+    "id": 1873,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\sh{M}(n)$ es un $\\sh{S}$-módulo graduado cuasi-coherente \\sref[I]{I.9.6.1}."
+  },
+  {
+    "id": 1874,
+    "decision": "not_applicable",
+    "note": "Puntuación introductoria de una fórmula desplegada; el español la integra en línea."
+  },
+  {
+    "id": 1875,
+    "decision": "not_applicable",
+    "note": "Puntuación introductoria de una fórmula desplegada; el español la integra en línea."
+  },
+  {
+    "id": 2016,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$S=\\Gamma(U,\\sh{S})$ es una $A$-álgebra graduada \\sref[I]{I.1.4.3};"
+  },
+  {
+    "id": 2017,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$S'=\\Gamma(U',\\sh{S})$ se identifica canónicamente con $S\\otimes_AA'$ \\sref[I]{I.1.6.4}."
+  },
+  {
+    "id": 2018,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "donde $f_U$ denota el morfismo estructural $X_U\\to U$ \\sref[I]{I.4.4.1}."
+  },
+  {
+    "id": 2019,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "existe un \\emph{isomorfismo} $\\eta_U$ del preesquema",
+    "en_new": "existe un isomorfismo $\\eta_U$ del preesquema"
+  },
+  {
+    "id": 2020,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "f^{-1}(V) \\ar[r]^{\\eta_V} \\ar[d]",
+    "en_new": "f^{-1}(V) \\ar[r]^{\\overset{\\eta_V}{\\sim}} \\ar[d]"
+  },
+  {
+    "id": 2022,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "La existencia de un $X$ que satisfaga las propiedades enunciadas resulta entonces de \\sref[I]{I.2.3.1};"
+  },
+  {
+    "id": 2023,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref{II.2.4.2} y \\sref[I]{I.5.5.5})"
+  },
+  {
+    "id": 2024,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "una $\\sh{O}_Y$-álgebra \\emph{de tipo finito} \\sref[I]{I.9.6.2}"
+  },
+  {
+    "id": 2025,
+    "decision": "not_applicable",
+    "note": "Coma de la sintaxis francesa."
+  },
+  {
+    "id": 2026,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref{II.2.7.1}[(ii)] y \\sref[I]{I.6.3.1})"
+  },
+  {
+    "id": 2029,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es canónicamente isomorfo a $\\Spec(\\sh{S}^{(d)}/(f-1)\\sh{S}^{(d)})$ \\sref{II.1.3.1}.",
+    "note": "\\sref ya compone derecha la referencia."
+  },
+  {
+    "id": 2030,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el haz de ideales de $\\sh{S}$ generado por esta familia \\sref[0]{0.5.1.1}"
+  },
+  {
+    "id": 2031,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(en el sentido de \\sref[0]{0.5.5.2})"
+  },
+  {
+    "id": 2032,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$A[T]/(gT-1)A[T]$ \\sref[0]{0.1.2.3}."
+  },
+  {
+    "id": 2033,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Sea $\\sh{L}$ un $\\sh{O}_Y$-módulo invertible \\sref[0]{0.5.4.1},"
+  },
+  {
+    "id": 2034,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$x_n\\mapsto x_n\\otimes c^{\\otimes n}$",
+    "en_new": "$x_n\\to x_n\\otimes c^{\\otimes n}$"
+  },
+  {
+    "id": 2035,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 2036,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\[\n  \\frac{x\\otimes c^{\\otimes nd}}{(f\\otimes c^{\\otimes d})^n}\n  =\n  \\frac{x\\otimes(\\varepsilon c)^{\\otimes nd}}{(f\\otimes(\\varepsilon c)^{\\otimes d})^n}\n\\]",
+    "en_new": "\\[\n  \\frac{x\\otimes c^{nd}}{(f\\otimes c^d)^n}\n  =\n  \\frac{x\\otimes(\\varepsilon c)^{nd}}{(f\\otimes(\\varepsilon c)^d)^n}\n\\]",
+    "note": "Se trasladan los cambios de potencias, conservando la disposición española."
+  },
+  {
+    "id": 2037,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Recordemos (\\sref[0]{0.4.1.3} y \\sref[I]{I.1.3.14})",
+    "note": "Se conserva la convención española de referencias con \\sref."
+  },
+  {
+    "id": 2038,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.3.1.10},"
+  },
+  {
+    "id": 2039,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se sabe \\sref[I]{I.5.1.1} que su \\emph{nilradical}"
+  },
+  {
+    "id": 2040,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$(\\sh{S}_+)_y=(\\sh{S}_y)_+$ \\sref[I]{I.5.1.1}."
+  },
+  {
+    "id": 2043,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de aquí resulta la conclusión \\sref[I]{I.5.1.2}."
+  },
+  {
+    "id": 2044,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Si $\\sh{S}$ es íntegra \\sref{II.3.1.12},"
+  },
+  {
+    "id": 2045,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de modo que $X$ es irreducible \\sref[0]{0.2.1.4};"
+  },
+  {
+    "id": 2046,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "donde $A$ es íntegro \\sref[I]{I.5.1.4},"
+  },
+  {
+    "id": 2047,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se tiene entonces, para \\emph{todo} $z\\in Y$,"
+  },
+  {
+    "id": 2048,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se concluye primero que el propio $S$ es reducido \\sref[I]{I.5.1.1}."
+  },
+  {
+    "id": 2051,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "o, lo que equivale a lo mismo \\sref[I]{I.9.6.1},"
+  },
+  {
+    "id": 2052,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el $\\sh{O}_{X_U}$-módulo cuasi-coherente $(\\Gamma(U,\\sh{M}))\\supertilde;"
+  },
+  {
+    "id": 2053,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\Gamma(U',\\sh{M})$ se identifica canónicamente con $\\Gamma(U,\\sh{M})\\otimes_AA'$ \\sref[I]{I.1.6.4};"
+  },
+  {
+    "id": 2054,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\eta_U^*((\\Gamma(U,\\sh{M}))\\supertilde)=\\widetilde{\\sh{M}}|f^{-1}(U)$"
+  },
+  {
+    "id": 2055,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "del principio de pegado de haces \\sref[0]{0.3.3.1}."
+  },
+  {
+    "id": 2056,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$Z_f=\\Spec(\\sh{S}^{(d)}/(f-1)\\sh{S}^{(d)})$ \\sref{II.3.1.4},"
+  },
+  {
+    "id": 2057,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$(\\sh{M}^{(d)}/(f-1)\\sh{M}^{(d)})\\supertilde$ \\sref{II.1.4.3}."
+  },
+  {
+    "id": 2058,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el $\\sh{O}_{Z_f}$-módulo $(\\sh{M}^{(d)}/(f-1)\\sh{M}^{(d)})\\supertilde$"
+  },
+  {
+    "id": 2059,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "nos reducimos a \\sref[I]{I.1.3.11}, \\sref[I]{I.1.3.9} y \\sref{II.2.5.4}."
+  },
+  {
+    "id": 2060,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "nos reducimos a \\sref[I]{I.1.3.11}, \\sref[I]{I.1.3.9} y \\sref{II.2.5.4}.",
+    "note": "La repetición del capítulo sigue la convención de \\sref."
+  },
+  {
+    "id": 2061,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sh{I}\\sh{M})\\supertilde=\\sh{I}\\cdot\\widetilde{\\sh{M}}"
+  },
+  {
+    "id": 2062,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sh{I}\\sh{M})\\supertilde=\\sh{I}\\cdot\\widetilde{\\sh{M}}",
+    "en_new": "(\\sh{I}\\sh{M})\\supertilde=\\sh{I}.\\widetilde{\\sh{M}}"
+  },
+  {
+    "id": 2063,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(donde el segundo miembro se define como en \\sref[0]{0.4.3.5})."
+  },
+  {
+    "id": 2327,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\sh{I}=\\widetilde{\\mathfrak{I}}$, donde $\\mathfrak{I}$ es un ideal de $A$.",
+    "en_new": "$\\sh{I}=\\widetilde{\\mathfrak{J}}$, donde $\\mathfrak{J}$ es un ideal de $A$."
+  },
+  {
+    "id": 2328,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$(\\mathfrak{I}M)_{(f)}=\\mathfrak{I}.M_{(f)}$",
+    "en_new": "$(\\mathfrak{J}M)_{(f)}=\\mathfrak{J}.M_{(f)}$"
+  },
+  {
+    "id": 2330,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de \\sref[I]{I.1.3.13} y \\sref[I]{I.1.6.9}."
+  },
+  {
+    "id": 2331,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de \\sref[I]{I.1.3.13} y \\sref[I]{I.1.6.9}.",
+    "note": "La repetición del capítulo sigue la convención de \\sref."
+  },
+  {
+    "id": 2332,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el $(\\sh{O}_X|X_f)$-módulo $(\\sh{S}(nd))\\supertilde|X_f$"
+  },
+  {
+    "id": 2333,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "está generada por $\\sh{S}_1$ \\sref{II.3.1.9}, los $\\sh{O}_X$-módulos"
+  },
+  {
+    "id": 2334,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "los $\\sh{O}_X$-módulos $(\\sh{S}(n))\\supertilde$ son invertibles"
+  },
+  {
+    "id": 2335,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "un isomorfismo canónico de $(\\sh{S}(nd))\\supertilde|(X_f\\cap\\vphi^{-1}(U))$"
+  },
+  {
+    "id": 2336,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sh{O}_X(n)=(\\sh{S}(n))\\supertilde"
+  },
+  {
+    "id": 2337,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "((\\sh{S}|U)(n))\\supertilde=\\sh{O}_X(n)|f^{-1}(U),"
+  },
+  {
+    "id": 2338,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\lambda:\\widetilde{\\sh{M}}\\otimes_{\\sh{O}_X}\\widetilde{\\sh{N}}\\to(\\sh{M}\\otimes_{\\sh{S}}\\sh{N})\\supertilde"
+  },
+  {
+    "id": 2339,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\mu:(\\shHom_{\\sh{S}}(\\sh{M},\\sh{N}))\\supertilde\\to\\shHom_{\\sh{O}_X}(\\widetilde{\\sh{M}},\\widetilde{\\sh{N}})."
+  },
+  {
+    "id": 2340,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Además, si $\\sh{S}$ está generada por $\\sh{S}_1$ \\sref{II.3.1.9}, $\\lambda$ es un isomorfismo;"
+  },
+  {
+    "id": 2341,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "si, además, $\\sh{M}$ admite una presentación finita \\sref{II.3.1.1}, $\\mu$ es un isomorfismo."
+  },
+  {
+    "id": 2342,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "sobre $X=\\Proj(\\sh{S})$ \\sref{II.3.1.8}[(iii)]."
+  },
+  {
+    "id": 2347,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\emph{En todo este apartado suponemos que la $\\sh{O}_Y$-álgebra graduada $\\sh{S}$ está engendrada por $\\sh{S}_1$ \\sref{II.3.1.9}.}",
+    "en_new": "\\emph{En todo este apartado suponemos que la $\\sh{O}_Y$-álgebra graduada $\\sh{S}$ está engendrada por $\\sh{S}_1$} \\sref{II.3.1.9}."
+  },
+  {
+    "id": 2353,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Se sabe \\sref[0]{0.4.2.2} que existe un homomorfismo canónico"
+  },
+  {
+    "id": 2357,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de la exactitud a izquierda del funtor $p_*$ \\sref[0]{0.4.2.1},"
+  },
+  {
+    "id": 2364,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "a cada $\\alpha_n$ le corresponde \\sref[0]{0.4.4.3} un homomorfismo canónico"
+  },
+  {
+    "id": 2366,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "al homomorfismo canónico (de grado~$0$) de $\\sh{O}_Y$-módulos graduados",
+    "en_new": "al homomorfismo canónico (de grado~$0$) de $\\sh{O}_Y$-módulos \\emph{graduados}"
+  },
+  {
+    "id": 2369,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "teniendo en cuenta \\sref[I]{I.1.6.7},"
+  },
+  {
+    "id": 2370,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "corresponde \\sref[I]{I.1.3.8} al homomorfismo de $S_{(f)}$-módulos"
+  },
+  {
+    "id": 2371,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "no se anula \\sref[0]{0.5.5.2}."
+  },
+  {
+    "id": 2372,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "no se anula \\sref[0]{0.5.5.2}."
+  },
+  {
+    "id": 2373,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "sobre $X$ \\sref[0]{0.4.2.1}.)"
+  },
+  {
+    "id": 2375,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es también un $\\sh{O}_Y$-módulo cuasi-coherente (\\sref[I]{I.1.4.1} y \\sref[I]{I.1.3.9});"
+  },
+  {
+    "id": 2376,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref[I]{I.1.4.1} y \\sref[I]{I.1.3.9});",
+    "note": "La repetición del capítulo sigue la convención de \\sref."
+  },
+  {
+    "id": 2377,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "si $X$ es de tipo finito sobre $Y$ \\sref[I]{I.9.2.2}."
+  },
+  {
+    "id": 2379,
+    "decision": "not_applicable",
+    "note": "Solo cambia la agrupación tipográfica de las referencias francesas."
+  },
+  {
+    "id": 2380,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Para todo abierto afín $U$ de $Y$, se tiene (\\sref[I]{I.1.3.9} y \\sref[I]{I.2.5.4})"
+  },
+  {
+    "id": 2383,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "  \\bbGamma_*(\\sh{F})\n  \\xrightarrow{\\alpha}\n  \\bbGamma_*((\\bbGamma_*(\\sh{F}))\\supertilde)\n  \\xrightarrow{\\bbGamma_*(\\beta)}\n  \\bbGamma_*(\\sh{F})"
+  },
+  {
+    "id": 2384,
+    "decision": "not_applicable",
+    "note": "Traslado del encabezamiento respecto al salto de página francés; no se altera la estructura española."
+  },
+  {
+    "id": 2386,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "engendrada por $\\sh{S}_1$ \\sref{II.3.1.9}; supongamos además"
+  },
+  {
+    "id": 2387,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref[I]{I.1.3.9} y \\sref[I]{I.1.3.12})"
+  },
+  {
+    "id": 2388,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref[I]{I.1.3.9} y \\sref[I]{I.1.3.12})",
+    "note": "La repetición del capítulo sigue la convención de \\sref."
+  },
+  {
+    "id": 2389,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "teniendo en cuenta \\sref[I]{I.1.3.9}; cuando $u$"
+  },
+  {
+    "id": 2390,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se dice también que $u$ es un \\emph{(\\textbf{TN})-isomorfismo}.",
+    "en_new": "se dice también que $u$ es un (\\textbf{TN})-isomorfismo."
+  },
+  {
+    "id": 2391,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Si $\\sh{M}$ satisface la condición (\\textbf{TF}),",
+    "en_new": "Si $\\sh{M}$ satisface la condición \\textup{(\\textbf{TF})},"
+  },
+  {
+    "id": 2392,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos que $\\sh{M}$ satisface (\\textbf{TF});",
+    "en_new": "Supongamos que $\\sh{M}$ satisface \\textup{(\\textbf{TF})};"
+  },
+  {
+    "id": 2394,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el homomorfismo canónico $\\beta$ \\sref{II.3.3.4} es un isomorfismo."
+  },
+  {
+    "id": 2395,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.3.4.4},"
+  },
+  {
+    "id": 2148,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "sus sub-$\\sh{S}$-módulos \\emph{graduados} de tipo finito $\\sh{N}_\\lambda$"
+  },
+  {
+    "id": 2149,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "tomando $\\sh{M}=\\bbGamma_*(\\sh{F})$."
+  },
+  {
+    "id": 2150,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "como $X$ es cuasi-compacto (\\sref{II.3.4.1} y \\sref[I]{I.6.3.1}) y $\\sh{F}$ es de tipo finito,"
+  },
+  {
+    "id": 2151,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "uno de los $\\beta(\\widetilde{\\sh{N}}_\\lambda)$ \\sref[0]{0.5.2.3}."
+  },
+  {
+    "id": 2152,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de las hipótesis sobre $Y$ \\sref[I]{I.9.4.9};"
+  },
+  {
+    "id": 2153,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos satisfechas las hipótesis de \\sref{II.3.4.4}, y supongamos además que el espacio subyacente a $Y$ es cuasi-compacto;"
+  },
+  {
+    "id": 2154,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sref[0]{0.4.4.3} es sobreyectivo."
+  },
+  {
+    "id": 2155,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref[0]{0.3.7.1} y \\sref[0]{0.4.4.3}),",
+    "note": "La repetición del capítulo sigue la convención de \\sref."
+  },
+  {
+    "id": 2156,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref[0]{0.3.7.1} y \\sref[0]{0.4.4.3}),"
+  },
+  {
+    "id": 2157,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se explicita de la manera siguiente \\sref[0]{0.4.4.1}:"
+  },
+  {
+    "id": 2158,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\emph{engendrado por sus secciones sobre $X$} \\sref[0]{0.5.5.1}:"
+  },
+  {
+    "id": 2159,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(aplicando \\sref[I]{I.1.4.1} a $p_*(\\sh{F})$)"
+  },
+  {
+    "id": 2161,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sref[0]{0.3.5.4.4};"
+  },
+  {
+    "id": 2162,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos satisfechas las hipótesis de \\sref{II.3.4.4}, y supongamos además que $Y$ es un esquema cuasi-compacto"
+  },
+  {
+    "id": 2164,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sref[I]{I.9.2.2}[b)]",
+    "en_new": "\\sref[I]{I.9.2.2}[\\emph{b)}]"
+  },
+  {
+    "id": 2165,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$p_*(\\sh{F}(n))$ es cuasi-coherente \\sref[I]{I.9.2.2}[b)]"
+  },
+  {
+    "id": 2166,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de las hipótesis sobre $Y$ \\sref[I]{I.9.4.9}."
+  },
+  {
+    "id": 2167,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Se deduce entonces de \\sref{II.3.4.6}, \\sref[0]{0.4.3.2} y \\sref[0]{0.5.2.3}"
+  },
+  {
+    "id": 2168,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Se deduce entonces de \\sref{II.3.4.6}, \\sref[0]{0.4.3.2} y \\sref[0]{0.5.2.3}"
+  },
+  {
+    "id": 2171,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "un morfismo $Y$-afín $\\Phi:G(\\vphi)\\to X'$",
+    "en_new": "un morfismo $Y$-\\emph{afín} $\\Phi:G(\\vphi)\\to X'$"
+  },
+  {
+    "id": 2172,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "al igual que sus componentes homogéneos \\sref[0]{0.5.1.4}."
+  },
+  {
+    "id": 2173,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$(S\\otimes_A A')\\supertilde$ \\sref[I]{I.1.6.5}; la primera afirmación"
+  },
+  {
+    "id": 2174,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "resulta entonces de \\sref{II.2.8.10} y \\sref[I]{I.3.2.6.2},"
+  },
+  {
+    "id": 2175,
+    "decision": "not_applicable",
+    "note": "Supresión de una preposición repetida en francés."
+  },
+  {
+    "id": 2176,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de \\sref{II.2.8.10} y \\sref[I]{I.1.6.5}; de aquí resulta la segunda afirmación,"
+  },
+  {
+    "id": 2177,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Con las notaciones de \\sref{II.3.5.3},"
+  },
+  {
+    "id": 2180,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$X'$ es de tipo finito sobre $Y'$ \\sref[I]{I.6.3.4}."
+  },
+  {
+    "id": 2181,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se deduce entonces de \\sref{II.3.5.4} y \\sref[0]{0.4.3.3}"
+  },
+  {
+    "id": 2182,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el homomorfismo canónico $\\sh{F}(n)\\to\\Psi_*(\\Psi^*(\\sh{F}(n)))$ \\sref[0]{0.4.4.3}."
+  },
+  {
+    "id": 2183,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el homomorfismo canónico \\sref[0]{0.3.7.2} $\\Gamma(q^{-1}(U),\\sh{F}(n))\\to\\Gamma(q'^{-1}(U'),\\sh{F}'(n))$."
+  },
+  {
+    "id": 2185,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\bbGamma_*(\\sh{F}))\\supertilde \\ar[u]^{\\beta_{\\sh{F}}} \\ar[r]_{\\widetilde{\\theta}}"
+  },
+  {
+    "id": 2186,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\bbGamma_*(\\sh{F}'))\\supertilde \\ar[u]_{\\beta_{\\sh{F}'}}"
+  },
+  {
+    "id": 2187,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\bbGamma_*(\\widetilde{\\sh{M}}) \\ar[r]^{\\theta}"
+  },
+  {
+    "id": 2188,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "& \\bbGamma_*(\\widetilde{\\sh{M}'})"
+  },
+  {
+    "id": 2191,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\nu:\\widetilde{\\sh{M}}\\to",
+    "en_new": "\\upsilon:\\widetilde{\\sh{M}}\\to"
+  },
+  {
+    "id": 2192,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "En efecto, $\\nu^\\sharp$ se obtiene",
+    "en_new": "En efecto, $\\upsilon^\\sharp$ se obtiene"
+  },
+  {
+    "id": 2193,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\nu^\\sharp$ es un \\emph{isomorfismo}.",
+    "en_new": "$\\upsilon^\\sharp$ es un \\emph{isomorfismo}."
+  },
+  {
+    "id": 2194,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es un \\emph{isomorfismo}."
+  },
+  {
+    "id": 2195,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\nu:\\sh{O}_X(n)\\to",
+    "en_new": "\\upsilon:\\sh{O}_X(n)\\to"
+  },
+  {
+    "id": 2199,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "al caso en que $\\vphi$ es \\emph{sobreyectivo} (resp. \\emph{inyectivo}, \\emph{biyectivo})."
+  },
+  {
+    "id": 2202,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "diremos también que es un \\emph{\\textbf{(TN)}-isomorfismo}."
+  },
+  {
+    "id": 2203,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "un homomorfismo \\textbf{(TN)}-sobreyectivo de $\\sh{O}_Y$-álgebras graduadas,",
+    "en_new": "un homomorfismo \\textup{\\textbf{(TN)}}-sobreyectivo de $\\sh{O}_Y$-álgebras graduadas,"
+  },
+  {
+    "id": 2204,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\Phi=\\Proj(\\vphi)$ \\sref{II.3.5.1} está definido"
+  },
+  {
+    "id": 2802,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "la imagen inversa de $\\bbGamma_*(\\sh{I})$"
+  },
+  {
+    "id": 2803,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\alpha:\\sh{S}\\to\\bbGamma_*(\\sh{O}_X)$"
+  },
+  {
+    "id": 2804,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\alpha:\\sh{S}\\to\\bbGamma_*(\\sh{O}_X)$ \\sref{II.3.3.2},"
+  },
+  {
+    "id": 2805,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Entonces $X'$ es el subpreesquema asociado \\sref[I]{I.4.2.1} a la inmersión cerrada"
+  },
+  {
+    "id": 2806,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\Gamma(U,\\sh{S})\\to\\Gamma(U,\\sh{S}')$ es sobreyectivo \\sref[I]{I.1.3.9},"
+  },
+  {
+    "id": 2807,
+    "decision": "not_applicable",
+    "note": "Coma de la sintaxis francesa."
+  },
+  {
+    "id": 2808,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las condiciones de \\sref{II.3.6.2}[(i)],"
+  },
+  {
+    "id": 2809,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "que prolonga $u$ \\sref{II.1.7.4}."
+  },
+  {
+    "id": 2813,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Entonces $q^*(\\sh{S})=(S\\otimes_A B)\\supertilde$ \\sref[I]{I.1.6.5};"
+  },
+  {
+    "id": 2816,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de $r_{\\sh{L},\\psi}$ corresponde \\sref[I]{I.2.2.4} al homomorfismo de álgebras"
+  },
+  {
+    "id": 2818,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en otras palabras, la cuestión es local sobre $Y$.",
+    "en_new": "en otras palabras, la cuestión es \\emph{local} sobre $Y$."
+  },
+  {
+    "id": 2819,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.3.7.3}, para que $r_{\\sh{L},\\psi}$ esté definido en todas partes,"
+  }
+]
+```
+
+II_CURRENT/EGA_II_es_current.tex, II 58, 3.3.4: `\sref[I]{I.2.5.4}` remite al capítulo I; el pasaje francés remite a II, 2.5.4.
+II_CURRENT/EGA_II_es_current.tex, II 64, 3.5.6: «para todo $\sh{O}_Y$-módulo graduado cuasi-coherente» debería decir «para todo $\sh{S}$-módulo graduado cuasi-coherente».

@@ -1,0 +1,3582 @@
+# Spanish hand pass, current_018: 147 items on 5 printed pages
+
+=================== PAGE 0\textsubscript{III} 41 ===================
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 40 -----
+\oldpage[0\textsubscript{III}]{40}
+Supongamos que $T$ es un funtor covariante aditivo de $\cat{C}$ en una categoría abeliana $\cat{C}'$.
+La \emph{hiperhomología} $\LL_\bullet T(K_\bullet)$ y las \emph{sucesiones espectrales de hiperhomología} de $T$ con respecto a un complejo $K_\bullet$ de $\cat{C}$ (cuando existen) se definen a partir de \sref{0.11.4.3}, de nuevo ``invirtiendo las flechas''.
+Los términos $E^2$ de las dos sucesiones espectrales así obtenidas son
+\[
+\label{0.11.6.2.1}
+\tag{11.6.2.1}
+  {}'E^2_{pq}
+  =\HH_p(\LL_qT(K_\bullet))
+\]
+y
+\[
+\label{0.11.6.2.2}
+\tag{11.6.2.2}
+  {}''E^2_{pq}
+  =\LL_pT(\HH_q(K_\bullet))
+\]
+donde $\LL_pT$ denota el funtor derivado por la izquierda de grado $p$ de $T$ para $p\geq0$, y cero para $p<0$, mientras que $\LL_qT(K_\bullet)$ denota el complejo $(\LL_qT(K_i))_{i\in\bb{Z}}$.
+
+Las propiedades de la hiperhomología no se deducen todas de las de la hipercohomología con solo ``invertir las flechas'' (a menos que se impongan a $\cat{C}'$ hipótesis adicionales de tipo AB~5*) de T, 1.5).
+La razón son las condiciones de regularidad de las dos sucesiones espectrales anteriores, a las que ahora hay que aplicar los criterios de \sref{0.11.3.4}.
+Estos criterios muestran que, si los límites inductivos filtrantes existen y son exactos en $\cat{C}'$, entonces existe el complejo definido por el bicomplejo $T(L_{\bullet\bullet})$ y la \emph{segunda} sucesión espectral ${}''E(T(L_{\bullet\bullet}))$ es regular.
+Si $K_\bullet$ está acotado inferiormente o existe un entero $n$ tal que todo objeto de $\cat{C}$ admite una resolución proyectiva de longitud a lo sumo $n$, entonces las \emph{dos} sucesiones espectrales de hiperhomología existen (sin hipótesis alguna sobre $\cat{C}'$) y son birregulares.
+\end{env}
+
+\begin{proposition}[11.6.3]
+\label{0.11.6.3}
+Sean $\cat{C}$ y $\cat{C}'$ dos categorías abelianas, y sea $T$ un funtor covariante aditivo de $\cat{C}$ en $\cat{C}'$.
+Entonces:
+\begin{enumerate}
+  \item[{\rm(i)}] {La hiperhomología $\LL_\bullet T(K_\bullet)$ es un funtor homológico sobre la categoría abeliana de los complejos de $\cat{C}$ acotados inferiormente.}
+
+  \item[{\rm(ii)}] {Sea $K_\bullet$ un complejo de $\cat{C}$ acotado inferiormente.
+  Si $\LL_nT(K_i)=0$ para todo $n>0$ y todo $i\in\bb{Z}$, existen isomorfismos funtoriales}
+  \[
+  \label{0.11.6.3.1}
+  \tag{11.6.3.1}
+    \LL_iT(K_\bullet)
+    \simto
+    \HH_i(T(K_\bullet))
+    \qquad(i\in\bb{Z}).
+  \]
+
+  \item[{\rm(iii)}] {Sea $K_\bullet$ un complejo de $\cat{C}$ acotado inferiormente.
+  Sea $L_{\bullet\bullet}=(L_{ij})$ un bicomplejo tal que $L_{ij}=0$ para $j<0$ y, para todo $i$, $L_{i,\bullet}$ es una resolución de $K_i$.
+  Supongamos además que $\LL_nT(L_{ij})=0$ para todo par $(i,j)$ y todo $n>0$.
+  Entonces existe un isomorfismo funtorial}
+  \[
+  \label{0.11.6.3.2}
+  \tag{11.6.3.2}
+    \LL_\bullet T(K_\bullet)
+    \simto
+    \HH_\bullet(T(L_{\bullet\bullet}))
+  \]
+\end{enumerate}
+
+Las demostraciones proceden como las de \sref{0.11.5.2}, \sref{0.11.4.5} y \sref{0.11.5.3} en el caso de complejos acotados inferiormente.
+Dejamos al lector los detalles de estos razonamientos.
+\end{proposition}
+
+\begin{env}[11.6.4]
+\label{0.11.6.4}
+Se tienen resultados enteramente análogos para los multifuntores covariantes aditivos en cada argumento.
+Por ejemplo, para un bifuntor $T$, las dos sucesiones espectrales de hiperhomología tienen términos $E^2$
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 41 -----
+\oldpage[0\textsubscript{III}]{41}
+\[
+\label{0.11.6.4.1}
+\tag{11.6.4.1}
+  {}'E^2_{pq}
+  =\HH_p(\LL_qT(K_\bullet,K'_\bullet))
+\]
+y
+\[
+\label{0.11.6.4.2}
+\tag{11.6.4.2}
+  {}''E^2_{pq}
+  =
+  \sum_{q'+q''=q}
+  \LL_pT(\HH_{q'}(K_\bullet),\HH_{q''}(K'_\bullet)).
+\]
+También aquí es la \emph{segunda} sucesión espectral la que es regular.
+Las dos sucesiones son birregulares cuando $K_\bullet$ y $K'_\bullet$ están acotados inferiormente, o cuando los objetos de las categorías abelianas consideradas admiten resoluciones proyectivas de una longitud fija.
+
+Además:
+\end{env}
+
+\begin{proposition}[11.6.5]
+\label{0.11.6.5}
+Sean $\cat{C}$, $\cat{C}'$ y $\cat{C}''$ tres categorías abelianas, y sea $T$ un bifuntor covariante biaditivo de $\cat{C}\times\cat{C}'$ en $\cat{C}''$.
+\begin{enumerate}
+  \item[{\rm(i)}] {$\LL_\bullet T(K_\bullet,K'_\bullet)$ es un bifuntor homológico en cada uno de los complejos acotados inferiormente $K_\bullet,K'_\bullet$, formados respectivamente por objetos de $\cat{C}$ y de $\cat{C}'$.}
+
+  \item[{\rm(ii)}] {Supongamos que $K_\bullet$ y $K'_\bullet$ están acotados inferiormente.
+  Sean $L_{\bullet\bullet}=(L_{ij})$ y $L'_{\bullet\bullet}=(L'_{ij})$ dos bicomplejos tales que $L_{ij}=L'_{ij}=0$ para $j<0$ y tales que, para todo $i$, $L_{i,\bullet}$ es una resolución de $K_i$ y $L'_{i,\bullet}$ es una resolución de $K'_i$.
+  Supongamos finalmente que $\LL_nT(L_{ij},L'_{hk})=0$ para todo $n>0$ y todo sistema de índices $(i,j,h,k)$.
+  Entonces existe un isomorfismo funtorial}
+  \[
+  \label{0.11.6.5.1}
+  \tag{11.6.5.1}
+    \LL_\bullet T(K_\bullet,K'_\bullet)
+    \simto
+    \HH_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet})).
+  \]
+
+  \item[{\rm(iii)}] {Supongamos además que, para todo par $(i,j)$ y todo par $(h,k)$, los funtores
+  \[
+    A\longmapsto T(A,L'_{hk}),
+    \qquad
+    A'\longmapsto T(L_{ij},A')
+  \]
+  son exactos en $\cat{C}$ y $\cat{C}'$, respectivamente.
+  Entonces existen isomorfismos funtoriales}
+  \[
+  \label{0.11.6.5.2}
+  \tag{11.6.5.2}
+    \LL_\bullet T(K_\bullet,K'_\bullet)
+    \simto
+    \HH_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+    \simto
+    \HH_\bullet(T(K_\bullet,L'_{\bullet\bullet})).
+  \]
+\end{enumerate}
+
+Las demostraciones son análogas a las de \sref{0.11.5.5} y \sref{0.11.5.6}.
+\end{proposition}
+
+\subsection{Hiperhomología de un funtor con respecto a un bicomplejo $K_{\bullet\bullet}$}
+\label{subsection:0.11.7}
+
+\begin{env}[11.7.1]
+\label{0.11.7.1}
+Sea $\cat{C}$ una categoría abeliana en la que todo objeto es cociente de un
+objeto proyectivo.
+Consideremos un bicomplejo $K_{\bullet\bullet}=(K_{ij})$ de objetos de $\cat{C}$ cuyos
+dos grados están acotados inferiormente.
+Podemos limitarnos siempre al caso en que $K_{ij}=0$ para $i<0$ o
+$j<0$, y así lo haremos en lo sucesivo.
+Podemos considerar $K_{\bullet\bullet}$ como un complejo ordinario formado por los
+objetos
+\[
+  K_{i,\bullet}=(K_{ij})_{j\geq 0}
+\]
+de la categoría abeliana $\cat{K}$ de los complejos no negativos de objetos de
+$\cat{C}$.
+Del Lema~\sref{0.11.5.2.1} (o, más precisamente, del lema
+``dual'' obtenido ``invirtiendo las flechas'') y de (M,~V,~2.2) se deduce
+que $K_{\bullet\bullet}$ admite una \emph{resolución de Cartan--Eilenberg
+proyectiva} en la categoría $\cat{K}$.
+Una tal resolución es un tricomplejo
+$M_{\bullet\bullet\bullet}=(M_{ijk})$ en $\cat{C}$, todos cuyos grados son
+no negativos y cuyos objetos son proyectivos, tal que, para todo $i$,
+\[
+  M_{i,\bullet\bullet},\qquad
+  \mathrm{B}^{\mathrm{I}}_i(M_{\bullet\bullet\bullet}),\qquad
+  \mathrm{Z}^{\mathrm{I}}_i(M_{\bullet\bullet\bullet}),\qquad
+  \HH^{\mathrm{I}}_i(M_{\bullet\bullet\bullet})
+\]
+son resoluciones proyectivas en $\cat{K}$, respectivamente, de
+\[
+  K_{i,\bullet},\qquad
+  \mathrm{B}^{\mathrm{I}}_i(K_{\bullet\bullet}),\qquad
+  \mathrm{Z}^{\mathrm{I}}_i(K_{\bullet\bullet}),\qquad
+  \HH^{\mathrm{I}}_i(K_{\bullet\bullet}).
+\]
+En particular, para todo par $(i,j)$, $M_{ij,\bullet}$ es una resolución
+proyectiva de $K_{ij}$ en $\cat{C}$.
+\end{env}
+
+\begin{proposition}[11.7.2]
+\label{0.11.7.2}
+Sea $T$ un funtor covariante aditivo de $\cat{C}$ en una categoría
+abeliana $\cat{C}'$.
+Con la notación de \sref{0.11.7.1}, la homología
+\[
+  \HH_\bullet\bigl(T(M_{\bullet\bullet\bullet})\bigr)
+\]
+del complejo simple asociado al tricomplejo
+$T(M_{\bullet\bullet\bullet})$ es canónicamente isomorfa a la
+hiperhomología $\LL_\bullet T(K_{\bullet\bullet})$ del
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 42 -----
+\oldpage[0\textsubscript{III}]{42}
+complejo simple asociado a $K_{\bullet\bullet}$
+\sref{0.11.6.2}.
+Es también el término límite común de seis sucesiones espectrales birregulares denotadas
+${}^{(t)}\mathrm{E}$, donde $t=a,b,a',b',c$ o $d$, cuyos
+términos $\mathrm{E}^2$ son
+\[
+\begin{aligned}
+  {}^{(a)}\mathrm{E}^2_{pq}
+    &= \LL_pT\bigl(\HH_q(K_{\bullet\bullet})\bigr),\\
+  {}^{(b)}\mathrm{E}^2_{pq}
+    &= \HH_p\bigl(\LL^{\mathrm{II}}_qT(K_{\bullet\bullet})\bigr),\\
+  {}^{(a')}\mathrm{E}^2_{pq}
+    &= \LL_pT\bigl(\HH^{\mathrm{I}}_q(K_{\bullet\bullet})\bigr),\\
+  {}^{(b')}\mathrm{E}^2_{pq}
+    &= \HH_p\bigl(\LL_qT(K_{\bullet\bullet})\bigr),\\
+  {}^{(c)}\mathrm{E}^2_{pq}
+    &= \LL_pT\bigl(\HH^{\mathrm{II}}_q(K_{\bullet\bullet})\bigr),\\
+  {}^{(d)}\mathrm{E}^2_{pq}
+    &= \HH_p\bigl(\LL^{\mathrm{I}}_qT(K_{\bullet\bullet})\bigr).
+\end{aligned}
+\]
+\end{proposition}
+
+Recordemos que, para un complejo $A_\bullet=(A_i)$, utilizamos la notación
+$F(A_\bullet)$ para el complejo cuyos objetos son los $F(A_i)$.
+Por ejemplo, $\LL^{\mathrm{II}}_qT(K_{\bullet\bullet})$ denota el complejo
+\[
+  \bigl(\LL^{\mathrm{II}}_qT(K_{i,\bullet})\bigr)_{i\geq 0},
+\]
+donde $\LL^{\mathrm{II}}_qT(K_{i,\bullet})$ es la hiperhomología de índice
+$q$ del funtor $T$ relativa al complejo simple $K_{i,\bullet}$.
+
+\begin{proof}
+Sea $L_\bullet$ el complejo simple asociado a
+$K_{\bullet\bullet}$, de modo que
+\[
+  L_i=\bigoplus_{r+s=i}K_{rs},
+\]
+y pongamos
+\[
+  N_{ij}=\bigoplus_{r+s=i}M_{rsj}.
+\]
+Está claro que, para todo $i$, $N_{i,\bullet}$ es una resolución proyectiva
+de $L_i$ en $\cat{C}$.
+De \sref{0.11.6.3} y \sref{0.11.6.4} se deduce que existe un
+isomorfismo funtorial
+\[
+  \LL_\bullet T(L_\bullet)
+  \isoto
+  \HH_\bullet\bigl(T(N_{\bullet\bullet})\bigr).
+\]
+Como el complejo simple asociado al bicomplejo
+$T(N_{\bullet\bullet})$ es también el complejo simple asociado al
+tricomplejo $T(M_{\bullet\bullet\bullet})$, esto demuestra la primera aserción.
+
+Además, $\LL_\bullet T(L_\bullet)$ es el término límite de las dos
+sucesiones espectrales de hiperhomología \sref{0.11.6.2} de $T$ relativas al
+complejo simple $L_\bullet$.
+Estas son precisamente ${}^{(b')}\mathrm{E}$ y ${}^{(a)}\mathrm{E}$,
+respectivamente.
+
+Consideremos ahora $M_{\bullet\bullet\bullet}$ como un bicomplejo
+$U_{\bullet\bullet}$, donde
+\[
+  U_{ij}=\bigoplus_{r+s=j}M_{irs}.
+\]
+La homología $\HH_\bullet(T(M_{\bullet\bullet\bullet}))$ es también la
+término límite de las dos sucesiones espectrales del bicomplejo
+$T(U_{\bullet\bullet})$.
+Para todo $i$, el bicomplejo $M_{i,\bullet\bullet}$ satisface las
+hipótesis de \sref{0.11.6.3} relativas al complejo simple
+$K_{i,\bullet}$.
+Por consiguiente,
+\[
+  \HH^{\mathrm{II}}_q\bigl(T(U_{i,\bullet})\bigr)
+  =
+  \LL^{\mathrm{II}}_qT(K_{i,\bullet}),
+\]
+y la primera sucesión espectral de $T(U_{\bullet\bullet})$ es precisamente
+${}^{(b)}\mathrm{E}$.
+
+Por otra parte, para todo $r$, $M_{\bullet,r,\bullet}$ es una
+resolución de Cartan--Eilenberg del complejo simple $K_{\bullet,r}$.
+El cálculo efectuado en (M,~XV,~2) muestra que
+\[
+  \HH^{\mathrm{I}}_q\bigl(T(M_{\bullet,rs})\bigr)
+  =
+  T\bigl(\HH^{\mathrm{I}}_q(M_{\bullet,rs})\bigr),
+\]
+y, por tanto,
+\[
+  \HH^{\mathrm{I}}_q\bigl(T(U_{\bullet,j})\bigr)
+  =
+  \bigoplus_{r+s=j}
+  T\bigl(\HH^{\mathrm{I}}_q(M_{\bullet,rs})\bigr).
+\]
+En otras palabras, el complejo simple
+$\HH^{\mathrm{I}}_q(T(U_{\bullet\bullet}))$ es el complejo simple
+asociado al bicomplejo
+$T(\HH^{\mathrm{I}}_q(M_{\bullet\bullet\bullet}))$.
+Para todo $q$, $\HH^{\mathrm{I}}_q(M_{\bullet\bullet\bullet})$ es una
+resolución proyectiva en $\cat{K}$ del complejo simple
+$\HH^{\mathrm{I}}_q(K_{\bullet\bullet})$.
+Aplicando \sref{0.11.6.3}, obtenemos
+\[
+  \HH^{\mathrm{II}}_p
+  \bigl(T(\HH^{\mathrm{I}}_q(M_{\bullet\bullet\bullet}))\bigr)
+  =
+  \LL_pT\bigl(\HH^{\mathrm{I}}_q(K_{\bullet\bullet})\bigr),
+\]
+y, por tanto, la sucesión espectral ${}^{(a')}\mathrm{E}$.
+Finalmente, las sucesiones espectrales ${}^{(c)}\mathrm{E}$ y
+${}^{(d)}\mathrm{E}$ se obtienen intercambiando los papeles de los
+índices $i$ y $j$ en la definición del tricomplejo
+$M_{\bullet\bullet\bullet}$ y aplicando los razonamientos anteriores al
+tricomplejo resultante.
+\end{proof}
+
+Llamamos a $\LL_\bullet T(K_{\bullet\bullet})$ la \emph{hiperhomología} de
+$T$ relativa al bicomplejo $K_{\bullet\bullet}$.
+
+\begin{env}[11.7.3]
+\label{0.11.7.3}
+\emph{Observaciones}.
+\begin{enumerate}
+  \item[{\rm(i)}]
+  De \sref{0.11.6.3} se deduce que
+  $\LL_\bullet T(K_{\bullet\bullet})$ es un funtor homológico sobre la
+  categoría de los bicomplejos $K_{\bullet\bullet}$ en $\cat{C}$ que están
+  acotados inferiormente en cada grado.
+----- French corrections on page 0\textsubscript{III} 41 -----
+[id 4860]
+OLD: c'est la seconde suite spectrale
+NEW: c'est la \emph{seconde} suite spectrale
+FRENCH CONTEXT (corrected): nnés par
+\oldpage[0\textsubscript{III}]{41}
+\[
+\label{0.11.6.4.1-fr}
+\tag{11.6.4.1}
+{}'E^2_{pq}=H_p(L_qT(K_\bullet,K'_\bullet))
+\]
+\[
+\label{0.11.6.4.2-fr}
+\tag{11.6.4.2}
+{}''E^2_{pq}=
+\sum_{q'+q''=q}L_pT(H_{q'}(K_\bullet),H_{q''}(K'_\bullet)).
+\]
+Ici encore, c'est la \emph{seconde} suite spectrale qui est régulière, les deux
+suites étant birégulières lorsqu'il s'agit de complexes $K_\bullet$,
+$K'_\bullet$ limités inférieurement, ou quand les objets des catégories
+abéliennes que l'on considère ont des résolutions projectives de longueur
+fixée.
+
+En outre
+
+[id 4862]
+OLD: $L_\bullet T(K_\bullet,K'_\bullet)$ est un bifoncteur
+NEW: $\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)$ est un bifoncteur
+FRENCH CONTEXT (corrected): [11.6.5]
+\label{0.11.6.5-fr}
+Soient $\boldsymbol{C}$, $\boldsymbol{C}'$, $\boldsymbol{C}''$ trois catégories
+abéliennes, $T$ un bifoncteur covariant biadditif de
+$\boldsymbol{C}\times\boldsymbol{C}'$ dans $\boldsymbol{C}''$.
+\begin{enumerate}
+\item[{\rm(i)}] {$\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)$ est un bifoncteur
+homologique en chacun des complexes limités inférieurement $K_\bullet$,
+$K'_\bullet$ (formés respectivement d'objets de $\boldsymbol{C}$ et d'objets de
+$\boldsymbol{C}'$).}
+\item[{\rm(ii)}] {Supposons $K_\bullet$ et $K'_\bullet$ limités
+inférieurement. Soient
+
+[id 4864]
+OLD: $K'_i$ et enfin que
+NEW: $K'_i$, et enfin que
+FRENCH CONTEXT (corrected): limités
+inférieurement. Soient $L_{\bullet\bullet}=(L_{ij})$,
+$L'_{\bullet\bullet}=(L'_{ij})$ deux bicomplexes tels que $L_{ij}=0$ et
+$L'_{ij}=0$ pour $j<0$, que pour tout $i$, $L_{i,\bullet}$ soit une
+résolution de $K_i$ et $L'_{i,\bullet}$ une résolution de $K'_i$, et enfin que
+$L_nT(L_{ij},L'_{hk})=0$ pour $n>0$ et tout système $(i,j,h,k)$. Alors on a
+un isomorphisme fonctoriel}
+\[
+\label{0.11.6.5.1-fr}
+\tag{11.6.5.1}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet})).
+
+[id 4865]
+OLD: \tag{11.6.5.1}
+L_\bullet T
+NEW: \tag{11.6.5.1}
+\mathbf{L}_\bullet T
+FRENCH CONTEXT (corrected):  $j<0$, que pour tout $i$, $L_{i,\bullet}$ soit une
+résolution de $K_i$ et $L'_{i,\bullet}$ une résolution de $K'_i$, et enfin que
+$L_nT(L_{ij},L'_{hk})=0$ pour $n>0$ et tout système $(i,j,h,k)$. Alors on a
+un isomorphisme fonctoriel}
+\[
+\label{0.11.6.5.1-fr}
+\tag{11.6.5.1}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet})).
+\]
+\item[{\rm(iii)}] {Supposons en outre que pour tout couple $(i,j)$ et
+tout couple $(h,k)$, les foncteurs
+$A\leadsto T(A,L'_{hk})$ et $A'\leadsto T(L_{ij},A')$
+so
+
+[id 4866]
+OLD: \simeq H_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet}))
+NEW: \xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet}))
+FRENCH CONTEXT (corrected): tion de $K_i$ et $L'_{i,\bullet}$ une résolution de $K'_i$, et enfin que
+$L_nT(L_{ij},L'_{hk})=0$ pour $n>0$ et tout système $(i,j,h,k)$. Alors on a
+un isomorphisme fonctoriel}
+\[
+\label{0.11.6.5.1-fr}
+\tag{11.6.5.1}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet})).
+\]
+\item[{\rm(iii)}] {Supposons en outre que pour tout couple $(i,j)$ et
+tout couple $(h,k)$, les foncteurs
+$A\leadsto T(A,L'_{hk})$ et $A'\leadsto T(L_{ij},A')$
+soient exacts dans $\boldsymbol{C}$ et $\boldsymbol{C}'$ respectivement. Alors on a
+des isomorph
+
+[id 4868]
+OLD: les foncteurs
+\[
+A\longmapsto T(A,L'_{hk}),\qquad
+A'\longmapsto T(L_{ij},A')
+\]
+NEW: les foncteurs
+$A\leadsto T(A,L'_{hk})$ et $A'\leadsto T(L_{ij},A')$
+FRENCH CONTEXT (corrected): nctoriel}
+\[
+\label{0.11.6.5.1-fr}
+\tag{11.6.5.1}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},L'_{\bullet\bullet})).
+\]
+\item[{\rm(iii)}] {Supposons en outre que pour tout couple $(i,j)$ et
+tout couple $(h,k)$, les foncteurs
+$A\leadsto T(A,L'_{hk})$ et $A'\leadsto T(L_{ij},A')$
+soient exacts dans $\boldsymbol{C}$ et $\boldsymbol{C}'$ respectivement. Alors on a
+des isomorphismes fonctoriels}
+\[
+\label{0.11.6.5.2-fr}
+\tag{11.6.5.2}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},K'_\bullet)
+
+[id 4869]
+OLD: \tag{11.6.5.2}
+L_\bullet T
+NEW: \tag{11.6.5.2}
+\mathbf{L}_\bullet T
+FRENCH CONTEXT (corrected): ue pour tout couple $(i,j)$ et
+tout couple $(h,k)$, les foncteurs
+$A\leadsto T(A,L'_{hk})$ et $A'\leadsto T(L_{ij},A')$
+soient exacts dans $\boldsymbol{C}$ et $\boldsymbol{C}'$ respectivement. Alors on a
+des isomorphismes fonctoriels}
+\[
+\label{0.11.6.5.2-fr}
+\tag{11.6.5.2}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+\xrightarrow{\sim} H_\bullet(T(K_\bullet,L'_{\bullet\bullet})).
+\]
+\end{enumerate}
+\upshape Les démonstrations sont analogues à celles de
+(\hyperref[0.11.5.5-fr]{11.5.5}) et 
+
+[id 4870]
+OLD: \simeq H_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+NEW: \xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+FRENCH CONTEXT (corrected): ncteurs
+$A\leadsto T(A,L'_{hk})$ et $A'\leadsto T(L_{ij},A')$
+soient exacts dans $\boldsymbol{C}$ et $\boldsymbol{C}'$ respectivement. Alors on a
+des isomorphismes fonctoriels}
+\[
+\label{0.11.6.5.2-fr}
+\tag{11.6.5.2}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+\xrightarrow{\sim} H_\bullet(T(K_\bullet,L'_{\bullet\bullet})).
+\]
+\end{enumerate}
+\upshape Les démonstrations sont analogues à celles de
+(\hyperref[0.11.5.5-fr]{11.5.5}) et (\hyperref[0.11.5.6-fr]{11.5.6}).
+\end{proposition}
+
+\subsection{Hyperhomologie d'un 
+
+[id 4871]
+OLD: \simeq H_\bullet(T(K_\bullet,L'_{\bullet\bullet}))
+NEW: \xrightarrow{\sim} H_\bullet(T(K_\bullet,L'_{\bullet\bullet}))
+FRENCH CONTEXT (corrected): oient exacts dans $\boldsymbol{C}$ et $\boldsymbol{C}'$ respectivement. Alors on a
+des isomorphismes fonctoriels}
+\[
+\label{0.11.6.5.2-fr}
+\tag{11.6.5.2}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+\xrightarrow{\sim} H_\bullet(T(K_\bullet,L'_{\bullet\bullet})).
+\]
+\end{enumerate}
+\upshape Les démonstrations sont analogues à celles de
+(\hyperref[0.11.5.5-fr]{11.5.5}) et (\hyperref[0.11.5.6-fr]{11.5.6}).
+\end{proposition}
+
+\subsection{Hyperhomologie d'un foncteur par rapport à un bicomplexe
+$K_{\bullet\bullet}$}
+\lab
+
+[id 4872]
+OLD: Les démonstrations sont analogues
+NEW: \upshape Les démonstrations sont analogues
+FRENCH CONTEXT (corrected): des isomorphismes fonctoriels}
+\[
+\label{0.11.6.5.2-fr}
+\tag{11.6.5.2}
+\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)
+\xrightarrow{\sim} H_\bullet(T(L_{\bullet\bullet},K'_\bullet))
+\xrightarrow{\sim} H_\bullet(T(K_\bullet,L'_{\bullet\bullet})).
+\]
+\end{enumerate}
+\upshape Les démonstrations sont analogues à celles de
+(\hyperref[0.11.5.5-fr]{11.5.5}) et (\hyperref[0.11.5.6-fr]{11.5.6}).
+\end{proposition}
+
+\subsection{Hyperhomologie d'un foncteur par rapport à un bicomplexe
+$K_{\bullet\bullet}$}
+\label{subsection:0.11.7-fr}
+
+\begin{env}[11.7.1]
+\label{0.11.7.1-f
+
+[id 4873]
+OLD: degrés sont limités inférieurement;
+NEW: degrés sont \emph{limités inférieurement};
+FRENCH CONTEXT (corrected): fr}
+
+\begin{env}[11.7.1]
+\label{0.11.7.1-fr}
+Soit $\boldsymbol{C}$ une catégorie abélienne dans laquelle tout objet est
+quotient d'un objet projectif. Considérons un bicomplexe
+$K_{\bullet\bullet}=(K_{ij})$ formé d'objets de $\boldsymbol{C}$, et dont les deux
+degrés sont \emph{limités inférieurement}; on peut toujours se borner au cas où
+$K_{ij}=0$ pour $i<0$ ou $j<0$, et c'est ce que nous ferons désormais. On
+peut considérer $K_{\bullet\bullet}$ comme un complexe (simple) formé
+d'objets $K_{i,\bullet}=(K_{ij})_{j\geq 0}$ de la catégorie abélienne
+$\boldsy
+
+[id 4874]
+OLD: est un
+tricomplexe $M
+NEW: est un
+\emph{tricomplexe} $M
+FRENCH CONTEXT (corrected): rref[0.11.5.2.1-fr]{11.5.2.1}) (ou plutôt du lemme
+«~dual~» obtenu par «~renversement des flèches~») et de (M, V, 2.2) que
+$K_{\bullet\bullet}$ admet une \emph{résolution projective de
+Cartan-Eilenberg} dans la catégorie $\boldsymbol{K}$; une telle résolution est un
+\emph{tricomplexe} $M_{\bullet\bullet\bullet}=(M_{ijk})$ de $\boldsymbol{C}$, à degrés
+tous $\geq 0$, formé d'objets projectifs, tel que pour tout $i$,
+$M_{i,\bullet\bullet}$, $\mathrm B_i^{\mathrm I}(M_{\bullet\bullet\bullet})$,
+$\mathrm Z_i^{\mathrm I}(M_{\bullet\bullet\bullet})
+
+[id 4875]
+OLD: constituent des résolutions
+projectives de
+NEW: constituent des \emph{résolutions
+projectives} de
+FRENCH CONTEXT (corrected): bol{C}$, à degrés
+tous $\geq 0$, formé d'objets projectifs, tel que pour tout $i$,
+$M_{i,\bullet\bullet}$, $\mathrm B_i^{\mathrm I}(M_{\bullet\bullet\bullet})$,
+$\mathrm Z_i^{\mathrm I}(M_{\bullet\bullet\bullet})$,
+$H_i^{\mathrm I}(M_{\bullet\bullet\bullet})$ constituent des \emph{résolutions
+projectives} de $K_{i,\bullet}$,
+$\mathrm B_i^{\mathrm I}(K_{\bullet\bullet})$,
+$\mathrm Z_i^{\mathrm I}(K_{\bullet\bullet})$,
+$H_i^{\mathrm I}(K_{\bullet\bullet})$ respectivement dans la catégorie
+$\boldsymbol{K}$; en particulier, pour tout couple $(i,j)$,
+$M_{ij,\bullet}$ 
+
+[id 4876]
+OLD: est une résolution projective de $K_{ij}$
+NEW: est une \emph{résolution projective} de $K_{ij}$
+FRENCH CONTEXT (corrected):  $K_{i,\bullet}$,
+$\mathrm B_i^{\mathrm I}(K_{\bullet\bullet})$,
+$\mathrm Z_i^{\mathrm I}(K_{\bullet\bullet})$,
+$H_i^{\mathrm I}(K_{\bullet\bullet})$ respectivement dans la catégorie
+$\boldsymbol{K}$; en particulier, pour tout couple $(i,j)$,
+$M_{ij,\bullet}$ est une \emph{résolution projective} de $K_{ij}$ dans
+$\boldsymbol{C}$.
+\end{env}
+
+\begin{proposition}[11.7.2]
+\label{0.11.7.2-fr}
+Soit $T$ un foncteur covariant additif de $\boldsymbol{C}$ dans une catégorie
+abélienne $\boldsymbol{C}'$. Avec les notations de
+\textup{(\hyperref[0.11.7.1-fr]{11.7.1})}, {l'ho
+
+[id 4877]
+OLD: (\hyperref[0.11.7.1-fr]{11.7.1})
+NEW: \textup{(\hyperref[0.11.7.1-fr]{11.7.1})}
+FRENCH CONTEXT (corrected): est une \emph{résolution projective} de $K_{ij}$ dans
+$\boldsymbol{C}$.
+\end{env}
+
+\begin{proposition}[11.7.2]
+\label{0.11.7.2-fr}
+Soit $T$ un foncteur covariant additif de $\boldsymbol{C}$ dans une catégorie
+abélienne $\boldsymbol{C}'$. Avec les notations de
+\textup{(\hyperref[0.11.7.1-fr]{11.7.1})}, {l'homologie
+$H_\bullet(T(M_{\bullet\bullet\bullet}))$ du complexe simple associé au
+tricomplexe $T(M_{\bullet\bullet\bullet})$ est canoniquement isomorphe à
+l'hyperhomologie $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ du complexe
+\oldpage[0\textsubscript{III
+
+[id 4878]
+OLD: \emph{l'homologie
+NEW: {l'homologie
+FRENCH CONTEXT (corrected): {ij}$ dans
+$\boldsymbol{C}$.
+\end{env}
+
+\begin{proposition}[11.7.2]
+\label{0.11.7.2-fr}
+Soit $T$ un foncteur covariant additif de $\boldsymbol{C}$ dans une catégorie
+abélienne $\boldsymbol{C}'$. Avec les notations de
+\textup{(\hyperref[0.11.7.1-fr]{11.7.1})}, {l'homologie
+$H_\bullet(T(M_{\bullet\bullet\bullet}))$ du complexe simple associé au
+tricomplexe $T(M_{\bullet\bullet\bullet})$ est canoniquement isomorphe à
+l'hyperhomologie $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ du complexe
+\oldpage[0\textsubscript{III}]{42}
+simple 
+
+[id 4879]
+OLD: $L_\bullet T(K_{\bullet\bullet})$ du complexe
+NEW: $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ du complexe
+FRENCH CONTEXT (corrected):  $\boldsymbol{C}'$. Avec les notations de
+\textup{(\hyperref[0.11.7.1-fr]{11.7.1})}, {l'homologie
+$H_\bullet(T(M_{\bullet\bullet\bullet}))$ du complexe simple associé au
+tricomplexe $T(M_{\bullet\bullet\bullet})$ est canoniquement isomorphe à
+l'hyperhomologie $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ du complexe
+\oldpage[0\textsubscript{III}]{42}
+simple associé à $K_{\bullet\bullet}$
+\textup{(\hyperref[0.11.6.2-fr]{11.6.2})}, et est
+l'aboutissement commun de six suites spectrales birégulières notées
+$\mathop{}^{(t)}E$ (avec $t=a,b,a',b',c$ ou $d$), dont les termes $E
+
+[id 4880]
+OLD: $\mathcal C$, $\mathcal C'$
+NEW: $\boldsymbol{C}$, $\boldsymbol{C}'$
+FRENCH CONTEXT (corrected): onclusion résulte de
+(\hyperref[0.11.1.6-fr]{11.1.6}).
+\end{proof}
+
+\begin{env}[11.4.6]
+\label{0.11.4.6-fr}
+Considérons maintenant, par exemple, un \emph{bifoncteur} covariant
+$(M,N)\to T(M,N)$ de $\boldsymbol{C}\times\boldsymbol{C}'$ dans $\boldsymbol{C}''$,
+$\boldsymbol{C}$, $\boldsymbol{C}'$, $\boldsymbol{C}''$ étant trois catégories
+abéliennes~; on suppose, pour simplifier, $T$ additif en chacun de ses
+arguments, et en outre que tout objet de $\boldsymbol{C}$ et tout objet de
+$\boldsymbol{C}'$ sont sous-objets d'un objet injectif, et que les lim
+
+[id 4881]
+OLD: $\mathcal C''$ trois catégories
+NEW: $\boldsymbol{C}''$ trois catégories
+FRENCH CONTEXT (corrected): let$ limités inférieurement, ou quand les objets des catégories
+abéliennes que l'on considère ont des résolutions projectives de longueur
+fixée.
+
+En outre :
+\end{env}
+
+\begin{proposition}[11.6.5]
+\label{0.11.6.5-fr}
+Soient $\boldsymbol{C}$, $\boldsymbol{C}'$, $\boldsymbol{C}''$ trois catégories
+abéliennes, $T$ un bifoncteur covariant biadditif de
+$\boldsymbol{C}\times\boldsymbol{C}'$ dans $\boldsymbol{C}''$.
+\begin{enumerate}
+\item[{\rm(i)}] {$\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)$ est un bifoncteur
+homologique en chacun des complexes limités i
+
+[id 4882]
+OLD: $\mathcal C\times\mathcal C'$ dans $\mathcal C''$
+NEW: $\boldsymbol{C}\times\boldsymbol{C}'$ dans $\boldsymbol{C}''$
+FRENCH CONTEXT (corrected): comme elle est régulière
+(\hyperref[0.11.4.4-fr]{11.4.4}), la conclusion résulte de
+(\hyperref[0.11.1.6-fr]{11.1.6}).
+\end{proof}
+
+\begin{env}[11.4.6]
+\label{0.11.4.6-fr}
+Considérons maintenant, par exemple, un \emph{bifoncteur} covariant
+$(M,N)\to T(M,N)$ de $\boldsymbol{C}\times\boldsymbol{C}'$ dans $\boldsymbol{C}''$,
+$\boldsymbol{C}$, $\boldsymbol{C}'$, $\boldsymbol{C}''$ étant trois catégories
+abéliennes~; on suppose, pour simplifier, $T$ additif en chacun de ses
+arguments, et en outre que tout objet de $\boldsymbol{C}$ et tout objet de
+$\boldsymbol{C}'$ sont sous-objet
+
+[id 4883]
+OLD: $\mathcal C$ et d'objets
+NEW: $\boldsymbol{C}$ et d'objets
+FRENCH CONTEXT (corrected): \boldsymbol{C}'$ dans $\boldsymbol{C}''$.
+\begin{enumerate}
+\item[{\rm(i)}] {$\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)$ est un bifoncteur
+homologique en chacun des complexes limités inférieurement $K_\bullet$,
+$K'_\bullet$ (formés respectivement d'objets de $\boldsymbol{C}$ et d'objets de
+$\boldsymbol{C}'$).}
+\item[{\rm(ii)}] {Supposons $K_\bullet$ et $K'_\bullet$ limités
+inférieurement. Soient $L_{\bullet\bullet}=(L_{ij})$,
+$L'_{\bullet\bullet}=(L'_{ij})$ deux bicomplexes tels que $L_{ij}=0$ et
+$L'_{ij}=0$ pour $j<0$, que pour tout $i$, $L
+
+[id 4884]
+OLD: de
+$\mathcal C'$).}
+NEW: de
+$\boldsymbol{C}'$).}
+FRENCH CONTEXT (corrected): ymbol{C}''$.
+\begin{enumerate}
+\item[{\rm(i)}] {$\mathbf{L}_\bullet T(K_\bullet,K'_\bullet)$ est un bifoncteur
+homologique en chacun des complexes limités inférieurement $K_\bullet$,
+$K'_\bullet$ (formés respectivement d'objets de $\boldsymbol{C}$ et d'objets de
+$\boldsymbol{C}'$).}
+\item[{\rm(ii)}] {Supposons $K_\bullet$ et $K'_\bullet$ limités
+inférieurement. Soient $L_{\bullet\bullet}=(L_{ij})$,
+$L'_{\bullet\bullet}=(L'_{ij})$ deux bicomplexes tels que $L_{ij}=0$ et
+$L'_{ij}=0$ pour $j<0$, que pour tout $i$, $L_{i,\bullet}$ soit une
+r
+
+[id 4885]
+OLD: $\mathcal C$ et $\mathcal C'$
+NEW: $\boldsymbol{C}$ et $\boldsymbol{C}'$
+FRENCH CONTEXT (corrected): t de
+$\boldsymbol{C}'$ sont sous-objets d'un objet injectif, et que les limites
+inductives filtrantes existent dans $\boldsymbol{C}''$ et sont exactes. On définit
+alors l'\emph{hypercohomologie} de $T$ par rapport à deux complexes
+$K^\bullet$, $K'^\bullet$ de $\boldsymbol{C}$ et $\boldsymbol{C}'$ respectivement, à
+opérateurs de dérivation de degré $+1$, en prenant pour $K^\bullet$ (resp.
+$K'^\bullet$) une résolution de Cartan-Eilenberg injective
+$L^{\bullet\bullet}$ (resp. $L'^{\bullet\bullet}$)~; alors
+$T(L^{\bullet\bullet},L'^{\bullet\bullet})$ est 
+
+[id 4886]
+OLD: $\mathcal C$ une catégorie
+NEW: $\boldsymbol{C}$ une catégorie
+FRENCH CONTEXT (corrected): ghtarrow{\sim}\operatorname{Hom}(X,B)
+  \tag{8.1.9.1}
+\]
+autrement dit que le foncteur
+$X\mapsto\varprojlim\operatorname{Hom}(X,A_\alpha)$ est
+\emph{représentable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10-fr}
+\textit{Exemples. II : Objet final.} Soient $\boldsymbol{C}$ une catégorie, $\{a\}$ un
+ensemble réduit à un seul élément. Considérons le foncteur contravariant
+$F:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{
+
+[id 4887]
+OLD: $\mathcal C$, et dont
+NEW: $\boldsymbol{C}$, et dont
+FRENCH CONTEXT (corrected): bullet}$}
+\label{subsection:0.11.7-fr}
+
+\begin{env}[11.7.1]
+\label{0.11.7.1-fr}
+Soit $\boldsymbol{C}$ une catégorie abélienne dans laquelle tout objet est
+quotient d'un objet projectif. Considérons un bicomplexe
+$K_{\bullet\bullet}=(K_{ij})$ formé d'objets de $\boldsymbol{C}$, et dont les deux
+degrés sont \emph{limités inférieurement}; on peut toujours se borner au cas où
+$K_{ij}=0$ pour $i<0$ ou $j<0$, et c'est ce que nous ferons désormais. On
+peut considérer $K_{\bullet\bullet}$ comme un complexe (simple) formé
+d'objets $K_{i,\bullet}=(K
+
+[id 4888]
+OLD: $\mathcal K$ des complexes
+NEW: $\boldsymbol{K}$ des complexes
+FRENCH CONTEXT (corrected): ]{11.5.2}) et
+(\hyperref[0.11.5.3-fr]{11.5.3}) sont valables dans la catégorie des
+complexes $K^\bullet$ \emph{limités inférieurement}, \emph{sans supposer que $T$
+permute aux limites inductives filtrantes}. En outre, quand on considère
+seulement la catégorie $\boldsymbol{K}$ des complexes $K^\bullet$ tels que
+$K^i=0$ pour $i<0$, la caractérisation de $\mathbf R^\bullet T(K^\bullet)$
+comme le système des \emph{foncteurs dérivés droits} de $T$ dans $\boldsymbol{K}$
+montre que ce foncteur cohomologique est \emph{universel} (T, 2.3).
+
+Un autre cas
+
+[id 4889]
+OLD: $\mathcal C$. Il
+résulte
+NEW: $\boldsymbol{C}$. Il
+résulte
+FRENCH CONTEXT (corrected):  $i<0$ ou $j<0$, et c'est ce que nous ferons désormais. On
+peut considérer $K_{\bullet\bullet}$ comme un complexe (simple) formé
+d'objets $K_{i,\bullet}=(K_{ij})_{j\geq 0}$ de la catégorie abélienne
+$\boldsymbol{K}$ des complexes à degrés positifs d'objets de $\boldsymbol{C}$. Il
+résulte du lemme (\hyperref[0.11.5.2.1-fr]{11.5.2.1}) (ou plutôt du lemme
+«~dual~» obtenu par «~renversement des flèches~») et de (M, V, 2.2) que
+$K_{\bullet\bullet}$ admet une \emph{résolution projective de
+Cartan-Eilenberg} dans la catégorie $\boldsymbol{K}$; une t
+
+[id 4890]
+OLD: $\mathcal K$; une telle
+NEW: $\boldsymbol{K}$; une telle
+FRENCH CONTEXT (corrected): dsymbol{C}$. Il
+résulte du lemme (\hyperref[0.11.5.2.1-fr]{11.5.2.1}) (ou plutôt du lemme
+«~dual~» obtenu par «~renversement des flèches~») et de (M, V, 2.2) que
+$K_{\bullet\bullet}$ admet une \emph{résolution projective de
+Cartan-Eilenberg} dans la catégorie $\boldsymbol{K}$; une telle résolution est un
+\emph{tricomplexe} $M_{\bullet\bullet\bullet}=(M_{ijk})$ de $\boldsymbol{C}$, à degrés
+tous $\geq 0$, formé d'objets projectifs, tel que pour tout $i$,
+$M_{i,\bullet\bullet}$, $\mathrm B_i^{\mathrm I}(M_{\bullet\bullet\bullet})$,
+$\mathrm Z_
+
+[id 4891]
+OLD: $\mathcal C$, à degrés
+NEW: $\boldsymbol{C}$, à degrés
+FRENCH CONTEXT (corrected): par «~renversement des flèches~») et de (M, V, 2.2) que
+$K_{\bullet\bullet}$ admet une \emph{résolution projective de
+Cartan-Eilenberg} dans la catégorie $\boldsymbol{K}$; une telle résolution est un
+\emph{tricomplexe} $M_{\bullet\bullet\bullet}=(M_{ijk})$ de $\boldsymbol{C}$, à degrés
+tous $\geq 0$, formé d'objets projectifs, tel que pour tout $i$,
+$M_{i,\bullet\bullet}$, $\mathrm B_i^{\mathrm I}(M_{\bullet\bullet\bullet})$,
+$\mathrm Z_i^{\mathrm I}(M_{\bullet\bullet\bullet})$,
+$H_i^{\mathrm I}(M_{\bullet\bullet\bullet})$ constituent des \
+
+[id 4892]
+OLD: $\mathcal K$; en particulier,
+NEW: $\boldsymbol{K}$; en particulier,
+FRENCH CONTEXT (corrected): M_{\bullet\bullet\bullet})$ constituent des \emph{résolutions
+projectives} de $K_{i,\bullet}$,
+$\mathrm B_i^{\mathrm I}(K_{\bullet\bullet})$,
+$\mathrm Z_i^{\mathrm I}(K_{\bullet\bullet})$,
+$H_i^{\mathrm I}(K_{\bullet\bullet})$ respectivement dans la catégorie
+$\boldsymbol{K}$; en particulier, pour tout couple $(i,j)$,
+$M_{ij,\bullet}$ est une \emph{résolution projective} de $K_{ij}$ dans
+$\boldsymbol{C}$.
+\end{env}
+
+\begin{proposition}[11.7.2]
+\label{0.11.7.2-fr}
+Soit $T$ un foncteur covariant additif de $\boldsymbol{C}$ dans une catégorie
+abélien
+
+[id 4893]
+OLD: $\mathcal C$.
+\end{env}
+NEW: $\boldsymbol{C}$.
+\end{env}
+FRENCH CONTEXT (corrected):  X\to X$~; lorsque $\boldsymbol{C}$ est la
+catégorie \textbf{\textit{Ens}}, on retrouve la notion classique de loi de
+composition interne sur un ensemble. On a un résultat analogue pour une loi
+de composition externe lorsque le produit $Z\times X$ existe dans $\boldsymbol{C}$.
+\end{env}
+
+\begin{env}[8.2.5]
+\label{0.8.2.5-fr}
+Avec les notations précédentes, supposons en outre que $X\times X\times X$
+existe dans $\boldsymbol{C}$~; la caractérisation du produit comme objet représentant un
+foncteur (\hyperref[0.8.1.9-fr]{8.1.9}) entraîne l'exist
+
+[id 4894]
+OLD: $\mathcal C$ dans une
+NEW: $\boldsymbol{C}$ dans une
+FRENCH CONTEXT (corrected): ldsymbol{C}$ admet une résolution projective de longueur $\leq n$,
+on peut supposer que $L_{ij}=0$ pour $j>n$.
+\end{env}
+
+\oldpage[0\textsubscript{III}]{40}
+\begin{env}[11.6.2]
+\label{0.11.6.2-fr}
+Supposons que $T$ soit un \emph{foncteur covariant additif} de $\boldsymbol{C}$ dans une
+catégorie abélienne $\boldsymbol{C}'$. La définition de
+l'\emph{hyperhomologie} $\mathbf{L}_\bullet T(K_\bullet)$ et des \emph{suites
+spectrales d'hyperhomologie} de $T$ par rapport à un complexe $K_\bullet$ de
+$\boldsymbol{C}$ (lorsqu'elles existent) se fait
+
+[id 4895]
+OLD: $\mathcal C'$. Avec les
+NEW: $\boldsymbol{C}'$. Avec les
+FRENCH CONTEXT (corrected): ur tout couple $(i,j)$,
+$M_{ij,\bullet}$ est une \emph{résolution projective} de $K_{ij}$ dans
+$\boldsymbol{C}$.
+\end{env}
+
+\begin{proposition}[11.7.2]
+\label{0.11.7.2-fr}
+Soit $T$ un foncteur covariant additif de $\boldsymbol{C}$ dans une catégorie
+abélienne $\boldsymbol{C}'$. Avec les notations de
+\textup{(\hyperref[0.11.7.1-fr]{11.7.1})}, {l'homologie
+$H_\bullet(T(M_{\bullet\bullet\bullet}))$ du complexe simple associé au
+tricomplexe $T(M_{\bullet\bullet\bullet})$ est canoniquement isomorphe à
+l'hyperhomologie $\mathbf{L}_\bullet T(K_{\bu
+
+=================== PAGE 0\textsubscript{III} 42 ===================
+----- (Spanish page 0\textsubscript{III} 41: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 42: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 43 -----
+\oldpage[0\textsubscript{III}]{43}
+  \item[{\rm(ii)}]
+  Sea $M_{\bullet\bullet\bullet}$ un tricomplejo en $\cat{C}$ tal que,
+  para todo par $(r,s)$, $M_{rs,\bullet}$ sea una resolución de $K_{rs}$,
+  y tal que
+  \[
+    \LL_nT(M_{ijk})=0
+  \]
+  para toda terna $(i,j,k)$ y todo $n>0$.
+  Entonces existe un isomorfismo
+  \[
+    \LL_\bullet T(K_{\bullet\bullet})
+    \isoto
+    \HH_\bullet\bigl(T(M_{\bullet\bullet\bullet})\bigr).
+  \]
+  En efecto, con la notación utilizada en la demostración de \sref{0.11.7.2},
+  $N_{i,\bullet}$ es una resolución de $L_i$ tal que
+  $\LL_nT(N_{ij})=0$ para todo $n>0$ y todo par $(i,j)$, por lo que
+  basta aplicar \sref{0.11.6.3},~(iii).
+
+  \item[{\rm(iii)}]
+  Los resultados de \sref{0.11.7.2} se generalizan inmediatamente a los
+  multifuntores covariantes.
+  Por ejemplo, sea $\cat{C}'$ una segunda categoría abeliana en la que todo
+  objeto sea cociente de un objeto proyectivo, sea
+  $K'_{\bullet\bullet}$ un bicomplejo en $\cat{C}'$ cuyos dos grados estén
+  acotados inferiormente, y sea $T$ un bifuntor covariante aditivo de
+  $\cat{C}\times\cat{C}'$ en una categoría abeliana $\cat{C}''$.
+  Si $L_\bullet$ y $L'_\bullet$ son los complejos simples asociados a
+  $K_{\bullet\bullet}$ y $K'_{\bullet\bullet}$, respectivamente, se define
+  la hiperhomología de $T$ relativa a los dos bicomplejos
+  $K_{\bullet\bullet}$ y $K'_{\bullet\bullet}$ como
+  \[
+    \LL_\bullet T(L_\bullet,L'_\bullet).
+  \]
+  Aplicando \sref{0.11.6.4} y \sref{0.11.6.5}, se obtienen, como en
+  \sref{0.11.7.2}, seis sucesiones espectrales que convergen a esta hiperhomología;
+  dejamos al lector su formulación explícita.
+\end{enumerate}
+\end{env}
+
+\subsection{Suplemento sobre la cohomología de los complejos simpliciales}
+\label{subsection:0.11.8}
+
+\begin{env}[11.8.1]
+\label{0.11.8.1}
+Sea $A$ un conjunto finito, y sea $\Sigma(A)$ el conjunto de las sucesiones
+finitas
+\[
+  \sigma=(\alpha_0,\ldots,\alpha_h)
+\]
+de elementos de $A$ (los ``símplices'' de $A$); pongamos
+$|\sigma|=\{\alpha_0,\ldots,\alpha_h\}$.
+Recordemos que el complejo de cadenas $\mathrm{C}_\bullet(A)$ es el grupo abeliano
+libre graduado engendrado por los elementos de $\Sigma(A)$, con
+$(\alpha_0,\ldots,\alpha_h)$ en grado $h$, y con diferencial
+\[
+  d(\alpha_0,\ldots,\alpha_h)
+  =
+  \sum_{j=0}^{h}(-1)^j
+  (\alpha_0,\ldots,\widehat{\alpha_j},\ldots,\alpha_h).
+\]
+El subgrupo $\mathrm{D}_\bullet(A)$ de $\mathrm{C}_\bullet(A)$ engendrado
+por las cadenas $\sigma=(\alpha_0,\ldots,\alpha_h)$ para las cuales dos de los
+$\alpha_i$ son iguales, y por las cadenas
+\[
+  \pi(\sigma)-\varepsilon_\pi.\sigma,
+\]
+donde, para toda permutación $\pi$,
+\[
+  \pi(\sigma)
+  =
+  (\alpha_{\pi(0)},\ldots,\alpha_{\pi(h)})
+\]
+y $\varepsilon_\pi$ es el signo de $\pi$, es un subcomplejo de
+$\mathrm{C}_\bullet(A)$.
+Sus elementos se llaman \emph{cadenas degeneradas}.
+Pongamos
+\[
+  \mathrm{L}_\bullet(A)
+  =
+  \mathrm{C}_\bullet(A)/\mathrm{D}_\bullet(A);
+\]
+existe un homomorfismo natural de complejos
+\[
+  p:\mathrm{C}_\bullet(A)\longrightarrow\mathrm{L}_\bullet(A).
+\]
+
+Recíprocamente, definamos un homomorfismo de complejos
+\[
+  j:\mathrm{L}_\bullet(A)\longrightarrow\mathrm{C}_\bullet(A)
+\]
+como sigue.
+Elijamos un orden total sobre $A$.
+A la clase módulo $\mathrm{D}_\bullet(A)$ de un símplex
+$\sigma=(\alpha_0,\ldots,\alpha_h)$, asociemos $0$ si dos de los
+$\alpha_i$ son iguales y, en caso contrario, asociemos la sucesión
+$(\beta_0,\ldots,\beta_h)$ obtenida ordenando los $\alpha_i$ en
+orden creciente.
+Está claro que $p\circ j$ es la identidad de
+$\mathrm{L}_\bullet(A)$.
+\end{env}
+
+\begin{env}[11.8.2]
+\label{0.11.8.2}
+Sea $B$ un segundo conjunto finito.
+Si $d'$ y $d''$ son los diferenciales de
+$\mathrm{C}_\bullet(A)$ y $\mathrm{C}_\bullet(B)$, el complejo producto
+tensorial
+\[
+  \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+\]
+puede considerarse como el grupo abeliano libre engendrado por los elementos de
+$\Sigma(A)\times\Sigma(B)$, con diferencial
+\[
+  d(\sigma,\tau)
+  =
+  (d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)
+  \qquad\text{si }\operatorname{Card}|\sigma|=h+1.
+\]
+
+Los homomorfismos naturales
+$\mathrm{C}_\bullet(A)\to\mathrm{L}_\bullet(A)$ y
+$\mathrm{C}_\bullet(B)\to\mathrm{L}_\bullet(B)$ definen un homomorfismo
+\[
+  p:
+  \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+  \longrightarrow
+  \mathrm{L}_\bullet(A)\otimes\mathrm{L}_\bullet(B),
+\]
+siendo este último producto tensorial isomorfo a
+\[
+  \frac{\mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)}
+  {\mathrm{C}_\bullet(A)\otimes\mathrm{D}_\bullet(B)
+   +\mathrm{D}_\bullet(A)\otimes\mathrm{C}_\bullet(B)}.
+\]
+Análogamente, utilizando los homomorfismos
+$\mathrm{L}_\bullet(A)\to\mathrm{C}_\bullet(A)$ y
+$\mathrm{L}_\bullet(B)\to\mathrm{C}_\bullet(B)$ definidos en
+\sref{0.11.8.1}, con órdenes totales sobre $A$ y $B$, se obtiene un
+homomorfismo
+\[
+  j:
+  \mathrm{L}_\bullet(A)\otimes\mathrm{L}_\bullet(B)
+  \longrightarrow
+  \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+\]
+tal que $p\circ j$ es la identidad.
+\end{env}
+----- French corrections on page 0\textsubscript{III} 42 -----
+[id 4896]
+OLD: (\hyperref[0.11.6.2-fr]{11.6.2}), et est
+NEW: \textup{(\hyperref[0.11.6.2-fr]{11.6.2})}, et est
+FRENCH CONTEXT (corrected): \bullet}))$ du complexe simple associé au
+tricomplexe $T(M_{\bullet\bullet\bullet})$ est canoniquement isomorphe à
+l'hyperhomologie $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ du complexe
+\oldpage[0\textsubscript{III}]{42}
+simple associé à $K_{\bullet\bullet}$
+\textup{(\hyperref[0.11.6.2-fr]{11.6.2})}, et est
+l'aboutissement commun de six suites spectrales birégulières notées
+$\mathop{}^{(t)}E$ (avec $t=a,b,a',b',c$ ou $d$), dont les termes $E^2$ sont
+donnés par les formules}
+\[
+\begin{aligned}
+{}^{(a)}E^2_{pq}&=L_pT(H_q(K_{\bullet\bullet}))&
+{}^{(b)}E^2_{pq}&=H_p
+
+[id 4897]
+OLD: dont les termes $E_2$ sont
+NEW: dont les termes $E^2$ sont
+FRENCH CONTEXT (corrected): let})$ du complexe
+\oldpage[0\textsubscript{III}]{42}
+simple associé à $K_{\bullet\bullet}$
+\textup{(\hyperref[0.11.6.2-fr]{11.6.2})}, et est
+l'aboutissement commun de six suites spectrales birégulières notées
+$\mathop{}^{(t)}E$ (avec $t=a,b,a',b',c$ ou $d$), dont les termes $E^2$ sont
+donnés par les formules}
+\[
+\begin{aligned}
+{}^{(a)}E^2_{pq}&=L_pT(H_q(K_{\bullet\bullet}))&
+{}^{(b)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet}))\\
+{}^{(a')}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet}))&
+{}^{(b')}E^2_{pq}&=H_p
+
+[id 4899]
+OLD: =H_p(L_q^{\mathrm{II}}T(K_{\bullet\bullet})),\\
+NEW: =H_p(\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet}))\\
+FRENCH CONTEXT (corrected):  est
+l'aboutissement commun de six suites spectrales birégulières notées
+$\mathop{}^{(t)}E$ (avec $t=a,b,a',b',c$ ou $d$), dont les termes $E^2$ sont
+donnés par les formules}
+\[
+\begin{aligned}
+{}^{(a)}E^2_{pq}&=L_pT(H_q(K_{\bullet\bullet}))&
+{}^{(b)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet}))\\
+{}^{(a')}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet}))&
+{}^{(b')}E^2_{pq}&=H_p(L_qT(K_{\bullet\bullet}))\\
+{}^{(c)}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet}))&
+{}^{(d)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet
+
+[id 4900]
+OLD: =L_pT(H_q^{\mathrm I}(K_{\bullet\bullet})),&
+NEW: =\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet}))&
+FRENCH CONTEXT (corrected): \mathop{}^{(t)}E$ (avec $t=a,b,a',b',c$ ou $d$), dont les termes $E^2$ sont
+donnés par les formules}
+\[
+\begin{aligned}
+{}^{(a)}E^2_{pq}&=L_pT(H_q(K_{\bullet\bullet}))&
+{}^{(b)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet}))\\
+{}^{(a')}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet}))&
+{}^{(b')}E^2_{pq}&=H_p(L_qT(K_{\bullet\bullet}))\\
+{}^{(c)}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet}))&
+{}^{(d)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet}))
+\end{aligned}
+\]
+\end{proposition}
+
+(On rappelle que nous utilisons
+
+[id 4902]
+OLD: =L_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet})),&
+NEW: =\mathbf{L}_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet}))&
+FRENCH CONTEXT (corrected): }^{(a)}E^2_{pq}&=L_pT(H_q(K_{\bullet\bullet}))&
+{}^{(b)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet}))\\
+{}^{(a')}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet}))&
+{}^{(b')}E^2_{pq}&=H_p(L_qT(K_{\bullet\bullet}))\\
+{}^{(c)}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet}))&
+{}^{(d)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet}))
+\end{aligned}
+\]
+\end{proposition}
+
+(On rappelle que nous utilisons la notation $F(A_\bullet)$ pour désigner le
+complexe des objets $F(A_i)$ pour tout complexe $A_\bullet=(A_i)$; par
+exemple
+
+[id 4903]
+OLD: =H_p(L_q^{\mathrm I}T(K_{\bullet\bullet})).
+NEW: =H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet}))
+FRENCH CONTEXT (corrected): athbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet}))\\
+{}^{(a')}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet}))&
+{}^{(b')}E^2_{pq}&=H_p(L_qT(K_{\bullet\bullet}))\\
+{}^{(c)}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet}))&
+{}^{(d)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet}))
+\end{aligned}
+\]
+\end{proposition}
+
+(On rappelle que nous utilisons la notation $F(A_\bullet)$ pour désigner le
+complexe des objets $F(A_i)$ pour tout complexe $A_\bullet=(A_i)$; par
+exemple $\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet})$ désigne le complex
+
+[id 4904]
+OLD: On rappelle que nous utilisons
+NEW: (On rappelle que nous utilisons
+FRENCH CONTEXT (corrected): mathrm I}(K_{\bullet\bullet}))&
+{}^{(b')}E^2_{pq}&=H_p(L_qT(K_{\bullet\bullet}))\\
+{}^{(c)}E^2_{pq}&=\mathbf{L}_pT(H_q^{\mathrm{II}}(K_{\bullet\bullet}))&
+{}^{(d)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet}))
+\end{aligned}
+\]
+\end{proposition}
+
+(On rappelle que nous utilisons la notation $F(A_\bullet)$ pour désigner le
+complexe des objets $F(A_i)$ pour tout complexe $A_\bullet=(A_i)$; par
+exemple $\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet})$ désigne le complexe
+$(\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$, où
+$\math
+
+[id 4905]
+OLD: au complexe simple $K_{i,\bullet}$.
+NEW: au complexe simple $K_{i,\bullet}$.)
+FRENCH CONTEXT (corrected): et=(A_i)$; par
+exemple $\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet})$ désigne le complexe
+$(\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$, où
+$\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$ est l'hyperhomologie d'indice $q$ du
+foncteur $T$ par rapport au complexe simple $K_{i,\bullet}$.)
+
+\begin{proof}
+Désignons par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+$N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+pro
+
+[id 4906]
+OLD: exemple $L_q^{\mathrm{II}}T
+NEW: exemple $\mathbf{L}_q^{\mathrm{II}}T
+FRENCH CONTEXT (corrected): let}))&
+{}^{(d)}E^2_{pq}&=H_p(\mathbf{L}_q^{\mathrm I}T(K_{\bullet\bullet}))
+\end{aligned}
+\]
+\end{proposition}
+
+(On rappelle que nous utilisons la notation $F(A_\bullet)$ pour désigner le
+complexe des objets $F(A_i)$ pour tout complexe $A_\bullet=(A_i)$; par
+exemple $\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet})$ désigne le complexe
+$(\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$, où
+$\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$ est l'hyperhomologie d'indice $q$ du
+foncteur $T$ par rapport au complexe simple $K_{i,\bullet}$.)
+
+\begin{proof}
+
+[id 4907]
+OLD: $(L_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$
+NEW: $(\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$
+FRENCH CONTEXT (corrected): end{aligned}
+\]
+\end{proposition}
+
+(On rappelle que nous utilisons la notation $F(A_\bullet)$ pour désigner le
+complexe des objets $F(A_i)$ pour tout complexe $A_\bullet=(A_i)$; par
+exemple $\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet})$ désigne le complexe
+$(\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$, où
+$\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$ est l'hyperhomologie d'indice $q$ du
+foncteur $T$ par rapport au complexe simple $K_{i,\bullet}$.)
+
+\begin{proof}
+Désignons par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\
+
+[id 4908]
+OLD: $L_q^{\mathrm{II}}T(K_{i,\bullet})$ est
+NEW: $\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$ est
+FRENCH CONTEXT (corrected): lisons la notation $F(A_\bullet)$ pour désigner le
+complexe des objets $F(A_i)$ pour tout complexe $A_\bullet=(A_i)$; par
+exemple $\mathbf{L}_q^{\mathrm{II}}T(K_{\bullet\bullet})$ désigne le complexe
+$(\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet}))_{i\geq0}$, où
+$\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$ est l'hyperhomologie d'indice $q$ du
+foncteur $T$ par rapport au complexe simple $K_{i,\bullet}$.)
+
+\begin{proof}
+Désignons par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+$N_{ij}=\bigoplus_
+
+[id 4909]
+OLD: de sorte que
+\[
+L_i=\bigoplus_{r+s=i}K_{rs},
+\]
+et posons
+NEW: de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+FRENCH CONTEXT (corrected): bullet}))_{i\geq0}$, où
+$\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$ est l'hyperhomologie d'indice $q$ du
+foncteur $T$ par rapport au complexe simple $K_{i,\bullet}$.)
+
+\begin{proof}
+Désignons par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+$N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un iso
+
+[id 4910]
+OLD: \[
+N_{ij}=\bigoplus_{r+s=i}M_{rsj};
+\]
+NEW: $N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+FRENCH CONTEXT (corrected): _{i,\bullet})$ est l'hyperhomologie d'indice $q$ du
+foncteur $T$ par rapport au complexe simple $K_{i,\bullet}$.)
+
+\begin{proof}
+Désignons par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+$N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\
+
+[id 4911]
+OLD: une résolution
+projective de $L_i$
+NEW: une \emph{résolution
+projective} de $L_i$
+FRENCH CONTEXT (corrected): simple $K_{i,\bullet}$.)
+
+\begin{proof}
+Désignons par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+$N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simpl
+
+[id 4912]
+OLD: isomorphisme fonctoriel
+\[
+NEW: isomorphisme fonctoriel
+$
+FRENCH CONTEXT (corrected): ons
+$N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simple associé au bicomplexe $T(N_{\bullet\bullet})$ est
+aussi associé au tricomplexe $T(M_{\bullet\bullet\bullet})$, cela prouve la
+première assertion de l
+
+[id 4913]
+OLD: 
+L_\bullet T(L_
+NEW: 
+\mathbf{L}_\bullet T(L_
+FRENCH CONTEXT (corrected): s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simple associé au bicomplexe $T(N_{\bullet\bullet})$ est
+aussi associé au tricomplexe $T(M_{\bullet\bullet\bullet})$, cela prouve la
+première assertion de l'énoncé.
+
+En outre, $\ma
+
+[id 4914]
+OLD: \simeq H_\bullet(T(N_{\bullet\bullet}))
+NEW: \xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))
+FRENCH CONTEXT (corrected): our chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simple associé au bicomplexe $T(N_{\bullet\bullet})$ est
+aussi associé au tricomplexe $T(M_{\bullet\bullet\bullet})$, cela prouve la
+première assertion de l'énoncé.
+
+En outre, $\mathbf{L}_\bullet T(L_\bullet)$ est l'aboutissement des deux 
+
+[id 4915]
+OLD: ;
+\]
+comme le complexe
+NEW: $;
+comme le complexe
+FRENCH CONTEXT (corrected): ution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simple associé au bicomplexe $T(N_{\bullet\bullet})$ est
+aussi associé au tricomplexe $T(M_{\bullet\bullet\bullet})$, cela prouve la
+première assertion de l'énoncé.
+
+En outre, $\mathbf{L}_\bullet T(L_\bullet)$ est l'aboutissement des deux suites
+spectrales d'
+
+[id 4916]
+OLD: En outre, $L_\bullet T(L_\bullet)$
+NEW: En outre, $\mathbf{L}_\bullet T(L_\bullet)$
+FRENCH CONTEXT (corrected): }_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simple associé au bicomplexe $T(N_{\bullet\bullet})$ est
+aussi associé au tricomplexe $T(M_{\bullet\bullet\bullet})$, cela prouve la
+première assertion de l'énoncé.
+
+En outre, $\mathbf{L}_\bullet T(L_\bullet)$ est l'aboutissement des deux suites
+spectrales d'hyperhomologie (\hyperref[0.11.6.2-fr]{11.6.2}) de $T$
+relativement au complexe simple $L_\bullet$, qui ne sont autres que les suites
+$\mathop{}^{(b')}E$ et $\mathop{}^{(a)}E$ respectivement.
+
+Considérons maint
+
+[id 4917]
+OLD: \[
+U_{ij}=\bigoplus_{r+s=j}M_{irs};
+\]
+NEW: $U_{ij}=\bigoplus_{r+s=j}M_{irs}$;
+FRENCH CONTEXT (corrected): .6.2-fr]{11.6.2}) de $T$
+relativement au complexe simple $L_\bullet$, qui ne sont autres que les suites
+$\mathop{}^{(b')}E$ et $\mathop{}^{(a)}E$ respectivement.
+
+Considérons maintenant $M_{\bullet\bullet\bullet}$ comme un bicomplexe
+$U_{\bullet\bullet}$ avec
+$U_{ij}=\bigoplus_{r+s=j}M_{irs}$;
+$H_\bullet(T(M_{\bullet\bullet\bullet}))$ est encore l'aboutissement des deux
+suites spectrales du bicomplexe $T(U_{\bullet\bullet})$. Or, pour tout $i$,
+$M_{i,\bullet\bullet}$ est un bicomplexe vérifiant les conditions de
+(\hyperref[0.11.6.3-fr]{11.6.3}) rel
+
+[id 4918]
+OLD: =
+L_q^{\mathrm{II}}T
+NEW: =
+\mathbf{L}_q^{\mathrm{II}}T
+FRENCH CONTEXT (corrected): pectrales du bicomplexe $T(U_{\bullet\bullet})$. Or, pour tout $i$,
+$M_{i,\bullet\bullet}$ est un bicomplexe vérifiant les conditions de
+(\hyperref[0.11.6.3-fr]{11.6.3}) relativement au complexe simple
+$K_{i,\bullet}$; donc
+$H_q^{\mathrm{II}}(T(U_{i,\bullet}))=
+\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$, et la première suite spectrale de
+$T(U_{\bullet\bullet})$ n'est autre que $\mathop{}^{(b)}E$. D'autre part, pour
+tout $r$, $M_{\bullet,r,\bullet}$ est une résolution de Cartan-Eilenberg du
+complexe simple $K_{\bullet,r}$; le calcul fait dans 
+
+[id 4919]
+OLD: $K_{\bullet,r}$, le calcul
+NEW: $K_{\bullet,r}$; le calcul
+FRENCH CONTEXT (corrected): ullet}))=
+\mathbf{L}_q^{\mathrm{II}}T(K_{i,\bullet})$, et la première suite spectrale de
+$T(U_{\bullet\bullet})$ n'est autre que $\mathop{}^{(b)}E$. D'autre part, pour
+tout $r$, $M_{\bullet,r,\bullet}$ est une résolution de Cartan-Eilenberg du
+complexe simple $K_{\bullet,r}$; le calcul fait dans (M, XV, 2) montre que
+$H_q^{\mathrm I}(T(M_{\bullet,rs}))=T(H_q^{\mathrm I}(M_{\bullet,rs}))$,
+d'où $H_q^{\mathrm I}(T(U_{\bullet,j}))=\bigoplus_{r+s=j}T(H_q^{\mathrm I}(M_{\bullet,rs}))$;
+autrement dit, le complexe simple
+$H_q^{\mathrm I}(T(U_{\bul
+
+[id 4920]
+OLD: montre que
+\[
+H_q^{\mathrm I}(T(M_{\bullet,rs}))
+=T(H_q^{\mathrm I}(M_{\bullet,rs})),
+\]
+NEW: montre que
+$H_q^{\mathrm I}(T(M_{\bullet,rs}))=T(H_q^{\mathrm I}(M_{\bullet,rs}))$,
+FRENCH CONTEXT (corrected): et})$, et la première suite spectrale de
+$T(U_{\bullet\bullet})$ n'est autre que $\mathop{}^{(b)}E$. D'autre part, pour
+tout $r$, $M_{\bullet,r,\bullet}$ est une résolution de Cartan-Eilenberg du
+complexe simple $K_{\bullet,r}$; le calcul fait dans (M, XV, 2) montre que
+$H_q^{\mathrm I}(T(M_{\bullet,rs}))=T(H_q^{\mathrm I}(M_{\bullet,rs}))$,
+d'où $H_q^{\mathrm I}(T(U_{\bullet,j}))=\bigoplus_{r+s=j}T(H_q^{\mathrm I}(M_{\bullet,rs}))$;
+autrement dit, le complexe simple
+$H_q^{\mathrm I}(T(U_{\bullet\bullet}))$ n'est autre que le complexe simple
+associé au bicomplexe
+$T(H_q^{\mathrm I}(M_{\bullet\bul
+
+[id 4921]
+OLD: 
+d'où
+\[
+H_q^{\mathrm I}(T(U_{\bullet,j}))
+=\bigoplus_{r+s=j}T(H_q^{\mathrm I}(M_{\bullet,rs}));
+\]
+NEW: 
+d'où $H_q^{\mathrm I}(T(U_{\bullet,j}))=\bigoplus_{r+s=j}T(H_q^{\mathrm I}(M_{\bullet,rs}))$;
+FRENCH CONTEXT (corrected): mathop{}^{(b)}E$. D'autre part, pour
+tout $r$, $M_{\bullet,r,\bullet}$ est une résolution de Cartan-Eilenberg du
+complexe simple $K_{\bullet,r}$; le calcul fait dans (M, XV, 2) montre que
+$H_q^{\mathrm I}(T(M_{\bullet,rs}))=T(H_q^{\mathrm I}(M_{\bullet,rs}))$,
+d'où $H_q^{\mathrm I}(T(U_{\bullet,j}))=\bigoplus_{r+s=j}T(H_q^{\mathrm I}(M_{\bullet,rs}))$;
+autrement dit, le complexe simple
+$H_q^{\mathrm I}(T(U_{\bullet\bullet}))$ n'est autre que le complexe simple
+associé au bicomplexe
+$T(H_q^{\mathrm I}(M_{\bullet\bullet\bullet}))$. Or, pour tout $q$,
+$H_q^{\mathrm I}(M_{\bullet\bullet\bullet})$ est une résolu
+
+[id 4922]
+OLD: est une résolution projective du
+NEW: est une résolution \emph{projective} du
+FRENCH CONTEXT (corrected): bullet,rs}))$;
+autrement dit, le complexe simple
+$H_q^{\mathrm I}(T(U_{\bullet\bullet}))$ n'est autre que le complexe simple
+associé au bicomplexe
+$T(H_q^{\mathrm I}(M_{\bullet\bullet\bullet}))$. Or, pour tout $q$,
+$H_q^{\mathrm I}(M_{\bullet\bullet\bullet})$ est une résolution \emph{projective} du
+complexe simple $H_q^{\mathrm I}(K_{\bullet\bullet})$ dans la catégorie
+$\boldsymbol{K}$; appliquant (\hyperref[0.11.6.3-fr]{11.6.3}), on voit que l'on a
+\[
+H_p^{\mathrm{II}}
+\bigl(T(H_q^{\mathrm I}(M_{\bullet\bullet\bullet}))\bigr)
+=\mathbf{L}_pT(H_q^{\mathr
+
+[id 4923]
+OLD: \bigr)
+=L_pT(H_q^{\mathrm I}
+NEW: \bigr)
+=\mathbf{L}_pT(H_q^{\mathrm I}
+FRENCH CONTEXT (corrected): e résolution \emph{projective} du
+complexe simple $H_q^{\mathrm I}(K_{\bullet\bullet})$ dans la catégorie
+$\boldsymbol{K}$; appliquant (\hyperref[0.11.6.3-fr]{11.6.3}), on voit que l'on a
+\[
+H_p^{\mathrm{II}}
+\bigl(T(H_q^{\mathrm I}(M_{\bullet\bullet\bullet}))\bigr)
+=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet})),
+\]
+et on obtient ainsi la suite $\mathop{}^{(a')}E$. Enfin, les suites
+$\mathop{}^{(c)}E$ et $\mathop{}^{(d)}E$ s'obtiennent en intervertissant les
+rôles des indices $i$ et $j$ dans la définition du tricomplexe
+$M_{\bullet\bullet\bullet}
+
+[id 4924]
+OLD: On dit que $L_\bullet T(K_{\bullet\bullet})$
+NEW: On dit que $\mathbf{L}_\bullet T(K_{\bullet\bullet})$
+FRENCH CONTEXT (corrected): tes
+$\mathop{}^{(c)}E$ et $\mathop{}^{(d)}E$ s'obtiennent en intervertissant les
+rôles des indices $i$ et $j$ dans la définition du tricomplexe
+$M_{\bullet\bullet\bullet}$ et en appliquant à ce nouveau tricomplexe les
+raisonnements qui précèdent.
+\end{proof}
+
+On dit que $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est l'\emph{hyperhomologie} de
+$T$ relative au \emph{bicomplexe} $K_{\bullet\bullet}$.
+
+\begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+\begin{enumerate}
+\item[{\rm(i)}] Il résulte de (\hyperref[0.11.6.3-fr]{11.6.3}) que
+$\mathbf{L}_\bullet T(K_{\bullet\
+
+[id 4925]
+OLD: \emph{l'hyperhomologie} de
+NEW: l'\emph{hyperhomologie} de
+FRENCH CONTEXT (corrected): en intervertissant les
+rôles des indices $i$ et $j$ dans la définition du tricomplexe
+$M_{\bullet\bullet\bullet}$ et en appliquant à ce nouveau tricomplexe les
+raisonnements qui précèdent.
+\end{proof}
+
+On dit que $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est l'\emph{hyperhomologie} de
+$T$ relative au \emph{bicomplexe} $K_{\bullet\bullet}$.
+
+\begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+\begin{enumerate}
+\item[{\rm(i)}] Il résulte de (\hyperref[0.11.6.3-fr]{11.6.3}) que
+$\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est un \emph{foncteur
+
+[id 4926]
+OLD: relative au bicomplexe
+NEW: relative au \emph{bicomplexe}
+FRENCH CONTEXT (corrected): s indices $i$ et $j$ dans la définition du tricomplexe
+$M_{\bullet\bullet\bullet}$ et en appliquant à ce nouveau tricomplexe les
+raisonnements qui précèdent.
+\end{proof}
+
+On dit que $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est l'\emph{hyperhomologie} de
+$T$ relative au \emph{bicomplexe} $K_{\bullet\bullet}$.
+
+\begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+\begin{enumerate}
+\item[{\rm(i)}] Il résulte de (\hyperref[0.11.6.3-fr]{11.6.3}) que
+$\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est un \emph{foncteur homologique} dans la
+catégorie de
+
+[id 4927]
+OLD: \begin{env}[11.7.3]
+\label{0.11.7.3-fr}
+\emph{Remarques}.
+
+NEW: \begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+
+FRENCH CONTEXT (corrected): e
+$M_{\bullet\bullet\bullet}$ et en appliquant à ce nouveau tricomplexe les
+raisonnements qui précèdent.
+\end{proof}
+
+On dit que $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est l'\emph{hyperhomologie} de
+$T$ relative au \emph{bicomplexe} $K_{\bullet\bullet}$.
+
+\begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+\begin{enumerate}
+\item[{\rm(i)}] Il résulte de (\hyperref[0.11.6.3-fr]{11.6.3}) que
+$\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est un \emph{foncteur homologique} dans la
+catégorie des bicomplexes $K_{\bullet\bullet}$ de $\boldsymbol{C}$ limités
+inférieurement
+
+[id 4928]
+OLD: $L_\bullet T(K_{\bullet\bullet})$ est un
+NEW: $\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est un
+FRENCH CONTEXT (corrected): L}_\bullet T(K_{\bullet\bullet})$ est l'\emph{hyperhomologie} de
+$T$ relative au \emph{bicomplexe} $K_{\bullet\bullet}$.
+
+\begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+\begin{enumerate}
+\item[{\rm(i)}] Il résulte de (\hyperref[0.11.6.3-fr]{11.6.3}) que
+$\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est un \emph{foncteur homologique} dans la
+catégorie des bicomplexes $K_{\bullet\bullet}$ de $\boldsymbol{C}$ limités
+inférieurement en chacun de leurs degrés.
+\oldpage[0\textsubscript{III}]{43}
+\item[{\rm(ii)}] Soit $M_{\bullet\bullet\bullet}$ un tricomplexe de
+$\b
+
+[id 4929]
+OLD: foncteur homologique dans la
+NEW: \emph{foncteur homologique} dans la
+FRENCH CONTEXT (corrected): rhomologie} de
+$T$ relative au \emph{bicomplexe} $K_{\bullet\bullet}$.
+
+\begin{remarks}[11.7.3]
+\label{0.11.7.3-fr}
+\upshape
+\begin{enumerate}
+\item[{\rm(i)}] Il résulte de (\hyperref[0.11.6.3-fr]{11.6.3}) que
+$\mathbf{L}_\bullet T(K_{\bullet\bullet})$ est un \emph{foncteur homologique} dans la
+catégorie des bicomplexes $K_{\bullet\bullet}$ de $\boldsymbol{C}$ limités
+inférieurement en chacun de leurs degrés.
+\oldpage[0\textsubscript{III}]{43}
+\item[{\rm(ii)}] Soit $M_{\bullet\bullet\bullet}$ un tricomplexe de
+$\boldsymbol{C}$ tel que pour chaque co
+
+[id 4930]
+OLD: $\mathcal C$; il résulte
+NEW: $\boldsymbol{C}$; il résulte
+FRENCH CONTEXT (corrected): ns par $L_\bullet$ le complexe simple associé à
+$K_{\bullet\bullet}$, de sorte que $L_i=\bigoplus_{r+s=i}K_{rs}$, et
+posons
+$N_{ij}=\bigoplus_{r+s=i}M_{rsj}$;
+il est clair que pour chaque $i$, $N_{i,\bullet}$ est une \emph{résolution
+projective} de $L_i$ dans $\boldsymbol{C}$; il résulte donc de
+(\hyperref[0.11.6.3-fr]{11.6.3}) et
+(\hyperref[0.11.6.4-fr]{11.6.4}) que l'on a un isomorphisme fonctoriel
+$
+\mathbf{L}_\bullet T(L_\bullet)\xrightarrow{\sim} H_\bullet(T(N_{\bullet\bullet}))$;
+comme le complexe simple associé au bicomplexe $T(N_{\bul
+
+[id 4931]
+OLD: $\mathcal K$; appliquant
+NEW: $\boldsymbol{K}$; appliquant
+FRENCH CONTEXT (corrected): plexe simple
+associé au bicomplexe
+$T(H_q^{\mathrm I}(M_{\bullet\bullet\bullet}))$. Or, pour tout $q$,
+$H_q^{\mathrm I}(M_{\bullet\bullet\bullet})$ est une résolution \emph{projective} du
+complexe simple $H_q^{\mathrm I}(K_{\bullet\bullet})$ dans la catégorie
+$\boldsymbol{K}$; appliquant (\hyperref[0.11.6.3-fr]{11.6.3}), on voit que l'on a
+\[
+H_p^{\mathrm{II}}
+\bigl(T(H_q^{\mathrm I}(M_{\bullet\bullet\bullet}))\bigr)
+=\mathbf{L}_pT(H_q^{\mathrm I}(K_{\bullet\bullet})),
+\]
+et on obtient ainsi la suite $\mathop{}^{(a')}E$. Enfin, les suites
+$\m
+
+[id 4932]
+OLD: $\mathcal C$ limités
+NEW: $\boldsymbol{C}$ limités
+FRENCH CONTEXT (corrected): es abéliennes, $T$ un foncteur
+covariant additif de $\boldsymbol{C}$ dans $\boldsymbol{C}'$. Alors :
+\begin{enumerate}
+\item[{\rm(i)}] {L'hyperhomologie $\mathbf{L}_\bullet T(K_\bullet)$ est un
+foncteur homologique dans la catégorie abélienne des complexes de
+$\boldsymbol{C}$ limités inférieurement.}
+\item[{\rm(ii)}] {Soit $K_\bullet$ un complexe de $\boldsymbol{C}$ limité
+inférieurement. Si $L_nT(K_i)=0$ pour tout $n>0$ et tout $i\in\mathbb Z$, on
+a des isomorphismes fonctoriels}
+\[
+\label{0.11.6.3.1-fr}
+\tag{11.6.3.1}
+\mathbf{L}_iT(K_\b
+
+=================== PAGE 0\textsubscript{III} 43 ===================
+----- (Spanish page 0\textsubscript{III} 42: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 43: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 44 -----
+\oldpage[0\textsubscript{III}]{44}
+Con esta notación:
+\begin{proposition}[11.8.3]
+\label{0.11.8.3}
+Existe una homotopía
+\[
+  h:
+  \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+  \longrightarrow
+  \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+\]
+tal que $h(\sigma,\tau)$ es una combinación lineal de pares de símplices
+$(\sigma_i,\tau_i)$ que satisfacen
+$|\sigma_i|\subset|\sigma|$ y $|\tau_i|\subset|\tau|$, y tal que,
+si $f=j\circ p$, entonces
+\[
+  f-1=h\circ d+d\circ h.
+  \tag{11.8.3.1}\label{0.11.8.3.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Basta definir $h$ sobre cada par $(\sigma,\tau)$ de símplices, por
+inducción sobre la suma de los grados de $\sigma$ y $\tau$; cuando esa suma
+es $0$, puede tomarse $h=0$.
+Pongamos
+\[
+  \omega
+  =
+  f(\sigma,\tau)-(\sigma,\tau)-h\bigl(d(\sigma,\tau)\bigr).
+\]
+Por la hipótesis de inducción y la definición de $d$, se tiene
+\[
+  \omega
+  \in
+  \mathrm{C}_\bullet(|\sigma|)
+  \otimes
+  \mathrm{C}_\bullet(|\tau|).
+\]
+Además,
+\[
+  d\omega
+  =
+  f\bigl(d(\sigma,\tau)\bigr)
+  -d(\sigma,\tau)
+  -d\bigl(h(d(\sigma,\tau))\bigr)
+  =
+  h\bigl(d(d(\sigma,\tau))\bigr)
+  =
+  0
+\]
+por \eqref{0.11.8.3.1} y la hipótesis de inducción.
+Ahora bien,
+\[
+  \HH_q\bigl(\mathrm{C}_\bullet(A)\bigr)=0
+  \qquad(q>0)
+\]
+(G, I, 3.7.4), y, por consiguiente,
+\[
+  \HH_q\bigl(
+    \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+  \bigr)=0
+  \qquad(q>0)
+\]
+por la fórmula de K\"unneth (G, I, 5.5.2).
+Aplicando esta observación con $A$ reemplazado por $|\sigma|$ y $B$ por
+$|\tau|$, se encuentra
+\[
+  \omega'
+  \in
+  \mathrm{C}_\bullet(|\sigma|)
+  \otimes
+  \mathrm{C}_\bullet(|\tau|)
+\]
+tal que $\omega=d\omega'$.
+Tomar $h(\sigma,\tau)=\omega'$ verifica \eqref{0.11.8.3.1} para el par
+$(\sigma,\tau)$ y permite continuar la inducción.
+\end{proof}
+
+\begin{env}[11.8.4]
+\label{0.11.8.4}
+Con la notación de \sref{0.11.8.2}, escribamos
+\[
+  (\sigma,\tau)\leq(\sigma',\tau')
+\]
+si $|\sigma|\subset|\sigma'|$ y $|\tau|\subset|\tau'|$.
+Un \emph{sistema de coeficientes} $\sh{S}$ sobre
+$\Sigma(A)\times\Sigma(B)$ consiste en una familia
+$(\Gamma_{\sigma,\tau})$ de grupos abelianos, donde
+$\Gamma_{\sigma,\tau}$ depende únicamente de los conjuntos $|\sigma|$ y
+$|\tau|$, junto con homomorfismos
+\[
+  \Gamma_{\sigma,\tau}
+  \longrightarrow
+  \Gamma_{\sigma',\tau'}
+  \qquad
+  \bigl((\sigma,\tau)\leq(\sigma',\tau')\bigr)
+\]
+que forman un sistema inductivo para este preorden.
+
+Definamos un complejo de cocadenas $\mathrm{C}^\bullet(A,B;\sh{S})$ cuyos elementos
+son las familias
+\[
+  \lambda=\bigl(\lambda(\sigma,\tau)\bigr),
+  \qquad
+  \lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau},
+\]
+cuando $(\sigma,\tau)$ recorre $\Sigma(A)\times\Sigma(B)$.
+Su diferencial se define como sigue.
+Si
+\[
+  d(\sigma,\tau)=\sum_i\pm(\sigma_i,\tau_i),
+\]
+entonces $|\sigma_i|\subset|\sigma|$ y $|\tau_i|\subset|\tau|$ para todo
+$i$, y se pone
+\[
+  d\lambda(\sigma,\tau)
+  =
+  \sum_i\pm\lambda_i(\sigma_i,\tau_i),
+\]
+donde $\lambda_i(\sigma_i,\tau_i)$ denota la imagen canónica de
+$\lambda(\sigma_i,\tau_i)$ en $\Gamma_{\sigma,\tau}$.
+
+Una cocadena $\lambda\in\mathrm{C}^\bullet(A,B;\sh{S})$ se llama
+\emph{bialternada} si $\lambda(\sigma,\tau)=0$ siempre que $\sigma$
+o $\tau$ tenga dos términos iguales, y si
+\[
+  \lambda(\pi(\sigma),\tau)
+  =
+  \varepsilon_\pi\lambda(\sigma,\tau),
+  \qquad
+  \lambda(\sigma,\pi'(\tau))
+  =
+  \varepsilon_{\pi'}\lambda(\sigma,\tau)
+\]
+para permutaciones arbitrarias $\pi$ y $\pi'$ de los índices.
+Estas cocadenas engendran manifiestamente un subcomplejo
+$\mathrm{L}^\bullet(A,B;\sh{S})$ de
+$\mathrm{C}^\bullet(A,B;\sh{S})$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5}
+La inyección canónica
+\[
+  \mathrm{L}^\bullet(A,B;\sh{S})
+  \longrightarrow
+  \mathrm{C}^\bullet(A,B;\sh{S})
+\]
+induce un isomorfismo en cohomología.
+\end{proposition}
+
+\begin{proof}
+Si $p$ y $j$ tienen los significados asignados en \sref{0.11.8.2}, entonces
+las aplicaciones
+\[
+  {}'\!p:\lambda\longmapsto\lambda\circ p,
+  \qquad
+  {}'\!j:\lambda\longmapsto\lambda\circ j
+\]
+están definidas sobre $\mathrm{L}^\bullet(A,B;\sh{S})$ y
+$\mathrm{C}^\bullet(A,B;\sh{S})$, respectivamente; la primera es precisamente
+la inyección canónica.
+Como ${}'\!j\circ{}'\!p$ es la identidad, solo queda demostrar
+que ${}'\!p\circ{}'\!j$ es homótopa a la identidad.
+Por \sref{0.11.8.3}, la aplicación
+\[
+  {}'\!h:\lambda\longmapsto\lambda\circ h
+\]
+está definida sobre $\mathrm{C}^\bullet(A,B;\sh{S})$, de modo que al trasponer
+\eqref{0.11.8.3.1} se obtiene el resultado deseado.
+\end{proof}
+
+\begin{env}[11.8.6]
+\label{0.11.8.6}
+----- French corrections on page 0\textsubscript{III} 43 -----
+[id 4933]
+OLD: soit une résolution de $K_{rs}$
+NEW: soit une \emph{résolution} de $K_{rs}$
+FRENCH CONTEXT (corrected): \bullet\bullet}$ de $\boldsymbol{C}$ limités
+inférieurement en chacun de leurs degrés.
+\oldpage[0\textsubscript{III}]{43}
+\item[{\rm(ii)}] Soit $M_{\bullet\bullet\bullet}$ un tricomplexe de
+$\boldsymbol{C}$ tel que pour chaque couple $(r,s)$,
+$M_{rs,\bullet}$ soit une \emph{résolution} de $K_{rs}$ et que
+$L_nT(M_{ijk})=0$ pour tous les triplets $(i,j,k)$ et tout $n>0$. Alors on a
+un isomorphisme
+$
+\mathbf{L}_\bullet T(K_{\bullet\bullet})
+\xrightarrow{\sim} H_\bullet(T(M_{\bullet\bullet\bullet}))$;
+en effet, avec les notations de la démonstration de
+(\h
+
+[id 4934]
+OLD: un isomorphisme
+\[
+NEW: un isomorphisme
+$
+FRENCH CONTEXT (corrected): t un $S$-morphisme
+surjectif $f:X'\to X$ (qui est alors projectif par
+(\hyperref[II.5.5.5-fr]{5.5.5, (v)})). Lorsqu'il en est ainsi, on peut en
+outre choisir $f$ de sorte qu'il existe un ouvert dense $U$ de $X$ tel que la
+restriction de $f$ à $f^{-1}(U)$ soit un isomorphisme
+$f^{-1}(U)\xrightarrow{\sim}U$ et que $f^{-1}(U)$ soit dense dans $X'$. Si en outre $X$
+est irréductible \textup{(resp.} réduit) on peut supposer qu'il en est de même de
+$X'$~; lorsque $X$ et $X'$ sont irréductibles, $f$ est un morphisme
+birationnel.
+\end{corol
+
+[id 4935]
+OLD: 
+L_\bullet T(K_{\bullet\bullet})
+NEW: 
+\mathbf{L}_\bullet T(K_{\bullet\bullet})
+FRENCH CONTEXT (corrected): oit $M_{\bullet\bullet\bullet}$ un tricomplexe de
+$\boldsymbol{C}$ tel que pour chaque couple $(r,s)$,
+$M_{rs,\bullet}$ soit une \emph{résolution} de $K_{rs}$ et que
+$L_nT(M_{ijk})=0$ pour tous les triplets $(i,j,k)$ et tout $n>0$. Alors on a
+un isomorphisme
+$
+\mathbf{L}_\bullet T(K_{\bullet\bullet})
+\xrightarrow{\sim} H_\bullet(T(M_{\bullet\bullet\bullet}))$;
+en effet, avec les notations de la démonstration de
+(\hyperref[0.11.7.2-fr]{11.7.2}), $N_{i,\bullet}$ est une résolution de
+$L_i$ telle que $L_nT(N_{ij})=0$ pour $n>0$ et tout couple $(i,j)$, et il
+
+
+[id 4936]
+OLD: \simeq H_\bullet(T(M_{\bullet\bullet\bullet}))
+NEW: \xrightarrow{\sim} H_\bullet(T(M_{\bullet\bullet\bullet}))
+FRENCH CONTEXT (corrected): lexe de
+$\boldsymbol{C}$ tel que pour chaque couple $(r,s)$,
+$M_{rs,\bullet}$ soit une \emph{résolution} de $K_{rs}$ et que
+$L_nT(M_{ijk})=0$ pour tous les triplets $(i,j,k)$ et tout $n>0$. Alors on a
+un isomorphisme
+$
+\mathbf{L}_\bullet T(K_{\bullet\bullet})
+\xrightarrow{\sim} H_\bullet(T(M_{\bullet\bullet\bullet}))$;
+en effet, avec les notations de la démonstration de
+(\hyperref[0.11.7.2-fr]{11.7.2}), $N_{i,\bullet}$ est une résolution de
+$L_i$ telle que $L_nT(N_{ij})=0$ pour $n>0$ et tout couple $(i,j)$, et il
+suffit d'appliquer (\hyperref[0.11.6.3-fr]{11.6.3}, (iii)).
+
+[id 4937]
+OLD: ;
+\]
+en effet
+NEW: $;
+en effet
+FRENCH CONTEXT (corrected): $,
+$M_{rs,\bullet}$ soit une \emph{résolution} de $K_{rs}$ et que
+$L_nT(M_{ijk})=0$ pour tous les triplets $(i,j,k)$ et tout $n>0$. Alors on a
+un isomorphisme
+$
+\mathbf{L}_\bullet T(K_{\bullet\bullet})
+\xrightarrow{\sim} H_\bullet(T(M_{\bullet\bullet\bullet}))$;
+en effet, avec les notations de la démonstration de
+(\hyperref[0.11.7.2-fr]{11.7.2}), $N_{i,\bullet}$ est une résolution de
+$L_i$ telle que $L_nT(N_{ij})=0$ pour $n>0$ et tout couple $(i,j)$, et il
+suffit d'appliquer (\hyperref[0.11.6.3-fr]{11.6.3}, (iii)).
+\item[{\rm
+
+[id 4938]
+OLD: $L_\bullet T(L_\bullet,L'_\bullet)$
+NEW: $\mathbf{L}_\bullet T(L_\bullet,L'_\bullet)$
+FRENCH CONTEXT (corrected): \bullet$ et $L'_\bullet$ sont les
+complexes simples associés à $K_{\bullet\bullet}$ et
+$K'_{\bullet\bullet}$ respectivement, on définit l'hyperhomologie de $T$ par
+rapport aux deux bicomplexes $K_{\bullet\bullet}$,
+$K'_{\bullet\bullet}$ comme l'hyperhomologie
+$\mathbf{L}_\bullet T(L_\bullet,L'_\bullet)$; appliquant
+(\hyperref[0.11.6.4-fr]{11.6.4}) et
+(\hyperref[0.11.6.5-fr]{11.6.5}), on a de même que dans
+(\hyperref[0.11.7.2-fr]{11.7.2}) six suites spectrales aboutissant à cette
+hyperhomologie, et que nous laissons le soin d'écrire au lecteur.
+\end{enumerate
+
+[id 4939]
+OLD: \end{enumerate}
+\end{env}
+NEW: \end{enumerate}
+\end{remarks}
+FRENCH CONTEXT (corrected): ssus de $\widehat{E}$ en lui
+  imposant de coïncider avec l'isomorphisme canonique
+  $\widehat{E}_X\to\widehat{E}$ (\hyperref[II.8.6.2-fr]{8.6.2})~; il est clair
+  qu'alors cet isomorphisme et (\hyperref[II.8.7.3.1-fr]{8.7.3.1}) coïncident
+  au-dessus de $E$.
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[8.7.5]
+\label{II.8.7.5-fr}
+Supposons qu'il existe $n_0>0$ tel que
+\begin{equation}
+\label{II.8.7.5.1-fr}
+  \mathcal{S}_{n+1}=\mathcal{S}_1\mathcal{S}_n
+  \qquad\text{pour }n\geqslant n_0.
+\tag{8.7.5.1}
+\end{equation}
+Alors le sous-préschéma
+
+[id 4940]
+OLD: étant de degré $h$
+NEW: étant de \emph{degré} $h$
+FRENCH CONTEXT (corrected):  d'éléments de $A$ («~simplexes~» de
+$A$); on pose $|\sigma|=\{\alpha_0,\ldots,\alpha_h\}$; on rappelle que le
+complexe de chaînes $\mathrm C_\bullet(A)$ est le groupe abélien libre
+gradué engendré par les éléments de $\Sigma(A)$,
+$(\alpha_0,\ldots,\alpha_h)$ étant de \emph{degré} $h$, avec une différentielle
+définie par
+$d(\alpha_0,\ldots,\alpha_h)=\sum_{j=0}^{h}(-1)^j(\alpha_0,\ldots,\widehat{\alpha}_j,\ldots,\alpha_h)$.
+Le sous-groupe $\mathrm D_\bullet(A)$ de $\mathrm C_\bullet(A)$ engendré par
+les chaînes $\sigma=(\alpha_0,\ldots,\alp
+
+[id 4941]
+OLD: définie par
+\[
+d(\alpha_0,\ldots,\alpha_h)=
+\sum_{j=0}^{h}(-1)^j
+(\alpha_0,\ldots,\widehat{\alpha_j},\ldots,\alpha_h).
+\]
+NEW: définie par
+$d(\alpha_0,\ldots,\alpha_h)=\sum_{j=0}^{h}(-1)^j(\alpha_0,\ldots,\widehat{\alpha}_j,\ldots,\alpha_h)$.
+FRENCH CONTEXT (corrected): $|\sigma|=\{\alpha_0,\ldots,\alpha_h\}$; on rappelle que le
+complexe de chaînes $\mathrm C_\bullet(A)$ est le groupe abélien libre
+gradué engendré par les éléments de $\Sigma(A)$,
+$(\alpha_0,\ldots,\alpha_h)$ étant de \emph{degré} $h$, avec une différentielle
+définie par
+$d(\alpha_0,\ldots,\alpha_h)=\sum_{j=0}^{h}(-1)^j(\alpha_0,\ldots,\widehat{\alpha}_j,\ldots,\alpha_h)$.
+Le sous-groupe $\mathrm D_\bullet(A)$ de $\mathrm C_\bullet(A)$ engendré par
+les chaînes $\sigma=(\alpha_0,\ldots,\alpha_h)$ pour lesquelles deux des
+$\alpha_i$ sont égaux, et par les chaînes
+$\pi(\sigma)-\varepsilon_\pi.\sigma$, où pour toute permutation $\p
+
+[id 4943]
+OLD: \[
+\pi(\sigma)=(\alpha_{\pi(0)},\ldots,\alpha_{\pi(h)})
+\]
+NEW: $\pi(\sigma)=(\alpha_{\pi(0)},\ldots,\alpha_{\pi(h)})$
+FRENCH CONTEXT (corrected): sous-groupe $\mathrm D_\bullet(A)$ de $\mathrm C_\bullet(A)$ engendré par
+les chaînes $\sigma=(\alpha_0,\ldots,\alpha_h)$ pour lesquelles deux des
+$\alpha_i$ sont égaux, et par les chaînes
+$\pi(\sigma)-\varepsilon_\pi.\sigma$, où pour toute permutation $\pi$,
+$\pi(\sigma)=(\alpha_{\pi(0)},\ldots,\alpha_{\pi(h)})$
+et $\varepsilon_\pi$ est la signature de $\pi$, est un sous-complexe de
+$\mathrm C_\bullet(A)$ dont les éléments sont dits chaînes
+\emph{dégénérées}; on pose
+$\mathrm L_\bullet(A)=\mathrm C_\bullet(A)/\mathrm D_\bullet(A)$, et on a un
+homomorphisme naturel de
+
+[id 4944]
+OLD: \emph{chaînes
+dégénérées}
+NEW: chaînes
+\emph{dégénérées}
+FRENCH CONTEXT (corrected): es chaînes
+$\pi(\sigma)-\varepsilon_\pi.\sigma$, où pour toute permutation $\pi$,
+$\pi(\sigma)=(\alpha_{\pi(0)},\ldots,\alpha_{\pi(h)})$
+et $\varepsilon_\pi$ est la signature de $\pi$, est un sous-complexe de
+$\mathrm C_\bullet(A)$ dont les éléments sont dits chaînes
+\emph{dégénérées}; on pose
+$\mathrm L_\bullet(A)=\mathrm C_\bullet(A)/\mathrm D_\bullet(A)$, et on a un
+homomorphisme naturel de complexes
+$p:\mathrm C_\bullet(A)\longrightarrow\mathrm L_\bullet(A)$.
+On définit d'autre part un homomorphisme de complexes
+$j:\mathrm L_\bullet(A)
+
+[id 4945]
+OLD: \[
+p:\mathrm C_\bullet(A)\longrightarrow\mathrm L_\bullet(A).
+\]
+NEW: $p:\mathrm C_\bullet(A)\longrightarrow\mathrm L_\bullet(A)$.
+FRENCH CONTEXT (corrected): silon_\pi$ est la signature de $\pi$, est un sous-complexe de
+$\mathrm C_\bullet(A)$ dont les éléments sont dits chaînes
+\emph{dégénérées}; on pose
+$\mathrm L_\bullet(A)=\mathrm C_\bullet(A)/\mathrm D_\bullet(A)$, et on a un
+homomorphisme naturel de complexes
+$p:\mathrm C_\bullet(A)\longrightarrow\mathrm L_\bullet(A)$.
+On définit d'autre part un homomorphisme de complexes
+$j:\mathrm L_\bullet(A)\longrightarrow\mathrm C_\bullet(A)$
+de la façon suivante : on ordonne totalement $A$; à la classe
+mod.~$\mathrm D_\bullet(A)$ d'un simplexe
+$\sigma=(\alpha_0,\ldots,\alpha_h)$, on f
+
+[id 4946]
+OLD: \[
+j:\mathrm L_\bullet(A)\longrightarrow\mathrm C_\bullet(A)
+\]
+NEW: $j:\mathrm L_\bullet(A)\longrightarrow\mathrm C_\bullet(A)$
+FRENCH CONTEXT (corrected): aînes
+\emph{dégénérées}; on pose
+$\mathrm L_\bullet(A)=\mathrm C_\bullet(A)/\mathrm D_\bullet(A)$, et on a un
+homomorphisme naturel de complexes
+$p:\mathrm C_\bullet(A)\longrightarrow\mathrm L_\bullet(A)$.
+On définit d'autre part un homomorphisme de complexes
+$j:\mathrm L_\bullet(A)\longrightarrow\mathrm C_\bullet(A)$
+de la façon suivante : on ordonne totalement $A$; à la classe
+mod.~$\mathrm D_\bullet(A)$ d'un simplexe
+$\sigma=(\alpha_0,\ldots,\alpha_h)$, on fait correspondre $0$ si deux des
+$\alpha_i$ sont égaux, et $\varepsilon_\pi(\beta_0,\ldots,\beta_h)$ sinon, où
+$(\
+
+[id 4947]
+OLD: est l'identité de
+NEW: est l'\emph{identité} de
+FRENCH CONTEXT (corrected): \alpha_h)$, on fait correspondre $0$ si deux des
+$\alpha_i$ sont égaux, et $\varepsilon_\pi(\beta_0,\ldots,\beta_h)$ sinon, où
+$(\beta_0,\ldots,\beta_h)=\pi(\sigma)$ est la suite des $\alpha_i$ rangés \emph{dans l'ordre croissant}. Il est clair que $p\circ
+j$ est l'\emph{identité} de $\mathrm L_\bullet(A)$.
+\end{env}
+
+\begin{env}[11.8.2]
+\label{0.11.8.2-fr}
+Soit $B$ un second ensemble fini; si $d'$, $d''$ sont les différentielles de
+$\mathrm C_\bullet(A)$ et $\mathrm C_\bullet(B)$, le complexe produit
+tensoriel $\mathrm C_\bullet(A)\otime
+
+[id 4948]
+OLD: \[
+p:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\longrightarrow\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B),
+\]
+NEW: $p:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)$,
+FRENCH CONTEXT (corrected): a(B)$, avec la différentielle
+$d(\sigma,\tau)=(d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)$ si $\deg\sigma=h$.
+
+Les homomorphismes naturels
+$\mathrm C_\bullet(A)\to\mathrm L_\bullet(A)$,
+$\mathrm C_\bullet(B)\to\mathrm L_\bullet(B)$ définissent un homomorphisme
+$p:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)$,
+ce dernier produit tensoriel étant isomorphe à
+$(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))/(\mathrm C_\bullet(A)\otimes\mathrm D_\bullet(B)+\mathrm D_\bullet(A)\otimes\mathrm C_\bullet(B))$.
+De même, à l'aide des homomorphismes
+$\mathrm L_\bullet(A)\to
+
+[id 4949]
+OLD: \[
+\frac{\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)}
+{\mathrm C_\bullet(A)\otimes\mathrm D_\bullet(B)
++\mathrm D_\bullet(A)\otimes\mathrm C_\bullet(B)}.
+\]
+NEW: $(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))/(\mathrm C_\bullet(A)\otimes\mathrm D_\bullet(B)+\mathrm D_\bullet(A)\otimes\mathrm C_\bullet(B))$.
+FRENCH CONTEXT (corrected): \mathrm L_\bullet(A)$,
+$\mathrm C_\bullet(B)\to\mathrm L_\bullet(B)$ définissent un homomorphisme
+$p:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)$,
+ce dernier produit tensoriel étant isomorphe à
+$(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))/(\mathrm C_\bullet(A)\otimes\mathrm D_\bullet(B)+\mathrm D_\bullet(A)\otimes\mathrm C_\bullet(B))$.
+De même, à l'aide des homomorphismes
+$\mathrm L_\bullet(A)\to\mathrm C_\bullet(A)$ et
+$\mathrm L_\bullet(B)\to\mathrm C_\bullet(B)$ définis dans
+(\hyperref[0.11.8.1-fr]{11.8.1}) (à l'aide d'ordres totaux sur $A$ et $B$),
+on définit un homomorphisme
+$j:\mathrm
+
+[id 4950]
+OLD: \[
+j:\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)
+\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\]
+NEW: $j:\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$
+FRENCH CONTEXT (corrected): llet(B))$.
+De même, à l'aide des homomorphismes
+$\mathrm L_\bullet(A)\to\mathrm C_\bullet(A)$ et
+$\mathrm L_\bullet(B)\to\mathrm C_\bullet(B)$ définis dans
+(\hyperref[0.11.8.1-fr]{11.8.1}) (à l'aide d'ordres totaux sur $A$ et $B$),
+on définit un homomorphisme
+$j:\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$
+tel que $p\circ j$ soit l'identité.
+\end{env}
+
+\oldpage[0\textsubscript{III}]{44}
+Avec ces notations :
+\begin{proposition}[11.8.3]
+\label{0.11.8.3-fr}
+{Il existe une homotopie
+$h:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm C_\bullet(
+
+[id 4951]
+OLD: $\mathcal C$ tel que
+NEW: $\boldsymbol{C}$ tel que
+FRENCH CONTEXT (corrected):  un \emph{foncteur homologique} dans la
+catégorie des bicomplexes $K_{\bullet\bullet}$ de $\boldsymbol{C}$ limités
+inférieurement en chacun de leurs degrés.
+\oldpage[0\textsubscript{III}]{43}
+\item[{\rm(ii)}] Soit $M_{\bullet\bullet\bullet}$ un tricomplexe de
+$\boldsymbol{C}$ tel que pour chaque couple $(r,s)$,
+$M_{rs,\bullet}$ soit une \emph{résolution} de $K_{rs}$ et que
+$L_nT(M_{ijk})=0$ pour tous les triplets $(i,j,k)$ et tout $n>0$. Alors on a
+un isomorphisme
+$
+\mathbf{L}_\bullet T(K_{\bullet\bullet})
+\xrightarrow{\sim} H_\bullet(T(M
+
+[id 4952]
+OLD: $\mathcal C'$ une seconde
+NEW: $\boldsymbol{C}'$ une seconde
+FRENCH CONTEXT (corrected): $L_nT(N_{ij})=0$ pour $n>0$ et tout couple $(i,j)$, et il
+suffit d'appliquer (\hyperref[0.11.6.3-fr]{11.6.3}, (iii)).
+\item[{\rm(iii)}] On généralise aussitôt les résultats de
+(\hyperref[0.11.7.2-fr]{11.7.2}) aux multifoncteurs covariants; par exemple,
+soient $\boldsymbol{C}'$ une seconde catégorie abélienne dans laquelle tout objet
+est quotient d'un objet projectif, $K'_{\bullet\bullet}$ un bicomplexe de
+$\boldsymbol{C}'$ dont les deux degrés sont limités inférieurement, et $T$ un
+bifoncteur covariant additif de $\boldsymbol{C}\times\boldsymb
+
+[id 4953]
+OLD: $\mathcal C'$ dont les
+NEW: $\boldsymbol{C}'$ dont les
+FRENCH CONTEXT (corrected):  aussitôt les résultats de
+(\hyperref[0.11.7.2-fr]{11.7.2}) aux multifoncteurs covariants; par exemple,
+soient $\boldsymbol{C}'$ une seconde catégorie abélienne dans laquelle tout objet
+est quotient d'un objet projectif, $K'_{\bullet\bullet}$ un bicomplexe de
+$\boldsymbol{C}'$ dont les deux degrés sont limités inférieurement, et $T$ un
+bifoncteur covariant additif de $\boldsymbol{C}\times\boldsymbol{C}'$ dans une
+catégorie abélienne $\boldsymbol{C}''$. Si $L_\bullet$ et $L'_\bullet$ sont les
+complexes simples associés à $K_{\bullet\bullet}$
+
+[id 4954]
+OLD: $\mathcal C\times\mathcal C'$ dans une
+NEW: $\boldsymbol{C}\times\boldsymbol{C}'$ dans une
+FRENCH CONTEXT (corrected):  $\boldsymbol{C}'$ une seconde catégorie abélienne dans laquelle tout objet
+est quotient d'un objet projectif, $K'_{\bullet\bullet}$ un bicomplexe de
+$\boldsymbol{C}'$ dont les deux degrés sont limités inférieurement, et $T$ un
+bifoncteur covariant additif de $\boldsymbol{C}\times\boldsymbol{C}'$ dans une
+catégorie abélienne $\boldsymbol{C}''$. Si $L_\bullet$ et $L'_\bullet$ sont les
+complexes simples associés à $K_{\bullet\bullet}$ et
+$K'_{\bullet\bullet}$ respectivement, on définit l'hyperhomologie de $T$ par
+rapport aux deux bicomplexes $K_{\bullet\bullet}$
+
+[id 4955]
+OLD: $\mathcal C''$. Si $L_\bullet$
+NEW: $\boldsymbol{C}''$. Si $L_\bullet$
+FRENCH CONTEXT (corrected): ut objet
+est quotient d'un objet projectif, $K'_{\bullet\bullet}$ un bicomplexe de
+$\boldsymbol{C}'$ dont les deux degrés sont limités inférieurement, et $T$ un
+bifoncteur covariant additif de $\boldsymbol{C}\times\boldsymbol{C}'$ dans une
+catégorie abélienne $\boldsymbol{C}''$. Si $L_\bullet$ et $L'_\bullet$ sont les
+complexes simples associés à $K_{\bullet\bullet}$ et
+$K'_{\bullet\bullet}$ respectivement, on définit l'hyperhomologie de $T$ par
+rapport aux deux bicomplexes $K_{\bullet\bullet}$,
+$K'_{\bullet\bullet}$ comme l'hyperhomologie
+$\mathbf
+
+[id 5521]
+OLD: rangés dans l'ordre croissant. Il est clair
+NEW: rangés \emph{dans l'ordre croissant}. Il est clair
+FRENCH CONTEXT (corrected): od.~$\mathrm D_\bullet(A)$ d'un simplexe
+$\sigma=(\alpha_0,\ldots,\alpha_h)$, on fait correspondre $0$ si deux des
+$\alpha_i$ sont égaux, et $\varepsilon_\pi(\beta_0,\ldots,\beta_h)$ sinon, où
+$(\beta_0,\ldots,\beta_h)=\pi(\sigma)$ est la suite des $\alpha_i$ rangés \emph{dans l'ordre croissant}. Il est clair que $p\circ
+j$ est l'\emph{identité} de $\mathrm L_\bullet(A)$.
+\end{env}
+
+\begin{env}[11.8.2]
+\label{0.11.8.2-fr}
+Soit $B$ un second ensemble fini; si $d'$, $d''$ sont les différentielles de
+$\mathrm C_\bullet(A)$ et $\mathrm C_\bullet(B)$, le complexe produ
+
+[id 5522]
+OLD: rangés dans l'ordre croissant dans
+NEW: rangés \emph{dans l'ordre croissant} dans
+
+[id 5523]
+OLD: \[
+d(\sigma,\tau)=(d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)
+\quad\text{si }\deg\sigma=h.
+\]
+Les homomorphismes naturels
+NEW: $d(\sigma,\tau)=(d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)$ si $\deg\sigma=h$.
+
+Les homomorphismes naturels
+FRENCH CONTEXT (corrected): $\mathrm C_\bullet(A)$ et $\mathrm C_\bullet(B)$, le complexe produit
+tensoriel $\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$ peut être
+considéré comme le groupe abélien libre engendré par les éléments de
+$\Sigma(A)\times\Sigma(B)$, avec la différentielle
+$d(\sigma,\tau)=(d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)$ si $\deg\sigma=h$.
+
+Les homomorphismes naturels
+$\mathrm C_\bullet(A)\to\mathrm L_\bullet(A)$,
+$\mathrm C_\bullet(B)\to\mathrm L_\bullet(B)$ définissent un homomorphisme
+$p:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm L_\bullet(A)\otimes\mathrm L_\bullet(B)$,
+ce dernier produit ten
+
+[id 5524]
+OLD: \[
+d(\sigma,\tau)=(d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)
+\quad\text{si }\operatorname{Card}|\sigma|=h+1.
+\]
+Les homomorphismes naturels
+NEW: $d(\sigma,\tau)=(d'\sigma,\tau)+(-1)^{h+1}(\sigma,d''\tau)$ si $\operatorname{Card}|\sigma|=h+1$.
+
+Les homomorphismes naturels
+
+=================== PAGE 0\textsubscript{III} 44 ===================
+----- (Spanish page 0\textsubscript{III} 43: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 44: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 45 -----
+\oldpage[0\textsubscript{III}]{45}
+La Proposición~\sref{0.11.8.5} reduce el cálculo de la cohomología de
+$\mathrm{L}^\bullet(A,B;\sh{S})$ al de
+$\mathrm{C}^\bullet(A,B;\sh{S})$.
+Por otra parte, por el teorema de Eilenberg--Zilber
+(G, I, 3.10.2), esta última cohomología es canónicamente isomorfa a la
+cohomología obtenida a partir del complejo de cadenas
+$\mathrm{P}_\bullet(A,B)$ de combinaciones lineales de pares
+$(\sigma,\tau)\in\Sigma(A)\times\Sigma(B)$ para los cuales $\sigma$ y
+$\tau$ tienen el mismo grado.
+El diferencial de este complejo es
+\[
+  d(\sigma,\tau)
+  =
+  \sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)
+\]
+cuando
+\[
+  d\sigma=\sum_j(-1)^j\sigma_j,
+  \qquad
+  d\tau=\sum_k(-1)^k\tau_k.
+\]
+Existen dos homomorfismos canónicos de complejos
+\[
+  f:\mathrm{P}_\bullet(A,B)
+  \longrightarrow
+  \mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B),
+  \qquad
+  g:\mathrm{C}_\bullet(A)\otimes\mathrm{C}_\bullet(B)
+  \longrightarrow
+  \mathrm{P}_\bullet(A,B),
+\]
+y se demuestra allí que existen homotopías $h$ y $h'$ tales que
+\[
+  f\circ g-1=d\circ h+h\circ d\qquad\text{et}
+  \qquad
+  g\circ f-1=d\circ h'+h'\circ d.
+\]
+Además,
+\[
+  f(\sigma,\tau)
+  \in
+  \mathrm{C}_\bullet(|\sigma|)
+  \otimes
+  \mathrm{C}_\bullet(|\tau|),
+  \qquad
+  g(\sigma,\tau)
+  \in
+  \mathrm{P}_\bullet(|\sigma|,|\tau|),
+\]
+y las homotopías pueden elegirse de modo que
+\[
+  h(\sigma,\tau)
+  \in
+  \mathrm{C}_\bullet(|\sigma|)
+  \otimes
+  \mathrm{C}_\bullet(|\tau|),
+  \qquad
+  h'(\sigma,\tau)
+  \in
+  \mathrm{P}_\bullet(|\sigma|,|\tau|).
+\]
+En efecto, $h(\sigma,\tau)$ y $h'(\sigma,\tau)$ pueden definirse por
+inducción sobre la suma de los grados de $\sigma$ y $\tau$, mientras que
+\[
+  \HH_q\bigl(
+    \mathrm{C}_\bullet(|\sigma|)
+    \otimes
+    \mathrm{C}_\bullet(|\tau|)
+  \bigr)
+  =
+  \HH_q\bigl(\mathrm{P}_\bullet(|\sigma|,|\tau|)\bigr)
+  =
+  0
+  \qquad(q>0)
+\]
+(\emph{loc.\ cit.}); el razonamiento es el mismo que en
+\sref{0.11.8.3}.
+
+Definamos ahora $\mathrm{P}^\bullet(A,B;\sh{S})$ como el conjunto de familias
+\[
+  \lambda=\bigl(\lambda(\sigma,\tau)\bigr),
+  \qquad
+  \lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau},
+\]
+donde $(\sigma,\tau)$ recorre los pares de símplices del mismo grado.
+Cuando
+\[
+  d\sigma=\sum_j(-1)^j\sigma_j,
+  \qquad
+  d\tau=\sum_k(-1)^k\tau_k,
+\]
+la fórmula
+\[
+  d\lambda(\sigma,\tau)
+  =
+  \sum(-1)^{j+k}\lambda(\sigma_j,\tau_k)
+\]
+está definida y da el diferencial de
+$\mathrm{P}^\bullet(A,B;\sh{S})$.
+Las aplicaciones
+\[
+  {}'\!f:\lambda\longmapsto\lambda\circ f,\quad
+  {}'\!g:\lambda\longmapsto\lambda\circ g,\quad
+  {}'\!h:\lambda\longmapsto\lambda\circ h,\quad
+  {}'\!h':\lambda\longmapsto\lambda\circ h'
+\]
+están todas definidas por las propiedades de soporte anteriores.
+Así, ${}'\!f\circ{}'\!g$ y ${}'\!g\circ{}'\!f$ son homótopas a la
+identidad, dando el isomorfismo requerido entre la cohomología de
+$\mathrm{C}^\bullet(A,B;\sh{S})$ y la de
+$\mathrm{P}^\bullet(A,B;\sh{S})$.
+\end{env}
+
+\begin{env}[11.8.7]
+\label{0.11.8.7}
+\emph{Observación}.
+El razonamiento de \sref{0.11.8.3}, aplicado a
+$\mathrm{C}_\bullet(A)$ y $\mathrm{L}_\bullet(A)$, muestra que si
+$j$ y $p$ se definen como en \sref{0.11.8.1}, entonces
+$f=j\circ p$ satisface de nuevo \eqref{0.11.8.3.1}, con
+$|h(\sigma)|\subset|\sigma|$.
+Como en \sref{0.11.8.5}, se obtiene un isomorfismo de la cohomología de
+$\mathrm{L}^\bullet(A;\sh{S})$ en la de
+$\mathrm{C}^\bullet(A;\sh{S})$, definiéndose los dos complejos de manera
+evidente.
+Este es el resultado cuya demostración se esboza en (G, I, 3.8.1).
+\end{env}
+
+\begin{env}[11.8.8]
+\label{0.11.8.8}
+Volvamos ahora a la notación y las hipótesis de \sref{0.11.8.2}, y sea
+\[
+  \sh{S}^\bullet=(\sh{S}^k)
+\]
+un complejo de sistemas de coeficientes sobre
+$\Sigma(A)\times\Sigma(B)$.
+Para cada $(\sigma,\tau)$, los grupos $\Gamma^k_{\sigma,\tau}$
+forman, por tanto, un complejo de grupos abelianos $(k\in\bb{Z})$, y para
+$(\sigma,\tau)\leq(\sigma',\tau')$ existen diagramas conmutativos
+\[
+  \xymatrix{
+    \Gamma^k_{\sigma,\tau}\ar[r]\ar[d] &
+    \Gamma^{k+1}_{\sigma,\tau}\ar[d]\\
+    \Gamma^k_{\sigma',\tau'}\ar[r] &
+    \Gamma^{k+1}_{\sigma',\tau'}.
+  }
+\]
+----- French corrections on page 0\textsubscript{III} 44 -----
+[id 4956]
+OLD: \emph{Il existe une homotopie
+NEW: {Il existe une homotopie
+FRENCH CONTEXT (corrected): athrm L_\bullet(A)\otimes\mathrm L_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$
+tel que $p\circ j$ soit l'identité.
+\end{env}
+
+\oldpage[0\textsubscript{III}]{44}
+Avec ces notations :
+\begin{proposition}[11.8.3]
+\label{0.11.8.3-fr}
+{Il existe une homotopie
+$h:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$,
+telle que $h(\sigma,\tau)$ soit combinaison linéaire de couples de simplexes
+$(\sigma_i,\tau_i)$ avec $|\sigma_i|\subset|\sigma|$,
+$|\tau_i|\sub
+
+[id 4957]
+OLD: \[
+h:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B),
+\]
+NEW: $h:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$,
+FRENCH CONTEXT (corrected): \mathrm L_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$
+tel que $p\circ j$ soit l'identité.
+\end{env}
+
+\oldpage[0\textsubscript{III}]{44}
+Avec ces notations :
+\begin{proposition}[11.8.3]
+\label{0.11.8.3-fr}
+{Il existe une homotopie
+$h:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$,
+telle que $h(\sigma,\tau)$ soit combinaison linéaire de couples de simplexes
+$(\sigma_i,\tau_i)$ avec $|\sigma_i|\subset|\sigma|$,
+$|\tau_i|\subset|\tau|$, et que l'on ait pour $f=j\circ p$,}
+\[
+\label{0.11.8.3.1-fr}
+\tag{11.8.3.1}
+f-1=h\circ d+d\circ h.
+\]
+\
+
+[id 4958]
+OLD: \[
+\omega=f(\sigma,\tau)-(\sigma,\tau)-h(d(\sigma,\tau));
+\]
+NEW: $\omega=f(\sigma,\tau)-(\sigma,\tau)-h(d(\sigma,\tau))$;
+FRENCH CONTEXT (corrected): rc d+d\circ h.
+\]
+\end{proposition}
+
+\begin{proof}
+Il suffit de définir $h$ sur chaque couple $(\sigma,\tau)$ de simplexes, en
+raisonnant par récurrence sur la somme des degrés de $\sigma$ et $\tau$, car
+on peut prendre $h=0$ lorsque cette somme est $0$. Soit
+$\omega=f(\sigma,\tau)-(\sigma,\tau)-h(d(\sigma,\tau))$;
+en vertu de l'hypothèse de récurrence et de la définition de $d$, on a
+$\omega\in\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$.
+On a
+\[
+d\omega=f(d(\sigma,\tau))-d(\sigma,\tau)-d(h(d(\sigma,\tau)))
+=h(d(d(\sigma,\tau)))=0
+\]
+en vertu de (\hyper
+
+[id 4959]
+OLD: \[
+\omega\in\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|).
+\]
+NEW: $\omega\in\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$.
+FRENCH CONTEXT (corrected): aisonnant par récurrence sur la somme des degrés de $\sigma$ et $\tau$, car
+on peut prendre $h=0$ lorsque cette somme est $0$. Soit
+$\omega=f(\sigma,\tau)-(\sigma,\tau)-h(d(\sigma,\tau))$;
+en vertu de l'hypothèse de récurrence et de la définition de $d$, on a
+$\omega\in\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$.
+On a
+\[
+d\omega=f(d(\sigma,\tau))-d(\sigma,\tau)-d(h(d(\sigma,\tau)))
+=h(d(d(\sigma,\tau)))=0
+\]
+en vertu de (\hyperref[0.11.8.3.1-fr]{11.8.3.1}) et de l'hypothèse de
+récurrence. Or, on a
+$H_q(\mathrm C_\bullet(A))=0$ pour $q>0$ (G, I, 3.7.4), donc aussi
+$H_q
+
+[id 4960]
+OLD: \[
+H_q(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))=0\quad(q>0),
+\]
+NEW: $H_q(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))=0$ pour $q>0$,
+FRENCH CONTEXT (corrected): |)$.
+On a
+\[
+d\omega=f(d(\sigma,\tau))-d(\sigma,\tau)-d(h(d(\sigma,\tau)))
+=h(d(d(\sigma,\tau)))=0
+\]
+en vertu de (\hyperref[0.11.8.3.1-fr]{11.8.3.1}) et de l'hypothèse de
+récurrence. Or, on a
+$H_q(\mathrm C_\bullet(A))=0$ pour $q>0$ (G, I, 3.7.4), donc aussi
+$H_q(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))=0$ pour $q>0$,
+en vertu de la formule de Künneth (G, I, 5.5.2). Appliquant cette remarque en
+remplaçant $A$ par $|\sigma|$ et $B$ par $|\tau|$, on voit qu'il existe un
+élément
+$\omega'$ de $\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$
+tel que $\omega=d\omega
+
+[id 4961]
+OLD: \[
+\omega'\in\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)
+\]
+NEW: $\omega'$ de $\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$
+FRENCH CONTEXT (corrected): >0$ (G, I, 3.7.4), donc aussi
+$H_q(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))=0$ pour $q>0$,
+en vertu de la formule de Künneth (G, I, 5.5.2). Appliquant cette remarque en
+remplaçant $A$ par $|\sigma|$ et $B$ par $|\tau|$, on voit qu'il existe un
+élément
+$\omega'$ de $\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$
+tel que $\omega=d\omega'$; prenant $h(\sigma,\tau)=\omega'$, on vérifie
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}) pour le couple $(\sigma,\tau)$ et la
+récurrence peut se poursuivre.
+\end{proof}
+
+\begin{env}[11.8.4]
+\label{0.11.8.4-fr}
+Les notations étant celles de
+
+[id 4962]
+OLD: coefficients} $\Gamma$ sur
+NEW: coefficients} $\mathscr S$ sur
+FRENCH CONTEXT (corrected): t se poursuivre.
+\end{proof}
+
+\begin{env}[11.8.4]
+\label{0.11.8.4-fr}
+Les notations étant celles de (\hyperref[0.11.8.2-fr]{11.8.2}), nous poserons
+$(\sigma,\tau)\leq(\sigma',\tau')$ si $|\sigma|\subset|\sigma'|$ et
+$|\tau|\subset|\tau'|$. Un \emph{système de coefficients} $\mathscr S$ sur
+$\Sigma(A)\times\Sigma(B)$ est constitué par une famille
+$(\Gamma_{\sigma,\tau})$ de groupes abéliens, où
+$\Gamma_{\sigma,\tau}$ ne dépend que des ensembles $|\sigma|$ et $|\tau|$,
+et une famille d'homomorphismes
+$\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\s
+
+[id 4963]
+OLD: \[
+\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}
+\quad\text{pour }(\sigma,\tau)\leq(\sigma',\tau'),
+\]
+NEW: $\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}$, pour $(\sigma,\tau)\leq(\sigma',\tau')$,
+FRENCH CONTEXT (corrected): emph{système de coefficients} $\mathscr S$ sur
+$\Sigma(A)\times\Sigma(B)$ est constitué par une famille
+$(\Gamma_{\sigma,\tau})$ de groupes abéliens, où
+$\Gamma_{\sigma,\tau}$ ne dépend que des ensembles $|\sigma|$ et $|\tau|$,
+et une famille d'homomorphismes
+$\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}$, pour $(\sigma,\tau)\leq(\sigma',\tau')$,
+formant un \emph{système inductif} pour cette relation de préordre. On définit alors
+un \emph{complexe de cochaînes} $\mathrm C^\bullet(A,B;\mathscr S)$ comme l'ensemble
+des familles $\lambda=(\lambda(\sigma,\tau))$, où $(\sigma,\tau)$ parcourt
+$\Sigma(A)\tim
+
+[id 4964]
+OLD: formant un système inductif
+NEW: formant un \emph{système inductif}
+FRENCH CONTEXT (corrected): e
+$(\Gamma_{\sigma,\tau})$ de groupes abéliens, où
+$\Gamma_{\sigma,\tau}$ ne dépend que des ensembles $|\sigma|$ et $|\tau|$,
+et une famille d'homomorphismes
+$\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}$, pour $(\sigma,\tau)\leq(\sigma',\tau')$,
+formant un \emph{système inductif} pour cette relation de préordre. On définit alors
+un \emph{complexe de cochaînes} $\mathrm C^\bullet(A,B;\mathscr S)$ comme l'ensemble
+des familles $\lambda=(\lambda(\sigma,\tau))$, où $(\sigma,\tau)$ parcourt
+$\Sigma(A)\times\Sigma(B)$, avec
+$\lambda(\sigma,
+
+[id 4965]
+OLD: un complexe de cochaînes
+NEW: un \emph{complexe de cochaînes}
+FRENCH CONTEXT (corrected): ue des ensembles $|\sigma|$ et $|\tau|$,
+et une famille d'homomorphismes
+$\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}$, pour $(\sigma,\tau)\leq(\sigma',\tau')$,
+formant un \emph{système inductif} pour cette relation de préordre. On définit alors
+un \emph{complexe de cochaînes} $\mathrm C^\bullet(A,B;\mathscr S)$ comme l'ensemble
+des familles $\lambda=(\lambda(\sigma,\tau))$, où $(\sigma,\tau)$ parcourt
+$\Sigma(A)\times\Sigma(B)$, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$ pour tout couple
+$(\sigma,\tau)$. La différentielle 
+
+[id 4966]
+OLD: $\mathrm C^\bullet(A,B;\Gamma)$ comme l'ensemble
+NEW: $\mathrm C^\bullet(A,B;\mathscr S)$ comme l'ensemble
+FRENCH CONTEXT (corrected): |\tau|$,
+et une famille d'homomorphismes
+$\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}$, pour $(\sigma,\tau)\leq(\sigma',\tau')$,
+formant un \emph{système inductif} pour cette relation de préordre. On définit alors
+un \emph{complexe de cochaînes} $\mathrm C^\bullet(A,B;\mathscr S)$ comme l'ensemble
+des familles $\lambda=(\lambda(\sigma,\tau))$, où $(\sigma,\tau)$ parcourt
+$\Sigma(A)\times\Sigma(B)$, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$ pour tout couple
+$(\sigma,\tau)$. La différentielle est donnée de la façon suivante : si
+$d(\sigma,\tau)=
+
+[id 4967]
+OLD: \[
+d(\sigma,\tau)=\sum_i\pm(\sigma_i,\tau_i),
+\]
+NEW: $d(\sigma,\tau)=\sum_i\pm(\sigma_i,\tau_i)$,
+FRENCH CONTEXT (corrected): comme l'ensemble
+des familles $\lambda=(\lambda(\sigma,\tau))$, où $(\sigma,\tau)$ parcourt
+$\Sigma(A)\times\Sigma(B)$, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$ pour tout couple
+$(\sigma,\tau)$. La différentielle est donnée de la façon suivante : si
+$d(\sigma,\tau)=\sum_i\pm(\sigma_i,\tau_i)$,
+on a $|\sigma_i|\subset|\sigma|$, $|\tau_i|\subset|\tau|$ pour tout $i$, et
+l'on prend
+\[
+d\lambda(\sigma,\tau)=\sum_i\pm\lambda_i(\sigma_i,\tau_i),
+\]
+où $\lambda_i(\sigma_i,\tau_i)$ désigne l'image canonique de
+$\lambda(\sigma_i,\tau_i)$ dans $\Gamma_{\sigm
+
+[id 4968]
+OLD: $\lambda\in\mathrm C^\bullet(A,B;\Gamma)$ est
+NEW: $\lambda\in\mathrm C^\bullet(A,B;\mathscr S)$ est
+FRENCH CONTEXT (corrected): au_i|\subset|\tau|$ pour tout $i$, et
+l'on prend
+\[
+d\lambda(\sigma,\tau)=\sum_i\pm\lambda_i(\sigma_i,\tau_i),
+\]
+où $\lambda_i(\sigma_i,\tau_i)$ désigne l'image canonique de
+$\lambda(\sigma_i,\tau_i)$ dans $\Gamma_{\sigma,\tau}$.
+
+Nous dirons qu'une cochaîne $\lambda\in\mathrm C^\bullet(A,B;\mathscr S)$ est
+\emph{bi-alternée} si $\lambda(\sigma,\tau)=0$ lorsque l'un des deux
+simplexes $\sigma$, $\tau$ a deux termes égaux, et si l'on a
+$\lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau)$ et
+$\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\
+
+[id 4969]
+OLD: \[
+\lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau),
+\qquad
+\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\tau)
+\]
+NEW: $\lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau)$ et
+$\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\tau)$
+FRENCH CONTEXT (corrected): bda(\sigma_i,\tau_i)$ dans $\Gamma_{\sigma,\tau}$.
+
+Nous dirons qu'une cochaîne $\lambda\in\mathrm C^\bullet(A,B;\mathscr S)$ est
+\emph{bi-alternée} si $\lambda(\sigma,\tau)=0$ lorsque l'un des deux
+simplexes $\sigma$, $\tau$ a deux termes égaux, et si l'on a
+$\lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau)$ et
+$\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\tau)$
+pour des permutations quelconques $\pi$, $\pi'$ des indices. Il est clair
+que ces cochaînes engendrent un \emph{sous-complexe}
+$\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5-f
+
+[id 4970]
+OLD: engendrent un sous-complexe
+NEW: engendrent un \emph{sous-complexe}
+FRENCH CONTEXT (corrected):  deux termes égaux, et si l'on a
+$\lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau)$ et
+$\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\tau)$
+pour des permutations quelconques $\pi$, $\pi'$ des indices. Il est clair
+que ces cochaînes engendrent un \emph{sous-complexe}
+$\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5-fr}
+{L'injection canonique
+$\mathrm L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomor
+
+[id 4971]
+OLD: $\mathrm L^\bullet(A,B;\Gamma)$ de $\mathrm C^\bullet(A,B;\Gamma)$.
+NEW: $\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+FRENCH CONTEXT (corrected): lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau)$ et
+$\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\tau)$
+pour des permutations quelconques $\pi$, $\pi'$ des indices. Il est clair
+que ces cochaînes engendrent un \emph{sous-complexe}
+$\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5-fr}
+{L'injection canonique
+$\mathrm L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin
+
+[id 4972]
+OLD: \emph{L'injection canonique
+NEW: {L'injection canonique
+FRENCH CONTEXT (corrected): ur des permutations quelconques $\pi$, $\pi'$ des indices. Il est clair
+que ces cochaînes engendrent un \emph{sous-complexe}
+$\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5-fr}
+{L'injection canonique
+$\mathrm L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{1
+
+[id 4973]
+OLD: \[
+\mathrm L^\bullet(A,B;\Gamma)\longrightarrow
+\mathrm C^\bullet(A,B;\Gamma)
+\]
+NEW: $\mathrm L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+FRENCH CONTEXT (corrected): lconques $\pi$, $\pi'$ des indices. Il est clair
+que ces cochaînes engendrent un \emph{sous-complexe}
+$\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5-fr}
+{L'injection canonique
+$\mathrm L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lamb
+
+[id 4974]
+OLD: les applications
+\[
+{}'p:
+NEW: les applications
+${}^tp:
+FRENCH CONTEXT (corrected):  L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'ident
+
+[id 4975]
+OLD: \lambda\longmapsto\lambda\circ p
+NEW: \lambda\to\lambda\circ p
+FRENCH CONTEXT (corrected): S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démont
+
+[id 4976]
+OLD: ,\qquad
+{}'j:
+NEW: $ et
+${}^tj:
+FRENCH CONTEXT (corrected):  C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^
+
+[id 4977]
+OLD: \lambda\longmapsto\lambda\circ j
+NEW: \lambda\to\lambda\circ j
+FRENCH CONTEXT (corrected): ,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homoto
+
+[id 4978]
+OLD: 
+\]
+sont définies dans
+NEW: $
+sont définies dans
+FRENCH CONTEXT (corrected): un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+
+[id 4979]
+OLD: $\mathrm L^\bullet(A,B;\Gamma)$ et
+$\mathrm C^\bullet(A,B;\Gamma)$ respectivement
+NEW: $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement
+FRENCH CONTEXT (corrected): la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{défi
+
+[id 4980]
+OLD: $\mathop{}'j\circ{}'p$
+NEW: ${}^tj\circ{}^tp$
+FRENCH CONTEXT (corrected): 2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'ide
+
+[id 4981]
+OLD: $\mathop{}'p\circ{}'j$
+NEW: ${}^tp\circ{}^tj$
+FRENCH CONTEXT (corrected): ^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le ré
+
+[id 4982]
+OLD: $\mathop{}'h:
+NEW: ${}^th:
+FRENCH CONTEXT (corrected): athrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le résultat cherché.
+\end{proof}
+
+\oldpage[0\textsubscript{III}]{45}
+\begin{env}[11.8.
+
+[id 4983]
+OLD: \lambda\mapsto\lambda\circ h
+NEW: \lambda\to\lambda\circ h
+FRENCH CONTEXT (corrected): ^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le résultat cherché.
+\end{proof}
+
+\oldpage[0\textsubscript{III}]{45}
+\begin{env}[11.8.6]
+\label{0.11.8.6-fr}
+L
+
+[id 4984]
+OLD: $ est définie dans
+NEW: $ est \emph{définie} dans
+FRENCH CONTEXT (corrected): $ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le résultat cherché.
+\end{proof}
+
+\oldpage[0\textsubscript{III}]{45}
+\begin{env}[11.8.6]
+\label{0.11.8.6-fr}
+La proposition (\hyperref[
+
+[id 4985]
+OLD: $\mathrm C^\bullet(A,B;\Gamma)$ et on peut donc
+NEW: $\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc
+FRENCH CONTEXT (corrected): ère n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le résultat cherché.
+\end{proof}
+
+\oldpage[0\textsubscript{III}]{45}
+\begin{env}[11.8.6]
+\label{0.11.8.6-fr}
+La proposition (\hyperref[0.11.8.5-fr]{11.8.5}) ramène le calcul de la
+cohomol
+
+=================== PAGE 0\textsubscript{III} 45 ===================
+----- (Spanish page 0\textsubscript{III} 44: shown above in this file) -----
+----- (Spanish page 0\textsubscript{III} 45: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega0/ega0-11.tex, page 0\textsubscript{III} 46 -----
+\oldpage[0\textsubscript{III}]{46}
+Se deduce inmediatamente que
+\[
+  \mathrm{C}^\bullet(A,B;\sh{S}^\bullet)
+  =
+  \bigl(
+    \mathrm{C}^h(A,B;\sh{S}^k)
+  \bigr)_{(h,k)\in\bb{Z}\times\bb{Z}}
+\]
+es un bicomplejo de grupos abelianos, y que
+\[
+  \mathrm{L}^\bullet(A,B;\sh{S}^\bullet)
+  =
+  \bigl(
+    \mathrm{L}^h(A,B;\sh{S}^k)
+  \bigr)
+\]
+es un subbicomplejo.
+\end{env}
+
+\begin{proposition}[11.8.9]
+\label{0.11.8.9}
+La inyección canónica
+\[
+  \mathrm{L}^\bullet(A,B;\sh{S}^\bullet)
+  \longrightarrow
+  \mathrm{C}^\bullet(A,B;\sh{S}^\bullet)
+\]
+induce un isomorfismo en la cohomología de estos dos bicomplejos.
+\end{proposition}
+
+\begin{proof}
+Por brevedad, pongamos
+\[
+  \mathrm{C}^{\bullet\bullet}
+  =
+  \mathrm{C}^\bullet(A,B;\sh{S}^\bullet),
+  \qquad
+  \mathrm{L}^{\bullet\bullet}
+  =
+  \mathrm{L}^\bullet(A,B;\sh{S}^\bullet).
+\]
+Como $\mathrm{C}^{hk}=\mathrm{L}^{hk}=0$ para $h<0$, las segundas
+sucesiones espectrales de estos bicomplejos son regulares
+\sref{0.11.3.3}.
+El homomorfismo
+$\mathrm{L}^{\bullet\bullet}\to\mathrm{C}^{\bullet\bullet}$ da, por tanto,
+un morfismo de sucesiones espectrales
+\[
+  {}''\mathrm{E}(\mathrm{L}^{\bullet\bullet})
+  \longrightarrow
+  {}''\mathrm{E}(\mathrm{C}^{\bullet\bullet})
+\]
+que, sobre los términos $\mathrm{E}_2$, es
+\[
+  \HH^p_{\mathrm{II}}
+  \bigl(\HH^q_{\mathrm{I}}(\mathrm{L}^{\bullet\bullet})\bigr)
+  \longrightarrow
+  \HH^p_{\mathrm{II}}
+  \bigl(\HH^q_{\mathrm{I}}(\mathrm{C}^{\bullet\bullet})\bigr).
+  \tag{11.8.9.1}\label{0.11.8.9.1}
+\]
+Sin embargo, para todo $k\in\bb{Z}$, \sref{0.11.8.5} muestra que
+\[
+  \HH^q_{\mathrm{I}}(\mathrm{L}^{\bullet,k})
+  \longrightarrow
+  \HH^q_{\mathrm{I}}(\mathrm{C}^{\bullet,k})
+\]
+es biyectivo.
+La conclusión se deduce de \sref{0.11.1.5}.
+\end{proof}
+
+\begin{env}[11.8.10]
+\label{0.11.8.10}
+Análogamente, con la notación de \sref{0.11.8.6}, existe un
+homomorfismo canónico de bicomplejos
+\[
+  \mathrm{C}^\bullet(A,B;\sh{S}^\bullet)
+  \longrightarrow
+  \mathrm{P}^\bullet(A,B;\sh{S}^\bullet),
+\]
+con la notación evidente.
+El razonamiento de \sref{0.11.8.9}, utilizando ahora \sref{0.11.8.6}, muestra que
+este homomorfismo induce asimismo un isomorfismo en cohomología.
+\end{env}
+
+\subsection{Un lema sobre los complejos de tipo finito}
+\label{subsection:0.11.9}
+
+\begin{proposition}[11.9.1]
+\label{0.11.9.1}
+Sea $\cat{C}$ una categoría abeliana, y sean $\boldsymbol K'$ y $K''$ subconjuntos
+del conjunto de objetos de $\cat{C}$, con $K''\subset K'$, que satisfacen las
+condiciones siguientes:
+\begin{enumerate}
+  \item[{\rm(i)}]
+  \emph{Para todo $A'\in\boldsymbol K'$ y todo epimorfismo $u:A\to A'$ en
+  $\cat{C}$, existen un objeto $B\in\boldsymbol K''$ y un morfismo $v:B\to A$
+  tales que $u\circ v$ es un epimorfismo.}
+
+  \item[{\rm(ii)}]
+  \emph{Para todo par $A,B\in\boldsymbol K'$ y todo epimorfismo $u:A\to B$,
+  el objeto $\Ker(u)$ pertenece a $K'$.}
+
+  \item[{\rm(iii)}]
+  \emph{El producto de dos objetos de $K''$ pertenece a $K''$.}
+\end{enumerate}
+
+\emph{Sea $P_\bullet=(P_i)_{i\in\bb{Z}}$ un complejo en $\cat{C}$ tal
+que $\HH_i(P_\bullet)\in\boldsymbol K'$ para todo $i$, y supongamos que existe un
+entero $d$ para el cual $\HH_i(P_\bullet)=0$ cuando $i<d$.
+Entonces existen un complejo $Q_\bullet=(Q_i)_{i\in\bb{Z}}$ en $\cat{C}$
+tal que $Q_i\in\boldsymbol K''$ para todo $i$ y $Q_i=0$ para $i<d$, y un
+homomorfismo de complejos
+\[
+  u:Q_\bullet\longrightarrow P_\bullet
+\]
+cuyo morfismo inducido
+\[
+  \HH_\bullet(Q_\bullet)\longrightarrow\HH_\bullet(P_\bullet)
+\]
+es un isomorfismo.}
+\end{proposition}
+
+\begin{proof}
+Demostremos primero la consecuencia siguiente de la condición~(i).
+
+\medskip\noindent
+\emph{(i bis)}
+\emph{Sea $u:C\to B$ un epimorfismo en $\cat{C}$, sea $A$ un
+objeto de $\boldsymbol K'$, y sea $v:A\to B$ un morfismo en $\cat{C}$.
+Entonces existen un objeto $D\in\boldsymbol K''$, un epimorfismo $u':D\to A$ y un
+morfismo $v':D\to C$ tales que el diagrama}
+\[
+  \xymatrix{
+    D\ar[r]^{u'}\ar[d]_{v'} & A\ar[d]^{v}\\
+    C\ar[r]_{u} & B
+  }
+  \tag{11.9.1.1}\label{0.11.9.1.1}
+\]
+\emph{es conmutativo.}
+
+Formemos el producto fibrado $C\times_B A$ en $\cat{C}$ y sean
+\[
+  p:C\times_B A\longrightarrow C,
+  \qquad
+  q:C\times_B A\longrightarrow A
+\]
+las proyecciones canónicas, de modo que
+----- French corrections on page 0\textsubscript{III} 45 -----
+[id 4736]
+OLD: $\mathrm L^\bullet(A,B;\Gamma)$ à celui de la cohomologie de
+$\mathrm C^\bullet(A,B;\Gamma)$. Rappelons
+NEW: $\mathrm L^\bullet(A,B;\mathscr S)$ à celui de la cohomologie de
+$\mathrm C^\bullet(A,B;\mathscr S)$. Rappelons
+FRENCH CONTEXT (corrected): ser l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le résultat cherché.
+\end{proof}
+
+\oldpage[0\textsubscript{III}]{45}
+\begin{env}[11.8.6]
+\label{0.11.8.6-fr}
+La proposition (\hyperref[0.11.8.5-fr]{11.8.5}) ramène le calcul de la
+cohomologie de $\mathrm L^\bullet(A,B;\mathscr S)$ à celui de la cohomologie de
+$\mathrm C^\bullet(A,B;\mathscr S)$. Rappelons d'autre part que cette dernière
+est, en vertu du th. d'Eilenberg-Zilber (G, I, 3.10.2), canoniquement
+isomorphe à la cohomologie du complexe de cochaînes défini comme suit : on
+forme le complexe de chaînes $\mathrm P_\bullet(A,B)$, constitué par les
+combinais
+
+[id 4737]
+OLD: aient le même degré;
+NEW: aient \emph{le même degré};
+FRENCH CONTEXT (corrected): canoniquement
+isomorphe à la cohomologie du complexe de cochaînes défini comme suit : on
+forme le complexe de chaînes $\mathrm P_\bullet(A,B)$, constitué par les
+combinaisons linéaires des $(\sigma,\tau)\in\Sigma(A)\times\Sigma(B)$ tels
+que $\sigma$ et $\tau$ aient \emph{le même degré}; la différentielle de ce complexe
+est donnée par
+$d:(\sigma,\tau)\leadsto\sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)$ si
+$d\sigma=\sum_j(-1)^j\sigma_j$ et $d\tau=\sum_k(-1)^k\tau_k$;
+on a alors deux homomorphismes canoniques de complexes
+\[
+f:\mathrm P_\bullet(A,B)\
+
+[id 4738]
+OLD: est donnée par
+\[
+d(\sigma,\tau)=\sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)
+\]
+si
+
+NEW: est donnée par
+$d:(\sigma,\tau)\leadsto\sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)$ si
+
+FRENCH CONTEXT (corrected): înes défini comme suit : on
+forme le complexe de chaînes $\mathrm P_\bullet(A,B)$, constitué par les
+combinaisons linéaires des $(\sigma,\tau)\in\Sigma(A)\times\Sigma(B)$ tels
+que $\sigma$ et $\tau$ aient \emph{le même degré}; la différentielle de ce complexe
+est donnée par
+$d:(\sigma,\tau)\leadsto\sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)$ si
+$d\sigma=\sum_j(-1)^j\sigma_j$ et $d\tau=\sum_k(-1)^k\tau_k$;
+on a alors deux homomorphismes canoniques de complexes
+\[
+f:\mathrm P_\bullet(A,B)\longrightarrow
+\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B),\qquad
+g:\mathrm C_\bullet(A)\otimes\mathrm C_\bulle
+
+[id 4739]
+OLD: \[
+d\sigma=\sum_j(-1)^j\sigma_j,\qquad
+d\tau=\sum_k(-1)^k\tau_k;
+\]
+on a alors
+NEW: $d\sigma=\sum_j(-1)^j\sigma_j$ et $d\tau=\sum_k(-1)^k\tau_k$;
+on a alors
+FRENCH CONTEXT (corrected): , constitué par les
+combinaisons linéaires des $(\sigma,\tau)\in\Sigma(A)\times\Sigma(B)$ tels
+que $\sigma$ et $\tau$ aient \emph{le même degré}; la différentielle de ce complexe
+est donnée par
+$d:(\sigma,\tau)\leadsto\sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)$ si
+$d\sigma=\sum_j(-1)^j\sigma_j$ et $d\tau=\sum_k(-1)^k\tau_k$;
+on a alors deux homomorphismes canoniques de complexes
+\[
+f:\mathrm P_\bullet(A,B)\longrightarrow
+\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B),\qquad
+g:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\longrightarrow\mathrm P_\bullet(A,B),
+\]
+et on démontre (\emph{loc
+
+[id 4740]
+OLD: qu'il y a des homotopies $h$
+NEW: qu'il y a des \emph{homotopies} $h$
+FRENCH CONTEXT (corrected): omorphismes canoniques de complexes
+\[
+f:\mathrm P_\bullet(A,B)\longrightarrow
+\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B),\qquad
+g:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\longrightarrow\mathrm P_\bullet(A,B),
+\]
+et on démontre (\emph{loc. cit.}) qu'il y a des \emph{homotopies} $h$, $h'$ telles
+que
+\[
+f\circ g-1=d\circ h+h\circ d\qquad\text{et}\qquad
+g\circ f-1=d\circ h'+h'\circ d.
+\]
+En outre, on a
+$f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ et
+$g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$
+et
+
+[id 4742]
+OLD: En outre, on a
+\[
+f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|),\qquad
+g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)
+\]
+
+NEW: En outre, on a
+$f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ et
+$g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$
+
+FRENCH CONTEXT (corrected): rm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\longrightarrow\mathrm P_\bullet(A,B),
+\]
+et on démontre (\emph{loc. cit.}) qu'il y a des \emph{homotopies} $h$, $h'$ telles
+que
+\[
+f\circ g-1=d\circ h+h\circ d\qquad\text{et}\qquad
+g\circ f-1=d\circ h'+h'\circ d.
+\]
+En outre, on a
+$f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ et
+$g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$
+et les homotopies $h$, $h'$ \emph{peuvent être prises telles que}
+$h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ \emph{et}
+$h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$.
+Ce point provient de ce que la définition de $h(
+
+[id 4743]
+OLD: $h'$ peuvent être prises telles que
+NEW: $h'$ \emph{peuvent être prises telles que}
+FRENCH CONTEXT (corrected): f\circ g-1=d\circ h+h\circ d\qquad\text{et}\qquad
+g\circ f-1=d\circ h'+h'\circ d.
+\]
+En outre, on a
+$f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ et
+$g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$
+et les homotopies $h$, $h'$ \emph{peuvent être prises telles que}
+$h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ \emph{et}
+$h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$.
+Ce point provient de ce que la définition de $h(\sigma,\tau)$ et
+$h'(\sigma,\tau)$ peut se faire par \emph{récurr
+
+[id 4744]
+OLD: \[
+h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|),\qquad
+h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|).
+\]
+
+NEW: $h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ \emph{et}
+$h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$.
+
+FRENCH CONTEXT (corrected): \qquad
+g\circ f-1=d\circ h'+h'\circ d.
+\]
+En outre, on a
+$f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ et
+$g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$
+et les homotopies $h$, $h'$ \emph{peuvent être prises telles que}
+$h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ \emph{et}
+$h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$.
+Ce point provient de ce que la définition de $h(\sigma,\tau)$ et
+$h'(\sigma,\tau)$ peut se faire par \emph{récurrence} sur la somme des degrés de
+$\sigma$ et $\tau$, et de ce que les
+$H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H_q(\m
+
+[id 4745]
+OLD: par récurrence sur
+NEW: par \emph{récurrence} sur
+FRENCH CONTEXT (corrected): ises telles que}
+$h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|)$ \emph{et}
+$h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$.
+Ce point provient de ce que la définition de $h(\sigma,\tau)$ et
+$h'(\sigma,\tau)$ peut se faire par \emph{récurrence} sur la somme des degrés de
+$\sigma$ et $\tau$, et de ce que les
+$H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H_q(\mathrm P_\bullet(|\sigma|,|\tau|))$
+sont \emph{nuls} pour $q>0$ (\emph{loc. cit.}); on raisonne alors comme dans
+(\hyperref
+
+[id 4746]
+OLD: sont nuls pour $q>0$
+NEW: sont \emph{nuls} pour $q>0$
+FRENCH CONTEXT (corrected): nition de $h(\sigma,\tau)$ et
+$h'(\sigma,\tau)$ peut se faire par \emph{récurrence} sur la somme des degrés de
+$\sigma$ et $\tau$, et de ce que les
+$H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H_q(\mathrm P_\bullet(|\sigma|,|\tau|))$
+sont \emph{nuls} pour $q>0$ (\emph{loc. cit.}); on raisonne alors comme dans
+(\hyperref[0.11.8.3-fr]{11.8.3}) et la conclusion en résulte.
+
+On définit alors $\mathrm P^\bullet(A,B;\mathscr S)$ comme l'ensemble des
+familles $\lambda=(\lambda(\sigma,\tau))$ où $(\sigma,\tau)$ parcourt les
+
+[id 4747]
+OLD: On définit alors $\mathrm P^\bullet(A,B;\Gamma)$
+NEW: On définit alors $\mathrm P^\bullet(A,B;\mathscr S)$
+FRENCH CONTEXT (corrected): que les
+$H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H_q(\mathrm P_\bullet(|\sigma|,|\tau|))$
+sont \emph{nuls} pour $q>0$ (\emph{loc. cit.}); on raisonne alors comme dans
+(\hyperref[0.11.8.3-fr]{11.8.3}) et la conclusion en résulte.
+
+On définit alors $\mathrm P^\bullet(A,B;\mathscr S)$ comme l'ensemble des
+familles $\lambda=(\lambda(\sigma,\tau))$ où $(\sigma,\tau)$ parcourt les
+couples dont les termes ont même degré, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$, et comme on a
+$d\sigma=\sum_j(-1)^j\sigma_j\in\mathrm C_\bullet(|\sigma|
+
+[id 4748]
+OLD: et comme on a
+\[
+d\sigma=\sum_j(-1)^j\sigma_j,\qquad
+d\tau=\sum_k(-1)^k\tau_k,
+\]
+
+NEW: et comme on a
+$d\sigma=\sum_j(-1)^j\sigma_j\in\mathrm C_\bullet(|\sigma|)$ et
+$d\tau=\sum_k(-1)^k\tau_k\in\mathrm C_\bullet(|\tau|)$,
+
+FRENCH CONTEXT (corrected): lusion en résulte.
+
+On définit alors $\mathrm P^\bullet(A,B;\mathscr S)$ comme l'ensemble des
+familles $\lambda=(\lambda(\sigma,\tau))$ où $(\sigma,\tau)$ parcourt les
+couples dont les termes ont même degré, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$, et comme on a
+$d\sigma=\sum_j(-1)^j\sigma_j\in\mathrm C_\bullet(|\sigma|)$ et
+$d\tau=\sum_k(-1)^k\tau_k\in\mathrm C_\bullet(|\tau|)$,
+\[
+d\lambda(\sigma,\tau)=
+\sum(-1)^{j+k}\lambda(\sigma_j,\tau_k)
+\]
+est défini et donne la différentielle du complexe
+$\mathrm P^\bullet(A,B;\mathscr S)$. Cela étant, les applications
+${}^tf:\lambda\to\lambda\circ f$, ${}^tg:\lambda\to\lambda\circ g$,
+${}^th:\
+
+[id 4750]
+OLD: du complexe
+$\mathrm P^\bullet(A,B;\Gamma)$. Cela étant
+NEW: du complexe
+$\mathrm P^\bullet(A,B;\mathscr S)$. Cela étant
+FRENCH CONTEXT (corrected): mma_{\sigma,\tau}$, et comme on a
+$d\sigma=\sum_j(-1)^j\sigma_j\in\mathrm C_\bullet(|\sigma|)$ et
+$d\tau=\sum_k(-1)^k\tau_k\in\mathrm C_\bullet(|\tau|)$,
+\[
+d\lambda(\sigma,\tau)=
+\sum(-1)^{j+k}\lambda(\sigma_j,\tau_k)
+\]
+est défini et donne la différentielle du complexe
+$\mathrm P^\bullet(A,B;\mathscr S)$. Cela étant, les applications
+${}^tf:\lambda\to\lambda\circ f$, ${}^tg:\lambda\to\lambda\circ g$,
+${}^th:\lambda\to\lambda\circ h$ et ${}^th':\lambda\to\lambda\circ h'$
+sont toutes \emph{définies} en vertu des remarques qui précèdent;
+${}^tf\circ{}^tg$ et ${}^tg\circ{}^t
+
+[id 4751]
+OLD: \[
+{}'f:\lambda\mapsto\lambda\circ f,\quad
+{}'g:\lambda\mapsto\lambda\circ g,\quad
+{}'h:\lambda\mapsto\lambda\circ h,\quad
+{}'h':\lambda\mapsto\lambda\circ h'
+\]
+
+NEW: ${}^tf:\lambda\to\lambda\circ f$, ${}^tg:\lambda\to\lambda\circ g$,
+${}^th:\lambda\to\lambda\circ h$ et ${}^th':\lambda\to\lambda\circ h'$
+
+FRENCH CONTEXT (corrected): ullet(|\sigma|)$ et
+$d\tau=\sum_k(-1)^k\tau_k\in\mathrm C_\bullet(|\tau|)$,
+\[
+d\lambda(\sigma,\tau)=
+\sum(-1)^{j+k}\lambda(\sigma_j,\tau_k)
+\]
+est défini et donne la différentielle du complexe
+$\mathrm P^\bullet(A,B;\mathscr S)$. Cela étant, les applications
+${}^tf:\lambda\to\lambda\circ f$, ${}^tg:\lambda\to\lambda\circ g$,
+${}^th:\lambda\to\lambda\circ h$ et ${}^th':\lambda\to\lambda\circ h'$
+sont toutes \emph{définies} en vertu des remarques qui précèdent;
+${}^tf\circ{}^tg$ et ${}^tg\circ{}^tf$ sont donc homotopes à
+l'identité, d'où l'isomorphisme cherché entre la cohomologie de
+$\mathrm C^\bullet(A,B;\mathscr S)$ et celle de
+$\mathrm P^\bullet(A,
+
+[id 4752]
+OLD: sont toutes définies en vertu
+NEW: sont toutes \emph{définies} en vertu
+FRENCH CONTEXT (corrected): )
+\]
+est défini et donne la différentielle du complexe
+$\mathrm P^\bullet(A,B;\mathscr S)$. Cela étant, les applications
+${}^tf:\lambda\to\lambda\circ f$, ${}^tg:\lambda\to\lambda\circ g$,
+${}^th:\lambda\to\lambda\circ h$ et ${}^th':\lambda\to\lambda\circ h'$
+sont toutes \emph{définies} en vertu des remarques qui précèdent;
+${}^tf\circ{}^tg$ et ${}^tg\circ{}^tf$ sont donc homotopes à
+l'identité, d'où l'isomorphisme cherché entre la cohomologie de
+$\mathrm C^\bullet(A,B;\mathscr S)$ et celle de
+$\mathrm P^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{en
+
+[id 4753]
+OLD: $\mathop{}'f\circ{}'g$ et $\mathop{}'g\circ{}'f$
+NEW: ${}^tf\circ{}^tg$ et ${}^tg\circ{}^tf$
+FRENCH CONTEXT (corrected): \bullet(A,B;\mathscr S)$. Cela étant, les applications
+${}^tf:\lambda\to\lambda\circ f$, ${}^tg:\lambda\to\lambda\circ g$,
+${}^th:\lambda\to\lambda\circ h$ et ${}^th':\lambda\to\lambda\circ h'$
+sont toutes \emph{définies} en vertu des remarques qui précèdent;
+${}^tf\circ{}^tg$ et ${}^tg\circ{}^tf$ sont donc homotopes à
+l'identité, d'où l'isomorphisme cherché entre la cohomologie de
+$\mathrm C^\bullet(A,B;\mathscr S)$ et celle de
+$\mathrm P^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{env}[11.8.7]
+\label{0.11.8.7-fr}
+\emph{Remarque}. Le même raisonnement
+
+[id 4754]
+OLD: $\mathrm C^\bullet(A,B;\Gamma)$ et celle de
+$\mathrm P^\bullet(A,B;\Gamma)$.
+NEW: $\mathrm C^\bullet(A,B;\mathscr S)$ et celle de
+$\mathrm P^\bullet(A,B;\mathscr S)$.
+FRENCH CONTEXT (corrected): }^th:\lambda\to\lambda\circ h$ et ${}^th':\lambda\to\lambda\circ h'$
+sont toutes \emph{définies} en vertu des remarques qui précèdent;
+${}^tf\circ{}^tg$ et ${}^tg\circ{}^tf$ sont donc homotopes à
+l'identité, d'où l'isomorphisme cherché entre la cohomologie de
+$\mathrm C^\bullet(A,B;\mathscr S)$ et celle de
+$\mathrm P^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{env}[11.8.7]
+\label{0.11.8.7-fr}
+\emph{Remarque}. Le même raisonnement que dans
+(\hyperref[0.11.8.3-fr]{11.8.3}), mais appliqué à
+$\mathrm C_\bullet(A)$ et $\mathrm L_\bullet(A)$, montre que si $j$ et $p$
+sont définis comme dans (\hyperref[0
+
+[id 4755]
+OLD: $\mathrm L^\bullet(A;\Gamma)$ sur celle de
+$\mathrm C^\bullet(A;\Gamma)$
+NEW: $\mathrm L^\bullet(A;\mathscr S)$ sur celle de
+$\mathrm C^\bullet(A;\mathscr S)$
+FRENCH CONTEXT (corrected): inis comme dans (\hyperref[0.11.8.1-fr]{11.8.1}), $f=j\circ p$
+vérifie encore une relation (\hyperref[0.11.8.3.1-fr]{11.8.3.1}), avec
+$|h(\sigma)|\subset|\sigma|$, d'où on déduit comme dans
+(\hyperref[0.11.8.5-fr]{11.8.5}) un isomorphisme de la cohomologie de
+$\mathrm L^\bullet(A;\mathscr S)$ sur celle de
+$\mathrm C^\bullet(A;\mathscr S)$, ces deux complexes étant définis de façon
+évidente. C'est le résultat dont la démonstration est esquissée dans
+(G, I, 3.8.1).
+\end{env}
+
+\begin{env}[11.8.8]
+\label{0.11.8.8-fr}
+Reprenons maintenant les notations et hypothèses de
+(\hyperref[0.11.8.2-fr]{11.8.
+
+[id 4756]
+OLD: considérons un complexe
+
+NEW: considérons un \emph{complexe}
+
+FRENCH CONTEXT (corrected): ux complexes étant définis de façon
+évidente. C'est le résultat dont la démonstration est esquissée dans
+(G, I, 3.8.1).
+\end{env}
+
+\begin{env}[11.8.8]
+\label{0.11.8.8-fr}
+Reprenons maintenant les notations et hypothèses de
+(\hyperref[0.11.8.2-fr]{11.8.2}), et considérons un \emph{complexe}
+$\mathscr S^\bullet=(\mathscr S^k)$ \emph{de systèmes de coefficients} sur
+$\Sigma(A)\times\Sigma(B)$ : pour chaque $(\sigma,\tau)$, les
+$\Gamma^k_{\sigma,\tau}$ forment donc un complexe de groupes abéliens
+$(k\in\mathbb Z)$, et on a les diagrammes commutatifs
+
+[id 4757]
+OLD: $\Gamma^\bullet=(\Gamma^k)$
+NEW: $\mathscr S^\bullet=(\mathscr S^k)$
+FRENCH CONTEXT (corrected): açon
+évidente. C'est le résultat dont la démonstration est esquissée dans
+(G, I, 3.8.1).
+\end{env}
+
+\begin{env}[11.8.8]
+\label{0.11.8.8-fr}
+Reprenons maintenant les notations et hypothèses de
+(\hyperref[0.11.8.2-fr]{11.8.2}), et considérons un \emph{complexe}
+$\mathscr S^\bullet=(\mathscr S^k)$ \emph{de systèmes de coefficients} sur
+$\Sigma(A)\times\Sigma(B)$ : pour chaque $(\sigma,\tau)$, les
+$\Gamma^k_{\sigma,\tau}$ forment donc un complexe de groupes abéliens
+$(k\in\mathbb Z)$, et on a les diagrammes commutatifs
+\[
+\xymatrix{
+\Gamma^k_{\sigma,\ta
+
+[id 4758]
+OLD: de systèmes de coefficients sur
+NEW: \emph{de systèmes de coefficients} sur
+FRENCH CONTEXT (corrected): t la démonstration est esquissée dans
+(G, I, 3.8.1).
+\end{env}
+
+\begin{env}[11.8.8]
+\label{0.11.8.8-fr}
+Reprenons maintenant les notations et hypothèses de
+(\hyperref[0.11.8.2-fr]{11.8.2}), et considérons un \emph{complexe}
+$\mathscr S^\bullet=(\mathscr S^k)$ \emph{de systèmes de coefficients} sur
+$\Sigma(A)\times\Sigma(B)$ : pour chaque $(\sigma,\tau)$, les
+$\Gamma^k_{\sigma,\tau}$ forment donc un complexe de groupes abéliens
+$(k\in\mathbb Z)$, et on a les diagrammes commutatifs
+\[
+\xymatrix{
+\Gamma^k_{\sigma,\tau}\ar[r]\ar[d] &
+\Gamma^{k+1}_{\sigma,\
+
+[id 5519]
+OLD: et de ce que les
+\[
+H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))
+\quad\text{et}\quad
+H_q(\mathrm P_\bullet(|\sigma|,|\tau|))
+\]
+
+NEW: et de ce que les
+$H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H_q(\mathrm P_\bullet(|\sigma|,|\tau|))$
+
+FRENCH CONTEXT (corrected): s\mathrm C_\bullet(|\tau|)$ \emph{et}
+$h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)$.
+Ce point provient de ce que la définition de $h(\sigma,\tau)$ et
+$h'(\sigma,\tau)$ peut se faire par \emph{récurrence} sur la somme des degrés de
+$\sigma$ et $\tau$, et de ce que les
+$H_q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H_q(\mathrm P_\bullet(|\sigma|,|\tau|))$
+sont \emph{nuls} pour $q>0$ (\emph{loc. cit.}); on raisonne alors comme dans
+(\hyperref[0.11.8.3-fr]{11.8.3}) et la conclusion en résulte.
+
+On définit alors $\mathrm P^\bullet(A,B;\mathscr S)$ comme l'ensemble des
+familles $\lambda=(\lambda(\sigma,\tau))$ où $
+
+[id 5520]
+OLD: et de ce que les
+\[
+H^q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))
+\quad\text{et}\quad
+H^q(\mathrm P_\bullet(|\sigma|,|\tau|))
+\]
+
+NEW: et de ce que les
+$H^q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))$ et
+$H^q(\mathrm P_\bullet(|\sigma|,|\tau|))$
+
+

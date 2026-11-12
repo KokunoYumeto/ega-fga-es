@@ -1,0 +1,3382 @@
+# Spanish hand pass, diplomatic_013: 138 items on 11 printed pages
+
+=================== PAGE II 189 ===================
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 188 -----
+\oldpage[II]{188}
+$\sh{I}$ de ideales de $\sh{O}_C$.
+Como $p$ es separado y cuasi-compacto, $X$ es entonces un esquema cuasi-compacto, y quedamos reducidos a demostrar que $\sh{L}$ es \emph{amplio} \sref{II.4.6.4}.
+En virtud del criterio~\sref{II.4.5.2}[a], hay que demostrar lo siguiente:
+para todo ideal cuasi-coherente $\sh{K}$ de $\sh{O}_X$ y todo punto $x\in X$ que no pertenezca al soporte de $\sh{O}_X/\sh{K}$, existe un entero $n>0$ y una sección $f$ de $\sh{K}\otimes\sh{L}^{\otimes n}$ sobre $X$ tal que $f(x)\neq0$.
+
+Para ello, pongamos
+\begin{align*}
+  \sh{K}_V &= \pi^*(\sh{K})\sh{O}_V,\\
+  \sh{K}_W &= \sh{K}_V|W,
+\end{align*}
+donde $W=V\setmin j(X)$;
+como la restricción de $q$ a $W$ es una inmersión abierta cuasi-compacta en $C$, se sigue de \sref[I]{I.9.4.2} que $\sh{K}_W$ es la restricción a $W$ de un ideal cuasi-coherente $\sh{K}'_V$ de $\sh{O}_V$ de la forma
+\[
+    \sh{K}'_V = q^*(\sh{K}_C)\sh{O}_V,
+\]
+donde $\sh{K}_C$ es un ideal cuasi-coherente de $\sh{O}_C$.
+Además, como, por hipótesis, $q^{-1}(Y)\subset j(X)$, y como $Y$ está definido por el ideal $\sh{I}$, la restricción a $W$ de $q^*(\sh{I})\sh{O}_V$ es igual a la de $\sh{O}_V$; por tanto, $\sh{K}_W$ es también la restricción a $W$ de $q^*(\sh{I}\sh{K}_C)\sh{O}_V$, y podemos suponer que $\sh{K}_C\subset\sh{I}$, de donde
+\[
+\label{II.8.10.6.1}
+    \sh{K}'_V \subset q^*(\sh{I})\sh{O}_V \subset \sh{J}
+\tag{8.10.6.1}
+\]
+teniendo en cuenta \sref[I]{I.4.4.6} y la conmutatividad de \sref{II.8.9.4.1}.
+Además, se deduce de \sref{II.8.10.4} que
+\[
+\label{II.8.10.6.2}
+    \sh{K}'_V \subset \sh{K}_V.
+\tag{8.10.6.2}
+\]
+Así las cosas, se sigue de \sref{II.8.10.3} que $j(x)$ pertenece a una sola componente irreducible de $\pi^{-1}(x)$;
+sea $z$ el punto genérico de esta componente, y pongamos $z'=q(z)$.
+En virtud de \sref{II.8.10.5}, la demostración quedará terminada (teniendo en cuenta \sref{II.8.10.6.1} y \sref{II.8.10.6.2}) si probamos la existencia de una sección $g$ de $\sh{K}'_V$ sobre $V$ tal que $g(z)\neq0$.
+Pero, por hipótesis, $\sh{K}$ tiene una restricción igual a la de $\sh{O}_X$ en una vecindad abierta de $x$;
+por otra parte, se sigue de \sref{II.8.10.3} que $z\neq j(x)$, y por tanto $z\in W$, de modo que $(\sh{K}_W)_z=\sh{O}_{V,z}$, y, por definición, $(\sh{K}_C)_{z'}=\sh{O}_{C,z}$.
+Como $C$ es afín, existe, pues, una sección $g'$ de $\sh{K}_C$ sobre $C$ tal que $g'(z')\neq0$; tomando por $g$ la sección de $\sh{K}'_V$ que corresponde canónicamente a $g'$, se tiene efectivamente $g(z)\neq0$, lo que termina la demostración.
+\end{env}
+
+\begin{remark}[8.10.7]
+\label{II.8.10.7}
+Ignoramos si, en el enunciado de \sref{II.8.9.4}, la condición~(ii) es o no superflua.
+En todo caso, la conclusión deja de ser válida si no se supone la existencia de un $Y$-morfismo $\pi:V\to X$ tal que $\pi\circ j=1_X$;
+indicamos brevemente cómo se puede construir, en efecto, un contraejemplo cuyos detalles no se desarrollarán hasta más adelante.
+Tomamos $Y=\Spec(k)$, donde $k$ es un cuerpo, y $C=\Spec(A)$, donde $A=k[T_1,T_2]$, con la $Y$-sección $\varepsilon$ correspondiente al homomorfismo de aumentación $A\to k$.
+Denotamos por $C'$ el esquema obtenido de $C$ por explosión del punto cerrado $a=\varepsilon(Y)$ de $C$;
+si $D$ es la imagen recíproca de $a$ en $C'$, consideramos en $D$ un punto cerrado $b$,
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 189 -----
+\oldpage[II]{189}
+y denotamos por $V$ el esquema obtenido de $C'$ por explosión de $b$;
+$X$ es el subpreesquema cerrado de $V$ dado por la imagen recíproca de $a$ mediante el morfismo estructural $q:V\to C$.
+Mostremos ahora que $X$ es la unión de dos componentes irreducibles, $X_1$ y $X_2$, donde $X_1$ es la imagen recíproca de $b$ en $V$.
+Es inmediato que el ideal $\sh{J}$ de $\sh{O}_V$ que define $X$ sigue siendo invertible, pero se puede probar que $j^*(\sh{J})=\sh{L}$ (donde $j$ es la inyección canónica $X\to V$) no es amplio, considerando el «grado» de la imagen recíproca de $\sh{L}$ sobre $X_1$, que sería $>0$ si $\sh{L}$ fuera amplio, pero que se puede demostrar (mediante un cálculo elemental de intersecciones) que es igual a $0$.
+\end{remark}
+
+\subsection{Unicidad de las contracciones}
+\label{subsection:II.8.11}
+
+\begin{lemma}[8.11.1]
+\label{II.8.11.1}
+Sean $U$ y $V$ dos preesquemas, y sea $h=(h_0,\lambda):U\to V$ un morfismo sobreyectivo.
+Supongamos que:
+\begin{enumerate}
+  \item[$1^\circ$] $\lambda:\sh{O}_V\to h_*(\sh{O}_U)=(h_0)_*(\sh{O}_U)$ es un isomorfismo.
+  \item[$2^\circ$] El espacio subyacente a $V$ se identifica con el espacio cociente del espacio subyacente a $U$ por la relación
+  \[
+      R:h_0(x)=h_0(y)
+  \]
+  (condición que siempre se cumple cuando el morfismo $h$ es \emph{abierto} o \emph{cerrado}, o, \emph{a fortiori}, cuando $h$ es \emph{propio}).
+\end{enumerate}
+Entonces, para todo preesquema $W$, la aplicación
+\[
+\label{II.8.11.1.1}
+    \Hom(V,W)\longrightarrow\Hom(U,W)
+\tag{8.11.1.1}
+\]
+que a cada morfismo $v=(v_0,\nu)$ de $V$ en $W$ asocia el morfismo $u=v\circ h=(u_0,\mu)$, es una biyección de $\Hom(V,W)$ sobre el conjunto de los $u$ tales que $u_0$ sea constante en toda fibra $h_0^{-1}(x)$.
+\end{lemma}
+
+\begin{proof}
+Es claro que, si $u=v\circ h$, de modo que $u_0=v_0\circ h_0$, entonces $u_0$ es constante en todo conjunto $h_0^{-1}(x)$.
+Recíprocamente, si $u$ tiene esta propiedad, mostraremos que existe un único $v\in\Hom(V,W)$ tal que $u=v\circ h$.
+La existencia y unicidad de la aplicación continua $v_0:V\to W$ tal que $u_0=v_0\circ h_0$ resultan de las hipótesis, pues $h_0$ se identifica con la aplicación canónica de $U$ sobre $U/R$.
+También podemos, sustituyendo $V$ por un preesquema isomorfo si es necesario, suponer que $\lambda$ es la identidad;
+por hipótesis, $\mu$ es entonces un homomorfismo
+\[
+    \mu:\sh{O}_W\longrightarrow(u_0)_*(\sh{O}_U)
+    =(v_0)_*((h_0)_*(\sh{O}_U))
+\]
+tal que el homomorfismo correspondiente $\mu^\sharp:u_0^*(\sh{O}_W)\to\sh{O}_U$ es \emph{local} en cada fibra.
+Como $(v_0)_*((h_0)_*(\sh{O}_U))=(v_0)_*(\sh{O}_V)$, se tiene necesariamente $\nu=\mu$, y todo se reduce a demostrar que el homomorfismo correspondiente $\nu^\sharp:v_0^*(\sh{O}_W)\to\sh{O}_V$ es local en cada fibra.
+Ahora bien, todo $y\in V$ es de la forma $h_0(x)$ para algún $x\in U$;
+pongamos $z=v_0(y)=u_0(x)$.
+Entonces, por \sref[0]{0.3.5.5}, el homomorfismo $\mu_x^\sharp$ se factoriza como
+\[
+    \mu_x^\sharp:\sh{O}_z
+    \xrightarrow{\nu_y^\sharp}\sh{O}_y
+    \xrightarrow{\lambda_x^\sharp}\sh{O}_x.
+\]
+Por hipótesis, $\lambda_x^\sharp$ y $\mu_x^\sharp$ son homomorfismos locales;
+por tanto, $\lambda_x^\sharp$ transforma todo elemento invertible de $\sh{O}_y$ en un elemento invertible de $\sh{O}_x$;
+si $\nu_y^\sharp$ transformase un elemento no invertible de $\sh{O}_z$ en un elemento invertible de $\sh{O}_y$, entonces $\mu_x^\sharp$ transformaría ese elemento de $\sh{O}_z$ en un elemento invertible de $\sh{O}_x$, en contradicción con la hipótesis, de donde resulta el lema.
+\end{proof}
+
+\begin{corollary}[8.11.2]
+\label{II.8.11.2}
+Sean $U$ un preesquema íntegro y $V$ un preesquema normal;
+entonces todo morfismo $h:U\to V$ que sea universalmente cerrado, birracional y radicial es un isomorfismo.
+\end{corollary}
+
+\begin{proof}
+Si $h=(h_0,\lambda)$, se sigue de las hipótesis que $h_0$ es inyectiva y cerrada, y que $h_0(U)$
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 190 -----
+\oldpage[II]{190}
+es densa en $V$, por lo que $h_0$ es un \emph{homeomorfismo} de $U$ sobre $V$.
+Para demostrar el corolario, bastará probar que $\lambda:\sh{O}_V\to(h_0)_*(\sh{O}_U)$ es un isomorfismo: podremos aplicar entonces \sref{II.8.11.1}, que probará que la aplicación \sref{II.8.11.1.1} es biyectiva (pues cada una de las fibras $h_0^{-1}(x)$ se reduce a un solo punto);
+por tanto, $h$ será un isomorfismo.
+Como la cuestión es evidentemente local sobre $V$, podemos suponer que $V=\Spec(A)$ es afín, con $A$ un anillo íntegro e integralmente cerrado \sref{II.8.8.6.1};
+$h$ corresponde entonces \sref[I]{I.2.2.4} a un homomorfismo $\vphi:A\to\Gamma(U,\sh{O}_U)$, y todo se reduce a probar que $\vphi$ es un isomorfismo.
+Ahora bien, si $K$ es el cuerpo de fracciones de $A$, entonces $\Gamma(U,\sh{O}_U)$ tiene, por hipótesis, a $K$ como cuerpo de fracciones, y $A$ es un subanillo de $\Gamma(U,\sh{O}_U)$, siendo $\vphi$ la inyección canónica \sref[I]{I.8.2.7}.
+Como el morfismo $h$ satisface las hipótesis de \sref{II.7.3.11}, $\Gamma(U,\sh{O}_U)$ es un subanillo de la clausura integral de $A$ en $K$ y, por tanto, es idéntico a $A$ por hipótesis.
+\end{proof}
+
+\begin{remark}[8.11.3]
+\label{II.8.11.3}
+Veremos en el Capítulo~III \sref[III]{III.4.4.11} que, cuando $V$ es un preesquema \emph{localmente noetheriano}, todo morfismo $h:U\to V$ que sea propio y cuasifinito (en particular, todo morfismo que satisfaga las hipótesis de \sref{II.8.11.2}) es necesariamente \emph{finito}.
+La conclusión de \sref{II.8.11.2} resulta entonces, en este caso, de \sref{II.6.1.15}.
+\end{remark}
+
+\begin{env}[8.11.4]
+\label{II.8.11.4}
+Vamos a ver ahora que, en el criterio de Grauert, a menudo puede demostrarse que el preesquema $C$ y la «contracción» $q$ están determinados de manera \emph{esencialmente única}.
+\end{env}
+
+\begin{lemma}[8.11.5]
+\label{II.8.11.5}
+Sean $Y$ un preesquema, $p:X\to Y$ un morfismo propio, $\sh{L}$ un $\sh{O}_X$-módulo invertible $p$-amplio, $C$ un $Y$-preesquema, $\varepsilon:Y\to C$ una $Y$-sección y $q:V=\bb{V}(\sh{L})\to C$ un $Y$-morfismo, tales que el diagrama de \sref{II.8.9.1.1} sea conmutativo.
+Supongamos además que, si $p=(p_0,\theta)$, entonces $\theta:\sh{O}_Y\to p_*(\sh{O}_X)$ es un isomorfismo.
+Sean $\sh{S}'=\bigoplus_{n\geq0}p_*(\sh{L}^{\otimes n})$ y $C'=\Spec(\sh{S}')$, y sea $q':\bb{V}(\sh{L})\to C'$ el $Y$-morfismo canónico \sref{II.8.8.5}.
+Entonces existe un único $Y$-morfismo $u:C'\to C$ tal que $q=u\circ q'$.
+\end{lemma}
+
+\begin{proof}
+La hipótesis sobre $\theta$ implica, en particular, que $p$ es sobreyectivo;
+como, en virtud de \sref{II.8.8.4}, la restricción de $q'$ a $\bb{V}(\sh{L})\setmin j(X)$ es un \emph{isomorfismo} sobre $C'\setmin\varepsilon'(Y)$ (donde $\varepsilon'$ es la sección vértice de $C'$), se sigue de \sref{II.8.8.4} que $q'$ es \emph{propio y sobreyectivo};
+además, en virtud de \sref{II.8.8.6}, si ponemos $q'=(q'_0,\tau)$, entonces $\tau:\sh{O}_{C'}\to q'_*(\sh{O}_V)$ es un isomorfismo.
+Nos encontramos, pues, en condiciones de aplicar \sref{II.8.11.1}, y habremos demostrado el lema si probamos que $q$ es constante en toda fibra $q'{}^{-1}(z')$, donde $z'\in C'$.
+Ahora bien, esta condición se satisface trivialmente para $z'\notin\varepsilon'(Y)$.
+Si $z'\in\varepsilon'(Y)$, existe un único $y\in Y$ tal que $z'=\varepsilon'(y)$ y, en virtud de la conmutatividad de \sref{II.8.8.5.2} y del hecho de que $q'$ aplica $\bb{V}(\sh{L})\setmin j(X)$ en $C'\setmin\varepsilon'(Y)$, se tiene $q'{}^{-1}(z')=j(p^{-1}(y))$;
+la conmutatividad del diagrama de \sref{II.8.9.1.1} demuestra entonces nuestra afirmación.
+\end{proof}
+
+\begin{corollary}[8.11.6]
+\label{II.8.11.6}
+Bajo las hipótesis de \sref{II.8.11.5}, supongamos además que $q$ es propio y que la restricción de $q$ a $\bb{V}(\sh{L})\setmin j(X)$ es un isomorfismo sobre $C\setmin\varepsilon(Y)$.
+Entonces el morfismo $u$ es universalmente cerrado, sobreyectivo y radicial, y su restricción a $C'\setmin\varepsilon'(Y)$ es un isomorfismo sobre $C\setmin\varepsilon(Y)$.
+\end{corollary}
+
+\begin{proof}
+Como $q'$ es un isomorfismo de $\bb{V}(\sh{L})\setmin j(X)$ sobre $C'\setmin\varepsilon'(Y)$ \sref{II.8.8.4}, la última afirmación resulta inmediatamente de que $q=u\circ q'$.
+Además, la conmutatividad de los diagramas
+----- French corrections on page II 189 -----
+[id 3334]
+OLD: (condition toujours vérifiée lorsque le morphisme $h$ est
+  ouvert, ou fermé, ou a fortiori lorsque $h$ est propre)
+NEW: \textup{(condition toujours vérifiée lorsque le morphisme $h$ est
+  \emph{ouvert}, ou \emph{fermé}, ou \emph{a fortiori} lorsque $h$ est \emph{propre})}
+FRENCH CONTEXT (corrected):   \item[$1^\circ$]
+  $\lambda:\mathcal{O}_V\to h_*(\mathcal{O}_U)
+  =(h_0)_*(\mathcal{O}_U)$ est un isomorphisme.
+  \item[$2^\circ$] L'espace sous-jacent à $V$ s'identifie à l'espace quotient
+  de l'espace sous-jacent à $U$ par la relation
+  $R:h_0(x)=h_0(y)$ \textup{(condition toujours vérifiée lorsque le morphisme $h$ est
+  \emph{ouvert}, ou \emph{fermé}, ou \emph{a fortiori} lorsque $h$ est \emph{propre})}.
+\end{enumerate}
+
+Alors, pour tout préschéma $W$, l'application
+\begin{equation}
+\label{II.8.11.1.1-fr}
+  \operatorname{Hom}(V,W)\longrightarrow\operatorname{Hom}(U,W)
+\tag{8.11.1.1}
+\end{equation}
+qui, à tout morphisme $v=(v_0,\nu)$ de $V$ dans $W$, fait cor
+
+[id 3336]
+OLD: soit local sur chaque
+NEW: soit \emph{local} sur chaque
+FRENCH CONTEXT (corrected): \lambda$ est l'identité~; par hypothèse, $\mu$ est alors un homomorphisme
+\[
+  \mu:\mathcal{O}_W\longrightarrow(u_0)_*(\mathcal{O}_U)
+  =(v_0)_*((h_0)_*(\mathcal{O}_U))
+\]
+tel que l'homomorphisme correspondant
+$\mu^\sharp:u_0^*(\mathcal{O}_W)\to\mathcal{O}_U$ soit \emph{local} sur chaque
+fibre. Comme
+$(v_0)_*((h_0)_*(\mathcal{O}_U))=(v_0)_*(\mathcal{O}_V)$, on doit
+nécessairement avoir $\nu=\mu$, et tout revient à voir que l'homomorphisme
+correspondant $\nu^\sharp:v_0^*(\mathcal{O}_W)\to\mathcal{O}_V$ est local sur
+chaque fibre. Or, tout $y\i
+
+[id 3337]
+OLD: {0, 3.5.5}
+NEW: {\textbf{0}, 3.5.5}
+FRENCH CONTEXT (corrected): fr}
+Le composé $(\psi'',\theta'')$ de deux morphismes de préschémas
+$(\psi,\theta)$ et $(\psi',\theta')$ est encore un morphisme de préschémas,
+comme il résulte de la formule
+${\theta''}^\sharp=\theta^\sharp\circ\psi^*({\theta'}^\sharp)$
+(\hyperref[0.3.5.5-fr]{\textbf{0}, 3.5.5}). On en conclut que les préschémas forment
+une \emph{catégorie}~; suivant la notation générale, on écrira
+$\operatorname{Hom}(X,Y)$ l'ensemble des morphismes d'un préschéma $X$ dans
+un préschéma $Y$.
+\end{env}
+
+\begin{example}[2.2.3]
+\label{I.2.2.3-fr}
+Si $U$
+
+=================== PAGE II 190 ===================
+----- (Spanish page II 189: shown above in this file) -----
+----- (Spanish page II 190: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 191 -----
+\oldpage[II]{191}
+de \sref{II.8.8.5.2} y \sref{II.8.9.1.1} demuestra que la restricción de $u$ al subpreesquema cerrado $\varepsilon'(Y)$ de $C'$ es un isomorfismo sobre el subpreesquema cerrado $\varepsilon(Y)$ de $C$, de donde se deduce inmediatamente que, para todo $z'\in\varepsilon'(Y)$, si $z=u(z')$, entonces $u$ define un isomorfismo de $\kres(z)$ sobre $\kres(z')$.
+Estas observaciones prueban que $u$ es biyectivo y radicial;
+además, si $\psi:C\to Y$ y $\psi':C'\to Y$ son los morfismos estructurales, entonces $\psi'=\psi\circ u$ y, como $\psi'$ es separado \sref{II.1.2.4}, también lo es $u$ \sref[I]{I.5.5.1}[v].
+Ya hemos visto, en la demostración de \sref{II.8.11.5}, que $q'$ es sobreyectivo;
+como $q=u\circ q'$ es propio, concluimos finalmente, por \sref{II.5.4.3} y \sref{II.5.4.9}, que $u$ es universalmente cerrado.
+\end{proof}
+
+\begin{proposition}[8.11.7]
+\label{II.8.11.7}
+Sean $Y$ un preesquema, $X$ un preesquema \emph{íntegro}, $p:X\to Y$ un morfismo propio, $\sh{L}$ un $\sh{O}_X$-módulo invertible $p$-amplio, $C$ un $Y$-preesquema \emph{normal}, $\varepsilon:Y\to C$ una $Y$-sección y $q:V=\bb{V}(\sh{L})\to C$ un $Y$-morfismo, tales que el diagrama de \sref{II.8.9.1.1} sea conmutativo.
+Supongamos además que, si $p=(p_0,\theta)$, entonces $\theta:\sh{O}_Y\to p_*(\sh{O}_X)$ es un isomorfismo.
+Sean $\sh{S}'=\bigoplus_{n\geq0}p_*(\sh{L}^{\otimes n})$ y $C'=\Spec(\sh{S}')$, y sea $q':\bb{V}(\sh{L})\to C'$ el $Y$-morfismo canónico \sref{II.8.8.5}.
+Entonces el único $Y$-morfismo $u:C'\to C$ tal que $q=u\circ q'$ es un \emph{isomorfismo}.
+\end{proposition}
+
+\begin{proof}
+De \sref{II.8.8.6} se sigue que $C'$ es íntegro;
+como $u$ es un homeomorfismo de los espacios subyacentes $C'\to C$ (pues $u$ es biyectivo y cerrado, por \sref{II.8.11.6}), $C$ es irreducible, luego íntegro y, puesto que la restricción de $u$ a un abierto no vacío de $C'$ es un isomorfismo sobre un abierto de $C$, $u$ es birracional.
+Como se supone que $C$ es normal, basta aplicar \sref{II.8.11.2} para obtener la conclusión.
+\end{proof}
+
+\begin{remark}[8.11.8]
+\label{II.8.11.8}
+\begin{enumerate}
+    \item[\rm{(i)}] La hipótesis de que $C$ es normal implica que $X$ también es normal.
+        En efecto, $C'=\Spec(\sh{S}')$ es entonces normal, por ser isomorfo a $C$, e íntegro, por \sref{II.8.8.6};
+        se concluye, pues, que $\Proj(\sh{S}')$ es \emph{normal}.
+        En efecto, la cuestión es local sobre $Y$;
+        si $Y$ es afín, con $\sh{S}'=\widetilde S'$, entonces el anillo $S'=\Gamma(C',\sh{O}_{C'})$ es íntegro e integralmente cerrado \sref{II.8.8.6.1} y, por tanto, para todo elemento homogéneo $f\in S'_+$, el anillo graduado $S'_f$ es íntegro e integralmente cerrado \cite[t.~I, p.~257 y 261]{I-13}, y también lo es el anillo $S'_{(f)}$ de sus términos de grado cero, porque la intersección de $S'_f$ con el cuerpo de fracciones de $S'_{(f)}$ es igual a $S'_{(f)}$;
+        esto prueba nuestra afirmación \sref{II.6.3.4}.
+        Por último, como $X$ es isomorfo a un subpreesquema abierto de $\Proj(\sh{S}')$ \sref{II.8.8.1}, $X$ es, en efecto, normal.
+        Podemos, por tanto, expresar \sref{II.8.11.7} en la forma siguiente:
+        \emph{Si $X$ es íntegro y normal, y $p=(p_0,\theta):X\to Y$ es un morfismo propio tal que $\theta:\sh{O}_Y\to p_*(\sh{O}_X)$ es un isomorfismo, entonces, para todo $\sh{O}_X$-módulo $p$-amplio $\sh{L}$, existe una manera y solo una de contraer la sección nula de $V=\bb{V}(\sh{L})$ de modo que se obtenga un $Y$-esquema normal $C$ y un $Y$-morfismo propio $q:V\to C$.}
+    \item[\rm{(ii)}] Cuando $p$ es propio, la hipótesis $p_*(\sh{O}_X)=\sh{O}_Y$ puede considerarse una hipótesis auxiliar, que no restringe verdaderamente la generalidad del resultado.
+        En efecto, si no se satisface, basta sustituir $Y$ por el $Y$-esquema $Y'=\Spec(p_*(\sh{O}_X))$ y considerar $X$ como un $Y'$-esquema.
+        Volveremos sobre este método general en el capítulo~III, \textsection~4.
+\end{enumerate}
+\end{remark}
+
+
+\subsection{Haces cuasi-coherentes sobre los conos proyectantes}
+\label{subsection:II.8.12}
+
+\begin{env}[8.12.1]
+\label{II.8.12.1}
+Retomemos las hipótesis y notaciones de \sref{II.8.3.1}.
+Sea $\sh{M}$ un \emph{$\sh{S}$-módulo graduado cuasi-coherente}; para evitar toda confusión, denotaremos por $\widetilde{\sh{M}}$ el $\sh{O}_C$-módulo cuasi-coherente
+----- French corrections on page II 190 -----
+[id 3676]
+OLD: {I, 2.2.4}
+NEW: {\textbf{I}, 2.2.4}
+FRENCH CONTEXT (corrected):  particulier, pour $U=S$, cela
+donne un homomorphisme
+$\varphi:\Gamma(X,\mathcal{O}_X)\to\Gamma(Y,\mathcal{O}_Y)$ de
+$\Gamma(S,\mathcal{O}_S)$-algèbres, auquel correspond un $S$-morphisme
+$h:Y\to X$ bien déterminé, puisque $X$ est affine
+(\hyperref[I.2.2.4-fr]{\textbf{I}, 2.2.4}). Reste à prouver que
+$\mathcal{A}(h)=\omega$, autrement dit, que pour tout ouvert $U$ d'une base
+de $S$, $\omega_U$ coïncide avec l'homomorphisme d'algèbres $\varphi_U$
+correspondant au $S$-morphisme $g^{-1}(U)\to f^{-1}(U)$ restriction de $h$.
+On peut se bo
+
+[id 3677]
+OLD: a par hypothèse $K$
+NEW: a pour hypothèse $K$
+FRENCH CONTEXT (corrected): .6.1})~; $h$ correspond alors
+(\hyperref[I.2.2.4-fr]{\textbf{I}, 2.2.4}) à un homomorphisme
+$\varphi:A\to\Gamma(U,\mathcal{O}_U)$ et tout revient à voir que $\varphi$
+est un isomorphisme. Or, si $K$ est le corps des fractions de $A$,
+$\Gamma(U,\mathcal{O}_U)$ a pour hypothèse $K$ pour corps des fractions et $A$
+est un sous-anneau de $\Gamma(U,\mathcal{O}_U)$, $\varphi$ étant l'injection
+canonique (\hyperref[I.8.2.7-fr]{\textbf{I}, 8.2.7}). Comme le morphisme $h$ vérifie
+les hypothèses de (\hyperref[II.7.3.11-fr]{7.3.11}),
+$\Gamma(U,\m
+
+[id 3678]
+OLD: {I, 8.2.7}
+NEW: {\textbf{I}, 8.2.7}
+FRENCH CONTEXT (corrected): phi$
+est un isomorphisme. Or, si $K$ est le corps des fractions de $A$,
+$\Gamma(U,\mathcal{O}_U)$ a pour hypothèse $K$ pour corps des fractions et $A$
+est un sous-anneau de $\Gamma(U,\mathcal{O}_U)$, $\varphi$ étant l'injection
+canonique (\hyperref[I.8.2.7-fr]{\textbf{I}, 8.2.7}). Comme le morphisme $h$ vérifie
+les hypothèses de (\hyperref[II.7.3.11-fr]{7.3.11}),
+$\Gamma(U,\mathcal{O}_U)$ est un sous-anneau de la fermeture intégrale de $A$
+dans $K$, donc est identique à $A$ par hypothèse.
+\end{proof}
+
+\begin{remark}[8.11.3]
+\label{II
+
+[id 3679]
+OLD: {III, 4.4.11}
+NEW: {\textbf{III}, 4.4.11}
+FRENCH CONTEXT (corrected): [II.7.3.11-fr]{7.3.11}),
+$\Gamma(U,\mathcal{O}_U)$ est un sous-anneau de la fermeture intégrale de $A$
+dans $K$, donc est identique à $A$ par hypothèse.
+\end{proof}
+
+\begin{remark}[8.11.3]
+\label{II.8.11.3-fr}
+On verra au chapitre III (\hyperref[III.4.4.11-fr]{\textbf{III}, 4.4.11}) que lorsque
+$V$ est un préschéma \emph{localement noethérien}, tout morphisme $h:U\to V$
+qui est propre et quasi-fini (en particulier tout morphisme vérifiant les
+hypothèses de (\hyperref[II.8.11.2-fr]{8.11.2})) est nécessairement
+\emph{fini}. La conclusion 
+
+[id 3680]
+OLD: essentiellement
+unique.
+NEW: \emph{essentiellement
+unique}.
+FRENCH CONTEXT (corrected): -fr]{6.1.15}).
+\end{remark}
+
+\begin{env}[8.11.4]
+\label{II.8.11.4-fr}
+Nous allons maintenant voir que, dans le critère de Grauert
+(\hyperref[II.8.9.1-fr]{8.9.1}), on peut souvent affirmer que le préschéma
+$C$ et la «~contraction~» $q$ sont déterminés de façon \emph{essentiellement
+unique}.
+\end{env}
+
+\begin{lemma}[8.11.5]
+\label{II.8.11.5-fr}
+Soient $Y$ un préschéma, $p:X\to Y$ un morphisme propre, $\mathcal{L}$ un
+$\mathcal{O}_X$-Module inversible $p$-ample, $C$ un $Y$-préschéma,
+$\varepsilon:Y\to C$ une $Y$-section,
+$q:V=\mathbf{V}(\mathcal{L
+
+[id 3681]
+OLD: (\hyperref[II.8.9.1.1-fr]{8.9.1.1}) soit commutatif
+NEW: \textup{(\hyperref[II.8.9.1.1-fr]{8.9.1.1})} soit commutatif
+FRENCH CONTEXT (corrected): 5-fr}
+Soient $Y$ un préschéma, $p:X\to Y$ un morphisme propre, $\mathcal{L}$ un
+$\mathcal{O}_X$-Module inversible $p$-ample, $C$ un $Y$-préschéma,
+$\varepsilon:Y\to C$ une $Y$-section,
+$q:V=\mathbf{V}(\mathcal{L})\to C$ un $Y$-morphisme, tels que le diagramme
+\textup{(\hyperref[II.8.9.1.1-fr]{8.9.1.1})} soit commutatif. On suppose en outre que,
+si $p=(p_0,\theta)$,
+$\theta:\mathcal{O}_Y\to p_*(\mathcal{O}_X)$ est un isomorphisme. Soient alors
+$\mathcal{S}'=\bigoplus_{n\geqslant0}p_*(\mathcal{L}^{\otimes n})$,
+$C'=\operatorname{Spec}(\mathcal{S}')$, et
+$q':\mathbf{V}(\mathca
+
+[id 3682]
+OLD: (\hyperref[II.8.8.5-fr]{8.8.5}). Il existe
+NEW: \textup{(\hyperref[II.8.8.5-fr]{8.8.5})}. Il existe
+FRENCH CONTEXT (corrected): heta)$,
+$\theta:\mathcal{O}_Y\to p_*(\mathcal{O}_X)$ est un isomorphisme. Soient alors
+$\mathcal{S}'=\bigoplus_{n\geqslant0}p_*(\mathcal{L}^{\otimes n})$,
+$C'=\operatorname{Spec}(\mathcal{S}')$, et
+$q':\mathbf{V}(\mathcal{L})\to C'$ le $Y$-morphisme canonique
+\textup{(\hyperref[II.8.8.5-fr]{8.8.5})}. Il existe un $Y$-morphisme $u:C'\to C$ et
+un seul tel que $q=u\circ q'$.
+\end{lemma}
+
+\begin{proof}
+L'hypothèse sur $\theta$ entraîne en particulier que $p$ est surjectif~;
+comme en vertu de (\hyperref[II.8.8.4-fr]{8.8.4}) la restriction de $q'$ à
+$\mathbf{V}(\mathcal{
+
+[id 3685]
+OLD: \emph{propre et
+surjectif}
+NEW: \emph{propre} et
+\emph{surjectif}
+FRENCH CONTEXT (corrected): hyperref[II.8.8.4-fr]{8.8.4}) la restriction de $q'$ à
+$\mathbf{V}(\mathcal{L})\setmin j(X)$ est un \emph{isomorphisme} sur
+$C'\setmin\varepsilon'(Y)$ ($\varepsilon'$ étant la section sommet de $C'$), il
+résulte de (\hyperref[II.8.8.4-fr]{8.8.4}) que $q'$ est \emph{propre} et
+\emph{surjectif}~; en outre, en vertu de (\hyperref[II.8.8.6-fr]{8.8.6}), si on pose
+$q'=(q'_0,\tau)$,
+$\tau:\mathcal{O}_{C'}\to q'_*(\mathcal{O}_V)$ est un isomorphisme. On est
+donc dans les conditions d'application du lemme
+(\hyperref[II.8.11.1-fr]{8.11.1}), et le lemme ser
+
+[id 3686]
+OLD: \varepsilon'(y)$~; et en vertu
+NEW: \varepsilon'(y)$, et en vertu
+FRENCH CONTEXT (corrected):  sera démontré si l'on prouve
+que $q$ est constant sur toute fibre $q'{}^{-1}(z')$, où $z'\in C'$. Or, la
+condition est trivialement vérifiée pour $z'\notin\varepsilon'(Y)$. D'autre
+part, si $z'\in\varepsilon'(Y)$, il existe un $y\in Y$ et un seul tel que
+$z'=\varepsilon'(y)$, et en vertu de la commutativité de
+(\hyperref[II.8.8.5.2-fr]{8.8.5.2}) et le fait que $q'$ applique
+$\mathbf{V}(\mathcal{L})\setmin j(X)$ dans $C'\setmin\varepsilon'(Y)$,
+$q'{}^{-1}(z')=j(p^{-1}(y))$~; la commutativité du diagramme
+(\hyperref[II.8.9.1.1-fr]{8.9.1.1}) éta
+
+[id 3689]
+OLD: hypothèses de (\hyperref[II.8.11.5-fr]{8.11.5})
+NEW: hypothèses de \textup{(\hyperref[II.8.11.5-fr]{8.11.5})}
+FRENCH CONTEXT (corrected): f{V}(\mathcal{L})\setmin j(X)$ dans $C'\setmin\varepsilon'(Y)$,
+$q'{}^{-1}(z')=j(p^{-1}(y))$~; la commutativité du diagramme
+(\hyperref[II.8.9.1.1-fr]{8.9.1.1}) établit donc notre assertion.
+\end{proof}
+
+\begin{corollary}[8.11.6]
+\label{II.8.11.6-fr}
+Sous les hypothèses de \textup{(\hyperref[II.8.11.5-fr]{8.11.5})}, supposons outre que
+$q$ soit propre et que la restriction de $q$ à
+$\mathbf{V}(\mathcal{L})\setmin j(X)$ soit un isomorphisme sur
+$C\setmin\varepsilon(Y)$. Alors le morphisme $u$ est universellement fermé,
+surjectif et radiciel, et sa restriction à $C'\setmi
+
+=================== PAGE II 191 ===================
+----- (Spanish page II 190: shown above in this file) -----
+----- (Spanish page II 191: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 192 -----
+\oldpage[II]{192}
+asociado a $\sh{M}$ \sref{II.1.4.3} cuando $\sh{M}$ se considera como un $\sh{S}$-módulo \emph{no graduado}, y por $\shProj_0(\sh{M})$ el $\sh{O}_X$-módulo cuasi-coherente asociado a $\sh{M}$, considerado esta vez como un $\sh{S}$-módulo graduado (en otras palabras, el $\sh{O}_X$-módulo denotado por $\widetilde{\sh{M}}$ en \sref{II.3.2.2}).
+Además, ponemos
+\[
+\label{II.8.12.1.1}
+  \sh{M}_X=\shProj(\sh{M})=\bigoplus_{n\in\bb{Z}}\shProj_0(\sh{M}(n));
+\tag{8.12.1.1}
+\]
+estando definida la $\sh{O}_X$-álgebra graduada cuasi-coherente $\sh{S}_X$ por \sref{II.8.6.1.1}, $\shProj(\sh{M})$ está dotado de una estructura de \emph{$\sh{S}_X$-módulo graduado (cuasi-coherente)}, mediante los homomorfismos canónicos \sref{II.3.2.6.1}
+\[
+\label{II.8.12.1.2}
+  \sh{O}_X(m)\otimes_{\sh{O}_X}\shProj_0(\sh{M}(n))\to\shProj_0(\sh{S}(m)\otimes_\sh{S}\sh{M}(n))\to\shProj_0(\sh{M}(m+n)),
+\tag{8.12.1.2}
+\]
+efectuándose la verificación de los axiomas de los módulos con ayuda del diagrama conmutativo de \sref{II.2.5.11.4}.
+
+Si $Y=\Spec(A)$ es afín, $\sh{S}=\widetilde{S}$ y $\sh{M}=\widetilde{M}$, donde $S$ es un $A$-álgebra graduada y $M$ un $S$-módulo graduado, entonces, para todo elemento homogéneo $f\in S_+$, se tiene
+\[
+\label{II.8.12.1.3}
+  \Gamma(X_f,\shProj(\widetilde{M}))=M_f
+\tag{8.12.1.3}
+\]
+por las definiciones y \sref{II.8.2.9.1}.
+
+Consideremos ahora el $\widehat{\sh{S}}$-módulo graduado cuasi-coherente
+\[
+\label{II.8.12.1.4}
+  \widehat{\sh{M}}=\sh{M}\otimes_\sh{S}\widehat{\sh{S}}
+\tag{8.12.1.4}
+\]
+($\widehat{\sh{S}}$ está definido por \sref{II.8.3.1.1}); de él se deduce un $\sh{O}_{\widehat{C}}$-módulo graduado cuasi-coherente $\shProj_0(\widehat{\sh{M}})$, que denotaremos también por
+\[
+\label{II.8.12.1.5}
+  \sh{M}^\square=\shProj_0(\widehat{\sh{M}}).
+\tag{8.12.1.5}
+\]
+
+Es claro \sref{II.3.2.4} que $\sh{M}^\square$ es un funtor aditivo \emph{exacto} en $\sh{M}$, que conmuta con las sumas directas y con los límites inductivos.
+\end{env}
+
+\begin{proposition}[8.12.2]
+\label{II.8.12.2}
+Con las notaciones de \sref{II.8.3.2}, se tienen isomorfismos canónicos funtoriales
+\[
+\label{II.8.12.2.1}
+    i^*(\sh{M}^\square)\simto\widetilde{\sh{M}},
+    \quad
+    j^*(\sh{M}^\square)\simto\shProj_0(\sh{M}).
+\tag{8.12.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En efecto, $i^*(\sh{M}^\square)$ se identifica canónicamente con $(\widehat{\sh{M}}/(\bb{z}-1)\widehat{\sh{M}})\supertilde$ sobre $\Spec(\widehat{\sh{S}}/(\bb{z}-1)\widehat{\sh{S}})$ en virtud de \sref{II.3.2.3};
+el primero de los isomorfismos canónicos \sref{II.8.12.2.1} se deduce entonces inmediatamente \sref{II.1.4.1} del isomorfismo canónico $\widehat{\sh{M}}/(\bb{z}-1)\widehat{\sh{M}}\simto\sh{M}$.
+Por otra parte, la inmersión canónica $j:X\to\widehat{C}$ corresponde al homomorfismo canónico $\widehat{\sh{S}}\to\sh{S}$ de núcleo $\bb{z}\widehat{\sh{S}}$ \sref{II.8.3.2};
+el segundo homomorfismo de \sref{II.8.12.2.1} es el caso particular del homomorfismo canónico de \sref{II.3.5.2}[ii], pues aquí se tiene $\widehat{\sh{M}}\otimes_{\widehat{\sh{S}}}\sh{S}=\sh{M}$;
+para comprobar que es un isomorfismo, podemos limitarnos al caso en que $Y=\Spec(A)$ es afín, $\sh{S}=\widetilde{S}$ y $\sh{M}=\widetilde{M}$;
+remitiéndonos a \sref{II.2.8.8}, la comprobación de que, para todo $f$ homogéneo en $S_+$, el homomorfismo precedente, restringido a $X_f$, se reduce a un isomorfismo es entonces inmediata.
+\end{proof}
+----- French corrections on page II 191 -----
+[id 3697]
+OLD: $k(z)$ sur
+NEW: $\boldsymbol{k}(z)$ sur
+FRENCH CONTEXT (corrected): ontre que la restriction de $u$ au
+sous-préschéma fermé $\varepsilon'(Y)$ de $C'$ est un isomorphisme sur le
+sous-préschéma fermé $\varepsilon(Y)$ de $C$, d'où résulte aussitôt que pour
+tout $z'\in\varepsilon'(Y)$, si $z=u(z')$, $u$ définit un isomorphisme de
+$\boldsymbol{k}(z)$ sur $\boldsymbol{k}(z')$. Ces remarques prouvent que $u$ est bijectif et radiciel~;
+en outre, si $\psi$ et $\psi'$ sont les morphismes structuraux $C\to Y$,
+$C'\to Y$, on a $\psi'=\psi\circ u$ et comme $\psi'$ est séparé
+(\hyperref[II.1.2.4-fr]{1.2.4}), il en est
+
+[id 3698]
+OLD: sur $k(z')$
+NEW: sur $\boldsymbol{k}(z')$
+FRENCH CONTEXT (corrected): tion de $u$ au
+sous-préschéma fermé $\varepsilon'(Y)$ de $C'$ est un isomorphisme sur le
+sous-préschéma fermé $\varepsilon(Y)$ de $C$, d'où résulte aussitôt que pour
+tout $z'\in\varepsilon'(Y)$, si $z=u(z')$, $u$ définit un isomorphisme de
+$\boldsymbol{k}(z)$ sur $\boldsymbol{k}(z')$. Ces remarques prouvent que $u$ est bijectif et radiciel~;
+en outre, si $\psi$ et $\psi'$ sont les morphismes structuraux $C\to Y$,
+$C'\to Y$, on a $\psi'=\psi\circ u$ et comme $\psi'$ est séparé
+(\hyperref[II.1.2.4-fr]{1.2.4}), il en est de même de $u$
+(\hyp
+
+[id 3699]
+OLD: {I, 5.5.1, (v)}
+NEW: {\textbf{I}, 5.5.1, (v)}
+FRENCH CONTEXT (corrected): outre, pour chaque indice $i$, comme la
+restriction de $g_i$ à $U_i$ est une immersion, il en est de même de la
+restriction de $g$ à $U_i$ (\hyperref[I.5.3.14-fr]{\textbf{I}, 5.3.14}). Comme les
+$U_i$ recouvrent $X$ et que $g$ est séparé
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (v)}), $g$ est une immersion de $X$ dans $P$
+(\hyperref[I.8.2.8-fr]{\textbf{I}, 8.2.8}). Comme le morphisme de Segre
+(\hyperref[II.4.3.3-fr]{4.3.3}) fournit une immersion de $P$ dans un
+$\mathbf{P}_k^N$, cela achève de prouver que $X$ est quasi-projectif.
+
+\begin{
+
+[id 3700]
+OLD: préschéma intègre,
+NEW: préschéma \textup{intègre},
+FRENCH CONTEXT (corrected): ctif~; comme $q=u\circ q'$ est propre, on conclut finalement de
+(\hyperref[II.5.4.3-fr]{5.4.3}) et (\hyperref[II.5.4.9-fr]{5.4.9}) que $u$
+est universellement fermé.
+\end{proof}
+
+\begin{proposition}[8.11.7]
+\label{II.8.11.7-fr}
+Soient $Y$ un préschéma, $X$ un préschéma \textup{intègre}, $p:X\to Y$ un morphisme
+propre, $\mathcal{L}$ un $\mathcal{O}_X$-Module inversible $p$-ample, $C$ un
+$Y$-préschéma \textup{normal}, $\varepsilon:Y\to C$ une $Y$-section,
+$q:V=\mathbf{V}(\mathcal{L})\to C$ un $Y$-morphisme, tels que le diagramme
+\textup{(\hype
+
+[id 3701]
+OLD: $Y$-préschéma normal,
+NEW: $Y$-préschéma \textup{normal},
+FRENCH CONTEXT (corrected): ) que $u$
+est universellement fermé.
+\end{proof}
+
+\begin{proposition}[8.11.7]
+\label{II.8.11.7-fr}
+Soient $Y$ un préschéma, $X$ un préschéma \textup{intègre}, $p:X\to Y$ un morphisme
+propre, $\mathcal{L}$ un $\mathcal{O}_X$-Module inversible $p$-ample, $C$ un
+$Y$-préschéma \textup{normal}, $\varepsilon:Y\to C$ une $Y$-section,
+$q:V=\mathbf{V}(\mathcal{L})\to C$ un $Y$-morphisme, tels que le diagramme
+\textup{(\hyperref[II.8.9.1.1-fr]{8.9.1.1})} soit commutatif. On suppose en outre que,
+si $p=(p_0,\theta)$, $\theta:\mathcal{O}_Y\to p_*(\mathcal{
+
+[id 3702]
+OLD: (\hyperref[II.8.9.1.1-fr]{8.9.1.1}) soit commutatif
+NEW: \textup{(\hyperref[II.8.9.1.1-fr]{8.9.1.1})} soit commutatif
+FRENCH CONTEXT (corrected): 5-fr}
+Soient $Y$ un préschéma, $p:X\to Y$ un morphisme propre, $\mathcal{L}$ un
+$\mathcal{O}_X$-Module inversible $p$-ample, $C$ un $Y$-préschéma,
+$\varepsilon:Y\to C$ une $Y$-section,
+$q:V=\mathbf{V}(\mathcal{L})\to C$ un $Y$-morphisme, tels que le diagramme
+\textup{(\hyperref[II.8.9.1.1-fr]{8.9.1.1})} soit commutatif. On suppose en outre que,
+si $p=(p_0,\theta)$,
+$\theta:\mathcal{O}_Y\to p_*(\mathcal{O}_X)$ est un isomorphisme. Soient alors
+$\mathcal{S}'=\bigoplus_{n\geqslant0}p_*(\mathcal{L}^{\otimes n})$,
+$C'=\operatorname{Spec}(\mathcal{S}')$, et
+$q':\mathbf{V}(\mathca
+
+[id 3703]
+OLD: (\mathcal{S}')$, et
+$q'
+NEW: (\mathcal{S}')$, \textup{et}
+$q'
+FRENCH CONTEXT (corrected): II.8.9.1.1-fr]{8.9.1.1})} soit commutatif. On suppose en outre que,
+si $p=(p_0,\theta)$, $\theta:\mathcal{O}_Y\to p_*(\mathcal{O}_X)$ soit un
+isomorphisme. Soient alors
+$\mathcal{S}'=\bigoplus_{n\geqslant0}p_*(\mathcal{L}^{\otimes n})$,
+$C'=\operatorname{Spec}(\mathcal{S}')$, \textup{et}
+$q':\mathbf{V}(\mathcal{L})\to C'$ le $Y$-morphisme canonique
+\textup{(\hyperref[II.8.8.5-fr]{8.8.5})}. Alors l'unique $Y$-morphisme $u:C'\to C$ tel
+que $q=u\circ q'$ est un \textup{isomorphisme}.
+\end{proposition}
+
+\begin{proof}
+Il résulte de (\hyperref[II.8.8.6
+
+[id 3704]
+OLD: (\hyperref[II.8.8.5-fr]{8.8.5}). Alors
+NEW: \textup{(\hyperref[II.8.8.5-fr]{8.8.5})}. Alors
+FRENCH CONTEXT (corrected): theta:\mathcal{O}_Y\to p_*(\mathcal{O}_X)$ soit un
+isomorphisme. Soient alors
+$\mathcal{S}'=\bigoplus_{n\geqslant0}p_*(\mathcal{L}^{\otimes n})$,
+$C'=\operatorname{Spec}(\mathcal{S}')$, \textup{et}
+$q':\mathbf{V}(\mathcal{L})\to C'$ le $Y$-morphisme canonique
+\textup{(\hyperref[II.8.8.5-fr]{8.8.5})}. Alors l'unique $Y$-morphisme $u:C'\to C$ tel
+que $q=u\circ q'$ est un \textup{isomorphisme}.
+\end{proposition}
+
+\begin{proof}
+Il résulte de (\hyperref[II.8.8.6-fr]{8.8.6}) que $C'$ est intègre~; comme
+$u$ est un homéomorphisme des espaces sous-jacents $C'\to C$ ($u
+
+[id 3705]
+OLD: est un isomorphisme.
+\end{proposition}
+NEW: est un \textup{isomorphisme}.
+\end{proposition}
+FRENCH CONTEXT (corrected): geqslant0}p_*(\mathcal{L}^{\otimes n})$,
+$C'=\operatorname{Spec}(\mathcal{S}')$, \textup{et}
+$q':\mathbf{V}(\mathcal{L})\to C'$ le $Y$-morphisme canonique
+\textup{(\hyperref[II.8.8.5-fr]{8.8.5})}. Alors l'unique $Y$-morphisme $u:C'\to C$ tel
+que $q=u\circ q'$ est un \textup{isomorphisme}.
+\end{proposition}
+
+\begin{proof}
+Il résulte de (\hyperref[II.8.8.6-fr]{8.8.6}) que $C'$ est intègre~; comme
+$u$ est un homéomorphisme des espaces sous-jacents $C'\to C$ ($u$ étant
+bijectif et fermé d'après (\hyperref[II.8.11.6-fr]{8.11.6})), $C$ est
+irréductible, donc intègre,
+
+[id 3707]
+OLD: S'=\Gamma(C',\mathcal{O}_{C'})
+NEW: S'=\Gamma(C',\mathcal{S}')
+FRENCH CONTEXT (corrected): t isomorphe à $C$, et intègre en vertu de
+  (\hyperref[II.8.8.6-fr]{8.8.6})~; on en conclut que
+  $\operatorname{Proj}(\mathcal{S}')$ est \emph{normal}. En effet, la question
+  est locale sur $Y$~; si $Y$ est affine, $\mathcal{S}'=\widetilde{S}'$,
+  l'anneau $S'=\Gamma(C',\mathcal{S}')$ est intègre et intégralement clos
+  (\hyperref[II.8.8.6.1-fr]{8.8.6.1}), donc, pour tout élément homogène
+  $f\in S'_+$, l'anneau gradué $S'_f$ est intègre et intégralement clos
+  ([13], t.~I, p.~257 et 261), et par suite aussi l'anneau $S'_{(f)}$ de ses
+  t
+
+[id 3708]
+OLD: (p_*(\mathcal{O}_X))$, et de
+NEW: (p_*(\mathcal{O}_X))$ et de
+FRENCH CONTEXT (corrected): {O}_X)=\mathcal{O}_Y$ peut être considérée comme une hypothèse
+  auxiliaire, ne constituant pas une vraie restriction de la généralité du
+  résultat. En effet, si elle n'est pas vérifiée, il suffit de remplacer $Y$
+  par le $Y$-schéma
+  $Y'=\operatorname{Spec}(p_*(\mathcal{O}_X))$ et de considérer $X$ comme un
+  $Y'$-schéma. Nous reviendrons sur cette méthode générale au chapitre III,
+  \S~4.
+\end{enumerate}
+\end{remark}
+\subsection{Faisceaux quasi-cohérents sur les cônes projetants}
+\label{subsection:II.8.12-fr}
+
+\begin{env}[8.12.1]
+\label{
+
+[id 3709]
+OLD: $\mathcal{S}$-Module gradué quasi-cohérent~;
+NEW: \emph{$\mathcal{S}$-Module gradué quasi-cohérent}~;
+FRENCH CONTEXT (corrected): end{enumerate}
+\end{remark}
+\subsection{Faisceaux quasi-cohérents sur les cônes projetants}
+\label{subsection:II.8.12-fr}
+
+\begin{env}[8.12.1]
+\label{II.8.12.1-fr}
+Reprenons les hypothèses et notations de
+(\hyperref[II.8.3.1-fr]{8.3.1}). Soit $\mathcal{M}$ un
+\emph{$\mathcal{S}$-Module gradué quasi-cohérent}~; pour éviter toute confusion,
+nous désignerons par $\widetilde{\mathcal{M}}$ le $\mathcal{O}_C$-Module
+\oldpage[II]{192}
+quasi-cohérent associé à $\mathcal{M}$
+(\hyperref[II.1.4.3-fr]{1.4.3}) lorsque $\mathcal{M}$ est considéré comme
+$\mathcal{S}$-Module \emph
+
+=================== PAGE II 192 ===================
+----- (Spanish page II 191: shown above in this file) -----
+----- (Spanish page II 192: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 193 -----
+\oldpage[II]{193}
+
+Por abuso de lenguaje, diremos también, gracias a la existencia del primero de los isomorfismos \sref{II.8.12.2.1}, que $\sh{M}^\square$ es la \emph{clausura proyectiva} del $\sh{O}_C$-módulo $\widetilde{\sh{M}}$ (quedando sobrentendido que entre los datos del $\sh{O}_C$-módulo $\widetilde{\sh{M}}$ figura la graduación del $\sh{S}$-módulo $\sh{M}$).
+
+\begin{env}[8.12.3]
+\label{II.8.12.3}
+Con las notaciones de \sref{II.8.3.5}, se tiene un homomorfismo canónico funtorial
+\[
+\label{II.8.12.3.1}
+    p^*(\shProj_0(\sh{M}))\to\sh{M}^\square|\widehat{E}.
+\tag{8.12.3.1}
+\]
+
+En efecto, se trata de un caso particular del homomorfismo $\nu^\sharp$ definido de manera general en \sref{II.3.5.6}.
+Si $Y=\Spec(A)$ es afín, $\sh{S}=\widetilde{S}$ y $\sh{M}=\widetilde{M}$, entonces, remitiéndonos a \sref{II.2.8.8}, vemos que la restricción de \sref{II.8.12.3.1} a $p^{-1}(X_f)=\widehat{C}_f$ (para un $f$ homogéneo en $S_+$) corresponde al homomorfismo canónico
+\[
+\label{II.8.12.3.2}
+    M_{(f)}\otimes_{S_{(f)}}S_f^\leq \to M_f^\leq
+\tag{8.12.3.2}
+\]
+teniendo en cuenta \sref{II.8.2.3.2} y \sref{II.8.2.5.2}.
+\end{env}
+
+\begin{env}[8.12.4]
+\label{II.8.12.4}
+Situémonos en las condiciones de \sref{II.8.5.1}, cuyas hipótesis y notaciones conservamos.
+De \sref{II.1.5.6} se sigue que, para todo $\sh{S}$-módulo graduado cuasi-coherente $\sh{M}$, se tiene, por una parte, un isomorfismo canónico
+\[
+\label{II.8.12.4.1}
+    \Phi^*(\widetilde{\sh{M}}) \simto (q^*(\sh{M})\otimes_{q^*(\sh{S})}\sh{S}')\supertilde
+\tag{8.12.4.1}
+\]
+de $\sh{O}_{C'}$-módulos;
+por otra parte, \sref{II.3.5.6} implica la existencia de un $\Proj(\vphi)$-morfismo canónico
+\[
+\label{II.8.12.4.2}
+    \shProj_0(\sh{M}) \to \shProj_0(q^*(\sh{M})\otimes_{q^*(\sh{S})}\sh{S}')|G(\vphi)
+\tag{8.12.4.2}
+\]
+y también de un $\widehat{\Phi}$-morfismo canónico
+\[
+\label{II.8.12.4.3}
+    \shProj_0(\widehat{\sh{M}}) \to \shProj_0(q^*(\widehat{\sh{M}})\otimes_{q^*(\widehat{\sh{S}})}\widehat{\sh{S}'})|G(\widehat{\vphi}).
+\tag{8.12.4.3}
+\]
+\end{env}
+
+\begin{env}[8.12.5]
+\label{II.8.12.5}
+Consideremos ahora la situación de \sref{II.8.6.1}, con las mismas notaciones;
+tomamos, pues, $Y'=X$, siendo el morfismo $q:X\to Y$ el morfismo estructural y $\vphi$ el $q$-morfismo canónico de \sref{II.8.6.1.2}.
+Se tiene entonces un isomorfismo canónico
+\[
+\label{II.8.12.5.1}
+    q^*(\sh{M})\otimes_{q^*(\sh{S})}\sh{S}_X^\geq \simto \sh{M}_X^\geq
+\tag{8.12.5.1}
+\]
+poniendo $\sh{M}_X^\geq=\bigoplus_{n\geq0}\shProj_0(\sh{M}(n))$.
+En efecto, podemos limitarnos al caso en que $Y=\Spec(A)$ es afín, $\sh{S}=\widetilde{S}$ y $\sh{M}=\widetilde{M}$, y definir el isomorfismo \sref{II.8.12.5.1} en cada uno de los abiertos afines $X_f$ (donde $f$ es homogéneo en $S_+$), comprobando la compatibilidad al pasar a un múltiplo homogéneo de $f$.
+Ahora bien, la restricción a $X_f$ del primer miembro de \sref{II.8.12.5.1} es $\widetilde{M}'=((M\otimes_A S_{(f)})\otimes_{S\otimes_A S_{(f)}}S_f^\geq)\supertilde$ por \sref{II.8.6.2.1};
+como se tiene un isomorfismo canónico de $M\otimes_A S_{(f)}$ sobre $M\otimes_S(S\otimes_A S_{(f)})$, se deduce un isomorfismo de $\widetilde{M}'$ sobre $(M\otimes_S S_f^\geq)\supertilde$, y este último es canónicamente isomorfo, por \sref{II.8.2.9.1}, a la restricción a $X_f$ del segundo miembro de \sref{II.8.12.5.1}, y satisface las condiciones de compatibilidad requeridas.
+----- French corrections on page II 192 -----
+[id 3711]
+OLD: $\operatorname{Proj}_0(\mathcal{M})$ le
+NEW: $\mathcal{P}\mathit{roj}_0(\mathcal{M})$ le
+FRENCH CONTEXT (corrected): nfusion,
+nous désignerons par $\widetilde{\mathcal{M}}$ le $\mathcal{O}_C$-Module
+\oldpage[II]{192}
+quasi-cohérent associé à $\mathcal{M}$
+(\hyperref[II.1.4.3-fr]{1.4.3}) lorsque $\mathcal{M}$ est considéré comme
+$\mathcal{S}$-Module \emph{non gradué}, et par
+$\mathcal{P}\mathit{roj}_0(\mathcal{M})$ le $\mathcal{O}_X$-Module
+quasi-cohérent associé à $\mathcal{M}$, $\mathcal{M}$ étant cette fois
+considéré comme $\mathcal{S}$-Module gradué (autrement dit le
+$\mathcal{O}_X$-Module noté $\widetilde{\mathcal{M}}$ dans
+(\hyperref[II.3.2.2-fr]{3.2.2})). Nous poser
+
+[id 3712]
+OLD: \mathcal{M}_X=\operatorname{Proj}
+NEW: \mathcal{M}_X=\mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): hcal{M}$, $\mathcal{M}$ étant cette fois
+considéré comme $\mathcal{S}$-Module gradué (autrement dit le
+$\mathcal{O}_X$-Module noté $\widetilde{\mathcal{M}}$ dans
+(\hyperref[II.3.2.2-fr]{3.2.2})). Nous poserons de plus
+\begin{equation}
+\label{II.8.12.1.1-fr}
+  \mathcal{M}_X=\mathcal{P}\mathit{roj}(\mathcal{M})
+  =\bigoplus_{n\in\mathbf{Z}}\mathcal{P}\mathit{roj}_0(\mathcal{M}(n))~;
+\tag{8.12.1.1}
+\end{equation}
+la $\mathcal{O}_X$-Algèbre graduée quasi-cohérente $\mathcal{S}_X$ étant
+définie par (\hyperref[II.8.6.1.1-fr]{8.6.1.1}),
+$\mathcal{P}\mathit{r
+
+[id 3713]
+OLD: \bigoplus_{n\in\mathbf{Z}}\operatorname{Proj}_0
+NEW: \bigoplus_{n\in\mathbf{Z}}\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): me $\mathcal{S}$-Module gradué (autrement dit le
+$\mathcal{O}_X$-Module noté $\widetilde{\mathcal{M}}$ dans
+(\hyperref[II.3.2.2-fr]{3.2.2})). Nous poserons de plus
+\begin{equation}
+\label{II.8.12.1.1-fr}
+  \mathcal{M}_X=\mathcal{P}\mathit{roj}(\mathcal{M})
+  =\bigoplus_{n\in\mathbf{Z}}\mathcal{P}\mathit{roj}_0(\mathcal{M}(n))~;
+\tag{8.12.1.1}
+\end{equation}
+la $\mathcal{O}_X$-Algèbre graduée quasi-cohérente $\mathcal{S}_X$ étant
+définie par (\hyperref[II.8.6.1.1-fr]{8.6.1.1}),
+$\mathcal{P}\mathit{roj}(\mathcal{M})$ est muni d'une structure de
+\emph{$\mathcal{S}_X$-
+
+[id 3714]
+OLD: $\operatorname{Proj}(\mathcal{M})$ est muni
+NEW: $\mathcal{P}\mathit{roj}(\mathcal{M})$ est muni
+FRENCH CONTEXT (corrected): athcal{P}\mathit{roj}(\mathcal{M})
+  =\bigoplus_{n\in\mathbf{Z}}\mathcal{P}\mathit{roj}_0(\mathcal{M}(n))~;
+\tag{8.12.1.1}
+\end{equation}
+la $\mathcal{O}_X$-Algèbre graduée quasi-cohérente $\mathcal{S}_X$ étant
+définie par (\hyperref[II.8.6.1.1-fr]{8.6.1.1}),
+$\mathcal{P}\mathit{roj}(\mathcal{M})$ est muni d'une structure de
+\emph{$\mathcal{S}_X$-Module gradué (quasi-cohérent)}, au moyen des homomorphismes
+canoniques (\hyperref[II.3.2.6.1-fr]{3.2.6.1})
+\begin{equation}
+\label{II.8.12.1.2-fr}
+  \mathcal{O}_X(m)\otimes_{\mathcal{O}_X}
+  \mathcal{P}\mathit{roj}_0(
+
+[id 3715]
+OLD: $\mathcal{S}_X$-Module gradué (quasi-cohérent)
+NEW: \emph{$\mathcal{S}_X$-Module gradué (quasi-cohérent)}
+FRENCH CONTEXT (corrected): thcal{P}\mathit{roj}_0(\mathcal{M}(n))~;
+\tag{8.12.1.1}
+\end{equation}
+la $\mathcal{O}_X$-Algèbre graduée quasi-cohérente $\mathcal{S}_X$ étant
+définie par (\hyperref[II.8.6.1.1-fr]{8.6.1.1}),
+$\mathcal{P}\mathit{roj}(\mathcal{M})$ est muni d'une structure de
+\emph{$\mathcal{S}_X$-Module gradué (quasi-cohérent)}, au moyen des homomorphismes
+canoniques (\hyperref[II.3.2.6.1-fr]{3.2.6.1})
+\begin{equation}
+\label{II.8.12.1.2-fr}
+  \mathcal{O}_X(m)\otimes_{\mathcal{O}_X}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{S}(m)\otimes_{\m
+
+[id 3716]
+OLD: \otimes_{\mathcal{O}_X}
+  \operatorname{Proj}
+NEW: \otimes_{\mathcal{O}_X}
+  \mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): 1}),
+$\mathcal{P}\mathit{roj}(\mathcal{M})$ est muni d'une structure de
+\emph{$\mathcal{S}_X$-Module gradué (quasi-cohérent)}, au moyen des homomorphismes
+canoniques (\hyperref[II.3.2.6.1-fr]{3.2.6.1})
+\begin{equation}
+\label{II.8.12.1.2-fr}
+  \mathcal{O}_X(m)\otimes_{\mathcal{O}_X}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{S}(m)\otimes_{\mathcal{S}}\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{M}(m+n))
+\tag{8.12.1.2}
+\end{equation}
+la vérification des axiomes des Modules se faisant à l'aide du diagramme
+commu
+
+[id 3717]
+OLD: \to \operatorname{Proj}_0(\mathcal{S}(m)
+NEW: \to \mathcal{P}\mathit{roj}_0(\mathcal{S}(m)
+FRENCH CONTEXT (corrected): e
+\emph{$\mathcal{S}_X$-Module gradué (quasi-cohérent)}, au moyen des homomorphismes
+canoniques (\hyperref[II.3.2.6.1-fr]{3.2.6.1})
+\begin{equation}
+\label{II.8.12.1.2-fr}
+  \mathcal{O}_X(m)\otimes_{\mathcal{O}_X}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{S}(m)\otimes_{\mathcal{S}}\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{M}(m+n))
+\tag{8.12.1.2}
+\end{equation}
+la vérification des axiomes des Modules se faisant à l'aide du diagramme
+commutatif (\hyperref[II.2.5.11.4-fr]{2.5.11.4}).
+
+Si $Y=\operatorname
+
+[id 3718]
+OLD: \to \operatorname{Proj}_0(\mathcal{M}(m+n))
+NEW: \to \mathcal{P}\mathit{roj}_0(\mathcal{M}(m+n))
+FRENCH CONTEXT (corrected): s
+canoniques (\hyperref[II.3.2.6.1-fr]{3.2.6.1})
+\begin{equation}
+\label{II.8.12.1.2-fr}
+  \mathcal{O}_X(m)\otimes_{\mathcal{O}_X}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{S}(m)\otimes_{\mathcal{S}}\mathcal{M}(n))
+  \to \mathcal{P}\mathit{roj}_0(\mathcal{M}(m+n))
+\tag{8.12.1.2}
+\end{equation}
+la vérification des axiomes des Modules se faisant à l'aide du diagramme
+commutatif (\hyperref[II.2.5.11.4-fr]{2.5.11.4}).
+
+Si $Y=\operatorname{Spec}(A)$ est affine, $\mathcal{S}=\widetilde{S}$ et
+$\mathcal{M}=\widetilde{M}$, où 
+
+[id 3719]
+OLD: \Gamma(X_f,\operatorname{Proj}
+NEW: \Gamma(X_f,\mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): 
+Si $Y=\operatorname{Spec}(A)$ est affine, $\mathcal{S}=\widetilde{S}$ et
+$\mathcal{M}=\widetilde{M}$, où $S$ est une $A$-algèbre graduée et $M$ un
+$S$-module gradué, alors, pour tout élément homogène $f\in S_+$, on a
+\begin{equation}
+\label{II.8.12.1.3-fr}
+  \Gamma(X_f,\mathcal{P}\mathit{roj}(\widetilde{M}))=M_f
+\tag{8.12.1.3}
+\end{equation}
+en vertu des définitions et de (\hyperref[II.8.2.9.1-fr]{8.2.9.1}).
+
+Considérons maintenant le $\widehat{\mathcal{S}}$-Module gradué
+quasi-cohérent
+\begin{equation}
+\label{II.8.12.1.4-fr}
+  \widehat{\mathcal{M
+
+[id 3720]
+OLD: $\operatorname{Proj}_0(\widehat{\mathcal{M}})$, que
+NEW: $\mathcal{P}\mathit{roj}_0(\widehat{\mathcal{M}})$, que
+FRENCH CONTEXT (corrected): dehat{\mathcal{M}}
+  =\mathcal{M}\otimes_{\mathcal{S}}\widehat{\mathcal{S}}
+\tag{8.12.1.4}
+\end{equation}
+($\widehat{\mathcal{S}}$ étant défini par
+(\hyperref[II.8.3.1.1-fr]{8.3.1.1}))~; on en déduit un
+$\mathcal{O}_{\widehat{C}}$-Module gradué quasi-cohérent
+$\mathcal{P}\mathit{roj}_0(\widehat{\mathcal{M}})$, que nous noterons aussi
+\begin{equation}
+\label{II.8.12.1.5-fr}
+  \mathcal{M}^{\square}=\mathcal{P}\mathit{roj}_0(\widehat{\mathcal{M}}).
+\tag{8.12.1.5}
+\end{equation}
+
+Il est clair (\hyperref[II.3.2.4-fr]{3.2.4}) que
+$\mathcal{M}^{\square}$ est un foncteur addit
+
+[id 3721]
+OLD: \mathcal{M}^{\square}=\operatorname{Proj}_0
+NEW: \mathcal{M}^{\square}=\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): mathcal{S}}$ étant défini par
+(\hyperref[II.8.3.1.1-fr]{8.3.1.1}))~; on en déduit un
+$\mathcal{O}_{\widehat{C}}$-Module gradué quasi-cohérent
+$\mathcal{P}\mathit{roj}_0(\widehat{\mathcal{M}})$, que nous noterons aussi
+\begin{equation}
+\label{II.8.12.1.5-fr}
+  \mathcal{M}^{\square}=\mathcal{P}\mathit{roj}_0(\widehat{\mathcal{M}}).
+\tag{8.12.1.5}
+\end{equation}
+
+Il est clair (\hyperref[II.3.2.4-fr]{3.2.4}) que
+$\mathcal{M}^{\square}$ est un foncteur additif \emph{exact} en $\mathcal{M}$,
+commutant aux sommes directes et aux limites inductives.
+\end{env}
+
+\begin{p
+
+[id 3723]
+OLD: additif exact en
+NEW: additif \emph{exact} en
+FRENCH CONTEXT (corrected): , que nous noterons aussi
+\begin{equation}
+\label{II.8.12.1.5-fr}
+  \mathcal{M}^{\square}=\mathcal{P}\mathit{roj}_0(\widehat{\mathcal{M}}).
+\tag{8.12.1.5}
+\end{equation}
+
+Il est clair (\hyperref[II.3.2.4-fr]{3.2.4}) que
+$\mathcal{M}^{\square}$ est un foncteur additif \emph{exact} en $\mathcal{M}$,
+commutant aux sommes directes et aux limites inductives.
+\end{env}
+
+\begin{proposition}[8.12.2]
+\label{II.8.12.2-fr}
+Avec les notations de \textup{(\hyperref[II.8.3.2-fr]{8.3.2})}, on a des
+isomorphismes canoniques fonctoriels
+\begin{equation}
+
+
+[id 3724]
+OLD: Avec les notations de (\hyperref[II.8.3.2-fr]{8.3.2})
+NEW: Avec les notations de \textup{(\hyperref[II.8.3.2-fr]{8.3.2})}
+FRENCH CONTEXT (corrected): end{equation}
+
+Il est clair (\hyperref[II.3.2.4-fr]{3.2.4}) que
+$\mathcal{M}^{\square}$ est un foncteur additif \emph{exact} en $\mathcal{M}$,
+commutant aux sommes directes et aux limites inductives.
+\end{env}
+
+\begin{proposition}[8.12.2]
+\label{II.8.12.2-fr}
+Avec les notations de \textup{(\hyperref[II.8.3.2-fr]{8.3.2})}, on a des
+isomorphismes canoniques fonctoriels
+\begin{equation}
+\label{II.8.12.2.1-fr}
+  i^*(\mathcal{M}^{\square})\xrightarrow{\sim}\widetilde{\mathcal{M}},
+  \qquad
+  j^*(\mathcal{M}^{\square})\xrightarrow{\sim}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}).
+\ta
+
+[id 3725]
+OLD: \xrightarrow{\sim}
+  \operatorname{Proj}
+NEW: \xrightarrow{\sim}
+  \mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): }
+Avec les notations de \textup{(\hyperref[II.8.3.2-fr]{8.3.2})}, on a des
+isomorphismes canoniques fonctoriels
+\begin{equation}
+\label{II.8.12.2.1-fr}
+  i^*(\mathcal{M}^{\square})\xrightarrow{\sim}\widetilde{\mathcal{M}},
+  \qquad
+  j^*(\mathcal{M}^{\square})\xrightarrow{\sim}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}).
+\tag{8.12.2.1}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+En effet, $i^*(\mathcal{M}^{\square})$ s'identifie canoniquement à
+$\left(\widehat{\mathcal{M}}/(\mathbf{z}-1)\widehat{\mathcal{M}}\right)^{\sim}$
+sur
+$\operatorname{Spec}(\widehat
+
+[id 3726]
+OLD: \left(\widehat{\mathcal{M}}/(z-1)
+NEW: \left(\widehat{\mathcal{M}}/(\mathbf{z}-1)
+FRENCH CONTEXT (corrected): {\sim}\widetilde{\mathcal{M}},
+  \qquad
+  j^*(\mathcal{M}^{\square})\xrightarrow{\sim}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}).
+\tag{8.12.2.1}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+En effet, $i^*(\mathcal{M}^{\square})$ s'identifie canoniquement à
+$\left(\widehat{\mathcal{M}}/(\mathbf{z}-1)\widehat{\mathcal{M}}\right)^{\sim}$
+sur
+$\operatorname{Spec}(\widehat{\mathcal{S}}/(\mathbf{z}-1)\widehat{\mathcal{S}})$
+en vertu de (\hyperref[II.3.2.3-fr]{3.2.3})~; le premier des isomorphismes
+canoniques (\hyperref[II.8.12.2.1-fr]{8.12.2.1}) se déduit alor
+
+[id 3727]
+OLD: \widehat{\mathcal{S}}/(z-1)
+NEW: \widehat{\mathcal{S}}/(\mathbf{z}-1)
+FRENCH CONTEXT (corrected):  outre $\widehat{C}$ est le plus petit sous-préschéma fermé de $\widehat{C}$
+majorant $i(C)$.
+\end{proposition}
+
+Pour définir $i$, on considère l'ouvert de $\widehat{C}$,
+\begin{equation}
+\label{II.8.3.2.4-fr}
+  \widehat{C}_{\mathbf{z}}=
+  \operatorname{Spec}(\widehat{\mathcal{S}}/(\mathbf{z}-1)\widehat{\mathcal{S}})
+\tag{8.3.2.4}
+\end{equation}
+(\hyperref[II.3.1.4-fr]{3.1.4}), $\mathbf{z}$ s'identifiant canoniquement à une
+section de $\widehat{\mathcal{S}}$ au-dessus de $Y$. L'isomorphisme
+$i:C\xrightarrow{\sim}\widehat{C}_{\mathbf{z}}$ correspond a
+
+[id 3728]
+OLD: (z-1)\widehat{\mathcal{M}}
+\xrightarrow
+NEW: (\mathbf{z}-1)\widehat{\mathcal{M}}
+\xrightarrow
+FRENCH CONTEXT (corrected): }-1)\widehat{\mathcal{S}})$
+en vertu de (\hyperref[II.3.2.3-fr]{3.2.3})~; le premier des isomorphismes
+canoniques (\hyperref[II.8.12.2.1-fr]{8.12.2.1}) se déduit alors aussitôt
+(\hyperref[II.1.4.1-fr]{1.4.1}) de l'isomorphisme canonique
+$\widehat{\mathcal{M}}/(\mathbf{z}-1)\widehat{\mathcal{M}}
+\xrightarrow{\sim}\mathcal{M}$. D'autre part, l'immersion canonique
+$j:X\to\widehat{C}$ correspond à l'homomorphisme canonique
+$\widehat{\mathcal{S}}\to\mathcal{S}$ de noyau
+$\mathbf{z}\widehat{\mathcal{S}}$ (\hyperref[II.8.3.2-fr]{8.3.2})~; le second
+homomorphisme (\hype
+
+[id 3729]
+OLD: $z\widehat{\mathcal{S}}$
+NEW: $\mathbf{z}\widehat{\mathcal{S}}$
+FRENCH CONTEXT (corrected): ne immersion fermée
+(\hyperref[II.1.4.10-fr]{1.4.10}). Enfin, $j$ correspond de même
+(\hyperref[II.3.5.1-fr]{3.5.1}) à l'homomorphisme surjectif de degré $0$,
+$\widehat{\mathcal{S}}\to\mathcal{S}$, qui se réduit à l'identité dans
+$\mathcal{S}$ et est nul dans $\mathbf{z}\widehat{\mathcal{S}}$, qui est son noyau~;
+$j$ est partout défini et est une immersion fermée en vertu de
+(\hyperref[II.3.6.2-fr]{3.6.2}).
+
+Pour démontrer les autres assertions de
+(\hyperref[II.8.3.2-fr]{8.3.2}), on peut évidemment se borner au cas où
+$Y=\operatorname{Spec}(A)$ es
+
+=================== PAGE II 193 ===================
+----- (Spanish page II 192: shown above in this file) -----
+----- (Spanish page II 193: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 194 -----
+\oldpage[II]{194}
+
+Sustituyendo $\sh{M}$ por $\widehat{\sh{M}}$, $\sh{S}$ por $\widehat{\sh{S}}$ y $\sh{S}_X$ por $(\sh{S}_X^\geq)^{\widehat{\,}}$ en el razonamiento precedente, se tiene asimismo un isomorfismo canónico
+\[
+\label{II.8.12.5.2}
+    q^*(\widehat{\sh{M}})\otimes_{q^*(\widehat{\sh{S}})}(\sh{S}_X^\geq)^\wedge \simto (\sh{M}_X^\geq)^{\widehat{\,}}.
+\tag{8.12.5.2}
+\]
+
+Si recordamos \sref{II.8.6.2} que el morfismo estructural $u:\Proj(\sh{S}_X^\geq)\to X$ es un isomorfismo, se deduce en primer lugar de lo anterior que se tiene un $u$-isomorfismo canónico
+\[
+\label{II.8.12.5.3}
+    \shProj_0\sh{M} \simto \shProj_0(\sh{M}_X^\geq)
+\tag{8.12.5.3}
+\]
+como caso particular de \sref{II.8.12.4.2}.
+Observemos que, con las notaciones de la demostración de \sref{II.8.6.2}, esto se reduce a ver que el homomorfismo canónico $M_{(f)}\otimes_{S_{(f)}}(S_f^\geq)^{(d)}\to(M_f^\geq)^{(d)}$ es un isomorfismo cuando $f\in S_d$, lo cual es inmediato.
+
+En segundo lugar, el isomorfismo \sref{II.8.12.5.2} proporciona, aplicando esta vez \sref{II.8.12.4.3} al morfismo canónico $r=\Proj(\widehat{\alpha}):\widehat{C}_X\to\widehat{C}$, un $r$-morfismo canónico
+\[
+\label{II.8.12.5.4}
+    \sh{M}^\square \to (\sh{M}_X^\geq)^\square.
+\tag{8.12.5.4}
+\]
+
+Recordemos ahora \sref{II.8.6.2} que las restricciones de $r$ a los conos sin vértice $\widehat{E}_X$ y $E_X$ son \emph{isomorfismos} sobre $\widehat{E}$ y $E$, respectivamente.
+Además:
+\end{env}
+
+\begin{proposition}[8.12.6]
+\label{II.8.12.6}
+Las restricciones a $\widehat{E}_X$ y $E_X$ del $r$-morfismo canónico de \sref{II.8.12.5.4} son isomorfismos
+\[
+\label{II.8.12.6.1}
+    \sh{M}^\square|\widehat{E} \simto (\sh{M}_X^\geq)^\square|\widehat{E}_X
+\tag{8.12.6.1}
+\]
+\[
+\label{II.8.12.6.2}
+    \widetilde{\sh{M}}|E \simto (\sh{M}_X^\geq)\supertilde|E_X.
+\tag{8.12.6.2}
+\]
+\end{proposition}
+
+\begin{proof}
+Nos reducimos al caso en que $Y$ es afín, como en la demostración de \sref{II.8.6.2} (cuyas notaciones adoptamos);
+reduciéndonos a las definiciones \sref{II.2.8.8}, debemos demostrar que el homomorfismo canónico
+\[
+    \widehat{M}_{(f)}\otimes_{\widehat{S}_{(f)}}(S_f^\geq)_{(f/1)}^\wedge \to (M\otimes_S S_f^\geq)_{(f/1)}^\wedge
+\]
+es un isomorfismo;
+pero, en virtud de \sref{II.8.2.3.2} y \sref{II.8.2.5.2}, el primer miembro se identifica canónicamente con $M_f^\leq\otimes_{S_f^\leq}(S_f^\geq)_{f/1}^\leq$ y, por tanto, con $M_f^\leq$, por \sref{II.8.2.7.2}, mientras que el segundo se identifica con $(M_f^\geq)_{f/1}^\leq$ y, por tanto, también con $M_f^\leq$, por \sref{II.8.2.9.2}, de donde se obtiene la conclusión relativa a \sref{II.8.12.6.1};
+\sref{II.8.12.6.2} se sigue entonces de \sref{II.8.12.6.1} y \sref{II.8.12.2.1}.
+\end{proof}
+
+\begin{corollary}[8.12.7]
+\label{II.8.12.7}
+Con las identificaciones de \sref{II.8.6.3}, la restricción de $(\sh{M}_X^\geq)^\square$ a $\widehat{E}_X$ puede identificarse con $(\sh{M}_X^\leq)\supertilde$, y la restricción de $(\sh{M}_X^\geq)^\square$ a $E_X$ con $\widetilde{\sh{M}}_X$.
+\end{corollary}
+
+\begin{proof}
+Podemos limitarnos al caso afín, y esto se sigue de la identificación de $(M_f^\geq)_{f/1}^\leq$ con $M_f^\leq$, y de $(M_f^\geq)_{f/1}$ con $M_f$ \sref{II.8.2.9.2}.
+\end{proof}
+
+\begin{proposition}[8.12.8]
+\label{II.8.12.8}
+Bajo las hipótesis de \sref{II.8.6.4}, el homomorfismo canónico de \sref{II.8.12.3.1} es un isomorfismo.
+\end{proposition}
+
+\begin{proof}
+Teniendo en cuenta que $\Proj(\sh{S}_X^\geq)\to X$ es un isomorfismo \sref{II.8.6.2}, y los
+----- French corrections on page II 193 -----
+[id 3730]
+OLD: p^*(\operatorname{Proj}
+NEW: p^*(\mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): de{\mathcal{M}}$ figure la
+graduation du $\mathcal{S}$-Module $\mathcal{M}$).
+
+\begin{env}[8.12.3]
+\label{II.8.12.3-fr}
+Avec les notations de (\hyperref[II.8.3.5-fr]{8.3.5}), on a un
+homomorphisme canonique fonctoriel
+\begin{equation}
+\label{II.8.12.3.1-fr}
+  p^*(\mathcal{P}\mathit{roj}_0(\mathcal{M}))
+  \to\mathcal{M}^{\square}|\widehat{E}.
+\tag{8.12.3.1}
+\end{equation}
+
+En effet, c'est un cas particulier de l'homomorphisme $\upsilon^{\sharp}$ défini de
+façon générale dans (\hyperref[II.3.5.6-fr]{3.5.6}). Si
+$Y=\operatorname{Spec}(A)$ est a
+
+[id 3732]
+OLD: $u^{\sharp}$ défini
+NEW: $\upsilon^{\sharp}$ défini
+FRENCH CONTEXT (corrected): .5}), on a un
+homomorphisme canonique fonctoriel
+\begin{equation}
+\label{II.8.12.3.1-fr}
+  p^*(\mathcal{P}\mathit{roj}_0(\mathcal{M}))
+  \to\mathcal{M}^{\square}|\widehat{E}.
+\tag{8.12.3.1}
+\end{equation}
+
+En effet, c'est un cas particulier de l'homomorphisme $\upsilon^{\sharp}$ défini de
+façon générale dans (\hyperref[II.3.5.6-fr]{3.5.6}). Si
+$Y=\operatorname{Spec}(A)$ est affine, $\mathcal{S}=\widetilde{S}$,
+$\mathcal{M}=\widetilde{M}$, on voit, en se reportant à
+(\hyperref[II.2.8.8-fr]{2.8.8}), que la restriction de
+(\hyperref[II.8.12.3.
+
+[id 3733]
+OLD: \label{II.8.12.4.2-fr}
+  \operatorname{Proj}
+NEW: \label{II.8.12.4.2-fr}
+  \mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): M})\otimes_{q^*(\mathcal{S})}\mathcal{S}'\right)^{\sim}
+\tag{8.12.4.1}
+\end{equation}
+de $\mathcal{O}_{C'}$-Modules~; et d'autre part
+(\hyperref[II.3.5.6-fr]{3.5.6}) entraîne l'existence d'un
+$\operatorname{Proj}(\varphi)$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.2-fr}
+  \mathcal{P}\mathit{roj}_0\mathcal{M}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathc
+
+[id 3734]
+OLD: _0(\mathcal{M})\to
+NEW: _0\mathcal{M}\to
+FRENCH CONTEXT (corrected): ^{\sim}
+\tag{8.12.4.1}
+\end{equation}
+de $\mathcal{O}_{C'}$-Modules~; et d'autre part
+(\hyperref[II.3.5.6-fr]{3.5.6}) entraîne l'existence d'un
+$\operatorname{Proj}(\varphi)$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.2-fr}
+  \mathcal{P}\mathit{roj}_0\mathcal{M}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{roj
+
+[id 3735]
+OLD: \left(\operatorname{Proj}_0
+  (q^*(\mathcal{M})
+NEW: \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})
+FRENCH CONTEXT (corrected): .1}
+\end{equation}
+de $\mathcal{O}_{C'}$-Modules~; et d'autre part
+(\hyperref[II.3.5.6-fr]{3.5.6}) entraîne l'existence d'un
+$\operatorname{Proj}(\varphi)$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.2-fr}
+  \mathcal{P}\mathit{roj}_0\mathcal{M}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{roj}_0\widehat{\mathcal{M}}\to
+  \left(\mathcal{P}\mathit
+
+[id 3736]
+OLD: \label{II.8.12.4.3-fr}
+  \operatorname{Proj}
+NEW: \label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{roj}
+FRENCH CONTEXT (corrected): 2-fr}
+  \mathcal{P}\mathit{roj}_0\mathcal{M}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{roj}_0\widehat{\mathcal{M}}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\widehat{\mathcal{M}})
+  \otimes_{q^*(\widehat{\mathcal{S}})}\widehat{\mathcal{S}}')\right)
+  |G(\widehat{\varphi}).
+\tag{8.12.4.3}
+\end{equation}
+\end{env}
+
+\begin{env}[8.12.5]
+\label{II.8.12
+
+[id 3737]
+OLD: _0(\widehat{\mathcal{M}})\to
+NEW: _0\widehat{\mathcal{M}}\to
+FRENCH CONTEXT (corrected):   \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{roj}_0\widehat{\mathcal{M}}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\widehat{\mathcal{M}})
+  \otimes_{q^*(\widehat{\mathcal{S}})}\widehat{\mathcal{S}}')\right)
+  |G(\widehat{\varphi}).
+\tag{8.12.4.3}
+\end{equation}
+\end{env}
+
+\begin{env}[8.12.5]
+\label{II.8.12.5-fr}
+Considérons mainten
+
+[id 3738]
+OLD: \left(\operatorname{Proj}_0
+  (q^*(\widehat{\mathcal{M}})
+NEW: \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\widehat{\mathcal{M}})
+FRENCH CONTEXT (corrected): j}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{roj}_0\widehat{\mathcal{M}}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\widehat{\mathcal{M}})
+  \otimes_{q^*(\widehat{\mathcal{S}})}\widehat{\mathcal{S}}')\right)
+  |G(\widehat{\varphi}).
+\tag{8.12.4.3}
+\end{equation}
+\end{env}
+
+\begin{env}[8.12.5]
+\label{II.8.12.5-fr}
+Considérons maintenant la situation de (\hyperref[II.8.6.1-fr]{8.6.1}),
+avec les mê
+
+[id 3739]
+OLD: \widehat{\mathcal{S}'}
+NEW: \widehat{\mathcal{S}}'
+FRENCH CONTEXT (corrected): ef[II.8.3.4.4-fr]{8.3.4.4}).
+\end{proof}
+
+\begin{env}[8.5.3]
+\label{II.8.5.3-fr}
+Le $q$-morphisme $\varphi$ se prolonge canoniquement en un $q$-morphisme
+d'Algèbres graduées
+\begin{equation}
+\label{II.8.5.3.1-fr}
+  \widehat{\varphi}:\widehat{\mathcal{S}}
+  \to\widehat{\mathcal{S}}'
+\tag{8.5.3.1}
+\end{equation}
+en posant $\widehat{\varphi}(\mathbf{z})=\mathbf{z}$. On en déduit par suite un morphisme
+\[
+  \widehat{\Phi}=\operatorname{Proj}(\widehat{\varphi}):
+  G(\widehat{\varphi})\to\widehat{C}
+  =\operatorname{Proj}(\widehat{\mathcal{S}
+
+[id 3740]
+OLD: \bigoplus_{n\geq0}\operatorname{Proj}_0
+NEW: \bigoplus_{n\geq0}\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): fr]{8.6.1.2}). On a alors un
+isomorphisme canonique
+\begin{equation}
+\label{II.8.12.5.1-fr}
+  q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}_X^{\geq}
+  \xrightarrow{\sim}\mathcal{M}_X^{\geq}
+\tag{8.12.5.1}
+\end{equation}
+en posant
+$\mathcal{M}_X^{\geq}=\bigoplus_{n\geq0}\mathcal{P}\mathit{roj}_0(\mathcal{M}(n))$.
+On peut en effet se borner au cas où $Y=\operatorname{Spec}(A)$ est affine,
+$\mathcal{S}=\widetilde{S}$ et $\mathcal{M}=\widetilde{M}$, et définir
+l'isomorphisme (\hyperref[II.8.12.5.1-fr]{8.12.5.1}) dans chacun des ouverts
+affines $X_f$ ($f
+
+=================== PAGE II 194 ===================
+----- (Spanish page II 193: shown above in this file) -----
+----- (Spanish page II 194: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 195 -----
+\oldpage[II]{195}
+isomorfismos \sref{II.8.12.5.4} y \sref{II.8.12.6.1}, nos vemos reducidos a demostrar la proposición correspondiente para el homomorfismo canónico $p_X^*(\shProj_0(\sh{M}_X^\geq))\to(\sh{M}_X^\geq)^\square|\widehat{E}_X$; en otras palabras, podemos limitarnos al caso en que $\sh{S}_1$ es un $\sh{O}_Y$-módulo invertible y $\sh{S}$ está generada por $\sh{S}_1$.
+Con las notaciones de \sref{II.8.12.3}, se tiene entonces, para algún $f\in S_1$, que $S_f^\leq=S_{(f)}[1/f]$, y el homomorfismo canónico $M_{(f)}\otimes_{S_{(f)}}S_f^\leq\to M_f^\leq$ es un isomorfismo, por la definición de $M_f^\leq$.
+\end{proof}
+
+\begin{env}[8.12.9]
+\label{II.8.12.9}
+Consideremos ahora los $\sh{S}$-módulos cuasi-coherentes
+\[
+    \sh{M}_{[n]}=\bigoplus_{m\geq n}\sh{M}_m
+\]
+y (con las notaciones de \sref{II.8.7.2}) el $\sh{S}^\natural$-módulo graduado cuasi-coherente
+\[
+\label{II.8.12.9.1}
+    \sh{M}^\natural=\left(\bigoplus_{n\geq0}\sh{M}_{[n]}\right)\supertilde.
+\tag{8.12.9.1}
+\]
+
+Hemos visto en \sref{II.8.7.3} que existe un $C$-isomorfismo canónico $h:C_X\simto\Proj(\sh{S}^\natural)$.
+Además:
+\end{env}
+
+\begin{proposition}[8.12.10]
+\label{II.8.12.10}
+Existe un $h$-isomorfismo canónico
+\[
+\label{II.8.12.10.1}
+    \shProj_0(\sh{M}^\natural) \simto \widetilde{\sh{M}}_X.
+\tag{8.12.10.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Se razona como en \sref{II.8.7.3}, utilizando esta vez la existencia del diisomorfismo de \sref{II.8.2.9.3} en lugar del de \sref{II.8.2.7.3}.
+Dejamos los detalles al lector.
+\end{proof}
+
+
+\subsection{Clausuras proyectivas de subhaces y subesquemas cerrados}
+\label{subsection:II.8.13}
+
+\begin{env}[8.13.1]
+\label{II.8.13.1}
+Con las hipótesis y notaciones de \sref{II.8.12.1}, consideremos un sub-$\sh{S}$-módulo cuasi-coherente $\sh{N}$ de $\sh{M}$, \emph{no necesariamente graduado}.
+Podemos entonces considerar el $\sh{O}_C$-módulo cuasi-coherente $\widetilde{\sh{N}}$ asociado a $\sh{N}$, que es un sub-$\sh{O}_C$-módulo de $\widetilde{\sh{M}}$.
+Hemos visto, por otra parte, en \sref{II.8.12.2.1}, que $\widetilde{\sh{M}}$ puede identificarse con la restricción de $\sh{M}^\square$ a $C$.
+Como la inyección canónica $i:C\to\widehat{C}$ es un morfismo afín \sref{II.8.3.2} y, \emph{a fortiori}, cuasi-compacto, la \emph{prolongación canónica} $(\widetilde{\sh{N}})^-$, el mayor sub-$\sh{O}_{\widehat{C}}$-módulo contenido en $\sh{M}^\square$ que induce $\widetilde{\sh{N}}$ sobre $C$, es un $\sh{O}_{\widehat{C}}$-módulo \emph{cuasi-coherente} \sref[I]{I.9.4.2}.
+Daremos una descripción más explícita por medio de un $\widehat{\sh{S}}$-módulo graduado.
+\end{env}
+
+\begin{env}[8.13.2]
+\label{II.8.13.2}
+Para ello, consideremos, para todo entero $n\geq0$, el homomorfismo $\bigoplus_{i\leq n}\sh{M}_i\to\sh{M}$ que, para todo abierto $U$ de $Y$, envía la familia
+\[
+    (s_i) \in \bigoplus_{i\leq n}\Gamma(U,\sh{M}_i)
+\]
+a la sección $\sum_i s_i\in\Gamma(U,\sh{M})$.
+Denotemos por $\sh{N}'_n$ la imagen inversa de $\sh{N}$ por este homomorfismo, que es un sub-$\sh{O}_Y$-módulo cuasi-coherente de $\bigoplus_{i\leq n}\sh{M}_i$.
+Consideremos ahora el homomorfismo $\bigoplus_{i\leq n}\sh{M}_i\to\widehat{\sh{M}}=\sh{M}[\bb{z}]$ que envía $(s_i)$ a la sección $\sum_{i\leq n}s_i\bb{z}^{n-i}\in\Gamma(U,\widehat{\sh{M}}_n)$, y sea $\sh{N}_n$ la imagen de $\sh{N}'_n$ por este homomorfismo;
+se tiene inmediatamente que $\overline{\sh{N}}=\bigoplus_{n\geq0}\sh{N}_n$ es un sub-$\widehat{\sh{S}}$-módulo graduado (cuasi-coherente) de $\widehat{\sh{M}}$;
+se dice que $\overline{\sh{N}}$ se obtiene de $\sh{N}$ por \emph{homogeneización}, mediante la «variable de homogeneización» $\bb{z}$.
+Observaremos
+----- French corrections on page II 194 -----
+[id 3745]
+OLD: \operatorname{Proj}_0\mathcal{M}
+NEW: \mathcal{P}\mathit{roj}_0\mathcal{M}
+FRENCH CONTEXT (corrected): S})}\mathcal{S}'\right)^{\sim}
+\tag{8.12.4.1}
+\end{equation}
+de $\mathcal{O}_{C'}$-Modules~; et d'autre part
+(\hyperref[II.3.5.6-fr]{3.5.6}) entraîne l'existence d'un
+$\operatorname{Proj}(\varphi)$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.2-fr}
+  \mathcal{P}\mathit{roj}_0\mathcal{M}\to
+  \left(\mathcal{P}\mathit{roj}_0
+  (q^*(\mathcal{M})\otimes_{q^*(\mathcal{S})}\mathcal{S}')\right)
+  |G(\varphi)
+\tag{8.12.4.2}
+\end{equation}
+et aussi d'un $\widehat{\Phi}$-morphisme canonique
+\begin{equation}
+\label{II.8.12.4.3-fr}
+  \mathcal{P}\mathit{
+
+[id 3746]
+OLD: \xrightarrow{\sim}\operatorname{Proj}_0(\mathcal{M}_X^{\geq})
+NEW: \xrightarrow{\sim}\mathcal{P}\mathit{roj}_0(\mathcal{M}_X^{\geq})
+FRENCH CONTEXT (corrected): ) que le morphisme
+structural $u:\operatorname{Proj}(\mathcal{S}_X^{\geq})\to X$ est un
+isomorphisme, on déduit d'abord de ce qui précède que l'on a un
+$u$-isomorphisme canonique
+\begin{equation}
+\label{II.8.12.5.3-fr}
+  \mathcal{P}\mathit{roj}_0\mathcal{M}
+  \xrightarrow{\sim}\mathcal{P}\mathit{roj}_0(\mathcal{M}_X^{\geq})
+\tag{8.12.5.3}
+\end{equation}
+comme cas particulier de (\hyperref[II.8.12.4.2-fr]{8.12.4.2}). On constate
+en effet, avec les notations de la démonstration de
+(\hyperref[II.8.6.2-fr]{8.6.2}), que cela revient à voir que
+l'homomorphisme canonique
+$M_{(f)}\otime
+
+[id 3748]
+OLD: (\hyperref[II.8.12.5.4-fr]{8.12.5.4}) sont des
+NEW: \textup{(\hyperref[II.8.12.5.4-fr]{8.12.5.4})} sont des
+FRENCH CONTEXT (corrected):  aux cônes épointés $\widehat{E}_X$ et $E_X$ sont des \emph{isomorphismes}
+sur $\widehat{E}$ et $E$ respectivement. En outre~:
+\end{env}
+
+\begin{proposition}[8.12.6]
+\label{II.8.12.6-fr}
+Les restrictions à $\widehat{E}_X$ et à $E_X$ du $r$-morphisme canonique
+\textup{(\hyperref[II.8.12.5.4-fr]{8.12.5.4})} sont des isomorphismes
+\begin{equation}
+\label{II.8.12.6.1-fr}
+  \mathcal{M}^{\square}|\widehat{E}
+  \xrightarrow{\sim}(\mathcal{M}_X^{\geq})^{\square}|\widehat{E}_X
+\tag{8.12.6.1}
+\end{equation}
+\begin{equation}
+\label{II.8.12.6.2-fr}
+  \mathcal{M}^{\sim}|E
+  \xright
+
+[id 3749]
+OLD: \widetilde{\mathcal{M}}|E
+NEW: \mathcal{M}^{\sim}|E
+FRENCH CONTEXT (corrected): 2.5.4-fr]{8.12.5.4})} sont des isomorphismes
+\begin{equation}
+\label{II.8.12.6.1-fr}
+  \mathcal{M}^{\square}|\widehat{E}
+  \xrightarrow{\sim}(\mathcal{M}_X^{\geq})^{\square}|\widehat{E}_X
+\tag{8.12.6.1}
+\end{equation}
+\begin{equation}
+\label{II.8.12.6.2-fr}
+  \mathcal{M}^{\sim}|E
+  \xrightarrow{\sim}(\mathcal{M}_X^{\geq})^{\sim}|E_X.
+\tag{8.12.6.2}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On se ramène au cas où $Y$ est affine comme dans la démonstration de
+(\hyperref[II.8.6.2-fr]{8.6.2})~; avec les notations de cette dernière, 
+
+[id 3752]
+OLD: identifications de (\hyperref[II.8.6.3-fr]{8.6.3})
+NEW: identifications de \textup{(\hyperref[II.8.6.3-fr]{8.6.3})}
+FRENCH CONTEXT (corrected): e
+(\hyperref[II.8.12.6.1-fr]{8.12.6.1})~; la formule
+(\hyperref[II.8.12.6.2-fr]{8.12.6.2}) résulte alors de
+(\hyperref[II.8.12.6.1-fr]{8.12.6.1}) et de
+(\hyperref[II.8.12.2.1-fr]{8.12.2.1}).
+\end{proof}
+
+\begin{corollary}[8.12.7]
+\label{II.8.12.7-fr}
+Avec les identifications de \textup{(\hyperref[II.8.6.3-fr]{8.6.3})}, la restriction
+de $(\mathcal{M}_X^{\geq})^{\square}$ à $\widehat{E}_X$ s'identifie à
+$(\mathcal{M}_X^{\leq})^{\sim}$ et la restriction de
+$(\mathcal{M}_X^{\geq})^{\square}$ à $E_X$ s'identifie à
+$\widetilde{\mathcal{M}}_X$.
+\end{corollary}
+
+\begin{proof}
+On 
+
+[id 3753]
+OLD: hypothèses de (\hyperref[II.8.6.4-fr]{8.6.4})
+NEW: hypothèses de \textup{(\hyperref[II.8.6.4-fr]{8.6.4})}
+FRENCH CONTEXT (corrected): est en effet ramené au cas affine, et cela résulte de l'identification de
+$(M_f^{\geq})_{f/1}^{\leq}$ à $M_f^{\leq}$ et de
+$(M_f^{\geq})_{f/1}$ à $M_f$ (\hyperref[II.8.2.9.2-fr]{8.2.9.2}).
+\end{proof}
+
+\begin{proposition}[8.12.8]
+\label{II.8.12.8-fr}
+Sous les hypothèses de \textup{(\hyperref[II.8.6.4-fr]{8.6.4})}, l'homomorphisme
+canonique \textup{(\hyperref[II.8.12.3.1-fr]{8.12.3.1})} est un isomorphisme.
+\end{proposition}
+
+\begin{proof}
+Compte tenu du fait que $\operatorname{Proj}(\mathcal{S}_X^{\geq})\to X$
+est un isomorphisme (\hyperref[II.8.6.2-fr]{8.6.2}) et des
+
+[id 3754]
+OLD: canonique (\hyperref[II.8.12.3.1-fr]{8.12.3.1}) est un
+NEW: canonique \textup{(\hyperref[II.8.12.3.1-fr]{8.12.3.1})} est un
+FRENCH CONTEXT (corrected): e
+$(M_f^{\geq})_{f/1}^{\leq}$ à $M_f^{\leq}$ et de
+$(M_f^{\geq})_{f/1}$ à $M_f$ (\hyperref[II.8.2.9.2-fr]{8.2.9.2}).
+\end{proof}
+
+\begin{proposition}[8.12.8]
+\label{II.8.12.8-fr}
+Sous les hypothèses de \textup{(\hyperref[II.8.6.4-fr]{8.6.4})}, l'homomorphisme
+canonique \textup{(\hyperref[II.8.12.3.1-fr]{8.12.3.1})} est un isomorphisme.
+\end{proposition}
+
+\begin{proof}
+Compte tenu du fait que $\operatorname{Proj}(\mathcal{S}_X^{\geq})\to X$
+est un isomorphisme (\hyperref[II.8.6.2-fr]{8.6.2}) et des
+\oldpage[II]{195}
+isomorphismes (\hyperref[II.8.12.5.4-fr]{8.12.5.4}) et
+(\hyper
+
+=================== PAGE II 195 ===================
+----- (Spanish page II 194: shown above in this file) -----
+----- (Spanish page II 195: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 196 -----
+\oldpage[II]{196}
+que, si $\sh{N}$ ya es un sub-$\sh{S}$-módulo \emph{graduado} de $\sh{M}$, entonces $\overline{\sh{N}}$ se identifica con la suma directa de las componentes $\widehat{\sh{N}}_n$ de grado $n\geq0$ en $\widehat{\sh{N}}=\sh{N}[\bb{z}]$.
+\end{env}
+
+\begin{proposition}[8.13.3]
+\label{II.8.13.3}
+El $\sh{O}_{\widehat{C}}$-módulo $\shProj_0(\overline{\sh{N}})$ es la prolongación canónica $(\widetilde{\sh{N}})^-$ de $\widetilde{\sh{N}}$ a $\widehat{C}$.
+\end{proposition}
+
+\begin{proof}
+La cuestión es local sobre $Y$ y $\widehat{C}$, en virtud de la definición de la prolongación canónica \sref[I]{I.9.4.1}.
+Podemos, pues, suponer ya que $Y=\Spec(A)$ es afín, con $\sh{S}=\widetilde{S}$, $\sh{M}=\widetilde{M}$ y $\sh{N}=\widetilde{N}$, donde $N$ es un sub-$S$-módulo de $M$ no necesariamente graduado.
+Además, por \sref{II.8.3.2.6}, $\widehat{C}$ es unión de los abiertos afines $\widehat C_{\mathbf z}=C$ y $\widehat{C}_f=\Spec(S_f^\leq)$ (con $f$ homogéneo en $S_+$).
+Basta, por tanto, demostrar que: (1) la restricción de $\shProj_0(\overline{\sh{N}})$ a $C$ es $\widetilde{\sh{N}}$; (2) la restricción de $\shProj_0(\overline{\sh{N}})$ a cada $\widehat{C}_f$ es la prolongación canónica de la restricción de $\sh{N}$ a $C\cap\widehat{C}_f=\Spec(S_f)$ \sref{II.8.3.2.6}.
+Para el primer punto, observemos que $\shProj_0(\overline{\sh{N}})|C$ se identifica con $(\overline{N}_{(\bb{z})})\supertilde$ \sref{II.8.3.2.4};
+pero $\overline{N}_{(\bb{z})}$ se identifica canónicamente \sref{II.2.2.5} con la imagen de $\overline{N}$ en $\widehat{M}/(\bb{z}-1)\widehat{M}$ y, mediante el isomorfismo canónico de este último con $M$ \sref{II.8.2.5}, dicha imagen se identifica con $N$, por la definición de $\overline{N}$ dada en \sref{II.8.13.2}.
+
+Para demostrar el segundo punto, observemos que la inyección $i:C\cap\widehat{C}_f\to\widehat{C}$ corresponde a la inyección canónica $S_f^\leq\to S_f$ \sref{II.8.3.2.6};
+tenemos asimismo $\Gamma(\widehat{C}_f,\sh{M}^\square)=M_f^\leq$, $\Gamma(\widehat{C}_f,i_*(\widetilde{\sh{N}}))=N_f$ y, por \sref{II.8.12.2.1}, $\Gamma(\widehat{C}_f,i_*(i^*(\sh{M}^\square)))=M_f$.
+Teniendo en cuenta \sref[I]{I.9.4.2}, quedamos reducidos a demostrar que $\overline{N}_{(f)}\subset\widehat{M}_{(f)}=M_f^\leq$ se identifica canónicamente con la imagen recíproca de $N_f$ por la inyección canónica $M_f^\leq\to M_f$.
+En efecto, sea $d=\deg(f)>0$, y supongamos que un elemento $(\sum_{k\leq md}x_k)/f^m$ de $M_f$ (con $x_k\in M_k$) es de la forma $y/f^m$, con $y\in N$.
+Multiplicando $y$ y los $x_k$ por una misma potencia conveniente $f^h$, podemos suponer ya que $\sum_{k\leq md}x_k=y$.
+Pero, en la identificación de \sref{II.8.2.5.2}, $(\sum_{k\leq md}x_k)/f^m$ corresponde a $\sum_{k\leq md}x_k\bb{z}^{md-k}/f^m$, y este es efectivamente un elemento de $\overline{N}_{(f)}$, puesto que $\sum_{k\leq md}x_k\in N$;
+el recíproco es evidente.
+\end{proof}
+
+\begin{remark}[8.13.4]
+\label{II.8.13.4}
+\begin{enumerate}
+    \item[\rm{(i)}] El caso de aplicación más importante de \sref{II.8.13.3} es aquel en que $\sh{M}=\sh{S}$, siendo entonces $\widetilde{\sh{N}}$ un haz \emph{arbitrario} cuasi-coherente de ideales $\sh{J}$ de $\sh{O}_C$ \sref{II.1.4.3}, que corresponde biyectivamente a un \emph{subpreesquema cerrado} $Z$ de $C$.
+        Entonces la prolongación canónica $(\sh{J})^-$ de $\sh{J}$ es el haz cuasi-coherente de ideales de $\sh{O}_{\widehat{C}}$ que define la \emph{adherencia} $\overline{Z}$ de $Z$ en $\widehat{C}$ \sref[I]{I.9.5.10};
+        la Proposición~\sref{II.8.13.3} proporciona un modo canónico de definir $\overline{Z}$ mediante un ideal graduado de $\widehat{\sh{S}}=\sh{S}[\bb{z}]$.
+    \item[\rm{(ii)}] Supongamos, para simplificar, que $Y$ es afín y adoptemos la notación de la demostración de \sref{II.8.13.3}.
+        Para cada $x\in N$ no nulo, sea $d(x)$ el mayor grado de las componentes homogéneas $x_i$ de $x$ en $M$;
+        por definición, $\overline{N}$ es el submódulo de $\widehat{M}$ formado por $0$ y por los elementos de la forma $h(x,k)=\bb{z}^k\sum_{i\leq d(x)}x_i\bb{z}^{d(x)-i}$ (para $k\geq0$ entero);
+        por tanto, está generado, como módulo sobre $\widehat{S}=S[\bb{z}]$, por los elementos de la forma
+        \[
+            h(x,0) = \sum_{i\leq d(x)}x_i\bb{z}^{d(x)-i}.
+        \]
+----- French corrections on page II 195 -----
+[id 3864]
+OLD: |\widehat{E}_X$
+NEW: |E_X$
+FRENCH CONTEXT (corrected): s (\hyperref[II.8.12.5.4-fr]{8.12.5.4}) et
+(\hyperref[II.8.12.6.1-fr]{8.12.6.1}), on est ramené à démontrer la
+proposition correspondante pour l'homomorphisme canonique
+$p_X^*(\mathcal{P}\mathit{roj}_0(\mathcal{M}_X^{\geq}))
+\to(\mathcal{M}_X^{\geq})^{\square}|E_X$, autrement dit, on est
+ramené au cas où $\mathcal{S}_1$ est un $\mathcal{O}_Y$-Module inversible et
+où $\mathcal{S}$ est engendrée par $\mathcal{S}_1$. Avec les notations de
+(\hyperref[II.8.12.3-fr]{8.12.3}), on a alors, pour un $f\in S_1$,
+$S_f^{\leq}=S_{(f)
+
+[id 3865]
+OLD: p_X^*(\operatorname{Proj}_0
+NEW: p_X^*(\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): 
+est un isomorphisme (\hyperref[II.8.6.2-fr]{8.6.2}) et des
+\oldpage[II]{195}
+isomorphismes (\hyperref[II.8.12.5.4-fr]{8.12.5.4}) et
+(\hyperref[II.8.12.6.1-fr]{8.12.6.1}), on est ramené à démontrer la
+proposition correspondante pour l'homomorphisme canonique
+$p_X^*(\mathcal{P}\mathit{roj}_0(\mathcal{M}_X^{\geq}))
+\to(\mathcal{M}_X^{\geq})^{\square}|E_X$, autrement dit, on est
+ramené au cas où $\mathcal{S}_1$ est un $\mathcal{O}_Y$-Module inversible et
+où $\mathcal{S}$ est engendrée par $\mathcal{S}_1$. Avec les notations de
+(\hyperref[II.8.12.3-
+
+[id 3866]
+OLD: \operatorname{Proj}_0(\mathcal{M}^{\natural})
+NEW: \mathcal{P}\mathit{roj}_0(\mathcal{M}^{\natural})
+FRENCH CONTEXT (corrected): ste un $C$-isomorphisme
+canonique $h:C_X\xrightarrow{\sim}\operatorname{Proj}(\mathcal{S}^{\natural})$.
+En outre~:
+\end{env}
+
+\begin{proposition}[8.12.10]
+\label{II.8.12.10-fr}
+Il existe un $h$-isomorphisme canonique
+\begin{equation}
+\label{II.8.12.10.1-fr}
+  \mathcal{P}\mathit{roj}_0(\mathcal{M}^{\natural})
+  \xrightarrow{\sim}\widetilde{\mathcal{M}}_X.
+\tag{8.12.10.1}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On raisonne comme dans (\hyperref[II.8.7.3-fr]{8.7.3}), en utilisant cette
+fois l'existence du di-isomorphisme (\hyperref[II.8.2.9.3-fr]{8.2.9.3}) a
+
+[id 3867]
+OLD: Module quasi-cohérent
+(
+NEW: Module \emph{quasi-cohérent}
+(
+FRENCH CONTEXT (corrected): rtiori} quasi-compact, le
+\emph{prolongement canonique} $(\widetilde{\mathcal{N}})^{-}$, plus grand
+sous-$\mathcal{O}_{\widehat{C}}$-Module contenu dans
+$\mathcal{M}^{\square}$ et induisant $\widetilde{\mathcal{N}}$ sur $C$, est
+un $\mathcal{O}_{\widehat{C}}$-Module \emph{quasi-cohérent}
+(\hyperref[I.9.4.2-fr]{\textbf{I}, 9.4.2}). Nous allons en donner une description
+explicite à l'aide d'un $\widehat{\mathcal{S}}$-Module gradué.
+\end{env}
+
+\begin{env}[8.13.2]
+\label{II.8.13.2-fr}
+Pour cela, considérons, pour tout entier $n\geqslant0$, l'homomo
+
+[id 3868]
+OLD: {I, 9.4.2}
+NEW: {\textbf{I}, 9.4.2}
+FRENCH CONTEXT (corrected): ela, posons
+\[
+  \mathcal{K}_V=\pi^*(\mathcal{K})\mathcal{O}_V
+\]
+et
+\[
+  \mathcal{K}_W=\mathcal{K}_V|W,\qquad\hbox{où}\qquad W=V\setmin j(X)~;
+\]
+comme la restriction de $q$ à $W$ est une immersion quasi-compacte dans $C$,
+il résulte de (\hyperref[I.9.4.2-fr]{\textbf{I}, 9.4.2}) que $\mathcal{K}_W$ est la
+restriction à $W$ d'un Idéal quasi-cohérent $\mathcal{K}'_V$ de
+$\mathcal{O}_V$, de la forme
+\[
+  \mathcal{K}'_V=q^*(\mathcal{K}_C)\mathcal{O}_V
+\]
+où $\mathcal{K}_C$ est un Idéal quasi-cohérent de $\mathcal{O}_C$. En outre,
+comme 
+
+[id 3869]
+OLD: qui est un sous-$\mathcal{O}_Y$-Module
+NEW: qui est un sous-$\mathcal{S}$-Module
+FRENCH CONTEXT (corrected): r tout ouvert
+$U$ de $Y$, fait correspondre à la famille
+\[
+  (s_i)\in\bigoplus_{i\leqslant n}\Gamma(U,\mathcal{M}_i)
+\]
+la section $\sum_i s_i\in\Gamma(U,\mathcal{M})$. Désignons par
+$\mathcal{N}'_n$ l'image réciproque de $\mathcal{N}$ par cet homomorphisme,
+qui est un sous-$\mathcal{S}$-Module quasi-cohérent de
+$\bigoplus_{i\leqslant n}\mathcal{M}_i$. Considérons maintenant
+l'homomorphisme
+$\bigoplus_{i\leqslant n}\mathcal{M}_i\to
+\widehat{\mathcal{M}}=\mathcal{M}[\mathbf{z}]$ qui fait correspondre à $(s_i)$ la
+section
+$\sum_{i\leqslant n}s_i \math
+
+[id 3870]
+OLD: \mathcal{M}[z]
+NEW: \mathcal{M}[\mathbf{z}]
+FRENCH CONTEXT (corrected): $ l'image réciproque de $\mathcal{N}$ par cet homomorphisme,
+qui est un sous-$\mathcal{S}$-Module quasi-cohérent de
+$\bigoplus_{i\leqslant n}\mathcal{M}_i$. Considérons maintenant
+l'homomorphisme
+$\bigoplus_{i\leqslant n}\mathcal{M}_i\to
+\widehat{\mathcal{M}}=\mathcal{M}[\mathbf{z}]$ qui fait correspondre à $(s_i)$ la
+section
+$\sum_{i\leqslant n}s_i \mathbf{z}^{n-i}\in\Gamma(U,\widehat{\mathcal{M}}_n)$, et
+soit $\mathcal{N}_n$ l'image de $\mathcal{N}'_n$ par cet homomorphisme~; on
+vérifie aussitôt que
+$\overline{\mathcal{N}}=\bigoplus_{n
+
+[id 3871]
+OLD: s_i z^{n-i}
+NEW: s_i \mathbf{z}^{n-i}
+FRENCH CONTEXT (corrected): }$-Module quasi-cohérent de
+$\bigoplus_{i\leqslant n}\mathcal{M}_i$. Considérons maintenant
+l'homomorphisme
+$\bigoplus_{i\leqslant n}\mathcal{M}_i\to
+\widehat{\mathcal{M}}=\mathcal{M}[\mathbf{z}]$ qui fait correspondre à $(s_i)$ la
+section
+$\sum_{i\leqslant n}s_i \mathbf{z}^{n-i}\in\Gamma(U,\widehat{\mathcal{M}}_n)$, et
+soit $\mathcal{N}_n$ l'image de $\mathcal{N}'_n$ par cet homomorphisme~; on
+vérifie aussitôt que
+$\overline{\mathcal{N}}=\bigoplus_{n\geqslant0}\mathcal{N}_n$ est un
+sous-$\widehat{\mathcal{S}}$-Module gradué (quasi-co
+
+[id 3872]
+OLD: homogénéisante~» $z$
+NEW: homogénéisante~» $\mathbf{z}$
+FRENCH CONTEXT (corrected): cal{N}}=\bigoplus_{n\geqslant0}\mathcal{N}_n$ est un
+sous-$\widehat{\mathcal{S}}$-Module gradué (quasi-cohérent) de
+$\widehat{\mathcal{M}}$~; on dit que $\overline{\mathcal{N}}$ est déduit de
+$\mathcal{N}$ par \emph{homogénéisation}, à l'aide de la «~variable
+homogénéisante~» $\mathbf{z}$. On notera
+\oldpage[II]{196}
+que si $\mathcal{N}$ est déjà un sous-$\mathcal{S}$-Module \emph{gradué} de
+$\mathcal{M}$, alors $\overline{\mathcal{N}}$ s'identifie à la somme directe
+des composantes $\widehat{\mathcal{N}}_n$ de degré $n\geqslant0$ dans
+$\wideh
+
+=================== PAGE II 196 ===================
+----- (Spanish page II 195: shown above in this file) -----
+----- (Spanish page II 196: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 197 -----
+\oldpage[II]{197}
+        Se dice que $h(x,0)$ se deduce de $x$ por \emph{homogeneización} mediante la «variable homogeneizante» $\bb{z}$.
+        Pero, como $h(x,0)$ no depende aditivamente de $x$ (ni, \emph{a fortiori}, $S$-linealmente), \emph{nos guardaremos de creer} (incluso cuando $M=S$) que los $h(x,0)$ forman un \emph{sistema de generadores} del $\widehat{S}$-módulo graduado $\overline{N}$ cuando $x$ recorre un \emph{sistema de generadores} del $S$-módulo $N$.
+        Esto sí sucede, sin embargo, cuando $N$ es un $S$-módulo \emph{libre cíclico} (el único caso considerado en la geometría algebraica elemental), pues, si $t$ es una base de $N$, entonces $h(t,0)$ genera el $\widehat{S}$-módulo $\overline{N}$.
+\end{enumerate}
+\end{remark}
+
+
+\subsection{Complementos sobre los haces asociados a $\mathcal{S}$-módulos graduados}
+\label{subsection:II.8.14}
+
+\begin{env}[8.14.1]
+\label{II.8.14.1}
+Sean $Y$ un preesquema, $\sh{S}$ una $\sh{O}_Y$-álgebra cuasi-coherente \emph{graduada en grados positivos}, $X=\Proj(\sh{S})$ y $q:X\to Y$ el morfismo estructural (que es separado, por \sref{II.3.1.3}).
+Con la notación de \sref{II.8.12.1}, hemos definido, en función de $\sh{M}$, un funtor $\sh{M}_X=\shProj(\sh{M})$, de la categoría de $\sh{S}$-módulos graduados cuasi-coherentes a la categoría de $\sh{S}_X$-módulos graduados cuasi-coherentes;
+además, está claro \sref{II.3.2.4} que este funtor es \emph{aditivo} y \emph{exacto}, y que conmuta con los límites inductivos.
+
+Observemos, además, que de la definición \sref{II.8.12.1.1} se sigue inmediatamente que
+\[
+\label{II.8.14.1.1}
+    \shProj(\sh{M}(n)) = (\shProj(\sh{M}))(n)
+    \quad\mbox{para todo $n\in\bb{Z}$.}
+\tag{8.14.1.1}
+\]
+\end{env}
+
+\begin{env}[8.14.2]
+\label{II.8.14.2}
+Vamos a extender primero los homomorfismos canónicos $\lambda$ y $\mu$, definidos en \sref{II.3.2.6}, a los $\sh{S}_X$-módulos de la forma $\shProj(\sh{M})$.
+Para ello, observemos que, para cualesquiera $m\in\bb{Z}$ y $n\in\bb{Z}$, tenemos, por \sref{II.2.1.2.1}, un homomorfismo canónico de $\sh{O}_X$-módulos
+\[
+\label{II.8.14.2.1}
+    \lambda_{mn}:
+    \shProj_0(\sh{M}(m))\otimes_{\sh{O}_X}\shProj_0(\sh{N}(n))
+    \to
+    \shProj_0((\sh{M}\otimes_{\sh{S}}\sh{N})(m+n)),
+\tag{8.14.2.1}
+\]
+y, asimismo, por \sref{II.2.1.2.2}, un homomorfismo canónico de $\sh{O}_X$-módulos
+\[
+\label{II.8.14.2.2}
+    \mu_{mn}:
+    \shProj_0((\shHom_{\sh{S}}(\sh{M},\sh{N}))(n-m))
+    \to
+    \shHom_{\sh{O}_X}(\shProj_0(\sh{M}(m)),\shProj_0(\sh{N}(n)))
+\tag{8.14.2.2}
+\]
+para cualesquiera $\sh{S}$-módulos graduados cuasi-coherentes $\sh{M}$ y $\sh{N}$.
+Esto induce un homomorfismo
+\[
+    \mu_k:
+    \shProj_0((\shHom_{\sh{S}}(\sh{M},\sh{N}))(k))
+    \to
+    (\shHom_{\sh{S}_X}(\shProj(\sh{M}),\shProj(\sh{N})))_k
+\]
+que envía cada $u\in\Gamma(U,\shProj_0((\shHom_{\sh{S}}(\sh{M},\sh{N}))(k)))$ al homomorfismo $\mu_k(u)$, de grado $k$, de $\bb{Z}$-módulos graduados $\Gamma(U,\shProj(\sh{M}))\to\Gamma(U,\shProj(\sh{N}))$ (donde $U$ es abierto en $X$), cuya restricción a cada $\Gamma(U,\shProj_0(\sh{M}(m)))$ coincide con $\mu_{m,m+k}(u)$;
+además, volviendo a la definición de los $\mu_{mn}$ \sref{II.2.5.12.1}, se ve inmediatamente que $\mu_k(u)$ es de hecho un homomorfismo de grado $k$ de $\Gamma(U,\sh{S}_X)$-módulos graduados y que, además, los $\mu_k$ definen un homomorfismo de \emph{$\sh{S}_X$-módulos graduados}
+\[
+\label{II.8.14.2.3}
+    \shProj(\shHom_{\sh{S}}(\sh{M},\sh{N}))
+    \to
+    \shHom_{\sh{S}_X}(\shProj(\sh{M}),\shProj(\sh{N})).
+\tag{8.14.2.3}
+\]
+
+De modo análogo, teniendo en cuenta el diagrama de asociatividad \sref{II.2.5.11.4}, los homomorfismos \sref{II.8.14.2.1} dan un homomorfismo de \emph{$\sh{S}_X$-módulos graduados}
+\[
+\label{II.8.14.2.4}
+    \lambda:
+    \shProj(\sh{M})\otimes_{\sh{S}_X}\shProj(\sh{N})
+    \to
+    \shProj(\sh{M}\otimes_{\sh{S}}\sh{N}).
+\tag{8.14.2.4}
+\]
+\end{env}
+----- French corrections on page II 196 -----
+[id 3874]
+OLD: \mathcal{N}[z]
+NEW: \mathcal{N}[\mathbf{z}]
+FRENCH CONTEXT (corrected): page[II]{196}
+que si $\mathcal{N}$ est déjà un sous-$\mathcal{S}$-Module \emph{gradué} de
+$\mathcal{M}$, alors $\overline{\mathcal{N}}$ s'identifie à la somme directe
+des composantes $\widehat{\mathcal{N}}_n$ de degré $n\geqslant0$ dans
+$\widehat{\mathcal{N}}=\mathcal{N}[\mathbf{z}]$.
+\end{env}
+
+\begin{proposition}[8.13.3]
+\label{II.8.13.3-fr}
+Le $\mathcal{O}_{\widehat{C}}$-Module
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ est le prolongement canonique
+$(\widetilde{\mathcal{N}})^{-}$ de $\widetilde{\mathcal{N}}$ à
+$\widehat{C}$.
+
+[id 3875]
+OLD: \operatorname{Proj}_0(\overline{\mathcal{N}})$ est le
+NEW: \mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ est le
+FRENCH CONTEXT (corrected): thcal{N}}$ s'identifie à la somme directe
+des composantes $\widehat{\mathcal{N}}_n$ de degré $n\geqslant0$ dans
+$\widehat{\mathcal{N}}=\mathcal{N}[\mathbf{z}]$.
+\end{env}
+
+\begin{proposition}[8.13.3]
+\label{II.8.13.3-fr}
+Le $\mathcal{O}_{\widehat{C}}$-Module
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ est le prolongement canonique
+$(\widetilde{\mathcal{N}})^{-}$ de $\widetilde{\mathcal{N}}$ à
+$\widehat{C}$.
+\end{proposition}
+
+\begin{proof}
+La question est locale sur $Y$ et $\widehat{C}$ en vertu de la définition du
+prolongement canonique (\hyperref[I.9.4.1-fr]{\t
+
+[id 3876]
+OLD: {I, 9.4.1}
+NEW: {\textbf{I}, 9.4.1}
+FRENCH CONTEXT (corrected):  le prolongement canonique
+$(\widetilde{\mathcal{N}})^{-}$ de $\widetilde{\mathcal{N}}$ à
+$\widehat{C}$.
+\end{proposition}
+
+\begin{proof}
+La question est locale sur $Y$ et $\widehat{C}$ en vertu de la définition du
+prolongement canonique (\hyperref[I.9.4.1-fr]{\textbf{I}, 9.4.1}). On peut donc déjà
+supposer que $Y=\operatorname{Spec}(A)$ est affine, avec
+$\mathcal{S}=\widetilde{S}$, $\mathcal{M}=\widetilde{M}$ et
+$\mathcal{N}=\widetilde{N}$, où $N$ est un sous-$S$-module non
+nécessairement gradué de $M$. En outre
+(\hyperref[II.8.3.2.
+
+[id 3878]
+OLD: \operatorname{Proj}_0(\overline{\mathcal{N}})$ à $C$
+NEW: \mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à $C$
+FRENCH CONTEXT (corrected): En outre
+(\hyperref[II.8.3.2.6-fr]{8.3.2.6}) $\widehat{C}$ est réunion des ouverts
+affines $\widehat{C}_{\mathbf{z}}=C$ et
+$\widehat{C}_f=\operatorname{Spec}(S_f^{\leq})$ ($f$ homogène dans $S_+$).
+Il suffira donc de montrer que~: $1^\circ$ la restriction de
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à $C$ est
+$\widetilde{\mathcal{N}}$~; $2^\circ$ la restriction de
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à chaque $\widehat{C}_f$ est
+le prolongement canonique de la restriction de $\mathcal{N}$ à
+$C\cap\widehat{C}_f=\operatorname{Spec}(S_f)$
+(\hyperre
+
+[id 3879]
+OLD: \operatorname{Proj}_0(\overline{\mathcal{N}})$ à chaque
+NEW: \mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à chaque
+FRENCH CONTEXT (corrected): $ et
+$\widehat{C}_f=\operatorname{Spec}(S_f^{\leq})$ ($f$ homogène dans $S_+$).
+Il suffira donc de montrer que~: $1^\circ$ la restriction de
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à $C$ est
+$\widetilde{\mathcal{N}}$~; $2^\circ$ la restriction de
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à chaque $\widehat{C}_f$ est
+le prolongement canonique de la restriction de $\mathcal{N}$ à
+$C\cap\widehat{C}_f=\operatorname{Spec}(S_f)$
+(\hyperref[II.8.3.2.6-fr]{8.3.2.6}). Pour le premier point, notons que
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})|C$ s'ide
+
+[id 3880]
+OLD: \operatorname{Proj}_0(\overline{\mathcal{N}})|C$
+NEW: \mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})|C$
+FRENCH CONTEXT (corrected): mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})$ à chaque $\widehat{C}_f$ est
+le prolongement canonique de la restriction de $\mathcal{N}$ à
+$C\cap\widehat{C}_f=\operatorname{Spec}(S_f)$
+(\hyperref[II.8.3.2.6-fr]{8.3.2.6}). Pour le premier point, notons que
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})|C$ s'identifie à
+$(\overline{N}_{(\mathbf{z})})^{\sim}$
+(\hyperref[II.8.3.2.4-fr]{8.3.2.4})~; or $\overline{N}_{(\mathbf{z})}$ s'identifie
+canoniquement (\hyperref[II.2.2.5-fr]{2.2.5}) à l'image de
+$\overline{N}$ dans $\widehat{M}/(\mathbf{z}-1)\widehat{M}$, et 
+
+[id 3881]
+OLD: (\overline{N}_{(z)})^{\sim}
+NEW: (\overline{N}_{(\mathbf{z})})^{\sim}
+FRENCH CONTEXT (corrected): {C}_f$ est
+le prolongement canonique de la restriction de $\mathcal{N}$ à
+$C\cap\widehat{C}_f=\operatorname{Spec}(S_f)$
+(\hyperref[II.8.3.2.6-fr]{8.3.2.6}). Pour le premier point, notons que
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})|C$ s'identifie à
+$(\overline{N}_{(\mathbf{z})})^{\sim}$
+(\hyperref[II.8.3.2.4-fr]{8.3.2.4})~; or $\overline{N}_{(\mathbf{z})}$ s'identifie
+canoniquement (\hyperref[II.2.2.5-fr]{2.2.5}) à l'image de
+$\overline{N}$ dans $\widehat{M}/(\mathbf{z}-1)\widehat{M}$, et par l'isomorphisme
+canonique de ce dernier sur $M$ (
+
+[id 3882]
+OLD: or $\overline{N}_{(z)}$
+NEW: or $\overline{N}_{(\mathbf{z})}$
+FRENCH CONTEXT (corrected): \cap\widehat{C}_f=\operatorname{Spec}(S_f)$
+(\hyperref[II.8.3.2.6-fr]{8.3.2.6}). Pour le premier point, notons que
+$\mathcal{P}\mathit{roj}_0(\overline{\mathcal{N}})|C$ s'identifie à
+$(\overline{N}_{(\mathbf{z})})^{\sim}$
+(\hyperref[II.8.3.2.4-fr]{8.3.2.4})~; or $\overline{N}_{(\mathbf{z})}$ s'identifie
+canoniquement (\hyperref[II.2.2.5-fr]{2.2.5}) à l'image de
+$\overline{N}$ dans $\widehat{M}/(\mathbf{z}-1)\widehat{M}$, et par l'isomorphisme
+canonique de ce dernier sur $M$ (\hyperref[II.8.2.5-fr]{8.2.5}), cette image
+s'identifie à $N$, en vertu 
+
+[id 3883]
+OLD: \widehat{M}/(z-1)
+NEW: \widehat{M}/(\mathbf{z}-1)
+FRENCH CONTEXT (corrected): P}\mathit{roj}_0(\overline{\mathcal{N}})|C$ s'identifie à
+$(\overline{N}_{(\mathbf{z})})^{\sim}$
+(\hyperref[II.8.3.2.4-fr]{8.3.2.4})~; or $\overline{N}_{(\mathbf{z})}$ s'identifie
+canoniquement (\hyperref[II.2.2.5-fr]{2.2.5}) à l'image de
+$\overline{N}$ dans $\widehat{M}/(\mathbf{z}-1)\widehat{M}$, et par l'isomorphisme
+canonique de ce dernier sur $M$ (\hyperref[II.8.2.5-fr]{8.2.5}), cette image
+s'identifie à $N$, en vertu de la définition de $\overline{N}$ donnée dans
+(\hyperref[II.8.13.2-fr]{8.13.2}).
+
+Pour prouver le second point, notons
+
+[id 3885]
+OLD: {I, 9.4.2}
+NEW: {\textbf{I}, 9.4.2}
+FRENCH CONTEXT (corrected): ela, posons
+\[
+  \mathcal{K}_V=\pi^*(\mathcal{K})\mathcal{O}_V
+\]
+et
+\[
+  \mathcal{K}_W=\mathcal{K}_V|W,\qquad\hbox{où}\qquad W=V\setmin j(X)~;
+\]
+comme la restriction de $q$ à $W$ est une immersion quasi-compacte dans $C$,
+il résulte de (\hyperref[I.9.4.2-fr]{\textbf{I}, 9.4.2}) que $\mathcal{K}_W$ est la
+restriction à $W$ d'un Idéal quasi-cohérent $\mathcal{K}'_V$ de
+$\mathcal{O}_V$, de la forme
+\[
+  \mathcal{K}'_V=q^*(\mathcal{K}_C)\mathcal{O}_V
+\]
+où $\mathcal{K}_C$ est un Idéal quasi-cohérent de $\mathcal{O}_C$. En outre,
+comme 
+
+[id 3887]
+OLD: x_kz^{md-k}
+NEW: x_k\mathbf{z}^{md-k}
+FRENCH CONTEXT (corrected): ec $y\in N$. En multipliant $y$ et les $x_k$ par un même
+$f^h$ convenable, on peut déjà supposer que $\sum_{k\leqslant md}x_k=y$.
+Mais dans l'identification (\hyperref[II.8.2.5.2-fr]{8.2.5.2}),
+$(\sum_{k\leqslant md}x_k)/f^m$ correspond à
+$\sum_{k\leqslant md}x_k\mathbf{z}^{md-k}/f^m$, et cet élément appartient bien à
+$\overline{N}_{(f)}$, puisque $\sum_{k\leqslant md}x_k\in N$~; la réciproque
+est évidente.
+\end{proof}
+
+\begin{remark}[8.13.4]
+\label{II.8.13.4-fr}
+\begin{enumerate}
+  \item[\rm{(i)}] Le cas d'application le plus importa
+
+[id 3888]
+OLD: {I, 9.5.10}
+NEW: {\textbf{I}, 9.5.10}
+FRENCH CONTEXT (corrected): )$ est l'espace sous-jacent) existe, et $\psi$ se factorise en
+\[
+\tag{5.6.1.2}
+\label{II.5.6.1.2-fr}
+\psi:U\xrightarrow{\psi'}X'\xrightarrow{h}X\times_SP
+\]
+où $\psi'$ est une \emph{immersion ouverte} et $h$ une \emph{immersion fermée}
+(\hyperref[I.9.5.10-fr]{\textbf{I}, 9.5.10}). Soient
+$q_1:X\times_SP\to X$ et $q_2:X\times_SP\to P$ les projections canoniques~;
+nous poserons
+\[
+\tag{5.6.1.3}
+\label{II.5.6.1.3-fr}
+f:X'\xrightarrow{h}X\times_SP\xrightarrow{q_1}X
+\]
+\[
+\tag{5.6.1.4}
+\label{II.5.6.1.4-fr}
+g:X'\xrightarrow{h}X\times_SP\x
+
+[id 3889]
+OLD: \mathcal{S}[z]
+NEW: \mathcal{S}[\mathbf{z}]
+FRENCH CONTEXT (corrected): aduée à \emph{degrés positifs}~;
+\emph{nous supposerons en outre que l'on a $\mathcal{S}_0=\mathcal{O}_Y$}.
+Conformément aux notations introduites en
+(\hyperref[II.8.2.2-fr]{8.2.2}), nous poserons
+\begin{equation}
+\label{II.8.3.1.1-fr}
+  \widehat{\mathcal{S}}=\mathcal{S}[\mathbf{z}]
+  =\mathcal{S}\otimes_{\mathcal{O}_Y}\mathcal{O}_Y[\mathbf{z}]
+\tag{8.3.1.1}
+\end{equation}
+que l'on considère comme $\mathcal{O}_Y$-Algèbre graduée à degrés positifs en
+définissant les degrés par la formule
+(\hyperref[II.8.2.2.2-fr]{8.2.2.2}), de sorte que p
+
+[id 3890]
+OLD: h(x,k)=z^k\sum_{i\leqslant d(x)}x_i z^{d(x)-i}
+NEW: h(x,k)=\mathbf{z}^k\sum_{i\leqslant d(x)}x_i \mathbf{z}^{d(x)-i}
+FRENCH CONTEXT (corrected): rref[II.8.13.3-fr]{8.13.3}). Pour tout $x\in N$ non nul, soit $d(x)$
+  le plus grand des degrés des composantes homogènes $x_i$ de $x$ dans $M$~;
+  $\overline{N}$ est par définition le sous-module de $\widehat{M}$ formé de
+  $0$ et des éléments de la forme
+  $h(x,k)=\mathbf{z}^k\sum_{i\leqslant d(x)}x_i \mathbf{z}^{d(x)-i}$ ($k$ entier
+  $\geqslant0$)~; il est donc engendré, en tant que module sur
+  $\widehat{S}=S[\mathbf{z}]$, par les éléments de la forme
+  \[
+    h(x,0)=\sum_{i\leqslant d(x)}x_i \mathbf{z}^{d(x)-i}.
+  \]
+  \oldpage[II]{197}
+  On dit que $h(x,0)$ est déduit de
+
+[id 3891]
+OLD: \widehat{S}=S[z]
+NEW: \widehat{S}=S[\mathbf{z}]
+FRENCH CONTEXT (corrected):  $S$ est un anneau gradué (à degrés positifs ou
+négatifs), l'algèbre de polynômes\footnote{Il ne saurait ici y avoir de
+confusion avec l'usage de la notation $\widehat{S}$ pour désigner le séparé
+complété d'un anneau.}
+\begin{equation}
+\label{II.8.2.2.1-fr}
+  \widehat{S}=S[\mathbf{z}]
+\tag{8.2.2.1}
+\end{equation}
+\oldpage[II]{158}
+est une $S$-algèbre graduée, quand on prend pour degré de $f\mathbf{z}^n$ ($n\geq0$) où
+$f$ est homogène,
+\begin{equation}
+\label{II.8.2.2.2-fr}
+  \deg(f\mathbf{z}^n)=n+\deg f.
+\tag{8.2.2.2}
+\end{equation}
+\end{e
+
+[id 3892]
+OLD: x_i z^{d(x)-i}.
+NEW: x_i \mathbf{z}^{d(x)-i}.
+FRENCH CONTEXT (corrected): ments de la forme
+  $h(x,k)=\mathbf{z}^k\sum_{i\leqslant d(x)}x_i \mathbf{z}^{d(x)-i}$ ($k$ entier
+  $\geqslant0$)~; il est donc engendré, en tant que module sur
+  $\widehat{S}=S[\mathbf{z}]$, par les éléments de la forme
+  \[
+    h(x,0)=\sum_{i\leqslant d(x)}x_i \mathbf{z}^{d(x)-i}.
+  \]
+  \oldpage[II]{197}
+  On dit que $h(x,0)$ est déduit de $x$ par \emph{homogénéisation} à l'aide
+  de la «~variable homogénéisante~» $\mathbf{z}$. Mais comme $h(x,0)$ ne dépend pas
+  additivement de $x$ (ni \emph{a fortiori} $S$-linéairement), \emph{on se
+
+=================== PAGE II 197 ===================
+----- (Spanish page II 196: shown above in this file) -----
+----- (Spanish page II 197: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 198 -----
+\oldpage[II]{198}
+
+\begin{proposition}[8.14.3]
+\label{II.8.14.3}
+El homomorfismo \sref{II.8.14.2.4} es biyectivo;
+también lo es \sref{II.8.14.2.3} siempre que el $\sh{S}$-módulo graduado $\sh{M}$ admita una presentación finita \sref{II.3.1.1}.
+\end{proposition}
+
+\begin{proof}
+La cuestión es claramente local sobre $X$ y $Y$;
+podemos, por tanto, suponer que $Y=\Spec(A)$ es afín, con $\sh{S}=\widetilde{S}$, $\sh{M}=\widetilde{M}$ y $\sh{N}=\widetilde{N}$, donde $S$ es una $A$-álgebra graduada en grados positivos y $M$ y $N$ son $S$-módulos graduados.
+Si $f$ es un elemento homogéneo de $S_+$, los homomorfismos \sref{II.8.14.2.1} y \sref{II.8.14.2.2}, restringidos al abierto afín $D_+(f)$, corresponden a los homomorfismos canónicos \sref{II.2.5.11.1} y \sref{II.2.5.12.1}:
+\begin{align*}
+    M(m)_{(f)}\otimes_{S_{(f)}}N(n)_{(f)}
+    &\to
+    (M\otimes_S N)(m+n)_{(f)}
+\\  (\Hom_S(M,N))(n-m)_{(f)}
+    &\to
+    \Hom_{S_{(f)}}(M(m)_{(f)},N(n)_{(f)}).
+\end{align*}
+
+Si nos remitimos a las definiciones de estos homomorfismos, vemos entonces (teniendo en cuenta \sref{II.8.2.9.1}) que la restricción de \sref{II.8.14.2.4} a $D_+(f)$ corresponde al homomorfismo canónico
+\[
+    M_f\otimes_{S_f}N_f \to (M\otimes_S N)_f
+\]
+definido en \sref[0]{0.1.3.4}, y sabemos que este último homomorfismo es un isomorfismo.
+De modo análogo, la restricción de \sref{II.8.14.2.3} a $D_+(f)$ corresponde al homomorfismo canónico \sref[0]{0.1.3.5}
+\[
+    (\Hom_S(M,N))_f \to \Hom_{S_f}(M_f,N_f)
+\]
+teniendo en cuenta que, como $M$ es de tipo finito, el módulo $\Hom_S(M,N)$, suma directa de los subgrupos formados por los homomorfismos \emph{homogéneos} de $S$-módulos \sref{II.2.1.2}, coincide con el conjunto de \emph{todos} los homomorfismos $M\to N$ de $S$-módulos.
+La hipótesis de que $M$ admite una presentación finita implica entonces \sref[0]{0.1.3.5} que el homomorfismo canónico considerado es, en efecto, un isomorfismo.
+\end{proof}
+
+\begin{proposition}[8.14.4]
+\label{II.8.14.4}
+Si $U$ es un abierto cuasi-compacto de $X$, existe un entero $d$ tal que, para todo entero $n$ múltiplo de $d$, $\sh{O}_X(n)|U$ es invertible y su inverso es $\sh{O}_X(-n)|U$.
+\end{proposition}
+
+\begin{proof}
+Como $q(U)$ es cuasi-compacto, está recubierto por un número finito de abiertos afines $V_i$, y así todo $x\in U$ está contenido en algún abierto afín de la forma $D_+(f)$, donde $f$ es un elemento homogéneo de grado $>0$ de uno de los anillos $\Gamma(V_i,\sh{S})$.
+Como $U$ es cuasi-compacto, podemos recubrirlo por un número finito de tales abiertos $D_+(f_j)$;
+sea $d$ un múltiplo común de los grados de los $f_j$.
+Este $d$ posee la propiedad requerida, por \sref{II.2.5.17}.
+\end{proof}
+
+\begin{env}[8.14.5]
+\label{II.8.14.5}
+Bajo las hipótesis y con la notación de \sref{II.8.14.1}, hemos definido, en \sref{II.3.3.2}, homomorfismos canónicos de $\sh{O}_Y$-módulos
+\[
+\label{II.8.14.5.1}
+    \alpha_n: \sh{M}_n \to q_*(\shProj_0(\sh{M}(n)))
+    \qquad (n\in\bb{Z}).
+\tag{8.14.5.1}
+\]
+
+Generalizando la notación de \sref{II.3.3.1}, ponemos, para todo \emph{$\sh{S}_X$-módulo graduado $\sh{F}$},
+\[
+\label{II.8.14.5.2}
+    \boldsymbol{\Gamma}_*(\sh{F}) = \bigoplus_{n\in\bb{Z}}q_*(\sh{F}_n).
+\tag{8.14.5.2}
+\]
+
+En particular, $\boldsymbol{\Gamma}_*(\sh{S}_X)=\bigoplus_{n\in\bb{Z}}q_*(\sh{O}_X(n))$ es la $\sh{O}_Y$-álgebra graduada denotada por $\boldsymbol{\Gamma}_*(\sh{O}_X)$ en \sref{II.3.3.1.2};
+está claro que $\boldsymbol{\Gamma}_*(\sh{F})$ es una \emph{$\boldsymbol{\Gamma}_*(\sh{S}_X)$-álgebra graduada} \sref[0]{0.4.2.2}.
+Cuando
+----- French corrections on page II 197 -----
+[id 3894]
+OLD: homogénéisante~» $z$
+NEW: homogénéisante~» $\mathbf{z}$
+FRENCH CONTEXT (corrected): cal{N}}=\bigoplus_{n\geqslant0}\mathcal{N}_n$ est un
+sous-$\widehat{\mathcal{S}}$-Module gradué (quasi-cohérent) de
+$\widehat{\mathcal{M}}$~; on dit que $\overline{\mathcal{N}}$ est déduit de
+$\mathcal{N}$ par \emph{homogénéisation}, à l'aide de la «~variable
+homogénéisante~» $\mathbf{z}$. On notera
+\oldpage[II]{196}
+que si $\mathcal{N}$ est déjà un sous-$\mathcal{S}$-Module \emph{gradué} de
+$\mathcal{M}$, alors $\overline{\mathcal{N}}$ s'identifie à la somme directe
+des composantes $\widehat{\mathcal{N}}_n$ de degré $n\geqslant0$ dans
+$\wideh
+
+[id 3895]
+OLD: à \emph{degrés positifs}
+NEW: \emph{à degrés positifs}
+FRENCH CONTEXT (corrected): d{remark}
+
+\subsection{Compléments sur les faisceaux associés aux
+$\mathcal{S}$-Modules gradués}
+\label{subsection:II.8.14-fr}
+
+\begin{env}[8.14.1]
+\label{II.8.14.1-fr}
+Soient $Y$ un préschéma, $\mathcal{S}$ une $\mathcal{O}_Y$-Algèbre graduée
+quasi-cohérente \emph{à degrés positifs},
+$X=\operatorname{Proj}(\mathcal{S})$, $q:X\to Y$ le morphisme structural
+(séparé en vertu de (\hyperref[II.3.1.3-fr]{3.1.3})). Conservons les
+notations de (\hyperref[II.8.12.1-fr]{8.12.1}), de sorte que nous avons
+défini un foncteur
+$\mathcal{M}_X=\mathcal{P
+
+[id 3896]
+OLD: \mathcal{M}_X=\operatorname{Proj}(\mathcal{M})
+NEW: \mathcal{M}_X=\mathcal{P}\mathit{roj}(\mathcal{M})
+FRENCH CONTEXT (corrected): hcal{M}$, $\mathcal{M}$ étant cette fois
+considéré comme $\mathcal{S}$-Module gradué (autrement dit le
+$\mathcal{O}_X$-Module noté $\widetilde{\mathcal{M}}$ dans
+(\hyperref[II.3.2.2-fr]{3.2.2})). Nous poserons de plus
+\begin{equation}
+\label{II.8.12.1.1-fr}
+  \mathcal{M}_X=\mathcal{P}\mathit{roj}(\mathcal{M})
+  =\bigoplus_{n\in\mathbf{Z}}\mathcal{P}\mathit{roj}_0(\mathcal{M}(n))~;
+\tag{8.12.1.1}
+\end{equation}
+la $\mathcal{O}_X$-Algèbre graduée quasi-cohérente $\mathcal{S}_X$ étant
+définie par (\hyperref[II.8.6.1.1-fr]{8.6.1.1}),
+$\mathcal{P}\mathit{roj}(\mathcal{
+
+[id 3897]
+OLD: \operatorname{Proj}(\mathcal{M}(n))
+  =(\operatorname{Proj}(\mathcal{M}))(n)
+NEW: \mathcal{P}\mathit{roj}(\mathcal{M}(n))
+  =(\mathcal{P}\mathit{roj}(\mathcal{M}))(n)
+FRENCH CONTEXT (corrected): e
+(\hyperref[II.3.2.4-fr]{3.2.4}) que c'est un foncteur \emph{additif exact},
+commutant aux limites inductives.
+
+Notons en outre qu'il résulte aussitôt de la définition
+(\hyperref[II.8.12.1.1-fr]{8.12.1.1}) que l'on a
+\begin{equation}
+\label{II.8.14.1.1-fr}
+  \mathcal{P}\mathit{roj}(\mathcal{M}(n))
+  =(\mathcal{P}\mathit{roj}(\mathcal{M}))(n)
+  \qquad\text{pour tout }n\in\mathbf{Z}.
+\tag{8.14.1.1}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.2]
+\label{II.8.14.2-fr}
+Nous allons d'abord étendre aux $\mathcal{S}_X$-Modules de la forme
+$\mathcal{P}\mathit{roj}(\mathcal{M})$ les homomorphismes canoniques
+
+[id 3898]
+OLD: $\operatorname{Proj}(\mathcal{M})$ les
+NEW: $\mathcal{P}\mathit{roj}(\mathcal{M})$ les
+FRENCH CONTEXT (corrected): it{roj}(\mathcal{M}(n))
+  =(\mathcal{P}\mathit{roj}(\mathcal{M}))(n)
+  \qquad\text{pour tout }n\in\mathbf{Z}.
+\tag{8.14.1.1}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.2]
+\label{II.8.14.2-fr}
+Nous allons d'abord étendre aux $\mathcal{S}_X$-Modules de la forme
+$\mathcal{P}\mathit{roj}(\mathcal{M})$ les homomorphismes canoniques $\lambda$
+et $\mu$ définis dans (\hyperref[II.3.2.6-fr]{3.2.6}). Pour cela, notons
+que, quels que soient $m\in\mathbf{Z}$ et $n\in\mathbf{Z}$, on a, en vertu
+de (\hyperref[II.2.1.2.1-fr]{2.1.2.1}), un homomorphisme canonique de
+$\mat
+
+[id 3899]
+OLD: \lambda_{mn}:\operatorname{Proj}_0(\mathcal{M}(m))
+  \otimes_{\mathcal{O}_X}\operatorname{Proj}_0(\mathcal{N}(n))
+  \to\operatorname{Proj}_0
+NEW: \lambda_{mn}:\mathcal{P}\mathit{roj}_0(\mathcal{M}(m))
+  \otimes_{\mathcal{O}_X}\mathcal{P}\mathit{roj}_0(\mathcal{N}(n))
+  \to\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): hyperref[II.3.2.6-fr]{3.2.6}). Pour cela, notons
+que, quels que soient $m\in\mathbf{Z}$ et $n\in\mathbf{Z}$, on a, en vertu
+de (\hyperref[II.2.1.2.1-fr]{2.1.2.1}), un homomorphisme canonique de
+$\mathcal{O}_X$-Modules
+\begin{equation}
+\label{II.8.14.2.1-fr}
+  \lambda_{mn}:\mathcal{P}\mathit{roj}_0(\mathcal{M}(m))
+  \otimes_{\mathcal{O}_X}\mathcal{P}\mathit{roj}_0(\mathcal{N}(n))
+  \to\mathcal{P}\mathit{roj}_0
+  ((\mathcal{M}\otimes_{\mathcal{S}}\mathcal{N})(m+n))
+\tag{8.14.2.1}
+\end{equation}
+et de même, en vertu de (\hyperref[II.2.1.2.2-fr]{2.1.2.2}), un
+homomorphisme canonique de $\mathcal{O}_X$-Modules
+\begin{equation}
+\label{II.8.14.2.2-fr}
+  \mu_{mn}:\mathcal
+
+[id 3900]
+OLD: \mu_{mn}:\operatorname{Proj}_0
+NEW: \mu_{mn}:\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): {P}\mathit{roj}_0
+  ((\mathcal{M}\otimes_{\mathcal{S}}\mathcal{N})(m+n))
+\tag{8.14.2.1}
+\end{equation}
+et de même, en vertu de (\hyperref[II.2.1.2.2-fr]{2.1.2.2}), un
+homomorphisme canonique de $\mathcal{O}_X$-Modules
+\begin{equation}
+\label{II.8.14.2.2-fr}
+  \mu_{mn}:\mathcal{P}\mathit{roj}_0
+  ((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(n-m))
+  \to\mathcal{H}om_{\mathcal{O}_X}
+  (\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)),
+   \mathcal{P}\mathit{roj}_0(\mathcal{N}(n)))
+\tag{8.14.2.2}
+\end{equation}
+quels que soient les $\mathcal{S}$-Mod
+
+[id 3901]
+OLD: (\operatorname{Proj}_0(\mathcal{M}(m)),
+   \operatorname{Proj}_0(\mathcal{N}(n)))
+NEW: (\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)),
+   \mathcal{P}\mathit{roj}_0(\mathcal{N}(n)))
+FRENCH CONTEXT (corrected): f[II.2.1.2.2-fr]{2.1.2.2}), un
+homomorphisme canonique de $\mathcal{O}_X$-Modules
+\begin{equation}
+\label{II.8.14.2.2-fr}
+  \mu_{mn}:\mathcal{P}\mathit{roj}_0
+  ((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(n-m))
+  \to\mathcal{H}om_{\mathcal{O}_X}
+  (\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)),
+   \mathcal{P}\mathit{roj}_0(\mathcal{N}(n)))
+\tag{8.14.2.2}
+\end{equation}
+quels que soient les $\mathcal{S}$-Modules gradués quasi-cohérents
+$\mathcal{M}$, $\mathcal{N}$. On en déduit un homomorphisme
+\[
+  \mu_k:\mathcal{P}\mathit{roj}_0
+  ((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k))
+  \
+
+[id 3902]
+OLD: \mu_k:\operatorname{Proj}_0
+NEW: \mu_k:\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): O}_X}
+  (\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)),
+   \mathcal{P}\mathit{roj}_0(\mathcal{N}(n)))
+\tag{8.14.2.2}
+\end{equation}
+quels que soient les $\mathcal{S}$-Modules gradués quasi-cohérents
+$\mathcal{M}$, $\mathcal{N}$. On en déduit un homomorphisme
+\[
+  \mu_k:\mathcal{P}\mathit{roj}_0
+  ((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k))
+  \to
+  (\mathcal{H}om_{\mathcal{S}_X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})))_k
+\]
+obtenu en faisant correspondre à tout
+$u\in\Gamma(U,\mathcal{P}\mathit{roj
+
+[id 3903]
+OLD: (\operatorname{Proj}(\mathcal{M}),\operatorname{Proj}(\mathcal{N})))_k
+NEW: (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})))_k
+FRENCH CONTEXT (corrected): ue soient les $\mathcal{S}$-Modules gradués quasi-cohérents
+$\mathcal{M}$, $\mathcal{N}$. On en déduit un homomorphisme
+\[
+  \mu_k:\mathcal{P}\mathit{roj}_0
+  ((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k))
+  \to
+  (\mathcal{H}om_{\mathcal{S}_X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})))_k
+\]
+obtenu en faisant correspondre à tout
+$u\in\Gamma(U,\mathcal{P}\mathit{roj}_0
+((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k)))$
+l'homomorphisme $\mu_k(u)$, de degré $k$, de $\mathbf{Z}$-modules gradués
+$\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal
+
+[id 3904]
+OLD: u\in\Gamma(U,\operatorname{Proj}_0
+NEW: u\in\Gamma(U,\mathcal{P}\mathit{roj}_0
+FRENCH CONTEXT (corrected): [
+  \mu_k:\mathcal{P}\mathit{roj}_0
+  ((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k))
+  \to
+  (\mathcal{H}om_{\mathcal{S}_X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})))_k
+\]
+obtenu en faisant correspondre à tout
+$u\in\Gamma(U,\mathcal{P}\mathit{roj}_0
+((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k)))$
+l'homomorphisme $\mu_k(u)$, de degré $k$, de $\mathbf{Z}$-modules gradués
+$\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{N}))$ ($U$ ouvert de $X$) qui 
+
+[id 3905]
+OLD: \Gamma(U,\operatorname{Proj}(\mathcal{M}))\to
+\Gamma(U,\operatorname{Proj}(\mathcal{N}))
+NEW: \Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{N}))
+FRENCH CONTEXT (corrected): ,\mathcal{P}\mathit{roj}(\mathcal{N})))_k
+\]
+obtenu en faisant correspondre à tout
+$u\in\Gamma(U,\mathcal{P}\mathit{roj}_0
+((\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k)))$
+l'homomorphisme $\mu_k(u)$, de degré $k$, de $\mathbf{Z}$-modules gradués
+$\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{N}))$ ($U$ ouvert de $X$) qui dans
+chaque $\Gamma(U,\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)))$ coïncide avec
+$\mu_{m,m+k}(u)$~; en outre, en revenant à la définition des $\mu_{mn}$
+(\hyperref[II.2.5.12.1-fr]{2.5.12.1}), on voit aussitôt que $\mu_k(u)$ est
+en fait
+
+[id 3906]
+OLD: \Gamma(U,\operatorname{Proj}_0(\mathcal{M}(m)))
+NEW: \Gamma(U,\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)))
+FRENCH CONTEXT (corrected): }om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))(k)))$
+l'homomorphisme $\mu_k(u)$, de degré $k$, de $\mathbf{Z}$-modules gradués
+$\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\Gamma(U,\mathcal{P}\mathit{roj}(\mathcal{N}))$ ($U$ ouvert de $X$) qui dans
+chaque $\Gamma(U,\mathcal{P}\mathit{roj}_0(\mathcal{M}(m)))$ coïncide avec
+$\mu_{m,m+k}(u)$~; en outre, en revenant à la définition des $\mu_{mn}$
+(\hyperref[II.2.5.12.1-fr]{2.5.12.1}), on voit aussitôt que $\mu_k(u)$ est
+en fait un homomorphisme de degré $k$ de
+$\Gamma(U,\mathcal{S}_X)$-modules gradués, et en outre q
+
+[id 3907]
+OLD: définissent un homomorphisme de $\mathcal{S}_X$-Modules gradués
+NEW: définissent un homomorphisme de $\mathcal{S}_X$-\emph{Modules gradués}
+FRENCH CONTEXT (corrected): 
+$\mu_{m,m+k}(u)$~; en outre, en revenant à la définition des $\mu_{mn}$
+(\hyperref[II.2.5.12.1-fr]{2.5.12.1}), on voit aussitôt que $\mu_k(u)$ est
+en fait un homomorphisme de degré $k$ de
+$\Gamma(U,\mathcal{S}_X)$-modules gradués, et en outre que les $\mu_k$
+définissent un homomorphisme de $\mathcal{S}_X$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.2.3-fr}
+  \mathcal{P}\mathit{roj}
+  (\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))
+  \to\mathcal{H}om_{\mathcal{S}_X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})).
+\tag{8.14.2.3}
+\end{eq
+
+[id 3908]
+OLD: \operatorname{Proj}
+  (\mathcal{H}om
+NEW: \mathcal{P}\mathit{roj}
+  (\mathcal{H}om
+FRENCH CONTEXT (corrected): n voit aussitôt que $\mu_k(u)$ est
+en fait un homomorphisme de degré $k$ de
+$\Gamma(U,\mathcal{S}_X)$-modules gradués, et en outre que les $\mu_k$
+définissent un homomorphisme de $\mathcal{S}_X$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.2.3-fr}
+  \mathcal{P}\mathit{roj}
+  (\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))
+  \to\mathcal{H}om_{\mathcal{S}_X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})).
+\tag{8.14.2.3}
+\end{equation}
+
+De même, compte tenu du diagramme d'associativité
+(\hyperref[II.2.5.11.4-f
+
+[id 3909]
+OLD: (\operatorname{Proj}(\mathcal{M}),\operatorname{Proj}(\mathcal{N})).
+NEW: (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})).
+FRENCH CONTEXT (corrected):  et en outre que les $\mu_k$
+définissent un homomorphisme de $\mathcal{S}_X$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.2.3-fr}
+  \mathcal{P}\mathit{roj}
+  (\mathcal{H}om_{\mathcal{S}}(\mathcal{M},\mathcal{N}))
+  \to\mathcal{H}om_{\mathcal{S}_X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})).
+\tag{8.14.2.3}
+\end{equation}
+
+De même, compte tenu du diagramme d'associativité
+(\hyperref[II.2.5.11.4-fr]{2.5.11.4}), les homomorphismes
+(\hyperref[II.8.14.2.1-fr]{8.14.2.1}) donnent un homomorphisme de
+$\mathcal{S}_X$-\emph{Modules gradués}
+\begin{equation
+
+[id 3910]
+OLD: donnent un homomorphisme de
+$\mathcal{S}_X$-Modules gradués
+NEW: donnent un homomorphisme de
+$\mathcal{S}_X$-\emph{Modules gradués}
+FRENCH CONTEXT (corrected): _X}
+  (\mathcal{P}\mathit{roj}(\mathcal{M}),\mathcal{P}\mathit{roj}(\mathcal{N})).
+\tag{8.14.2.3}
+\end{equation}
+
+De même, compte tenu du diagramme d'associativité
+(\hyperref[II.2.5.11.4-fr]{2.5.11.4}), les homomorphismes
+(\hyperref[II.8.14.2.1-fr]{8.14.2.1}) donnent un homomorphisme de
+$\mathcal{S}_X$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.2.4-fr}
+  \lambda:\mathcal{P}\mathit{roj}(\mathcal{M})
+  \otimes_{\mathcal{S}_X}\mathcal{P}\mathit{roj}(\mathcal{N})
+  \to\mathcal{P}\mathit{roj}(\mathcal{M}\otimes_{\mathcal{S}}\mathcal{N}).
+\tag{8.14.2.4}
+\end{equation}
+\end{
+
+[id 3911]
+OLD: \lambda:\operatorname{Proj}(\mathcal{M})
+  \otimes_{\mathcal{S}_X}\operatorname{Proj}(\mathcal{N})
+  \to\operatorname{Proj}(\mathcal{M}\otimes_{\mathcal{S}}\mathcal{N}).
+NEW: \lambda:\mathcal{P}\mathit{roj}(\mathcal{M})
+  \otimes_{\mathcal{S}_X}\mathcal{P}\mathit{roj}(\mathcal{N})
+  \to\mathcal{P}\mathit{roj}(\mathcal{M}\otimes_{\mathcal{S}}\mathcal{N}).
+FRENCH CONTEXT (corrected): on}
+
+De même, compte tenu du diagramme d'associativité
+(\hyperref[II.2.5.11.4-fr]{2.5.11.4}), les homomorphismes
+(\hyperref[II.8.14.2.1-fr]{8.14.2.1}) donnent un homomorphisme de
+$\mathcal{S}_X$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.2.4-fr}
+  \lambda:\mathcal{P}\mathit{roj}(\mathcal{M})
+  \otimes_{\mathcal{S}_X}\mathcal{P}\mathit{roj}(\mathcal{N})
+  \to\mathcal{P}\mathit{roj}(\mathcal{M}\otimes_{\mathcal{S}}\mathcal{N}).
+\tag{8.14.2.4}
+\end{equation}
+\end{env}
+
+\oldpage[II]{198}
+\begin{proposition}[8.14.3]
+\label{II.8.14.3-fr}
+L'homomorphisme (\hyperref[II.8.14.2.4-fr]{8.14.2.4}) est bijectif~; il en
+est de même de (\hyperref[II.8.14.2.3-fr]{8.14.2.3}) lorsque le
+$\mathcal{S}
+
+=================== PAGE II 198 ===================
+----- (Spanish page II 197: shown above in this file) -----
+----- (Spanish page II 198: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 199 -----
+\oldpage[II]{199}
+tomamos $\sh{M}=\sh{S}$ en los homomorfismos \sref{II.8.14.5.1}, obtenemos el homomorfismo de $\sh{O}_Y$-álgebras graduadas
+\[
+\label{II.8.14.5.3}
+    \alpha:\sh{S}\to\boldsymbol{\Gamma}_*(\sh{S}_X)
+\tag{8.14.5.3}
+\]
+definido anteriormente en \sref{II.3.3.2}, y que hace de $\boldsymbol{\Gamma}_*(\sh{F})$ un \emph{$\sh{S}$-módulo graduado};
+los homomorfismos \sref{II.8.14.5.1} definen entonces un homomorfismo (de grado $0$) de \emph{$\sh{S}$-módulos graduados}
+\[
+\label{II.8.14.5.4}
+    \alpha:\sh{M}\to\boldsymbol{\Gamma}_*(\shProj(\sh{M})).
+\tag{8.14.5.4}
+\]
+\end{env}
+
+\begin{env}[8.14.6]
+\label{II.8.14.6}
+En general, para un $\sh{S}_X$-módulo graduado cuasi-coherente $\sh{F}$, no es seguro que el $\sh{S}$-módulo graduado $\boldsymbol{\Gamma}_*(\sh{F})$ sea necesariamente cuasi-coherente.
+Consideremos un abierto $X'$ de $X$ tal que la restricción $q':X'\to Y$ de $q$ a $X'$ sea un morfismo \emph{cuasi-compacto}.
+Como $q'$ es además separado, $q'_*(\sh{F}')$ es entonces un $\sh{O}_Y$-módulo cuasi-coherente para todo $\sh{O}_{X'}$-módulo cuasi-coherente $\sh{F}'$ \sref[I]{I.9.2.2}[b].
+Ponemos
+\[
+\label{II.8.14.6.1}
+    \sh{S}_{X'} = \sh{S}_X|X' = \bigoplus_{n\in\bb{Z}}\sh{O}_X(n)|X'
+\tag{8.14.6.1}
+\]
+y, para todo $\sh{S}_{X'}$-módulo graduado $\sh{F}'$,
+\[
+\label{II.8.14.6.2}
+    \boldsymbol{\Gamma}'_*(\sh{F}') = \bigoplus_{n\in\bb{Z}}q'_*(\sh{F}'_n).
+\tag{8.14.6.2}
+\]
+
+La observación anterior muestra entonces que, si $\sh{F}'$ es un $\sh{S}_{X'}$-módulo cuasi-coherente, $\boldsymbol{\Gamma}'_*(\sh{F}')$ es un $\sh{S}$-módulo graduado \emph{cuasi-coherente} \sref[I]{I.9.6.1}.
+
+Observemos también que la inyección canónica $j:X'\to X$ es \emph{cuasi-compacta}, porque $q'=q\circ j$ es cuasi-compacto y $q$ es separado \sref[I]{I.6.6.4}[v].
+Entonces $\sh{F}=j_*(\sh{F}')$ es un $\sh{S}_X$-módulo graduado cuasi-coherente para todo $\sh{S}_{X'}$-módulo graduado cuasi-coherente $\sh{F}'$, y de las definiciones anteriores se sigue que
+\[
+\label{II.8.14.6.3}
+    \boldsymbol{\Gamma}'_*(\sh{F}') = \boldsymbol{\Gamma}_*(\sh{F}).
+\tag{8.14.6.3}
+\]
+
+Bajo las mismas hipótesis sobre $X'$, para todo $\sh{S}$-módulo graduado cuasi-coherente $\sh{M}$, ponemos
+\[
+\label{II.8.14.6.4}
+    \shProj'(\sh{M}) = \shProj(\sh{M})|X'
+\tag{8.14.6.4}
+\]
+que es un $\sh{S}_{X'}$-módulo graduado cuasi-coherente.
+El homomorfismo canónico
+\[
+    \shProj(\sh{M}) \to j_*(\shProj'(\sh{M}))
+\]
+\sref[0]{0.4.4.3} proporciona, pues, un homomorfismo canónico $\boldsymbol{\Gamma}_*(\shProj(\sh{M}))\to\boldsymbol{\Gamma}'_*(\shProj'(\sh{M}))$ de $\sh{S}$-módulos graduados y, componiéndolo con \sref{II.8.14.5.4}, obtenemos un homomorfismo canónico funtorial (de grado $0$) de $\sh{S}$-módulos graduados cuasi-coherentes
+\[
+\label{II.8.14.6.5}
+    \alpha': \sh{M} \to \boldsymbol{\Gamma}'_*(\shProj'(\sh{M})).
+\tag{8.14.6.5}
+\]
+\end{env}
+
+\begin{env}[8.14.7]
+\label{II.8.14.7}
+Conservando las hipótesis sobre $X'$ de \sref{II.8.14.6}, sea $\sh{F}'$ un \emph{$\sh{S}_{X'}$-módulo graduado cuasi-coherente}, de modo que $\shProj'(\boldsymbol{\Gamma}'_*(\sh{F}'))$ es también un $\sh{S}_{X'}$-módulo graduado \emph{cuasi-coherente}.
+----- French corrections on page II 198 -----
+[id 3912]
+OLD: (m+n)_{(f)},\\
+NEW: (m+n)_{(f)}\\
+FRENCH CONTEXT (corrected): .2.2-fr]{8.14.2.2}), restreints à l'ouvert affine
+$D_+(f)$, correspondent aux homomorphismes canoniques
+(\hyperref[II.2.5.11.1-fr]{2.5.11.1}) et
+(\hyperref[II.2.5.12.1-fr]{2.5.12.1})~:
+\begin{align*}
+  M(m)_{(f)}\otimes_{S_{(f)}}N(n)_{(f)}
+  &\to(M\otimes_S N)(m+n)_{(f)}\\
+  (\operatorname{Hom}_S(M,N))(n-m)_{(f)}
+  &\to\operatorname{Hom}_{S_{(f)}}(M(m)_{(f)},N(n)_{(f)}).
+\end{align*}
+Si on se reporte aux définitions de ces homomorphismes, on voit donc (compte
+tenu de (\hyperref[II.8.2.9.1-fr]{8.2.9.1})) que la restriction de
+(\
+
+[id 3913]
+OLD: {0, 1.3.4}
+NEW: {\textbf{0}, 1.3.4}
+FRENCH CONTEXT (corrected): identifie canoniquement à
+$M_f\otimes_{A_f}N_f$ en vertu de (\hyperref[I.1.3.7-fr]{1.3.7}) et
+(\hyperref[I.1.3.6-fr]{1.3.6}). On sait par ailleurs que le $A_f$-module
+$M_f\otimes_{A_f}N_f$ est canoniquement isomorphe à $(M\otimes_A N)_f$
+(\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}), qui lui-même est canoniquement isomorphe à
+$\Gamma(D(f),(M\otimes_A N)\supertilde)$
+(\hyperref[I.1.3.7-fr]{1.3.7} et \hyperref[I.1.3.6-fr]{1.3.6}). En outre, on
+vérifie aussitôt que les isomorphismes canoniques
+\[
+  \mathscr{F}(D(f))\xrightarrow{\sim}\Gamma
+
+[id 3914]
+OLD: canonique (\hyperref[0.1.3.5-fr]{0, 1.3.5}
+NEW: canonique (\hyperref[0.1.3.5-fr]{\textbf{0}, 1.3.5}
+FRENCH CONTEXT (corrected): ique
+\[
+  M_f\otimes_{S_f}N_f\to(M\otimes_S N)_f
+\]
+défini dans (\hyperref[0.1.3.4-fr]{\textbf{0}, 1.3.4}), et on sait que ce dernier est
+un isomorphisme. De même, la restriction de
+(\hyperref[II.8.14.2.3-fr]{8.14.2.3}) à $D_+(f)$ correspond à
+l'homomorphisme canonique (\hyperref[0.1.3.5-fr]{\textbf{0}, 1.3.5})
+\[
+  (\operatorname{Hom}_S(M,N))_f\to
+  \operatorname{Hom}_{S_f}(M_f,N_f)
+\]
+compte tenu de ce que, $M$ étant de type fini, le module
+$\operatorname{Hom}_S(M,N)$, somme directe des sous-groupes formés des
+homomorphismes \emph{homogènes} de $S$-modules
+(\hype
+
+[id 3915]
+OLD: alors (\hyperref[0.1.3.5-fr]{0, 1.3.5}
+NEW: alors (\hyperref[0.1.3.5-fr]{\textbf{0}, 1.3.5}
+FRENCH CONTEXT (corrected): e directe des sous-groupes formés des
+homomorphismes \emph{homogènes} de $S$-modules
+(\hyperref[II.2.1.2-fr]{2.1.2}), coïncide avec l'ensemble de \emph{tous} les
+homomorphismes $M\to N$ de $S$-modules. L'hypothèse que $M$ admet une
+présentation finie entraîne alors (\hyperref[0.1.3.5-fr]{\textbf{0}, 1.3.5}) que
+l'homomorphisme canonique considéré est bien un isomorphisme.
+\end{proof}
+
+\begin{proposition}[8.14.4]
+\label{II.8.14.4-fr}
+Si $U$ est un ouvert quasi-compact de $X$, il existe un entier $d$ tel que
+pour tout entier $n$ multiple de $d$, $\mathcal{O}_X(n)
+
+[id 3916]
+OLD: q_*(\operatorname{Proj}_0(\mathcal{M}(n)))
+NEW: q_*(\mathcal{P}\mathit{roj}_0(\mathcal{M}(n)))
+FRENCH CONTEXT (corrected): I.8.14.5-fr}
+Avec les hypothèses et notations de (\hyperref[II.8.14.1-fr]{8.14.1}), on a
+défini dans (\hyperref[II.3.3.2-fr]{3.3.2}) des homomorphismes canoniques de
+$\mathcal{O}_Y$-Modules
+\begin{equation}
+\label{II.8.14.5.1-fr}
+  \alpha_n:\mathcal{M}_n\to
+  q_*(\mathcal{P}\mathit{roj}_0(\mathcal{M}(n)))
+  \qquad(n\in\mathbf{Z})
+\tag{8.14.5.1}
+\end{equation}
+Généralisant les notations de (\hyperref[II.3.3.1-fr]{3.3.1}), nous
+poserons, pour tout $\mathcal{S}_X$-\emph{Module gradué} $\mathcal{F}$
+\begin{equation}
+\label{II.8.14.5.2-fr}
+  \bbGamma_*(\mathcal{F})
+
+[id 3917]
+OLD: pour tout $\mathcal{S}_X$-Module gradué
+NEW: pour tout $\mathcal{S}_X$-\emph{Module gradué}
+FRENCH CONTEXT (corrected): $-Modules
+\begin{equation}
+\label{II.8.14.5.1-fr}
+  \alpha_n:\mathcal{M}_n\to
+  q_*(\mathcal{P}\mathit{roj}_0(\mathcal{M}(n)))
+  \qquad(n\in\mathbf{Z})
+\tag{8.14.5.1}
+\end{equation}
+Généralisant les notations de (\hyperref[II.3.3.1-fr]{3.3.1}), nous
+poserons, pour tout $\mathcal{S}_X$-\emph{Module gradué} $\mathcal{F}$
+\begin{equation}
+\label{II.8.14.5.2-fr}
+  \bbGamma_*(\mathcal{F})=
+  \bigoplus_{n\in\mathbf{Z}}q_*(\mathcal{F}_n).
+\tag{8.14.5.2}
+\end{equation}
+En particulier,
+$\bbGamma_*(\mathcal{S}_X)=\bigoplus_{n\in\mathbf{Z}}q_*(\mathcal{O}_X(n))$
+est la $
+
+[id 3918]
+OLD: $\mathcal{F}$,
+NEW: $\mathcal{F}$
+FRENCH CONTEXT (corrected): . On a des définitions et
+conventions analogues pour les faisceaux d'espaces topologiques ou de groupes
+topologiques.
+\end{env}
+
+\oldpage[0\textsubscript{I}]{25}
+
+\begin{env}[3.1.5]
+\label{0.3.1.5-fr}
+Il est clair que pour toute catégorie $\boldsymbol{K}$, si $\mathcal{F}$ est un
+préfaisceau (resp. un faisceau) sur $X$ à valeurs dans $\boldsymbol{K}$ et $U$ un
+ouvert de $X$, les $\mathcal{F}(V)$ pour les ouverts $V\subset U$ constituent
+un préfaisceau (resp. un faisceau) à valeurs dans $\boldsymbol{K}$, que l'on
+appelle préfais
+
+[id 3919]
+OLD: \Gamma_*(\mathcal{F})=
+NEW: \bbGamma_*(\mathcal{F})=
+FRENCH CONTEXT (corrected): proof}
+
+\begin{env}[3.3.4]
+\label{II.3.3.4-fr}
+Nous supposerons désormais, outre l'hypothèse du début de ce numéro, que pour
+tout $\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$, les
+$p_*(\mathcal{F}(n))$ sont \emph{quasi-cohérents} sur $Y$, et par suite
+$\bbGamma_*(\mathcal{F})=\bigoplus_{n\in\mathbf{Z}}p_*(\mathcal{F}(n))$ est
+aussi un $\mathcal{O}_Y$-Module quasi-cohérent
+(\hyperref[I.1.4.1-fr]{\textbf{I}, 1.4.1} et
+\hyperref[I.1.3.9-fr]{1.3.9})~; cette circonstance se produira toujours en
+particulier si $X$ est \emph{de type fini}
+
+[id 3920]
+OLD: $\Gamma_*(\mathcal{S}_X)=
+NEW: $\bbGamma_*(\mathcal{S}_X)=
+FRENCH CONTEXT (corrected): [II.3.3.1-fr]{3.3.1}), nous
+poserons, pour tout $\mathcal{S}_X$-\emph{Module gradué} $\mathcal{F}$
+\begin{equation}
+\label{II.8.14.5.2-fr}
+  \bbGamma_*(\mathcal{F})=
+  \bigoplus_{n\in\mathbf{Z}}q_*(\mathcal{F}_n).
+\tag{8.14.5.2}
+\end{equation}
+En particulier,
+$\bbGamma_*(\mathcal{S}_X)=\bigoplus_{n\in\mathbf{Z}}q_*(\mathcal{O}_X(n))$
+est la $\mathcal{O}_Y$-Algèbre graduée notée
+$\bbGamma_*(\mathcal{O}_X)$ dans
+(\hyperref[II.3.3.1.2-fr]{3.3.1.2})~; il est clair que
+$\bbGamma_*(\mathcal{F})$ est une $\bbGamma_*(\mathcal{S}_X)$-\emph{Algèbre gr
+
+[id 3921]
+OLD: $\Gamma_*(\mathcal{O}_X)$
+NEW: $\bbGamma_*(\mathcal{O}_X)$
+FRENCH CONTEXT (corrected): \[
+  p_*(\mathcal{F})\otimes_{\mathcal{O}_Y}p_*(\mathcal{G})
+  \longrightarrow
+  p_*(\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{G})
+\]
+pour deux $\mathcal{O}_X$-Modules $\mathcal{F}$ et $\mathcal{G}$~; on déduit
+donc de (\hyperref[II.3.2.7.1-fr]{3.2.7.1}) que
+$\bbGamma_*(\mathcal{O}_X)$ est muni d'une structure de
+$\mathcal{O}_Y$-\emph{Algèbre graduée}, et
+(\hyperref[II.3.2.5.2-fr]{3.2.5.2}) définit de même sur
+$\bbGamma_*(\mathcal{F})$ une structure de \emph{Module gradué} sur
+$\bbGamma_*(\mathcal{O}_X)$.
+
+En vertu de (\hyperref[II.3.2.5-fr
+
+[id 3922]
+OLD: que
+$\Gamma_*(\mathcal{F})$
+NEW: que
+$\bbGamma_*(\mathcal{F})$
+FRENCH CONTEXT (corrected): l{F}_n).
+\tag{8.14.5.2}
+\end{equation}
+En particulier,
+$\bbGamma_*(\mathcal{S}_X)=\bigoplus_{n\in\mathbf{Z}}q_*(\mathcal{O}_X(n))$
+est la $\mathcal{O}_Y$-Algèbre graduée notée
+$\bbGamma_*(\mathcal{O}_X)$ dans
+(\hyperref[II.3.3.1.2-fr]{3.3.1.2})~; il est clair que
+$\bbGamma_*(\mathcal{F})$ est une $\bbGamma_*(\mathcal{S}_X)$-\emph{Algèbre graduée}
+(\hyperref[0.4.2.2-fr]{\textbf{0}, 4.2.2}). Lorsque
+\oldpage[II]{199}
+dans les homomorphismes (\hyperref[II.8.14.5.1-fr]{8.14.5.1}), on prend
+$\mathcal{M}=\mathcal{S}$, on obtient l'homomorphisme de
+$
+
+[id 3923]
+OLD: un $\Gamma_*(\mathcal{S}_X)$-Module gradué
+NEW: une $\bbGamma_*(\mathcal{S}_X)$-\emph{Algèbre graduée}
+FRENCH CONTEXT (corrected): ion}
+En particulier,
+$\bbGamma_*(\mathcal{S}_X)=\bigoplus_{n\in\mathbf{Z}}q_*(\mathcal{O}_X(n))$
+est la $\mathcal{O}_Y$-Algèbre graduée notée
+$\bbGamma_*(\mathcal{O}_X)$ dans
+(\hyperref[II.3.3.1.2-fr]{3.3.1.2})~; il est clair que
+$\bbGamma_*(\mathcal{F})$ est une $\bbGamma_*(\mathcal{S}_X)$-\emph{Algèbre graduée}
+(\hyperref[0.4.2.2-fr]{\textbf{0}, 4.2.2}). Lorsque
+\oldpage[II]{199}
+dans les homomorphismes (\hyperref[II.8.14.5.1-fr]{8.14.5.1}), on prend
+$\mathcal{M}=\mathcal{S}$, on obtient l'homomorphisme de
+$\mathcal{O}_Y$-Algèbres graduées
+\begin{equation}
+\label{II
+
+[id 3924]
+OLD: {0, 4.2.2}
+NEW: {\textbf{0}, 4.2.2}
+FRENCH CONTEXT (corrected):  && Y\ar[ld]^g\\
+    & S
+  }
+  \tag{1.1.2.1}\label{II.1.1.2.1-fr}
+\]
+
+On a par définition $h=(\psi,\theta)$, où
+$\theta:\mathcal{O}_Y\to h_*(\mathcal{O}_X)=\psi_*(\mathcal{O}_X)$ est un
+homomorphisme de faisceaux d'anneaux~; on en déduit
+(\hyperref[0.4.2.2-fr]{\textbf{0}, 4.2.2}) un homomorphisme de
+$\mathcal{O}_S$-Algèbres
+$g_*(\theta):g_*(\mathcal{O}_Y)\to g_*(h_*(\mathcal{O}_X))=f_*(\mathcal{O}_X)$,
+autrement dit, un homomorphisme de $\mathcal{O}_S$-Algèbres
+$\mathcal{A}(Y)\to\mathcal{A}(X)$, que nous noterons aussi
+$\mathcal{A}(h
+
+=================== PAGE II 199 ===================
+----- (Spanish page II 198: shown above in this file) -----
+----- (Spanish page II 199: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 200 -----
+\oldpage[II]{200}
+Vamos a definir un homomorfismo canónico funtorial (de grado $0$) de $\sh{S}_{X'}$-módulos graduados
+\[
+\label{II.8.14.7.1}
+    \beta': \shProj'(\boldsymbol{\Gamma}'_*(\sh{F}')) \to \sh{F}'.
+\tag{8.14.7.1}
+\]
+
+Supongamos primero que $Y=\Spec(A)$ es afín y que $\sh{S}=\widetilde{S}$, donde $S$ es una $A$-álgebra graduada en grados positivos;
+entonces $\boldsymbol{\Gamma}'_*(\sh{F}')=\widetilde{M}$, donde $M=\bigoplus_{n\in\bb{Z}}\Gamma(X',\sh{F}'_n)$ es un $S$-módulo graduado.
+Sea $f\in S_d$ tal que $D_+(f)\subset X'$;
+por definición \sref{II.2.6.2}, $\alpha_d(f)$ restringida a $D_+(f)$ es la sección de $\sh{O}_X(d)$ sobre $D_+(f)$ correspondiente al elemento $f/1$ de $(S(d))_{(f)}$ y, por tanto, es invertible;
+por consiguiente, también lo es $\alpha_d(f^n)$ para todo $n>0$.
+De aquí concluimos inmediatamente que hemos definido un $S_f$-homomorfismo (de grado $0$) de módulos graduados $\beta_f:M_f\to\Gamma(D_+(f),\sh{F}')$ enviando cada elemento $z/f^n\in M_f$ (donde $z\in M$) a la sección $(z|D_+(f))(\alpha_d(f^n)|D_+(f))^{-1}$ de $\sh{F}'$ sobre $D_+(f)$.
+Además, tenemos un diagrama conmutativo correspondiente a \sref{II.2.6.4.1}, de donde resulta la definición de $\beta'$ en este caso.
+Para pasar al caso general, hay que considerar una $A$-álgebra $A'$, la $A'$-álgebra graduada $S'=S\otimes_A A'$, y utilizar el diagrama conmutativo análogo a \sref{II.2.8.13.2};
+dejamos los detalles al lector.
+\end{env}
+
+\begin{proposition}[8.14.8]
+\label{II.8.14.8}
+Si $X'$ es un abierto de $X=\Proj(\sh{S})$ tal que $q':X'\to Y$ es cuasi-compacto, el homomorfismo $\beta'$ definido en \sref{II.8.14.7} es biyectivo.
+\end{proposition}
+
+\begin{proof}
+Podemos restringirnos claramente al caso en que $Y$ es afín, y todo se reduce entonces a demostrar (con la notación de \sref{II.8.14.7}) que el homomorfismo $\beta_f:M_f\to\Gamma(D_+(f),\sh{F}')$ es un isomorfismo.
+Pero sustituir $f$ por una de sus potencias no cambia ni $D_+(f)$ ni $\beta_f$;
+como $X'$ es \emph{cuasi-compacto} por hipótesis, podemos suponer siempre, por \sref{II.8.14.4}, que el haz $\sh{O}_X(d)$ es \emph{invertible}.
+Como $X'$ es un esquema (porque $q'$ es separado), la proposición es entonces exactamente \sref[I]{I.9.3.1}.
+\end{proof}
+
+\begin{corollary}[8.14.9]
+\label{II.8.14.9}
+Bajo las hipótesis de \sref{II.8.14.8}, todo $\sh{S}_{X'}$-módulo graduado cuasi-coherente es isomorfo a un $\sh{S}_{X'}$-módulo graduado de la forma $\shProj'(\sh{M})$, donde $\sh{M}$ es un $\sh{S}$-módulo graduado cuasi-coherente.
+Además, si $\sh{F}'$ es de tipo finito y suponemos que $Y$ es un esquema cuasi-compacto o un preesquema cuyo espacio subyacente es noetheriano, podemos suponer que $\sh{M}$ es de tipo finito.
+\end{corollary}
+
+\begin{proof}
+La demostración, a partir de \sref{II.8.14.8}, sigue exactamente el mismo camino que la demostración de \sref{II.3.4.5} a partir de \sref{II.3.4.4}, y dejamos los detalles al lector.
+\end{proof}
+
+\begin{proposition}[8.14.10]
+\label{II.8.14.10}
+Bajo las hipótesis de \sref{II.8.14.7}, sean $\sh{M}$ un $\sh{S}$-módulo graduado cuasi-coherente y $\sh{F}'$ un $\sh{S}_{X'}$-módulo graduado cuasi-coherente;
+los homomorfismos compuestos
+\[
+\label{II.8.14.10.1}
+    \shProj'(\sh{M})
+    \xrightarrow{\shProj'(\alpha')}
+    \shProj'(\boldsymbol{\Gamma}'_*(\shProj'(\sh{M})))
+    \xrightarrow{\beta'}
+    \shProj'(\sh{M})
+\tag{8.14.10.1}
+\]
+\[
+\label{II.8.14.10.2}
+    \boldsymbol{\Gamma}'_*(\sh{F}')
+    \xrightarrow{\alpha'}
+    \boldsymbol{\Gamma}'_*(\shProj'(\boldsymbol{\Gamma}'_*(\sh{F}')))
+    \xrightarrow{\boldsymbol{\Gamma}'_*(\beta')}
+    \boldsymbol{\Gamma}'_*(\sh{F}')
+\tag{8.14.10.2}
+\]
+son los isomorfismos identidad.
+\end{proposition}
+
+\begin{proof}
+La cuestión es local sobre $Y$, y la demostración se hace como en \sref{II.2.6.5};
+dejamos los detalles al lector.
+\end{proof}
+
+\begin{remark}[8.14.11]
+\label{II.8.14.11}
+En el capítulo~III \sref[III]{III.2.3.1}, veremos que, cuando $Y$ es \emph{localmente noetheriano} y $\sh{S}$ es una $\sh{O}_Y$-álgebra graduada cuasi-coherente \emph{de tipo finito} (en cuyo caso
+----- French corrections on page II 199 -----
+[id 3926]
+OLD: \alpha:\mathcal{S}\to\Gamma_*(\mathcal{S}_X)
+NEW: \alpha:\mathcal{S}\to\bbGamma_*(\mathcal{S}_X)
+FRENCH CONTEXT (corrected): 2.2-fr]{\textbf{0}, 4.2.2}). Lorsque
+\oldpage[II]{199}
+dans les homomorphismes (\hyperref[II.8.14.5.1-fr]{8.14.5.1}), on prend
+$\mathcal{M}=\mathcal{S}$, on obtient l'homomorphisme de
+$\mathcal{O}_Y$-Algèbres graduées
+\begin{equation}
+\label{II.8.14.5.3-fr}
+  \alpha:\mathcal{S}\to\bbGamma_*(\mathcal{S}_X)
+\tag{8.14.5.3}
+\end{equation}
+déjà défini dans (\hyperref[II.3.3.2-fr]{3.3.2}), et qui fait donc de
+$\bbGamma_*(\mathcal{F})$ un $\mathcal{S}$-\emph{Module gradué}~; les homomorphismes
+(\hyperref[II.8.14.5.1-fr]{8.14.5.1}) définissent alors un homomorphisme (
+
+[id 3927]
+OLD: $\Gamma_*(\mathcal{F})$ un
+NEW: $\bbGamma_*(\mathcal{F})$ un
+FRENCH CONTEXT (corrected): O}_X$-Modules $\mathcal{F}$ et $\mathcal{G}$~; on déduit
+donc de (\hyperref[II.3.2.7.1-fr]{3.2.7.1}) que
+$\bbGamma_*(\mathcal{O}_X)$ est muni d'une structure de
+$\mathcal{O}_Y$-\emph{Algèbre graduée}, et
+(\hyperref[II.3.2.5.2-fr]{3.2.5.2}) définit de même sur
+$\bbGamma_*(\mathcal{F})$ une structure de \emph{Module gradué} sur
+$\bbGamma_*(\mathcal{O}_X)$.
+
+En vertu de (\hyperref[II.3.2.5-fr]{3.2.5}), et de l'exactitude à gauche du
+foncteur $p_*$ (\hyperref[0.4.2.1-fr]{\textbf{0}, 4.2.1}),
+$\bbGamma_*(\mathcal{F})$ est un foncteur covariant add
+
+[id 3928]
+OLD: $\mathcal{S}$-Module gradué~;
+NEW: $\mathcal{S}$-\emph{Module gradué}~;
+FRENCH CONTEXT (corrected): isme de
+$\mathcal{O}_Y$-Algèbres graduées
+\begin{equation}
+\label{II.8.14.5.3-fr}
+  \alpha:\mathcal{S}\to\bbGamma_*(\mathcal{S}_X)
+\tag{8.14.5.3}
+\end{equation}
+déjà défini dans (\hyperref[II.3.3.2-fr]{3.3.2}), et qui fait donc de
+$\bbGamma_*(\mathcal{F})$ un $\mathcal{S}$-\emph{Module gradué}~; les homomorphismes
+(\hyperref[II.8.14.5.1-fr]{8.14.5.1}) définissent alors un homomorphisme (de
+degré $0$) de $\mathcal{S}$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.5.4-fr}
+  \alpha:\mathcal{M}\to\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M})).
+
+[id 3929]
+OLD: (de
+degré $0$) de $\mathcal{S}$-Modules gradués
+NEW: (de
+degré $0$) de $\mathcal{S}$-\emph{Modules gradués}
+FRENCH CONTEXT (corrected): )
+\tag{8.14.5.3}
+\end{equation}
+déjà défini dans (\hyperref[II.3.3.2-fr]{3.3.2}), et qui fait donc de
+$\bbGamma_*(\mathcal{F})$ un $\mathcal{S}$-\emph{Module gradué}~; les homomorphismes
+(\hyperref[II.8.14.5.1-fr]{8.14.5.1}) définissent alors un homomorphisme (de
+degré $0$) de $\mathcal{S}$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.5.4-fr}
+  \alpha:\mathcal{M}\to\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M})).
+\tag{8.14.5.4}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.6]
+\label{II.8.14.6-fr}
+En général, pour un $\mathcal{S}_X$-Module gradué quasi-cohérent
+
+[id 3930]
+OLD: \alpha:\mathcal{M}\to\Gamma_*(\operatorname{Proj}(\mathcal{M})).
+NEW: \alpha:\mathcal{M}\to\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M})).
+FRENCH CONTEXT (corrected): c de
+$\bbGamma_*(\mathcal{F})$ un $\mathcal{S}$-\emph{Module gradué}~; les homomorphismes
+(\hyperref[II.8.14.5.1-fr]{8.14.5.1}) définissent alors un homomorphisme (de
+degré $0$) de $\mathcal{S}$-\emph{Modules gradués}
+\begin{equation}
+\label{II.8.14.5.4-fr}
+  \alpha:\mathcal{M}\to\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M})).
+\tag{8.14.5.4}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.6]
+\label{II.8.14.6-fr}
+En général, pour un $\mathcal{S}_X$-Module gradué quasi-cohérent
+$\mathcal{F}$, il n'est pas certain que le $\mathcal{S}$-Module gradué
+$\bbGamma_*(\mathcal{F})$ soit nécessaire
+
+[id 3931]
+OLD: $\Gamma_*(\mathcal{F})$ soit
+NEW: $\bbGamma_*(\mathcal{F})$ soit
+FRENCH CONTEXT (corrected): _*(\mathcal{P}\mathit{roj}(\mathcal{M})).
+\tag{8.14.5.4}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.6]
+\label{II.8.14.6-fr}
+En général, pour un $\mathcal{S}_X$-Module gradué quasi-cohérent
+$\mathcal{F}$, il n'est pas certain que le $\mathcal{S}$-Module gradué
+$\bbGamma_*(\mathcal{F})$ soit nécessairement quasi-cohérent. Considérons un
+ouvert $X'$ de $X$ tel que la restriction $q':X'\to Y$ de $q$ à $X'$ soit
+un morphisme \emph{quasi-compact}. Comme $q'$ est en outre séparé,
+$q'_*(\mathcal{F}')$ est alors un $\mathcal{O}_Y$-Module quasi-cohérent 
+
+[id 3932]
+OLD: {I, 9.2.2,
+NEW: {\textbf{I}, 9.2.2,
+FRENCH CONTEXT (corrected): $ le morphisme
+structural. Pour tout $\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$,
+$f_*(\mathcal{F})$ est un $\mathcal{O}_S$-Module quasi-cohérent.
+\end{proposition}
+
+Compte tenu de (\hyperref[II.1.2.4-fr]{1.2.4}), cela résulte de
+(\hyperref[I.9.2.2-fr]{\textbf{I}, 9.2.2, \emph{a)}}).
+
+En particulier, la $\mathcal{O}_S$-Algèbre
+$\mathcal{A}(X)=f_*(\mathcal{O}_X)$ est \emph{quasi-cohérente}.
+
+\begin{proposition}[1.2.7]
+\label{II.1.2.7-fr}
+Soient $X$ un $S$-schéma affine au-dessus de $S$. Pour tout $S$-préschéma
+$Y$, l'applicati
+
+[id 3933]
+OLD: 9.2.2, b)}
+NEW: 9.2.2, \emph{b)}}
+FRENCH CONTEXT (corrected): cal{G}$ est un $\mathcal{O}_Y$-Module quasi-cohérent de type fini
+(dépendant de $n$).
+\end{corollary}
+
+\begin{proof}
+Comme le morphisme structural $X\to Y$ est séparé et de type fini,
+$p_*(\mathcal{F}(n))$ est quasi-cohérent
+(\hyperref[I.9.2.2-fr]{\textbf{I}, 9.2.2, \emph{b)}}), donc limite inductive de ses
+sous-$\mathcal{O}_Y$-Modules quasi-cohérents de type fini, en vertu de
+l'hypothèse sur $Y$ (\hyperref[I.9.4.9-fr]{\textbf{I}, 9.4.9}). On en déduit par
+(\hyperref[II.3.4.6-fr]{3.4.6}),
+(\hyperref[0.4.3.2-fr]{\textbf{0}, 4.3.2}) 
+
+[id 3934]
+OLD: \Gamma'_*(\mathcal{F}')=
+
+NEW: \bbGamma'_*(\mathcal{F}')=
+
+FRENCH CONTEXT (corrected): \begin{equation}
+\label{II.8.14.6.1-fr}
+  \mathcal{S}_{X'}=\mathcal{S}_X|X'
+  =\bigoplus_{n\in\mathbf{Z}}\mathcal{O}_X(n)|X'
+\tag{8.14.6.1}
+\end{equation}
+et, pour tout $\mathcal{S}_{X'}$-Module gradué $\mathcal{F}'$,
+\begin{equation}
+\label{II.8.14.6.2-fr}
+  \bbGamma'_*(\mathcal{F}')=
+  \bigoplus_{n\in\mathbf{Z}}q'_*(\mathcal{F}'_n).
+\tag{8.14.6.2}
+\end{equation}
+La remarque précédente montre alors que si $\mathcal{F}'$ est un
+$\mathcal{S}_{X'}$-Module quasi-cohérent, $\bbGamma'_*(\mathcal{F}')$ est un
+$\mathcal{S}$-Module gradué \emph{quas
+
+[id 3935]
+OLD: $\Gamma'_*(\mathcal{F}')$ est un
+NEW: $\bbGamma'_*(\mathcal{F}')$ est un
+FRENCH CONTEXT (corrected): '$,
+\begin{equation}
+\label{II.8.14.6.2-fr}
+  \bbGamma'_*(\mathcal{F}')=
+  \bigoplus_{n\in\mathbf{Z}}q'_*(\mathcal{F}'_n).
+\tag{8.14.6.2}
+\end{equation}
+La remarque précédente montre alors que si $\mathcal{F}'$ est un
+$\mathcal{S}_{X'}$-Module quasi-cohérent, $\bbGamma'_*(\mathcal{F}')$ est un
+$\mathcal{S}$-Module gradué \emph{quasi-cohérent}
+(\hyperref[I.9.6.1-fr]{\textbf{I}, 9.6.1}).
+
+On notera d'ailleurs que l'injection canonique $j:X'\to X$ est
+\emph{quasi-compacte} puisque $q'=q\circ j$ l'est et que $q$ est séparé
+(\hyperref[I.6.6.4-fr]{\textb
+
+[id 3936]
+OLD: Module gradué quasi-cohérent
+(
+NEW: Module gradué \emph{quasi-cohérent}
+(
+FRENCH CONTEXT (corrected): Gamma'_*(\mathcal{F}')=
+  \bigoplus_{n\in\mathbf{Z}}q'_*(\mathcal{F}'_n).
+\tag{8.14.6.2}
+\end{equation}
+La remarque précédente montre alors que si $\mathcal{F}'$ est un
+$\mathcal{S}_{X'}$-Module quasi-cohérent, $\bbGamma'_*(\mathcal{F}')$ est un
+$\mathcal{S}$-Module gradué \emph{quasi-cohérent}
+(\hyperref[I.9.6.1-fr]{\textbf{I}, 9.6.1}).
+
+On notera d'ailleurs que l'injection canonique $j:X'\to X$ est
+\emph{quasi-compacte} puisque $q'=q\circ j$ l'est et que $q$ est séparé
+(\hyperref[I.6.6.4-fr]{\textbf{I}, 6.6.4, (v)}). Par suite
+$\mathcal{F}=j_*(\math
+
+[id 3937]
+OLD: {I, 9.6.1}
+NEW: {\textbf{I}, 9.6.1}
+FRENCH CONTEXT (corrected): hcal{M})$ formé d'une
+$\mathcal{O}_S$-Algèbre quasi-cohérente $\mathcal{B}$ et d'un
+$\mathcal{B}$-Module $\mathcal{M}$ quasi-cohérent \textup{(en tant que
+$\mathcal{O}_S$-Module ou en tant que $\mathcal{B}$-Module, ce qui revient au
+même (\hyperref[I.9.6.1-fr]{\textbf{I}, 9.6.1}))}, il existe un couple
+$(X,\mathcal{F})$ formé d'un préschéma $X$ affine au-dessus de $S$ et d'un
+$\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$, tels que
+$\mathcal{A}(X)=\mathcal{B}$ et $\mathcal{A}(\mathcal{F})=\mathcal{M}$~; en
+outre ce couple est dé
+
+[id 3938]
+OLD: {I, 6.6.4,
+NEW: {\textbf{I}, 6.6.4,
+FRENCH CONTEXT (corrected): 1.2.5-fr]{1.2.5}) et recouvrent $X'$~; il résulte donc encore
+du lemme (\hyperref[II.4.6.13.1-fr]{4.6.13.1, (i)}) et de
+(\hyperref[II.4.5.2-fr]{4.5.2, \emph{a')}}) que $\mathcal{L}'$ est ample, le
+morphisme $f_{(Y')}$ étant quasi-compact
+(\hyperref[I.6.6.4-fr]{\textbf{I}, 6.6.4, (iii)}).
+
+Pour prouver (iv), notons d'abord que $f_1\times_S f_2$ est quasi-compact
+(\hyperref[I.6.6.4-fr]{\textbf{I}, 6.6.4, (iv)}). On peut en outre supposer $S$,
+$Y_1$ et $Y_2$ affines ((\hyperref[II.4.6.4-fr]{4.6.4}) et
+(\hyperref[I.3.2.7-fr]{\textbf{I}, 
+
+[id 3939]
+OLD: \Gamma'_*(\mathcal{F}')=\Gamma_*(\mathcal{F}).
+NEW: \bbGamma'_*(\mathcal{F}')=\bbGamma_*(\mathcal{F}).
+FRENCH CONTEXT (corrected):  suite
+$\mathcal{F}=j_*(\mathcal{F}')$ est un $\mathcal{S}_X$-Module gradué
+quasi-cohérent pour tout $\mathcal{S}_{X'}$-Module gradué quasi-cohérent
+$\mathcal{F}'$, et il résulte des définitions précédentes que l'on a
+\begin{equation}
+\label{II.8.14.6.3-fr}
+  \bbGamma'_*(\mathcal{F}')=\bbGamma_*(\mathcal{F}).
+\tag{8.14.6.3}
+\end{equation}
+Avec les mêmes hypothèses sur $X'$, pour tout $\mathcal{S}$-Module gradué
+quasi-cohérent $\mathcal{M}$, nous poserons
+\begin{equation}
+\label{II.8.14.6.4-fr}
+  \mathcal{P}\mathit{roj}'(\mathcal{M})
+  =\mathcal{P}\mathit{roj}(\mat
+
+[id 3940]
+OLD: \operatorname{Proj}'(\mathcal{M})
+  =\operatorname{Proj}(\mathcal{M})|X'
+NEW: \mathcal{P}\mathit{roj}'(\mathcal{M})
+  =\mathcal{P}\mathit{roj}(\mathcal{M})|X'
+FRENCH CONTEXT (corrected): {II.8.14.6.3-fr}
+  \bbGamma'_*(\mathcal{F}')=\bbGamma_*(\mathcal{F}).
+\tag{8.14.6.3}
+\end{equation}
+Avec les mêmes hypothèses sur $X'$, pour tout $\mathcal{S}$-Module gradué
+quasi-cohérent $\mathcal{M}$, nous poserons
+\begin{equation}
+\label{II.8.14.6.4-fr}
+  \mathcal{P}\mathit{roj}'(\mathcal{M})
+  =\mathcal{P}\mathit{roj}(\mathcal{M})|X'
+\tag{8.14.6.4}
+\end{equation}
+qui est un $\mathcal{S}_{X'}$-Module gradué quasi-cohérent. L'homomorphisme
+canonique
+\[
+  \mathcal{P}\mathit{roj}(\mathcal{M})\to
+  j_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))
+\]
+(\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3}) donne d
+
+[id 3941]
+OLD: \operatorname{Proj}(\mathcal{M})\to
+  j_*(\operatorname{Proj}'(\mathcal{M}))
+NEW: \mathcal{P}\mathit{roj}(\mathcal{M})\to
+  j_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))
+FRENCH CONTEXT (corrected): , nous poserons
+\begin{equation}
+\label{II.8.14.6.4-fr}
+  \mathcal{P}\mathit{roj}'(\mathcal{M})
+  =\mathcal{P}\mathit{roj}(\mathcal{M})|X'
+\tag{8.14.6.4}
+\end{equation}
+qui est un $\mathcal{S}_{X'}$-Module gradué quasi-cohérent. L'homomorphisme
+canonique
+\[
+  \mathcal{P}\mathit{roj}(\mathcal{M})\to
+  j_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))
+\]
+(\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3}) donne donc un homomorphisme canonique
+$\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\bbGamma'_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))$ de $\mathcal{S}$-Modules
+gradués, et par suite, en le composant avec
+(
+
+[id 3942]
+OLD: {0, 4.4.3}
+NEW: {\textbf{0}, 4.4.3}
+FRENCH CONTEXT (corrected): érer que $\widetilde{j}$
+applique $\widetilde{N}'$ dans $\Phi_*(\widetilde{N})$. Il correspond
+canoniquement à cet homomorphisme $\widetilde{j}$ un homomorphisme
+$h=\widetilde{j}^{\sharp}$ de $\Phi^*(\widetilde{N}')$ dans $\widetilde{N}$
+(\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3})~; on va voir que pour chaque fibre,
+$h_x$ est \emph{bijectif}. Posons $x'={}^a\varphi(x)$ et soit $f'\in A'$
+tel que $x'\in D(f')$~; soit $f=\varphi(f')$. L'anneau
+$\Gamma(D(f),\widetilde{A})$ s'identifie à $A_f$, les modules
+$\Gamma(D(f),\widetilde{N})$ et 
+
+[id 3943]
+OLD: $\Gamma_*(\operatorname{Proj}(\mathcal{M}))\to
+\Gamma'_*(\operatorname{Proj}'(\mathcal{M}))$
+NEW: $\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\bbGamma'_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))$
+FRENCH CONTEXT (corrected): qui est un $\mathcal{S}_{X'}$-Module gradué quasi-cohérent. L'homomorphisme
+canonique
+\[
+  \mathcal{P}\mathit{roj}(\mathcal{M})\to
+  j_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))
+\]
+(\hyperref[0.4.4.3-fr]{\textbf{0}, 4.4.3}) donne donc un homomorphisme canonique
+$\bbGamma_*(\mathcal{P}\mathit{roj}(\mathcal{M}))\to
+\bbGamma'_*(\mathcal{P}\mathit{roj}'(\mathcal{M}))$ de $\mathcal{S}$-Modules
+gradués, et par suite, en le composant avec
+(\hyperref[II.8.14.5.4-fr]{8.14.5.4}), on obtient un homomorphisme canonique
+fonctoriel (de degré $0$) de $\mathcal{S}$-Modules gradués quasi-cohérents
+\begin{equation}
+\label{II.8.14.6.5-fr
+
+[id 3944]
+OLD: \alpha':\mathcal{M}\to
+  \Gamma'_*(\operatorname{Proj}'(\mathcal{M})).
+NEW: \alpha':\mathcal{M}\to
+  \bbGamma'_*(\mathcal{P}\mathit{roj}'(\mathcal{M})).
+FRENCH CONTEXT (corrected): $\mathcal{S}$-Modules
+gradués, et par suite, en le composant avec
+(\hyperref[II.8.14.5.4-fr]{8.14.5.4}), on obtient un homomorphisme canonique
+fonctoriel (de degré $0$) de $\mathcal{S}$-Modules gradués quasi-cohérents
+\begin{equation}
+\label{II.8.14.6.5-fr}
+  \alpha':\mathcal{M}\to
+  \bbGamma'_*(\mathcal{P}\mathit{roj}'(\mathcal{M})).
+\tag{8.14.6.5}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.7]
+\label{II.8.14.7-fr}
+Conservons sur $X'$ les hypothèses de
+(\hyperref[II.8.14.6-fr]{8.14.6}), et soit $\mathcal{F}'$ un
+$\mathcal{S}_{X'}$-\emph{Module gradué quasi-cohérent}, de sorte que
+$\mathcal
+
+[id 3945]
+OLD: Module gradué quasi-cohérent, de sorte
+NEW: \emph{Module gradué quasi-cohérent}, de sorte
+FRENCH CONTEXT (corrected): M}\to
+  \bbGamma'_*(\mathcal{P}\mathit{roj}'(\mathcal{M})).
+\tag{8.14.6.5}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.7]
+\label{II.8.14.7-fr}
+Conservons sur $X'$ les hypothèses de
+(\hyperref[II.8.14.6-fr]{8.14.6}), et soit $\mathcal{F}'$ un
+$\mathcal{S}_{X'}$-\emph{Module gradué quasi-cohérent}, de sorte que
+$\mathcal{P}\mathit{roj}'(\bbGamma'_*(\mathcal{F}'))$ est aussi un
+$\mathcal{S}_{X'}$-Module gradué \emph{quasi-\oldpage[II]{200}cohérent}. Nous allons définir un
+homomorphisme canonique fonctoriel (de degré $0$) de
+$\mathcal{S}_{X'}$-Modules gradués
+\beg
+
+[id 3946]
+OLD: $\operatorname{Proj}'(\Gamma'_*(\mathcal{F}'))$ est aussi
+NEW: $\mathcal{P}\mathit{roj}'(\bbGamma'_*(\mathcal{F}'))$ est aussi
+FRENCH CONTEXT (corrected): cal{M})).
+\tag{8.14.6.5}
+\end{equation}
+\end{env}
+
+\begin{env}[8.14.7]
+\label{II.8.14.7-fr}
+Conservons sur $X'$ les hypothèses de
+(\hyperref[II.8.14.6-fr]{8.14.6}), et soit $\mathcal{F}'$ un
+$\mathcal{S}_{X'}$-\emph{Module gradué quasi-cohérent}, de sorte que
+$\mathcal{P}\mathit{roj}'(\bbGamma'_*(\mathcal{F}'))$ est aussi un
+$\mathcal{S}_{X'}$-Module gradué \emph{quasi-\oldpage[II]{200}cohérent}. Nous allons définir un
+homomorphisme canonique fonctoriel (de degré $0$) de
+$\mathcal{S}_{X'}$-Modules gradués
+\begin{equation}
+\label{II.8.14.7.1-fr}
+  \beta':\mathcal{P}\mathit{roj}
+
+[id 3948]
+OLD: \beta':\operatorname{Proj}'(\Gamma'_*(\mathcal{F}'))\to
+NEW: \beta':\mathcal{P}\mathit{roj}'(\bbGamma'_*(\mathcal{F}'))\to
+FRENCH CONTEXT (corrected): a'_*(\mathcal{F}'))$ est aussi un
+$\mathcal{S}_{X'}$-Module gradué \emph{quasi-\oldpage[II]{200}cohérent}. Nous allons définir un
+homomorphisme canonique fonctoriel (de degré $0$) de
+$\mathcal{S}_{X'}$-Modules gradués
+\begin{equation}
+\label{II.8.14.7.1-fr}
+  \beta':\mathcal{P}\mathit{roj}'(\bbGamma'_*(\mathcal{F}'))\to\mathcal{F}'.
+\tag{8.14.7.1}
+\end{equation}
+
+Supposons d'abord $Y=\operatorname{Spec}(A)$ affine,
+$\mathcal{S}=\widetilde{S}$, où $S$ est une $A$-algèbre graduée à degrés
+positifs~; alors $\bbGamma'_*(\mathcal{F}')=\widetilde{M}$, où
+$M=\bigoplus_{\mathbf{Z}\i
+

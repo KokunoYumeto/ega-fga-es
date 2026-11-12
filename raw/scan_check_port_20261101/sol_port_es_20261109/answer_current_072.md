@@ -1,0 +1,1023 @@
+```json
+[
+  {
+    "id": 20852,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "es inyectivo ($0_{\\mathrm I}$, 6.5.1);",
+    "en_new": "es inyectivo ($\\mathbf 0_{\\mathrm I}$, 6.5.1);"
+  },
+  {
+    "id": 20854,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "Designemos por $\\mathbf P(f,x)$",
+    "en_new": "Designemos por $\\boldsymbol{P}(f,x)$"
+  },
+  {
+    "id": 20855,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$h:Y\\to Z$, $\\mathbf P(f,x)$",
+    "en_new": "$h:Y\\to Z$, $\\boldsymbol{P}(f,x)$"
+  },
+  {
+    "id": 20856,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$\\mathbf P(h\\circ f,x)$",
+    "en_new": "$\\boldsymbol{P}(h\\circ f,x)$"
+  },
+  {
+    "id": 20857,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "está sobre $x$, las propiedades $\\mathbf P(f,x)$",
+    "en_new": "está sobre $x$, las propiedades $\\boldsymbol{P}(f,x)$"
+  },
+  {
+    "id": 20858,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$\\mathbf P(f',x')$ son equivalentes",
+    "en_new": "$\\boldsymbol{P}(f',x')$ son equivalentes"
+  },
+  {
+    "id": 20859,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "Entonces las propiedades $\\mathbf P(f,x)$",
+    "en_new": "Entonces las propiedades $\\boldsymbol{P}(f,x)$"
+  },
+  {
+    "id": 20860,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$\\mathbf P(g,x)$ son equivalentes.",
+    "en_new": "$\\boldsymbol{P}(g,x)$ son equivalentes."
+  },
+  {
+    "id": 20861,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "(«invariancia por cambio de base étale»)",
+    "en_new": "\\textup{(«invariancia por cambio de base étale»)}"
+  },
+  {
+    "id": 20863,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$\\mathbf P(f',x')$ (resp.",
+    "en_new": "$\\boldsymbol{P}(f',x')$ (resp."
+  },
+  {
+    "id": 20864,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$\\mathbf P(g',x')$)",
+    "en_new": "$\\boldsymbol{P}(g',x')$)"
+  },
+  {
+    "id": 20865,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "equivalente a $\\mathbf P(f,x)$",
+    "en_new": "equivalente a $\\boldsymbol{P}(f,x)$"
+  },
+  {
+    "id": 20866,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "(resp. $\\mathbf P(g,x)$)",
+    "en_new": "(resp. $\\boldsymbol{P}(g,x)$)"
+  },
+  {
+    "id": 20867,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "que $\\mathbf P(g,x)$ es entonces",
+    "en_new": "que $\\boldsymbol{P}(g,x)$ es entonces"
+  },
+  {
+    "id": 20868,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "$\\mathbf P(h\\circ g,x)$",
+    "en_new": "$\\boldsymbol{P}(h\\circ g,x)$"
+  },
+  {
+    "id": 20869,
+    "decision": "not_applicable",
+    "note": "Cambio de entorno del francés; el español ya tiene el encabezado «Ejemplos»."
+  },
+  {
+    "id": 20870,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "tomar como propiedad $\\mathbf P(f,x)$",
+    "en_new": "tomar como propiedad $\\boldsymbol{P}(f,x)$"
+  },
+  {
+    "id": 20871,
+    "decision": "not_applicable",
+    "note": "Cierre del cambio de entorno francés de 20869."
+  },
+  {
+    "id": 20872,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "\\item[\\textup{(i)}] Sean $f:X\\to Y$ un morfismo localmente de tipo finito y $x$ un punto de $X$."
+  },
+  {
+    "id": 20874,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "(en particular, $\\sh{O}_{X,x}$ es una $\\sh{O}_{Y,f(x)}$-álgebra \\emph{esencialmente étale} (18.6.1))",
+    "en_new": "\\textup{(en particular, $\\sh{O}_{X,x}$ es una $\\sh{O}_{Y,f(x)}$-álgebra \\emph{esencialmente étale} (18.6.1))}"
+  },
+  {
+    "id": 20875,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "\\item[\\textup{(ii)}] Para que un morfismo $f:X\\to Y$ sea étale"
+  },
+  {
+    "id": 20876,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "($0_{\\mathrm I}$, 6.5.1 y 6.6.2)",
+    "en_new": "($\\mathbf 0_{\\mathrm I}$, 6.5.1 y 6.6.2)"
+  },
+  {
+    "id": 20880,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "(lo que equivale a decir ($0_{\\mathrm I}$, 6.3.3) que, para todo ideal maximal $\\mathfrak n$ de $B$ (necesariamente sobre $\\mathfrak m$), $B_{\\mathfrak n}$ es un $A$-módulo plano).",
+    "en_new": "\\textup{(lo que equivale a decir ($\\mathbf 0_{\\mathrm I}$, 6.3.3) que, para todo ideal maximal $\\mathfrak n$ de $B$ (necesariamente sobre $\\mathfrak m$), $B_{\\mathfrak n}$ es un $A$-módulo plano).}"
+  },
+  {
+    "id": 20881,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-18-es/components/04_18_4.tex",
+    "en_old": "($0_{\\mathrm I}$, 6.3.3)",
+    "note": "covered by 20880"
+  },
+  {
+    "id": 20884,
+    "decision": "not_applicable",
+    "note": "Versalitas de nombres propios: tipografía del francés."
+  },
+  {
+    "id": 20887,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "de la categoría de los $X$-preesquemas en la de los \\emph{conjuntos}",
+    "en_new": "de la categoría de los $X$-\\emph{preesquemas} en la de los \\emph{conjuntos}"
+  },
+  {
+    "id": 20888,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 8.1.8)",
+    "en_new": "($\\mathbf 0_{\\mathrm{III}}$, 8.1.8)"
+  },
+  {
+    "id": 20889,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "($0_{\\mathrm I}$, 4.4.3.2)",
+    "en_new": "($\\mathbf 0_{\\mathrm I}$, 4.4.3.2)"
+  },
+  {
+    "id": 20898,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$\\Gamma(\\mathbf V(\\check{\\sh{E}}_{(X')})/X')\\to\\Gamma(X',\\sh{E}_{(X')})$",
+    "en_new": "$\\Gamma(\\mathbf V(\\check{\\sh{E}}_{(X')})/X')\\xrightarrow{\\sim}\\Gamma(X',\\sh{E}_{(X')})$"
+  },
+  {
+    "id": 20901,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 8.1.6)",
+    "en_new": "($\\mathbf 0_{\\mathrm{III}}$, 8.1.6)"
+  },
+  {
+    "id": 20903,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 20904,
+    "decision": "not_applicable",
+    "note": "Presentación de fórmula y separación de párrafos."
+  },
+  {
+    "id": 20913,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea; el tamaño de los paréntesis no cambia su significado."
+  },
+  {
+    "id": 20917,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Para todo morfismo finito $g:S'\\to S$, la aplicación canónica",
+    "en_new": "Para todo morfismo \\textup{finito} $g:S'\\to S$, la aplicación canónica"
+  },
+  {
+    "id": 20919,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\item[a')] Para todo morfismo finito y localmente libre",
+    "en_new": "\\item[\\textup{a$'$)}] Para todo morfismo finito y localmente libre"
+  },
+  {
+    "id": 20920,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "finito y localmente libre $g:S'\\to S$, la aplicación \\textup{(18.5.4.1)}",
+    "en_new": "\\textup{finito y localmente libre} $g:S'\\to S$, la aplicación \\textup{(18.5.4.1)}"
+  },
+  {
+    "id": 20923,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Para todo morfismo étale y separado $g:S'\\to S$, la aplicación canónica",
+    "en_new": "Para todo morfismo \\textup{étale y separado} $g:S'\\to S$, la aplicación canónica"
+  },
+  {
+    "id": 20925,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "La condición $b)$ implica $a')$; si además $S$ es cuasicompacto y cuasiseparado, la condición $a)$ implica $b)$.",
+    "en_new": "La condición \\textup{b)} implica \\textup{a$'$)}; si además $S$ es cuasicompacto y cuasiseparado, la condición \\textup{a)} implica \\textup{b)}."
+  },
+  {
+    "id": 20926,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Demostremos primero que $b)$ implica $a')$. Supongamos, pues, verificada $b)$",
+    "en_new": "Demostremos primero que \\emph{b)} implica \\emph{a$'$)}. Supongamos, pues, verificada \\emph{b)}"
+  },
+  {
+    "id": 20929,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Como la hipótesis $b)$, aplicada",
+    "en_new": "Como la hipótesis \\emph{b)}, aplicada"
+  },
+  {
+    "id": 20930,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Antes de demostrar que $a)$ implica $b)$ cuando",
+    "en_new": "Antes de demostrar que \\emph{a)} implica \\emph{b)} cuando"
+  },
+  {
+    "id": 20931,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "verifican la condición $a)$ de (18.5.4), entonces",
+    "en_new": "verifican la condición \\textup{a)} de \\textup{(18.5.4)}, entonces"
+  },
+  {
+    "id": 20932,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "para todo morfismo finito $g:S'\\to S$, $S'$ es la única",
+    "en_new": "para todo morfismo \\textup{finito} $g:S'\\to S$, $S'$ es la única"
+  },
+  {
+    "id": 20933,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "la condición $a)$ aplicada al morfismo",
+    "en_new": "la condición \\emph{a)} aplicada al morfismo"
+  },
+  {
+    "id": 20934,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "bajo la hipótesis $a)$, la aplicación (18.5.4.2) es \\emph{inyectiva}",
+    "en_new": "bajo la hipótesis \\emph{a)}, la aplicación (18.5.4.2) es \\emph{inyectiva}"
+  },
+  {
+    "id": 20935,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "bajo la hipótesis $a)$, la aplicación (18.5.4.2) es \\emph{sobreyectiva}",
+    "en_new": "bajo la hipótesis \\emph{a)}, la aplicación (18.5.4.2) es \\emph{sobreyectiva}"
+  },
+  {
+    "id": 20939,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "En virtud de la hipótesis $a)$, existe",
+    "en_new": "En virtud de la hipótesis \\emph{a)}, existe"
+  },
+  {
+    "id": 20940,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$s\\mapsto n(s)$",
+    "en_new": "$s\\leadsto n(s)$"
+  },
+  {
+    "id": 20942,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "en la condición $b)$, se supone",
+    "en_new": "en la condición \\emph{b)}, se supone"
+  },
+  {
+    "id": 20943,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "si verifican la condición $a)$ de (18.5.4).",
+    "en_new": "si verifican la condición \\textup{a)} de \\textup{(18.5.4)}."
+  },
+  {
+    "id": 20949,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Se dice que un anillo $A$ es \\emph{henseliano} si es semilocal",
+    "en_new": "Se dice que un anillo $A$ es henseliano si es semilocal"
+  },
+  {
+    "id": 20950,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Se llama \\emph{esquema local henseliano} a un esquema",
+    "en_new": "Se llama esquema local henseliano a un esquema"
+  },
+  {
+    "id": 20953,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "toda $A$-álgebra finita $B$ sea isomorfa a un producto de anillos locales.",
+    "en_new": "toda $A$-álgebra finita $B$ sea isomorfa a un producto de anillos \\textup{locales}."
+  },
+  {
+    "id": 20954,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "(y, por tanto, un producto directo de anillos locales henselianos (18.5.9))",
+    "en_new": "\\textup{(y, por tanto,} un producto directo de anillos locales henselianos \\textup{(18.5.9))}"
+  },
+  {
+    "id": 20956,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\item[a')] La condición",
+    "en_new": "\\item[\\textup{a$'$)}] La condición"
+  },
+  {
+    "id": 20957,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$a)$ se satisface para todas",
+    "en_new": "\\textup{a)} se satisface para todas"
+  },
+  {
+    "id": 20962,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$f|X':X'\\to S$ sea un morfismo finito.",
+    "en_new": "$f|X':X'\\to S$ sea un morfismo \\textup{finito}."
+  },
+  {
+    "id": 20963,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\item[c')] Para todo morfismo localmente de tipo finito",
+    "en_new": "\\item[\\textup{c$'$)}] Para todo morfismo localmente de tipo finito"
+  },
+  {
+    "id": 20964,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\item[c'')] Para todo morfismo localmente de presentación finita",
+    "en_new": "\\item[\\textup{c$''$)}] Para todo morfismo localmente de presentación finita"
+  },
+  {
+    "id": 20967,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Del mismo modo, la condición $b)$ es",
+    "en_new": "Del mismo modo, la condición \\emph{b)} es"
+  },
+  {
+    "id": 20968,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "en $b)$, \\emph{c$'$)} y \\emph{c$''$)}, los morfismos",
+    "en_new": "en \\emph{b)}, \\emph{c$'$)} y \\emph{c$''$)}, los morfismos"
+  },
+  {
+    "id": 20969,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "El hecho de que $a)$ implique $b)$ y de que $b)$ implique \\emph{a$'$)} es",
+    "en_new": "El hecho de que \\emph{a)} implique \\emph{b)} y de que \\emph{b)} implique \\emph{a$'$)} es"
+  },
+  {
+    "id": 20970,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Demostremos además que \\emph{a$'$)} implica $a)$.",
+    "en_new": "Demostremos además que \\emph{a$'$)} implica \\emph{a)}."
+  },
+  {
+    "id": 20972,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Es inmediato que $c)$ implica $a)$, como",
+    "en_new": "Es inmediato que \\emph{c)} implica \\emph{a)}, como"
+  },
+  {
+    "id": 20973,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Para ver que $a)$ implica $c)$, puede",
+    "en_new": "Para ver que \\emph{a)} implica \\emph{c)}, puede"
+  },
+  {
+    "id": 20974,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 20975,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "se deduce de $a)$ que $B$ es un producto",
+    "en_new": "se deduce de \\emph{a)} que $B$ es un producto"
+  },
+  {
+    "id": 20976,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Es trivial que $c)$ implica \\emph{c$'$)}, en virtud",
+    "en_new": "Es trivial que \\emph{c)} implica \\emph{c$'$)}, en virtud"
+  },
+  {
+    "id": 20977,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Demostremos que \\emph{c$'$)} implica $c'')$. Supongamos, en efecto, verificada \\emph{c$'$)}",
+    "en_new": "Demostremos que \\emph{c$'$)} implica \\emph{c$''$)}. Supongamos, en efecto, verificada \\emph{c$'$)}"
+  },
+  {
+    "id": 20981,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "lo que establecerá $c'')$",
+    "en_new": "lo que establecerá \\emph{c$''$)}"
+  },
+  {
+    "id": 20990,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Por último, $c'')$ implica \\emph{a$'$)}",
+    "en_new": "Por último, \\emph{c$''$)} implica \\emph{a$'$)}"
+  },
+  {
+    "id": 20991,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "para todo morfismo finito $f:X\\to S$ y todo",
+    "en_new": "para todo morfismo \\textup{finito} $f:X\\to S$ y todo"
+  },
+  {
+    "id": 20992,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "morfismo étale y separado $g:Y\\to S$",
+    "en_new": "morfismo \\textup{étale y separado} $g:Y\\to S$"
+  },
+  {
+    "id": 20993,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$X_0=X\\times_S S_0$ y $Y_0=Y\\times_S S_0$",
+    "en_new": "$X_0=X\\times_S S_0$ \\textup{y} $Y_0=Y\\times_S S_0$"
+  },
+  {
+    "id": 20994,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "la equivalencia de $a)$ y $b)$ en (18.5.11)",
+    "en_new": "la equivalencia de \\emph{a)} y \\emph{b)} en (18.5.11)"
+  },
+  {
+    "id": 20995,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "del hecho de que $a)$ implica $b)$ en (18.5.4)",
+    "en_new": "del hecho de que \\emph{a)} implica \\emph{b)} en (18.5.4)"
+  },
+  {
+    "id": 20996,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Las condiciones equivalentes $a)$, \\emph{a$'$)}, $b)$ del teorema",
+    "en_new": "Las condiciones equivalentes \\emph{a)}, \\emph{a$'$)}, \\emph{b)} del teorema"
+  },
+  {
+    "id": 20997,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\item[a'')] Para todo polinomio mónico",
+    "en_new": "\\item[\\textup{a$''$)}] \\itshape Para todo polinomio mónico"
+  },
+  {
+    "id": 20998,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "dos polinomios mónicos primos entre sí $G_0$",
+    "en_new": "dos polinomios mónicos \\textup{primos entre sí} $G_0$"
+  },
+  {
+    "id": 21000,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "las condiciones \\emph{a$'$)} y $a'')$ son",
+    "en_new": "las condiciones \\emph{a$'$)} y \\emph{a$''$)} son"
+  },
+  {
+    "id": 21001,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "(donde $\\mathfrak r$ es el radical de $A$), es henseliano",
+    "en_new": "\\textup{(}donde $\\mathfrak r$ es el radical de $A$\\textup{)}, es henseliano"
+  },
+  {
+    "id": 24776,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$R=QH$ y $S=PG$",
+    "en_new": "$R=PG$ y $S=QH$"
+  },
+  {
+    "id": 21005,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$B\\longmapsto B/\\mathfrak rB$",
+    "en_new": "$B\\leadsto B/\\mathfrak rB$"
+  },
+  {
+    "id": 21006,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\item[(ii)] Sean $A$ un anillo noetheriano",
+    "en_new": "\\item[(ii)] Sean $A$ un anillo \\emph{noetheriano}"
+  },
+  {
+    "id": 21008,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "\\operatorname{Idem}(A)=\\varprojlim_n\\operatorname{Idem}(A/\\mathfrak J^n)",
+    "en_new": "\\operatorname{Idem}(A)=\\varprojlim\\operatorname{Idem}(A/\\mathfrak J^n)",
+    "note": "Se conserva la presentación en bloque del español."
+  },
+  {
+    "id": 21010,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "(donde $X_s=f^{-1}(s)$) es sobreyectiva",
+    "en_new": "\\textup{(}donde $X_s=f^{-1}(s)$\\textup{)} es sobreyectiva"
+  },
+  {
+    "id": 21013,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "puede suponerse que $f$ es étale. La conclusión",
+    "en_new": "puede suponerse que $f$ es \\emph{étale}. La conclusión"
+  },
+  {
+    "id": 21014,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "del criterio (18.5.11, $b)$). (El lector",
+    "en_new": "del criterio (18.5.11, \\emph{b)}). (El lector"
+  },
+  {
+    "id": 21017,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "Es inmediato que $d)$ implica la condición $b)$ de (18.5.11), pues",
+    "en_new": "Es inmediato que \\emph{d)} implica la condición \\emph{b)} de (18.5.11), pues"
+  },
+  {
+    "id": 21018,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "y demostremos $d)$. La hipótesis de $d)$ implica",
+    "en_new": "y demostremos \\emph{d)}. La hipótesis de \\emph{d)} implica"
+  },
+  {
+    "id": 21020,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "la condición $c)$ de (18.5.11), $\\sh{O}",
+    "en_new": "la condición \\emph{c)} de (18.5.11), $\\sh{O}"
+  },
+  {
+    "id": 21021,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "$Y\\longmapsto Y\\cap X_s$",
+    "en_new": "$Y\\leadsto Y\\cap X_s$"
+  },
+  {
+    "id": 21024,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/05_18_5.tex",
+    "en_old": "(18.5.11, $c)$ que $S'$",
+    "en_new": "(18.5.11, \\emph{c)}) que $S'$"
+  },
+  {
+    "id": 21027,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "$S=B-\\mathfrak n$",
+    "en_new": "$S=B\\setmin\\mathfrak n$"
+  },
+  {
+    "id": 21031,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "Entonces, para todo anillo local henseliano $B$, la aplicación canónica",
+    "en_new": "Entonces, para todo anillo local \\textup{henseliano} $B$, la aplicación canónica"
+  },
+  {
+    "id": 21032,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "puesto que $k(x)=k(s)$",
+    "en_new": "puesto que $\\boldsymbol k(x)=\\boldsymbol k(s)$"
+  },
+  {
+    "id": 21033,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "y que $k(x')=k(y)$. Hay que",
+    "en_new": "y que $\\boldsymbol k(x')=\\boldsymbol k(y)$. Hay que"
+  },
+  {
+    "id": 21034,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "el cuerpo $k(x')=k(y)$",
+    "en_new": "el cuerpo $\\boldsymbol k(x')=\\boldsymbol k(y)$"
+  },
+  {
+    "id": 21036,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "henseliano y de (18.5.11, $b)$).",
+    "en_new": "henseliano y de (18.5.11, \\emph{b)})."
+  },
+  {
+    "id": 21037,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "el criterio (18.5.11, $b)$) significa",
+    "en_new": "el criterio (18.5.11, \\emph{b)}) significa"
+  },
+  {
+    "id": 21040,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "las hipótesis $k(x_1)=k(x_2)=k(s)$",
+    "en_new": "las hipótesis $\\boldsymbol k(x_1)=\\boldsymbol k(x_2)=\\boldsymbol k(s)$"
+  },
+  {
+    "id": 21041,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "y que $k(x_3)=k(s)$",
+    "en_new": "y que $\\boldsymbol k(x_3)=\\boldsymbol k(s)$"
+  },
+  {
+    "id": 21045,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "Como $k(x_3)=k(x_2)$",
+    "en_new": "Como $\\boldsymbol k(x_3)=\\boldsymbol k(x_2)$"
+  },
+  {
+    "id": 21046,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "Se llama \\emph{henselizado} de un anillo local",
+    "en_new": "Se llama henselizado de un anillo local"
+  },
+  {
+    "id": 24777,
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": 21054,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "en (17.6.1), $a)$ implica $c')$, se deduce",
+    "en_new": "en (17.6.1), \\emph{a)} implica \\emph{c$'$)}, se deduce"
+  },
+  {
+    "id": 21057,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "apliquemos el criterio (18.5.11, $b)$).",
+    "en_new": "apliquemos el criterio (18.5.11, \\emph{b)})."
+  },
+  {
+    "id": 21058,
+    "decision": "not_applicable",
+    "note": "Fórmulas presentadas en línea en vez de en bloque."
+  },
+  {
+    "id": 21059,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "se tiene $k(x_\\lambda)=k(s_\\lambda)$",
+    "en_new": "se tiene $\\boldsymbol k(x_\\lambda)=\\boldsymbol k(s_\\lambda)$"
+  },
+  {
+    "id": 21060,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\Hom.\\operatorname{loc}({}^h\\!A,B)=\\varprojlim_\\lambda\\Hom.\\operatorname{loc}(A_\\lambda,B)",
+    "en_new": "\\Hom.\\operatorname{loc}({}^h\\!A,B)\\cong\\varprojlim\\Hom.\\operatorname{loc}(A_\\lambda,B)",
+    "note": "Se conserva la presentación en bloque del español."
+  },
+  {
+    "id": 21061,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "(\\mathfrak m.{}^h\\!A)^n=\\mathfrak m^n.{}^h\\!A=\\varinjlim_\\lambda\\mathfrak m_\\lambda^n.",
+    "en_new": "(\\mathfrak m.{}^h\\!A)^n=\\mathfrak m^n.{}^h\\!A=\\varinjlim\\mathfrak m_\\lambda^n.",
+    "note": "Se conserva la presentación en bloque del español."
+  },
+  {
+    "id": 21062,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "{}^h\\!A/(\\mathfrak m.{}^h\\!A)^n=\\varinjlim_\\lambda(A_\\lambda/\\mathfrak m_\\lambda^n),",
+    "en_new": "{}^h\\!A/(\\mathfrak m.{}^h\\!A)^n=\\varinjlim(A_\\lambda/\\mathfrak m_\\lambda^n),",
+    "note": "Se conserva la presentación en bloque del español."
+  },
+  {
+    "id": 21063,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "Sea ahora $A$ un anillo semilocal y sean",
+    "en_new": "Sea ahora $A$ un anillo \\emph{semilocal} y sean"
+  },
+  {
+    "id": 21064,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "al anillo producto $\\prod_i{}^h(A_{\\mathfrak m_i})$",
+    "en_new": "al anillo \\emph{producto} $\\prod_i{}^h(A_{\\mathfrak m_i})$"
+  },
+  {
+    "id": 21068,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "son dos anillos semilocales de radicales",
+    "en_new": "son dos anillos \\emph{semilocales} de radicales"
+  },
+  {
+    "id": 21069,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "en llamar \\emph{homomorfismo semilocal} de $A$",
+    "en_new": "en llamar homomorfismo \\emph{semilocal} de $A$"
+  },
+  {
+    "id": 21070,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 21072,
+    "decision": "not_applicable",
+    "note": "Fórmulas presentadas en línea en vez de en bloque."
+  },
+  {
+    "id": 21073,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 21074,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[(i)] Para que ${}^h\\!A$ sea reducido (resp. normal), es necesario",
+    "en_new": "\\item[\\textup{(i)}] Para que ${}^h\\!A$ sea reducido \\textup{(resp.} normal\\textup{)}, es necesario"
+  },
+  {
+    "id": 21077,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "(lo que implica que las fibras del morfismo canónico $\\Spec({}^h\\!A)\\to\\Spec(A)$ son \\emph{geométricamente regulares})",
+    "en_new": "\\textup{(lo que implica que las fibras del morfismo canónico $\\Spec({}^h\\!A)\\to\\Spec(A)$ son \\emph{geométricamente regulares})}"
+  },
+  {
+    "id": 21079,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$a)$] ser un anillo",
+    "en_new": "\\item[\\textup{a)}] ser un anillo"
+  },
+  {
+    "id": 21081,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\textup{(0, 16.5.3)}",
+    "en_new": "\\textup{(\\textbf{0}, 16.5.3)}"
+  },
+  {
+    "id": 21082,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$b)$] verificar la propiedad $(S_n)$",
+    "en_new": "\\item[\\textup{b)}] verificar la propiedad $(S_n)$"
+  },
+  {
+    "id": 21084,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$c)$] ser regular",
+    "en_new": "\\item[\\textup{c)}] ser regular"
+  },
+  {
+    "id": 21085,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$d)$] verificar la propiedad $(R_n)$",
+    "en_new": "\\item[\\textup{d)}] verificar la propiedad $(R_n)$"
+  },
+  {
+    "id": 21087,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$a)$] $A$ es unirrama",
+    "en_new": "\\item[\\textup{a)}] $A$ es unirrama"
+  },
+  {
+    "id": 21088,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "(0, 23.2.1) (resp. reducido y unirrama)",
+    "en_new": "\\textup{(\\textbf{0}, 23.2.1) (resp.} reducido y unirrama\\textup{)}"
+  },
+  {
+    "id": 21089,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "(0, 23.2.1)",
+    "note": "covered by 21088"
+  },
+  {
+    "id": 21090,
+    "decision": "not_applicable",
+    "note": "Ortografía francesa de «unibranche»."
+  },
+  {
+    "id": 21091,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$b)$] Para toda $A$-álgebra",
+    "en_new": "\\item[\\textup{b)}] Para toda $A$-álgebra"
+  },
+  {
+    "id": 21092,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "$\\Spec(A')$ es irreducible (resp. íntegro).",
+    "en_new": "$\\Spec(A')$ es irreducible \\textup{(resp.} íntegro\\textup{)}."
+  },
+  {
+    "id": 21093,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "\\item[$c)$] $\\Spec",
+    "en_new": "\\item[\\textup{c)}] $\\Spec"
+  },
+  {
+    "id": 21094,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "{}^h\\!A)$ es irreducible (resp. íntegro).",
+    "en_new": "{}^h\\!A)$ es irreducible \\textup{(resp.} íntegro\\textup{)}."
+  },
+  {
+    "id": 21095,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "el caso en que $A$ es reducido y, por tanto, también",
+    "en_new": "el caso en que $A$ es \\emph{reducido} y, por tanto, también"
+  },
+  {
+    "id": 21096,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "la condición $b)$ significa",
+    "en_new": "la condición \\emph{b)} significa"
+  },
+  {
+    "id": 21097,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "y por tanto $b)$ implica $c)$.",
+    "en_new": "y por tanto \\emph{b)} implica \\emph{c)}."
+  },
+  {
+    "id": 21098,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "y por tanto $c)$ implica $b)$.",
+    "en_new": "y por tanto \\emph{c)} implica \\emph{b)}."
+  },
+  {
+    "id": 21100,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "Demostremos que $c)$ implica $a)$. Observemos",
+    "en_new": "Demostremos que \\emph{c)} implica \\emph{a)}. Observemos"
+  },
+  {
+    "id": 21101,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "Demostremos por último que $a)$ implica $c)$.",
+    "en_new": "Demostremos por último que \\emph{a)} implica \\emph{c)}."
+  },
+  {
+    "id": 21105,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "($0_{\\mathrm{III}}$, 10.3.1.3)",
+    "en_new": "($\\mathbf 0_{\\mathrm{III}}$, 10.3.1.3)"
+  },
+  {
+    "id": 21108,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "$k(\\mathfrak m')\\to k(\\mathfrak n)$",
+    "en_new": "$\\boldsymbol k(\\mathfrak m')\\to \\boldsymbol k(\\mathfrak n)$"
+  },
+  {
+    "id": 21109,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "k(\\mathfrak n)$ sea un isomorfismo",
+    "note": "covered by 21108"
+  },
+  {
+    "id": 21111,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/06_18_6.tex",
+    "en_old": "isomorfo a $A_\\lambda$ (18.5.11, $b)$)",
+    "en_new": "isomorfo a $A_\\lambda$ (18.5.11, \\emph{b)})"
+  },
+  {
+    "id": 21114,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/07_18_7.tex",
+    "en_old": "denotaremos por $\\mathbf P(Z,k)$",
+    "en_new": "denotaremos por $\\boldsymbol{P}(Z,k)$"
+  },
+  {
+    "id": 21115,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/07_18_7.tex",
+    "en_old": "la propiedad $\\mathbf Q(A,k)$ satisface",
+    "en_new": "la propiedad $\\boldsymbol{Q}(A,k)$ satisface"
+  },
+  {
+    "id": 21116,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/07_18_7.tex",
+    "en_old": "la propiedad $\\mathbf Q(A,k)$ es",
+    "en_new": "la propiedad $\\boldsymbol{Q}(A,k)$ es"
+  },
+  {
+    "id": 21117,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/07_18_7.tex",
+    "en_old": "a $\\mathbf Q(A,k')$",
+    "en_new": "a $\\boldsymbol{Q}(A,k')$"
+  },
+  {
+    "id": 21118,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-18-es/components/07_18_7.tex",
+    "en_old": "las propiedades $\\mathbf P$ consideradas",
+    "en_new": "las propiedades $\\boldsymbol{P}$ consideradas"
+  }
+]
+```

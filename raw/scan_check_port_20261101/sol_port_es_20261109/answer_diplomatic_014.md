@@ -1,0 +1,874 @@
+```json
+[
+  {
+    "id": 4221,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\boldsymbol{\\Gamma}'_*(\\sh{F}')=\\widetilde{M}$"
+  },
+  {
+    "id": 4222,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "M=\\bigoplus_{n\\in\\bb{Z}}\\Gamma(X',\\sh{F}'_n)",
+    "en_new": "M=\\bigoplus_{\\bb{Z}\\in n}\\Gamma(X',\\sh{F}'_n)",
+    "note": "Se reproduce literalmente el índice corregido francés, aunque parece invertido."
+  },
+  {
+    "id": 4223,
+    "decision": "not_applicable",
+    "note": "Coma de la prosa francesa."
+  },
+  {
+    "id": 4224,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "definido en \\sref{II.8.14.7} es biyectivo.",
+    "en_new": "definido en \\textup{\\sref{II.8.14.7}} es biyectivo."
+  },
+  {
+    "id": 4225,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "la proposición es entonces exactamente \\sref[I]{I.9.3.1}.",
+    "note": "La macro de referencia conserva la tipografía del capítulo."
+  },
+  {
+    "id": 4226,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.8.14.8}, todo",
+    "en_new": "Bajo las hipótesis de \\textup{\\sref{II.8.14.8}}, todo"
+  },
+  {
+    "id": 4227,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.8.14.7}, sean",
+    "en_new": "Bajo las hipótesis de \\textup{\\sref{II.8.14.7}}, sean"
+  },
+  {
+    "id": 4228,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\shProj'(\\sh{M})$, donde $\\sh{M}$ es un $\\sh{S}$-módulo graduado cuasi-coherente."
+  },
+  {
+    "id": 4229,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\shProj'(\\boldsymbol{\\Gamma}'_*(\\shProj'(\\sh{M})))"
+  },
+  {
+    "id": 4230,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\shProj'(\\sh{M})\n    \\xrightarrow{\\shProj'(\\alpha')}\n    \\shProj'("
+  },
+  {
+    "id": 4231,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\shProj'(\\boldsymbol{\\Gamma}'_*(\\shProj'(\\sh{M})))\n    \\xrightarrow{\\beta'}\n    \\shProj'(\\sh{M})"
+  },
+  {
+    "id": 4232,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}'_*(\\shProj'(\\boldsymbol{\\Gamma}'_*(\\sh{F}')))"
+  },
+  {
+    "id": 4233,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}'_*(\\sh{F}')\n    \\xrightarrow{\\alpha'}\n    \\boldsymbol{\\Gamma}'_*("
+  },
+  {
+    "id": 4234,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}'_*(\\shProj'(\\boldsymbol{\\Gamma}'_*(\\sh{F}')))\n    \\xrightarrow{\\boldsymbol{\\Gamma}'_*(\\beta')}\n    \\boldsymbol{\\Gamma}'_*(\\sh{F}')"
+  },
+  {
+    "id": 4235,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "En el capítulo~III \\sref[III]{III.2.3.1},",
+    "note": "La macro de referencia conserva la tipografía del capítulo."
+  },
+  {
+    "id": 4238,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(\\shProj(\\sh{M}))^{(d,k)} \\xleftarrow{\\sim} \\shProj(\\sh{M}^{(d,k)})."
+  },
+  {
+    "id": 4239,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\shProj_0(\\sh{S}^{(d,k)}(n)) \\simto \\sh{O}_X(nd+k),"
+  },
+  {
+    "id": 4240,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}_*^{(d)}(\\shProj(\\sh{M}^{(d,k)})) \\simto"
+  },
+  {
+    "id": 4241,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\simto \\boldsymbol{\\Gamma}_*((\\shProj(\\sh{M}))^{(d,k)})"
+  },
+  {
+    "id": 4242,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}_*^{(d)}(\\shProj(\\sh{M}^{(d,k)})) \\simto"
+  },
+  {
+    "id": 4243,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}_*((\\shProj(\\sh{M}))^{(d,k)})\n\\tag{8.14.13.4}"
+  },
+  {
+    "id": 4244,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "donde $\\boldsymbol{\\Gamma}_*^{(d)}$ corresponde al morfismo estructural"
+  },
+  {
+    "id": 4245,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\\\  \\boldsymbol{\\Gamma}_*^{(d)}(\\shProj(\\sh{M}^{(d,k)})) \\ar[rr]^{\\sim}"
+  },
+  {
+    "id": 4246,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "&& \\boldsymbol{\\Gamma}_*((\\shProj(\\sh{M}))^{(d,k)})"
+  },
+  {
+    "id": 4247,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\boldsymbol{\\Gamma}_*^{(d)}(\\shProj(\\sh{M}^{(d,k)})) \\ar[rr]^{\\sim}"
+  },
+  {
+    "id": 4248,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "&& \\boldsymbol{\\Gamma}_*((\\shProj(\\sh{M}))^{(d,k)})"
+  },
+  {
+    "id": 4249,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "que satisfaga la condición~\\textbf{(TF)};",
+    "en_new": "que satisfaga la condición~\\textup{\\textbf{(TF)}};"
+  },
+  {
+    "id": 4250,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "periódica \\sref{II.8.14.12}, y existe",
+    "en_new": "periódica \\textup{\\sref{II.8.14.12}}, y existe"
+  },
+  {
+    "id": 4251,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "tal que los $(\\shProj(\\sh{M}))^{(d,k)}$"
+  },
+  {
+    "id": 4252,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\sref{II.2.1.6}[iii] y \\sref{II.3.4.3}.",
+    "note": "La referencia al inciso usa la convención propia de la edición española."
+  },
+  {
+    "id": 3950,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\bb{S}(\\sh{E}),\\bb{S}_{\\sh{A}}(\\sh{E})$",
+    "en_new": "$\\bb{S}(\\sh{E}),\\bb{S}_A(\\sh{E})$"
+  },
+  {
+    "id": 3952,
+    "decision": "not_applicable",
+    "note": "Cambio tipográfico de «cero» al numeral, sin cambio de grado."
+  },
+  {
+    "id": 3953,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\alpha_n,\\alpha,\\alpha_{\\sh{M}}$ (homomorfismos canónicos): \\hyperref[II.2.6.2]{2.6.2}.",
+    "en_new": "$\\alpha_n,\\alpha,\\alpha_M$ (homomorfismos canónicos): \\hyperref[II.2.6.2]{2.6.2}."
+  },
+  {
+    "id": 3954,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\Gamma_*(\\sh{F})$ ($\\sh{F}$ un $\\sh{O}_X$-módulo,\n$X=\\Proj(\\sh{S})$): \\hyperref[II.3.3.1]{3.3.1}.",
+    "en_new": "$\\boldsymbol{\\Gamma}_*(\\sh{F})$ ($\\sh{F}$ un $\\sh{O}_X$-módulo,\n$X=\\Proj(\\sh{S})$): \\hyperref[II.3.3.1]{3.3.1}."
+  },
+  {
+    "id": 3955,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\shProj_0(\\sh{M}),\\shProj(\\sh{M}),\\sh{M}_X,\n\\widehat{\\sh{M}},\\sh{M}^{\\square}$",
+    "note": "La edición española emplea su macro propia para el Proj caligráfico."
+  },
+  {
+    "id": 3956,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\Gamma_*(\\sh{F})$\n($X=\\Proj(\\sh{S})$, $\\sh{F}$ un $\\sh{S}_X$-módulo graduado):",
+    "en_new": "$\\boldsymbol{\\Gamma}_*(\\sh{F})$\n($X=\\Proj(\\sh{S})$, $\\sh{F}$ un $\\sh{S}_X$-módulo graduado):"
+  },
+  {
+    "id": 3959,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\egaTerm{Condición (TF); condición (TN)}{\\hyperref[II.3.4.2]{3.4.2}}",
+    "en_new": "\\egaTerm{Condición (\\textbf{TF}); condición (\\textbf{TN})}{\\hyperref[II.3.4.2]{3.4.2}}"
+  },
+  {
+    "id": 3960,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\egaTerm{Fibra geométrica racional de un fibrado proyectivo sobre una extensión $K$ de $\\kres(y)$}{\\hyperref[II.4.2.6]{4.2.6}}",
+    "note": "La macro española de cuerpo residual ya representa la k correspondiente."
+  },
+  {
+    "id": 3961,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\egaTerm{Morfismo canónico $G(\\varepsilon)\\to\\Proj(S)$, $S=\\bigoplus_{n\\geq0}\\Gamma(X,\\sh{L}^{\\otimes n})$}",
+    "en_new": "\\egaTerm{Morfismo canónico $G(\\varepsilon)\\to\\Proj(S)$ $\\bigl(S=\\bigoplus_{n\\geq0}\\Gamma(X,\\sh{L}^{\\otimes n})\\bigr)$}"
+  },
+  {
+    "id": 3962,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(TN)-inyectivo, (TN)-sobreyectivo, (TN)-biyectivo (homomorfismo de $\\sh{S}$-módulos",
+    "en_new": "(\\textbf{TN})-inyectivo, (\\textbf{TN})-sobreyectivo, (\\textbf{TN})-biyectivo (homomorfismo de $\\sh{S}$-módulos"
+  },
+  {
+    "id": 3963,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(TN)-isomorfismo de $\\sh{S}$-módulos",
+    "en_new": "(\\textbf{TN})-isomorfismo de $\\sh{S}$-módulos"
+  },
+  {
+    "id": 3964,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(TN)-inyectivo, (TN)-sobreyectivo, (TN)-biyectivo (homomorfismo de $\\sh{O}_Y$-álgebras",
+    "en_new": "(\\textbf{TN})-inyectivo, (\\textbf{TN})-sobreyectivo, (\\textbf{TN})-biyectivo (homomorfismo de $\\sh{O}_Y$-álgebras"
+  },
+  {
+    "id": 3965,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "(TN)-isomorfismo de $\\sh{O}_Y$-álgebras",
+    "en_new": "(\\textbf{TN})-isomorfismo de $\\sh{O}_Y$-álgebras"
+  },
+  {
+    "id": 3756,
+    "decision": "not_applicable",
+    "note": "Formato de la cabecera del índice francés."
+  },
+  {
+    "id": 3757,
+    "decision": "not_applicable",
+    "note": "Composición y tipografía de la fila del capítulo."
+  },
+  {
+    "id": 3759,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3760,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3761,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3762,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3763,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3764,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3765,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3767,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3768,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3769,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3770,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3771,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3772,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3773,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3774,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3775,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3777,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3778,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3779,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3780,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3781,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3782,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3783,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3784,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3785,
+    "decision": "not_applicable",
+    "note": "Cabecera de continuación de la tabla francesa."
+  },
+  {
+    "id": 3787,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3788,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3789,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3790,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3791,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3792,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3794,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3795,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3796,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3797,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3798,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3799,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3801,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3802,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3803,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3804,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3805,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3806,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3807,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3809,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3810,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3811,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3812,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3814,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3815,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3816,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3817,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3818,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3819,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3820,
+    "decision": "not_applicable",
+    "note": "Cabecera de continuación de la tabla francesa."
+  },
+  {
+    "id": 3821,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3822,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3823,
+    "decision": "not_applicable",
+    "note": "Punto final tipográfico del rótulo del índice."
+  },
+  {
+    "id": 3829,
+    "decision": "not_applicable",
+    "note": "Tipografía del título y de su indicación de continuación."
+  },
+  {
+    "id": 3830,
+    "decision": "not_applicable",
+    "note": "Versalitas del título en el índice francés."
+  },
+  {
+    "id": 3831,
+    "decision": "not_applicable",
+    "note": "Versalitas del título en el índice francés."
+  },
+  {
+    "id": 3832,
+    "decision": "not_applicable",
+    "note": "Capitalización y versalitas del título francés."
+  },
+  {
+    "id": 3849,
+    "decision": "not_applicable",
+    "note": "Peso tipográfico de la conjunción en un encabezamiento."
+  },
+  {
+    "id": 3850,
+    "decision": "not_applicable",
+    "note": "Supresión de comillas francesas; se conservan las comillas españolas."
+  },
+  {
+    "id": 3851,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Z_i\\cap C\\left(\\bigcup_{j\\ne i}Z_j\\right)",
+    "en_new": "Z_i\\cap\\complement(\\bigcup\\limits_{j\\ne i}Z_j)",
+    "note": "Se corrige el símbolo de complemento sin cambiar la disposición española."
+  },
+  {
+    "id": 3852,
+    "decision": "not_applicable",
+    "note": "Supresión de comillas francesas; se conservan las comillas españolas."
+  },
+  {
+    "id": 3853,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 3854,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Supongamos que $\\sh{O}_X$ es coherente,",
+    "en_new": "Supongamos que $\\sh{O}_X$ es \\emph{coherente},"
+  },
+  {
+    "id": 3855,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\sh{O}_X$-módulo coherente. Si,",
+    "en_new": "$\\sh{O}_X$-módulo \\emph{coherente}. Si,"
+  },
+  {
+    "id": 3856,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "un $\\sh{O}_x$-módulo libre de rango $n$,",
+    "en_new": "un $\\sh{O}_x$-módulo \\emph{libre de rango $n$},"
+  },
+  {
+    "id": 3857,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "tal que $\\sh{F}|U$ es localmente libre de rango $n$;",
+    "en_new": "tal que $\\sh{F}|U$ es \\emph{localmente libre de rango $n$};"
+  },
+  {
+    "id": 3860,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "En efecto, esto se deduce de (6.4.1, d).",
+    "en_new": "En efecto, esto se deduce de (6.4.1, \\emph{d)})."
+  },
+  {
+    "id": 3861,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "En la línea 18 de la p.~83, reemplazar $K$ por $k$ (dos veces).",
+    "en_new": "En la línea 18 de la p.~83, reemplazar $\\boldsymbol{K}$ por $\\boldsymbol{k}$ (dos veces)."
+  },
+  {
+    "id": 3862,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "En la línea 18 de la p.~83, reemplazar $K$ por $k$ (dos veces).",
+    "note": "covered by 3861"
+  },
+  {
+    "id": 3863,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 4120,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 4121,
+    "decision": "not_applicable",
+    "note": "Reordenación tipográfica de la misma aplicación y su dominio y codominio."
+  },
+  {
+    "id": 4122,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "los $f\\in A$ tales que $\\vphi(f)(x)=0$ es un ideal primo de $A$, pues",
+    "en_new": "los $f\\in A$ tales que $\\vphi(f)(x)=0$ es un \\emph{ideal primo} de $A$, pues"
+  },
+  {
+    "id": 4125,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 4126,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "lo que prueba que ${}^a\\vphi$ es una aplicación continua $X\\to S$.",
+    "en_new": "lo que prueba que ${}^a\\vphi$ es una aplicación \\emph{continua} $X\\to S$."
+  },
+  {
+    "id": 4128,
+    "decision": "not_applicable",
+    "note": "Reformulación equivalente para poner la fórmula en línea."
+  },
+  {
+    "id": 4130,
+    "decision": "not_applicable",
+    "note": "Disposición en línea y puntuación de enlace de la prosa francesa."
+  },
+  {
+    "id": 4131,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$\\widetilde{\\vphi}_x^\\sharp:\\sh{O}_y\\to\\sh{O}_x$ es local.",
+    "en_new": "$\\widetilde{\\vphi}_x^\\sharp:\\sh{O}_y\\to\\sh{O}_x$ es \\emph{local}."
+  },
+  {
+    "id": 4132,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 4134,
+    "decision": "not_applicable",
+    "note": "Paso de fórmula desplegada a fórmula en línea."
+  },
+  {
+    "id": 4135,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\theta^x:\\kres(\\psi(x))\\to\\kres(x)",
+    "note": "La macro española conserva la notación del cuerpo residual."
+  },
+  {
+    "id": 4136,
+    "decision": "already",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\theta^x:\\kres(\\psi(x))\\to\\kres(x)",
+    "note": "La macro española conserva la notación del cuerpo residual."
+  },
+  {
+    "id": 4140,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Cuando $(X,\\sh{O}_X)$ e $(Y,\\sh{O}_Y)$ son espacios localmente\nanillados, consideraremos los morfismos",
+    "en_new": "Cuando $(X,\\sh{O}_X)$ e $(Y,\\sh{O}_Y)$ son espacios \\emph{localmente\nanillados}, consideraremos los morfismos"
+  },
+  {
+    "id": 4141,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$(\\psi,\\theta):(X,\\sh{O}_X)\\to(Y,\\sh{O}_Y)$ tales que, para todo\n$x\\in X$, $\\theta_x^\\sharp:\\sh{O}_{\\psi(x)}\\to\\sh{O}_x$ es un\nhomomorfismo local.",
+    "en_new": "$(\\psi,\\theta):(X,\\sh{O}_X)\\to(Y,\\sh{O}_Y)$ tales que, para todo\n$x\\in X$, $\\theta_x^\\sharp:\\sh{O}_{\\psi(x)}\\to\\sh{O}_x$ es un\nhomomorfismo \\emph{local}."
+  },
+  {
+    "id": 4143,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "espacios localmente anillados forman una categoría.",
+    "en_new": "espacios localmente anillados forman una \\emph{categoría}."
+  },
+  {
+    "id": 4144,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "considerar el conjunto de morfismos de espacios anillados de $X$ a\n$Y$,",
+    "en_new": "considerar el conjunto de \\emph{morfismos de espacios anillados} de $X$ a\n$Y$,"
+  },
+  {
+    "id": 4145,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "escribiremos $\\Hom_{\\mathrm{rs}}(X,Y)$",
+    "en_new": "escribiremos $\\Hom_{\\mathit{rs}}(X,Y)$",
+    "note": "Se conserva el subíndice propio de la edición española."
+  },
+  {
+    "id": 4146,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\rho:\\Hom_{\\mathrm{rs}}(X,Y)\n  \\to\\Hom(\\Gamma(Y,\\sh{O}_Y),\\Gamma(X,\\sh{O}_X)),",
+    "en_new": "\\rho:\\Hom_{\\mathit{rs}}(X,Y)\n  \\to\\Hom(\\Gamma(Y,\\sh{O}_Y),\\Gamma(X,\\sh{O}_X)),",
+    "note": "Se conserva el subíndice propio de la edición española."
+  },
+  {
+    "id": 4147,
+    "decision": "not_applicable",
+    "note": "Coma de enlace entre la fórmula y la continuación de la prosa."
+  },
+  {
+    "id": 4148,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "es funtorial en $X$ e $Y$ en la categoría de los espacios localmente",
+    "en_new": "es \\emph{funtorial} en $X$ e $Y$ en la categoría de los espacios localmente"
+  },
+  {
+    "id": 4149,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "la aplicación \\sref{I.1.8.2.2} sea",
+    "en_new": "la aplicación \\textup{\\sref{I.1.8.2.2}} sea"
+  },
+  {
+    "id": 4152,
+    "decision": "not_applicable",
+    "note": "Coma de la sintaxis francesa."
+  },
+  {
+    "id": 4153,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "de los espacios localmente anillados a los conjuntos son isomorfos.",
+    "en_new": "de los espacios localmente anillados a los conjuntos son \\emph{isomorfos}."
+  },
+  {
+    "id": 4155,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "anillado cuyo espacio subyacente consta de un punto y cuyo haz",
+    "en_new": "anillado cuyo espacio subyacente \\emph{consta de un punto} y cuyo haz"
+  },
+  {
+    "id": 4156,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "define un $\\pi$-morfismo $\\iota:A'\\to\\sh{O}_S$",
+    "en_new": "define un \\emph{$\\pi$-morfismo} $\\iota:A'\\to\\sh{O}_S$"
+  },
+  {
+    "id": 4157,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Se obtiene así un morfismo canónico de espacios anillados",
+    "en_new": "Se obtiene así un \\emph{morfismo} canónico \\emph{de espacios anillados}"
+  },
+  {
+    "id": 4159,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "Con la notación de \\sref{I.1.8.4}, para todo",
+    "en_new": "Con la notación de \\textup{\\sref{I.1.8.4}}, para todo"
+  },
+  {
+    "id": 4161,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "\\textup{(0, 4.4.3.3)}",
+    "en_new": "\\textup{(\\textbf{0}, 4.4.3.3)}"
+  },
+  {
+    "id": 4162,
+    "decision": "apply",
+    "en_file": "II_DIPLOMATIC/EGA_II_es_diplomatic.tex",
+    "en_old": "$M\\mapsto i_*(\\widetilde M)$",
+    "en_new": "$M\\to i_*(\\widetilde M)$"
+  }
+]
+```
+II 200, corolario 8.14.9: falta nombrar $\sh{F}'$ en la primera oración, aunque la segunda oración utiliza ese símbolo.
+II 208, entrada $N_{\sh{B}/\sh{A}}(f)$: «sección de la $\sh{B}$-álgebra $\sh{A}$» invierte el álgebra y su base; debe describir una sección de la $\sh{A}$-álgebra $\sh{B}$.
+II 208, entrada $\widehat{\sh{S}}$: el texto visible de la referencia dice «3.8.1», aunque la clave y la referencia correcta son II.8.3.1.

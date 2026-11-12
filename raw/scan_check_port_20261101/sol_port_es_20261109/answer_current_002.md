@@ -1,0 +1,916 @@
+```json
+[
+  {
+    "id": 1684,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\item[\\rm(a)] $V_+(E)=X=\\Proj(S)$.",
+    "en_new": "\\item[\\textit{(a)}] $V_+(E)=X=\\Proj(S)$."
+  },
+  {
+    "id": 1685,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\item[\\rm(b)] Todo elemento de $E$ es nilpotente.",
+    "en_new": "\\item[\\textit{(b)}] Todo elemento de $E$ es nilpotente."
+  },
+  {
+    "id": 1686,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\item[\\rm(c)] Las componentes homogéneas de todo elemento de $E$ son nilpotentes.",
+    "en_new": "\\item[\\textit{(c)}] Las componentes homogéneas de todo elemento de $E$ son nilpotentes."
+  },
+  {
+    "id": 1687,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Es claro que (c) implica (b), y que (b) implica (a).",
+    "en_new": "Es claro que \\emph{(c)} implica \\emph{(b)}, y que \\emph{(b)} implica \\emph{(a)}."
+  },
+  {
+    "id": 1688,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "la condición (a) equivale a exigir que",
+    "en_new": "la condición \\emph{(a)} equivale a exigir que"
+  },
+  {
+    "id": 1689,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\emph{a fortiori}, (a) implica que",
+    "en_new": "\\emph{a fortiori}, \\emph{(a)} implica que"
+  },
+  {
+    "id": 1690,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "entonces $\\rad_+(\\mathfrak{J})$ es la intersección de los ideales primos graduados de $S_+$ que contienen $\\mathfrak{J}$.",
+    "note": "Se conserva la macro española del radical."
+  },
+  {
+    "id": 1691,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$Y\\mapsto\\mathfrak{j}_+(Y)$",
+    "en_new": "$Y\\to\\mathfrak{j}_+(Y)$"
+  },
+  {
+    "id": 1692,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\mathfrak{J}\\mapsto V_+(\\mathfrak{J})$",
+    "en_new": "$\\mathfrak{J}\\to V_+(\\mathfrak{J})$"
+  },
+  {
+    "id": 1693,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "  \\item[\\rm(a)] $D_+(f)\\subset\\bigcup_\\alpha D_+(f_\\alpha)$;\n  \\item[\\rm(b)] $V_+(f)\\supset\\bigcap_\\alpha V_+(f_\\alpha)$;\n  \\item[\\rm(c)] $f$ tiene alguna potencia en el ideal generado por los $f_\\alpha$.",
+    "en_new": "  \\item[\\textit{(a)}] $D_+(f)\\subset\\bigcup_\\alpha D_+(f_\\alpha)$;\n  \\item[\\textit{(b)}] $V_+(f)\\supset\\bigcap_\\alpha V_+(f_\\alpha)$;\n  \\item[\\textit{(c)}] $f$ tiene alguna potencia en el ideal generado por los $f_\\alpha$.",
+    "note": "Se trasladan las etiquetas cursivas, conservando la disposición española."
+  },
+  {
+    "id": 1694,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "En la correspondencia biyectiva descrita en \\sref{II.2.3.12},",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1695,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "corresponden los ideales graduados \\emph{primos} de $S_+$."
+  },
+  {
+    "id": 1696,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es una \\emph{inmersión abierta} \\sref[I]{I.1.3.6}."
+  },
+  {
+    "id": 1697,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Basta \\sref[I]{I.5.5.6} demostrar que"
+  },
+  {
+    "id": 1698,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "como se describe en \\sref[I]{I.2.3.2} (cf. \\sref{II.7.4.14})."
+  },
+  {
+    "id": 1699,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Si $\\mathfrak{N}_+$ es el nilradical de $S_+$ \\sref{II.2.1.10},",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1700,
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": 1702,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el homomorfismo canónico $S_f\\to\\overline{S}_{\\overline{f}}$ \\sref[0]{0.1.5.1}"
+  },
+  {
+    "id": 1703,
+    "decision": "not_applicable",
+    "note": "Acentuación francesa."
+  },
+  {
+    "id": 1704,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "identifica $D_+(\\overline{f})$ con $(D_+(f))_\\red$ \\sref[I]{I.5.1.2}"
+  },
+  {
+    "id": 1706,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de aquí resulta la conclusión \\sref[I]{I.5.1.2}."
+  },
+  {
+    "id": 1709,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "la biyección anterior es un \\emph{homeomorfismo} de espacios topológicos."
+  },
+  {
+    "id": 1711,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\Proj(S)$ y $\\Proj(S^{(d)})$ se identifican canónicamente como \\emph{esquemas}."
+  },
+  {
+    "id": 1712,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\Proj(S)$ y $\\Proj(S')$ se identifican como \\emph{esquemas}."
+  },
+  {
+    "id": 1713,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Sea $M$ un $S$-módulo \\emph{graduado}."
+  },
+  {
+    "id": 1715,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "identificado con $D_+(f)$ \\sref[I]{I.1.3.4}."
+  },
+  {
+    "id": 1717,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "con el haz asociado al módulo $(M_{(f)})_{g^d/f^e}$ \\sref[I]{I.1.3.6}"
+  },
+  {
+    "id": 1721,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Por consiguiente \\sref[0]{0.3.3.1}, existe un $\\sh{O}_X$-módulo"
+  },
+  {
+    "id": 1723,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "teniendo en cuenta \\sref[I]{I.1.3.7}."
+  },
+  {
+    "id": 1724,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "definido en \\sref{II.2.5.2} está \\emph{asociado} al $S$-módulo graduado $M$.",
+    "en_new": "definido en \\sref{II.2.5.2} está asociado al $S$-módulo graduado $M$."
+  },
+  {
+    "id": 1725,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "El funtor $M\\mapsto\\widetilde{M}$ es un funtor covariante aditivo exacto",
+    "en_new": "El funtor $\\widetilde{M}$ en $M$ es un funtor covariante aditivo exacto"
+  },
+  {
+    "id": 1727,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el funtor de localización $M\\mapsto M_f$",
+    "en_new": "el funtor de localización $M_f$ en $M$"
+  },
+  {
+    "id": 1728,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el funtor de grado cero $N\\mapsto N_0$",
+    "en_new": "el funtor de grado cero $N_0$ en $N$"
+  },
+  {
+    "id": 1729,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el funtor de haz asociado $P\\mapsto\\widetilde{P}$",
+    "en_new": "el funtor de haz asociado $\\widetilde{P}$ en $P$"
+  },
+  {
+    "id": 1730,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "las sumas directas \\sref[I]{I.1.3.5} \\sref[I]{I.1.3.9};"
+  },
+  {
+    "id": 1731,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sref[I]{I.1.3.5} \\sref[I]{I.1.3.9}; de aquí resulta la proposición.",
+    "note": "Las referencias separadas conservan la convención española de indicar el capítulo."
+  },
+  {
+    "id": 1732,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "los resultados de \\sref[I]{I.1.3.9} y \\sref[I]{I.1.3.10}"
+  },
+  {
+    "id": 1733,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\sref[I]{I.1.3.10} siguen siendo válidos",
+    "note": "Se conserva la convención española para referencias separadas."
+  },
+  {
+    "id": 1734,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el \\emph{anillo local $(\\sh{O}_X)_\\mathfrak{p}$}",
+    "en_new": "el \\emph{anillo local} $(\\sh{O}_X)_\\mathfrak{p}$"
+  },
+  {
+    "id": 1736,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1738,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es un $(\\sh{O}_X|U)$-módulo invertible \\sref[0]{0.5.4.1}."
+  },
+  {
+    "id": 1741,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "pues $\\sh{O}_X(n)$ es entonces un $\\sh{O}_X$-módulo \\emph{invertible}."
+  },
+  {
+    "id": 1743,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "con el isomorfismo canónico $M_f\\otimes_{S_f}N_f\\simto(M\\otimes_S N)_f$ \\sref[0]{0.1.3.4}"
+  },
+  {
+    "id": 1745,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\mathfrak{J}\\otimes_S\\mathfrak{K})\\supertilde \\ar[dl]"
+  },
+  {
+    "id": 1746,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de la definición \\sref{II.2.5.11.1} de $\\lambda_f$ y de \\sref[I]{I.1.3.13}."
+  },
+  {
+    "id": 1748,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(N\\otimes_S P)\\supertilde \\ar[r]_\\lambda"
+  },
+  {
+    "id": 1749,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(M\\otimes_S N\\otimes_S P)\\supertilde"
+  },
+  {
+    "id": 1751,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "esto resulta inmediatamente de las definiciones y de \\sref[I]{I.1.3.13}."
+  },
+  {
+    "id": 1752,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Se concluye así de nuevo, teniendo en cuenta \\sref[I]{I.1.3.8},"
+  },
+  {
+    "id": 1753,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\mu:(\\Hom_S(M,N))\\supertilde"
+  },
+  {
+    "id": 1754,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1755,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1756,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1757,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1758,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1759,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Se deduce entonces de \\sref[0]{0.1.3.4} que"
+  },
+  {
+    "id": 1760,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1761,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1880,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea y tamaño de delimitadores."
+  },
+  {
+    "id": 1882,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$z/f^h\\mapsto z/f^{h-n}$",
+    "en_new": "$z/f^h\\to z/f^{h-n}$"
+  },
+  {
+    "id": 1884,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "=(\\mathfrak{J}\\cdot M)\\supertilde",
+    "note": "Se conserva el signo español equivalente de multiplicación."
+  },
+  {
+    "id": 1885,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\mathfrak{J}\\otimes_S M)\\supertilde \\ar[dl]"
+  },
+  {
+    "id": 1886,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$1\\in(S(m+n))_{-(m+n)}$"
+  },
+  {
+    "id": 1888,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "para todo $\\sh{O}_X$-módulo $\\sh{F}$ \\sref[0]{0.5.4.6},"
+  },
+  {
+    "id": 1889,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa antes de la fórmula."
+  },
+  {
+    "id": 1890,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Recordemos \\sref[0]{0.5.4.6} que"
+  },
+  {
+    "id": 1891,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$x\\mapsto x/1$ es un homomorfismo de grupos abelianos",
+    "en_new": "$x\\to x/1$ es un homomorfismo de grupos abelianos"
+  },
+  {
+    "id": 1892,
+    "decision": "not_applicable",
+    "note": "División de una palabra francesa en el salto de página."
+  },
+  {
+    "id": 1894,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 1895,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "la definición \\sref[0]{0.5.4.6} de la multiplicación"
+  },
+  {
+    "id": 1896,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "no se anula \\sref[0]{0.5.5.2}.",
+    "note": "La macro española ya imprime el capítulo y la referencia derechos."
+  },
+  {
+    "id": 24623,
+    "decision": "not_applicable",
+    "note": "Normalización ortotipográfica francesa de «Module»."
+  },
+  {
+    "id": 1897,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa."
+  },
+  {
+    "id": 1898,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\beta:(\\Gamma_\\bullet(\\sh{F}))\\supertilde\\to\\sh{F}"
+  },
+  {
+    "id": 1899,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\xrightarrow{\\widetilde{\\alpha}}(\\Gamma_\\bullet(\\widetilde{M}))\\supertilde"
+  },
+  {
+    "id": 1900,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\xrightarrow{\\alpha}\\Gamma_\\bullet((\\Gamma_\\bullet(\\sh{F}))\\supertilde)"
+  },
+  {
+    "id": 1901,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "sobre las secciones por encima de $D_+(f)$ \\sref[I]{I.1.3.8}."
+  },
+  {
+    "id": 1903,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Existe un entero $n$ tal que el submódulo $\\bigoplus_{k\\geq n}M_k$ es un $S$-módulo de tipo finito.",
+    "en_new": "\\emph{Existe un entero $n$ tal que el submódulo $\\bigoplus_{k\\geq n}M_k$ es un $S$-módulo de tipo finito.}"
+  },
+  {
+    "id": 1904,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Existe un entero $n$ tal que $M_k=0$ para $k\\geq n$.",
+    "en_new": "\\emph{Existe un entero $n$ tal que $M_k=0$ para $k\\geq n$.}"
+  },
+  {
+    "id": 1905,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Si $M$ satisface la condición (TF),",
+    "en_new": "Si $M$ satisface la condición \\textup{(TF)},"
+  },
+  {
+    "id": 1906,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos que $M$ satisface (TF); para que",
+    "en_new": "Supongamos que $M$ satisface \\textup{(TF)}; para que"
+  },
+  {
+    "id": 1907,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es necesario y suficiente que $M$ satisfaga (TN).",
+    "en_new": "es necesario y suficiente que $M$ satisfaga \\textup{(TN)}."
+  },
+  {
+    "id": 1911,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "al caso en que $M$ es \\emph{de tipo finito}."
+  },
+  {
+    "id": 1912,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "un $S_{(f)}$-módulo de tipo finito \\sref[I]{I.1.3.9};"
+  },
+  {
+    "id": 1762,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el homomorfismo canónico $\\beta:(\\Gamma_\\bullet(\\sh{F}))\\supertilde\\to\\sh{F}$"
+  },
+  {
+    "id": 1763,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\beta:(\\Gamma_\\bullet(\\sh{F}))\\supertilde\\to\\sh{F}$ \\sref{II.2.6.4} es un isomorfismo.",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1764,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "según \\sref[I]{I.9.3.2}, \\sref{II.2.5.14.2}"
+  },
+  {
+    "id": 1765,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "la definición \\sref[I]{I.9.3.1} del isomorfismo canónico anterior"
+  },
+  {
+    "id": 1766,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.2.7.5}, todo $\\sh{O}_X$-módulo cuasi-coherente $\\sh{F}$",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1767,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.2.7.5}, todo $\\sh{O}_X$-módulo cuasi-coherente de tipo finito $\\sh{F}$",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1769,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "resulta de \\sref[0]{0.5.2.3} que"
+  },
+  {
+    "id": 1771,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.2.7.5}, sea $\\sh{F}$ un $\\sh{O}_X$-módulo cuasi-coherente de tipo finito.\nExiste entonces un entero $n_0$ tal que, para todo $n\\geq n_0$, $\\sh{F}(n)$",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1772,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "sus secciones sobre $X$ \\sref[0]{0.5.1.1}.",
+    "note": "La macro española ya imprime el capítulo y la referencia derechos."
+  },
+  {
+    "id": 1774,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.2.7.5}, para todo $n\\geq0$,",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1777,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.2.7.5}, sea $\\sh{F}$ un $\\sh{O}_X$-módulo cuasi-coherente de tipo finito.\nExiste entonces un entero $n_0$ tal que, para todo $n\\geq n_0$, $\\sh{F}$ es isomorfo",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1778,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos que se cumplen las hipótesis de \\sref{II.2.7.5}, y sea $M$",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1779,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "El homomorfismo canónico $\\widetilde{\\alpha}:\\widetilde{M}\\to(\\Gamma_\\bullet(\\widetilde{M}))\\supertilde$ es un isomorfismo."
+  },
+  {
+    "id": 1780,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de \\sref{II.2.5.4}, con un sub-$\\sh{O}_X$-módulo de $\\widetilde{M}$).",
+    "note": "La referencia, no el paréntesis explicativo entero, es lo que endereza la corrección francesa."
+  },
+  {
+    "id": 1781,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Como $\\beta:(\\Gamma_\\bullet(\\widetilde{M}))\\supertilde\\to\\widetilde{M}$ es un isomorfismo"
+  },
+  {
+    "id": 1782,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "como $\\widetilde{M}$ es un funtor exacto \\sref{II.2.5.4},"
+  },
+  {
+    "id": 1783,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\widetilde{P}=(\\Gamma_\\bullet(\\widetilde{M}))\\supertilde$."
+  },
+  {
+    "id": 1784,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\widetilde{Q}=(\\Gamma_\\bullet(\\sh{G}))\\supertilde$"
+  },
+  {
+    "id": 1785,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de $\\Spec(S)$ en $\\Spec(S')$ \\sref[I]{I.1.2.1}"
+  },
+  {
+    "id": 1786,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "así como \\sref[I]{I.1.2.2.2}."
+  },
+  {
+    "id": 1788,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "le corresponde \\sref[I]{I.1.6.1} un morfismo de esquemas afines"
+  },
+  {
+    "id": 1789,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(llamado \\emph{asociado a $\\vphi$}",
+    "en_new": "\\textup{(llamado} \\emph{asociado a $\\vphi$}"
+  },
+  {
+    "id": 1790,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\emph{asociado a $\\vphi$} y denotado",
+    "en_new": "asociado a $\\vphi$ y denotado"
+  },
+  {
+    "id": 1793,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se aplican entonces \\sref{II.2.8.2} y \\sref[I]{I.1.2.7}."
+  },
+  {
+    "id": 1794,
+    "decision": "not_applicable",
+    "note": "La anidación francesa de «(cf. (...))» no se reproduce en español."
+  },
+  {
+    "id": 1795,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "esto resulta, en efecto, de \\sref[I]{I.2.3.2}."
+  },
+  {
+    "id": 1796,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "se sabe \\sref[0]{0.1.5.2} que"
+  },
+  {
+    "id": 1797,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "un isomorfismo de haces $(M_{[\\vphi]})\\supertilde|D_+(f')\\simto(\\Phi_f)_*(\\widetilde{M}|D_+(f))$"
+  },
+  {
+    "id": 1798,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\sref{II.2.5.2} y \\sref[I]{I.1.6.3})."
+  },
+  {
+    "id": 1800,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$(M_{[\\vphi]})\\supertilde|D_+(f'g') \\simto (\\Phi_{fg})_*(\\widetilde{M}|D_+(fg))$"
+  },
+  {
+    "id": 1801,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "del isomorfismo $(M_{[\\vphi]})\\supertilde|D_+(f')\\simto(\\Phi_f)_*(\\widetilde{M}|D_+(f))$."
+  },
+  {
+    "id": 1802,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "del $\\sh{O}_{X'}$-módulo $(M_{[\\vphi]})\\supertilde$ sobre el"
+  },
+  {
+    "id": 1807,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Bajo las hipótesis de \\sref{II.2.8.1}, sea $M'$",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1810,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$M'_{f'}\\otimes_{S'_{f'}}S_f\\simto(M'\\otimes_{S'}S)_f$ \\sref[0]{0.1.5.4}"
+  },
+  {
+    "id": 1813,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "teniendo en cuenta \\sref[I]{I.1.6.5}."
+  },
+  {
+    "id": 1816,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "de donde, por \\sref[0]{0.1.5.4},"
+  },
+  {
+    "id": 1817,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\vphi:s'\\mapsto s'\\otimes1$",
+    "en_new": "$\\vphi:s'\\to s'\\otimes1$"
+  },
+  {
+    "id": 1818,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "El diagrama \\sref{II.2.8.9.1} identifica el esquema $X$",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1820,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\nu:\\Phi^*(\\widetilde M')\\to\\widetilde{M}$ \\sref{II.2.8.8} es un isomorfismo.",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1821,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "con el producto $D_+(f')\\times_{Y'}Y$ \\sref[I]{I.3.2.6.2};"
+  },
+  {
+    "id": 1822,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "basta \\sref[I]{I.3.2.2} demostrar que"
+  },
+  {
+    "id": 1823,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$S_f\\simto S'_{f'}\\otimes_{A'}A$ \\sref[0]{0.1.5.4}."
+  },
+  {
+    "id": 1825,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\Phi^*(\\widetilde M'(n))=\\widetilde M'(n)\\otimes_{Y'}"
+  },
+  {
+    "id": 1826,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "en virtud de \\sref{II.2.8.11} y \\sref[0]{0.4.3.3}."
+  },
+  {
+    "id": 1827,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Por consiguiente, según \\sref[0]{0.3.7.1},"
+  },
+  {
+    "id": 1828,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\Gamma_*(\\sh{F}') \\to \\Gamma_*(\\sh{F})."
+  },
+  {
+    "id": 1834,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\Gamma_*(\\sh{F}'))\\supertilde \\ar[r]^-{\\beta_{\\sh{F}'}}"
+  },
+  {
+    "id": 1835,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "(\\Gamma_*(\\sh{F}))\\supertilde \\ar[r]_-{\\beta_{\\sh{F}}}"
+  },
+  {
+    "id": 1836,
+    "decision": "not_applicable",
+    "note": "Supresión de un punto final en la edición francesa."
+  },
+  {
+    "id": 1845,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "siendo la primera fila el isomorfismo canónico \\sref[0]{0.4.3.3}."
+  },
+  {
+    "id": 1846,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\Phi^*((\\Hom_{S'}(M',N'))\\supertilde) \\to"
+  },
+  {
+    "id": 1847,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\to (\\Hom_S(M,N))\\supertilde."
+  },
+  {
+    "id": 1848,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\Phi^*((\\Hom_{S'}(M',N'))\\supertilde) \\ar[r] \\ar[d]_{\\Phi^*(\\mu)}"
+  },
+  {
+    "id": 1849,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "& (\\Hom_S(M,N))\\supertilde \\ar[d]^\\mu"
+  },
+  {
+    "id": 1852,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "siendo la segunda fila horizontal el homomorfismo canónico \\sref[0]{0.4.4.6}"
+  },
+  {
+    "id": 1853,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "es un homomorfismo (TN)-sobreyectivo de anillos graduados",
+    "en_new": "es un homomorfismo \\textup{(TN)}-sobreyectivo de anillos graduados"
+  },
+  {
+    "id": 1854,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "el morfismo correspondiente $\\Phi$ \\sref{II.2.8.1} está definido",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1857,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "$\\alpha:S\\to\\Gamma_*(\\sh{O}_X)$ \\sref{II.2.6.2}, y pongamos",
+    "note": "La macro española ya imprime la referencia derecha."
+  },
+  {
+    "id": 1858,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "lo que termina de demostrar (i) \\sref[I]{I.4.2.3}."
+  },
+  {
+    "id": 1859,
+    "decision": "apply",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "\\widetilde{j}(\\widetilde{\\mathfrak{J'}})=\\sh{J}",
+    "en_new": "\\widetilde{j}(\\widetilde{\\mathfrak{J}}')=\\sh{J}"
+  },
+  {
+    "id": 1861,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos que se cumplen las hipótesis de \\sref{II.2.9.2}[(i)] y, además,",
+    "note": "La macro española ya imprime la referencia y su apartado derechos."
+  },
+  {
+    "id": 1864,
+    "decision": "already",
+    "en_file": "II_CURRENT/EGA_II_es_current.tex",
+    "en_old": "Supongamos que se cumplen las hipótesis de \\sref{II.2.9.2}[(ii)].",
+    "note": "La macro española ya imprime la referencia y su apartado derechos."
+  }
+]
+```
+II_CURRENT/EGA_II_es_current.tex, II 33, diagrama (2.5.11.4): `\\widetilde{M}` carece de la barra que debe iniciar `\widetilde`.
+II_CURRENT/EGA_II_es_current.tex, II 43, diagrama de (2.8.5): `\\Spec(A)` carece de la barra que debe iniciar `\Spec`.
+II_CURRENT/EGA_II_es_current.tex, II 47, diagrama (2.8.14.2): `\\Phi^*` carece de la barra que debe iniciar `\Phi`.

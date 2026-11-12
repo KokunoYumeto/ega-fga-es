@@ -1,0 +1,3034 @@
+# Spanish hand pass, diplomatic_010: 144 items on 9 printed pages
+
+=================== PAGE II 137 ===================
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 136 -----
+\oldpage[II]{136}
+\begin{theorem}[6.7.1]
+\label{II.6.7.1}
+Sean $X$ un esquema afín, $Y$ un preesquema noetheriano y $f:X\to Y$ un morfismo finito sobreyectivo.
+Entonces $Y$ es un esquema afín.
+\end{theorem}
+
+\begin{proof}
+Es claro que
+\[
+  f_\red:X_\red\to Y_\red
+\]
+es finito \sref{II.6.1.5}[(vi)];
+como $X_\red$ es un esquema afín y decir que $Y$ es afín equivale a decir que $Y_\red$ es afín (pues $Y$ es noetheriano \sref[I]{I.6.1.7}), se ve que puede suponerse que $Y$ es \emph{reducido}.
+Para toda parte cerrada $Y'$ de $Y$, existe un único subpreesquema reducido de $Y$ que tiene $Y'$ por espacio subyacente \sref[I]{I.5.1.2};
+su imagen recíproca $f^{-1}(Y')$, canónicamente isomorfa a $X\times_Y Y'$ \sref[I]{I.4.4.1}, es afín como subpreesquema cerrado de $X$, y la restricción de $f$ a $f^{-1}(Y')$, que se identifica con $f\times_Y1_{Y'}$, es un morfismo finito sobreyectivo \sref{II.6.1.5}[(iii)].
+En virtud del principio de recurrencia noetheriana \sref[0]{0.2.2.2}, puede reducirse, pues (teniendo en cuenta \sref[I]{I.6.1.7}), a probar el teorema bajo la hipótesis de que, para \emph{toda} parte cerrada $Y'\neq Y$, todo subpreesquema cerrado de $Y$ que tenga $Y'$ por espacio subyacente sea afín.
+Se concluye entonces que, \emph{para todo $\sh{O}_Y$-módulo coherente $\sh{F}$ cuyo soporte (cerrado) $Z$ sea distinto de $Y$, se tiene $\HH^1(Y,\sh{F})=0$}.
+En efecto, existe un subpreesquema cerrado $Y'$ de $Y$ que tiene $Z$ por espacio subyacente y tal que, si $j:Y'\to Y$ es la inyección canónica, se tenga
+\[
+  \sh{F}=j_*(j^*(\sh{F}))
+\]
+\sref[I]{I.9.3.5};
+entonces
+\[
+  \HH^1(Y,\sh{F})=\HH^1(Y',j^*(\sh{F}))=0
+\]
+por \sref{II.5.2.3} y \sref[I]{I.5.1.9.2}.
+
+Supongamos primero que $Y$ no es irreducible, y sean $Y'$ una componente irreducible de $Y$ y $Y''=Y\setminus Y'$;
+denotemos también por $Y'$ el subpreesquema cerrado reducido de $Y$ que tiene $Y'$ por espacio subyacente, y por $j$ la inyección canónica $Y'\to Y$.
+Sea $\sh{F}$ un $\sh{O}_Y$-módulo coherente, y consideremos el homomorfismo canónico
+\[
+  \rho:\sh{F}\to\sh{F}'=j_*(j^*(\sh{F}))
+\]
+\sref[0]{0.4.4.3};
+$\sh{F}'$ es un $\sh{O}_Y$-módulo coherente en virtud de \sref[0]{0.5.3.10} y \sref[0]{0.5.3.12}, pues
+\[
+  j_*(\sh{O}_{Y'})=\sh{O}_Y/\sh{J},
+\]
+donde $\sh{J}$ denota el haz de ideales de $\sh{O}_Y$ que define el subpreesquema $Y'$.
+Entonces $\sh{G}=\Ker\rho$ y $\sh{K}=\Im\rho$ son también $\sh{O}_Y$-módulos coherentes \sref[0]{0.5.3.4};
+pero, por definición, la fibra $\sh{F}'_y$ de $\sh{F}'$ en el punto genérico $y$ de $Y'$ es igual a $\sh{F}_y$, pues $y$ es interior a $Y'$ y se tiene, por tanto, $\sh{J}_y=0$, ya que $Y$ es reducido.
+Se concluye que $y$ no pertenece al soporte (cerrado) de $\sh{G}$;
+por otra parte, el soporte de $\sh{F}'$ (y \emph{a fortiori} el de $\sh{K}$) está contenido en $Y'$;
+en otras palabras, los soportes de $\sh{G}$ y $\sh{K}$ son \emph{distintos de $Y$}.
+Se deduce que
+\[
+  \HH^1(Y,\sh{G})=\HH^1(Y,\sh{K})=0,
+\]
+y la sucesión exacta de cohomología aplicada a
+\[
+  0\to\sh{G}\to\sh{F}\to\sh{K}\to0
+\]
+implica que $\HH^1(Y,\sh{F})=0$.
+Se concluye entonces mediante el criterio de Serre \sref{II.5.2.1}.
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 136-137.
+
+Supongamos, pues, que $Y$ es irreducible y, por tanto, \emph{íntegro}.
+También puede suponerse que $X$ es \emph{íntegro}:
+si se denotan por $X_i$ los subpreesquemas cerrados reducidos de $X$ cuyos espacios subyacentes son las componentes irreducibles de $X$ \sref[I]{I.5.2.1}, y por $f_i$ la restricción de $f$ a $X_i$, al menos uno de los $f_i$ es dominante y, como es un morfismo finito \sref{II.6.1.5}, es sobreyectivo \sref{II.6.1.10};
+como $X_i$ es además un esquema afín, se ve que puede sustituirse $X$ por $X_i$ en el enunciado.
+
+\begin{lemma}[6.7.1.1]
+\label{II.6.7.1.1}
+Sean $X$ e $Y$ dos preesquemas íntegros noetherianos, $x$ (resp. $y$) el punto genérico de $X$ (resp. de $Y$), y $f:X\to Y$ un morfismo finito sobreyectivo.
+Sea $\sh{L}$ un $\sh{O}_X$-módulo invertible tal que exista un entorno abierto afín $U$ de $y$ y una sección $g\in\Gamma(X,\sh{L})$ para los cuales
+\[
+  x\in X_g\subset f^{-1}(U).
+\]
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 137 -----
+\oldpage[II]{137}
+Existen entonces enteros $m,n>0$, un homomorfismo
+\[
+  u:\sh{O}_Y^m\to f_*(\sh{L}^{\otimes n}),
+\]
+y un entorno abierto $V$ de $y$ tales que la restricción $u|V$ sea un isomorfismo de $\sh{O}_Y^m|V$ sobre $f_*(\sh{L}^{\otimes n})|V$.
+\end{lemma}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 137.
+
+\begin{proof}
+Sea $C$ el anillo (íntegro) de $U$, y sea $k=\sh{O}_y$ su cuerpo de fracciones:
+como $f$ es finito, $U'=f^{-1}(U)$ es afín \sref{II.1.3.2};
+sea $D$ su anillo (íntegro), de cuerpo de fracciones $K=\sh{O}_x$;
+por hipótesis, $D$ es un $C$-módulo de tipo finito \sref{II.6.1.4}, luego $K$ es una extensión de rango finito de $k$.
+La fibra
+\[
+  f^{-1}(y)
+  =X\times_Y\Spec(\kres(y))
+  =X\times_Y\Spec(\sh{O}_y)
+\]
+se identifica con $\Spec(K)$ \sref[I]{I.3.6.6};
+sean $s_i$ ($1\leq i\leq m$) elementos de $D$ que formen una base de $K$ sobre $k$.
+Existe un entero $n>0$ tal que las secciones
+\[
+  (s_i|X_g)g^{\otimes n}
+\]
+de $\sh{L}^{\otimes n}$ sobre $X_g$ se prolonguen en secciones $b_i$ ($1\leq i\leq m$) de $\sh{L}^{\otimes n}$ sobre $X$ \sref[I]{I.9.3.1}.
+Los $b_i$ son también, por definición, secciones de $f_*(\sh{L}^{\otimes n})$ sobre $Y$, y definen, pues, un homomorfismo
+\[
+  u:\sh{O}_Y^m\to f_*(\sh{L}^{\otimes n})
+\]
+\sref[0]{0.5.1.1};
+vamos a ver que $u$ responde a la cuestión.
+Se tiene
+\[
+  \sh{L}^{\otimes n}|U'=\widetilde{M},
+\]
+donde $M$ es un $D$-módulo de tipo finito;
+si $\vphi$ es la inyección $C\to D$ correspondiente al morfismo $f^{-1}(U)\to U$ dado por la restricción de $f$, entonces $M_{[\vphi]}$ es un $C$-módulo de tipo finito.
+Por tanto,
+\[
+  f_*(\sh{L}^{\otimes n})|U=(M_{[\vphi]})\supertilde
+\]
+\sref[I]{I.1.6.3} es coherente y, como $U$ es un abierto afín cualquiera de $Y$, $f_*(\sh{L}^{\otimes n})$ es coherente.
+Además, $u|U=\widetilde{\theta}$, donde $\theta$ es un $C$-homomorfismo
+\[
+  C^m\to M_{[\vphi]},
+\]
+y $u_y=\theta_y$ es el homomorfismo
+\[
+  \theta\otimes1:
+  k^m=C^m\otimes_Ck\to M_{[\vphi]}\otimes_Ck;
+\]
+este último es, por definición, un \emph{isomorfismo}, pues los $(b_i)_x$ forman una base de $M_{[\vphi]}\otimes K$ sobre $k$, siendo $g_x$, por hipótesis, un generador de $(\sh{L}^{\otimes n})_x$.
+Se concluye que los soportes de los $\sh{O}_Y$-módulos $\Ker u$ y $\Coker u$ no contienen a $y$;
+como estos $\sh{O}_Y$-módulos son coherentes \sref[0]{0.5.3.3}, sus soportes son cerrados \sref[0]{0.5.2.2}, de donde resulta el lema.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 137-138.
+
+Sentado esto, las hipótesis del lema \sref{II.6.7.1.1} se satisfacen en el caso considerado tomando $\sh{L}=\sh{O}_X$, pues $X$ es afín \sref[I]{I.1.1.10};
+pongamos $\sh{A}=\sh{O}_Y$ y $\sh{B}=f_*(\sh{O}_X)$.
+En virtud del criterio de Serre \sref{II.5.2.1.1}, basta probar que, para todo $\sh{O}_Y$-módulo coherente $\sh{F}$, se tiene $\HH^1(Y,\sh{F})=0$;
+basta incluso probarlo cuando $\sh{F}\subset\sh{O}_Y$, lo que implica que $\sh{F}$ es sin torsión, pues $Y$ es íntegro;
+de hecho, vamos a demostrar que $\HH^1(Y,\sh{F})=0$ para \emph{todo} $\sh{O}_Y$-módulo coherente \emph{sin torsión} $\sh{F}$.
+Ahora bien, el homomorfismo $u:\sh{A}^m\to\sh{B}$ define un homomorfismo
+\[
+  v:\sh{G}=\shHom_{\sh{A}}(\sh{B},\sh{F})
+  \to
+  \shHom_{\sh{A}}(\sh{A}^m,\sh{F})
+  =\sh{F}^m.
+\]
+
+Mostremos primero que $v$ es \emph{inyectivo}:
+por hipótesis, $\sh{T}=\Coker u$ tiene un soporte que no encuentra a $V$, y es, por tanto, un $\sh{O}_Y$-módulo \emph{de torsión} \sref[I]{I.7.4.6};
+la sucesión exacta
+\[
+  \sh{A}^m\to\sh{B}\to\sh{T}\to0
+\]
+da, por exactitud por la izquierda del funtor $\shHom_{\sh{A}}$, la sucesión exacta
+\[
+  0\to\shHom_{\sh{A}}(\sh{T},\sh{F})
+  \to\sh{G}\xrightarrow{v}\sh{F}^m.
+\]
+Pero, como $\sh{F}$ es sin torsión, se tiene
+\[
+  \shHom_{\sh{A}}(\sh{T},\sh{F})=0
+\]
+\sref[0]{0.5.2.6}, de donde resulta nuestra afirmación.
+Se tiene, pues, la sucesión exacta
+\[
+  0\to\sh{G}\to\sh{F}^m\to\Coker v\to0,
+\]
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 138 -----
+\oldpage[II]{138}
+donde $\sh{G}$ y $\Coker v$ son $\sh{O}_Y$-módulos coherentes (\sref[0]{0.5.3.4} y \sref[0]{0.5.3.5});
+en virtud de la sucesión exacta de cohomología, bastaría probar que
+\[
+  \HH^1(Y,\sh{G})=\HH^1(Y,\Coker v)=0
+\]
+para deducir que
+\[
+  \HH^1(Y,\sh{F}^m)=(\HH^1(Y,\sh{F}))^m=0,
+\]
+y, por tanto, que $\HH^1(Y,\sh{F})=0$.
+Pero la restricción $v|V$ es un isomorfismo, por lo que el soporte de $\Coker v$ es distinto de $Y$, de donde
+\[
+  \HH^1(Y,\Coker v)=0
+\]
+por la hipótesis inicial.
+Por otra parte, $\sh{G}$ es un $\sh{B}$-módulo \emph{coherente} \sref[I]{I.9.6.4};
+como $X$ es afín sobre $Y$, existe un $\sh{O}_X$-módulo cuasi-coherente $\sh{K}$ tal que $\sh{G}$ es isomorfo a $f_*(\sh{K})$ \sref{II.1.4.3};
+como $X$ es afín, se tiene $\HH^1(X,\sh{K})=0$ \sref[I]{I.5.1.9.2}, luego también $\HH^1(Y,\sh{G})=0$ por \sref{II.5.2.3}, lo que termina la demostración del teorema \sref{II.6.7.1}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 138.
+
+\begin{corollary}[6.7.2]
+\label{II.6.7.2}
+Sean $X$ un preesquema noetheriano y $(X_i)_{1\leq i\leq n}$ una cubierta finita del espacio $X$ formada por conjuntos cerrados.
+Para que $X$ sea afín, es necesario y suficiente que, para cada $i$, exista un subpreesquema cerrado de $X$, cuyo espacio subyacente sea $X_i$, que sea afín.
+\end{corollary}
+
+\begin{proof}
+En efecto, si así ocurre, sea $X'$ el esquema \emph{suma} de los $X_i$;
+es claro que $X'$ es afín, y se define un morfismo sobreyectivo $f:X'\to X$ tomando como restricción de $f$ a $X_i$ la inyección canónica.
+En virtud de \sref{II.6.7.1}, todo se reduce a verificar que $f$ es \emph{finito}, y esto ya se ha visto en \sref{II.6.1.5}.
+\end{proof}
+
+\begin{corollary}[6.7.3]
+\label{II.6.7.3}
+Para que un preesquema noetheriano $X$ sea afín, es necesario y suficiente que sean afines los subpreesquemas cerrados reducidos cuyos espacios subyacentes son las componentes irreducibles de $X$.
+\end{corollary}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 138-139.
+
+\section{Criterios valuativos}
+\label{section:II.7}
+
+Damos en este parágrafo criterios valuativos de separación y de la propiedad de ser propio para un morfismo, es decir, criterios que hacen intervenir un esquema auxiliar variable de la forma $\Spec(A)$, donde $A$ es un anillo de valuación.
+Mediante hipótesis «noetherianas» convenientes, estos criterios pueden restringirse al caso en que $A$ es un anillo de valuación \emph{discreta}.
+Este será, sin duda, el único caso que tendremos que aplicar en lo sucesivo, y no hemos introducido los anillos de valuación arbitrarios, en el caso general, sino para establecer el vínculo con los desarrollos clásicos.
+
+\subsection{Recordatorios sobre los anillos de valuación}
+\label{subsection:II.7.1}
+
+\begin{env}[7.1.1]
+\label{II.7.1.1}
+Entre las diversas propiedades equivalentes que caracterizan los anillos de valuación, utilizaremos la siguiente:
+se dice que un anillo $A$ es un \emph{anillo de valuación} si es un anillo íntegro que no es un cuerpo y si, en el conjunto de los anillos locales contenidos en el cuerpo de fracciones $K$ de $A$ y distintos de $K$, $A$ es \emph{maximal} para la relación de dominación \sref[I]{I.8.1.1}.
+Recordemos que un anillo de valuación es \emph{íntegramente cerrado}.
+Si $A$ es un anillo de valuación, $A_\mathfrak{p}$ es también un anillo de valuación para todo ideal primo $\mathfrak{p}\neq0$ de $A$.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 139.
+
+\begin{env}[7.1.2]
+\label{II.7.1.2}
+Sean $K$ un cuerpo y $A$ un subanillo local de $K$ que no sea un cuerpo;
+----- French corrections on page II 137 -----
+[id 3056]
+OLD: La fibre
+\[
+f^{-1}(y)=X\times_Y\operatorname{Spec}(k(y))
+=X\times_Y\operatorname{Spec}(\mathcal{O}_y)
+\]
+s'identifie
+NEW: La fibre
+$f^{-1}(y)=X\times_Y\operatorname{Spec}(\boldsymbol{k}(y))=X\times_Y\operatorname{Spec}(\mathcal{O}_y)$
+s'identifie
+FRENCH CONTEXT (corrected): =f^{-1}(U)$ est affine
+(\hyperref[II.1.3.2-fr]{1.3.2})~; soit $D$ son anneau (intègre) de corps des
+fractions $K=\mathcal{O}_x$~; par hypothèse $D$ est un $C$-module de type
+fini (\hyperref[II.6.1.4-fr]{6.1.4}), donc $K$ est une extension de rang fini
+de $k$. La fibre
+$f^{-1}(y)=X\times_Y\operatorname{Spec}(\boldsymbol{k}(y))=X\times_Y\operatorname{Spec}(\mathcal{O}_y)$
+s'identifie à $\operatorname{Spec}(K)$
+(\hyperref[I.3.6.5-fr]{\textbf{I}, 3.6.6})~; soient $s_i$ ($1\leq i\leq m$) des
+éléments de $D$ formant une base de $K$ sur $k$. Il existe $n>0$ tel que les
+sections $(s_i|X_g)g^{\otimes n}$ de $\mathcal{L}^{\otimes n}$ au-dessus de
+
+[id 3057]
+OLD: {I, 3.6.6}
+NEW: {\textbf{I}, 3.6.6}
+FRENCH CONTEXT (corrected): fini (\hyperref[II.6.1.4-fr]{6.1.4}), donc $K$ est une extension de rang fini
+de $k$. La fibre
+$f^{-1}(y)=X\times_Y\operatorname{Spec}(\boldsymbol{k}(y))=X\times_Y\operatorname{Spec}(\mathcal{O}_y)$
+s'identifie à $\operatorname{Spec}(K)$
+(\hyperref[I.3.6.5-fr]{\textbf{I}, 3.6.6})~; soient $s_i$ ($1\leq i\leq m$) des
+éléments de $D$ formant une base de $K$ sur $k$. Il existe $n>0$ tel que les
+sections $(s_i|X_g)g^{\otimes n}$ de $\mathcal{L}^{\otimes n}$ au-dessus de
+$X_g$ se prolongent en sections $b_i$ ($1\leq i\leq m$) de
+$\mathcal
+
+[id 3058]
+OLD: {I, 9.3.1}
+NEW: {\textbf{I}, 9.3.1}
+FRENCH CONTEXT (corrected): lpha_d(f))}$ (où $\Gamma_*(\mathcal{F})$ est
+considéré comme $\Gamma_*(\mathcal{O}_X)$-module) n'est autre que
+$(\Gamma_*(\mathcal{F}))_{(f)}$ (où $\Gamma_*(\mathcal{F})$ est considéré
+comme $S$-module)~; si on se reporte à la définition
+(\hyperref[I.9.3.1-fr]{\textbf{I}, 9.3.1}) de l'isomorphisme canonique précédent, on
+voit qu'il coïncide avec l'homomorphisme $\beta_f$, d'où le théorème.
+\end{proof}
+
+\begin{remark}[2.7.6]
+\label{II.2.7.6-fr}
+Si on suppose l'anneau gradué $S$ \emph{noethérien}, la condition de
+(\hyperref[II.2.7.5-fr
+
+[id 3059]
+OLD: {0, 5.1.1}
+NEW: {\textbf{0}, 5.1.1}
+FRENCH CONTEXT (corrected): omorphisme
+surjectif $A^n\to M$, alors il existe un homomorphisme surjectif
+$\widetilde{A}^n\to\widetilde{M}$, autrement dit le $\widetilde{A}$-Module
+$\widetilde{M}$ est \emph{engendré par une famille finie de sections au-dessus
+de $X$} (\hyperref[0.5.1.1-fr]{\textbf{0}, 5.1.1}), et réciproquement.
+
+\begin{env}[1.3.10]
+\label{I.1.3.10-fr}
+Si $N$ est un sous-module d'un $A$-module $M$, l'injection canonique
+$j:N\to M$ donne par (\hyperref[I.1.3.9-fr]{1.3.9}) un homomorphisme injectif
+$\widetilde{N}\to\widetilde{M}$, qui permet d'iden
+
+[id 3060]
+OLD: {I, 1.6.3}
+NEW: {\textbf{I}, 1.6.3}
+FRENCH CONTEXT (corrected): cal{G})
+  =\mathcal{A}(\mathcal{F})\otimes_{\mathcal{A}(X)}\mathcal{A}(\mathcal{G})
+  \tag{1.4.8.1}\label{II.1.4.8.1-fr}
+\]
+à un isomorphisme canonique fonctoriel près. Si de plus $\mathcal{F}$ admet
+une présentation finie, il résulte de
+(\hyperref[I.1.6.3-fr]{\textbf{I}, 1.6.3} et
+\hyperref[I.1.3.12-fr]{1.3.12}) que
+\[
+  \mathcal{A}(\mathcal{H}om_X(\mathcal{F},\mathcal{G}))
+  =\mathcal{H}om_{\mathcal{A}(X)}
+    (\mathcal{A}(\mathcal{F}),\mathcal{A}(\mathcal{G}))
+  \tag{1.4.8.2}\label{II.1.4.8.2-fr}
+\]
+à un isomorphisme canonique prè
+
+[id 3061]
+OLD: l'homomorphisme
+\[
+\theta\otimes1:K^m=C^m\otimes K\longrightarrow
+M_{[\varphi]}\otimes K,
+\]
+or ce dernier
+NEW: l'homomorphisme
+$\theta\otimes1:K^m=C^m\otimes K\longrightarrow M_{[\varphi]}\otimes K$~;
+or ce dernier
+FRENCH CONTEXT (corrected): 1.6.3-fr]{\textbf{I}, 1.6.3}) est cohérent et comme $U$ est un ouvert
+affine quelconque de $Y$, $f_*(\mathcal{L}^{\otimes n})$ est cohérent~; en
+outre $u|U=\widetilde{\theta}$, où $\theta$ est un $C$-homomorphisme
+$C^m\to M_{[\varphi]}$, et $u_y=\theta_y$ est l'homomorphisme
+$\theta\otimes1:K^m=C^m\otimes K\longrightarrow M_{[\varphi]}\otimes K$~;
+or ce dernier est par définition un \emph{isomorphisme}, car les $(b_i)_x$
+forment une base de $M_{[\varphi]}\otimes K$ sur $k$, $g_x$ étant par
+hypothèse un générateur de $(\mathcal{L}^{\otimes n})_x$. On en conclut que
+les supports des $\mathcal{O}_Y$-Modules $\operatorn
+
+[id 3062]
+OLD: {0, 5.3.3}
+NEW: {\textbf{0}, 5.3.3}
+FRENCH CONTEXT (corrected): pothèse un générateur de $(\mathcal{L}^{\otimes n})_x$. On en conclut que
+les supports des $\mathcal{O}_Y$-Modules $\operatorname{Ker}u$ et
+$\operatorname{Coker}u$ ne contiennent pas $y$~; comme ces
+$\mathcal{O}_Y$-Modules sont cohérents
+(\hyperref[0.5.3.3-fr]{\textbf{0}, 5.3.3}), leurs supports sont fermés
+(\hyperref[0.5.2.2-fr]{\textbf{0}, 5.2.2}), d'où le lemme.
+
+Cela étant, les hypothèses du lemme
+(\hyperref[II.6.7.1.1-fr]{6.7.1.1}) sont remplies dans le cas que nous
+considérons en prenant $\mathcal{L}=\mathcal{O}_X$, puisque $X$
+
+[id 3063]
+OLD: {0, 5.2.2}
+NEW: {\textbf{0}, 5.2.2}
+FRENCH CONTEXT (corrected): 
+\end{corollary}
+
+Il est clair que $\mathscr{F}_{/X'}$ est un
+$(\mathscr{O}_X)_{/X'}$-Module de type fini
+(\hyperref[I.10.8.8-fr]{10.8.8, (ii)}) et
+(\hyperref[0.5.2.4-fr]{\textbf{0}, 5.2.4}),
+
+\oldpage[I]{198}
+
+donc son support est fermé (\hyperref[0.5.2.2-fr]{\textbf{0}, 5.2.2}) et
+évidemment contenu dans $\operatorname{Supp}(\mathscr{F})\cap X'$. Pour
+montrer qu'il est égal à ce dernier ensemble, on est aussitôt ramené à
+prouver que la relation $\Gamma(X',\mathscr{F}_{/X'})=0$ entraîne
+$\operatorname{Supp}(\mathscr{F})\cap X'=\varn
+
+[id 3064]
+OLD: {I, 1.1.10}
+NEW: {\textbf{I}, 1.1.10}
+FRENCH CONTEXT (corrected): erref[0.5.2.2-fr]{\textbf{0}, 5.2.2}), d'où le lemme.
+
+Cela étant, les hypothèses du lemme
+(\hyperref[II.6.7.1.1-fr]{6.7.1.1}) sont remplies dans le cas que nous
+considérons en prenant $\mathcal{L}=\mathcal{O}_X$, puisque $X$ est affine
+(\hyperref[I.1.1.10-fr]{\textbf{I}, 1.1.10})~; nous poserons
+$\mathcal{A}=\mathcal{O}_Y$, $\mathcal{B}=f_*(\mathcal{O}_X)$. En vertu du
+critère de Serre (\hyperref[II.5.2.1.1-fr]{5.2.1.1}), il suffit de prouver
+que pour tout $\mathcal{O}_Y$-Module cohérent $\mathcal{F}$, on a
+$\mathrm{H}^1(Y,\mathcal{F
+
+[id 3065]
+OLD: par hypothèse,
+$\mathcal{T}
+NEW: par hypothèse
+$\mathcal{T}
+FRENCH CONTEXT (corrected): athcal{A}^m\to\mathcal{B}$ définit un homomorphisme
+\[
+v:\mathcal{G}
+=\mathcal{H}om_{\mathcal{A}}(\mathcal{B},\mathcal{F})
+\longrightarrow
+\mathcal{H}om_{\mathcal{A}}(\mathcal{A}^m,\mathcal{F})
+=\mathcal{F}^m.
+\]
+Montrons d'abord que $v$ est \emph{injectif}~: par hypothèse
+$\mathcal{T}=\operatorname{Coker}u$ a un support ne rencontrant pas $V$, donc
+est un $\mathcal{O}_Y$-Module \emph{de torsion}
+(\hyperref[I.7.4.6-fr]{\textbf{I}, 7.4.6})~; la suite exacte
+\[
+\mathcal{A}^m\longrightarrow\mathcal{B}\longrightarrow\mathcal{T}
+\longrightarrow0
+
+[id 3066]
+OLD: -Module de torsion
+NEW: -Module \emph{de torsion}
+FRENCH CONTEXT (corrected): hcal{F})
+\longrightarrow
+\mathcal{H}om_{\mathcal{A}}(\mathcal{A}^m,\mathcal{F})
+=\mathcal{F}^m.
+\]
+Montrons d'abord que $v$ est \emph{injectif}~: par hypothèse
+$\mathcal{T}=\operatorname{Coker}u$ a un support ne rencontrant pas $V$, donc
+est un $\mathcal{O}_Y$-Module \emph{de torsion}
+(\hyperref[I.7.4.6-fr]{\textbf{I}, 7.4.6})~; la suite exacte
+\[
+\mathcal{A}^m\longrightarrow\mathcal{B}\longrightarrow\mathcal{T}
+\longrightarrow0
+\]
+donne, par exactitude à gauche du foncteur
+$\mathcal{H}om_{\mathcal{A}}$, la suite exacte
+\[
+0\longrightarrow
+
+[id 3067]
+OLD: {I, 7.4.6}
+NEW: {\textbf{I}, 7.4.6}
+FRENCH CONTEXT (corrected): ]^h\ar[dr]_{g'} && X'\ar[dl]^g\\
+& X
+}
+\]
+où $h$ est une immersion fermée (\hyperref[II.1.4.10-fr]{1.4.10}). En outre,
+on sait que le support de $\mathcal{T}$ est un ensemble fermé
+(\hyperref[0.5.2.2-fr]{\textbf{0}, 5.2.2}) rare dans $X$
+(\hyperref[I.7.4.6-fr]{\textbf{I}, 7.4.6}), d'où on conclut que pour le point générique
+$x$ d'une composante irréductible de $X$, il y a un voisinage ouvert affine
+$U$ de $x$ tel que
+$\mathcal{B}|U=(\mathcal{B}/\mathcal{T})|U$. Comme $g$ est par hypothèse
+surjectif, on en conclut que $x\in g'(X'')$~;
+
+[id 3068]
+OLD: {0, 5.2.6}
+NEW: {\textbf{0}, 5.2.6}
+FRENCH CONTEXT (corrected): 
+\[
+0\longrightarrow
+\mathcal{H}om_{\mathcal{A}}(\mathcal{T},\mathcal{F})
+\longrightarrow\mathcal{G}\xrightarrow{v}\mathcal{F}^m.
+\]
+Mais comme $\mathcal{F}$ est sans torsion, on a
+$\mathcal{H}om_{\mathcal{A}}(\mathcal{T},\mathcal{F})=0$
+(\hyperref[0.5.2.6-fr]{\textbf{0}, 5.2.6}), d'où notre assertion. On a donc la suite
+exacte
+\[
+0\longrightarrow\mathcal{G}\longrightarrow\mathcal{F}^m
+\longrightarrow\operatorname{Coker}v\longrightarrow0
+\]
+
+\oldpage[II]{138}
+
+où $\mathcal{G}$ et $\operatorname{Coker}v$ sont des
+$\mathcal{O}_Y$-Modul
+
+=================== PAGE II 138 ===================
+----- (Spanish page II 137: shown above in this file) -----
+----- (Spanish page II 138: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 139 -----
+\oldpage[II]{139}
+existe entonces un anillo de valuación que tiene $K$ por cuerpo de fracciones y domina a $A$ (\cite[p.~1-07, lema~2]{I-1}).
+
+Por otra parte, sean $B$ un anillo de valuación, $k$ su cuerpo residual, $K$ su cuerpo de fracciones y $L$ una extensión de $k$.
+Existe entonces un anillo de valuación \emph{completo} $C$ que domina a $B$ y cuyo cuerpo residual es $L$.
+En efecto, $L$ es extensión algebraica de una extensión trascendente pura
+\[
+  L'=k(T_\mu)_{\mu\in M};
+\]
+se sabe que puede prolongarse la valuación de $K$ correspondiente a $B$ a una valuación de
+\[
+  K'=K(T_\mu)_{\mu\in M}
+\]
+de suerte que $L'$ sea el cuerpo residual de esta valuación (\cite[p.~98]{II-24});
+sustituyendo $B$ por el completado del anillo de esta valuación prolongada, se ve que puede limitarse al caso en que $B$ es completo y $L$ es una clausura algebraica de $k$.
+Si $\overline{K}$ es una clausura algebraica de $K$, puede prolongarse a $\overline{K}$ la valuación que define $B$, y el cuerpo residual correspondiente es una clausura algebraica de $k$, como se ve levantando a $\overline{K}$ los coeficientes de un polinomio mónico de $k[T]$.
+Se queda finalmente reducido al caso $L=k$, y basta entonces tomar para $C$ el completado de $B$ para responder a la cuestión.
+\end{env}
+
+\begin{env}[7.1.3]
+\label{II.7.1.3}
+Sean $K$ un cuerpo y $A$ un subanillo de $K$;
+la clausura integral $A'$ de $A$ en $K$ es la intersección de los anillos de valuación que contienen a $A$ y tienen a $K$ por cuerpo de fracciones (\cite[p.~51, th.~2]{I-11}).
+La proposición \sref{II.7.1.2} se expresa entonces bajo la forma geométrica equivalente siguiente.
+\end{env}
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 139.
+
+\begin{proposition}[7.1.4]
+\label{II.7.1.4}
+Sean $Y$ un preesquema, $p:X\to Y$ un morfismo, $x$ un punto de $X$, $y=p(x)$ e $y'\neq y$ una especialización \sref[0]{0.2.1.2} de $y$.
+Existe entonces un esquema local $Y'$, espectro de un anillo de valuación, y un morfismo separado $f:Y'\to Y$ tales que, si se denota por $a$ el único punto cerrado de $Y'$ y por $b$ el punto genérico de $Y'$, se tenga
+\[
+  f(a)=y'
+  \qquad\text{y}\qquad
+  f(b)=y.
+\]
+Puede suponerse además que se satisface una de las dos propiedades adicionales siguientes:
+\begin{enumerate}
+  \item[\rm{(i)}] $Y'$ es el espectro de un anillo de valuación completo cuyo cuerpo residual es algebraicamente cerrado, y existe un $\kres(y)$-homomorfismo $\kres(x)\to\kres(b)$.
+  \item[\rm{(ii)}] Existe un $\kres(y)$-isomorfismo $\kres(x)\simto\kres(b)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Sea $Y_1$ el subpreesquema cerrado reducido de $Y$ que tiene $\overline{\{y\}}$ por espacio subyacente \sref[I]{I.5.2.1}, y sea $X_1$ el subpreesquema cerrado imagen recíproca $p^{-1}(Y_1)$;
+como $y'\in\overline{\{y\}}$ por hipótesis y $\kres(x)$ es el mismo en $X$ y en $X_1$, puede suponerse que $Y$ es \emph{íntegro}, de punto genérico $y$.
+$\sh{O}_{y'}$ es entonces un anillo local íntegro que no es un cuerpo, cuyo cuerpo de fracciones es $\sh{O}_y=\kres(y)$, y $\kres(x)$ es una extensión de $\kres(y)$.
+
+Para realizar las condiciones $f(a)=y'$ y $f(b)=y$, así como la condición adicional~(i) (resp.~(ii)), se tomará $Y'=\Spec(A')$, donde $A'$ es un anillo de valuación que domina a $\sh{O}_{y'}$, es completo y tiene un cuerpo residual algebraicamente cerrado extensión de $\kres(x)$ (resp. un anillo de valuación $A'$ que domina a $\sh{O}_{y'}$ y cuyo cuerpo de fracciones es $\kres(x)$);
+la existencia de $A'$ está garantizada por \sref{II.7.1.2}.
+\end{proof}
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 139-140.
+
+\begin{env}[7.1.5]
+\label{II.7.1.5}
+Recordemos que un anillo local $A$ se dice \emph{de dimensión~1} si existe un ideal primo distinto del ideal maximal $\mathfrak{m}$ y si todo ideal primo de $A$ distinto de $\mathfrak{m}$ es un ideal primo \emph{minimal};
+cuando $A$ es \emph{íntegro}, esto equivale a exigir que $\mathfrak{m}$ y $(0)$ sean los únicos ideales primos y que $\mathfrak{m}\neq(0)$;
+en otros términos, $Y=\Spec(A)$ consta de dos
+----- French corrections on page II 138 -----
+[id 3069]
+OLD: {0, 5.3.4}
+NEW: {\textbf{0}, 5.3.4}
+FRENCH CONTEXT (corrected): in{proof}
+En effet, si $\mathscr{J}_1$ et $\mathscr{J}_2$ appartiennent à $\Phi$, et
+si on pose $\mathscr{J}=\mathscr{J}_1\cap\mathscr{J}_2$,
+$\mathscr{J}$ est cohérent puisque $\mathscr{O}_X$ est cohérent
+(\hyperref[I.6.1.1-fr]{6.1.1} et
+\hyperref[0.5.3.4-fr]{\textbf{0}, 5.3.4}), et l'on a
+$\mathscr{J}_x=(\mathscr{J}_1)_x\cap(\mathscr{J}_2)_x$, pour tout
+$x\in X$, donc $\mathscr{J}_x=\mathscr{O}_x$ pour $x\notin X'$ et
+$\mathscr{J}_x\neq\mathscr{O}_x$ pour $x\in X'$, ce qui prouve que
+$\mathscr{J}\in\Phi$. D'autre part, si $X$ est n
+
+[id 3070]
+OLD: $\mathcal{B}$-Module cohérent
+NEW: \emph{$\mathcal{B}$-Module} cohérent
+FRENCH CONTEXT (corrected): par suite
+$\mathrm{H}^1(Y,\mathcal{F})=0$. Or la restriction $v|V$ est un isomorphisme,
+donc le support de $\operatorname{Coker}v$ est distinct de $Y$, d'où
+$\mathrm{H}^1(Y,\operatorname{Coker}v)=0$ par l'hypothèse du début. D'autre
+part, $\mathcal{G}$ est un \emph{$\mathcal{B}$-Module} cohérent
+(\hyperref[I.9.6.4-fr]{\textbf{I}, 9.6.4})~; comme $X$ est affine au-dessus de $Y$, il
+existe un $\mathcal{O}_X$-Module quasi-cohérent $\mathcal{K}$ tel que
+$\mathcal{G}$ soit isomorphe à $f_*(\mathcal{K})$
+(\hyperref[II.1.4.3-fr]{1.4.3})~; comme $X$ est affi
+
+[id 3071]
+OLD: {I, 9.6.4}
+NEW: {\textbf{I}, 9.6.4}
+FRENCH CONTEXT (corrected): n $v|V$ est un isomorphisme,
+donc le support de $\operatorname{Coker}v$ est distinct de $Y$, d'où
+$\mathrm{H}^1(Y,\operatorname{Coker}v)=0$ par l'hypothèse du début. D'autre
+part, $\mathcal{G}$ est un \emph{$\mathcal{B}$-Module} cohérent
+(\hyperref[I.9.6.4-fr]{\textbf{I}, 9.6.4})~; comme $X$ est affine au-dessus de $Y$, il
+existe un $\mathcal{O}_X$-Module quasi-cohérent $\mathcal{K}$ tel que
+$\mathcal{G}$ soit isomorphe à $f_*(\mathcal{K})$
+(\hyperref[II.1.4.3-fr]{1.4.3})~; comme $X$ est affine, on a
+$\mathrm{H}^1(X,\mathcal{K})=0$
+(
+
+[id 3072]
+OLD: {I, 5.1.9.2}
+NEW: {\textbf{I}, 5.1.9.2}
+FRENCH CONTEXT (corrected): 0
+\tag{4.5.13.2}
+\end{equation}
+pour un $m>0$ assez grand. En effet, $Z_g$ est un \emph{ouvert affine} de $Z$ et
+on a donc $\mathrm{H}^1(Z_g,\mathcal{J}(n))=0$ quand $\mathcal{J}(n)$ est
+considéré comme un $\mathcal{O}_Z$-\emph{Module}
+(\hyperref[I.5.1.9.2-fr]{\textbf{I}, 5.1.9.2}). En particulier, si on pose
+$g'=g|Z_g$, et si on considère son image par l'application
+$\partial:\Gamma(Z_g,\mathcal{L}'^{\otimes n})\to
+\mathrm{H}^1(Z_g,\mathcal{J}(n))$, on a $\partial g'=0$. Pour expliciter
+cette relation, observons qu'en dimension $1$ la
+
+[id 3073]
+OLD: noethérien $X$ soit affine, il faut
+NEW: noethérien $X$ soit affine il faut
+FRENCH CONTEXT (corrected): riction de $f$ à $X_i$ l'injection
+canonique. Tout revient à vérifier que $f$ est \emph{fini}, en vertu de
+(\hyperref[II.6.7.1-fr]{6.7.1}), et cela a été vu en
+(\hyperref[II.6.1.5-fr]{6.1.5}).
+
+\begin{corollary}[6.7.3]
+\label{II.6.7.3-fr}
+Pour qu'un préschéma noethérien $X$ soit affine il faut et il suffit que les
+sous-préschémas fermés réduits ayant pour espaces sous-jacents les composantes
+irréductibles de $X$ soient affines.
+\end{corollary}
+
+\section{Critères valuatifs}
+\label{section:II.7-fr}
+
+Nous donnons dans ce paragraphe des critères valuat
+
+[id 3074]
+OLD: {I, 8.1.1}
+NEW: {\textbf{I}, 8.1.1}
+FRENCH CONTEXT (corrected): {anneau de valuation} si c'est un anneau intègre qui n'est pas un
+corps, et si, dans l'ensemble des anneaux locaux contenus dans le corps des
+fractions $K$ de $A$ et distincts de $K$, $A$ est \emph{maximal} pour la
+relation de domination (\hyperref[I.8.1.1-fr]{\textbf{I}, 8.1.1}). Rappelons qu'un
+anneau de valuation est \emph{intégralement clos}. Si $A$ est un anneau de
+valuation, $A_{\mathfrak{p}}$ est aussi un anneau de valuation pour tout
+idéal premier $\mathfrak{p}\neq0$ de $A$.
+\end{env}
+
+\begin{env}[7.1.2]
+\label{II.7.1.2-fr}
+S
+
+=================== PAGE II 139 ===================
+----- (Spanish page II 138: shown above in this file) -----
+----- (Spanish page II 139: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 140 -----
+\oldpage[II]{140}
+puntos $a$ y $b$: $a$ es el único punto \emph{cerrado}, se tiene $\mathfrak{j}_a=\mathfrak{m}$, y $\kres(a)=k$ es el \emph{cuerpo residual} $k=A/\mathfrak{m}$;
+$b$ es el \emph{punto genérico} de $Y$, $\mathfrak{j}_b=(0)$, el conjunto $\{b\}$ es el único abierto de $Y$ distinto de $\emp$ y de $Y$ (abierto que, por tanto, es \emph{denso en todas partes}), y $\kres(b)=K$ es el \emph{cuerpo de fracciones} de $A$.
+\end{env}
+
+\begin{env}[7.1.6]
+\label{II.7.1.6}
+Para un anillo local noetheriano $A$ de dimensión~1, se sabe (\cite[pp.~2-08 y 17-01]{I-1}) que las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm{(a)}] $A$ es normal;
+  \item[\rm{(b)}] $A$ es regular;
+  \item[\rm{(c)}] $A$ es un anillo de valuación;
+\end{enumerate}
+además, $A$ es entonces un \emph{anillo de valuación discreta}.
+Las Proposiciones~\sref{II.7.1.2} y \sref{II.7.1.3} tienen entonces los análogos siguientes para los anillos de valuación discreta:
+\end{env}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 140.
+
+\begin{proposition}[7.1.7]
+\label{II.7.1.7}
+Sean $A$ un anillo local íntegro noetheriano que no sea un cuerpo, $K$ su cuerpo de fracciones y $L$ una extensión de tipo finito de $K$;
+existe entonces un anillo de valuación discreta que tiene a $L$ por cuerpo de fracciones y domina a $A$.
+\end{proposition}
+
+\begin{proof}
+Supongamos primero que $L=K$.
+Sean $\mathfrak{m}$ el ideal maximal de $A$, $(x_1,\ldots,x_n)$ un sistema de generadores no nulos de $\mathfrak{m}$ y $B$ el subanillo
+\[
+  A[x_2/x_1,\ldots,x_n/x_1]
+\]
+de $K$, que es noetheriano.
+Es inmediato que el ideal $\mathfrak{m}B$ de $B$ es idéntico al ideal principal $x_1B$;
+si $\mathfrak{p}$ es un ideal primo minimal por encima de $x_1B$, entonces $\mathfrak{p}$ tiene altura~1 (\cite[t.~I, p.~277]{I-13});
+en otros términos, $B_\mathfrak{p}$ es un anillo local noetheriano \emph{de dimensión~1};
+es claro que $\mathfrak{p}B_\mathfrak{p}\cap A$ es un ideal de $A$ que contiene a $\mathfrak{m}$ y no contiene a $1$, luego es igual a $\mathfrak{m}$ y, por consiguiente, $B_\mathfrak{p}$ \emph{domina} a $A$ \sref[I]{I.8.1.1}.
+Del teorema de Krull--Akizuki (\cite[p.~293]{II-25}) resulta que la clausura integral $C$ de $B_\mathfrak{p}$ es un anillo noetheriano (aunque $C$ no sea necesariamente un $B_\mathfrak{p}$-módulo de tipo finito);
+si $\mathfrak{n}$ es un ideal maximal de $C$, entonces $C_\mathfrak{n}$ es un anillo local noetheriano normal de dimensión~1 (\cite[p.~295]{II-25}), y por tanto un anillo de valuación discreta que domina a $B_\mathfrak{p}$ y, \emph{a fortiori}, a $A$.
+
+Si ahora $L$ es una extensión de tipo finito de $K$, por lo precedente puede reducirse al caso en que $A$ es ya un anillo de valuación discreta.
+Sea $w$ una valuación de $K$ asociada a $A$;
+existe una valuación discreta $w'$ de $L$ que \emph{prolonga} a $w$: por inducción sobre el número de generadores de $L$, puede reducirse al caso en que $L=K(\alpha)$, y entonces la proposición es clásica (\cite[p.~106]{II-24}).
+\end{proof}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 140.
+
+\begin{corollary}[7.1.8]
+\label{II.7.1.8}
+Sean $A$ un anillo íntegro noetheriano, $K$ su cuerpo de fracciones y $L$ una extensión de tipo finito de $K$.
+Entonces la clausura integral de $A$ en $L$ es la intersección de los anillos de valuación discreta que tienen a $L$ por cuerpo de fracciones y contienen a $A$.
+\end{corollary}
+
+\begin{proof}
+En efecto, tal anillo de valuación discreta, al ser normal, contiene \emph{a fortiori} todo elemento de $L$ entero sobre $A$.
+Basta, pues, demostrar que, si $x\in L$ no es entero sobre $A$, existe un anillo de valuación discreta $C$ que tiene a $L$ por cuerpo de fracciones, contiene a $A$ y no contiene a $x$.
+La hipótesis sobre $x$ significa que $x\notin B=A[1/x]$ o, en otros términos, que $1/x$ no es invertible en el anillo noetheriano $B$.
+Existe por tanto un ideal primo $\mathfrak{p}$ de $B$ que contiene a $1/x$.
+El anillo local íntegro $B_\mathfrak{p}$ es noetheriano y está contenido en $L$, que es una extensión de tipo finito del cuerpo de fracciones de $B_\mathfrak{p}$ (el cual contiene a $K$).
+En virtud de \sref{II.7.1.7}, existe entonces un anillo de valuación discreta $C$ que domina a $B_\mathfrak{p}$ y tiene a $L$ por cuerpo de fracciones;
+como $1/x\in\mathfrak{p}B_\mathfrak{p}$ pertenece al ideal maximal de $C$, se tiene $x\notin C$, lo que concluye la demostración.
+\end{proof}
+
+La forma geométrica de \sref{II.7.1.7} es la siguiente:
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 141.
+----- French corrections on page II 139 -----
+[id 3075]
+OLD: (\cite[p.~1-07, lemme~2]{I-1})
+NEW: (\cite{I-1}, p.~1-07, lemme~2)
+FRENCH CONTEXT (corrected): ak{p}\neq0$ de $A$.
+\end{env}
+
+\begin{env}[7.1.2]
+\label{II.7.1.2-fr}
+Soient $K$ un corps, $A$ un sous-anneau local de $K$ qui n'est pas un corps~;
+
+\oldpage[II]{139}
+
+il existe alors un anneau de valuation ayant $K$ pour corps des fractions et
+qui domine $A$ (\cite{I-1}, p.~1-07, lemme~2).
+
+D'autre part, soient $B$ un anneau de valuation, $k$ son corps des restes,
+$K$ son corps des fractions, $L$ une extension de $k$. Alors il existe un
+anneau de valuation \emph{complet} $C$ qui domine $B$ et dont le corps des
+restes est $L$. En effet, $L$ est
+
+[id 3076]
+OLD: (\cite[p.~98]{II-24})
+NEW: (\cite{II-24}, p.~98)
+FRENCH CONTEXT (corrected): t extension algébrique d'une extension
+transcendante pure $L'=k(T_\mu)_{\mu\in M}$~; on sait qu'on peut prolonger la
+valuation de $K$ correspondant à $B$ à une valuation de
+$K'=K(T_\mu)_{\mu\in M}$ de sorte que $L'$ soit le corps des restes de cette
+valuation (\cite{II-24}, p.~98)~; remplaçant $B$ par le complété de l'anneau
+de cette valuation prolongée, on voit qu'on peut se limiter au cas où $B$ est
+complet et $L$ est une clôture algébrique de $k$. Si $\overline{K}$ est une
+clôture algébrique de $K$, on peut alors prolonger à $\overl
+
+[id 3077]
+OLD: (\cite[p.~51, th.~2]{I-11})
+NEW: (\cite{I-11}, p.~51, th.~2)
+FRENCH CONTEXT (corrected): ondre à la question.
+\end{env}
+
+\begin{env}[7.1.3]
+\label{II.7.1.3-fr}
+Soient $K$ un corps, $A$ un sous-anneau de $K$~; la fermeture intégrale $A'$
+de $A$ dans $K$ est l'intersection des anneaux de valuation contenant $A$ et
+ayant $K$ pour corps des fractions
+(\cite{I-11}, p.~51, th.~2). La proposition
+(\hyperref[II.7.1.2-fr]{7.1.2}) s'exprime sous la forme géométrique
+équivalente~:
+\end{env}
+
+\begin{proposition}[7.1.4]
+\label{II.7.1.4-fr}
+Soient $Y$ un préschéma, $p:X\to Y$ un morphisme, $x$ un point de $X$,
+$y=p(x)$, $y'\neq y$ une spécial
+
+[id 3078]
+OLD: (\hyperref[0.2.1.2-fr]{0, 2.1.2})
+NEW: \textup{(\hyperref[0.2.1.2-fr]{\textbf{0}, 2.1.2})}
+FRENCH CONTEXT (corrected): position
+(\hyperref[II.7.1.2-fr]{7.1.2}) s'exprime sous la forme géométrique
+équivalente~:
+\end{env}
+
+\begin{proposition}[7.1.4]
+\label{II.7.1.4-fr}
+Soient $Y$ un préschéma, $p:X\to Y$ un morphisme, $x$ un point de $X$,
+$y=p(x)$, $y'\neq y$ une spécialisation
+\textup{(\hyperref[0.2.1.2-fr]{\textbf{0}, 2.1.2})} de $y$. Il existe alors un schéma local
+$Y'$, spectre d'un anneau de valuation, et un morphisme séparé $f:Y'\to Y$
+tel que, si $a$ désigne l'unique point fermé de $Y'$ et $b$ le point
+générique de $Y'$, on ait $f(a)=y'$ et $f(b)=y$. On peut en outre supposer
+
+
+[id 3080]
+OLD: $k(y)$-homo
+NEW: $\boldsymbol{k}(y)$-homo
+FRENCH CONTEXT (corrected): )=y'$ et $f(b)=y$. On peut en outre supposer
+vérifiée l'une des deux propriétés additionnelles suivantes~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+
+[id 3081]
+OLD: morphisme $k(x)
+NEW: morphisme $\boldsymbol{k}(x)
+FRENCH CONTEXT (corrected): ut en outre supposer
+vérifiée l'une des deux propriétés additionnelles suivantes~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme es
+
+[id 3082]
+OLD: \to k(b)$
+NEW: \to \boldsymbol{k}(b)$
+FRENCH CONTEXT (corrected): e l'une des deux propriétés additionnelles suivantes~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyp
+
+[id 3083]
+OLD: $k(y)$-iso
+NEW: $\boldsymbol{k}(y)$-iso
+FRENCH CONTEXT (corrected): 
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), et soit $X_1$ le
+
+[id 3084]
+OLD: $k(x)\xrightarrow
+NEW: $\boldsymbol{k}(x)\xrightarrow
+FRENCH CONTEXT (corrected): ] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), et soit $X_1$ le sous-préschéma fermé
+image réciproque $
+
+[id 3085]
+OLD: {\sim}k(b)$
+NEW: {\sim}\boldsymbol{k}(b)$
+FRENCH CONTEXT (corrected): eau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), et soit $X_1$ le sous-préschéma fermé
+image réciproque $p^{-1}(Y_1)$~; comme $y'
+
+[id 3086]
+OLD: {I, 5.2.1}
+NEW: {\textbf{I}, 5.2.1}
+FRENCH CONTEXT (corrected): ph{c')} entraîne \emph{a)}. Or, soit $U$
+un voisinage ouvert de $x\in X$, et soit $\mathcal{J}$ un faisceau d'idéaux
+quasi-cohérent de $\mathcal{O}_X$ définissant un sous-préschéma fermé de $X$
+ayant $X\setmin U$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}). L'hypothèse \emph{c')} entraîne qu'il existe un
+entier $n>0$ et une section $f$ de $\mathcal{J}(n)$ au-dessus de $X$ telle
+que $f(x)\neq0$. Mais on a évidemment $f\in S_n$, et $x\in X_f\subset U$, ce
+qui prouve \emph{a)}.
+\end{proof}
+
+Lorsque $X$ est un pré
+
+[id 3087]
+OLD: que $k(x)$ est le même
+NEW: que $\boldsymbol{k}(x)$ est le même
+FRENCH CONTEXT (corrected): oit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), et soit $X_1$ le sous-préschéma fermé
+image réciproque $p^{-1}(Y_1)$~; comme $y'\in\overline{\{y\}}$ par hypothèse
+et que $\boldsymbol{k}(x)$ est le même dans $X$ et dans $X_1$, on peut supposer $Y$
+\emph{intègre}, de point générique $y$~; $\mathcal{O}_{y'}$ est alors un
+anneau local intègre qui n'est pas un corps, et dont le corps des fractions
+est $\mathcal{O}_y=\boldsymbol{k}(y)$, et $\boldsymbol{k}(x)$ est
+
+[id 3088]
+OLD: \mathcal{O}_y=k(y)$
+NEW: \mathcal{O}_y=\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): \{y\}}$ par hypothèse
+et que $\boldsymbol{k}(x)$ est le même dans $X$ et dans $X_1$, on peut supposer $Y$
+\emph{intègre}, de point générique $y$~; $\mathcal{O}_{y'}$ est alors un
+anneau local intègre qui n'est pas un corps, et dont le corps des fractions
+est $\mathcal{O}_y=\boldsymbol{k}(y)$, et $\boldsymbol{k}(x)$ est une extension de $\boldsymbol{k}(y)$. Pour
+réaliser les conditions $f(a)=y'$ et $f(b)=y$ ainsi que la condition
+additionnelle (i) (resp. (ii)), on prendra
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation dominant
+$\
+
+[id 3089]
+OLD: et $k(x)$ est une
+NEW: et $\boldsymbol{k}(x)$ est une
+FRENCH CONTEXT (corrected): dsymbol{k}(x)$ est le même dans $X$ et dans $X_1$, on peut supposer $Y$
+\emph{intègre}, de point générique $y$~; $\mathcal{O}_{y'}$ est alors un
+anneau local intègre qui n'est pas un corps, et dont le corps des fractions
+est $\mathcal{O}_y=\boldsymbol{k}(y)$, et $\boldsymbol{k}(x)$ est une extension de $\boldsymbol{k}(y)$. Pour
+réaliser les conditions $f(a)=y'$ et $f(b)=y$ ainsi que la condition
+additionnelle (i) (resp. (ii)), on prendra
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation dominant
+$\mathcal{O}_{y'}$ et qui est comp
+
+[id 3090]
+OLD: de $k(y)$. Pour
+NEW: de $\boldsymbol{k}(y)$. Pour
+FRENCH CONTEXT (corrected): ns $X_1$, on peut supposer $Y$
+\emph{intègre}, de point générique $y$~; $\mathcal{O}_{y'}$ est alors un
+anneau local intègre qui n'est pas un corps, et dont le corps des fractions
+est $\mathcal{O}_y=\boldsymbol{k}(y)$, et $\boldsymbol{k}(x)$ est une extension de $\boldsymbol{k}(y)$. Pour
+réaliser les conditions $f(a)=y'$ et $f(b)=y$ ainsi que la condition
+additionnelle (i) (resp. (ii)), on prendra
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation dominant
+$\mathcal{O}_{y'}$ et qui est complet et a un corps des restes
+algébrique
+
+[id 3091]
+OLD: clos extension de $k(x)$
+NEW: clos extension de $\boldsymbol{k}(x)$
+FRENCH CONTEXT (corrected): iser les conditions $f(a)=y'$ et $f(b)=y$ ainsi que la condition
+additionnelle (i) (resp. (ii)), on prendra
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation dominant
+$\mathcal{O}_{y'}$ et qui est complet et a un corps des restes
+algébriquement clos extension de $\boldsymbol{k}(x)$ (resp. un anneau de valuation $A'$
+dominant $\mathcal{O}_{y'}$ et dont $\boldsymbol{k}(x)$ est le corps des fractions)~;
+l'existence de $A'$ est garantie par
+(\hyperref[II.7.1.2-fr]{7.1.2}).
+
+\begin{env}[7.1.5]
+\label{II.7.1.5-fr}
+Rappelons qu'un anneau local
+
+[id 3092]
+OLD: et dont $k(x)$ est le corps
+NEW: et dont $\boldsymbol{k}(x)$ est le corps
+FRENCH CONTEXT (corrected): rendra
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation dominant
+$\mathcal{O}_{y'}$ et qui est complet et a un corps des restes
+algébriquement clos extension de $\boldsymbol{k}(x)$ (resp. un anneau de valuation $A'$
+dominant $\mathcal{O}_{y'}$ et dont $\boldsymbol{k}(x)$ est le corps des fractions)~;
+l'existence de $A'$ est garantie par
+(\hyperref[II.7.1.2-fr]{7.1.2}).
+
+\begin{env}[7.1.5]
+\label{II.7.1.5-fr}
+Rappelons qu'un anneau local $A$ est dit \emph{de dimension $1$} s'il existe
+un idéal premier distinct de l'idéal maximal $\mathfrak
+
+=================== PAGE II 140 ===================
+----- (Spanish page II 139: shown above in this file) -----
+----- (Spanish page II 140: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 141 -----
+\oldpage[II]{141}
+\begin{proposition}[7.1.9]
+\label{II.7.1.9}
+Sean $Y$ un preesquema localmente noetheriano, $p:X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de $X$, $y=p(x)$ e $y'\neq y$ una especialización de $y$.
+Existe entonces un esquema local $Y'$, espectro de un anillo de valuación discreta, un morfismo separado $f:Y'\to Y$ y una $Y$-aplicación racional $g$ de $Y'$ en $X$, tales que, si $a$ designa el punto cerrado de $Y'$ y $b$ su punto genérico, se tiene $f(a)=y'$, $f(b)=y$, $g(b)=x$, y tales que, en el diagrama conmutativo
+\[
+\label{II.7.1.9.1}
+  \xymatrix{
+      & \kres(x) \ar[dl]_{\gamma}
+  \\  \kres(b)
+      & \kres(y) \ar[u]_{\pi} \ar[l]^{\vphi}
+  }
+\tag{7.1.9.1}
+\]
+(donde $\pi$, $\vphi$ y $\gamma$ son los homomorfismos correspondientes, respectivamente, a $p$, $f$ y $g$), el homomorfismo $\gamma$ es biyectivo.
+\end{proposition}
+
+\begin{proof}
+Como en \sref{II.7.1.4}, puede reducirse al caso en que $Y$ es íntegro de punto genérico $y$ (teniendo en cuenta \sref[I]{I.6.3.4}[iv]) y, como la cuestión es local sobre $X$ y $Y$, puede suponerse que $p$ es de tipo finito;
+se está entonces en la situación de \sref{II.7.1.4}, con la propiedad adicional de que $\kres(x)$ es una extensión \emph{de tipo finito} de $\kres(y)$ \sref[I]{I.6.4.11} y de que $\sh{O}_{y'}$ es noetheriano;
+esto permite aplicar \sref{II.7.1.7} y tomar $Y'=\Spec(A')$, donde $A'$ es un anillo de valuación discreta que domina a $\sh{O}_{y'}$ y cuyo cuerpo de fracciones es $\kres(x)$.
+Así queda definido un diagrama conmutativo \sref{II.7.1.9.1} en el que $\gamma$ es biyectivo, y $\pi$ y $\vphi$ corresponden a los morfismos $p$ y $f$.
+Además, como $X$ e $Y$ son localmente noetherianos \sref[I]{I.6.6.2} e $Y'$ es íntegro, existe una única $Y$-aplicación racional $g$ de $Y'$ en $X$ a la que corresponde el isomorfismo $\gamma$ \sref[I]{I.7.1.15}, lo que termina la demostración.
+\end{proof}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 141-142.
+
+\subsection{Criterio valuativo de separación}
+\label{subsection:II.7.2}
+
+\begin{proposition}[7.2.1]
+\label{II.7.2.1}
+Sean $X$ e $Y$ dos preesquemas y $f:X\to Y$ un morfismo cuasi-compacto.
+Las dos condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm{(a)}] El morfismo $f$ es cerrado.
+  \item[\rm{(b)}] Para todo $x\in X$ y toda especialización $y'\neq y$ de $y=f(x)$, existe una especialización $x'$ de $x$ tal que $f(x')=x$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La condición~(b) expresa que
+\[
+  f(\overline{\{x\}})=\overline{\{y\}},
+\]
+y es, por tanto, consecuencia de~(a).
+Para demostrar que (b) implica (a), considérese una parte cerrada $X'$ del espacio subyacente $X$;
+sea $Y'=\overline{f(X')}$, y demostremos que $Y'=f(X')$.
+Considérense los subpreesquemas cerrados reducidos de $X$ e $Y$ que tienen, respectivamente, a $X'$ e $Y'$ por espacios subyacentes \sref[I]{I.5.2.1};
+existe entonces un morfismo $f':X'\to Y'$ tal que el diagrama
+\[
+  \xymatrix{
+      X' \ar[r]^{f'} \ar[d]
+      & Y' \ar[d]
+  \\  X \ar[r]_{f}
+      & Y
+  }
+\]
+es conmutativo \sref[I]{I.5.2.2}, y, como $f$ es cuasi-compacto, también lo es $f'$.
+Se queda así reducido a demostrar que, si $f$ es un morfismo cuasi-compacto y \emph{dominante}, entonces
+----- French corrections on page II 140 -----
+[id 3340]
+OLD: $k(a)=k$
+NEW: $\boldsymbol{k}(a)=k$
+FRENCH CONTEXT (corrected): re
+que $\mathfrak{m}$ et $(0)$ sont les seuls idéaux premiers et
+$\mathfrak{m}\neq(0)$~; autrement dit, $Y=\operatorname{Spec}(A)$ est
+réduit à deux
+\oldpage[II]{140}
+points $a$, $b$~: $a$ est l'unique point \emph{fermé}, on a
+$\mathfrak{j}_a=\mathfrak{m}$ et $\boldsymbol{k}(a)=k$ est le \emph{corps résiduel}
+$k=A/\mathfrak{m}$~; $b$ est le \emph{point générique} de $Y$,
+$\mathfrak{j}_b=(0)$, l'ensemble $\{b\}$ étant l'unique ensemble ouvert de
+$Y$ distinct de $\varnothing$ et de $Y$ (ensemble ouvert qui est donc
+\emph{partout dense}),
+
+[id 3341]
+OLD: $k(b)=K$
+NEW: $\boldsymbol{k}(b)=K$
+FRENCH CONTEXT (corrected):  le \emph{corps résiduel}
+$k=A/\mathfrak{m}$~; $b$ est le \emph{point générique} de $Y$,
+$\mathfrak{j}_b=(0)$, l'ensemble $\{b\}$ étant l'unique ensemble ouvert de
+$Y$ distinct de $\varnothing$ et de $Y$ (ensemble ouvert qui est donc
+\emph{partout dense}), et $\boldsymbol{k}(b)=K$ est le \emph{corps des fractions} de $A$.
+\end{env}
+
+\begin{env}[7.1.6]
+\label{II.7.1.6-fr}
+Pour un anneau local $A$, noethérien et de dimension $1$, on sait que les
+conditions suivantes sont équivalentes
+(\cite{I-1}, p.~2-08 et 17-01)~:
+\textit{a)} $A$ est n
+
+[id 3343]
+OLD: (\cite[p.~2-08 et 17-01]{I-1})
+NEW: (\cite{I-1}, p.~2-08 et 17-01)
+FRENCH CONTEXT (corrected): t donc
+\emph{partout dense}), et $\boldsymbol{k}(b)=K$ est le \emph{corps des fractions} de $A$.
+\end{env}
+
+\begin{env}[7.1.6]
+\label{II.7.1.6-fr}
+Pour un anneau local $A$, noethérien et de dimension $1$, on sait que les
+conditions suivantes sont équivalentes
+(\cite{I-1}, p.~2-08 et 17-01)~:
+\textit{a)} $A$ est normal~;
+\textit{b)} $A$ est régulier~;
+\textit{c)} $A$ est un anneau de valuation~;
+en outre, $A$ est alors un \emph{anneau de valuation discrète}. Les prop.
+(\hyperref[II.7.1.2-fr]{7.1.2}) et
+(\hyperref[II.7.1.3-fr]{7.1.3}) ont alors l
+
+[id 3344]
+OLD: \begin{enumerate}
+\item[\rm{a)}] $A$ est normal~;
+\item[\rm{b)}] $A$ est régulier~;
+\item[\rm{c)}] $A$ est un anneau de valuation~;
+\end{enumerate}
+NEW: \textit{a)} $A$ est normal~;
+\textit{b)} $A$ est régulier~;
+\textit{c)} $A$ est un anneau de valuation~;
+FRENCH CONTEXT (corrected): $\boldsymbol{k}(b)=K$ est le \emph{corps des fractions} de $A$.
+\end{env}
+
+\begin{env}[7.1.6]
+\label{II.7.1.6-fr}
+Pour un anneau local $A$, noethérien et de dimension $1$, on sait que les
+conditions suivantes sont équivalentes
+(\cite{I-1}, p.~2-08 et 17-01)~:
+\textit{a)} $A$ est normal~;
+\textit{b)} $A$ est régulier~;
+\textit{c)} $A$ est un anneau de valuation~;
+en outre, $A$ est alors un \emph{anneau de valuation discrète}. Les prop.
+(\hyperref[II.7.1.2-fr]{7.1.2}) et
+(\hyperref[II.7.1.3-fr]{7.1.3}) ont alors les analogues suivants pour les
+anneaux de valuation discrète~:
+\end{env}
+
+\begin{proposition}[7.1.7]
+\label
+
+[id 3345]
+OLD: (\cite[t.~I, p.~277]{I-13})
+NEW: (\cite{I-13}, t.~I, p.~277)
+FRENCH CONTEXT (corrected): s-anneau
+$A[x_2/x_1,\ldots,x_n/x_1]$ de $K$, qui est noethérien. Il est immédiat que
+l'idéal $\mathfrak{m}B$ de $B$ est identique à l'idéal principal $x_1B$~;
+si $\mathfrak{p}$ est un idéal premier minimal de $x_1B$, on sait que
+$\mathfrak{p}$ est de rang $1$ (\cite{I-13}, t.~I, p.~277)~; autrement dit
+$B_{\mathfrak{p}}$ est un anneau local noethérien \emph{de dimension $1$}~;
+il est clair que
+$\mathfrak{p}B_{\mathfrak{p}}\cap A$ est un idéal de $A$ contenant
+$\mathfrak{m}$ et ne contenant pas $1$, donc égal à $\mathfrak{m}$, et par
+suite $B
+
+[id 3346]
+OLD: {I, 8.1.1}
+NEW: {\textbf{I}, 8.1.1}
+FRENCH CONTEXT (corrected): {anneau de valuation} si c'est un anneau intègre qui n'est pas un
+corps, et si, dans l'ensemble des anneaux locaux contenus dans le corps des
+fractions $K$ de $A$ et distincts de $K$, $A$ est \emph{maximal} pour la
+relation de domination (\hyperref[I.8.1.1-fr]{\textbf{I}, 8.1.1}). Rappelons qu'un
+anneau de valuation est \emph{intégralement clos}. Si $A$ est un anneau de
+valuation, $A_{\mathfrak{p}}$ est aussi un anneau de valuation pour tout
+idéal premier $\mathfrak{p}\neq0$ de $A$.
+\end{env}
+
+\begin{env}[7.1.2]
+\label{II.7.1.2-fr}
+S
+
+[id 3347]
+OLD: (\cite[p.~293]{II-25})
+NEW: (\cite{II-25}, p.~293)
+FRENCH CONTEXT (corrected): thfrak{p}B_{\mathfrak{p}}\cap A$ est un idéal de $A$ contenant
+$\mathfrak{m}$ et ne contenant pas $1$, donc égal à $\mathfrak{m}$, et par
+suite $B_{\mathfrak{p}}$ \emph{domine} $A$
+(\hyperref[I.8.1.1-fr]{\textbf{I}, 8.1.1}). Il résulte du th. de Krull-Akizuki
+(\cite{II-25}, p.~293) que la clôture intégrale $C$ de $B_{\mathfrak{p}}$
+est un anneau noethérien (bien que $C$ ne soit pas nécessairement un
+$B_{\mathfrak{p}}$-module de type fini)~; si $\mathfrak{n}$ est un idéal
+maximal de $C$, $C_{\mathfrak{n}}$ est un anneau local noethérien 
+
+[id 3348]
+OLD: (\cite[p.~295]{II-25})
+NEW: (\cite{II-25}, p.~295)
+FRENCH CONTEXT (corrected): e $C$ de $B_{\mathfrak{p}}$
+est un anneau noethérien (bien que $C$ ne soit pas nécessairement un
+$B_{\mathfrak{p}}$-module de type fini)~; si $\mathfrak{n}$ est un idéal
+maximal de $C$, $C_{\mathfrak{n}}$ est un anneau local noethérien normal de
+dimension $1$ (\cite{II-25}, p.~295), donc un anneau de valuation discrète,
+qui domine $B_{\mathfrak{p}}$ et \emph{a fortiori} $A$.
+
+Si maintenant $L$ est une extension de type fini de $K$, on peut, d'après ce
+qui précède, se limiter au cas où $A$ est déjà un anneau de valuation
+discrète. Soit $
+
+[id 3349]
+OLD: (\cite[p.~106]{II-24})
+NEW: (\cite{II-24}, p.~106)
+FRENCH CONTEXT (corrected): rète. Soit $w$ une valuation de $K$ associée à $A$~; il existe une
+valuation discrète $w'$ de $L$ qui \emph{prolonge} $w$~: on se ramène en
+effet par récurrence sur le nombre de générateurs de $L$ au cas où
+$L=K(\alpha)$, et alors la proposition est classique
+(\cite{II-24}, p.~106).
+
+\begin{corollary}[7.1.8]
+\label{II.7.1.8-fr}
+Soient $A$ un anneau intègre noethérien, $K$ son corps des fractions, $L$ une
+extension de type fini de $K$. Alors la fermeture intégrale de $A$ dans $L$
+est l'intersection des anneaux de valuation discrète ayant
+
+=================== PAGE II 141 ===================
+----- (Spanish page II 140: shown above in this file) -----
+----- (Spanish page II 141: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 142 -----
+\oldpage[II]{142}
+la condición~(b) implica que $f(X)=Y$.
+Ahora bien, sea $y'$ un punto de $Y$ y sea $y$ el punto genérico de una componente irreducible de $Y$ que contiene a $y'$;
+en virtud de~(b), basta demostrar que $f^{-1}(y)$ no es vacío.
+Pero se sabe que esta propiedad es consecuencia de que $f$ es cuasi-compacto y dominante \sref[I]{I.6.6.5}.
+\end{proof}
+
+\begin{corollary}[7.2.2]
+\label{II.7.2.2}
+Sea $f:X\to Y$ una inmersión cuasi-compacta.
+Para que el espacio subyacente $X$ sea cerrado en $Y$, es necesario y suficiente que contenga toda especialización, en $Y$, de cada uno de sus puntos.
+\end{corollary}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 142.
+
+\begin{proposition}[7.2.3]
+\label{II.7.2.3}
+Sean $Y$ un preesquema (resp. un preesquema localmente noetheriano) y $f:X\to Y$ un morfismo (resp. un morfismo localmente de tipo finito).
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm{(a)}] $f$ es separado.
+  \item[\rm{(b)}] El morfismo diagonal $X\to X\times_Y X$ es cuasi-compacto y, para todo $Y$-preesquema de la forma $Y'=\Spec(A)$, donde $A$ es un anillo de valuación (resp. un anillo de valuación discreta), dos $Y$-morfismos de $Y'$ en $X$ que coinciden en el punto genérico de $Y'$ son iguales.
+  \item[\rm{(c)}] El morfismo diagonal $X\to X\times_Y X$ es cuasi-compacto y, para todo $Y$-preesquema de la forma $Y'=\Spec(A)$, donde $A$ es un anillo de valuación (resp. un anillo de valuación discreta), dos $Y'$-secciones de $X'=X_{(Y')}$ que coinciden en el punto genérico de $Y'$ son iguales.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La equivalencia entre (b) y (c) resulta de la correspondencia biyectiva entre los $Y$-morfismos de $Y'$ en $X$ y las $Y'$-secciones de $X'$ \sref[I]{I.3.3.14}.
+Si $X$ es separado sobre $Y$, la condición~(b) se satisface en virtud de \sref[I]{I.7.2.2.1}, puesto que $Y'$ es íntegro.
+Queda por demostrar que (b) implica que el morfismo diagonal
+\[
+  \Delta:X\to X\times_Y X
+\]
+es cerrado, y equivale a demostrar que satisface el criterio de \sref{II.7.2.2}.
+Sea, pues, $z$ un punto de la diagonal $\Delta(X)$ y $z'\neq z$ una especialización de $z$ en $X\times_Y X$.
+Existe entonces, por \sref{II.7.1.4}, un anillo de valuación $A$ y un morfismo $f$ de $Y'=\Spec(A)$ en $X\times_Y X$ que aplica el punto cerrado $a$ de $Y'$ en $z'$ y el punto genérico $b$ de $Y'$ en $z$;
+este morfismo hace de $Y'$ un $(X\times_Y X)$-preesquema y, \emph{a fortiori}, un $Y$-preesquema.
+Componiendo con $f$ las dos proyecciones de $X\times_Y X$, se obtienen dos $Y$-morfismos $g_1,g_2$ de $Y'$ en $X$ que, por hipótesis, coinciden en el punto $b$;
+son, por tanto, iguales a un mismo morfismo $g$, lo que significa \sref[I]{I.5.3.1} que $f$ se factoriza en $f=\Delta\circ g$ y, por consiguiente, $z'\in\Delta(X)$.
+Cuando se supone que $Y$ es localmente noetheriano y $f$ localmente de tipo finito, $X\times_Y X$ es localmente noetheriano \sref[I]{I.6.6.7};
+puede entonces repetirse el razonamiento precedente suponiendo que $A$ es un anillo de valuación discreta, en virtud de \sref{II.7.1.9}.
+\end{proof}
+
+\begin{remark}[7.2.4]
+\label{II.7.2.4}
+\begin{enumerate}
+  \item[\rm{(i)}] La hipótesis de que el morfismo $\Delta$ sea cuasi-compacto se satisface siempre que $Y$ sea localmente noetheriano y $f$ localmente de tipo finito, pues $X\times_Y X$ es entonces localmente noetheriano \sref[I]{I.6.6.4}[i].
+  En el caso general, significa también que, para toda cubierta $(U_\alpha)$ de $X$ por abiertos afines, los conjuntos $U_\alpha\cap U_\beta$ son \emph{cuasi-compactos}.
+  \item[\rm{(ii)}] Para que $f$ sea separado, \emph{basta} exigir la condición~(b) o la condición~(c) solo para anillos de valuación $A$ \emph{completos} cuyos cuerpos residuales sean \emph{algebraicamente cerrados};
+  esto resulta, en efecto, de la demostración de \sref{II.7.2.3} y de \sref{II.7.1.4}.
+\end{enumerate}
+\end{remark}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 143.
+----- French corrections on page II 141 -----
+[id 3350]
+OLD: & k(x)
+NEW: & \boldsymbol{k}(x)
+FRENCH CONTEXT (corrected): e $g$ de $Y'$ dans $X$, tels que, si $a$ désigne le
+point fermé de $Y'$ et $b$ son point générique, on ait $f(a)=y'$,
+$f(b)=y$, $g(b)=x$, et que dans le diagramme commutatif
+\[
+\tag{7.1.9.1}
+\label{II.7.1.9.1-fr}
+\begin{tikzcd}[column sep=large,row sep=large]
+& \boldsymbol{k}(x) \arrow[dl,"\gamma"'] \\
+\boldsymbol{k}(b) & \boldsymbol{k}(y) \arrow[u,"\pi"'] \arrow[l,"\varphi"]
+\end{tikzcd}
+\]
+(où $\pi$, $\varphi$, $\gamma$ sont les homomorphismes correspondant
+respectivement à $p$, $f$ et $g$), $\gamma$ soit une bijection.
+\end{propos
+
+[id 3351]
+OLD: k(b)
+NEW: \boldsymbol{k}(b)
+FRENCH CONTEXT (corrected): une des deux propriétés additionnelles suivantes~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hy
+
+[id 3352]
+OLD: & k(y)
+NEW: & \boldsymbol{k}(y)
+FRENCH CONTEXT (corrected): é de $Y'$ et $b$ son point générique, on ait $f(a)=y'$,
+$f(b)=y$, $g(b)=x$, et que dans le diagramme commutatif
+\[
+\tag{7.1.9.1}
+\label{II.7.1.9.1-fr}
+\begin{tikzcd}[column sep=large,row sep=large]
+& \boldsymbol{k}(x) \arrow[dl,"\gamma"'] \\
+\boldsymbol{k}(b) & \boldsymbol{k}(y) \arrow[u,"\pi"'] \arrow[l,"\varphi"]
+\end{tikzcd}
+\]
+(où $\pi$, $\varphi$, $\gamma$ sont les homomorphismes correspondant
+respectivement à $p$, $f$ et $g$), $\gamma$ soit une bijection.
+\end{proposition}
+
+Comme dans (\hyperref[II.7.1.4-fr]{7.1.4}), on peut se
+
+[id 3353]
+OLD: \arrow[u,"\pi"]
+NEW: \arrow[u,"\pi"']
+FRENCH CONTEXT (corrected):  point générique, on ait $f(a)=y'$,
+$f(b)=y$, $g(b)=x$, et que dans le diagramme commutatif
+\[
+\tag{7.1.9.1}
+\label{II.7.1.9.1-fr}
+\begin{tikzcd}[column sep=large,row sep=large]
+& \boldsymbol{k}(x) \arrow[dl,"\gamma"'] \\
+\boldsymbol{k}(b) & \boldsymbol{k}(y) \arrow[u,"\pi"'] \arrow[l,"\varphi"]
+\end{tikzcd}
+\]
+(où $\pi$, $\varphi$, $\gamma$ sont les homomorphismes correspondant
+respectivement à $p$, $f$ et $g$), $\gamma$ soit une bijection.
+\end{proposition}
+
+Comme dans (\hyperref[II.7.1.4-fr]{7.1.4}), on peut se ramener au cas o
+
+[id 3354]
+OLD: \arrow[l,"\varphi"']
+NEW: \arrow[l,"\varphi"]
+FRENCH CONTEXT (corrected):  on ait $f(a)=y'$,
+$f(b)=y$, $g(b)=x$, et que dans le diagramme commutatif
+\[
+\tag{7.1.9.1}
+\label{II.7.1.9.1-fr}
+\begin{tikzcd}[column sep=large,row sep=large]
+& \boldsymbol{k}(x) \arrow[dl,"\gamma"'] \\
+\boldsymbol{k}(b) & \boldsymbol{k}(y) \arrow[u,"\pi"'] \arrow[l,"\varphi"]
+\end{tikzcd}
+\]
+(où $\pi$, $\varphi$, $\gamma$ sont les homomorphismes correspondant
+respectivement à $p$, $f$ et $g$), $\gamma$ soit une bijection.
+\end{proposition}
+
+Comme dans (\hyperref[II.7.1.4-fr]{7.1.4}), on peut se ramener au cas où $Y$
+est intègre de
+
+[id 3355]
+OLD: {I, 6.3.4, (iv)}
+NEW: {\textbf{I}, 6.3.4, (iv)}
+FRENCH CONTEXT (corrected): momorphismes correspondant
+respectivement à $p$, $f$ et $g$), $\gamma$ soit une bijection.
+\end{proposition}
+
+Comme dans (\hyperref[II.7.1.4-fr]{7.1.4}), on peut se ramener au cas où $Y$
+est intègre de point générique $y$ (compte tenu de
+(\hyperref[I.6.3.4-fr]{\textbf{I}, 6.3.4, (iv)})) et comme la question est locale sur
+$X$ et $Y$, on peut supposer $p$ de type fini~; on est alors dans la situation
+de (\hyperref[II.7.1.4-fr]{7.1.4}), avec la propriété supplémentaire que
+$\boldsymbol{k}(x)$ est une extension \emph{de type fini} de $\boldsy
+
+[id 3356]
+OLD: $k(x)$ est une extension
+NEW: $\boldsymbol{k}(x)$ est une extension
+FRENCH CONTEXT (corrected): $ sur $K$.
+\end{remark}
+
+\begin{proposition}[6.4.11]
+\label{I.6.4.11-fr}
+Si $f:X\to Y$ est un morphisme de type fini, pour tout $y\in Y$, la fibre
+$f^{-1}(y)$ est un préschéma algébrique sur le corps résiduel $\boldsymbol{k}(y)$ et pour
+tout $x\in f^{-1}(y)$, $\boldsymbol{k}(x)$ est une extension de type fini de $\boldsymbol{k}(y)$.
+\end{proposition}
+
+Comme $f^{-1}(y)=X\otimes_Y \boldsymbol{k}(y)$
+(\hyperref[I.3.6.3-fr]{3.6.3}), la proposition résulte de
+(\hyperref[I.6.3.4-fr]{6.3.4, (iv)}) et de
+(\hyperref[I.6.3.3-fr]{6.3.3}).
+
+\begin{proposition}[6.
+
+[id 3357]
+OLD: de $k(y)$
+NEW: de $\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): operatorname{Spec}(K)\ar[l]
+  }
+\]
+\end{proposition}
+
+La condition est suffisante, car pour tout $y\in Y$, il suffit de l'appliquer
+à un morphisme $\operatorname{Spec}(K)\to Y$ correspondant à un monomorphisme
+$\boldsymbol{k}(y)\to K$, $K$ étant une extension de $\boldsymbol{k}(y)$
+(\hyperref[I.2.4.6-fr]{2.4.6}). Inversement, supposons $f$ surjectif, et soit
+$y\in Y$ l'image de l'unique point de $\operatorname{Spec}(K)$~; il existe
+$x\in X$ tel que $f(x)=y$~; considérons le monomorphisme correspondant
+$\boldsymbol{k}(y)\to\boldsymbol{k}
+
+[id 3358]
+OLD: {I, 6.4.11}
+NEW: {\textbf{I}, 6.4.11}
+FRENCH CONTEXT (corrected): poser que $B$ est un
+anneau local (égal à $\mathcal{O}_{f(x)}$)~; si $\mathfrak{n}$ est l'idéal
+maximal de $B$, $f^{-1}(f(x))$ est alors un schéma affine d'anneau
+$A/\mathfrak{n}A$, de type fini sur $\boldsymbol{k}(f(x))=B/\mathfrak{n}$
+(\hyperref[I.6.4.11-fr]{\textbf{I}, 6.4.11}). Cela étant, si \emph{a)} est vérifiée, on peut
+en outre supposer que $f^{-1}(f(x))$ est réduite au point $x$~; donc
+$A/\mathfrak{n}A$ est de rang fini sur $B/\mathfrak{n}$
+(\hyperref[I.6.4.4-fr]{\textbf{I}, 6.4.4}), autrement dit $A$ est un $B$-module
+quasi
+
+[id 3359]
+OLD: dont $k(x)$
+NEW: dont $\boldsymbol{k}(x)$
+FRENCH CONTEXT (corrected): dra
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation dominant
+$\mathcal{O}_{y'}$ et qui est complet et a un corps des restes
+algébriquement clos extension de $\boldsymbol{k}(x)$ (resp. un anneau de valuation $A'$
+dominant $\mathcal{O}_{y'}$ et dont $\boldsymbol{k}(x)$ est le corps des fractions)~;
+l'existence de $A'$ est garantie par
+(\hyperref[II.7.1.2-fr]{7.1.2}).
+
+\begin{env}[7.1.5]
+\label{II.7.1.5-fr}
+Rappelons qu'un anneau local $A$ est dit \emph{de dimension $1$} s'il existe
+un idéal premier distinct de l'idéal maxim
+
+[id 3360]
+OLD: {I, 6.6.2}
+NEW: {\textbf{I}, 6.6.2}
+FRENCH CONTEXT (corrected): ons. On a
+donc ainsi défini un diagramme commutatif
+(\hyperref[II.7.1.9.1-fr]{7.1.9.1}), où $\gamma$ est une bijection, et $\pi$
+et $\varphi$ correspondent aux morphismes $p$ et $f$. En outre, comme $X$ et
+$Y$ sont localement noethériens (\hyperref[I.6.6.2-fr]{\textbf{I}, 6.6.2}) et que $Y'$
+est intègre, il y a une $Y$-application rationnelle $g$ et une seule de $Y'$
+dans $X$ à laquelle correspond l'isomorphisme $\gamma$
+(\hyperref[I.7.1.15-fr]{\textbf{I}, 7.1.15}), ce qui achève la démonstration.
+
+\subsection{Critère valuatif de sép
+
+[id 3361]
+OLD: {I, 7.1.15}
+NEW: {\textbf{I}, 7.1.15}
+FRENCH CONTEXT (corrected): tre, comme $X$ et
+$Y$ sont localement noethériens (\hyperref[I.6.6.2-fr]{\textbf{I}, 6.6.2}) et que $Y'$
+est intègre, il y a une $Y$-application rationnelle $g$ et une seule de $Y'$
+dans $X$ à laquelle correspond l'isomorphisme $\gamma$
+(\hyperref[I.7.1.15-fr]{\textbf{I}, 7.1.15}), ce qui achève la démonstration.
+
+\subsection{Critère valuatif de séparation}
+\label{subsection:II.7.2-fr}
+
+\begin{proposition}[7.2.1]
+\label{II.7.2.1-fr}
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme quasi-compact. Les
+deux conditions suivantes s
+
+[id 3362]
+OLD: La condition b)
+NEW: La condition \emph{b)}
+FRENCH CONTEXT (corrected): 4.6.4]
+\label{II.4.6.4-fr}
+Soit $(U_\alpha)$ un recouvrement ouvert de $Y$. Pour que $\mathcal{L}$
+soit ample relativement à $Y$, il faut et il suffit que
+$\mathcal{L}|f^{-1}(U_\alpha)$ soit ample relativement à $U_\alpha$ pour
+tout $\alpha$.
+\end{corollary}
+
+La condition \emph{b)} est en effet locale sur $Y$.
+
+\begin{corollary}[4.6.5]
+\label{II.4.6.5-fr}
+Soit $\mathcal{K}$ un $\mathcal{O}_Y$-Module inversible. Pour que
+$\mathcal{L}$ soit $Y$-ample, il faut et il suffit que
+$\mathcal{L}\otimes f^*(\mathcal{K})$ le soit.
+\end{corollary}
+
+
+[id 3363]
+OLD: conséquence de a).
+NEW: conséquence de \emph{a)}.
+FRENCH CONTEXT (corrected): ur tout $x\in X$ et toute spécialisation $y'$ de $y=f(x)$,
+distincte de $y$, il existe une spécialisation $x'$ de $x$ telle que
+$f(x')=x$.
+\end{enumerate}
+\end{proposition}
+
+La condition \emph{b)} exprime que $f(\overline{\{x\}})=\overline{\{y\}}$ et est donc
+conséquence de \emph{a)}. Pour montrer que \emph{b)} entraîne \emph{a)}, considérons une partie
+fermée $X'$ de l'espace sous-jacent $X$~; soit $Y'=\overline{f(X')}$ et
+montrons que $Y'=f(X')$. Considérons les sous-préschémas fermés réduits de
+$X$ et $Y$ respectivement ayant pour espac
+
+[id 3364]
+OLD: que b) entraîne a),
+NEW: que \emph{b)} entraîne \emph{a)},
+FRENCH CONTEXT (corrected): $-Module quasi-cohérent est engendré par
+  ses sections au-dessus de $X$.
+  \item[\rm{e')}] Tout faisceau quasi-cohérent d'idéaux de type fini de
+  $\mathcal{O}_X$ est engendré par ses sections au-dessus de $X$.
+\end{enumerate}
+\end{proposition}
+
+Il est clair que \emph{b)} entraîne \emph{a)}, et \emph{a)} entraîne \emph{c)} en vertu du critère \emph{b)} de
+(\hyperref[II.4.4.4-fr]{4.4.4}) appliqué au morphisme identique (compte tenu
+de la remarque précédant l'énoncé)~; d'autre part \emph{c)} entraîne \emph{c')}
+(\hyperref[II.4.5.10-fr]{4.5.10, (i)}
+
+[id 3365]
+OLD: {I, 5.2.1}
+NEW: {\textbf{I}, 5.2.1}
+FRENCH CONTEXT (corrected): ph{c')} entraîne \emph{a)}. Or, soit $U$
+un voisinage ouvert de $x\in X$, et soit $\mathcal{J}$ un faisceau d'idéaux
+quasi-cohérent de $\mathcal{O}_X$ définissant un sous-préschéma fermé de $X$
+ayant $X\setmin U$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}). L'hypothèse \emph{c')} entraîne qu'il existe un
+entier $n>0$ et une section $f$ de $\mathcal{J}(n)$ au-dessus de $X$ telle
+que $f(x)\neq0$. Mais on a évidemment $f\in S_n$, et $x\in X_f\subset U$, ce
+qui prouve \emph{a)}.
+\end{proof}
+
+Lorsque $X$ est un pré
+
+[id 3366]
+OLD: {I, 5.2.2}
+NEW: {\textbf{I}, 5.2.2}
+FRENCH CONTEXT (corrected): uit de $Y$ ayant $\overline{f(X_i)}$ pour espace
+sous-jacent. Si $g_i$ (resp. $h_i$) est le morphisme d'injection $X_i\to X$
+(resp. $Y_i\to Y$), on en conclut que $f\circ g_i=h_i\circ f_i$, où $f_i$
+est un morphisme dominant $X_i\to Y_i$
+(\hyperref[I.5.2.2-fr]{\textbf{I}, 5.2.2})~; on est alors dans les conditions
+d'application de (\hyperref[II.5.4.5-fr]{5.4.5}), et pour que $f$ soit
+propre, il faut et il suffit que les $f_i$ le soient.
+\end{env}
+
+\begin{corollary}[5.4.8]
+\label{II.5.4.8-fr}
+Soient $X$, $Y$ des $S$-préschémas séparés
+
+=================== PAGE II 142 ===================
+----- (Spanish page II 141: shown above in this file) -----
+----- (Spanish page II 142: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 143 -----
+\oldpage[II]{143}
+
+\subsection{Criterio valuativo de la propiedad de ser propio}
+\label{subsection:II.7.3}
+
+\begin{proposition}[7.3.1]
+\label{II.7.3.1}
+Sean $A$ un anillo de valuación, $Y=\Spec(A)$, $b$ el punto genérico de $Y$, $X$ un \emph{esquema} íntegro y $f:X\to Y$ un morfismo \emph{cerrado} tal que $f^{-1}(b)$ se reduzca a un único punto $x$ y que el homomorfismo correspondiente $\kres(b)\to\kres(x)$ sea biyectivo.
+Entonces $f$ es un isomorfismo.
+\end{proposition}
+
+\begin{proof}
+Como $f$ es cerrado y dominante, se tiene $f(X)=Y$;
+basta \sref[I]{I.4.2.2} demostrar que, para todo $y'\neq b$ en $Y$, existe \emph{un único} punto $x'$ tal que $f(x')=y'$ y que el homomorfismo correspondiente $\sh{O}_{y'}\to\sh{O}_{x'}$ es biyectivo, pues entonces $f$ será un homeomorfismo.
+Ahora bien, si $f(x')=y'$, entonces $\sh{O}_{x'}$ es un anillo local contenido en
+\[
+  K=\kres(x)=\kres(b)
+\]
+y que domina a $\sh{O}_{y'}$;
+este último es el anillo local $A_{y'}$ y, por tanto, es un anillo de valuación \sref{II.7.1.1} que tiene a $K$ por cuerpo de fracciones.
+Por otra parte, $\sh{O}_{x'}\neq K$, puesto que $x'$ no es el punto genérico de $X$ \sref[0]{0.2.1.3};
+se concluye entonces que $\sh{O}_{x'}=\sh{O}_{y'}$.
+Como $X$ es un esquema íntegro, la igualdad $\sh{O}_{x'}=\sh{O}_{x''}$ implica $x'=x''$ \sref[I]{I.8.2.2}, lo que termina la demostración.
+\end{proof}
+
+\begin{env}[7.3.2]
+\label{II.7.3.2}
+Sean $A$ un anillo de valuación, $K$ su cuerpo de fracciones, $Y=\Spec(A)$ y $b$ el punto genérico de $Y$, de modo que $\sh{O}_b=\kres(b)$ es igual a $K$;
+sea $f:X\to Y$ un morfismo.
+Se sabe \sref[I]{I.7.1.4} que las \emph{$Y$-secciones racionales} de $X$ están en correspondencia biyectiva con los \emph{gérmenes}, en el punto $b$, de $Y$-secciones definidas en vecindades de $b$, de donde se obtiene una aplicación canónica
+\[
+\label{II.7.3.2.1}
+  \Gamma_\mathrm{rat}(X/Y)\longrightarrow
+  \Gamma(f^{-1}(b)/\Spec(K)),
+\tag{7.3.2.1}
+\]
+identificándose por definición \sref[I]{I.3.4.5} los elementos de $\Gamma(f^{-1}(b)/\Spec(K))$ con los \emph{puntos de $f^{-1}(b)=X\otimes_A K$ racionales sobre $K$}.
+Cuando $f$ es \emph{separado}, de \sref[I]{I.5.4.7} resulta que la aplicación \sref{II.7.3.2.1} es \emph{inyectiva}, puesto que $Y$ es un esquema íntegro.
+
+Componiendo \sref{II.7.3.2.1} con la aplicación canónica
+\[
+  \Gamma(X/Y)\longrightarrow\Gamma_\mathrm{rat}(X/Y)
+\]
+de \sref[I]{I.7.1.2}, se obtiene una aplicación canónica
+\[
+\label{II.7.3.2.2}
+  \Gamma(X/Y)\longrightarrow
+  \Gamma(f^{-1}(b)/\Spec(K)).
+\tag{7.3.2.2}
+\]
+Cuando $f$ es \emph{separado}, esta aplicación es también \emph{inyectiva} \sref[I]{I.5.4.7}.
+\end{env}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 143-144.
+
+\begin{proposition}[7.3.3]
+\label{II.7.3.3}
+Sean $A$ un anillo de valuación de cuerpo de fracciones $K$, $Y=\Spec(A)$, $b$ el punto genérico de $Y$ y $f:X\to Y$ un morfismo \emph{separado} y \emph{cerrado}.
+Entonces la aplicación canónica \sref{II.7.3.2.2} es biyectiva (lo que equivale a decir que es \emph{sobreyectiva} e implica que las $Y$-secciones racionales de $X$ están \emph{definidas en todas partes}).
+\end{proposition}
+
+\begin{proof}
+Sea, pues, $x$ un punto de $f^{-1}(b)$ \emph{racional} sobre $K$.
+Como $f$ es separado, también lo es el morfismo $f^{-1}(b)\to\Spec(K)$ correspondiente a $f$ \sref[I]{I.5.5.1}[iv], y, puesto que toda sección de $f^{-1}(b)$ es una inmersión cerrada \sref[I]{I.5.4.6}, $\{x\}$ es cerrado \emph{en $f^{-1}(b)$}.
+Considérese el subpreesquema cerrado reducido $X'$ de $X$ que tiene por espacio subyacente la clausura $\overline{\{x\}}$ de $\{x\}$ \emph{en $X$}.
+Es claro que la restricción de $f$ a $X'$ satisface las hipótesis de \sref{II.7.3.1} y es, por tanto, un \emph{isomorfismo} de $X'$ sobre $Y$, cuyo isomorfismo inverso es la $Y$-sección buscada de $X$.
+\end{proof}
+
+\begin{env}[7.3.4]
+\label{II.7.3.4}
+Para enunciar los dos resultados siguientes, utilizaremos una terminología que se justificará y discutirá en el capítulo~IV:
+si $F$ es una parte
+----- French corrections on page II 142 -----
+[id 3367]
+OLD: condition b) implique
+NEW: condition \emph{b)} implique
+FRENCH CONTEXT (corrected): e $\mathbf{S}(\mathcal{E})$, la
+$\mathcal{O}_Y$-Algèbre graduée quasi-cohérente
+$\mathcal{S}=\mathbf{S}(\mathcal{E})/\mathcal{J}$ est engendrée par
+$\mathcal{S}_1$ et ce dernier, image canonique de $\mathcal{E}$, est un
+$\mathcal{O}_Y$-Module de type fini. La condition \emph{b)} implique \emph{a)} en vertu de
+(\hyperref[II.3.6.2-fr]{3.6.2}) appliqué au cas où
+$\mathcal{M}\to\mathcal{S}_1$ est l'application identique.
+
+\oldpage[II]{104}
+
+\begin{definition}[5.5.2]
+\label{II.5.5.2-fr}
+On dit qu'un $Y$-préschéma $X$ est projectif sur $Y$ ou est u
+
+[id 3368]
+OLD: vertu de b),
+NEW: vertu de \emph{b)},
+FRENCH CONTEXT (corrected): à prouver que si
+$f$ est un morphisme quasi-compact et \emph{dominant}, alors la
+\oldpage[II]{142}
+condition \emph{b)} implique que $f(X)=Y$. Or, soit $y'$ un point de $Y$ et soit $y$
+le point générique d'une composante irréductible de $Y$ contenant $y'$~; en
+vertu de \emph{b)}, il suffit de montrer que $f^{-1}(y)$ n'est pas vide. Mais on sait
+que cette propriété est conséquence du fait que $f$ est dominant et
+quasi-compact (\hyperref[I.6.6.5-fr]{\textbf{I}, 6.6.5}).
+
+\begin{corollary}[7.2.2]
+\label{II.7.2.2-fr}
+Soit $f:X\to Y$ un mo
+
+[id 3369]
+OLD: {I, 6.6.5}
+NEW: {\textbf{I}, 6.6.5}
+FRENCH CONTEXT (corrected): nt générique d'une composante irréductible de $Y$ contenant $y'$~; en
+vertu de \emph{b)}, il suffit de montrer que $f^{-1}(y)$ n'est pas vide. Mais on sait
+que cette propriété est conséquence du fait que $f$ est dominant et
+quasi-compact (\hyperref[I.6.6.5-fr]{\textbf{I}, 6.6.5}).
+
+\begin{corollary}[7.2.2]
+\label{II.7.2.2-fr}
+Soit $f:X\to Y$ un morphisme d'immersion quasi-compact. Pour que l'espace
+sous-jacent $X$ soit fermé dans $Y$, il faut et il suffit qu'il contienne toute
+spécialisation (dans $Y$) de chacun de ses points.
+\end{c
+
+[id 3370]
+OLD: (resp. un préschéma localement noethérien)
+NEW: \textup{(resp.} un préschéma localement noethérien\textup{)}
+FRENCH CONTEXT (corrected): mersion quasi-compact. Pour que l'espace
+sous-jacent $X$ soit fermé dans $Y$, il faut et il suffit qu'il contienne toute
+spécialisation (dans $Y$) de chacun de ses points.
+\end{corollary}
+
+\begin{proposition}[7.2.3]
+\label{II.7.2.3-fr}
+Soient $Y$ un préschéma \textup{(resp.} un préschéma localement noethérien\textup{)}, $f:X\to Y$
+un morphisme \textup{(resp.} un morphisme localement de type fini\textup{)}. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est séparé.
+\item[\rm b)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+p
+
+[id 3371]
+OLD: (resp. un morphisme localement de type fini)
+NEW: \textup{(resp.} un morphisme localement de type fini\textup{)}
+FRENCH CONTEXT (corrected): et il suffit qu'il contienne toute
+spécialisation (dans $Y$) de chacun de ses points.
+\end{corollary}
+
+\begin{proposition}[7.2.3]
+\label{II.7.2.3-fr}
+Soient $Y$ un préschéma \textup{(resp.} un préschéma localement noethérien\textup{)}, $f:X\to Y$
+un morphisme \textup{(resp.} un morphisme localement de type fini\textup{)}. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est séparé.
+\item[\rm b)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+pour tout $Y$-préschéma de la forme $Y'=\operatorname{Spec}(A)$, où $A$ est un
+anneau de 
+
+[id 3372]
+OLD: (resp. un anneau de valuation discrète), deux
+$Y$-morphismes
+NEW: \textup{(resp.} un anneau de valuation discrète\textup{)}, deux
+$Y$-morphismes
+FRENCH CONTEXT (corrected): itions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est séparé.
+\item[\rm b)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+pour tout $Y$-préschéma de la forme $Y'=\operatorname{Spec}(A)$, où $A$ est un
+anneau de valuation \textup{(resp.} un anneau de valuation discrète\textup{)}, deux
+$Y$-morphismes de $Y'$ dans $X$ qui coïncident au point générique de $Y'$ sont
+égaux.
+\item[\rm c)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+pour tout $Y$-préschéma de la forme $Y'=\operatorname{Spec}(A)$, où $A$ est un
+anneau de valuation \textup{(resp
+
+[id 3373]
+OLD: (resp. un anneau de valuation discrète), deux
+$Y'$-sections
+NEW: \textup{(resp.} un anneau de valuation discrète\textup{)}, deux
+$Y'$-sections
+FRENCH CONTEXT (corrected): Y$-morphismes de $Y'$ dans $X$ qui coïncident au point générique de $Y'$ sont
+égaux.
+\item[\rm c)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+pour tout $Y$-préschéma de la forme $Y'=\operatorname{Spec}(A)$, où $A$ est un
+anneau de valuation \textup{(resp.} un anneau de valuation discrète\textup{)}, deux
+$Y'$-sections de $X'=X_{(Y')}$ qui coïncident au point générique de $Y'$ sont
+égales.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de \emph{b)} et de \emph{c)} résulte de la correspondance biunivoque entre
+$Y$-morphismes de $Y'$ dans $X$ et $Y'$-sections de $X'$
+(\hype
+
+[id 3374]
+OLD: de b) et de c)
+NEW: de \emph{b)} et de \emph{c)}
+FRENCH CONTEXT (corrected): '=\operatorname{Spec}(A)$, où $A$ est un
+anneau de valuation \textup{(resp.} un anneau de valuation discrète\textup{)}, deux
+$Y'$-sections de $X'=X_{(Y')}$ qui coïncident au point générique de $Y'$ sont
+égales.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de \emph{b)} et de \emph{c)} résulte de la correspondance biunivoque entre
+$Y$-morphismes de $Y'$ dans $X$ et $Y'$-sections de $X'$
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14}). Si $X$ est séparé sur $Y$, la condition \emph{b)}
+est vérifiée en vertu de (\hyperref[I.7.2.2.1-fr]{\textbf{I}
+
+[id 3375]
+OLD: {I, 3.3.14}
+NEW: {\textbf{I}, 3.3.14}
+FRENCH CONTEXT (corrected):  $K$
+(\hyperref[I.3.4.5-fr]{\textbf{I}, 3.4.5})).
+
+\begin{remark}[4.2.5]
+\label{II.4.2.5-fr}
+Comme il y a correspondance biunivoque canonique entre $Y$-morphismes de $X$
+dans $P$ et leurs morphismes graphes, $X$-sections de $P\times_YX$
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14}), on voit qu'inversement
+(\hyperref[II.4.2.3-fr]{4.2.3}) peut se déduire de
+(\hyperref[II.4.2.4-fr]{4.2.4}). Désignons par
+$\operatorname{Hyp}_Y(X,\mathcal{E})$ l'ensemble des
+sous-$\mathcal{O}_X$-Modules quasi-cohérents $\mathcal{F}$ de
+$\mathcal{E}\otimes_Y
+
+[id 3376]
+OLD: la condition b)
+est vérifiée
+NEW: la condition \emph{b)}
+est vérifiée
+FRENCH CONTEXT (corrected): ales.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de \emph{b)} et de \emph{c)} résulte de la correspondance biunivoque entre
+$Y$-morphismes de $Y'$ dans $X$ et $Y'$-sections de $X'$
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14}). Si $X$ est séparé sur $Y$, la condition \emph{b)}
+est vérifiée en vertu de (\hyperref[I.7.2.2.1-fr]{\textbf{I}, 7.2.2.1}), puisque $Y'$
+est intègre. Il reste à prouver que \emph{b)} entraîne que le morphisme diagonal
+$\Delta:X\to X\times_YX$ est fermé, et il revient au même de montrer qu'il
+vérifie le critère de (\hyperr
+
+[id 3377]
+OLD: {I, 7.2.2.1}
+NEW: {\textbf{I}, 7.2.2.1}
+FRENCH CONTEXT (corrected): e \emph{c)} résulte de la correspondance biunivoque entre
+$Y$-morphismes de $Y'$ dans $X$ et $Y'$-sections de $X'$
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14}). Si $X$ est séparé sur $Y$, la condition \emph{b)}
+est vérifiée en vertu de (\hyperref[I.7.2.2.1-fr]{\textbf{I}, 7.2.2.1}), puisque $Y'$
+est intègre. Il reste à prouver que \emph{b)} entraîne que le morphisme diagonal
+$\Delta:X\to X\times_YX$ est fermé, et il revient au même de montrer qu'il
+vérifie le critère de (\hyperref[II.7.2.2-fr]{7.2.2}). Or, soit $z$ un point de
+la diago
+
+[id 3378]
+OLD: prouver que b) entraîne
+NEW: prouver que \emph{b)} entraîne
+FRENCH CONTEXT (corrected): ak J^2B$ forment un système de générateurs de la
+$(A/\mathfrak J)$-algèbre $B/\mathfrak JB$~; on voit aussitôt que les $c_ia_j$
+forment un système de générateurs de la $(A/\mathfrak J^2)$-algèbre
+$B/\mathfrak J^2B$, donc \emph{a)} implique \emph{b)}.
+
+Reste à prouver que \emph{b)} entraîne \emph{c)}. L'hypothèse entraîne que $B_1$ est un
+anneau noethérien, et comme $B_1=B_2/\mathfrak J^2B_2$, on a
+$\mathfrak J^2B_1=0$, donc
+$\mathfrak JB_1=\mathfrak JB_1/\mathfrak J^2B_1$ est un $B_0$-module de type
+fini. Les conditions de (7.2.7) sont donc vér
+
+[id 3379]
+OLD: {I, 5.3.1}
+NEW: {\textbf{I}, 5.3.1}
+FRENCH CONTEXT (corrected): réschéma. Si on compose
+avec $f$ les deux projections de $X\times_YX$, on obtient deux $Y$-morphismes
+$g_1$, $g_2$ de $Y'$ dans $X$, qui par hypothèse coïncident au point $b$~; ils
+sont donc égaux à un même morphisme $g$, ce qui signifie
+(\hyperref[I.5.3.1-fr]{\textbf{I}, 5.3.1}) que $f$ se factorise en $f=\Delta\circ g$, et
+par suite $z'\in\Delta(X)$. Lorsqu'on suppose $Y$ localement noethérien et $f$
+localement de type fini, $X\times_YX$ est localement noethérien
+(\hyperref[I.6.6.7-fr]{\textbf{I}, 6.6.7})~; on peut alors reprendre 
+
+[id 3380]
+OLD: {I, 6.6.7}
+NEW: {\textbf{I}, 6.6.7}
+FRENCH CONTEXT (corrected): nifie
+(\hyperref[I.5.3.1-fr]{\textbf{I}, 5.3.1}) que $f$ se factorise en $f=\Delta\circ g$, et
+par suite $z'\in\Delta(X)$. Lorsqu'on suppose $Y$ localement noethérien et $f$
+localement de type fini, $X\times_YX$ est localement noethérien
+(\hyperref[I.6.6.7-fr]{\textbf{I}, 6.6.7})~; on peut alors reprendre le raisonnement
+précédent en y supposant que $A$ est un anneau de valuation discrète, en vertu
+de (\hyperref[II.7.1.9-fr]{7.1.9}).
+
+\begin{remark}[7.2.4]
+\label{II.7.2.4-fr}
+\begin{enumerate}
+\item[\rm (i)] L'hypothèse que le morphi
+
+[id 3381]
+OLD: {I, 6.6.4, (i)}
+NEW: {\textbf{I}, 6.6.4, (i)}
+FRENCH CONTEXT (corrected): 2.4-fr}
+\begin{enumerate}
+\item[\rm (i)] L'hypothèse que le morphisme $\Delta$ est quasi-compact est
+toujours vérifiée lorsque $Y$ est localement noethérien et $f$ localement de
+type fini, car $X\times_YX$ est alors localement noethérien
+(\hyperref[I.6.6.4-fr]{\textbf{I}, 6.6.4, (i)}). Dans le cas général, elle signifie aussi
+que pour tout recouvrement $(U_\alpha)$ de $X$ par des ouverts affines, les
+ensembles $U_\alpha\cap U_\beta$ sont \emph{quasi-compacts}.
+\item[\rm (ii)] Pour que $f$ soit séparé, il \emph{suffit} que la condition \em
+
+[id 3382]
+OLD: que la condition b)
+ou la condition c)
+NEW: que la condition \emph{b)}
+ou la condition \emph{c)}
+FRENCH CONTEXT (corrected): xtbf{I}, 6.6.4, (i)}). Dans le cas général, elle signifie aussi
+que pour tout recouvrement $(U_\alpha)$ de $X$ par des ouverts affines, les
+ensembles $U_\alpha\cap U_\beta$ sont \emph{quasi-compacts}.
+\item[\rm (ii)] Pour que $f$ soit séparé, il \emph{suffit} que la condition \emph{b)}
+ou la condition \emph{c)} soit vérifiée pour un anneau de valuation $A$ qui est
+\emph{complet} et dont le corps des restes est \emph{algébriquement clos}~;
+cela résulte en effet de la démonstration de
+(\hyperref[II.7.2.3-fr]{7.2.3}) et de
+(\hyperref[II.7.1.4-fr]{7.1.4}).
+\end{enumerat
+
+=================== PAGE II 143 ===================
+----- (Spanish page II 142: shown above in this file) -----
+----- (Spanish page II 143: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 144 -----
+\oldpage[II]{144}
+de un preesquema $Y$, se llama \emph{codimensión} de $F$ en $Y$, y se denota por $\codim_Y F$, al ínfimo de los enteros $\dim(\sh{O}_z)$ cuando $z$ recorre $F$.
+\end{env}
+
+\begin{corollary}[7.3.5]
+\label{II.7.3.5}
+Sean $Y$ un preesquema localmente noetheriano reducido y $N$ el conjunto de los puntos $y\in Y$ en los que $Y$ no es regular \sref[0]{0.4.1.4};
+supóngase que $\codim_Y N\geq2$.
+Sea $f:X\to Y$ un morfismo de tipo finito, \emph{separado} y \emph{cerrado}, y sea $g$ una $Y$-sección racional de $X$;
+si $Y'$ es el conjunto de los puntos de $Y$ en los que $g$ no está definida (conjunto que es \emph{cerrado} \sref[I]{I.7.2.1}), entonces $\codim_Y Y'\geq2$.
+\end{corollary}
+
+\begin{proof}
+Basta demostrar que $g$ está definida en todo punto $z\in Y$ tal que $\dim\sh{O}_z\leq1$.
+Si $\dim\sh{O}_z=0$, entonces $z$ es el punto genérico de una componente irreducible de $Y$ \sref[I]{I.1.1.14}, por lo que pertenece a todo abierto denso en todas partes de $Y$ y, en particular, al dominio de definición de $g$.
+Supongamos, pues, que $\dim\sh{O}_z=1$;
+por hipótesis, $\sh{O}_z$ es entonces un anillo local noetheriano regular y, por \sref{II.7.1.6}, un \emph{anillo de valuación discreta}.
+Sea $Z=\Spec(\sh{O}_z)$;
+como $U=Y\setmin Y'$ es denso en todas partes, $U\cap Z$ no es vacío \sref[I]{I.2.4.2};
+sea $g'$ la aplicación racional de $Z$ en $X$ inducida por $g$ \sref[I]{I.7.2.8};
+basta demostrar que $g'$ es un \emph{morfismo} \sref[I]{I.7.2.9}.
+Ahora bien, $g'$ puede considerarse como una $Z$-sección racional del $Z$-preesquema
+\[
+  f^{-1}(Z)=X\times_Y Z;
+\]
+es claro que el morfismo $f^{-1}(Z)\to Z$ correspondiente a $f$ es cerrado, y de \sref[I]{I.5.5.1}[i] resulta que es separado;
+se concluye entonces de \sref{II.7.3.3} que $g'$ está definida en todas partes;
+como $Z$ es reducido y $X$ es separado sobre $Y$, $g'$ es un morfismo \sref[I]{I.7.2.2}.
+\end{proof}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed p. 144.
+
+\begin{corollary}[7.3.6]
+\label{II.7.3.6}
+Sean $S$ un preesquema localmente noetheriano y $X$ e $Y$ dos $S$-preesquemas;
+supóngase que $Y$ es reducido y, además, que el conjunto $N$ de los puntos $y\in Y$ en los que $Y$ no es regular satisface $\codim_Y N\geq2$;
+supóngase finalmente que el morfismo estructural $X\to S$ es propio.
+Sea $f$ una $S$-aplicación racional de $Y$ en $X$, y sea $Y'$ el conjunto de los puntos de $Y$ en los que $f$ no está definida;
+entonces $\codim_Y Y'\geq2$.
+\end{corollary}
+
+\begin{proof}
+Se sabe \sref[I]{I.7.1.2} que pueden identificarse las $S$-aplicaciones racionales de $Y$ en $X$ con las $Y$-secciones racionales de $X\times_S Y$;
+como el morfismo estructural $X\times_S Y\to Y$ es cerrado \sref{II.5.4.1}, puede aplicarse \sref{II.7.3.5}, de donde resulta el corolario.
+\end{proof}
+
+\begin{remark}[7.3.7]
+\label{II.7.3.7}
+Las hipótesis impuestas a $Y$ en \sref{II.7.3.5} y \sref{II.7.3.6} se satisfacen, en particular, cuando $Y$ es \emph{normal} \sref[0]{0.4.1.4}, en virtud de \sref{II.7.1.6}.
+\end{remark}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 144-145.
+
+Los morfismos universalmente cerrados (resp. los morfismos propios) pueden caracterizarse mediante un recíproco de \sref{II.7.3.3}:
+
+\begin{theorem}[7.3.8]
+\label{II.7.3.8}
+Sean $Y$ un preesquema (resp. un preesquema localmente noetheriano) y $f:X\to Y$ un morfismo cuasi-compacto separado (resp. un morfismo de tipo finito).
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\rm{(a)}] $f$ es universalmente cerrado (resp. propio).
+  \item[\rm{(b)}] Para todo $Y$-esquema de la forma $Y'=\Spec(A)$, donde $A$ es un anillo de valuación (resp. un anillo de valuación discreta) de cuerpo de fracciones $K$, la aplicación canónica
+  \[
+    \Hom_Y(Y',X)\longrightarrow\Hom_Y(\Spec(K),X)
+  \]
+  correspondiente a la inyección canónica $A\to K$ es sobreyectiva (resp. biyectiva).
+----- French corrections on page II 143 -----
+[id 3383]
+OLD: $X$ un schéma intègre
+NEW: $X$ un \textup{schéma} intègre
+FRENCH CONTEXT (corrected): end{enumerate}
+\end{remark}
+
+\oldpage[II]{143}
+\subsection{Critère valuatif de propreté}
+\label{subsection:II.7.3-fr}
+
+\begin{proposition}[7.3.1]
+\label{II.7.3.1-fr}
+Soient $A$ un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, $X$ un \textup{schéma} intègre, $f:X\to Y$ un morphisme \textup{fermé} tel
+que $f^{-1}(b)$ se réduise à un point $x$ et que l'homomorphisme correspondant
+$\boldsymbol{k}(b)\to \boldsymbol{k}(x)$ soit bijectif. Alors $f$ est un isomorphisme.
+\end{proposition}
+
+Comme $f$ est fermé et dominan
+
+[id 3384]
+OLD: morphisme fermé tel
+NEW: morphisme \textup{fermé} tel
+FRENCH CONTEXT (corrected): 
+\subsection{Critère valuatif de propreté}
+\label{subsection:II.7.3-fr}
+
+\begin{proposition}[7.3.1]
+\label{II.7.3.1-fr}
+Soient $A$ un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, $X$ un \textup{schéma} intègre, $f:X\to Y$ un morphisme \textup{fermé} tel
+que $f^{-1}(b)$ se réduise à un point $x$ et que l'homomorphisme correspondant
+$\boldsymbol{k}(b)\to \boldsymbol{k}(x)$ soit bijectif. Alors $f$ est un isomorphisme.
+\end{proposition}
+
+Comme $f$ est fermé et dominant, on a $f(X)=Y$~; il suffit
+(\hyperref[I.4.
+
+[id 3385]
+OLD: $k(b)\to
+NEW: $\boldsymbol{k}(b)\to
+FRENCH CONTEXT (corrected): I.7.3.1-fr}
+Soient $A$ un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, $X$ un \textup{schéma} intègre, $f:X\to Y$ un morphisme \textup{fermé} tel
+que $f^{-1}(b)$ se réduise à un point $x$ et que l'homomorphisme correspondant
+$\boldsymbol{k}(b)\to \boldsymbol{k}(x)$ soit bijectif. Alors $f$ est un isomorphisme.
+\end{proposition}
+
+Comme $f$ est fermé et dominant, on a $f(X)=Y$~; il suffit
+(\hyperref[I.4.2.2-fr]{\textbf{I}, 4.2.2}) de prouver que pour tout $y'\neq b$ dans $Y$,
+il existe \emph{un seul} po
+
+[id 3386]
+OLD: k(x)$ soit bijectif
+NEW: \boldsymbol{k}(x)$ soit bijectif
+FRENCH CONTEXT (corrected):  un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, $X$ un \textup{schéma} intègre, $f:X\to Y$ un morphisme \textup{fermé} tel
+que $f^{-1}(b)$ se réduise à un point $x$ et que l'homomorphisme correspondant
+$\boldsymbol{k}(b)\to \boldsymbol{k}(x)$ soit bijectif. Alors $f$ est un isomorphisme.
+\end{proposition}
+
+Comme $f$ est fermé et dominant, on a $f(X)=Y$~; il suffit
+(\hyperref[I.4.2.2-fr]{\textbf{I}, 4.2.2}) de prouver que pour tout $y'\neq b$ dans $Y$,
+il existe \emph{un seul} point $x'$ tel que $f(x')=y'$ et qu
+
+[id 3387]
+OLD: {I, 4.2.2}
+NEW: {\textbf{I}, 4.2.2}
+FRENCH CONTEXT (corrected): ^{-1}(b)$ se réduise à un point $x$ et que l'homomorphisme correspondant
+$\boldsymbol{k}(b)\to \boldsymbol{k}(x)$ soit bijectif. Alors $f$ est un isomorphisme.
+\end{proposition}
+
+Comme $f$ est fermé et dominant, on a $f(X)=Y$~; il suffit
+(\hyperref[I.4.2.2-fr]{\textbf{I}, 4.2.2}) de prouver que pour tout $y'\neq b$ dans $Y$,
+il existe \emph{un seul} point $x'$ tel que $f(x')=y'$ et que l'homomorphisme
+correspondant $\mathcal{O}_{y'}\to\mathcal{O}_{x'}$ soit bijectif, car $f$ sera
+alors un homéomorphisme. Or, si $f(x')=y'$, $\mathcal{
+
+[id 3388]
+OLD: un \emph{seul} point
+NEW: \emph{un seul} point
+FRENCH CONTEXT (corrected): ldsymbol{k}(b)\to \boldsymbol{k}(x)$ soit bijectif. Alors $f$ est un isomorphisme.
+\end{proposition}
+
+Comme $f$ est fermé et dominant, on a $f(X)=Y$~; il suffit
+(\hyperref[I.4.2.2-fr]{\textbf{I}, 4.2.2}) de prouver que pour tout $y'\neq b$ dans $Y$,
+il existe \emph{un seul} point $x'$ tel que $f(x')=y'$ et que l'homomorphisme
+correspondant $\mathcal{O}_{y'}\to\mathcal{O}_{x'}$ soit bijectif, car $f$ sera
+alors un homéomorphisme. Or, si $f(x')=y'$, $\mathcal{O}_{x'}$ est un anneau
+local contenu dans $K=\boldsymbol{k}(x)=\boldsymbol{k}(
+
+[id 3389]
+OLD: $K=k(x)
+NEW: $K=\boldsymbol{k}(x)
+FRENCH CONTEXT (corrected):  $Y$,
+il existe \emph{un seul} point $x'$ tel que $f(x')=y'$ et que l'homomorphisme
+correspondant $\mathcal{O}_{y'}\to\mathcal{O}_{x'}$ soit bijectif, car $f$ sera
+alors un homéomorphisme. Or, si $f(x')=y'$, $\mathcal{O}_{x'}$ est un anneau
+local contenu dans $K=\boldsymbol{k}(x)=\boldsymbol{k}(b)$ et dominant $\mathcal{O}_{y'}$~; ce dernier
+est l'anneau local $A_{y'}$, donc est un anneau de valuation
+(\hyperref[II.7.1.1-fr]{7.1.1}) ayant $K$ pour corps des fractions. Par
+ailleurs on a $\mathcal{O}_{x'}\neq K$ puisque $x'$ n'est pas l
+
+[id 3390]
+OLD: =k(b)$ et dominant
+NEW: =\boldsymbol{k}(b)$ et dominant
+FRENCH CONTEXT (corrected): h{un seul} point $x'$ tel que $f(x')=y'$ et que l'homomorphisme
+correspondant $\mathcal{O}_{y'}\to\mathcal{O}_{x'}$ soit bijectif, car $f$ sera
+alors un homéomorphisme. Or, si $f(x')=y'$, $\mathcal{O}_{x'}$ est un anneau
+local contenu dans $K=\boldsymbol{k}(x)=\boldsymbol{k}(b)$ et dominant $\mathcal{O}_{y'}$~; ce dernier
+est l'anneau local $A_{y'}$, donc est un anneau de valuation
+(\hyperref[II.7.1.1-fr]{7.1.1}) ayant $K$ pour corps des fractions. Par
+ailleurs on a $\mathcal{O}_{x'}\neq K$ puisque $x'$ n'est pas le point
+générique de $X$ (\hype
+
+[id 3391]
+OLD: {0, 2.1.3}
+NEW: {\textbf{0}, 2.1.3}
+FRENCH CONTEXT (corrected):  $A$
+un plus petit idéal premier $\mathfrak{N}$, qui correspond donc à un point
+générique
+\oldpage[I]{83}
+de $X$~; en outre, $X$ n'admet qu'un seul point générique puisque c'est un
+espace de Kolmogoroff ((\hyperref[I.1.1.8-fr]{1.1.8}) et
+(\hyperref[0.2.1.3-fr]{\textbf{0}, 2.1.3})).
+
+\begin{proposition}[1.1.15]
+\label{I.1.1.15-fr}
+Si $\mathfrak{J}$ est un idéal de $A$ contenu dans le radical
+$\mathfrak{R}(A)$, le seul voisinage de $V(\mathfrak{J})$ dans
+$X=\operatorname{Spec}(A)$ est l'espace $X$ tout entier.
+\end{proposition}
+
+En eff
+
+[id 3392]
+OLD: {I, 8.2.2}
+NEW: {\textbf{I}, 8.2.2}
+FRENCH CONTEXT (corrected): $ n'est pas le point
+générique de $X$ (\hyperref[0.2.1.3-fr]{\textbf{0}, 2.1.3})~; on en conclut que
+$\mathcal{O}_{x'}=\mathcal{O}_{y'}$. Comme $X$ est un schéma intègre, la
+relation $\mathcal{O}_{x'}=\mathcal{O}_{x''}$ entraîne $x'=x''$
+(\hyperref[I.8.2.2-fr]{\textbf{I}, 8.2.2}), ce qui achève la démonstration.
+
+\begin{env}[7.3.2]
+\label{II.7.3.2-fr}
+Soient $A$ un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, de sorte que $\mathcal{O}_b=\boldsymbol{k}(b)$ est égal à $K$, corps des
+fractions de $A$~;
+
+[id 3393]
+OLD: $\mathcal{O}_b=k(b)$
+NEW: $\mathcal{O}_b=\boldsymbol{k}(b)$
+FRENCH CONTEXT (corrected): \mathcal{O}_{x''}$ entraîne $x'=x''$
+(\hyperref[I.8.2.2-fr]{\textbf{I}, 8.2.2}), ce qui achève la démonstration.
+
+\begin{env}[7.3.2]
+\label{II.7.3.2-fr}
+Soient $A$ un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, de sorte que $\mathcal{O}_b=\boldsymbol{k}(b)$ est égal à $K$, corps des
+fractions de $A$~; soit $f:X\to Y$ un morphisme. On sait
+(\hyperref[I.7.1.4-fr]{\textbf{I}, 7.1.4}) que les $Y$-\emph{sections rationnelles} de
+$X$ sont en correspondance biunivoque avec les \emph{germes} de $Y$-sections
+(définies da
+
+[id 3394]
+OLD: {I, 7.1.4}
+NEW: {\textbf{I}, 7.1.4}
+FRENCH CONTEXT (corrected): {II.7.3.2-fr}
+Soient $A$ un anneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, de sorte que $\mathcal{O}_b=\boldsymbol{k}(b)$ est égal à $K$, corps des
+fractions de $A$~; soit $f:X\to Y$ un morphisme. On sait
+(\hyperref[I.7.1.4-fr]{\textbf{I}, 7.1.4}) que les $Y$-\emph{sections rationnelles} de
+$X$ sont en correspondance biunivoque avec les \emph{germes} de $Y$-sections
+(définies dans des voisinages de $b$) au point $b$, d'où une application
+canonique
+\[
+\tag{7.3.2.1}
+\label{II.7.3.2.1-fr}
+\Gamma_{\mathrm
+
+[id 3395]
+OLD: $Y$-sections \emph{rationnelles}
+NEW: $Y$-\emph{sections rationnelles}
+FRENCH CONTEXT (corrected): nneau de valuation, $Y=\operatorname{Spec}(A)$, $b$ le point
+générique de $Y$, de sorte que $\mathcal{O}_b=\boldsymbol{k}(b)$ est égal à $K$, corps des
+fractions de $A$~; soit $f:X\to Y$ un morphisme. On sait
+(\hyperref[I.7.1.4-fr]{\textbf{I}, 7.1.4}) que les $Y$-\emph{sections rationnelles} de
+$X$ sont en correspondance biunivoque avec les \emph{germes} de $Y$-sections
+(définies dans des voisinages de $b$) au point $b$, d'où une application
+canonique
+\[
+\tag{7.3.2.1}
+\label{II.7.3.2.1-fr}
+\Gamma_{\mathrm{rat}}(X/Y)\longrightarrow
+\Gamma(f^{-1}(b
+
+[id 3396]
+OLD: {I, 3.4.5}
+NEW: {\textbf{I}, 3.4.5}
+FRENCH CONTEXT (corrected): (\hyperref[I.2.4.6-fr]{\textbf{I}, 2.4.6})~; les $S$-morphismes
+$\{\xi\}\to\mathbf{V}(\mathcal{E})$ ne sont donc autres que les
+\emph{points géométriques de $\mathbf{V}(\mathcal{E})$ à valeurs dans
+l'extension $K$ de $\boldsymbol{k}(s)$} (\hyperref[I.3.4.5-fr]{\textbf{I}, 3.4.5}), points qui
+sont localisés aux points de $p^{-1}(s)$. L'ensemble de ces points, qu'on
+peut encore appeler \emph{la fibre géométrique rationnelle sur $K$ de
+$\mathbf{V}(\mathcal{E})$ au-dessus du point $s$}, s'identifie d'après
+(\hyperref[II.1.7.8-fr]{1.7.8})
+
+[id 3397]
+OLD: {I, 5.4.7}) que
+NEW: {\textbf{I}, 5.4.7}) que
+FRENCH CONTEXT (corrected):  $\Gamma(f^{-1}(b)/\operatorname{Spec}(K))$ s'identifiant
+d'ailleurs, par définition (\hyperref[I.3.4.5-fr]{\textbf{I}, 3.4.5}) aux \emph{points
+de $f^{-1}(b)=X\otimes_AK$ rationnels sur $K$}. Lorsque $f$ est \emph{séparé},
+il résulte de (\hyperref[I.5.4.7-fr]{\textbf{I}, 5.4.7}) que l'application
+(\hyperref[II.7.3.2.1-fr]{7.3.2.1}) est \emph{injective}, puisque $Y$ est un
+schéma intègre.
+
+Composant (\hyperref[II.7.3.2.1-fr]{7.3.2.1}) avec l'application canonique
+$\Gamma(X/Y)\to\Gamma_{\mathrm{rat}}(X/Y)$
+(\hyperref[I.7.1.2-fr]{\textbf{I}
+
+[id 3398]
+OLD: {I, 7.1.2}
+NEW: {\textbf{I}, 7.1.2}
+FRENCH CONTEXT (corrected):  $Y'=X'_{(h)}=X'_{(Y)}$, et notons que le morphisme
+$g'=g_{(Y)}:Y'\to Y$ est \emph{entier}
+(\hyperref[II.6.1.5-fr]{6.1.5, (iii)}). Vu la correspondance entre
+applications rationnelles de $Y$ dans $X'$ et $Y$-sections rationnelles de
+$Y'$ (\hyperref[I.7.1.2-fr]{\textbf{I}, 7.1.2}), on voit qu'on est ramené à prouver le
+cas particulier de (\hyperref[II.6.1.13-fr]{6.1.13}) où $X=Y$, autrement dit
+le
+
+\begin{corollary}[6.1.14]
+\label{II.6.1.14-fr}
+Soient $X$ un préschéma normal localement intègre, $g:X'\to X$ un morphisme
+\textup{entier}
+
+[id 3399]
+OLD: {I, 5.4.7}).
+NEW: {\textbf{I}, 5.4.7}).
+FRENCH CONTEXT (corrected): I}, 7.1.2}), on obtient une application canonique
+\[
+\tag{7.3.2.2}
+\label{II.7.3.2.2-fr}
+\Gamma(X/Y)\longrightarrow \Gamma(f^{-1}(b)/\operatorname{Spec}(K)).
+\]
+Lorsque $f$ est \emph{séparé}, cette application est encore \emph{injective}
+(\hyperref[I.5.4.7-fr]{\textbf{I}, 5.4.7}).
+\end{env}
+
+\begin{proposition}[7.3.3]
+\label{II.7.3.3-fr}
+Soient $A$ un anneau de valuation de corps des fractions $K$,
+$Y=\operatorname{Spec}(A)$, $b$ le point générique de $Y$, $f:X\to Y$ un
+morphisme \emph{séparé} et \emph{fermé}. Alors l'application canon
+
+[id 3400]
+OLD: (\hyperref[II.7.3.2.2-fr]{7.3.2.2}) est bijective
+NEW: \textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} est bijective
+FRENCH CONTEXT (corrected): {env}
+
+\begin{proposition}[7.3.3]
+\label{II.7.3.3-fr}
+Soient $A$ un anneau de valuation de corps des fractions $K$,
+$Y=\operatorname{Spec}(A)$, $b$ le point générique de $Y$, $f:X\to Y$ un
+morphisme \emph{séparé} et \emph{fermé}. Alors l'application canonique
+\textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} est bijective \textup{(ce qui revient à dire
+qu'elle est \emph{surjective} et entraîne que les $Y$-sections rationnelles de
+$X$ sont \emph{partout définies})}.
+\end{proposition}
+
+Soit donc $x$ un point de $f^{-1}(b)$, \emph{rationnel sur $K$}. Comme $f$ est
+séparé, il en e
+
+[id 3401]
+OLD: (ce qui revient à dire
+qu'elle est \emph{surjective} et entraîne que les $Y$-sections rationnelles de
+$X$ sont \emph{partout définies})
+NEW: \textup{(ce qui revient à dire
+qu'elle est \emph{surjective} et entraîne que les $Y$-sections rationnelles de
+$X$ sont \emph{partout définies})}
+FRENCH CONTEXT (corrected): t $A$ un anneau de valuation de corps des fractions $K$,
+$Y=\operatorname{Spec}(A)$, $b$ le point générique de $Y$, $f:X\to Y$ un
+morphisme \emph{séparé} et \emph{fermé}. Alors l'application canonique
+\textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} est bijective \textup{(ce qui revient à dire
+qu'elle est \emph{surjective} et entraîne que les $Y$-sections rationnelles de
+$X$ sont \emph{partout définies})}.
+\end{proposition}
+
+Soit donc $x$ un point de $f^{-1}(b)$, \emph{rationnel sur $K$}. Comme $f$ est
+séparé, il en est de même du morphisme
+$f^{-1}(b)\to\operatorname{Spec}(K)$ correspondant à $f$
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}), et toute secti
+
+[id 3402]
+OLD: {I, 5.5.1, (iv)}
+NEW: {\textbf{I}, 5.5.1, (iv)}
+FRENCH CONTEXT (corrected): lles de
+$X$ sont \emph{partout définies})}.
+\end{proposition}
+
+Soit donc $x$ un point de $f^{-1}(b)$, \emph{rationnel sur $K$}. Comme $f$ est
+séparé, il en est de même du morphisme
+$f^{-1}(b)\to\operatorname{Spec}(K)$ correspondant à $f$
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}), et toute section de $f^{-1}(b)$ étant
+une immersion fermée (\hyperref[I.5.4.6-fr]{\textbf{I}, 5.4.6}), $\{x\}$ est fermé
+\emph{dans $f^{-1}(b)$}. Considérons le sous-préschéma fermé réduit $X'$ de
+$X$ ayant pour espace sous-jacent l'adhérence $\overline{\{x
+
+[id 3403]
+OLD: {I, 5.4.6}
+NEW: {\textbf{I}, 5.4.6}
+FRENCH CONTEXT (corrected): tègre, et $f$
+s'identifie alors à un morphisme d'un ouvert $U$ de $X$ dans $X'$
+(\hyperref[I.7.2.2-fr]{\textbf{I}, 7.2.2}) qui est une $U$-section de $g^{-1}(U)$.
+Comme $g$ est séparé, $f$ est une immersion fermée de $U$ dans $g^{-1}(U)$
+(\hyperref[I.5.4.6-fr]{\textbf{I}, 5.4.6})~; soit $Z$ le sous-préschéma fermé de
+$g^{-1}(U)$ associé à $f$ (\hyperref[I.4.2.1-fr]{\textbf{I}, 4.2.1}), qui est
+isomorphe à $U$, donc intègre~; soit $X_1$ le sous-préschéma réduit de $X'$
+ayant pour espace sous-jacent l'adhérence $\overline{Z}$ de $Z$ da
+
+[id 3404]
+OLD: dans $X$. Il est clair
+NEW: \emph{dans} $X$. Il est clair
+FRENCH CONTEXT (corrected): ion de $f^{-1}(b)$ étant
+une immersion fermée (\hyperref[I.5.4.6-fr]{\textbf{I}, 5.4.6}), $\{x\}$ est fermé
+\emph{dans $f^{-1}(b)$}. Considérons le sous-préschéma fermé réduit $X'$ de
+$X$ ayant pour espace sous-jacent l'adhérence $\overline{\{x\}}$ de $\{x\}$
+\emph{dans} $X$. Il est clair que la restriction de $f$ à $X'$ vérifie les hypothèses
+de (\hyperref[II.7.3.1-fr]{7.3.1}), donc est un \emph{isomorphisme} de $X'$ sur
+$Y$, dont l'isomorphisme réciproque est la $Y$-section de $X$ cherchée.
+
+\begin{env}[7.3.4]
+\label{II.7.3.4-fr}
+Pour énonce
+
+=================== PAGE II 144 ===================
+----- (Spanish page II 143: shown above in this file) -----
+----- (Spanish page II 144: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 145 -----
+\oldpage[II]{145}
+  \item[\rm{(c)}] Para todo $Y$-esquema de la forma $Y'=\Spec(A)$, donde $A$ es un anillo de valuación (resp. un anillo de valuación discreta), la aplicación canónica \sref{II.7.3.2.2} relativa al $Y'$-preesquema $X_{(Y')}$ es sobreyectiva (resp. biyectiva).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+La equivalencia entre (b) y (c) resulta inmediatamente de \sref[I]{I.3.3.14};
+(a) implica (c), pues, en uno u otro caso, (a) implica que $f_{(Y')}$ es separado \sref[I]{I.5.5.1}[iv] y cerrado, y basta aplicar \sref{II.7.3.3}.
+Queda por demostrar que (b) implica (a).
+
+Consideremos primero el caso en que $Y$ es arbitrario y $f$ es separado y cuasi-compacto.
+Si $f$ satisface la condición~(b), también la satisface
+\[
+  f_{(Y'')}:X_{(Y'')}\longrightarrow Y'',
+\]
+donde $Y''$ es un $Y$-preesquema arbitrario, en virtud de la equivalencia entre (b) y (c) y del hecho de que
+\[
+  X_{(Y'')}\times_{Y''}Y'=X\times_Y Y'
+\]
+para todo morfismo $Y'\to Y''$ \sref[I]{I.3.3.9.1};
+como, además, $f_{(Y'')}$ es separado y cuasi-compacto cuando $f$ lo es (\sref[I]{I.5.5.1}[iv] y \sref[I]{I.6.6.4}[iii]), se queda reducido a demostrar que (b) implica que $f$ es \emph{cerrado}.
+Para ello, basta verificar la condición~(b) de \sref{II.7.2.1}.
+Sean, pues, $x\in X$ e $y'$ una especialización de $y=f(x)$, distinta de $y$;
+en virtud de \sref{II.7.1.4}, existen un esquema $Y'$, espectro de un anillo de valuación, y un morfismo separado $g:Y'\to Y$ tales que, si $a$ designa el punto cerrado y $b$ el punto genérico de $Y'$, se tiene $g(a)=y'$, $g(b)=y$, y existe un $\kres(y)$-homomorfismo $\kres(x)\to\kres(b)$.
+Este último corresponde canónicamente a un $Y$-morfismo
+\[
+  \Spec(\kres(b))\longrightarrow X
+\]
+\sref[I]{I.2.4.6}, y de (b) resulta entonces que existe un $Y$-morfismo $h:Y'\to X$ al que corresponde el morfismo precedente.
+Se tiene entonces $h(b)=x$;
+si se pone $h(a)=x'$, entonces $x'$ es una especialización de $x$ y
+\[
+  f(x')=f(h(a))=g(a)=y'.
+\]
+
+Si ahora $Y$ es localmente noetheriano y $f$ de tipo finito, la hipótesis~(b) implica primero que $f$ es \emph{separado}, en virtud de \sref{II.7.2.3}, pues el morfismo diagonal $X\to X\times_Y X$ es cuasi-compacto \sref{II.7.2.4}.
+Además, para demostrar que $f$ es propio, basta demostrar que
+\[
+  f_{(Y'')}:X_{(Y'')}\longrightarrow Y''
+\]
+es \emph{cerrado} para todo $Y$-preesquema $Y''$ \emph{de tipo finito}, teniendo en cuenta \sref{II.5.6.3}.
+Como $Y''$ es entonces localmente noetheriano, puede repetirse el razonamiento del primer caso tomando para $Y'$ el espectro de un anillo de valuación discreta y aplicando \sref{II.7.1.9} en lugar de \sref{II.7.1.4}.
+\end{proof}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 145-146.
+
+\begin{remarks}[7.3.9]
+\label{II.7.3.9}
+\begin{enumerate}
+  \item[\rm{(i)}] Cuando $Y$ es un preesquema arbitrario y $f$ un morfismo separado, para que $f$ sea universalmente cerrado \emph{basta} exigir la condición~(b) o la condición~(c) solo para anillos de valuación $A$ \emph{completos} cuyos cuerpos residuales sean \emph{algebraicamente cerrados};
+  esto resulta, en efecto, de la demostración precedente y de \sref{II.7.1.4}.
+
+  \item[\rm{(ii)}] Del criterio~(c) de \sref{II.7.3.8} se deduce una nueva demostración, más próxima a los métodos clásicos, del hecho de que un morfismo proyectivo $X\to Y$ es cerrado \sref{II.5.5.3}.
+  Puede suponerse, en efecto, que $Y$ es afín y, por consiguiente, identificar $X$ con un subpreesquema cerrado de un fibrado proyectivo $\bb{P}_Y^n$ \sref{II.5.3.3};
+  para demostrar que $X\to Y$ es cerrado, basta verificar que lo es el morfismo estructural $\bb{P}_Y^n\to Y$, y el criterio~(c) de \sref{II.7.3.8}, junto con \sref{II.4.1.3.1}, muestra que se queda reducido a demostrar el hecho siguiente:
+  \emph{si $Y$ es el espectro de un anillo de valuación $A$, de cuerpo de fracciones $K$, todo punto de $\bb{P}_Y^n$ con valores en $K$ proviene, por restricción al punto genérico de $Y$, de un punto de $\bb{P}_Y^n$ con valores en $A$.}
+  Ahora bien, todo $\sh{O}_Y$-módulo invertible es trivial \sref[I]{I.2.4.8};
+  de \sref{II.4.2.6} resulta, pues, que un punto de $\bb{P}_Y^n$ con valores en $K$ se identifica con una clase de sistemas
+  \[
+    (\zeta c_0,\zeta c_1,\ldots,\zeta c_n),
+  \]
+  donde $\zeta\in K^\times$ y los $c_i\in K$ no son todos nulos.
+  Multiplicando los $c_i$ por un elemento de $A$ de
+----- French corrections on page II 144 -----
+[id 3405]
+OLD: (\hyperref[0.4.1.4-fr]{0, 4.1.4})~;
+NEW: \textup{(\hyperref[0.4.1.4-fr]{\textbf{0}, 4.1.4})}~;
+FRENCH CONTEXT (corrected): e{codim}_YF$ la borne inférieure des entiers
+$\dim(\mathcal{O}_z)$, où $z$ parcourt $F$.
+\end{env}
+
+\begin{corollary}[7.3.5]
+\label{II.7.3.5-fr}
+Soient $Y$ un préschéma localement noethérien réduit, $N$ l'ensemble des
+points $y\in Y$ où $Y$ n'est pas régulier
+\textup{(\hyperref[0.4.1.4-fr]{\textbf{0}, 4.1.4})}~; on suppose que
+$\operatorname{codim}_YN\geq2$. Soit $f:X\to Y$ un morphisme de type fini,
+\textup{séparé} et \textup{fermé} et soit $g$ une $Y$-section rationnelle de $X$~; si $Y'$ est
+l'ensemble des points de $Y$ où $g$ n'est pas définie \textup{(ensemble qu
+
+[id 3406]
+OLD: fini,
+séparé et
+NEW: fini,
+\textup{séparé} et
+FRENCH CONTEXT (corrected): .5-fr}
+Soient $Y$ un préschéma localement noethérien réduit, $N$ l'ensemble des
+points $y\in Y$ où $Y$ n'est pas régulier
+\textup{(\hyperref[0.4.1.4-fr]{\textbf{0}, 4.1.4})}~; on suppose que
+$\operatorname{codim}_YN\geq2$. Soit $f:X\to Y$ un morphisme de type fini,
+\textup{séparé} et \textup{fermé} et soit $g$ une $Y$-section rationnelle de $X$~; si $Y'$ est
+l'ensemble des points de $Y$ où $g$ n'est pas définie \textup{(ensemble qui est
+\emph{fermé} (\hyperref[I.7.2.1-fr]{\textbf{I}, 7.2.1}))} on a
+$\operatorname{codim}_YY'\geq2$.
+\end{co
+
+[id 3407]
+OLD: fermé et soit $g$
+NEW: \textup{fermé} et soit $g$
+FRENCH CONTEXT (corrected): chéma localement noethérien réduit, $N$ l'ensemble des
+points $y\in Y$ où $Y$ n'est pas régulier
+\textup{(\hyperref[0.4.1.4-fr]{\textbf{0}, 4.1.4})}~; on suppose que
+$\operatorname{codim}_YN\geq2$. Soit $f:X\to Y$ un morphisme de type fini,
+\textup{séparé} et \textup{fermé} et soit $g$ une $Y$-section rationnelle de $X$~; si $Y'$ est
+l'ensemble des points de $Y$ où $g$ n'est pas définie \textup{(ensemble qui est
+\emph{fermé} (\hyperref[I.7.2.1-fr]{\textbf{I}, 7.2.1}))} on a
+$\operatorname{codim}_YY'\geq2$.
+\end{corollary}
+
+Il suffit de prou
+
+[id 3408]
+OLD: (ensemble qui est
+\emph{fermé} (\hyperref[I.7.2.1-fr]{I, 7.2.1}))
+NEW: \textup{(ensemble qui est
+\emph{fermé} (\hyperref[I.7.2.1-fr]{\textbf{I}, 7.2.1}))}
+FRENCH CONTEXT (corrected): extbf{0}, 4.1.4})}~; on suppose que
+$\operatorname{codim}_YN\geq2$. Soit $f:X\to Y$ un morphisme de type fini,
+\textup{séparé} et \textup{fermé} et soit $g$ une $Y$-section rationnelle de $X$~; si $Y'$ est
+l'ensemble des points de $Y$ où $g$ n'est pas définie \textup{(ensemble qui est
+\emph{fermé} (\hyperref[I.7.2.1-fr]{\textbf{I}, 7.2.1}))} on a
+$\operatorname{codim}_YY'\geq2$.
+\end{corollary}
+
+Il suffit de prouver que $g$ est définie en tout point $z\in Y$ tel que
+$\dim\mathcal{O}_z\leq1$. Si $\dim\mathcal{O}_z=0$, $z$ est point générique
+d'une composante irréductible de $Y$ (\hyperref[I.1.1.14
+
+[id 3409]
+OLD: {I, 1.1.14}
+NEW: {\textbf{I}, 1.1.14}
+FRENCH CONTEXT (corrected): a
+$\operatorname{codim}_YY'\geq2$.
+\end{corollary}
+
+Il suffit de prouver que $g$ est définie en tout point $z\in Y$ tel que
+$\dim\mathcal{O}_z\leq1$. Si $\dim\mathcal{O}_z=0$, $z$ est point générique
+d'une composante irréductible de $Y$ (\hyperref[I.1.1.14-fr]{\textbf{I}, 1.1.14}), donc
+appartient à tout ouvert partout dense de $Y$, et en particulier au domaine de
+définition de $g$. Supposons donc que $\dim\mathcal{O}_z=1$~;
+$\mathcal{O}_z$ est alors par hypothèse un anneau local noethérien régulier,
+donc (\hyperref[II.7.1.6-fr]{7.1.6
+
+[id 3411]
+OLD: {I, 2.4.2}
+NEW: {\textbf{I}, 2.4.2}
+FRENCH CONTEXT (corrected): r hypothèse un anneau local noethérien régulier,
+donc (\hyperref[II.7.1.6-fr]{7.1.6}) un \emph{anneau de valuation discrète}.
+Soit $Z=\operatorname{Spec}(\mathcal{O}_z)$~; comme $U=Y\setmin Y'$ est partout
+dense, $U\cap Z$ n'est pas vide (\hyperref[I.2.4.2-fr]{\textbf{I}, 2.4.2})~; soit $g'$
+l'application rationnelle de $Z$ dans $X$ induite par $g$
+(\hyperref[I.7.2.8-fr]{\textbf{I}, 7.2.8})~; il suffit de montrer que $g'$ est un
+\emph{morphisme} (\hyperref[I.7.2.9-fr]{\textbf{I}, 7.2.9}). Or, $g'$ peut être
+considérée comme une $Z$-s
+
+[id 3412]
+OLD: {I, 7.2.8}
+NEW: {\textbf{I}, 7.2.8}
+FRENCH CONTEXT (corrected): n discrète}.
+Soit $Z=\operatorname{Spec}(\mathcal{O}_z)$~; comme $U=Y\setmin Y'$ est partout
+dense, $U\cap Z$ n'est pas vide (\hyperref[I.2.4.2-fr]{\textbf{I}, 2.4.2})~; soit $g'$
+l'application rationnelle de $Z$ dans $X$ induite par $g$
+(\hyperref[I.7.2.8-fr]{\textbf{I}, 7.2.8})~; il suffit de montrer que $g'$ est un
+\emph{morphisme} (\hyperref[I.7.2.9-fr]{\textbf{I}, 7.2.9}). Or, $g'$ peut être
+considérée comme une $Z$-section rationnelle du $Z$-préschéma
+$f^{-1}(Z)=X\times_YZ$~; il est clair que le morphisme $f^{-1}(Z)\to Z$
+corre
+
+[id 3413]
+OLD: {I, 7.2.9}
+NEW: {\textbf{I}, 7.2.9}
+FRENCH CONTEXT (corrected):  $U\cap Z$ n'est pas vide (\hyperref[I.2.4.2-fr]{\textbf{I}, 2.4.2})~; soit $g'$
+l'application rationnelle de $Z$ dans $X$ induite par $g$
+(\hyperref[I.7.2.8-fr]{\textbf{I}, 7.2.8})~; il suffit de montrer que $g'$ est un
+\emph{morphisme} (\hyperref[I.7.2.9-fr]{\textbf{I}, 7.2.9}). Or, $g'$ peut être
+considérée comme une $Z$-section rationnelle du $Z$-préschéma
+$f^{-1}(Z)=X\times_YZ$~; il est clair que le morphisme $f^{-1}(Z)\to Z$
+correspondant à $f$ est fermé, et il résulte de
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (i)}) qu'il es
+
+[id 3414]
+OLD: {I, 5.5.1, (i)}
+NEW: {\textbf{I}, 5.5.1, (i)}
+FRENCH CONTEXT (corrected): e
+sous-jacent $\overline{f(X)}$ (\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), on sait que
+$f$ se factorise en $X\to T\xrightarrow{j}Y$, où $j$ est le
+morphisme d'injection (\hyperref[I.5.2.2-fr]{\textbf{I}, 5.2.2}), et comme $j$ est
+séparé (\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (i)}), il résulte de
+(\hyperref[II.6.1.5-fr]{6.1.5, (v)}) que $g$ est un morphisme entier. On peut
+donc supposer que $f(X)$ est \emph{dense} dans $Y$. Enfin, la question étant locale
+sur $Y$, on peut se borner au cas où $Y=\operatorname{Spec}(A)$. Alors
+$X=\operat
+
+[id 3415]
+OLD: {I, 7.2.2}
+NEW: {\textbf{I}, 7.2.2}
+FRENCH CONTEXT (corrected): up{entier}, $f$ une $X$-section rationnelle de $X'$. Alors $f$ est partout
+définie.
+\end{corollary}
+
+La question étant locale sur $X$, on peut supposer $X$ intègre, et $f$
+s'identifie alors à un morphisme d'un ouvert $U$ de $X$ dans $X'$
+(\hyperref[I.7.2.2-fr]{\textbf{I}, 7.2.2}) qui est une $U$-section de $g^{-1}(U)$.
+Comme $g$ est séparé, $f$ est une immersion fermée de $U$ dans $g^{-1}(U)$
+(\hyperref[I.5.4.6-fr]{\textbf{I}, 5.4.6})~; soit $Z$ le sous-préschéma fermé de
+$g^{-1}(U)$ associé à $f$ (\hyperref[I.4.2.1-fr]{\textbf{I}, 4
+
+[id 3416]
+OLD: {I, 7.1.2}
+NEW: {\textbf{I}, 7.1.2}
+FRENCH CONTEXT (corrected):  $Y'=X'_{(h)}=X'_{(Y)}$, et notons que le morphisme
+$g'=g_{(Y)}:Y'\to Y$ est \emph{entier}
+(\hyperref[II.6.1.5-fr]{6.1.5, (iii)}). Vu la correspondance entre
+applications rationnelles de $Y$ dans $X'$ et $Y$-sections rationnelles de
+$Y'$ (\hyperref[I.7.1.2-fr]{\textbf{I}, 7.1.2}), on voit qu'on est ramené à prouver le
+cas particulier de (\hyperref[II.6.1.13-fr]{6.1.13}) où $X=Y$, autrement dit
+le
+
+\begin{corollary}[6.1.14]
+\label{II.6.1.14-fr}
+Soient $X$ un préschéma normal localement intègre, $g:X'\to X$ un morphisme
+\textup{entier}
+
+[id 3417]
+OLD: {0, 4.1.4}), en vertu
+NEW: {\textbf{0}, 4.1.4}), en vertu
+FRENCH CONTEXT (corrected): ]{7.3.5}), d'où le corollaire.
+
+\begin{remark}[7.3.7]
+\label{II.7.3.7-fr}
+Les hypothèses faites sur $Y$ dans (\hyperref[II.7.3.5-fr]{7.3.5}) et
+(\hyperref[II.7.3.6-fr]{7.3.6}) seront en particulier réalisées lorsque $Y$
+est \emph{normal} (\hyperref[0.4.1.4-fr]{\textbf{0}, 4.1.4}), en vertu de
+(\hyperref[II.7.1.6-fr]{7.1.6}).
+\end{remark}
+
+Nous pouvons caractériser les morphismes universellement fermés (resp.
+propres) par une réciproque de (\hyperref[II.7.3.3-fr]{7.3.3})~:
+
+\begin{theorem}[7.3.8]
+\label{II.7.3.8-fr}
+Soient $Y$ un préschéma \text
+
+[id 3418]
+OLD: (resp. un préschéma localement noethérien)
+NEW: \textup{(resp.} un préschéma localement noethérien\textup{)}
+FRENCH CONTEXT (corrected): mersion quasi-compact. Pour que l'espace
+sous-jacent $X$ soit fermé dans $Y$, il faut et il suffit qu'il contienne toute
+spécialisation (dans $Y$) de chacun de ses points.
+\end{corollary}
+
+\begin{proposition}[7.2.3]
+\label{II.7.2.3-fr}
+Soient $Y$ un préschéma \textup{(resp.} un préschéma localement noethérien\textup{)}, $f:X\to Y$
+un morphisme \textup{(resp.} un morphisme localement de type fini\textup{)}. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est séparé.
+\item[\rm b)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+p
+
+[id 3419]
+OLD: (resp. de type fini)
+NEW: \textup{(resp.} de type fini\textup{)}
+FRENCH CONTEXT (corrected): ement fermés (resp.
+propres) par une réciproque de (\hyperref[II.7.3.3-fr]{7.3.3})~:
+
+\begin{theorem}[7.3.8]
+\label{II.7.3.8-fr}
+Soient $Y$ un préschéma \textup{(resp.} un préschéma localement noethérien\textup{)}, $f:X\to Y$
+un morphisme quasi-compact séparé \textup{(resp.} de type fini\textup{)}. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est universellement fermé \textup{(resp.} propre\textup{)}.
+\item[\rm b)] Pour tout $Y$-schéma de la forme
+$Y'=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation \textup
+
+[id 3420]
+OLD: (resp. propre)
+NEW: \textup{(resp.} propre\textup{)}
+FRENCH CONTEXT (corrected): chéma \textup{(resp.} un préschéma localement noethérien\textup{)}, $f:X\to Y$
+un morphisme quasi-compact séparé \textup{(resp.} de type fini\textup{)}. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est universellement fermé \textup{(resp.} propre\textup{)}.
+\item[\rm b)] Pour tout $Y$-schéma de la forme
+$Y'=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation \textup{(resp.} un anneau
+de valuation discrète) de corps des fractions $K$, l'application canonique
+\[
+\operatorname{Hom}_Y(Y',X)\longrightarrow
+\o
+
+[id 3421]
+OLD: (resp. un anneau
+de valuation discrète)
+NEW: \textup{(resp.} un anneau
+de valuation discrète)
+FRENCH CONTEXT (corrected): xtup{)}. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est universellement fermé \textup{(resp.} propre\textup{)}.
+\item[\rm b)] Pour tout $Y$-schéma de la forme
+$Y'=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation \textup{(resp.} un anneau
+de valuation discrète) de corps des fractions $K$, l'application canonique
+\[
+\operatorname{Hom}_Y(Y',X)\longrightarrow
+\operatorname{Hom}_Y(\operatorname{Spec}(K),X)
+\]
+correspondant à l'injection canonique $A\to K$, est surjective \textup{(resp.}
+bijective\textup{)}.
+\oldpage[II]
+
+[id 3422]
+OLD: (resp.
+bijective)
+NEW: \textup{(resp.}
+bijective\textup{)}
+FRENCH CONTEXT (corrected):  \textup{(resp.} un anneau
+de valuation discrète) de corps des fractions $K$, l'application canonique
+\[
+\operatorname{Hom}_Y(Y',X)\longrightarrow
+\operatorname{Hom}_Y(\operatorname{Spec}(K),X)
+\]
+correspondant à l'injection canonique $A\to K$, est surjective \textup{(resp.}
+bijective\textup{)}.
+\oldpage[II]{145}
+\item[\rm c)] Pour tout $Y$-schéma de la forme $Y'=\operatorname{Spec}(A)$,
+où $A$ est un anneau de valuation \textup{(resp.} un anneau de valuation discrète)
+l'application canonique \textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} relative au
+
+
+=================== PAGE II 145 ===================
+----- (Spanish page II 144: shown above in this file) -----
+----- (Spanish page II 145: shown above in this file) -----
+----- Spanish, II_DIPLOMATIC/EGA_II_es_diplomatic.tex, page II 146 -----
+\oldpage[II]{146}
+  valuación conveniente, puede suponerse que todos los $c_i$ pertenecen a $A$ y que al menos uno de ellos es invertible.
+  Pero entonces, por \sref{II.4.2.6}, el sistema $(c_0,\ldots,c_n)$ define también un punto de $\bb{P}_Y^n$ con valores en $A$, lo que demuestra la afirmación.
+
+  \item[\rm{(iii)}] Los criterios \sref{II.7.2.3} y \sref{II.7.3.8} son especialmente cómodos cuando se considera el dato de un $Y$-preesquema $X$ como equivalente al dato del funtor
+  \[
+    X(Y')=\Hom_Y(Y',X)
+  \]
+  sobre los $Y$-preesquemas $Y'$;
+  estos criterios permitirán, por ejemplo, demostrar que, bajo ciertas condiciones, los «esquemas de Picard» son propios.
+\end{enumerate}
+\end{remarks}
+
+% Fuente francesa: PMIHES_1961__8__5_0, printed pp. 146-147.
+
+\begin{corollary}[7.3.10]
+\label{II.7.3.10}
+Sean $Y$ un esquema íntegro (resp. un esquema íntegro localmente noetheriano), $X$ un esquema íntegro y $f:X\to Y$ un morfismo dominante.
+\begin{enumerate}
+  \item[\rm{(i)}] Si $f$ es cuasi-compacto y universalmente cerrado, todo anillo de valuación cuyo cuerpo de fracciones sea el cuerpo $R(X)$ de las funciones racionales sobre $X$ y que domine a un anillo local de $Y$ domina también a un anillo local de $X$.
+  \item[\rm{(ii)}] Recíprocamente, supóngase que $f$ es de tipo finito y que la propiedad enunciada en~(i) se verifica para todo anillo de valuación (resp. todo anillo de valuación discreta) que tenga a $R(X)$ por cuerpo de fracciones.
+  Entonces $f$ es propio.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Observemos ante todo que las hipótesis implican en todos los casos que $f$ es separado \sref[I]{I.5.5.9}.
+\begin{enumerate}
+  \item[\rm{(i)}] Sean $K=R(Y)$, $L=R(X)$, $y$ un punto de $Y$ y $A$ un anillo de valuación que domine a $\sh{O}_y$ y tenga a $L$ por cuerpo de fracciones;
+  la inyección $\sh{O}_y\to A$ define, por tanto, un morfismo $h$ de $Y'=\Spec(A)$ en $Y$ \sref[I]{I.2.4.4} tal que $h(a)=y$, donde se denota por $a$ el punto cerrado de $Y'$;
+  además, si $\eta$ es el punto genérico de $Y$, que es también el de $\Spec(\sh{O}_y)$, se tiene $h(b)=\eta$, donde se denota por $b$ el punto genérico de $Y'$ (pues $K\subset L$ por hipótesis).
+  Si $\xi$ es el punto genérico de $X$, se tiene por hipótesis $\kres(\xi)=\kres(b)=L$, de donde resulta un $Y$-morfismo $g:\Spec(L)\to X$ tal que $g(b)=\xi$;
+  en virtud de \sref{II.7.3.8}, $g$ proviene de un $Y$-morfismo $g':Y'\to X$.
+  Si $x=g'(a)$, es claro que $A$ domina a $\sh{O}_x$.
+
+  \item[\rm{(ii)}] Como la cuestión es local sobre $Y$, puede suponerse que $Y$ es afín (resp. afín y noetheriano).
+  Puesto que $f$ es de tipo finito, puede aplicarse en ambos casos el lema de Chow \sref{II.5.6.1}.
+  Existen, pues, un morfismo proyectivo $p:P\to Y$, una inmersión $j:X'\to P$ y un morfismo proyectivo, sobreyectivo y birracional $g:X'\to X$, siendo $X'$ íntegro, tales que el diagrama
+  \[
+    \xymatrix{
+      P \ar[d]_p
+      & X' \ar[l]_j \ar[d]^g
+      \\ Y
+      & X \ar[l]^f
+    }
+  \]
+  es conmutativo.
+  Basta probar que $j$ es una inmersión \emph{cerrada}, pues entonces $f\circ g=p\circ j$ será un morfismo proyectivo, y por tanto propio, y, como $g$ es sobreyectivo, $f$ será también propio \sref{II.5.4.3}.
+  Sea $Z$ el subpreesquema cerrado reducido de $P$ cuyo espacio subyacente es $\overline{j(X')}$ \sref[I]{I.5.2.1};
+  como $X'$ es íntegro, $j$ se factoriza en $i\circ h$, donde $i:Z\to P$ es la inyección canónica, $h:X'\to Z$ una inmersión abierta dominante \sref[I]{I.5.2.3}, y $Z$ es íntegro;
+----- French corrections on page II 145 -----
+[id 3093]
+OLD: (resp. un anneau
+NEW: \textup{(resp.} un anneau
+FRENCH CONTEXT (corrected): itions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] $f$ est séparé.
+\item[\rm b)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+pour tout $Y$-préschéma de la forme $Y'=\operatorname{Spec}(A)$, où $A$ est un
+anneau de valuation \textup{(resp.} un anneau de valuation discrète\textup{)}, deux
+$Y$-morphismes de $Y'$ dans $X$ qui coïncident au point générique de $Y'$ sont
+égaux.
+\item[\rm c)] Le morphisme diagonal $X\to X\times_YX$ est quasi-compact, et
+pour tout $Y$-préschéma de la forme $Y'=\operatorname{Spec}
+
+[id 3094]
+OLD: (\hyperref[II.7.3.2.2-fr]{7.3.2.2})
+NEW: \textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})}
+FRENCH CONTEXT (corrected): {env}
+
+\begin{proposition}[7.3.3]
+\label{II.7.3.3-fr}
+Soient $A$ un anneau de valuation de corps des fractions $K$,
+$Y=\operatorname{Spec}(A)$, $b$ le point générique de $Y$, $f:X\to Y$ un
+morphisme \emph{séparé} et \emph{fermé}. Alors l'application canonique
+\textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} est bijective \textup{(ce qui revient à dire
+qu'elle est \emph{surjective} et entraîne que les $Y$-sections rationnelles de
+$X$ sont \emph{partout définies})}.
+\end{proposition}
+
+Soit donc $x$ un point de $f^{-1}(b)$, \emph{rationnel sur $K$}. Comme $f$ est
+s
+
+[id 3095]
+OLD: (resp. bijective)
+NEW: \textup{(resp.} bijective)
+FRENCH CONTEXT (corrected): ut $Y$-schéma de la forme $Y'=\operatorname{Spec}(A)$,
+où $A$ est un anneau de valuation \textup{(resp.} un anneau de valuation discrète)
+l'application canonique \textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} relative au
+$Y'$-préschéma $X_{(Y')}$ est surjective \textup{(resp.} bijective).
+\end{enumerate}
+\end{theorem}
+
+L'équivalence de \emph{b)} et \emph{c)} résulte aussitôt de
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14})~; \emph{a)} implique \emph{c)}, car \emph{a)} entraîne, dans
+l'une ou l'autre hypothèse, que $f_{(Y')}$ est séparé
+(\hyper
+
+[id 3096]
+OLD: {I, 3.3.14}
+NEW: {\textbf{I}, 3.3.14}
+FRENCH CONTEXT (corrected):  $K$
+(\hyperref[I.3.4.5-fr]{\textbf{I}, 3.4.5})).
+
+\begin{remark}[4.2.5]
+\label{II.4.2.5-fr}
+Comme il y a correspondance biunivoque canonique entre $Y$-morphismes de $X$
+dans $P$ et leurs morphismes graphes, $X$-sections de $P\times_YX$
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14}), on voit qu'inversement
+(\hyperref[II.4.2.3-fr]{4.2.3}) peut se déduire de
+(\hyperref[II.4.2.4-fr]{4.2.4}). Désignons par
+$\operatorname{Hyp}_Y(X,\mathcal{E})$ l'ensemble des
+sous-$\mathcal{O}_X$-Modules quasi-cohérents $\mathcal{F}$ de
+$\mathcal{E}\otimes_Y
+
+[id 3097]
+OLD: L'équivalence de b) et c) résulte
+NEW: L'équivalence de \emph{b)} et \emph{c)} résulte
+FRENCH CONTEXT (corrected): A$ est un anneau de valuation \textup{(resp.} un anneau de valuation discrète)
+l'application canonique \textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} relative au
+$Y'$-préschéma $X_{(Y')}$ est surjective \textup{(resp.} bijective).
+\end{enumerate}
+\end{theorem}
+
+L'équivalence de \emph{b)} et \emph{c)} résulte aussitôt de
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14})~; \emph{a)} implique \emph{c)}, car \emph{a)} entraîne, dans
+l'une ou l'autre hypothèse, que $f_{(Y')}$ est séparé
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}) et fermé, et il suffit d'appliquer
+(\h
+
+[id 3098]
+OLD: ~; a) implique c), car a) entraîne
+NEW: ~; \emph{a)} implique \emph{c)}, car \emph{a)} entraîne
+FRENCH CONTEXT (corrected): textup{(\hyperref[II.7.3.2.2-fr]{7.3.2.2})} relative au
+$Y'$-préschéma $X_{(Y')}$ est surjective \textup{(resp.} bijective).
+\end{enumerate}
+\end{theorem}
+
+L'équivalence de \emph{b)} et \emph{c)} résulte aussitôt de
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14})~; \emph{a)} implique \emph{c)}, car \emph{a)} entraîne, dans
+l'une ou l'autre hypothèse, que $f_{(Y')}$ est séparé
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}) et fermé, et il suffit d'appliquer
+(\hyperref[II.7.3.3-fr]{7.3.3}). Reste à prouver que \emph{b)} entraîne \emph{a)}.
+Plaçons-nous d'abord dans le cas
+
+[id 3099]
+OLD: {I, 5.5.1, (iv)}) et fermé
+NEW: {\textbf{I}, 5.5.1, (iv)}) et fermé
+FRENCH CONTEXT (corrected): e}
+\end{theorem}
+
+L'équivalence de \emph{b)} et \emph{c)} résulte aussitôt de
+(\hyperref[I.3.3.14-fr]{\textbf{I}, 3.3.14})~; \emph{a)} implique \emph{c)}, car \emph{a)} entraîne, dans
+l'une ou l'autre hypothèse, que $f_{(Y')}$ est séparé
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}) et fermé, et il suffit d'appliquer
+(\hyperref[II.7.3.3-fr]{7.3.3}). Reste à prouver que \emph{b)} entraîne \emph{a)}.
+Plaçons-nous d'abord dans le cas où $Y$ est quelconque, $f$ séparé et
+quasi-compact. Si la condition \emph{b)} est vérifiée par $f$, elle l'est aussi 
+
+[id 3100]
+OLD: Reste à prouver que b) entraîne a).
+NEW: Reste à prouver que \emph{b)} entraîne \emph{a)}.
+FRENCH CONTEXT (corrected): 14-fr]{\textbf{I}, 3.3.14})~; \emph{a)} implique \emph{c)}, car \emph{a)} entraîne, dans
+l'une ou l'autre hypothèse, que $f_{(Y')}$ est séparé
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}) et fermé, et il suffit d'appliquer
+(\hyperref[II.7.3.3-fr]{7.3.3}). Reste à prouver que \emph{b)} entraîne \emph{a)}.
+Plaçons-nous d'abord dans le cas où $Y$ est quelconque, $f$ séparé et
+quasi-compact. Si la condition \emph{b)} est vérifiée par $f$, elle l'est aussi par
+$f_{(Y'')}:X_{(Y'')}\to Y''$, où $Y''$ est un $Y$-préschéma quelconque, en
+vertu de l'équivalence de \emp
+
+[id 3101]
+OLD: Si la condition b) est vérifiée
+NEW: Si la condition \emph{b)} est vérifiée
+FRENCH CONTEXT (corrected):  séparé
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)}) et fermé, et il suffit d'appliquer
+(\hyperref[II.7.3.3-fr]{7.3.3}). Reste à prouver que \emph{b)} entraîne \emph{a)}.
+Plaçons-nous d'abord dans le cas où $Y$ est quelconque, $f$ séparé et
+quasi-compact. Si la condition \emph{b)} est vérifiée par $f$, elle l'est aussi par
+$f_{(Y'')}:X_{(Y'')}\to Y''$, où $Y''$ est un $Y$-préschéma quelconque, en
+vertu de l'équivalence de \emph{b)} et \emph{c)}, et du fait que
+$X_{(Y'')}\times_{Y''}Y'=X\times_YY'$ pour tout morphisme $Y'\to Y''$
+(\hyperref[I.3.3.9.
+
+[id 3102]
+OLD: l'équivalence de b) et c), et du fait
+NEW: l'équivalence de \emph{b)} et \emph{c)}, et du fait
+FRENCH CONTEXT (corrected): } entraîne \emph{a)}.
+Plaçons-nous d'abord dans le cas où $Y$ est quelconque, $f$ séparé et
+quasi-compact. Si la condition \emph{b)} est vérifiée par $f$, elle l'est aussi par
+$f_{(Y'')}:X_{(Y'')}\to Y''$, où $Y''$ est un $Y$-préschéma quelconque, en
+vertu de l'équivalence de \emph{b)} et \emph{c)}, et du fait que
+$X_{(Y'')}\times_{Y''}Y'=X\times_YY'$ pour tout morphisme $Y'\to Y''$
+(\hyperref[I.3.3.9.1-fr]{\textbf{I}, 3.3.9.1})~; comme en outre $f_{(Y'')}$ est séparé
+et quasi-compact quand $f$ l'est
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)} et
+\hyperref[I.6.
+
+[id 3103]
+OLD: {I, 3.3.9.1}
+NEW: {\textbf{I}, 3.3.9.1}
+FRENCH CONTEXT (corrected): '$ (\hyperref[I.4.3.2-fr]{\textbf{I}, 4.3.2} et
+\hyperref[II.3.3.3-fr]{3.3.3}). Pour démontrer (ii), considérons deux
+morphismes propres $X\to Y$, $Y\to Z$, et un morphisme $Z'\to Z$. On peut
+écrire $X\times_ZZ'=X\times_Y(Y\times_ZZ')$
+(\hyperref[I.3.3.9.1-fr]{\textbf{I}, 3.3.9.1}), et par suite la projection
+$X\times_ZZ'\to Z'$ se factorise en
+$X\times_Y(Y\times_ZZ')\to Y\times_ZZ'\to Z'$. Compte tenu de la remarque
+du début, (ii) résulte donc de ce que le composé de deux morphismes fermés
+est fermé. Enfin, pour tout morphisme $S'\to 
+
+[id 3104]
+OLD: {I, 5.5.1, (iv)} et
+NEW: {\textbf{I}, 5.5.1, (iv)} et
+FRENCH CONTEXT (corrected): lence de \emph{b)} et \emph{c)}, et du fait que
+$X_{(Y'')}\times_{Y''}Y'=X\times_YY'$ pour tout morphisme $Y'\to Y''$
+(\hyperref[I.3.3.9.1-fr]{\textbf{I}, 3.3.9.1})~; comme en outre $f_{(Y'')}$ est séparé
+et quasi-compact quand $f$ l'est
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)} et
+\hyperref[I.6.6.4-fr]{6.6.4, (iii)}), on est ramené à prouver que \emph{b)} entraîne
+que $f$ est \emph{fermé}. Pour cela, il suffit de vérifier la condition \emph{b)} de
+(\hyperref[II.7.2.1-fr]{7.2.1}). Soient donc $x\in X$, $y'$ une spécialisation
+de $y=f(x)
+
+[id 3105]
+OLD: ramené à prouver que b) entraîne
+NEW: ramené à prouver que \emph{b)} entraîne
+FRENCH CONTEXT (corrected): \times_YY'$ pour tout morphisme $Y'\to Y''$
+(\hyperref[I.3.3.9.1-fr]{\textbf{I}, 3.3.9.1})~; comme en outre $f_{(Y'')}$ est séparé
+et quasi-compact quand $f$ l'est
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)} et
+\hyperref[I.6.6.4-fr]{6.6.4, (iii)}), on est ramené à prouver que \emph{b)} entraîne
+que $f$ est \emph{fermé}. Pour cela, il suffit de vérifier la condition \emph{b)} de
+(\hyperref[II.7.2.1-fr]{7.2.1}). Soient donc $x\in X$, $y'$ une spécialisation
+de $y=f(x)$, distincte de $y$~; en vertu de
+(\hyperref[II.7.1.4-fr]{7.1.4}), il y a un schéma $
+
+[id 3106]
+OLD: vérifier la condition b) de
+NEW: vérifier la condition \emph{b)} de
+FRENCH CONTEXT (corrected): ~; comme en outre $f_{(Y'')}$ est séparé
+et quasi-compact quand $f$ l'est
+(\hyperref[I.5.5.1-fr]{\textbf{I}, 5.5.1, (iv)} et
+\hyperref[I.6.6.4-fr]{6.6.4, (iii)}), on est ramené à prouver que \emph{b)} entraîne
+que $f$ est \emph{fermé}. Pour cela, il suffit de vérifier la condition \emph{b)} de
+(\hyperref[II.7.2.1-fr]{7.2.1}). Soient donc $x\in X$, $y'$ une spécialisation
+de $y=f(x)$, distincte de $y$~; en vertu de
+(\hyperref[II.7.1.4-fr]{7.1.4}), il y a un schéma $Y'$, spectre d'un anneau de
+valuation, et un morphisme séparé $g:Y'\to Y$ tels que, s
+
+[id 3107]
+OLD: un $k(y)$
+NEW: un $\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): s~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme espace sous-jacent
+(\hyperref[I.5.2.1-fr]{\textbf{I}, 5.2.1}), et soit $X_1
+
+[id 3108]
+OLD: homomorphisme $k(x)
+NEW: homomorphisme $\boldsymbol{k}(x)
+FRENCH CONTEXT (corrected): n peut en outre supposer
+vérifiée l'une des deux propriétés additionnelles suivantes~:
+\begin{enumerate}
+\item[\rm{(i)}] $Y'$ est le spectre d'un anneau de valuation complet
+dont le corps des restes est algébriquement clos, et il existe un
+$\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$.
+\item[\rm{(ii)}] Il existe un $\boldsymbol{k}(y)$-isomorphisme
+$\boldsymbol{k}(x)\xrightarrow{\sim}\boldsymbol{k}(b)$.
+\end{enumerate}
+\end{proposition}
+
+Soit $Y_1$ le sous-préschéma fermé réduit de $Y$ ayant
+$\overline{\{y\}}$ comme es
+
+[id 3109]
+OLD: k(b)$. Ce dernier
+NEW: \boldsymbol{k}(b)$. Ce dernier
+FRENCH CONTEXT (corrected): schéma $Y'$, spectre d'un anneau de
+valuation, et un morphisme séparé $g:Y'\to Y$ tels que, si $a$ désigne le point
+fermé et $b$ le point générique de $Y'$, on ait $g(a)=y'$, $g(b)=y$, et qu'il
+existe un $\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$. Ce dernier correspond
+canoniquement à un $Y$-morphisme $\operatorname{Spec}(\boldsymbol{k}(b))\to X$
+(\hyperref[I.2.4.6-fr]{\textbf{I}, 2.4.6}), et il résulte donc de \emph{b)} qu'il existe un
+$Y$-morphisme $h:Y'\to X$ auquel correspond le morphisme précédent. On a
+alor
+
+[id 3110]
+OLD: \operatorname{Spec}(k(b))
+NEW: \operatorname{Spec}(\boldsymbol{k}(b))
+FRENCH CONTEXT (corrected): to Y$ tels que, si $a$ désigne le point
+fermé et $b$ le point générique de $Y'$, on ait $g(a)=y'$, $g(b)=y$, et qu'il
+existe un $\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$. Ce dernier correspond
+canoniquement à un $Y$-morphisme $\operatorname{Spec}(\boldsymbol{k}(b))\to X$
+(\hyperref[I.2.4.6-fr]{\textbf{I}, 2.4.6}), et il résulte donc de \emph{b)} qu'il existe un
+$Y$-morphisme $h:Y'\to X$ auquel correspond le morphisme précédent. On a
+alors $h(b)=x$~; si l'on pose $h(a)=x'$, $x'$ est spécialisation de $x$, et
+l'on a $f(x'
+
+[id 3111]
+OLD: {I, 2.4.6}
+NEW: {\textbf{I}, 2.4.6}
+FRENCH CONTEXT (corrected): 8.3.3})).
+\end{env}
+
+\begin{env}[1.7.10]
+\label{II.1.7.10-fr}
+Prenons maintenant pour $X$ le spectre $\{\xi\}$ d'un corps $K$~; le
+morphisme structural $f:X\to S$ correspond donc à un monomorphisme
+$\boldsymbol{k}(s)\to K$, où $s=f(\xi)$
+(\hyperref[I.2.4.6-fr]{\textbf{I}, 2.4.6})~; les $S$-morphismes
+$\{\xi\}\to\mathbf{V}(\mathcal{E})$ ne sont donc autres que les
+\emph{points géométriques de $\mathbf{V}(\mathcal{E})$ à valeurs dans
+l'extension $K$ de $\boldsymbol{k}(s)$} (\hyperref[I.3.4.5-fr]{\textbf{I}, 3.4.5}), points qui
+sont loc
+
+[id 3112]
+OLD: il résulte donc de b) qu'il
+NEW: il résulte donc de \emph{b)} qu'il
+FRENCH CONTEXT (corrected): )=y'$, $g(b)=y$, et qu'il
+existe un $\boldsymbol{k}(y)$-homomorphisme $\boldsymbol{k}(x)\to \boldsymbol{k}(b)$. Ce dernier correspond
+canoniquement à un $Y$-morphisme $\operatorname{Spec}(\boldsymbol{k}(b))\to X$
+(\hyperref[I.2.4.6-fr]{\textbf{I}, 2.4.6}), et il résulte donc de \emph{b)} qu'il existe un
+$Y$-morphisme $h:Y'\to X$ auquel correspond le morphisme précédent. On a
+alors $h(b)=x$~; si l'on pose $h(a)=x'$, $x'$ est spécialisation de $x$, et
+l'on a $f(x')=f(h(a))=g(a)=y'$.
+
+Si maintenant $Y$ est localement noethérien et $f$ de type fini, l'
+
+[id 3113]
+OLD: l'hypothèse
+b) entraîne d'abord
+NEW: l'hypothèse
+\emph{b)} entraîne d'abord
+FRENCH CONTEXT (corrected): il existe un
+$Y$-morphisme $h:Y'\to X$ auquel correspond le morphisme précédent. On a
+alors $h(b)=x$~; si l'on pose $h(a)=x'$, $x'$ est spécialisation de $x$, et
+l'on a $f(x')=f(h(a))=g(a)=y'$.
+
+Si maintenant $Y$ est localement noethérien et $f$ de type fini, l'hypothèse
+\emph{b)} entraîne d'abord que $f$ est \emph{séparé}, en vertu de
+(\hyperref[II.7.2.3-fr]{7.2.3}), le morphisme diagonal $X\to X\times_YX$
+étant quasi-compact (\hyperref[II.7.2.4-fr]{7.2.4}). En outre, pour vérifier
+que $f$ est propre, il suffit de montrer que $f_{(Y'')}:X_{(Y'')}\to Y
+
+[id 3114]
+OLD: condition b) ou la condition c) soit
+NEW: condition \emph{b)} ou la condition \emph{c)} soit
+FRENCH CONTEXT (corrected): .1.9}) au lieu de
+(\hyperref[II.7.1.4-fr]{7.1.4}).
+
+\begin{remark}[7.3.9]
+\label{II.7.3.9-fr}
+\begin{enumerate}
+\item[\rm (i)] Lorsque $Y$ est un préschéma quelconque et $f$ un morphisme
+séparé, pour que $f$ soit universellement fermé, il \emph{suffit} que la
+condition \emph{b)} ou la condition \emph{c)} soit vérifiée pour les anneaux de valuation
+$A$ \emph{complets} et dont le corps des restes est \emph{algébriquement
+clos}~; cela résulte en effet de la démonstration et de
+(\hyperref[II.7.1.4-fr]{7.1.4}).
+\item[\rm (ii)] On déduit du critère \emph{c)} de
+(\hyperr
+
+[id 3115]
+OLD: On déduit du critère c) de
+NEW: On déduit du critère \emph{c)} de
+FRENCH CONTEXT (corrected): n \emph{b)} ou la condition \emph{c)} soit vérifiée pour les anneaux de valuation
+$A$ \emph{complets} et dont le corps des restes est \emph{algébriquement
+clos}~; cela résulte en effet de la démonstration et de
+(\hyperref[II.7.1.4-fr]{7.1.4}).
+\item[\rm (ii)] On déduit du critère \emph{c)} de
+(\hyperref[II.7.3.8-fr]{7.3.8}) une nouvelle démonstration du fait qu'un
+morphisme projectif $X\to Y$ est fermé (\hyperref[II.5.5.3-fr]{5.5.3}), plus
+proche des méthodes classiques. On peut en effet supposer $Y$ affine, et par
+suite $X$ identifié à un sous-pr
+
+[id 3116]
+OLD: et le critère c) de
+NEW: et le critère \emph{c)} de
+FRENCH CONTEXT (corrected): $ affine, et par
+suite $X$ identifié à un sous-préschéma fermé d'un fibré projectif
+$\mathbf{P}_Y^n$ (\hyperref[II.5.3.3-fr]{5.3.3})~; pour prouver que $X\to Y$
+est fermé, il suffit de vérifier qu'il en est ainsi du morphisme structural
+$\mathbf{P}_Y^n\to Y$, et le critère \emph{c)} de
+(\hyperref[II.7.3.8-fr]{7.3.8}), joint à
+(\hyperref[II.4.1.3.1-fr]{4.1.3.1}), prouve qu'on est ramené à démontrer le
+fait suivant~: \emph{si $Y$ est le spectre d'un anneau de valuation $A$, de
+corps des fractions $K$, tout point de $\mathbf{P}_Y^n$ à valeurs 
+
+[id 3117]
+OLD: provient (par restriction au point générique de $Y$) d'un point de
+NEW: provient} (par restriction au point générique de $Y$) \emph{d'un point de
+FRENCH CONTEXT (corrected): ef[II.7.3.8-fr]{7.3.8}), joint à
+(\hyperref[II.4.1.3.1-fr]{4.1.3.1}), prouve qu'on est ramené à démontrer le
+fait suivant~: \emph{si $Y$ est le spectre d'un anneau de valuation $A$, de
+corps des fractions $K$, tout point de $\mathbf{P}_Y^n$ à valeurs dans $K$
+provient} (par restriction au point générique de $Y$) \emph{d'un point de
+$\mathbf{P}_Y^n$ à valeurs dans $A$}. Or, tout $\mathcal{O}_Y$-Module
+inversible est trivial (\hyperref[I.2.4.8-fr]{\textbf{I}, 2.4.8})~; donc, il résulte de
+(\hyperref[II.4.2.6-fr]{4.2.6}) qu'un point de $\mathbf{P}_Y^n$ à valeurs dans
+$K$ s'identifie à une 
+
+[id 3118]
+OLD: {I, 2.4.8}
+NEW: {\textbf{I}, 2.4.8}
+FRENCH CONTEXT (corrected): lus tard comment on peut de la même manière définir, entre autres,
+les schémas \og grassmanniennes\fg{}.
+\end{remark}
+
+\begin{corollary}[4.2.6]
+\label{II.4.2.6-fr}
+Supposons que tout $\mathcal{O}_Y$-Module inversible soit trivial
+\textup{(\hyperref[I.2.4.8-fr]{\textbf{I}, 2.4.8})}. Soit $V$ le groupe
+$\operatorname{Hom}_{\mathcal{O}_Y}(\mathcal{E},\mathcal{O}_Y)$, considéré
+comme module sur l'anneau $A=\Gamma(Y,\mathcal{O}_Y)$, et soit $V^*$ le
+sous-ensemble de $V$ formé des homomorphismes surjectifs. Alors l'ensemble
+des $Y$-section
+
+[id 3119]
+OLD: les $c_i$ sont des
+NEW: les $c$ sont des
+FRENCH CONTEXT (corrected): trivial (\hyperref[I.2.4.8-fr]{\textbf{I}, 2.4.8})~; donc, il résulte de
+(\hyperref[II.4.2.6-fr]{4.2.6}) qu'un point de $\mathbf{P}_Y^n$ à valeurs dans
+$K$ s'identifie à une classe d'éléments $(\zeta c_0,\zeta c_1,\ldots,\zeta
+c_n)$ de $K$, où $\zeta\neq0$ et les $c$ sont des éléments non tous nuls de
+$K$. Or, en multipliant les $c_i$ par un élément de $A$ de
+\oldpage[II]{146}
+valuation convenable, on peut supposer que les $c_i$ appartiennent tous à
+$A$, et que l'un au moins est inversible. Mais alors
+(\hyperref[II.4.2.6-fr]{4.2.6
+

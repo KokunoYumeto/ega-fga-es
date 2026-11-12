@@ -1,0 +1,896 @@
+```json
+[
+  {
+    "id": 15976,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\begin{enumerate}[label=(\\roman*)]\n  \\item Supongamos $f$ pseudofinito.",
+    "en_new": "\\begin{enumerate}[label=\\textup{(\\roman*)}]\n  \\item Supongamos $f$ pseudofinito.",
+    "note": "También cubre 15977 y 15978."
+  },
+  {
+    "id": 15977,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "  \\item Sea $(U_\\lambda)$ un recubrimiento de $Y$ por abiertos cuasicompactos.",
+    "note": "covered by 15976"
+  },
+  {
+    "id": 15978,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "  \\item Supongamos además que $Y$ es noetheriano y $f$ de tipo finito.",
+    "note": "covered by 15976"
+  },
+  {
+    "id": 15980,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.4.3.2}"
+  },
+  {
+    "id": 15981,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.1.5}"
+  },
+  {
+    "id": 15982,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "en $\\sh{B}|U_\\lambda$. En consecuencia",
+    "en_new": "en $\\sh{B}_\\lambda$. En consecuencia"
+  },
+  {
+    "id": 15983,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\operatorname{Spec}(\\sh{C}|U_\\lambda)",
+    "en_new": "\\operatorname{Spec}(\\sh{C}_\\lambda)"
+  },
+  {
+    "id": 15984,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.4.2.4}"
+  },
+  {
+    "id": 15985,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[III]{III.4.4.3}"
+  },
+  {
+    "id": 15987,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref{IV.8.10.5},~(v) y (xi))"
+  },
+  {
+    "id": 15988,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.2.2}"
+  },
+  {
+    "id": 15992,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.2.4}"
+  },
+  {
+    "id": 15993,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.2.6}"
+  },
+  {
+    "id": 15994,
+    "decision": "not_applicable",
+    "note": "El entorno proof español ya proporciona la marca de final de demostración."
+  },
+  {
+    "id": 15995,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.4.5.3}",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 15996,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.5.3.3}"
+  },
+  {
+    "id": 15997,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.4.1.1}"
+  },
+  {
+    "id": 15998,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.9.4.9}"
+  },
+  {
+    "id": 16000,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "restricción de $g$ a $X_\\lambda$, es cuasifinito. Como es de presentación finita",
+    "en_new": "restricción de $g$ a $X_\\lambda$, es \\emph{cuasifinito}. Como es de presentación finita"
+  },
+  {
+    "id": 16001,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.8.2.8}"
+  },
+  {
+    "id": 16002,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.5.2.3}"
+  },
+  {
+    "id": 16003,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "entonces $\\sh{A}$ es una $\\sh{O}_Y$-álgebra finita y $Y'$",
+    "en_new": "entonces $\\sh{A}$ es una $\\sh{O}_Y$-álgebra \\emph{finita} y $Y'$"
+  },
+  {
+    "id": 16004,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.1.3.6}"
+  },
+  {
+    "id": 16005,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.3.4}",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16006,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.3.9}"
+  },
+  {
+    "id": 16007,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.6.2.4},~(v))"
+  },
+  {
+    "id": 16008,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.5.5.1}"
+  },
+  {
+    "id": 16009,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 16010,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.1.6.2}",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16011,
+    "decision": "not_applicable",
+    "note": "Cambio de modo verbal propio de la gramática francesa."
+  },
+  {
+    "id": 16013,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "existe en la categoría de los $S$-preesquemas \\sref{IV.8.2.3}.",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16014,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16015,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\varinjlim_\\lambda\\operatorname{Hom}_S(X_\\lambda,Y)\\to\\operatorname{Hom}_S(X,Y). \\tag{8.13.1.1}",
+    "en_new": "\\varinjlim\\operatorname{Hom}_S(X_\\lambda,Y)\\to\\operatorname{Hom}_S(X,Y). \\tag{8.13.1.1}"
+  },
+  {
+    "id": 16017,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Supongamos que $X_\\alpha$ es cuasicompacto (resp. cuasicompacto y cuasiseparado)",
+    "en_new": "Supongamos que $X_\\alpha$ es cuasicompacto (\\textup{resp.} cuasicompacto y cuasiseparado)"
+  },
+  {
+    "id": 16018,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "y que el morfismo estructural $Y\\to S$ es localmente de tipo finito (resp. localmente de presentación finita).",
+    "en_new": "y que el morfismo estructural $Y\\to S$ es localmente de tipo finito (\\textup{resp.} localmente de presentación finita)."
+  },
+  {
+    "id": 16019,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Entonces la aplicación \\sref{IV.8.13.1.1} es inyectiva",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16020,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "es inyectiva (resp. biyectiva).",
+    "en_new": "es inyectiva (\\textup{resp.} biyectiva)."
+  },
+  {
+    "id": 16021,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición de las fórmulas."
+  },
+  {
+    "id": 16022,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.3.3.14}"
+  },
+  {
+    "id": 16023,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Con la notación de \\sref{IV.8.13.1},",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16025,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16026,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16198,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Dada una categoría $\\mathcal{C}$, la categoría $\\mathbf{Pro}(\\mathcal{C})$ de los \\emph{pro-objetos} de $\\mathcal{C}$ tiene",
+    "en_new": "Dada una categoría $\\boldsymbol{C}$, la categoría $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C})$ de los \\emph{pro-objetos} de $\\boldsymbol{C}$ tiene"
+  },
+  {
+    "id": 16199,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "de objetos de $\\mathcal{C}$ cuyos conjuntos de índices",
+    "en_new": "de objetos de $\\boldsymbol{C}$ cuyos conjuntos de índices"
+  },
+  {
+    "id": 16200,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16201,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "considerando el sistema $u_{\\mu''}^{\\prime\\mu'}\\circ u_{\\mu'}^\\mu$.",
+    "en_new": "considerando el sistema $u_{\\mu''}^{\\prime\\prime\\mu}=u_{\\mu''}^{\\prime\\mu'}\\circ u_{\\mu'}^\\mu$."
+  },
+  {
+    "id": 16202,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "y denotemos por $\\mathcal{C}$ la subcategoría plena de la categoría $(\\mathbf{Sch})_{/S}$ de los $S$-preesquemas,",
+    "en_new": "y denotemos por $\\boldsymbol{C}$ la subcategoría plena de la categoría $(\\boldsymbol{\\mathit{Sch}})_{/S}$ de los $S$-preesquemas,"
+  },
+  {
+    "id": 16203,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16204,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "donde $g:X\\to X_0$ es afín y $f:X_0\\to S$ es \\emph{de presentación finita};",
+    "en_new": "donde $g:X\\to X_0$ es \\emph{afín} y $f:X_0\\to S$ es \\emph{de presentación finita};"
+  },
+  {
+    "id": 16205,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "los preesquemas de $\\mathcal{C}$ son",
+    "en_new": "los preesquemas de $\\boldsymbol{C}$ son"
+  },
+  {
+    "id": 16206,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "la subcategoría plena $\\mathcal{C}'_0$ de $(\\mathbf{Sch})_{/S}$ formada",
+    "en_new": "la subcategoría plena $\\boldsymbol{C}'_0$ de $(\\boldsymbol{\\mathit{Sch}})_{/S}$ formada"
+  },
+  {
+    "id": 16207,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "y la categoría $\\mathbf{Pro}(\\mathcal{C}'_0)$ de pro-objetos de $\\mathcal{C}'_0$.",
+    "en_new": "y la categoría $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0)$ de pro-objetos de $\\boldsymbol{C}'_0$."
+  },
+  {
+    "id": 16208,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "de $\\mathbf{Pro}(\\mathcal{C}'_0)$ es \\emph{esencialmente afín}",
+    "en_new": "de $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0)$ es \\emph{esencialmente afín}"
+  },
+  {
+    "id": 16209,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$v_{\\gamma\\mu}:X_\\mu\\to X_\\gamma$ es afín (lo que implica",
+    "en_new": "$v_{\\gamma\\mu}:X_\\mu\\to X_\\gamma$ es \\emph{afín} (lo que implica"
+  },
+  {
+    "id": 16210,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Obsérvese que un objeto de $\\mathbf{Pro}(\\mathcal{C}'_0)$ isomorfo",
+    "en_new": "Obsérvese que un objeto de $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0)$ isomorfo"
+  },
+  {
+    "id": 16212,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Denotaremos por $\\mathcal{C}'$ la subcategoría plena de $\\mathbf{Pro}(\\mathcal{C}'_0)$ formada por los pro-objetos esencialmente afines.",
+    "en_new": "Denotaremos por $\\boldsymbol{C}'$ la subcategoría plena de $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0)$ formada por los pro-objetos esencialmente afines."
+  },
+  {
+    "id": 16213,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "para todo objeto $\\mathbf{X}=(X_\\mu)_{\\mu\\in M}$ de $\\mathcal{C}'$, existe",
+    "en_new": "para todo objeto $\\mathbf{X}=(X_\\mu)_{\\mu\\in M}$ de $\\boldsymbol{C}'$, existe"
+  },
+  {
+    "id": 16214,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "un \\emph{funtor} canónico"
+  },
+  {
+    "id": 16215,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "L:\\mathcal{C}'\\to\\mathcal{C} \\tag{8.13.4.1}",
+    "en_new": "L:\\boldsymbol{C}'\\to\\boldsymbol{C} \\tag{8.13.4.1}"
+  },
+  {
+    "id": 16218,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "de $\\mathcal{C}'$, se tiene, para cada $\\mu'$, una aplicación canónica",
+    "en_new": "de $\\boldsymbol{C}'$, se tiene, para cada $\\mu'$, una aplicación canónica"
+  },
+  {
+    "id": 16222,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Bajo las hipótesis y con la notación de \\sref{IV.8.13.4},",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16223,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "(lo que implica ya que $S$ es cuasicompacto y cuasiseparado \\sref{IV.1.2.8})",
+    "en_new": "\\textup{(lo que implica ya que $S$ es cuasicompacto y cuasiseparado \\sref{IV.1.2.8})}"
+  },
+  {
+    "id": 16224,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$L$ es \\emph{una equivalencia de categorías}.",
+    "en_new": "$L$ es una equivalencia de categorías."
+  },
+  {
+    "id": 16225,
+    "decision": "unclear",
+    "note": "La traducción omite la frase «quels que soient X, X' dans C'»; no hay aquí una aparición de C' que corregir."
+  },
+  {
+    "id": 16226,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$\\mathbf{X}\\in\\mathcal{C}'$",
+    "en_new": "$\\mathbf{X}\\in\\boldsymbol{C}'$"
+  },
+  {
+    "id": 16228,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[II]{II.1.3.1}"
+  },
+  {
+    "id": 16229,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.9.6.6}"
+  },
+  {
+    "id": 16230,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "los $X_\\lambda$ pertenecen a $\\mathcal{C}'_0$, y como",
+    "en_new": "los $X_\\lambda$ pertenecen a $\\boldsymbol{C}'_0$, y como"
+  },
+  {
+    "id": 16231,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "es un objeto de $\\mathcal{C}'$ cuyo límite proyectivo",
+    "en_new": "es un objeto de $\\boldsymbol{C}'$ cuyo límite proyectivo"
+  },
+  {
+    "id": 16232,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Se sigue de \\sref{IV.1.6.2} y \\sref[II]{II.1.6.2}"
+  },
+  {
+    "id": 16233,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "que un $\\mathcal{C}$-grupo no es otra cosa que un $(\\mathbf{Sch})_{/S}$-grupo que es un preesquema esencialmente afín sobre $S$.",
+    "en_new": "que un $\\boldsymbol{C}$-\\emph{grupo} no es otra cosa que un $(\\boldsymbol{\\mathit{Sch}})_{/S}$-\\emph{grupo} que es un preesquema esencialmente afín sobre $S$.",
+    "note": "También cubre 16234, 16235 y 16236."
+  },
+  {
+    "id": 16234,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$\\mathcal{C}$-grupo no es otra cosa",
+    "note": "covered by 16233"
+  },
+  {
+    "id": 16235,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$(\\mathbf{Sch})_{/S}$-grupo que es un preesquema esencialmente afín",
+    "note": "covered by 16233"
+  },
+  {
+    "id": 16236,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "-grupo que es un preesquema esencialmente afín sobre $S$.",
+    "note": "covered by 16233"
+  },
+  {
+    "id": 16237,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "los productos finitos existen en la categoría $\\mathcal{C}'$:",
+    "en_new": "los productos finitos existen en la categoría $\\boldsymbol{C}'$:"
+  },
+  {
+    "id": 16238,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "son dos objetos de $\\mathcal{C}'$, los productos",
+    "en_new": "son dos objetos de $\\boldsymbol{C}'$, los productos"
+  },
+  {
+    "id": 16239,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16240,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "en $\\mathbf{Pro}(\\mathcal{C}'_0)$; además",
+    "en_new": "en $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0)$; además"
+  },
+  {
+    "id": 16241,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "además, por \\sref[II]{II.1.6.2},"
+  },
+  {
+    "id": 16242,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "el producto $\\mathbf{X}\\times\\mathbf{Y}$ pertenece también a $\\mathcal{C}'$.",
+    "en_new": "el producto $\\mathbf{X}\\times\\mathbf{Y}$ pertenece también a $\\boldsymbol{C}'$."
+  },
+  {
+    "id": 16243,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "Se concluye entonces, como antes, que un $\\mathcal{C}'$-grupo es un $\\mathbf{Pro}(\\mathcal{C}'_0)$-grupo que es esencialmente afín.",
+    "en_new": "Se concluye entonces, como antes, que un $\\boldsymbol{C}'$-\\emph{grupo} es un $\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0)$-\\emph{grupo} que es esencialmente afín.",
+    "note": "También cubre 16244, 16245 y 16246."
+  },
+  {
+    "id": 16244,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$\\mathcal{C}'$-grupo es un",
+    "note": "covered by 16243"
+  },
+  {
+    "id": 16245,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$\\mathbf{Pro}(\\mathcal{C}'_0)$-grupo",
+    "note": "covered by 16243"
+  },
+  {
+    "id": 16246,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "-grupo que es esencialmente afín.",
+    "note": "covered by 16243"
+  },
+  {
+    "id": 16247,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "las categorías de los $\\mathcal{C}'$-grupos y de los $\\mathcal{C}$-grupos",
+    "en_new": "las categorías de los $\\boldsymbol{C}'$-grupos y de los $\\boldsymbol{C}$-grupos"
+  },
+  {
+    "id": 16248,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "la categoría de los $\\mathcal{C}$-grupos sea",
+    "en_new": "la categoría de los $\\boldsymbol{C}$-grupos sea"
+  },
+  {
+    "id": 16249,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$\\boldsymbol{K}$-\\emph{grupos}, donde"
+  },
+  {
+    "id": 16250,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "por $\\mathcal{C}'_0$-$\\boldsymbol{gr}$ la categoría de los $\\mathcal{C}'_0$-grupos,",
+    "en_new": "por $\\boldsymbol{C}'_0$-$\\boldsymbol{gr}$ la categoría de los $\\boldsymbol{C}'_0$-grupos,"
+  },
+  {
+    "id": 16251,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "la categoría de los $\\mathcal{C}'$-grupos sea equivalente",
+    "en_new": "la categoría de los $\\boldsymbol{C}'$-grupos sea equivalente"
+  },
+  {
+    "id": 16252,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$\\mathbf{Pro}(\\mathcal{C}'_0\\text{-}\\boldsymbol{gr})$",
+    "en_new": "$\\boldsymbol{\\mathit{Pro}}(\\boldsymbol{C}'_0\\text{-}\\boldsymbol{gr})$"
+  },
+  {
+    "id": 16253,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 16254,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "esencialmente afín \\sref{IV.8.13.4} y formado",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16255,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "la aplicación canónica \\sref{IV.8.13.1.1}",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16256,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\varinjlim h_X(Z_\\lambda)\\to h_X(\\varprojlim_\\lambda Z_\\lambda) \\tag{8.14.2.1}",
+    "en_new": "\\varinjlim h_X(Z_\\lambda)\\to h_X(\\varprojlim Z_\\lambda) \\tag{8.14.2.1}"
+  },
+  {
+    "id": 16257,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "  \\item Para todo sistema proyectivo filtrante $(Z_\\lambda)$ de $S$-preesquemas tal que los $Z_\\lambda$ sean esquemas afines, la aplicación \\sref{IV.8.14.2.1} es biyectiva.",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16258,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "  \\item[\\rm c$'$)] Para todo abierto afín $U$ de $S$ y todo sistema proyectivo filtrante $(Z_\\lambda)$ de $U$-preesquemas tal que los $Z_\\lambda$ sean esquemas afines, la aplicación \\sref{IV.8.14.2.1} es biyectiva.",
+    "note": "La macro ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16259,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\varinjlim_\\lambda\\operatorname{Hom}_{A\\text{-}\\mathrm{alg.}}(B,C_\\lambda)\\to\\operatorname{Hom}_{A\\text{-}\\mathrm{alg.}}(B,\\varinjlim C_\\lambda) \\tag{8.14.2.3}",
+    "en_new": "\\varinjlim\\operatorname{Hom}_{A\\text{-}\\mathrm{alg.}}(B,C_\\lambda)\\to\\operatorname{Hom}_{A\\text{-}\\mathrm{alg.}}(B,\\varinjlim C_\\lambda) \\tag{8.14.2.3}"
+  },
+  {
+    "id": 16261,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16262,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16263,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "$u(t_i)\\setmin q_\\lambda(T_i)\\in\\mathfrak{J}/\\mathfrak{J}_\\lambda$."
+  },
+  {
+    "id": 16265,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16266,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\varinjlim_\\lambda\\operatorname{Hom}_S(Z_\\lambda,V)\\to\\operatorname{Hom}_S(\\varprojlim_\\lambda Z_\\lambda,V) \\tag{8.14.2.4}",
+    "en_new": "\\varinjlim\\operatorname{Hom}_S(Z_\\lambda,V)\\to\\operatorname{Hom}_S(\\varprojlim Z_\\lambda,V) \\tag{8.14.2.4}"
+  },
+  {
+    "id": 16267,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16268,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16269,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula separada a fórmula en línea."
+  },
+  {
+    "id": 16270,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-8.tex",
+    "en_old": "\\sref[I]{I.2.4.2}"
+  },
+  {
+    "id": 16271,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "$\\mathbf{k}(s)$-preesquema",
+    "en_new": "$\\boldsymbol{k}(s)$-preesquema"
+  },
+  {
+    "id": 16272,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "\\operatorname{Spec}(\\mathbf{k}(s))",
+    "en_new": "\\operatorname{Spec}(\\boldsymbol{k}(s))"
+  },
+  {
+    "id": 16273,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "\\sh{F}_s=\\sh{F}\\otimes_{\\sh{O}_S}\\mathbf{k}(s)",
+    "en_new": "\\sh{F}_s=\\sh{F}\\otimes_{\\sh{O}_S}\\boldsymbol{k}(s)"
+  },
+  {
+    "id": 16274,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 16275,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "sea $\\mathcal{C}$ un conjunto de extensiones de $k$.",
+    "en_new": "sea $\\boldsymbol{C}$ un conjunto de extensiones de $k$."
+  },
+  {
+    "id": 16277,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "Si $K\\in\\mathcal{C}$ y existe un $k$-homomorfismo",
+    "en_new": "Si $K\\in\\boldsymbol{C}$ y existe un $k$-homomorfismo"
+  },
+  {
+    "id": 16278,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "entonces $K'\\in\\mathcal{C}$.\n  \\item Si $K\\in\\mathcal{C}$, existe",
+    "en_new": "entonces $K'\\in\\boldsymbol{C}$.\n  \\item Si $K\\in\\boldsymbol{C}$, existe"
+  },
+  {
+    "id": 16279,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "tal que $K'\\in\\mathcal{C}$.",
+    "en_new": "tal que $K'\\in\\boldsymbol{C}$."
+  },
+  {
+    "id": 16280,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "Si $K\\in\\mathcal{C}$ es el cuerpo de fracciones",
+    "en_new": "Si $K\\in\\boldsymbol{C}$ es el cuerpo de fracciones"
+  },
+  {
+    "id": 16282,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "$A_f/\\mathfrak{m}\\in\\mathcal{C}$",
+    "en_new": "$A_f/\\mathfrak{m}\\in\\boldsymbol{C}$"
+  },
+  {
+    "id": 16550,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "que es una extensión finita de $k$.",
+    "en_new": "que es una extensión \\textup{finita} de $k$."
+  },
+  {
+    "id": 16551,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "$\\mathcal{C}$ no es vacío.",
+    "en_new": "$\\boldsymbol{C}$ no es vacío."
+  },
+  {
+    "id": 16552,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "Existe $K'\\in\\mathcal{C}$",
+    "en_new": "Existe $K'\\in\\boldsymbol{C}$"
+  },
+  {
+    "id": 16553,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "Se tiene $\\Omega\\in\\mathcal{C}$.",
+    "en_new": "Se tiene $\\Omega\\in\\boldsymbol{C}$."
+  },
+  {
+    "id": 16554,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "existe una extensión $K'\\in\\mathcal{C}$ de la forma",
+    "en_new": "existe una extensión $K'\\in\\boldsymbol{C}$ de la forma"
+  },
+  {
+    "id": 16555,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "y $\\mathcal{C}$ no es vacío, $\\mathcal{C}$ contiene",
+    "en_new": "y $\\boldsymbol{C}$ no es vacío, $\\boldsymbol{C}$ contiene"
+  },
+  {
+    "id": 16556,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "$k\\in\\mathcal{C}$",
+    "en_new": "$k\\in\\boldsymbol{C}$"
+  },
+  {
+    "id": 16557,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "el conjunto $\\mathcal{C}$ está formado",
+    "en_new": "el conjunto $\\boldsymbol{C}$ está formado"
+  },
+  {
+    "id": 16558,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "un conjunto $\\mathcal{C}'$ de $k$-álgebras",
+    "en_new": "un conjunto $\\boldsymbol{C}'$ de $k$-álgebras"
+  },
+  {
+    "id": 16559,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "Si $A\\in\\mathcal{C}'$ y existe",
+    "en_new": "Si $A\\in\\boldsymbol{C}'$ y existe"
+  },
+  {
+    "id": 16560,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "entonces $A'\\in\\mathcal{C}'$.",
+    "en_new": "entonces $A'\\in\\boldsymbol{C}'$."
+  },
+  {
+    "id": 16561,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "tomando como $\\mathcal{C}'$ el conjunto",
+    "en_new": "tomando como $\\boldsymbol{C}'$ el conjunto"
+  },
+  {
+    "id": 16562,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "Bajo las hipótesis~\\emph{(i)}, \\emph{(ii)}, \\emph{(iii)} de~\\sref{IV.9.1.1},",
+    "note": "Dentro del corolario, emph pone las etiquetas en redonda; sref ya imprime la referencia en redonda."
+  },
+  {
+    "id": 16563,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "\\begin{enumerate}[label=(\\roman*~bis)]",
+    "en_new": "\\begin{enumerate}[label=(\\roman*~\\emph{bis})]"
+  },
+  {
+    "id": 16566,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "cuando no se satisface (i~bis),",
+    "en_new": "cuando no se satisface (i~\\emph{bis}),"
+  },
+  {
+    "id": 16567,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "\\textnormal{(}resp.\\ un $\\Omega$-morfismo",
+    "en_new": "\\textnormal{(}\\textup{resp.}\\ un $\\Omega$-morfismo"
+  },
+  {
+    "id": 16568,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "\\textnormal{(}resp.\\ un $k'$-morfismo",
+    "en_new": "\\textnormal{(}\\textup{resp.}\\ un $k'$-morfismo"
+  },
+  {
+    "id": 16569,
+    "decision": "apply",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "\\textnormal{(}resp.\\ un $K$-morfismo",
+    "en_new": "\\textnormal{(}\\textup{resp.}\\ un $K$-morfismo"
+  },
+  {
+    "id": 16570,
+    "decision": "already",
+    "en_file": "IV3/sections/ega4-9.tex",
+    "en_old": "~\\emph{(i)} a~\\emph{(xiv)} especificada de~\\sref{IV.8.10.5}\\textnormal{)}",
+    "note": "Las etiquetas están en redonda mediante emph dentro de la proposición; la referencia y el paréntesis final también están en redonda."
+  }
+]
+```
+IV3/sections/ega4-8.tex, p. 45: sobran paréntesis de cierre tras varias referencias, entre ellas `\sref{IV.8.1.2},~$a$))`, las referencias a 8.8.2 y 8.10.5, y `\sref[III]{III.4.4.3})`.
+IV3/sections/ega4-8.tex, p. 46: numerosas referencias terminan con un paréntesis de cierre adicional sin apertura correspondiente, por ejemplo `\sref{IV.8.9.1})`, `\sref[II]{II.6.2.2})` y `\sref{IV.6.14.4})`.
+IV3/sections/ega4-8.tex, p. 47, observación 8.12.7: el francés enfatiza «schéma affine», pero el español solo enfatiza «esquema», dejando «afín» fuera.
+IV3/sections/ega4-8.tex, p. 47, demostración de 8.12.8: faltan los subíndices `_\lambda` en `X=\bigcap X_\lambda` y `f^{-1}(y)=\bigcap(X_\lambda\cap g^{-1}(y))`.
+IV3/sections/ega4-8.tex, p. 47: sobran paréntesis de cierre tras numerosas referencias, incluidas `\sref[II]{II.4.5.3})`, `\sref[II]{II.5.3.3})`, `\sref[I]{I.9.4.9})` y las referencias finales a los apartados de 8.12.3.
+IV3/sections/ega4-8.tex, p. 48: sobran paréntesis de cierre tras varias referencias, incluidas `\sref{IV.8.12.8})`, `\sref[I]{I.8.2.8})`, `\sref[I]{I.5.2.3})`, `\sref[II]{II.6.3.4})` y las referencias de la demostración de 8.12.11.
+IV3/sections/ega4-8.tex, p. 50, 8.13.4: falta el énfasis de «isomorfo» que aparece en el contexto francés.
+IV3/sections/ega4-8.tex, p. 51, demostración de 8.13.5: se omite que la aplicación debe ser biyectiva para cualesquiera objetos `\mathbf{X}` y `\mathbf{X}'` de la categoría correspondiente.

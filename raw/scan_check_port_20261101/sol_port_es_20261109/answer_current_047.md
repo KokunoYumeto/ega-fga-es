@@ -1,0 +1,960 @@
+```json
+[
+  {
+    "id": 10569,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Sea $K'$ el subcuerpo (igual al subanillo) de $K$ generado por\n$k(K^p)$ y los $x_\\alpha$; teniendo en cuenta (21.4.3)",
+    "en_new": "Teniendo en cuenta (21.4.3)"
+  },
+  {
+    "id": 10571,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$d_{K/k}(x_\\alpha)$; como\neste subespacio es el núcleo",
+    "en_new": "$d_{K/k}(x_\\alpha)$, y como\neste subespacio vectorial es el núcleo"
+  },
+  {
+    "id": 10572,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "y por tanto $x_\\alpha\\notin K_\\alpha$.\n\nSi ahora $(x_\\alpha)$ es una familia $p$-independiente, es una subfamilia\nde una $p$-base de $K$ sobre $k$ (21.4.2); los $d_{K/k}(x_\\alpha)$ forman entonces\nparte de una base del espacio vectorial $\\Omega^1_{K/k}$ (21.2.5), y son\npor consiguiente linealmente independientes sobre $K$. Recíprocamente, si los\n$d_{K/k}(x_\\alpha)$ son linealmente independientes sobre $K$, los dos\npárrafos precedentes muestran que $(x_\\alpha)$ es $p$-independiente sobre $k$.\n\\end{proof}",
+    "en_new": "y por tanto $x_\\alpha\\notin K_\\alpha$.\n\\end{proof}"
+  },
+  {
+    "id": 10576,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Entonces la sucesión de espacios vectoriales sobre $L$",
+    "note": "Expresa la misma estructura de espacios vectoriales sobre L."
+  },
+  {
+    "id": 10577,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$d_K(x_\\lambda^p)\\otimes1$ forman una base del espacio vectorial $\\Upsilon_{L/K}$.",
+    "en_new": "$d_K(x_\\lambda^p)\\otimes1$ forman una base del espacio vectorial sobre $L$ $\\Upsilon_{L/K}$."
+  },
+  {
+    "id": 10578,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 10579,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "En este número y en los dos siguientes, ya no suponemos que los anillos",
+    "en_new": "En este número y en los dos siguientes, \\emph{ya no suponemos} que los anillos"
+  },
+  {
+    "id": 10580,
+    "decision": "not_applicable",
+    "note": "Tipografía de la abreviatura francesa de número."
+  },
+  {
+    "id": 10581,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa."
+  },
+  {
+    "id": 10582,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "isomorfismo $x\\mapsto x^p$.",
+    "en_new": "isomorfismo $x\\rightsquigarrow x^p$."
+  },
+  {
+    "id": 10585,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$c)\\Leftrightarrow c')\\Leftrightarrow a)\\Rightarrow b)\n \\Rightarrow b')$",
+    "en_new": "$\\mathrm{c})\\Leftrightarrow\\mathrm{c}')\\Leftrightarrow\\mathrm{a})\\Rightarrow\\mathrm{b})\n \\Rightarrow\\mathrm{b}')$"
+  },
+  {
+    "id": 10587,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$B$ es un $A$-módulo plano",
+    "en_new": "$B$ es un $A$-módulo \\emph{plano}"
+  },
+  {
+    "id": 10588,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "(0$_{\\rm I}$, 6.3.4)",
+    "en_new": "($\\mathbf{0}_{\\mathrm I}$, 6.3.4)"
+  },
+  {
+    "id": 10589,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$A$-álgebra de\nCohen (19.8.1)",
+    "en_new": "$A$-\\emph{álgebra de\nCohen} (19.8.1)"
+  },
+  {
+    "id": 10590,
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": 10592,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$G=B/\\mathfrak n^2$",
+    "en_new": "$C=B/\\mathfrak n^2$"
+  },
+  {
+    "id": 10593,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "y considerando $G$ como",
+    "en_new": "y considerando $C$ como"
+  },
+  {
+    "id": 10597,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "derivación de $L$ en $L$; finalmente",
+    "en_new": "derivación \\emph{de} $L$ \\emph{en} $L$; finalmente"
+  },
+  {
+    "id": 10598,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "significa que $D'$ prolonga $D$.",
+    "en_new": "significa que $D'$ \\emph{prolonga} $D$."
+  },
+  {
+    "id": 10599,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Por otra parte, toda derivación $D$",
+    "en_new": "Por otra parte, \\emph{toda} derivación $D$"
+  },
+  {
+    "id": 10601,
+    "decision": "not_applicable",
+    "note": "Reformulación gramatical francesa sin cambio de significado."
+  },
+  {
+    "id": 10202,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "cuestión de la unicidad del cuerpo de representantes",
+    "en_new": "cuestión de la \\emph{unicidad} del cuerpo de representantes"
+  },
+  {
+    "id": 10203,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Sean $\\mathfrak J$ el ideal máximo\n  de $C$, $K=C/\\mathfrak J$",
+    "en_new": "Sean, en efecto, $\\mathfrak J$ el ideal máximo\n  de $C$, $K=C/\\mathfrak J$"
+  },
+  {
+    "id": 10204,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "entonces, para\n  que este homomorfismo sea único, es necesario y suficiente que\n  $\\Omega^1_K=0$.",
+    "en_new": "entonces, \\emph{para\n  que este homomorfismo sea único, es necesario y suficiente que}\n  $\\Omega^1_K=0$."
+  },
+  {
+    "id": 10206,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "homomorfismos distintos $u_1,v_1$ de $K$ en",
+    "en_new": "homomorfismos distintos $u'$, $v'$ de $K$ en"
+  },
+  {
+    "id": 10208,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "que $K$ es perfecto si es de característica",
+    "en_new": "que $K$ es \\emph{perfecto} si es de característica"
+  },
+  {
+    "id": 10209,
+    "decision": "not_applicable",
+    "note": "Reformulación gramatical francesa; las hipótesis españolas son las mismas."
+  },
+  {
+    "id": 10211,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "en (19.8.6, (i)) sea única,",
+    "en_new": "en (19.8.6, (i)) sea \\emph{única},"
+  },
+  {
+    "id": 10212,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 10213,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "canónico $s$ de (21.6.1.1) es además biyectivo,",
+    "en_new": "canónico $s$ de (21.6.1.1) es además \\emph{biyectivo},"
+  },
+  {
+    "id": 10214,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "decimos que $k$ es un cuerpo\n$k_0$-admisible para la extensión $L$ de $K$.",
+    "en_new": "decimos que $k$ es un \\emph{cuerpo\n$k_0$-admisible para la extensión $L$ de $K$}."
+  },
+  {
+    "id": 10215,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "(por ejemplo, tales que $[K:k]$ sea finito)",
+    "en_new": "(por ejemplo, tales que $[K:k]$ sea \\emph{finito})"
+  },
+  {
+    "id": 10216,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa."
+  },
+  {
+    "id": 10217,
+    "decision": "not_applicable",
+    "note": "Cambio de presentación de la definición numerada a ecuación; el español ya conserva el número 21.6.1.2."
+  },
+  {
+    "id": 10218,
+    "decision": "not_applicable",
+    "note": "Cierre del entorno de ecuación correspondiente al cambio de presentación de 10217."
+  },
+  {
+    "id": 10221,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Las condiciones equivalentes de (i) se verifican cuando",
+    "en_new": "Las condiciones equivalentes de \\textup{(i)} se verifican cuando"
+  },
+  {
+    "id": 10222,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Si $L$ es separable sobre $k$, se tiene\n  $\\Upsilon_{L/k/k_0}=0$ (20.6.19)"
+  },
+  {
+    "id": 10224,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "por lo que se cumple la condición a) de (i);",
+    "en_new": "por lo que se cumple la condición \\emph{a)} de (i);"
+  },
+  {
+    "id": 10225,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "la condición a) de (i).\n\\end{enumerate}",
+    "en_new": "la condición \\emph{a)} de (i).\n\\end{enumerate}"
+  },
+  {
+    "id": 10229,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "cohomología de $T^\\bullet_1$ y la de $T^\\bullet_2$"
+  },
+  {
+    "id": 10230,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "como $T_1$ y $T_2$ tienen así la misma",
+    "en_new": "como $T^\\bullet_1$ y $T^\\bullet_2$ tienen así la misma"
+  },
+  {
+    "id": 10234,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$T'_1,T'_2,T'_3$;",
+    "en_new": "$T'^\\bullet_1$, $T'^\\bullet_2$ y $T'^\\bullet_3$;"
+  },
+  {
+    "id": 10236,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "cohomología de $T'^\\bullet_2$ y la de $T'^\\bullet_3$"
+  },
+  {
+    "id": 10239,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\item[(i)] Dados cinco cuerpos $k\\subset k'\\subset k''\\subset K\\subset L$",
+    "en_new": "\\item[\\textup{(i)}] Dados cinco cuerpos $k\\subset k'\\subset k''\\subset K\\subset L$"
+  },
+  {
+    "id": 10240,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\item[(ii)] Dados cinco cuerpos\n  $k_0\\subset k\\subset K\\subset L\\subset M$",
+    "en_new": "\\item[\\textup{(ii)}] Dados cinco cuerpos\n  $k_0\\subset k\\subset K\\subset L\\subset M$"
+  },
+  {
+    "id": 10241,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\end{enumerate}\n\nEsto se deduce inmediatamente de las relaciones (21.6.4.2) y (21.6.4.4), siendo\nlos valores de $d$ $\\geqslant0$.\n\\end{corollary}",
+    "en_new": "\\end{enumerate}\n\\end{corollary}\n\nEsto se deduce inmediatamente de las relaciones (21.6.4.2) y (21.6.4.4), siendo\nlos valores de $d$ $\\geqslant0$.",
+    "note": "La justificación no forma parte del enunciado en cursiva."
+  },
+  {
+    "id": 10244,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "de donde (0$_{\\rm III}$, 11.10.2)",
+    "en_new": "de donde ($\\mathbf{0}_{\\rm III}$, 11.10.2)"
+  },
+  {
+    "id": 10245,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "=(\\operatorname{rg}_{L'}\\Omega^1_{L/L'}",
+    "en_new": "=(\\operatorname{rg}_L\\Omega^1_{L/L'}"
+  },
+  {
+    "id": 10247,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\operatorname{rg}_L\\Omega^1_{L/K}-\\operatorname{rg}_L\\Upsilon_{L/K}",
+    "en_new": "\\operatorname{rg}_L\\Omega^1_{L/K}\\setmin\\operatorname{rg}_L\\Upsilon_{L/K}"
+  },
+  {
+    "id": 10250,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\operatorname{rg}\\Omega^1_{L/K}-\\operatorname{rg}\\Upsilon_{L/K}\n=\\deg",
+    "en_new": "\\operatorname{rg}\\Omega^1_{L/K}\\setmin\\operatorname{rg}\\Upsilon_{L/K}\n=\\deg"
+  },
+  {
+    "id": 10251,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\item[\\rm a)] $x$ es trascendente sobre $K$;",
+    "en_new": "\\item[\\textit{a)}] $x$ es trascendente sobre $K$;"
+  },
+  {
+    "id": 10252,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\item[\\rm b)] $L$ es una extensión algebraica separable de $K$",
+    "en_new": "\\item[\\textit{b)}] $L$ es una extensión algebraica separable de $K$"
+  },
+  {
+    "id": 10253,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\item[\\rm c)] $L$ es una extensión algebraica inseparable de $K$",
+    "en_new": "\\item[\\textit{c)}] $L$ es una extensión algebraica inseparable de $K$"
+  },
+  {
+    "id": 10254,
+    "decision": "not_applicable",
+    "note": "Variante gramatical francesa."
+  },
+  {
+    "id": 10256,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\operatorname{rg}\\Omega^1_{L/K}-\\operatorname{rg}\\Upsilon_{L/K/k}\n=\\deg",
+    "en_new": "\\operatorname{rg}\\Omega^1_{L/K}\\setmin\\operatorname{rg}\\Upsilon_{L/K/k}\n=\\deg"
+  },
+  {
+    "id": 10257,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\operatorname{rg}\\Omega^1_{L/K}-\\operatorname{rg}\\Upsilon_{L/K/k}\n\\geqslant",
+    "en_new": "\\operatorname{rg}\\Omega^1_{L/K}\\setmin\\operatorname{rg}\\Upsilon_{L/K/k}\n\\geqslant"
+  },
+  {
+    "id": 10260,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\operatorname{rg}_L\\Omega^1_{L/k}-\\operatorname{rg}_K\\Omega^1_{K/k}\n=\\deg.\\operatorname{tr}_K L+d(L/K,k).",
+    "en_new": "\\operatorname{rg}_L\\Omega^1_{L/k}\\setmin\\operatorname{rg}_K\\Omega^1_{K/k}\n=\\deg.\\operatorname{tr}_K L+d(L/K,k)."
+  },
+  {
+    "id": 10367,
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase francesa que continúa tras la fórmula."
+  },
+  {
+    "id": 10368,
+    "decision": "not_applicable",
+    "note": "El español emplea una oración independiente."
+  },
+  {
+    "id": 10369,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\operatorname{rg}_L\\Omega^1_{L/k}-\\operatorname{rg}_L\\Upsilon_{L/K/k}",
+    "en_new": "\\operatorname{rg}_L\\Omega^1_{L/K}-\\operatorname{rg}_L\\Upsilon_{L/K/k}"
+  },
+  {
+    "id": 10370,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "subcuerpo $k$ de $K$ tal que $[K:k]$ sea finito y que sea admisible",
+    "en_new": "subcuerpo $k$ de $K$ tal que $[K:k]$ sea \\emph{finito} y que sea admisible"
+  },
+  {
+    "id": 10373,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "las condiciones b) y\nd) son equivalentes",
+    "en_new": "las condiciones \\emph{b)} y\n\\emph{d)} son equivalentes"
+  },
+  {
+    "id": 10375,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "la conjunción de a) y b) equivale a c).",
+    "en_new": "la conjunción de \\emph{a)} y \\emph{b)} equivale a \\emph{c)}."
+  },
+  {
+    "id": 10376,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Todo se reduce a ver que d) implica a).",
+    "en_new": "Todo se reduce a ver que \\emph{d)} implica \\emph{a)}."
+  },
+  {
+    "id": 10377,
+    "decision": "not_applicable",
+    "note": "Concordancia de género francesa."
+  },
+  {
+    "id": 10378,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "En virtud de (20.6.3.2) y de (0$_{\\rm III}$, 11.10.2)",
+    "en_new": "En virtud de (20.6.3.2) y de (\\textbf{0}$_{\\rm III}$, 11.10.2)"
+  },
+  {
+    "id": 10383,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "Sea $r$ el rango de la familia $(a_i)_{1\\leqslant i\\leqslant n}$ sobre $K$, y",
+    "en_new": "Sea $r$ el rango de la familia $(a_i)_{1\\leqslant i\\leqslant n}$ \\emph{sobre} $K$, y"
+  },
+  {
+    "id": 10384,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$(a_i)_{1\\leqslant i\\leqslant r+1}$ es libre sobre $k_\\beta$; en efecto",
+    "en_new": "$(a_i)_{1\\leqslant i\\leqslant r+1}$ es \\emph{libre sobre} $k_\\beta$; en efecto"
+  },
+  {
+    "id": 10385,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$p$-independiente sobre $k_\\alpha$.\n\nEn efecto, decir",
+    "en_new": "$p$-independiente sobre $k_\\alpha$.\n\\end{lemma}\n\n\\begin{proof}\nEn efecto, decir",
+    "note": "Separa la demostración del enunciado en cursiva."
+  },
+  {
+    "id": 10386,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "de $K$.\n\\end{lemma}",
+    "en_new": "de $K$.\n\\end{proof}"
+  },
+  {
+    "id": 10389,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "(lo que ocurre en particular si $L$ es una extensión de tipo finito en",
+    "en_new": "\\textup{(}lo que ocurre en particular si $L$ es una extensión de tipo finito en"
+  },
+  {
+    "id": 10390,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$\\Upsilon_{L/K/k_0}$, y como $\\Upsilon_{L/K/k_0}$ es por hipótesis de rango\nfinito,",
+    "en_new": "$\\Upsilon_{L/K/k_0}$, y como $\\Upsilon_{L/K/k_0}$ es por hipótesis de rango\n\\emph{finito},"
+  },
+  {
+    "id": 10391,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "uno de los $N_\\alpha$ es nulo",
+    "en_new": "uno de los $N_\\alpha$ es $0$"
+  },
+  {
+    "id": 10392,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "o que su\nintersección",
+    "en_new": "o que su\n\\emph{intersección}"
+  },
+  {
+    "id": 10393,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "es nula. Pero esta intersección",
+    "en_new": "es $0$. Pero esta intersección"
+  },
+  {
+    "id": 10395,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "basta, por tanto, mostrar que la aplicación\ncanónica",
+    "en_new": "basta, por tanto, mostrar que $c)$ implica que la aplicación\ncanónica"
+  },
+  {
+    "id": 10397,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "es inyectiva para todo espacio vectorial $V$ sobre $K$",
+    "en_new": "es inyectiva para todo \\emph{espacio vectorial} $V$ sobre $K$"
+  },
+  {
+    "id": 10399,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$\\operatorname{rg}\\Upsilon_{L/K}\\leqslant1$",
+    "en_new": "$\\operatorname{rg}\\Upsilon_{L/K/k_0}\\leqslant\\operatorname{rg}\\Upsilon_{L/K}\\leqslant1$"
+  },
+  {
+    "id": 10401,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa."
+  },
+  {
+    "id": 10403,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa."
+  },
+  {
+    "id": 10407,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$p$-libre sobre $k_\\alpha$, y la existencia",
+    "en_new": "$p$-libre \\emph{sobre} $k_\\alpha$, y la existencia"
+  },
+  {
+    "id": 10408,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10412,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "subcuerpos de $k$ tal que $[k:k_\\alpha]$ sea finito para todo $\\alpha$",
+    "en_new": "subcuerpos de $k$ tal que $[k:k_\\alpha]$ sea \\emph{finito} para todo $\\alpha$"
+  },
+  {
+    "id": 10413,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$A_\\alpha=k_\\alpha[[T_1^p,\\ldots,T_r^p]]$, $A$ es un $A_\\alpha$-módulo libre\nde tipo finito;",
+    "en_new": "$A_\\alpha=k_\\alpha[[T_1^p,\\ldots,T_r^p]]$, $A$ es un $A_\\alpha$-módulo \\emph{libre\nde tipo finito};"
+  },
+  {
+    "id": 10415,
+    "decision": "not_applicable",
+    "note": "Puntuación introductoria francesa."
+  },
+  {
+    "id": 10618,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10621,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "-\\operatorname{rg}_K(\\Upsilon_{K/k_0})",
+    "en_new": "\\setmin\\operatorname{rg}_K(\\Upsilon_{K/k_0})"
+  },
+  {
+    "id": 10626,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "su imagen es cerrada en",
+    "en_new": "su imagen es \\emph{cerrada} en"
+  },
+  {
+    "id": 10627,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "es, por tanto, exacta y escindida en virtud",
+    "en_new": "es, por tanto, \\emph{exacta y escindida} en virtud"
+  },
+  {
+    "id": 10628,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$A_0$-álgebra finita y que el cuerpo",
+    "en_new": "$A_0$-álgebra \\textup{finita} y que el cuerpo"
+  },
+  {
+    "id": 10629,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "fracciones $E$ de $A$ sea una extensión separable del cuerpo",
+    "en_new": "fracciones $E$ de $A$ sea una extensión \\textup{separable} del cuerpo"
+  },
+  {
+    "id": 10631,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$\\widehat\\Omega^1_{A_0/k}$ es un $A_0$-módulo libre de",
+    "en_new": "$\\widehat\\Omega^1_{A_0/k}$ es un $A_0$-módulo \\emph{libre} de"
+  },
+  {
+    "id": 10634,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "se sabe que $v$ es sobreyectivo y que",
+    "en_new": "se sabe que $v$ es \\emph{sobreyectivo} y que"
+  },
+  {
+    "id": 10635,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$\\operatorname{Im}(u)$ es densa en",
+    "en_new": "$\\operatorname{Im}(u)$ es \\emph{densa} en"
+  },
+  {
+    "id": 10636,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "la sucesión (21.9.5.2) es exacta.",
+    "en_new": "la sucesión (21.9.5.2) es \\emph{exacta}."
+  },
+  {
+    "id": 10638,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$\\Omega^1_{A/A_0}$ es un $A$-módulo de torsión",
+    "en_new": "$\\Omega^1_{A/A_0}$ es un $A$-\\emph{módulo de torsión}"
+  },
+  {
+    "id": 10639,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "un mismo sub-$A$-módulo de tipo finito",
+    "en_new": "un mismo sub-$A$-módulo de \\emph{tipo finito}"
+  },
+  {
+    "id": 10640,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "se han formado así $r$ derivaciones continuas de $A$",
+    "en_new": "se han formado así $r$ derivaciones \\emph{continuas} de $A$"
+  },
+  {
+    "id": 10643,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "-\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    =(r",
+    "en_new": "\\setmin\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    =(r"
+  },
+  {
+    "id": 10644,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "-\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    \\geqslant",
+    "en_new": "\\setmin\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    \\geqslant"
+  },
+  {
+    "id": 10646,
+    "decision": "not_applicable",
+    "note": "Cambio de presentación de la demostración; se conservan los entornos españoles de demostración y enumeración."
+  },
+  {
+    "id": 10648,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "      K_0\\ar[r] & M_0\\ar[r] & L_0\\ar[r] & E\\\\\n      k\\ar[u]\\ar[r] & N\\ar[u]\\ar[r] & M\\ar[u]\\ar[r] & L\\ar[u]\\\\\n      k_0\\ar[u]\\ar[r] & k'_0\\ar[u]\\ar[r] & N'\\ar[u] &",
+    "en_new": "      & K_0\\ar[rr] & & M_0\\ar[r] & L_0\\ar[r] & E\\\\\n      & k\\ar[u]\\ar[r] & N\\ar[r] & M\\ar[u]\\ar[r] & L\\ar[u]\\\\\n      k_0\\ar[r] & k'_0\\ar[u]\\ar[r] & N'\\ar[u]"
+  },
+  {
+    "id": 10649,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "\\Omega^1_{E/M}\n    -\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}",
+    "en_new": "\\Omega^1_{E/M}\n    \\setmin\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}"
+  },
+  {
+    "id": 10652,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "extensión finita $k'$ de $k$, $K\\otimes_k k'$",
+    "en_new": "extensión \\emph{finita} $k'$ de $k$, $K\\otimes_k k'$"
+  },
+  {
+    "id": 10658,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "-\\operatorname{rg}_{M_0}\\Upsilon_{M_0/M/N}",
+    "en_new": "\\setmin\\operatorname{rg}_{M_0}\\Upsilon_{M_0/M/N}"
+  },
+  {
+    "id": 10662,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "-\\operatorname{rg}_{L_0}\\Omega^1_{L_0/N}",
+    "en_new": "\\setmin\\operatorname{rg}_{L_0}\\Omega^1_{L_0/N}"
+  },
+  {
+    "id": 10663,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "&-\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}",
+    "en_new": "&\\setmin\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}"
+  },
+  {
+    "id": 10669,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10882,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10885,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea y cambio de tamaño de paréntesis."
+  },
+  {
+    "id": 10886,
+    "decision": "not_applicable",
+    "note": "Polinomio presentado en línea en vez de en bloque."
+  },
+  {
+    "id": 10888,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "sea $k(\\mathfrak p)$ el cuerpo residual",
+    "en_new": "sea $\\boldsymbol{k}(\\mathfrak p)$ el cuerpo residual"
+  },
+  {
+    "id": 10889,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "&\\operatorname{rg}_{k(\\mathfrak p)}",
+    "en_new": "&\\operatorname{rg}_{\\mathbf{k}(\\mathfrak p)}"
+  },
+  {
+    "id": 10891,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "+\\operatorname{rg}_{k(\\mathfrak p)}",
+    "en_new": "+\\operatorname{rg}_{\\mathbf{k}(\\mathfrak p)}"
+  },
+  {
+    "id": 10893,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "$E=k(\\mathfrak p)$",
+    "en_new": "$E=\\boldsymbol{k}(\\mathfrak p)$"
+  },
+  {
+    "id": 10895,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "miembros de (21.9.8.1) son iguales.\n\\end{proposition}",
+    "en_new": "miembros de \\textup{(21.9.8.1)} son iguales.\n\\end{proposition}"
+  },
+  {
+    "id": 10896,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "en que $A$ es íntegro y $\\mathfrak p=0$",
+    "en_new": "en que $A$ es \\emph{íntegro} y $\\mathfrak p=0$"
+  },
+  {
+    "id": 10897,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-21-es.tex",
+    "en_old": "lo que implica que $E$ es una extensión finita del cuerpo",
+    "en_new": "lo que implica que $E$ es una extensión \\emph{finita} del cuerpo"
+  },
+  {
+    "id": 10933,
+    "decision": "not_applicable",
+    "note": "Punto final del título francés."
+  },
+  {
+    "id": 10939,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "\\mathbf S_C^*",
+    "en_new": "\\mathbf S_C^\\bullet"
+  },
+  {
+    "id": 10941,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "\\operatorname{gr}_{\\mathfrak J}^\\bullet(B)$ (19.5.2) es biyectivo.",
+    "en_new": "\\operatorname{gr}_{\\mathfrak J}^\\bullet(B)$ \\textup{(19.5.2)} es biyectivo."
+  },
+  {
+    "id": 10943,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "$\\chi:\\Upsilon_{C/A/\\Lambda}\\to\\mathfrak J/\\mathfrak J^2$ (20.6.20)",
+    "en_new": "$\\chi:\\Upsilon_{C/A/\\Lambda}\\to\\mathfrak J/\\mathfrak J^2$ \\textup{(20.6.20)}"
+  },
+  {
+    "id": 10946,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "Recíprocamente, supongamos que $B$ sea una $A$-álgebra"
+  },
+  {
+    "id": 10948,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10949,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "\\item[$\\gamma'$)] El homomorfismo",
+    "en_new": "\\item[$\\gamma'$)] \\emph{El homomorfismo}"
+  },
+  {
+    "id": 10950,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "  es inyectivo.\n\\end{enumerate}\n\n(i)",
+    "en_new": "  \\emph{es inyectivo}.\n\\end{enumerate}\n\n(i)"
+  },
+  {
+    "id": 10951,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10952,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "$u_{B/A/\\Lambda}\\otimes 1_C$ sea invertible por la izquierda.",
+    "en_new": "$u_{B/A/\\Lambda}\\otimes 1_C$ sea \\emph{invertible por la izquierda}."
+  },
+  {
+    "id": 10953,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "la sucesión exacta anterior\nse escinde,",
+    "en_new": "la sucesión exacta anterior\n\\emph{se escinde},"
+  },
+  {
+    "id": 10903,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "\\mathbf S_K^*",
+    "en_new": "\\mathbf S_K^\\bullet"
+  },
+  {
+    "id": 10906,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "Dados un álgebra de polinomios $E=K[T_1,\\ldots,T_n]$, el ideal maximal",
+    "en_new": "\\itshape Dados un álgebra de polinomios $E=K[T_1,\\ldots,T_n]$, el ideal maximal"
+  },
+  {
+    "id": 10907,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "$\\Lambda$-homomorfismo $v:B\\to E/\\mathfrak b$",
+    "en_new": "$A$-homomorfismo $v:B\\to E/\\mathfrak b$"
+  },
+  {
+    "id": 10909,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10912,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "(«~álgebra de los números duales\nsobre $K$~»)",
+    "en_new": "\\textup{(«~álgebra de los números duales\nsobre $K$~»)}"
+  },
+  {
+    "id": 10913,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "$\\Lambda$-homomorfismo $v:B\\to K$",
+    "en_new": "$A$-homomorfismo $v:B\\to K$"
+  },
+  {
+    "id": 10914,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10916,
+    "decision": "not_applicable",
+    "note": "Fórmula presentada en línea en vez de en bloque."
+  },
+  {
+    "id": 10917,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "$\\operatorname{D\\acute{e}r}_\\Lambda(B,L)\\to\\operatorname{D\\acute{e}r}_\\Lambda(A,L)$ es\n\\emph{sobreyectivo}",
+    "en_new": "$\\operatorname{D\\acute{e}r}_\\Lambda(B,L)\\to\\operatorname{D\\acute{e}r}_\\Lambda(A,L)$ \\emph{es\nsobreyectivo}"
+  },
+  {
+    "id": 10918,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "Para toda $\\Lambda$-álgebra local artiniana $E$ de cuerpo residual igual a\n$K$, y todo ideal nilpotente $\\mathfrak r$ de $E$, todo",
+    "en_new": "\\itshape Para toda $A$-álgebra local \\textup{artiniana} $E$ de cuerpo residual \\textup{igual a}\n$K$, y todo ideal nilpotente $\\mathfrak r$ de $E$, todo",
+    "note": "Incluye también 10919, 10920 y 10921."
+  },
+  {
+    "id": 10919,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "Para toda $\\Lambda$-álgebra local artiniana $E$",
+    "note": "covered by 10918"
+  },
+  {
+    "id": 10920,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "artiniana $E$ de cuerpo residual igual a",
+    "note": "covered by 10918"
+  },
+  {
+    "id": 10921,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "residual igual a\n$K$, y todo ideal nilpotente",
+    "note": "covered by 10918"
+  },
+  {
+    "id": 10922,
+    "decision": "apply",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "$\\Lambda$-homomorfismo $B\\to E/\\mathfrak r$",
+    "en_new": "$A$-homomorfismo $B\\to E/\\mathfrak r$"
+  },
+  {
+    "id": 10958,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "(ii) Si $B$ es una $A$-álgebra formalmente lisa para la topología"
+  },
+  {
+    "id": 10959,
+    "decision": "already",
+    "en_file": "IV1_CURRENT/ega4/ega0-22-es.tex",
+    "en_old": "topología discreta, $B$ es una $\\Lambda$-álgebra formalmente lisa para la topología"
+  }
+]
+```
+21.4.5: falta el comienzo de la demostración que el contexto francés corregido sitúa antes de la página 164; en particular, se usa \(K_\alpha\) sin definirlo.
+21.5.3(i): falta la referencia (19.6.1) tras la afirmación de que \(K\) es una \(k\)-álgebra formalmente lisa.
+22.1.1(ii): «y que \(A\) sea una \(A\)-álgebra formalmente lisa» debe referirse a una \(\Lambda\)-álgebra.
+22.1.4: «cuando se sustituyen \(B_0\) y \(k\) por \(B\) y \(A\)» invierte la sustitución requerida por el razonamiento.

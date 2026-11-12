@@ -1,0 +1,937 @@
+```json
+[
+  {
+    "id": 8619,
+    "decision": "apply",
+    "en_file": "III2/units/III.backmatter.es.tex",
+    "en_old": "soporte es \\emph{propio sobre $Y$}, un razonamiento análogo al de (2.2.4)",
+    "en_new": "soporte es \\emph{propio} sobre $Y$, un razonamiento análogo al de (2.2.4)"
+  },
+  {
+    "id": 8620,
+    "decision": "apply",
+    "en_file": "III2/units/III.backmatter.es.tex",
+    "en_old": "tienen soportes \\emph{propios sobre $Y$}, entonces",
+    "en_new": "tienen soportes \\emph{propios} sobre $Y$, entonces"
+  },
+  {
+    "id": 8626,
+    "decision": "not_applicable",
+    "note": "Partición de palabra y salto de página franceses."
+  },
+  {
+    "id": 24650,
+    "decision": "not_applicable",
+    "note": "Mayúscula inicial francesa."
+  },
+  {
+    "id": 8632,
+    "decision": "apply",
+    "en_file": "III2/units/III.backmatter.es.tex",
+    "en_old": "$s\\mapsto sx_i$",
+    "en_new": "$s\\leadsto sx_i$"
+  },
+  {
+    "id": 8634,
+    "decision": "apply",
+    "en_file": "III2/units/III.backmatter.es.tex",
+    "en_old": "cuasicoherente (I, 1.3.10).",
+    "en_new": "cuasicoherente (\\textbf I, 1.3.10)."
+  },
+  {
+    "id": 8635,
+    "decision": "not_applicable",
+    "note": "Adorno de cierre; solo presentación."
+  },
+  {
+    "id": 23819,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-backmatter-bibliography-es.tex",
+    "en_old": "\\begingroup\n\\makeatletter\n% The book-class bibliography environment normally creates its own chapter\n% heading.  This leaf already carries the printed section heading above.\n\\expandafter\\def\\csname chapter\\endcsname{\\@ifstar{\\@gobble}{\\@gobble}}\n\\makeatother\n\\begin{thebibliography}{44}",
+    "note": "Ya se suprime el encabezado automático dentro de un grupo."
+  },
+  {
+    "id": 23820,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-backmatter-bibliography-es.tex",
+    "en_old": "\\end{thebibliography}\n\\endgroup"
+  },
+  {
+    "id": 23825,
+    "decision": "not_applicable",
+    "note": "Se conserva la convención española para el guion de intervalo."
+  },
+  {
+    "id": 23828,
+    "decision": "not_applicable",
+    "note": "Se conserva la convención española para el guion de intervalo."
+  },
+  {
+    "id": 23832,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\mathcal{P}^{\\infty}_{f}$, $\\mathcal{P}^{\\infty}_{X/S}$,\n",
+    "en_new": "$\\mathcal{P}^{\\infty}_{f}$, $\\mathcal{P}^{\\infty}_{X/S}$, $\\mathcal{G}r_n(\\mathcal{P}_f)$, $\\mathcal{G}r_n(\\mathcal{P}_{X/S})$,\n"
+  },
+  {
+    "id": 23833,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\Omega^{1}_{f}$, $\\Omega^{1}_{X/S}$",
+    "en_new": "$\\varOmega^{1}_{f}$, $\\varOmega^{1}_{X/S}$"
+  },
+  {
+    "id": 23838,
+    "decision": "not_applicable",
+    "note": "Presentación de la fracción; no cambia la notación matemática."
+  },
+  {
+    "id": 23840,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\Omega^p_{X/S}$, $\\Omega^\\bullet_{X/S}$",
+    "en_new": "$\\varOmega^p_{X/S}$, $\\varOmega^\\bullet_{X/S}$"
+  },
+  {
+    "id": 23841,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$d^n_{X/S,\\mathcal{F}}$, $d^n_{X/S}$ : 16.7.5.",
+    "en_new": "$d^n_{X/S,\\mathcal{F}}$ : 16.7.5."
+  },
+  {
+    "id": 23845,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\mathcal P\\!s.\\operatorname{hom}(X,Y)$,\n$\\mathcal P\\!s.\\operatorname{hom}_S(X,Y)$ : 20.2.2.",
+    "en_new": "$\\mathcal P\\!s.\\mathit{hom}(X,Y)$,\n$\\mathcal P\\!s.\\mathit{hom}_S(X,Y)$ : 20.2.2."
+  },
+  {
+    "id": 23846,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\mathcal P\\!s.\\operatorname{hom}_S(X,Y)^f$",
+    "en_new": "$\\mathcal P\\!s.\\mathit{hom}_S(X,Y)^f$"
+  },
+  {
+    "id": 23847,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\mathcal P\\!s.\\operatorname{hom}_{X/S}(X,Y)$",
+    "en_new": "$\\mathcal P\\!s.\\mathit{hom}_{X/S}(X,Y)$"
+  },
+  {
+    "id": 23849,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\mathcal S_f(U)$, $\\mathcal S_f$, $\\mathcal M_{X/S,f}$",
+    "en_new": "$\\mathcal T_f(U)$, $\\mathcal T_f$, $\\mathcal M_{X/S,f}$"
+  },
+  {
+    "id": 23856,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-notation-es.tex",
+    "en_old": "$\\Gamma_T(\\mathscr Z_X^1)$",
+    "en_new": "$\\varGamma_T(\\mathscr Z_X^1)$"
+  },
+  {
+    "id": 24018,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-terminology-es.tex",
+    "en_old": "\\EGAIVterm{Sucesión de secciones transversalmente regular relativamente a $S$}{{\\EGAReadLink{IV.19.1.2}{19.1.2}}}",
+    "en_new": "\\EGAIVterm{Sucesión de secciones transversalmente regular relativamente a $S$}{{\\EGAReadLink{IV.19.1.2}{19.2.1}}}",
+    "note": "Se corrige la referencia visible conservando la clave del enlace."
+  },
+  {
+    "id": 23989,
+    "decision": "not_applicable",
+    "note": "Encabezado de columna; solo presentación."
+  },
+  {
+    "id": 23991,
+    "decision": "not_applicable",
+    "note": "Puntuación y presentación de las entradas del índice."
+  },
+  {
+    "id": 23992,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-contents-es.tex",
+    "en_old": "\\begin{center}\\textbf{CAPÍTULO IV. --- Estudio local de los esquemas y de los morfismos de esquemas (fin)}\\end{center}",
+    "en_new": "\\EGAIVcontentsline{}{\\textbf{CAPÍTULO IV. --- Estudio local de los esquemas y de los morfismos de esquemas (fin)}}{5}",
+    "note": "Se incorpora la remisión de página 5 conservando la tipografía española."
+  },
+  {
+    "id": 24019,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-backmatter-contents-es.tex",
+    "en_old": "{Caracterizaciones de los morfismos no ramificados}{65}",
+    "en_new": "{Caracterizaciones de los morfismos no ramificados}{63}"
+  },
+  {
+    "id": 23993,
+    "decision": "not_applicable",
+    "note": "Encabezado de columna; solo presentación."
+  },
+  {
+    "id": 23994,
+    "decision": "not_applicable",
+    "note": "Encabezado de columna; solo presentación."
+  },
+  {
+    "id": 23996,
+    "decision": "not_applicable",
+    "note": "Versalitas de un título del índice; solo presentación."
+  },
+  {
+    "id": 23997,
+    "decision": "not_applicable",
+    "note": "Versalitas de un título del índice; solo presentación."
+  },
+  {
+    "id": 23998,
+    "decision": "not_applicable",
+    "note": "Versalitas de un título del índice; solo presentación."
+  },
+  {
+    "id": 24023,
+    "decision": "not_applicable",
+    "note": "Cambio de presentación de un encabezado."
+  },
+  {
+    "id": 24027,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$\\sh{O}$-${}_P$Module por\n$\\sh{O}_P$-Module.",
+    "en_new": "$\\sh{O}$-${}_P$\\emph{módulo} por\n$\\sh{O}_P$-\\emph{módulo}."
+  },
+  {
+    "id": 24031,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir normal por intégralement clos.",
+    "en_new": "sustituir \\emph{normal} por \\emph{íntegramente cerrado}."
+  },
+  {
+    "id": 24033,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir dimension por rang.",
+    "en_new": "sustituir \\emph{dimensión} por \\emph{rango}."
+  },
+  {
+    "id": 24047,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir tout $A$-module por tout\n$A$-module $M$.",
+    "en_new": "sustituir \\emph{todo} $A$-\\emph{módulo} por \\emph{todo}\n$A$-\\emph{módulo} $M$."
+  },
+  {
+    "id": 24081,
+    "decision": "not_applicable",
+    "note": "Solo se presenta la misma fórmula en una línea independiente."
+  },
+  {
+    "id": 24084,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$\\operatorname{deg.tr.}_kE$ por $\\operatorname{deg.tr.}_LE$",
+    "en_new": "$\\operatorname{deg.tr}_kE$ por $\\operatorname{deg.tr}_LE$"
+  },
+  {
+    "id": 24091,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir préschéma por $k$-préschéma.",
+    "en_new": "sustituir \\emph{preesquema} por $k$-\\emph{preesquema}."
+  },
+  {
+    "id": 24093,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$k(\\mathfrak p($ por",
+    "en_new": "$\\boldsymbol k(\\mathfrak p($ por"
+  },
+  {
+    "id": 24094,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$k(\\mathfrak p)$.",
+    "en_new": "$\\boldsymbol k(\\mathfrak p)$."
+  },
+  {
+    "id": 24100,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0$, 16.3.9.2)",
+    "en_new": "(\\textbf{0}, 16.3.9.2)"
+  },
+  {
+    "id": 24129,
+    "decision": "not_applicable",
+    "note": "Cambio de presentación de un encabezado."
+  },
+  {
+    "id": 24130,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 1)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 1)"
+  },
+  {
+    "id": 24132,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "En ($0_{\\mathrm{III}}$, 11.1.6)",
+    "en_new": "En ($\\mathbf{0}_{\\mathrm{III}}$, 11.1.6)"
+  },
+  {
+    "id": 24134,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "la imagen de $d_r^{p,0}$ es $E_r^{p+r,-r+1}=0$",
+    "en_new": "la imagen de $d_r^{p0}$ es $E_r^{p+r,-r+1}=0$"
+  },
+  {
+    "id": 24135,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 2)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 2)"
+  },
+  {
+    "id": 24651,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir $p_2\\setmin p_1$ por $p_1\\setmin p_2$;",
+    "en_new": "sustituir $p_1\\setmin p_2$ por $p_2\\setmin p_1$;"
+  },
+  {
+    "id": 24139,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir finies por\nfinies en tant qu'ensembles.",
+    "en_new": "sustituir \\emph{finitas} por\n\\emph{finitas como conjuntos}."
+  },
+  {
+    "id": 24140,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 4)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 4)"
+  },
+  {
+    "id": 24143,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 5)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 5)"
+  },
+  {
+    "id": 24145,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 16.1.4)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 16.1.4)"
+  },
+  {
+    "id": 24147,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 6)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 6)"
+  },
+  {
+    "id": 24149,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 16.1.9)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 16.1.9)"
+  },
+  {
+    "id": 24150,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 7)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 7)"
+  },
+  {
+    "id": 24152,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 16.5.12)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 16.5.12)"
+  },
+  {
+    "id": 24153,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 8)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 8)"
+  },
+  {
+    "id": 24155,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 19.3.12)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 19.3.12)"
+  },
+  {
+    "id": 24156,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 9)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 9)"
+  },
+  {
+    "id": 24158,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 19.8.3)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 19.8.3)"
+  },
+  {
+    "id": 24159,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir homomorphisme por homomorphisme local;",
+    "en_new": "sustituir \\emph{homomorfismo} por \\emph{homomorfismo local};"
+  },
+  {
+    "id": 24160,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 19.8.4)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 19.8.4)"
+  },
+  {
+    "id": 24161,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 10)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 10)"
+  },
+  {
+    "id": 24163,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 20.1.2)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 20.1.2)"
+  },
+  {
+    "id": 24164,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$aD$ por $bD$",
+    "en_new": "$a\\mathrm D$ por $b\\mathrm D$"
+  },
+  {
+    "id": 24165,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "p.~117, sustituir $A$-module por $B$-module.",
+    "en_new": "p.~117, sustituir $A$-\\emph{módulo} por $B$-\\emph{módulo}."
+  },
+  {
+    "id": 24166,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 11)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 11)"
+  },
+  {
+    "id": 24168,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 20.2.1)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 20.2.1)"
+  },
+  {
+    "id": 24169,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$A$-modules por $B$-modules.",
+    "en_new": "$A$-\\emph{módulos} por $B$-\\emph{módulos}."
+  },
+  {
+    "id": 24170,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 12)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 12)"
+  },
+  {
+    "id": 24172,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 20.4.6.1)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 20.4.6.1)"
+  },
+  {
+    "id": 24177,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 20.4.8)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 20.4.8)"
+  },
+  {
+    "id": 24180,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 14)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 14)"
+  },
+  {
+    "id": 24182,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 20.4.13)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 20.4.13)"
+  },
+  {
+    "id": 24183,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "extensión separable del de $A$.",
+    "en_new": "extensión \\emph{separable} del de $A$."
+  },
+  {
+    "id": 24184,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$\\Omega^1_{B/A}$ es un módulo de torsión.",
+    "en_new": "$\\Omega^1_{B/A}$ es un \\emph{módulo de torsión}."
+  },
+  {
+    "id": 24185,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 15)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 15)"
+  },
+  {
+    "id": 24187,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm{IV}}$, 22.2.7)",
+    "en_new": "($\\mathbf{0}_{\\mathrm{IV}}$, 22.2.7)"
+  },
+  {
+    "id": 24188,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 16)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 16)"
+  },
+  {
+    "id": 24190,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sustituir « de présentation finie » por\n« localement de présentation finie »",
+    "en_new": "sustituir « \\emph{de presentación finita} » por\n« \\emph{localmente de presentación finita} »"
+  },
+  {
+    "id": 24191,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 17)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 17)"
+  },
+  {
+    "id": 24194,
+    "decision": "not_applicable",
+    "note": "Las mismas fórmulas y la misma condición se redistribuyen en dos ecuaciones."
+  },
+  {
+    "id": 24195,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24199,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "de $s$ contiene, por tanto, $\\mathfrak m_y\\sh{O}_X$, y se deduce de\n($0_{\\mathrm I}$, 1.7.4) que el soporte de $s$ está contenido en\n$f^{-1}(y)$;",
+    "en_new": "de $s$ contiene, por tanto, $\\mathfrak m_y\\sh{O}_X$, y por consiguiente\n($\\mathbf{0}_{\\mathrm I}$, 1.7.4), el soporte de $s$ (conjunto de los $x\\in X$ tales que $s_x\\neq0$) está contenido en\n$f^{-1}(y)$;",
+    "note": "Incluye 24200 y 24201 para evitar ediciones solapadas."
+  },
+  {
+    "id": 24200,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 1.7.4) que el soporte de $s$ está contenido en",
+    "note": "covered by 24199"
+  },
+  {
+    "id": 24201,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0_{\\mathrm I}$, 1.7.4)",
+    "note": "covered by 24199"
+  },
+  {
+    "id": 24202,
+    "decision": "not_applicable",
+    "note": "Redistribución en línea de las mismas inclusiones."
+  },
+  {
+    "id": 24203,
+    "decision": "not_applicable",
+    "note": "Cambio del entorno de presentación francés."
+  },
+  {
+    "id": 24204,
+    "decision": "not_applicable",
+    "note": "Cierre del cambio de entorno de presentación francés."
+  },
+  {
+    "id": 24205,
+    "decision": "not_applicable",
+    "note": "Cambio a fórmula en línea y enlace de las frases; mismo contenido."
+  },
+  {
+    "id": 24208,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 18)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 18)"
+  },
+  {
+    "id": 24211,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$i_s:\\operatorname{Spec}(k(s))\\to X$",
+    "en_new": "$i_s:\\operatorname{Spec}(\\boldsymbol k(s))\\to X$"
+  },
+  {
+    "id": 24214,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$(i_s)_*(G(s))$ es irredundante.",
+    "en_new": "$(i_s)_*(G(s))$ es \\emph{irredundante}."
+  },
+  {
+    "id": 24215,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "Sea, por otra parte, $S$ una parte discreta\nde $X$",
+    "en_new": "Sea, por otra parte, $S$ una parte \\emph{discreta}\nde $X$"
+  },
+  {
+    "id": 24218,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "cada $s\\in S$ un módulo cociente $G(s)$ de $\\sh{F}(s)$ de longitud\nfinita.",
+    "en_new": "cada $s\\in S$ un módulo cociente $G(s)$ de $\\sh{F}(s)$ de longitud\n\\emph{finita}."
+  },
+  {
+    "id": 24219,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "de $\\sh{O}_X$-módulos coherentes (pues $S$, al ser discreto, es",
+    "en_new": "de $\\sh{O}_X$-módulos \\emph{coherentes} (pues $S$, al ser discreto, es"
+  },
+  {
+    "id": 24220,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "de $u$ un homomorfismo inyectivo",
+    "en_new": "de $u$ un homomorfismo \\emph{inyectivo}"
+  },
+  {
+    "id": 24222,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "es una descomposición irredundante, que es\nreducida cuando",
+    "en_new": "es una descomposición \\emph{irredundante}, que es\n\\emph{reducida} cuando"
+  },
+  {
+    "id": 24223,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "Se obtiene así una biyección\n$(G(s))_{s\\in S}\\leadsto\\sh{G}$",
+    "en_new": "Se obtiene así una \\emph{biyección}\n$(G(s))_{s\\in S}\\leadsto\\sh{G}$"
+  },
+  {
+    "id": 24225,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 19)",
+    "en_new": "($\\mathbf{Err}_{\\mathrm{IV}}$, 19)"
+  },
+  {
+    "id": 24229,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(que pueden ser cardinales arbitrarios)",
+    "en_new": "(que pueden ser \\emph{cardinales} arbitrarios)"
+  },
+  {
+    "id": 24230,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0$, 16.1.1)",
+    "en_new": "(\\textbf{0}, 16.1.1)"
+  },
+  {
+    "id": 24233,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0$, 16.1.5)",
+    "en_new": "(\\textbf{0}, 16.1.5)"
+  },
+  {
+    "id": 24234,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24235,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0$, 16.1.3.1)",
+    "en_new": "(\\textbf{0}, 16.1.3.1)"
+  },
+  {
+    "id": 24237,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "existe un $L$-homomorfismo $u:K\\otimes_kL\\to L$",
+    "en_new": "existe un $L$-\\emph{homomorfismo} $u:K\\otimes_kL\\to L$"
+  },
+  {
+    "id": 24238,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "$k$-homomorfismo $v:K\\to L$",
+    "en_new": "$k$-\\emph{homomorfismo} $v:K\\to L$"
+  },
+  {
+    "id": 24442,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 20).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 20)}"
+  },
+  {
+    "id": 24447,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "este punto pertenece necesariamente a dos componentes",
+    "en_new": "este punto pertenece necesariamente a \\emph{dos} componentes"
+  },
+  {
+    "id": 24448,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24449,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "por consiguiente, el conjunto cerrado $Y$ es raro.",
+    "en_new": "por consiguiente, el conjunto cerrado $Y$ es \\emph{raro}."
+  },
+  {
+    "id": 24450,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 21).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 21)}"
+  },
+  {
+    "id": 24452,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 22).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 22)}"
+  },
+  {
+    "id": 24454,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "Bajo las hipótesis de {\\EGAReadLink{IV.6.2.3}{(6.2.3)}}, sea",
+    "en_new": "Bajo las hipótesis de \\textup{\\EGAReadLink{IV.6.2.3}{(6.2.3)}}, sea"
+  },
+  {
+    "id": 24460,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "sabe que, en estas condiciones,\n\\[\n H_n(K_\\bullet\\otimes_AL_\\bullet)\\simeq\n \\bigoplus_{p+q=n}\n H_p(K_\\bullet)\\otimes_AH_q(L_\\bullet)\n\\]\n(G, I, 5.5)",
+    "en_new": "sabe que, en estas condiciones, $H_n(K_\\bullet\\otimes_AL_\\bullet)$ es canónicamente isomorfo a\n\\[\n \\bigoplus_{p+q=n}(H_p(K_\\bullet)\\otimes_AH_q(L_\\bullet))\n\\]\n(G, I, 5.5)",
+    "note": "Se incorpora el carácter canónico del isomorfismo."
+  },
+  {
+    "id": 24461,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "costumbre) es una resolución de $M\\otimes_AN$ por $B$-módulos",
+    "en_new": "costumbre) es una \\emph{resolución} de $M\\otimes_AN$ por $B$-módulos"
+  },
+  {
+    "id": 24463,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "r=\\operatorname{dim.proj}_A(M),\\qquad",
+    "en_new": "r=\\operatorname{dim.proj}_AM,\\qquad",
+    "note": "Se conserva la disposición española de la fórmula."
+  },
+  {
+    "id": 24464,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "($0$, 17.2.6)",
+    "en_new": "(\\textbf{0}, 17.2.6)"
+  },
+  {
+    "id": 24465,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24466,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\operatorname{Tor}^{B}_{r+s}(M\\otimes_AN,k(B))\\neq0.",
+    "en_new": "\\operatorname{Tor}^{B}_{r+s}(M\\otimes_AN,\\boldsymbol k(B))\\neq0."
+  },
+  {
+    "id": 24470,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24471,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(K_\\bullet\\otimes_AL_\\bullet)\\otimes_Bk(B)=\n (K_\\bullet\\otimes_Ak)\\otimes_k\n (L_\\bullet\\otimes_Bk(B)),",
+    "en_new": "(K_\\bullet\\otimes_AL_\\bullet)\\otimes_B\\boldsymbol k(B)=\n (K_\\bullet\\otimes_Ak)\\otimes_k\n (L_\\bullet\\otimes_B\\boldsymbol k(B)),",
+    "note": "Incluye 24472."
+  },
+  {
+    "id": 24472,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(L_\\bullet\\otimes_Bk(B)),\n\\]\nque es, por tanto",
+    "note": "covered by 24471"
+  },
+  {
+    "id": 24473,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "H_{r+s}((K_\\bullet\\otimes_Ak)\\otimes_k\n (L_\\bullet\\otimes_Bk(B)))\\simeq\n H_r(K_\\bullet\\otimes_Ak)\\otimes_k\n H_s(L_\\bullet\\otimes_Bk(B)),",
+    "en_new": "H_{r+s}((K_\\bullet\\otimes_Ak)\\otimes_k\n (L_\\bullet\\otimes_B\\boldsymbol k(B)))=\n H_r(K_\\bullet\\otimes_Ak)\\otimes_k\n H_s(L_\\bullet\\otimes_B\\boldsymbol k(B)),",
+    "note": "Corrige el signo e incluye 24474 y 24475, conservando la disposición española."
+  },
+  {
+    "id": 24474,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(L_\\bullet\\otimes_Bk(B)))\\simeq",
+    "note": "covered by 24473"
+  },
+  {
+    "id": 24475,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "H_s(L_\\bullet\\otimes_Bk(B)),",
+    "note": "covered by 24473"
+  },
+  {
+    "id": 24476,
+    "decision": "not_applicable",
+    "note": "Ajuste gramatical francés; la construcción española ya es correcta."
+  },
+  {
+    "id": 24477,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24478,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\operatorname{Tor}^{B}_{r+s}(M\\otimes_AN,k(B))=\n \\operatorname{Tor}^{A}_{r}(M,k)\\otimes_k\n \\operatorname{Tor}^{B}_{s}(N,k(B))",
+    "en_new": "\\operatorname{Tor}^{B}_{r+s}(M\\otimes_AN,\\boldsymbol k(B))=\n \\operatorname{Tor}^{A}_{r}(M,k)\\otimes_k\n \\operatorname{Tor}^{B}_{s}(N,\\boldsymbol k(B))",
+    "note": "Incluye 24479."
+  },
+  {
+    "id": 24479,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\operatorname{Tor}^{B}_{s}(N,k(B))",
+    "note": "covered by 24478"
+  },
+  {
+    "id": 24480,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 23).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 23)}"
+  },
+  {
+    "id": 24482,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 24).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 24)}"
+  },
+  {
+    "id": 24485,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "limitarnos al caso en que $K'$ sea una extensión algebraica separable de $A$.",
+    "en_new": "limitarnos al caso en que $K'$ sea una extensión \\emph{algebraica} separable de $A$."
+  },
+  {
+    "id": 24486,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "en $B(K')$ es radicial sobre $K'$;",
+    "en_new": "en $B(K')$ es \\emph{radicial} sobre $K'$;"
+  },
+  {
+    "id": 24488,
+    "decision": "not_applicable",
+    "note": "Cambio de fórmula destacada a fórmula en línea."
+  },
+  {
+    "id": 24489,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 25).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 25)}"
+  },
+  {
+    "id": 24493,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "\\paragraph{(Err\\textsubscript{IV}, 26).}",
+    "en_new": "\\paragraph{($\\mathbf{Err}_{\\mathrm{IV}}$, 26)}"
+  },
+  {
+    "id": 24496,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-errata-addenda-list3-es.tex",
+    "en_old": "(Err\\textsubscript{IV}, 25)) que si",
+    "en_new": "\\textbf{($\\mathbf{Err}_{\\mathrm{IV}}$, 25)}) que si"
+  }
+]
+```
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 345, (0III, 10.2.1): las expresiones «en outre si» y «si en outre» permanecen sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 345, (III, 4.4.12) y (III, 7.9.11): permanece la abreviatura francesa «chap.».
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 345, (0IV, 19.8.8): «A-module» y «B-module» permanecen sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 345, (0IV, 21.5.3): «ramifiée» y «ramifié» permanecen en francés; la corrección de género no está adaptada al español.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 346, (IV, 4.2.1): «première» y «seconde» permanecen sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 346, (IV, 7.8.4): las citas conservan «vérifiant» y, en la segunda, «et» sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 346: el encabezado «2e Partie, Bibliographie» permanece en francés.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 346, (IV, 12.1.1): «pour» permanece sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 347, (IV, 15.6.10): «et» y «ou» permanecen sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 348, ErrIV 4: «simple» y «lisse» no están adaptados a la terminología española.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 348, ErrIV 5: las dos expresiones que comienzan por «Dire que» permanecen en francés.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 348, ErrIV 11: «di-homomorphismes de modules (relatif à u)» y «homomorphisme de B-modules» permanecen en francés.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 348, ErrIV 15: las dos citas sobre las topologías preádicas permanecen en francés.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 348, ErrIV 16: «et anneaux strictement locaux», «comme» y «comme étant» permanecen sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 349, observación 3.2.9: aparece «et si» en lugar de una conjunción española.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 350, ErrIV 21: «intègre» y «de dimension 2» permanecen sin traducir.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 351, ErrIV 23: «canonique» y el texto añadido «F un O_X-Module cohérent» permanecen en francés.
+IV4/ega4/ega4-errata-addenda-list3-es.tex, p. IV 352, ErrIV 29: las citas y el párrafo de sustitución permanecen en francés.

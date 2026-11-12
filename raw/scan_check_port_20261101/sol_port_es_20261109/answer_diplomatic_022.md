@@ -1,0 +1,933 @@
+```json
+[
+  {
+    "id": 5284,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "  \\mathrm{gr}^p\\bigl(\\RR^{n+1}\\Gamma(\\sh{F})\\bigr)\n  \\isoto\n  \\mathrm{E}_\\infty^{p,n-p+1}(\\sh{F}).",
+    "en_new": "  \\mathrm{gr}^p\\bigl(\\RR^{n+1}\\Gamma(\\boldsymbol{\\sh{F}})\\bigr)\n  \\isoto\n  \\mathrm{E}_\\infty^{p,n-p+1}(\\boldsymbol{\\sh{F}})."
+  },
+  {
+    "id": 5285,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "Como el sistema proyectivo\n$\\RR^{n+1}\\Gamma(\\sh{F})$ satisface",
+    "en_new": "Como el sistema proyectivo\n$\\RR^{n+1}\\Gamma(\\boldsymbol{\\sh{F}})$ satisface"
+  },
+  {
+    "id": 5286,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "  \\mathrm{gr}^p\\bigl(\\RR^{n+1}\\Gamma(\\sh{F})\\bigr)\n  \\isoto\n  \\varprojlim_k\n  \\mathrm{gr}^p\\bigl(\\HH^{n+1}(X,\\sh{F}_k)\\bigr)",
+    "en_new": "  \\mathrm{gr}^p\\bigl(\\RR^{n+1}\\Gamma(\\boldsymbol{\\sh{F}})\\bigr)\n  \\isoto\n  \\varprojlim_k\n  \\mathrm{gr}^p\\bigl(\\HH^{n+1}(X,\\sh{F}_k)\\bigr)",
+    "note": "Se traslada el cambio de símbolo, no la disposición en línea."
+  },
+  {
+    "id": 5287,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5288,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición del mismo diagrama conmutativo."
+  },
+  {
+    "id": 5289,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$S$--$\\cat{C}$-módulo filtrado en el sentido de \\sref{0.13.6.6}"
+  },
+  {
+    "id": 5290,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$S$--$\\cat{C}$-módulo filtrado en el sentido de \\sref{0.13.6.6}",
+    "en_new": "$S$--$\\cat{C}$-\\emph{módulo filtrado} en el sentido de \\sref{0.13.6.6}"
+  },
+  {
+    "id": 5291,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "morfismos $A_h\\longrightarrow A_k$ para $k\\leq h$ son morfismos de\n$S$--$\\cat{C}$-módulos filtrados."
+  },
+  {
+    "id": 5292,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "\\emph{sistema proyectivo de $S$--$\\cat{C}$-módulos filtrados}."
+  },
+  {
+    "id": 5293,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "son morfismos de\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos bigraduados\n(\\sref{0.13.6.5})"
+  },
+  {
+    "id": 5294,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos bigraduados\n(\\sref{0.13.6.5})",
+    "en_new": "$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-\\emph{módulos bigraduados}\n(\\sref{0.13.6.5})"
+  },
+  {
+    "id": 5295,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "son $\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos\nbigraduados, siendo los dos primeros submódulos de"
+  },
+  {
+    "id": 5296,
+    "decision": "not_applicable",
+    "note": "Cambio de concordancia gramatical francesa."
+  },
+  {
+    "id": 5297,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "estos son\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos graduados."
+  },
+  {
+    "id": 5298,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "estos son\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos graduados.",
+    "en_new": "estos son\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-\\emph{módulos graduados}."
+  },
+  {
+    "id": 5299,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\mathrm{E}_\\infty^{pq}(\\bb{A})$ es asimismo un\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulo bigraduado, y cada"
+  },
+  {
+    "id": 5300,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\mathrm{E}_\\infty^{(n)}(\\bb{A})$ es un\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulo graduado."
+  },
+  {
+    "id": 5301,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "forman un isomorfismo de\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos graduados de\n$\\mathrm{E}_\\infty^{(n)}(A_k)$"
+  },
+  {
+    "id": 5302,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "  \\mathrm{gr}^\\bullet\\bigl(\\RR^n\\mathrm{T}(\\bb{A})\\bigr)\n  \\isoto\n  \\varprojlim_k",
+    "en_new": "  \\mathrm{gr}^\\bullet\\bigl(\\RR^n\\mathrm{T}(\\bb{A})\n  \\isoto\n  \\varprojlim_k",
+    "note": "Se reproduce la supresión del paréntesis del NEW francés."
+  },
+  {
+    "id": 5303,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "por consiguiente, los isomorfismos \\sref{0.13.7.4.1} forman un\nisomorfismo de\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos graduados."
+  },
+  {
+    "id": 5304,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "isomorfismo de\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-módulos graduados.\n\\end{env}",
+    "en_new": "isomorfismo de\n$\\mathrm{gr}^\\bullet(S)$--$\\cat{C}'$-\\emph{módulos graduados}.\n\\end{env}"
+  },
+  {
+    "id": 5305,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "Supongamos que $\\cat{C}$ es una categoría abeliana en la que todo objeto"
+  },
+  {
+    "id": 5306,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\mathrm{T}$ un funtor covariante aditivo de $\\cat{C}$ en la\ncategoría de grupos abelianos."
+  },
+  {
+    "id": 5307,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "sistema proyectivo estricto de $S$--$\\cat{C}$-módulos filtrados, para la"
+  },
+  {
+    "id": 5308,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5309,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "\\emph{de \\sref{0.13.7.3.1} es de tipo finito para\n  $m=n$ y $m=n+1$.}",
+    "note": "\\emph ya imprime este pasaje en redonda dentro de la proposición."
+  },
+  {
+    "id": 5310,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$(\\RR^{n+1}\\mathrm{T}(A_k))_{k\\in\\bb{Z}}$ satisfacen {\\rm(ML)}."
+  },
+  {
+    "id": 5311,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5312,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de la fórmula."
+  },
+  {
+    "id": 5313,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "    \\mathrm{F}^{p+1}\\bigl(\\RR'^{\\,n}\\mathrm{T}(\\bb{A})\\bigr)",
+    "en_new": "    \\mathrm{F}^{p+1}\\bigl(\\RR'^{\\,n}(\\mathrm{T}(\\bb{A})\\bigr)",
+    "note": "Se reproduce el paréntesis añadido en el NEW francés."
+  },
+  {
+    "id": 5314,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "  (\\sref{0.13.5.7}), y los isomorfismos",
+    "en_new": "  \\textup{(\\sref{0.13.5.7})}, y los isomorfismos"
+  },
+  {
+    "id": 5316,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\RR'^{\\,n}\\mathrm{T}(\\bb{A})$ del sistema proyectivo\n$(\\RR^n\\mathrm{T}(A_k))$.",
+    "note": "La familia ya expresa el sistema proyectivo, no un solo término."
+  },
+  {
+    "id": 5317,
+    "decision": "not_applicable",
+    "note": "Supresión de un espacio debido al salto de línea francés."
+  },
+  {
+    "id": 5318,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\mathrm{E}_1^{(m)}(\\bb{A})$ es estacionaria para $m=n$ y",
+    "en_new": "$\\mathrm{E}_1^{(m)}(\\bb{A})$ es \\emph{estacionaria} para $m=n$ y"
+  },
+  {
+    "id": 5319,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "La condición {\\rm(b)} de \\sref{0.11.1.10}",
+    "en_new": "La condición \\emph{(b)} de \\sref{0.11.1.10}"
+  },
+  {
+    "id": 5320,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "Se sigue que la condición {\\rm(a)} de \\sref{0.13.7.4}",
+    "en_new": "Se sigue que la condición \\emph{(a)} de \\sref{0.13.7.4}"
+  },
+  {
+    "id": 5321,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5322,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "$\\mathrm{E}_1^{(n)}(\\bb{A})$, es de tipo finito, y también lo es",
+    "en_new": "$\\mathrm{E}_1^{(n)}(\\bb{A})$, es de \\emph{tipo finito}, y también lo es"
+  },
+  {
+    "id": 5323,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5324,
+    "decision": "not_applicable",
+    "note": "Cambio de ubicación respecto al entorno lemma; no se altera la estructura española."
+  },
+  {
+    "id": 5325,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.7.6.11}"
+  },
+  {
+    "id": 5326,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.7.6.2}"
+  },
+  {
+    "id": 5327,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.7.7.8}"
+  },
+  {
+    "id": 5328,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega0/ega0-13.tex",
+    "en_old": "\\sref[0\\textsubscript{I}]{0.7.7.1}"
+  },
+  {
+    "id": 4664,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/EGA_III1_ES_DIPLOMATIC_READER.tex",
+    "en_old": "las proposiciones preliminares de \\sref[0]{0.13.4} a \\sref[0]{0.13.7}",
+    "note": "Las macros imprimen el capítulo en negrita; también está correcto en EGA_III_1_ES.tex."
+  },
+  {
+    "id": 4665,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "considerado como elemento del dual $\\dual{(A^r)}$",
+    "note": "Se conserva la macro española para el dual."
+  },
+  {
+    "id": 4666,
+    "decision": "not_applicable",
+    "note": "Cambio de puntuación de la prosa francesa."
+  },
+  {
+    "id": 4670,
+    "decision": "not_applicable",
+    "note": "Coma de enlace entre fórmulas, sin efecto matemático."
+  },
+  {
+    "id": 4671,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\emph{$A$-isomorfismo $K_i(\\mathbf{f},M)\\isoto K^{r-i}(\\mathbf{f},M)$}"
+  },
+  {
+    "id": 4672,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$K_i(\\mathbf{f},M)\\isoto K^{r-i}(\\mathbf{f},M)$",
+    "en_new": "$K_\\bullet(\\mathbf{f},M)\\isoto K^\\bullet(\\mathbf{f},M)$"
+  },
+  {
+    "id": 4676,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "la aplicación $z\\mapsto f_i\\cdot z$ sobre $M_{i-1}",
+    "note": "El producto ya lleva un punto explícito."
+  },
+  {
+    "id": 4678,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(M, XVII, 5.2 (a) y G, I, 5.5.2)",
+    "en_new": "(M, XVII, 5.2 \\emph{(a)} y G, I, 5.5.2)"
+  },
+  {
+    "id": 4682,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "la definición de $\\HH_0(K_\\bullet\\otimes\\HH_p(L_\\bullet))$ y",
+    "en_new": "la definición de $\\HH_0(K\\otimes\\HH_p(L_\\bullet))$ y"
+  },
+  {
+    "id": 4683,
+    "decision": "not_applicable",
+    "note": "Cambio del enlace gramatical francés."
+  },
+  {
+    "id": 4685,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "la aplicación $z\\mapsto f_r\\cdot z$ sobre $M_{r-1}$",
+    "note": "El producto ya lleva un punto explícito."
+  },
+  {
+    "id": 4687,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$\\mathbf{x}\\in\\dual{F}$",
+    "note": "Se conserva la macro española para el dual."
+  },
+  {
+    "id": 4688,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$\\mathbf{y}={}^t u(\\mathbf{x})\\in\\dual{E}$",
+    "note": "Se conserva la macro española para el dual."
+  },
+  {
+    "id": 4690,
+    "decision": "not_applicable",
+    "note": "Coma de enlace entre fórmulas, sin efecto matemático."
+  },
+  {
+    "id": 4691,
+    "decision": "not_applicable",
+    "note": "Puntuación de enlace con la explicación que sigue."
+  },
+  {
+    "id": 4695,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\HH^p(X\\setmin Y,\\sh{F})"
+  },
+  {
+    "id": 5021,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.5.5.2}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5022,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.3.3}"
+  },
+  {
+    "id": 5024,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.5.5.3}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5027,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.1.6.1}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5030,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "el homomorfismo canónico (\\hyperref[III.1.2.3.2]{1.2.3.2}) $M\\to",
+    "en_new": "el homomorfismo canónico \\textup{(\\hyperref[III.1.2.3.2]{1.2.3.2})} $M\\to"
+  },
+  {
+    "id": 5031,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "se ha demostrado de nuevo \\sref[I]{I.1.3.7} como caso particular."
+  },
+  {
+    "id": 5032,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.11}"
+  },
+  {
+    "id": 5038,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.1.10}"
+  },
+  {
+    "id": 5039,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "para $f\\in A$ \\sref[I]{I.1.3.6}; por tanto"
+  },
+  {
+    "id": 5040,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.6.1}",
+    "note": "La macro imprime la referencia completa en redonda y el capítulo en negrita."
+  },
+  {
+    "id": 5042,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.3.2}"
+  },
+  {
+    "id": 5043,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.1.3.1) es biyectivo",
+    "en_new": "\\textup{(\\textbf{0},~12.1.3.1)} es biyectivo"
+  },
+  {
+    "id": 5044,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.1.7}"
+  },
+  {
+    "id": 5045,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.11.1.6}"
+  },
+  {
+    "id": 5046,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.2.5.1) es biyectivo",
+    "en_new": "\\textup{(\\textbf{0},~12.2.5.1)} es biyectivo"
+  },
+  {
+    "id": 5047,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "es biyectivo \\sref[0]{0.12.2.5}."
+  },
+  {
+    "id": 5048,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "recubrimiento $\\mathfrak{U}$ es afín \\sref[I]{I.5.5.6}"
+  },
+  {
+    "id": 5049,
+    "decision": "not_applicable",
+    "note": "Puntuación francesa tras Soient."
+  },
+  {
+    "id": 5050,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(notación de \\sref{III.1.2.1}) sean afines.",
+    "note": "La referencia con sus propios paréntesis ya es redonda."
+  },
+  {
+    "id": 5051,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "Entonces (con las notaciones de \\sref{III.1.2.1}),",
+    "note": "La referencia con sus propios paréntesis ya es redonda."
+  },
+  {
+    "id": 5054,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$A_*=\\Gamma_*(\\sh{L})$ \\sref[0]{0.5.4.6}",
+    "note": "La macro ya da negrita y referencia redonda."
+  },
+  {
+    "id": 5055,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5058,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "los $U_i\\cap X_f$ son abiertos afines \\sref[I]{I.1.3.6}"
+  },
+  {
+    "id": 5059,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5060,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5061,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.3.2}"
+  },
+  {
+    "id": 5063,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.9}[ii]"
+  },
+  {
+    "id": 5064,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$M\\mapsto M_{(f)}$",
+    "en_new": "$M\\leadsto M_{(f)}$"
+  },
+  {
+    "id": 5066,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "las hipótesis de la Proposición~\\sref{III.1.4.5} y, además,",
+    "note": "La macro ya imprime la referencia completa en redonda."
+  },
+  {
+    "id": 5067,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5068,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\item[{\\rm(i)}] Supóngase que el abierto $X_f$ es afín."
+  },
+  {
+    "id": 5069,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\item[{\\rm(ii)}] Recíprocamente, supóngase que $X_f$ es cuasicompacto"
+  },
+  {
+    "id": 5070,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "En virtud del criterio de Serre \\sref[II]{II.5.2.1}"
+  },
+  {
+    "id": 5071,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.4.2}"
+  },
+  {
+    "id": 5072,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{II},~4.5.13.2)"
+  },
+  {
+    "id": 5330,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "estas inyecciones son morfismos afines \\sref[I]{I.5.5.6}"
+  },
+  {
+    "id": 5331,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.2.6}"
+  },
+  {
+    "id": 5332,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.5.5.10}"
+  },
+  {
+    "id": 5333,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.9.2.2}"
+  },
+  {
+    "id": 5334,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.4.1.1}"
+  },
+  {
+    "id": 5335,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "definido por el recubrimiento $\\mathfrak{U}$ (G, II, 5.2) es entonces",
+    "en_new": "definido por el recubrimiento $\\mathfrak{U}$ \\textup{(G, II, 5.2)} es entonces"
+  },
+  {
+    "id": 5337,
+    "decision": "not_applicable",
+    "note": "Solo cambia la ubicación de un párrafo respecto al entorno proof."
+  },
+  {
+    "id": 5338,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "Bajo las hipótesis de la Proposición~\\sref{III.1.4.10},",
+    "note": "La macro ya imprime la referencia completa en redonda."
+  },
+  {
+    "id": 5339,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "las hipótesis de la Proposición~\\sref{III.1.4.10} y, además, que $Y$ es cuasicompacto.",
+    "note": "La macro ya imprime la referencia completa en redonda."
+  },
+  {
+    "id": 5340,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "las hipótesis de la Proposición~\\sref{III.1.4.10} y, además, que $Y=\\Spec(A)$ es afín.",
+    "note": "La macro ya imprime la referencia completa en redonda."
+  },
+  {
+    "id": 5341,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "es un $\\sh{O}_Y$-módulo cuasi-coherente \\sref[I]{I.1.3.7}."
+  },
+  {
+    "id": 5342,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~12.2.5.2) es biyectivo",
+    "en_new": "\\textup{(\\textbf{0},~12.2.5.2)} es biyectivo"
+  },
+  {
+    "id": 5343,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.2.5} es, por tanto, biyectivo"
+  },
+  {
+    "id": 5344,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "un morfismo plano de preesquemas \\sref[0]{0.6.7.1};",
+    "note": "La macro ya da negrita y referencia redonda."
+  },
+  {
+    "id": 5346,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "    Y'\\ar[l]^{v}.\n  }",
+    "note": "El diagrama ya termina con punto."
+  },
+  {
+    "id": 5347,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0},~4.4.3.2)",
+    "note": "El número de capítulo ya está en negrita."
+  },
+  {
+    "id": 5349,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{0}~,12.2.5.1 y 12.2.5.2)"
+  },
+  {
+    "id": 5351,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "no impone \\emph{hipótesis alguna} sobre $v$"
+  },
+  {
+    "id": 5352,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "sea $f$-plano \\sref[0]{0.6.7.1},",
+    "note": "La macro ya da negrita y referencia redonda."
+  },
+  {
+    "id": 5353,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "Esto se deduce de la definición \\sref[0]{0.6.7.1}"
+  },
+  {
+    "id": 5354,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.6.3.3}"
+  },
+  {
+    "id": 5355,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.3.4}"
+  },
+  {
+    "id": 5356,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(cf.~\\sref[0]{0.12.2.5})"
+  },
+  {
+    "id": 5357,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "el $\\vphi$-morfismo (\\textbf{0},~12.1.3.1) relativo"
+  },
+  {
+    "id": 5358,
+    "decision": "not_applicable",
+    "note": "Solo cambia la posición de una etiqueta de flecha."
+  },
+  {
+    "id": 5359,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "por definición \\sref[0]{0.4.4.3}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5360,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 5361,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[II]{II.1.6.2}[iii]"
+  },
+  {
+    "id": 5362,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.12.1.4.2}"
+  },
+  {
+    "id": 5363,
+    "decision": "not_applicable",
+    "note": "Solo cambia la posición de una etiqueta de flecha."
+  },
+  {
+    "id": 5364,
+    "decision": "not_applicable",
+    "note": "Dos puntos introductorios de la prosa francesa."
+  },
+  {
+    "id": 5365,
+    "decision": "not_applicable",
+    "note": "Solo cambia la disposición de las definiciones."
+  },
+  {
+    "id": 5366,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$U_\\mathbf{s}'=\\bigcap_{k=0}^p U_{i_k}'={v'}^{-1}(U_\\mathbf{s})$",
+    "en_new": "$U_\\mathbf{s}'=\\bigcap_{k=0}^{\\boldsymbol{p}} U_{i_k}'={v'}^{-1}(U_\\mathbf{s})$"
+  },
+  {
+    "id": 5367,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.6.5}"
+  },
+  {
+    "id": 5368,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[0]{0.6.1.1}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5369,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.3.2.2}"
+  },
+  {
+    "id": 5370,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "la demostración termina por el criterio de Serre \\sref[II]{II.5.2.1}."
+  },
+  {
+    "id": 5371,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "\\sref[I]{I.1.4.1} (con $V=X$)"
+  },
+  {
+    "id": 5372,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "las condiciones (d1) y (d2) de",
+    "en_new": "las condiciones (\\textit{d}1) y (\\textit{d}2) de"
+  },
+  {
+    "id": 5373,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "La verificación de (d2) es inmediata",
+    "en_new": "La verificación de (\\textit{d}2) es inmediata"
+  },
+  {
+    "id": 5374,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "$f^m v(t)=v(f^m t)=0$ \\sref[I]{I.1.4.1},"
+  },
+  {
+    "id": 5375,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "luego por \\sref[I]{I.1.4.1} existe un entero"
+  },
+  {
+    "id": 5376,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "Compruébese ahora (d2);",
+    "en_new": "Compruébese ahora (\\textit{d}2);"
+  },
+  {
+    "id": 5377,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "una sección $z\\in\\Gamma(X,\\sh{H})$ \\sref[I]{I.1.4.1}."
+  },
+  {
+    "id": 5378,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-1.tex",
+    "en_old": "(\\textbf{I},~5.1.9.2)"
+  },
+  {
+    "id": 5382,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "consideremos el anillo graduado \\sref[0]{0.5.4.6}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5389,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "Consideremos ahora el $S$-módulo graduado \\sref[0]{0.5.4.6}",
+    "note": "La macro ya imprime el capítulo en negrita."
+  },
+  {
+    "id": 5391,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "\\sref[I]{I.9.3.1}"
+  },
+  {
+    "id": 5394,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "un isomorfismo de $S$-módulos \\emph{graduados}"
+  },
+  {
+    "id": 5396,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "$\\vphi_{kh}:M_{i_0 i_1\\cdots i_p}^{(h)}\\to M_{i_0 i_1\\cdots i_p}^{(k)}$"
+  },
+  {
+    "id": 5397,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "una estructura de $S$-módulo graduado sobre $\\varinjlim_n C_n^p(M)$",
+    "en_new": "una estructura de $S$-módulo \\emph{graduado} sobre $\\varinjlim_n C_n^p(M)$"
+  },
+  {
+    "id": 5398,
+    "decision": "already",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "donde el isomorfismo \\emph{conserva los grados}:"
+  },
+  {
+    "id": 5399,
+    "decision": "apply",
+    "en_file": "III1_DIPLOMATIC/ega3/ega3-2.tex",
+    "en_old": "pertenezcan a una misma componente homogénea $M_m$ de $M$",
+    "en_new": "pertenezcan a una \\emph{misma} componente homogénea $M_m$ de $M$"
+  },
+  {
+    "id": 6060,
+    "decision": "unclear",
+    "note": "No aparece la definición de \\shProj ni un uso correspondiente en los textos españoles suministrados."
+  }
+]
+```
+III1_DIPLOMATIC/ega3/ega3-1.tex, demostración de 1.4.5: el primer complejo lleva `\sh{L}^m`, mientras que el francés lleva la potencia tensorial `\mathcal L^{\otimes m}`; el cambio 5059 solo afecta a la disposición.
+III1_DIPLOMATIC/ega3/ega3-1.tex: las referencias a 0_I, 5.5.2; 5.5.3; 1.6.1; 5.4.6; 6.7.1; 4.4.3.2; 6.3.3; 4.4.3 y 6.1.1 omiten el subíndice I que figura en el francés; las correcciones correspondientes solo añaden negrita o redonda.
+III1_DIPLOMATIC/ega3/ega3-2.tex, 2.1.1 y 2.1.2: las referencias a 0_I, 5.4.6 omiten el subíndice I; 5382 y 5389 solo añaden negrita.

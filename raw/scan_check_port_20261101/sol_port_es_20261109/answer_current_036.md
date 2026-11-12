@@ -1,0 +1,890 @@
+```json
+[
+  {
+    "id": 7600,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "\\item[(ii)] Supongamos además que $A$ es local y reducido",
+    "en_new": "\\item[\\textup{(ii)}] Supongamos además que $A$ es local y reducido"
+  },
+  {
+    "id": 7601,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7602,
+    "decision": "already",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "\\operatorname{rank}_{\\kres(x)}T_p(\\kres(x))\n  \\geq\n  \\operatorname{rank}_{\\kres(x)}\n  \\bigl(T_p(A)\\otimes_A\\kres(x)\\bigr)",
+    "note": "The Spanish residue-field macro supplies the corrected notation."
+  },
+  {
+    "id": 7603,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "un anillo\nlocal noetheriano, de ideal maximal",
+    "en_new": "un anillo\n\\emph{local} noetheriano, de ideal maximal"
+  },
+  {
+    "id": 7604,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "Las condiciones siguientes son equivalentes:",
+    "en_new": "Las condiciones siguientes son \\emph{equivalentes}:"
+  },
+  {
+    "id": 7606,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "\\item[\\emph{a)}] Para todo complejo $P_\\bullet$ de $A$-módulos planos",
+    "en_new": "\\item[\\emph{a)}] Para \\emph{todo} complejo $P_\\bullet$ de $A$-módulos planos"
+  },
+  {
+    "id": 7607,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "\\operatorname{rank}_k T_p(k)\n      \\geq",
+    "en_new": "\\operatorname{rank}_k(T_p(k))\n      \\geq"
+  },
+  {
+    "id": 7613,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "Para ver\nque \\textnormal{a)} implica \\textnormal{b)}, considérese",
+    "en_new": "Para ver\nque \\emph{a)} implica \\emph{b)}, considérese"
+  },
+  {
+    "id": 7614,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7615,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "\\textnormal{a)} al complejo",
+    "en_new": "\\emph{a)} al complejo"
+  },
+  {
+    "id": 7616,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7617,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7618,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "Para probar que \\textnormal{b)} implica\n\\textnormal{c)}, establezcamos primero el lema siguiente.",
+    "en_new": "Para probar que \\emph{b)} implica\n\\emph{c)}, establezcamos primero el lema siguiente."
+  },
+  {
+    "id": 7619,
+    "decision": "not_applicable",
+    "note": "French tense correction."
+  },
+  {
+    "id": 7620,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7918,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7919,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7920,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "Para deducir \\textnormal{c)} de \\textnormal{b)}, tómese una sucesión",
+    "en_new": "Para deducir \\emph{c)} de \\emph{b)}, tómese una sucesión"
+  },
+  {
+    "id": 7921,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7922,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7923,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "La hipótesis\n\\textnormal{b)} da, por tanto,",
+    "en_new": "La hipótesis\n\\emph{b)} da, por tanto,"
+  },
+  {
+    "id": 7925,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "Finalmente, para probar que \\textnormal{c)} implica\n\\textnormal{a)}, aplíquese",
+    "en_new": "Finalmente, para probar que \\emph{c)} implica\n\\emph{a)}, aplíquese"
+  },
+  {
+    "id": 7926,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "La hipótesis \\textnormal{c)}, aplicada a $Z'_{p-1}$, da",
+    "en_new": "La hipótesis \\emph{c)}, aplicada a $Z'_{p-1}$, da"
+  },
+  {
+    "id": 7927,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7928,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7929,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7930,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7931,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "Supongamos ahora que el anillo local $A$ es regular de dimensión",
+    "en_new": "Supongamos ahora que el anillo local $A$ es \\emph{regular} de dimensión"
+  },
+  {
+    "id": 7932,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7934,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.6.es.tex",
+    "en_old": "todo $A$-módulo reflexivo de tipo finito es libre,",
+    "en_new": "todo $A$-módulo \\emph{reflexivo} de tipo finito es \\emph{libre},"
+  },
+  {
+    "id": 7935,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7936,
+    "decision": "not_applicable",
+    "note": "French heading punctuation."
+  },
+  {
+    "id": 7937,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "$\\mathscr O_X$-módulos $\\mathscr P_i$ son planos sobre $Y$",
+    "en_new": "$\\mathscr O_X$-módulos $\\mathscr P_i$ son \\emph{planos} sobre $Y$"
+  },
+  {
+    "id": 7938,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.6.7.1}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 7940,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7941,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7942,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Este es un complejo de $\\mathscr O_{X'}$-módulos cuasicoherentes que son planos\nsobre $Y'$",
+    "en_new": "Este es un complejo de $\\mathscr O_{X'}$-módulos cuasicoherentes que son \\emph{planos}\nsobre $Y'$"
+  },
+  {
+    "id": 7943,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[I]{I.9.1.12}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 7944,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.6.2.1}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 7945,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr T^{A'}_\\bullet(\\widetilde{M'})\n  =\\bigl(\\Gamma(Y',\\mathscr T^{Y'}_\\bullet(\\widetilde{M'}))\\bigr)^\\sim.",
+    "en_new": "\\mathscr T^{A'}_\\bullet(\\widetilde{M}')\n  =\\bigl(\\Gamma(Y',\\mathscr T^{Y'}_\\bullet(\\widetilde{M}'))\\bigr)^\\sim.",
+    "note": "Moves the primes outside the tildes; retains Spanish display layout."
+  },
+  {
+    "id": 7946,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "T^{A'}_\\bullet(M')\n  =\\Gamma(Y',\\mathscr T^{Y'}_\\bullet(\\widetilde{M'})),",
+    "en_new": "T^{A'}_\\bullet(M')\n  =\\Gamma(Y',\\mathscr T^{Y'}_\\bullet(\\widetilde{M}')),",
+    "note": "Moves the prime outside the tilde; retains Spanish display layout."
+  },
+  {
+    "id": 7948,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[II]{II.1.6.2}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 7949,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7950,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7951,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[I]{I.1.3}, \\sref[I]{I.3.2}",
+    "note": "The reference macros supply the corrected chapter typography."
+  },
+  {
+    "id": 7954,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr L_\\bullet=\\widetilde{L_\\bullet},",
+    "en_new": "\\mathscr L_\\bullet=\\widetilde{L}_\\bullet,",
+    "note": "Moves the complex index outside the tilde; retains Spanish display layout."
+  },
+  {
+    "id": 7955,
+    "decision": "not_applicable",
+    "note": "French heading punctuation."
+  },
+  {
+    "id": 7957,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\emph{La función}",
+    "en_new": "La función",
+    "note": "The theorem body is already italic."
+  },
+  {
+    "id": 7958,
+    "decision": "not_applicable",
+    "note": "French quotation-mark convention."
+  },
+  {
+    "id": 7961,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\operatorname{rank}_{\\kres(y)}",
+    "note": "The Spanish residue-field macro supplies the corrected notation."
+  },
+  {
+    "id": 7962,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr T_p^{\\kres(y)}(\\kres(y))",
+    "en_new": "T_p^{\\kres(y)}(\\kres(y))"
+  },
+  {
+    "id": 7963,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "^{\\kres(y)}(\\kres(y))",
+    "note": "The Spanish residue-field macro supplies the corrected notation."
+  },
+  {
+    "id": 7964,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\emph{es semicontinua superiormente.}",
+    "en_new": "es semicontinua superiormente.",
+    "note": "The theorem body is already italic."
+  },
+  {
+    "id": 7965,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\emph{Para un entero $p$ dado, las condiciones siguientes son equivalentes:}",
+    "en_new": "Para un entero $p$ dado, las condiciones siguientes son equivalentes:",
+    "note": "The theorem body is already italic."
+  },
+  {
+    "id": 7973,
+    "decision": "not_applicable",
+    "note": "The Spanish explanatory clause has the same meaning; only French parenthetical punctuation and display layout change."
+  },
+  {
+    "id": 7974,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Es claro que a$''$) implica \\emph{a$'$)} y que\na$'$) implica a).",
+    "en_new": "Es claro que \\emph{a$''$)} implica \\emph{a$'$)} y que\n\\emph{a$'$)} implica \\emph{a)}."
+  },
+  {
+    "id": 7975,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "La equivalencia de a), a$''$), b) y b$'$) se demostró en",
+    "en_new": "La equivalencia de \\emph{a)}, \\emph{a$''$)}, \\emph{b)} y \\emph{b$'$)} se demostró en"
+  },
+  {
+    "id": 7976,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "cuando $Y$ es afín.",
+    "en_new": "cuando $Y$ es \\emph{afín}."
+  },
+  {
+    "id": 7977,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "probemos primero que a) equivale a c),",
+    "en_new": "probemos primero que \\emph{a)} equivale a \\emph{c)},"
+  },
+  {
+    "id": 7978,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "probará que la propiedad a) es local sobre $Y$;",
+    "en_new": "probará que la propiedad \\emph{a)} es \\emph{local} sobre $Y$;"
+  },
+  {
+    "id": 7979,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "carácter local de a$''$) y b).",
+    "en_new": "carácter local de \\emph{a$''$)} y \\emph{b)}."
+  },
+  {
+    "id": 7980,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Como es claro que c)\nimplica a), todo se reduce a probar el recíproco.",
+    "en_new": "Como es claro que \\emph{c)}\nimplica \\emph{a)}, todo se reduce a probar el recíproco."
+  },
+  {
+    "id": 7981,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7982,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7983,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7984,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[I]{I.9.4.2}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 7985,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Para demostrar la equivalencia de b) y b$'$) en el caso general,",
+    "en_new": "Para demostrar la equivalencia de \\emph{b)} y \\emph{b$'$)} en el caso general,"
+  },
+  {
+    "id": 7986,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7987,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr T_{p-1}^{U}(\\mathscr M|U)\n  \\xrightarrow{\\sim}\n  \\mathscr{H}\\!om_{\\mathscr O_Y|U}\n    (\\mathscr Q_U,\\mathscr M|U).",
+    "en_new": "\\mathscr T_{p-1}^{U}(\\mathscr M|U)\n  \\to\n  \\mathscr{H}\\!om_{\\mathscr O_Y|U}\n    (\\mathscr Q_U,\\mathscr M|U).",
+    "note": "Carries over the corrected arrow while retaining the display."
+  },
+  {
+    "id": 7988,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Queda por demostrar la equivalencia de a) y d). Es claro que d) es local sobre\n$Y$, y acabamos de ver que lo mismo ocurre con a); además, d) es también local\nsobre $Y'$.",
+    "en_new": "Queda por demostrar la equivalencia de \\emph{a)} y \\emph{d)}. Es claro que \\emph{d)} es local sobre\n$Y$, y acabamos de ver que lo mismo ocurre con \\emph{a)}; además, \\emph{d)} es también local\nsobre $Y'$."
+  },
+  {
+    "id": 7989,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "$Y$, y acabamos de ver que lo mismo ocurre con a); además, d) es también local\nsobre $Y'$.",
+    "note": "covered by 7988"
+  },
+  {
+    "id": 7992,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7993,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 7994,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "En otras palabras, d) implica a$''$), lo que termina la demostración.",
+    "en_new": "En otras palabras, \\emph{d)} implica \\emph{a$''$)}, lo que termina la demostración."
+  },
+  {
+    "id": 7995,
+    "decision": "not_applicable",
+    "note": "Spanish uses a separate sentence, not the French parenthesis."
+  },
+  {
+    "id": 7996,
+    "decision": "not_applicable",
+    "note": "Spanish has no enclosing parenthesis here."
+  },
+  {
+    "id": 7998,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.6.7.4}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8000,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Basta entonces aplicar la equivalencia de b) y\nb$'$) en \\sref{III.7.7.5} para $p=1$.",
+    "en_new": "Basta entonces aplicar la equivalencia de \\emph{b)} y\n\\emph{b$'$)} en \\sref{III.7.7.5} para $p=1$."
+  },
+  {
+    "id": 8003,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "general razonando como en la demostración de la equivalencia de b) y b$'$) en",
+    "en_new": "general razonando como en la demostración de la equivalencia de \\emph{b)} y \\emph{b$'$)} en"
+  },
+  {
+    "id": 8004,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.8.1.8}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8009,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.8.1.4}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8011,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Bajo las hipótesis de \\sref{III.7.7.6} relativas a $X$, $Y$ y $f$,",
+    "note": "The reference macro already prints the complete reference upright."
+  },
+  {
+    "id": 8012,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\item[(i)] $\\mathscr F$ es plano sobre $Y$;",
+    "en_new": "\\item[\\textup{(i)}] $\\mathscr F$ es plano sobre $Y$;"
+  },
+  {
+    "id": 8013,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\item[(ii)] $\\mathscr G$ es isomorfo al conúcleo de un homomorfismo",
+    "en_new": "\\item[\\textup{(ii)}] $\\mathscr G$ es isomorfo al conúcleo de un homomorfismo"
+  },
+  {
+    "id": 8016,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.5.4.2.1}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8017,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.5.3.5}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8018,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.5.4.2}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8022,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[0]{0.4.4.3.1}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8023,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8024,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8025,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8026,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "$\\mathscr O_X$-módulo invertible $Y$-amplio,",
+    "en_new": "$\\mathscr O_X$-módulo invertible $Y$-\\emph{amplio},"
+  },
+  {
+    "id": 8027,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "$f:X\\to Y$ es un morfismo proyectivo.",
+    "en_new": "$f:X\\to Y$ es un morfismo \\emph{proyectivo}."
+  },
+  {
+    "id": 8028,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[II]{II.5.5.1}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8029,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\sref[II]{II.2.7.10}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8030,
+    "decision": "not_applicable",
+    "note": "French caption capitalization."
+  },
+  {
+    "id": 8031,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "condiciones generales de \\sref{III.7.7.5}, sean $y$ un punto de $Y$ y $p$ un",
+    "note": "The reference macro already prints the complete reference upright."
+  },
+  {
+    "id": 8034,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8035,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "T_p^{\\mathscr O_y}(\\mathscr O_y)\n      \\longrightarrow\n      T_p^{\\mathscr O_y}(\\kres(y))",
+    "note": "The Spanish residue-field macro supplies the corrected notation."
+  },
+  {
+    "id": 8036,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8038,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8039,
+    "decision": "already",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "(\\mathscr O_y/\\mathfrak m_y^{n+1})\n      \\longrightarrow\n      T_p^{\\mathscr O_y}(\\kres(y))",
+    "note": "The Spanish residue-field macro supplies the corrected notation."
+  },
+  {
+    "id": 8040,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8042,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "la equivalencia de a), b) y c) resulta de",
+    "en_new": "la equivalencia de \\emph{a)}, \\emph{b)} y \\emph{c)} resulta de"
+  },
+  {
+    "id": 8044,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "Si $\\mathscr T_p$ es exacto por la derecha (respectivamente, por la izquierda),",
+    "en_new": "Si $\\mathscr T_p$ es exacto por la derecha \\textup{(respectivamente,} por la izquierda\\textup{)},"
+  },
+  {
+    "id": 8045,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "derecha (respectivamente, por la izquierda). El recíproco es cierto cuando el",
+    "en_new": "derecha \\textup{(respectivamente,} por la izquierda\\textup{)}. El recíproco es cierto cuando el"
+  },
+  {
+    "id": 8046,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "por las condiciones c) y b) de\n\\sref{III.7.7.5}.",
+    "en_new": "por las condiciones \\emph{c)} y \\emph{b)} de\n\\sref{III.7.7.5}."
+  },
+  {
+    "id": 8047,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr P^\\bullet\\otimes_{\\mathscr O_Y}\\mathscr M)$ es también finito y, más",
+    "en_new": "\\mathscr P^\\bullet\\otimes_{\\mathscr O_Y}\\mathscr M)$ es también \\emph{finito} y, más"
+  },
+  {
+    "id": 8048,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8049,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr L'_\\bullet=\\widetilde{L'_\\bullet}",
+    "en_new": "\\mathscr L'_\\bullet=\\widetilde{L}'_\\bullet"
+  },
+  {
+    "id": 8050,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8051,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8054,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8055,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.7.es.tex",
+    "en_old": "\\mathscr L_\\bullet=\\widetilde{L_\\bullet},",
+    "en_new": "\\mathscr L_\\bullet=\\widetilde{L}_\\bullet,"
+  },
+  {
+    "id": 8056,
+    "decision": "not_applicable",
+    "note": "Display-to-inline layout only."
+  },
+  {
+    "id": 8057,
+    "decision": "not_applicable",
+    "note": "French heading punctuation."
+  },
+  {
+    "id": 8058,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "cuasicoherentes definido por \\eqref{III.7.7.1.1}. Sea $y$ un punto",
+    "note": "The equation-reference macro already prints the reference upright."
+  },
+  {
+    "id": 8060,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\emph{homológicamente plano sobre\n$Y$ en el punto $y$, en dimensión $p$} (o \\emph{cohomológicamente\nplano sobre $Y$ en el punto $y$, en dimensión $-p$}) si existe un",
+    "en_new": "homológicamente plano sobre\n$Y$ en el punto $y$, en dimensión $p$ \\textup{(o} cohomológicamente\nplano sobre $Y$ en el punto $y$, en dimensión $-p$) si existe un"
+  },
+  {
+    "id": 8061,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "plano sobre $Y$ en el punto $y$, en dimensión $-p$}",
+    "note": "Spanish uses the equivalent unary-minus notation."
+  },
+  {
+    "id": 8062,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "plano sobre $Y$ en el punto $y$, en dimensión $-p$}) si existe un",
+    "note": "covered by 8060"
+  },
+  {
+    "id": 8063,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "Se dice que $\\mathscr P_\\bullet$ es \\emph{homológicamente plano en\ndimensión $p$ sobre $Y$} (o \\emph{cohomológicamente plano en\ndimensión $-p$ sobre $Y$}) si es homológicamente plano sobre $Y$ en",
+    "en_new": "Se dice que $\\mathscr P_\\bullet$ es homológicamente plano en\ndimensión $p$ sobre $Y$ \\textup{(o} cohomológicamente plano en\ndimensión $-p$ sobre $Y$) si es homológicamente plano sobre $Y$ en"
+  },
+  {
+    "id": 8064,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "dimensión $-p$ sobre $Y$}",
+    "note": "Spanish uses the equivalent unary-minus notation."
+  },
+  {
+    "id": 8065,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "dimensión $-p$ sobre $Y$}) si es homológicamente plano sobre $Y$ en",
+    "note": "covered by 8063"
+  },
+  {
+    "id": 8066,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "Cuando $\\mathscr P_\\bullet$ es homológicamente plano sobre $Y$\n(respectivamente, sobre $Y$ en el punto $y$)",
+    "en_new": "\\upshape Cuando $\\mathscr P_\\bullet$ es homológicamente plano sobre $Y$\n(respectivamente, sobre $Y$ en el punto $y$)"
+  },
+  {
+    "id": 8067,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\emph{local sobre $Y$}.",
+    "en_new": "\\emph{local} sobre $Y$."
+  },
+  {
+    "id": 8068,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\sref[I]{I.9.4.2}",
+    "note": "The reference macro supplies the corrected chapter typography."
+  },
+  {
+    "id": 8069,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "Con las notaciones e hipótesis de \\sref{III.7.8.1}, las condiciones",
+    "note": "The reference macro already prints the complete reference upright."
+  },
+  {
+    "id": 8074,
+    "decision": "not_applicable",
+    "note": "French grammar correction."
+  },
+  {
+    "id": 8075,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "$Y$, y $\\mathscr T_\\bullet$ el funtor definido por\n\\eqref{III.7.7.1.1}. Para todo $y\\in Y$, las condiciones siguientes",
+    "note": "The equation-reference macro already prints the reference upright."
+  },
+  {
+    "id": 8080,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\operatorname{length}\n        \\mathscr T_p^{\\mathscr O_y}\\bigl(\\kres(y)\\bigr)",
+    "note": "The Spanish residue-field macro supplies the corrected notation."
+  },
+  {
+    "id": 8081,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\cdot\n      \\operatorname{length}",
+    "en_new": ".\n      \\operatorname{length}",
+    "note": "Carries over the printed multiplication mark."
+  },
+  {
+    "id": 8082,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\operatorname{length}\n        \\bigl(\\mathscr O_y/\\mathfrak m_y^{\\,n+1}\\bigr).",
+    "en_new": "\\operatorname{length}\n        \\mathscr O_y/\\mathfrak m_y^{\\,n+1}."
+  },
+  {
+    "id": 8083,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\mathscr H^{-p}(f,\\mathscr P^\\bullet)|U\n    \\]\n    es isomorfo",
+    "en_new": "\\mathcal H^{-p}(f,\\mathscr P^\\bullet)|U\n    \\]\n    es isomorfo"
+  },
+  {
+    "id": 8084,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\mathscr H^{-p}(f,\\mathscr P^\\bullet)|U\n        \\otimes_{\\mathscr O_Y|U}\\mathscr M",
+    "en_new": "\\mathcal H^{-p}(f,\\mathscr P^\\bullet)|U\n        \\otimes_{\\mathscr O_Y|U}\\mathscr M"
+  },
+  {
+    "id": 8085,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\mathscr H^{-p}\n        \\bigl(f,(\\mathscr P^\\bullet|U)",
+    "en_new": "\\mathcal H^{-p}\n        \\bigl(f,(\\mathscr P^\\bullet|U)"
+  },
+  {
+    "id": 8088,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "$z\\mapsto d_p(z)$",
+    "en_new": "$z\\leadsto d_p(z)$"
+  },
+  {
+    "id": 8089,
+    "decision": "not_applicable",
+    "note": "Spanish uses a comma-delimited clause, not the French parenthesis."
+  },
+  {
+    "id": 8091,
+    "decision": "apply",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "Además, si $Y$ es reducido en $y$",
+    "en_new": "Además, si $Y$ es \\textup{reducido} en $y$"
+  },
+  {
+    "id": 8092,
+    "decision": "already",
+    "en_file": "III2/units/III.7.8.es.tex",
+    "en_old": "\\sref[0]{0.4.1.4}",
+    "note": "The reference macro supplies both the corrected chapter typography and the upright parenthesis."
+  }
+]
+```
+III2/units/III.7.8.es.tex, 7.8.4 and its proof: the local module-valued functors are written \mathscr T_p^{\mathscr O_y} (and \mathscr T_{p+1}^{\mathscr O_y}) where the French has T_p^{\mathscr O_y} (and T_{p+1}^{\mathscr O_y}).

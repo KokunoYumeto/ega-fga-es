@@ -1,0 +1,519 @@
+```json
+[
+  {
+    "id": 23759,
+    "decision": "not_applicable",
+    "note": "Reorganización del enunciado y la prueba; el español presenta b') como reformulación dentro de la demostración."
+  },
+  {
+    "id": 23760,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "La propiedad $a)$ puede expresarse también",
+    "en_new": "La propiedad \\emph{a)} puede expresarse también"
+  },
+  {
+    "id": 23762,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "La propiedad $a)$ es, pues,\nequivalente a la siguiente:",
+    "en_new": "La propiedad \\emph{a)} es, pues,\nequivalente a la siguiente:"
+  },
+  {
+    "id": 23763,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "\\emph{$a')$ Si existe un conjunto cerrado $Y$ contenido en uno de los $X\\setmin U_\\lambda$, tal\nque $\\operatorname{codim}(Y,X)\\geq2$ y que $Z|X\\setmin Y$ sea localmente principal,\nentonces $Z$ es localmente principal.}",
+    "en_new": "\\emph{a$'$)} Si existe un conjunto cerrado $Y$ contenido en uno de los $X\\setmin U_\\lambda$, tal\nque $\\operatorname{codim}(Y,X)\\geq2$ y que $Z|X\\setmin Y$ sea localmente principal,\nentonces $Z$ es localmente principal."
+  },
+  {
+    "id": 23767,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "entonces $Z$ es localmente principal.}",
+    "note": "covered by 23763"
+  },
+  {
+    "id": 23768,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "Observemos, por otra parte, que $b)$ implica $b')$ en virtud",
+    "en_new": "Observemos, por otra parte, que \\emph{b)} implica \\emph{b$'$)} en virtud"
+  },
+  {
+    "id": 23772,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "$b)$ y $b')$. Se queda",
+    "en_new": "\\emph{b)} y \\emph{b$'$)}. Se queda"
+  },
+  {
+    "id": 23773,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "probar la equivalencia de $a')$ y $b')$.",
+    "en_new": "probar la equivalencia de \\emph{a$'$)} y \\emph{b$'$)}."
+  },
+  {
+    "id": 23775,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "$a')$ y $b')$ son locales",
+    "en_new": "\\emph{a$'$)} y \\emph{b$'$)} son locales"
+  },
+  {
+    "id": 23776,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "cuando $X$ es noetheriano y normal e $Y$ es cerrado",
+    "en_new": "cuando $X$ es \\emph{noetheriano} y normal e $Y$ es cerrado"
+  },
+  {
+    "id": 23777,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "\\emph{\\emph{a$''$)} Para todo ciclo $1$-codimensional $Z$ sobre $X$, la hipótesis de que $Z|U$\n(donde $U=X\\setmin Y$) es localmente principal implica que el propio $Z$ es localmente\nprincipal.}",
+    "en_new": "\\emph{a$''$)} Para todo ciclo $1$-codimensional $Z$ sobre $X$, la hipótesis de que $Z|U$\n(donde $U=X\\setmin Y$) es localmente principal implica que el propio $Z$ es localmente\nprincipal."
+  },
+  {
+    "id": 23779,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "implica que el propio $Z$ es localmente\nprincipal.}",
+    "note": "covered by 23777"
+  },
+  {
+    "id": 23780,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "\\emph{$b'')$ El homomorfismo canónico\n$\\operatorname{Pic}(X)\\to\\operatorname{Pic}(U)$ es sobreyectivo.}",
+    "en_new": "\\emph{b$''$)} El homomorfismo canónico\n$\\operatorname{Pic}(X)\\to\\operatorname{Pic}(U)$ es sobreyectivo."
+  },
+  {
+    "id": 23781,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "Demostremos primero que \\emph{a$''$)} implica $b'')$;",
+    "en_new": "Demostremos primero que \\emph{a$''$)} implica \\emph{b$''$)};"
+  },
+  {
+    "id": 23782,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "restricción $\\mathscr Z^1(X)\\to\\mathscr Z^1(U)$ es biyectivo",
+    "en_new": "restricción $\\mathfrak{Z}^1(X)\\to\\mathfrak{Z}^1(U)$ es biyectivo"
+  },
+  {
+    "id": 23784,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "Recíprocamente, demostremos que $b'')$ implica \\emph{a$''$)}.",
+    "en_new": "Recíprocamente, demostremos que \\emph{b$''$)} implica \\emph{a$''$)}."
+  },
+  {
+    "id": 23785,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "$\\mathscr Z^1_{\\mathrm{princ}}(X)$ por el isomorfismo\n$\\mathscr Z^1(X)\\to\\mathscr Z^1(U)$ es $\\mathscr Z^1_{\\mathrm{princ}}(U)$",
+    "en_new": "$\\mathfrak{Z}^1_{\\mathrm{princ}}(X)$ por el isomorfismo\n$\\mathfrak{Z}^1(X)\\to\\mathfrak{Z}^1(U)$ es $\\mathfrak{Z}^1_{\\mathrm{princ}}(U)$"
+  },
+  {
+    "id": 23786,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "(dicho de otro\n  modo, tal que $\\overline{\\{x\\}}\\cap S=\\varnothing$)",
+    "en_new": "\\textup{(}dicho de otro\n  modo, tal que $\\overline{\\{x\\}}\\cap S=\\varnothing$\\textup{)}"
+  },
+  {
+    "id": 23787,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "(pues las propiedades $a)$ y $b)$ son locales sobre $X$)",
+    "en_new": "(pues las propiedades \\emph{a)} y \\emph{b)} son locales sobre $X$)"
+  },
+  {
+    "id": 23788,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "la condición $a)$ de (21.13.15) equivale",
+    "en_new": "la condición \\emph{a)} de (21.13.15) equivale"
+  },
+  {
+    "id": 23789,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "la condición $a)$ de (21.13.14) aplicada",
+    "en_new": "la condición \\emph{a)} de (21.13.14) aplicada"
+  },
+  {
+    "id": 23790,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "El corolario resulta entonces de la equivalencia de $a)$ y $b)$ en",
+    "en_new": "El corolario resulta entonces de la equivalencia de \\emph{a)} y \\emph{b)} en"
+  },
+  {
+    "id": 23791,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "Entonces la condición $a)$ de (21.13.14)",
+    "en_new": "Entonces la condición \\emph{a)} de (21.13.14)"
+  },
+  {
+    "id": 23793,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "Está claro que $a)$ implica $c)$, pues",
+    "en_new": "Está claro que \\emph{a)} implica \\emph{c)}, pues"
+  },
+  {
+    "id": 23795,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "Recíprocamente, $c)$ implica $a)$:",
+    "en_new": "Recíprocamente, \\emph{c)} implica \\emph{a)}:"
+  },
+  {
+    "id": 23800,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "las condiciones $a)$ y $b)$ equivalen\ntambién a la siguiente:",
+    "en_new": "las condiciones \\emph{a)} y \\emph{b)} equivalen\ntambién a la siguiente:"
+  },
+  {
+    "id": 23802,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/02_21_13.tex",
+    "en_old": "todo ciclo $1$-codimensional cuyo soporte no contiene a $z$ es principal.",
+    "en_new": "todo ciclo $1$-codimensional cuyo soporte no contiene a $z$ es \\emph{principal}."
+  },
+  {
+    "id": 23806,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "(para las topologías preádicas\n$(\\mathbf 0, 19.3.1)$)",
+    "en_new": "\\textup{(}para las topologías preádicas\n$(\\mathbf 0, 19.3.1)$\\textup{)}"
+  },
+  {
+    "id": 23809,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23811,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23812,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23813,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23815,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición y de puntuación expositiva francesa."
+  },
+  {
+    "id": 23930,
+    "decision": "not_applicable",
+    "note": "Cambio de disposición; el español ya usa \\ldots y expresa la misma condición."
+  },
+  {
+    "id": 23931,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$h$ divide a $F_0$ en $K[T]$",
+    "en_new": "$h$ divide a $F_0$ \\emph{en} $K[T]$"
+  },
+  {
+    "id": 23932,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23933,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "es divisible por $h$ en $K[T]$",
+    "en_new": "es divisible por $h$ \\emph{en} $K[T]$"
+  },
+  {
+    "id": 23935,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "Bajo las hipótesis de (21.14.1) sobre $A$, $B$ y $\\rho$",
+    "en_new": "Bajo las hipótesis de \\textup{(21.14.1)} sobre $A$, $B$ y $\\rho$"
+  },
+  {
+    "id": 23939,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "(y por tanto también $X$)",
+    "en_new": "\\textup{(}y por tanto también $X$\\textup{)}"
+  },
+  {
+    "id": 23940,
+    "decision": "not_applicable",
+    "note": "Puntuación sintáctica francesa; las comas españolas delimitan correctamente el inciso."
+  },
+  {
+    "id": 23941,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "tal que, para todo $s\\in S$, $Y_s=Y\\cap X_s$ sea de codimensión",
+    "en_new": "tal que, para \\emph{todo} $s\\in S$, $Y_s=Y\\cap X_s$ sea de codimensión"
+  },
+  {
+    "id": 23942,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "la condición $b)$ de (21.13.15) se cumple",
+    "en_new": "la condición \\emph{b)} de (21.13.15) se cumple"
+  },
+  {
+    "id": 23946,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23949,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "(8.1.2, $a$))",
+    "en_new": "(8.1.2, \\emph{a)})"
+  },
+  {
+    "id": 23951,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23955,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$A$ es \\emph{íntegro e\nintegralmente cerrado}.",
+    "en_new": "$A$ es \\emph{íntegro} e\n\\emph{integralmente cerrado}."
+  },
+  {
+    "id": 23956,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$\\mathbb Z$-álgebra de tipo finito (7.8.3",
+    "en_new": "$\\mathbb Z$-álgebra \\emph{de tipo finito} (7.8.3"
+  },
+  {
+    "id": 23957,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23958,
+    "decision": "not_applicable",
+    "note": "Solo cambia una fórmula de presentación a línea."
+  },
+  {
+    "id": 23960,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$U=X\\setmin Y$, $U_\\mu=X_\\mu-Y_\\mu$, y sean $j:U\\to X$ y\n$j_\\mu:U_\\mu\\to X_\\mu$ las inyecciones canónicas;",
+    "en_new": "$U=X\\setmin Y$, $U_\\lambda=X_\\lambda\\setmin Y_\\lambda$, y sean $j:U\\to X$ y\n$j_\\lambda:U_\\lambda\\to X_\\lambda$ las inyecciones canónicas;"
+  },
+  {
+    "id": 23962,
+    "decision": "already",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$U_\\mu=X_\\mu-Y_\\mu$",
+    "note": "covered by 23960"
+  },
+  {
+    "id": 23963,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$p_\\mu:X\\to X_\\mu$ es un morfismo afín, se tiene\n\\[\n  j_*(\\mathcal O_U)=p_\\mu^*((j_\\mu)_*(\\mathcal O_{U_\\mu}))\n  \\qquad(\\mathbf{II}, 1.5.2),\n\\]",
+    "en_new": "$p_\\lambda:X\\to X_\\lambda$ es un morfismo afín, se tiene\n\\[\n  j_*(\\mathcal O_U)=p_\\lambda^*((j_\\lambda)_*(\\mathcal O_{U_\\lambda}))\n  \\qquad(\\mathbf{II}, 1.5.2),\n\\]"
+  },
+  {
+    "id": 23964,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "no es otro que $p_\\mu^*(\\rho_\\mu)$, donde\n$\\rho_\\mu:\\mathcal O_{X_\\mu}\\to(j_\\mu)_*(\\mathcal O_{U_\\mu})$ es el homomorfismo",
+    "en_new": "no es otro que $p_\\lambda^*(\\rho_\\lambda)$, donde\n$\\rho_\\lambda:\\mathcal O_{X_\\lambda}\\to(j_\\lambda)_*(\\mathcal O_{U_\\lambda})$ es el homomorfismo"
+  },
+  {
+    "id": 23966,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "(17.5.3); puesto que $Y$ no contiene ninguna componente irreducible de $X_s$",
+    "en_new": "(17.5.3); puesto que $Y_s$ no contiene ninguna componente irreducible de $X_s$"
+  },
+  {
+    "id": 23973,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$X=\\mathbb V_S^2$",
+    "en_new": "$X=\\mathbf V_S^2$"
+  },
+  {
+    "id": 23974,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "$X_s=\\mathbb V_k^2$",
+    "en_new": "$X_s=\\mathbf V_k^2$"
+  },
+  {
+    "id": 23980,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/03_21_14.tex",
+    "en_old": "es local sobre $S$ y sobre $T$, lo que permite",
+    "en_new": "es local sobre $S$ \\emph{y sobre} $T$, lo que permite"
+  },
+  {
+    "id": 23981,
+    "decision": "not_applicable",
+    "note": "Punto final de un título francés."
+  },
+  {
+    "id": 23982,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "Se llama \\emph{haz de los divisores sobre $X$ relativos a $S$}, o",
+    "en_new": "Se llama haz de los divisores sobre $X$ relativos a $S$, o"
+  },
+  {
+    "id": 23983,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "\\emph{haz de los divisores sobre $X$ transversales a $f$}, y se denota por",
+    "en_new": "haz de los divisores sobre $X$ transversales a $f$, y se denota por"
+  },
+  {
+    "id": 23984,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "denominan \\emph{divisores sobre $X$ relativos a $S$}, o",
+    "en_new": "denominan divisores sobre $X$ relativos a $S$, o"
+  },
+  {
+    "id": 23985,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "\\emph{divisores sobre $X$\ntransversales a $f$}; forman",
+    "en_new": "divisores sobre $X$\ntransversales a $f$; forman"
+  },
+  {
+    "id": 23709,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "y una sección $t\\in\\mathscr T_{X/S}(U)$ tal que",
+    "en_new": "y una sección $t\\in T_{X/S}(U)$ tal que"
+  },
+  {
+    "id": 23713,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "$Y(D)\\to X$",
+    "en_new": "$\\boldsymbol{\\mathsf Y}(D)\\to X$"
+  },
+  {
+    "id": 23714,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "\\emph{identificar canónicamente}",
+    "en_new": "\\emph{identificar} canónicamente"
+  },
+  {
+    "id": 23723,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "$D$ (21.2.8 y 21.2.9).",
+    "en_new": "$D$ \\textup{(21.2.8 y 21.2.9)}."
+  },
+  {
+    "id": 23724,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "$f^{-1}\\in\\Gamma(U,\\mathscr M_{X/S})$",
+    "en_new": "$f^{-1}\\in\\Gamma(U,\\mathscr M_{X/S}^*)$"
+  },
+  {
+    "id": 23725,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "(resp. $D_x=0$)",
+    "en_new": "\\textup{(resp. $D_x=0$)}"
+  },
+  {
+    "id": 23726,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "(resp. $D=0$)",
+    "en_new": "\\textup{(resp. $D=0$)}"
+  },
+  {
+    "id": 23727,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "$T=X-\\operatorname{dom}(\\varphi)$",
+    "en_new": "$T=X\\setmin\\operatorname{dom}(\\varphi)$"
+  },
+  {
+    "id": 23728,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "\\emph{finito y plano}",
+    "en_new": "\\emph{finito} y \\emph{plano}"
+  },
+  {
+    "id": 23729,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "localmente libre (18.2.7)",
+    "en_new": "\\emph{localmente libre} (18.2.7)"
+  },
+  {
+    "id": 23730,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "$\\mathscr L=N_{X'/X}(\\mathscr L')$ sobre $X$, regular con respecto a $S$.",
+    "en_new": "$\\mathscr L=N_{X'/X}(\\mathscr L')$ sobre $X$, \\emph{regular con respecto a $S$}."
+  },
+  {
+    "id": 23731,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "$D'\\in\\operatorname{Div}(X'/S)$, se tiene $g_*(D')",
+    "en_new": "$D'\\in\\operatorname{Div}(X'/S)$, \\emph{se tiene} $g_*(D')"
+  },
+  {
+    "id": 23732,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "un morfismo cualquiera $S'\\to S$",
+    "en_new": "un morfismo \\emph{cualquiera} $S'\\to S$"
+  },
+  {
+    "id": 23733,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "sobre $p^{-1}(U)$, regular\ncon respecto a $S'$",
+    "en_new": "sobre $p^{-1}(U)$, \\emph{regular\ncon respecto a $S'$}",
+    "note": "Se conserva S', ya corregido en el español para el cambio de base."
+  },
+  {
+    "id": 23736,
+    "decision": "apply",
+    "en_file": "IV4/ega4/ega4-21c-es/components/04_21_15.tex",
+    "en_old": "no es otra que la \\emph{imagen inversa}",
+    "en_new": "no es otra que la imagen inversa"
+  }
+]
+```
+
+IV4/ega4/ega4-21c-es/components/02_21_13.tex, p. 322: la nota sobre $Y=\overline{\{x\}}$ afirma erróneamente que esa clausura no es necesariamente cerrada.
+IV4/ega4/ega4-21c-es/components/02_21_13.tex, p. 323: $Z''=Z\setmin Z'$ usa diferencia de conjuntos donde corresponde la resta de ciclos $Z''=Z-Z'$.

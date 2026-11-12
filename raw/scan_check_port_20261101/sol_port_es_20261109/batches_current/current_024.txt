@@ -1,0 +1,3137 @@
+# Spanish hand pass, current_024: 132 items on 6 printed pages
+
+=================== PAGE III 110 ===================
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 109 -----
+\oldpage[III]{109}
+Bajo las mismas hipótesis de finitud sobre $\sh{S}$ y $\sh{M}$, se deduce de \sref{III.2.4.1} que
+\[
+  \bigoplus_{k\in\bb Z}\RR^p f_*(\sh{M}_k)
+\]
+es un $\sh{S}$-módulo de tipo finito para todo $p$.
+Bajo las hipótesis adicionales de \sref{III.2.4.1}[ii], existe además un entero $N$ tal que, para $n\geq N$,
+\[
+  \RR^p f_*(\sh{M}_k(n))=0
+\]
+para todo $p>0$ y todo $k\in\bb Z$, y el homomorfismo canónico
+\[
+  f^*\bigl(f_*(\sh{M}_k(n))\bigr)
+  \longrightarrow
+  \sh{M}_k(n)
+\]
+es sobreyectivo para todo $k\in\bb Z$.
+\end{env}
+
+
+\subsection{Característica de Euler--Poincar\'e y polinomio de Hilbert}
+\label{subsection:III.2.5}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1}
+Sea $A$ un anillo artiniano y sea $X$ un $A$-esquema proyectivo sobre
+\[
+  Y=\Spec(A).
+\]
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $A$-módulos
+\[
+  \HH^i(X,\sh{F})\qquad(i\geq0)
+\]
+son de tipo finito \sref{III.2.2.1} y, por tanto, tienen longitud finita, puesto que $A$ es artiniano.
+Además, \sref{III.2.2.1} muestra que $\HH^i(X,\sh{F})=0$ salvo para un número finito de $i\geq0$.
+Así, el entero
+\[
+\label{III.2.5.1.1}
+  \chi_A(\sh{F})
+  =
+  \sum_{i=0}^{\infty}
+  (-1)^i\operatorname{length}_A\bigl(\HH^i(X,\sh{F})\bigr)
+  \tag{2.5.1.1}
+\]
+está definido para todo $\sh{O}_X$-módulo coherente $\sh{F}$.
+Cuando $A$ es un anillo local artiniano, $\chi_A(\sh{F})$ se llama la \emph{característica de Euler--Poincar\'e} de $\sh{F}$ con respecto a $A$.
+Para $\sh{F}=\sh{O}_X$, el entero $\chi_A(\sh{O}_X)$ se llama el \emph{género aritmético} de $X$ con respecto a $A$.
+\end{env}
+
+\begin{proposition}[2.5.2]
+\label{III.2.5.2}
+Sea
+\[
+  0\longrightarrow\sh{F}'
+  \longrightarrow\sh{F}
+  \longrightarrow\sh{F}''
+  \longrightarrow0
+\]
+una sucesión exacta de $\sh{O}_X$-módulos coherentes.
+Entonces
+\[
+\label{III.2.5.2.1}
+  \chi_A(\sh{F})
+  =
+  \chi_A(\sh{F}')+\chi_A(\sh{F}'').
+  \tag{2.5.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Los módulos de cohomología de $\sh{F}$, $\sh{F}'$ y $\sh{F}''$ se anulan en todos los grados suficientemente grandes.
+Existe, por tanto, un entero $r>0$ para el cual la sucesión exacta larga de cohomología tiene la forma
+\[
+  0\longrightarrow\HH^0(X,\sh{F}')
+  \longrightarrow\HH^0(X,\sh{F})
+  \longrightarrow\HH^0(X,\sh{F}'')
+  \longrightarrow\HH^1(X,\sh{F}')
+  \longrightarrow\cdots
+\]
+\[
+  \ldots\longrightarrow\HH^r(X,\sh{F}')
+  \longrightarrow\HH^r(X,\sh{F})
+  \longrightarrow\HH^r(X,\sh{F}'')
+  \longrightarrow0.
+\]
+En una sucesión exacta de $A$-módulos de longitud finita con términos nulos en ambos extremos, la suma alternada de las longitudes es nula \sref[0]{0.11.10.1}.
+La aplicación de este hecho da inmediatamente \eqref{III.2.5.2.1}.
+\end{proof}
+
+El resultado de \sref{III.2.5.2} se aplica siempre que $X$ sea un $A$-esquema cuasicompacto y que los $A$-módulos $\HH^i(X,\sh{F})$ sean de tipo finito para todo $\sh{O}_X$-módulo coherente $\sh{F}$ \sref{III.1.4.12}.
+
+\begin{theorem}[2.5.3]
+\label{III.2.5.3}
+Sea $A$ un anillo local artiniano, sea $X$ un esquema proyectivo sobre
+\[
+  Y=\Spec(A),
+\]
+sea $\sh{L}$ un $\sh{O}_X$-módulo invertible muy amplio relativo a $Y$, y sea $\sh{F}$ un $\sh{O}_X$-módulo coherente.
+Para todo $n\in\bb Z$, pongamos
+\[
+  \sh{F}(n)=\sh{F}\otimes_{\sh{O}_X}\sh{L}^{\otimes n}.
+\]
+\begin{enumerate}
+  \item[\textup{(i)}] Existe un único polinomio $P\in\bb Q[T]$ tal que
+  \[
+    \chi_A(\sh{F}(n))=P(n)
+  \]
+  para todo $n\in\bb Z$.
+  El polinomio $P$ se llama el \emph{polinomio de Hilbert} de $\sh{F}$ con respecto a $A$.
+
+  \item[\textup{(ii)}] Para todo $n$ suficientemente grande,
+  \[
+    \chi_A(\sh{F}(n))
+    =
+    \operatorname{length}_A\Gamma(X,\sh{F}(n)).
+  \]
+
+  \item[\textup{(iii)}] El coeficiente del término de mayor grado de $\chi_A(\sh{F}(n))$ es no negativo.
+\end{enumerate}
+\end{theorem}
+
+Además, demostraremos en el Capítulo~IV, en la sección dedicada a la dimensión, que \emph{el grado de $\chi_A(\sh{F}(n))$ es igual a la dimensión del soporte de $\sh{F}$}.
+
+\begin{proof}
+Para todo $n$ suficientemente grande, se tiene
+\[
+  \HH^i(X,\sh{F}(n))=0
+\]
+para todo $i>0$ \sref{III.2.2.1}.
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 110 -----
+\oldpage[III]{110}
+Por consiguiente,
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \operatorname{length}_A\HH^0(X,\sh{F}(n))
+  =
+  \operatorname{length}_A\Gamma(X,\sh{F}(n))
+\]
+para todo $n$ suficientemente grande, lo que demuestra \emph{(ii)}.
+Se sigue que $\chi_A(\sh{F}(n))\geq0$ para todo $n$ suficientemente grande y, por tanto, \emph{(iii)} se deduce de \emph{(i)}.
+La aserción de unicidad de \emph{(i)} es inmediata, por lo que queda demostrar la existencia de $P$.
+
+Mostremos primero que podemos suponer
+\[
+  \mathfrak{m}\sh{F}=0,
+\]
+donde $\mathfrak{m}$ es el ideal maximal de $A$.
+En efecto, existe un entero $s>0$ tal que $\mathfrak{m}^s=0$ y, por tanto, $\sh{F}(n)$ posee la filtración finita
+\[
+  \sh{F}(n)
+  \supset\mathfrak{m}\sh{F}(n)
+  \supset\cdots
+  \supset\mathfrak{m}^{s-1}\sh{F}(n)
+  \supset0.
+\]
+Una inducción que utiliza \eqref{III.2.5.2.1} da
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \sum_{k=1}^{s}
+  \chi_A\left(
+    \mathfrak{m}^{k-1}\sh{F}(n)/
+    \mathfrak{m}^{k}\sh{F}(n)
+  \right).
+\]
+Pero
+\[
+  \mathfrak{m}^{k-1}\sh{F}(n)/
+  \mathfrak{m}^{k}\sh{F}(n)
+  =
+  \sh{F}'_k(n),
+  \qquad
+  \sh{F}'_k=
+  \mathfrak{m}^{k-1}\sh{F}/\mathfrak{m}^{k}\sh{F},
+\]
+lo que demuestra la reducción.
+
+Supongamos, pues, que $\mathfrak{m}\sh{F}=0$.
+Sea $X'$ el subesquema cerrado de $X$ obtenido como imagen inversa, por el morfismo estructural
+\[
+  X\longrightarrow\Spec(A),
+\]
+del único punto cerrado de $\Spec(A)$, y sea $j:X'\to X$ la inyección canónica.
+Entonces
+\[
+  \sh{F}=j_*(\sh{F}')
+\]
+para un $\sh{O}_{X'}$-módulo coherente $\sh{F}'$, y $X'$ es proyectivo sobre $\Spec(K)$, donde
+\[
+  K=A/\mathfrak{m}.
+\]
+Si $\sh{L}'=j^*(\sh{L})$, entonces $\sh{L}'$ es muy amplio relativo a $\Spec(K)$ \sref[II]{II.4.4.10}, y
+\[
+  \sh{F}(n)=j_*(\sh{F}'(n)),
+  \qquad
+  \sh{F}'(n)
+  =
+  \sh{F}'\otimes_{\sh{O}_{X'}}\sh{L}'^{\otimes n}
+\]
+\sref[0]{0.5.4.10}.
+Se sigue que
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \chi_K(\sh{F}'(n))
+\]
+(G, II, 4.9.1), y quedamos reducidos al caso en que $A$ es un cuerpo.
+
+Ahora puede considerarse $X$ como un subesquema cerrado de
+\[
+  P=\mathbf{P}_A^r
+\]
+para un $r$ conveniente \sref[II]{II.5.5.4}[ii].
+Si $i:X\to P$ es la inyección canónica, el mismo razonamiento da
+\[
+  \chi_A(\sh{F}(n))
+  =
+  \chi_A\bigl(i_*(\sh{F})(n)\bigr).
+\]
+Podemos, por tanto, limitarnos al caso
+\[
+  X=\mathbf{P}_A^r=\Proj(S),
+  \qquad
+  S=A[T_0,\ldots,T_r],
+\]
+donde $A$ es un cuerpo.
+
+En este caso, $\sh{F}=\widetilde{M}$ para un $S$-módulo graduado $M$ de tipo finito \sref[II]{II.2.7.8}.
+Por el teorema de las sicigias de Hilbert (M, VIII, 6.5), $M$ posee una resolución finita por $S$-módulos \emph{libres} graduados de tipo finito:
+\[
+  0\longrightarrow L_q
+  \longrightarrow L_{q-1}
+  \longrightarrow\cdots
+  \longrightarrow L_1
+  \longrightarrow M
+  \longrightarrow0.
+\]
+Como el funtor $\widetilde{M}$ es exacto \sref[II]{II.2.5.4}, obtenemos una sucesión exacta
+\[
+  0\longrightarrow\widetilde{L}_q
+  \longrightarrow\widetilde{L}_{q-1}
+  \longrightarrow\cdots
+  \longrightarrow\widetilde{L}_1
+  \longrightarrow\widetilde{M}
+  \longrightarrow0,
+\]
+y, por tanto, para todo $n\in\bb Z$, una sucesión exacta
+\[
+  0\longrightarrow\widetilde{L}_q(n)
+  \longrightarrow\widetilde{L}_{q-1}(n)
+  \longrightarrow\cdots
+  \longrightarrow\widetilde{L}_1(n)
+  \longrightarrow\widetilde{M}(n)
+  \longrightarrow0.
+\]
+Una inducción sobre $q$, utilizando \sref{III.2.5.2}, da
+\[
+  \chi_A(\widetilde{M}(n))
+  =
+  \sum_{j=1}^{q}
+  (-1)^{j+1}\chi_A(\widetilde{L}_j(n)).
+\]
+Para demostrar \emph{(i)}, quedamos, por tanto, reducidos al caso en que $M$ es graduado, \emph{libre} y de tipo finito y, por consiguiente, al caso
+\[
+  M=S(h)
+\]
+para algún $h\in\bb Z$.
+Entonces
+\[
+  \widetilde{M}(n)
+  =
+  \widetilde{M(n)}
+  =
+  \widetilde{S(n+h)}
+\]
+\sref[II]{II.2.5.15}, de modo que el teorema se deduce del lema siguiente.
+\end{proof}
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 111 -----
+\oldpage[III]{111}
+\begin{lemma}[2.5.3.1]
+\label{III.2.5.3.1}
+Sea $A$ un cuerpo, sea $r>0$ un entero y sea
+\[
+  X=\mathbf{P}_A^r.
+\]
+Entonces
+\[
+  \chi_A(\sh{O}_X(n))
+  =
+  \binom{n+r}{r}
+\]
+para todo $n\in\bb Z$.
+\end{lemma}
+
+\begin{proof}
+Para $n\geq0$,
+\[
+  \chi_A(\sh{O}_X(n))
+  =
+  \operatorname{length}_A\HH^0(X,\sh{O}_X(n)),
+\]
+que es el número de monomios en los $T_i$ de grado total $n$, a saber,
+\[
+  \binom{n+r}{r}
+\]
+\sref{III.2.1.12}.
+
+Para $n\leq-r-1$, se tiene análogamente
+\[
+  \chi_A(\sh{O}_X(n))
+  =
+  (-1)^r\operatorname{length}_A\HH^r(X,\sh{O}_X(n)).
+\]
+Escribiendo $n=-r-h$, la dimensión de $\HH^r(X,\sh{O}_X(n))$ sobre $A$ es el número de sucesiones
+\[
+  (p_i)_{0\leq i\leq r}
+\]
+de enteros positivos que satisfacen
+\[
+  \sum_{i=0}^{r}p_i=r+h
+\]
+\sref{III.2.1.12}.
+Equivalentemente, es el número de sucesiones de enteros no negativos
+\[
+  (q_i)_{0\leq i\leq r}
+\]
+tales que
+\[
+  \sum_{i=0}^{r}q_i=h-1.
+\]
+Este número es
+\[
+  \binom{h+r-1}{r}
+  =
+  (-1)^r\binom{n+r}{r}.
+\]
+Finalmente, si $-r\leq n<0$, entonces
+\[
+  \binom{n+r}{r}=0,
+\]
+y $\HH^i(X,\sh{O}_X(n))=0$ para todo $i\geq0$ \sref{III.2.1.12}.
+Esto demuestra el lema.
+\end{proof}
+
+\begin{corollary}[2.5.4]
+\label{III.2.5.4}
+Sea $A$ un anillo local artiniano, sea $S$ una $A$-álgebra graduada de tipo finito engendrada por $S_1$, sea $M$ un $S$-módulo graduado de tipo finito y sea
+\[
+  X=\Proj(S).
+\]
+Entonces, para todo $n$ suficientemente grande,
+\[
+  \chi_A(\widetilde{M}(n))
+  =
+  \operatorname{length}_A(M_n).
+\]
+\end{corollary}
+
+\begin{proof}
+Para todo $n$ suficientemente grande, los módulos
+\[
+  M_n
+  \quad\text{y}\quad
+  \Gamma(X,\widetilde{M}(n))
+\]
+son isomorfos \sref{III.2.3.1}.
+\end{proof}
+
+
+\subsection{Aplicación: criterios de amplitud}
+\label{subsection:III.2.6}
+
+\begin{proposition}[2.6.1]
+\label{III.2.6.1}
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo propio,
+y sea $\sh{L}$ un $\sh{O}_X$-módulo invertible.
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] $\sh{L}$ es amplio para $f$.
+  \item[\emph{b)}] Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, existe
+  un entero $N$ tal que, para $n\geq N$,
+  \[
+    \RR^qf_*(\sh{F}\otimes\sh{L}^{\otimes n})=0
+  \]
+  para todo $q>0$.
+  \item[\emph{c)}] Para todo ideal coherente $\sh{J}$ de $\sh{O}_X$, existe
+  un entero $N$ tal que, para $n\geq N$,
+  \[
+    \RR^1f_*(\sh{J}\otimes\sh{L}^{\otimes n})=0.
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Hemos visto que \emph{a)} implica \emph{b)} \sref{III.2.2.1},~(ii).
+Es inmediato que \emph{b)} implica \emph{c)}, y queda demostrar
+que \emph{c)} implica \emph{a)}.
+Podemos limitarnos al caso en que $Y$ es afín \sref[II]{II.4.6.4}.
+Basta mostrar que, cuando $h$ recorre las secciones de
+$\sh{L}^{\otimes n}$ sobre $X$, con $n>0$, los subconjuntos abiertos afines $X_h$
+forman un recubrimiento de $X$ \sref[II]{II.4.5.2}.
+
+Para ello, sea $x$ un punto cerrado de $X$ y sea $U$ un entorno
+abierto afín de $x$.
+Encontraremos un entero $n$ y una sección
+\[
+  h\in\Gamma(X,\sh{L}^{\otimes n})
+\]
+tal que $x\in X_h\subset U$.
+El subconjunto abierto $X_h$ será entonces afín \sref[I]{I.1.3.6}.
+La unión de todos esos $X_h$ es un subconjunto abierto de $X$ que contiene todo
+punto cerrado y, por tanto, es todo $X$, puesto que $X$ es noetheriano
+\sref[I]{I.6.3.7} y \sref[0]{0.2.1.3}.
+
+Sean $\sh{J}$ y $\sh{J}'$, respectivamente, los ideales cuasicoherentes de
+$\sh{O}_X$ que definen los subpreesquemas cerrados reducidos cuyos espacios
+subyacentes son $X\setmin U$ y $(X\setmin U)\cup\{x\}$, respectivamente \sref[I]{I.5.2.1}.
+Los ideales $\sh{J}$ y $\sh{J}'$ son coherentes \sref[I]{I.6.1.1},
+$\sh{J}'\subset\sh{J}$, y
+\[
+  \sh{J}''=\sh{J}/\sh{J}'
+\]
+es un $\sh{O}_X$-módulo coherente \sref[0]{0.5.3.3}, con soporte
+$\{x\}$, y $\sh{J}''_x=\kres(x)$.
+Como $\sh{L}$ es localmente libre, la sucesión
+\[
+  0\longrightarrow
+  \sh{J}'\otimes\sh{L}^{\otimes n}
+  \longrightarrow
+  \sh{J}\otimes\sh{L}^{\otimes n}
+  \longrightarrow
+  \sh{J}''\otimes\sh{L}^{\otimes n}
+  \longrightarrow0
+\]
+es exacta para todo $n$.
+Por hipótesis, para todo $n$ suficientemente grande,
+\[
+  \HH^1(X,\sh{J}'\otimes\sh{L}^{\otimes n})=0.
+\]
+----- French corrections on page III 110 -----
+[id 5848]
+OLD: \[
+\chi_A(\mathcal F(n))=\operatorname{long}H^0(X,\mathcal F(n))
+=\operatorname{long}\Gamma(X,\mathcal F(n))
+\]
+NEW: $\chi_A(\mathcal F(n))=\operatorname{long}H^0(X,\mathcal F(n))
+=\operatorname{long}\Gamma(X,\mathcal F(n))$
+FRENCH CONTEXT (corrected):  outre que \emph{le degré de
+$\chi_A(\mathcal F(n))$ est égal à la dimension du support de}
+$\mathcal F$.
+
+\begin{proof}
+Comme on a $H^i(X,\mathcal F(n))=0$ pour tout $i>0$ dès que $n$ est
+assez grand (\hyperref[III.2.2.1-fr]{2.2.1}),
+
+\oldpage[III]{110}
+on a
+$\chi_A(\mathcal F(n))=\operatorname{long}H^0(X,\mathcal F(n))
+=\operatorname{long}\Gamma(X,\mathcal F(n))$
+pour $n$ assez grand, d'où (ii)~; cela entraîne
+$\chi_A(\mathcal F(n))\geq0$ pour $n$ assez grand, et (iii) résulte donc
+de (i)~; comme d'ailleurs l'assertion d'unicité de (i) est immédiate, il
+reste à prouver l'existence du polynôme $P$.
+
+Montrons d'abord qu
+
+[id 5850]
+OLD: (II, 4.4.10)
+NEW: (\textbf{II}, 4.4.10)
+FRENCH CONTEXT (corrected): (\mathcal F')$, où $\mathcal F'$ est un
+$\mathcal O_{X'}$-Module cohérent~; $X'$ est un schéma projectif sur
+$\operatorname{Spec}(K)$, où $K=A/\mathfrak m$. Si
+$\mathcal L'=j^*(\mathcal L)$, $\mathcal L'$ est très ample relativement
+à $\operatorname{Spec}(K)$ (\textbf{II}, 4.4.10), et on a
+$\mathcal F(n)=j_*(\mathcal F'(n))$, où
+$\mathcal F'(n)=\mathcal F'\otimes_{\mathcal O_{X'}}
+\mathcal L'^{\otimes n}$ (\textbf{0}\textsubscript{I}, 5.4.10). On en conclut que
+$\chi_A(\mathcal F(n))=\chi_K(\mathcal F'(n))$ (G, II, 4.9.1), et on est
+do
+
+[id 5851]
+OLD: (0\textsubscript{I}, 5.4.10)
+NEW: (\textbf{0}\textsubscript{I}, 5.4.10)
+FRENCH CONTEXT (corrected): 
+
+(ii) Soit $\mathcal L'=g'^*(\mathcal L)$, qui est un
+$\mathcal O_{X'}$-Module inversible~; pour tout $n\in\mathbb Z$, on a
+$g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otimes n}
+=\mathcal M(n)$
+(\textbf{0}\textsubscript{I}, 5.4.10) à un isomorphisme près~; on peut appliquer
+à $\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$ le
+raisonnement fait dans (i) pour $\widetilde{\mathcal M}$, qui prouve que
+$R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$
+est isomorphe 
+
+[id 5852]
+OLD: est un corps.
+NEW: est un \emph{corps}.
+FRENCH CONTEXT (corrected): =j_*(\mathcal F'(n))$, où
+$\mathcal F'(n)=\mathcal F'\otimes_{\mathcal O_{X'}}
+\mathcal L'^{\otimes n}$ (\textbf{0}\textsubscript{I}, 5.4.10). On en conclut que
+$\chi_A(\mathcal F(n))=\chi_K(\mathcal F'(n))$ (G, II, 4.9.1), et on est
+donc ramené au cas où $A$ est un \emph{corps}.
+
+Notons maintenant que $X$ peut être considéré comme un sous-schéma
+fermé de $P=\mathbf P_A^r$ pour un $r$ convenable (\textbf{II}, 5.5.4, (ii))~;
+si $i:X\to P$ est l'injection canonique, on voit comme ci-dessus que l'on
+a $\chi_A(\mathcal F(n))=\chi_A(i_*(\m
+
+[id 5853]
+OLD: (II, 5.5.4, (ii))
+NEW: (\textbf{II}, 5.5.4, (ii))
+FRENCH CONTEXT (corrected): 0). On en conclut que
+$\chi_A(\mathcal F(n))=\chi_K(\mathcal F'(n))$ (G, II, 4.9.1), et on est
+donc ramené au cas où $A$ est un \emph{corps}.
+
+Notons maintenant que $X$ peut être considéré comme un sous-schéma
+fermé de $P=\mathbf P_A^r$ pour un $r$ convenable (\textbf{II}, 5.5.4, (ii))~;
+si $i:X\to P$ est l'injection canonique, on voit comme ci-dessus que l'on
+a $\chi_A(\mathcal F(n))=\chi_A(i_*(\mathcal F)(n))$, de sorte que l'on
+peut se borner au cas où $X=\mathbf P_A^r=\operatorname{Proj}(S)$ avec
+$S=A[T_0,\ldots,T_r]$, $A$ étant un corp
+
+[id 5854]
+OLD: (II, 2.7.8)
+NEW: (\textbf{II}, 2.7.8)
+FRENCH CONTEXT (corrected): al F(n))=\chi_A(i_*(\mathcal F)(n))$, de sorte que l'on
+peut se borner au cas où $X=\mathbf P_A^r=\operatorname{Proj}(S)$ avec
+$S=A[T_0,\ldots,T_r]$, $A$ étant un corps.
+
+Cela étant, on a $\mathcal F=\widetilde M$, où $M$ est un $S$-module
+gradué de type fini (\textbf{II}, 2.7.8)~; il existe par suite une résolution finie
+de $M$ par des $S$-modules gradués \emph{libres} de type fini
+\[
+0\to L_q\to L_{q-1}\to\ldots\to L_1\to M\to0
+\]
+en vertu du th. des syzygies de Hilbert (M, VIII, 6.5)~; comme
+$\widetilde M$ est un foncteur exact en 
+
+[id 5858]
+OLD: (II, 2.5.4)
+NEW: (\textbf{II}, 2.5.4)
+FRENCH CONTEXT (corrected): l existe par suite une résolution finie
+de $M$ par des $S$-modules gradués \emph{libres} de type fini
+\[
+0\to L_q\to L_{q-1}\to\ldots\to L_1\to M\to0
+\]
+en vertu du th. des syzygies de Hilbert (M, VIII, 6.5)~; comme
+$\widetilde M$ est un foncteur exact en $M$ (\textbf{II}, 2.5.4), on a
+aussi une suite exacte
+\[
+0\to\widetilde L_q\to\widetilde L_{q-1}\to\ldots
+\to\widetilde L_1\to\widetilde M\to0
+\]
+et par suite, pour tout $n\in\mathbb Z$, la suite
+\[
+0\to\widetilde L_q(n)\to\widetilde L_{q-1}(n)\to\ldots
+\to\widetilde L_1(n)\to\wideti
+
+[id 5862]
+OLD: (II, 2.5.15)
+NEW: (\textbf{II}, 2.5.15)
+FRENCH CONTEXT (corrected): M(n))=\sum_{j=1}^{q}(-1)^{j+1}
+\chi_A(\widetilde L_j(n))
+\]
+et pour prouver (i), on est donc ramené au cas où $M$ est \emph{libre} et gradué
+de type fini, donc au cas où $M=S(h)$ pour un $h\in\mathbb Z$. Comme
+alors $\widetilde M(n)=(M(n))^\sim=(S(n+h))^\sim$ (\textbf{II}, 2.5.15), on voit
+finalement que le théorème résultera du
+\end{proof}
+
+\oldpage[III]{111}
+\begin{lemma}[2.5.3.1]
+\label{III.2.5.3.1-fr}
+Soient $A$ un corps, $r$ un entier $>0$, et $X=\mathbf P_A^r$~; on a
+alors
+$\chi_A(\mathcal O_X(n))=\binom{n+r}{r}$
+pour tout $n\in\
+
+=================== PAGE III 111 ===================
+----- (Spanish page III 110: shown above in this file) -----
+----- (Spanish page III 111: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 112 -----
+\oldpage[III]{112}
+
+La sucesión exacta de cohomología muestra, por tanto, que
+\[
+  \Gamma(X,\sh{J}\otimes\sh{L}^{\otimes n})
+  \longrightarrow
+  \Gamma(X,\sh{J}''\otimes\sh{L}^{\otimes n})
+\]
+es sobreyectivo.
+Una sección $g$ de $\sh{J}''\otimes\sh{L}^{\otimes n}$ sobre $X$ tal que
+$g(x)\neq0$ es, por consiguiente, la imagen de una sección
+\[
+  h\in\Gamma(X,\sh{J}\otimes\sh{L}^{\otimes n})
+  \subset\Gamma(X,\sh{L}^{\otimes n});
+\]
+la inclusión se deduce de \sref[0]{0.5.4.1}.
+Por construcción, $h(x)\neq0$, mientras que $h(z)=0$ para todo $z\notin U$.
+Así, $x\in X_h\subset U$, lo que demuestra la aserción.
+\end{proof}
+
+\begin{proposition}[2.6.2]
+\label{III.2.6.2}
+Sea $Y$ un preesquema noetheriano, sea $f:X\to Y$ un morfismo de
+tipo finito, sea $g:X'\to X$ un morfismo finito sobreyectivo, sea
+$\sh{L}$ un $\sh{O}_X$-módulo invertible, y pongamos
+\[
+  \sh{L}'=g^*(\sh{L}).
+\]
+Supongamos que existe un subconjunto $Z$ de $X$, propio sobre $Y$
+\sref[II]{II.5.4.10}, tal que, para todo $x\in X\setmin Z$, o bien $X$ es
+normal en $x$, o bien
+\[
+  \bigl(g_*(\sh{O}_{X'})\bigr)_x
+\]
+es un $\sh{O}_{X,x}$-módulo libre.
+Entonces $\sh{L}$ es amplio para $f$ si y solo si $\sh{L}'$ es amplio para
+$f\circ g$.
+\end{proposition}
+
+\begin{proof}
+\begin{env}[2.6.2.1]
+\label{III.2.6.2.1}
+Como $g$ es afín, la condición es necesaria \sref[II]{II.5.1.12}.
+Para demostrar que es suficiente, podemos suponer que $Y$ es afín
+\sref[II]{II.4.6.4}.
+Mostremos primero que también podemos limitarnos al caso en que $X$ es
+reducido.
+
+Sea $j:X_{\mathrm{red}}\to X$ la inmersión canónica, y pongamos
+\[
+  X_1=X_{\mathrm{red}},
+  \qquad
+  X'_1=X'\times_X X_1.
+\]
+Tenemos entonces el diagrama conmutativo
+\[
+  \xymatrix{
+    X'\ar[d]_g &
+    X'_1\ar[l]_{j'}\ar[d]^{g_1}\\
+    X &
+    X_1\ar[l]^{j}
+  }
+  \label{III.2.6.2.2}\tag{2.6.2.2}
+\]
+El morfismo $f\circ j$ es de tipo finito \sref[I]{I.6.3.4}, y
+$g_1$ es finito \sref[II]{II.6.1.5},~(iii).
+Si $\sh{L}'$ es amplio para $f\circ g$, entonces
+$j'^*(\sh{L}')$ es amplio para $f\circ g\circ j'$, porque $j'$ es una
+inmersión cerrada \sref[II]{II.5.1.12} y \sref[I]{I.4.3.2}.
+Si $Z_1=j^{-1}(Z)$, entonces $Z_1$ es propio sobre $Y$
+\sref[II]{II.5.4.10}.
+Además, si $X$ es normal en un punto $x$, también lo es $X_{\mathrm{red}}$
+en ese punto; y si
+$\bigl(g_*(\sh{O}_{X'})\bigr)_x$ es un $\sh{O}_{X,x}$-módulo libre,
+entonces \sref[II]{II.1.5.2} muestra que
+\[
+  \bigl((g_1)_*(\sh{O}_{X'_1})\bigr)_x
+\]
+es un $\sh{O}_{X_1,x}$-módulo libre.
+Finalmente, como $X$ es noetheriano \sref[I]{I.6.3.7}, la amplitud de
+$j^*(\sh{L})$ implica la de $\sh{L}$ \sref[II]{II.4.5.14}.
+Como
+\[
+  j'^*(\sh{L}')=g_1^*(j^*(\sh{L})),
+\]
+esto demuestra la reducción anunciada.
+En lo sucesivo suponemos que $Y$ es afín y que $X$ es reducido.
+\end{env}
+
+Se satisfacen ahora las hipótesis de \sref[II]{II.6.6.11}.
+Existen un $Y$-preesquema reducido $X_2$, y un
+$Y$-morfismo finito birracional
+\[
+  h:X_2\to X
+\]
+cuya restricción a $h^{-1}(X\setmin Z)$ es un isomorfismo sobre $X\setmin Z$, y
+tal que $h^*(\sh{L})$ es amplio.
+Reemplazando $X'$ por $X_2$, quedamos reducidos a demostrar la proposición bajo
+la hipótesis adicional de que $g$ posee las propiedades que acabamos de enumerar para
+$h$.
+Seguimos denotando por $Z$ un subpreesquema cerrado de $X$, propio sobre
+$Y$ \sref[II]{II.5.4.10}, cuyo espacio subyacente es el subconjunto dado
+$Z$.
+
+\begin{env}[2.6.2.3]
+\label{III.2.6.2.3}
+Sea $X_1$ un subpreesquema cerrado de $X$, sea $j:X_1\to X$ la
+inmersión canónica, y sea
+\[
+  X'_1=g^{-1}(X_1)=X'\times_X X_1,
+\]
+con inmersión canónica $j':X'_1\to X'$.
+El cuadrado correspondiente es de nuevo \eqref{III.2.6.2.2}.
+Pongamos
+\[
+  \sh{L}_1=j^*(\sh{L}),
+  \qquad
+  \sh{L}'_1=j'^*(\sh{L}')=g_1^*(\sh{L}_1).
+\]
+Entonces $\sh{L}'_1$ es amplio para $f\circ g\circ j'$
+\sref[II]{II.5.1.12}.
+Si $Z_1=j^{-1}(Z)$, el subpreesquema cerrado $Z_1$ de $X_1$ es propio
+sobre $Y$ \sref[II]{II.5.4.2},~(ii).
+En otras palabras, las hipótesis de \sref{III.2.6.2} se cumplen para
+$X_1$, $\sh{L}_1$, $g_1$ y $Z_1$.
+\end{env}
+----- French corrections on page III 111 -----
+[id 5863]
+OLD: \[
+\chi_A(\mathcal O_X(n))=\binom{n+r}{r}
+\]
+NEW: $\chi_A(\mathcal O_X(n))=\binom{n+r}{r}$
+FRENCH CONTEXT (corrected): lde M(n)=(M(n))^\sim=(S(n+h))^\sim$ (\textbf{II}, 2.5.15), on voit
+finalement que le théorème résultera du
+\end{proof}
+
+\oldpage[III]{111}
+\begin{lemma}[2.5.3.1]
+\label{III.2.5.3.1-fr}
+Soient $A$ un corps, $r$ un entier $>0$, et $X=\mathbf P_A^r$~; on a
+alors
+$\chi_A(\mathcal O_X(n))=\binom{n+r}{r}$
+pour tout $n\in\mathbb Z$.
+\end{lemma}
+
+\begin{proof}
+En effet, pour $n\geq0$, on a
+$\chi_A(\mathcal O_X(n))=\operatorname{long}H^0(X,\mathcal O_X(n))$, qui
+est le nombre de monômes en les $T_i$ de degré total $n$, c'est-à-dire
+$\binom{n+r}{r}$ (\hyperref[III
+
+[id 5864]
+OLD: \[
+\chi_A(\mathcal O_X(n))=(-1)^r
+\operatorname{long}H^r(X,\mathcal O_X(n))~;
+\]
+NEW: $\chi_A(\mathcal O_X(n))=(-1)^r
+\operatorname{long}H^r(X,\mathcal O_X(n))$~;
+FRENCH CONTEXT (corrected): }
+En effet, pour $n\geq0$, on a
+$\chi_A(\mathcal O_X(n))=\operatorname{long}H^0(X,\mathcal O_X(n))$, qui
+est le nombre de monômes en les $T_i$ de degré total $n$, c'est-à-dire
+$\binom{n+r}{r}$ (\hyperref[III.2.1.12-fr]{2.1.12}). Pour
+$n\leq-r-1$, on a de même
+$\chi_A(\mathcal O_X(n))=(-1)^r
+\operatorname{long}H^r(X,\mathcal O_X(n))$~;
+si $n=-r-h$, la dimension de $H^r(X,\mathcal O_X(n))$ sur $A$ est le
+nombre des suites $(p_i)_{0\leq i\leq r}$ d'entiers $p_i>0$ tels que
+$\sum_{i=0}^{r}p_i=r+h$ (\hyperref[III.2.1.12-fr]{2.1.12}), ou encore le
+nombre des suites d'entiers $q_i\geq0$ $(0\leq i
+
+[id 5865]
+OLD: \[
+\binom{h+r-1}{r}=(-1)^r\binom{n+r}{r}.
+\]
+NEW: $\binom{h+r-1}{r}=(-1)^r\binom{n+r}{r}$.
+FRENCH CONTEXT (corrected): t le
+nombre des suites $(p_i)_{0\leq i\leq r}$ d'entiers $p_i>0$ tels que
+$\sum_{i=0}^{r}p_i=r+h$ (\hyperref[III.2.1.12-fr]{2.1.12}), ou encore le
+nombre des suites d'entiers $q_i\geq0$ $(0\leq i\leq r)$ tels que
+$\sum_{i=0}^{r}q_i=h-1$~; c'est donc le nombre
+$\binom{h+r-1}{r}=(-1)^r\binom{n+r}{r}$.
+Enfin, pour $-r\leq n<0$, on a $\binom{n+r}{r}=0$ et d'autre part
+$H^i(X,\mathcal O_X(n))=0$ pour tout $i\geq0$
+(\hyperref[III.2.1.12-fr]{2.1.12}), ce qui prouve le lemme.
+\end{proof}
+
+\begin{corollary}[2.5.4]
+\label{III.2.5.4-fr}
+Soient $A$ un anneau local a
+
+[id 5866]
+OLD: \[
+\chi_A(\widetilde M(n))=\operatorname{long}M_n
+\]
+NEW: $\chi_A(\widetilde M(n))=\operatorname{long}M_n$
+FRENCH CONTEXT (corrected): ce qui prouve le lemme.
+\end{proof}
+
+\begin{corollary}[2.5.4]
+\label{III.2.5.4-fr}
+Soient $A$ un anneau local artinien, $S$ une $A$-algèbre graduée de type
+fini engendrée par $S_1$, $M$ un $S$-module gradué de type fini,
+$X=\operatorname{Proj}(S)$. On a alors
+$\chi_A(\widetilde M(n))=\operatorname{long}M_n$
+pour $n$ assez grand.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de ce que $M_n$ et $\Gamma(X,\widetilde M(n))$ sont
+isomorphes pour $n$ assez grand
+(\hyperref[III.2.3.1-fr]{2.3.1}).
+\end{proof}
+
+\subsection{Application : critères d'amplitude}
+\label{subsect
+
+[id 5867]
+OLD: \item[a)]
+NEW: \item[\textup{a)}]
+FRENCH CONTEXT (corrected): .4-fr}
+
+\begin{theorem}[1.4.1]
+\label{I.1.4.1-fr}
+Soient $X$ le spectre premier d'un anneau $A$, $V$ une partie ouverte
+quasi-compacte de $X$, $\mathscr{F}$ un $(\mathscr{O}_X|V)$-Module. Les
+quatre conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un $A$-module $M$ tel que $\mathscr{F}$ soit
+  isomorphe à $\widetilde{M}|V$.
+  \item[\textup{b)}] Il existe un recouvrement ouvert fini $(V_i)$ de $V$ par des
+  ensembles de la forme $D(f_i)$ ($f_i\in A$) contenus dans $V$, tels que,
+  pour tout $i
+
+[id 5868]
+OLD: \item[b)]
+NEW: \item[\textup{b)}]
+FRENCH CONTEXT (corrected): ie ouverte
+quasi-compacte de $X$, $\mathscr{F}$ un $(\mathscr{O}_X|V)$-Module. Les
+quatre conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] Il existe un $A$-module $M$ tel que $\mathscr{F}$ soit
+  isomorphe à $\widetilde{M}|V$.
+  \item[\textup{b)}] Il existe un recouvrement ouvert fini $(V_i)$ de $V$ par des
+  ensembles de la forme $D(f_i)$ ($f_i\in A$) contenus dans $V$, tels que,
+  pour tout $i$, $\mathscr{F}|V_i$ soit isomorphe à un faisceau de la forme
+  $\widetilde{M}_i$, où $M_i$ est un $A_{f_i}$-
+
+[id 5869]
+OLD: \[
+R^qf_*(\mathcal F\otimes\mathcal L^{\otimes n})=0
+\]
+NEW: $R^qf_*(\mathcal F\otimes\mathcal L^{\otimes n})=0$
+FRENCH CONTEXT (corrected): ule inversible. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\textup{a)}] $\mathcal L$ est ample pour $f$.
+\item[\textup{b)}] Pour tout $\mathcal O_X$-Module cohérent $\mathcal F$, il
+existe un entier $N$ tel que pour $n\geq N$, on ait
+$R^qf_*(\mathcal F\otimes\mathcal L^{\otimes n})=0$
+pour tout $q>0$.
+\item[\textup{c)}] Pour tout Idéal cohérent $\mathcal J$ de $\mathcal O_X$, il
+existe un entier $N$ tel que pour $n\geq N$ on ait
+$R^1f_*(\mathcal J\otimes\mathcal L^{\otimes n})=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On a vu qu
+
+[id 5870]
+OLD: \item[c)]
+NEW: \item[\textup{c)}]
+FRENCH CONTEXT (corrected):  un recouvrement ouvert fini $(V_i)$ de $V$ par des
+  ensembles de la forme $D(f_i)$ ($f_i\in A$) contenus dans $V$, tels que,
+  pour tout $i$, $\mathscr{F}|V_i$ soit isomorphe à un faisceau de la forme
+  $\widetilde{M}_i$, où $M_i$ est un $A_{f_i}$-module.
+  \item[\textup{c)}] Le faisceau $\mathscr{F}$ est quasi-cohérent
+  \textup{(\hyperref[0.5.1.3-fr]{\textbf{0}, 5.1.3})}.
+  \item[\textup{d)}] Les deux propriétés suivantes ont lieu~:
+  \begin{enumerate}
+    \item[\textup{d\,1)}] Pour tout $f\in A$ tel que $D(f)\subset V$ et toute
+
+[id 5871]
+OLD: \[
+R^1f_*(\mathcal J\otimes\mathcal L^{\otimes n})=0.
+\]
+NEW: $R^1f_*(\mathcal J\otimes\mathcal L^{\otimes n})=0$.
+FRENCH CONTEXT (corrected): l F$, il
+existe un entier $N$ tel que pour $n\geq N$, on ait
+$R^qf_*(\mathcal F\otimes\mathcal L^{\otimes n})=0$
+pour tout $q>0$.
+\item[\textup{c)}] Pour tout Idéal cohérent $\mathcal J$ de $\mathcal O_X$, il
+existe un entier $N$ tel que pour $n\geq N$ on ait
+$R^1f_*(\mathcal J\otimes\mathcal L^{\otimes n})=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On a vu que \emph{a)} entraîne \emph{b)} (\hyperref[III.2.2.1-fr]{2.2.1}, (ii)). Il
+est trivial que \emph{b)} entraîne \emph{c)}, et il reste à prouver que \emph{c)} implique
+\emph{a)}. On peut se borner au cas
+
+[id 5872]
+OLD: que a) entraîne b)
+NEW: que \emph{a)} entraîne \emph{b)}
+FRENCH CONTEXT (corrected): de séries
+        formelles restreintes \textup{(\hyperref[0.7.5.1-fr]{\textbf{0}, 7.5.1})} sur
+        $\Gamma(V,\mathscr{O}_{\mathfrak{Y}})$, par un idéal (nécessairement
+        fermé).
+    \end{enumerate}
+\end{enumerate}
+\end{proposition}
+
+Il est immédiat que \emph{a)} entraîne \emph{b)} en vertu de
+(\hyperref[I.10.12.3-fr]{10.12.3}). Pour montrer que \emph{b)} entraîne \emph{c)}, on
+peut, puisque la question est locale sur $\mathfrak{Y}$, supposer que
+$\mathfrak{Y}=\operatorname{Spf}(B)$, où $B$ est adique noethérien~; soit
+$\mathscr{K}=\mat
+
+[id 5873]
+OLD: que b) entraîne c)
+NEW: que \emph{b)} entraîne \emph{c)}
+FRENCH CONTEXT (corrected): forment un système de générateurs de la
+$(A/\mathfrak J)$-algèbre $B/\mathfrak JB$~; on voit aussitôt que les $c_i,a_j$
+forment un système de générateurs de la $(A/\mathfrak J^2)$-algèbre
+$B/\mathfrak J^2B$, donc \emph{a)} implique \emph{b)}.
+
+Reste à prouver que \emph{b)} entraîne \emph{c)}. L'hypothèse entraîne que $B_1$ est un
+anneau noethérien, et comme $B_1=B_2/\mathfrak J^2B_2$, on a
+$\mathfrak J^2B_1=0$, donc
+$\mathfrak JB_1=\mathfrak JB_1/\mathfrak J^2B_1$ est un $B_0$-module de type
+fini. Les conditions de (7.2.7) sont donc vérifiées par
+
+[id 5874]
+OLD: que c) implique
+a).
+NEW: que \emph{c)} implique
+\emph{a)}.
+FRENCH CONTEXT (corrected): n ait
+$R^1f_*(\mathcal J\otimes\mathcal L^{\otimes n})=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On a vu que \emph{a)} entraîne \emph{b)} (\hyperref[III.2.2.1-fr]{2.2.1}, (ii)). Il
+est trivial que \emph{b)} entraîne \emph{c)}, et il reste à prouver que \emph{c)} implique
+\emph{a)}. On peut se borner au cas où $Y$ est affine (\textbf{II}, 4.6.4), et prouver
+dans ce cas que $\mathcal L$ est ample~; il suffira de montrer que lorsque
+$h$ parcourt l'ensemble des sections des $\mathcal L^{\otimes n}$
+$(n>0)$ au-dessus de $X$, ceux des $X_h$ q
+
+[id 5875]
+OLD: (II, 4.6.4)
+NEW: (\textbf{II}, 4.6.4)
+FRENCH CONTEXT (corrected):  les
+hypothèses de (\hyperref[III.2.2.1-fr]{2.2.1}) impliquent que pour tout
+ouvert $U\subset Y$, la restriction de $f$ à $f^{-1}(U)$ est un morphisme
+projectif $f^{-1}(U)\to U$ (\textbf{II}, 5.5.5, (iii)) et
+$\mathcal L|f^{-1}(U)$ est ample pour ce morphisme (\textbf{II}, 4.6.4).
+
+(ii) L'assertion (iii) de (\hyperref[III.2.2.1-fr]{2.2.1}) est encore
+valable, comme on l'a vu, lorsque l'on suppose seulement que $X$ est un
+schéma quasi-compact ou un préschéma dont l'espace sous-jacent est
+noethérien, et $f:X\to Y$ un morphisme quasi-com
+
+[id 5876]
+OLD: (II, 4.5.2)
+NEW: (\textbf{II}, 4.5.2)
+FRENCH CONTEXT (corrected): extbf{II}, 4.6.4), et prouver
+dans ce cas que $\mathcal L$ est ample~; il suffira de montrer que lorsque
+$h$ parcourt l'ensemble des sections des $\mathcal L^{\otimes n}$
+$(n>0)$ au-dessus de $X$, ceux des $X_h$ qui sont affines forment un
+recouvrement de $X$ (\textbf{II}, 4.5.2). Pour cela, montrons que pour tout point
+\emph{fermé} $x$ de $X$ et tout voisinage ouvert affine $U$ de $x$, il existe un
+$n$ et un $h\in\Gamma(X,\mathcal L^{\otimes n})$ tels que
+$x\in X_h\subset U$~; $X_h$ sera nécessairement affine (\textbf{I}, 1.3.6) et l
+
+[id 5877]
+OLD: point
+fermé $x$
+NEW: point
+\emph{fermé} $x$
+FRENCH CONTEXT (corrected): L$ est ample~; il suffira de montrer que lorsque
+$h$ parcourt l'ensemble des sections des $\mathcal L^{\otimes n}$
+$(n>0)$ au-dessus de $X$, ceux des $X_h$ qui sont affines forment un
+recouvrement de $X$ (\textbf{II}, 4.5.2). Pour cela, montrons que pour tout point
+\emph{fermé} $x$ de $X$ et tout voisinage ouvert affine $U$ de $x$, il existe un
+$n$ et un $h\in\Gamma(X,\mathcal L^{\otimes n})$ tels que
+$x\in X_h\subset U$~; $X_h$ sera nécessairement affine (\textbf{I}, 1.3.6) et la
+réunion de ces $X_h$ sera un ouvert de $X$ contenant tou
+
+[id 5878]
+OLD: (I, 1.3.6)
+NEW: (\textbf{I}, 1.3.6)
+FRENCH CONTEXT (corrected): X$ par des ouverts affines qui sont arbitrairement fins (\textbf{I}, 1.1.10),
+la définition de la cohomologie de Čech (G, II, 5.8) montre que l'on a aussi
+$\check H^p(X,\mathcal F)=0$ pour $p>0$. Mais ceci s'applique aussi à tout
+préschéma $X_f$ pour $f\in A$ (\textbf{I}, 1.3.6), donc
+$\check H^p(X_f,\mathcal F)=0$ pour $p>0$. Comme l'on a
+$X_f\cap X_g=X_{fg}$, on en déduit que l'on a aussi
+$H^p(X,\mathcal F)=0$ pour tout $p>0$, en vertu de (G, II, 5.9.2).
+\end{proof}
+
+\begin{corollary}[1.3.2]
+\label{III.1.3.2-fr}
+Soient $Y$ un présc
+
+[id 5879]
+OLD: (I, 6.3.7 et
+NEW: (\textbf{I}, 6.3.7 et
+FRENCH CONTEXT (corrected): Gamma(X,\mathcal L^{\otimes n})$ tels que
+$x\in X_h\subset U$~; $X_h$ sera nécessairement affine (\textbf{I}, 1.3.6) et la
+réunion de ces $X_h$ sera un ouvert de $X$ contenant tous les points
+fermés de $X$, et par suite $X$ lui-même puisque $X$ est noethérien
+(\textbf{I}, 6.3.7 et \textbf{0}\textsubscript{I}, 2.1.3). Soit $\mathcal J$ (resp.
+$\mathcal J'$) le faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X\setmin U$ (resp. $(X\setmin U)\cup\{x\}$) (\t
+
+[id 5880]
+OLD: 0\textsubscript{I}, 2.1.3)
+NEW: \textbf{0}\textsubscript{I}, 2.1.3)
+FRENCH CONTEXT (corrected): times n})$ tels que
+$x\in X_h\subset U$~; $X_h$ sera nécessairement affine (\textbf{I}, 1.3.6) et la
+réunion de ces $X_h$ sera un ouvert de $X$ contenant tous les points
+fermés de $X$, et par suite $X$ lui-même puisque $X$ est noethérien
+(\textbf{I}, 6.3.7 et \textbf{0}\textsubscript{I}, 2.1.3). Soit $\mathcal J$ (resp.
+$\mathcal J'$) le faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X\setmin U$ (resp. $(X\setmin U)\cup\{x\}$) (\textbf{I}, 5.2.1)~; il est clair que
+
+
+[id 5883]
+OLD: (I, 5.2.1)
+NEW: (\textbf{I}, 5.2.1)
+FRENCH CONTEXT (corrected):  et \textbf{0}\textsubscript{I}, 2.1.3). Soit $\mathcal J$ (resp.
+$\mathcal J'$) le faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X\setmin U$ (resp. $(X\setmin U)\cup\{x\}$) (\textbf{I}, 5.2.1)~; il est clair que
+$\mathcal J$ et $\mathcal J'$ sont cohérents (\textbf{I}, 6.1.1), que
+$\mathcal J'\subset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (\textbf{0}\textsubscript{I}, 5.3.3) ayant pour support 
+
+[id 5884]
+OLD: (I, 6.1.1)
+NEW: (\textbf{I}, 6.1.1)
+FRENCH CONTEXT (corrected): faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X\setmin U$ (resp. $(X\setmin U)\cup\{x\}$) (\textbf{I}, 5.2.1)~; il est clair que
+$\mathcal J$ et $\mathcal J'$ sont cohérents (\textbf{I}, 6.1.1), que
+$\mathcal J'\subset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (\textbf{0}\textsubscript{I}, 5.3.3) ayant pour support $\{x\}$ et tel
+que $\mathcal J''_x=\boldsymbol{k}(x)$. Comme $\mathcal L$ est locale
+
+[id 5885]
+OLD: (0\textsubscript{I}, 5.3.3)
+NEW: (\textbf{0}\textsubscript{I}, 5.3.3)
+FRENCH CONTEXT (corrected): recte $\mathcal E$
+d'un nombre fini de faisceaux $\mathcal O_X(m_j)$ (\textbf{II}, 2.7.10)~;
+autrement dit, on a une suite exacte
+\[
+0\longrightarrow\mathcal R\longrightarrow\mathcal E
+\longrightarrow\mathcal F\longrightarrow0,
+\]
+où $\mathcal R$ est cohérent (\textbf{0}\textsubscript{I}, 5.3.3) et où
+$\mathcal E$ vérifie (i) et (iii). Comme $\mathcal F(n)$ est un foncteur
+exact en $\mathcal F$, on a aussi la suite exacte
+\[
+0\longrightarrow\mathcal R(n)\longrightarrow\mathcal E(n)
+\longrightarrow\mathcal F(n)\longrightarrow0
+\]
+pour tout $n\in\mathb
+
+[id 5886]
+OLD: \mathcal J''_x=k(x)
+NEW: \mathcal J''_x=\boldsymbol{k}(x)
+FRENCH CONTEXT (corrected): $\mathcal J$ et $\mathcal J'$ sont cohérents (\textbf{I}, 6.1.1), que
+$\mathcal J'\subset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (\textbf{0}\textsubscript{I}, 5.3.3) ayant pour support $\{x\}$ et tel
+que $\mathcal J''_x=\boldsymbol{k}(x)$. Comme $\mathcal L$ est localement libre, la
+suite
+$0\to\mathcal J'\otimes\mathcal L^{\otimes n}
+\to\mathcal J\otimes\mathcal L^{\otimes n}
+\to\mathcal J''\otimes\mathcal L^{\otimes n}\to0$
+est exacte pour tout $n$, et par hypothèse il existe $n$ assez grand
+
+[id 5887]
+OLD: \[
+0\to\mathcal J'\otimes\mathcal L^{\otimes n}
+\to\mathcal J\otimes\mathcal L^{\otimes n}
+\to\mathcal J''\otimes\mathcal L^{\otimes n}\to0
+\]
+NEW: $0\to\mathcal J'\otimes\mathcal L^{\otimes n}
+\to\mathcal J\otimes\mathcal L^{\otimes n}
+\to\mathcal J''\otimes\mathcal L^{\otimes n}\to0$
+FRENCH CONTEXT (corrected): bset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (\textbf{0}\textsubscript{I}, 5.3.3) ayant pour support $\{x\}$ et tel
+que $\mathcal J''_x=\boldsymbol{k}(x)$. Comme $\mathcal L$ est localement libre, la
+suite
+$0\to\mathcal J'\otimes\mathcal L^{\otimes n}
+\to\mathcal J\otimes\mathcal L^{\otimes n}
+\to\mathcal J''\otimes\mathcal L^{\otimes n}\to0$
+est exacte pour tout $n$, et par hypothèse il existe $n$ assez grand tel
+que $H^1(X,\mathcal J'\otimes\mathcal L^{\otimes n})=0$~; la suite
+exacte de cohomologie
+\oldpage[III]{112}
+prouve donc que l'homomorphisme
+$\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes
+
+=================== PAGE III 112 ===================
+----- (Spanish page III 111: shown above in this file) -----
+----- (Spanish page III 112: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 113 -----
+\oldpage[III]{113}
+
+Esto nos permite demostrar \sref{III.2.6.2} por inducción noetheriana
+\sref[0]{0.2.2.2} cuando la restricción de $g$ a $g^{-1}(X\setmin Z)$ es un
+isomorfismo sobre $X\setmin Z$; como se vio en \sref{III.2.6.2.1}, ese caso es
+suficiente.
+Basta mostrar que, si la conclusión de \sref{III.2.6.2} se cumple
+para $\sh{L}_1$ sobre todo subpreesquema cerrado $X_1$ de $X$ cuyo
+espacio subyacente no es $X$, entonces también se cumple para $\sh{L}$.
+
+\begin{env}[2.6.2.4]
+\label{III.2.6.2.4}
+Pongamos
+\[
+  \sh{A}=\sh{O}_X,
+  \qquad
+  \sh{B}=g_*(\sh{O}_{X'}).
+\]
+Como $g$ es birracional y $X$ es reducido, $\sh{B}$ es una
+sub-$\sh{A}$-álgebra del haz $\sh{R}(X)$ de anillos totales de fracciones,
+y es un $\sh{A}$-módulo coherente.
+Además,
+\[
+  \sh{B}|_{X-Z}=\sh{A}|_{X-Z}.
+\]
+Sea $\sh{K}$ el conductor de $\sh{B}$ sobre $\sh{A}$, es decir, el mayor
+sub-$\sh{A}$-módulo cuasicoherente de $\sh{A}$ tal que
+\[
+  \sh{B}\sh{K}\subset\sh{A}.
+\]
+Equivalentemente, $\sh{K}$ es el anulador del
+$\sh{A}$-módulo $\sh{B}/\sh{A}$ \sref[0]{0.5.3.7}.
+Se sigue que
+\[
+  \sh{B}\sh{K}=\sh{K}.
+\]
+Está claro que $\sh{K}_x=\sh{A}_x$ en todo punto que admite un entorno
+$W_x$ sobre el cual $g:g^{-1}(W_x)\to W_x$ es un isomorfismo.
+Esto ocurre, en particular, en todo punto de $X\setmin Z$, y en un
+entorno de todo punto genérico de una componente irreducible de
+$X$.
+
+Sea
+\[
+  Z_1=\Spec(\sh{A}/\sh{K})
+\]
+el subpreesquema cerrado de $X$ definido por $\sh{K}$.
+Es propio sobre $Y$, porque su espacio subyacente es cerrado en $Z$
+\sref[II]{II.5.4.10}.
+La definición de $\sh{K}$ da también
+\[
+  \sh{B}|_{X-Z_1}=\sh{A}|_{X-Z_1}.
+\]
+Podemos, por tanto, reducirnos al caso
+\[
+  Z=\Spec(\sh{A}/\sh{K}).
+\]
+Como $X\setmin Z_1$ es un subconjunto abierto no vacío de $X$, podemos además
+suponer que el espacio subyacente de $Z$ es distinto de $X$.
+\end{env}
+
+\begin{env}[2.6.2.5]
+\label{III.2.6.2.5}
+Consideremos $X'$ como $\Spec(\sh{B})$, puesto que $g$ es afín, y sea
+\[
+  \sh{K}'=\widetilde{\sh{K}}.
+\]
+Este es un ideal coherente de $\sh{O}_{X'}$ que satisface
+$g_*(\sh{K}')=\sh{K}$ \sref[II]{II.1.4.1}.
+El subpreesquema cerrado
+\[
+  Z'=g^{-1}(Z)=Z\times_X X'
+\]
+de $X'$ está definido por $\sh{K}'$ y es igual a
+\[
+  \Spec(\sh{B}/\sh{K})
+\]
+\sref[II]{II.1.4.10}.
+El morfismo $h:Z'\to Z$ es finito \sref[II]{II.6.1.5},~(iii);
+por consiguiente, $Z'$ es propio sobre $Y$ \sref[II]{II.6.1.11} y
+\sref[II]{II.5.4.2},~(ii).
+
+Debemos demostrar que, para todo $x\in X$ y todo entorno abierto $U$
+de $x$, existen un entero $n>0$ y una sección $s$ de
+$\sh{L}^{\otimes n}$ sobre $X$ tales que
+\[
+  x\in X_s\subset U
+\]
+\sref[II]{II.4.5.2}.
+Distinguimos dos casos.
+
+\smallskip
+\noindent
+$1^\circ$ Supongamos primero que $x\in X\setmin Z$.
+Podemos suponer evidentemente que $U\subset X\setmin Z$, de modo que
+$U'=g^{-1}(U)$ no corta a $Z'$.
+Como $\sh{L}'$ es amplio, existen $n>0$ y una sección $s'$ de
+$\sh{L}'^{\otimes n}$ sobre $X'$ tales que
+\[
+  x'=g^{-1}(x)\in X'_{s'}\subset g^{-1}(U)
+\]
+\sref[II]{II.4.5.2}.
+También podemos suponer que
+$\sh{K}'\otimes\sh{L}'^{\otimes n}$ está engendrado por sus secciones globales
+\sref[II]{II.4.5.5}.
+Como $\sh{K}'_{x'}=\sh{O}_{X',x'}$, una de estas secciones, digamos $s''$, es
+no nula en $x'$.
+Multiplicándola por $s'$ y reemplazando así $n$ por $2n$, podemos conseguir
+que
+\[
+  x'\in X'_{s''}\subset g^{-1}(U).
+\]
+Por \sref[0]{0.5.4.10}, existe un isomorfismo canónico
+\[
+  \Gamma(X,\sh{K}\otimes\sh{L}^{\otimes n})
+  \xrightarrow{\sim}
+  \Gamma(X',\sh{K}'\otimes\sh{L}'^{\otimes n}).
+\]
+La sección $s$ de $\sh{K}\otimes\sh{L}^{\otimes n}$ correspondiente a
+$s''$ posee manifiestamente las propiedades requeridas.
+
+\smallskip
+\noindent
+$2^\circ$ Supongamos ahora que $x\in Z$.
+Sea $\sh{J}$ el ideal coherente de $\sh{O}_X$ que define el
+subpreesquema cerrado reducido cuyo espacio subyacente es $X\setmin U$, y consideremos en
+$\sh{B}$ los ideales coherentes
+----- French corrections on page III 112 -----
+[id 5587]
+OLD: \[
+\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\longrightarrow
+\Gamma(X,\mathcal J''\otimes\mathcal L^{\otimes n})
+\]
+NEW: $\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\to
+\Gamma(X,\mathcal J''\otimes\mathcal L^{\otimes n})$
+FRENCH CONTEXT (corrected): \mathcal J''\otimes\mathcal L^{\otimes n}\to0$
+est exacte pour tout $n$, et par hypothèse il existe $n$ assez grand tel
+que $H^1(X,\mathcal J'\otimes\mathcal L^{\otimes n})=0$~; la suite
+exacte de cohomologie
+\oldpage[III]{112}
+prouve donc que l'homomorphisme
+$\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\to
+\Gamma(X,\mathcal J''\otimes\mathcal L^{\otimes n})$
+est \emph{surjectif}. Une section $g$ de
+$\mathcal J''\otimes\mathcal L^{\otimes n}$ au-dessus de $X$ telle que
+$g(x)\neq0$ est donc l'image d'une section
+$h\in\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\subset\Gamma(X,\mathcal L^{\otimes n})$ (car en 
+
+[id 5588]
+OLD: est surjectif. Une
+NEW: est \emph{surjectif}. Une
+FRENCH CONTEXT (corrected): z grand tel
+que $H^1(X,\mathcal J'\otimes\mathcal L^{\otimes n})=0$~; la suite
+exacte de cohomologie
+\oldpage[III]{112}
+prouve donc que l'homomorphisme
+$\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\to
+\Gamma(X,\mathcal J''\otimes\mathcal L^{\otimes n})$
+est \emph{surjectif}. Une section $g$ de
+$\mathcal J''\otimes\mathcal L^{\otimes n}$ au-dessus de $X$ telle que
+$g(x)\neq0$ est donc l'image d'une section
+$h\in\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\subset\Gamma(X,\mathcal L^{\otimes n})$ (car en vertu de
+(\textbf{0}\texts
+
+[id 5589]
+OLD: (0\textsubscript{I}, 5.4.1)
+NEW: (\textbf{0}\textsubscript{I}, 5.4.1)
+FRENCH CONTEXT (corrected): h{surjectif}. Une section $g$ de
+$\mathcal J''\otimes\mathcal L^{\otimes n}$ au-dessus de $X$ telle que
+$g(x)\neq0$ est donc l'image d'une section
+$h\in\Gamma(X,\mathcal J\otimes\mathcal L^{\otimes n})
+\subset\Gamma(X,\mathcal L^{\otimes n})$ (car en vertu de
+(\textbf{0}\textsubscript{I}, 5.4.1),
+$\mathcal J\otimes\mathcal L^{\otimes n}$ est un sous-$\mathcal O_X$-Module
+de $\mathcal L^{\otimes n}$)~; on a par définition $h(x)\neq0$ et
+$h(z)=0$ pour $z\notin U$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[2.6.2]
+\label{III.2.6.2-
+
+[id 5590]
+OLD: (II, 5.4.10) telle
+NEW: (\textbf{II}, 5.4.10) telle
+FRENCH CONTEXT (corrected): rien, $f:X\to Y$ un morphisme de type
+fini, $g:X'\to X$ un morphisme fini surjectif, $\mathcal L$ un
+$\mathcal O_X$-Module inversible et $\mathcal L'=g^*(\mathcal L)$. On
+suppose vérifiée la condition suivante~: Il existe une partie $Z$ de
+$X$, propre sur $Y$ (\textbf{II}, 5.4.10) telle que pour tout $x\in X\setmin Z$, ou bien
+$X$ est normal au point $x$, ou bien $(g_*(\mathcal O_{X'}))_x$ est un
+$\mathcal O_x$-module libre. Dans ces conditions, pour que $\mathcal L$
+soit ample pour $f$, il faut et il suffit que $\mathcal L'$ soit ample
+pour
+
+[id 5592]
+OLD: nécessaire (II, 5.1.12)
+NEW: nécessaire (\textbf{II}, 5.1.12)
+FRENCH CONTEXT (corrected): ule libre. Dans ces conditions, pour que $\mathcal L$
+soit ample pour $f$, il faut et il suffit que $\mathcal L'$ soit ample
+pour $f\circ g$.
+\end{proposition}
+
+\begin{proof}
+\begin{env}[2.6.2.1]
+\label{III.2.6.2.1-fr}
+Puisque $g$ est affine, la condition est nécessaire (\textbf{II}, 5.1.12). Pour
+voir qu'elle est suffisante, on peut supposer $Y$ affine (\textbf{II}, 4.6.4).
+Montrons en outre qu'on peut se borner au cas où $X$ est \emph{réduit}. En
+effet, soit $j:X_{\mathrm{red}}\to X$ l'injection canonique, et posons
+$X_1=X_{\mathrm{red}}$, $X'_
+
+[id 5593]
+OLD: (II, 4.6.4)
+NEW: (\textbf{II}, 4.6.4)
+FRENCH CONTEXT (corrected):  les
+hypothèses de (\hyperref[III.2.2.1-fr]{2.2.1}) impliquent que pour tout
+ouvert $U\subset Y$, la restriction de $f$ à $f^{-1}(U)$ est un morphisme
+projectif $f^{-1}(U)\to U$ (\textbf{II}, 5.5.5, (iii)) et
+$\mathcal L|f^{-1}(U)$ est ample pour ce morphisme (\textbf{II}, 4.6.4).
+
+(ii) L'assertion (iii) de (\hyperref[III.2.2.1-fr]{2.2.1}) est encore
+valable, comme on l'a vu, lorsque l'on suppose seulement que $X$ est un
+schéma quasi-compact ou un préschéma dont l'espace sous-jacent est
+noethérien, et $f:X\to Y$ un morphisme quasi-com
+
+[id 5594]
+OLD: $X$ est réduit. En
+NEW: $X$ est \emph{réduit}. En
+FRENCH CONTEXT (corrected): {proof}
+\begin{env}[2.6.2.1]
+\label{III.2.6.2.1-fr}
+Puisque $g$ est affine, la condition est nécessaire (\textbf{II}, 5.1.12). Pour
+voir qu'elle est suffisante, on peut supposer $Y$ affine (\textbf{II}, 4.6.4).
+Montrons en outre qu'on peut se borner au cas où $X$ est \emph{réduit}. En
+effet, soit $j:X_{\mathrm{red}}\to X$ l'injection canonique, et posons
+$X_1=X_{\mathrm{red}}$, $X'_1=X'\times_X X_1$, de sorte que l'on a le
+diagramme commutatif
+\[
+\xymatrix{
+X'\ar[d]_g & X'_1\ar[l]_{j'}\ar[d]^{g_1\, .}\\
+X & X_1\ar[l]^{j}
+}
+\tag{2.6.2.2}\la
+
+[id 5596]
+OLD: (I, 6.3.4)
+NEW: (\textbf{I}, 6.3.4)
+FRENCH CONTEXT (corrected): 
+$X_1=X_{\mathrm{red}}$, $X'_1=X'\times_X X_1$, de sorte que l'on a le
+diagramme commutatif
+\[
+\xymatrix{
+X'\ar[d]_g & X'_1\ar[l]_{j'}\ar[d]^{g_1\, .}\\
+X & X_1\ar[l]^{j}
+}
+\tag{2.6.2.2}\label{III.2.6.2.2-fr}
+\]
+
+Le morphisme $f\circ j$ est alors de type fini (\textbf{I}, 6.3.4) et $g_1$ est
+un morphisme fini (\textbf{II}, 6.1.5, (iii))~; si $\mathcal L'$ est ample pour
+$f\circ g$, $j'^*(\mathcal L')$ est ample pour $f\circ g\circ j'$ puisque
+$j'$ est une immersion fermée (\textbf{II}, 5.1.12 et \textbf{I}, 4.3.2). Si on pose
+$Z_1=j^
+
+[id 5597]
+OLD: (II, 6.1.5, (iii))
+NEW: (\textbf{II}, 6.1.5, (iii))
+FRENCH CONTEXT (corrected): sorte que l'on a le
+diagramme commutatif
+\[
+\xymatrix{
+X'\ar[d]_g & X'_1\ar[l]_{j'}\ar[d]^{g_1\, .}\\
+X & X_1\ar[l]^{j}
+}
+\tag{2.6.2.2}\label{III.2.6.2.2-fr}
+\]
+
+Le morphisme $f\circ j$ est alors de type fini (\textbf{I}, 6.3.4) et $g_1$ est
+un morphisme fini (\textbf{II}, 6.1.5, (iii))~; si $\mathcal L'$ est ample pour
+$f\circ g$, $j'^*(\mathcal L')$ est ample pour $f\circ g\circ j'$ puisque
+$j'$ est une immersion fermée (\textbf{II}, 5.1.12 et \textbf{I}, 4.3.2). Si on pose
+$Z_1=j^{-1}(Z)$, $Z_1$ est propre sur $Y$ (\textbf{II}, 5.4.10)~; 
+
+[id 5598]
+OLD: (II, 5.1.12 et I, 4.3.2)
+NEW: (\textbf{II}, 5.1.12 et \textbf{I}, 4.3.2)
+FRENCH CONTEXT (corrected): orphisme $f\circ j$ est alors de type fini (\textbf{I}, 6.3.4) et $g_1$ est
+un morphisme fini (\textbf{II}, 6.1.5, (iii))~; si $\mathcal L'$ est ample pour
+$f\circ g$, $j'^*(\mathcal L')$ est ample pour $f\circ g\circ j'$ puisque
+$j'$ est une immersion fermée (\textbf{II}, 5.1.12 et \textbf{I}, 4.3.2). Si on pose
+$Z_1=j^{-1}(Z)$, $Z_1$ est propre sur $Y$ (\textbf{II}, 5.4.10)~; d'autre part,
+si $X$ est normal en un point $x$, il en est évidemment de même de
+$X_{\mathrm{red}}$~; enfin, si $(g_*(\mathcal O_{X'}))_x$ est un
+$\mathcal O_x$-module libre, il rés
+
+[id 5599]
+OLD: (II, 5.4.10)~;
+NEW: (\textbf{II}, 5.4.10)~;
+FRENCH CONTEXT (corrected): extbf{II}, 6.1.5, (iii))~; si $\mathcal L'$ est ample pour
+$f\circ g$, $j'^*(\mathcal L')$ est ample pour $f\circ g\circ j'$ puisque
+$j'$ est une immersion fermée (\textbf{II}, 5.1.12 et \textbf{I}, 4.3.2). Si on pose
+$Z_1=j^{-1}(Z)$, $Z_1$ est propre sur $Y$ (\textbf{II}, 5.4.10)~; d'autre part,
+si $X$ est normal en un point $x$, il en est évidemment de même de
+$X_{\mathrm{red}}$~; enfin, si $(g_*(\mathcal O_{X'}))_x$ est un
+$\mathcal O_x$-module libre, il résulte aussitôt de (\textbf{II}, 1.5.2) que
+$((g_1)_*(\mathcal O_{X'_1}))_x$ est
+
+[id 5600]
+OLD: (II, 1.5.2)
+NEW: (\textbf{II}, 1.5.2)
+FRENCH CONTEXT (corrected): ongrightarrow
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=\mathcal M(n)
+\]
+est surjectif. Or, on a
+$g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+=f^*(g_*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))$
+(\textbf{II}, 1.5.2) et comme $g_*\circ f'_* = f_*\circ g'_*$, on voit
+finalement que l'on a
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})))
+=f^*(f_*(g'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))=f^*(f_*(\mathcal M(n))),
+\]
+ce qui achève 
+
+[id 5601]
+OLD: (I, 6.3.7)
+NEW: (\textbf{I}, 6.3.7)
+FRENCH CONTEXT (corrected): est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (\textbf{II}, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (\textbf{II}, 1.3.7 et \textbf{I}, 6.3.4, (ii)), $X'$ est
+noethérien (\textbf{I}, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+$R^pf_*(\mathcal M)\to R^ph_*(\widetilde{\mathcal M})$ est bijectif
+(\hyperref[III.1.3.4-fr]{1.3.4}). En outre, cet homomorphisme est un
+homomorph
+
+[id 5602]
+OLD: (II, 4.5.14)
+NEW: (\textbf{II}, 4.5.14)
+FRENCH CONTEXT (corrected): $\mathcal O_x$-module libre, il résulte aussitôt de (\textbf{II}, 1.5.2) que
+$((g_1)_*(\mathcal O_{X'_1}))_x$ est un $\mathcal O_{X_1,x}$-module
+libre. Enfin, comme $X$ est noethérien (\textbf{I}, 6.3.7), si
+$j^*(\mathcal L)$ est ample, $\mathcal L$ est ample (\textbf{II}, 4.5.14), et
+comme $j'^*(\mathcal L')=g_1^*(j^*(\mathcal L))$, cela achève la
+réduction annoncée. Nous supposons donc désormais $Y$ \emph{affine} et $X$
+\emph{réduit}.
+\end{env}
+
+Les hypothèses de (\textbf{II}, 6.6.11) étant alors vérifiées, il existe un
+$Y$-préschéma
+
+[id 5603]
+OLD: désormais $Y$ affine et $X$
+réduit.
+NEW: désormais $Y$ \emph{affine} et $X$
+\emph{réduit}.
+FRENCH CONTEXT (corrected): _1,x}$-module
+libre. Enfin, comme $X$ est noethérien (\textbf{I}, 6.3.7), si
+$j^*(\mathcal L)$ est ample, $\mathcal L$ est ample (\textbf{II}, 4.5.14), et
+comme $j'^*(\mathcal L')=g_1^*(j^*(\mathcal L))$, cela achève la
+réduction annoncée. Nous supposons donc désormais $Y$ \emph{affine} et $X$
+\emph{réduit}.
+\end{env}
+
+Les hypothèses de (\textbf{II}, 6.6.11) étant alors vérifiées, il existe un
+$Y$-préschéma réduit $X_2$, et un $Y$-morphisme $h:X_2\to X$ \emph{fini} et
+\emph{birationnel} tel que la restriction de $h$ à $h^{-1}(X\setmin Z)$ soit un
+\emph{isomorphis
+
+[id 5604]
+OLD: (II, 6.6.11)
+NEW: (\textbf{II}, 6.6.11)
+FRENCH CONTEXT (corrected): ^*(\mathcal L)$ est ample, $\mathcal L$ est ample (\textbf{II}, 4.5.14), et
+comme $j'^*(\mathcal L')=g_1^*(j^*(\mathcal L))$, cela achève la
+réduction annoncée. Nous supposons donc désormais $Y$ \emph{affine} et $X$
+\emph{réduit}.
+\end{env}
+
+Les hypothèses de (\textbf{II}, 6.6.11) étant alors vérifiées, il existe un
+$Y$-préschéma réduit $X_2$, et un $Y$-morphisme $h:X_2\to X$ \emph{fini} et
+\emph{birationnel} tel que la restriction de $h$ à $h^{-1}(X\setmin Z)$ soit un
+\emph{isomorphisme} sur $X\setmin Z$ et que $h^*(\mathcal L)$ soit 
+
+[id 5606]
+OLD: fini et
+birationnel tel
+NEW: \emph{fini} et
+\emph{birationnel} tel
+FRENCH CONTEXT (corrected):  L))$, cela achève la
+réduction annoncée. Nous supposons donc désormais $Y$ \emph{affine} et $X$
+\emph{réduit}.
+\end{env}
+
+Les hypothèses de (\textbf{II}, 6.6.11) étant alors vérifiées, il existe un
+$Y$-préschéma réduit $X_2$, et un $Y$-morphisme $h:X_2\to X$ \emph{fini} et
+\emph{birationnel} tel que la restriction de $h$ à $h^{-1}(X\setmin Z)$ soit un
+\emph{isomorphisme} sur $X\setmin Z$ et que $h^*(\mathcal L)$ soit ample. Remplaçant
+$X'$ par $X_2$, on voit qu'on est ramené à démontrer la proposition en
+supposant en outre que \emph{$g$ possède les p
+
+[id 5608]
+OLD: soit un
+isomorphisme sur
+NEW: soit un
+\emph{isomorphisme} sur
+FRENCH CONTEXT (corrected): e} et $X$
+\emph{réduit}.
+\end{env}
+
+Les hypothèses de (\textbf{II}, 6.6.11) étant alors vérifiées, il existe un
+$Y$-préschéma réduit $X_2$, et un $Y$-morphisme $h:X_2\to X$ \emph{fini} et
+\emph{birationnel} tel que la restriction de $h$ à $h^{-1}(X\setmin Z)$ soit un
+\emph{isomorphisme} sur $X\setmin Z$ et que $h^*(\mathcal L)$ soit ample. Remplaçant
+$X'$ par $X_2$, on voit qu'on est ramené à démontrer la proposition en
+supposant en outre que \emph{$g$ possède les propriétés qui viennent d'être
+énumérées pour $h$}. Nous désignerons encore par $Z
+
+[id 5610]
+OLD: que $g$ possède les propriétés qui viennent d'être
+énumérées pour $h$.
+NEW: que \emph{$g$ possède les propriétés qui viennent d'être
+énumérées pour $h$}.
+FRENCH CONTEXT (corrected): } et
+\emph{birationnel} tel que la restriction de $h$ à $h^{-1}(X\setmin Z)$ soit un
+\emph{isomorphisme} sur $X\setmin Z$ et que $h^*(\mathcal L)$ soit ample. Remplaçant
+$X'$ par $X_2$, on voit qu'on est ramené à démontrer la proposition en
+supposant en outre que \emph{$g$ possède les propriétés qui viennent d'être
+énumérées pour $h$}. Nous désignerons encore par $Z$ un sous-préschéma de
+$X$ ayant $Z$ pour espace sous-jacent, qui est propre sur $Y$
+(\textbf{II}, 5.4.10).
+
+\begin{env}[2.6.2.3]
+\label{III.2.6.2.3-fr}
+Soient maintenant $X_1$ un \emph{sous-préschéma fermé} de $X$,
+$j:X_1\to X$ 
+
+[id 5611]
+OLD: (II, 5.4.10).
+NEW: (\textbf{II}, 5.4.10).
+FRENCH CONTEXT (corrected):  qu'on est ramené à démontrer la proposition en
+supposant en outre que \emph{$g$ possède les propriétés qui viennent d'être
+énumérées pour $h$}. Nous désignerons encore par $Z$ un sous-préschéma de
+$X$ ayant $Z$ pour espace sous-jacent, qui est propre sur $Y$
+(\textbf{II}, 5.4.10).
+
+\begin{env}[2.6.2.3]
+\label{III.2.6.2.3-fr}
+Soient maintenant $X_1$ un \emph{sous-préschéma fermé} de $X$,
+$j:X_1\to X$ l'injection canonique,
+$X'_1=g^{-1}(X_1)=X'\times_X X_1$ son image réciproque,
+$j':X'_1\to X'$ l'injection canonique, de sorte que l'on a 
+
+[id 5612]
+OLD: un sous-préschéma fermé de $X$,
+NEW: un \emph{sous-préschéma fermé} de $X$,
+FRENCH CONTEXT (corrected):  propriétés qui viennent d'être
+énumérées pour $h$}. Nous désignerons encore par $Z$ un sous-préschéma de
+$X$ ayant $Z$ pour espace sous-jacent, qui est propre sur $Y$
+(\textbf{II}, 5.4.10).
+
+\begin{env}[2.6.2.3]
+\label{III.2.6.2.3-fr}
+Soient maintenant $X_1$ un \emph{sous-préschéma fermé} de $X$,
+$j:X_1\to X$ l'injection canonique,
+$X'_1=g^{-1}(X_1)=X'\times_X X_1$ son image réciproque,
+$j':X'_1\to X'$ l'injection canonique, de sorte que l'on a le diagramme
+commutatif (\hyperref[III.2.6.2.2-fr]{2.6.2.2})~; posons
+$\mathcal L_1=j^*(\mathcal L)$,
+$\math
+
+[id 5613]
+OLD: j'$ (II, 5.1.12)
+NEW: j'$ (\textbf{II}, 5.1.12)
+FRENCH CONTEXT (corrected):  l'injection canonique, de sorte que l'on a le diagramme
+commutatif (\hyperref[III.2.6.2.2-fr]{2.6.2.2})~; posons
+$\mathcal L_1=j^*(\mathcal L)$,
+$\mathcal L'_1=j'^*(\mathcal L')=g_1^*(\mathcal L_1)$, de sorte que
+$\mathcal L'_1$ est ample pour $f\circ g\circ j'$ (\textbf{II}, 5.1.12). Si on
+pose $Z_1=j^{-1}(Z)$, le sous-préschéma fermé $Z_1$ de $X_1$ est propre
+sur $Y$ (\textbf{II}, 5.4.2, (ii)). En d'autres termes, \emph{les hypothèses de}
+(\hyperref[III.2.6.2-fr]{2.6.2}) \emph{sont vérifiées pour} $X_1$,
+$\mathcal L_1$, $g_1$ et $Z_1$.
+
+
+[id 5614]
+OLD: (II, 5.4.2, (ii))
+NEW: (\textbf{II}, 5.4.2, (ii))
+FRENCH CONTEXT (corrected): 
+$\mathcal L_1=j^*(\mathcal L)$,
+$\mathcal L'_1=j'^*(\mathcal L')=g_1^*(\mathcal L_1)$, de sorte que
+$\mathcal L'_1$ est ample pour $f\circ g\circ j'$ (\textbf{II}, 5.1.12). Si on
+pose $Z_1=j^{-1}(Z)$, le sous-préschéma fermé $Z_1$ de $X_1$ est propre
+sur $Y$ (\textbf{II}, 5.4.2, (ii)). En d'autres termes, \emph{les hypothèses de}
+(\hyperref[III.2.6.2-fr]{2.6.2}) \emph{sont vérifiées pour} $X_1$,
+$\mathcal L_1$, $g_1$ et $Z_1$.
+\end{env}
+
+\oldpage[III]{113}
+Ceci va nous permettre de démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) par \emph{récur
+
+[id 5615]
+OLD: les hypothèses de
+(\hyperref[III.2.6.2-fr]{2.6.2}) sont vérifiées pour $X_1$
+NEW: \emph{les hypothèses de}
+(\hyperref[III.2.6.2-fr]{2.6.2}) \emph{sont vérifiées pour} $X_1$
+FRENCH CONTEXT (corrected): j'^*(\mathcal L')=g_1^*(\mathcal L_1)$, de sorte que
+$\mathcal L'_1$ est ample pour $f\circ g\circ j'$ (\textbf{II}, 5.1.12). Si on
+pose $Z_1=j^{-1}(Z)$, le sous-préschéma fermé $Z_1$ de $X_1$ est propre
+sur $Y$ (\textbf{II}, 5.4.2, (ii)). En d'autres termes, \emph{les hypothèses de}
+(\hyperref[III.2.6.2-fr]{2.6.2}) \emph{sont vérifiées pour} $X_1$,
+$\mathcal L_1$, $g_1$ et $Z_1$.
+\end{env}
+
+\oldpage[III]{113}
+Ceci va nous permettre de démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) par \emph{récurrence noethérienne}
+(\textbf{0}\textsubscript{I}, 2.2.2) dans le cas où la restriction de $g$ à
+$g^{-1}(X\setmin
+
+=================== PAGE III 113 ===================
+----- (Spanish page III 112: shown above in this file) -----
+----- (Spanish page III 113: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 114 -----
+\oldpage[III]{114}
+
+\[
+  \sh{J}\sh{B}
+  \qquad\text{y}\qquad
+  \sh{J}\sh{K}
+  =
+  \sh{J}(\sh{K}\sh{B})
+  =
+  \sh{K}(\sh{J}\sh{B}).
+\]
+Tenemos el diagrama de inclusiones
+\[
+  \xymatrix@R=1.5em{
+    \sh{J}\sh{B}\ar@{^{(}->}[r] &
+    \sh{B}\\
+    \sh{J}\ar@{^{(}->}[r]\ar@{^{(}->}[u] &
+    \sh{A}\ar@{^{(}->}[u]\\
+    \sh{J}\sh{K}\sh{B}=\sh{J}\sh{K}
+      \ar@{^{(}->}[r]\ar@{^{(}->}[u] &
+    \sh{K}\ar@{^{(}->}[u]
+  }
+  \label{III.2.6.2.6}\tag{2.6.2.6}
+\]
+Sea $\sh{J}'=(\sh{J}\sh{B})^\sim$ el ideal coherente de
+$\sh{O}_{X'}$ tal que
+\[
+  g_*(\sh{J}')=\sh{J}\sh{B}.
+\]
+Entonces
+\[
+  \sh{J}'\sh{K}'=(\sh{J}\sh{K}\sh{B})^\sim,
+  \qquad
+  \sh{J}'/\sh{J}'\sh{K}'
+  =
+  (\sh{J}\sh{B}/\sh{J}\sh{K}\sh{B})^\sim
+\]
+\sref[II]{II.1.4.4}.
+Como $\sh{J}|_V=\sh{J}\sh{K}|_V$ sobre todo subconjunto abierto $V$ disjunto
+de $Z$, el soporte de $\sh{J}'/\sh{J}'\sh{K}'$ está contenido en
+$Z'$.
+Como $Z'$ es propio sobre $Y$, \sref{III.2.2.4} muestra que, para todo
+$n$ suficientemente grande, la aplicación canónica
+\[
+  \Gamma(X',\sh{J}'\otimes\sh{L}'^{\otimes n})
+  \longrightarrow
+  \Gamma\bigl(
+    X',
+    (\sh{J}'/\sh{J}'\sh{K}')\otimes\sh{L}'^{\otimes n}
+  \bigr)
+\]
+es sobreyectiva.
+Por \sref[0]{0.5.4.10}, se sigue que la aplicación canónica
+\[
+  \Gamma(X,\sh{J}\sh{B}\otimes\sh{L}^{\otimes n})
+  \longrightarrow
+  \Gamma\bigl(
+    X,
+    (\sh{J}\sh{B}/\sh{J}\sh{K}\sh{B})
+      \otimes\sh{L}^{\otimes n}
+  \bigr)
+\]
+es sobreyectiva.
+
+Sean $i:Z\to X$ e $i':Z'\to X'$ las inmersiones canónicas.
+Forman parte del diagrama conmutativo
+\[
+  \xymatrix{
+    X'\ar[d]_g &
+    Z'\ar[l]_{i'}\ar[d]^h\\
+    X &
+    Z\ar[l]^{i}
+  }
+\]
+Pongamos
+\[
+  \sh{M}=i^*(\sh{L}),
+  \qquad
+  \sh{M}'=i'^*(\sh{L}').
+\]
+Como $\sh{L}'$ es amplio, $\sh{M}'$ es amplio
+\sref[II]{II.5.1.12}, y
+\[
+  \sh{M}'=h^*(\sh{M}).
+\]
+La hipótesis de inducción noetheriana, aplicada puesto que $Z\neq X$, muestra ahora
+que $\sh{M}$ es amplio.
+Por consiguiente, para todo $n$ suficientemente grande,
+\[
+  i^*(\sh{J}/\sh{J}\sh{K})\otimes\sh{M}^{\otimes n}
+\]
+está engendrado por sus secciones sobre $Z$ \sref[II]{II.4.5.5}.
+Como
+\[
+  \sh{J}/\sh{J}\sh{K}
+  =
+  i_*\bigl(i^*(\sh{J}/\sh{J}\sh{K})\bigr),
+\]
+\sref[0]{0.5.4.10} da una sección $s$ de
+\[
+  (\sh{J}/\sh{J}\sh{K})\otimes\sh{L}^{\otimes n}
+\]
+sobre $X$, para algún $n$ suficientemente grande, tal que $s(x)\neq0$.
+En efecto, $\sh{J}_x=\sh{A}_x$ por la definición de $\sh{J}$, mientras que
+$\sh{K}_x\neq\sh{A}_x$ por hipótesis.
+
+El diagrama \eqref{III.2.6.2.6} muestra que $s$ es también una sección de
+\[
+  (\sh{J}\sh{B}/\sh{J}\sh{K}\sh{B})
+  \otimes\sh{L}^{\otimes n}
+\]
+sobre $X$.
+Es, por tanto, la imagen canónica de una sección
+\[
+  t\in\Gamma(X,\sh{J}\sh{B}\otimes\sh{L}^{\otimes n}).
+\]
+Por definición, la imagen de $t$ módulo
+$\sh{J}\sh{K}\sh{B}\otimes\sh{L}^{\otimes n}$ pertenece a
+\[
+  \frac{\sh{J}\otimes\sh{L}^{\otimes n}}
+       {\sh{J}\sh{K}\sh{B}\otimes\sh{L}^{\otimes n}}.
+\]
+El diagrama \eqref{III.2.6.2.6} implica, por tanto, que $t$ es una sección
+de $\sh{J}\otimes\sh{L}^{\otimes n}$ y, en particular, una sección de
+$\sh{L}^{\otimes n}$.
+Se tiene $t(x)\neq0$, luego $x\in X_t$.
+Por la definición de $\sh{J}$, la sección $t$ se anula sobre $X\setmin U$, el
+soporte de $\sh{O}_X/\sh{J}$.
+Así, $X_t\subset U$, y la demostración está terminada.
+\end{env}
+\end{proof}
+----- French corrections on page III 113 -----
+[id 5616]
+OLD: par récurrence noethérienne
+NEW: par \emph{récurrence noethérienne}
+FRENCH CONTEXT (corrected): }, 5.4.2, (ii)). En d'autres termes, \emph{les hypothèses de}
+(\hyperref[III.2.6.2-fr]{2.6.2}) \emph{sont vérifiées pour} $X_1$,
+$\mathcal L_1$, $g_1$ et $Z_1$.
+\end{env}
+
+\oldpage[III]{113}
+Ceci va nous permettre de démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) par \emph{récurrence noethérienne}
+(\textbf{0}\textsubscript{I}, 2.2.2) dans le cas où la restriction de $g$ à
+$g^{-1}(X\setmin Z)$ est un \emph{isomorphisme} sur $X\setmin Z$ (ce qui est suffisant pour
+notre propos, comme on l'a vu en
+(\hyperref[III.2.6.2.2-fr]{2.6.2.2}))~: il suffira d'établ
+
+[id 5617]
+OLD: (0\textsubscript{I}, 2.2.2)
+NEW: (\textbf{0}\textsubscript{I}, 2.2.2)
+FRENCH CONTEXT (corrected): , \emph{les hypothèses de}
+(\hyperref[III.2.6.2-fr]{2.6.2}) \emph{sont vérifiées pour} $X_1$,
+$\mathcal L_1$, $g_1$ et $Z_1$.
+\end{env}
+
+\oldpage[III]{113}
+Ceci va nous permettre de démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) par \emph{récurrence noethérienne}
+(\textbf{0}\textsubscript{I}, 2.2.2) dans le cas où la restriction de $g$ à
+$g^{-1}(X\setmin Z)$ est un \emph{isomorphisme} sur $X\setmin Z$ (ce qui est suffisant pour
+notre propos, comme on l'a vu en
+(\hyperref[III.2.6.2.2-fr]{2.6.2.2}))~: il suffira d'établir que si, pour
+tout sous-préschéma f
+
+[id 5619]
+OLD: est un isomorphisme sur
+NEW: est un \emph{isomorphisme} sur
+FRENCH CONTEXT (corrected): t \emph{inversible}
+(\hyperref[II.3.2.5-fr]{3.2.5}) et \emph{très ample} en vertu de
+(\hyperref[II.4.4.3-fr]{4.4.3}) pour le morphisme structural $X\to Y$.
+
+On notera que si $f:X\to Y$ est le morphisme structural, la restriction de
+$f$ à $f^{-1}(Y\setmin Y')$ est un \emph{isomorphisme} sur $Y\setmin Y'$ lorsque
+$\mathcal{I}$ est un \emph{Idéal de} $\mathcal{O}_Y$ et $Y'$ le sous-préschéma fermé
+qu'il définit~: en effet, la question étant locale sur $Y$, il suffit de
+supposer $\mathcal{I}=\mathcal{O}_Y$, et notre assertion résulte de
+(\hyperref[
+
+[id 5621]
+OLD: (\hyperref[III.2.6.2.1-fr]{2.6.2.1}))
+NEW: (\hyperref[III.2.6.2.2-fr]{2.6.2.2}))
+FRENCH CONTEXT (corrected): f[III.2.6.2-fr]{2.6.2}) par \emph{récurrence noethérienne}
+(\textbf{0}\textsubscript{I}, 2.2.2) dans le cas où la restriction de $g$ à
+$g^{-1}(X\setmin Z)$ est un \emph{isomorphisme} sur $X\setmin Z$ (ce qui est suffisant pour
+notre propos, comme on l'a vu en
+(\hyperref[III.2.6.2.2-fr]{2.6.2.2}))~: il suffira d'établir que si, pour
+tout sous-préschéma fermé $X_1$ de $X$, dont l'espace sous-jacent est
+$\neq X$, la conclusion de (\hyperref[III.2.6.2-fr]{2.6.2}) est vraie
+pour le faisceau $\mathcal L_1$, alors elle est vraie aussi pour le
+faisceau $\math
+
+[id 5624]
+OLD: le conducteur de
+NEW: le \emph{conducteur} de
+FRENCH CONTEXT (corrected): hcal B=g_*(\mathcal O_{X'})$,
+de sorte que $\mathcal B$ est une sous-$\mathcal A$-Algèbre de
+$\mathcal R(X)$, qui est un $\mathcal A$-Module cohérent~; en outre, la
+restriction $\mathcal B|(X\setmin Z)$ est égale à $\mathcal A|(X\setmin Z)$. Soit
+$\mathcal K$ le \emph{conducteur} de $\mathcal B$ sur $\mathcal A$, c'est-à-dire
+le plus grand sous-$\mathcal A$-Module quasi-cohérent de $\mathcal A$ tel
+que $\mathcal B.\mathcal K\subset\mathcal A$ (ou encore l'\emph{annulateur} du
+$\mathcal A$-Module $\mathcal B/\mathcal A$
+(\textbf{0}\textsu
+
+[id 5625]
+OLD: $\mathcal B\mathcal K\subset\mathcal A$
+NEW: $\mathcal B.\mathcal K\subset\mathcal A$
+FRENCH CONTEXT (corrected): ent~; en outre, la
+restriction $\mathcal B|(X\setmin Z)$ est égale à $\mathcal A|(X\setmin Z)$. Soit
+$\mathcal K$ le \emph{conducteur} de $\mathcal B$ sur $\mathcal A$, c'est-à-dire
+le plus grand sous-$\mathcal A$-Module quasi-cohérent de $\mathcal A$ tel
+que $\mathcal B.\mathcal K\subset\mathcal A$ (ou encore l'\emph{annulateur} du
+$\mathcal A$-Module $\mathcal B/\mathcal A$
+(\textbf{0}\textsubscript{I}, 5.3.7)), ce qui entraîne
+$\mathcal B.\mathcal K=\mathcal K$. Il est clair que
+$\mathcal K_x=\mathcal A_x$ en tous les points admettant un voisinage
+$W_
+
+[id 5626]
+OLD: l'annulateur du
+NEW: l'\emph{annulateur} du
+FRENCH CONTEXT (corrected):  Z)$ est égale à $\mathcal A|(X\setmin Z)$. Soit
+$\mathcal K$ le \emph{conducteur} de $\mathcal B$ sur $\mathcal A$, c'est-à-dire
+le plus grand sous-$\mathcal A$-Module quasi-cohérent de $\mathcal A$ tel
+que $\mathcal B.\mathcal K\subset\mathcal A$ (ou encore l'\emph{annulateur} du
+$\mathcal A$-Module $\mathcal B/\mathcal A$
+(\textbf{0}\textsubscript{I}, 5.3.7)), ce qui entraîne
+$\mathcal B.\mathcal K=\mathcal K$. Il est clair que
+$\mathcal K_x=\mathcal A_x$ en tous les points admettant un voisinage
+$W_x$ tel que $g$ soit un isomorphism
+
+[id 5627]
+OLD: (0\textsubscript{I}, 5.3.7)
+NEW: (\textbf{0}\textsubscript{I}, 5.3.7)
+FRENCH CONTEXT (corrected): mph{conducteur} de $\mathcal B$ sur $\mathcal A$, c'est-à-dire
+le plus grand sous-$\mathcal A$-Module quasi-cohérent de $\mathcal A$ tel
+que $\mathcal B.\mathcal K\subset\mathcal A$ (ou encore l'\emph{annulateur} du
+$\mathcal A$-Module $\mathcal B/\mathcal A$
+(\textbf{0}\textsubscript{I}, 5.3.7)), ce qui entraîne
+$\mathcal B.\mathcal K=\mathcal K$. Il est clair que
+$\mathcal K_x=\mathcal A_x$ en tous les points admettant un voisinage
+$W_x$ tel que $g$ soit un isomorphisme de $g^{-1}(W_x)$ sur $W_x$, et en
+particulier en tous les points de $X\setmin Z
+
+[id 5628]
+OLD: $\mathcal B\mathcal K=\mathcal K$
+NEW: $\mathcal B.\mathcal K=\mathcal K$
+FRENCH CONTEXT (corrected): -à-dire
+le plus grand sous-$\mathcal A$-Module quasi-cohérent de $\mathcal A$ tel
+que $\mathcal B.\mathcal K\subset\mathcal A$ (ou encore l'\emph{annulateur} du
+$\mathcal A$-Module $\mathcal B/\mathcal A$
+(\textbf{0}\textsubscript{I}, 5.3.7)), ce qui entraîne
+$\mathcal B.\mathcal K=\mathcal K$. Il est clair que
+$\mathcal K_x=\mathcal A_x$ en tous les points admettant un voisinage
+$W_x$ tel que $g$ soit un isomorphisme de $g^{-1}(W_x)$ sur $W_x$, et en
+particulier en tous les points de $X\setmin Z$ et dans un voisinage de tout
+point générique d'une 
+
+[id 5630]
+OLD: il est encore propre sur
+NEW: il est encore \emph{propre} sur
+FRENCH CONTEXT (corrected): et en
+particulier en tous les points de $X\setmin Z$ et dans un voisinage de tout
+point générique d'une composante irréductible de $X$. Considérons alors
+le sous-préschéma fermé $Z_1=\operatorname{Spec}(\mathcal A/\mathcal K)$
+de $X$ défini par $\mathcal K$~; il est encore \emph{propre} sur $Y$ car le
+sous-espace $Z_1$ est fermé dans $Z$ (\textbf{II}, 5.4.10). De plus, la définition
+de $\mathcal K$ montre que
+$\mathcal B|(X\setmin Z_1)=\mathcal A|(X\setmin Z_1)$~; on voit donc qu'on peut toujours
+se ramener au cas où
+$Z=\operatorname{Spec}(\math
+
+[id 5631]
+OLD: fermé dans $Z$ (II, 5.4.10)
+NEW: fermé dans $Z$ (\textbf{II}, 5.4.10)
+FRENCH CONTEXT (corrected): oisinage de tout
+point générique d'une composante irréductible de $X$. Considérons alors
+le sous-préschéma fermé $Z_1=\operatorname{Spec}(\mathcal A/\mathcal K)$
+de $X$ défini par $\mathcal K$~; il est encore \emph{propre} sur $Y$ car le
+sous-espace $Z_1$ est fermé dans $Z$ (\textbf{II}, 5.4.10). De plus, la définition
+de $\mathcal K$ montre que
+$\mathcal B|(X\setmin Z_1)=\mathcal A|(X\setmin Z_1)$~; on voit donc qu'on peut toujours
+se ramener au cas où
+$Z=\operatorname{Spec}(\mathcal A/\mathcal K)$, et comme on a vu que
+$X\setmin Z_1$ est un ouvert 
+
+[id 5632]
+OLD: \mathcal B|(X-Z_1)
+NEW: \mathcal B|(X\setmin Z_1)
+FRENCH CONTEXT (corrected): le sous-préschéma fermé $Z_1=\operatorname{Spec}(\mathcal A/\mathcal K)$
+de $X$ défini par $\mathcal K$~; il est encore \emph{propre} sur $Y$ car le
+sous-espace $Z_1$ est fermé dans $Z$ (\textbf{II}, 5.4.10). De plus, la définition
+de $\mathcal K$ montre que
+$\mathcal B|(X\setmin Z_1)=\mathcal A|(X\setmin Z_1)$~; on voit donc qu'on peut toujours
+se ramener au cas où
+$Z=\operatorname{Spec}(\mathcal A/\mathcal K)$, et comme on a vu que
+$X\setmin Z_1$ est un ouvert non vide de $X$, on peut toujours supposer que
+l'espace $Z$ est \emph{distinct
+
+[id 5633]
+OLD: \mathcal A|(X-Z_1)
+NEW: \mathcal A|(X\setmin Z_1)
+FRENCH CONTEXT (corrected): _1=\operatorname{Spec}(\mathcal A/\mathcal K)$
+de $X$ défini par $\mathcal K$~; il est encore \emph{propre} sur $Y$ car le
+sous-espace $Z_1$ est fermé dans $Z$ (\textbf{II}, 5.4.10). De plus, la définition
+de $\mathcal K$ montre que
+$\mathcal B|(X\setmin Z_1)=\mathcal A|(X\setmin Z_1)$~; on voit donc qu'on peut toujours
+se ramener au cas où
+$Z=\operatorname{Spec}(\mathcal A/\mathcal K)$, et comme on a vu que
+$X\setmin Z_1$ est un ouvert non vide de $X$, on peut toujours supposer que
+l'espace $Z$ est \emph{distinct} de $X$.
+\end{env}
+
+\begi
+
+[id 5635]
+OLD: est distinct de $X$
+NEW: est \emph{distinct} de $X$
+FRENCH CONTEXT (corrected): l B|(X\setmin Z_1)=\mathcal A|(X\setmin Z_1)$~; on voit donc qu'on peut toujours
+se ramener au cas où
+$Z=\operatorname{Spec}(\mathcal A/\mathcal K)$, et comme on a vu que
+$X\setmin Z_1$ est un ouvert non vide de $X$, on peut toujours supposer que
+l'espace $Z$ est \emph{distinct} de $X$.
+\end{env}
+
+\begin{env}[2.6.2.5]
+\label{III.2.6.2.5-fr}
+Considérons $X'$ comme égal à $\operatorname{Spec}(\mathcal B)$ (puisque
+$g$ est affine) et soit $\mathcal K'=\widetilde{\mathcal K}$, Idéal
+cohérent de $\mathcal O_{X'}$ tel que $g_*(\mathcal K')=\mathc
+
+[id 5636]
+OLD: (II, 1.4.1)
+NEW: (\textbf{II}, 1.4.1)
+FRENCH CONTEXT (corrected): {env}
+
+\begin{env}[2.6.2.5]
+\label{III.2.6.2.5-fr}
+Considérons $X'$ comme égal à $\operatorname{Spec}(\mathcal B)$ (puisque
+$g$ est affine) et soit $\mathcal K'=\widetilde{\mathcal K}$, Idéal
+cohérent de $\mathcal O_{X'}$ tel que $g_*(\mathcal K')=\mathcal K$
+(\textbf{II}, 1.4.1)~; le sous-préschéma fermé
+$Z'=g^{-1}(Z)=Z\times_X X'$ de $X'$ est défini par $\mathcal K'$ et égal
+à $\operatorname{Spec}(\mathcal B/\mathcal K)$ (\textbf{II}, 1.4.10)~; comme
+$h:Z'\to Z$ est un morphisme fini (\textbf{II}, 6.1.5, (iii)), $Z'$ est \emph{propr
+
+[id 5637]
+OLD: (II, 1.4.10)
+NEW: (\textbf{II}, 1.4.10)
+FRENCH CONTEXT (corrected): ilde{\mathcal K}$, Idéal
+cohérent de $\mathcal O_{X'}$ tel que $g_*(\mathcal K')=\mathcal K$
+(\textbf{II}, 1.4.1)~; le sous-préschéma fermé
+$Z'=g^{-1}(Z)=Z\times_X X'$ de $X'$ est défini par $\mathcal K'$ et égal
+à $\operatorname{Spec}(\mathcal B/\mathcal K)$ (\textbf{II}, 1.4.10)~; comme
+$h:Z'\to Z$ est un morphisme fini (\textbf{II}, 6.1.5, (iii)), $Z'$ est \emph{propre}
+sur $Y$ (\textbf{II}, 6.1.11 et 5.4.2, (ii)).
+
+Cela posé, il nous faut prouver que pour tout $x\in X$ et tout voisinage
+ouvert $U$ de $x$, il existe une section $s$ 
+
+[id 5638]
+OLD: (II, 6.1.5, (iii))
+NEW: (\textbf{II}, 6.1.5, (iii))
+FRENCH CONTEXT (corrected): sorte que l'on a le
+diagramme commutatif
+\[
+\xymatrix{
+X'\ar[d]_g & X'_1\ar[l]_{j'}\ar[d]^{g_1\, .}\\
+X & X_1\ar[l]^{j}
+}
+\tag{2.6.2.2}\label{III.2.6.2.2-fr}
+\]
+
+Le morphisme $f\circ j$ est alors de type fini (\textbf{I}, 6.3.4) et $g_1$ est
+un morphisme fini (\textbf{II}, 6.1.5, (iii))~; si $\mathcal L'$ est ample pour
+$f\circ g$, $j'^*(\mathcal L')$ est ample pour $f\circ g\circ j'$ puisque
+$j'$ est une immersion fermée (\textbf{II}, 5.1.12 et \textbf{I}, 4.3.2). Si on pose
+$Z_1=j^{-1}(Z)$, $Z_1$ est propre sur $Y$ (\textbf{II}, 5.4.10)~; 
+
+[id 5639]
+OLD: $Z'$ est propre
+sur
+NEW: $Z'$ est \emph{propre}
+sur
+FRENCH CONTEXT (corrected): (\textbf{II}, 1.4.1)~; le sous-préschéma fermé
+$Z'=g^{-1}(Z)=Z\times_X X'$ de $X'$ est défini par $\mathcal K'$ et égal
+à $\operatorname{Spec}(\mathcal B/\mathcal K)$ (\textbf{II}, 1.4.10)~; comme
+$h:Z'\to Z$ est un morphisme fini (\textbf{II}, 6.1.5, (iii)), $Z'$ est \emph{propre}
+sur $Y$ (\textbf{II}, 6.1.11 et 5.4.2, (ii)).
+
+Cela posé, il nous faut prouver que pour tout $x\in X$ et tout voisinage
+ouvert $U$ de $x$, il existe une section $s$ d'un
+$\mathcal L^{\otimes n}$ $(n>0)$ au-dessus de $X$ telle que
+$x\in X_s\subset U$ (\textbf{II},
+
+[id 5640]
+OLD: (II, 6.1.11 et 5.4.2, (ii))
+NEW: (\textbf{II}, 6.1.11 et 5.4.2, (ii))
+FRENCH CONTEXT (corrected): préschéma fermé
+$Z'=g^{-1}(Z)=Z\times_X X'$ de $X'$ est défini par $\mathcal K'$ et égal
+à $\operatorname{Spec}(\mathcal B/\mathcal K)$ (\textbf{II}, 1.4.10)~; comme
+$h:Z'\to Z$ est un morphisme fini (\textbf{II}, 6.1.5, (iii)), $Z'$ est \emph{propre}
+sur $Y$ (\textbf{II}, 6.1.11 et 5.4.2, (ii)).
+
+Cela posé, il nous faut prouver que pour tout $x\in X$ et tout voisinage
+ouvert $U$ de $x$, il existe une section $s$ d'un
+$\mathcal L^{\otimes n}$ $(n>0)$ au-dessus de $X$ telle que
+$x\in X_s\subset U$ (\textbf{II}, 4.5.2)~; nous distinguerons deux cas~:
+
+
+
+[id 5641]
+OLD: (II, 4.5.2)~;
+NEW: (\textbf{II}, 4.5.2)~;
+FRENCH CONTEXT (corrected): h{propre}
+sur $Y$ (\textbf{II}, 6.1.11 et 5.4.2, (ii)).
+
+Cela posé, il nous faut prouver que pour tout $x\in X$ et tout voisinage
+ouvert $U$ de $x$, il existe une section $s$ d'un
+$\mathcal L^{\otimes n}$ $(n>0)$ au-dessus de $X$ telle que
+$x\in X_s\subset U$ (\textbf{II}, 4.5.2)~; nous distinguerons deux cas~:
+
+$1^\circ$ On a $x\in X\setmin Z$~; on peut évidemment supposer alors que l'on a
+aussi $U\subset X\setmin Z$, donc l'ouvert $U'=g^{-1}(U)$ ne rencontre pas
+$Z'$. Comme $\mathcal L'$ est ample par hypothèse, il existe un $n>0$ et
+
+
+[id 5644]
+OLD: (II, 4.5.2). En
+NEW: (\textbf{II}, 4.5.2). En
+FRENCH CONTEXT (corrected):  $U\subset X\setmin Z$, donc l'ouvert $U'=g^{-1}(U)$ ne rencontre pas
+$Z'$. Comme $\mathcal L'$ est ample par hypothèse, il existe un $n>0$ et
+une section $s'$ de $\mathcal L'^{\otimes n}$ au-dessus de $X'$ telle
+que $x'=g^{-1}(x)\in X'_{s'}\subset g^{-1}(U)$ (\textbf{II}, 4.5.2). En outre, on
+peut supposer que $\mathcal K'\otimes\mathcal L'^{\otimes n}$ soit
+engendré par ses sections au-dessus de $X'$ (\textbf{II}, 4.5.5), donc, comme
+$\mathcal K'_{x'}=\mathcal O_{x'}$, il y a une de ces sections $s''$
+telle que $s''(x')\neq0$~; en la mu
+
+[id 5645]
+OLD: (II, 4.5.5)
+NEW: (\textbf{II}, 4.5.5)
+FRENCH CONTEXT (corrected): 'il existe un ouvert $U$ de $Y$ tel que
+$\mathcal J|U$ soit inversible. Si $\mathcal L$ est un
+$\mathcal O_Y$-Module ample, il existe un entier $n$ tel que
+$\mathcal F(n)=\mathcal F\otimes\mathcal L^{\otimes n}$ soit engendré par
+ses sections au-dessus de $Y$ (\textbf{II}, 4.5.5)~; \emph{a fortiori}, on a
+$\Gamma(Y,\mathcal F(n))\neq0$, d'où la conclusion.
+\end{proof}
+
+\begin{corollary}[2.3.7]
+\label{III.2.3.7-fr}
+Soient $X$ et $Y$ deux schémas intègres, projectifs sur un corps $k$, et
+soit $f:X\to Y$ un $k$-morphisme birationnel. Alo
+
+[id 5646]
+OLD: (0\textsubscript{I}, 5.4.10)
+NEW: (\textbf{0}\textsubscript{I}, 5.4.10)
+FRENCH CONTEXT (corrected): 
+
+(ii) Soit $\mathcal L'=g'^*(\mathcal L)$, qui est un
+$\mathcal O_{X'}$-Module inversible~; pour tout $n\in\mathbb Z$, on a
+$g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=g'_*(\widetilde{\mathcal M})\otimes\mathcal L^{\otimes n}
+=\mathcal M(n)$
+(\textbf{0}\textsubscript{I}, 5.4.10) à un isomorphisme près~; on peut appliquer
+à $\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$ le
+raisonnement fait dans (i) pour $\widetilde{\mathcal M}$, qui prouve que
+$R^pf_*(g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))$
+est isomorphe 
+
+[id 5649]
+OLD: considérons dans $\mathcal B$
+NEW: considérons \emph{dans} $\mathcal B$
+FRENCH CONTEXT (corrected): }$ qui
+correspond à $s''$ par cet isomorphisme a évidemment les propriétés
+voulues.
+
+$2^\circ$ On a $x\in Z$. Soit $\mathcal J$ l'Idéal cohérent de
+$\mathcal O_X$ définissant le sous-préschéma fermé réduit de $X$ ayant
+pour espace sous-jacent $X\setmin U$, et considérons \emph{dans} $\mathcal B$ les Idéaux
+\oldpage[III]{114}
+cohérents $\mathcal J\mathcal B$ et
+$\mathcal J\mathcal K=\mathcal J(\mathcal K\mathcal B)
+=\mathcal K(\mathcal J\mathcal B)$, de sorte que l'on a le diagramme
+d'inclusions
+\[
+\xymatrix@R=1.5em{
+\mathcal J\mathcal B\ar[r] & \math
+
+[id 5650]
+OLD: $\mathcal B$ les deux
+
+
+NEW: $\mathcal B$ les Idéaux
+
+FRENCH CONTEXT (corrected): $ par cet isomorphisme a évidemment les propriétés
+voulues.
+
+$2^\circ$ On a $x\in Z$. Soit $\mathcal J$ l'Idéal cohérent de
+$\mathcal O_X$ définissant le sous-préschéma fermé réduit de $X$ ayant
+pour espace sous-jacent $X\setmin U$, et considérons \emph{dans} $\mathcal B$ les Idéaux
+\oldpage[III]{114}
+cohérents $\mathcal J\mathcal B$ et
+$\mathcal J\mathcal K=\mathcal J(\mathcal K\mathcal B)
+=\mathcal K(\mathcal J\mathcal B)$, de sorte que l'on a le diagramme
+d'inclusions
+\[
+\xymatrix@R=1.5em{
+\mathcal J\mathcal B\ar[r] & \mathcal B\\
+\mat
+
+=================== PAGE III 114 ===================
+----- (Spanish page III 113: shown above in this file) -----
+----- (Spanish page III 114: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-2.tex, page III 115 -----
+\oldpage[III]{115}
+
+\begin{env}[2.6.3]
+\label{III.2.6.3}
+\emph{Observación.}
+Cuando $X$ es propio sobre $Y$, la Proposición~\sref{III.2.6.2} puede demostrarse
+más sencillamente razonando como en el teorema de Chevalley
+\sref[II]{II.6.7.1}, con ayuda de la Proposición~\sref{III.2.6.1} y
+del lema \sref[II]{II.6.7.1.1}.
+\end{env}
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 115 -----
+\section{Teorema de finitud para los morfismos propios}
+\label{section:III.3}
+
+\subsection{El lema de d\'evissage}
+\label{subsection:III.3.1}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1}
+Sea $\C$ una categoría abeliana.
+Diremos que un subconjunto $\C'$ del conjunto de objetos de $\C$ es \emph{exacto} si $0\in\C'$ y si, para toda sucesión exacta $0\to A'\to A\to A''\to 0$ en $\C$ tal que dos de los objetos $A$, $A'$, $A''$ pertenecen a $\C'$, el tercero pertenece también a $\C'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2}
+Sea $X$ un preesquema noetheriano; denotemos por $\C$ la categoría abeliana de los $\sh{O}_X$-módulos coherentes.
+Sea $\C'$ un subconjunto exacto de $\C$, y sea $X'$ un subconjunto cerrado del espacio subyacente a $X$.
+Supongamos que, para todo subconjunto cerrado irreducible $Y$ de $X'$, de punto genérico $y$, existe un $\sh{O}_X$-módulo $\sh{G}\in\C'$ de soporte $Y$ tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+Entonces todo $\sh{O}_X$-módulo coherente cuyo soporte esté contenido en $X'$ pertenece a $\C'$ (y, en particular, si $X'=X$, se tiene $\C'=\C$).
+\end{theorem}
+
+\begin{proof}
+Consideremos la siguiente propiedad $\textbf{P}(Y)$ de un subconjunto cerrado $Y$ de $X'$: todo $\sh{O}_X$-módulo coherente cuyo soporte esté contenido en $Y$ pertenece a $\C'$.
+En virtud del principio de inducción noetheriana \sref[0]{0.2.2.2}, vemos que basta demostrar que \emph{si $Y$ es un subconjunto cerrado de $X'$ tal que la propiedad $\textbf{P}(Y')$ es verdadera para todo subconjunto cerrado $Y'$ de $Y$, distinto de $Y$, entonces $\textbf{P}(Y)$ es verdadera}.
+
+Sea, pues, $\sh{F}\in\C$ de soporte contenido en $Y$, y demostremos que $\sh{F}\in\C'$.
+Denotemos también por $Y$ el subpreesquema cerrado reducido de $X$ cuyo espacio subyacente es $Y$ \sref[I]{I.5.2.1}; está definido por un haz coherente de ideales $\sh{J}$ de $\sh{O}_X$.
+Sabemos \sref[I]{I.9.3.4} que existe un entero $n>0$ tal que $\sh{J}^n\sh{F}=0$; para $1\leq k\leq n$ se tiene, por tanto, una sucesión exacta
+\[
+  0\to\sh{J}^{k-1}\sh{F}/\sh{J}^k\sh{F}\to\sh{F}/\sh{J}^k\sh{F}\to\sh{F}/\sh{J}^{k-1}\sh{F}\to 0
+\]
+ de $\sh{O}_X$-módulos coherentes (\sref[0]{0.5.3.6} y \sref[0]{0.5.3.3}); como $\C'$ es exacto, una inducción sobre $k$ muestra que basta probar que cada $\sh{F}_k=\sh{J}^{k-1}\sh{F}/\sh{J}^k\sh{F}$ pertenece a $\C'$.
+Nos reducimos así a probar que $\sh{F}\in\C'$ bajo la hipótesis adicional $\sh{J}\sh{F}=0$; esto equivale a decir que $\sh{F}=j_*(j^*(\sh{F}))$, donde $j$ es la inmersión canónica $Y\to X$.
+Consideremos ahora dos casos:
+\begin{enumerate}
+  \item[(a)] $Y$ es \emph{reducible}.
+    Escribamos $Y=Y'\cup Y''$, donde $Y'$ e $Y''$ son subconjuntos cerrados de $Y$, distintos de $Y$; denotemos también por $Y'$ e $Y''$ los subpreesquemas cerrados reducidos de $X$ cuyos espacios subyacentes son, respectivamente, $Y'$ e $Y''$, definidos respectivamente por los haces de ideales $\sh{J}'$ y $\sh{J}''$ de $\sh{O}_X$.
+    Pongamos $\sh{F}'=\sh{F}\otimes_{\sh{O}_X}(\sh{O}_X/\sh{J}')$ y $\sh{F}''=\sh{F}\otimes_{\sh{O}_X}(\sh{O}_X/\sh{J}'')$.
+    Los homomorfismos canónicos $\sh{F}\to\sh{F}'$ y $\sh{F}\to\sh{F}''$ definen así un homomorfismo $u:\sh{F}\to\sh{F}'\oplus\sh{F}''$.
+    Demostremos que, para todo $z\not\in Y'\cap Y''$, el homomorfismo $u_z:\sh{F}_z\to\sh{F}_z'\oplus\sh{F}_z''$ es \emph{biyectivo}.
+    En efecto, se tiene $\sh{J}'\cap\sh{J}''=\sh{J}$, pues la cuestión es local y
+----- French corrections on page III 114 -----
+[id 5652]
+OLD: \mathcal J\mathcal B\ar@{^{(}->}[r] & \mathcal B\\
+\mathcal J\ar@{^{(}->}[r]\ar@{^{(}->}[u] &
+\mathcal A\ar@{^{(}->}[u]\\
+\mathcal J\mathcal K\mathcal B=\mathcal J\mathcal K
+\ar@{^{(}->}[r]\ar@{^{(}->}[u] &
+\mathcal K\ar@{^{(}->}[u]
+NEW: \mathcal J\mathcal B\ar[r] & \mathcal B\\
+\mathcal J\ar[r]\ar[u] &
+\mathcal A\ar[u]\\
+\mathcal J\mathcal K\mathcal B=\mathcal J\mathcal K
+\ar[r]\ar[u] &
+\mathcal K\ar[u]
+FRENCH CONTEXT (corrected): nsidérons \emph{dans} $\mathcal B$ les Idéaux
+\oldpage[III]{114}
+cohérents $\mathcal J\mathcal B$ et
+$\mathcal J\mathcal K=\mathcal J(\mathcal K\mathcal B)
+=\mathcal K(\mathcal J\mathcal B)$, de sorte que l'on a le diagramme
+d'inclusions
+\[
+\xymatrix@R=1.5em{
+\mathcal J\mathcal B\ar[r] & \mathcal B\\
+\mathcal J\ar[r]\ar[u] &
+\mathcal A\ar[u]\\
+\mathcal J\mathcal K\mathcal B=\mathcal J\mathcal K
+\ar[r]\ar[u] &
+\mathcal K\ar[u]
+}
+\tag{2.6.2.6}\label{III.2.6.2.6-fr}
+\]
+
+Soit $\mathcal J'$ l'Idéal cohérent $(\mathcal J\mathcal B)^\sim$ de
+$\mathcal O_{X'}$ de sorte que $\mathcal J\mathcal B=g_*(\mathcal J')$,
+$\mathcal J'\mathcal K'=(\mathcal J\mathcal K\mathcal B)^\sim$, et par
+suite
+
+[id 5655]
+OLD: \[
+\mathcal J'/\mathcal J'\mathcal K'
+=(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)^\sim
+\]
+NEW: $\mathcal J'/\mathcal J'\mathcal K'
+=(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)^\sim$
+FRENCH CONTEXT (corrected): }
+\tag{2.6.2.6}\label{III.2.6.2.6-fr}
+\]
+
+Soit $\mathcal J'$ l'Idéal cohérent $(\mathcal J\mathcal B)^\sim$ de
+$\mathcal O_{X'}$ de sorte que $\mathcal J\mathcal B=g_*(\mathcal J')$,
+$\mathcal J'\mathcal K'=(\mathcal J\mathcal K\mathcal B)^\sim$, et par
+suite
+$\mathcal J'/\mathcal J'\mathcal K'
+=(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)^\sim$
+(\textbf{II}, 1.4.4). Comme $\mathcal J|V=\mathcal J\mathcal K|V$ pour tout
+ouvert $V$ ne rencontrant pas $Z$, on voit que le support de
+$\mathcal J'/\mathcal J'\mathcal K'$ est \emph{contenu dans} $Z'$. Comme $Z'$ est
+propre sur $Y$, on peut appliquer (\hype
+
+[id 5656]
+OLD: (II, 1.4.4)
+NEW: (\textbf{II}, 1.4.4)
+FRENCH CONTEXT (corrected): u'on peut supposer $N$ tel que pour
+$n\geq N$, l'homomorphisme canonique
+$f'^*(f'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}))
+\longrightarrow\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n}$
+soit surjectif~; comme $g'_*$ est un foncteur exact (\textbf{II}, 1.4.4),
+l'homomorphisme correspondant
+\[
+g'_*(f'^*(f'_*(\widetilde{\mathcal M}\otimes
+\mathcal L'^{\otimes n})))
+\longrightarrow
+g'_*(\widetilde{\mathcal M}\otimes\mathcal L'^{\otimes n})
+=\mathcal M(n)
+\]
+est surjectif. Or, on a
+$g'_*(f'^*(f'_*(\widetilde{\mathcal 
+
+[id 5657]
+OLD: est contenu dans $Z'$
+NEW: est \emph{contenu dans} $Z'$
+FRENCH CONTEXT (corrected): '/\mathcal J'\mathcal K'
+=(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)^\sim$
+(\textbf{II}, 1.4.4). Comme $\mathcal J|V=\mathcal J\mathcal K|V$ pour tout
+ouvert $V$ ne rencontrant pas $Z$, on voit que le support de
+$\mathcal J'/\mathcal J'\mathcal K'$ est \emph{contenu dans} $Z'$. Comme $Z'$ est
+propre sur $Y$, on peut appliquer (\hyperref[III.2.2.4-fr]{2.2.4}) et on
+voit que pour $n$ assez grand, l'application canonique
+\[
+\Gamma(X',\mathcal J'\otimes\mathcal L'^{\otimes n})
+\longrightarrow
+\Gamma(X',(\mathcal J'/\mathcal J'\mathcal 
+
+[id 5658]
+OLD: est surjective. Mais
+NEW: est \emph{surjective}. Mais
+
+[id 5660]
+OLD: (0\textsubscript{I}, 5.4.10), on en
+NEW: (\textbf{0}\textsubscript{I}, 5.4.10), on en
+FRENCH CONTEXT (corrected): 4}) et on
+voit que pour $n$ assez grand, l'application canonique
+\[
+\Gamma(X',\mathcal J'\otimes\mathcal L'^{\otimes n})
+\longrightarrow
+\Gamma(X',(\mathcal J'/\mathcal J'\mathcal K')
+\otimes\mathcal L'^{\otimes n})
+\]
+est \emph{surjective}.
+
+Mais en vertu de (\textbf{0}\textsubscript{I}, 5.4.10), on en
+conclut que l'application canonique
+\[
+\Gamma(X,\mathcal J\mathcal B\otimes\mathcal L^{\otimes n})
+\longrightarrow
+\Gamma(X,(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)
+\otimes\mathcal L^{\otimes n})
+\]
+est \emph{surjective}.
+
+Cela étant, soient $i:Z
+
+[id 5661]
+OLD: est surjective.
+
+Cela
+NEW: est \emph{surjective}.
+
+Cela
+FRENCH CONTEXT (corrected): de (\textbf{0}\textsubscript{I}, 5.4.10), on en
+conclut que l'application canonique
+\[
+\Gamma(X,\mathcal J\mathcal B\otimes\mathcal L^{\otimes n})
+\longrightarrow
+\Gamma(X,(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)
+\otimes\mathcal L^{\otimes n})
+\]
+est \emph{surjective}.
+
+Cela étant, soient $i:Z\to X$ l'injection canonique,
+$i':Z'\to X'$ l'injection canonique, de sorte qu'on a le diagramme
+commutatif
+\[
+\xymatrix{
+X'\ar[d]_g & Z'\ar[l]_{i'}\ar[d]^{h}\\
+X & Z\ar[l]^{i}
+}
+\]
+
+Soient $\mathcal M=i^*(\mathcal L)$, $\mathcal M'=i'^*(\ma
+
+[id 5663]
+OLD: (II, 5.1.12)
+NEW: (\textbf{II}, 5.1.12)
+FRENCH CONTEXT (corrected): Dans ces conditions, pour que $\mathcal L$
+soit ample pour $f$, il faut et il suffit que $\mathcal L'$ soit ample
+pour $f\circ g$.
+\end{proposition}
+
+\begin{proof}
+\begin{env}[2.6.2.1]
+\label{III.2.6.2.1-fr}
+Puisque $g$ est affine, la condition est nécessaire (\textbf{II}, 5.1.12). Pour
+voir qu'elle est suffisante, on peut supposer $Y$ affine (\textbf{II}, 4.6.4).
+Montrons en outre qu'on peut se borner au cas où $X$ est \emph{réduit}. En
+effet, soit $j:X_{\mathrm{red}}\to X$ l'injection canonique, et posons
+$X_1=X_{\mathrm{red}}$, $X'_
+
+[id 5664]
+OLD: $\mathcal M$ est ample. Par
+NEW: $\mathcal M$ est \emph{ample}. Par
+FRENCH CONTEXT (corrected): i^*(\mathcal L)$, $\mathcal M'=i'^*(\mathcal L')$~;
+comme $\mathcal L'$ est ample, $\mathcal M'$ est ample (\textbf{II}, 5.1.12), et
+d'autre part $\mathcal M'=h^*(\mathcal M)$~; on conclut donc de
+l'hypothèse de récurrence noethérienne (puisque $Z\neq X$) que
+$\mathcal M$ est \emph{ample}. Par suite
+$i^*(\mathcal J/\mathcal J\mathcal K)\otimes\mathcal M^{\otimes n}$ est
+engendré par ses sections au-dessus de $Z$ pour $n$ assez grand
+(\textbf{II}, 4.5.5). Comme
+$\mathcal J/\mathcal J\mathcal K=i_*(i^*(\mathcal J/\mathcal J\mathcal K))$,
+on déduit en
+
+[id 5665]
+OLD: (II, 4.5.5)
+NEW: (\textbf{II}, 4.5.5)
+FRENCH CONTEXT (corrected): 'il existe un ouvert $U$ de $Y$ tel que
+$\mathcal J|U$ soit inversible. Si $\mathcal L$ est un
+$\mathcal O_Y$-Module ample, il existe un entier $n$ tel que
+$\mathcal F(n)=\mathcal F\otimes\mathcal L^{\otimes n}$ soit engendré par
+ses sections au-dessus de $Y$ (\textbf{II}, 4.5.5)~; \emph{a fortiori}, on a
+$\Gamma(Y,\mathcal F(n))\neq0$, d'où la conclusion.
+\end{proof}
+
+\begin{corollary}[2.3.7]
+\label{III.2.3.7-fr}
+Soient $X$ et $Y$ deux schémas intègres, projectifs sur un corps $k$, et
+soit $f:X\to Y$ un $k$-morphisme birationnel. Alo
+
+[id 5666]
+OLD: (0\textsubscript{I}, 5.4.10) qu'il
+NEW: (\textbf{0}\textsubscript{I}, 5.4.10) qu'il
+FRENCH CONTEXT (corrected): i^*(\mathcal J/\mathcal J\mathcal K)\otimes\mathcal M^{\otimes n}$ est
+engendré par ses sections au-dessus de $Z$ pour $n$ assez grand
+(\textbf{II}, 4.5.5). Comme
+$\mathcal J/\mathcal J\mathcal K=i_*(i^*(\mathcal J/\mathcal J\mathcal K))$,
+on déduit encore de (\textbf{0}\textsubscript{I}, 5.4.10) qu'il existe une section
+$s$ de $(\mathcal J/\mathcal J\mathcal K)\otimes
+\mathcal L^{\otimes n}$ au-dessus de $X$ (pour un $n$ assez grand) telle
+que $s(x)\neq0$, puisque l'on a $\mathcal J_x=\mathcal A_x$ par
+définition de $\mathcal J$ et $\mathcal K_x\neq\mathca
+
+[id 5667]
+OLD: l'image
+canonique d'une section $t$ de
+NEW: l'\emph{image
+canonique d'une section $t$ de}
+FRENCH CONTEXT (corrected):  J$ et $\mathcal K_x\neq\mathcal A_x$ par
+hypothèse. Le diagramme (\hyperref[III.2.6.2.6-fr]{2.6.2.6}) montre que
+$s$ est aussi une section de
+$(\mathcal J\mathcal B/\mathcal J\mathcal K\mathcal B)
+\otimes\mathcal L^{\otimes n}$ au-dessus de $X$, donc $s$ est l'\emph{image
+canonique d'une section $t$ de}
+$(\mathcal J\mathcal B)\otimes\mathcal L^{\otimes n}$ au-dessus de $X$.
+Mais par définition, l'image canonique $s$ de $t$ mod.
+$(\mathcal J\mathcal K\mathcal B)\otimes\mathcal L^{\otimes n}$ est
+dans
+$(\mathcal J\otimes\mathcal L^{\otimes n})/
+(\mathcal J\mat
+
+[id 5668]
+OLD: \[
+(\mathcal J\otimes\mathcal L^{\otimes n})/
+(\mathcal J\mathcal K\mathcal B\otimes\mathcal L^{\otimes n})
+\]
+NEW: $(\mathcal J\otimes\mathcal L^{\otimes n})/
+(\mathcal J\mathcal K\mathcal B\otimes\mathcal L^{\otimes n})$
+FRENCH CONTEXT (corrected):  donc $s$ est l'\emph{image
+canonique d'une section $t$ de}
+$(\mathcal J\mathcal B)\otimes\mathcal L^{\otimes n}$ au-dessus de $X$.
+Mais par définition, l'image canonique $s$ de $t$ mod.
+$(\mathcal J\mathcal K\mathcal B)\otimes\mathcal L^{\otimes n}$ est
+dans
+$(\mathcal J\otimes\mathcal L^{\otimes n})/
+(\mathcal J\mathcal K\mathcal B\otimes\mathcal L^{\otimes n})$
+donc, en vertu de (\hyperref[III.2.6.2.6-fr]{2.6.2.6}), cela implique que
+$t$ est une \emph{section de} $\mathcal J\otimes\mathcal L^{\otimes n}$
+au-dessus de $X$, et \emph{a fortiori} une section de
+$\mathcal L^{\otimes n}$. On a vu ci-dessus que $t(x)\neq0$
+
+[id 5669]
+OLD: une section de $\mathcal J\otimes
+NEW: une \emph{section de} $\mathcal J\otimes
+FRENCH CONTEXT (corrected): \mathcal J\mathcal K\mathcal B)\otimes\mathcal L^{\otimes n}$ est
+dans
+$(\mathcal J\otimes\mathcal L^{\otimes n})/
+(\mathcal J\mathcal K\mathcal B\otimes\mathcal L^{\otimes n})$
+donc, en vertu de (\hyperref[III.2.6.2.6-fr]{2.6.2.6}), cela implique que
+$t$ est une \emph{section de} $\mathcal J\otimes\mathcal L^{\otimes n}$
+au-dessus de $X$, et \emph{a fortiori} une section de
+$\mathcal L^{\otimes n}$. On a vu ci-dessus que $t(x)\neq0$, donc
+$x\in X_t$, et par définition de $\mathcal J$, $t(y)=0$ dans $X\setmin U$ qui
+est le support de $\mathcal O_X/\mathc
+
+=================== PAGE III 115 ===================
+----- (Spanish page III 114: shown above in this file) -----
+----- (Spanish page III 115: shown above in this file) -----
+----- Spanish, III1_CURRENT/ega3/ega3-3.tex, page III 116 -----
+\oldpage[III]{116}
+    la igualdad anterior se deduce de (\sref[I]{I.5.2.1} y \sref[I]{I.1.1.5}); si $z\not\in Y''$, se tiene $\sh{J}_z'=\sh{J}_z$, de donde $\sh{F}_z'=\sh{F}_z$ y $\sh{F}_z''=0$, lo que prueba nuestra afirmación en este caso; se razona del mismo modo si $z\not\in Y'$.
+    Por consiguiente, el núcleo y el conúcleo de $u$, que pertenecen a $\C$ \sref[0]{0.5.3.4}, tienen su soporte en $Y'\cap Y''$ y, por hipótesis, pertenecen a $\C'$; por la misma razón, $\sh{F}'$ y $\sh{F}''$ pertenecen a $\C'$, y por tanto también $\sh{F}'\oplus\sh{F}''$, pues $\C'$ es exacto.
+    La conclusión se obtiene entonces considerando las dos sucesiones exactas
+    \[
+      0\to\Im u\to\sh{F}'\oplus\sh{F}''\to\Coker u\to 0,
+    \]
+    \[
+      0\to\Ker u\to\sh{F}\to\Im u\to 0,
+    \]
+    y la hipótesis de que $\C'$ es exacto.
+  \item[(b)] $Y$ es irreducible y, por consiguiente, el subpreesquema $Y$ de $X$ es \emph{íntegro}.
+    Si $y$ es su punto genérico, se tiene $(\sh{O}_Y)_y=\kres(y)$ y, como $j^*(\sh{F})$ es un $\sh{O}_Y$-módulo coherente, $\sh{F}_y=(j^*(\sh{F}))_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión finita~$m$.
+    Por hipótesis existe \emph{un} $\sh{O}_X$-módulo coherente $\sh{G}\in\C'$ (necesariamente de soporte $Y$) tal que $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$.
+    Existe, por tanto, un $\kres(y)$-isomorfismo $(\sh{G}_y)^m\isoto\sh{F}_y$, que es también un $\sh{O}_Y$-isomorfismo; como $\sh{G}^m$ y $\sh{F}$ son coherentes, existe un entorno abierto $W$ de $y$ en $X$ y un isomorfismo $\sh{G}^m|W\isoto\sh{F}|W$ \sref[0]{0.5.2.7}.
+    Sea $\sh{H}$ el grafo de este isomorfismo, que es un $(\sh{O}_X|W)$-submódulo coherente de $(\sh{G}^m\oplus\sh{F})|W$, canónicamente isomorfo a $\sh{G}^m|W$ y a $\sh{F}|W$; existe entonces un $\sh{O}_X$-submódulo coherente $\sh{H}_0$ de $\sh{G}^m\oplus\sh{F}$ que induce $\sh{H}$ sobre $W$ y $0$ sobre $X\setmin Y$, puesto que $\sh{G}^m$ y $\sh{F}$ tienen soporte $Y$~\sref[I]{I.9.4.7}.
+    Las restricciones $v:\sh{H}_0\to\sh{G}^m$ y $w:\sh{H}_0\to\sh{F}$ de las proyecciones canónicas de $\sh{G}^m\oplus\sh{F}$ son entonces homomorfismos de $\sh{O}_X$-módulos coherentes que, sobre $W$ y sobre $X\setmin Y$, se reducen a isomorfismos; en otras palabras, los núcleos y conúcleos de $v$ y $w$ tienen su soporte en el cerrado $Y\setmin(Y\cap W)$, distinto de $Y$.
+    Pertenecen a $\C'$; por otra parte, $\sh{G}^m\in\C'$, pues $\sh{G}\in\C'$ y $\C'$ es exacto.
+    De la exactitud de $\C'$ concluimos sucesivamente que $\sh{H}_0\in\C'$ y luego que $\sh{F}\in\C'$.
+C.Q.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3}
+Supongamos además que el subconjunto exacto $\C'$ de $\C$ tiene la propiedad de que todo factor directo coherente de un $\sh{O}_X$-módulo coherente $\sh{M}\in\C'$ pertenece también a $\C'$.
+En este caso, la conclusión del Teorema~\sref{III.3.1.2} sigue siendo válida cuando la condición «$\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión~$1$» se sustituye por $\sh{G}_y\neq 0$ (lo que equivale a $\Supp(\sh{G})=Y$).
+\end{corollary}
+
+\begin{proof}
+El razonamiento del Teorema~\sref{III.3.1.2} solo debe modificarse en el caso~(b); ahora $\sh{G}_y$ es un espacio vectorial sobre $\kres(y)$ de dimensión $q>0$ y, por tanto, se tiene un $\sh{O}_Y$-isomorfismo $(\sh{G}_y)^m\isoto(\sh{F}_y)^q$; el final del razonamiento del Teorema~\sref{III.3.1.2} prueba entonces que $\sh{F}^q\in\C'$, y la hipótesis adicional sobre $\C'$ implica que $\sh{F}\in\C'$.
+\end{proof}
+
+\subsection{El teorema de finitud: caso de los esquemas ordinarios}
+\label{subsection:III.3.2}
+\label{III.3.2}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1}
+Sea $Y$ un preesquema localmente noetheriano y sea $f:X\to Y$ un morfismo propio.
+Para todo $\sh{O}_X$-módulo coherente $\sh{F}$, los $\sh{O}_Y$-módulos $\RR^q f_*(\sh{F})$ son coherentes para $q\geq 0$.
+\end{theorem}
+
+\begin{proof}
+Como la cuestión es local sobre $Y$, podemos suponer que $Y$ es noetheriano, y por tanto que $X$ es noetheriano~\sref[I]{I.6.3.7}.
+Los $\sh{O}_X$-módulos coherentes $\sh{F}$ para los cuales es válida la conclusión del Teorema~\sref{III.3.2.1} forman un subconjunto \emph{exacto} $\C'$ de la categoría $\C$ de los $\sh{O}_X$-módulos coherentes.
+----- French corrections on page III 115 -----
+[id 5671]
+OLD: \begin{env}[2.6.3]
+\label{III.2.6.3-fr}
+\emph{Remarque.}
+NEW: \begin{remark}[2.6.3]
+\label{III.2.6.3-fr}
+\upshape
+FRENCH CONTEXT (corrected):  On a vu ci-dessus que $t(x)\neq0$, donc
+$x\in X_t$, et par définition de $\mathcal J$, $t(y)=0$ dans $X\setmin U$ qui
+est le support de $\mathcal O_X/\mathcal J$~; donc $X_t\subset U$, ce qui
+achève la démonstration.
+\end{env}
+\end{proof}
+
+\oldpage[III]{115}
+\begin{remark}[2.6.3]
+\label{III.2.6.3-fr}
+\upshape Lorsque $X$ est \emph{propre} sur $Y$, on peut démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) plus simplement, en raisonnant comme dans
+le th. de Chevalley (\textbf{II}, 6.7.1), à l'aide de
+(\hyperref[III.2.6.1-fr]{2.6.1}) et du lemme (\textbf{II}, 6.7.1.1).
+\end
+
+[id 5672]
+OLD: \end{env}
+
+\section{
+NEW: \end{remark}
+
+\section{
+FRENCH CONTEXT (corrected): hape Lorsque $X$ est \emph{propre} sur $Y$, on peut démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) plus simplement, en raisonnant comme dans
+le th. de Chevalley (\textbf{II}, 6.7.1), à l'aide de
+(\hyperref[III.2.6.1-fr]{2.6.1}) et du lemme (\textbf{II}, 6.7.1.1).
+\end{remark}
+
+\section{Le théorème de finitude pour les morphismes propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ens
+
+[id 5673]
+OLD: est propre sur $Y$, on peut
+NEW: est \emph{propre} sur $Y$, on peut
+FRENCH CONTEXT (corrected): nition de $\mathcal J$, $t(y)=0$ dans $X\setmin U$ qui
+est le support de $\mathcal O_X/\mathcal J$~; donc $X_t\subset U$, ce qui
+achève la démonstration.
+\end{env}
+\end{proof}
+
+\oldpage[III]{115}
+\begin{remark}[2.6.3]
+\label{III.2.6.3-fr}
+\upshape Lorsque $X$ est \emph{propre} sur $Y$, on peut démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) plus simplement, en raisonnant comme dans
+le th. de Chevalley (\textbf{II}, 6.7.1), à l'aide de
+(\hyperref[III.2.6.1-fr]{2.6.1}) et du lemme (\textbf{II}, 6.7.1.1).
+\end{remark}
+
+\section{Le théorème de finitude pour
+
+[id 5674]
+OLD: (II, 6.7.1), à
+NEW: (\textbf{II}, 6.7.1), à
+FRENCH CONTEXT (corrected): émonstration.
+\end{env}
+\end{proof}
+
+\oldpage[III]{115}
+\begin{remark}[2.6.3]
+\label{III.2.6.3-fr}
+\upshape Lorsque $X$ est \emph{propre} sur $Y$, on peut démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) plus simplement, en raisonnant comme dans
+le th. de Chevalley (\textbf{II}, 6.7.1), à l'aide de
+(\hyperref[III.2.6.1-fr]{2.6.1}) et du lemme (\textbf{II}, 6.7.1.1).
+\end{remark}
+
+\section{Le théorème de finitude pour les morphismes propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{defin
+
+[id 5675]
+OLD: (II, 6.7.1.1)
+NEW: (\textbf{II}, 6.7.1.1)
+FRENCH CONTEXT (corrected): label{III.2.6.3-fr}
+\upshape Lorsque $X$ est \emph{propre} sur $Y$, on peut démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) plus simplement, en raisonnant comme dans
+le th. de Chevalley (\textbf{II}, 6.7.1), à l'aide de
+(\hyperref[III.2.6.1-fr]{2.6.1}) et du lemme (\textbf{II}, 6.7.1.1).
+\end{remark}
+
+\section{Le théorème de finitude pour les morphismes propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélien
+
+[id 5676]
+OLD: Soit $K$ une
+NEW: Soit $\boldsymbol{K}$ une
+FRENCH CONTEXT (corrected): {2.6.1}) et du lemme (\textbf{II}, 6.7.1.1).
+\end{remark}
+
+\section{Le théorème de finitude pour les morphismes propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'
+
+[id 5677]
+OLD: sous-ensemble $K'$ de
+l'ensemble
+NEW: sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble
+FRENCH CONTEXT (corrected): section{Le théorème de finitude pour les morphismes propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\bold
+
+[id 5678]
+OLD: objets de $K$ est
+NEW: objets de $\boldsymbol{K}$ est
+FRENCH CONTEXT (corrected): s propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\beg
+
+[id 5679]
+OLD: est \emph{exact} si
+NEW: est exact si
+FRENCH CONTEXT (corrected): II.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theore
+
+[id 5680]
+OLD: si $0\in K'$
+NEW: si $0\in\boldsymbol{K}'$
+FRENCH CONTEXT (corrected): \subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3
+
+[id 5681]
+OLD: \[
+0\longrightarrow A'\longrightarrow A\longrightarrow A''\longrightarrow0
+\]
+NEW: $0\to A'\to A\to A''\to0$
+FRENCH CONTEXT (corrected): .3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne pa
+
+[id 5682]
+OLD: dans $K$ telle que
+NEW: dans $\boldsymbol{K}$ telle que
+FRENCH CONTEXT (corrected): n}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $\boldsymbol{K}$ une catégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $\boldsymbol{K}$ la catégorie 
+
+[id 5683]
+OLD: soit dans $K'$, alors
+NEW: soit dans $\boldsymbol{K}'$, alors
+
+[id 5684]
+OLD: aussi dans $K'$.
+NEW: aussi dans $\boldsymbol{K}'$.
+FRENCH CONTEXT (corrected): }'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $\boldsymbol{K}$ la catégorie abélienne
+des $\mathcal O_X$-Modules cohérents. Soient $\boldsymbol{K}'$ un sous-ensemble exact de
+$\boldsymbol{K}$, 
+
+[id 5685]
+OLD: on désigne par $K$ la
+NEW: on désigne par $\boldsymbol{K}$ la
+FRENCH CONTEXT (corrected): A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $\boldsymbol{K}$ la catégorie abélienne
+des $\mathcal O_X$-Modules cohérents. Soient $\boldsymbol{K}'$ un sous-ensemble exact de
+$\boldsymbol{K}$, $X'$ une partie fermée de l'espace sous-jacent à $X$. On suppose que
+pour toute partie fermée irréductible $Y$ de $X'$, de point gén
+
+[id 5686]
+OLD: Soient $K'$ un
+NEW: Soient $\boldsymbol{K}'$ un
+FRENCH CONTEXT (corrected): boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $\boldsymbol{K}$ la catégorie abélienne
+des $\mathcal O_X$-Modules cohérents. Soient $\boldsymbol{K}'$ un sous-ensemble exact de
+$\boldsymbol{K}$, $X'$ une partie fermée de l'espace sous-jacent à $X$. On suppose que
+pour toute partie fermée irréductible $Y$ de $X'$, de point générique $y$, il
+existe un $\mathcal O_X$-Module $\mathcal G\in\boldsymbol{K}'$ de suppo
+
+[id 5687]
+OLD: de
+$K$, $X'$
+NEW: de
+$\boldsymbol{K}$, $X'$
+FRENCH CONTEXT (corrected): ns $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $\boldsymbol{K}$ la catégorie abélienne
+des $\mathcal O_X$-Modules cohérents. Soient $\boldsymbol{K}'$ un sous-ensemble exact de
+$\boldsymbol{K}$, $X'$ une partie fermée de l'espace sous-jacent à $X$. On suppose que
+pour toute partie fermée irréductible $Y$ de $X'$, de point générique $y$, il
+existe un $\mathcal O_X$-Module $\mathcal G\in\boldsymbol{K}'$ de support $Y$ tel que $\mathcal G_y$ soit
+un $\boldsy
+
+[id 5688]
+OLD: $k(y)$
+NEW: $\boldsymbol{k}(y)$
+FRENCH CONTEXT (corrected): point de $X$, $y$ un point de $Y$,
+au-dessus du même point $s\in S$. L'ensemble des points de $X\times_S Y$ ayant
+pour projections $x$ et $y$ est en correspondance biunivoque canonique avec
+l'ensemble des types d'extensions composées de $\boldsymbol{k}(x)$ et $\boldsymbol{k}(y)$ considérés
+comme extensions de $\boldsymbol{k}(s)$ \textup{(Bourbaki, \emph{Alg.}, chap. VIII, \S~8, prop. 2)}.
+\end{proposition}
+
+Soit $p$ (resp. $q$) la projection de $X\times_S Y$ dans $X$ (resp. $Y$) et
+soit $E$ le sous-espace $p^{-1}(x)\cap q^{-1}(y)$ de
+
+[id 5689]
+OLD: appartient à $K'$ (et
+NEW: appartient à $\boldsymbol{K}'$ (et
+FRENCH CONTEXT (corrected):  point générique $y$, il
+existe un $\mathcal O_X$-Module $\mathcal G\in\boldsymbol{K}'$ de support $Y$ tel que $\mathcal G_y$ soit
+un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$. Alors tout $\mathcal O_X$-Module
+cohérent de support contenu dans $X'$ appartient à $\boldsymbol{K}'$ (et en particulier,
+si $X'=X$, on a $\boldsymbol{K}'=\boldsymbol{K}$).
+\end{theorem}
+
+\begin{proof}
+Considérons la propriété suivante $\boldsymbol{P}(Y)$ d'une partie fermée $Y$ de $X'$~:
+tout $\mathcal O_X$-Module cohérent de support contenu dans $Y$ appartient 
+
+[id 5690]
+OLD: on a $K'=K$)
+NEW: on a $\boldsymbol{K}'=\boldsymbol{K}$)
+FRENCH CONTEXT (corrected): hcal G\in\boldsymbol{K}'$ de support $Y$ tel que $\mathcal G_y$ soit
+un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$. Alors tout $\mathcal O_X$-Module
+cohérent de support contenu dans $X'$ appartient à $\boldsymbol{K}'$ (et en particulier,
+si $X'=X$, on a $\boldsymbol{K}'=\boldsymbol{K}$).
+\end{theorem}
+
+\begin{proof}
+Considérons la propriété suivante $\boldsymbol{P}(Y)$ d'une partie fermée $Y$ de $X'$~:
+tout $\mathcal O_X$-Module cohérent de support contenu dans $Y$ appartient à
+$\boldsymbol{K}'$. En vertu du principe de récurrence noethérien
+
+[id 5691]
+OLD: suivante $P(Y)$
+NEW: suivante $\boldsymbol{P}(Y)$
+FRENCH CONTEXT (corrected): pace vectoriel de dimension $1$. Alors tout $\mathcal O_X$-Module
+cohérent de support contenu dans $X'$ appartient à $\boldsymbol{K}'$ (et en particulier,
+si $X'=X$, on a $\boldsymbol{K}'=\boldsymbol{K}$).
+\end{theorem}
+
+\begin{proof}
+Considérons la propriété suivante $\boldsymbol{P}(Y)$ d'une partie fermée $Y$ de $X'$~:
+tout $\mathcal O_X$-Module cohérent de support contenu dans $Y$ appartient à
+$\boldsymbol{K}'$. En vertu du principe de récurrence noethérienne (\textbf{0}\textsubscript{I},
+2.2.2), on voit qu'on est ramené à démontrer que \e
+
+[id 5692]
+OLD: appartient à
+$K'$. En vertu
+NEW: appartient à
+$\boldsymbol{K}'$. En vertu
+FRENCH CONTEXT (corrected): ol{K}'$ (et en particulier,
+si $X'=X$, on a $\boldsymbol{K}'=\boldsymbol{K}$).
+\end{theorem}
+
+\begin{proof}
+Considérons la propriété suivante $\boldsymbol{P}(Y)$ d'une partie fermée $Y$ de $X'$~:
+tout $\mathcal O_X$-Module cohérent de support contenu dans $Y$ appartient à
+$\boldsymbol{K}'$. En vertu du principe de récurrence noethérienne (\textbf{0}\textsubscript{I},
+2.2.2), on voit qu'on est ramené à démontrer que \emph{si $Y$ est une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, disti
+
+[id 5693]
+OLD: (0\textsubscript{I},
+2.2.2)
+NEW: (\textbf{0}\textsubscript{I},
+2.2.2)
+FRENCH CONTEXT (corrected): end{theorem}
+
+\begin{proof}
+Considérons la propriété suivante $\boldsymbol{P}(Y)$ d'une partie fermée $Y$ de $X'$~:
+tout $\mathcal O_X$-Module cohérent de support contenu dans $Y$ appartient à
+$\boldsymbol{K}'$. En vertu du principe de récurrence noethérienne (\textbf{0}\textsubscript{I},
+2.2.2), on voit qu'on est ramené à démontrer que \emph{si $Y$ est une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $\boldsymbol{P}(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in
+
+[id 5694]
+OLD: $P(Y')$
+NEW: $\boldsymbol{P}(Y')$
+FRENCH CONTEXT (corrected): hérent de support contenu dans $Y$ appartient à
+$\boldsymbol{K}'$. En vertu du principe de récurrence noethérienne (\textbf{0}\textsubscript{I},
+2.2.2), on voit qu'on est ramené à démontrer que \emph{si $Y$ est une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $\boldsymbol{P}(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in\boldsymbol{K}$ à support contenu dans $Y$ et prouvons que
+$\mathcal F\in\boldsymbol{K}'$. Désignons encore par $Y$ le sous-présc
+
+[id 5695]
+OLD: alors $P(Y)$
+NEW: alors $\boldsymbol{P}(Y)$
+FRENCH CONTEXT (corrected): de récurrence noethérienne (\textbf{0}\textsubscript{I},
+2.2.2), on voit qu'on est ramené à démontrer que \emph{si $Y$ est une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $\boldsymbol{P}(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in\boldsymbol{K}$ à support contenu dans $Y$ et prouvons que
+$\mathcal F\in\boldsymbol{K}'$. Désignons encore par $Y$ le sous-préschéma fermé réduit de
+$X$ ayant $Y$ pour espace sous-jacent (\textbf{I}, 5.2.1)~; il est défin
+
+[id 5696]
+OLD: $\mathcal F\in K$ à support
+NEW: $\mathcal F\in\boldsymbol{K}$ à support
+FRENCH CONTEXT (corrected): ipt{I},
+2.2.2), on voit qu'on est ramené à démontrer que \emph{si $Y$ est une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $\boldsymbol{P}(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in\boldsymbol{K}$ à support contenu dans $Y$ et prouvons que
+$\mathcal F\in\boldsymbol{K}'$. Désignons encore par $Y$ le sous-préschéma fermé réduit de
+$X$ ayant $Y$ pour espace sous-jacent (\textbf{I}, 5.2.1)~; il est défini par un Idéal
+cohérent $\mathcal J$ de $\mathcal O_X$. On sait
+
+[id 5697]
+OLD: $\mathcal F\in K'$. Désignons
+NEW: $\mathcal F\in\boldsymbol{K}'$. Désignons
+FRENCH CONTEXT (corrected):  une partie
+fermée de $X'$ telle que la propriété $\boldsymbol{P}(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $\boldsymbol{P}(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in\boldsymbol{K}$ à support contenu dans $Y$ et prouvons que
+$\mathcal F\in\boldsymbol{K}'$. Désignons encore par $Y$ le sous-préschéma fermé réduit de
+$X$ ayant $Y$ pour espace sous-jacent (\textbf{I}, 5.2.1)~; il est défini par un Idéal
+cohérent $\mathcal J$ de $\mathcal O_X$. On sait (\textbf{I}, 9.3.4) qu'il existe un
+entier $n>0$ tel que $\mathcal J^n\mat
+
+[id 5698]
+OLD: (I, 5.2.1)
+NEW: (\textbf{I}, 5.2.1)
+FRENCH CONTEXT (corrected):  et \textbf{0}\textsubscript{I}, 2.1.3). Soit $\mathcal J$ (resp.
+$\mathcal J'$) le faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X\setmin U$ (resp. $(X\setmin U)\cup\{x\}$) (\textbf{I}, 5.2.1)~; il est clair que
+$\mathcal J$ et $\mathcal J'$ sont cohérents (\textbf{I}, 6.1.1), que
+$\mathcal J'\subset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (\textbf{0}\textsubscript{I}, 5.3.3) ayant pour support 
+
+[id 5699]
+OLD: (I, 9.3.4)
+NEW: (\textbf{I}, 9.3.4)
+FRENCH CONTEXT (corrected): contenu dans $Y$ et prouvons que
+$\mathcal F\in\boldsymbol{K}'$. Désignons encore par $Y$ le sous-préschéma fermé réduit de
+$X$ ayant $Y$ pour espace sous-jacent (\textbf{I}, 5.2.1)~; il est défini par un Idéal
+cohérent $\mathcal J$ de $\mathcal O_X$. On sait (\textbf{I}, 9.3.4) qu'il existe un
+entier $n>0$ tel que $\mathcal J^n\mathcal F=0$~; pour $1\leq k\leq n$, on a
+donc une suite exacte
+\[
+0\longrightarrow
+\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal
+
+[id 5700]
+OLD: (0\textsubscript{I}, 5.3.6 et 5.3.3)
+NEW: (\textbf{0}\textsubscript{I}, 5.3.6 et 5.3.3)
+FRENCH CONTEXT (corrected): $, on a
+donc une suite exacte
+\[
+0\longrightarrow
+\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^{k-1}\mathcal F
+\longrightarrow0
+\]
+de $\mathcal O_X$-Modules cohérents (\textbf{0}\textsubscript{I}, 5.3.6 et 5.3.3)~;
+comme $\boldsymbol{K}'$ est exact, on voit, par récurrence sur $k$, qu'il suffit de montrer
+que chacun des
+$\mathcal F_k=\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F$ est dans
+$\boldsymbol{K}'$. On est donc ramené à prouver que $\mathcal F\in\boldsymbo
+
+[id 5701]
+OLD: comme $K'$ est exact
+NEW: comme $\boldsymbol{K}'$ est exact
+FRENCH CONTEXT (corrected): w
+\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^{k-1}\mathcal F
+\longrightarrow0
+\]
+de $\mathcal O_X$-Modules cohérents (\textbf{0}\textsubscript{I}, 5.3.6 et 5.3.3)~;
+comme $\boldsymbol{K}'$ est exact, on voit, par récurrence sur $k$, qu'il suffit de montrer
+que chacun des
+$\mathcal F_k=\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F$ est dans
+$\boldsymbol{K}'$. On est donc ramené à prouver que $\mathcal F\in\boldsymbol{K}'$ sous l'hypothèse
+supplémentai
+
+[id 5702]
+OLD: est dans
+$K'$. On est
+NEW: est dans
+$\boldsymbol{K}'$. On est
+FRENCH CONTEXT (corrected): 
+\]
+de $\mathcal O_X$-Modules cohérents (\textbf{0}\textsubscript{I}, 5.3.6 et 5.3.3)~;
+comme $\boldsymbol{K}'$ est exact, on voit, par récurrence sur $k$, qu'il suffit de montrer
+que chacun des
+$\mathcal F_k=\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F$ est dans
+$\boldsymbol{K}'$. On est donc ramené à prouver que $\mathcal F\in\boldsymbol{K}'$ sous l'hypothèse
+supplémentaire que $\mathcal J\mathcal F=0$~; il revient au même de dire que
+$\mathcal F=j_*(j^*(\mathcal F))$, où $j$ est l'injection canonique
+$Y\to X$. Distinguons maintenant deux ca
+
+[id 5703]
+OLD: $\mathcal F\in K'$ sous
+NEW: $\mathcal F\in\boldsymbol{K}'$ sous
+FRENCH CONTEXT (corrected): ript{I}, 5.3.6 et 5.3.3)~;
+comme $\boldsymbol{K}'$ est exact, on voit, par récurrence sur $k$, qu'il suffit de montrer
+que chacun des
+$\mathcal F_k=\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F$ est dans
+$\boldsymbol{K}'$. On est donc ramené à prouver que $\mathcal F\in\boldsymbol{K}'$ sous l'hypothèse
+supplémentaire que $\mathcal J\mathcal F=0$~; il revient au même de dire que
+$\mathcal F=j_*(j^*(\mathcal F))$, où $j$ est l'injection canonique
+$Y\to X$. Distinguons maintenant deux cas~:
+\begin{enumerate}
+\item[\textit{a)}] $Y$ est \emph{réducti
+
+[id 5704]
+OLD: \item[a)]
+NEW: \item[\textit{a)}]
+FRENCH CONTEXT (corrected):  du point de vue birationnel qu'elle implique) être nuisible à celui qui désire se familiariser avec le point de vue et les techniques exposés ici.
+Par contre, nous supposerons que le lecteur a une bonne connaissance des sujets suivants~:
+
+\begin{enumerate}
+  \item[\textit{a)}] L'\emph{Algèbre commutative}, telle qu'elle est exposée par exemple dans les volumes en cours de préparation des \emph{Éléments} de N.~Bourbaki (et, en attendant la parution de ces volumes, dans Samuel-Zariski~\cite{I-13} et Samuel~\cite{I-11},~\cite{I-12}).
+
+
+[id 5705]
+OLD: \[
+\mathcal F'=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J'),\qquad
+\mathcal F''=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J'').
+\]
+NEW: $\mathcal F'=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J')$,
+$\mathcal F''=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J'')$.
+FRENCH CONTEXT (corrected): istinctes de $Y$~; soient encore $Y'$,
+$Y''$ les sous-préschémas fermés réduits de $X$ ayant pour espaces
+sous-jacents $Y'$, $Y''$ respectivement, qui sont définis respectivement par
+les Idéaux cohérents $\mathcal J'$, $\mathcal J''$ de $\mathcal O_X$. Posons
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J')$,
+$\mathcal F''=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J'')$.
+Les homomorphismes canoniques $\mathcal F\to\mathcal F'$,
+$\mathcal F\to\mathcal F''$ définissent donc un homomorphisme
+$u:\mathcal F\to\mathcal F'\oplus\mathcal F''$. Montrons que pour tout
+$z\notin Y'\cap Y''$, l'homomorphisme
+$u_z:\mathcal F_z\to\mathcal F
+
+[id 14437]
+OLD: $\mathcal G\in K'$ de support $Y$ tel que
+NEW: $\mathcal G\in\boldsymbol{K}'$ de support $Y$ tel que
+FRENCH CONTEXT (corrected):  cohérents. Soient $\boldsymbol{K}'$ un sous-ensemble exact de
+$\boldsymbol{K}$, $X'$ une partie fermée de l'espace sous-jacent à $X$. On suppose que
+pour toute partie fermée irréductible $Y$ de $X'$, de point générique $y$, il
+existe un $\mathcal O_X$-Module $\mathcal G\in\boldsymbol{K}'$ de support $Y$ tel que $\mathcal G_y$ soit
+un $\boldsymbol{k}(y)$-espace vectoriel de dimension $1$. Alors tout $\mathcal O_X$-Module
+cohérent de support contenu dans $X'$ appartient à $\boldsymbol{K}'$ (et en particulier,
+si $X'=X$, on a $\boldsymbol{K}'=\boldsymbol{K}$).
+\end{the
+
+[id 14438]
+OLD: $\mathcal G\in K'$ tel que
+NEW: $\mathcal G\in\boldsymbol{K}'$ tel que
+
+[id 24631]
+OLD: $A''$ soit dans
+NEW: $A''$ soient dans
+FRENCH CONTEXT (corrected): tégorie abélienne. On dit qu'un sous-ensemble $\boldsymbol{K}'$ de
+l'ensemble des objets de $\boldsymbol{K}$ est exact si $0\in\boldsymbol{K}'$ et si, pour toute
+suite exacte
+$0\to A'\to A\to A''\to0$
+dans $\boldsymbol{K}$ telle que deux des objets $A$, $A'$, $A''$ soient dans $\boldsymbol{K}'$, alors le
+troisième est aussi dans $\boldsymbol{K}'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $\boldsymbol{K}$ la catégorie abélienne
+des $\mathcal O_X$-Modules cohérent
+

@@ -4,7 +4,8 @@ Traducciones al español de dos obras de Alexander Grothendieck: los *Fondements
 completos (las ocho exposiciones del Seminario Bourbaki de 1957–1962, n.º 149, 182, 190, 195, 212, 221, 232 y 236,
 sus erratas y los comentarios de 1962), y una parte de los *Éléments de géométrie algébrique* (EGA), escritos con la
 colaboración de Jean Dieudonné y publicados en las *Publications mathématiques de l'IHÉS* (1960–1967): EGA II, EGA III
-y EGA IV, partes 3 y 4, y el capítulo 0 de EGA IV, parte 1.
+y EGA IV, partes 3 y 4, y el capítulo 0 de EGA IV, parte 1; de EGA I, el capítulo I completo y el capítulo 0
+hasta 0.3.6.2.
 
 ## Cómo se hizo
 
@@ -14,12 +15,19 @@ y montó las ediciones. En la
 preparación de algunas secciones de EGA se usaron fuentes inglesas que incorporan la traducción humana del proyecto
 ryankeleti/ega; para FGA, la traducción inglesa de Tim Hosgood sirvió de referencia (véase «Fuentes y créditos»).
 
+Los lectores de EGA I (traducción de OpenAI Codex, GPT-6.1 Sol, esfuerzo de razonamiento ultra, agosto–octubre
+de 2026) se publicaron el 15 de noviembre de 2026; la composición (nada sobresale del margen más de 2 pt) y la
+publicación las hizo Claude Opus 5.5 con esfuerzo high.
+
 Las ediciones corregidas y las traducciones diplomáticas, que siguen el texto impreso, son documentos separados; las
 notas matemáticas también.
 
 ## Estado
 
-FGA está completo. De EGA faltan EGA I, EGA IV, parte 2, y el capítulo IV de EGA IV, parte 1. Puede haber errores.
+FGA está completo. De EGA I están el capítulo I completo (§§1–10, con los índices de notaciones y de terminología)
+y el capítulo 0 hasta 0.3.6.2 (secciones 1–2 y subsecciones 3.1–3.5 completas, 3.6.1 y 3.6.2); el resto del
+capítulo 0 sigue en preparación. Faltan EGA IV, parte 2 (su traducción llega hasta 7.9.10, pero las partes
+traducidas aún no están montadas en un lector) y el capítulo IV de EGA IV, parte 1. Puede haber errores.
 
 ## Otras ediciones de EGA y FGA
 
@@ -55,6 +63,9 @@ Cada lector tiene su PDF, su fuente LaTeX completa y un ZIP con todos los archiv
 
 | Obra y alcance | Lectura | LaTeX completo | Fuentes |
 | --- | --- | --- | --- |
+| EGA I: capítulo I completo (§§1–10) e índices | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_I_ES.pdf) | [LaTeX](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_I_ES.tex) | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_I_ES_fuentes.zip) |
+| EGA I: capítulo 0 hasta 0.3.6.2, lectura actual | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_0_ES_actual.pdf) | | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_0_ES_fuentes.zip) |
+| EGA I: capítulo 0 hasta 0.3.6.2, lectura según el impreso | [PDF](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_0_ES_diplomatica.pdf) | | [ZIP](https://github.com/KokunoYumeto/ega-fga-es/releases/download/v2026-11-15-ega-i/EGA_I_CAP_0_ES_fuentes.zip) |
 | EGA II: edición corregida | [PDF](readers/EGA_II/EGA_II_es_current.pdf) | [LaTeX](readers/EGA_II/EGA_II_es_current.tex) | [ZIP](readers/EGA_II/EGA_II_es_current_sources.zip) |
 | EGA II: traducción diplomática | [PDF](readers/EGA_II/EGA_II_es_diplomatic.pdf) | [LaTeX](readers/EGA_II/EGA_II_es_diplomatic.tex) | [ZIP](readers/EGA_II/EGA_II_es_diplomatic_sources.zip) |
 | EGA II: notas matemáticas | [PDF](readers/EGA_II/EGA_II_Notas_matematicas.pdf) | [LaTeX](readers/EGA_II/EGA_II_Notas_matematicas.tex) | [ZIP](readers/EGA_II/EGA_II_Notas_matematicas_sources.zip) |
@@ -94,8 +105,4 @@ Los proyectos LaTeX modulares están en [editions](editions/README.md), uno por 
 
 ## Derechos
 
-En la medida en que el editor tenga derechos sobre las traducciones, las correcciones y la composición producidas por
-IA, quedan dedicados al dominio público bajo
-[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Esto no afecta a los derechos sobre las obras
-originales ni sobre las traducciones humanas citadas, y no concede permiso para usarlas. Aviso completo:
-[RIGHTS_NOTICE.md](RIGHTS_NOTICE.md).
+Los derechos sobre las obras originales pertenecen a sus autores o a los representantes o herederos de estos. Nuestras traducciones, correcciones y composición tipográfica fueron producidas por IA. No tienen autor humano y, según nuestro entender, no están protegidas por derechos de autor; si aun así existiera algún derecho nuestro, se dedica al dominio público bajo [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Todo este trabajo reproduce o traduce las obras originales, por lo que nada de lo que aquí se publica concede licencia ni autoriza reproducción, traducción u otro uso de ellas; tampoco afecta a los derechos sobre las traducciones humanas citadas. Estas ediciones se publican con fines educativos y sin ánimo de lucro, y no reclamamos ningún derecho que no poseamos. Si usted es titular de derechos sobre alguna de estas obras y se opone a su publicación aquí, [abra una incidencia en GitHub](https://github.com/KokunoYumeto/ega-fga-es/issues) y la retiraremos. Aviso completo: [RIGHTS_NOTICE.md](RIGHTS_NOTICE.md).

@@ -1,0 +1,82 @@
+\begin{env}[5.5.1]
+\label{IV.2.s5.5.1-fr}
+Recordemos (\textbf 0, 16.3.9) que si $A$, $B$ son dos anillos locales noetherianos,
+$k$ el cuerpo residual de $A$, $\varphi:A\to B$ un homomorfismo local, se tiene
+\begin{equation}
+\dim(B)\leq\dim(A)+\dim(B\otimes_A k).
+\tag{5.5.1.1}\label{IV.2.s5.5.1.1-fr}
+\end{equation}
+\end{env}
+
+De ello se deduce:
+
+\begin{proposition}[5.5.2]
+\label{IV.2.s5.5.2-fr}
+Sean $X$, $Y$ dos preesquemas localmente noetherianos, $f:X\to Y$ un
+morfismo, $x$ un punto de $X$, $y=f(x)$. Entonces se tiene
+\begin{equation}
+\dim(\mathcal O_x)\leq\dim(\mathcal O_y)
++\dim(\mathcal O_x\otimes_{\mathcal O_y}\boldsymbol{k}(y)).
+\tag{5.5.2.1}\label{IV.2.s5.5.2.1-fr}
+\end{equation}
+\end{proposition}
+
+\oldpage[IV-2]{95}
+
+En particular, si $x$ es un \emph{punto maximal de la fibra} $f^{-1}(y)$, se tiene
+\begin{equation}
+\dim(\mathcal O_x)\leq\dim(\mathcal O_y)
+\tag{5.5.2.2}\label{IV.2.s5.5.2.2-fr}
+\end{equation}
+puesto que $\mathcal O_x\otimes_{\mathcal O_y}\boldsymbol{k}(y)
+=\mathcal O_x/\mathfrak m_y\mathcal O_x$ es el anillo local de $x$ en el
+preesquema $f^{-1}(y)$, y es, por tanto, de dimensión $0$ por hipótesis.
+
+Vamos a obtener una fórmula más precisa que (5.5.2.1) cuando se supone que
+$f$ es un morfismo \emph{de tipo finito}.
+
+\begin{proposition}[5.5.3]
+\label{IV.2.s5.5.3-fr}
+Sean $A$ un anillo noetheriano, $T$ una indeterminada, $\mathfrak p$ un ideal
+primo de $A$; entonces $\mathfrak p'=\mathfrak pA[T]$ es primo en
+$B=A[T]$ y $\mathfrak p'\cap A=\mathfrak p$. Existe una infinidad de
+ideales primos de $B$ distintos de $\mathfrak p'$, cuya intersección
+con $A$ es $\mathfrak p$; estos ideales son dos a dos no comparables por
+inclusión. Además, si $\mathfrak q$ es uno de estos ideales, se tiene
+\begin{equation}
+\dim(B_{\mathfrak q})=\dim(B_{\mathfrak p'})+1
+=\dim(A_{\mathfrak p})+1.
+\tag{5.5.3.1}\label{IV.2.s5.5.3.1-fr}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Para las primeras afirmaciones, la cuestión se reduce inmediatamente, reemplazando
+$A$ por $A/\mathfrak p$ y observando que
+$A[T]/\mathfrak pA[T]=(A/\mathfrak p)[T]$, al caso $\mathfrak p=0$; resultan
+entonces del hecho de que los ideales primos de $B=A[T]$ cuya intersección
+con $A$ se reduce a $0$ son exactamente los que no intersecan la parte
+multiplicativa $S=A\setmin\{0\}$ del anillo \emph{íntegro} $A$; ahora bien, se sabe que hay
+una biyección creciente del conjunto de estos ideales sobre el conjunto de los
+ideales primos de $S^{-1}A[T]=K[T]$, donde $K$ es el cuerpo de fracciones de
+$A$ (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S~2, n\textsuperscript{o}~5, prop.~11). Además, en virtud de (5.5.1.2), se
+tiene
+$\dim(B_{\mathfrak q})\leq\dim(A_{\mathfrak p})
++\dim(B_{\mathfrak q}/\mathfrak pB_{\mathfrak q})$,
+y si $k$ es el cuerpo de fracciones de $A/\mathfrak p$,
+$B_{\mathfrak q}/\mathfrak pB_{\mathfrak q}$ se identifica canónicamente con
+$(k[T])_{\mathfrak q}$, que es, por tanto, un anillo de valoración discreta y,
+por consiguiente, de dimensión $1$. Finalmente, si
+$\mathfrak p=\mathfrak p_0\supset\mathfrak p_1\supset\ldots
+\supset\mathfrak p_m$ es una cadena de ideales primos de $A$ de longitud
+máxima, los ideales $\mathfrak p_jB$ $(0\leq j\leq m)$ son primos en
+$B$, dos a dos distintos y contenidos en $\mathfrak q$; por tanto,
+$\dim(B_{\mathfrak q})\geq m+1=\dim(A_{\mathfrak p})+1$ y, en consecuencia,
+$\dim(B_{\mathfrak q})=\dim(A_{\mathfrak p})+1$. Esta relación también se
+escribe $\operatorname{ht}(\mathfrak q)=\operatorname{ht}(\mathfrak p)+1$;
+como $\mathfrak q\ne\mathfrak p'$, se tiene además
+$\operatorname{ht}(\mathfrak q)\geq\operatorname{ht}(\mathfrak p')+1
+\geq\operatorname{ht}(\mathfrak p)+1$ por definición de la altura de un
+ideal primo; esto termina de demostrar (5.5.3.1).
+\end{proof}

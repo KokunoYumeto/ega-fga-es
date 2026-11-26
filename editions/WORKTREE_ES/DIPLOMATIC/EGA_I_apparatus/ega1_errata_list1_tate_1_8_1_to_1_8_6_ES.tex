@@ -1,0 +1,193 @@
+\paragraph{(I, 1.7.3) y (I, 2.2.4)}
+Los enunciados dados bajo estos números pueden generalizarse, de
+acuerdo con una observación de J.~Tate, como sigue.
+
+\subsection*{1.8. Morfismos de espacios localmente anillados a esquemas afines}
+\label{ega2:addendum:subsection:I.1.8-fr}
+
+\begin{proposition}[1.8.1]
+\label{ega2:addendum:I.1.8.1-fr}
+Sean $(S,\sh{O}_S)$ un esquema afín y $(X,\sh{O}_X)$ un espacio
+localmente anillado. Existe una biyección canónica del conjunto de
+homomorfismos de anillos
+\oldpage[II]{218}
+$\Gamma(S,\sh{O}_S)\to\Gamma(X,\sh{O}_X)$
+al conjunto de morfismos de espacios anillados
+$(\psi,\theta):(X,\sh{O}_X)\to(S,\sh{O}_S)$ tales que, para todo
+$x\in X$, $\theta_x^\sharp$ sea un homomorfismo local: $\sh{O}_{\psi(x)}\to\sh{O}_x$.
+\end{proposition}
+
+\begin{proof}
+Observemos primero que, si $(X,\sh{O}_X)$ y $(S,\sh{O}_S)$ son dos
+espacios anillados cualesquiera, un morfismo $(\psi,\theta)$ de
+$(X,\sh{O}_X)$ a $(S,\sh{O}_S)$ define canónicamente un homomorfismo
+de anillos
+$\Gamma(\theta):\Gamma(S,\sh{O}_S)\to\Gamma(X,\sh{O}_X)$;
+y, por tanto, una primera aplicación
+\begin{equation}
+\label{ega2:addendum:I.1.8.1.1-fr}
+  \rho:\Hom((X,\sh{O}_X),(S,\sh{O}_S))
+  \to\Hom(\Gamma(S,\sh{O}_S),\Gamma(X,\sh{O}_X)).
+\tag{1.8.1.1}
+\end{equation}
+Recíprocamente, bajo las hipótesis de la proposición, pongamos
+$A=\Gamma(S,\sh{O}_S)$ y consideremos un homomorfismo de anillos
+$\vphi:A\to\Gamma(X,\sh{O}_X)$. Para todo $x\in X$, el conjunto de
+los $f\in A$ tales que $\vphi(f)(x)=0$ es un \emph{ideal primo} de $A$, pues
+$\sh{O}_x/\mathfrak m_x=\boldsymbol{k}(x)$ es un cuerpo. Es, por tanto, un
+elemento de $S=\Spec(A)$, que denotaremos asimismo por
+${}^a\vphi(x)$. Además, para todo $f\in A$, por definición (\textbf 0, 5.5.2),
+${}^a\vphi^{-1}(D(f))=X_f$,
+lo que prueba que ${}^a\vphi$ es una aplicación \emph{continua} $X\to S$.
+
+Definamos después un homomorfismo
+\[
+  \widetilde{\vphi}:\sh{O}_S\to{}^a\vphi_*(\sh{O}_X)
+\] de $\sh{O}_S$-módulos; para todo $f\in A$, se tiene
+$\Gamma(D(f),\sh{O}_S)=A_f$ (1.3.6); para todo $s\in A$, se hace corresponder a $s/f\in A_f$ el elemento
+$(\vphi(s)|X_f)(\vphi(f)|X_f)^{-1}$ de $\Gamma(X_f,\sh{O}_X)=\Gamma(D(f),{}^a\vphi_*(\sh{O}_X))$,
+y se comprueba inmediatamente (pasando de $D(f)$ a $D(fg)$) que esto define un homomorfismo de $\sh{O}_S$-módulos, de donde, un morfismo de espacios
+anillados $({}^a\vphi,\widetilde{\vphi})$. Con la misma notación, y
+escribiendo $y={}^a\vphi(x)$, se tiene (\textbf 0, 3.7.1)
+$\widetilde{\vphi}_x^\sharp(s_y/f_y)=(\vphi(s)_x)(\vphi(f)_x)^{-1}$;
+Como $s_y\in\mathfrak m_y$ equivale, por definición, a
+$\vphi(s)_x\in\mathfrak m_x$, se ve que $\widetilde{\vphi}_x^\sharp$ es un homomorfismo \emph{local} $\sh{O}_y\to\sh{O}_x$. Se ha
+definido así una segunda aplicación
+$\sigma:\Hom(\Gamma(S,\sh{O}_S),\Gamma(X,\sh{O}_X))\to\mathfrak L$,
+donde $\mathfrak L$ denota el conjunto de morfismos
+$(\psi,\theta):(X,\sh{O}_X)\to(S,\sh{O}_S)$ para los cuales
+$\theta_x^\sharp$ es local para todo $x\in X$.
+
+Queda probar que $\sigma$ y la restricción de $\rho$ a $\mathfrak L$
+son inversas. La definición de $\widetilde{\vphi}$ da inmediatamente
+$\Gamma(\widetilde{\vphi})=\vphi$, y por tanto $\rho\circ\sigma$ es la
+identidad. Para ver que $\sigma\circ\rho$ es la identidad, partamos de
+$(\psi,\theta)\in\mathfrak L$ y sea $\vphi=\Gamma(\theta)$. La
+hipótesis sobre $\theta_x^\sharp$ proporciona, al pasar a los cuerpos
+residuales, un monomorfismo
+$\theta^x:\boldsymbol{k}(\psi(x))\to\boldsymbol{k}(x)$
+tal que, para todo $f\in A=\Gamma(S,\sh{O}_S)$,
+$\theta^x(f(\psi(x)))=\vphi(f)(x)$;
+Así, $f(\psi(x))=0$ equivale a $\vphi(f)(x)=0$, lo que prueba que
+${}^a\vphi=\psi$. Por otra parte, las definiciones hacen conmutativo
+el diagrama
+\[
+  \xymatrix{
+    A\ar[r]^\vphi\ar[d] &
+    \Gamma(X,\sh{O}_X)\ar[d]\\
+    A_{\psi(x)}\ar[r]_{\theta_x^\sharp} &
+    \sh{O}_x
+  }
+\]
+y también es conmutativo el diagrama análogo en el que
+$\theta_x^\sharp$ se reemplaza por $\widetilde{\vphi}_x^\sharp$. De
+(\textbf 0, 1.2.4) se sigue que
+$\widetilde{\vphi}_x^\sharp=\theta_x^\sharp$, y, por consiguiente,
+$\widetilde{\vphi}=\theta$.
+\end{proof}
+
+\begin{env}[1.8.2]
+\label{ega2:addendum:I.1.8.2-fr}
+Cuando $(X,\sh{O}_X)$ e $(Y,\sh{O}_Y)$ son espacios \emph{localmente
+anillados}, consideraremos los morfismos
+$(\psi,\theta):(X,\sh{O}_X)\to(Y,\sh{O}_Y)$ tales que, para todo
+$x\in X$, $\theta_x^\sharp$ sea un homomorfismo \emph{local}: $\sh{O}_{\psi(x)}\to\sh{O}_x$.
+
+Siempre que en lo sucesivo hablemos de un
+\oldpage[II]{219}
+\emph{morfismo de espacios localmente anillados}, entenderemos siempre
+un morfismo de este tipo. Con esta definición de los morfismos, los
+espacios localmente anillados forman una \emph{categoría}. Para dos objetos
+$X,Y$ de esta categoría, $\Hom(X,Y)$ denotará, por tanto, el conjunto
+de morfismos de espacios localmente anillados de $X$ a $Y$ (el
+conjunto denotado por $\mathfrak L$ en \sref{ega2:addendum:I.1.8.1-fr}). Cuando queramos
+considerar el conjunto de \emph{morfismos de espacios anillados} de $X$ a
+$Y$, escribiremos $\Hom_{\mathit{an}}(X,Y)$ para evitar toda
+ambigüedad. La aplicación \sref{ega2:addendum:I.1.8.1.1-fr} se escribe entonces
+\begin{equation}
+\label{ega2:addendum:I.1.8.2.1-fr}
+  \rho:\Hom_{\mathit{an}}(X,Y)
+  \to\Hom(\Gamma(Y,\sh{O}_Y),\Gamma(X,\sh{O}_X))
+\tag{1.8.2.1}
+\end{equation}
+y su restricción
+\begin{equation}
+\label{ega2:addendum:I.1.8.2.2-fr}
+  \rho':\Hom(X,Y)
+  \to\Hom(\Gamma(Y,\sh{O}_Y),\Gamma(X,\sh{O}_X))
+\tag{1.8.2.2}
+\end{equation}
+es \emph{funtorial} en $X$ e $Y$ en la categoría de los espacios localmente
+anillados.
+\end{env}
+
+\begin{corollary}[1.8.3]
+\label{ega2:addendum:I.1.8.3-fr}
+Sea $(Y,\sh{O}_Y)$ un espacio localmente anillado. Para que $Y$ sea un
+esquema afín, es necesario y suficiente que, para todo espacio
+localmente anillado $(X,\sh{O}_X)$, la aplicación \textup{\sref{ega2:addendum:I.1.8.2.2-fr}} sea
+biyectiva.
+\end{corollary}
+
+\begin{proof}
+La Proposición~\sref{ega2:addendum:I.1.8.1-fr} muestra que la condición es necesaria.
+Recíprocamente, se supone que se cumple y se pone
+$A=\Gamma(Y,\sh{O}_Y)$. La hipótesis y \sref{ega2:addendum:I.1.8.1-fr} muestran que los
+funtores
+$X\to\Hom(X,Y)$ y $X\to\Hom(X,\Spec(A))$
+de los espacios localmente anillados a los conjuntos son \emph{isomorfos}.
+Esto implica la existencia de un isomorfismo canónico
+$X\to\Spec(A)$ (cf.~\textbf 0, 8).
+\end{proof}
+
+\begin{env}[1.8.4]
+\label{ega2:addendum:I.1.8.4-fr}
+Sea $S=\Spec(A)$ un esquema afín. Denotemos por $(S',A')$ el espacio
+anillado cuyo espacio subyacente \emph{consta de un punto} y cuyo haz
+estructural $A'$ es el haz (necesariamente simple) sobre $S'$ definido
+por el anillo $A$. Sea $\pi:S\to S'$ la única aplicación de $S$ en $S'$; observemos, por otra parte, que para todo
+abierto $U$ de $S$ se tiene una aplicación canónica
+$\Gamma(S',A')=\Gamma(S,\sh{O}_S)\to\Gamma(U,\sh{O}_S)$
+que define un \emph{$\pi$-morfismo} $\iota:A'\to\sh{O}_S$ de haces de anillos.
+Se obtiene así un \emph{morfismo} canónico \emph{de espacios anillados}
+$i=(\pi,\iota):(S,\sh{O}_S)\to(S',A')$.
+Para todo $A$-módulo $M$, denotemos por $M'$ el haz simple sobre $S'$
+definido por $M$, que es evidentemente un $A'$-módulo. Está claro que
+$i_*(\widetilde M)=M'$ (1.3.7).
+\end{env}
+
+\begin{lemma}[1.8.5]
+\label{ega2:addendum:I.1.8.5-fr}
+Con la notación de \textup{\sref{ega2:addendum:I.1.8.4-fr}}, para todo $A$-módulo $M$, el
+$\sh{O}_S$-homomorfismo canónico y funtorial \textup{(\textbf{0}, 4.4.3.3)}
+\begin{equation}
+\label{ega2:addendum:I.1.8.5.1-fr}
+  i^*(i_*(\widetilde M))\to\widetilde M
+\tag{1.8.5.1}
+\end{equation}
+es un isomorfismo.
+\end{lemma}
+
+\begin{proof}
+Ambos miembros de \sref{ega2:addendum:I.1.8.5.1-fr} son exactos por la derecha
+(siendo evidentemente exacto el funtor
+$M\to i_*(\widetilde M)$) y conmutan con las sumas directas.
+Considerando $M$ como el conúcleo de un homomorfismo
+$A^{(I)}\to A^{(J)}$, se reduce uno al caso $M=A$, en el cual la
+afirmación es inmediata.
+\end{proof}
+
+\begin{corollary}[1.8.6]
+\label{ega2:addendum:I.1.8.6-fr}
+Sea $(X,\sh{O}_X)$ un espacio anillado y sea $u:X\to S$ un morfismo de
+\oldpage[II]{220}
+espacios anillados. Para todo $A$-módulo $M$, existe, con la notación
+de \sref{ega2:addendum:I.1.8.4-fr}, un isomorfismo canónico y funtorial de
+$\sh{O}_X$-módulos
+\begin{equation}
+\label{ega2:addendum:I.1.8.6.1-fr}
+  u^*(\widetilde M)\xrightarrow{\sim} u^*(i^*(M'))
+\tag{1.8.6.1}
+\end{equation}
+\end{corollary}
+

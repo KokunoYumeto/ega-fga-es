@@ -1,0 +1,58 @@
+\clearpage
+\thispagestyle{plain}
+\oldpage[IV-2]{5}
+\phantomsection
+\label{chapter:IV2-fr}
+
+\begin{center}
+{\large CAPÍTULO IV \textit{(continuación)}\par}
+\vspace{1.5em}
+{\Large\bfseries ESTUDIO LOCAL DE LOS ESQUEMAS\\
+Y DE LOS MORFISMOS DE ESQUEMAS\par}
+\end{center}
+
+\setcounter{section}{1}
+\section{Cambio de base y planitud}
+\label{section:IV.2-fr}
+
+Este parágrafo (a diferencia del \textsection~6) solo recurre excepcionalmente a técnicas noetherianas.
+Los números~1 y~2 apenas son más que traducciones de propiedades elementales de la planitud en Álgebra conmutativa (cf.~Bourbaki, \emph{Alg.~comm.}, cap.~I), y se incluyen aquí para facilitar las referencias.
+Los números siguientes están dedicados principalmente a propiedades de «descenso» por morfismos planos o fielmente planos: si $g:Y'\to Y$ es un morfismo de este tipo, se trata de poder afirmar que un subconjunto de~$Y$, un $\mathcal O_Y$-módulo o un morfismo $X\to Y$ tiene cierta propiedad cuando se sabe que su \emph{imagen inversa} por~$g$ posee dicha propiedad.
+Nos limitamos aquí a las propiedades que no recurren a la técnica general del «descenso», que se desarrollará en el capítulo~V.
+
+\setcounter{subsection}{0}
+\subsection{Módulos planos sobre los preesquemas.}
+\label{subsection:IV.2.1-fr}
+
+\begin{env}[2.1.1]
+\EGAReaderTarget{ega4.c04.statement.2-1-1}{IV.2.1.1-fr}
+Sean $f:X\to Y$ un morfismo de preesquemas y $\mathscr F$ un $\mathcal O_X$-módulo;
+recordemos~$(\mathbf{0}_{\mathrm I},6.7.1)$ que se dice que $\mathscr F$ es $f$-\emph{plano} (o $Y$-\emph{plano}) \emph{en un punto} $x\in X$ si $\mathscr F_x$ es un módulo plano sobre $\mathcal O_{f(x)}$, y $f$-\emph{plano} (o $Y$-\emph{plano}) si es $f$-plano en todo $x\in X$; finalmente, se dice que el morfismo $f$ es \emph{plano en el punto} $x\in X$ (resp.\ \emph{plano}) si $\mathcal O_X$ es plano respecto de $f$ en el punto~$x$ (resp.\ plano respecto de $f$).
+Cuando $f=1_X$, se dirá simplemente que un $\mathcal O_X$-módulo $\mathscr F$ es \emph{plano en el punto} $x$ (resp.\ \emph{plano}) si es plano sobre $X$ en ese punto (resp.\ en todo punto $x\in X$), es decir, si $\mathscr F_x$ es un módulo plano sobre $\mathcal O_x$ (resp.\ si así ocurre para todo $x\in X$).
+Recordemos que hemos demostrado~(\textbf{III}, 1.4.15.1) la propiedad siguiente:
+\end{env}
+
+\begin{proposition}[2.1.2]
+\label{IV.2.1.2-fr}
+Sean $A$ y $B$ dos anillos, $\varphi:A\to B$ un homomorfismo de anillos, $X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, $f:X\to Y$ el morfismo correspondiente a $\varphi$ y $M$ un $B$-módulo.
+Para que $\mathscr F=\widetilde M$ sea plano respecto de $f$, es necesario y suficiente que $M$ sea un módulo plano sobre~$A$.
+\end{proposition}
+
+\oldpage[IV-2]{6}
+
+\begin{proposition}[2.1.3]
+\label{IV.2.1.3-fr}
+Sean $f:X\to Y$ un morfismo de preesquemas y $\mathscr F$ un $\mathcal O_X$-módulo cuasicoherente. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] Para todo cambio de base $g:Y'\to Y$, si se pone $X'=X\times_Y Y'$, el funtor $\mathscr G'\leadsto\mathscr F\otimes_Y\mathscr G'$ de la categoría de $\mathcal O_{Y'}$-módulos cuasicoherentes a la de $\mathcal O_{X'}$-módulos cuasicoherentes es exacto.
+  \item[\emph{a$'$)}] La condición~\emph{a)} se cumple para todos los morfismos canónicos $g:\operatorname{Spec}(\mathcal O_y)\to Y$~\textup{(\textbf{I}, 2.4.1)}, donde $y$ recorre~$Y$.
+  \item[\emph{b)}] $\mathscr F$ es plano respecto de~$f$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Puesto que las cuestiones son locales en $X$ y en $Y$, es posible limitarse al caso en que $Y=\operatorname{Spec}(B)$, $X=\operatorname{Spec}(A)$ y $\mathscr F=\widetilde M$, donde $M$ es un $A$-módulo.
+Es claro que \emph{a)} implica \emph{a$'$)};
+la condición~\emph{a$'$)} implica que, para todo $x\in X$, el funtor $N\leadsto M_{\mathfrak n}\otimes_{B_{\mathfrak n}}N$ es exacto en la categoría de $B_{\mathfrak n}$-módulos, donde $\mathfrak n$ es el ideal $\mathfrak j_{f(x)}$ de~$B$; esto significa que $M_{\mathfrak n}$ es un módulo plano sobre $B_{\mathfrak n}$, y de~$(\mathbf{0}_{\mathrm I},6.3.3)$ y~(2.1.2) se sigue que $\mathscr F$ es plano respecto de~$f$.
+Por último, para ver que \emph{b)} implica \emph{a)}, también es posible limitarse al caso en que $Y'=\operatorname{Spec}(A')$ es afín y $\mathscr G'=\widetilde{N}'$, donde $N'$ es un $A'$-módulo; la conclusión se sigue entonces de nuevo de~(2.1.2) y de la definición de planitud, pues $(M\otimes_A N')^{\sim}=\mathscr F\otimes_{\mathcal O_Y}\mathscr G'$.
+\end{proof}

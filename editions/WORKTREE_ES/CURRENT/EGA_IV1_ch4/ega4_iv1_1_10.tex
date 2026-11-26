@@ -1,0 +1,138 @@
+\subsection{Aplicación a los morfismos abiertos.}
+\label{subsection:IV.1.10-fr}
+
+\begin{theorem}[1.10.1]
+\label{IV.1.10.1-fr}
+Sean $X$ un preesquema, $E$ un subconjunto ind-construible de $X$ \textup{(1.9.4)}, $x$
+un punto de $X$. Para que $x$ sea interior a $E$, es necesario y suficiente que
+toda generalización \textup{($\mathbf{0}_{\mathrm I}$, 2.1.2)} $x'$ de $x$ pertenezca a $E$,
+es decir \textup{(\textbf{I}, 2.4.2)}, que se tenga
+$\operatorname{Spec}(\mathcal O_{X,x})\subset E$.
+\end{theorem}
+
+\begin{proof}
+La condición es evidentemente necesaria, pues toda vecindad de $x$ contiene las
+generalizaciones de $x$. Para ver que es suficiente, se puede evidentemente
+limitar al caso en que $X=\operatorname{Spec}(A)$ es afín, siendo $x$ un ideal primo
+$\mathfrak p$ de $A$. Se sabe entonces (1.9.5, (ix)) que existen un esquema afín
+$X'=\operatorname{Spec}(A')$ y un morfismo $f:X'\to X$ tales que
+$f(X')=X\setmin E$. Pongamos $Y=\operatorname{Spec}(\mathcal O_{X,x})$ y
+$Y'=X'\times_XY$; la hipótesis significa (en
+virtud de (\textbf{I}, 3.6.5)) que se tiene $Y'=\varnothing$, es decir,
+$A'\otimes_AA_{\mathfrak p}=0$. Como
+$A_{\mathfrak p}=\varinjlim A_t$, donde $t$ recorre $A\setmin\mathfrak p$
+($\mathbf{0}_{\mathrm I}$, 1.4.5), se tiene $\varinjlim A_t'=0$, pues el funtor
+$\varinjlim$ conmuta con el producto tensorial. Por consiguiente (1.9.1), existe un
+$t\in A\setmin\mathfrak p$ tal que $A_t'=0$, y $\mathrm D(t)$ es entonces una
+vecindad abierta de $x$ en $X$ contenida en $E$.
+\end{proof}
+
+\begin{corollary}[1.10.2]
+\label{IV.1.10.2-fr}
+Sea $f:X\to Y$ un morfismo localmente de presentación finita, y sea
+$y\in Y$. Para que $y$ sea interior a $f(X)$, es necesario y suficiente que toda
+generalización $y'$ de $y$ pertenezca a $f(X)$.
+\end{corollary}
+
+\begin{proof}
+Se sabe, en efecto, (1.9.5, (viii)) que $f(X)$ es ind-construible en $Y$ y
+basta aplicar (1.10.1).
+\end{proof}
+
+Diremos que una aplicación continua $f:X\to Y$ es \emph{abierta en un
+punto} $x\in X$ si la imagen por $f$ de \emph{toda} vecindad de $x$ en $X$
+es una vecindad de $f(x)$ en $Y$.
+
+\begin{proposition}[1.10.3]
+\EGAReaderTarget{ega4.c04.prop.1-10-3}{IV.1.10.3-fr}
+Sean $f:X\to Y$ un morfismo, $x$ un punto de $X$, $y=f(x)$. Consideremos
+las condiciones siguientes:
+\begin{enumerate}
+  \item[\textup{a)}] $f$ es abierto en el punto $x$.
+  \item[\textup{b)}] Para toda generalización $y'$ de $y$, existe una generalización
+  $x'$ de $x$ tal que $f(x')=y'$.
+  \item[\textup{b')}] La imagen por $f$ de $\operatorname{Spec}(\mathcal O_{X,x})$ es
+  $\operatorname{Spec}(\mathcal O_{Y,y})$.
+  \item[\textup{c)}] Para todo subconjunto cerrado irreducible $Y'$ de $Y$ que contiene a $y$,
+  existe una componente irreducible de $X'=f^{-1}(Y')$ que contiene a $x$ y
+  domina $Y'$.
+\end{enumerate}
+Se tienen entonces las implicaciones
+$\mathrm{a)}\Rightarrow\mathrm{b)}\Leftrightarrow\mathrm{b')}
+\Leftrightarrow\mathrm{c)}$. Si además $f$ es localmente de presentación
+finita, las cuatro condiciones son equivalentes.
+\end{proposition}
+
+\begin{proof}
+Por definición de una generalización, la imagen por $f$ de
+$\operatorname{Spec}(\mathcal O_{X,x})$ está siempre contenida en
+$\operatorname{Spec}(\mathcal O_{Y,y})$, por tanto \emph{b)} y \emph{b')} son equivalentes. Es
+inmediato
+que \emph{c)} implica \emph{b)}, pues si $y'$ es una generalización de $y$,
+$Y'=\overline{\{y'\}}$ es un subconjunto irreducible de $Y$ que contiene a $y$; si
+$x'$ es el punto genérico de una componente irreducible de $f^{-1}(Y')$ que
+contiene a $x$ y domina $Y'$, se tiene $f(x')=y'$ ($\mathbf{0}_{\mathrm I}$, 2.1.5) y $x'$
+es una generalización de $x$. Recíprocamente, \emph{b)} implica \emph{c)}: en efecto, sea
+$y'$ el punto genérico de $Y'$ y sea $x'$ una generalización de $x$ tal
+que $f(x')=y'$; sea $Z'$ una componente irreducible de $f^{-1}(Y')$
+que contiene a $x'$ (por tanto a $x$); como $f(x')$ es ya denso en $Y'$, lo mismo
+ocurre \emph{a fortiori} con $f(Z')$.
+
+Para ver que \emph{a)} implica \emph{b')}, se puede evidentemente limitar al caso en que
+$X=\operatorname{Spec}(B)$ y $Y=\operatorname{Spec}(A)$ son afines, siendo $x$
+un ideal primo
+$\mathfrak q$ de $B$, de modo que
+$\mathcal O_{X,x}=B_{\mathfrak q}=\varinjlim B_t$,
+\oldpage[IV-1]{250}
+donde $t$ recorre $B\setmin\mathfrak q$. Se tiene, por consiguiente (1.9.2),
+$f(\operatorname{Spec}(\mathcal O_{X,x}))
+=\bigcap_t f(\operatorname{Spec}(B_t))=\bigcap_t f(\mathrm D(t))$,
+y por hipótesis, para todo $t\in B\setmin\mathfrak q$, $y$ es interior a
+$f(\mathrm D(t))$, por tanto $f(\mathrm D(t))$ contiene
+$\operatorname{Spec}(\mathcal O_{Y,y})$; de donde
+$\operatorname{Spec}(\mathcal O_{Y,y})
+\subset f(\operatorname{Spec}(\mathcal O_{X,x}))$, lo que establece
+nuestra afirmación. Por último, cuando $f$ es localmente de presentación finita, \emph{b)}
+implica \emph{a)} en virtud de (1.10.2) aplicado a la restricción $U\to Y$ de $f$ a
+una vecindad abierta arbitraria $U$ de $x$.
+\end{proof}
+
+\begin{corollary}[1.10.4]
+\label{IV.1.10.4-fr}
+Sea $f:X\to Y$ un morfismo. Consideremos las condiciones siguientes:
+\begin{enumerate}
+  \item[\textup{a)}] $f$ es abierto.
+  \item[\textup{b)}] Para todo $x\in X$ y toda generalización $y'$ de $y=f(x)$,
+  existe una generalización $x'$ de $x$ tal que $f(x')=y'$.
+  \item[\textup{b')}] Para todo $x\in X$, la imagen por $f$ de
+  $\operatorname{Spec}(\mathcal O_{X,x})$ es
+  $\operatorname{Spec}(\mathcal O_{Y,f(x)})$.
+  \item[\textup{c)}] Para todo subconjunto cerrado irreducible $Y'$ de $Y$, toda
+  componente irreducible de $f^{-1}(Y')$ domina $Y'$.
+\end{enumerate}
+Se tienen entonces las implicaciones
+$\mathrm{a)}\Rightarrow\mathrm{b)}\Leftrightarrow\mathrm{b')}
+\Leftrightarrow\mathrm{c)}$. Si además $f$ es localmente de presentación
+finita, las cuatro condiciones son equivalentes.
+\end{corollary}
+
+\begin{proof}
+Decir que $f$ es abierto significa que $f$ es abierto en todo punto $x\in X$,
+por lo que las implicaciones
+$\textit{a)}\Rightarrow\textit{b)}\Leftrightarrow\textit{b')}$ resultan de las
+implicaciones análogas en (1.10.3), así como la implicación
+$\textit{b)}\Rightarrow\textit{a)}$ cuando $f$ es localmente de presentación
+finita. La implicación $\textit{c)}\Rightarrow\textit{b)}$ resulta también de
+la implicación análoga en (1.10.3); probemos, por último, que \emph{b)} implica \emph{c)}. En
+efecto, sea $x'$ el punto genérico de una componente
+irreducible de $f^{-1}(Y')$, y mostremos que $y'=f(x')$ es el punto genérico
+de $Y'$. Sea $y''$ una generalización de $y'$; existe por hipótesis una
+generalización $x''$ de $x'$ tal que $f(x'')=y''$, y como
+$x''\in f^{-1}(Y')$, se tiene necesariamente $x''=x'$, por tanto $y''=y'$, lo que
+termina la demostración.
+\end{proof}
+
+\begin{center}
+\emph{(Continuará.)}
+\end{center}
+

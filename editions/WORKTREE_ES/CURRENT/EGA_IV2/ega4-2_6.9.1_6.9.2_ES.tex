@@ -1,0 +1,75 @@
+\subsection{El teorema de planitud genérica.}
+\label{subsection:IV.6.9}
+
+\begin{theorem}[6.9.1]
+\label{IV.2.s6.9.1-fr}
+Sean $Y$ un preesquema localmente noetheriano e íntegro, $u:X\to Y$ un
+morfismo de tipo finito y $\mathcal F$ un $\mathcal O_X$-Módulo coherente. Entonces
+existe un abierto no vacío $U$ de $Y$ tal que
+$\mathcal F|u^{-1}(U)$ es plano sobre $U$.
+\end{theorem}
+
+\begin{proof}
+Es posible, evidentemente, limitarse al caso en que $Y=\operatorname{Spec}(A)$ es afín;
+entonces $X$ es una unión finita de abiertos afines $X_i$ de tipo finito sobre $Y$; si,
+para cada $i$, hay un abierto no vacío $U_i$ en $Y$ tal que
+$\mathcal F|(X_i\cap u^{-1}(U_i))$ es plano sobre $U_i$, es claro que,
+tomando para $U$ la intersección de los $U_i$, se obtiene lo requerido; se puede
+por tanto suponer que $X=\operatorname{Spec}(B)$, donde $B$ es una $A$-álgebra de
+tipo finito. Entonces $\mathcal F=\widetilde M$, donde $M$ es un $B$-módulo
+finitamente generado; el teorema resultará, por consiguiente, del
+\end{proof}
+
+\begin{lemma}[6.9.2]
+\label{IV.2.s6.9.2-fr}
+Sean $A$ un anillo íntegro noetheriano, $B$ una $A$-álgebra de tipo finito y
+$M$ un $B$-módulo finitamente generado. Entonces existe $f\ne0$ en $A$ tal que
+$M_f$ es un $A_f$-módulo libre.
+\end{lemma}
+
+\begin{proof}
+Designemos por $K$ el cuerpo de fracciones de $A$; entonces $B\otimes_AK$ es un
+álgebra de tipo finito sobre $K$ y $M\otimes_AK$ un $(B\otimes_AK)$-módulo
+finitamente generado. Procederemos por inducción
+\oldpage[IV-2]{154}
+sobre la \emph{dimensión} $n$ del soporte de
+$M\otimes_AK$, que es $\setmin\infty$ o bien finita y $\geq0$. Supongamos primero
+$n=\setmin\infty$, es decir, $M\otimes_AK=0$; si $(m_i)_{1\leq i\leq r}$ es
+un sistema de generadores del $B$-módulo $M$, existe por tanto un $f\ne0$ en
+$A$ tal que $fm_i=0$ para $1\leq i\leq r$; así pues, $M_f=0$ y el lema es válido
+en este caso. Supongamos ahora $n\geq0$. Se sabe que existe una sucesión de composición
+$M=M_1\supset M_2\supset\ldots\supset M_q=0$ del $B$-módulo $M$
+tal que cada uno de los cocientes $N_i=M_i/M_{i+1}$ es isomorfo a un
+$B$-módulo de la forma $B/\mathfrak p_i$, donde $\mathfrak p_i$ es un ideal
+primo de $B$ (Bourbaki, \emph{Alg. comm.}, cap. IV, \S~1, n\textsuperscript{o}~4, teor.~1).
+Si el resultado es válido para cada uno de los $N_i$, para cada $i$ existe un
+$f_i\ne0$ en $A$ tal que $(N_i)_{f_i}$ es libre sobre $A_{f_i}$; poniendo
+$f=f_1f_2\ldots f_{q-1}$, resulta que $(N_i)_f$ es un $A_f$-módulo
+libre para $1\leq i\leq q\setmin 1$. Pero $(N_i)_f=(M_i)_f/(M_{i+1})_f$
+$(\mathbf{0}_{\mathrm I},1.3.2)$ y, como una extensión de módulos libres es libre,
+se deduce que $M_f$ es un $A_f$-módulo libre. Sustituyendo $B$ por
+$B/\mathfrak p$ ($\mathfrak p$ un ideal primo de $B$), que sigue siendo de tipo
+finito sobre $A$, se ve que es posible limitarse al caso en que $M=B$ \emph{y} $B$ \emph{es íntegro}.
+Se sabe entonces (Bourbaki, \emph{Alg. comm.}, cap. V, \S~3, n\textsuperscript{o}~1, cor. 1 del
+teor. 1) que existe un elemento $g\ne0$ en $A$ y elementos $t_i$
+$(1\leq i\leq m)$ de $B$, algebraicamente independientes sobre $A$ y tales que
+$B_g$ es \emph{entero} sobre $A_g[t_1,\ldots,t_m]$. Se puede sustituir $A$ por $A_g$,
+$B$ por $B_g$ y suponer, por consiguiente, que $B$ es entero sobre
+$C=A[t_1,\ldots,t_m]$, y por tanto un $C$-módulo finitamente generado y \emph{sin torsión}. Además,
+se sabe (4.1.2) que la dimensión de $\operatorname{Spec}(B\otimes_AK)$ es
+igual a $m$, de modo que $m=n$.
+
+Así pues, si $h$ es el rango del $C$-módulo sin torsión $B$, existe una
+sucesión exacta de $C$-módulos
+\[
+0\longrightarrow C^h\longrightarrow B\longrightarrow M'\longrightarrow0
+\]
+donde $M'$ es un $C$-módulo \emph{de torsión} finitamente generado; el soporte de $M'$ no
+contiene por tanto el punto genérico de $\operatorname{Spec}(C)$ (\textbf I, 7.4.6),
+y por consiguiente el soporte de $M'\otimes_AK$ no contiene el punto genérico
+de $\operatorname{Spec}(C\otimes_AK)$ (\textbf I, 9.1.13.1); de ello se concluye (4.1.2.1)
+que su dimensión es $<n$. Por la hipótesis de inducción, existe un
+$f\ne0$ en $A$ tal que $M'_f$ es un $A_f$-módulo libre; por otra parte,
+$C_f^h$ es un $A_f$-módulo libre; lo mismo ocurre, por tanto, con $B_f$, que,
+en virtud de $(\mathbf{0}_{\mathrm I},1.3.2)$, es una extensión de módulos libres. Queda demostrado.
+\end{proof}

@@ -1,0 +1,135 @@
+\begin{proposition}[4.5.13]
+\label{IV.2.4.5.13-fr}
+Sean $X$, $Y$ dos $k$-preesquemas, $f:Y\to X$ un $k$-morfismo. Supongamos que
+$Y$ es geométricamente conexo y no vacío, y que $X$ es conexo. Entonces $X$ es
+geométricamente conexo.
+\end{proposition}
+
+\begin{proof}
+Sean $\Omega$ una clausura algebraica de $k$, $X'=X_{(\Omega)}$,
+$Y'=Y_{(\Omega)}$, $f'=f_{(\Omega)}:Y'\to X'$~; hay que demostrar que $X'$ es
+conexo. Sea $U'$ una parte abierta y cerrada no vacía de $X'$~; observemos que
+los morfismos $p:X'\to X$ y $q:Y'\to Y$ son \emph{abiertos} (2.4.10) y
+\emph{cerrados}, puesto que $\Omega$ es una extensión algebraica de $k$
+(\textbf{II}, 6.1.10). Por tanto, $U=p(U')$ es abierto y cerrado no vacío en $X$, y en
+consecuencia es igual a $X$. Como $Y$ no es vacío, se concluye (\textbf I, 3.4.7) que
+$V'=f'^{-1}(U')$ no es vacío~; además, es una parte abierta y cerrada de $Y'$,
+y este último espacio es conexo por hipótesis~; por tanto, $V'=Y'$. Se deduce
+que $U'=X'$, pues, de lo contrario, el mismo razonamiento aplicado al conjunto
+abierto y cerrado $X'\setmin U'$ demostraría que $f'^{-1}(X'\setmin U')=Y'$, lo cual es
+absurdo, ya que $Y'$ no es vacío.
+\end{proof}
+
+\begin{corollary}[4.5.13.1]
+\label{IV.2.4.5.13.1-fr}
+\begin{enumerate}
+\item[\textup{(i)}] Sean $X$, $Y$ dos $k$-preesquemas, $f:Y\to X$ un $k$-morfismo.
+Si $Y$ es geométricamente conexo y no vacío, la componente conexa $X_0$ de
+$X$ que contiene a $f(Y)$ es geométricamente conexa.
+\item[\textup{(ii)}] Sea $X$ un $k$-preesquema. Si $Y$ es una componente irreducible
+de $X$ que es geométricamente irreducible, entonces la componente conexa $X_0$
+de $X$ que contiene a $Y$ es geométricamente conexa.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) Puede suponerse que $Y$ es reducido, de modo que $f$ se factoriza en
+$f:Y\xrightarrow{g}X_0\xrightarrow{j}X$, donde $X_0$
+
+\oldpage[IV-2]{65}
+
+designa el subpreesquema reducido de $X$ que tiene $X_0$ por espacio
+subyacente (\textbf I, 5.2.2)~; basta aplicar (4.5.13) a $g$.
+
+(ii) Considerando un preesquema que tenga $Y$ por espacio subyacente,
+y observando que $Y$ es \emph{a fortiori} geométricamente conexo, basta aplicar
+(i) a la inyección canónica $Y\to X$.
+\end{proof}
+
+\begin{corollary}[4.5.14]
+\label{IV.2.4.5.14-fr}
+Sea $X$ un $k$-preesquema. Si $x$ es un punto de $X$ tal que $\boldsymbol{k}(x)$ sea una
+extensión primaria de $k$ \textup{(en particular, si $x$ es un \emph{punto racional} de $X$)},
+la componente conexa de $x$ en $X$ es geométricamente conexa.
+\end{corollary}
+
+\begin{proof}
+Basta aplicar (4.5.13.1) a $Y=\operatorname{Spec}(\boldsymbol{k}(x))$ y al morfismo
+canónico $Y\to X$, teniendo en cuenta (4.5.9), que implica que $Y$ es
+geométricamente irreducible.
+\end{proof}
+
+\begin{proposition}[4.5.15]
+\label{IV.2.4.5.15-fr}
+Sean $X$ un $k$-preesquema, $x$ un punto de $X$, y $k'$ la clausura algebraica
+separable de $k$ en $\boldsymbol{k}(x)$. Se suponen satisfechas las condiciones siguientes~:
+\begin{enumerate}
+\item[\textup{(i)}] $X$ es conexo.
+\item[\textup{(ii)}] $k'$ es una extensión finita de $k$.
+\end{enumerate}
+Entonces el número geométrico de componentes conexas de $X$ es
+$\leqslant[k':k]$, y si $k''$ es una extensión galoisiana finita de $k$
+que contiene a $k'$, las componentes conexas de $X\otimes_k k''$ son
+geométricamente conexas.
+\end{proposition}
+
+Se observará que la condición (ii) se satisface si $X$ es \emph{localmente de
+tipo finito sobre} $k$.
+
+\begin{proof}
+En virtud de la condición (ii), existen extensiones galoisianas finitas $k''$
+de $k$ que contienen a $k'$. Pongamos $X''=X\otimes_k k''$~; el morfismo de
+proyección $p:X''\to X$ es fielmente plano y finito, por tanto cerrado
+(\textbf{II}, 6.1.10), y en consecuencia (2.3.6, (ii)) la imagen por $p$ de toda
+componente conexa $X''_\alpha$ de $X''$ es igual a $X$~; por tanto,
+$X''_\alpha$ contiene un punto $x''_\alpha\in p^{-1}(x)$. Ahora bien,
+$p^{-1}(x)$ tiene un número de puntos igual al número de componentes
+irreducibles de $\operatorname{Spec}(\boldsymbol{k}(x)\otimes_k k'')$ (\textbf I, 3.4.9), es decir,
+a $[k':k]$ (4.3.4), y \emph{a fortiori} el número de componentes conexas de
+$X''$ es $\leqslant[k':k]$. Para todo $x''_\alpha\in p^{-1}(x)$,
+$\boldsymbol{k}(x''_\alpha)$ es una extensión primaria de $k''$ en virtud de (4.3.5) y de
+(\textbf I, 3.4.9). Se puede, pues, aplicar a $x''_\alpha$ y a $X''$ el corolario
+(4.5.14), que demuestra que todas las componentes conexas de $X''$ son
+geométricamente conexas.
+\end{proof}
+
+\begin{corollary}[4.5.16]
+\label{IV.2.4.5.16-fr}
+Sean $X$ un $k$-preesquema, $(X_\alpha)$ la familia de sus componentes conexas,
+y, para todo $\alpha$, sea $x_\alpha\in X_\alpha$. Se suponen satisfechas las
+condiciones siguientes~:
+\begin{enumerate}
+\item[\textup{(i)}] La familia $(X_\alpha)$ es finita.
+\item[\textup{(ii)}] Para todo $\alpha$, la clausura algebraica separable $k'_\alpha$
+de $k$ en $\boldsymbol{k}(x_\alpha)$ es una extensión finita de $k$.
+\end{enumerate}
+Entonces el número geométrico de componentes conexas de $X$ es a lo sumo
+$\sum_\alpha[k'_\alpha:k]$, y existe una extensión finita separable $k''$ de
+$k$ tal que todas las componentes conexas de $X\otimes_k k''$ sean
+geométricamente conexas.
+\end{corollary}
+
+\begin{proof}
+Observando que las componentes conexas de $X$ son abiertas en virtud de la
+condición (i), basta aplicar a cada uno de los subpreesquemas de $X$ inducidos
+sobre los abiertos $X_\alpha$ el resultado de (4.5.15)~; para obtener una
+extensión $k''$ que cumpla lo requerido, basta tomar una extensión galoisiana
+finita de $k$ que contenga todos los $k'_\alpha$.
+\end{proof}
+
+\oldpage[IV-2]{66}
+
+\begin{corollary}[4.5.17]
+\label{IV.2.4.5.17-fr}
+Supongamos que el $k$-preesquema $X$ contiene un punto $x$ tal que la clausura
+algebraica separable de $k$ en $\boldsymbol{k}(x)$ sea finita sobre $k$. Para que $X$ sea
+geométricamente conexo, es necesario y suficiente que, para toda extensión
+finita separable $K$ de $k$, $X\otimes_k K$ sea conexo.
+\end{corollary}
+
+\begin{remark}[4.5.18]
+\label{IV.2.4.5.18-fr}
+Veremos en el \S~8 (8.4.5) que la conclusión de (4.5.17) sigue siendo válida
+si, en lugar de suponer satisfecha la condición del enunciado, se supone que
+$X$ es \emph{cuasicompacto}.
+\end{remark}

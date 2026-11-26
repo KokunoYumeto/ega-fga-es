@@ -4,8 +4,7 @@ Traducciones al español de dos obras de Alexander Grothendieck: los *Fondements
 completos (las ocho exposiciones del Seminario Bourbaki de 1957–1962, n.º 149, 182, 190, 195, 212, 221, 232 y 236,
 sus erratas y los comentarios de 1962), y una parte de los *Éléments de géométrie algébrique* (EGA), escritos con la
 colaboración de Jean Dieudonné y publicados en las *Publications mathématiques de l'IHÉS* (1960–1967): EGA II, EGA III
-y EGA IV, partes 3 y 4, y el capítulo 0 de EGA IV, parte 1; de EGA I, el capítulo I completo y el capítulo 0
-hasta 0.3.6.2.
+completos: introducción y capítulos 0–IV (EGA I–IV, en las partes de su publicación original).
 
 ## Cómo se hizo
 
@@ -19,15 +18,21 @@ Los lectores de EGA I (traducción de OpenAI Codex, GPT-6.1 Sol, esfuerzo de raz
 de 2026) se publicaron el 15 de noviembre de 2026; la composición (nada sobresale del margen más de 2 pt) y la
 publicación las hizo Claude Opus 5.5 con esfuerzo high.
 
+La traducción pendiente de EGA (el capítulo 0 desde 0.4.4.3, el capítulo IV de EGA IV, parte 1), el cotejo y el montaje
+de EGA IV, parte 2, la aplicación del estándar terminológico a todo EGA y los catorce lectores del 25 de noviembre de 2026
+los hizo GPT-6.0 Astra (OpenAI), modo Pro de ChatGPT, en noviembre de 2026 (entrega final del 25 de noviembre; sus
+registros, con 12.432 comprobaciones, están en
+[raw/EGA_ES_FINISH_final_20261125T0434Z](raw/EGA_ES_FINISH_final_20261125T0434Z/README.md)). La compilación de
+comprobación, la revisión de los PDF (ninguna caja sobresale; páginas revisadas a la vista) y la publicación las hizo
+Claude Opus 5.5 con esfuerzo high, el 26 de noviembre de 2026.
+
 Las ediciones corregidas y las traducciones diplomáticas, que siguen el texto impreso, son documentos separados; las
 notas matemáticas también.
 
 ## Estado
 
-FGA está completo. De EGA I están el capítulo I completo (§§1–10, con los índices de notaciones y de terminología)
-y el capítulo 0 hasta 0.3.6.2 (secciones 1–2 y subsecciones 3.1–3.5 completas, 3.6.1 y 3.6.2); el resto del
-capítulo 0 sigue en preparación. Faltan EGA IV, parte 2 (su traducción llega hasta 7.9.10, pero las partes
-traducidas aún no están montadas en un lector) y el capítulo IV de EGA IV, parte 1. Puede haber errores.
+FGA y EGA están completos en español: EGA I–IV, con el capítulo 0 completo, el capítulo IV de EGA IV, parte 1, y EGA
+IV, parte 2, montada. Puede haber errores; no se afirma revisión humana.
 
 ## Otras ediciones de EGA y FGA
 
@@ -57,7 +62,30 @@ FGA:
 Todas las ediciones de EGA, FGA y SGA de este proyecto figuran en
 [ega-fga-sga](https://github.com/KokunoYumeto/ega-fga-sga).
 
-## Contenido
+## Lectores de EGA (25 de noviembre de 2026, vigentes)
+
+Compilados con pdfLaTeX; ninguna caja sobresale del margen. El LaTeX de cada lector es autónomo.
+
+| Lector | Lectura | LaTeX |
+| --- | --- | --- |
+| EGA completo (I–IV), edición actual acumulativa con índice | [PDF](readers/2026-11-25/EGA_COMPLETA_CURRENT/EGA_COMPLETA_CURRENT.pdf) | [LaTeX](readers/2026-11-25/EGA_COMPLETA_CURRENT/EGA_COMPLETA_CURRENT.tex) |
+| EGA I: introducción, capítulo 0 y capítulo I; edición actual | [PDF](readers/2026-11-25/EGA_I_CURRENT/EGA_I_CURRENT.pdf) | [LaTeX](readers/2026-11-25/EGA_I_CURRENT/EGA_I_CURRENT.tex) |
+| EGA I: traducción diplomática | [PDF](readers/2026-11-25/EGA_I_DIPLOMATIC/EGA_I_DIPLOMATIC.pdf) | [LaTeX](readers/2026-11-25/EGA_I_DIPLOMATIC/EGA_I_DIPLOMATIC.tex) |
+| EGA II: edición actual | [PDF](readers/2026-11-25/EGA_II_CURRENT/EGA_II_CURRENT.pdf) | [LaTeX](readers/2026-11-25/EGA_II_CURRENT/EGA_II_CURRENT.tex) |
+| EGA II: traducción diplomática | [PDF](readers/2026-11-25/EGA_II_DIPLOMATIC/EGA_II_DIPLOMATIC.pdf) | [LaTeX](readers/2026-11-25/EGA_II_DIPLOMATIC/EGA_II_DIPLOMATIC.tex) |
+| EGA III-1: edición actual | [PDF](readers/2026-11-25/EGA_III1_CURRENT/EGA_III1_CURRENT.pdf) | [LaTeX](readers/2026-11-25/EGA_III1_CURRENT/EGA_III1_CURRENT.tex) |
+| EGA III-1: traducción diplomática | [PDF](readers/2026-11-25/EGA_III1_DIPLOMATIC/EGA_III1_DIPLOMATIC.pdf) | [LaTeX](readers/2026-11-25/EGA_III1_DIPLOMATIC/EGA_III1_DIPLOMATIC.tex) |
+| EGA III-2 | [PDF](readers/2026-11-25/EGA_III2/EGA_III2.pdf) | [LaTeX](readers/2026-11-25/EGA_III2/EGA_III2.tex) |
+| EGA IV-1: capítulo 0, §§14–23, y capítulo IV, §1; edición actual | [PDF](readers/2026-11-25/EGA_IV1_CURRENT/EGA_IV1_CURRENT.pdf) | [LaTeX](readers/2026-11-25/EGA_IV1_CURRENT/EGA_IV1_CURRENT.tex) |
+| EGA IV-1: traducción diplomática | [PDF](readers/2026-11-25/EGA_IV1_DIPLOMATIC/EGA_IV1_DIPLOMATIC.pdf) | [LaTeX](readers/2026-11-25/EGA_IV1_DIPLOMATIC/EGA_IV1_DIPLOMATIC.tex) |
+| EGA IV-2: §§2–7; edición actual | [PDF](readers/2026-11-25/EGA_IV2_CURRENT/EGA_IV2_CURRENT.pdf) | [LaTeX](readers/2026-11-25/EGA_IV2_CURRENT/EGA_IV2_CURRENT.tex) |
+| EGA IV-2: traducción diplomática | [PDF](readers/2026-11-25/EGA_IV2_DIPLOMATIC/EGA_IV2_DIPLOMATIC.pdf) | [LaTeX](readers/2026-11-25/EGA_IV2_DIPLOMATIC/EGA_IV2_DIPLOMATIC.tex) |
+| EGA IV-3: §§8–15 | [PDF](readers/2026-11-25/EGA_IV3/EGA_IV3.pdf) | [LaTeX](readers/2026-11-25/EGA_IV3/EGA_IV3.tex) |
+| EGA IV-4: §§16–21 | [PDF](readers/2026-11-25/EGA_IV4/EGA_IV4.pdf) | [LaTeX](readers/2026-11-25/EGA_IV4/EGA_IV4.tex) |
+
+Las fuentes españolas mantenidas de EGA I, EGA IV-1 (capítulo IV) y EGA IV-2 están en [editions/WORKTREE_ES](editions/WORKTREE_ES/).
+
+## FGA y lectores anteriores de EGA
 
 Cada lector tiene su PDF, su fuente LaTeX completa y un ZIP con todos los archivos necesarios para compilarlo.
 

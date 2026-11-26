@@ -1,0 +1,35 @@
+from iv38_patchlib import *
+p=Patches('surface')
+for un,formula in [('8.4.2',r'$(1\leq i\leq m)$'),('8.4.2',r'$(1\leq j\leq n)$'),('8.4.2.1',r'$(1\leq i\leq m)$')]:p.replace(un,'('+formula+')',formula)
+p.replace('8.1.3',r'para los espacios analíticos subyacentes formados por los puntos',r'para los espacios subyacentes a los espacios analíticos formados por los puntos')
+p.replace('8.1.2',r'(para un $\alpha$ fijo)',r'(para un $\alpha$ \emph{fijo})')
+p.replace('8.1.2',r'\emph{el cuerpo} $R(Y)=K$ \emph{de funciones racionales sobre} $Y$',r'\emph{el cuerpo $R(Y)=K$ de funciones racionales sobre $Y$}')
+p.replace('8.1.2',r'\emph{$\mathbf Z$-álgebras de tipo finito}',r'$\mathbf Z$-\emph{álgebras de tipo finito}')
+p.replace('8.2.7',r'un espacio anillado $S$',r'un espacio anillado arbitrario $S$')
+p.replace('8.2.7',r'un conjunto preordenado $L$',r'un conjunto preordenado \emph{arbitrario} $L$')
+p.replace('8.2.7',r'en la categoría de $\mathcal O_S$-Álgebras cuasicoherentes',r'en la categoría de $\mathcal O_S$-Álgebras \emph{cuasicoherentes}')
+p.replace('8.5.1',r'forman un sistema inductivo de homomorfismos',r'forman un \emph{sistema inductivo} de homomorfismos')
+p.replace('8.6.2',r'es un conjunto ordenado por',r'es un conjunto \emph{ordenado} por')
+p.replace('8.8.2.3',r'$U_{i\mu}=v_{\alpha\mu}^{-1}(U_{i\alpha})$ forman un recubrimiento',r'$U_{i\mu}=v_{\alpha\mu}^{-1}(U_{i\alpha})$ forman un \emph{recubrimiento}')
+p.replace('8.8.2.3',r'envían $W(x)$ al mismo abierto afín',r'envían $W(x)$ a un \emph{mismo} abierto afín')
+p.replace('8.8.3',r'una \emph{familia} finita',r'una familia \emph{finita}')
+p.replace('8.8.3',r'y una familia finita $(f^{(j)})_{j\in J}$',r'y una familia \emph{finita} $(f^{(j)})_{j\in J}$')
+p.replace('8.11.2',r'con mayor razón',r'\emph{a fortiori}')
+p.replace('8.11.5',r'$\mathcal O_Y$-Álgebra finita.',r'$\mathcal O_Y$-Álgebra \emph{finita}.')
+p.replace('8.12.6',r'un anillo local excelente',r'un anillo local \emph{excelente}')
+p.replace('8.13.4',r"$\boldsymbol{\mathit{Pro}}(\boldsymbol{C}'_0)$ isomorfo",r"$\boldsymbol{\mathit{Pro}}(\boldsymbol{C}'_0)$ \emph{isomorfo}")
+p.replace('8.13.4',r'\emph{esencialmente afines sobre} $S$',r'\emph{esencialmente afines sobre $S$}')
+p.replace('8.13.4',r'\emph{esencialmente afín sobre} $S$',r'\emph{esencialmente afín sobre $S$}')
+p.save()
+
+t=SP.read_text();edits=[];dry=[]
+for un,u in units(t).items():
+ ms=math_spans(u.text)
+ for m in re.finditer(r'constructib',u.text,re.I):
+  if any(s.start<=m.start()<s.end for s in ms):continue
+  old=m[0];new=old.replace('constructib','construib').replace('Constructib','Construib')
+  dry.append([str(SP.relative_to(ROOT)),un,u.start+m.start(),old,new,u.text[max(0,m.start()-65):m.end()+65]])
+  edits.append((u.start+m.start(),u.start+m.end(),new,un,'TERMINOLOGY_DECISIONS.tsv EGAIV3-ES-TERM-0004: construible; French constructible witness in this unit; outside formulas.'))
+write('IV38_TERMINOLOGY_DRY_RUN.tsv',['file','place','offset','before','after','context'],dry)
+apply(edits,'terminology','standard')
+print('terminology found',len(dry),'changed',len(edits))

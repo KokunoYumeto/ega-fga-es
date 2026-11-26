@@ -1,0 +1,87 @@
+\begin{proposition}[3.1.6]
+\label{IV.2.3.1.6-fr}
+Sean $X$ un preesquema localmente noetheriano y $\mathcal F$ un
+$\mathcal O_X$-módulo coherente; entonces $\operatorname{Ass}(\mathcal F)$ es
+localmente finito \textup{(es decir, todo punto de $X$ admite una vecindad cuya
+intersección con $\operatorname{Ass}(\mathcal F)$ es finita)}.
+\end{proposition}
+
+Basta considerar el caso en que $X$ es afín, y por tanto noetheriano; entonces
+la proposición resulta de (3.1.2) y de Bourbaki, \emph{Alg. comm.}, cap.~IV,
+\S~1, núm.~4, cor. del teo.~2.
+
+\oldpage[IV-2]{38}
+\begin{proposition}[3.1.7]
+\EGAReaderTarget{ega4.c04.prop.3-1-7}{IV.2.3.1.7-fr}
+Sea $X$ un preesquema.
+\begin{enumerate}
+\item[\emph{(i)}] Sea $0\to\mathcal F'\to\mathcal F\to\mathcal F''\to0$
+una sucesión exacta de $\mathcal O_X$-módulos cuasicoherentes. Entonces
+$\operatorname{Ass}(\mathcal F')\subset\operatorname{Ass}(\mathcal F)
+\subset\operatorname{Ass}(\mathcal F')\cup\operatorname{Ass}(\mathcal F'')$.
+\item[\emph{(ii)}] Sean $\mathcal F$ un $\mathcal O_X$-módulo
+cuasicoherente y $(\mathcal F_\alpha)$ una familia de
+sub-$\mathcal O_X$-módulos cuasicoherentes de $\mathcal F$ tal que
+$\mathcal F$ sea la unión de los $\mathcal F_\alpha$. Entonces
+$\operatorname{Ass}(\mathcal F)=\bigcup_\alpha\operatorname{Ass}(\mathcal F_\alpha)$.
+\item[\emph{(iii)}] Para toda familia $(\mathcal F_\alpha)$ de
+$\mathcal O_X$-módulos cuasicoherentes, se tiene
+$\operatorname{Ass}(\bigoplus_\alpha\mathcal F_\alpha)
+=\bigcup_\alpha\operatorname{Ass}(\mathcal F_\alpha)$.
+\end{enumerate}
+\end{proposition}
+
+Se reduce de inmediato a las proposiciones correspondientes para los módulos
+(Bourbaki, \emph{loc. cit.}, \S~1, núm.~1, fórmula (1), prop.~3 y cor.~1 de la
+prop.~3).
+
+\begin{proposition}[3.1.8]
+\label{IV.2.3.1.8-fr}
+Sean $X$ un preesquema localmente noetheriano, $\mathcal F$ un
+$\mathcal O_X$-módulo cuasicoherente, $U$ un abierto de $X$ y $\mathcal J$ un
+ideal coherente de $\mathcal O_X$ que define un subpreesquema cerrado de $X$
+cuyo espacio subyacente es $X\setmin U$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[\emph{a)}] $\operatorname{Ass}(\mathcal F)\subset U$.
+\item[\emph{b)}] Para todo abierto afín $V$, toda sección de $\mathcal F$
+sobre $V$ cuya restricción a $V\cap U$ sea nula es igual a $0$.
+\item[\emph{c)}] El homomorfismo canónico
+$\mathcal F\to\mathcal Hom_{\mathcal O_X}(\mathcal J,\mathcal F)$ es
+inyectivo.
+\end{enumerate}
+\end{proposition}
+
+Como la cuestión es local, se puede suponer $X=\operatorname{Spec}(A)$ afín,
+siendo $A$ un anillo noetheriano, $\mathcal F=\widetilde M$, donde $M$ es un
+$A$-módulo, y $\mathcal J=\widetilde{\mathfrak J}$, donde $\mathfrak J$ es un
+ideal de $A$. El homomorfismo $M\to\operatorname{Hom}_A(\mathfrak J,M)$ hace
+corresponder a $m\in M$ el homomorfismo $x\leadsto xm$ de $\mathfrak J$ en
+$M$; decir que no es inyectivo significa que existe un $m\ne0$ en $M$ tal que
+$\mathfrak Jm=0$.
+
+Demostremos primero que \emph{c)} implica \emph{a)}: en efecto, si
+$\operatorname{Ass}(\mathcal F)$ intersecara entonces $X\setmin U$, existiría un
+ideal primo $\mathfrak p\in\operatorname{Ass}(M)$ que contiene a
+$\mathfrak J$, y por tanto un elemento $m\ne0$ de $M$ tal que
+$\mathfrak Jm=0$. En segundo lugar, \emph{b)} implica \emph{c)}: en efecto,
+si se tuviera $\mathfrak Jm=0$ para un $m\ne0$ en $M$, para todo ideal primo
+$\mathfrak q\not\supset\mathfrak J$ existiría un $a\in\mathfrak J$ que no
+pertenece a $\mathfrak q$; por tanto, la relación $am=0$ implicaría que la
+imagen canónica de $m$ en $M_\mathfrak q$ es $0$; en otras palabras, $m$
+sería una sección $\ne0$ de $\mathcal F$ sobre $X$ cuya restricción a $U$
+sería nula.
+
+Finalmente, \emph{a)} implica \emph{b)}. Para verlo, observemos que el
+homomorfismo canónico
+$M\longrightarrow\prod_{\mathfrak p\in\operatorname{Ass}(M)}M_\mathfrak p$
+es \emph{inyectivo}: en efecto, si $N$ es el núcleo de este homomorfismo, se
+tiene $\operatorname{Ass}(N)\subset\operatorname{Ass}(M)$; si existiera un
+$\mathfrak p\in\operatorname{Ass}(N)$, habría un elemento $n\in N$ cuyo
+anulador sería $\mathfrak p$; pero, por definición de $N$, existiría un
+elemento $s\notin\mathfrak p$ tal que $sn=0$, lo cual es absurdo; se concluye
+que $\operatorname{Ass}(N)=\varnothing$, y por tanto $N=0$. Ahora bien, la
+condición \emph{a)} implica que, si $m\in M$ es una sección de $\mathcal F$
+cuya restricción a $U$ es nula, la imagen canónica de $m$ en
+$M_\mathfrak p$ es nula para todo $\mathfrak p\in\operatorname{Ass}(M)$, y
+por tanto $m=0$. Q.E.D.
+

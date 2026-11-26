@@ -1,0 +1,438 @@
+\subsection{Haces localmente libres}
+\label{subsection:0.5.4-fr}
+
+\begin{env}[5.4.1]
+\label{0.5.4.1-fr}
+Sea $X$ un espacio anillado. Se dice que un $\mathcal{O}_X$-Módulo $\mathcal{F}$
+es \emph{localmente libre} si, para todo $x\in X$, existe una vecindad
+abierta $U$ de $x$ tal que $\mathcal{F}|U$ es isomorfo a un
+$(\mathcal{O}_X|U)$-Módulo de la forma $\mathcal{O}_X^{(I)}|U$, donde $I$ puede
+depender de $U$. Si para todo $U$, $I$ es finito, se dice que $\mathcal{F}$ es
+\emph{de rango finito}; si para todo $U$, $I$ tiene el mismo número finito de elementos
+$n$, se dice que $\mathcal{F}$ es \emph{de rango $n$}. Un
+$\mathcal{O}_X$-Módulo localmente libre de rango 1 se llama también
+\emph{invertible} (cf. (5.4.3)). Si $\mathcal{F}$ es un
+$\mathcal{O}_X$-Módulo localmente libre de rango finito, para todo $x\in X$,
+$\mathcal{F}_x$ es un $\mathcal{O}_x$-módulo libre de rango finito $n(x)$, y
+existe una vecindad $U$ de $x$ tal que $\mathcal{F}|U$ es de rango $n(x)$;
+si $X$ es conexo, $n(x)$ es, por tanto, \emph{constante}.
+
+Es claro que todo haz localmente libre es cuasicoherente, y si
+$\mathcal{O}_X$ es un haz coherente de anillos, todo
+$\mathcal{O}_X$-Módulo localmente libre de rango finito es coherente.
+
+Si $\mathcal{L}$ es localmente libre,
+$\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{F}$ es un funtor \emph{exacto}
+en $\mathcal{F}$ en la categoría de los $\mathcal{O}_X$-Módulos.
+
+Tendremos que considerar sobre todo $\mathcal{O}_X$-Módulos localmente libres
+de rango finito,
+
+\oldpage[0\textsubscript{I}]{49}
+
+y cuando hablemos de haces localmente libres sin precisar, se
+sobreentenderá que son de \emph{rango finito}.
+\end{env}
+
+\begin{env}[5.4.2]
+\label{0.5.4.2-fr}
+Si $\mathcal{L}$, $\mathcal{F}$ son dos $\mathcal{O}_X$-Módulos, se tiene un
+homomorfismo canónico funtorial
+\[
+  \check{\mathcal{L}}\otimes_{\mathcal{O}_X}\mathcal{F}
+  =\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)
+   \otimes_{\mathcal{O}_X}\mathcal{F}
+  \longrightarrow
+  \mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{F})
+  \tag{5.4.2.1}\label{0.5.4.2.1-fr}
+\]
+definido de la manera siguiente: para todo abierto $U$, a todo par $(u,t)$, donde
+\[
+  u\in\Gamma\bigl(U,
+    \mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)\bigr)
+  =\operatorname{Hom}(\mathcal{L}|U,\mathcal{O}_X|U)
+  \quad\text{y}\quad
+  t\in\Gamma(U,\mathcal{F}),
+\]
+se hace corresponder el elemento de
+$\operatorname{Hom}(\mathcal{L}|U,\mathcal{F}|U)$ que, para todo $x\in U$,
+hace corresponder a $s_x\in\mathcal{L}_x$ el elemento $u_x(s_x)t_x$ de
+$\mathcal{F}_x$. Si $\mathcal{L}$ es \emph{localmente libre de rango finito},
+este homomorfismo es \emph{biyectivo}; como la propiedad es local, se puede,
+en efecto, limitar al caso en que $\mathcal{L}=\mathcal{O}_X^n$; como para todo
+$\mathcal{O}_X$-Módulo $\mathcal{G}$,
+$\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{O}_X^n,\mathcal{G})$ es
+canónicamente isomorfo a $\mathcal{G}^n$, se reduce al caso
+$\mathcal{L}=\mathcal{O}_X$, que es inmediato.
+\end{env}
+
+\begin{env}[5.4.3]
+\EGAReaderTarget{canon-ref.0.5.4.3-fr}{0.5.4.3-fr}
+Si $\mathcal{L}$ es invertible, lo mismo ocurre con su dual
+$\check{\mathcal{L}}=
+\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)$, pues se reduce
+inmediatamente (siendo la cuestión local) al caso $\mathcal{L}=\mathcal{O}_X$. Además,
+se tiene un isomorfismo canónico
+\[
+  \mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)
+  \otimes_{\mathcal{O}_X}\mathcal{L}
+  \xrightarrow{\sim}
+  \mathcal{O}_X
+  \tag{5.4.3.1}\label{0.5.4.3.1-fr}
+\]
+en efecto, según (5.4.2), basta definir un isomorfismo canónico
+$\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{L})
+\xrightarrow{\sim}\mathcal{O}_X$. Ahora bien, para \emph{todo}
+$\mathcal{O}_X$-Módulo $\mathcal{F}$, se tiene un homomorfismo canónico
+$\mathcal{O}_X\longrightarrow
+\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{F},\mathcal{F})$ (5.3.7). Queda
+por probar que si $\mathcal{F}=\mathcal{L}$ es invertible, este homomorfismo
+es biyectivo, y como la cuestión es local, se reduce al caso
+$\mathcal{L}=\mathcal{O}_X$, que es inmediato.
+
+Por lo que precede, se pone
+$\mathcal{L}^{-1}=
+\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)$, y se dice que
+$\mathcal{L}^{-1}$ es el \emph{inverso} de $\mathcal{L}$. La terminología de
+\og haz invertible\fg{} puede justificarse de la manera siguiente cuando $X$ se
+reduce a un punto y $\mathcal{O}_X$ es un anillo \emph{local} $A$ de ideal
+maximal $\mathfrak m$; si $M$ y $M'$ son dos $A$-módulos (siendo $M$ de
+tipo finito) tales que $M\otimes_A M'$ es isomorfo a $A$, como
+$(A/\mathfrak m)\otimes_A(M\otimes_A M')$ se identifica con
+$(M/\mathfrak mM)\otimes_{A/\mathfrak m}(M'/\mathfrak mM')$, este último
+producto tensorial de espacios vectoriales sobre el cuerpo $A/\mathfrak m$ es
+isomorfo a $A/\mathfrak m$, lo que exige que $M/\mathfrak mM$ y
+$M'/\mathfrak mM'$ sean de dimensión 1. Para todo elemento $z\in M$
+que no pertenece a $\mathfrak mM$, se tiene, pues, $M=Az+\mathfrak mM$, lo que
+implica $M=Az$ según el lema de Nakayama, siendo $M$ de tipo finito.
+Por lo demás, como el anulador de $z$ anula $M\otimes_A M'$, isomorfo a
+$A$, este anulador es $\{0\}$, y $M$ es, por consiguiente, \emph{isomorfo a $A$}.
+En el caso general, esto muestra que si $\mathcal{L}$ es un
+$\mathcal{O}_X$-Módulo de tipo finito, tal que existe un
+$\mathcal{O}_X$-Módulo $\mathcal{F}$ para el cual
+$\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{F}$ es isomorfo a
+$\mathcal{O}_X$, y si además los anillos $\mathcal{O}_x$ son anillos
+locales, entonces $\mathcal{L}_x$ es un $\mathcal{O}_x$-módulo isomorfo a
+$\mathcal{O}_x$ para todo $x\in X$. Si se supone que $\mathcal{O}_X$ y $\mathcal{L}$ son
+\emph{coherentes}, se concluye, pues, que $\mathcal{L}$ es invertible
+en virtud de (5.2.7).
+\end{env}
+
+\begin{env}[5.4.4]
+\label{0.5.4.4-fr}
+Si $\mathcal{L}$ y $\mathcal{L}'$ son dos $\mathcal{O}_X$-Módulos
+invertibles, lo mismo ocurre con
+$\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}'$, pues, siendo la cuestión
+local, se puede suponer que $\mathcal{L}=\mathcal{O}_X$, y el resultado es
+entonces trivial. Para todo entero $n\geq1$, se designa por
+$\mathcal{L}^{\otimes n}$ el producto tensorial de $n$ haces
+
+\oldpage[0\textsubscript{I}]{50}
+
+idénticos a $\mathcal{L}$; se pone por convenio
+$\mathcal{L}^{\otimes0}=\mathcal{O}_X$ y para $n\geq1$,
+$\mathcal{L}^{\otimes(-n)}=(\mathcal{L}^{-1})^{\otimes n}$. Con estas
+notaciones, existe entonces un \emph{isomorfismo canónico funtorial}
+\[
+  \mathcal{L}^{\otimes m}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}
+  \xrightarrow{\sim}
+  \mathcal{L}^{\otimes(n+m)}
+  \tag{5.4.4.1}\label{0.5.4.4.1-fr}
+\]
+cualesquiera que sean los enteros racionales $m,n$: en efecto, en virtud de las
+definiciones, se reduce inmediatamente al caso en que $m=-1$, $n=1$, y
+el isomorfismo en cuestión ha sido entonces definido en (5.4.3).
+\end{env}
+
+\begin{env}[5.4.5]
+\EGAReaderTarget{canon-ref.0.5.4.5-fr}{0.5.4.5-fr}
+Sea $f:Y\to X$ un morfismo de espacios anillados. Si $\mathcal{L}$ es un
+$\mathcal{O}_X$-Módulo localmente libre (resp. invertible),
+$f^*(\mathcal{L})$ es un $\mathcal{O}_Y$-Módulo localmente libre (resp.
+invertible): esto resulta inmediatamente de que las imágenes inversas de dos
+$\mathcal{O}_X$-Módulos localmente isomorfos son localmente isomorfas, de
+que $f^*$ conmuta con las sumas directas finitas y de que
+$f^*(\mathcal{O}_X)=\mathcal{O}_Y$ (4.3.4). Además, se sabe que se tiene un
+homomorfismo canónico funtorial
+\[
+  f^*(\check{\mathcal{L}})
+  \longrightarrow
+  \bigl(f^*(\mathcal{L})\bigr)\check{}
+\]
+(4.4.6), y cuando $\mathcal{L}$ es localmente libre, este homomorfismo es
+\emph{biyectivo}: en efecto, se reduce de nuevo al caso en que
+$\mathcal{L}=\mathcal{O}_X$, que es trivial. Se concluye que si
+$\mathcal{L}$ es invertible, $f^*(\mathcal{L}^{\otimes n})$ se identifica
+canónicamente con $(f^*(\mathcal{L}))^{\otimes n}$ para todo entero racional
+$n$.
+\end{env}
+
+\begin{env}[5.4.6]
+\label{0.5.4.6-fr}
+Sea $\mathcal{L}$ un $\mathcal{O}_X$-Módulo invertible; se designa por
+$\Gamma_*(X,\mathcal{L})$ o simplemente $\Gamma_*(\mathcal{L})$ el grupo
+abeliano suma directa
+$\bigoplus_{n\in\mathbb{Z}}\Gamma(X,\mathcal{L}^{\otimes n})$; se lo dota
+de una estructura de \emph{anillo graduado}, haciendo corresponder al par
+$(s_n,s_m)$, donde $s_n\in\Gamma(X,\mathcal{L}^{\otimes n})$,
+$s_m\in\Gamma(X,\mathcal{L}^{\otimes m})$, la sección de
+$\mathcal{L}^{\otimes(n+m)}$ sobre $X$ que corresponde canónicamente
+(5.4.4.1) a la sección $s_n\otimes s_m$ de
+$\mathcal{L}^{\otimes n}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes m}$;
+la asociatividad de esta multiplicación se verifica de manera inmediata. Es
+claro que $\Gamma_*(X,\mathcal{L})$ es un funtor covariante en
+$\mathcal{L}$, con valores en la categoría de los anillos graduados.
+
+Si ahora $\mathcal{F}$ es un $\mathcal{O}_X$-Módulo cualquiera, se pone
+\[
+  \Gamma_*(\mathcal{L},\mathcal{F})
+  =\bigoplus_{n\in\mathbb{Z}}
+   \Gamma\bigl(X,
+     \mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}\bigr).
+\]
+Se dota a este grupo abeliano de una estructura de \emph{módulo graduado} sobre
+el anillo graduado $\Gamma_*(\mathcal{L})$ de la manera siguiente: al par
+$(s_n,u_m)$, donde $s_n\in\Gamma(X,\mathcal{L}^{\otimes n})$ y
+$u_m\in\Gamma(X,
+\mathcal{F}\otimes\mathcal{L}^{\otimes m})$, se hace
+corresponder la sección de
+$\mathcal{F}\otimes\mathcal{L}^{\otimes(m+n)}$ que corresponde
+canónicamente (5.4.4.1) a $s_n\otimes u_m$; la verificación de los axiomas de
+los módulos es inmediata. Para $X$ y $\mathcal{L}$ fijos,
+$\Gamma_*(\mathcal{L},\mathcal{F})$ es un funtor covariante en
+$\mathcal{F}$ con valores en la categoría de los
+$\Gamma_*(\mathcal{L})$-módulos graduados; para $X$ y $\mathcal{F}$ fijos,
+es un funtor covariante en $\mathcal{L}$ con valores en la categoría de los
+grupos abelianos.
+
+Si $f:Y\to X$ es un morfismo de espacios anillados, el homomorfismo canónico
+(4.4.3.2)
+\[
+  \rho:\mathcal{L}^{\otimes n}
+  \longrightarrow
+  f_*\bigl(f^*(\mathcal{L}^{\otimes n})\bigr)
+\]
+define un homomorfismo de grupos abelianos
+\[
+  \Gamma(X,\mathcal{L}^{\otimes n})
+  \longrightarrow
+  \Gamma\bigl(Y,f^*(\mathcal{L}^{\otimes n})\bigr),
+\]
+y como
+$f^*(\mathcal{L}^{\otimes n})=(f^*(\mathcal{L}))^{\otimes n}$, resulta de las
+definiciones de los homomorfismos canónicos (4.4.3.2) y (5.4.4.1) que los
+homomorfismos anteriores definen un \emph{homomorfismo funtorial
+de anillos graduados}
+$\Gamma_*(\mathcal{L})\to\Gamma_*(f^*(\mathcal{L}))$. El mismo homomorfismo
+canónico (4.4.3) define asimismo un homomorfismo de grupos abelianos
+\[
+  \Gamma\bigl(X,
+    \mathcal{F}\otimes\mathcal{L}^{\otimes n}\bigr)
+  \longrightarrow
+  \Gamma\bigl(Y,
+    f^*(\mathcal{F}\otimes\mathcal{L}^{\otimes n})\bigr),
+\]
+y como
+\[
+  f^*(\mathcal{F}\otimes\mathcal{L}^{\otimes n})
+  =f^*(\mathcal{F})\otimes
+   (f^*(\mathcal{L}))^{\otimes n}
+  \quad\text{(4.3.3.1),}
+\]
+
+\oldpage[0\textsubscript{I}]{51}
+
+estos homomorfismos (para $n$ variable) definen un
+\emph{dihomomorfismo de módulos graduados}
+\[
+  \Gamma_*(\mathcal{L},\mathcal{F})
+  \longrightarrow
+  \Gamma_*(f^*(\mathcal{L}),f^*(\mathcal{F})).
+\]
+\end{env}
+
+\begin{env}[5.4.7]
+\EGAReaderTarget{canon-ref.0.5.4.7-fr}{0.5.4.7-fr}
+Se puede mostrar que existe un \emph{conjunto} $\mathfrak{M}$ (denotado también
+por $\mathfrak{M}(X)$) de $\mathcal{O}_X$-Módulos invertibles tal que todo
+$\mathcal{O}_X$-Módulo invertible es isomorfo a un elemento de
+$\mathfrak{M}$ y a uno solo\footnote{Véase el libro en preparación citado en
+la Introducción.}; se define en $\mathfrak{M}$ una ley de composición
+haciendo corresponder a dos elementos $\mathcal{L}$, $\mathcal{L}'$ de
+$\mathfrak{M}$ el único elemento de $\mathfrak{M}$ isomorfo a
+$\mathcal{L}\otimes\mathcal{L}'$. Con esta ley de
+composición, $\mathfrak{M}$ es un \emph{grupo isomorfo al grupo de
+cohomología} $H^1(X,\mathcal{O}_X^*)$, donde $\mathcal{O}_X^*$ es el
+subhaz de $\mathcal{O}_X$ tal que $\Gamma(U,\mathcal{O}_X^*)$ es el
+grupo de los elementos invertibles del anillo $\Gamma(U,\mathcal{O}_X)$ para
+todo abierto $U\subset X$ ($\mathcal{O}_X^*$ es, por tanto, un haz de grupos
+abelianos \emph{multiplicativos}).
+
+Para ello se observará que, para todo abierto $U\subset X$, el grupo de las secciones
+$\Gamma(U,\mathcal{O}_X^*)$ se identifica canónicamente con el \emph{grupo de los
+automorfismos} del $(\mathcal{O}_X|U)$-Módulo $\mathcal{O}_X|U$,
+haciendo corresponder la identificación a una sección $\varepsilon$ de
+$\mathcal{O}_X^*$ sobre $U$ el automorfismo $u$ de $\mathcal{O}_X|U$
+tal que $u_x(s_x)=\varepsilon_xs_x$ para todo $x\in U$ y todo
+$s_x\in\mathcal{O}_x$. Sea entonces $\mathfrak{U}=(U_\lambda)$ un recubrimiento
+abierto de $X$; el dato, para todo par de índices $(\lambda,\mu)$, de un
+automorfismo $\theta_{\lambda\mu}$ de
+$\mathcal{O}_X|(U_\lambda\cap U_\mu)$ equivale a darse una
+$1$-\emph{cocadena} del recubrimiento $\mathfrak{U}$, con valores en
+$\mathcal{O}_X^*$, y decir que los $\theta_{\lambda\mu}$ verifican la
+condición de pegado (3.3.1) significa que la cocadena correspondiente es
+un \emph{cociclo}. Del mismo modo, el dato, para todo $\lambda$, de un automorfismo
+$\omega_\lambda$ de $\mathcal{O}_X|U_\lambda$ equivale al dato de una
+$0$-cocadena del recubrimiento $\mathfrak{U}$, con valores en
+$\mathcal{O}_X^*$, y su \emph{coborde} corresponde a la familia de los
+automorfismos
+$(\omega_\lambda|U_\lambda\cap U_\mu)\circ
+ (\omega_\mu|U_\lambda\cap U_\mu)^{-1}$.
+Se puede hacer corresponder a todo $1$-cociclo de $\mathfrak{U}$ con valores
+en $\mathcal{O}_X^*$ el elemento de $\mathfrak{M}$ isomorfo al
+$\mathcal{O}_X$-Módulo invertible obtenido por pegado a partir de la
+familia de automorfismos $(\theta_{\lambda\mu})$ correspondiente a este cociclo,
+y a dos cociclos cohomólogos corresponden dos elementos iguales de
+$\mathfrak{M}$ (3.3.2); en otras palabras, se ha definido así una aplicación
+$\varphi_{\mathfrak{U}}:H^1(\mathfrak{U},\mathcal{O}_X^*)\to\mathfrak{M}$.
+Además, si $\mathfrak{B}$ es un segundo recubrimiento abierto de $X$, más fino
+que $\mathfrak{U}$, el diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+H^1(\mathfrak{U},\mathcal{O}_X^*)
+  \arrow[dd]
+  \arrow[rrd,"\varphi_{\mathfrak{U}}"] & & \\
+& & \mathfrak{M} \\
+H^1(\mathfrak{B},\mathcal{O}_X^*)
+  \arrow[rru,swap,"\varphi_{\mathfrak{B}}"] & &
+\end{tikzcd}
+\]
+donde la flecha vertical es el homomorfismo canónico (G, II, 5.7), es
+conmutativo, como resulta de (3.3.3). Por paso al límite inductivo, se
+obtiene, pues, una aplicación
+$H^1(X,\mathcal{O}_X^*)\to\mathfrak{M}$, identificándose el grupo de cohomología de \v{C}ech
+$\check{H}^1(X,\mathcal{O}_X^*)$, como se sabe, con el primer grupo
+de cohomología $H^1(X,\mathcal{O}_X^*)$ (G, II, 5.9, cor. del teorema~5.9.1).
+Esta aplicación es \emph{sobreyectiva}: en efecto, por definición, para todo
+$\mathcal{O}_X$-Módulo invertible $\mathcal{L}$, hay un recubrimiento abierto
+$(U_\lambda)$ de $X$ tal que $\mathcal{L}$ se obtiene por pegado de los
+haces $\mathcal{O}_X|U_\lambda$ (3.3.1). Es también
+\emph{inyectiva}, pues basta probarlo para las aplicaciones
+$H^1(\mathfrak{U},\mathcal{O}_X^*)\to\mathfrak{M}$, y esto resulta entonces de
+(3.3.2). Queda por mostrar que
+
+\oldpage[0\textsubscript{I}]{52}
+
+la biyección así definida es un homomorfismo de grupos. Ahora bien, dados
+dos $\mathcal{O}_X$-Módulos invertibles $\mathcal{L}$, $\mathcal{L}'$, hay
+un recubrimiento abierto $(U_\lambda)$ tal que $\mathcal{L}|U_\lambda$ y
+$\mathcal{L}'|U_\lambda$ son isomorfos a $\mathcal{O}_X|U_\lambda$ para
+todo $\lambda$; hay, pues, para cada índice $\lambda$ un elemento
+$a_\lambda$ (resp. $a'_\lambda$) de $\Gamma(U_\lambda,\mathcal{L})$ (resp.
+$\Gamma(U_\lambda,\mathcal{L}'))$ tal que los elementos de
+$\Gamma(U_\lambda,\mathcal{L})$ (resp. $\Gamma(U_\lambda,\mathcal{L}'))$
+son los $s_\lambda\cdot a_\lambda$ (resp.
+$s_\lambda\cdot a'_\lambda$), donde $s_\lambda$ recorre
+$\Gamma(U_\lambda,\mathcal{O}_X)$. Los cociclos correspondientes
+$(\varepsilon_{\lambda\mu})$, $(\varepsilon'_{\lambda\mu})$ son tales que
+$s_\lambda\cdot a_\lambda=s_\mu\cdot a_\mu$ (resp.
+$s_\lambda\cdot a'_\lambda=s_\mu\cdot a'_\mu$) sobre
+$U_\lambda\cap U_\mu$ es equivalente a
+$s_\lambda=\varepsilon_{\lambda\mu}s_\mu$ (resp.
+$s_\lambda=\varepsilon'_{\lambda\mu}s_\mu$) sobre
+$U_\lambda\cap U_\mu$. Como las secciones de
+$\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}'$ sobre $U_\lambda$
+son las sumas finitas de los
+$s_\lambda s'_\lambda\cdot(a_\lambda\otimes a'_\lambda)$ donde $s_\lambda$ y
+$s'_\lambda$ recorren $\Gamma(U_\lambda,\mathcal{O}_X)$, es claro que
+el cociclo $(\varepsilon_{\lambda\mu}\varepsilon'_{\lambda\mu})$ corresponde
+a $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}'$, lo que termina la
+demostración\footnote{Para una forma general de este resultado, véase el libro
+citado en la nota de la p.~51.}.
+\end{env}
+
+\begin{env}[5.4.8]
+\label{0.5.4.8-fr}
+Sea $f=(\psi,\omega)$ un morfismo $Y\to X$ de espacios anillados. El funtor
+$f^*$, restringido a la categoría de los $\mathcal{O}_X$-Módulos invertibles,
+define una aplicación (denotada también por $f^*$ por abuso de lenguaje) del conjunto
+$\mathfrak{M}(X)$ en el conjunto $\mathfrak{M}(Y)$. Por otra parte, se tiene un
+homomorfismo canónico (T, 3.2.2)
+\[
+  H^1(X,\mathcal{O}_X^*)\longrightarrow H^1(Y,\mathcal{O}_Y^*).
+  \tag{5.4.8.1}\label{0.5.4.8.1-fr}
+\]
+Cuando se identifican canónicamente (5.4.7) $\mathfrak{M}(X)$ y
+$H^1(X,\mathcal{O}_X^*)$ (resp. $\mathfrak{M}(Y)$ y
+$H^1(Y,\mathcal{O}_Y^*)$), el homomorfismo (5.4.8.1) \emph{se identifica con
+la aplicación $f^*$}. En efecto, si $\mathcal{L}$ procede de un cociclo
+$(\varepsilon_{\lambda\mu})$ correspondiente a un recubrimiento abierto
+$(U_\lambda)$ de $X$, basta mostrar que $f^*(\mathcal{L})$ procede
+de un cociclo cuya clase de cohomología es imagen por (5.4.8.1) de la de
+$(\varepsilon_{\lambda\mu})$. Ahora bien, si $\theta_{\lambda\mu}$ es
+el automorfismo de $\mathcal{O}_X|(U_\lambda\cap U_\mu)$ que corresponde a
+$\varepsilon_{\lambda\mu}$, es claro que $f^*(\mathcal{L})$ se obtiene por
+pegado de los $\mathcal{O}_Y|\psi^{-1}(U_\lambda)$ mediante los
+automorfismos $f^*(\theta_{\lambda\mu})$, y basta, pues, verificar que
+estos últimos corresponden al cociclo
+$(\omega^\sharp(\varepsilon_{\lambda\mu}))$, lo que resulta inmediatamente de las
+definiciones (se ha identificado $\varepsilon_{\lambda\mu}$ con su imagen canónica
+por $\rho$ (3.7.2), sección de $\psi^*(\mathcal{O}_X^*)$ sobre
+$\psi^{-1}(U_\lambda\cap U_\mu)$).
+\end{env}
+
+\begin{env}[5.4.9]
+\label{0.5.4.9-fr}
+Sean $\mathcal{E}$, $\mathcal{F}$ dos $\mathcal{O}_X$-Módulos,
+suponiéndose $\mathcal{F}$ \emph{localmente libre}, y sea $\mathcal{G}$ un
+$\mathcal{O}_X$-Módulo \emph{extensión de $\mathcal{F}$ por $\mathcal{E}$},
+es decir, tal que existe una sucesión exacta
+\[
+  0\longrightarrow\mathcal{E}\xrightarrow{j}\mathcal{G}
+  \xrightarrow{p}\mathcal{F}\longrightarrow 0.
+\]
+Entonces, para todo $x\in X$, existe una vecindad abierta $U$ de $x$ tal que
+$\mathcal{G}|U$ es isomorfo a la \emph{suma directa}
+$\mathcal{E}|U\oplus\mathcal{F}|U$. Se puede, en efecto, limitar al caso en que
+$\mathcal{F}=\mathcal{O}_X^n$; sean $e_i$ ($1\leq i\leq n$) las secciones
+canónicas (5.5.5) de $\mathcal{O}_X^n$; existe entonces una vecindad abierta
+$U$ de $x$ y $n$ secciones $s_i$ de $\mathcal{G}$ sobre $U$ tales que
+$p(s_i|U)=e_i|U$ para $1\leq i\leq n$. Dicho esto, sea $f$
+el homomorfismo $\mathcal{F}|U\to\mathcal{G}|U$ definido por las secciones
+$s_i|U$ (5.1.1). Es inmediato que para todo abierto $V\subset U$, y toda
+sección $s\in\Gamma(V,\mathcal{G})$ se tiene
+$s-f(p(s))\in\Gamma(V,\mathcal{E})$, de donde nuestra afirmación.
+\end{env}
+
+\begin{env}[5.4.10]
+\label{0.5.4.10-fr}
+Sean $f:X\to Y$ un morfismo de espacios anillados, $\mathcal{F}$ un
+$\mathcal{O}_X$-Módulo, $\mathcal{L}$ un $\mathcal{O}_Y$-Módulo localmente
+libre de rango finito. Existe entonces un isomorfismo canónico
+\[
+  f_*(\mathcal{F})\otimes_{\mathcal{O}_Y}\mathcal{L}
+  \xrightarrow{\sim}
+  f_*\bigl(\mathcal{F}\otimes_{\mathcal{O}_X}f^*(\mathcal{L})\bigr)
+  \tag{5.4.10.1}\label{0.5.4.10.1-fr}
+\]
+
+\oldpage[0\textsubscript{I}]{53}
+
+En efecto, para todo $\mathcal{O}_Y$-Módulo $\mathcal{L}$, se tiene un
+homomorfismo canónico
+\[
+  f_*(\mathcal{F})\otimes_{\mathcal{O}_Y}\mathcal{L}
+  \xrightarrow{1\otimes\rho}
+  f_*(\mathcal{F})\otimes_{\mathcal{O}_Y}f_*(f^*(\mathcal{L}))
+  \xrightarrow{\alpha}
+  f_*\bigl(\mathcal{F}\otimes_{\mathcal{O}_X}f^*(\mathcal{L})\bigr)
+\]
+siendo $\rho$ el homomorfismo (4.4.3.2) y $\alpha$ el homomorfismo (4.2.2.1).
+Para mostrar que cuando $\mathcal{L}$ es localmente libre este homomorfismo
+es biyectivo, basta, siendo la cuestión local sobre $Y$, considerar el
+caso en que $\mathcal{L}=\mathcal{O}_Y^n$; además, como $f_*$ y $f^*$ conmutan con las
+sumas directas finitas, se puede suponer $n=1$, y en este caso la proposición
+resulta inmediatamente de las definiciones y de la relación
+$f^*(\mathcal{O}_Y)=\mathcal{O}_X$.
+\end{env}
+

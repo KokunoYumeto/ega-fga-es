@@ -1,0 +1,80 @@
+\begin{proposition}[5.8.5]
+\label{IV.2.s5.8.5-fr}
+Para que un preesquema localmente noetheriano $X$ sea reducido, es necesario
+y suficiente que verifique las propiedades $(S_1)$ y $(R_0)$.
+\end{proposition}
+
+Teniendo en cuenta (5.7.5), esto resulta de la observación precedente y de
+(3.2.1).
+
+\begin{theorem}[5.8.6]
+\EGAReaderTarget{ega4.c04.thm.5-8-6}{IV.2.s5.8.6-fr}
+(criterio de Serre). Sea $X$ un preesquema localmente noetheriano. Para que
+$X$ sea normal, es necesario y suficiente que $X$ verifique las propiedades
+$(S_2)$ y $(R_1)$, dicho de otro modo, que para todo $x\in X$ se cumplan las
+propiedades siguientes:
+\begin{enumerate}
+\item[\textup{(i)}] Si $\dim(\mathcal O_x)\leq1$, $\mathcal O_x$ es regular
+\textup{(es decir, es un} cuerpo \textup{o un} anillo de valoración discreta \textup{(\textbf{0}, 17.1.4))}.
+\item[\textup{(ii)}] Si $\dim(\mathcal O_x)\geq2$, entonces
+$\operatorname{prof}(\mathcal O_x)\geq2$.
+\end{enumerate}
+\end{theorem}
+
+Las condiciones son \emph{necesarias}. En efecto, decir que $X$ es normal significa
+que, para todo $x\in X$, $\mathcal O_x$ es un anillo local noetheriano
+integralmente cerrado. Si $\dim(\mathcal O_x)=0$ (resp.
+$\dim(\mathcal O_x)=1$), se concluye que $\mathcal O_x$ es un cuerpo, puesto
+que $\mathcal O_x$ es íntegro (resp. que $\mathcal O_x$ es un anillo de
+valoración discreta, en virtud de (\textbf{II}, 7.1.6)). Por otra parte, para todo
+elemento $f_x\neq0$ de $\mathcal O_x$, se sabe (Bourbaki, \emph{Alg. comm.},
+chap. VII, § 1, n\textsuperscript{o} 4, prop. 8) que los ideales primos asociados a
+$\mathcal O_x/f_x\mathcal O_x$ no son inmersos, por tanto $\mathcal O_x$
+verifica $(S_2)$ (5.7.7).
+
+Las condiciones son \emph{suficientes}. En efecto, de (5.8.5) resulta primero que
+$X$ es \emph{reducido}. Como la cuestión es local, se puede además suponer que
+$X=\operatorname{Spec}(A)$, donde $A$ es un anillo noetheriano \emph{reducido}
+(\textbf I, 5.1.4); si $R$ es el anillo total de fracciones de $A$, $R$ es producto
+directo de un número finito de cuerpos, y (teniendo en cuenta (\textbf{II}, 6.3.6))
+bastará probar que $A$ está \emph{integralmente cerrado en} $R$. Sea, pues, $h=f/g$
+un elemento de $R$ entero sobre $A$, siendo $g$ y $f$ elementos de $A$ tales
+que $g$ no sea divisor de cero. Se tiene una relación de la forma
+\begin{equation}
+f^n+\sum_{i=1}^n a_i f^{n-i}g^i=0
+\qquad\text{con }a_i\in A\quad\text{para }1\leq i\leq n.
+\tag{5.8.6.1}\label{IV.2.s5.8.6.1-fr}
+\end{equation}
+
+Sea $\mathfrak p$ un ideal primo de $A$ tal que
+$\dim(A_{\mathfrak p})=1$; si $f_{\mathfrak p}$ y $g_{\mathfrak p}$ son las
+imágenes de $f$ y $g$ en $A_{\mathfrak p}$, de (5.8.6.1) resulta que
+$f_{\mathfrak p}/g_{\mathfrak p}$ (que pertenece al anillo total de
+fracciones de $A_{\mathfrak p}$, puesto que $g_{\mathfrak p}$ no es divisor
+de cero en $A_{\mathfrak p}$ por planitud $(\mathbf{0}_{\mathrm I},5.3.1)$) es entero
+sobre $A_{\mathfrak p}$; pero como $A_{\mathfrak p}$ es regular, y por tanto
+integralmente cerrado, se tiene
+$f_{\mathfrak p}/g_{\mathfrak p}\in A_{\mathfrak p}$. En otras palabras, se
+tiene $(fA)_{\mathfrak p}\subset(gA)_{\mathfrak p}$. Pero la hipótesis
+$(S_2)$ implica, por (5.7.7), puesto que $g$ no es divisor de cero en $A$, que
+$A/gA$ solo tiene ideales primos asociados \emph{no inmersos} $\mathfrak p_i$
+($1\leq i\leq n$); ahora bien, $gA$ es la intersección de ideales primarios
+$\mathfrak q_i$ correspondientes a los $\mathfrak p_i$, y, según lo que
+se acaba de ver, los $\mathfrak q_i$ son las imágenes inversas en $A$, por los
+homomorfismos $A\to A_{\mathfrak p_i}$, de los ideales
+$(gA)_{\mathfrak p_i}$ (Bourbaki, \emph{Alg. comm.}, chap. IV, § 2, n\textsuperscript{o} 3,
+prop. 5). Pero en virtud del Hauptidealsatz (\textbf 0, 16.3.2) se tiene
+$\dim(A_{\mathfrak p_i})=1$ para $1\leq i\leq n$, por tanto
+$(fA)_{\mathfrak p_i}\subset(gA)_{\mathfrak p_i}$ para todo $i$ según lo
+anterior; como $fA$ está contenido en la intersección de las imágenes inversas
+de los $(fA)_{\mathfrak p_i}$ ($1\leq i\leq n$), se tiene $fA\subset gA$, es
+decir, $f/g\in A$. C.Q.F.D.
+
+\oldpage[IV-2]{109}
+
+\subsection{\texorpdfstring{Módulos $Z$-puros y $Z$-cerrados.}{Módulos Z-puros y Z-cerrados}}
+
+Una parte de las nociones y resultados de esta sección y de la siguiente son
+casos particulares de nociones y resultados desarrollados en el capítulo III
+en la teoría de la cohomología local. Para comodidad del lector, damos aquí
+una exposición independiente.

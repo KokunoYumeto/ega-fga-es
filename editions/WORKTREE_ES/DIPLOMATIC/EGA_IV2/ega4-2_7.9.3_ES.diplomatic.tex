@@ -1,0 +1,89 @@
+\begin{proposition}[7.9.3]
+\label{IV.2.s7.9.3-fr}
+Sea $A$ un anillo local noetheriano reducido, y supongamos que se puede
+resolver $\operatorname{Spec}(A)$. Entonces las fibras del morfismo
+canónico $\operatorname{Spec}(\widehat A)\to\operatorname{Spec}(A)$
+en los puntos maximales de $\operatorname{Spec}(A)$ son regulares.
+\end{proposition}
+
+\begin{proof}
+Pongamos $X=\operatorname{Spec}(A)$, $X'=\operatorname{Spec}(\widehat A)$,
+y sea $g:X'\to X$ el morfismo canónico. Sea $f:Y\to X$ un morfismo
+de desingularización; pongamos $Y'=X'\times_XY$, y sean
+$f':Y'\to X'$ y $g':Y'\to Y$ las proyecciones canónicas, de modo que
+se tiene un diagrama conmutativo
+\[
+\xymatrix{
+X'\ar[d]_g & Y'\ar[l]_{f'}\ar[d]^{g'}\\
+X & Y\ar[l]^f
+}
+\]
+
+Bastará demostrar que el preesquema $Y'$ es \emph{regular}: en efecto,
+como $f$ es birracional y de tipo finito, existe un abierto $U$ denso
+en todo $X$ tal que la restricción $f^{-1}(U)\to U$ de $f$ es un
+isomorfismo y $f^{-1}(U)$ es denso en todo $Y$ (\textbf{I}, 6.5.5).
+Los preesquemas inducidos, respectivamente, en el abierto $g^{-1}(U)$
+de $X'$ y en el abierto $g'^{-1}(f^{-1}(U))$ de $Y'$ son, por tanto,
+isomorfos; esto demuestra que $g^{-1}(U)$ es regular y, \emph{a fortiori},
+también lo son las fibras de $g$ en los puntos maximales de $X$,
+que están contenidos en $U$.
+
+\oldpage[IV-2]{219}
+
+Notemos que el morfismo $f'$ es propio (\textbf{II}, 5.4.2) y, en
+particular, de tipo finito; por tanto, $Y'$ es noetheriano, puesto que
+también lo es $X'$. Sea $a'$ el punto cerrado de $X'$; para ver que $Y'$
+es regular, bastará demostrar que, \emph{para todo} $y'\in f'^{-1}(a')$,
+\emph{el anillo local $\mathcal O_{Y',y'}$ es regular}. En efecto,
+se tendrá entonces $f'^{-1}(a')\subset\operatorname{Reg}(Y')$.
+Pero, como $X'$ es el espectro de un anillo local completo y $f'$ es
+de tipo finito, $\operatorname{Reg}(Y')$ es \emph{abierto} en $Y'$
+(6.12.8); además, como el morfismo $f'$ es \emph{cerrado} y
+$f'^{-1}(a')\subset\operatorname{Reg}(Y')$, existe una vecindad $V'$
+de $a'$ en $X'$ tal que $f'^{-1}(V')\subset\operatorname{Reg}(Y')$.
+Como $\widehat A$ es un anillo local, necesariamente $V'=X'$;
+por tanto, $\operatorname{Reg}(Y')=Y'$ y la proposición quedará
+demostrada.
+
+Ahora bien, si $a$ es el punto cerrado de $X$, se tiene
+$g^{-1}(a)=\{a'\}$ y los cuerpos residuales $\boldsymbol{k}(a)$ y $\boldsymbol{k}(a')$ son
+isomorfos; por tanto, $g'^{-1}(f^{-1}(a))=f'^{-1}(a')$, y la restricción
+$f'^{-1}(a')\to f^{-1}(a)$ de $g'$ es un \emph{isomorfismo} de estas
+dos fibras. Sea $y=g'(y')$ y pongamos $B=\mathcal O_{Y,y}$; si
+$\mathfrak n=\mathfrak m_y$ es el ideal maximal de $B$, lo anterior
+muestra que en el anillo (noetheriano) $B'=B\otimes_A\widehat A$
+existe un único ideal maximal $\mathfrak n'$ sobre $\mathfrak n$ y
+se tiene $\mathcal O_{Y',y'}=B'_{\mathfrak n'}$. Para mostrar que el
+anillo local $B'_{\mathfrak n'}$ es regular, basta establecer que
+también lo es su \emph{completado} (\textbf 0, 17.1.5); ahora bien, por hipótesis
+$B$ es regular, y, por tanto, también lo es su completado $\widehat B$.
+La conclusión se seguirá, pues, del lema siguiente:
+
+\begin{lemma}[7.9.3.1]
+\label{IV.2.s7.9.3.1-fr}
+Sean $A$, $B$ dos anillos locales noetherianos,
+$\rho:A\to B$ un homomorfismo local tal que el anillo
+$B'=B\otimes_A\widehat A$ sea noetheriano. Entonces, para todo ideal
+maximal $\mathfrak n'$ de $B'$ sobre el ideal maximal $\mathfrak n$
+de $B$ y el ideal maximal de $\widehat A$, los completados de $B$
+y de $B'_{\mathfrak n'}$ son isomorfos.
+\end{lemma}
+
+\begin{proof}
+Sea $\mathfrak m$ el ideal maximal de $A$ y pongamos
+$B''=B'_{\mathfrak n'}$. Para todo entero $h>0$ se tiene
+$B'/\mathfrak m^hB'=B\otimes_A(\widehat A/\mathfrak m^h\widehat A)$;
+pero $\widehat A/\mathfrak m^h\widehat A$ es isomorfo a
+$A/\mathfrak m^h$, por lo que $B'/\mathfrak m^hB'$ es isomorfo a
+$B/\mathfrak m^hB$ y, en particular, es un anillo local cuyo ideal
+maximal es $\mathfrak n'/\mathfrak m^hB'$. Por tanto,
+$B''/\mathfrak m^hB''$, isomorfo a
+$(B'/\mathfrak m^hB')_{\mathfrak n'}$, es $B$-isomorfo a
+$B'/\mathfrak m^hB'$ y, finalmente, a $B/\mathfrak m^hB$.
+En particular, el ideal maximal de $B''$ es igual a $\mathfrak nB''$,
+y $B''/\mathfrak n^hB''$ es isomorfo a $B/\mathfrak n^h$, por lo
+anterior. Como $\widehat{B}''=\varprojlim_h(B''/\mathfrak n^hB'')$,
+queda demostrado el lema y, con él, (7.9.3).
+\end{proof}
+\end{proof}

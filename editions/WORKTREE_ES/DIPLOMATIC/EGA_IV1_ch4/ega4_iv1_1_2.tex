@@ -1,0 +1,207 @@
+\subsection{Morfismos cuasiseparados.}
+\label{subsection:IV.1.2-fr}
+
+\begin{definition}[1.2.1]
+\label{IV.1.2.1-fr}
+Sean $X$, $Y$ dos preesquemas. Se dice que un morfismo $f:X\to Y$ es
+cuasiseparado \textup{(o que} $X$ es cuasiseparado sobre $Y$\textup{)} si el
+morfismo diagonal
+$\Delta_f=(1_X,1_X)_Y:X\to X\times_Y X$ es cuasicompacto. Se dice que un
+preesquema $X$ es cuasiseparado si es cuasiseparado sobre
+$\operatorname{Spec}(\mathbf Z)$.
+\end{definition}
+
+Por definición, todo morfismo separado es cuasiseparado, pues $\Delta_f$ es una
+inmersión cerrada (1.1.2, (i)); un \emph{esquema} $X$ es un preesquema
+cuasiseparado, por ser separado sobre $\operatorname{Spec}(\mathbf Z)$ (\textbf{I}, 5.4.1).
+
+\begin{proposition}[1.2.2]
+\label{IV.1.2.2-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Todo monomorfismo de preesquemas $f:X\to Y$ (en particular toda
+  inmersión) es cuasiseparado.
+  \item[\textup{(ii)}] Si $f:X\to Y$ y $g:Y\to Z$ son dos morfismos cuasiseparados,
+  $g\circ f:X\to Z$ es cuasiseparado.
+  \item[\textup{(iii)}] Sean $X$, $Y$ dos $S$-preesquemas, $f:X\to Y$ un $S$-morfismo
+  cuasiseparado. Entonces, para todo cambio de base $g:S'\to S$, el morfismo
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ es cuasiseparado.
+  \item[\textup{(iv)}] Si $f:X\to Y$, $f':X'\to Y'$ son dos $S$-morfismos cuasiseparados,
+  entonces
+  \[
+    f\times_S f':X\times_S X'\to Y\times_S Y'
+  \]
+  es cuasiseparado.
+  \item[\textup{(v)}] Si $f:X\to Y$, $g:Y\to Z$ son dos morfismos tales que $g\circ f$
+  sea cuasiseparado, entonces $f$ es cuasiseparado.
+  \item[\textup{(vi)}] Si $f:X\to Y$ es un morfismo cuasiseparado,
+  $f_{\mathrm{red}}:X_{\mathrm{red}}\to Y_{\mathrm{red}}$ es cuasiseparado.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En virtud de (\textbf{I}, 5.5.12), basta demostrar (i), (ii) y (iii).
+
+La afirmación (i) es trivial, pues todo monomorfismo es separado (\textbf{I}, 5.5.1).
+Para demostrar (iii), se reduce inmediatamente al caso en que $Y=S$ (\textbf{I}, 3.3.11) y
+la afirmación resulta de que
+$\Delta_{f_{(S')}}=(\Delta_f)_{(S')}$ (\textbf{I}, 5.3.4) y de (1.1.2, (iii)). Para
+demostrar (ii), consideremos las proyecciones $p$ y $q$ de $X\times_Y X$ sobre
+$X$; si $i=(p,q)_Z$, se sabe que el diagrama
+\[
+\xymatrix{
+  X\times_Y X \ar[r]^-{i} \ar[d]_-{\pi} & X\times_Z X
+    \ar[d]^-{f\times_Z f} \\
+  Y \ar[r]_-{\Delta_g} & Y\times_Z Y
+}
+\]
+(donde $\pi$ es el morfismo estructural) es conmutativo e identifica
+$X\times_Y X$ con el producto de los $(Y\times_Z Y)$-preesquemas $Y$ y
+$X\times_Z X$ (\textbf{I}, 5.3.5). Si $g$ es cuasiseparado, $\Delta_g$ es
+cuasicompacto,
+\oldpage[IV-1]{227}
+por tanto lo mismo ocurre con $i$ (1.1.2, (iii)); si además $f$
+es cuasiseparado, $\Delta_f$ es cuasicompacto, por lo que también lo es
+$i\circ\Delta_f$ (1.1.2, (ii)), que es igual a $\Delta_{g\circ f}$.
+\end{proof}
+
+\begin{corollary}[1.2.3]
+\label{IV.1.2.3-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Sea $X$ un preesquema cuasiseparado. Entonces todo morfismo $f:X\to Y$
+  es cuasiseparado.
+  \item[\textup{(ii)}] Sea $Y$ un preesquema cuasiseparado. Para que un morfismo $f:X\to Y$
+  sea cuasiseparado, es necesario y suficiente que el preesquema $X$ sea
+  cuasiseparado.
+\end{enumerate}
+\end{corollary}
+
+Esto resulta inmediatamente de (1.2.2, (ii) y (v)) aplicado a $X$, $Y$ y
+$\operatorname{Spec}(\mathbf Z)$.
+
+\begin{proposition}[1.2.4]
+\label{IV.1.2.4-fr}
+Sean $f:X\to Y$ un morfismo, $g:Y\to Z$ un morfismo cuasiseparado. Si
+$g\circ f$ es cuasicompacto, lo mismo ocurre con $f$.
+\end{proposition}
+
+\begin{proof}
+Se sabe que $f$ es el morfismo compuesto
+$X\xrightarrow{\Gamma_f}X\times_ZY\xrightarrow{\mathrm{pr}_2}Y$
+(\textbf{I}, 5.3.13); por otra parte, $\mathrm{pr}_2$ se identifica con
+$(g\circ f)\times_Z1_Y$ (\textbf{I}, 3.3.4) y si $g\circ f$ es cuasicompacto, lo
+mismo ocurre con $\mathrm{pr}_2$ (1.1.2, (iv)). Por último, se tiene el diagrama
+conmutativo
+\[
+\xymatrix{
+  X \ar[r]^-{\Gamma_f} \ar[d]_-{f} & X\times_ZY
+    \ar[d]^-{f\times 1_Y} \\
+  Y \ar[r]_-{\Delta_g} & Y\times_ZY
+}
+\tag{1.2.4.1}
+\label{IV.1.2.4.1-fr}
+\]
+que identifica $X$ con el producto de los $(Y\times_ZY)$-preesquemas $Y$ y
+$X\times_ZY$ (\textbf{I}, 5.3.7). Como por hipótesis $\Delta_g$ es un morfismo
+cuasicompacto, lo mismo ocurre con $\Gamma_f$ (1.1.2, (iii)); la conclusión
+resulta, por tanto, de (1.1.2, (ii)).
+\end{proof}
+
+\begin{proposition}[1.2.5]
+\label{IV.1.2.5-fr}
+Sean $f:X\to Y$, $g:Y'\to Y$ dos morfismos,
+$X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Si $g$ es cuasicompacto y
+sobreyectivo y $f'$ cuasiseparado, entonces $f$ es cuasiseparado.
+\end{proposition}
+
+\begin{proof}
+Se tiene, en efecto, $(X'\times_{Y'}X')=(X\times_YX)_{(Y')}$ y
+$\Delta_{f'}=(\Delta_f)_{(Y')}$ (\textbf{I}, 5.3.4); como la proyección
+$X'\times_{Y'}X'\to X\times_YX$ es cuasicompacta (1.1.2, (iii)) y
+sobreyectiva (\textbf{I}, 3.5.2), se puede, en virtud de (\textbf{I}, 3.3.11), aplicar (1.1.4),
+que muestra que, puesto que $\Delta_{f'}$ es un morfismo cuasicompacto, lo
+mismo ocurre con $\Delta_f$.
+\end{proof}
+
+\begin{proposition}[1.2.6]
+\label{IV.1.2.6-fr}
+Sean $f:X\to Y$ un morfismo, $(U_\alpha)$ un recubrimiento de $Y$ por
+abiertos tales que los preesquemas inducidos $U_\alpha$ sean cuasiseparados. Para
+que $f$ sea cuasiseparado, es necesario y suficiente que cada uno de los preesquemas
+inducidos por $X$ sobre los abiertos $f^{-1}(U_\alpha)$ sea cuasiseparado.
+\end{proposition}
+
+\begin{proof}
+La imagen inversa en $X\times_YX$ de $U_\alpha$ es
+$X_\alpha\times_{U_\alpha}X_\alpha$, poniendo
+$X_\alpha=f^{-1}(U_\alpha)$, y la restricción
+$X_\alpha\to X_\alpha\times_{U_\alpha}X_\alpha$ de $\Delta_f$ no es otra
+que $\Delta_{f_\alpha}$, denotando por $f_\alpha$ la restricción
+$X_\alpha\to U_\alpha$ de $f$; en virtud de la definición (1.2.1) y del
+carácter local de la noción de morfismo cuasicompacto (1.1.1), para que $f$
+sea cuasiseparado, es necesario y suficiente que cada uno de los morfismos $f_\alpha$
+lo sea. Pero como por hipótesis el morfismo
+$U_\alpha\to\operatorname{Spec}(\mathbf Z)$ es cuasiseparado, es lo mismo
+decir que $f_\alpha$ es cuasiseparado o que el compuesto
+$X_\alpha\xrightarrow{f_\alpha}U_\alpha\to\operatorname{Spec}(\mathbf Z)$
+lo es (1.2.2, (ii) y (v)), de donde la proposición.
+\end{proof}
+
+\oldpage[IV-1]{228}
+
+Para verificar que un morfismo es cuasiseparado, se reduce, por tanto, a dar
+criterios para que un preesquema sea cuasiseparado:
+
+\begin{proposition}[1.2.7]
+\label{IV.1.2.7-fr}
+Sean $X$ un preesquema, $(U_\alpha)$ un recubrimiento de $X$ formado por abiertos
+cuasicompactos. Las propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $X$ es cuasiseparado.
+  \item[\textup{b)}] Para todo abierto cuasicompacto $U$ de $X$, la inmersión canónica
+  $U\to X$ es cuasicompacta \textup{(es decir, $U$ es \emph{retrocompacto} en $X$)}.
+  \item[\textup{b')}] La intersección de dos abiertos cuasicompactos de $X$ es
+  cuasicompacta.
+  \item[\textup{c)}] Para todo par de índices $(\alpha,\beta)$, la intersección
+  $U_\alpha\cap U_\beta$ es cuasicompacta.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Las propiedades \emph{b)} y \emph{b')} son trivialmente equivalentes por
+definición de un morfismo cuasicompacto. Como un abierto cuasicompacto es
+unión finita de abiertos afines, para dos abiertos cuasicompactos $U$, $V$ de
+$X$, $U\times_{\mathbf Z}V$ es un abierto cuasicompacto de
+$X\times_{\mathbf Z}X$ (\textbf{I}, 3.2.7), cuya imagen inversa por $\Delta_X$ es
+$U\cap V$, por lo que \emph{a)} implica \emph{b')}. Es trivial que \emph{b')}
+implica \emph{c)}; por último, si se verifica \emph{c)}, los
+$U_\alpha\times_{\mathbf Z}U_\beta$ forman un recubrimiento de
+$X\times_{\mathbf Z}X$ por abiertos cuasicompactos, y se sabe que para
+que el morfismo $\Delta_X:X\to X\times_{\mathbf Z}X$ sea cuasicompacto,
+basta que las imágenes inversas $U_\alpha\cap U_\beta$ de los
+$U_\alpha\times_{\mathbf Z}U_\beta$ por $\Delta_X$ sean cuasicompactas
+(1.1.1); por tanto \emph{c)} implica \emph{a)}.
+\end{proof}
+
+\begin{corollary}[1.2.8]
+\label{IV.1.2.8-fr}
+Todo preesquema $X$ cuyo espacio subyacente es localmente noetheriano (por
+ejemplo un preesquema localmente noetheriano) es cuasiseparado; todo morfismo
+$f:X\to Y$ es entonces cuasiseparado.
+\end{corollary}
+
+\begin{proposition}[1.2.9]
+\label{IV.1.2.9-fr}
+Sean $X'$, $X''$ dos preesquemas, $X=X'\coprod X''$ su suma,
+$f':X'\to Y$, $f'':X''\to Y$ dos morfismos, $f:X\to Y$ el morfismo que
+coincide con $f'$ en $X'$ y con $f''$ en $X''$. Para que $f$ sea
+cuasiseparado, es necesario y suficiente que $f'$ y $f''$ lo sean.
+\end{proposition}
+
+\begin{proof}
+En efecto, $X\times_YX$ es suma de los cuatro preesquemas
+$X'\times_YX'$, $X'\times_YX''$, $X''\times_YX'$ y $X''\times_YX''$, y
+$\Delta_f$ es el morfismo que coincide con $\Delta_{f'}$ en $X'$ y con
+$\Delta_{f''}$ en $X''$; la proposición resulta, por tanto, inmediatamente de las
+definiciones.
+\end{proof}
+

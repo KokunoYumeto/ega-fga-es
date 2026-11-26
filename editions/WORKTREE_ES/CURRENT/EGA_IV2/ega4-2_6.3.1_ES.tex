@@ -1,0 +1,96 @@
+\subsection{Planitud y profundidad.}
+
+\begin{proposition}[6.3.1]
+\EGAReaderTarget{ega4.c04.prop.6-3-1}{IV.2.s6.3.1-fr}
+Sean $A$, $B$ dos anillos locales noetherianos, $k$ el cuerpo residual de
+$A$, $\varphi:A\to B$ un homomorfismo local, $M$ un $A$-módulo de tipo finito
+y $N$ un $B$-módulo de tipo finito. Si $N$ es un $A$-módulo plano $\neq0$, se
+tiene
+\begin{equation}
+\operatorname{prof}_B(M\otimes_AN)=\operatorname{prof}_A(M)
++\operatorname{prof}_{B\otimes_Ak}(N\otimes_Ak).
+\tag{6.3.1.1}\label{IV.2.s6.3.1.1-fr}
+\end{equation}
+\end{proposition}
+
+Es posible limitarse al caso en que $M\neq0$, pues de lo contrario los dos
+miembros de (6.3.1.1) son iguales a $+\infty$. Procederemos por inducción sobre
+el entero $n$ igual al segundo miembro de (6.3.1.1) (que es finito en virtud
+de las hipótesis, de (\textbf 0, 16.4.6.2) y del lema de Nakayama aplicado a $N$).
+Supongamos primero $n=0$; entonces, si $\mathfrak m$ y $\mathfrak n$ designan
+los ideales maximales de $A$ y $B$, respectivamente, $\mathfrak m$ es un ideal
+primo asociado a $M$ y $\mathfrak n/\mathfrak mB$ un ideal primo de
+$B/\mathfrak mB=B\otimes_Ak$ asociado a $N\otimes_Ak$ (\textbf 0, 16.4.6, (i)). Se
+concluye entonces de (3.3.1) que $\mathfrak n$ es un ideal primo de $B$
+asociado a $M\otimes_AN$ y, por tanto, (\textbf 0, 16.4.6, (i)), que
+$\operatorname{prof}_B(M\otimes_AN)=0$. Supongamos, pues, $n>0$, y distingamos
+dos casos:
+
+$a)$ Supongamos $\operatorname{prof}_A(M)>0$. Sea $x\in\mathfrak m$ un
+elemento $M$-regular, y pongamos
+\[
+A'=A/xA,\qquad B'=B/xB,\qquad M'=M/xM,\qquad N'=N/xN;
+\]
+se tiene
+\[
+B'\otimes_{A'}k=B\otimes_Ak,\qquad N'\otimes_{A'}k=N\otimes_Ak
+\]
+puesto que $x\in\mathfrak m$, y
+\[
+M'\otimes_{A'}N'=(M\otimes_AN)/x(M\otimes_AN);
+\]
+
+\oldpage[IV-2]{139}
+
+además, como $N$ es un $A$-módulo plano, la hipótesis de que $x$ es
+$M$-regular implica que $x$ es también $(M\otimes_AN)$-regular
+$(\mathbf{0}_{\mathrm I}, 6.1.1)$. Se tiene, por tanto, (\textbf 0, 16.4.6, (ii) y 16.4.8)
+\[
+\operatorname{prof}_{A'}(M')=\operatorname{prof}_A(M)\setmin 1,
+\qquad
+\operatorname{prof}_{B'}(M'\otimes_{A'}N')
+=\operatorname{prof}_B(M\otimes_AN)\setmin 1
+\]
+y
+\[
+\operatorname{prof}_{B'\otimes_{A'}k}(N'\otimes_{A'}k)
+=\operatorname{prof}_{B\otimes_Ak}(N\otimes_Ak).
+\]
+
+La igualdad (6.3.1.1) es, pues, consecuencia de la misma relación para $A'$,
+$B'$, $M'$ y $N'$; pero, como $N$ es un $A$-módulo plano,
+$N'=N\otimes_AA'$ es un $A'$-módulo plano $(\mathbf{0}_{\mathrm I}, 6.2.1)$; se puede,
+por tanto, aplicar la hipótesis de inducción, lo que demuestra (6.3.1.1) en
+este caso.
+
+$b)$ Supongamos $\operatorname{prof}_{B\otimes_Ak}(N\otimes_Ak)>0$.
+Consideremos un elemento $y\in\mathfrak n$ que sea
+$(N\otimes_Ak)$-regular; resulta de $(\mathbf{0}_{\mathrm{III}}, 10.2.4)$ que $y$ es
+entonces $N$-regular y que
+\[
+N'=N/yN
+\]
+es un $A$-módulo \emph{plano}, puesto que se supone que $N$ es un $A$-módulo plano.
+Aplicando $(\mathbf{0}_{\mathrm I}, 6.1.2)$ a la sucesión exacta de $A$-módulos
+\[
+0\to N\xrightarrow{y}N\to N'\to0
+\]
+se concluyen los isomorfismos
+\[
+(M\otimes_AN)/y(M\otimes_AN)\xrightarrow{\sim}M\otimes_AN'
+\quad\text{y}\quad
+N'\otimes_Ak\xrightarrow{\sim}(N\otimes_Ak)/y(N\otimes_Ak)
+\]
+y, además, que $y$ es $(M\otimes_AN)$-regular. Se tiene, por tanto,
+\[
+\operatorname{prof}_{B\otimes_Ak}(N'\otimes_Ak)
+=\operatorname{prof}_{B\otimes_Ak}(N\otimes_Ak)\setmin 1
+\]
+y
+\[
+\operatorname{prof}_B(M\otimes_AN')
+=\operatorname{prof}_B(M\otimes_AN)\setmin 1;
+\]
+la hipótesis de inducción muestra que la relación (6.3.1.1) es válida para
+$A$, $B$, $M$ y $N'$, y de lo que precede se deduce (6.3.1.1) para $A$, $B$,
+$M$ y $N$.

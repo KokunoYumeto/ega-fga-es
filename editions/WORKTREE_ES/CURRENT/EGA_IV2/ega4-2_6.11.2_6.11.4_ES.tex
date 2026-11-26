@@ -1,0 +1,106 @@
+\begin{proposition}[6.11.2]
+\label{IV.2.s6.11.2-fr}
+Sea $X$ un preesquema localmente noetheriano y localmente inmersible en
+un esquema regular \textup{(5.11.1)}; sea $\mathcal F$ un $\mathcal O_X$-Módulo
+coherente. Entonces:
+\begin{enumerate}
+\item[\textup{(i)}] \textup{(M. Auslander)} La función
+$x\leadsto\operatorname{coprof}(\mathcal F_x)$ es semicontinua
+superiormente en $X$ \textup{(es decir, para todo entero $n$, el conjunto
+$U_{C_n}(\mathcal F)$ de los $x\in X$ tales que
+$\operatorname{coprof}(\mathcal F_x)\leq n$ es} abierto).
+\item[\textup{(ii)}] Para todo entero $n$, el conjunto $U_{S_n}(\mathcal F)$ de los
+$x\in X$ tales que $\mathcal F$ posee la propiedad $(S_n)$ en el punto $x$
+es abierto.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] Puesto que la cuestión es local en $X$, es posible, en virtud de
+la hipótesis, limitarse al caso en que $X$ es un subesquema cerrado de un esquema
+afín regular $Y$. Si $j:X\to Y$ es la inyección canónica y
+$\mathcal G=j_*(\mathcal F)$, se sabe que, para todo $x\in X$, se tiene
+$\dim(\mathcal F_x)=\dim(\mathcal G_x)$ y
+$\operatorname{prof}(\mathcal F_x)=\operatorname{prof}(\mathcal G_x)$,
+por tanto, $\operatorname{coprof}(\mathcal F_x)=
+\operatorname{coprof}(\mathcal G_x)$; como
+$\operatorname{coprof}(\mathcal G_y)=0$ para $y\in Y\setmin X$, la cuestión se reduce a
+probar la propiedad para $\mathcal G$. Es decir, es posible limitarse al
+caso en que $X$ es un esquema afín \emph{regular}. Se sabe entonces (\textbf 0, 17.3.4) que
+se tiene
+\[
+\operatorname{prof}(\mathcal F_x)=\dim(\mathcal O_{X,x})\setmin
+\operatorname{dim.proj}(\mathcal F_x).
+\]
+Por otra parte, si $S$ es el único subpreesquema cerrado de $X$ cuyo
+espacio subyacente es $\operatorname{Supp}(\mathcal F)$, se tiene
+$\dim(\mathcal F_x)=\operatorname{codim}(\overline{\{x\}},S)$ (5.1.12.1) y, en
+virtud de (5.1.9),
+\[
+\dim(\mathcal F_x)=\dim(\mathcal O_{X,x})\setmin\operatorname{codim}_x(S,X)
+\]
+pues $\mathcal O_{X,x}$ es un anillo regular y, \emph{a fortiori},
+biequidimensional (\textbf 0, 16.5.12). Se puede, por tanto, escribir
+\begin{equation}
+\operatorname{coprof}(\mathcal F_x)=
+\operatorname{dim.proj}(\mathcal F_x)\setmin\operatorname{codim}_x(S,X)
+\tag{6.11.2.1}\label{IV.2.s6.11.2.1-fr}
+\end{equation}
+y la proposición se sigue de (6.11.1) y de (\textbf 0, 14.2.6).
+
+\item[(ii)] Como los $U_{C_n}(\mathcal F)$ son abiertos para todo $n$ por
+(i), los $Z_n=X\setmin U_{C_n}(\mathcal F)$ son cerrados en $X$; además, es
+claro que $Z_{n+1}\subset Z_n$ y, como $\dim(\mathcal F_x)$ es finita
+para todo $x\in X$ y
+$\operatorname{coprof}(\mathcal F_x)\leq\dim(\mathcal F_x)$,
+la intersección de los $Z_n$ es \emph{vacía}; como es posible limitarse al caso en que $X$
+es afín y, por tanto, cuasicompacto, se puede suponer que existe un $m$
+\oldpage[IV-2]{160}
+tal que $Z_m=\varnothing$. Ahora bien, se sigue de (5.7.4) que la relación
+$x\in U_{S_k}(\mathcal F)$ equivale al conjunto de relaciones
+\begin{equation}
+\operatorname{codim}_x(Z_n,S)>n+k
+\tag{6.11.2.2}\label{IV.2.s6.11.2.2-fr}
+\end{equation}
+para todo $n\geq0$; pero, para $n\geq m$, esta relación se verifica
+automáticamente, de modo que basta considerar las relaciones (6.11.2.2)
+para $0\leq n<m$. Ahora bien (\textbf 0, 14.2.6), el conjunto $V_{n,k}$ de los $x$ que verifican
+(6.11.2.2) es abierto, y $U_{S_k}(\mathcal F)$, intersección de los $V_{n,k}$
+para $0\leq n<m$, es también abierto. Queda demostrado.
+\end{enumerate}
+\end{proof}
+
+Recordemos que la hipótesis de que $X$ es localmente inmersible en un esquema
+regular siempre se cumple cuando $X$ es un preesquema \emph{localmente de
+tipo finito sobre un cuerpo} $k$ (5.8.3).
+
+\begin{corollary}[6.11.3]
+\label{IV.2.s6.11.3-fr}
+Bajo las hipótesis de \textup{(6.11.2)}, el conjunto $\operatorname{CM}(\mathcal F)$
+de los puntos $x\in X$ tales que $\mathcal F_x$ es un módulo de
+Cohen-Macaulay es abierto en $X$.
+\end{corollary}
+
+\begin{proof}
+En efecto, es el conjunto $U_{C_0}(\mathcal F)$.
+\end{proof}
+
+\begin{remarks}[6.11.4]
+\label{IV.2.s6.11.4-fr}
+\begin{enumerate}
+\item[(i)] El razonamiento de (6.11.2, (ii)) prueba que (sin hipótesis sobre
+$X$), si $U_{C_n}(\mathcal F)$ es abierto para \emph{todo} entero $n$, entonces
+$U_{S_n}(\mathcal F)$ es abierto para todo entero $n$.
+\item[(ii)] Se tiene
+$\operatorname{CM}(\mathcal F)=\bigcap_nU_{S_n}(\mathcal F)$. Si todo punto
+$x\in X$ admite una vecindad abierta $V$ de dimensión \emph{finita}, la
+sucesión de intersecciones $V\cap U_{S_n}(\mathcal F)$ es \emph{estacionaria},
+pues existe un $m$ tal que $\dim(\mathcal F_x)\leq m$ para todo
+$x\in V$; por consiguiente, si los $U_{S_n}(\mathcal F)$ son abiertos para \emph{todo}
+entero $n$, $\operatorname{CM}(\mathcal F)$ es abierto en $X$.
+\item[(iii)] Se escribirá $U_{S_n}(X)$, $U_{C_n}(X)$,
+$\operatorname{CM}(X)$ en lugar de $U_{S_n}(\mathcal O_X)$,
+$U_{C_n}(\mathcal O_X)$, $\operatorname{CM}(\mathcal O_X)$.
+\end{enumerate}
+\end{remarks}

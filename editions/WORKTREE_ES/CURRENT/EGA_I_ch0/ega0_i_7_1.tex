@@ -1,0 +1,190 @@
+\section{Anillos ádicos}
+\label{section:0.7-fr}
+
+\subsection{Anillos admisibles}
+\label{subsection:0.7.1-fr}
+
+\begin{env}[7.1.1]
+\label{0.7.1.1-fr}
+Recordemos que en un anillo topológico $A$ (no necesariamente separado), se
+dice que un elemento $x$ es \emph{topológicamente nilpotente} si $0$ es \emph{un} límite de
+la sucesión $(x^n)_{n\geq0}$. Se dice que un anillo topológico $A$ está
+\emph{linealmente topologizado} si existe un sistema fundamental de vecindades de
+$0$ en $A$ formado por \emph{ideales} (necesariamente \emph{abiertos}).
+\end{env}
+
+\begin{definition}[7.1.2]
+\label{0.7.1.2-fr}
+En un anillo linealmente topologizado $A$, se dice que un ideal $\mathfrak J$
+es un \textup{ideal de definición} si $\mathfrak J$ es abierto y si, para toda
+vecindad $V$ de $0$, existe un entero $n>0$ tal
+
+\oldpage[0\textsubscript{I}]{61}
+
+que $\mathfrak J^n\subset V$ \textup{(lo que se expresa, por abuso de lenguaje, diciendo
+que la sucesión $(\mathfrak J^n)$ \emph{tiende a} $0$)}. Se dice que un anillo linealmente
+topologizado $A$ es \emph{preadmisible} si existe en $A$ un ideal de definición;
+se dice que $A$ es \emph{admisible} si es preadmisible y si además es
+separado y completo.
+\end{definition}
+
+Es claro que si $\mathfrak J$ es un ideal de definición, $\mathfrak L$ un
+ideal abierto de $A$, $\mathfrak J\cap\mathfrak L$ es también un ideal de
+definición; los ideales de definición de un anillo preadmisible $A$ forman,
+pues, un \emph{sistema fundamental de vecindades de} $0$.
+
+\begin{lemma}[7.1.3]
+\label{0.7.1.3-fr}
+Sea $A$ un anillo linealmente topologizado.
+\begin{enumerate}
+  \item[{\upshape(i)}] Para que $x\in A$ sea topológicamente nilpotente, es
+    necesario y suficiente que para todo ideal abierto $\mathfrak J$ de $A$, la imagen
+    canónica de $x$ en $A/\mathfrak J$ sea nilpotente. El conjunto
+    $\mathfrak T$ de los elementos topológicamente nilpotentes de $A$ es un ideal.
+  \item[{\upshape(ii)}] Supongamos además que $A$ es preadmisible, y sea
+    $\mathfrak J$ un ideal de definición de $A$. Para que $x\in A$ sea
+    topológicamente nilpotente, es necesario y suficiente que su imagen canónica en
+    $A/\mathfrak J$ sea nilpotente; el ideal $\mathfrak T$ es la imagen
+    inversa del nilradical de $A/\mathfrak J$ y es, por tanto, abierto.
+\end{enumerate}
+\end{lemma}
+
+(i) se deduce inmediatamente de las definiciones. Para probar (ii), basta
+observar que para toda vecindad $V$ de $0$ en $A$, existe $n>0$ tal que
+$\mathfrak J^n\subset V$; si $x\in A$ es tal que $x^m\in\mathfrak J$, se tiene
+$x^{mq}\in V$ para $q\geq n$, por tanto $x$ es topológicamente nilpotente.
+
+\begin{proposition}[7.1.4]
+\label{0.7.1.4-fr}
+Sean $A$ un anillo preadmisible, $\mathfrak J$ un ideal de definición de
+$A$.
+\begin{enumerate}
+  \item[{\upshape(i)}] Para que un ideal $\mathfrak J'$ de $A$ esté contenido
+    en un ideal de definición, es necesario y suficiente que exista un entero
+    $n>0$ tal que ${\mathfrak J'}^n\subset\mathfrak J$.
+  \item[{\upshape(ii)}] Para que un $x\in A$ esté contenido en un ideal de
+    definición, es necesario y suficiente que sea topológicamente nilpotente.
+\end{enumerate}
+\end{proposition}
+
+(i) Si ${\mathfrak J'}^n\subset\mathfrak J$, para toda vecindad abierta $V$ de
+$0$ en $A$, existe $m$ tal que $\mathfrak J^m\subset V$, por tanto
+${\mathfrak J'}^{mn}\subset V$.
+
+(ii) La condición es evidentemente necesaria; es suficiente, pues si se
+cumple, existe $n$ tal que $x^n\in\mathfrak J$, por tanto
+$\mathfrak J'=\mathfrak J+Ax$ es un ideal de definición, puesto que es abierto,
+y que ${\mathfrak J'}^n\subset\mathfrak J$.
+
+\begin{corollary}[7.1.5]
+\label{0.7.1.5-fr}
+En un anillo preadmisible $A$, un ideal primo abierto contiene todos los
+ideales de definición.
+\end{corollary}
+
+\begin{corollary}[7.1.6]
+\label{0.7.1.6-fr}
+Siendo las notaciones y las hipótesis las de \textup{(7.1.4)}, las propiedades siguientes
+de un ideal $\mathfrak J_0$ de $A$ son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $\mathfrak J_0$ es el mayor ideal de definición de $A$;
+  \item[$b)$] $\mathfrak J_0$ es un ideal de definición maximal;
+  \item[$c)$] $\mathfrak J_0$ es un ideal de definición tal que el anillo
+    $A/\mathfrak J_0$ es reducido.
+\end{enumerate}
+Para que exista un ideal $\mathfrak J_0$ con estas propiedades, es necesario y
+suficiente que el nilradical de $A/\mathfrak J$ sea nilpotente; $\mathfrak J_0$
+es entonces igual al ideal $\mathfrak T$ de los elementos topológicamente nilpotentes
+de $A$.
+\end{corollary}
+
+Es claro que $a)$ implica $b)$, y $b)$ implica $c)$ en virtud de
+(7.1.4, (ii)) y (7.1.3, (ii)); por la misma razón, $c)$ implica $a)$. La
+última afirmación resulta de (7.1.4, (i)) y (7.1.3, (ii)).
+
+Cuando $\mathfrak T/\mathfrak J$, nilradical de $A/\mathfrak J$, es
+nilpotente, se denota por $A_{\mathrm{red}}$ el anillo cociente (reducido)
+$A/\mathfrak T$.
+
+\oldpage[0\textsubscript{I}]{62}
+
+\begin{corollary}[7.1.7]
+\label{0.7.1.7-fr}
+Un anillo preadmisible noetheriano admite un mayor ideal de definición.
+\end{corollary}
+
+\begin{corollary}[7.1.8]
+\label{0.7.1.8-fr}
+Si un anillo preadmisible $A$ es tal que, para un ideal de definición
+$\mathfrak J$, las potencias $\mathfrak J^n$ ($n>0$) forman un sistema
+fundamental de vecindades de $0$, lo mismo ocurre con las potencias
+${\mathfrak J'}^n$ de todo ideal de definición $\mathfrak J'$ de $A$.
+\end{corollary}
+
+\begin{definition}[7.1.9]
+\label{0.7.1.9-fr}
+Se dice que un anillo preadmisible $A$ es \emph{preádico} si existe un ideal de
+definición $\mathfrak J$ de $A$ tal que los $\mathfrak J^n$ forman un sistema
+fundamental de vecindades de $0$ en $A$ \textup{(o, lo que equivale a lo mismo, tal que
+los $\mathfrak J^n$ son \emph{abiertos})}. Se llama anillo \emph{ádico} a un anillo
+preádico separado y completo.
+\end{definition}
+
+Si $\mathfrak J$ es un ideal de definición de un anillo preádico (resp.
+ádico) $A$, se dice también que $A$ es un anillo
+\emph{$\mathfrak J$-preádico} (resp. \emph{$\mathfrak J$-ádico}), y que su
+topología es la topología \emph{$\mathfrak J$-preádica} (resp.
+\emph{$\mathfrak J$-ádica}). Más generalmente, si $M$ es un $A$-módulo, la
+topología sobre $M$ que tiene como sistema fundamental de vecindades de $0$ los
+submódulos $\mathfrak J^nM$ se llama topología
+\emph{$\mathfrak J$-preádica} (resp. \emph{$\mathfrak J$-ádica}). En virtud
+de (7.1.8), estas topologías son independientes de la elección del ideal de definición
+$\mathfrak J$.
+
+\begin{proposition}[7.1.10]
+\label{0.7.1.10-fr}
+Sean $A$ un anillo admisible, $\mathfrak J$ un ideal de definición de $A$.
+Entonces $\mathfrak J$ está contenido en el radical de $A$.
+\end{proposition}
+
+Este enunciado equivale a cualquiera de los corolarios siguientes:
+
+\begin{corollary}[7.1.11]
+\label{0.7.1.11-fr}
+Para todo $x\in\mathfrak J$, $1+x$ es invertible en $A$.
+\end{corollary}
+
+\begin{corollary}[7.1.12]
+\label{0.7.1.12-fr}
+Para que $f\in A$ sea invertible en $A$, es necesario y suficiente que su imagen
+canónica en $A/\mathfrak J$ sea invertible en $A/\mathfrak J$.
+\end{corollary}
+
+\begin{corollary}[7.1.13]
+\label{0.7.1.13-fr}
+Para todo $A$-módulo $M$ de tipo finito, la relación $M=\mathfrak JM$
+(equivalente a $M\otimes_A(A/\mathfrak J)=0$) implica $M=0$.
+\end{corollary}
+
+\begin{corollary}[7.1.14]
+\label{0.7.1.14-fr}
+Sea $u:M\to N$ un homomorfismo de $A$-módulos, siendo $N$ de tipo finito;
+para que $u$ sea sobreyectivo, es necesario y suficiente que
+$u\otimes1:M\otimes_A(A/\mathfrak J)\to N\otimes_A(A/\mathfrak J)$ lo sea.
+\end{corollary}
+
+En efecto, la equivalencia de (7.1.10) y (7.1.11) resulta de Bourbaki,
+\emph{Alg.}, cap.~VIII, \textsection6, n\textsuperscript{o}~3, teorema~1, y
+la de (7.1.10) y (7.1.13) de \emph{loc. cit.}, teorema~2; el hecho de que
+(7.1.10) implica (7.1.14) resulta de \emph{loc. cit.}, cor.~4 de la prop.~6;
+por otra parte, (7.1.14) implica (7.1.13) aplicándolo al homomorfismo nulo.
+Finalmente, (7.1.10) implica que si $f$ es invertible en $A/\mathfrak J$, $f$
+no está contenido en ningún ideal maximal de $A$, por tanto $f$ es invertible en
+$A$, es decir, (7.1.10) implica (7.1.12); y, recíprocamente, (7.1.12)
+implica (7.1.11).
+
+Todo se reduce, pues, a demostrar (7.1.11). Ahora bien, como $A$ es separado y completo y
+la sucesión $(\mathfrak J^n)$ tiende a $0$, es inmediato que la serie
+$\sum_{n=0}^{\infty}(-1)^n x^n$ es convergente en $A$ y que, si $y$ es
+su suma, se tiene $y(1+x)=1$.
+

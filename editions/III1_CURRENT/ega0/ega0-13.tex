@@ -1,127 +1,86 @@
 \section{Límites proyectivos en álgebra homológica}
 \label{section:0.13}
+\label{section:0.13-fr}
 
 \subsection{La condición de Mittag-Leffler}
 \label{subsection:0.13.1}
+\label{subsection:0.13.1-fr}
 
 \begin{env}[13.1.1]
 \label{0.13.1.1}
-Sea $\cat{C}$ una categoría abeliana en la que existan los productos
+\label{0.13.1.1-fr}
+Sea $\boldsymbol{C}$ una categoría abeliana en la que existan los productos
 infinitos (axioma AB~3*) de T, 1.5).
 Entonces existe el ínfimo de una familia de subobjetos de un objeto de
-$\cat{C}$, y todo sistema proyectivo de objetos de $\cat{C}$ posee un
+$\boldsymbol{C}$, y todo sistema proyectivo de objetos de $\boldsymbol{C}$ posee un
 límite proyectivo; este último es un funtor exacto por la izquierda del
 sistema proyectivo en cuestión (T, 1.8).
 \oldpage[0\textsubscript{III}]{65}
 Sea $(A_\alpha,f_{\alpha\beta})$ un sistema proyectivo de objetos de
-$\cat{C}$ cuyo conjunto de índices $\mathrm{I}$ está \emph{filtrado} por la derecha.
-Pongamos
-\[
-  A=\varprojlim A_\alpha,
-\]
-y, para cada $\alpha\in\mathrm{I}$, sea
-$f_\alpha:A\longrightarrow A_\alpha$ el morfismo canónico.
-Para todo $\alpha\in\mathrm{I}$, los subobjetos
+$\boldsymbol{C}$ cuyo conjunto de índices $I$ es \emph{filtrante} a la derecha; sean $A=\varprojlim A_\alpha$
+y, para cada $\alpha\in I$, sea
+$f_\alpha:A\to A_\alpha$ el morfismo canónico.
+Para todo $\alpha\in I$, los subobjetos
 $f_{\alpha\beta}(A_\beta)$, para $\alpha\leq\beta$, forman una familia
-filtrada decreciente de subobjetos de $A_\alpha$.
+filtrante decreciente de subobjetos de $A_\alpha$.
 El subobjeto
-\[
-  A'_\alpha
-  =
-  \inf_{\beta\geq\alpha}f_{\alpha\beta}(A_\beta)
-\]
-se llama el subobjeto de las \emph{imágenes universales} en $A_\alpha$.
-Está claro que
-\[
-  f_\alpha(A)\subset A'_\alpha,
-  \qquad
-  f_{\alpha\beta}(A'_\beta)\subset A'_\alpha
-  \quad(\alpha\leq\beta).
-\]
-Así,
+$A'_\alpha=\inf_{\beta\geq\alpha}f_{\alpha\beta}(A_\beta)$
+se llama el subobjeto de las \emph{imágenes universales} en $A_\alpha$; está claro que $f_\alpha(A)\subset A'_\alpha$ y $f_{\alpha\beta}(A'_\beta)\subset A'_\alpha$ para $\alpha\leq\beta$; por tanto
 $(A'_\alpha,f_{\alpha\beta}|A'_\beta)$ es un sistema proyectivo y
-\[
-  A=\varprojlim A'_\alpha.
-\]
+$A=\varprojlim A'_\alpha$.
 \end{env}
 
 \begin{env}[13.1.2]
 \label{0.13.1.2}
-Para un sistema proyectivo $(A_\alpha,f_{\alpha\beta})$ en $\cat{C}$,
+\label{0.13.1.2-fr}
+Para un sistema proyectivo $(A_\alpha,f_{\alpha\beta})$ en $\boldsymbol{C}$,
 se llama \emph{condición de Mittag-Leffler} a la siguiente:
 \begin{itemize}
   \item[(ML)]
   \emph{Para todo índice $\alpha$, existe un $\beta\geq\alpha$ tal
   que, para todo $\gamma\geq\beta$,}
-  \[
-    f_{\alpha\gamma}(A_\gamma)
-    =
-    f_{\alpha\beta}(A_\beta).
-  \]
+  $f_{\alpha\gamma}(A_\gamma)=f_{\alpha\beta}(A_\beta)$.
 \end{itemize}
 
 Está claro que la condición (ML) se cumple si todos los
-$f_{\alpha\beta}$ son epimorfismos.
-Recíprocamente, supongamos que se cumple (ML), y para cada
-$\alpha\in\mathrm{I}$ sea $A'_\alpha$ el subobjeto de las imágenes
-universales en $A_\alpha$.
-Entonces, para $\alpha\leq\beta$, la restricción de
-$f_{\alpha\beta}$ a $A'_\beta$ es un \emph{epimorfismo}
-\[
-  A'_\beta\longrightarrow A'_\alpha.
-\]
-En efecto, elijamos $\gamma\geq\beta$ tal que
-\[
-  f_{\beta\delta}(A_\delta)
-  =
-  f_{\beta\gamma}(A_\gamma)
-  \qquad(\delta\geq\gamma).
-\]
-Entonces $A'_\beta=f_{\beta\gamma}(A_\gamma)$, y por tanto
-\[
-  f_{\alpha\beta}(A'_\beta)
-  =
-  f_{\alpha\gamma}(A_\gamma),
-  \qquad
-  A'_\alpha
-  =
-  f_{\alpha\gamma}(A_\gamma)
-  =
-  f_{\alpha\beta}(A'_\beta).
-\]
+$f_{\alpha\beta}$ son \emph{epimorfismos}, la condición (ML) se satisface. Recíprocamente, si se satisface (ML), y si para todo $\alpha\in I$ sea $A'_\alpha$ el subobjeto de las imágenes
+universales en $A_\alpha$, la restricción de $f_{\alpha\beta}$ a $A'_\beta$ es un \emph{epimorfismo}
+$A'_\beta\to A'_\alpha$ para $\alpha\leq\beta$: en efecto, si $\gamma\geq\beta$ es tal que $f_{\beta\delta}(A_\delta)=f_{\beta\gamma}(A_\gamma)$ para $\delta\geq\gamma$, se tiene
+$A'_\beta=f_{\beta\gamma}(A_\gamma)$ y esto implica, por otra parte, $f_{\alpha\delta}(A_\delta)=f_{\alpha\gamma}(A_\gamma)$ para $\delta\geq\gamma$, por tanto $A'_\alpha=f_{\alpha\gamma}(A_\gamma)=f_{\alpha\beta}(A'_\beta)$.
 
-La condición (ML) se cumple también cuando los objetos $A_\alpha$ son
-\emph{artinianos} en $\cat{C}$, es decir, cuando toda familia de
+Observemos también que la condición (ML) se satisface cuando los objetos $A_\alpha$ son
+\emph{artinianos} en $\boldsymbol{C}$, es decir, cuando toda familia de
 subobjetos de $A_\alpha$ posee un elemento minimal.
-En efecto, un elemento minimal de la familia filtrada decreciente
-$\bigl(f_{\alpha\beta}(A_\beta)\bigr)$ de subobjetos de $A_\alpha$
+En efecto, un elemento minimal de la familia filtrante decreciente
+$(f_{\alpha\beta}(A_\beta))$ de subobjetos de $A_\alpha$
 es necesariamente el menor de esos subobjetos.
 \end{env}
 
-\begin{env}[13.1.3]
+\begin{remark}[13.1.3]
 \label{0.13.1.3}
+\label{0.13.1.3-fr}
 \emph{Observación} (13.1.3).
-La condición (ML) puede formularse también cuando $\cat{C}$ es, por
+La condición (ML) puede formularse también cuando $\boldsymbol{C}$ es, por
 ejemplo, la categoría de conjuntos.
 Se puede definir de nuevo el subconjunto de las imágenes universales en
 $A_\alpha$, y las observaciones hechas en \sref{0.13.1.1} y
 \sref{0.13.1.2} siguen siendo válidas.
-\end{env}
+\end{remark}
 
 \subsection{La condición de Mittag-Leffler para grupos abelianos}
 \label{subsection:0.13.2}
+\label{subsection:0.13.2-fr}
 
 \begin{proposition}[13.2.1]
 \label{0.13.2.1}
+\label{0.13.2.1-fr}
 Sea
 \[
-  0\longrightarrow A_\alpha
-  \xrightarrow{u_\alpha}B_\alpha
-  \xrightarrow{v_\alpha}C_\alpha
-  \longrightarrow0
+0\longrightarrow A_\alpha\xrightarrow{u_\alpha}B_\alpha
+\xrightarrow{v_\alpha}C_\alpha\longrightarrow0
 \]
 una sucesión exacta de sistemas proyectivos de grupos abelianos, relativos
-al mismo conjunto de índices filtrado $\mathrm{I}$.
+al mismo conjunto de índices filtrante $I$.
 \begin{enumerate}
   \item[{\rm(i)}]
   Si $(B_\alpha)$ satisface {\rm(ML)}, entonces también $(C_\alpha)$.
@@ -134,175 +93,82 @@ al mismo conjunto de índices filtrado $\mathrm{I}$.
 \begin{proof}
 Sean $(f_{\alpha\beta})$, $(g_{\alpha\beta})$ y
 $(h_{\alpha\beta})$ los sistemas de homomorfismos que definen
-$(A_\alpha)$, $(B_\alpha)$ y $(C_\alpha)$, respectivamente.
+$(A_\alpha)$, $(B_\alpha)$ y $(C_\alpha)$ respectivamente.
 
-(i) Supongamos que
-\[
-  g_{\alpha\beta}(B_\beta)
-  =
-  g_{\alpha\lambda}(B_\lambda)
-  \qquad(\lambda\geq\beta).
-\]
-Como $v_\beta$ y $v_\lambda$ son sobreyectivos,
-\[
-  h_{\alpha\beta}(C_\beta)
-  =
-  v_\alpha\bigl(g_{\alpha\beta}(B_\beta)\bigr)
-  =
-  v_\alpha\bigl(g_{\alpha\lambda}(B_\lambda)\bigr)
-  =
-  h_{\alpha\lambda}(C_\lambda)
-\]
+(i) Supongamos que $g_{\alpha\beta}(B_\beta)=g_{\alpha\lambda}(B_\lambda)$ para $\lambda\geq\beta$; como $v_\beta$ y $v_\lambda$ son sobreyectivos,
+$h_{\alpha\beta}(C_\beta)=v_\alpha(g_{\alpha\beta}(B_\beta))=v_\alpha(g_{\alpha\lambda}(B_\lambda))=h_{\alpha\lambda}(C_\lambda)$
 para $\lambda\geq\beta$.
 
-(ii) Sea $\alpha\in\mathrm{I}$.
-Elijamos $\beta\geq\alpha$ tal que
-\[
-  f_{\alpha\beta}(A_\beta)
-  =
-  f_{\alpha\lambda}(A_\lambda)
-  \qquad(\lambda\geq\beta),
-\]
-y elijamos después $\gamma\geq\beta$ tal que
-\[
-  h_{\beta\gamma}(C_\gamma)
-  =
-  h_{\beta\lambda}(C_\lambda)
-  \qquad(\lambda\geq\gamma).
-\]
-Sea $y_\alpha\in g_{\alpha\gamma}(B_\gamma)$, escribamos
+(ii) Sea $\alpha\in I$, y sea $\beta\geq\alpha$ un índice tal que para $\lambda\geq\beta$ se tenga $f_{\alpha\beta}(A_\beta)=f_{\alpha\lambda}(A_\lambda)$; sea, por otra parte, $\gamma\geq\beta$ un índice tal que, para $\lambda\geq\gamma$, se tenga $h_{\beta\gamma}(C_\gamma)=h_{\beta\lambda}(C_\lambda)$. Sea entonces $y_\alpha$ un elemento de $g_{\alpha\gamma}(B_\gamma)$; se tiene, pues,
 $y_\alpha=g_{\alpha\gamma}(y_\gamma)$ con $y_\gamma\in B_\gamma$,
 y pongamos $y_\beta=g_{\beta\gamma}(y_\gamma)$.
 Entonces
-\[
-  v_\beta(y_\beta)
-  =
-  h_{\beta\gamma}\bigl(v_\gamma(y_\gamma)\bigr).
-\]
+$v_\beta(y_\beta)=h_{\beta\gamma}(v_\gamma(y_\gamma))$.
 Para todo $\lambda\geq\gamma$, existe, por hipótesis, un
 $y_\lambda\in B_\lambda$ tal que
-\[
-  h_{\beta\gamma}\bigl(v_\gamma(y_\gamma)\bigr)
-  =
-  h_{\beta\lambda}\bigl(v_\lambda(y_\lambda)\bigr).
-\]
+$h_{\beta\gamma}(v_\gamma(y_\gamma))
+=h_{\beta\lambda}(v_\lambda(y_\lambda))
+=v_\beta(g_{\beta\lambda}(y_\lambda))$,
 De aquí que
 $v_\beta(y_\beta\setmin g_{\beta\lambda}(y_\lambda))=0$, y por tanto
 existe un $x_\beta\in A_\beta$
 \oldpage[0\textsubscript{III}]{66}
 tal que
-\[
-  y_\beta
-  =
-  g_{\beta\lambda}(y_\lambda)+u_\beta(x_\beta).
-\]
+$y_\beta=g_{\beta\lambda}(y_\lambda)+u_\beta(x_\beta)$.
 Se sigue que
-\[
-  y_\alpha
-  =
-  g_{\alpha\lambda}(y_\lambda)
-  +
-  u_\alpha\bigl(f_{\alpha\beta}(x_\beta)\bigr).
-\]
+$y_\alpha=g_{\alpha\lambda}(y_\lambda)+u_\alpha(f_{\alpha\beta}(x_\beta))$
 Como $\lambda\geq\beta$, existe un $x_\lambda\in A_\lambda$ tal
 que
-\[
-  f_{\alpha\beta}(x_\beta)=f_{\alpha\lambda}(x_\lambda).
-\]
+$f_{\alpha\beta}(x_\beta)=f_{\alpha\lambda}(x_\lambda)$,
 Por consiguiente,
-\[
-  y_\alpha
-  =
-  g_{\alpha\lambda}
-  \bigl(y_\lambda+u_\lambda(x_\lambda)\bigr)
-  \in g_{\alpha\lambda}(B_\lambda),
-\]
+$y_\alpha=g_{\alpha\lambda}(y_\lambda+u_\lambda(x_\lambda))\in g_{\alpha\lambda}(B_\lambda)$,
 lo que demuestra la aserción.
 \end{proof}
 
 \begin{proposition}[13.2.2]
 \label{0.13.2.2}
-Sea $\mathrm{I}$ un conjunto ordenado filtrado que posee un subconjunto
+\label{0.13.2.2-fr}
+Sea $I$ un conjunto ordenado filtrante que posee un subconjunto
 cofinal numerable, y sea
 \[
-  0\longrightarrow A_\alpha
-  \xrightarrow{u_\alpha}B_\alpha
-  \xrightarrow{v_\alpha}C_\alpha
-  \longrightarrow0
+0\longrightarrow A_\alpha\xrightarrow{u_\alpha}B_\alpha
+\xrightarrow{v_\alpha}C_\alpha\longrightarrow0
 \]
 una sucesión exacta de sistemas proyectivos de grupos abelianos indexados
-por $\mathrm{I}$.
+por $I$.
 Si $(A_\alpha)$ satisface {\rm(ML)}, entonces la sucesión
 \[
-  0\longrightarrow\varprojlim A_\alpha
-  \longrightarrow\varprojlim B_\alpha
-  \longrightarrow\varprojlim C_\alpha
-  \longrightarrow0
+0\longrightarrow\varprojlim A_\alpha
+\longrightarrow\varprojlim B_\alpha
+\longrightarrow\varprojlim C_\alpha\longrightarrow0
 \]
 es exacta.
 \end{proposition}
 
 \begin{proof}
 Solo queda demostrar que el homomorfismo
-\[
-  v=\varprojlim v_\alpha:
-  \varprojlim B_\alpha\longrightarrow\varprojlim C_\alpha
-\]
-es sobreyectivo.
-Sea $z=(z_\alpha)\in\varprojlim C_\alpha$, y pongamos
-\[
-  E_\alpha=v_\alpha^{-1}(z_\alpha).
-\]
+$v=\varprojlim v_\alpha:\varprojlim B_\alpha\to\varprojlim C_\alpha$ es sobreyectivo. Sea $z=(z_\alpha)$ un elemento de $\varprojlim C_\alpha$, y pongamos
+$E_\alpha=v_\alpha^{-1}(z_\alpha)$
 Los $E_\alpha$ forman manifiestamente un sistema proyectivo de conjuntos no
 vacíos mediante las restricciones de los homomorfismos
-$g_{\alpha\beta}:B_\beta\longrightarrow B_\alpha$.
+$g_{\alpha\beta}:B_\beta\to B_\alpha$.
 
 Demostremos que este sistema proyectivo satisface (ML).
 Identificando $A_\alpha$ con un subgrupo de $B_\alpha$ por medio de
-$u_\alpha$, elijamos, para todo $\alpha\in\mathrm{I}$, un índice
-$\beta\geq\alpha$ tal que
-\[
-  g_{\alpha\beta}(A_\beta)
-  =
-  g_{\alpha\lambda}(A_\lambda)
-  \qquad(\lambda\geq\beta).
-\]
-Afirmamos que también
-\[
-  g_{\alpha\beta}(E_\beta)
-  =
-  g_{\alpha\lambda}(E_\lambda)
-  \qquad(\lambda\geq\beta).
-\]
-En efecto, tomemos $y_\lambda\in E_\lambda$ y pongamos
-\[
-  y_\beta=g_{\beta\lambda}(y_\lambda),
-  \qquad
-  y_\alpha=g_{\alpha\lambda}(y_\lambda).
-\]
-Sea $y'_\alpha=g_{\alpha\beta}(y'_\beta)$ para algún
+$u_\alpha$, para todo $\alpha\in I$, un índice
+$\beta\geq\alpha$ tal que $g_{\alpha\beta}(A_\beta)=g_{\alpha\lambda}(A_\lambda)$ para $\lambda\geq\beta$; mostremos que se tiene también $g_{\alpha\beta}(E_\beta)=g_{\alpha\lambda}(E_\lambda)$ para $\lambda\geq\beta$. En efecto, tomemos un $y_\lambda\in E_\lambda$ y pongamos $y_\beta=g_{\beta\lambda}(y_\lambda)$, $y_\alpha=g_{\alpha\lambda}(y_\lambda)$; sea $y'_\alpha\in g_{\alpha\beta}(E_\beta)$, de modo que
+$y'_\alpha=g_{\alpha\beta}(y'_\beta)$ para algún
 $y'_\beta\in E_\beta$.
 Entonces $y'_\beta\setmin y_\beta=x_\beta\in A_\beta$, y por hipótesis existe
 un $x_\lambda\in A_\lambda$ tal que
-\[
-  g_{\alpha\beta}(x_\beta)
-  =
-  g_{\alpha\lambda}(x_\lambda).
-\]
+$g_{\alpha\beta}(x_\beta)=g_{\alpha\lambda}(x_\lambda)$
 Así,
 \[
-  y'_\alpha
-  =
-  g_{\alpha\beta}(y_\beta)+g_{\alpha\beta}(x_\beta)
-  =
-  g_{\alpha\lambda}(y_\lambda+x_\lambda)
-  \in g_{\alpha\lambda}(E_\lambda),
-\]
-lo que demuestra la afirmación.
-
-Se sabe (Bourbaki, \emph{Top.\ g\'{e}n.}, cap.~II,
-\textsection3, teorema~1) que, bajo las hipótesis impuestas a
-$\mathrm{I}$, un sistema proyectivo de conjuntos no vacíos que satisface (ML)
+y'_\alpha=g_{\alpha\beta}(y_\beta)+g_{\alpha\beta}(x_\beta)
+=g_{\alpha\lambda}(y_\lambda)+g_{\alpha\lambda}(x_\lambda)
+=g_{\alpha\lambda}(y_\lambda+x_\lambda)
+\in g_{\alpha\lambda}(E_\lambda),
+\] lo que demuestra nuestra aserción. Dicho esto, se sabe (Bourbaki, \emph{Top. gén.}, cap.~II, 3\textsuperscript{a} ed., §~3, teorema~1) que bajo las hipótesis hechas sobre $I$, un sistema proyectivo de conjuntos no vacíos que satisface (ML)
 posee un límite proyectivo no vacío.
 Existe, por tanto, un punto
 $y=(y_\alpha)\in\varprojlim E_\alpha$.
@@ -312,144 +178,99 @@ $z=v(y)$.
 
 \begin{proposition}[13.2.3]
 \label{0.13.2.3}
-Bajo las hipótesis sobre $\mathrm{I}$ de \sref{0.13.2.2}, sea
-$(\mathrm{K}^\bullet_\alpha)_{\alpha\in\mathrm{I}}$ un sistema proyectivo
+\label{0.13.2.3-fr}
+Bajo las hipótesis sobre $I$ de \sref{0.13.2.2}, sea
+$(K_\alpha^\bullet)_{\alpha\in I}$ un sistema proyectivo
 de complejos de grupos abelianos
-\[
-  \mathrm{K}^\bullet_\alpha
-  =
-  (\mathrm{K}^n_\alpha)_{n\in\bb{Z}},
-\]
+$K_\alpha^\bullet=(K_\alpha^n)_{n\in\mathbb Z}$
 cuyas diferenciales tienen grado $+1$.
 Para todo $n$, existe un homomorfismo canónico funtorial
 \begin{equation}
-\label{0.13.2.3.1}
+\label{0.13.2.3.1-fr}
 \tag{13.2.3.1}
-  h_n:
-  \HH^n\bigl(\varprojlim\mathrm{K}^\bullet_\alpha\bigr)
-  \longrightarrow
-  \varprojlim\HH^n(\mathrm{K}^\bullet_\alpha).
+h_n:H^n(\varprojlim K_\alpha^\bullet)
+\longrightarrow\varprojlim H^n(K_\alpha^\bullet).
 \end{equation}
 Si, para todo grado $n$, el sistema proyectivo de grupos abelianos
-$(\mathrm{K}^n_\alpha)_{\alpha\in\mathrm{I}}$ satisface {\rm(ML)},
-entonces todo $h_n$ es sobreyectivo.
-Si, además, el sistema proyectivo
-$(\HH^{n-1}(\mathrm{K}^\bullet_\alpha))_{\alpha\in\mathrm{I}}$
+$(K_\alpha^n)_{\alpha\in I}$ satisface {\rm(ML)},
+entonces todo $h_n$ son sobreyectivos. Si además, para un grado $n$, el sistema proyectivo $(H^{n-1}(K_\alpha^\bullet))_{\alpha\in I}$
 satisface {\rm(ML)}, entonces $h_n$ es biyectivo.
 \end{proposition}
 
 \begin{proof}
-Pongamos
+Pongamos, para todo $n$, $K^n=\varprojlim K_\alpha^n$; la definición de los homomorfismos $h_n$ están definidos por los diagramas conmutativos
 \[
-  \mathrm{K}^n=\varprojlim\mathrm{K}^n_\alpha
-  \qquad(n\in\bb{Z}).
-\]
-Los homomorfismos $h_n$ están definidos por los diagramas conmutativos
-\[
-  \xymatrix{
-    \cdots\ar[r]
-      & \mathrm{K}^{n-1}\ar[r]\ar[d]
-      & \mathrm{K}^n\ar[r]\ar[d]
-      & \mathrm{K}^{n+1}\ar[r]\ar[d]
-      & \cdots\\
-    \cdots\ar[r]
-      & \mathrm{K}^{n-1}_\alpha\ar[r]
-      & \mathrm{K}^n_\alpha\ar[r]
-      & \mathrm{K}^{n+1}_\alpha\ar[r]
-      & \cdots,
-  }
+\xymatrix{
+\ldots\ar[r]&K^{n-1}\ar[r]\ar[d]&K^n\ar[r]\ar[d]
+&K^{n+1}\ar[r]\ar[d]&\ldots\\
+\ldots\ar[r]&K_\alpha^{n-1}\ar[r]&K_\alpha^n\ar[r]
+&K_\alpha^{n+1}\ar[r]&\ldots
+}
 \]
 \oldpage[0\textsubscript{III}]{67}
-siendo las diferenciales en $\mathrm{K}^\bullet$ los límites proyectivos
+siendo las diferenciales en $K^\bullet$ los límites proyectivos
 de las diferenciales correspondientes en los
-$\mathrm{K}^\bullet_\alpha$.
+$K_\alpha^\bullet$.
 Consideremos las sucesiones exactas
 \[
-  (*_n)\qquad
-  0\longrightarrow
-  \mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow
-  \mathrm{Z}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow
-  \HH^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow0
+(*_n)\qquad
+0\longrightarrow \mathrm B^n(K_\alpha^\bullet)
+\longrightarrow \mathrm Z^n(K_\alpha^\bullet)
+\longrightarrow H^n(K_\alpha^\bullet)\longrightarrow0
 \]
 y
 \[
-  (**_n)\qquad
-  0\longrightarrow
-  \mathrm{Z}^{n-1}(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow
-  \mathrm{K}^{n-1}_\alpha
-  \longrightarrow
-  \mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow0.
+(**_n)\qquad
+0\longrightarrow \mathrm Z^{n-1}(K_\alpha^\bullet)
+\longrightarrow K_\alpha^{n-1}
+\longrightarrow \mathrm B^n(K_\alpha^\bullet)\longrightarrow0
 \]
 La hipótesis y la Proposición~\sref{0.13.2.1}~(i) muestran que el
 sistema proyectivo
-$(\mathrm{B}^n(\mathrm{K}^\bullet_\alpha))_{\alpha\in\mathrm{I}}$
+$(\mathrm B^n(K_\alpha^\bullet))_{\alpha\in I}$
 satisface (ML) para todo $n$.
 Se sigue de \sref{0.13.2.2} que
 \[
-  (***_n)\qquad
-  0\longrightarrow
-  \varprojlim_\alpha\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow
-  \varprojlim_\alpha\mathrm{Z}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow
-  \varprojlim_\alpha\HH^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow0
+(***_n)\qquad
+0\longrightarrow\varprojlim_\alpha\mathrm B^n(K_\alpha^\bullet)
+\longrightarrow\varprojlim_\alpha\mathrm Z^n(K_\alpha^\bullet)
+\longrightarrow\varprojlim_\alpha H^n(K_\alpha^\bullet)
+\longrightarrow0
 \]
 es exacta.
 Ahora bien,
-$\varprojlim\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)$
-se identifica con un subgrupo de $\mathrm{K}^{n}$ que contiene
-$\mathrm{B}^n(\mathrm{K}^\bullet)$, mientras que
-$\varprojlim\mathrm{Z}^n(\mathrm{K}^\bullet_\alpha)$
-se identifica con un subgrupo de $\mathrm{Z}^n(\mathrm{K}^\bullet)$.
-Por consiguiente, $h_n$ es sobreyectivo.
-
-Supongamos ahora, además, que
-$(\HH^{n-1}(\mathrm{K}^\bullet_\alpha))_{\alpha\in\mathrm{I}}$
+$\varprojlim\mathrm B^n(K_\alpha^\bullet)$
+se identifica con un subgrupo de $K^n$ que contiene
+$\mathrm B^n(K^\bullet)$, mientras que
+$\varprojlim\mathrm Z^n(K_\alpha^\bullet)$
+se identifica con un subgrupo de $\mathrm Z^n(K^\bullet)$.
+Por consiguiente, $h_n$ es sobreyectiva. Si ahora se supone además que el sistema proyectivo $(H^{n-1}(K_\alpha^\bullet))_{\alpha\in I}$
 satisface (ML).
 Las sucesiones exactas $(*_{n-1})$ y la
 Proposición~\sref{0.13.2.1}~(ii) muestran que
-$(\mathrm{Z}^{n-1}(\mathrm{K}^\bullet_\alpha))_{\alpha\in\mathrm{I}}$
+$(\mathrm Z^{n-1}(K_\alpha^\bullet))_{\alpha\in I}$
 satisface (ML).
 Aplicando \sref{0.13.2.2} a las sucesiones exactas $(**_n)$ se obtiene una
 sucesión exacta
 \[
-  0\longrightarrow
-  \varprojlim_\alpha
-    \mathrm{Z}^{n-1}(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow
-  \mathrm{K}^{n-1}
-  \xrightarrow{u}
-  \varprojlim_\alpha
-    \mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow0.
+0\longrightarrow
+\varprojlim_\alpha\mathrm Z^{n-1}(K_\alpha^\bullet)
+\longrightarrow K^{n-1}\xrightarrow{u}
+\varprojlim_\alpha\mathrm B^n(K_\alpha^\bullet)
+\longrightarrow0
 \]
 Como
-$\varprojlim\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-\supset\mathrm{B}^n(\mathrm{K}^\bullet)$
-y el compuesto de $u$ con la inyección
-\[
-  \varprojlim_\alpha\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-  \longrightarrow\mathrm{K}^n
-\]
-es la diferencial
-$\mathrm{K}^{n-1}\longrightarrow\mathrm{K}^n$, la sobreyectividad de
+$\varprojlim\mathrm B^n(K_\alpha^\bullet)
+\supset\mathrm B^n(K^\bullet)$, y que el compuesto de la inyección $\varprojlim\mathrm B^n(K_\alpha^\bullet)\to K^n$ y de $u$ es el operador de derivación $K^{n-1}\to K^n$, la sobreyectividad de
 $u$ implica
-\[
-  \varprojlim_\alpha\mathrm{B}^n(\mathrm{K}^\bullet_\alpha)
-  =
-  \mathrm{B}^n(\mathrm{K}^\bullet).
-\]
+$\varprojlim\mathrm B^n(K_\alpha^\bullet)
+=\mathrm B^n(K^\bullet)$,
 Así, $h_n$ es inyectivo.
 \end{proof}
 
 \begin{env}[13.2.4]
 \label{0.13.2.4}
+\label{0.13.2.4-fr}
 \emph{Observaciones} (13.2.4).
 \begin{enumerate}
   \item[{\rm(i)}]
@@ -458,9 +279,7 @@ Así, $h_n$ es inyectivo.
   esa proposición sigue siendo válida si se supone únicamente que los
   $A_\alpha$ pueden dotarse de estructuras de espacios metrizables completos
   en los que las traslaciones son homeomorfismos, que las aplicaciones
-  $f_{\alpha\beta}:A_\beta\longrightarrow A_\alpha$ que definen el
-  sistema proyectivo son uniformemente continuas para las métricas en
-  cuestión, y que $(A_\alpha)$ satisface la condición
+  $f_{\alpha\beta}:A_\beta\to A_\alpha$ que definen el sistema proyectivo $(A_\alpha)$ son \emph{uniformemente continuas} para las distancias consideradas, y finalmente que el sistema $(A_\alpha)$ satisface la condición
   \begin{itemize}
     \item[(ML$'$)]
     \emph{Para todo índice $\alpha$, existe un $\beta\geq\alpha$ tal
@@ -470,24 +289,15 @@ Así, $h_n$ es inyectivo.
   \end{itemize}
 
   Esto da un suplemento análogo a \sref{0.13.2.3}.
-  Supongamos que $\mathrm{K}^n_\alpha=0$ para $n<0$ y todo $\alpha$;
-  que
-  $(\mathrm{K}^n_\alpha)_{\alpha\in\mathrm{I}}$ satisface (ML) para
+  Supongamos que $K_\alpha^n=0$ para $n<0$ y todo $\alpha$; supongamos además que $(K_\alpha^n)_{\alpha\in I}$ satisface (ML) para
   $n\geq0$; y que
-  $A_\alpha=\HH^0(\mathrm{K}^\bullet_\alpha)$ puede dotarse de
+  $A_\alpha=H^0(K_\alpha^\bullet)$ puede dotarse de
   estructuras de espacio métrico que tengan las propiedades recién enunciadas.
   Entonces las conclusiones de \sref{0.13.2.3} no cambian para
   $n\geq2$, y $h_1$ es además \emph{biyectivo}.
   En efecto, el argumento de \sref{0.13.2.2} muestra también que
-  $(\mathrm{B}^1(\mathrm{K}^\bullet_\alpha))_{\alpha\in\mathrm{I}}$
-  satisface (ML), que la sucesión $(***_1)$ es exacta y, finalmente,
-  que
-  \[
-    \varprojlim_\alpha
-    \mathrm{B}^1(\mathrm{K}^\bullet_\alpha)
-    =
-    \mathrm{B}^1(\mathrm{K}^\bullet).
-  \]
+  $(\mathrm B^1(K_\alpha^\bullet))_{\alpha\in I}$
+  satisface (ML), que la sucesión $(***_1)$ es exacta, y finalmente, en virtud de lo que precede, que $\varprojlim\mathrm B^1(K_\alpha^\bullet)=\mathrm B^1(K^\bullet)$.
   Esto demuestra, entre otras cosas, las aserciones de (T, 3.10.2).
 
   \item[{\rm(ii)}]
@@ -499,226 +309,137 @@ Así, $h_n$ es inyectivo.
 
 \subsection{Aplicación: cohomología de un límite proyectivo de haces}
 \label{subsection:0.13.3}
+\label{subsection:0.13.3-fr}
 
 \begin{proposition}[13.3.1]
 \label{0.13.3.1}
+\label{0.13.3.1-fr}
 \oldpage[0\textsubscript{III}]{68}
 Sea $X$ un espacio topológico, sea
-$(\sh{F}_k)_{k\in\bb{N}}$ un sistema proyectivo de haces de
-grupos abelianos sobre $X$, y pongamos
-$\sh{F}=\varprojlim\sh{F}_k$.
-Supongamos que se cumplen las condiciones siguientes:
+$(\mathcal F_k)_{k\in\mathbb N}$ un sistema proyectivo de haces de
+grupos abelianos sobre $X$, y sea $\mathcal F=\varprojlim\mathcal F_k$.
+Se suponen verificadas las condiciones siguientes:
 \begin{enumerate}
   \item[{\rm(i)}]
-  Existe una base $\mathfrak{B}$ de la topología de $X$ tal que,
-  para todo $U\in\mathfrak{B}$ y todo $i\geq0$, el sistema
+  Existe una base $\mathfrak B$ de la topología de $X$ tal que,
+  para todo $U\in\mathfrak B$ y todo $i\geq0$, el sistema
   proyectivo
-  $(\HH^i(U,\sh{F}_k))_{k\in\bb{N}}$ satisface \textup{(ML)}.
+  $(H^i(U,\mathcal F_k))_{k\in\mathbb N}$ satisface \textup{(ML)}.
 
   \item[{\rm(ii)}]
   Para todo $x\in X$ y todo $i>0$, se tiene
-  \[
-    \varinjlim_U\bigl(\varprojlim_k
-    \HH^i(U,\sh{F}_k)\bigr)=0,
-  \]
-  donde $U$ recorre los entornos de $x$ pertenecientes a
-  $\mathfrak{B}$.
+  $\varinjlim_U\bigl(\varprojlim_k H^i(U,\mathcal F_k)\bigr)=0$
+  donde $U$ recorre las vecindades de $x$ pertenecientes a
+  $\mathfrak B$.
 
   \item[{\rm(iii)}]
   Los homomorfismos
-  $u_{hk}:\sh{F}_k\longrightarrow\sh{F}_h$ $(h\leq k)$ que definen el
-  sistema proyectivo $(\sh{F}_k)$ son sobreyectivos.
+  $u_{hk}:\mathcal F_k\to\mathcal F_h$ $(h\leq k)$ que definen el
+  sistema proyectivo $(\mathcal F_k)$ son sobreyectivos.
 \end{enumerate}
 Bajo estas condiciones, para todo $i>0$, el homomorfismo canónico
 \[
-  h_i:\HH^i(X,\sh{F})
-  \longrightarrow
-  \varprojlim_k\HH^i(X,\sh{F}_k)
+h_i:H^i(X,\mathcal F)\longrightarrow
+\varprojlim_k H^i(X,\mathcal F_k)
 \]
 es sobreyectivo. Si, además, para un valor dado de $i$ el sistema
 proyectivo
-$(\HH^{i-1}(X,\sh{F}_k))_{k\in\bb{N}}$ satisface \textup{(ML)}, entonces $h_i$ es
+$(H^{i-1}(X,\mathcal F_k))_{k\in\mathbb N}$ satisface \textup{(ML)}, entonces $h_i$ es
 biyectivo.
 \end{proposition}
 
 \begin{proof}
 \emph{a)}
-Supongamos primero que los $\sh{F}_k$, así como los \emph{núcleos}
-$\sh{N}_{hk}$ de los $u_{hk}$, son \emph{flácidos}; mostraremos entonces que
+Supongamos primero que los $\mathcal F_k$, así como los \emph{núcleos}
+$\mathcal N_{hk}$ de los $u_{hk}$, son \emph{flácidos}; mostraremos entonces que
 la condición~{\rm(iii)} del enunciado implica
-$\HH^i(X,\sh{F})=0$ para $i>0$.
+$H^i(X,\mathcal F)=0$ para $i>0$.
 Basta demostrar que, para \emph{todo} subconjunto abierto $U$ de $X$ y todo
-recubrimiento $\mathfrak{U}$ de $U$ por subconjuntos abiertos de $U$, se tiene
-\[
-  \HH^i(\mathfrak{U},\sh{F})=0
-  \qquad (i>0).
-\]
-En efecto, se sigue entonces primero que, para la cohomología de \v{C}ech,
-$\check{\HH}^{\,i}(U,\sh{F})=0$ para todo $i>0$, y por tanto, por
+recubrimiento $\mathfrak U$ de $U$ por subconjuntos abiertos de $U$, se tiene $H^i(\mathfrak U,\mathcal F)=0$ para $i>0$. De ello resultará en efecto, en primer lugar, que para la cohomología de Čech se tiene
+$\check H^i(U,\mathcal F)=0$ para todo $i>0$, y por tanto, por
 (G, II, 5.9.2) aplicado al conjunto de todos los subconjuntos abiertos de
-$X$, que $\HH^i(X,\sh{F})=0$ para todo $i>0$.
+$X$, que $H^i(X,\mathcal F)=0$ para todo $i>0$.
 
-Como los $\sh{F}_k$ son flácidos, se tiene
-$\HH^i(\mathfrak{U},\sh{F}_k)=0$ para todo $i>0$
-(G, II, 5.2.3).
-Para cada $k$, consideremos el complejo
-$\mathrm{C}^\bullet(\mathfrak{U},\sh{F}_k)$ de cocadenas
-alternadas sobre el nervio del recubrimiento $\mathfrak{U}$ (G, II, 5.1);
-estos complejos forman manifiestamente un sistema proyectivo de complejos de
-grupos abelianos.
-Demostremos que todas las aplicaciones
-\[
-  \mathrm{C}^\bullet(\mathfrak{U},\sh{F}_k)
-  \longrightarrow
-  \mathrm{C}^\bullet(\mathfrak{U},\sh{F}_h)
-  \qquad(h\leq k)
-\]
-son \emph{sobreyectivas}.
-Por definición, basta mostrar que, para todo subconjunto abierto $V$
+Como los $\mathcal F_k$ son flácidos, se tiene
+$H^i(\mathfrak U,\mathcal F_k)=0$ para todo $i>0$ (G, II, 5.2.3); consideremos para cada $k$ el complejo $C^\bullet(\mathfrak U,\mathcal F_k)$ de cocadenas
+alternadas sobre el nervio del recubrimiento $\mathfrak U$ (G, II, 5.1), que forman evidentemente un sistema proyectivo de complejos de grupos abelianos. Mostremos que todas las aplicaciones $C^\bullet(\mathfrak U,\mathcal F_k)\to
+C^\bullet(\mathfrak U,\mathcal F_h)$ $(h\leq k)$ son \emph{sobreyectivas}. Evidentemente, basta, por definición, demostrar que para todo abierto $V$
 de $X$, la aplicación
-$\Gamma(V,\sh{F}_k)\longrightarrow\Gamma(V,\sh{F}_h)$ es
+$\Gamma(V,\mathcal F_k)\to\Gamma(V,\mathcal F_h)$ es
 es sobreyectiva. Pero la sucesión
-\[
-  0\longrightarrow\sh{N}_{hk}\longrightarrow\sh{F}_k
-  \longrightarrow\sh{F}_h\longrightarrow0
-\]
+$0\to\mathcal N_{hk}\to\mathcal F_k\to\mathcal F_h\to0$
 es exacta por hipótesis y da, por tanto, la sucesión exacta de
 cohomología
 \[
-  \Gamma(V,\sh{F}_k)\longrightarrow\Gamma(V,\sh{F}_h)
-  \longrightarrow\HH^1(V,\sh{N}_{hk})=0,
+\Gamma(V,\mathcal F_k)\longrightarrow\Gamma(V,\mathcal F_h)
+\longrightarrow H^1(V,\mathcal N_{hk})=0
 \]
-pues $\sh{N}_{hk}$ es flácido.
+pues $\mathcal N_{hk}$ es flácido.
 
 El sistema proyectivo
-$(\mathrm{C}^\bullet(\mathfrak{U},\sh{F}_k))_{k\in\bb{N}}$
+$(C^\bullet(\mathfrak U,\mathcal F_k))_{k\in\mathbb N}$
 satisface, por tanto, (ML), y lo mismo vale para
-$(\HH^i(\mathfrak{U},\sh{F}_k))_{k\in\bb{N}}$ para todo $i\geq0$:
-para $i>0$ esto es trivial, mientras que para $i=0$ se sigue de lo
-precedente, pues
-$\HH^0(\mathfrak{U},\sh{F}_k)=\Gamma(U,\sh{F}_k)$
-(G, II, 5.2.2).
-Podemos, por tanto, aplicar \sref{0.13.2.3}, que da
-\[
-  \HH^i(\mathfrak{U},\sh{F})
-  =
-  \varprojlim_k\HH^i(\mathfrak{U},\sh{F}_k)
-  =0
-  \qquad(i>0).
-\]
+$(H^i(\mathfrak U,\mathcal F_k))_{k\in\mathbb N}$ para todo $i\geq0$:
+para $i>0$, y como $H^0(\mathfrak U,\mathcal F_k)=\Gamma(U,\mathcal F_k)$
+(G, II, 5.2.2), la condición (ML) se cumple también para $i=0$ por lo que precede. Se puede, pues, aplicar (\hyperref[0.13.2.3-fr]{13.2.3}), que muestra que $H^i(\mathfrak U,\mathcal F)=\varprojlim_k H^i(\mathfrak U,\mathcal F_k)=0$ para todo $i>0$.
 
-\emph{b)}
-Pasemos ahora al caso general. Para cada $k\in\bb{N}$, consideremos la
-\emph{resolución canónica}
-\[
-  \sh{C}^\bullet(X,\sh{F}_k)
-  =
-  \bigl(\sh{C}^i(X,\sh{F}_k)\bigr)_{i\geq0}
-\]
-de $\sh{F}_k$ por haces flácidos (G, II, 4.3).
+\emph{b)} Pasemos al caso general, y consideremos para cada $k\in\mathbb N$, la \emph{resolución canónica} $\mathcal C^\bullet(X,\mathcal F_k)
+=(\mathcal C^i(X,\mathcal F_k))_{i\geq0}$
+de $\mathcal F_k$ por haces flácidos (G, II, 4.3).
 Para todo $i\geq0$, está claro que
-$(\sh{C}^i(X,\sh{F}_k))_{k\in\bb{N}}$ es un sistema proyectivo de
+$(\mathcal C^i(X,\mathcal F_k))_{k\in\mathbb N}$ es un sistema proyectivo de
 haces flácidos; demostremos que satisface las condiciones de la
 parte~\emph{a)}.
 \oldpage[0\textsubscript{III}]{69}
-En efecto, si $\sh{N}_{hk}$ denota el núcleo de $u_{hk}$ para $h\leq k$,
+En efecto, si $\mathcal N_{hk}$ denota el núcleo de $u_{hk}$ para $h\leq k$,
 entonces la sucesión
-\[
-  0\longrightarrow\sh{N}_{hk}\longrightarrow\sh{F}_k
-  \longrightarrow\sh{F}_h\longrightarrow0
-\]
+$0\to\mathcal N_{hk}\to\mathcal F_k\to\mathcal F_h\to0$
 es exacta por~{\rm(iii)}, y nuestra aserción se sigue de la exactitud
 del funtor
-$\sh{A}\leadsto\sh{C}^i(X,\sh{A})$ (G, II, 4.3).
-
-Pongamos
-\[
-  \sh{G}^i=\varprojlim_k\sh{C}^i(X,\sh{F}_k).
-\]
+$\mathcal A\leadsto\mathcal C^i(X,\mathcal A)$ es exacto (G, II, 4.3). Sea $\mathcal G^i=\varprojlim_k\mathcal C^i(X,\mathcal F_k)$
 Por la parte~\emph{a)}, se tiene
-$\HH^j(X,\sh{G}^i)=0$ para $j>0$ e $i\geq0$.
+$H^j(X,\mathcal G^i)=0$ para $j>0$ e $i\geq0$.
 Demostraremos que
-$\sh{G}^\bullet=(\sh{G}^i)_{i\geq0}$ es una \emph{resolución} del haz
-$\sh{F}$. Como $\HH^j(X,\sh{G}^\bullet)=0$ para $j>0$, la cohomología
-$\HH^\bullet(X,\sh{F})$ será entonces igual a
-$\HH^\bullet(\Gamma(X,\sh{G}^\bullet))$ (G, II, 4.7.1).
-
-Tomando el límite proyectivo de las sucesiones exactas
-\[
-  0\longrightarrow\sh{F}_k
-  \longrightarrow\sh{C}^0(X,\sh{F}_k)
-  \longrightarrow\sh{C}^1(X,\sh{F}_k)
-  \longrightarrow\cdots
+$\mathcal G^\bullet=(\mathcal G^i)_{i\geq0}$ es una \emph{resolución} del haz
+$\mathcal F$. Como $H^j(X,\mathcal G^\bullet)=0$ para $j>0$, la cohomología
+$H^\bullet(X,\mathcal F)$ será entonces igual a
+$H^\bullet(\Gamma(X,\mathcal G^\bullet))$ (G, II, 4.7.1). Está claro que, por paso al límite proyectivo, se deducen de las sucesiones exactas \[
+0\longrightarrow\mathcal F_k
+\longrightarrow\mathcal C^0(X,\mathcal F_k)
+\longrightarrow\mathcal C^1(X,\mathcal F_k)\longrightarrow\ldots
 \]
 se obtiene manifiestamente un complejo de haces de grupos abelianos
 \[
-  0\longrightarrow\sh{F}
-  \longrightarrow\sh{G}^0
-  \longrightarrow\sh{G}^1
-  \longrightarrow\ldots.
+0\longrightarrow\mathcal F\longrightarrow\mathcal G^0
+\longrightarrow\mathcal G^1\longrightarrow\ldots
 \]
 Para demostrar nuestra aserción, queda establecer que
-$\sh{H}^i(\sh{G}^\bullet)=0$ para $i>0$.
+$\mathcal H^i(\mathcal G^\bullet)=0$ para $i>0$.
 Este haz está generado por el prehaz
-\[
-  U\leadsto\HH^i\bigl(\Gamma(U,\sh{G}^\bullet)\bigr)
-\]
+$U\leadsto H^i(\Gamma(U,\mathcal G^\bullet))$
 (G, II, 4.1).
-Ahora bien, el complejo $\Gamma(U,\sh{G}^\bullet)$ es el límite proyectivo
+Ahora bien, el complejo $\Gamma(U,\mathcal G^\bullet)$ es el límite proyectivo
 del sistema proyectivo de complejos de grupos abelianos
-\[
-  \bigl(\Gamma(U,\sh{C}^\bullet(X,\sh{F}_k))\bigr)_{k\in\bb{N}}
-\]
+$(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))_{k\in\mathbb N}$
 (\textbf{0}\textsubscript{I}, \EGAUnavailableHyperref{0.3.2.6}{3.2.6}).
-Vimos en la parte~\emph{a)} que, para todo $i\geq0$, las aplicaciones
-\[
-  \Gamma(U,\sh{C}^i(X,\sh{F}_k))
-  \longrightarrow
-  \Gamma(U,\sh{C}^i(X,\sh{F}_h))
-  \qquad(h\leq k)
-\]
-son \emph{sobreyectivas}. Por otra parte,
-\[
-  \HH^i(U,\sh{F}_k)
-  =
-  \HH^i\bigl(\Gamma(U,\sh{C}^\bullet(X,\sh{F}_k))\bigr),
-\]
-pues la resolución canónica $\sh{C}^\bullet(U,\sh{F}_k|U)$ es
-inducida sobre $U$ por $\sh{C}^\bullet(X,\sh{F}_k)$.
-Por la hipótesis~{\rm(i)}, para todo $U\in\mathfrak{B}$ podemos aplicar
-\sref{0.13.2.3} a este sistema proyectivo de complejos, y por tanto
-\[
-  \HH^i\bigl(\Gamma(U,\sh{G}^\bullet)\bigr)
-  =
-  \varprojlim_k\HH^i(U,\sh{F}_k)
-  \qquad(i\geq0).
-\]
-La hipótesis~{\rm(ii)} muestra entonces, por definición, que los haces
-$\sh{H}^i(\sh{G}^\bullet)$ se anulan para $i>0$.
+Se ha visto en la parte~\emph{a)} que, para todo $i\geq0$, las aplicaciones $\Gamma(U,\mathcal C^i(X,\mathcal F_k))\to
+\Gamma(U,\mathcal C^i(X,\mathcal F_h))$ $(h\leq k)$ son \emph{sobreyectivas}; por otra parte, se tiene
+$H^i(U,\mathcal F_k)=
+H^i(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))$,
+pues la resolución canónica $\mathcal C^\bullet(U,\mathcal F_k|U)$ es
+inducida sobre $U$ por $\mathcal C^\bullet(X,\mathcal F_k)$.
+Por la hipótesis~{\rm(i)}, para todo $U\in\mathfrak B$, se puede aplicar (\hyperref[0.13.2.3-fr]{13.2.3}) al sistema proyectivo de complejos $(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))_{k\in\mathbb N}$, y se tiene, pues, $H^i(\Gamma(U,\mathcal G^\bullet))=\varprojlim_k H^i(U,\mathcal F_k)$ para todo $i\geq0$. La hipótesis (ii) demuestra entonces, por definición, que los haces $\mathcal H^i(\mathcal G^\bullet)$ se anulan para $i>0$.
 
-Así, para todo $i\geq0$,
-\[
-  \HH^i(X,\sh{F})
-  =
-  \HH^i\bigl(\Gamma(X,\sh{G}^\bullet)\bigr),
-  \qquad
-  \Gamma(X,\sh{G}^\bullet)
-  =
-  \varprojlim_k\Gamma(X,\sh{C}^\bullet(X,\sh{F}_k)).
-\]
-Acabamos de observar que todas las aplicaciones
-\[
-  \Gamma(X,\sh{C}^i(X,\sh{F}_k))
-  \longrightarrow
-  \Gamma(X,\sh{C}^i(X,\sh{F}_h))
-  \qquad(h\leq k)
-\]
-son sobreyectivas; la conclusión se sigue, por tanto, una vez más de
-\sref{0.13.2.3}.
+Así, para todo $i\geq0$, $H^i(X,\mathcal F)=H^i(\Gamma(X,\mathcal G^\bullet))$ y \[
+\Gamma(X,\mathcal G^\bullet)
+=\varprojlim_k\Gamma(X,\mathcal C^\bullet(X,\mathcal F_k)).
+\] Se acaba de observar que las aplicaciones $\Gamma(X,\mathcal C^i(X,\mathcal F_k))\to
+\Gamma(X,\mathcal C^i(X,\mathcal F_h))$ $(h\leq k)$ son todas sobreyectivas; la conclusión resulta, pues, de nuevo de (\hyperref[0.13.2.3-fr]{13.2.3}).
 \end{proof}
 
 \begin{env}[13.3.2]
 \label{0.13.3.2}
+\label{0.13.3.2-fr}
 \emph{Observaciones} (13.3.2).
 \begin{enumerate}
   \item[{\rm(i)}]
@@ -729,11 +450,9 @@ son sobreyectivas; la conclusión se sigue, por tanto, una vez más de
   \item[{\rm(ii)}]
   Las condiciones~{\rm(i)} y~{\rm(ii)} de \sref{0.13.3.1} se satisfacen,
   en particular, si
-  $\HH^i(U,\sh{F}_k)=0$ para todo $k$, todo $i>0$ y todo
-  $U\in\mathfrak{B}$, y si, para $U\in\mathfrak{B}$, las aplicaciones
-  \[
-    \Gamma(U,\sh{F}_k)\longrightarrow\Gamma(U,\sh{F}_h)
-  \]
+  $H^i(U,\mathcal F_k)=0$ para todo $k$, todo $i>0$ y todo
+  $U\in\mathfrak B$, y si, para $U\in\mathfrak B$, las aplicaciones
+  $\Gamma(U,\mathcal F_k)\to\Gamma(U,\mathcal F_h)$
   son \emph{sobreyectivas}. Este es el caso más frecuente en el que se aplica
   \sref{0.13.3.1}.
 \end{enumerate}
@@ -741,221 +460,190 @@ son sobreyectivas; la conclusión se sigue, por tanto, una vez más de
 
 \subsection{Condición de Mittag-Leffler y objetos graduados asociados a sistemas proyectivos}
 \label{subsection:0.13.4}
+\label{subsection:0.13.4-fr}
 \label{0.13.4}
+\label{0.13.4-fr}
 
 \begin{env}[13.4.1]
 \label{0.13.4.1}
+\label{0.13.4.1-fr}
 Sea
-$\bb{A}=(A_k,u_{kh})_{k\in\bb{Z}}$ un sistema proyectivo en una
-categoría abeliana $\cat{C}$.
+$\mathbf A=(A_k,u_{kh})_{k\in\mathbb Z}$ un sistema proyectivo en una
+categoría abeliana $\boldsymbol{C}$.
 Decimos que está \emph{acotado inferiormente} si existe un $k_0$ tal que
-$A_k=0$ para $k<k_0$.
-Sobre cada $A_k$ definimos una \emph{filtración}
-$(\mathrm{F}^p(A_k))_{p\in\bb{Z}}$ por
+$A_k=0$ para $k<k_0$. Definiremos sobre cada $A_k$ una \emph{filtración} $(\mathrm F^p(A_k))_{p\in\mathbb Z}$ por
 \begin{equation}
-\label{0.13.4.1.1}
+\label{0.13.4.1.1-fr}
 \tag{13.4.1.1}
-  \mathrm{F}^p(A_k)=
-  \begin{cases}
-    \Ker(A_k\longrightarrow A_{p-1}) & \text{para }p\leq k+1,\\
-    0 & \text{para }p\geq k+1.
-  \end{cases}
+\begin{cases}
+\mathrm F^p(A_k)=\operatorname{Ker}(A_k\longrightarrow A_{p-1})&\text{para }p\leq k+1\\
+\mathrm F^p(A_k)=0&\text{para }p\geq k+1
+\end{cases}
 \end{equation}
 
 \oldpage[0\textsubscript{III}]{70}
 Por hipótesis,
-$\mathrm{F}^{k_0}(A_k)=A_k$ y
-$\mathrm{F}^{k+1}(A_k)=0$; en otras palabras, la filtración considerada
+$\mathrm F^{k_0}(A_k)=A_k$ y
+$\mathrm F^{k+1}(A_k)=0$; en otras palabras, la filtración considerada
 es finita (\sref{0.11.1.3}).
 Los objetos graduados asociados a esta filtración son, por tanto,
 \[
-  \mathrm{gr}^p(A_k)
-  =
-  \Ker(A_k\longrightarrow A_{p-1})
-  \big/
-  \Ker(A_k\longrightarrow A_p).
+\operatorname{gr}^p(A_k)=
+\operatorname{Ker}(A_k\longrightarrow A_{p-1})
+/\operatorname{Ker}(A_k\longrightarrow A_p)
 \]
-Por consiguiente, $\mathrm{gr}^p(A_k)$ es isomorfo a la imagen por
-$A_k\longrightarrow A_p$ de
-$\Ker(A_k\longrightarrow A_{p-1})$.
+Por consiguiente, $\operatorname{gr}^p(A_k)$ es isomorfo a la imagen por
+$A_k\to A_p$ de
+$\operatorname{Ker}(A_k\to A_{p-1})$.
 Por la transitividad de los morfismos que definen un sistema proyectivo,
 se tiene, por tanto,
 \begin{equation}
-\label{0.13.4.1.2}
+\label{0.13.4.1.2-fr}
 \tag{13.4.1.2}
-  \mathrm{gr}^p(A_k)
-  =
-  \Ker(A_p\longrightarrow A_{p-1})
-  \cap
-  \Im(A_k\longrightarrow A_p).
+\operatorname{gr}^p(A_k)=
+\operatorname{Ker}(A_p\longrightarrow A_{p-1})
+\cap\operatorname{Im}(A_k\longrightarrow A_p)
 \end{equation}
 Pero \sref{0.13.4.1.1} da
-$\Ker(A_p\longrightarrow A_{p-1})=\mathrm{gr}^p(A_p)$, y por tanto
+$\operatorname{Ker}(A_p\to A_{p-1})=\operatorname{gr}^p(A_p)$, y por tanto
 \begin{equation}
-\label{0.13.4.1.3}
+\label{0.13.4.1.3-fr}
 \tag{13.4.1.3}
-  \mathrm{gr}^p(A_k)
-  =
-  \mathrm{gr}^p(A_p)
-  \cap
-  \Im(A_k\longrightarrow A_p).
+\operatorname{gr}^p(A_k)=
+\operatorname{gr}^p(A_p)\cap\operatorname{Im}(A_k\longrightarrow A_p).
 \end{equation}
-
-Las definiciones precedentes muestran también que, para $k\leq h$,
+Las definiciones precedentes muestran además que se tiene para $k\leq h$,
 \[
-  u_{kh}\bigl(\mathrm{F}^p(A_h)\bigr)
-  \subset
-  \mathrm{F}^p(A_k),
+u_{kh}(\mathrm F^p(A_h))\subset\mathrm F^p(A_k)
 \]
-y, por consiguiente, para todo $p\in\bb{Z}$, los
-$\mathrm{gr}^p(u_{kh})$ definen un sistema proyectivo
-$(\mathrm{gr}^p(A_k))_{k\in\bb{Z}}$.
+y por consiguiente que los $\operatorname{gr}^p(u_{kh})$ definen un sistema proyectivo
+$(\operatorname{gr}^p(A_k))_{k\in\mathbb Z}$ para todo $p\in\mathbb Z$.
 \end{env}
 
 \begin{env}[13.4.2]
 \label{0.13.4.2}
-Decimos que el sistema proyectivo $\bb{A}$ es
+\label{0.13.4.2-fr}
+Decimos que el sistema proyectivo $\mathbf A$ es
 \emph{esencialmente constante} si los morfismos
-$A_{k+1}\longrightarrow A_k$ son isomorfismos para todo $k$
+$A_{k+1}\to A_k$ son isomorfismos para todo $k$
 suficientemente grande.
-Decimos que $\bb{A}$ es \emph{estricto} si los morfismos
-$A_i\longrightarrow A_j$ $(j\leq i)$ son epimorfismos.
+Decimos que $\mathbf A$ es \emph{estricto} si los morfismos
+$A_i\to A_j$ $(j\leq i)$ son epimorfismos.
 
-Cuando $\bb{A}$ es estricto, se sigue de \sref{0.13.4.1.3} que, para
+Cuando $\mathbf A$ es estricto, se sigue de \sref{0.13.4.1.3} que, para
 $p\leq k\leq h$, el morfismo canónico
-\[
-  \mathrm{gr}^p(A_h)\longrightarrow\mathrm{gr}^p(A_k)
-\]
+$\operatorname{gr}^p(A_h)\to\operatorname{gr}^p(A_k)$
 es un isomorfismo; en otras palabras, el sistema proyectivo
-$(\mathrm{gr}^p(A_k))_{k\in\bb{Z}}$ es esencialmente constante.
-La sucesión de objetos $\mathrm{gr}^p(A_p)$, identificada para todo
-$p$ con $\varprojlim_k\mathrm{gr}^p(A_k)$, se denota entonces
-$\mathrm{gr}^\bullet(\bb{A})$ y se llama el
+$(\operatorname{gr}^p(A_k))_{k\in\mathbb Z}$ es esencialmente constante.
+La sucesión de objetos $\operatorname{gr}^p(A_p)$ (identificados con $\varprojlim_k\operatorname{gr}^p(A_k)$ para todo $p$) se denota entonces
+$\operatorname{gr}^\bullet(\mathbf A)$ y se llama el
 \emph{objeto graduado asociado al sistema proyectivo estricto}
-$\bb{A}=(A_k)$.
-
-Supongamos ahora que el sistema proyectivo $\bb{A}$, acotado
+$\mathbf A=(A_k)$. Si se supone ahora que el sistema proyectivo $\mathbf A$, acotado
 inferiormente, satisface (ML).
 Por \sref{0.13.1.2}, el sistema proyectivo
-$\bb{A}'=(A'_k)$ de objetos de ``imagen universal'' es estricto; también está
+$\mathbf A'=(A'_k)$ de objetos de ``imagen universal'' es estricto; también está
 acotado inferiormente.
-El objeto graduado $\mathrm{gr}^\bullet(\bb{A}')$ asociado a
-$\bb{A}'$ se llama asimismo el objeto graduado
-\emph{asociado a} $\bb{A}$ y se denota
-$\mathrm{gr}^\bullet(\bb{A})$.
+El objeto graduado $\operatorname{gr}^\bullet(\mathbf A')$ asociado a
+$\mathbf A'$ se llama asimismo el objeto graduado
+\emph{asociado a} $\mathbf A$ y se denota
+$\operatorname{gr}^\bullet(\mathbf A)$.
 \end{env}
 
 \begin{proposition}[13.4.3]
 \label{0.13.4.3}
-Sea $\bb{A}=(A_k)_{k\in\bb{Z}}$ un sistema proyectivo acotado
-inferiormente en una categoría abeliana $\cat{C}$.
+\label{0.13.4.3-fr}
+Sea $\mathbf A=(A_k)_{k\in\mathbb Z}$ un sistema proyectivo acotado
+inferiormente en una categoría abeliana $\boldsymbol{C}$.
 Las condiciones siguientes son equivalentes:
 \begin{enumerate}
-  \item[{\rm a)}] $\bb{A}$ satisface \textup{(ML)}.
-  \item[{\rm b)}] Para todo $p\in\bb{Z}$, el sistema proyectivo
-  $(\mathrm{gr}^p(A_k))_{k\in\bb{Z}}$ es esencialmente constante.
+  \item[{\rm a)}] $\mathbf A$ satisface \textup{(ML)}.
+  \item[{\rm b)}] Para todo $p\in\mathbb Z$, el sistema proyectivo
+  $(\operatorname{gr}^p(A_k))_{k\in\mathbb Z}$ es esencialmente constante.
 \end{enumerate}
 Además, cuando se cumplen estas condiciones, existe, para todo
-$p\in\bb{Z}$, un isomorfismo canónico
+$p\in\mathbb Z$, un isomorfismo canónico
 \begin{equation}
-\label{0.13.4.3.1}
+\label{0.13.4.3.1-fr}
 \tag{13.4.3.1}
-  \mathrm{gr}^p(\bb{A})
-  \isoto
-  \varprojlim_k\mathrm{gr}^p(A_k).
+\operatorname{gr}^p(\mathbf A)\xrightarrow{\sim}
+\varprojlim_k\operatorname{gr}^p(A_k).
 \end{equation}
 \end{proposition}
 
 \begin{proof}
 Se sigue inmediatamente de \sref{0.13.4.1.2} que \emph{a)} implica
 \emph{b)}. La misma fórmula, aplicada al sistema proyectivo
-$\bb{A}'$ con la notación de \sref{0.13.4.2}, da
+$\mathbf A'$ con la notación de \sref{0.13.4.2}, da
 \sref{0.13.4.3.1} por definición.
 
 Para $k\leq h$, pongamos
-\[
-  A_{kh}=\Im(A_h\longrightarrow A_k).
-\]
+$A_{kh}=\operatorname{Im}(A_h\to A_k)$
 Si $k\leq h\leq j$, entonces
 $A_{kj}\subset A_{kh}\subset A_k$.
 Dotemos a $A_{kh}$ de la filtración inducida por
-$(\mathrm{F}^p(A_k))$.
-La transitividad de los morfismos que definen $\bb{A}$ muestra
+$(\mathrm F^p(A_k))$.
+La transitividad de los morfismos que definen $\mathbf A$ muestra
 inmediatamente que esta es también la filtración cociente de
-$(\mathrm{F}^p(A_h))$; por consiguiente,
+$(\mathrm F^p(A_h))$; por consiguiente,
 \begin{equation}
-\label{0.13.4.3.2}
+\label{0.13.4.3.2-fr}
 \tag{13.4.3.2}
-  \mathrm{gr}^p(A_{kh})
-  =
-  \Im\bigl(
-    \mathrm{gr}^p(A_h)\longrightarrow\mathrm{gr}^p(A_k)
-  \bigr).
+\operatorname{gr}^p(A_{kh})=
+\operatorname{Im}\bigl(\operatorname{gr}^p(A_h)\longrightarrow
+\operatorname{gr}^p(A_k)\bigr).
 \end{equation}
 
 \oldpage[0\textsubscript{III}]{71}
 Supongamos ahora que se cumple \emph{b)}.
-Para todo $p\in\bb{Z}$ y todo $k\geq p$, existe un entero
-$\mathrm{L}(p,k)$ tal que el miembro derecho de
-\sref{0.13.4.3.2} es constante para $h\geq\mathrm{L}(p,k)$.
-Como $\mathrm{gr}^p(A_k)=0$ para $p<k_0$, para $k$ fijo solo
-un número finito de los enteros $\mathrm{L}(p,k)$ puede ser no nulo cuando
+Para todo $p\in\mathbb Z$ y todo $k\geq p$, existe un entero
+$\mathrm L(p,k)$ tal que el miembro derecho de
+\sref{0.13.4.3.2} es constante para $h\geq\mathrm L(p,k)$.
+Como $\operatorname{gr}^p(A_k)=0$ para $p<k_0$, para $k$ fijo solo
+un número finito de los enteros $\mathrm L(p,k)$ puede ser no nulo cuando
 $p$ recorre los enteros $\leq k$.
-Sea $\mathrm{L}(k)=m$ el mayor de estos enteros.
+Sea $\mathrm L(k)=m$ el mayor de estos enteros.
 Para todo $h\geq m$, se tiene
 $A_{kh}\subset A_{km}$, y, por la definición de $m$, la inyección
 canónica
-$A_{kh}\longrightarrow A_{km}$ induce un isomorfismo
-\[
-  \mathrm{gr}^\bullet(A_{kh})
-  \simto
-  \mathrm{gr}^\bullet(A_{km}).
-\]
+$A_{kh}\to A_{km}$ induce un isomorfismo
+$\operatorname{gr}^\bullet(A_{kh})\xrightarrow{\sim}
+\operatorname{gr}^\bullet(A_{km})$
 Como las filtraciones son finitas, esta inyección es ella misma biyectiva
 (Bourbaki, \emph{Alg.\ comm.}, cap.~III, \textsection2,
 n\textsuperscript{o}~8, teorema~1).
-Esto demuestra que $\bb{A}$ satisface (ML).
+Esto demuestra que $\mathbf A$ satisface (ML).
 \end{proof}
 
 \begin{env}[13.4.4]
-\label{0.13.4.4}
-Supongamos que el límite proyectivo
-$A=\varprojlim A_k$ existe en $\cat{C}$.
-En las definiciones de \sref{0.13.4.1}, se puede entonces reemplazar $A_k$
+\label{0.13.4.4-fr}
+Supongamos que en $\boldsymbol{C}$ el límite proyectivo $A=\varprojlim A_k$ existe. En las definiciones de (\hyperref[0.13.4.1-fr]{13.4.1}), se puede entonces reemplazar $A_k$
 por $A$, y la filtración así definida sobre $A$ sigue satisfaciendo
 \begin{equation}
-\label{0.13.4.4.1}
+\label{0.13.4.4.1-fr}
 \tag{13.4.4.1}
-  \mathrm{gr}^p(A)
-  =
-  \mathrm{gr}^p(A_p)
-  \cap
-  \Im(A\longrightarrow A_p).
+\operatorname{gr}^p(A)=\operatorname{gr}^p(A_p)
+\cap\operatorname{Im}(A\longrightarrow A_p).
 \end{equation}
 \end{env}
 
 \begin{corollary}[13.4.5]
 \label{0.13.4.5}
-Supongamos que $\cat{C}$ es la categoría de grupos abelianos.
-Si el sistema proyectivo $\bb{A}$ satisface \textup{(ML)} y
-$A=\varprojlim_k A_k$, entonces para todo $p\in\bb{Z}$ existe un
+\label{0.13.4.5-fr}
+Supongamos que $\boldsymbol{C}$ es la categoría de grupos abelianos.
+Si el sistema proyectivo $\mathbf A$ satisface \textup{(ML)} y
+$A=\varprojlim_k A_k$, entonces para todo $p\in\mathbb Z$ existe un
 isomorfismo canónico
 \begin{equation}
-\label{0.13.4.5.1}
+\label{0.13.4.5.1-fr}
 \tag{13.4.5.1}
-  \mathrm{gr}^p(A)
-  \isoto
-  \varprojlim_k\mathrm{gr}^p(A_k).
+\operatorname{gr}^p(A)\xrightarrow{\sim}
+\varprojlim_k\operatorname{gr}^p(A_k).
 \end{equation}
 \end{corollary}
 
 \begin{proof}
 En efecto,
-\[
-  \Im(A_k\longrightarrow A_p)
-  =
-  \Im(A\longrightarrow A_p)
-\]
+$\operatorname{Im}(A_k\to A_p)=\operatorname{Im}(A\to A_p)$
 para todo $k$ suficientemente grande
 (Bourbaki, \emph{Top.\ g\'{e}n.}, cap.~II,
 3\textsuperscript{e}~\'{e}d., \textsection3,
@@ -965,356 +653,242 @@ n\textsuperscript{o}~5, teorema~1), y la conclusión se sigue de
 
 \subsection{Límites proyectivos de sucesiones espectrales de complejos filtrados}
 \label{subsection:0.13.5}
+\label{subsection:0.13.5-fr}
 
 \begin{env}[13.5.1]
 \label{0.13.5.1}
-Sea $\cat{C}$ una categoría abeliana y sea $X^\bullet$ un complejo
-de objetos de $\cat{C}$ dotado de una filtración
-$(\mathrm{F}^p(X^\bullet))_{p\in\bb{Z}}$ tal que
-$\mathrm{F}^{p_0}(X^\bullet)=X^\bullet$ para algún índice $p_0$.
-Para todo $k\in\bb{Z}$, consideremos el complejo
-\[
-  X^\bullet_k=X^\bullet/\mathrm{F}^{k+1}(X^\bullet);
-\]
-está dotado canónicamente de la filtración constituida por
-\[
-  \mathrm{F}^p(X^\bullet_k)
-  =
-  \mathrm{F}^p(X^\bullet)/\mathrm{F}^{k+1}(X^\bullet)
-  \quad\text{para }p\leq k,
-\]
-y $\mathrm{F}^p(X^\bullet_k)=0$ para $p\geq k+1$.
+\label{0.13.5.1-fr}
+Sea $\boldsymbol{C}$ una categoría abeliana y sea $X^\bullet$ un complejo
+de objetos de $\boldsymbol{C}$ dotado de una filtración
+$(\mathrm F^p(X^\bullet))_{p\in\mathbb Z}$ tal que
+$\mathrm F^{p_0}(X^\bullet)=X^\bullet$ para algún índice $p_0$. Consideremos para cada $k\in\mathbb Z$ el complejo $X_k^\bullet=X^\bullet/\mathrm F^{k+1}(X^\bullet)$; está provisto canónicamente de la filtración formada por los $\mathrm F^p(X_k^\bullet)=
+\mathrm F^p(X^\bullet)/\mathrm F^{k+1}(X^\bullet)$ para $p\leq k$ y por los $\mathrm F^p(X_k^\bullet)=0$ para $p\geq k+1$.
 Además, existen morfismos canónicos
-$X^\bullet_{k+1}\longrightarrow X^\bullet_k$, que hacen de
-$\bb{X}^\bullet=(X^\bullet_k)_{k\in\bb{Z}}$ un \emph{sistema proyectivo
-de complejos filtrados de objetos de $\cat{C}$}.
-Observemos que este sistema proyectivo es \emph{estricto} y que
-$X^\bullet_k=0$ para $k<p_0$.
+$X_{k+1}^\bullet\to X_k^\bullet$, que hacen de
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ un \emph{sistema proyectivo
+de complejos filtrados de objetos de $\boldsymbol{C}$}.
+Se observará que este sistema proyectivo es \emph{estricto} y que
+$X_k^\bullet=0$ para $k<p_0$.
 \end{env}
 
 \begin{env}[13.5.2]
 \label{0.13.5.2}
+\label{0.13.5.2-fr}
 Más generalmente, consideremos un sistema proyectivo estricto acotado
 inferiormente
-$\bb{X}^\bullet=(X^\bullet_k)_{k\in\bb{Z}}$ de complejos de objetos de
-$\cat{C}$, y dotemos cada $X^\bullet_k$ de la filtración definida en
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ de complejos de objetos de
+$\boldsymbol{C}$, y dotemos cada $X_k^\bullet$ de la filtración definida en
 \sref{0.13.4.1} (aplicada en la categoría abeliana de complejos acotados
-inferiormente de objetos de $\cat{C}$).
+inferiormente de objetos de $\boldsymbol{C}$).
 Los morfismos
-$X^\bullet_k\longrightarrow X^\bullet_p$ ($p\leq k$) se convierten entonces
+$X_k^\bullet\to X_p^\bullet$ ($(p\leq k)$) se convierten entonces
 en morfismos de complejos \emph{filtrados} con filtraciones finitas.
 La funtorialidad de las sucesiones espectrales de complejos filtrados
 (\sref{0.11.2.3}) muestra que los morfismos de transición de
-$\bb{X}^\bullet$ inducen morfismos que hacen de
-\[
-  \mathrm{E}(\bb{X}^\bullet)
-  =
-  \bigl(\mathrm{E}(X^\bullet_k)\bigr)_{k\in\bb{Z}}
-\]
+$\mathbf X^\bullet$ inducen morfismos que hacen de
+$\mathrm E(\mathbf X^\bullet)=(\mathrm E(X_k^\bullet))$
 un \emph{sistema proyectivo de sucesiones espectrales}.
 \end{env}
 
 \begin{lemma}[13.5.3]
 \label{0.13.5.3}
+\label{0.13.5.3-fr}
 Supongamos que el sistema proyectivo
-$\bb{X}^\bullet=(X^\bullet_k)_{k\in\bb{Z}}$ de complejos filtrados se
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ de complejos filtrados se
 obtiene como en \sref{0.13.5.2}. Entonces:
 \begin{enumerate}
   \item[{\rm a)}] Para $r\geq p-p_0$, se tiene
-  \[
-    \mathrm{B}_r^{pq}(X^\bullet_k)
-    =
-    \mathrm{B}_\infty^{pq}(X^\bullet_k)
-  \]
-  para todo $k\in\bb{Z}$.
+  $\mathrm B_r^{pq}(X_k^\bullet)=\mathrm B_\infty^{pq}(X_k^\bullet)$
+  para todo $k\in\mathbb Z$.
   \item[{\rm b)}] Para $k+1\leq p+r$, se tiene
-  \[
-    \mathrm{Z}_r^{pq}(X^\bullet_k)
-    =
-    \mathrm{Z}_\infty^{pq}(X^\bullet_k).
-  \]
-  \item[{\rm c)}] Para $k+1\geq p+r$, los morfismos
-  \[
-    \mathrm{Z}_r^{pq}(X^\bullet_h)
-    \longrightarrow
-    \mathrm{Z}_r^{pq}(X^\bullet_k)
-    \quad\text{y}\quad
-    \mathrm{B}_r^{pq}(X^\bullet_h)
-    \longrightarrow
-    \mathrm{B}_r^{pq}(X^\bullet_k)
-  \]
-  son isomorfismos para todo $h\geq k$.
+  $\mathrm Z_r^{pq}(X_k^\bullet)=\mathrm Z_\infty^{pq}(X_k^\bullet)$.
+  \item[{\rm c)}] Para $k+1\geq p+r$, los morfismos $\mathrm Z_r^{pq}(X_h^\bullet)\to\mathrm Z_r^{pq}(X_k^\bullet)$ y $\mathrm B_r^{pq}(X_h^\bullet)\to\mathrm B_r^{pq}(X_k^\bullet)$ son isomorfismos para todo $h\geq k$.
 \end{enumerate}
 \end{lemma}
 
 \oldpage[0\textsubscript{III}]{72}
 Estas tres propiedades se siguen inmediatamente de las definiciones de
 \sref{0.11.2.2}, teniendo en cuenta que
-$\mathrm{F}^{p-r+1}(X^\bullet_k)=X^\bullet_k$ cuando $p-r<p_0$.
+$\mathrm F^{p-r+1}(X_k^\bullet)=X_k^\bullet$ cuando $p-r<p_0$.
 
 \begin{env}[13.5.4]
-\label{0.13.5.4}
-Supongamos que se cumplen las hipótesis de \sref{0.13.5.3}.
-Entonces, para $p$, $q$ y $r$ fijos (con $r$ finito), los sistemas
-proyectivos
-\[
-  \bigl(\mathrm{Z}_r^{pq}(X^\bullet_k)\bigr)_{k\in\bb{Z}},
-  \qquad
-  \bigl(\mathrm{B}_r^{pq}(X^\bullet_k)\bigr)_{k\in\bb{Z}},
-  \qquad
-  \bigl(\mathrm{E}_r^{pq}(X^\bullet_k)\bigr)_{k\in\bb{Z}}
-\]
-son \emph{esencialmente constantes}; sus respectivos límites proyectivos
-se denotarán por
-$\mathrm{Z}_r^{pq}(\bb{X}^\bullet)$,
-$\mathrm{B}_r^{pq}(\bb{X}^\bullet)$, y
-\[
-  \mathrm{E}_r^{pq}(\bb{X}^\bullet)
-  =
-  \mathrm{Z}_r^{pq}(\bb{X}^\bullet)/
-  \mathrm{B}_r^{pq}(\bb{X}^\bullet).
-\]
-Los objetos $\mathrm{Z}_r^{pq}(\bb{X}^\bullet)$ y
-$\mathrm{B}_r^{pq}(\bb{X}^\bullet)$ se identifican canónicamente con
-subobjetos de $\mathrm{E}_1^{pq}(\bb{X}^\bullet)$.
+\label{0.13.5.4-fr}
+Supongamos satisfechas las hipótesis de (\hyperref[0.13.5.3-fr]{13.5.3}). Entonces, para $p,q,r$ fijos ($r$ finito), los sistemas proyectivos $(\mathrm Z_r^{pq}(X_k^\bullet))_{k\in\mathbb Z}$, $(\mathrm B_r^{pq}(X_k^\bullet))_{k\in\mathbb Z}$, $(\mathrm E_r^{pq}(X_k^\bullet))_{k\in\mathbb Z}$ son \emph{esencialmente constantes}; se denotará por $\mathrm Z_r^{pq}(\mathbf X^\bullet)$,
+$\mathrm B_r^{pq}(\mathbf X^\bullet)$, y
+$\mathrm E_r^{pq}(\mathbf X^\bullet)=
+\mathrm Z_r^{pq}(\mathbf X^\bullet)/
+\mathrm B_r^{pq}(\mathbf X^\bullet)$
+Los objetos $\mathrm Z_r^{pq}(\mathbf X^\bullet)$ y
+$\mathrm B_r^{pq}(\mathbf X^\bullet)$ se identifican canónicamente con
+subobjetos de $\mathrm E_1^{pq}(\mathbf X^\bullet)$.
 La definición de los $d_r^{pq}$ (M, XV, 1) muestra que estos
-morfismos, tomados respecto de los $X^\bullet_k$, son también esencialmente
+morfismos, tomados respecto de los $X_k^\bullet$, son también esencialmente
 constantes, y definen, por tanto, morfismos
 \begin{equation}
-\label{0.13.5.4.1}
+\label{0.13.5.4.1-fr}
 \tag{13.5.4.1}
-  d_r^{pq}:
-  \mathrm{E}_r^{pq}(\bb{X}^\bullet)
-  \longrightarrow
-  \mathrm{E}_r^{p+r,q-r+1}(\bb{X}^\bullet)
+d_r^{pq}:\mathrm E_r^{pq}(\mathbf X^\bullet)
+\longrightarrow\mathrm E_r^{p+r,q-r+1}(\mathbf X^\bullet)
 \end{equation}
 tal que
 $d_r^{p+r,q-r+1}\circ d_r^{pq}=0$.
 Además, existen isomorfismos canónicos de
-$\Ker(d_r^{pq})$ sobre
-\[
-  \mathrm{Z}_{r+1}^{pq}(\bb{X}^\bullet)/
-  \mathrm{B}_r^{pq}(\bb{X}^\bullet)
-\]
-y de $\Im(d_r^{pq})$ sobre
-\[
-  \mathrm{B}_{r+1}^{p+r,q-r+1}(\bb{X}^\bullet)/
-  \mathrm{B}_r^{p+r,q-r+1}(\bb{X}^\bullet).
-\]
+$\operatorname{Ker}(d_r^{pq})$ sobre
+$\mathrm Z_{r+1}^{pq}(\mathbf X^\bullet)/
+\mathrm B_r^{pq}(\mathbf X^\bullet)$
+y de $\operatorname{Im}(d_r^{pq})$ sobre
+$\mathrm B_{r+1}^{p+r,q-r+1}(\mathbf X^\bullet)/
+\mathrm B_r^{p+r,q-r+1}(\mathbf X^\bullet)$.
 \end{env}
 
 \begin{lemma}[13.5.5]
 \label{0.13.5.5}
+\label{0.13.5.5-fr}
 Bajo las hipótesis de \sref{0.13.5.3}, para
 $s\geq r>p-p_0$ existe un monomorfismo canónico
 \begin{equation}
-\label{0.13.5.5.1}
+\label{0.13.5.5.1-fr}
 \tag{13.5.5.1}
-  i:
-  \mathrm{E}_s^{pq}(\bb{X}^\bullet)
-  \longrightarrow
-  \mathrm{E}_r^{pq}(\bb{X}^\bullet)
+i:\mathrm E_s^{pq}(\mathbf X^\bullet)
+\longrightarrow\mathrm E_r^{pq}(\mathbf X^\bullet)
 \end{equation}
 y un isomorfismo canónico
 \begin{equation}
-\label{0.13.5.5.2}
+\label{0.13.5.5.2-fr}
 \tag{13.5.5.2}
-  j_r:
-  \mathrm{E}_r^{pq}(\bb{X}^\bullet)
-  \simto
-  \mathrm{E}_\infty^{pq}(X^\bullet_{p+r-1})
+j_r:\mathrm E_r^{pq}(\mathbf X^\bullet)
+\xrightarrow{\sim}\mathrm E_\infty^{pq}(X_{p+r-1}^\bullet)
 \end{equation}
 tal que el diagrama
 \begin{equation}
-\label{0.13.5.5.3}
+\label{0.13.5.5.3-fr}
 \tag{13.5.5.3}
-  \xymatrix{
-    \mathrm{E}_s^{pq}(\bb{X}^\bullet)
-      \ar[r]^{j_s}\ar[d]_i
-    &
-    \mathrm{E}_\infty^{pq}(X^\bullet_{p+s-1})
-      \ar[d]
-    \\
-    \mathrm{E}_r^{pq}(\bb{X}^\bullet)
-      \ar[r]^{j_r}
-    &
-    \mathrm{E}_\infty^{pq}(X^\bullet_{p+r-1})
-  }
+\xymatrix{
+\mathrm E_s^{pq}(\mathbf X^\bullet)\ar[r]^{j_s}\ar[d]_i
+&\mathrm E_\infty^{pq}(X_{p+s-1}^\bullet)\ar[d]\\
+\mathrm E_r^{pq}(\mathbf X^\bullet)\ar[r]_{j_r}
+&\mathrm E_\infty^{pq}(X_{p+r-1}^\bullet)
+}
 \end{equation}
 es conmutativo, donde la flecha vertical derecha está inducida por el
 morfismo
-$X^\bullet_{p+s-1}\longrightarrow X^\bullet_{p+r-1}$.
+$X_{p+s-1}^\bullet\to X_{p+r-1}^\bullet$.
 \end{lemma}
 
 \begin{proof}
-La existencia de $i$ se sigue de
-\[
-  \mathrm{B}_r^{pq}(X^\bullet_k)
-  =
-  \mathrm{B}_\infty^{pq}(X^\bullet_k)
-  \qquad (r>p-p_0)
-\]
-(\sref{0.13.5.3},~\emph{a)}).
-Para $k+1\leq p+r$, se tiene
-\[
-  \mathrm{Z}_r^{pq}(X^\bullet_k)
-  =
-  \mathrm{Z}_\infty^{pq}(X^\bullet_k)
-\]
-(\sref{0.13.5.3},~\emph{b)}); en particular,
-\[
-  \mathrm{Z}_r^{pq}(X^\bullet_{p+r-1})
-  =
-  \mathrm{Z}_\infty^{pq}(X^\bullet_{p+r-1}).
-\]
+La existencia de $i$ proviene de que $\mathrm B_r^{pq}(X_k^\bullet)=\mathrm B_\infty^{pq}(X_k^\bullet)$ para $r>p-p_0$ (\hyperref[0.13.5.3-fr]{13.5.3}, \emph{a)}); se tiene
+$\mathrm Z_r^{pq}(X_k^\bullet)=\mathrm Z_\infty^{pq}(X_k^\bullet)$ para $k+1\leq p+r$ (\hyperref[0.13.5.3-fr]{13.5.3}, \emph{b)}), de donde, en particular,
+$\mathrm Z_r^{pq}(X_{p+r-1}^\bullet)=
+\mathrm Z_\infty^{pq}(X_{p+r-1}^\bullet)$
 Por otra parte,
-$\mathrm{Z}_r^{pq}(X^\bullet_{p+r-1})$ y
-$\mathrm{B}_r^{pq}(X^\bullet_{p+r-1})$ se identifican canónicamente con
-$\mathrm{Z}_r^{pq}(\bb{X}^\bullet)$ y
-$\mathrm{B}_r^{pq}(\bb{X}^\bullet)$ por
+$\mathrm Z_r^{pq}(X_{p+r-1}^\bullet)$ y
+$\mathrm B_r^{pq}(X_{p+r-1}^\bullet)$ se identifican canónicamente con
+$\mathrm Z_r^{pq}(\mathbf X^\bullet)$ y
+$\mathrm B_r^{pq}(\mathbf X^\bullet)$ por
 \sref{0.13.5.3},~\emph{c)}.
 Esto demuestra la existencia de $j_r$ y la conmutatividad de
 \sref{0.13.5.5.3}.
 \end{proof}
 
 \begin{corollary}[13.5.6]
-\label{0.13.5.6}
-Bajo las hipótesis de \sref{0.13.5.3}, si uno de los límites
-proyectivos
-\[
-  \varprojlim_r\mathrm{E}_r^{pq}(\bb{X}^\bullet),
-  \qquad
-  \varprojlim_k\mathrm{E}_\infty^{pq}(X^\bullet_k)
-\]
-existe, entonces también existe el otro, y hay un isomorfismo canónico
+\label{0.13.5.6-fr}
+Bajo las hipótesis de \textup{(\hyperref[0.13.5.3-fr]{13.5.3})}, si uno de los límites proyectivos $\varprojlim_r\mathrm E_r^{pq}(\mathbf X^\bullet)$, $\varprojlim_k\mathrm E_\infty^{pq}(X_k^\bullet)$ existe, lo mismo ocurre con el otro, y se tiene un isomorfismo canónico
 \begin{equation}
-\label{0.13.5.6.1}
+\label{0.13.5.6.1-fr}
 \tag{13.5.6.1}
-  j_\infty:
-  \varprojlim_r\mathrm{E}_r^{pq}(\bb{X}^\bullet)
-  \simto
-  \varprojlim_k\mathrm{E}_\infty^{pq}(X^\bullet_k).
+j_\infty:\varprojlim_r\mathrm E_r^{pq}(\mathbf X^\bullet)
+\xrightarrow{\sim}
+\varprojlim_k\mathrm E_\infty^{pq}(X_k^\bullet).
 \end{equation}
 Además, el sistema proyectivo
-$(\mathrm{E}_r^{pq}(\bb{X}^\bullet))_{r\in\bb{Z}}$ es esencialmente
+$(\mathrm E_r^{pq}(\mathbf X^\bullet))_{r\in\mathbb Z}$ es esencialmente
 constante \textup{(\sref{0.13.4.2})} si y solo si el sistema proyectivo
-$(\mathrm{E}_\infty^{pq}(X^\bullet_k))_{k\in\bb{Z}}$ es esencialmente
+$(\mathrm E_\infty^{pq}(X_k^\bullet))_{k\in\mathbb Z}$ es esencialmente
 constante.
 \end{corollary}
 
 \begin{env}[13.5.7]
 \label{0.13.5.7}
-Denotamos por
-$\mathrm{B}_\infty^{pq}(\bb{X}^\bullet)$ y
-$\mathrm{Z}_\infty^{pq}(\bb{X}^\bullet)$ los subobjetos de
-$\mathrm{E}_1^{pq}(\bb{X}^\bullet)$ iguales respectivamente a
-$\mathrm{B}_r^{pq}(\bb{X}^\bullet)$ para $r>p-p_0$ y a
-$\inf_r\mathrm{Z}_r^{pq}(\bb{X}^\bullet)$, cuando este último existe.
+\label{0.13.5.7-fr}
+Se denota por
+$\mathrm B_\infty^{pq}(\mathbf X^\bullet)$ y
+$\mathrm Z_\infty^{pq}(\mathbf X^\bullet)$ los subobjetos de
+$\mathrm E_1^{pq}(\mathbf X^\bullet)$ iguales respectivamente a
+$\mathrm B_r^{pq}(\mathbf X^\bullet)$ para $r>p-p_0$ y a
+$\inf_r\mathrm Z_r^{pq}(\mathbf X^\bullet)$, cuando este último existe.
 Así,
-\[
-  \varprojlim_r\mathrm{E}_r^{pq}(\bb{X}^\bullet)
-\]
+$\varprojlim_r\mathrm E_r^{pq}(\mathbf X^\bullet)$
 \oldpage[0\textsubscript{III}]{73}
 se identifica canónicamente con
-\[
-  \mathrm{E}_\infty^{pq}(\bb{X}^\bullet)
-  =
-  \mathrm{Z}_\infty^{pq}(\bb{X}^\bullet)/
-  \mathrm{B}_\infty^{pq}(\bb{X}^\bullet).
-\]
-Observemos que los objetos
-$\mathrm{Z}_r^{pq}(\bb{X}^\bullet)$,
-$\mathrm{B}_r^{pq}(\bb{X}^\bullet)$,
-$\mathrm{E}_r^{pq}(\bb{X}^\bullet)$
-($1\leq r\leq+\infty$), y los morfismos $d_r^{pq}$ dependen
-\emph{funtorialmente} del sistema proyectivo $\bb{X}^\bullet$, con las
+$\mathrm E_\infty^{pq}(\mathbf X^\bullet)=
+\mathrm Z_\infty^{pq}(\mathbf X^\bullet)/
+\mathrm B_\infty^{pq}(\mathbf X^\bullet)$.
+Se observará que los objetos
+$\mathrm Z_r^{pq}(\mathbf X^\bullet)$,
+$\mathrm B_r^{pq}(\mathbf X^\bullet)$,
+$\mathrm E_r^{pq}(\mathbf X^\bullet)$
+($(1\leq r\leq+\infty)$), y los morfismos $d_r^{pq}$ dependen
+\emph{funtorialmente} del sistema proyectivo $\mathbf X^\bullet$, con las
 restricciones de \sref{0.13.5.5}, y los morfismos definidos en
 \sref{0.13.5.5} y \sref{0.13.5.6} son funtoriales.
 \end{env}
 
 \subsection{Sucesión espectral de un funtor relativa a un objeto dotado de una filtración finita}
 \label{subsection:0.13.6}
+\label{subsection:0.13.6-fr}
 
 \begin{env}[13.6.1]
 \label{0.13.6.1}
-Sean $\cat{C}$ y $\cat{C}'$ dos categorías abelianas, y sea
-$\mathrm{T}:\cat{C}\longrightarrow\cat{C}'$ un funtor covariante
+\label{0.13.6.1-fr}
+Sean $\boldsymbol{C}$ y $\boldsymbol{C}'$ dos categorías abelianas, y sea
+$\mathrm T:\boldsymbol{C}\to \boldsymbol{C}'$ un funtor covariante
 aditivo.
-Supongamos que todo objeto de $\cat{C}$ es isomorfo a un subobjeto de
+Supongamos que todo objeto de $\boldsymbol{C}$ es isomorfo a un subobjeto de
 un objeto inyectivo, de modo que existan los funtores derivados por la derecha
-$\RR^p\mathrm{T}$ ($p\geq0$).
+$\mathrm R^p\mathrm T$ ($(p\geq0)$).
 \end{env}
 
 \begin{lemma}[13.6.2]
 \label{0.13.6.2}
-Sea $A$ un objeto de $\cat{C}$ dotado de una filtración \textup{finita}
-$(\mathrm{F}^i(A))_{i\in\bb{Z}}$.
+\label{0.13.6.2-fr}
+Sea $A$ un objeto de $\boldsymbol{C}$ dotado de una filtración \textup{finita}
+$(\mathrm F^i(A))_{i\in\mathbb Z}$.
 Existe una resolución inyectiva
 $X^\bullet=(X^j)_{j\geq0}$ de $A$, dotada de una filtración finita
-$(\mathrm{F}^i(X^\bullet))_{i\in\bb{Z}}$, tal que
-\[
-  \mathrm{F}^i(A)=A
-  \quad\text{\textup{(respectivamente, $\mathrm{F}^i(A)=0$)}}
-\]
-implica
-\[
-  \mathrm{F}^i(X^\bullet)=X^\bullet
-  \quad\text{\textup{(respectivamente, $\mathrm{F}^i(X^\bullet)=0$)}}, 
-\]
-y tal que, para todo $i\in\bb{Z}$,
-$\mathrm{F}^i(X^\bullet)$ es una resolución inyectiva de
-$\mathrm{F}^i(A)$.
+$(\mathrm F^i(X^\bullet))_{i\in\mathbb Z}$ tal que la relación $\mathrm F^i(A)=A$ \textup{(resp. $\mathrm F^i(A)=0$)} implique $\mathrm F^i(X^\bullet)=X^\bullet$ \textup{(resp. $\mathrm F^i(X^\bullet)=0$)} y que, para todo $i\in\mathbb Z$,
+$\mathrm F^i(X^\bullet)$ es una resolución inyectiva de
+$\mathrm F^i(A)$.
 \end{lemma}
 
 \begin{proof}
-Sea $p$ (respectivamente, $q>p$) el mayor índice tal que
-$\mathrm{F}^i(A)=A$ (respectivamente, el menor índice tal que
+Sea $p$ (resp. $q>p$) el mayor índice tal que
+$\mathrm F^i(A)=A$ (resp. el menor índice tal que
 $\mathrm F^i(A)=0$).
-Razonamos por inducción sobre $q-p$, siendo inmediato el lema cuando
-$q-p=1$.
-Supongamos construida una resolución inyectiva ${X''}^\bullet$ de
-$A/\mathrm{F}^{q-1}(A)$ que tenga las propiedades requeridas.
-Consideremos la sucesión exacta
-\[
-  0\longrightarrow\mathrm{F}^{q-1}(A)
-  \longrightarrow A
-  \longrightarrow A/\mathrm{F}^{q-1}(A)
-  \longrightarrow0,
-\]
-tomemos una resolución inyectiva ${X'}^\bullet$ de
-$\mathrm{F}^{q-1}(A)$, y elijamos después una resolución inyectiva
-$X^\bullet$ de $A$ de modo que se obtenga una sucesión exacta
-\[
-  0\longrightarrow {X'}^\bullet
-  \longrightarrow X^\bullet
-  \longrightarrow {X''}^\bullet
-  \longrightarrow0
-\]
+Se razona por inducción sobre $q-p$, siendo inmediato el lema cuando
+$q-p=1$. Habiendo formado una resolución inyectiva ${X''}^\bullet$ de
+$A/\mathrm F^{q-1}(A)$ con las propiedades requeridas, se considera la sucesión exacta $0\to\mathrm F^{q-1}(A)\to A\to A/\mathrm F^{q-1}(A)\to0$, se toma una resolución inyectiva ${X'}^\bullet$ de
+$\mathrm F^{q-1}(A)$, luego se determina una resolución inyectiva $X^\bullet$ de $A$ de modo que se obtenga una sucesión exacta
+$0\to {X'}^\bullet\to X^\bullet\to {X''}^\bullet\to0$
 compatible con la sucesión precedente (M, V, 2.2).
 Está claro que $X^\bullet$ tiene las propiedades requeridas.
 \end{proof}
 
 \begin{corollary}[13.6.3]
 \label{0.13.6.3}
-Sea $B$ un segundo objeto de $\cat{C}$, dotado de una filtración
-finita $(\mathrm{F}^i(B))_{i\in\bb{Z}}$, sea $s$ un entero,
-y sea $u:A\longrightarrow B$ un morfismo tal que
-\[
-  u(\mathrm{F}^i(A))\subset\mathrm{F}^{i+s}(B)
-\]
-para todo $i\in\bb{Z}$.
+\label{0.13.6.3-fr}
+Sea $B$ un segundo objeto de $\boldsymbol{C}$, dotado de una filtración
+finita $(\mathrm F^i(B))_{i\in\mathbb Z}$, sea $s$ un entero,
+y sea $u:A\to B$ un morfismo tal que
+$u(\mathrm F^i(A))\subset\mathrm F^{i+s}(B)$
+para todo $i\in\mathbb Z$.
 Si $Y^\bullet=(Y^j)_{j\geq0}$ es una resolución inyectiva de $B$
 dotada de una filtración
-$(\mathrm{F}^i(Y^\bullet))_{i\in\bb{Z}}$ que tenga las propiedades
+$(\mathrm F^i(Y^\bullet))_{i\in\mathbb Z}$ que tenga las propiedades
 enunciadas en \sref{0.13.6.2}, entonces existe un morfismo
-$v:X^\bullet\longrightarrow Y^\bullet$, compatible con $u$, tal
+$v:X^\bullet\to Y^\bullet$, compatible con $u$, tal
 que
-\[
-  v(\mathrm{F}^i(X^\bullet))
-  \subset
-  \mathrm{F}^{i+s}(Y^\bullet)
-\]
-para todo $i\in\bb{Z}$.
+$v(\mathrm F^i(X^\bullet))\subset\mathrm F^{i+s}(Y^\bullet)$
+para todo $i\in\mathbb Z$.
 Además, cualesquiera dos de tales morfismos $v$ y $v'$ son homotópicos.
 \end{corollary}
 
@@ -1323,128 +897,77 @@ precedente y de (M, V, 2.3).
 
 \begin{env}[13.6.4]
 \label{0.13.6.4}
+\label{0.13.6.4-fr}
 Bajo las hipótesis de \sref{0.13.6.2}, consideremos el complejo
-$\mathrm{T}(X^\bullet)$ en $\cat{C}'$.
+$\mathrm T(X^\bullet)$ en $\boldsymbol{C}'$.
 Está filtrado por los complejos
-$\mathrm{T}(\mathrm{F}^i(X^\bullet))$, pues
-$\mathrm{F}^i(X^\bullet)$ es un sumando directo de $X^\bullet$.
+$\mathrm T(\mathrm F^i(X^\bullet))$, pues
+$\mathrm F^i(X^\bullet)$ es un sumando directo de $X^\bullet$.
 Se sigue de \sref{0.13.6.3} que la \emph{sucesión espectral} de
 este complejo filtrado depende, salvo isomorfismo, únicamente del
 objeto filtrado $A$.
-Su término límite es la cohomología $\RR^\bullet\mathrm{T}(A)$, dotada
+Su término límite es la cohomología $\mathrm R^\bullet\mathrm T(A)$, dotada
 de la filtración
 \begin{equation}
-\label{0.13.6.4.1}
+\label{0.13.6.4.1-fr}
 \tag{13.6.4.1}
-  \begin{split}
-  \mathrm{F}^p(\RR^n\mathrm{T}(A))
-  &=
-  \Im\bigl(
-    \RR^n\mathrm{T}(\mathrm{F}^p(A))
-    \longrightarrow
-    \RR^n\mathrm{T}(A)
-  \bigr)
-  \\
-  &=
-  \Ker\bigl(
-    \RR^n\mathrm{T}(A)
-    \longrightarrow
-    \RR^n\mathrm{T}(A/\mathrm{F}^p(A))
-  \bigr),
-  \end{split}
+\begin{split}
+\mathrm F^p(\mathrm R^n\mathrm T(A))
+&=\operatorname{Im}\bigl(\mathrm R^n\mathrm T(\mathrm F^p(A))
+\longrightarrow\mathrm R^n\mathrm T(A)\bigr)\\
+&=\operatorname{Ker}\bigl(\mathrm R^n\mathrm T(A)
+\longrightarrow\mathrm R^n\mathrm T(A/\mathrm F^p(A))\bigr)
+\end{split}
 \end{equation}
-por \sref{0.11.2.2}, y su término $\mathrm{E}_1$ es
+por \sref{0.11.2.2}, y su término $\mathrm E_1$ es
 \begin{equation}
-\label{0.13.6.4.2}
+\label{0.13.6.4.2-fr}
 \tag{13.6.4.2}
-  \mathrm{E}_1^{pq}
-  =
-  \RR^{p+q}\mathrm{T}(\mathrm{gr}^p(A)),
+\mathrm E_1^{pq}=\mathrm R^{p+q}\mathrm T(\operatorname{gr}^p(A))
 \end{equation}
-donde, como de costumbre,
-$\mathrm{gr}^p(A)=\mathrm{F}^p(A)/\mathrm{F}^{p+1}(A)$.
-Se desprende de \sref{0.11.2.2} que la filtración del término límite
-es \emph{finita} y que, para $p$ y $q$ fijos, las sucesiones
+donde $\operatorname{gr}^p(A)$ designa, como de costumbre, $\mathrm F^p(A)/\mathrm F^{p+1}(A)$. Está claro, por (\hyperref[0.11.2.2-fr]{11.2.2}), que la filtración del término límite es \emph{finita}, y que para $p$ y $q$ dados, las sucesiones de los
 \oldpage[0\textsubscript{III}]{74}
-\[
-  \mathrm{B}_r^{pq}(A)
-  =
-  \mathrm{B}_r^{pq}(\mathrm{T}(X^\bullet))
-  \quad\text{y}\quad
-  \mathrm{Z}_r^{pq}(A)
-  =
-  \mathrm{Z}_r^{pq}(\mathrm{T}(X^\bullet))
-\]
-son \emph{estacionarias}.
-La sucesión espectral precedente es, por tanto, \emph{birregular}
-(\sref{0.11.1.3}).
-La denotamos por
-$\mathrm{E}(A)=(\mathrm{E}_r^{pq}(A))$ y la llamamos la
-\emph{sucesión espectral del funtor $\mathrm{T}$ relativa al
+$\mathrm B_r^{pq}(A)=\mathrm B_r^{pq}(\mathrm T(X^\bullet))$ y $\mathrm Z_r^{pq}(A)=\mathrm Z_r^{pq}(\mathrm T(X^\bullet))$ son \emph{estacionarias}, por tanto la sucesión espectral precedente es \emph{birregular} (\hyperref[0.11.1.3-fr]{11.1.3}). Denotaremos esta sucesión por $\mathrm E(A)=(\mathrm E_r^{pq}(A))$ y la llamaremos la
+\emph{sucesión espectral del funtor $\mathrm T$ relativa al
 objeto filtrado $A$}.
 \end{env}
 
 \begin{env}[13.6.5]
 \label{0.13.6.5}
+\label{0.13.6.5-fr}
 Supongamos ahora que se cumplen las hipótesis de \sref{0.13.6.3}, y
 conservemos su notación.
-Como $\mathrm{F}^i(X^\bullet)$ (respectivamente,
-$\mathrm{F}^i(Y^\bullet)$) es un sumando directo de $X^\bullet$
-(respectivamente, $Y^\bullet$), se tiene
-\[
-  (\mathrm{T}v)\bigl(\mathrm{T}(\mathrm{F}^i(X^\bullet))\bigr)
-  \subset
-  \mathrm{T}(\mathrm{F}^{i+s}(Y^\bullet))
-\]
-para todo $i\in\bb{Z}$.
+Como $\mathrm F^i(X^\bullet)$ (resp.
+$\mathrm F^i(Y^\bullet)$) es un sumando directo de $X^\bullet$
+(resp. $Y^\bullet$), se tiene
+$(\mathrm T v)(\mathrm T(\mathrm F^i(X^\bullet)))
+\subset\mathrm T(\mathrm F^{i+s}(Y^\bullet))$
+para todo $i\in\mathbb Z$.
 Las definiciones de \sref{0.11.2.2} muestran entonces que, para
-$1\leq r\leq+\infty$, $\mathrm{T}v$ define morfismos
-\[
-  \mathrm{B}_r^{pq}(\mathrm{T}(X^\bullet))
-  \longrightarrow
-  \mathrm{B}_r^{p+s,q-s}(\mathrm{T}(Y^\bullet))
-\]
+$1\leq r\leq+\infty$, $\mathrm T v$ define morfismos
+$\mathrm B_r^{pq}(\mathrm T(X^\bullet))\to
+\mathrm B_r^{p+s,q-s}(\mathrm T(Y^\bullet))$
 y
-\[
-  \mathrm{Z}_r^{pq}(\mathrm{T}(X^\bullet))
-  \longrightarrow
-  \mathrm{Z}_r^{p+s,q-s}(\mathrm{T}(Y^\bullet)),
-\]
+$\mathrm Z_r^{pq}(\mathrm T(X^\bullet))\to
+\mathrm Z_r^{p+s,q-s}(\mathrm T(Y^\bullet))$,
 y, por tanto, un morfismo
 \[
-  w_r:
-  \mathrm{E}_r^{pq}(A)
-  \longrightarrow
-  \mathrm{E}_r^{p+s,q-s}(B).
+w_r:\mathrm E_r^{pq}(A)\to\mathrm E_r^{p+s,q-s}(B)~;
 \]
 Análogamente, sobre los términos límite se tienen morfismos
-\[
-  u_n:
-  \RR^n\mathrm{T}(A)
-  \longrightarrow
-  \RR^n\mathrm{T}(B)
-\]
+$u_n:\mathrm R^n\mathrm T(A)\to\mathrm R^n\mathrm T(B)$
 tales que
-\[
-  u_n\bigl(\mathrm{F}^p(\RR^n\mathrm{T}(A))\bigr)
-  \subset
-  \mathrm{F}^{p+s}(\RR^n\mathrm{T}(B)).
-\]
+$u_n(\mathrm F^p(\mathrm R^n\mathrm T(A)))\subset
+\mathrm F^{p+s}(\mathrm R^n\mathrm T(B))$.
 La definición de los $d_r^{pq}$ (M, XV, 1) muestra también que los
 diagramas
 \[
-  \xymatrix{
-    \mathrm{E}_r^{pq}(A)
-      \ar[r]^{d_r^{pq}}\ar[d]_{w_r}
-    &
-    \mathrm{E}_r^{p+r,q-r+1}(A)
-      \ar[d]^{w_r}
-    \\
-    \mathrm{E}_r^{p+s,q-s}(B)
-      \ar[r]_{d_r^{p+s,q-s}}
-    &
-    \mathrm{E}_r^{p+r+s,q-r-s+1}(B)
-  }
+\xymatrix{
+\mathrm E_r^{pq}(A)\ar[r]^{d_r^{pq}}\ar[d]_{w_r}
+&\mathrm E_r^{p+r,q-r+1}(A)\ar[d]^{w_r}\\
+\mathrm E_r^{p+s,q-s}(B)\ar[r]_{d_r^{p+s,q-s}}
+&\mathrm E_r^{p+r+s,q-r-s+1}(B)
+}
 \]
 son conmutativos.
 Se sigue que existe un diagrama conmutativo análogo para los
@@ -1452,219 +975,137 @@ isomorfismos $\alpha_r^{pq}$, cuya explicitación dejamos al lector.
 Finalmente (\emph{loc.\ cit.}), se tienen también diagramas conmutativos
 sobre los términos límite:
 \[
-  \xymatrix{
-    \mathrm{E}_\infty^{pq}(A)
-      \ar[r]^{\beta^{pq}}\ar[d]_{w_\infty}
-    &
-    \mathrm{gr}^p(\RR^{p+q}\mathrm{T}(A))
-      \ar[d]^{u_{p+q}}
-    \\
-    \mathrm{E}_\infty^{p+s,q-s}(B)
-      \ar[r]_{\beta^{p+s,q-s}}
-    &
-    \mathrm{gr}^{p+s}(\RR^{p+q}\mathrm{T}(B)).
-  }
+\xymatrix{
+\mathrm E_\infty^{pq}(A)\ar[r]^{\beta^{pq}}\ar[d]_{w_\infty}
+&\operatorname{gr}^p(\mathrm R^{p+q}\mathrm T(A))
+  \ar[d]^{u_{p+q}}\\
+\mathrm E_\infty^{p+s,q-s}(B)\ar[r]_{\beta^{p+s,q-s}}
+&\operatorname{gr}^{p+s}(\mathrm R^{p+q}\mathrm T(B))
+}
 \]
 \end{env}
 
 \begin{env}[13.6.6]
 \label{0.13.6.6}
+\label{0.13.6.6-fr}
 Supongamos, en particular, que existe un anillo $S$, dotado de una
-\emph{filtración} $(\mathrm{F}^i(S))_{i\in\bb{Z}}$, y un homomorfismo
+\emph{filtración} $(\mathrm F^i(S))_{i\in\mathbb Z}$, y un homomorfismo
 de anillos
 \begin{equation}
-\label{0.13.6.6.1}
+\label{0.13.6.6.1-fr}
 \tag{13.6.6.1}
-  h:S\longrightarrow\Hom_{\cat{C}}(A,A)
+h:S\to\operatorname{Hom}_{\boldsymbol{C}}(A,A)
 \end{equation}
 \oldpage[0\textsubscript{III}]{75}
-tal que, para todo $t\in\mathrm{F}^j(S)$,
-\[
-  h_t(\mathrm F^i(A))
-  \subset
-  \mathrm{F}^{i+j}(A)
-\]
-para todo par $i,j$.
-Para abreviar, decimos entonces que $A$ está dotado de la estructura de un
-\emph{$S$--$\cat{C}$-módulo filtrado} sobre el anillo filtrado $S$.
+tal que, para todo $t\in\mathrm F^j(S)$,
+$h_t(\mathrm F^i(A))\subset\mathrm F^{i+j}(A)$ para todo par $i$, $j$. Diremos para abreviar que $A$ está dotado de la estructura de un
+\emph{$S$--$\boldsymbol{C}$-módulo filtrado} sobre el anillo filtrado $S$.
 
 Al pasar a los objetos graduados asociados, todo $h_t$, para
-$t\in\mathrm{F}^i(S)$, define un endomorfismo \emph{graduado}
-$\overline{h}_t$ de $\mathrm{gr}^\bullet(A)$, homogéneo de grado
-$i$.
-Además, este endomorfismo depende únicamente de la clase de $t$ en
-$\mathrm{gr}^i(S)$, y se obtiene así un homomorfismo de
-\emph{anillos graduados}
-\[
-  \overline{h}:
-  \mathrm{gr}^\bullet(S)
-  \longrightarrow
-  \Hom_{\cat{C}}^\bullet
-  \bigl(\mathrm{gr}^\bullet(A),\mathrm{gr}^\bullet(A)\bigr),
-\]
-donde el miembro derecho es el anillo de endomorfismos \emph{graduados} de
-$\mathrm{gr}^\bullet(A)$.
-Decimos que $\mathrm{gr}^\bullet(A)$ está dotado de la estructura
-de un \emph{$\mathrm{gr}^\bullet(S)$--$\cat{C}$-módulo graduado}.
+$t\in\mathrm F^j(S)$, define un endomorfismo \emph{graduado}
+$\overline h_t$ de $\operatorname{gr}^\bullet(A)$, homogéneo de grado $j$; además, este morfismo solo depende de la clase de $t$ en $\operatorname{gr}^j(S)$, y se define así un homomorfismo de \emph{anillos graduados} \[
+\overline h:\operatorname{gr}^\bullet(S)\to
+\operatorname{Hom}_{\boldsymbol{C}}^g(\operatorname{gr}^\bullet(A),
+\operatorname{gr}^\bullet(A))
+\] donde el segundo miembro es el anillo de los endomorfismos \emph{graduados} de $\operatorname{gr}^\bullet(A)$.
+Decimos que $\operatorname{gr}^\bullet(A)$ está dotado de la estructura
+de un \emph{$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}$-módulo graduado}.
 
 Se sigue de \sref{0.13.6.5} que, para
-$1\leq r\leq+\infty$, todo
-$\overline{t}\in\mathrm{gr}^i(S)$ define canónicamente, sobre los
-objetos bigraduados
-\[
-  \bigl(\mathrm{B}_r^{pq}(A)\bigr)_{(p,q)\in\bb{Z}\times\bb{Z}},
-  \qquad
-  \bigl(\mathrm{Z}_r^{pq}(A)\bigr)_{(p,q)\in\bb{Z}\times\bb{Z}},
-\]
-y
-\[
-  \mathrm{E}_r(A)
-  =
-  \bigl(\mathrm{E}_r^{pq}(A)\bigr)_{(p,q)\in\bb{Z}\times\bb{Z}},
-\]
-endomorfismos bigraduados de grado $(i,-i)$.
-Sobre $\mathrm{E}_r(A)$, para $r$ finito, este endomorfismo conmuta con
+$1\leq r\leq+\infty$, todo $\overline t\in\operatorname{gr}^j(S)$ define canónicamente en los objetos bigraduados $(\mathrm B_r^{pq}(A))_{(p,q)\in\mathbb Z\times\mathbb Z}$, $(\mathrm Z_r^{pq}(A))_{(p,q)\in\mathbb Z\times\mathbb Z}$ y $\mathrm E_r(A)=(\mathrm E_r^{pq}(A))_{(p,q)\in\mathbb Z\times\mathbb Z}$ endomorfismos bigraduados de grados $(j,-j)$; en $\mathrm E_r(A)$, para $r$ finito, este endomorfismo conmuta con
 el endomorfismo bigraduado definido por los $d_r^{pq}$.
 Estos endomorfismos satisfacen las condiciones usuales de asociatividad y
 distributividad respecto de la adición en
-$\mathrm{gr}^\bullet(S)$ y en los objetos bigraduados en cuestión.
+$\operatorname{gr}^\bullet(S)$ y en los objetos bigraduados en cuestión.
 Para abreviar, decimos que estos últimos son
-\emph{$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulos bigraduados};
+\emph{$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-módulos bigraduados};
 es inmediato que los $\alpha_r^{pq}$ definen un \emph{isomorfismo} para
 este tipo de estructura.
 
-Para todo entero $n$, sea $\mathrm{B}_r^{(n)}(A)$
-(respectivamente, $\mathrm{Z}_r^{(n)}(A)$ y
-$\mathrm{E}_r^{(n)}(A)$) el subobjeto graduado de
-$\mathrm{B}_r^{\bullet,\bullet}(A)$
-(respectivamente, $\mathrm{Z}_r^{\bullet,\bullet}(A)$ y
-$\mathrm{E}_r^{\bullet,\bullet}(A)$) constituido por los términos para
-los que $p+q=n$ ($1\leq r\leq+\infty$).
+Para todo entero $n$, sea $\mathrm B_r^{(n)}(A)$
+(resp. $\mathrm Z_r^{(n)}(A)$ y
+$\mathrm E_r^{(n)}(A)$) el subobjeto graduado de $\mathrm B_r^{\bullet\bullet}(A)$ (resp. $\mathrm Z_r^{\bullet\bullet}(A)$, $\mathrm E_r^{\bullet\bullet}(A)$) formado por los $\mathrm B_r^{pq}(A)$ (resp. $\mathrm Z_r^{pq}(A)$, $\mathrm E_r^{pq}(A)$) tales que $p+q=n$ ($1\leq r\leq+\infty$).
 Es inmediato que estos son
-\emph{$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulos graduados}.
+\emph{$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-módulos graduados}.
 
-Finalmente, todo $\overline{t}\in\mathrm{gr}^i(S)$ define, para todo
-$n$, un endomorfismo graduado de grado $i$ sobre el objeto graduado
-$\mathrm{gr}^\bullet(\RR^n\mathrm{T}(A))$, que adquiere así la
+Finalmente, todo $\overline t\in\operatorname{gr}^j(S)$ define, para todo
+$n$ un endomorfismo graduado de grado $j$ en el objeto graduado $\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(A))$, que adquiere así la
 estructura de un
-$\mathrm{gr}^\bullet(S)$--\emph{$\cat{C}'$-módulo graduado}.
-Para $p+q=n$, los $\beta^{pq}$ definen un \emph{isomorfismo}
-\[
-  \mathrm E_\infty^{(n)}(A)
-  \isoto
-  \mathrm{gr}^\bullet(\RR^n\mathrm{T}(A))
-\]
-para este tipo de estructura.
+$\operatorname{gr}^\bullet(S)$--\emph{$\boldsymbol{C}'$-módulo graduado}; los $\beta^{pq}$ (para $p+q=n$) definen un \emph{isomorfismo} de $\mathrm E_\infty^{(n)}(A)$ sobre $\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(A))$ para esta especie de estructura.
 
-Observemos que, cuando $\cat{C}'$ es la categoría de \emph{grupos abelianos}, las
-estructuras de $S$--$\cat{C}'$-módulo (respectivamente, de
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulo graduado o bigraduado) son
-simplemente las estructuras usuales de $S$-\emph{módulo} (respectivamente, de
-$\mathrm{gr}^\bullet(S)$-módulo graduado o bigraduado).
+Se observará que cuando $\boldsymbol{C}'$ es la categoría de \emph{grupos abelianos}, las
+estructuras de $S$--$\boldsymbol{C}'$-módulo (resp. de
+$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-módulo graduado o bigraduado) son
+simplemente las estructuras usuales de $S$-\emph{módulo} (resp. de
+$\operatorname{gr}^\bullet(S)$-módulo graduado o bigraduado).
 \end{env}
 
 \subsection{Funtores derivados de un límite proyectivo de argumentos}
 \label{subsection:0.13.7}
+\label{subsection:0.13.7-fr}
 \label{0.13.7}
 
 \begin{env}[13.7.1]
 \label{0.13.7.1}
-Sean $\cat{C}$ y $\cat{C}'$ dos categorías abelianas, y supongamos
-que todo objeto de $\cat{C}$ es isomorfo a un subobjeto de un
+\label{0.13.7.1-fr}
+Sean $\boldsymbol{C}$ y $\boldsymbol{C}'$ dos categorías abelianas, suponiéndose $\boldsymbol{C}$ tal que todo objeto de $\boldsymbol{C}$ es isomorfo a un subobjeto de un
 objeto inyectivo.
 Sea
-\[
-  \mathrm{T}:\cat{C}\longrightarrow\cat{C}'
-\]
+$\mathrm T:\boldsymbol{C}\to \boldsymbol{C}'$
 un funtor covariante aditivo.
 Consideremos un \emph{sistema proyectivo estricto}
-$\bb{A}=(A_k)_{k\in\bb{Z}}$ en $\cat{C}$, acotado inferiormente; más
-precisamente, supongamos que $A_k=0$ para $k<k_0$.
-A este sistema asociamos canónicamente, sobre cada $A_k$ la
-filtración $(\mathrm{F}^p(A_k))_{p\in\bb{Z}}$ dada por
-\sref{0.13.4.1.1}.
-Como el sistema proyectivo es \emph{estricto}, los morfismos canónicos
+$\mathbf A=(A_k)_{k\in\mathbb Z}$ en $\boldsymbol{C}$, acotado inferiormente; más
+precisamente, supongamos que $A_k=0$ para $k<k_0$. Asociamos canónicamente a este sistema una filtración $(\mathrm F^p(A_k))_{p\in\mathbb Z}$ sobre cada $A_k$ mediante las fórmulas (\hyperref[0.13.4.1.1-fr]{13.4.1.1}), y como se trata de un sistema proyectivo \emph{estricto}, los morfismos canónicos
 \begin{equation}
-\label{0.13.7.1.1}
+\label{0.13.7.1.1-fr}
 \tag{13.7.1.1}
-  \mathrm{F}^i(A_h)/\mathrm{F}^j(A_h)
-  \longrightarrow
-  \mathrm{F}^i(A_k)/\mathrm{F}^j(A_k)
-  \qquad(h\geq k)
+\mathrm F^i(A_h)/\mathrm F^j(A_h)\to
+\mathrm F^i(A_k)/\mathrm F^j(A_k)\qquad(h\geq k)
 \end{equation}
-son \emph{isomorfismos} para $i\leq j\leq k+1$.
-Recordemos también que
-$\mathrm{F}^{k_0}(A_k)=A_k$ y
-$\mathrm{F}^{k+1}(A_k)=0$ para todo $k$.
+son \emph{isomorfismos} para $i\leq j\leq k+1$ son \emph{isomorfismos}. Recordemos además que se tiene $\mathrm F^{k_0}(A_k)=A_k$ y
+$\mathrm F^{k+1}(A_k)=0$ para todo $k$.
 \end{env}
 
 \begin{env}[13.7.2]
 \label{0.13.7.2}
-Para cada $k$, construyamos una \emph{resolución inyectiva}
-$\mathrm{X}_k^\bullet=(\mathrm{X}_k^j)_{j\geq0}$ de $A_k$ que tenga las
+\label{0.13.7.2-fr}
+Para cada $k$ una \emph{resolución inyectiva} $X_k^\bullet=(X_k^j)_{j\geq0}$ de $A_k$ que tenga las
 propiedades de \sref{0.13.6.2}.
-Los morfismos canónicos $A_{k+1}\longrightarrow A_k$ nos permiten, por
+Los morfismos canónicos $A_{k+1}\to A_k$ nos permiten, por
 \sref{0.13.6.3}, definir para cada $k$ un morfismo de complejos
-\[
-  \mathrm{X}_{k+1}^\bullet\longrightarrow\mathrm{X}_k^\bullet
-\]
-compatible con las filtraciones y que hace de
-$\bb{X}^\bullet=(\mathrm{X}_k^\bullet)_{k\in\bb{Z}}$ un sistema
-proyectivo de complejos.
+$X_{k+1}^\bullet\to X_k^\bullet$ compatibles
 \oldpage[0\textsubscript{III}]{76}
-Podemos suponer además que este sistema proyectivo es \emph{estricto}.
-En efecto, por \sref{0.13.7.1.1},
-\[
-  A_k
-  \simeq
-  A_{k+1}/\mathrm{F}^{k+1}(A_{k+1}).
-\]
-Así, al construir $\mathrm{X}_{k+1}^\bullet$, podemos tomar la
-resolución inyectiva de
-$A_{k+1}/\mathrm{F}^{k+1}(A_{k+1})$ \emph{igual} a
-$\mathrm{X}_k^\bullet$.
+con las filtraciones, y que hacen de
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ un \emph{sistema proyectivo} de complejos. Se puede suponer además que este sistema proyectivo es \emph{estricto}. Para ello, se observa que, en virtud del isomorfismo (\hyperref[0.13.7.1.1-fr]{13.7.1.1}), $A_k$ es isomorfo a $A_{k+1}/\mathrm F^{k+1}(A_{k+1})$; se puede, pues, tomar, en la construcción de $X_{k+1}^\bullet$, la resolución inyectiva de $A_{k+1}/\mathrm F^{k+1}(A_{k+1})$ \emph{igual} a
+$X_k^\bullet$.
 Se sigue entonces de (M, V, 2.3) que el morfismo de complejos
-$\mathrm{X}_{k+1}^\bullet\longrightarrow\mathrm{X}_k^\bullet$ puede
+$X_{k+1}^\bullet\to X_k^\bullet$ puede
 construirse de modo que, al pasar a los cocientes, induzca un
 \emph{isomorfismo}
-\[
-  \mathrm{X}_{k+1}^\bullet/
-  \mathrm{F}^{k+1}(\mathrm{X}_{k+1}^\bullet)
-  \simto
-  \mathrm{X}_k^\bullet
-\]
+$X_{k+1}^\bullet/\mathrm F^{k+1}(X_{k+1}^\bullet)
+\xrightarrow{\sim}X_k^\bullet$
 que respeta las filtraciones; esta es precisamente la condición de
 \sref{0.13.5.1}.
 \end{env}
 
 \begin{env}[13.7.3]
 \label{0.13.7.3}
+\label{0.13.7.3-fr}
 Por construcción, el sistema proyectivo
-$\mathrm{T}(\bb{X}^\bullet)$ de complejos
-$\mathrm{T}(\mathrm{X}_k^\bullet)$ satisface las hipótesis de
+$\mathrm T(\mathbf X^\bullet)$ de complejos
+$\mathrm T(X_k^\bullet)$ satisface las hipótesis de
 \sref{0.13.5.3}.
 Los resultados de \sref{0.13.5.4}, \sref{0.13.5.5} y
 \sref{0.13.5.6} se aplican, por tanto, a las sucesiones espectrales
-\[
-  \mathrm{E}\bigl(\mathrm{T}(\mathrm{X}_k^\bullet)\bigr)
-  =
-  \mathrm{E}(A_k).
-\]
-Para $1\leq r\leq+\infty$, escribimos
-$\mathrm{E}_r^{pq}(\bb{A})$ en lugar de
-$\mathrm{E}_r^{pq}(\mathrm{T}(\bb{X}^\bullet))$
-(cf.\ \sref{0.13.5.7} cuando $r=+\infty$), y utilizamos la misma convención
-para la notación análoga.
-En particular,
-\begin{equation}
-\label{0.13.7.3.1}
+$\mathrm E(\mathrm T(X_k^\bullet))=\mathrm E(A_k)$; escribiremos $\mathrm E_r^{pq}(\mathbf A)$ en lugar de
+$\mathrm E_r^{pq}(\mathrm T(\mathbf X^\bullet))$ para $1\leq r\leq+\infty$ (cf. (\hyperref[0.13.5.7-fr]{13.5.7}) para $r=+\infty$) y lo mismo para las notaciones análogas. Se observará en particular que se tiene \begin{equation}
+\label{0.13.7.3.1-fr}
 \tag{13.7.3.1}
-  \mathrm{E}_1^{pq}(\bb{A})
-  =
-  \RR^{p+q}\mathrm{T}\bigl(\mathrm{gr}^p(\bb{A})\bigr),
+\mathrm E_1^{pq}(\mathbf A)=
+\mathrm R^{p+q}\mathrm T(\operatorname{gr}^p(\mathbf A))
 \end{equation}
 por \sref{0.13.6.4.2} y el hecho de que el sistema proyectivo
-$(\mathrm{gr}^p(A_k))_{k\in\bb{Z}}$ es esencialmente constante.
+$(\operatorname{gr}^p(A_k))$ es esencialmente constante.
 Estos resultados, junto con \sref{0.13.4.3}, dan la proposición
 siguiente, demostrada por primera vez por Shih Weishu mediante un método
 diferente (inédito).
@@ -1672,41 +1113,31 @@ diferente (inédito).
 
 \begin{proposition}[13.7.4]
 \label{0.13.7.4}
+\label{0.13.7.4-fr}
 (Shih).
 Sea $n$ un entero.
 Las dos condiciones siguientes son equivalentes:
 \begin{enumerate}
   \item[{\rm a)}] Para todo par $(p,q)$ tal que $p+q=n$, el
   sistema proyectivo
-  $(\mathrm{E}_r^{pq}(\bb{A}))_{r\geq2}$ es esencialmente constante.
+  $(\mathrm E_r^{pq}(\mathbf A))_{r\geq2}$ es esencialmente constante.
   \item[{\rm b)}] El sistema proyectivo
-  \[
-    \RR^n\mathrm{T}(\bb{A})
-    =
-    \bigl(\RR^n\mathrm{T}(A_k)\bigr)_{k\in\bb{Z}}
-  \]
-  satisface {\rm(ML)}.
+  $\mathrm R^n\mathrm T(\mathbf A)=
+(\mathrm R^n\mathrm T(A_k))_{k\in\mathbb Z}$ satisface \textup{(ML)}.
 \end{enumerate}
-Además, cuando se cumplen estas condiciones, existe un
-isomorfismo canónico
+Además, cuando se cumplen estas condiciones, se tiene un isomorfismo canónico
 \begin{equation}
-\label{0.13.7.4.1}
+\label{0.13.7.4.1-fr}
 \tag{13.7.4.1}
-  \mathrm{gr}^p\bigl(\RR^n\mathrm{T}(\bb{A})\bigr)
-  \isoto
-  \mathrm{E}_\infty^{p,n-p}(\bb{A})
-  \qquad(p\in\bb{Z}).
+\operatorname{gr}^p(\mathrm R^n\mathrm T(\mathbf A))
+\xrightarrow{\sim}\mathrm E_\infty^{p,n-p}(\mathbf A)
+\qquad\textit{pour tout $p\in\mathbb Z$.}
 \end{equation}
 \end{proposition}
-
 \begin{proof}
-Por \sref{0.13.5.6}, la condición {\rm a)} dice precisamente que, para
-$p+q=n$, el sistema proyectivo
-$(\mathrm{E}_\infty^{pq}(A_k))_{k\in\bb{Z}}$ es esencialmente
-constante.
-Por otra parte,
-$\mathrm{gr}^p(\RR^n\mathrm{T}(A_k))$ es canónicamente isomorfo a
-$\mathrm{E}_\infty^{p,n-p}(A_k)$.
+En efecto, en virtud de (\hyperref[0.13.5.6-fr]{13.5.6}), la condición \emph{a)} equivale a decir que el sistema proyectivo $(\mathrm E_\infty^{pq}(A_k))_{k\in\mathbb Z}$ es esencialmente constante para $p+q=n$, y por otra parte
+$\operatorname{gr}^p(\mathrm R^n\mathrm T(A_k))$ es canónicamente isomorfo a
+$\mathrm E_\infty^{p,n-p}(A_k)$.
 Se sigue de \sref{0.13.4.3} que {\rm a)} y {\rm b)} son
 equivalentes, y \sref{0.13.7.4.1} no es sino
 \sref{0.13.5.6.1} en el caso considerado.
@@ -1714,264 +1145,170 @@ equivalentes, y \sref{0.13.7.4.1} no es sino
 
 \begin{corollary}[13.7.5]
 \label{0.13.7.5}
-Sea $\boldsymbol{\sh{F}}=(\sh{F}_k)_{k\in\bb{N}}$ un sistema proyectivo de
+\label{0.13.7.5-fr}
+Sea $\boldsymbol{\mathcal F}=(\mathcal F_k)_{k\in\mathbb N}$ un sistema proyectivo de
 haces de grupos abelianos que satisface las condiciones {\rm(i)}, {\rm(ii)}
-y {\rm(iii)} de \sref{0.13.3.1}, y pongamos
-$\sh{F}=\varprojlim\sh{F}_k$.
+y {\rm(iii)} de \sref{0.13.3.1}, y sea
+$\mathcal F=\varprojlim\mathcal F_k$.
 Supongamos que, para el funtor
-$\sh{G}\leadsto\Gamma(X,\sh{G})$, el sistema proyectivo
-$(\mathrm{E}_r^{pq}(\boldsymbol{\sh{F}}))_r$ es esencialmente constante siempre que
-$p+q=n$ o $p+q=n+1$.
-Sobre $\HH^{n+1}(X,\sh{F})$, consideremos la filtración
-\[
-  \mathrm{F}^p\bigl(\HH^{n+1}(X,\sh{F})\bigr)
-  =
-  \Ker\bigl(
-    \HH^{n+1}(X,\sh{F})
-    \longrightarrow
-    \HH^{n+1}(X,\sh{F}_{p-1})
-  \bigr).
-\]
+$\mathcal G\leadsto\Gamma(X,\mathcal G)$, el sistema proyectivo $(\mathrm E_r^{pq}(\boldsymbol{\mathcal F}))_{r\in\mathbb Z}$ sea esencialmente constante para todo par $(p,q)$ tal que $p+q=n$ o $p+q=n+1$. Consideremos sobre $H^{n+1}(X,\mathcal F)$ la filtración definida por $\mathrm F^p(H^{n+1}(X,\mathcal F))=
+\operatorname{Ker}(H^{n+1}(X,\mathcal F)\to
+H^{n+1}(X,\mathcal F_{p-1}))$.
 Entonces existe un isomorfismo canónico
 \begin{equation}
-\label{0.13.7.5.1}
+\label{0.13.7.5.1-fr}
 \tag{13.7.5.1}
-  \mathrm{gr}^p\bigl(\HH^{n+1}(X,\sh{F})\bigr)
-  \isoto
-  \mathrm{E}_\infty^{p,n-p+1}(\boldsymbol{\sh{F}})
-  \qquad(p\in\bb{Z}).
+\operatorname{gr}^p(H^{n+1}(X,\mathcal F))
+\xrightarrow{\sim}\mathrm E_\infty^{p,n-p+1}(\boldsymbol{\mathcal F})
+\qquad\textit{pour tout $p\in\mathbb Z$.}
 \end{equation}
 \end{corollary}
 
 \begin{proof}
+Resulta de (\hyperref[0.13.7.4-fr]{13.7.4}) aplicado al caso en que $\boldsymbol{C}$ la categoría de haces de
+grupos abelianos sobre $X$, como $\boldsymbol{C}'$ la categoría de grupos abelianos,
+y $\mathrm T=\Gamma$, que se tiene un isomorfismo
 \oldpage[0\textsubscript{III}]{77}
-Apliquemos \sref{0.13.7.4} tomando como $\cat{C}$ la categoría de haces de
-grupos abelianos sobre $X$, como $\cat{C}'$ la categoría de grupos abelianos,
-y $\mathrm{T}=\Gamma$.
-Da, para todo $p\in\bb{Z}$, un isomorfismo canónico
+canónico
+$\operatorname{gr}^p(\mathrm R^{n+1}\Gamma(\boldsymbol{\mathcal F}))
+\xrightarrow{\sim}\mathrm E_\infty^{p,n-p+1}(\boldsymbol{\mathcal F})$ para todo $p\in\mathbb Z$. Por otra parte, como, en virtud de (\hyperref[0.13.7.4-fr]{13.7.4}), el sistema proyectivo $(H^n(X,\mathcal F_k))_{k\in\mathbb Z}$ satisface (ML), se deduce de (\hyperref[0.13.3.1-fr]{13.3.1}) un isomorfismo canónico
+\hypertarget{canon-legacy.0-III.13.7.5.proof-comparison}{}
 \[
-  \mathrm{gr}^p\bigl(\RR^{n+1}\Gamma(\boldsymbol{\sh{F}})\bigr)
-  \isoto
-  \mathrm{E}_\infty^{p,n-p+1}(\boldsymbol{\sh{F}}).
-\]
-Además, por \sref{0.13.7.4}, el sistema proyectivo
-$(\HH^n(X,\sh{F}_k))_{k\in\bb{Z}}$ satisface {\rm(ML)}; por tanto
-\sref{0.13.3.1} da un isomorfismo canónico
-\[
-\label{0.13.7.5.1b}
+\label{0.13.7.5.1b-fr}
 \tag{13.7.5.2}
-  \HH^{n+1}(X,\sh{F})
-  \isoto
-  \varprojlim_k\HH^{n+1}(X,\sh{F}_k).
+H^{n+1}(X,\mathcal F)\xrightarrow{\sim}
+\varprojlim_k H^{n+1}(X,\mathcal F_k).
 \]
 
 Como el sistema proyectivo
-$\RR^{n+1}\Gamma(\boldsymbol{\sh{F}})$ satisface {\rm(ML)} por
+$\mathrm R^{n+1}\Gamma(\boldsymbol{\mathcal F})$ satisface {\rm(ML)} por
 \sref{0.13.7.4}, existe un isomorfismo canónico
-\[
-  \mathrm{gr}^p\bigl(\RR^{n+1}\Gamma(\boldsymbol{\sh{F}})\bigr)
-  \isoto
-  \varprojlim_k
-  \mathrm{gr}^p\bigl(\HH^{n+1}(X,\sh{F}_k)\bigr)
-\]
+$\operatorname{gr}^p(\mathrm R^{n+1}\Gamma(\boldsymbol{\mathcal F}))
+\xrightarrow{\sim}
+\varprojlim_k\operatorname{gr}^p(H^{n+1}(X,\mathcal F_k))$
 por \sref{0.13.4.3}, y un isomorfismo canónico
+$\varprojlim_k\operatorname{gr}^p(H^{n+1}(X,\mathcal F_k))
+\xrightarrow{\sim}
+\operatorname{gr}^p(\varprojlim_k H^{n+1}(X,\mathcal F_k))$
+(\hyperref[0.13.4.5-fr]{13.4.5}). Todo se reduce, pues, a ver que el isomorfismo (\hyperref[0.13.7.5.1b-fr]{13.7.5.2}) es compatible con las filtraciones de los dos miembros; pero esto resulta inmediatamente de las definiciones y de la conmutatividad del diagrama
 \[
-  \varprojlim_k
-  \mathrm{gr}^p\bigl(\HH^{n+1}(X,\sh{F}_k)\bigr)
-  \isoto
-  \mathrm{gr}^p\left(
-    \varprojlim_k\HH^{n+1}(X,\sh{F}_k)
-  \right)
+\xymatrix{
+H^{n+1}(X,\mathcal F)\ar[rr]^{\sim}\ar[dr]
+&&\varprojlim_k H^{n+1}(X,\mathcal F_k)\ar[dl]\\
+&H^{n+1}(X,\mathcal F_{p-1})&
+}
 \]
-por \sref{0.13.4.5}.
-Solo queda comprobar que el isomorfismo precedente es
-compatible con las filtraciones de sus dos lados.
-Esto se sigue inmediatamente de las definiciones y, para todo $p$,
-de la conmutatividad de
-\[
-  \xymatrix{
-    \HH^{n+1}(X,\sh{F})
-      \ar[r]^-{\sim}\ar[dr]
-    &
-    \varprojlim_k\HH^{n+1}(X,\sh{F}_k)
-      \ar[d]
-    \\
-    &
-    \HH^{n+1}(X,\sh{F}_{p-1}).
-  }
-\]
+para todo $p$.
 \end{proof}
 
 \begin{env}[13.7.6]
 \label{0.13.7.6}
+\label{0.13.7.6-fr}
 Sea $S$ un anillo dotado de una filtración
-$(\mathrm{F}^i(S))_{i\in\bb{Z}}$ tal que
-$\mathrm{F}^0(S)=S$ (y por tanto
-$\mathrm{gr}^i(S)=0$ para $i<0$).
+$(\mathrm F^i(S))_{i\in\mathbb Z}$ tal que
+$\mathrm F^0(S)=S$ (y por tanto
+$\operatorname{gr}^i(S)=0$ para $i<0$).
 Supongamos que cada $A_k$, con la filtración definida en
 \sref{0.13.7.1}, es un
-$S$--$\cat{C}$-\emph{módulo filtrado} en el sentido de \sref{0.13.6.6}, y que los
-morfismos $A_h\longrightarrow A_k$ para $k\leq h$ son morfismos de
-$S$--$\cat{C}$-módulos filtrados.
-Para abreviar, decimos entonces que $\bb{A}$ es un
-\emph{sistema proyectivo de $S$--$\cat{C}$-módulos filtrados}.
-
-Es inmediato que, para $k\leq h$ y
-$1\leq r\leq+\infty$, los morfismos
-\[
-  \mathrm{B}_r^{pq}(A_h)\longrightarrow\mathrm{B}_r^{pq}(A_k),
-  \qquad
-  \mathrm{Z}_r^{pq}(A_h)\longrightarrow\mathrm{Z}_r^{pq}(A_k)
-\]
-son morfismos de
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-\emph{módulos bigraduados}
-(\sref{0.13.6.5}), y que, para $r$ finito, las familias
-\[
-  \bigl(\mathrm{Z}_r^{pq}(\bb{A})\bigr),\qquad
-  \bigl(\mathrm{B}_r^{pq}(\bb{A})\bigr),\qquad
-  \bigl(\mathrm{E}_r^{pq}(\bb{A})\bigr)
-\]
-son $\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulos
-bigraduados, siendo los dos primeros submódulos de
-$(\mathrm{E}_1^{pq}(\bb{A}))$.
-Escribimos de nuevo
-$\mathrm{Z}_r^{(n)}(\bb{A})$,
-$\mathrm{B}_r^{(n)}(\bb{A})$ y
-$\mathrm{E}_r^{(n)}(\bb{A})$ para los respectivos subobjetos graduados
+$S$--$\boldsymbol{C}$-\emph{módulo filtrado} en el sentido de \sref{0.13.6.6}, y que los
+morfismos $A_h\to A_k$ para $k\leq h$ son morfismos de
+$S$--$\boldsymbol{C}$-módulos filtrados.
+Para abreviar, diremos entonces que $\mathbf A$ es un
+\emph{sistema proyectivo de $S$--$\boldsymbol{C}$-módulos filtrados}. Entonces es inmediato que los morfismos $\mathrm B_r^{pq}(A_h)\to\mathrm B_r^{pq}(A_k)$ y $\mathrm Z_r^{pq}(A_h)\to\mathrm Z_r^{pq}(A_k)$ para $k\leq h$ y
+$1\leq r\leq+\infty$, son morfismos para las estructuras de $\operatorname{gr}^\bullet(S)$-$\boldsymbol{C}'$-\emph{módulo bigraduado} (\hyperref[0.13.6.5-fr]{13.6.5}), y que las familias $(\mathrm Z_r^{pq}(\mathbf A))$, $(\mathrm B_r^{pq}(\mathbf A))$ y $(\mathrm E_r^{pq}(\mathbf A))$ son $\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-\emph{módulos bigraduados}
+(\sref{0.13.6.5}), y que, para $r$ finito, siendo los dos primeros submódulos de $(\mathrm E_1^{pq}(\mathbf A))$. Se denotará también por $\mathrm Z_r^{(n)}(\mathbf A)$,
+$\mathrm B_r^{(n)}(\mathbf A)$ y
+$\mathrm E_r^{(n)}(\mathbf A)$ para los respectivos subobjetos graduados
 obtenidos conservando únicamente los términos con $p+q=n$; estos son
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-\emph{módulos graduados}.
+$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-\emph{módulos graduados}.
 
 Cuando el sistema proyectivo
-$(\mathrm{E}_r^{pq}(\bb{A}))_r$ es esencialmente constante,
-$\mathrm{E}_\infty^{pq}(\bb{A})$ es asimismo un
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulo bigraduado, y cada
-$\mathrm{E}_\infty^{(n)}(\bb{A})$ es un
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulo graduado.
-Además, para cada $k$, los isomorfismos
-\[
-  \beta^{p,n-p}:
-  \mathrm{E}_\infty^{p,n-p}(A_k)
-  \isoto
-  \mathrm{gr}^p\bigl(\RR^n\mathrm{T}(A_k)\bigr)
-\]
-forman un isomorfismo de
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-módulos graduados de
-$\mathrm{E}_\infty^{(n)}(A_k)$ sobre
-$\mathrm{gr}^\bullet(\RR^n\mathrm{T}(A_k))$.
+$(\mathrm E_r^{pq}(\mathbf A))_{r\in\mathbb Z}$ es esencialmente constante,
+$(\mathrm E_\infty^{pq}(\mathbf A))$ es asimismo un
+$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-módulo bigraduado, y cada
+$\mathrm E_\infty^{(n)}(\mathbf A)$ es un
+$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-módulo graduado. Además, los $\beta^{p,n-p}:\mathrm E_\infty^{p,n-p}(A_k)\xrightarrow{\sim}
+\operatorname{gr}^p(\mathrm R^n\mathrm T(A_k))$ constituyen para cada $k$ un isomorfismo para la estructura de $\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-módulos graduados de
+$\mathrm E_\infty^{(n)}(A_k)$ sobre
+$\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(A_k))$.
 Bajo las hipótesis precedentes, el isomorfismo
-\[
-  \beta^{p,n-p}:
-  \mathrm{E}_\infty^{(n)}(\bb{A})
-  \isoto
-  \varprojlim_k
-  \mathrm{gr}^\bullet\bigl(\RR^n\mathrm{T}(A_k)\bigr)
-\]
+$\beta^{p,n-p}:\mathrm E_\infty^{(n)}(\mathbf A)\xrightarrow{\sim}
+\varprojlim_k\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(A_k))$
 respeta, por tanto, también estas estructuras.
 Lo mismo vale manifiestamente para el isomorfismo canónico
-\[
-  \mathrm{gr}^\bullet\bigl(\RR^n\mathrm{T}(\bb{A})\bigr)
-  \isoto
-  \varprojlim_k
-  \mathrm{gr}^\bullet\bigl(\RR^n\mathrm{T}(A_k)\bigr);
-\]
+$\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(\mathbf A))
+\xrightarrow{\sim}
+\varprojlim_k\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(A_k))$,
 por consiguiente, los isomorfismos \sref{0.13.7.4.1} forman un
 isomorfismo de
-$\mathrm{gr}^\bullet(S)$--$\cat{C}'$-\emph{módulos graduados}.
+$\operatorname{gr}^\bullet(S)$--$\boldsymbol{C}'$-\emph{módulos graduados}.
 \end{env}
 
 \begin{proposition}[13.7.7]
 \label{0.13.7.7}
-Sea $S$ un anillo noetheriano $\mathfrak{J}$-ádico.
-Supongamos que $\cat{C}$ es una categoría abeliana en la que todo objeto
+\label{0.13.7.7-fr}
+Sea $S$ un anillo noetheriano $\mathfrak J$-ádico.
+Supongamos que $\boldsymbol{C}$ es una categoría abeliana en la que todo objeto
 es isomorfo a un subobjeto de un objeto inyectivo, y sea
-$\mathrm{T}$ un funtor covariante aditivo de $\cat{C}$ en la
+$\mathrm T$ un funtor covariante aditivo de $\boldsymbol{C}$ en la
 categoría de grupos abelianos.
-Sea $\bb{A}=(A_k)_{k\in\bb{Z}}$ un
+Sea $\mathbf A=(A_k)_{k\in\mathbb Z}$ un
 \oldpage[0\textsubscript{III}]{78}
-sistema proyectivo estricto de $S$--$\cat{C}$-módulos filtrados, para la
-filtración $\mathfrak{J}$-ádica sobre $S$, acotado inferiormente.
-Para un entero fijo $n$, supongamos que se cumple la condición siguiente:
+sistema proyectivo estricto de $S$--$\boldsymbol{C}$-módulos filtrados, para la
+filtración $\mathfrak J$-ádica sobre $S$, acotado inferiormente.
+Para un entero fijo $n$ dado, se satisfaga la condición siguiente:
 \begin{itemize}
-  \item[$(\mathrm{F}_n)$]
-  \emph{El $\mathrm{gr}^\bullet(S)$-módulo graduado}
-  \[
-    \mathrm{E}_1^{(m)}(\bb{A})
-    =
-    \bigl(
-      \RR^m\mathrm{T}(\mathrm{gr}^p(\bb{A}))
-    \bigr)_{p\in\bb{Z}}
-  \]
+\item[$(\mathrm F_n)$]
+  \emph{El $\operatorname{gr}^\bullet(S)$-módulo graduado}
+  $\mathrm E_1^{(m)}(\mathbf A)=
+(\mathrm R^m\mathrm T(\operatorname{gr}^p(\mathbf A)))_{p\in\mathbb Z}$
   \emph{de \sref{0.13.7.3.1} es de tipo finito para
   $m=n$ y $m=n+1$.}
 \end{itemize}
 Entonces:
 \begin{enumerate}
   \item[{\rm(i)}] Los sistemas proyectivos
-  $(\RR^n\mathrm{T}(A_k))_{k\in\bb{Z}}$ y
-  $(\RR^{n+1}\mathrm{T}(A_k))_{k\in\bb{Z}}$ satisfacen {\rm(ML)}.
+  $(\mathrm R^n\mathrm T(A_k))_{k\in\mathbb Z}$ y
+  $(\mathrm R^{n+1}\mathrm T(A_k))_{k\in\mathbb Z}$ satisfacen {\rm(ML)}.
   \item[{\rm(ii)}] Si
-  \[
-    \RR'^{\,n}\mathrm{T}(\bb{A})
-    =
-    \varprojlim_k\RR^n\mathrm{T}(A_k),
-  \]
-  entonces $\RR'^{\,n}\mathrm{T}(\bb{A})$ es un $S$-módulo de tipo
-  finito.
-  \item[{\rm(iii)}] La filtración sobre
-  $\RR'^{\,n}\mathrm{T}(\bb{A})$ definida por
-  \[
-    \mathrm{F}^p\bigl(\RR'^{\,n}\mathrm{T}(\bb{A})\bigr)
-    =
-    \Ker\bigl(
-      \RR'^{\,n}\mathrm{T}(\bb{A})
-      \longrightarrow
-      \RR^n\mathrm{T}(A_{p-1})
-    \bigr)
-    \qquad(p\in\bb{Z})
-  \]
-  es $\mathfrak{J}$-buena; es decir,
-  \[
-    \mathfrak{J}\,
-    \mathrm{F}^p\bigl(\RR'^{\,n}\mathrm{T}(\bb{A})\bigr)
-    \subset
-    \mathrm{F}^{p+1}\bigl(\RR'^{\,n}\mathrm{T}(\bb{A})\bigr)
-  \]
+  $\mathrm R'^{\,n}\mathrm T(\mathbf A)=
+\varprojlim_k\mathrm R^n\mathrm T(A_k)$,
+  entonces $\mathrm R'^{\,n}\mathrm T(\mathbf A)$ es un $S$-módulo de tipo finito.
+\item[\rm(iii)] La filtración definida por $\mathrm F^p(\mathrm R'^{\,n}\mathrm T(\mathbf A))=
+\operatorname{Ker}(\mathrm R'^{\,n}\mathrm T(\mathbf A)
+\to\mathrm R^n\mathrm T(A_{p-1}))$ $(p\in\mathbb Z)$ sobre $\mathrm R'^{\,n}\mathrm T(\mathbf A)$ es $\mathfrak J$-buena; es decir,
+  $\mathfrak J\mathrm F^p(\mathrm R'^{\,n}\mathrm T(\mathbf A))
+\subset\mathrm F^{p+1}(\mathrm R'^{\,n}\mathrm T(\mathbf A))$
   para todo $p$, con igualdad para todo $p$ suficientemente grande.
   En particular, la topología sobre
-  $\RR'^{\,n}\mathrm{T}(\bb{A})$ definida por esta filtración es la
-  topología $\mathfrak{J}$-ádica.
+  $\mathrm R'^{\,n}\mathrm T(\mathbf A)$ definida por esta filtración es la
+  topología $\mathfrak J$-ádica.
   \item[{\rm(iv)}] El sistema proyectivo
-  $(\mathrm{E}_r^{pq}(\bb{A}))_r$ es esencialmente constante siempre que
+  $(\mathrm E_r^{pq}(\mathbf A))_{r\in\mathbb Z}$ es esencialmente constante siempre que
   $p+q=n$ o $p+q=n+1$.
-  Así, $\mathrm{E}_\infty^{pq}(\bb{A})$ está definido
-  \textup{(\sref{0.13.5.7})}, y los isomorfismos
-  \begin{equation}
-  \label{0.13.7.7.1}
-  \tag{13.7.7.1}
-    \mathrm{gr}^p\bigl(\RR'^{\,n}\mathrm{T}(\bb{A})\bigr)
-    \isoto
-    \mathrm{E}_\infty^{p,n-p}(\bb{A})
-    \qquad(p\in\bb{Z})
-  \end{equation}
-  forman un isomorfismo de
-  $\mathrm{gr}^\bullet(S)$-módulos graduados.
+  Así, $\mathrm E_\infty^{pq}(\mathbf A)$ está, pues, definido \textup{(\hyperref[0.13.5.7-fr]{13.5.7})} y se tiene un isomorfismo canónico de $\operatorname{gr}^\bullet(S)$-módulos graduados
+\begin{equation}
+\label{0.13.7.7.1-fr}
+\tag{13.7.7.1}
+\operatorname{gr}^p(\mathrm R'^{\,n}\mathrm T(\mathbf A))
+\xrightarrow{\sim}\mathrm E_\infty^{p,n-p}(\mathbf A)
+\quad(p\in\mathbb Z).
+\end{equation}
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-En vista de \sref{0.13.7.7.1}, y teniendo en cuenta los
-isomorfismos \sref{0.13.7.4.1}, por abuso de notación escribiremos también
-$\RR^n\mathrm{T}(\bb{A})$ para el límite proyectivo
-$\RR'^{\,n}\mathrm{T}(\bb{A})$ del sistema proyectivo
-$(\RR^n\mathrm{T}(A_k))$.
+Se observará que el isomorfismo (\hyperref[0.13.7.7.1-fr]{13.7.7.1}) permitirá denotar por $\mathrm R^n\mathrm T(\mathbf A)$ para el límite proyectivo
+$\mathrm R'^{\,n}\mathrm T(\mathbf A)$ del sistema proyectivo
+$\mathrm R^n\mathrm T(\mathbf A)$.
 
-El anillo graduado $\mathrm{gr}^\bullet(S)$ es noetheriano
+El anillo graduado $\operatorname{gr}^\bullet(S)$ es noetheriano
 (Bourbaki, \emph{Alg.\ comm.}, cap.~III, \textsection2,
 n\textsuperscript{o}~9, cor.~5 del teorema~2).
 Por tanto, la sucesión creciente de
-$\mathrm{gr}^\bullet(S)$-submódulos graduados
-$\mathrm{B}_r^{(m)}(\bb{A})$ de
-$\mathrm{E}_1^{(m)}(\bb{A})$ es \emph{estacionaria} para $m=n$ y
+$\operatorname{gr}^\bullet(S)$-submódulos graduados
+$\mathrm B_r^{(m)}(\mathbf A)$ de
+$\mathrm E_1^{(m)}(\mathbf A)$ es \emph{estacionaria} para $m=n$ y
 $m=n+1$.
 La condición \emph{(b)} de \sref{0.11.1.10} queda, por tanto, satisfecha.
 Se sigue que la condición \emph{(a)} de \sref{0.13.7.4} se cumple para
@@ -1979,27 +1316,15 @@ $n$ y para $n+1$, lo que demuestra {\rm(i)}.
 
 Además, los isomorfismos \sref{0.13.7.4.1}, junto con las
 observaciones de \sref{0.13.7.6}, muestran que
-$\mathrm{gr}^\bullet(\RR^n\mathrm{T}(\bb{A}))$ es un
-$\mathrm{gr}^\bullet(S)$-módulo graduado isomorfo a
-\[
-  \mathrm{E}_\infty^{(n)}(\bb{A})
-  =
-  \mathrm{Z}_\infty^{(n)}(\bb{A})
-  /
-  \mathrm{B}_\infty^{(n)}(\bb{A}).
-\]
-Como $\mathrm{Z}_\infty^{(n)}(\bb{A})$ es un submódulo de
-$\mathrm{E}_1^{(n)}(\bb{A})$, es de \emph{tipo finito}, y también lo es
-$\mathrm{E}_\infty^{(n)}(\bb{A})$.
+$\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(\mathbf A))$ es un
+$\operatorname{gr}^\bullet(S)$-módulo graduado isomorfo a
+$\mathrm E_\infty^{(n)}(\mathbf A)=
+\mathrm Z_\infty^{(n)}(\mathbf A)/\mathrm B_\infty^{(n)}(\mathbf A)$
+Como $\mathrm Z_\infty^{(n)}(\mathbf A)$ es un submódulo de
+$\mathrm E_1^{(n)}(\mathbf A)$, es de \emph{tipo finito}, y también lo es
+$\mathrm E_\infty^{(n)}(\mathbf A)$.
 Finalmente, para la filtración
-$(\mathrm{F}^p(\RR'^{\,n}\mathrm{T}(\bb{A})))$, se sigue de
-\sref{0.13.4.5} que
-\[
-  \mathrm{gr}^\bullet\bigl(\RR^n\mathrm{T}(\bb{A})\bigr)
-  \quad\hbox{y}\quad
-  \mathrm{gr}^\bullet\bigl(\RR'^{\,n}\mathrm{T}(\bb{A})\bigr)
-\]
-son $\mathrm{gr}^\bullet(S)$-módulos graduados isomorfos.
+$(\mathrm F^p(\mathrm R'^{\,n}\mathrm T(\mathbf A)))$, resulta de (\hyperref[0.13.4.5-fr]{13.4.5}) que $\operatorname{gr}^\bullet(\mathrm R^n\mathrm T(\mathbf A))$ y $\operatorname{gr}^\bullet(\mathrm R'^{\,n}\mathrm T(\mathbf A))$ son $\operatorname{gr}^\bullet(S)$-módulos graduados isomorfos.
 Esto demuestra {\rm(iv)}.
 Las aserciones {\rm(ii)} y {\rm(iii)} se seguirán de estos resultados
 y del lema siguiente.
@@ -2007,50 +1332,39 @@ y del lema siguiente.
 
 \begin{lemma}[13.7.7.2]
 \label{0.13.7.7.2}
-Sea $S$ un anillo noetheriano $\mathfrak{J}$-ádico, y sea $M$
+\label{0.13.7.7.2-fr}
+Sea $S$ un anillo noetheriano $\mathfrak J$-ádico, y sea $M$
 un $S$-módulo dotado de una filtración codiscreta
-$(\mathrm{F}^p(M))_{p\in\bb{Z}}$ tal que
-\[
-  \mathfrak{J}\mathrm{F}^p(M)
-  \subset
-  \mathrm{F}^{p+1}(M).
-\]
+$(\mathrm F^p(M))_{p\in\mathbb Z}$ tal que
+$\mathfrak J\mathrm F^p(M)\subset\mathrm F^{p+1}(M)$
 Así, $M$ es un módulo filtrado sobre $S$ dotado de su
-filtración $\mathfrak{J}$-ádica.
+filtración $\mathfrak J$-ádica.
 Supongamos además que $M$ es separado para la topología definida por
-$(\mathrm{F}^p(M))$.
+$(\mathrm F^p(M))$.
 Entonces las condiciones siguientes son equivalentes:
 \begin{enumerate}
   \item[{\rm a)}] $M$ es un $S$-módulo de tipo finito y
-  $(\mathrm{F}^p(M))$ es una filtración $\mathfrak{J}$-buena.
-  \item[{\rm b)}] $\mathrm{gr}^\bullet(M)$ es un
-  $\mathrm{gr}^\bullet(S)$-módulo de tipo finito.
-  \item[{\rm c)}] Los $\mathrm{gr}^p(M)$ son $S$-módulos de
+  $(\mathrm F^p(M))$ es una filtración $\mathfrak J$-buena.
+  \item[{\rm b)}] $\operatorname{gr}^\bullet(M)$ es un
+  $\operatorname{gr}^\bullet(S)$-módulo de tipo finito.
+  \item[{\rm c)}] Los $\operatorname{gr}^p(M)$ son $S$-módulos de
   tipo finito y, para todo $p$ suficientemente grande, los homomorfismos
   canónicos
   \begin{equation}
-  \label{0.13.7.7.3}
-  \tag{13.7.7.3}
-    \mathfrak{J}\otimes_S\mathrm{gr}^p(M)
-    \longrightarrow
-    \mathrm{gr}^{p+1}(M)
-  \end{equation}
+\label{0.13.7.7.3-fr}
+\tag{13.7.7.3}
+\mathfrak J\otimes_S\operatorname{gr}^p(M)\longrightarrow
+\operatorname{gr}^{p+1}(M)
+\end{equation}
   \oldpage[0\textsubscript{III}]{79}
   son sobreyectivos.
   Están inducidos por
-  $\mathfrak{J}\otimes_S\mathrm{F}^p(M)
-  \longrightarrow\mathrm{F}^{p+1}(M)$, teniendo en cuenta el hecho
+  $\mathfrak J\otimes_S\mathrm F^p(M)\to\mathrm F^{p+1}(M)$, teniendo en cuenta el hecho
   de que la imagen del homomorfismo compuesto
-  \[
-    \mathfrak{J}\otimes_S\mathrm{F}^{p+1}(M)
-    \longrightarrow
-    \mathfrak{J}\otimes_S\mathrm{F}^p(M)
-    \longrightarrow
-    \mathrm{F}^{p+1}(M)
-  \]
+  $\mathfrak J\otimes_S\mathrm F^{p+1}(M)\to
+\mathfrak J\otimes_S\mathrm F^p(M)\to\mathrm F^{p+1}(M)$
   es
-  $\mathfrak{J}\mathrm{F}^{p+1}(M)
-  \subset\mathrm{F}^{p+2}(M)$.
+  $\mathfrak J\mathrm F^{p+1}(M)\subset\mathrm F^{p+2}(M)$.
 \end{enumerate}
 \end{lemma}
 
@@ -2059,80 +1373,61 @@ Para la demostración, véase Bourbaki, \emph{Alg.\ comm.}, cap.~III,
 
 \begin{env}[13.7.7.4]
 \label{0.13.7.7.4}
+\label{0.13.7.7.4-fr}
 Para aplicar el lema \sref{0.13.7.7.2}, queda observar que la
-topología sobre $\RR'^{\,n}\mathrm{T}(\bb{A})$ definida por la filtración
-considerada lo convierte en un $S$-módulo separado y completo:
+topología sobre $\mathrm R'^{\,n}\mathrm T(\mathbf A)$ por la filtración considerada hace de $\mathrm R'^{\,n}\mathrm T(\mathbf A)$ un $S$-módulo separado y completo:
 esta es la topología de límite proyectivo de los grupos discretos
-$\RR^n\mathrm{T}(A_k)$.
+$\mathrm R^n\mathrm T(A_k)$.
 Por otra parte, si $A_k=0$ para $k<k_0$, entonces también
-$\RR^n\mathrm{T}(A_k)=0$ para $k<k_0$; por tanto
-\[
-  \mathrm{F}^{k_0}\bigl(\RR'^{\,n}\mathrm{T}(\bb{A})\bigr)
-  =
-  \RR'^{\,n}\mathrm{T}(\bb{A}).
-\]
+$\mathrm R^n\mathrm T(A_k)=0$ para $k<k_0$; por tanto
+$\mathrm F^{k_0}(\mathrm R'^{\,n}\mathrm T(\mathbf A))=
+\mathrm R'^{\,n}\mathrm T(\mathbf A)$,
 Así, todas las hipótesis del lema quedan efectivamente satisfechas.
 \end{env}
 
 \begin{corollary}[13.7.8]
 \label{0.13.7.8}
-Si se cumple la hipótesis $(\mathrm{F}_n)$, entonces para todo $f\in S$
+\label{0.13.7.8-fr}
+Si se cumple la hipótesis $(\mathrm F_n)$, entonces para todo $f\in S$
 existe un isomorfismo canónico
 \begin{equation}
-\label{0.13.7.8.1}
+\label{0.13.7.8.1-fr}
 \tag{13.7.8.1}
-  \varprojlim_k\bigl(\RR^n\mathrm{T}(A_k)\bigr)_f
-  \isoto
-  \RR^n\mathrm{T}(\bb{A})\otimes_S S_{\{f\}}.
+\varprojlim_k\bigl((\mathrm R^n\mathrm T(A_k))_f\bigr)
+\xrightarrow{\sim}\mathrm R^n\mathrm T(\mathbf A)\otimes_S S_{\{f\}}.
 \end{equation}
 \end{corollary}
 
 \begin{proof}
-En efecto, $\RR^n\mathrm{T}(\bb{A})$ es un $S$-módulo de tipo finito,
+En efecto, $\mathrm R^n\mathrm T(\mathbf A)$ es un $S$-módulo de tipo finito,
 y $S_{\{f\}}$ es una $S$-álgebra ádica noetheriana
 (\sref[0\textsubscript{I}]{0.7.6.11}), a saber, la completación separada
-de $S_f$ para la topología $\mathfrak{J}$-preádica
+de $S_f$ para la topología $\mathfrak J$-preádica
 (\sref[0\textsubscript{I}]{0.7.6.2}).
 Se sigue de \sref[0\textsubscript{I}]{0.7.7.8} y
 \sref[0\textsubscript{I}]{0.7.7.1} que
-\[
-  \RR^n\mathrm{T}(\bb{A})\otimes_S S_{\{f\}}
-\]
+$\mathrm R^n\mathrm T(\mathbf A)\otimes_S S_{\{f\}}$
 es isomorfo a la completación separada de
-$\RR^n\mathrm{T}(\bb{A})\otimes_S S_f$ para la
-topología $\mathfrak{J}$-preádica.
-Un sistema fundamental de entornos de cero para esta topología
-es
-\[
-  \bigl(
-    \mathfrak{J}^p\RR^n\mathrm{T}(\bb{A})
-  \bigr)\otimes_S S_f;
-\]
+$\mathrm R^n\mathrm T(\mathbf A)\otimes_S S_f$ para la
+topología $\mathfrak J$-preádica; un sistema fundamental de vecindades de $0$ para esta topología es
+$(\mathfrak J^p\mathrm R^n\mathrm T(\mathbf A))\otimes_S S_f$,
 los grupos
-\[
-  \mathrm{F}^p\bigl(\RR^n\mathrm{T}(\bb{A})\bigr)
-  \otimes_S S_f
-\]
+$\mathrm F^p(\mathrm R^n\mathrm T(\mathbf A))\otimes_S S_f$
 forman, por tanto, también un sistema tal.
 Este último grupo es el núcleo de la aplicación canónica
-\[
-  \bigl(\RR^n\mathrm{T}(\bb{A})\bigr)_f
-  \longrightarrow
-  \bigl(\RR^n\mathrm{T}(A_{p-1})\bigr)_f.
-\]
+$(\mathrm R^n\mathrm T(\mathbf A))_f\to
+(\mathrm R^n\mathrm T(A_{p-1}))_f$
 Por consiguiente, el grupo separado asociado a
-$\RR^n\mathrm{T}(\bb{A})\otimes_S S_f$ se identifica con un subgrupo
+$\mathrm R^n\mathrm T(\mathbf A)\otimes_S S_f$ se identifica con un subgrupo
 $G$ de
-\[
-  \varprojlim_k\bigl(\RR^n\mathrm{T}(A_k)\bigr)_f.
-\]
+$\varprojlim_k((\mathrm R^n\mathrm T(A_k))_f)$.
 Pero el sistema proyectivo
-$((\RR^n\mathrm{T}(A_k))_f)_k$ satisface manifiestamente {\rm(ML)}, y la
-imagen de $(\RR^n\mathrm{T}(\bb{A}))_f$ en cada
-$(\RR^n\mathrm{T}(A_k))_f$ es igual a la imagen común de los
-$(\RR^n\mathrm{T}(A_h))_f$ para todo $h\geq k$ suficientemente grande.
+$((\mathrm R^n\mathrm T(A_k))_f)$ satisface manifiestamente {\rm(ML)}, y la
+imagen de $(\mathrm R^n\mathrm T(\mathbf A))_f$ en cada
+$(\mathrm R^n\mathrm T(A_k))_f$ es igual a la imagen común de los
+$(\mathrm R^n\mathrm T(A_h))_f$ para todo $h\geq k$ suficientemente grande.
 Se sigue inmediatamente que $G$ es \emph{denso en todas partes} en
-$\varprojlim_k(\RR^n\mathrm{T}(A_k))_f$.
+$\varprojlim_k((\mathrm R^n\mathrm T(A_k))_f)$.
 Como este último grupo es separado y completo, queda demostrado el
 corolario.
 \end{proof}

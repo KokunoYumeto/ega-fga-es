@@ -1,0 +1,146 @@
+\begin{proposition}[4.5.19]
+\EGAReaderTarget{ega4.c04.prop.4-5-19}{IV.2.4.5.19-fr}
+Sean $X$ un $k$-preesquema, $Z$ una parte de $X$, $k'$ una extensión
+algebraicamente cerrada de $k$, $X'=X\otimes_k k'$, $p:X'\to X$ la proyección
+canónica. Se supone que $Z'=p^{-1}(Z)$ está contenida en \textup{una sola} componente
+irreducible $X'_0$ de $X'$. Entonces se tiene $X'_0=p^{-1}(X_0)$, donde
+$X_0=p(X'_0)$ es una componente irreducible de $X$ que contiene a $Z$, y además
+$X_0$ es geométricamente irreducible. Si además $X'_0$ es la única componente
+irreducible de $X'$ que \textup{corta} $Z'$, entonces $X_0$ es la única componente
+irreducible de $X$ que corta $Z$.
+\end{proposition}
+
+Para demostrar que $X'_0=p^{-1}(X_0)$, vamos a aplicar el
+
+\begin{lemma}[4.5.19.1]
+\label{IV.2.4.5.19.1-fr}
+Sean $T$ y $T'$ dos preesquemas, $p:T'\to T$ un morfismo~; consideremos el
+preesquema $T''=T'\times_T T'$, y sean $p_1:T''\to T'$ y $p_2:T''\to T'$ las
+proyecciones canónicas. Para que una parte $U'$ de $T'$ sea de la forma
+$p^{-1}(U)$, donde $U\subset T$, es necesario y suficiente que se tenga
+$p_1^{-1}(U')=p_2^{-1}(U')$.
+\end{lemma}
+
+\begin{proof}
+El morfismo estructural $q:T''\to T$ es igual a $p\circ p_1$ y a
+$p\circ p_2$ por definición, de modo que la relación es necesaria.
+Recíprocamente, supongamos que se verifica~; sean $u'$ un punto de $U'$ y $t'$
+un punto de $p^{-1}(p(u'))$~; como $p(t')=p(u')$, existe un punto $t''\in T''$
+tal que $p_1(t'')=u'$ y $p_2(t'')=t'$ (\textbf I, 3.4.7)~; por tanto,
+$t''\in p_1^{-1}(U')=p_2^{-1}(U')$ por hipótesis y, por consiguiente,
+$t'=p_2(t'')\in U'$, lo que demuestra el lema.
+\end{proof}
+
+\begin{proof}
+Demostrado este lema, para probar que $X'_0=p^{-1}(X_0)$, formemos el producto
+$X''=X'\times_X X'$ (relativo al morfismo $p:X'\to X$)~; si $p_1$ y $p_2$ son
+las proyecciones canónicas de $X''$ en $X'$, se trata, pues, de demostrar que
+$p_1^{-1}(X'_0)=p_2^{-1}(X'_0)$. Ahora bien, si se pone
+$S=\operatorname{Spec}(k)$ y $S'=\operatorname{Spec}(k')$, observemos que, si
+$S''=S'\times_S S'=\operatorname{Spec}(k'\otimes_k k')$, también puede
+escribirse $X''=X'\times_{S'}S''$. Si $\varphi'':X''\to S''$ es el morfismo
+estructural, basta demostrar que, para todo $s''\in S''$, se tiene
+$p_1^{-1}(X'_0)\cap\varphi''^{-1}(s'')
+=p_2^{-1}(X'_0)\cap\varphi''^{-1}(s'')$.
+Si se pone $T=\operatorname{Spec}(\boldsymbol{k}(s''))$,
+$U=X''\times_{S''}T=\varphi''^{-1}(s'')$, y si $v:U\to X''$ es la proyección
+canónica, se trata, pues, de demostrar que
+$U_1=v^{-1}(p_1^{-1}(X'_0))$ y $U_2=v^{-1}(p_2^{-1}(X'_0))$, que son
+componentes irreducibles de $U$ (4.4.5), son idénticas. Se tiene el diagrama
+\begin{equation}
+\tag{4.5.19.2}
+\label{IV.2.4.5.19.2-fr}
+\xymatrix@C=3.2em@R=3.0em{
+X\ar[d]
+  & X'\ar[l]_p\ar[d]
+  & X''\ar@<.55ex>[l]^{p_2}\ar@<-.55ex>[l]_{p_1}
+       \ar[d]^{\varphi''}
+  & U\ar[l]_v\ar[d]
+\\
+S
+  & S'\ar[l]
+  & S''\ar@<.55ex>[l]\ar@<-.55ex>[l]
+  & T\ar[l]
+}
+\end{equation}
+Por construcción, tanto $U_1$ como $U_2$ contienen el conjunto
+$w^{-1}(Z)$, donde
+\[
+w=p\circ p_1\circ v=p\circ p_2\circ v.
+\]
+
+\oldpage[IV-2]{67}
+
+Ahora bien, existe un cuerpo $K$, extensión común de $k'$ y de $\boldsymbol{k}(s'')$, de
+modo que, si se pone $P=\operatorname{Spec}(K)$, el diagrama
+\[
+\xymatrix@C=3.5em@R=3em{
+S'\ar[d] & P\ar[l]\ar[d]\\
+S & T\ar[l]
+}
+\]
+sea conmutativo~; si se pone $Q=X\otimes_k K$, el diagrama
+\[
+\xymatrix@C=3.5em@R=3em{
+X'\ar[d]_p & Q\ar[l]_q\ar[d]^r\\
+X & U\ar[l]^w
+}
+\]
+es, pues, también conmutativo, y las dos componentes irreducibles
+$r^{-1}(U_1)$ y $r^{-1}(U_2)$ de $Q$ (4.4.5) contienen, por consiguiente,
+$q^{-1}(Z')$. Ahora bien, en virtud de (4.4.5), las imágenes
+$q(r^{-1}(U_1))$ y $q(r^{-1}(U_2))$ son componentes irreducibles de $X'$ que
+contienen a $Z'$~; por tanto, ambas son iguales a $X'_0$, luego
+$r^{-1}(U_1)=r^{-1}(U_2)$ en virtud de (4.4.5), y finalmente $U_1=U_2$.
+
+Como $p$ es sobreyectivo y $X'_0$ domina una componente irreducible de $X$,
+$X_0=p(X'_0)$ es una componente irreducible de $X$ que contiene a $Z$, y como
+$p^{-1}(X_0)$ es una componente irreducible de $X'$, $X_0$ es geométricamente
+irreducible.
+
+Para demostrar la última afirmación, sea $X_1$ una segunda componente
+irreducible de $X$ que corte $Z$. Tomando $z\in Z\cap X_1$, se ve que existe
+una componente irreducible de $X'$ que corta $Z'$ y domina $X_1$ (2.3.5)~;
+pero, como $X'_0$ es por hipótesis la única componente irreducible de $X'$ que
+corta $Z'$, se tiene necesariamente $X_1=X_0$.
+\end{proof}
+
+\begin{remark}[4.5.20]
+\label{IV.2.4.5.20-fr}
+El hecho de que $Z'$ esté contenida en una sola componente irreducible $X'_0$
+de $X'$ \emph{no implica} que $X_0=p(X'_0)$ sea la única componente irreducible
+de $X$ que contiene a $Z$. Tomemos, en efecto, $k=\mathbf R$, $k'=\mathbf C$, y
+como $X$ el $k$-esquema obtenido por pegado\footnote{La técnica del
+«~pegado~» de preesquemas se desarrollará en detalle en el cap.~V~; para el
+caso considerado aquí (donde se trata de curvas algebraicas), puede consultarse
+[38], pp.~68--71.} en un punto (no genérico) de
+$X_1=\operatorname{Spec}(\mathbf R[S,T]/(S^2+T^2+1))$ y de
+$X_2=\operatorname{Spec}(\mathbf C[T])$ (los anillos locales de estas dos
+curvas en cada uno de sus puntos cerrados tienen el mismo cuerpo residual
+isomorfo a $\mathbf C$)~; $X_1$ y $X_2$ se identifican con las dos componentes
+irreducibles de $X$~; si $x$ es su punto común, $p^{-1}(x)$ está formado por
+dos puntos distintos $y'$ y $z'$, $p^{-1}(X_1)$ es irreducible, y
+$p^{-1}(X_2)$ es suma de dos componentes irreducibles $Y'$ y $Z'$ de $X'$
+tales que $y'\in Y'$ y $z'\in Z'$, de modo que $p^{-1}(x)$ solo está contenido
+en una única componente irreducible de $X'$.
+\end{remark}
+
+\begin{proposition}[4.5.21]
+\label{IV.2.4.5.21-fr}
+Sea $k$ un cuerpo separablemente cerrado, y sea $k'$ una clausura algebraica de
+$k$. Para todo $k$-preesquema $X$, la proyección canónica
+$X\otimes_k k'\to X$ es un homeomorfismo universal.
+
+\oldpage[IV-2]{68}
+
+En particular, las componentes irreducibles \textup{(resp.} conexas\textup{)} de $X$ son
+geométricamente irreducibles \textup{(resp.} geométricamente conexas\textup{)}.
+\end{proposition}
+
+\begin{proof}
+Por definición, $k'$ es una extensión radicial de $k$~; el morfismo
+$\operatorname{Spec}(k')\to\operatorname{Spec}(k)$ es entero, sobreyectivo y
+radicial, por lo que la primera afirmación se deduce de (2.4.5, (i))~; la
+segunda se deduce de ella, en vista de (4.5.1).
+\end{proof}
+

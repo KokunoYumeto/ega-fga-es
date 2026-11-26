@@ -1,0 +1,94 @@
+\begin{corollary}[5.2.3]
+\EGAReaderTarget{ega4.c04.cor.5-2-3}{IV.2.5.2.3-fr}
+Sean $X$ un preesquema localmente de tipo finito sobre un cuerpo $k$ y $x$ un
+punto de $X$. Se tiene
+\begin{equation}
+\dim_x(X)=\dim(\mathcal O_x)+\operatorname{deg.tr}_k \boldsymbol{k}(x).
+\tag{5.2.3.1}\label{IV.2.5.2.3.1-fr}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Se sabe que existe una vecindad abierta $U$ de $x$ en $X$ tal que
+$\dim_x(X)=\dim(U)$ $(\mathbf{0},14.1.4.1)$, y se puede suponer que las componentes
+irreducibles de $U$ sean los $X_i\cap U$, donde los $X_i$ son las
+componentes irreducibles de $X$ que contienen a $x$; como $U\cap X_i$
+
+\oldpage[IV-2]{91}
+
+es denso en $X_i$, de (4.1.1.3) se sigue que
+$\dim(X_i)=\dim(U\cap X_i)$, por lo que se tiene
+$\dim_x(X)=\sup_i(\dim(X_i))$. Además, los ideales primos minimales de
+$\mathcal O_x$ corresponden a los puntos genéricos de los $X_i$, por lo que,
+por $(\mathbf{0},16.1.1.1)$, se tiene
+$\dim(\mathcal O_{X,x})=\sup_i(\dim(\mathcal O_{X_i,x}))$. La cuestión se reduce así
+al caso en que $X$ es \emph{irreducible}; como $X$ es biequidimensional por
+(5.2.1), se tiene
+$\dim(X)=\dim(\overline{\{x\}})+\operatorname{codim}(\overline{\{x\}},X)$
+$(\mathbf{0},14.3.5.1)$, y se sabe que
+$\dim(\overline{\{x\}})=\operatorname{deg.tr}_k \boldsymbol{k}(x)$ por (5.2.1) y
+$\operatorname{codim}(\overline{\{x\}},X)=\dim(\mathcal O_x)$ por (5.1.2).
+\end{proof}
+
+\begin{corollary}[5.2.4]
+\label{IV.2.5.2.4-fr}
+Sean $X$ un preesquema localmente de tipo finito sobre un cuerpo $k$,
+$\mathcal L$ un $\mathcal O_X$-módulo invertible y $f$ una sección de
+$\mathcal L$ sobre $X$, tal que el conjunto $Y$ de los $x\in X$ para los
+cuales $f(x)=0$ sea raro en $X$. Entonces se tiene
+$\dim(Y)\leq\dim(X)-1$; los dos miembros de esta desigualdad son iguales si
+$Y$ corta toda componente irreducible de dimensión máxima de $X$.
+\end{corollary}
+
+\begin{proof}
+Si $(X_\alpha)$ es la familia de las componentes irreducibles de $X$, se
+tiene
+\[
+\dim(Y)=\sup_\alpha(\dim(Y\cap X_\alpha))
+\]
+y, por tanto, la cuestión se reduce al caso en que $X$ es irreducible (pues
+$Y\cap X_\alpha$ es raro en $X_\alpha$, ya que todo $X_\alpha$ tiene interior
+no vacío en $X$). Basta considerar el caso en que $Y\ne\varnothing$; entonces,
+para todo punto maximal $x$ de $Y$, se tiene (puesto que $X$ es
+biequidimensional)
+$\dim(\overline{\{x\}})=\dim(X)-\operatorname{codim}(\overline{\{x\}},X)$,
+y, puesto que $Y$ es raro en $X$, se tiene
+\[
+\operatorname{codim}(\overline{\{x\}},X)=1
+\] por (5.1.8); de aquí el
+corolario.
+\end{proof}
+
+\begin{remarks}[5.2.5]
+\label{IV.2.5.2.5-fr}
+\begin{enumerate}
+\item[(i)] A diferencia de lo que ocurre con los $k$-preesquemas algebraicos,
+un preesquema localmente noetheriano $X$ no es necesariamente catenario
+(cf. (5.6.11)); sin embargo, lo es si todos sus anillos locales $\mathcal O_x$
+son cocientes de anillos regulares $(\mathbf{0},16.5.12)$ y, en particular, si $X$ es
+\emph{regular} (\textbf I, 4.1.4). No obstante, ni siquiera un esquema (íntegro)
+$X=\operatorname{Spec}(A)$, donde $A$ es un anillo \emph{regular}, es
+necesariamente \emph{biequidimensional}; dicho de otro modo $(\mathbf{0},14.3.3)$,
+las codimensiones en $X$ de los distintos puntos cerrados de $X$ no son
+necesariamente las mismas. Por ejemplo, sean $B$ un anillo de valoración
+discreta, $\mathfrak m=B\pi$ su ideal maximal, $k=B/\mathfrak m$ su cuerpo
+residual y $K$ el cuerpo de fracciones de $B$; sea $A$ el anillo de polinomios
+$B[T]$. En $A$ hay ideales maximales \emph{de altura} $2$, por ejemplo
+$(\pi)+(T)$; pero también hay ideales maximales \emph{de altura} $1$, por
+ejemplo el ideal principal $(\pi T-1)$: en efecto, un ideal primo principal
+$\ne0$ es de altura $1$ (5.1.8); por otra parte,
+$A/(\pi T-1)$ es isomorfo al anillo de fracciones $B_\pi$
+$(\mathbf{0}_{\mathrm I},1.2.3)$, que aquí no es otro que $K$, lo que prueba que el
+ideal $(\pi T-1)$ es maximal y de altura $1$.
+
+\item[(ii)] Cuando $X$ es un preesquema localmente de tipo finito sobre un
+cuerpo, se ha visto (4.1.1.3) que $\dim(U)=\dim(X)$ para todo abierto $U$
+denso en todas partes en $X$. Este resultado \emph{no se extiende} a los
+preesquemas noetherianos regulares, aunque sean biequidimensionales. Por
+ejemplo, sean $B$ un anillo de valoración discreta y $\mathfrak m$ su ideal
+maximal; $X=\operatorname{Spec}(B)$ tiene dos puntos, el ideal $(0)$ y
+$\mathfrak m$, siendo este último el único punto cerrado; se tiene
+$\dim(X)=1$, pero el conjunto abierto $U=\{(0)\}$ es de dimensión $0$
+(cf. \S~10).
+\end{enumerate}
+\end{remarks}

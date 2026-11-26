@@ -22,3 +22,12 @@ La traducción al español, las correcciones, la edición y la composición est�
 - [EGA III-1: alcance e identidad de las fuentes](editions/III1_CURRENT/FUENTES.md).
 - [EGA IV-1, capítulo 0: alcance e identidad de las fuentes](editions/IV1_CURRENT/FUENTES.md).
 - [EGA IV-4: alcance e identidad de las fuentes](editions/IV4/FUENTES.md).
+
+## Finalización de EGA (noviembre de 2026)
+
+La traducción pendiente de EGA (capítulo 0 desde 0.4.4.3; EGA IV, parte 1, capítulo IV), el cotejo y el montaje de
+EGA IV, parte 2, la aplicación del estándar terminológico y los lectores del 25 de noviembre de 2026 los produjo
+GPT-6.0 Astra (OpenAI), modo Pro de ChatGPT (ejecución EGA_ES_FINISH; registros en
+`raw/EGA_ES_FINISH_final_20261125T0434Z/`). Compilación de comprobación, revisión de los PDF y publicación: Claude
+Opus 5.5 (Anthropic), esfuerzo high, 26 de noviembre de 2026. La traducción, las correcciones y la composición están
+producidas por IA; no se afirma revisión humana.

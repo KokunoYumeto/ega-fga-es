@@ -1,162 +1,112 @@
 \subsection{Caracterizaciones del funtor producto tensorial}
 \label{subsection:III.7.2}
+\label{subsection:III.7.2.fr}
 
 \begin{env}[7.2.1]
 \label{III.7.2.1}
 Sea $A$ un anillo, no necesariamente conmutativo; sea $M$
-(respectivamente $N$) un $A$-módulo a izquierda
-(respectivamente a derecha), y sea $P$ un $\bb Z$-módulo.
-Recordemos que dar un $\bb Z$-homomorfismo
-\[
-  v:N\otimes_A M\longrightarrow P
-\]
-equivale a dar una aplicación $\bb Z$-bilineal
-\[
-  u:N\times M\longrightarrow P
-\]
-tal que
-\[
-  u(ta,x)=u(t,ax)
-  \qquad(a\in A,\ t\in N,\ x\in M),
-\]
-estando relacionadas ambas aplicaciones por
-\[
-  v(t\otimes x)=u(t,x).
-\]
+(resp. $N$) un $A$-módulo a izquierda
+(resp. a derecha), y sea $P$ un $\mathbf Z$-módulo.
+Recordemos que dar un $\mathbf Z$-homomorfismo
+$v:N\otimes_A M\longrightarrow P$
+equivale a dar una aplicación $\mathbf Z$-bilineal
+$u:N\times M\longrightarrow P$
+tal que $u(ta,x)=u(t,ax)$ para $a\in A$, $t\in N$, $x\in M$,
+estando relacionadas las dos aplicaciones por $v(t\otimes x)=u(t,x)$.
 Por otra parte, dar $u$ equivale a dar un
 \oldpage[III]{177}
-$\bb Z$-\emph{homomorfismo}
-\[
-  x\to f_x
-\]
-de $M$ en $\Hom_{\bb Z}(N,P)$ tal que
-\[
-  f_{ax}(t)=f_x(ta)
-  \qquad(a\in A,\ t\in N,\ x\in M),
-\]
-estando relacionadas ambas aplicaciones por $u(t,x)=f_x(t)$.
+$\mathbf Z$-\emph{homomorfismo}
+$x\to f_x$
+de $M$ en $\operatorname{Hom}_{\mathbf Z}(N,P)$ tal que
+$f_{ax}(t)=f_x(ta)$ para $a\in A$, $t\in N$, $x\in M$,
+estando relacionadas las dos aplicaciones por $u(t,x)=f_x(t)$.
 \end{env}
 
 \begin{env}[7.2.2]
-\label{III.7.2.2}
-Sea
-\[
-  T:\cat{Ab}_A\longrightarrow\cat{Ab}
-\]
-un funtor covariante aditivo. Para todo $A$-módulo a izquierda
-$M$ vamos a definir un \emph{homomorfismo canónico de} $\bb Z$-\emph{módulos},
-\emph{funtorial en} $M$,
-\begin{env}[7.2.2.1]
-\label{III.7.2.2.1}
+Sea $T:\boldsymbol{Ab}_A\to\boldsymbol{Ab}$ un funtor covariante aditivo. Vamos
+a definir, para todo $A$-módulo por la izquierda $M$, un \emph{homomorfismo canónico
+funtorial en} $M$, \emph{de} $\mathbf Z$-\emph{módulos}
 \[
   t_M:T(A_s)\otimes_A M\longrightarrow T(M).
-  \tag{7.2.2.1}\label{III.7.2.2.1.eq}
-\]
-\end{env}
-Por \sref{III.7.2.1}, basta definir un $\bb Z$-homomorfismo
-\[
-  x\leadsto t'_M(x)
-\]
-de $M$ en $\Hom_{\bb Z}(T(A_s),T(M))$ tal que
-\[
-  t'_M(ax)(y)=t'_M(x)(ya)
-  \qquad(a\in A,\ x\in M,\ y\in T(A_s)).
-\]
-Para ello, obsérvese que $\Hom_{\bb Z}(T(A_s),T(M))$ es
-canónicamente un $A$-módulo a izquierda, en virtud de la
-estructura de $A$-módulo a derecha de $T(A_s)$, con
-multiplicación escalar definida por
-\[
-  (a.w)(y)=w(ya)
-\]
-para $a\in A$, $w\in\Hom_{\bb Z}(T(A_s),T(M))$ e
-$y\in T(A_s)$. Definamos $t'_M$ como el compuesto de los dos
-homomorfismos canónicos
-\[
-  M
-  \xrightarrow{\sim}
-  \Hom_A(A_s,M)
-  \xrightarrow{T}
-  \Hom_{\bb Z}(T(A_s),T(M)).
+  \tag{7.2.2.1}\label{III.7.2.2.1.fr}
 \]
 
-La segunda flecha envía $w$ a $T(w)$; la primera es el
-isomorfismo canónico de $A$-módulos que envía $x$ a la aplicación
-$\theta_x:A_s\to M$ definida por
+Para ello bastará, en virtud de (7.2.1), definir un
+$\mathbf Z$-homomorfismo $x\leadsto t'_M(x)$ de $M$ en
+$\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$, tal que se tenga
+$t'_M(ax)(y)=t'_M(x)(ya)$ para $a\in A$, $x\in M$ y $y\in T(A_s)$.
+Observemos para ello que
+$\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$ está canónicamente provisto de una
+estructura de $A$-módulo por la izquierda procedente de la estructura de $A$-módulo por la
+derecha de $T(A_s)$, siendo la ley externa tal que si
+$a\in A$, $v\in\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$,
+$(a.v)(y)=v(ya)$ para $y\in T(A_s)$.
+Dicho esto, definiremos $t'_M$ como compuesto de los dos homomorfismos
+canónicos
 \[
-  \theta_x(\xi)=\xi x
-  \qquad(\xi\in A,\ x\in M).
+  M\xrightarrow{\sim}\operatorname{Hom}_A(A_s,M)
+  \xrightarrow{T}
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))
 \]
-Como $\theta_{ax}=\theta_x\circ h_a$, se tiene
-\[
-  T(\theta_{ax})
-  =
-  T(\theta_x\circ h_a)
-  =
-  T(\theta_x)\circ T(h_a),
-\]
-y, por consiguiente, para $y\in T(A_s)$,
+siendo la segunda flecha la aplicación $u\leadsto T(u)$, la primera
+el isomorfismo canónico de $A$-módulos $x\leadsto\theta_x$ tal que
+$\theta_x(\xi)=\xi x$ para $\xi\in A$, $x\in M$. Se tiene
+$\theta_{ax}=\theta_x\circ h_a$, luego
+$T(\theta_{ax})=T(\theta_x\circ h_a)=T(\theta_x)\circ T(h_a)$
+y por tanto, para $y\in T(A_s)$,
 \[
   T(\theta_{ax})(y)
   =
-  T(\theta_x)\bigl(T(h_a)(y)\bigr)
+  T(\theta_x)(T(h_a)(y))
   =
-  T(\theta_x)(ya),
+  T(\theta_x)(ya)
 \]
-por la definición de la estructura de $A$-módulo a derecha sobre
-$T(A_s)$. Esto prueba la existencia de $t_M$.
-
-Es inmediato que este homomorfismo es funtorial en $M$: para todo
-homomorfismo $w:M\to M'$ de $A$-módulos a izquierda, el diagrama
-\begin{env}[7.2.2.2]
-\label{III.7.2.2.2}
+por definición de la ley externa sobre $T(A_s)$, lo que prueba la existencia de
+$t_M$; es inmediato verificar que este homomorfismo es funtorial en
+$M$, es decir, que para todo homomorfismo $w:M\to M'$ de $A$-módulos por la
+izquierda, el diagrama
 \[
-\xymatrix{
+\xymatrix@C=30pt@R=30pt{
   T(A_s)\otimes_A M
-    \ar[r]^-{t_M}\ar[d]_{1\otimes w}
-  & T(M)\ar[d]^{T(w)}
+  \ar[r]^-{t_M}\ar[d]_{1\otimes w}
+  &
+  T(M)\ar[d]^{T(w)}
   \\
   T(A_s)\otimes_A M'
-    \ar[r]_-{t_{M'}}
-  & T(M')
+  \ar[r]_-{t_{M'}}
+  &
+  T(M')
 }
-\tag{7.2.2.2}\label{III.7.2.2.2.eq}
+\tag{7.2.2.2}\label{III.7.2.2.2.fr}
 \]
-\end{env}
-es conmutativo. La funtorialidad de
-\eqref{III.7.2.2.1.eq} muestra asimismo que, cuando $A$ es
-\emph{conmutativo}, $t_M$ es un homomorfismo de $A$-\emph{módulos}
-\sref{III.7.1.2}.
+es conmutativo.
+
+La funtorialidad del homomorfismo (7.2.2.1) muestra que cuando $A$ es
+\emph{conmutativo}, es un homomorfismo de $A$-\emph{módulos} (cf. (7.1.2)).
 \end{env}
 
 \begin{env}[7.2.3]
 \label{III.7.2.3}
 Cuando $A$ es conmutativo, se puede definir más generalmente un
 homomorfismo canónico de $A$-módulos
-\begin{env}[7.2.3.1]
+
 \label{III.7.2.3.1}
 \[
-  T(N)\otimes_A M
-  \longrightarrow
-  T(N\otimes_A M).
-  \tag{7.2.3.1}\label{III.7.2.3.1.eq}
+  T(N)\otimes_A M\longrightarrow T(N\otimes_A M)
+  \tag{7.2.3.1}\label{III.7.2.3.1.fr}
 \]
-\end{env}
-para todo $A$-módulo $N$: en la construcción de
-\sref{III.7.2.2}, sustitúyase $\theta_x$ por el homomorfismo de
+
+para todo $A$-módulo $N$; basta, en la construcción de (7.2.2), reemplazar el homomorfismo $\theta_x$ por el homomorfismo de
 $A$-módulos
-\[
-  N\longrightarrow N\otimes_A M,
-  \qquad
-  y\longmapsto y\otimes x.
-\]
-Es inmediato que este homomorfismo es \emph{funtorial tanto en} $M$ \emph{como
+$N\longrightarrow N\otimes_A M$
+que a todo $y\in N$ hace corresponder $y\otimes x$. Es inmediato que este
+homomorfismo es \emph{funtorial en} $M$ \emph{como
 en} $N$.
 
 \oldpage[III]{178}
 En particular, si $B$ es una $A$-álgebra, no necesariamente
 conmutativa, existe un homomorfismo, funtorial en $M$,
-\begin{env}[7.2.3.2]
+
 \label{III.7.2.3.2}
 \[
   (T(M))_{(B)}
@@ -165,29 +115,31 @@ conmutativa, existe un homomorfismo, funtorial en $M$,
   \longrightarrow
   T(M\otimes_A B)
   =
-  T_{(B)}(M_{(B)}).
-  \tag{7.2.3.2}\label{III.7.2.3.2.eq}
+  T_{(B)}(M_{(B)})
+  \tag{7.2.3.2}\label{III.7.2.3.2.fr}
 \]
-\end{env}
+
 Por la funtorialidad de \eqref{III.7.2.3.1.eq} en $M$, este es un
 homomorfismo de $B$-\emph{módulos}.
 
 Se tiene además un diagrama conmutativo
-\begin{env}[7.2.3.3]
+
 \label{III.7.2.3.3}
 \[
-\xymatrix{
+\xymatrix@C=30pt@R=30pt{
   T(A)\otimes_A M
-    \ar[r]^-{t_M}\ar[d]
-  & T(M)\ar[d]
+  \ar[r]^-{t_M}\ar[d]
+  &
+  T(M)\ar[d]
   \\
   T_{(B)}(B_s)\otimes_B M_{(B)}
-    \ar[r]_-{t_{M_{(B)}}}
-  & T_{(B)}(M_{(B)})
+  \ar[r]_-{t_{M_{(B)}}}
+  &
+  T_{(B)}(M_{(B)})
 }
-\tag{7.2.3.3}\label{III.7.2.3.3.eq}
+\tag{7.2.3.3}\label{III.7.2.3.3.fr}
 \]
-\end{env}
+
 La flecha vertical derecha es el compuesto
 \[
   T(M)
@@ -200,178 +152,140 @@ La flecha vertical derecha es el compuesto
 \]
 del homomorfismo canónico y \eqref{III.7.2.3.2.eq}. La flecha
 vertical izquierda de \eqref{III.7.2.3.3.eq} es el homomorfismo
-\[
-  T(A)\otimes_A M
-  \longrightarrow
-  T_{(B)}(B_s)\otimes_B(B\otimes_A M)
-  =
-  T_{(B)}(B_s)\otimes_A M,
-\]
+$T(A)\otimes_A M\longrightarrow T_{(B)}(B_s)\otimes_B(B\otimes_A M)=T_{(B)}(B_s)\otimes_A M$
 donde
-\[
-  T(A)\longrightarrow T_{(B)}(B_s)=T(B)
-\]
+$T(A)\longrightarrow T_{(B)}(B_s)=T(B)$
 es $T(\rho)$, considerando $\rho$ como homomorfismo de
 $A$-módulos $A\to B_{[\rho]}$.
 \end{env}
 
 \begin{lemma}[7.2.4]
 \label{III.7.2.4}
-Si $T$ es un funtor covariante aditivo de $\cat{Ab}_A$ en
-$\cat{Ab}$ que conmuta con las sumas directas, entonces el
+Si $T$ es un funtor covariante aditivo de $\boldsymbol{Ab}_A$ en
+$\boldsymbol{Ab}$ que conmuta con las sumas directas, entonces el
 homomorfismo canónico $t_L$ de \eqref{III.7.2.2.1.eq} es un
 isomorfismo para todo $A$-módulo libre $L$.
 \end{lemma}
 
 \begin{proof}
-Escribamos
-\[
-  L=\bigoplus_{\alpha\in I}L_\alpha,
-\]
-donde cada $L_\alpha$ es isomorfo a $A_s$. La definición de $t_M$
+En efecto, se tiene $L=\bigoplus_{\alpha\in I}L_\alpha$
+donde cada $L_\alpha$ es isomorfo a $A_s$ para todo $\alpha\in I$; la definición de
+$t_M$
 en \sref{III.7.2.2} muestra que
-\[
-  t_L=\bigoplus_{\alpha\in I}t_{L_\alpha},
-\]
+$t_L=\bigoplus_{\alpha\in I}t_{L_\alpha}$,
 porque
 \[
   T:
-  \Hom_A(A_s,L)
+  \operatorname{Hom}_A(A_s,L)
   \longrightarrow
-  \Hom_{\bb Z}(T(A_s),T(L))
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(L))
 \]
-es la suma directa de las aplicaciones $\bb Z$-lineales
-\[
-  T_\alpha:
-  \Hom_A(A_s,L_\alpha)
-  \longrightarrow
-  \Hom_{\bb Z}(T(A_s),T(L_\alpha))
-\]
+es la suma directa de las aplicaciones $\mathbf Z$-lineales
+$T_\alpha:\operatorname{Hom}_A(A_s,L_\alpha)\longrightarrow\operatorname{Hom}_{\mathbf Z}(T(A_s),T(L_\alpha))$
 por la hipótesis sobre $T$. Solo queda, por tanto, demostrar el
 lema para $L=A_s$; pero entonces $t_L$ es precisamente el
 isomorfismo canónico
-\[
-  T(A_s)\otimes_A A_s
-  \xrightarrow{\sim}
-  T(A_s),
-\]
+$T(A_s)\otimes_A A_s\xrightarrow{\sim}T(A_s)$
 válido para todo $A$-módulo a derecha.
 \end{proof}
 
 \begin{proposition}[7.2.5]
-\label{III.7.2.5}
-Sea $T$ un funtor covariante aditivo de $\cat{Ab}_A$ en
-$\cat{Ab}$ que conmuta con las sumas directas. Las condiciones
-siguientes son equivalentes:
+Sea $T$ un funtor covariante aditivo de $\boldsymbol{Ab}_A$ en
+$\boldsymbol{Ab}$, que conmuta con las sumas directas. Las condiciones siguientes son
+equivalentes:
 \begin{enumerate}
-  \item[(a)] $T$ es exacto por la derecha;
-  \item[(b)] el homomorfismo canónico $t_M$ de
-    \eqref{III.7.2.2.1.eq} es un isomorfismo para todo $A$-módulo
-    a izquierda $M$;
-  \item[($\mathrm{b}'$)] $T$ es semiexacto y $t_M$ es
-    sobreyectivo para todo $A$-módulo a izquierda $M$;
-  \item[(c)] $T$ es isomorfo a un funtor de $M$ de la forma
-    $N\otimes_A M$, donde $N$ es un $A$-módulo a derecha.
+  \item[a)] $T$ es exacto por la derecha.
+  \item[b)] El homomorfismo canónico $t_M$ \textup{(7.2.2.1)} es un isomorfismo para
+    todo $A$-módulo por la izquierda $M$.
+  \item[$b'$)] $T$ es semiexacto y el homomorfismo $t_M$ es sobreyectivo para
+    todo $A$-módulo por la izquierda $M$.
+  \item[c)] $T$ es isomorfo a un funtor en $M$ de la forma
+    $N\otimes_A M$, donde $N$ es un $A$-módulo por la derecha.
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Es claro que (b) implica (c), y que (c) implica (a). Demostremos
-que (a) implica (b).
+Está claro que $b)$ implica $c)$ y que $c)$ implica $a)$; mostremos que
+$a)$ implica $b)$.
 \oldpage[III]{179}
 Pongamos
+$T'(M)=T(A_s)\otimes_A M$
+para todo $A$-módulo por la izquierda $M$. Existe una sucesión exacta
+$L'\longrightarrow L\longrightarrow M\longrightarrow0$,
+donde $L$ y $L'$ son dos $A$-módulos por la izquierda \emph{libres}; como $T$ y $T'$ son
+exactos por la derecha, se tiene pues el diagrama conmutativo
 \[
-  T'(M)=T(A_s)\otimes_A M
-\]
-para todo $A$-módulo a izquierda $M$. Existe una sucesión exacta
-\[
-  L'\longrightarrow L\longrightarrow M\longrightarrow0,
-\]
-donde $L$ y $L'$ son $A$-módulos \emph{libres} a izquierda. Como $T$ y
-$T'$ son exactos por la derecha, existe un diagrama conmutativo
-\[
-\xymatrix{
-  T'(L')\ar[r]\ar[d]^{t_{L'}}
-  & T'(L)\ar[r]\ar[d]^{t_L}
-  & T'(M)\ar[r]\ar[d]^{t_M}
-  & 0
+\xymatrix@C=22pt@R=25pt{
+  T'(L')\ar[r]\ar[d]_{t_{L'}}
+  &
+  T'(L)\ar[r]\ar[d]_{t_L}
+  &
+  T'(M)\ar[r]\ar[d]_{t_M}
+  &
+  0
   \\
   T(L')\ar[r]
-  & T(L)\ar[r]
-  & T(M)\ar[r]
-  & 0
+  &
+  T(L)\ar[r]
+  &
+  T(M)\ar[r]
+  &
+  0
 }
 \]
-cuyas filas son exactas. Por \sref{III.7.2.4}, $t_L$ y
-$t_{L'}$ son isomorfismos; por el lema de los cinco, también lo es
-$t_M$.
-
-Es claro que (b) implica ($\mathrm{b}'$). Para mostrar que
-($\mathrm{b}'$) implica (a), basta demostrar el lema siguiente.
+donde las dos filas son exactas; como $t_L$ y $t_{L'}$ son
+isomorfismos en virtud de (7.2.4), lo mismo ocurre con $t_M$ por el lema de los
+cinco. Finalmente, está claro que $b)$ implica $b')$. Para mostrar que $b')$
+implica $a)$, basta probar el
 \end{proof}
 
 \begin{lemma}[7.2.5.1]
-\label{III.7.2.5.1}
-Sean $\cat K$ y $\cat K'$ categorías abelianas, sean $F$ y $G$
-funtores covariantes aditivos de $\cat K$ en $\cat K'$, y sea
-\[
-  f:F\longrightarrow G
-\]
-una transformación natural \emph{(T, I, 1.2)} tal que
-\[
-  f_E:F(E)\longrightarrow G(E)
-\]
-es un epimorfismo para todo objeto $E$ de $\cat K$. Si $F$ es
-exacto por la derecha y $G$ es semiexacto, entonces $G$ es exacto
-por la derecha.
+Sean $\boldsymbol{K}$, $\boldsymbol{K}'$ dos categorías abelianas, $F$, $G$ dos
+funtores covariantes aditivos de $\boldsymbol{K}$ en $\boldsymbol{K}'$,
+$f:F\to G$ un morfismo funtorial \textup{(T, I, 1.2)} tal que, para todo objeto $E$
+de la categoría $\boldsymbol{K}$,
+$f_E:F(E)\longrightarrow G(E)$
+es un epimorfismo. Entonces, si $F$ es exacto por la derecha y $G$ semiexacto,
+$G$ es exacto por la derecha.
 \end{lemma}
 
 \begin{proof}
-Basta mostrar que, para todo epimorfismo $v:E'\to E$ en $\cat K$,
+Todo se reduce en efecto a demostrar que para todo epimorfismo
+$v:E'\to E$ en $\boldsymbol{K}$,
+$G(v):G(E')\longrightarrow G(E)$
+es un epimorfismo; ahora bien, se tiene el diagrama conmutativo
 \[
-  G(v):G(E')\longrightarrow G(E)
-\]
-es un epimorfismo. Existe un diagrama conmutativo
-\[
-\xymatrix{
+\xymatrix@C=35pt@R=30pt{
   F(E')\ar[r]^{F(v)}\ar[d]_{f_{E'}}
-  & F(E)\ar[d]^{f_E}
+  &
+  F(E)\ar[d]^{f_E}
   \\
   G(E')\ar[r]_{G(v)}
-  & G(E)
+  &
+  G(E)
 }
 \]
-Aquí $F(v)$, $f_{E'}$ y $f_E$ son epimorfismos; por consiguiente,
-$G(v)$ también es un epimorfismo.
+en el cual $F(v)$, $f_{E'}$ y $f_E$ son epimorfismos; lo mismo ocurre pues
+con $G(v)$.
 \end{proof}
 
 \begin{remark}[7.2.6]
 \label{III.7.2.6}
 Para todo $A$-módulo a derecha $N$, pongamos
-\[
-  T_N(M)=N\otimes_A M
-\]
+$T_N(M)=N\otimes_A M$
 para todo $A$-módulo a izquierda $M$. Así, $T_N$ es un funtor
-covariante aditivo de $\cat{Ab}_A$ en $\cat{Ab}$, es exacto por
+covariante aditivo de $\boldsymbol{Ab}_A$ en $\boldsymbol{Ab}$, es exacto por
 la derecha y conmuta con las sumas directas. Si se identifica
 canónicamente $T_N(A_s)$ con $N$, se comprueba inmediatamente que
 el homomorfismo correspondiente \eqref{III.7.2.2.1.eq} es la
-identidad. Se sigue que el $A$-módulo a derecha $N$ de
-\sref{III.7.2.5}(c) está determinado salvo isomorfismo único y es
-canónicamente isomorfo a $T(A_s)$.
-
-Equivalentemente, las correspondencias
-\[
-  T\leadsto T(A_s)
-  \qquad\text{y}\qquad
-  N\leadsto T_N
-\]
-definen una \emph{equivalencia} \emph{(T, I, 1.2)} entre la categoría de
-los $A$-módulos a derecha y la categoría de los funtores
+identidad. Se sigue que el $A$-módulo a derecha $N$ del enunciado de
+(7.2.5, $c)$) está determinado salvo isomorfismo único y es
+canónicamente isomorfo a $T(A_s)$. Se puede decir también que los morfismos
+funtoriales
+$T\leadsto T(A_s)$ y $N\leadsto T_N$
+constituyen una \emph{equivalencia} (T, I, 1.2) de la categoría de los $A$-módulos a derecha y la categoría de los funtores
 covariantes aditivos
-\[
-  \cat{Ab}_A\longrightarrow\cat{Ab}
-\]
+$\boldsymbol{Ab}_A\to\boldsymbol{Ab}$
 que son exactos por la derecha y conmutan con las sumas directas.
 \end{remark}
 
@@ -379,14 +293,12 @@ que son exactos por la derecha y conmutan con las sumas directas.
 \label{III.7.2.7}
 Sea $A$ un anillo artiniano a izquierda cuyo cociente por su
 radical $\mathfrak m$ es un cuerpo $k$, y sea $T$ un funtor
-covariante aditivo de $\cat{Ab}_A$ en $\cat{Ab}$ que conmuta con
+covariante aditivo de $\boldsymbol{Ab}_A$ en $\boldsymbol{Ab}$ que conmuta con
 las sumas directas. Las condiciones de \sref{III.7.2.5} son
 también equivalentes a la condición siguiente:
 \begin{enumerate}
   \item[(d)] $T$ es semiexacto y el homomorfismo
-    \[
-      T(\varepsilon):T(A_s)\longrightarrow T(k)
-    \]
+    $T(\varepsilon):T(A_s)\longrightarrow T(k)$
     inducido por el homomorfismo canónico
     $\varepsilon:A_s\to k$ es sobreyectivo.
 \end{enumerate}
@@ -394,13 +306,9 @@ también equivalentes a la condición siguiente:
 
 \begin{proof}
 \oldpage[III]{180}
-Es claro que la condición ($\mathrm{b}'$) de
-\sref{III.7.2.5} implica (d). Demostremos que (d) implica
-($\mathrm{b}'$). Existe un entero $n$ tal que
-$\mathfrak m^n=0$. Para todo $A$-módulo $M$, pongamos
-\[
-  M_h=\mathfrak m^hM.
-\]
+Es claro que la condición ($b')$ de (7.2.5) implica $d)$; probemos que
+$d)$ implica $b')$). Existe un entero $n$ tal que
+$\mathfrak m^n=0$; pongamos, para todo $A$-módulo $M$, $M_h=\mathfrak m^hM$;
 Demostraremos, por inducción descendente sobre $h$, que $t_{M_h}$
 es sobreyectivo. La afirmación es clara para $h=n$. Si $h<n$,
 existe una sucesión exacta
@@ -408,50 +316,47 @@ existe una sucesión exacta
   0\longrightarrow M_{h+1}
   \longrightarrow M_h
   \longrightarrow M_h/M_{h+1}
-  \longrightarrow0,
+  \longrightarrow 0
 \]
 y la hipótesis de inducción dice que $t_{M_{h+1}}$ es
 sobreyectivo. Además, $M_h/M_{h+1}$ es anulado por $\mathfrak m$
 y, por tanto, es un $(A/\mathfrak m)$-módulo; en otras palabras,
-es una suma directa de $A$-módulos isomorfos a $k$. Como $T$
-conmuta con las sumas directas, para demostrar que
-$t_{M_h/M_{h+1}}$ es sobreyectivo basta demostrar que $t_k$ lo es.
-El diagrama
+es una suma directa de $A$-módulos isomorfos a $k$. Para probar que $t_{M_h/M_{h+1}}$ es sobreyectivo basta demostrar que $t_k$ lo es, puesto que $T$ conmuta con las sumas directas. Ahora bien,
+en virtud de la conmutatividad del diagrama
 \[
-\xymatrix{
+\xymatrix@C=35pt@R=30pt{
   T(A_s)\otimes_A A_s
-    \ar[r]^-{t_{A_s}}\ar[d]_{1\otimes\varepsilon}
-  & T(A_s)\ar[d]^{T(\varepsilon)}
+  \ar[r]^-{t_{A_s}}\ar[d]_{1\otimes\varepsilon}
+  &
+  T(A_s)\ar[d]^{T(\varepsilon)}
   \\
   T(A_s)\otimes_A k
-    \ar[r]_-{t_k}
-  & T(k)
+  \ar[r]_-{t_k}
+  &
+  T(k)
 }
 \]
-es conmutativo. La condición (d), junto con
-\sref{III.7.2.4}, muestra entonces que $t_k$ es sobreyectivo.
-
-Para terminar la demostración, queda mostrar que si
-\[
-  0\longrightarrow M'
-  \longrightarrow M
-  \xrightarrow{v}M''
-  \longrightarrow0
-\]
+y de (7.2.4), la hipótesis $d)$ implica que $t_k$ es sobreyectivo. Para terminar la demostración, bastará probar que si se tiene una sucesión exacta $0\longrightarrow M'\longrightarrow M\xrightarrow{v}M''\longrightarrow 0$
 es una sucesión exacta de $A$-módulos para la que $t_{M'}$ y
 $t_{M''}$ son sobreyectivos, entonces $t_M$ es sobreyectivo.
 Existe un diagrama conmutativo
 \[
-\xymatrix{
+\xymatrix@C=27pt@R=30pt{
   T'(M')\ar[r]\ar[d]_{t_{M'}}
-  & T'(M)\ar[r]\ar[d]_{t_M}
-  & T'(M'')\ar[r]\ar[d]_{t_{M''}}
-  & 0\ar[d]
+  &
+  T'(M)\ar[r]\ar[d]_{t_M}
+  &
+  T'(M'')\ar[r]\ar[d]_{t_{M''}}
+  &
+  0\ar[d]
   \\
   T(M')\ar[r]
-  & T(M)\ar[r]_{T(v)}
-  & T(M'')\ar[r]
-  & \Coker(T(v))
+  &
+  T(M)\ar[r]_-{T(v)}
+  &
+  T(M'')\ar[r]
+  &
+  \operatorname{Coker}(T(v))
 }
 \]
 cuyas dos filas son exactas, por la hipótesis de que $T$ es

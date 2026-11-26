@@ -1,0 +1,69 @@
+\subsection{Propiedades de permanencia por paso al límite inductivo.}
+
+En todo este número, $(A_\alpha,\varphi_{\beta\alpha})$ designa un \emph{sistema
+inductivo de anillos} cuyo conjunto de índices es preordenado \emph{filtrante}; se pone
+$A=\varinjlim A_\alpha$ y se designa por $\varphi_\alpha$ el homomorfismo
+canónico $A_\alpha\to A$.
+
+\begin{proposition}[5.13.1]
+\label{IV.2.s5.13.1-fr}
+\begin{enumerate}
+\item[\textup{(i)}] Para todo índice $\alpha$, sea $\mathfrak a_\alpha$ un ideal de
+$A_\alpha$ tal que, para $\alpha\leq\beta$, se tenga
+$\varphi_{\beta\alpha}(\mathfrak a_\alpha)\subset\mathfrak a_\beta$.
+Entonces los $\mathfrak a_\alpha$ forman un sistema inductivo para las
+restricciones de los $\varphi_{\beta\alpha}$,
+$\mathfrak a=\varinjlim\mathfrak a_\alpha$ se identifica canónicamente con un
+ideal de $A$, y $A/\mathfrak a$ con
+$\varinjlim(A_\alpha/\mathfrak a_\alpha)$. Si, además, se tiene
+$\mathfrak a_\alpha=\varphi_{\beta\alpha}^{-1}(\mathfrak a_\beta)$ para
+$\alpha\leq\beta$, entonces
+$\mathfrak a_\alpha=\varphi_\alpha^{-1}(\mathfrak a)$ para todo $\alpha$.
+\item[\textup{(ii)}] Recíprocamente, para todo ideal $\mathfrak a$ de $A$, si se pone
+$\mathfrak a_\alpha=\varphi_\alpha^{-1}(\mathfrak a)$ para todo $\alpha$, los
+$\mathfrak a_\alpha$ forman un sistema inductivo tal que
+$\mathfrak a=\varinjlim\mathfrak a_\alpha$.
+\end{enumerate}
+\end{proposition}
+
+Es claro que (ii) es un caso particular de (i). En (i), el hecho de que
+$\mathfrak a$ se identifique canónicamente con un ideal de $A$, y
+$A/\mathfrak a$ con $\varinjlim(A_\alpha/\mathfrak a_\alpha)$, proviene de la
+exactitud del funtor $\varinjlim$ en la categoría de los grupos abelianos.
+Además, $\mathfrak a$ es la unión de la familia creciente de los
+$\varphi_\alpha(\mathfrak a_\alpha)$; por tanto, si
+$x_\alpha\in A_\alpha$ es tal que
+$\varphi_\alpha(x_\alpha)\in\mathfrak a$, existe $\beta\geq\alpha$ tal que
+$\varphi_\alpha(x_\alpha)=\varphi_\beta(y_\beta)$ para un
+$y_\beta\in\mathfrak a_\beta$, por tanto
+$\varphi_\beta(\varphi_{\beta\alpha}(x_\alpha))=\varphi_\beta(y_\beta)$;
+pero esto implica la existencia de un $\gamma\geq\beta$ tal que
+$\varphi_{\gamma\beta}(\varphi_{\beta\alpha}(x_\alpha))=\varphi_{\gamma\beta}(y_\beta)$,
+y, en consecuencia,
+$\varphi_{\gamma\alpha}(x_\alpha)\in\mathfrak a_\gamma$, de donde
+$x_\alpha\in\mathfrak a_\alpha$ si se tiene
+$\mathfrak a_\alpha=\varphi_{\gamma\alpha}^{-1}(\mathfrak a_\gamma)$.
+
+\begin{corollary}[5.13.2]
+\label{IV.2.s5.13.2-fr}
+Si $\mathfrak N_\alpha$ es el nilradical de $A_\alpha$, el nilradical de $A$
+se identifica con $\varinjlim\mathfrak N_\alpha$, y $A_{\mathrm{red}}$ con
+$\varinjlim(A_\alpha)_{\mathrm{red}}$. En particular, si los $A_\alpha$ son
+reducidos, lo mismo ocurre con $A$.
+\end{corollary}
+
+\oldpage[IV-2]{132}
+
+En efecto, es claro que
+$\varphi_{\beta\alpha}(\mathfrak N_\alpha)\subset\mathfrak N_\beta$ para
+$\alpha\leq\beta$, y que $\varinjlim\mathfrak N_\alpha$ es un ideal
+nilpotente de $A$, por tanto contenido en el nilradical $\mathfrak N$ de $A$.
+Recíprocamente, si $x\in\mathfrak N$, se tiene $x^h=0$ para un entero $h$; se
+puede escribir $x=\varphi_\alpha(x_\alpha)$ para un índice $\alpha$ y un
+$x_\alpha\in A_\alpha$; la relación
+$\varphi_\alpha(x_\alpha^h)=0$ implica la existencia de un
+$\beta\geq\alpha$ tal que
+$\varphi_{\beta\alpha}(x_\alpha^h)=0$, o también $x_\beta^h=0$ poniendo
+$x_\beta=\varphi_{\beta\alpha}(x_\alpha)$; por consiguiente,
+$x_\beta\in\mathfrak N_\beta$ y, como $x=\varphi_\beta(x_\beta)$, esto
+termina de probar el corolario, teniendo en cuenta (5.13.1).

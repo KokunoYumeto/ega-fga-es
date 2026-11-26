@@ -1,0 +1,82 @@
+\begin{env}[5.9.1]
+\label{IV.2.s5.9.1-fr}
+Sean $X$ un preesquema localmente noetheriano y $Z$ una parte de $X$
+\emph{estable por especialización}: esto significa que, para toda parte finita
+$M$ de $Z$, la clausura de $M$ está contenida en $Z$ y, por consiguiente,
+$Z$ es unión de una familia filtrante creciente $(Z_\alpha)$ de partes
+cerradas de $X$; recíprocamente, es claro que una unión de esta clase es
+estable por especialización.
+
+Pongamos $U_\alpha=X\setmin Z_\alpha$, de modo que $X\setmin Z$ es la intersección de la
+familia filtrante decreciente de abiertos $U_\alpha$; sea
+$i_\alpha:U_\alpha\to X$ la inyección canónica y, para
+$U_\alpha\supset U_\beta$, sea $i_{\alpha\beta}:U_\beta\to U_\alpha$ la
+inyección canónica, de modo que se tiene
+$i_\beta=i_\alpha\circ i_{\alpha\beta}$. Sea $\mathcal F$ un
+$\mathcal O_X$-módulo (no necesariamente cuasicoherente); se tiene, pues,
+$(i_\beta)_*(\mathcal F|U_\beta)
+=(i_\alpha)_*((i_{\alpha\beta})_*(\mathcal F|U_\beta))$;
+del homomorfismo canónico $(\mathbf{0}_{\mathrm I},4.4.3.2)$
+\[
+\mathcal F|U_\alpha\longrightarrow
+(i_{\alpha\beta})_*(\mathcal F|U_\beta)
+\]
+se deduce, pues, aplicando el funtor $(i_\alpha)_*$, un homomorfismo
+\[
+\rho_{\beta\alpha}:(i_\alpha)_*(\mathcal F|U_\alpha)
+\longrightarrow(i_\beta)_*(\mathcal F|U_\beta)
+\]
+y se comprueba inmediatamente que se tiene
+$\rho_{\gamma\alpha}=\rho_{\gamma\beta}\circ\rho_{\beta\alpha}$ para
+$U_\alpha\supset U_\beta\supset U_\gamma$; dicho de otro modo, los
+$\mathcal O_X$-módulos $(i_\alpha)_*(\mathcal F|U_\alpha)$ forman un
+\emph{sistema inductivo} respecto de los homomorfismos
+$\rho_{\beta\alpha}$. Se pone
+\begin{equation}
+\mathcal H^0_{X/Z}(\mathcal F)
+=\varinjlim_\alpha(i_\alpha)_*(\mathcal F|U_\alpha).
+\tag{5.9.1.1}\label{IV.2.s5.9.1.1-fr}
+\end{equation}
+
+Este $\mathcal O_X$-módulo no depende de la familia creciente
+$(Z_\alpha)$ de cerrados cuya unión es $Z$: en efecto, sea $V$ un abierto
+\emph{noetheriano} de $X$; se sabe (G, II, 3.10.1) que, en la categoría
+de los $\mathcal O_V$-módulos, el funtor
+$\mathcal G\leadsto\Gamma(V,\mathcal G)$ conmuta con los límites inductivos;
+se tiene, pues, en virtud de (5.9.1.1)
+\begin{equation}
+\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))
+=\varinjlim_\alpha\Gamma(V\cap U_\alpha,\mathcal F).
+\tag{5.9.1.2}\label{IV.2.s5.9.1.2-fr}
+\end{equation}
+
+Sea entonces $(Z'_\lambda)$ una segunda familia filtrante creciente de
+cerrados de $X$, cuya unión es $Z$; $V\cap Z_\alpha$ es, pues, unión de los
+$V\cap Z_\alpha\cap Z'_\lambda$; pero $V\cap Z_\alpha$ es localmente cerrado
+en $X$, por lo que toda parte cerrada irreducible de $V\cap Z_\alpha$ admite
+un punto genérico; como los $V\cap Z_\alpha\cap Z'_\lambda$ son cerrados en
+$V\cap Z_\alpha$ y forman (para $\alpha$ fijo) una familia filtrante
+creciente, existe un índice $\lambda$ tal que
+$V\cap Z_\alpha\cap Z'_\lambda=V\cap Z_\alpha$
+$(\mathbf{0}_{\mathrm{III}},9.2.4)$, dicho de otro modo,
+$V\cap Z_\alpha\subset V\cap Z'_\lambda$. Esto prueba que las familias
+filtrantes decrecientes $V\cap U_\alpha$, $V\cap U'_\lambda$ (donde
+$U'_\lambda=X\setmin Z'_\lambda$) son cofinales entre sí, de donde se sigue nuestra
+afirmación, en virtud de (5.9.1.2).
+\end{env}
+
+\oldpage[IV-2]{110}
+
+Se observará que el conjunto $Z$ no es necesariamente construible: se obtiene
+un ejemplo de este hecho tomando $X=\operatorname{Spec}(A)$, donde $A$ es un
+anillo noetheriano íntegro que tiene una infinidad de ideales maximales, y
+$Z$ el complemento del punto genérico de $X$.
+
+Si $Z$ es cerrado y $i:X\setmin Z\to X$ es la inyección canónica, se tiene
+\begin{equation}
+\mathcal H^0_{X/Z}(\mathcal F)=i_*(\mathcal F|X\setmin Z)
+\tag{5.9.1.3}\label{IV.2.s5.9.1.3-fr}
+\end{equation}
+y, en particular, para $Z=\varnothing$,
+$\mathcal H^0_{X/Z}(\mathcal F)=\mathcal F$.
+

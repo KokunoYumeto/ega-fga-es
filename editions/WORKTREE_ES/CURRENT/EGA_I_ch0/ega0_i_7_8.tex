@@ -1,0 +1,99 @@
+\subsection{Topologías sobre los módulos de homomorfismos}
+\label{subsection:0.7.8-fr}
+
+\begin{env}[7.8.1]
+\label{0.7.8.1-fr}
+Sean $A$ un anillo \emph{$\mathfrak J$-ádico noetheriano}, $M$ y $N$ dos
+$A$-módulos de tipo finito, provistos de la topología $\mathfrak J$-preádica;
+se sabe (7.3.6) que son separados y completos; además, todo
+$A$-homomorfismo $M\to N$ es automáticamente continuo, y el $A$-módulo
+$\operatorname{Hom}_A(M,N)$ es de tipo finito. Para todo entero $i\geq 0$, pongamos
+$A_i=A/\mathfrak J^{i+1}$, $M_i=M/\mathfrak J^{i+1}M$,
+$N_i=N/\mathfrak J^{i+1}N$; para $i\leq j$, todo homomorfismo
+$u_j:M_j\to N_j$ aplica $\mathfrak J^{i+1}M_j$ en
+$\mathfrak J^{i+1}N_j$, por tanto da por paso a los cocientes un
+homomorfismo $u_i:M_i\to N_i$, lo que define un homomorfismo canónico
+$\operatorname{Hom}_{A_j}(M_j,N_j)\to\operatorname{Hom}_{A_i}(M_i,N_i)$; además, los
+$\operatorname{Hom}_{A_i}(M_i,N_i)$ constituyen un \emph{sistema proyectivo} para estos
+homomorfismos, y resulta de (7.2.10) que hay un isomorfismo
+canónico
+\[
+  \varphi:\operatorname{Hom}_A(M,N)\longrightarrow
+  \varprojlim_i\operatorname{Hom}_{A_i}(M_i,N_i).
+\]
+Además:
+\end{env}
+
+\begin{proposition}[7.8.2]
+\label{0.7.8.2-fr}
+Si $M$ y $N$ son módulos de tipo finito sobre un anillo $\mathfrak J$-ádico
+noetheriano $A$, los submódulos $\operatorname{Hom}_A(M,\mathfrak J^{i+1}N)$ forman un
+sistema fundamental de vecindades de $0$ en $\operatorname{Hom}_A(M,N)$ para la
+topología $\mathfrak J$-ádica, y el homomorfismo canónico
+\[
+  \varphi:\operatorname{Hom}_A(M,N)\longrightarrow
+  \varprojlim_i\operatorname{Hom}_{A_i}(M_i,N_i)
+\]
+es un isomorfismo topológico.
+\end{proposition}
+
+Se puede, en efecto, considerar $M$ como cociente de un $A$-módulo libre $L$ de
+tipo finito, y, por consiguiente, identificar $\operatorname{Hom}_A(M,N)$ con un submódulo de
+$\operatorname{Hom}_A(L,N)$; en esta identificación,
+$\operatorname{Hom}_A(M,\mathfrak J^{i+1}N)$ es la intersección de $\operatorname{Hom}_A(M,N)$ y de
+$\operatorname{Hom}_A(L,\mathfrak J^{i+1}N)$; como la topología inducida sobre
+$\operatorname{Hom}_A(M,N)$ por la topología $\mathfrak J$-ádica de $\operatorname{Hom}_A(L,N)$ es
+la topología $\mathfrak J$-ádica (7.3.2), se reduce a demostrar la
+primera afirmación
+
+\oldpage[0\textsubscript{I}]{78}
+
+para $M=L=A^m$; pero entonces $\operatorname{Hom}_A(L,N)=N^m$,
+$\operatorname{Hom}_A(L,\mathfrak J^{i+1}N)=(\mathfrak J^{i+1}N)^m=
+\mathfrak J^{i+1}N^m$ y el resultado es evidente. Para establecer la segunda
+afirmación, observemos que la imagen de $\operatorname{Hom}_A(M,\mathfrak J^{i+1}N)$ en
+$\operatorname{Hom}_{A_j}(M_j,N_j)$ es nula para $j\leq i$, por tanto $\varphi$ es
+continuo; recíprocamente, la imagen inversa en $\operatorname{Hom}_A(M,N)$ del $0$ de
+$\operatorname{Hom}_{A_i}(M_i,N_i)$ es $\operatorname{Hom}_A(M,\mathfrak J^{i+1}N)$, por tanto $\varphi$
+es bicontinuo.
+
+Si se supone solamente que $A$ es un anillo \emph{$\mathfrak J$-preádico
+noetheriano}, $M$ y $N$ dos $A$-módulos de tipo finito, separados para la
+topología $\mathfrak J$-preádica, la demostración anterior muestra que
+la primera afirmación de (7.8.2) sigue siendo válida, y que $\varphi$ es un
+isomorfismo topológico de $\operatorname{Hom}_A(M,N)$ sobre un submódulo de
+$\varprojlim_i\operatorname{Hom}_{A_i}(M_i,N_i)$.
+
+\begin{proposition}[7.8.3]
+\label{0.7.8.3-fr}
+Bajo las hipótesis de \textup{(7.8.2)}, el conjunto de los homomorfismos inyectivos
+\textup{(resp.} sobreyectivos, biyectivos) de $M$ en $N$ es una parte abierta de
+$\operatorname{Hom}_A(M,N)$.
+\end{proposition}
+
+En efecto, en virtud de (7.3.5) y (7.1.14), para que $u$ sea sobreyectivo, es
+necesario y suficiente que el homomorfismo correspondiente
+$u_0:M/\mathfrak JM\to N/\mathfrak JN$ lo sea, y el conjunto de los
+homomorfismos sobreyectivos de $M$ en $N$ es, por tanto, imagen inversa por
+la aplicación continua $\operatorname{Hom}_A(M,N)\to\operatorname{Hom}_{A_0}(M_0,N_0)$ de una parte
+de un espacio discreto. Mostremos ahora que el conjunto de los homomorfismos
+inyectivos es abierto; sea $v$ tal homomorfismo y pongamos $M'=v(M)$;
+por el lema de Artin-Rees (7.3.2.1), existe un entero $k\geq 0$ tal que
+$M'\cap\mathfrak J^{m+k}N\subset\mathfrak J^mM'$ para todo $m>0$; vamos
+a ver que para $w\in\mathfrak J^{k+1}\operatorname{Hom}_A(M,N)$,
+$u=v+w$ es inyectivo, lo que terminará la demostración. En efecto, sea
+$x\in M$ tal que $u(x)=0$; probemos que para todo $i\geq 0$ la relación
+$x\in\mathfrak J^iM$ implica $x\in\mathfrak J^{i+1}M$; resultará de ello
+que
+\[
+  x\in\bigcap_{i\geq 0}\mathfrak J^iM=(0).
+\]
+En efecto, se tiene entonces $w(x)\in\mathfrak J^{i+k+1}N$, y, por otra parte,
+$w(x)=-v(x)\in M'$, por tanto
+$v(x)\in M'\cap\mathfrak J^{i+k+1}N\subset\mathfrak J^{i+1}M'$, y como
+$v$ es un isomorfismo de $M$ sobre $M'$, $x\in\mathfrak J^{i+1}M$;
+c.q.d.
+
+\begin{flushright}
+\emph{(Continuará.)}
+\end{flushright}

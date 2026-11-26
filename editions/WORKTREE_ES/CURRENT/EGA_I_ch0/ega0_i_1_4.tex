@@ -1,0 +1,106 @@
+\subsection{Cambio de subconjunto multiplicativo}
+\label{subsection:0.1.4-fr}
+
+\begin{env}[1.4.1]
+\label{0.1.4.1-fr}
+Sean $S$, $T$ dos subconjuntos multiplicativos de un anillo $A$ tales que $S\subset T$; existe un homomorfismo canónico $\rho_A^{T,S}$ (o simplemente $\rho^{T,S}$) de $S^{-1}A$ en $T^{-1}A$, que hace corresponder al elemento denotado por $a/s$ de $S^{-1}A$ el elemento denotado por $a/s$ en $T^{-1}A$; se tiene
+$i_A^T=\rho_A^{T,S}\circ i_A^S$.
+Para todo $A$-módulo $M$, existe igualmente una aplicación $S^{-1}A$-lineal de $S^{-1}M$ en $T^{-1}M$ (considerando este último como $S^{-1}A$-módulo mediante el homomorfismo $\rho_A^{T,S}$), que hace corresponder al elemento $m/s$ de $S^{-1}M$ el elemento $m/s$ de $T^{-1}M$; esta aplicación se denota por $\rho_M^{T,S}$, o simplemente por $\rho^{T,S}$, y se tiene también
+$i_M^T=\rho_M^{T,S}\circ i_M^S$;
+en la identificación canónica (1.2.5), $\rho_M^{T,S}$ se identifica con $\rho_A^{T,S}\otimes 1$.
+El homomorfismo $\rho_M^{T,S}$ es un \emph{morfismo funtorial} (o transformación natural) del funtor $S^{-1}M$ en el funtor $T^{-1}M$; en otras palabras, el diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+S^{-1}M \arrow[r,"S^{-1}u"] \arrow[d,"\rho_M^{T,S}"'] & S^{-1}N \arrow[d,"\rho_N^{T,S}"] \\
+T^{-1}M \arrow[r,"T^{-1}u"] & T^{-1}N
+\end{tikzcd}
+\]
+
+\oldpage[0\textsubscript{I}]{16}
+es conmutativo para todo homomorfismo $u:M\to N$; se observará además que $T^{-1}u$ está completamente determinado por $S^{-1}u$, pues para $m\in M$ y $t\in T$ se tiene
+\[
+  (T^{-1}u)(m/t)=(t/1)^{-1}\rho^{T,S}\bigl((S^{-1}u)(m/1)\bigr).
+\]
+\end{env}
+
+\begin{env}[1.4.2]
+\label{0.1.4.2-fr}
+Con las mismas notaciones, para dos $A$-módulos $M$, $N$, los diagramas (cf. (1.3.4) y (1.3.5))
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+(S^{-1}M)\otimes_{S^{-1}A}(S^{-1}N) \arrow[r,"\sim"] \arrow[d]
+  & S^{-1}(M\otimes_A N) \arrow[d]
+  \\
+(T^{-1}M)\otimes_{T^{-1}A}(T^{-1}N) \arrow[r,"\sim"]
+  & T^{-1}(M\otimes_A N)
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+S^{-1}\operatorname{Hom}_A(M,N) \arrow[r] \arrow[d]
+  & \operatorname{Hom}_{S^{-1}A}(S^{-1}M,S^{-1}N) \arrow[d] \\
+T^{-1}\operatorname{Hom}_A(M,N) \arrow[r]
+  & \operatorname{Hom}_{T^{-1}A}(T^{-1}M,T^{-1}N)
+\end{tikzcd}
+\]
+son conmutativos.
+\end{env}
+
+\begin{env}[1.4.3]
+\label{0.1.4.3-fr}
+Hay un caso importante en el que el homomorfismo $\rho^{T,S}$ es \emph{biyectivo}, a saber, cuando todo elemento de $T$ es divisor de un elemento de $S$; se identifican entonces mediante $\rho^{T,S}$ los módulos $S^{-1}M$ y $T^{-1}M$.
+Se dice que $S$ es \emph{saturado} si todo divisor en $A$ de un elemento de $S$ pertenece a $S$; sustituyendo $S$ por el conjunto $T$ de todos los divisores de los elementos de $S$ (conjunto que es multiplicativo y saturado), se ve que siempre se puede, si se desea, limitar la consideración a módulos de fracciones $S^{-1}M$ en los que $S$ sea saturado.
+\end{env}
+
+\begin{env}[1.4.4]
+\label{0.1.4.4-fr}
+Si $S$, $T$, $U$ son tres subconjuntos multiplicativos de $A$ tales que $S\subset T\subset U$, se tiene
+\[
+  \rho^{U,S}=\rho^{U,T}\circ\rho^{T,S}.
+\]
+\end{env}
+
+\begin{env}[1.4.5]
+\label{0.1.4.5-fr}
+Consideremos una \emph{familia filtrante creciente} $(S_\alpha)$ de subconjuntos multiplicativos de $A$ (se escribirá $\alpha\leq\beta$ para $S_\alpha\subset S_\beta$), y sea $S$ el subconjunto multiplicativo $\bigcup_\alpha S_\alpha$; pongamos
+$\rho_{\beta\alpha}=\rho_A^{S_\beta,S_\alpha}$ para $\alpha\leq\beta$;
+en virtud de (1.4.4), los homomorfismos $\rho_{\beta\alpha}$ definen un anillo $A'$ que es el \emph{límite inductivo} del sistema inductivo de anillos $(S_\alpha^{-1}A,\rho_{\beta\alpha})$.
+Sea $\rho_\alpha$ la aplicación canónica $S_\alpha^{-1}A\to A'$, y pongamos $\varphi_\alpha=\rho_A^{S,S_\alpha}$; como $\varphi_\alpha=\varphi_\beta\circ\rho_{\beta\alpha}$ para $\alpha\leq\beta$ según (1.4.4), se puede definir de forma única un homomorfismo $\varphi:A'\to S^{-1}A$ tal que el diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+  & S_\alpha^{-1}A
+      \arrow[ddl,"\rho_\alpha"']
+      \arrow[d,"\rho_{\beta\alpha}"]
+      \arrow[ddr,"\varphi_\alpha"] & \\
+  & S_\beta^{-1}A
+      \arrow[dl,"\rho_\beta"]
+      \arrow[dr,"\varphi_\beta"'] & \\
+A' \arrow[rr,"\varphi"'] & & S^{-1}A
+\end{tikzcd}
+\qquad(\alpha\leq\beta)
+\]
+sea conmutativo.
+De hecho, $\varphi$ es un \emph{isomorfismo}: en efecto, es inmediato por construcción que $\varphi$ es sobreyectivo.
+Por otra parte, si $\rho_\alpha(a/s_\alpha)\in A'$ es tal que $\varphi(\rho_\alpha(a/s_\alpha))=0$, esto significa que $a/s_\alpha=0$ en $S^{-1}A$, es decir, que existe $s\in S$ tal que $sa=0$; pero hay un $\beta\geq\alpha$ tal que $s\in S_\beta$, y por consiguiente, como $\rho_\alpha(a/s_\alpha)=\rho_\beta(sa/ss_\alpha)=0$, se ve que $\varphi$ es inyectivo.
+Se trata de igual modo el caso de un $A$-módulo $M$, y así se han definido isomorfismos canónicos
+\[
+  \varinjlim S_\alpha^{-1}A\xrightarrow{\sim}
+  (\varinjlim S_\alpha)^{-1}A,
+  \qquad
+  \varinjlim S_\alpha^{-1}M\xrightarrow{\sim}
+  (\varinjlim S_\alpha)^{-1}M,
+\]
+el segundo de los cuales es \emph{funtorial} en $M$.
+\end{env}
+
+\oldpage[0\textsubscript{I}]{17}
+\begin{env}[1.4.6]
+\label{0.1.4.6-fr}
+Sean $S_1$, $S_2$ dos subconjuntos multiplicativos de $A$; entonces $S_1S_2$ también es un subconjunto multiplicativo de $A$.
+Denotemos por $S_2'$ la imagen canónica de $S_2$ en el anillo $S_1^{-1}A$, que es un subconjunto multiplicativo de este anillo.
+Para todo $A$-módulo $M$, existe entonces un isomorfismo funtorial
+\[
+  S_2'^{-1}(S_1^{-1}M)\xrightarrow{\sim}(S_1S_2)^{-1}M
+\]
+que hace corresponder a $(m/s_1)/(s_2/1)$ el elemento $m/(s_1s_2)$.
+\end{env}

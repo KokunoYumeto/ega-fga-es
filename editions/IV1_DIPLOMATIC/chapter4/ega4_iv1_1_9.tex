@@ -1,0 +1,585 @@
+\subsection{Conjuntos pro-construibles e ind-construibles.}
+\label{subsection:IV.1.9-fr}
+
+\begin{lemma}[1.9.1]
+\label{IV.1.9.1-fr}
+Sea $(A_\alpha)_{\alpha\in I}$ un sistema inductivo de anillos cuyo conjunto
+de índices $I$ es filtrante a la derecha, y sea $A=\varinjlim A_\alpha$. Para que
+$A=0$, es necesario y suficiente que exista un índice $\gamma$ tal que
+$A_\gamma=0$ (y se tiene entonces $A_\beta=0$ para todo $\beta\geq\gamma$).
+\end{lemma}
+
+\begin{proof}
+En efecto, para todo $\alpha\in I$, el homomorfismo canónico
+$\varphi_\alpha:A_\alpha\to A$ transforma el elemento unidad en elemento unidad;
+decir que $A=0$ significa que $\varphi_\alpha(1)=0$, o también
+$\varphi_\alpha(1)=\varphi_\alpha(0)$; se sabe que esto equivale a decir
+que existe un índice $\gamma\geq\alpha$ tal que el homomorfismo
+$\varphi_{\gamma\alpha}:A_\alpha\to A_\gamma$ es tal que
+$\varphi_{\gamma\alpha}(1)=\varphi_{\gamma\alpha}(0)$, y esta última
+relación equivale a $A_\gamma=0$, de donde el lema.
+\end{proof}
+
+\begin{proposition}[1.9.2]
+\label{IV.1.9.2-fr}
+Sean $B$ un anillo, $(A_\alpha)_{\alpha\in I}$ un sistema inductivo de
+$B$-álgebras cuyo conjunto de índices $I$ es filtrante a la derecha, y sea
+$A=\varinjlim A_\alpha$; pongamos $Y=\operatorname{Spec}(B)$,
+$X_\alpha=\operatorname{Spec}(A_\alpha)$, $X=\operatorname{Spec}(A)$, y
+sean $u:X\to Y$, $u_\alpha:X_\alpha\to Y$ los morfismos correspondientes a los
+homomorfismos estructurales $B\to A$, $B\to A_\alpha$. Entonces:
+\end{proposition}
+
+\setmanualcurrentlabel{1.9.2.i}\label{IV.1.9.2.i-fr}%
+(i) \emph{Para que $X=\varnothing$, es necesario y suficiente que exista un
+$\gamma\in I$ tal que $X_\gamma=\varnothing$, y se tiene entonces
+$X_\alpha=\varnothing$ para $\alpha\geq\gamma$.}\par
+
+\oldpage[IV-1]{242}
+
+(ii) {\setmanualcurrentlabel{1.9.2.ii}\label{IV.1.9.2.ii-fr}}\emph{Se tiene}
+\[
+  u(X)=\bigcap_{\alpha\in I}u_\alpha(X_\alpha). \tag{1.9.2.1}
+  \label{IV.1.9.2.1-fr}
+\]
+
+La afirmación (i) no es otra cosa que la traducción de (1.9.1). Para demostrar
+(ii), observemos que, puesto que $u$ se factoriza en
+$X\to X_\alpha\xrightarrow{u_\alpha}Y$, el primer miembro de (1.9.2.1) está
+contenido en el segundo. Recíprocamente, sea $y\in Y\setmin u(X)$; se tiene
+$u^{-1}(y)=\varnothing$, y $u^{-1}(y)$ es el espacio subyacente al
+$\boldsymbol{k}(y)$-preesquema $\operatorname{Spec}(A\otimes_B\boldsymbol{k}(y))$; como en la
+categoría de los $B$-módulos el funtor $\varinjlim$ conmuta con el producto
+tensorial, $A\otimes_B\boldsymbol{k}(y)$ es límite inductivo del sistema inductivo de anillos
+$A_\alpha\otimes_B\boldsymbol{k}(y)$; el lema (1.9.1) muestra que existe $\alpha$ tal
+que $A_\alpha\otimes_B\boldsymbol{k}(y)=0$, es decir,
+$u_\alpha^{-1}(y)=\varnothing$, por tanto $y\notin u_\alpha(X_\alpha)$. C.Q.F.D.
+
+\begin{proposition}[1.9.3]
+\label{IV.1.9.3-fr}
+Sean $X$ un preesquema cuasicompacto y cuasiseparado, $E$ un subconjunto de $X$,
+$(X_\alpha)_{\alpha\in I}$ un recubrimiento abierto afín de $X$, y para
+todo $\alpha\in I$, pongamos $E_\alpha=E\cap X_\alpha$. Las condiciones
+siguientes son equivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] Existe un morfismo cuasicompacto $f:X'\to X$ tal que
+  $E=f(X')$.
+  \item[\textup{a$'$)}] Para todo $\alpha$, existe un morfismo cuasicompacto
+  $f_\alpha:X'_\alpha\to X_\alpha$ tal que
+  $E_\alpha=f_\alpha(X'_\alpha)$.
+  \item[\textup{a$''$)}] Para todo $\alpha$, existen un esquema afín $X'_\alpha$
+  y un morfismo $f_\alpha:X'_\alpha\to X_\alpha$ tales que
+  $f_\alpha(X'_\alpha)=E_\alpha$.
+  \item[\textup{b)}] $E$ es intersección de subconjuntos construibles de $X$.
+  \item[\textup{b$'$)}] $F=X\setmin E$ es unión de subconjuntos construibles de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Está claro que $b)$ y $b')$ son equivalentes. La condición $a)$ implica
+$a')$ tomando como $X'_\alpha$ el preesquema inducido sobre el abierto
+$f^{-1}(X_\alpha)$ de $X'$ y como $f_\alpha$ la restricción de $f$. Para
+ver que $a')$ implica $a'')$, basta observar que $X'_\alpha$ es
+unión de abiertos afines $X''_{\alpha\lambda}$ ($\lambda\in L$); sea
+$X''_\alpha$ el preesquema \emph{suma} de los $X''_{\alpha\lambda}$
+($\lambda\in L$), que es un esquema afín; si
+$g_\alpha:X''_\alpha\to X'_\alpha$ es el morfismo que coincide con
+la identidad en cada uno de los $X''_{\alpha\lambda}$, está claro que si se
+pone $f'_\alpha=f_\alpha\circ g_\alpha$, se tiene
+$E_\alpha=f'_\alpha(X''_\alpha)$ puesto que $g_\alpha$ es sobreyectivo. Para
+mostrar que $a'')$ implica $a)$, observemos que hay un subconjunto finito $J$ de
+$I$ tal que los $X_\alpha$ de índices $\alpha\in J$ recubren $X$; sea
+$X'$ el preesquema suma de los $X'_\alpha$ para $\alpha\in J$, y sea
+$f:X'\to X$ el morfismo que coincide con $j_\alpha\circ f_\alpha$ para todo
+$\alpha\in J$, donde $j_\alpha:X_\alpha\to X$ es la inyección canónica. Como
+$E$ es unión de los $E\cap X_\alpha$ para $\alpha\in J$, se tiene efectivamente
+$E=f(X')$ y queda por ver que $f$ es un morfismo cuasicompacto; pero
+la hipótesis de que $X$ es cuasiseparado implica que $j_\alpha$ es
+cuasicompacto (1.2.7), por lo que lo mismo ocurre con
+$j_\alpha\circ f_\alpha$ (1.1.1 y 1.1.2) y finalmente con $f$ (1.1.6).
+
+Queda, por tanto, por probar la equivalencia de $a'')$ y de $b)$. Probemos en primer
+lugar que $a'')$ implica $b)$: consideremos un subconjunto finito $J$ de $I$ tal
+que los $X_\alpha$ para $\alpha\in J$ recubren $X$; bastará mostrar
+que, para todo $\alpha\in J$, $E_\alpha$ es intersección de subconjuntos
+construibles $F_{\alpha\lambda}$ de $X_\alpha$ ($\lambda\in L_\alpha$);
+en efecto, todo $F_{\alpha\lambda}$ es también un subconjunto construible de $X$
+en virtud de (\textbf{0}\textsubscript{III}, 9.1.8, (ii)), pues la hipótesis de que $X$ es
+cuasiseparado implica que todo $X_\alpha$ es retrocompacto en $X$ (1.2.7);
+$E$, por ser unión de los $E_\alpha$ para $\alpha\in J$, es intersección de las
+uniones (finitas) $\bigcup_{\alpha\in J}F_{\alpha,\lambda(\alpha)}$, para
+todas las elecciones de los $\lambda(\alpha)\in L_\alpha$; como estas uniones son
+construibles en $X$, esto establece nuestra afirmación. Se puede, por tanto, limitar
+al caso
+
+\oldpage[IV-1]{243}
+
+en que $X=\operatorname{Spec}(A)$ y en que $E=f(X')$, donde
+$X'=\operatorname{Spec}(A')$ es afín, $f:X'\to X$ un morfismo
+correspondiente a un homomorfismo de anillos $A\to A'$. Observemos ahora que
+$A'$ es límite inductivo de la familia $(A'_\lambda)$ de sus
+sub-$A$-álgebras \emph{de tipo finito}, ordenada por inclusión; si
+$X'_\lambda=\operatorname{Spec}(A'_\lambda)$, $f$ se factoriza en
+$X'\to X'_\lambda\xrightarrow{f_\lambda}X$ y resulta de (1.9.2, (ii))
+que se tiene $f(X')=\bigcap_\lambda f_\lambda(X'_\lambda)$; si se demuestra
+que $f_\lambda(X'_\lambda)$ es intersección de subconjuntos construibles de
+$X$, lo mismo ocurrirá con $f(X')$. Se puede, por tanto, limitar al caso en que $A'$ es
+una $A$-álgebra \emph{de tipo finito}. Ahora bien, se tiene el lema siguiente:
+\end{proof}
+
+\begin{lemma}[1.9.3.1]
+\label{IV.1.9.3.1-fr}
+Sean $A$ un anillo, $A'$ una $A$-álgebra de tipo finito. Entonces $A'$ es
+$A$-isomorfa a un límite inductivo filtrante $\varinjlim A''_\mu$ donde las
+$A''_\mu$ son $A$-álgebras de presentación finita \textup{(1.4.1)}.
+\end{lemma}
+
+\begin{proof}
+En efecto, se puede escribir $A'=B/\mathfrak J$, con
+$B=A[T_1,\ldots,T_n]$ y $\mathfrak J$ un ideal de $B$. Pero $\mathfrak J$
+es límite inductivo de los ideales \emph{de tipo finito} $\mathfrak J'_\mu$ de
+$B$, contenidos en $\mathfrak J$, ordenados por inclusión; como en la
+categoría de los $B$-módulos el funtor $\varinjlim$ es exacto, se concluye
+que $A'=\varinjlim B/\mathfrak J'_\mu$ salvo un $A$-isomorfismo.
+\end{proof}
+
+El mismo razonamiento que anteriormente permite entonces reducir al caso en que $A'$
+es una $A$-álgebra de presentación finita; pero entonces $f(X')$ es
+construible en $X$ en virtud del teorema de Chevalley (1.8.5), lo que
+prueba $b)$.
+
+Demostremos, por último, que $b)$ implica $a'')$. Si $E$ es intersección de una
+familia $(G_\lambda)_{\lambda\in L}$ de subconjuntos construibles de $X$,
+cada $E_\alpha$ es intersección de los $G_\lambda\cap X_\alpha$, que son
+construibles en $X_\alpha$ (\textbf{0}\textsubscript{III}, 9.1.8, (i)), por lo que se
+reduce al caso en que $X=\operatorname{Spec}(A)$ es afín.
+
+Se sabe entonces (1.8.3) que para todo $\lambda\in L$ existe un morfismo
+$f_\lambda:X'_\lambda\to X$, donde
+$X'_\lambda=\operatorname{Spec}(A'_\lambda)$ es afín, tal que
+$f_\lambda(X'_\lambda)=G_\lambda$. Basta, por tanto, probar el lema
+siguiente:
+
+\begin{lemma}[1.9.3.2]
+\label{IV.1.9.3.2-fr}
+Sean $(A'_\lambda)_{\lambda\in L}$ una familia de $A$-álgebras,
+$X=\operatorname{Spec}(A)$, $X'_\lambda=\operatorname{Spec}(A'_\lambda)$,
+y sea $f_\lambda:X'_\lambda\to X$ el morfismo estructural. Para todo
+subconjunto finito $J$ de $L$, pongamos
+$A'_J=\bigotimes_{\lambda\in J}A'_\lambda$ (producto tensorial de
+$A$-álgebras), $X'_J=\operatorname{Spec}(A'_J)$, y sea $f_J:X'_J\to X$ el
+morfismo estructural. Se tiene entonces
+$f_J(X'_J)=\bigcap_{\lambda\in J}f_\lambda(X'_\lambda)$. Si
+$A'=\varinjlim A'_J$, recorriendo $J$ el conjunto filtrante de los subconjuntos finitos
+de $L$, $X'=\operatorname{Spec}(A')$, y si $f:X'\to X$ es el morfismo
+estructural, se tiene $f(X')=\bigcap_{\lambda\in L}f_\lambda(X'_\lambda)$.
+\end{lemma}
+
+\begin{proof}
+La primera afirmación resulta de (\textbf{I}, 3.4.7); la segunda resulta de (1.9.2,
+(ii)), que da la relación $f(X')=\bigcap_Jf_J(X'_J)$.
+\end{proof}
+
+\begin{definition}[1.9.4]
+\label{IV.1.9.4-fr}
+Sea $X$ un espacio topológico. Se dice que un subconjunto $E$ de $X$ es
+pro-construible \textup{(resp.} ind-construible\textup{)} en $X$ si, para
+todo $x\in X$, existe una vecindad abierta $U$ de $x$ en $X$ tal que
+$E\cap U$ es intersección \textup{(resp.} unión\textup{)} de subconjuntos localmente
+construibles de $U$.
+\end{definition}
+
+Teniendo en cuenta (1.2.7) y (\textbf{0}\textsubscript{III}, 9.1.8 y 9.1.12), las
+condiciones equivalentes de la proposición (1.9.3) se expresan, por tanto, diciendo
+que $E$ es \emph{pro-construible} en $X$, pues los conjuntos localmente
+construibles en $X$ son idénticos a los conjuntos construibles en
+$X$ bajo las hipótesis de (1.9.3).
+
+\oldpage[IV-1]{244}
+
+\begin{proposition}[1.9.5]
+\label{IV.1.9.5-fr}
+Sea $X$ un preesquema.
+\begin{enumerate}
+  \item[\textup{(i)}] Para que un subconjunto $E$ de $X$ sea pro-construible, es necesario y
+  suficiente que $X\setmin E$ sea ind-construible.
+  \item[\textup{(ii)}] Toda unión finita y toda intersección de subconjuntos
+  pro-construibles de $X$ son pro-construibles. Toda intersección
+  finita y toda unión de subconjuntos ind-construibles de $X$ son
+  ind-construibles.
+  \item[\textup{(iii)}] Toda intersección \textup{(resp.} unión\textup{)} de subconjuntos localmente
+  construibles de $X$ es pro-construible \textup{(resp.} ind-construible\textup{)}.
+  Recíprocamente, si $X$ es cuasicompacto y cuasiseparado, todo subconjunto
+  pro-construible \textup{(resp.} ind-construible\textup{)} de $X$ es intersección \textup{(resp.}
+  unión\textup{)} de subconjuntos construibles de $X$.
+  \item[\textup{(iv)}] Sea $(U_\alpha)$ un recubrimiento abierto de $X$. Para que un
+  subconjunto $E$ de $X$ sea pro-construible \textup{(resp.} ind-construible\textup{)} en
+  $X$, es necesario y suficiente que para todo $\alpha$, $E\cap U_\alpha$ sea
+  pro-construible \textup{(rep.} ind-construible\textup{)} en $U_\alpha$.
+  \item[\textup{(v)}] Todo subconjunto pro-construible $E$ de $X$ es retrocompacto
+  en $X$. Para que un subconjunto localmente cerrado $E$ de $X$ sea
+  retrocompacto en $X$, es necesario y suficiente que sea
+  pro-construible en $X$.
+  \item[\textup{(vi)}] Sea $f:X'\to X$ un morfismo de preesquemas; para todo subconjunto
+  pro-construible \textup{(resp.} ind-construible\textup{)} $E$ de $X$, $f^{-1}(E)$ es
+  pro-construible \textup{(resp.} ind-construible\textup{)} en $X'$.
+  \item[\textup{(vii)}] Sea $f:X'\to X$ un morfismo cuasicompacto; para todo
+  subconjunto pro-construible $E'$ de $X'$, $f(E')$ es pro-construible en
+  $X$; en particular $f(X')$ es pro-construible en $X$.
+  \item[\textup{(viii)}] Sea $f:X'\to X$ un morfismo localmente de presentación
+  finita; para todo subconjunto ind-construible $E'$ de $X'$, $f(E')$ es
+  ind-construible en $X$; en particular $f(X')$ es ind-construible
+  en $X$.
+  \item[\textup{(ix)}] Supongamos que $X$ es cuasicompacto y cuasiseparado; entonces,
+  para que un subconjunto $E$ de $X$ sea pro-construible, es necesario y suficiente
+  que existan un esquema afín $X'$ y un morfismo (necesariamente
+  cuasicompacto) $f:X'\to X$ tales que $E=f(X')$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Las propiedades (i), (ii), (iv) y la primera afirmación de (iii) resultan
+de la definición (1.9.4) y son válidas para un espacio topológico
+cualquiera, utilizando la distributividad mutua de la intersección y de
+la unión y el hecho de que si $T$ es localmente construible en $X$,
+$T\cap U$ es localmente construible en $U$ para todo abierto $U$ de $X$.
+Si $X$ es cuasicompacto y cuasiseparado y $E$ es pro-construible en
+$X$, hay un recubrimiento finito $(U_i)$ de $X$ formado por abiertos afines tales
+que $E\cap U_i$ es intersección de subconjuntos construibles $M_{i\lambda}$
+de $U_i$ ($\lambda\in L_i$); los $M_{i\lambda}$ son también construibles
+en $X$ en virtud de (1.2.7) y (\textbf{0}\textsubscript{III}, 9.1.8, (ii)) y $E$ es
+intersección de las uniones finitas $\bigcup_iM_{i,\lambda(i)}$ (donde
+$\lambda(i)\in L_i$ para todo $i$), que son subconjuntos construibles en
+$X$; esto demuestra la segunda afirmación de (iii). La afirmación (ix) resulta
+de (iii) y de (1.9.3). Para demostrar la primera afirmación de (v), se puede
+limitar al caso en que $X$ es afín, y probar entonces que $E$ es
+cuasicompacto (\textbf{0}\textsubscript{III}, 9.1.1); pero como $X$ es entonces
+cuasiseparado, existe en virtud de (ix) un morfismo cuasicompacto
+$f:X'\to X$ tal que $E=f(X')$; como $X'$ es cuasicompacto, lo mismo
+ocurre con su imagen $E$ por una aplicación continua.
+
+Para probar (vi), se puede limitar, en virtud de (iv), al caso en que $X$ es
+afín; la conclusión resulta entonces de (iii) y de (1.8.2).
+
+\oldpage[IV-1]{245}
+
+Asimismo, para demostrar (vii), se puede limitar al caso en que $X$ es afín;
+entonces $X'$ es unión finita de abiertos afines $X'_i$ y $f(E')$ es unión
+de los $f(E'\cap X'_i)$, de modo que se puede también suponer que $X'$ es afín,
+en virtud de (ii); pero entonces $E'=g(X'')$, donde $g:X''\to X'$ es un morfismo
+cuasicompacto, en virtud de (ix), y se tiene $f(E')=f(g(X''))$, por lo que $f(E')$ es
+pro-construible puesto que $g\circ f$ es cuasicompacto.
+
+Se deduce de (vii) la demostración de la segunda afirmación de (v): en
+efecto, sea $E$ un subconjunto localmente cerrado y retrocompacto en $X$, y
+consideremos un subpreesquema de $X$ que tenga a $E$ por espacio subyacente (\textbf{I},
+5.2.1); la inyección canónica $j:E\to X$ es entonces por hipótesis un
+morfismo cuasicompacto, y resulta de (vii) que $E=j(E)$ es
+pro-construible en $X$.
+
+Por último, para probar (viii), se puede de nuevo suponer $X$ afín; además, si
+$(X'_\alpha)$ es un recubrimiento abierto afín de $X'$ tal que
+$E'\cap X'_\alpha$ es unión de subconjuntos construibles de $X'_\alpha$
+((iii) y (iv)), $f(E')$ es unión de los $f(E'\cap X'_\alpha)$ y, en virtud
+del teorema de Chevalley (1.8.4), cada uno de los $f(E'\cap X'_\alpha)$ es
+unión de subconjuntos construibles de $X$, de donde la conclusión.
+\end{proof}
+
+\begin{examples}[1.9.6]
+\label{IV.1.9.6-fr}
+Todo subconjunto \emph{finito} de un preesquema $X$
+es pro-construible: en efecto, basta considerar los subconjuntos
+$\{x\}$ reducidos a un solo punto (1.9.5, (ii)) y $\{x\}$ es la imagen de
+$\operatorname{Spec}(\boldsymbol{k}(x))$ por el morfismo canónico
+$\operatorname{Spec}(\boldsymbol{k}(x))\to X$, que es cuasicompacto; de donde la conclusión
+por (1.9.5, (vii)). En cambio, un subconjunto $\{x\}$ reducido a un punto no es
+necesariamente ind-construible; por ejemplo, sea $A$ un anillo
+noetheriano íntegro que tiene una infinidad de ideales maximales, y sea $x$ el punto
+genérico de $X=\operatorname{Spec}(A)$; si $\{x\}$ fuera ind-construible
+en $X$, sería construible en virtud de (1.9.5, (iii)) y por consiguiente
+contendría un abierto no vacío de $X$ (\textbf{0}\textsubscript{III}, 9.2.2); pero
+esto contradice la hipótesis de que $A$ posee una infinidad de ideales maximales, en
+virtud del teorema de Artin-Tate (\textbf{0}, 16.3.3).
+
+Todo subconjunto \emph{cerrado} $Y$ de un preesquema $X$ es pro-construible, por
+(1.9.5, (v)). Todo subconjunto abierto de $X$ es, por tanto, ind-construible, pero
+un subconjunto abierto $U$ de $X$ solo es pro-construible si es
+\emph{retrocompacto}, en virtud de nuevo de (1.9.5, (v)).
+
+Por último, si $X$ es un preesquema \emph{noetheriano}, por tanto cuasiseparado (1.2.8),
+resulta de (1.9.5, (iii)) y de (\textbf{0}\textsubscript{III}, 9.1.7) que los
+subconjuntos ind-construibles de $X$ son las \emph{uniones de subconjuntos
+localmente cerrados de $X$}.
+\end{examples}
+
+\begin{theorem}[1.9.7]
+\label{IV.1.9.7-fr}
+Sean $X$ un preesquema cuasicompacto, $E$ un subconjunto ind-construible de
+$X$, $(F_\lambda)_{\lambda\in L}$ una familia de subconjuntos pro-construibles
+de $X$ tal que $\bigcap_{\lambda\in L}F_\lambda\subset E$; entonces existe
+un subconjunto finito $J$ de $L$ tal que
+$\bigcap_{\lambda\in J}F_\lambda\subset E$.
+\end{theorem}
+
+\begin{proof}
+Observemos que los conjuntos $F=X\setmin E$ y $F\cap F_\lambda$ son
+pro-construibles, por lo que se reduce al
+\end{proof}
+
+\begin{corollary}[1.9.8]
+\label{IV.1.9.8-fr}
+Sean $X$ un preesquema cuasicompacto, $(F_\lambda)_{\lambda\in L}$ una
+familia de subconjuntos pro-construibles de $X$ cuya intersección es vacía;
+entonces existe una subfamilia finita $(F_\lambda)_{\lambda\in J}$ cuya
+intersección es vacía.
+\end{corollary}
+
+\begin{proof}
+Recubriendo $X$ por un número finito de abiertos afines, y utilizando (1.9.5,
+(iv)), se reduce al caso en que $X$ es afín; en virtud de (1.9.5, (ix)), se
+tiene $F_\lambda=f_\lambda(X'_\lambda)$,
+
+\oldpage[IV-1]{246}
+
+donde $X'_\lambda=\operatorname{Spec}(A'_\lambda)$ es afín, y $f_\lambda$
+es un morfismo $X'_\lambda\to X$; entonces, con las notaciones de (1.9.3.2),
+se tiene por hipótesis $f(X')=\varnothing$, por tanto $X'=\varnothing$; pero esto
+implica por (1.9.2, (i)) que existe un subconjunto finito $J$ de $L$ tal que
+$X'_J=\varnothing$, por tanto
+$f_J(X'_J)=\bigcap_{\lambda\in J}F_\lambda=\varnothing$.
+\end{proof}
+
+\begin{corollary}[1.9.9]
+\label{IV.1.9.9-fr}
+Sean $X$ un preesquema cuasicompacto, $F$ un subconjunto pro-construible de
+$X$, $(E_\lambda)_{\lambda\in L}$ una familia de subconjuntos ind-construibles
+de $X$ tal que $F\subset\bigcup_{\lambda\in L}E_\lambda$; entonces existe
+un subconjunto finito $J$ de $L$ tal que
+$F\subset\bigcup_{\lambda\in J}E_\lambda$. En particular, de todo
+recubrimiento de $X$ por subconjuntos ind-construibles, se puede extraer un
+recubrimiento finito de $X$.
+\end{corollary}
+
+\begin{proof}
+Esto resulta de (1.9.7) pasando a los complementarios.
+\end{proof}
+
+\begin{proposition}[1.9.10]
+\label{IV.1.9.10-fr}
+Sea $X$ un preesquema. Para que un subconjunto $E$ de $X$ sea
+ind-construible, es necesario que, para todo $x\in X$, la intersección
+$E\cap\overline{\{x\}}$ sea una vecindad de $x$ en
+$\overline{\{x\}}$. Si $X$ es localmente noetheriano, esta condición es
+suficiente.
+\end{proposition}
+
+\begin{proof}
+Supongamos $E$ ind-construible, y sea $Y$ la intersección de
+$\overline{\{x\}}$ y de un abierto afín en $X$, que contiene a $x$; hay,
+por tanto, un subpreesquema de $X$ que tiene a $Y$ por espacio subyacente (\textbf{I}, 5.2.1),
+y si $j:Y\to X$ es la inyección canónica,
+$E\cap Y=j^{-1}(E)$ es ind-construible en $Y$ (1.9.5, (vi)). Como $Y$
+es cuasicompacto y separado, $E\cap Y$ es, por tanto, unión de subconjuntos
+construibles de $Y$ (1.9.5, (iii)); por consiguiente, hay dos abiertos $U$,
+$V$ en $Y$ tales que
+$x\in U\cap\complement V\subset E\cap Y$ (\textbf{0}\textsubscript{III}, 9.1.3).
+Pero como $x$ es punto genérico del espacio irreducible $Y$, $V$ es
+necesariamente vacío y se tiene $U\subset E\cap Y$.
+
+Supongamos ahora $X$ localmente noetheriano, y sea $E$ un subconjunto de
+$X$ que verifica la condición del enunciado. En virtud de la definición (1.9.4),
+se puede limitar al caso en que $X$ es \emph{noetheriano}. Entonces, para todo $x\in E$,
+$E\cap\overline{\{x\}}$ contiene un subconjunto no vacío de la forma
+$U\cap\overline{\{x\}}$, donde $U$ es abierto en $X$; esto muestra que $E$
+es unión de subconjuntos localmente cerrados de $X$, por tanto es
+ind-construible (1.9.6).
+\end{proof}
+
+\begin{proposition}[1.9.11]
+\label{IV.1.9.11-fr}
+Sean $X$ un preesquema, $E$ un subconjunto de $X$. Las propiedades siguientes son
+equivalentes:
+\begin{enumerate}
+  \item[a)] $E$ es localmente construible.
+  \item[b)] $E$ es ind-construible y pro-construible.
+  \item[c)] $E$ y $X\setmin E$ son pro-construibles.
+  \item[d)] $E$ y $X\setmin E$ son ind-construibles.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Basta evidentemente probar que $d)$ implica $a)$, y se puede limitar
+al caso en que $X$ es afín. Entonces (1.9.5, (iii)), $E$ (resp. $X\setmin E$) es unión
+de una familia $(E_\lambda)$ (resp. $E'_\mu$)) de subconjuntos construibles de
+$X$; como los $E_\lambda$ y los $E'_\mu$ forman un recubrimiento de $X$,
+resulta de (1.9.9) que hay un número finito de índices $\lambda_i$,
+$\mu_j$ tales que los $E_{\lambda_i}$ y los $E'_{\mu_j}$ forman un
+recubrimiento de $X$; esto implica que $E$ es unión de los
+$E_{\lambda_i}$, por tanto es construible.
+\end{proof}
+
+\begin{corollary}[1.9.12]
+\label{IV.1.9.12-fr}
+Sea $f:X\to Y$ un morfismo sobreyectivo, que es cuasicompacto o bien
+localmente de presentación finita. Para que un subconjunto $E$ de $Y$ sea
+localmente construible \textup{(resp.} pro-construible, \textup{resp.} ind-construible\textup{)},
+es necesario y suficiente que $f^{-1}(E)$ lo sea en $X$.
+\end{corollary}
+
+\oldpage[IV-1]{247}
+
+\begin{proof}
+Se sabe que la condición es necesaria ((1.8.2) y (1.9.5, (vi))); para
+mostrar que es suficiente, se reduce al caso en que $X$ es afín, en
+virtud de (1.9.5, (iv)); además, en virtud de (1.9.11), se puede limitar al
+caso en que $f^{-1}(E)$ es pro-construible, \emph{o} al caso en que $f^{-1}(E)$ es
+ind-construible. Si $f$ es sobreyectivo y cuasicompacto, y $f^{-1}(E)$
+pro-construible, resulta de (1.9.5, (vii)) que
+$E=f(f^{-1}(E))$ es pro-construible. Si $f$ es sobreyectivo y localmente de
+presentación finita, y $f^{-1}(E)$ ind-construible,
+$E=f(f^{-1}(E))$ es ind-construible por (1.9.5, (viii)), lo que termina la
+demostración.
+\end{proof}
+
+\begin{env}[1.9.13]
+\label{IV.1.9.13-fr}
+Sean $X$ un preesquema, $\mathscr T$ su topología; resulta de (1.9.5,
+(i) y (ii)) que los subconjuntos ind-construibles (resp. pro-construibles) de
+$X$ son los subconjuntos abiertos (resp. cerrados) para una topología sobre $X$,
+llamada \emph{topología construible} y que denotaremos por
+$\mathscr T^{\mathrm{cons}}$; denotaremos por $X^{\mathrm{cons}}$
+el conjunto $X$ provisto de la topología $\mathscr T^{\mathrm{cons}}$.
+\end{env}
+
+\begin{proposition}[1.9.14]
+\label{IV.1.9.14-fr}
+Sean $X$ un preesquema, $\mathscr T$ su topología,
+$\mathscr T^{\mathrm{cons}}$ la topología construible sobre $X$.
+\begin{enumerate}
+  \item[\textup{(i)}] La topología $\mathscr T^{\mathrm{cons}}$ es más fina que
+  $\mathscr T$.
+  \item[\textup{(ii)}] Los subconjuntos localmente construibles de $X$ son idénticos
+  a los subconjuntos a la vez abiertos y cerrados del espacio $X^{\mathrm{cons}}$.
+  \item[\textup{(iii)}] Para todo morfismo $f:X\to Y$, la aplicación subyacente de
+  $X^{\mathrm{cons}}$ a $Y^{\mathrm{cons}}$ es continua; se la denota por
+  $f^{\mathrm{cons}}$.
+  \item[\textup{(iv)}] Si el morfismo $f:X\to Y$ es cuasicompacto,
+  $f^{\mathrm{cons}}$ es una aplicación cerrada; en particular, si $f$
+  es cuasicompacto y biyectivo, $f^{\mathrm{cons}}$ es un homeomorfismo.
+  \item[\textup{(v)}] Si un morfismo $f:X\to Y$ es localmente de presentación
+  finita, $f^{\mathrm{cons}}$ es una aplicación abierta; en particular,
+  si $f$ es biyectivo y localmente de presentación finita,
+  $f^{\mathrm{cons}}$ es un homeomorfismo.
+  \item[\textup{(vi)}] Para todo abierto $U$ de $X$, la topología inducida por
+  $\mathscr T^{\mathrm{cons}}$ sobre $U$ es idéntica a la topología de
+  $U^{\mathrm{cons}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En efecto, (i) resulta de que todo abierto para $\mathscr T$ es un abierto
+para $\mathscr T^{\mathrm{cons}}$ (1.9.6), y (ii) es una traducción de
+(1.9.11); (iii), (iv) y (v) traducen respectivamente (1.9.5), (vi), (vii)
+y (viii). Por último, para demostrar (vi), basta observar que la inyección
+canónica $j:U\to X$ es localmente de presentación finita (1.4.3), por lo que
+$j^{\mathrm{cons}}:U^{\mathrm{cons}}\to X^{\mathrm{cons}}$ es una
+aplicación continua abierta.
+\end{proof}
+
+\begin{proposition}[1.9.15]
+\label{IV.1.9.15-fr}
+Sea $X$ un preesquema.
+\begin{enumerate}
+  \item[\textup{(i)}] Para que $X^{\mathrm{cons}}$ sea cuasicompacto, es necesario y
+  suficiente que $X$ sea cuasicompacto.
+  \item[\textup{(ii)}] Para que $X^{\mathrm{cons}}$ sea separado, es necesario y suficiente
+  que $X$ sea cuasiseparado, y entonces $X^{\mathrm{cons}}$ es localmente
+  compacto y totalmente discontinuo.
+  \item[\textup{(iii)}] Para que $X^{\mathrm{cons}}$ sea compacto, es necesario y suficiente
+  que $X$ sea cuasicompacto y cuasiseparado.
+  \item[\textup{(iv)}] Todo punto de $X$ admite, para la topología
+  $\mathscr T^{\mathrm{cons}}$, una vecindad abierta y compacta.
+  \item[\textup{(v)}] Para que un morfismo $f:X\to Y$ sea cuasicompacto, es necesario y
+  suficiente que la aplicación continua
+  $f^{\mathrm{cons}}:X^{\mathrm{cons}}\to Y^{\mathrm{cons}}$ sea propia.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Como $\mathscr T^{\mathrm{cons}}$ es más fina que $\mathscr T$, está
+claro que si $X^{\mathrm{cons}}$ es cuasicompacto, lo mismo ocurre con $X$;
+el recíproco resulta de (1.9.9).
+
+(ii) Supongamos $X$ cuasiseparado, y mostremos que $X^{\mathrm{cons}}$ es
+totalmente discontinuo: en efecto, si $x$, $y$ son dos puntos distintos de
+$X$ y si, por ejemplo, $x\notin\overline{\{y\}}$, existe una
+\oldpage[IV-1]{248}
+vecindad abierta afín $U$ de $X$ que no contiene a $y$; como $X$ es
+cuasiseparado, $U$ es retrocompacto en $X$ (1.2.7), por tanto $U$ y $X\setmin U$ son
+localmente construibles en $X$, y por consiguiente abiertos en
+$X^{\mathrm{cons}}$ en virtud de (1.9.11), de donde nuestra afirmación. Como sobre todo
+abierto afín $U$ de $X$, la topología inducida por $\mathscr T^{\mathrm{cons}}$
+es la de $U^{\mathrm{cons}}$ en virtud de (1.9.14, (vi)), resulta de lo
+anterior que $X^{\mathrm{cons}}$ es localmente compacto, puesto que $U$ es
+abierto en $X^{\mathrm{cons}}$ y que $U^{\mathrm{cons}}$ es compacto. Queda por
+probar que si $X^{\mathrm{cons}}$ es separado, entonces $X$ es cuasiseparado;
+consideremos, en efecto, un abierto afín $U$ de $X$; la topología inducida sobre
+$U$ por $\mathscr T^{\mathrm{cons}}$ es la de $U^{\mathrm{cons}}$
+(1.9.14, (vi)), por tanto $U$ es compacto para esta topología inducida, puesto que
+$U^{\mathrm{cons}}$ es compacto por la primera parte del razonamiento. Si
+$V$ es un segundo abierto afín en $X$, $U\cap V$ es, por tanto, un subconjunto
+compacto del espacio separado $X^{\mathrm{cons}}$, por ser intersección de dos
+subconjuntos compactos de este espacio; como la topología inducida por
+$\mathscr T^{\mathrm{cons}}$ sobre $U\cap V$ es la de
+$(U\cap V)^{\mathrm{cons}}$ (1.9.14, (vi)) y la aplicación identidad
+$(U\cap V)^{\mathrm{cons}}\to U\cap V$ es continua, se concluye que
+$U\cap V$ es cuasicompacto para la topología inducida por $\mathscr T$; $X$
+es, por consiguiente, cuasiseparado en virtud de (1.2.7).
+
+(iii) es un corolario inmediato de (i) y (ii).
+
+(iv) Para todo $x\in X$, una vecindad abierta afín $U$ de $x$ para
+$\mathscr T$ es también una vecindad de $x$ para $\mathscr T^{\mathrm{cons}}$
+y es compacta en virtud de (iii) y de (1.9.14, (vi)), pues la topología inducida
+sobre $U$ por $\mathscr T^{\mathrm{cons}}$ es idéntica a la de
+$U^{\mathrm{cons}}$.
+
+(v) Supongamos $f$ cuasicompacto; entonces ya se sabe (1.9.14, (iv)) que
+$f^{\mathrm{cons}}$ es una aplicación \emph{cerrada}. Sea, por otra parte, $y$ un
+punto de $Y$, y pongamos
+\[
+  Z=f^{-1}(y)=X\times_Y\operatorname{Spec}(\boldsymbol{k}(y));
+\]
+$Z$ es cuasicompacto (1.1.2, (iii)) y como el morfismo canónico
+$p:Z\to X$ es inyectivo, resulta de (i) y de que la aplicación
+$p^{\mathrm{cons}}$ es continua, que la topología inducida sobre $f^{-1}(y)$
+por la de $X^{\mathrm{cons}}$ hace de $f^{-1}(y)$ un espacio cuasicompacto.
+Esto prueba que $f^{\mathrm{cons}}$ es una aplicación propia (Bourbaki,
+\emph{Top. gén.}, cap. I, 3.\textsuperscript{a} ed.,
+\S~10, n\textsuperscript{o}~2, teorema~1). Recíprocamente, supongamos que
+la aplicación continua $f^{\mathrm{cons}}$ es propia, y sea $V$ un abierto
+cuasicompacto de $Y$; si $h:V\to Y$ es la inyección canónica,
+$h^{\mathrm{cons}}:V^{\mathrm{cons}}\to Y^{\mathrm{cons}}$ es continua e
+inyectiva y $V^{\mathrm{cons}}$ es cuasicompacto por (i), por tanto la topología
+inducida sobre $V$ por la de $Y^{\mathrm{cons}}$ hace de $V$ un espacio
+cuasicompacto. La hipótesis de que $f^{\mathrm{cons}}$ es propia implica entonces
+que la topología inducida sobre $f^{-1}(V)$ por la de $X^{\mathrm{cons}}$ hace
+de $f^{-1}(V)$ un espacio cuasicompacto (\emph{loc. cit.}, prop.~6), por lo que
+$f^{-1}(V)$ es también un subespacio cuasicompacto de $X$, lo que muestra que
+el morfismo $f$ es cuasicompacto.
+\end{proof}
+
+\begin{env}[1.9.16]
+\label{IV.1.9.16-fr}
+Mostraremos más adelante cómo se puede, para todo preesquema $X$, dotar
+al espacio $X^{\mathrm{cons}}$ de un haz de anillos que lo convierte en un preesquema
+cuyos anillos locales son todos cuerpos, idénticos a los cuerpos residuales en los
+puntos de $X$. Tales preesquemas se introducen, por ejemplo, de manera natural
+en la traducción, al lenguaje de los esquemas, de las construcciones de
+Néron [32] en su teoría de la reducción de las variedades abelianas.
+\end{env}
+
+\oldpage[IV-1]{249}
+
+
+

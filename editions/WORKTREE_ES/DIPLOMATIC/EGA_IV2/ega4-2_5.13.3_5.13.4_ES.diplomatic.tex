@@ -1,0 +1,103 @@
+\begin{proposition}[5.13.3]
+\label{IV.2.s5.13.3-fr}
+\begin{enumerate}
+\item[\textup{(i)}] Para todo índice $\alpha$, sea $\mathfrak p_\alpha$ un ideal
+primo de $A_\alpha$ tal que, para $\alpha\leq\beta$, se tenga
+$\varphi_{\beta\alpha}(\mathfrak p_\alpha)\subset\mathfrak p_\beta$.
+Entonces $\mathfrak p=\varinjlim\mathfrak p_\alpha$ es un ideal primo de $A$.
+En particular, si los $A_\alpha$ son íntegros, lo mismo ocurre con $A$.
+\item[\textup{(ii)}] Si, además, se tiene
+$\mathfrak p_\alpha=\varphi_{\beta\alpha}^{-1}(\mathfrak p_\beta)$ para
+$\alpha\leq\beta$, entonces $A_{\mathfrak p}$ se identifica canónicamente
+con $\varinjlim(A_\alpha)_{\mathfrak p_\alpha}$.
+\item[\textup{(iii)}] Si $A$ es un anillo local, $\mathfrak p$ su ideal maximal, y si
+los homomorfismos $\varphi_\alpha$ son inyectivos, entonces, poniendo
+$\mathfrak p_\alpha=\varphi_\alpha^{-1}(\mathfrak p)$, se tiene
+$A=\varinjlim(A_\alpha)_{\mathfrak p_\alpha}$ y los homomorfismos
+$(A_\alpha)_{\mathfrak p_\alpha}\to A$ son inyectivos.
+\end{enumerate}
+\end{proposition}
+
+Las dos afirmaciones de (i) son de hecho equivalentes, puesto que
+$A/\mathfrak p=\varinjlim(A_\alpha/\mathfrak p_\alpha)$. Supongamos, pues,
+que todos los $A_\alpha$ son íntegros, y sean $x$, $y$ dos elementos de $A$
+tales que $xy=0$. Existe entonces un índice $\alpha$ tal que
+$x=\varphi_\alpha(x_\alpha)$, $y=\varphi_\alpha(y_\alpha)$, con
+$x_\alpha,y_\alpha$ en $A_\alpha$, y
+$\varphi_\alpha(x_\alpha y_\alpha)=0$; pero esto implica la existencia de un
+índice $\beta\geq\alpha$ tal que, si se pone
+$x_\beta=\varphi_{\beta\alpha}(x_\alpha)$,
+$y_\beta=\varphi_{\beta\alpha}(y_\alpha)$, se tenga $x_\beta y_\beta=0$;
+como $A_\beta$ es íntegro, se tiene $x_\beta=0$ o $y_\beta=0$ y, como
+$x=\varphi_\beta(x_\beta)$ e $y=\varphi_\beta(y_\beta)$, esto termina de
+demostrar que $A$ es íntegro.
+
+Demostremos ahora (ii). La hipótesis implica que los
+$A_\alpha\setmin\mathfrak p_\alpha$ forman un sistema inductivo de partes
+multiplicativas de los $A_\alpha$, cuyo límite inductivo es
+$A\setmin\mathfrak p$; por consiguiente, los anillos locales
+$(A_\alpha)_{\mathfrak p_\alpha}$ forman un sistema inductivo (en el que los
+homomorfismos de transición son \emph{locales}), y los homomorfismos canónicos
+$(A_\alpha)_{\mathfrak p_\alpha}\to A_{\mathfrak p}$ un sistema inductivo de
+homomorfismos, cuyo límite inductivo
+$\psi:\varinjlim((A_\alpha)_{\mathfrak p_\alpha})
+\longrightarrow A_{\mathfrak p}$
+es un homomorfismo sobreyectivo. Queda por ver que $\psi$ es inyectivo. Ahora
+bien, si $x_\alpha\in A_\alpha$ y
+$s_\alpha\in A_\alpha\setmin\mathfrak p_\alpha$ son tales que
+$\varphi_\alpha(x_\alpha)/\varphi_\alpha(s_\alpha)=0$ en
+$A_{\mathfrak p}$, existe $s'\in A\setmin\mathfrak p$ tal que
+$s'\varphi_\alpha(x_\alpha)=0$, y, reemplazando si es preciso $\alpha$ por un
+índice mayor, se puede suponer que $s'=\varphi_\alpha(s'_\alpha)$, con
+$s'_\alpha\in A_\alpha\setmin\mathfrak p_\alpha$, de donde
+$\varphi_\alpha(s'_\alpha x_\alpha)=0$; existe, por tanto, un
+$\beta\geq\alpha$ tal que
+$\varphi_{\beta\alpha}(s'_\alpha x_\alpha)=0$ en $A_\beta$, lo que implica
+$\varphi_{\beta\alpha}(x_\alpha)/\varphi_{\beta\alpha}(s_\alpha)=0$ en
+$(A_\beta)_{\mathfrak p_\beta}$, y prueba, por tanto, que la imagen canónica de
+$x_\alpha/s_\alpha$ en $\varinjlim((A_\alpha)_{\mathfrak p_\alpha})$ es nula.
+
+Finalmente, la primera afirmación de (iii) resulta de (ii) y de que
+$A_{\mathfrak p}=A$. Además, los elementos de
+$A_\alpha\setmin\mathfrak p_\alpha$ son invertibles en $A$, por lo que también se
+tiene $A_{\mathfrak p_\alpha}=A$, y el hecho de que
+$(A_\alpha)_{\mathfrak p_\alpha}\to A$ sea inyectivo se deduce, por planitud,
+de la hipótesis de que $\varphi_\alpha$ es inyectivo.
+
+\begin{corollary}[5.13.4]
+\label{IV.2.s5.13.4-fr}
+Supongamos que todos los $A_\alpha$ son íntegros, y que los
+$\varphi_{\beta\alpha}$ son inyectivos. Entonces, si $A'_\alpha$ es la
+clausura integral de $A_\alpha$, $A'=\varinjlim A'_\alpha$ es la clausura
+integral de $A$. En particular, si $A_\alpha$ es integralmente cerrado para
+todo $\alpha$, lo mismo ocurre con $A$. Si los $A_\alpha$ son anillos locales
+unirramosos \textup{(resp.} geométricamente unirramosos) \textup{(\textbf 0, 23.2.1)}, y los
+$\varphi_{\beta\alpha}$ homomorfismos locales inyectivos, $A$ es unirramoso
+\textup{(resp.} geométricamente unirramoso).
+\end{corollary}
+
+Si $K_\alpha$ es el cuerpo de fracciones de $A_\alpha$, resulta de (5.13.3,
+(ii)), aplicado a los $\mathfrak p_\alpha=0$, que
+$K=\varinjlim K_\alpha$ es el cuerpo de fracciones de $A$, y
+$A'=\varinjlim A'_\alpha$ se identifica con
+
+\oldpage[IV-2]{133}
+
+un subanillo de $K$, evidentemente entero sobre $A$. Recíprocamente, sea
+$z\in K$ un elemento que verifica una ecuación de dependencia integral
+$z^n+\sum_{i=1}^{n}c_i z^{n-i}=0$,
+donde los $c_i\in A$. Existe un índice $\alpha$, un
+$z_\alpha\in K_\alpha$ y unos $c_{i\alpha}\in A_\alpha$ tales que $z$
+(resp. los $c_i$) sean las imágenes de $z_\alpha$ (resp. de los
+$c_{i\alpha}$), por tanto se tiene $z_\alpha\in A'_\alpha$, lo que prueba que
+$z\in A'$. Se deduce inmediatamente que, si los $A_\alpha$ son integralmente
+cerrados, lo mismo ocurre con $A$. Si los $A_\alpha$ son locales y los
+$\varphi_{\beta\alpha}$ homomorfismos locales, se sabe
+$(\mathbf{0}_{\mathrm{III}}, 10.3.1.3)$ que $A$ es un anillo local y que, si
+$k_\alpha$ es el cuerpo residual de $A_\alpha$,
+$k=\varinjlim k_\alpha$ es el de $A$; si los $A'_\alpha$ son locales, $A'$ es
+local y, por tanto, $A$ es unirramoso; si además el cuerpo residual
+$k'_\alpha$ de $A'_\alpha$ es una extensión radicial de $k_\alpha$ para todo
+$\alpha$, $k'=\varinjlim k'_\alpha$, que es el cuerpo residual de $A'$, es
+una extensión radicial de $k$, y, por tanto, $A$ es geométricamente
+unirramoso.

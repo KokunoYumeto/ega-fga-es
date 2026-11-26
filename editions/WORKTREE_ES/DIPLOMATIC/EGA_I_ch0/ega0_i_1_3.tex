@@ -1,0 +1,64 @@
+\subsection{Propiedades funtoriales}
+\label{subsection:0.1.3-fr}
+
+\begin{env}[1.3.1]
+\label{0.1.3.1-fr}
+Sean $M$, $N$ dos $A$-módulos, y $u$ un $A$-homomorfismo $M\to N$.
+Si $S$ es un subconjunto multiplicativo de $A$, se define un $S^{-1}A$-homomorfismo $S^{-1}M\to S^{-1}N$, denotado por $S^{-1}u$, poniendo $(S^{-1}u)(m/s)=u(m)/s$; si $S^{-1}M$ y $S^{-1}N$ se identifican canónicamente con $S^{-1}A\otimes_A M$ y $S^{-1}A\otimes_A N$ (1.2.5), $S^{-1}u$ se identifica con $1\otimes u$.
+Si $P$ es un tercer $A$-módulo, y $v$ un $A$-homomorfismo $N\to P$, se tiene $S^{-1}(v\circ u)=(S^{-1}v)\circ(S^{-1}u)$; en otras palabras, $S^{-1}M$ es un \emph{funtor covariante en $M$}, de la categoría de los $A$-módulos en la de los $S^{-1}A$-módulos (con $A$ y $S$ fijos).
+\end{env}
+
+\begin{env}[1.3.2]
+\label{0.1.3.2-fr}
+El funtor $S^{-1}M$ es \emph{exacto}; en otras palabras, si la sucesión
+\[
+  M\xrightarrow{u}N\xrightarrow{v}P
+\]
+es exacta, también lo es la sucesión
+\[
+  S^{-1}M\xrightarrow{S^{-1}u}S^{-1}N\xrightarrow{S^{-1}v}S^{-1}P.
+\]
+En particular, si $u:M\to N$ es inyectivo (resp. sobreyectivo), también lo es $S^{-1}u$;
+
+\oldpage[0\textsubscript{I}]{15}
+si $N$ y $P$ son dos submódulos de $M$, $S^{-1}N$ y $S^{-1}P$ se identifican canónicamente con submódulos de $S^{-1}M$, y se tiene
+\[
+  S^{-1}(N+P)=S^{-1}N+S^{-1}P
+  \quad\text{y}\quad
+  S^{-1}(N\cap P)=(S^{-1}N)\cap(S^{-1}P).
+\]
+\end{env}
+
+\begin{env}[1.3.3]
+\label{0.1.3.3-fr}
+Sea $(M_\alpha,\varphi_{\beta\alpha})$ un sistema inductivo de $A$-módulos; entonces $(S^{-1}M_\alpha,S^{-1}\varphi_{\beta\alpha})$ es un sistema inductivo de $S^{-1}A$-módulos.
+Expresando los $S^{-1}M_\alpha$ y $S^{-1}\varphi_{\beta\alpha}$ como productos tensoriales (1.2.5 y 1.3.1), de la conmutación de las operaciones de producto tensorial y de límite inductivo se deduce que se tiene un isomorfismo canónico
+\[
+  S^{-1}\varinjlim M_\alpha\xrightarrow{\sim}\varinjlim S^{-1}M_\alpha
+\]
+lo que también se expresa diciendo que el funtor $S^{-1}M$ (en $M$) \emph{conmuta con los límites inductivos}.
+\end{env}
+
+\begin{env}[1.3.4]
+\label{0.1.3.4-fr}
+Sean $M$, $N$ dos $A$-módulos; existe un isomorfismo canónico \emph{funtorial} (en $M$ y $N$)
+\[
+  (S^{-1}M)\otimes_{S^{-1}A}(S^{-1}N)
+  \xrightarrow{\sim}
+  S^{-1}(M\otimes_A N)
+\]
+que transforma $(m/s)\otimes(n/t)$ en $(m\otimes n)/st$.
+\end{env}
+
+\begin{env}[1.3.5]
+\label{0.1.3.5-fr}
+Se tiene igualmente un homomorfismo \emph{funtorial} (en $M$ y $N$)
+\[
+  S^{-1}\operatorname{Hom}_A(M,N)
+  \longrightarrow
+  \operatorname{Hom}_{S^{-1}A}(S^{-1}M,S^{-1}N)
+\]
+que hace corresponder a $u/s$ el homomorfismo $m/t\to u(m)/st$.
+Cuando $M$ tiene una \emph{presentación finita}, el homomorfismo anterior es un \emph{isomorfismo}: esto es inmediato cuando $M$ es de la forma $A^r$, y se pasa de ahí al caso general partiendo de la sucesión exacta $A^p\to A^q\to M\to 0$, y utilizando la exactitud del funtor $S^{-1}M$ y la exactitud por la izquierda del funtor $\operatorname{Hom}_A(M,N)$ en $M$.
+Se observará que este caso se presenta siempre cuando $A$ es \emph{noetheriano} y el $A$-módulo $M$ es \emph{de tipo finito}.
+\end{env}

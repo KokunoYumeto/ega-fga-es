@@ -1,0 +1,119 @@
+\begin{theorem}[2.3.10]
+\label{IV.2.3.10-fr}
+Sea $f:X\to Y$ un morfismo cuasiplano \textup{(2.3.3)}. Entonces, para toda parte
+proconstruible \textup{(1.9.4)} $Z$ de $Y$, se tiene
+$f^{-1}(\overline Z)=\overline{f^{-1}(Z)}$.
+\end{theorem}
+
+Como $f$ es continuo, se tiene
+$\overline{f^{-1}(Z)}\subset f^{-1}(\overline Z)$, y todo se reduce a
+demostrar que, para todo $x\in X$ tal que $f(x)\in\overline Z$, $x$ es
+adherente a $f^{-1}(Z)$; es claro que la cuestión es local sobre $Y$, por lo
+que se puede suponer $Y$ afín. En virtud de la hipótesis, existe un esquema afín
+$Y'$ y un morfismo $g:Y'\to Y$ tales que $g(Y')=Z$ (1.9.5, (ix)). Sea $Y_1$
+la imagen cerrada de $Y'$ por $g$ (\textbf I, 9.5.3), y sea $X_1$ el subpreesquema
+cerrado $f^{-1}(Y_1)$ de $X$; si $f_1:X_1\to Y_1$ es la restricción de $f$ a
+$X_1$, se sabe que $f_1$ es cuasiplano (2.3.3); se puede, por tanto, sustituir
+$X$, $Y$ por $X_1$, $Y_1$, respectivamente, es decir, suponer que $g$ es
+\emph{dominante}. Pongamos entonces $X'=X\times_Y Y'$, y sean $f'$ y $g'$ las
+proyecciones de $X'$ en $Y'$ y $X$, respectivamente, de modo que se tiene el
+diagrama conmutativo
+\[
+\xymatrix{
+  X \ar[d]_f & X' \ar[l]_{g'} \ar[d]^{f'} \\
+  Y & Y' \ar[l]^g
+}
+\]
+Como $f$ es cuasiplano y $g$ cuasicompacto y dominante, se deduce de (2.3.7)
+(donde se intercambian los papeles de $f$ y $g$) que $g'$ es un morfismo
+dominante, lo que demuestra el teorema.
+
+\begin{corollary}[2.3.11]
+\label{IV.2.3.11-fr}
+Sean $f$ un morfismo cuasiplano y cuasicompacto, $F$ una parte cerrada de
+$X$ tal que $F=f^{-1}(f(F))$; entonces se tiene
+$F=f^{-1}(\overline{f(F)})$.
+\end{corollary}
+
+Sea $Y'$ el subpreesquema reducido de $X$ cuyo espacio subyacente es $F$
+(\textbf I, 5.2.1), y sea $j:Y'\to X$ la inyección canónica; entonces $f\circ j$ es
+cuasicompacto (1.1.2),
+\oldpage[IV-2]{18}
+por lo que $Z=f(F)$ es proconstruible en $Y$ (1.9.5, (vii)), y el corolario
+se deduce de que $F$ es cerrado.
+
+El resultado de (2.3.11) también puede escribirse en la forma
+$F=f^{-1}(f(X)\cap\overline{f(F)})$; es decir, los conjuntos cerrados del
+subespacio $f(X)$ de $Y$ son las partes $Z\subset f(X)$ tales que
+$f^{-1}(Z)$ sea cerrado en $X$; esto significa también que \emph{la topología
+inducida por $Y$ en $f(X)$ es cociente de la de $X$ por la relación de
+equivalencia definida por $f$}. En particular:
+
+\begin{corollary}[2.3.12]
+\label{IV.2.3.12-fr}
+Sea $f:X\to Y$ un morfismo cuasifielmente plano \textup{(2.3.3)} y cuasicompacto.
+Entonces la topología de $Y$ es cociente de la de $X$ por la relación de
+equivalencia definida por $f$ \textup{(es decir, para que $Z\subset Y$ sea \emph{abierto}
+(resp. \emph{cerrado}) en $Y$, es necesario y suficiente que $f^{-1}(Z)$ sea \emph{abierto}
+(resp. \emph{cerrado}) en $X$)}.
+\end{corollary}
+
+En efecto, se tiene entonces $f(X)=Y$.
+
+\begin{corollary}[2.3.13]
+\label{IV.2.3.13-fr}
+Sean $X$, $Y$ dos $S$-preesquemas, $f:X\to Y$ un $S$-morfismo fielmente
+plano y cuasicompacto. Para que $Y$ sea separado sobre $S$, es necesario y
+suficiente que la inmersión canónica
+$j:X\times_Y X\to X\times_S X$ \textup{(\textbf{I}, 5.3.10)} sea cerrada.
+\end{corollary}
+
+Observemos para ello que se tiene el diagrama conmutativo (\textbf I, 5.3.5)
+\[
+\xymatrix{
+  X\times_Y X \ar[r]^j \ar[d]_{\pi} &
+  X\times_S X \ar[d]^{f\times_S f}\\
+  Y \ar[r]_{\Delta_Y} & Y\times_S Y
+}
+\]
+que identifica $X\times_Y X$ con el producto de los
+$(Y\times_S Y)$-preesquemas $Y$ y $X\times_S X$. Como $f$ es sobreyectivo,
+lo mismo ocurre con $\pi$ y con $f\times_S f$, por lo que la diagonal
+$\Delta_Y(Y)$ tiene como imagen inversa por $f\times_S f$ la imagen
+$j(X\times_Y X)$ (\textbf I, 3.4.8). Como $f\times_S f$ es fielmente plano y
+cuasicompacto (1.1.2 y 2.2.13), basta aplicar (2.3.12) a este morfismo.
+
+\begin{corollary}[2.3.14]
+\label{IV.2.3.14-fr}
+Sea $f:X\to Y$ un morfismo cuasifielmente plano y cuasicompacto, y sea
+$Z$ una parte de $Y$. Para que $Z$ sea una parte localmente cerrada
+proconstruible de $Y$, es necesario y suficiente que $f^{-1}(Z)$ sea una
+parte localmente cerrada proconstruible de $X$.
+\end{corollary}
+
+Ya se sabe (1.9.12) que, para que $Z$ sea una parte proconstruible de
+$Y$, es necesario y suficiente que $f^{-1}(Z)$ sea una parte proconstruible
+de $X$. La condición es evidentemente necesaria. Para demostrar que es
+suficiente, consideremos el subpreesquema cerrado reducido $Y_1$ de $Y$ cuyo
+espacio subyacente es $\overline Z$, y sea $X_1$ su imagen inversa por
+$f$, cuyo espacio subyacente es
+$f^{-1}(\overline Z)=\overline{f^{-1}(Z)}$ en virtud de (2.3.10). Como
+$f^{-1}(Z)$ es localmente cerrado en $X$, es abierto en
+$\overline{f^{-1}(Z)}$ y, por tanto, en $X_1$; ahora bien, el morfismo
+$f_1:X_1\to Y_1$ deducido de $f$ por restricción es cuasifielmente plano y
+cuasicompacto (1.1.2 y 2.3.3); se deduce, pues, de (2.3.12) que $Z$ es abierto
+en $\overline Z$, lo que demuestra que $Z$ es localmente cerrado en $Y$.
+
+\begin{remark}[2.3.15]
+\label{IV.2.3.15-fr}
+En (2.3.12), no basta suponer únicamente que $f$ es \emph{fielmente plano}. Por
+ejemplo, tomemos como $Y$ una curva algebraica reducida irreducible
+\oldpage[IV-2]{19}
+(\textbf{II}, 7.4.2), como $X$ el preesquema \emph{suma} de los esquemas
+$\operatorname{Spec}(\mathcal O_y)$, donde $y$ recorre $Y$ (\textbf I, 3.1), y como
+$f$ el morfismo canónico, que es fielmente plano (\textbf I, 2.4.2); si $\eta$ denota
+el punto genérico de $Y$, $Z=\{\eta\}$ no es abierto en $Y$ (\textbf{II}, 7.4.3),
+pero $f^{-1}(Z)=\operatorname{Spec}(\mathcal O_\eta)$, puesto que
+$\mathcal O_\eta$ es un cuerpo y, por consiguiente, $f^{-1}(Z)$ es abierto
+en $X$.
+\end{remark}

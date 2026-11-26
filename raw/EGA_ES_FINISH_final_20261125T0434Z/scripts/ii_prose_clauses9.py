@@ -1,0 +1,13 @@
+from ii_patchlib import *
+p=Patches('clauses9')
+p.replace('5.4.7',r'y, para cada $i$, sea el único',r'y consideremos para cada $i$ el único')
+p.replace('5.4.7',r'morfismos \emph{dominantes} y preesquemas',r'morfismos \emph{dominantes} de preesquemas')
+p.replace('8.6.3',r'Análogamente, aplicando \sref{II.8.3.6.2-fr} a',r'Análogamente, la fórmula \sref{II.8.3.6.2-fr}, aplicada a')
+p.replace('2.3.3',r'Para todo $f\in S$, ponemos',r'Se pone, para todo $f\in S$,')
+p.replace('8.12.6',r'(cuyas notaciones adoptamos); reduciéndose',r'; con las notaciones de esta última, y reduciéndose')
+p.replace('8.3.1','también diremos «cono»','también se dirá «cono»')
+p.replace('3.2.8',r'Si $\mathcal{S}$ está generada por $\mathcal{S}_1$, para todo',r'Supongamos que $\mathcal{S}$ está generada por $\mathcal{S}_1$. Para todo')
+p.replace('6.5.1','y la primera se denota por','y denotaremos por')
+p.replace('8.14.7',r"Conservando las hipótesis sobre $X'$ de \sref{II.8.14.6-fr}, sea",r"Conservemos sobre $X'$ las hipótesis de \sref{II.8.14.6-fr}, y sea")
+p.replace('8.6.1',r'se denota por $\varepsilon_X:X\to C_X$',r'se denotan por $\varepsilon_X:X\to C_X$')
+p.save()

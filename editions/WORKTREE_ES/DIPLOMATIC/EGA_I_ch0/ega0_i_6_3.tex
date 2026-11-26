@@ -1,0 +1,109 @@
+\subsection{Localización de la planitud}
+\label{subsection:0.6.3-fr}
+
+\begin{env}[6.3.1]
+\label{0.6.3.1-fr}
+Si $A$ es un anillo, $S$ una parte multiplicativa de $A$, $S^{-1}A$ es
+un $A$-\emph{módulo plano}. En efecto, para todo $A$-módulo $N$,
+$N\otimes_A S^{-1}A$ se identifica con $S^{-1}N$ (1.2.5) y se sabe (1.3.2)
+que $S^{-1}N$ es un funtor exacto en $N$.
+
+Si ahora $M$ es un $A$-módulo plano,
+$S^{-1}M=M\otimes_A S^{-1}A$ es un $S^{-1}A$-módulo plano (6.2.1), por tanto
+es también $A$-plano en virtud de lo que precede y de (6.2.1). En particular,
+si $P$ es un $S^{-1}A$-módulo, se lo puede considerar como un $A$-módulo
+isomorfo a $S^{-1}P$; para que $P$ sea $A$-plano, es necesario y suficiente
+que sea $S^{-1}A$-plano.
+\end{env}
+
+\begin{env}[6.3.2]
+\label{0.6.3.2-fr}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $T$ una parte multiplicativa de
+$B$. Si $P$ es un $B$-módulo que es $A$-\emph{plano}, $T^{-1}P$ es $A$-\emph{plano}. En
+efecto, para todo $A$-módulo $N$, se tiene
+\[
+  (T^{-1}P)\otimes_A N
+  =(T^{-1}B\otimes_B P)\otimes_A N
+  =T^{-1}B\otimes_B(P\otimes_A N)
+  =T^{-1}(P\otimes_A N)~;
+\]
+ahora bien, $T^{-1}(P\otimes_A N)$ es un funtor exacto en $N$, por ser compuesto de los
+dos funtores exactos $P\otimes_A N$ (en $N$) y $T^{-1}Q$ (en $Q$). Si $S$
+es una parte multiplicativa de $A$ cuya imagen en $B$ está
+\emph{contenida en $T$}, $T^{-1}P$ es igual a $S^{-1}(T^{-1}P)$, por tanto es
+también $S^{-1}A$-plano en virtud de (6.3.1).
+\end{env}
+
+\begin{env}[6.3.3]
+\label{0.6.3.3-fr}
+Sean $\varphi:A\to B$ un homomorfismo de anillos, $M$ un $B$-módulo. Las
+propiedades siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $M$ es un $A$-módulo plano.
+  \item[$b)$] Para todo ideal maximal $\mathfrak{n}$ de $B$,
+    $M_\mathfrak{n}$ es un $A$-módulo plano.
+  \item[$c)$] Para todo ideal maximal $\mathfrak{n}$ de $B$, poniendo
+    $\mathfrak{m}=\varphi^{-1}(\mathfrak{n})$, $M_\mathfrak{n}$ es un
+    $A_\mathfrak{m}$-módulo plano.
+\end{enumerate}
+
+En efecto, como $M_\mathfrak{n}=(M_\mathfrak{n})_\mathfrak{m}$,
+la equivalencia de $b)$ y $c)$ resulta de (6.3.1), y el hecho de que $a)$
+implica $b)$ es un caso particular de (6.3.2). Queda por ver que $b)$
+implica $a)$,
+\oldpage[0\textsubscript{I}]{57}
+es decir, que para todo homomorfismo inyectivo $u:N'\to N$ de
+$A$-módulos, el homomorfismo
+$v=1\otimes u:M\otimes_A N'\to M\otimes_A N$ es inyectivo. Ahora bien, $v$ es también
+un homomorfismo de $B$-módulos, y se sabe que para que sea inyectivo,
+basta que para todo ideal maximal $\mathfrak{n}$ de $B$,
+\[
+  v_\mathfrak{n}:(M\otimes_A N')_\mathfrak{n}
+  \longrightarrow(M\otimes_A N)_\mathfrak{n}
+\]
+sea inyectivo. Pero como
+\[
+  (M\otimes_A N)_\mathfrak{n}
+  =B_\mathfrak{n}\otimes_B(M\otimes_A N)
+  =M_\mathfrak{n}\otimes_A N,
+\]
+$v_\mathfrak{n}$ no es otro que el homomorfismo
+\[
+  1\otimes u:M_\mathfrak{n}\otimes_A N'
+  \longrightarrow M_\mathfrak{n}\otimes_A N,
+\]
+que es inyectivo puesto que $M_\mathfrak{n}$ es $A$-plano.
+
+En particular (haciendo $B=A$), para que un $A$-módulo $M$ sea plano, es
+necesario y suficiente que $M_\mathfrak{m}$ sea $A_\mathfrak{m}$-plano para todo
+ideal maximal $\mathfrak{m}$ de $A$.
+\end{env}
+
+\begin{env}[6.3.4]
+\label{0.6.3.4-fr}
+Sea $M$ un $A$-módulo; si $M$ es plano, y si $f\in A$ no es divisor
+de $0$ en $A$, $f$ no anula ningún elemento $\neq0$ de $M$, pues
+el homomorfismo $m\to f.m$ se escribe $1\otimes u$, donde $u$ es la
+multiplicación $a\to f.a$ en $A$ y $M$ está identificado con
+$M\otimes_A A$; si $u$ es inyectiva, lo mismo ocurre, pues, con
+$1\otimes u$ puesto que $M$ es plano. En particular, si $A$ es
+\emph{íntegro}, $M$ es \emph{sin torsión}.
+
+Recíprocamente, supongamos que $A$ es íntegro, $M$ sin torsión, y supongamos que para
+todo ideal maximal $\mathfrak{m}$ de $A$, $A_\mathfrak{m}$ es un
+\emph{anillo de valoración discreta}; entonces $M$ es $A$-\emph{plano}. Basta, en
+efecto (6.3.3), probar que $M_\mathfrak{m}$ es $A_\mathfrak{m}$-plano, y
+se puede, pues, suponer que $A$ es ya un anillo de valoración discreta. Pero
+como $M$ es límite inductivo de sus submódulos de tipo finito, y estos
+últimos son sin torsión, se puede además limitar al caso en que $M$ es de
+tipo finito (6.1.2). La proposición resulta en este caso de que $M$ es un
+$A$-módulo libre.
+
+En particular, si $A$ es un anillo \emph{íntegro},
+$\varphi:A\to B$ un homomorfismo de anillos que hace de $B$ un $A$-módulo
+\emph{plano} y $\neq\{0\}$, $\varphi$ es necesariamente \emph{inyectivo}.
+Recíprocamente, si $B$ es íntegro, $A$ un subanillo de $B$ y si para todo
+ideal maximal $\mathfrak{m}$ de $A$, $A_\mathfrak{m}$ es un anillo de
+valoración discreta, $B$ es $A$-\emph{plano}.
+\end{env}
+

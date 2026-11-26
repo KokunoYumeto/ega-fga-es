@@ -1,0 +1,91 @@
+% R598: whole EGA I Chapter0 3.5.4.
+% OpenAI Codex, GPT-6.1 Sol, Ultra; no human review claimed.
+\oldpage[0\textsubscript{I}]{32}
+
+\begin{env}[3.5.4]
+\label{0.3.5.4-fr}
+Supongamos ahora que la categoría $\boldsymbol{K}$ sea tal\footnote{En
+el libro citado en la Introducción, daremos condiciones muy
+generales sobre la categoría $\boldsymbol{K}$ que aseguren la existencia de las imágenes
+inversas de prehaces con valores en $\boldsymbol{K}$.} que \emph{todo}
+prehaz $\mathcal{G}$ sobre $Y$ con valores en $\boldsymbol{K}$ admita una
+imagen inversa por $\psi$, que denotaremos por $\psi^*(\mathcal{G})$.
+
+Veremos que se puede definir $\psi^*(\mathcal{G})$ como \emph{funtor
+covariante} en $\mathcal{G}$, de la categoría de prehaces sobre $Y$ con
+valores en $\boldsymbol{K}$ a la de haces sobre $X$ con valores en
+$\boldsymbol{K}$, de tal manera que el isomorfismo $v\to v^\flat$ sea un
+\emph{isomorfismo de bifuntores}
+\begin{equation*}
+  \operatorname{Hom}_X(\psi^*(\mathcal{G}),\mathcal{F})
+  \xrightarrow{\sim}
+  \operatorname{Hom}_Y(\mathcal{G},\psi_*(\mathcal{F}))
+\tag{3.5.4.1}\label{0.3.5.4.1-fr}
+\end{equation*}
+en $\mathcal{G}$ y $\mathcal{F}$.
+
+En efecto, para todo morfismo
+$w:\mathcal{G}_1\to\mathcal{G}_2$ de prehaces sobre $Y$ con valores en
+$\boldsymbol{K}$, consideremos el morfismo compuesto
+\[
+  \mathcal{G}_1\xrightarrow{w}\mathcal{G}_2
+  \xrightarrow{\rho_{\mathcal{G}_2}}
+  \psi_*(\psi^*(\mathcal{G}_2))~;
+\]
+le corresponde un morfismo
+$(\rho_{\mathcal{G}_2}\circ w)^\sharp:
+\psi^*(\mathcal{G}_1)\to\psi^*(\mathcal{G}_2)$, que denotaremos por
+$\psi^*(w)$. Se tiene, pues, en virtud de (3.5.3.3)
+\begin{equation*}
+  \psi_*(\psi^*(w))\circ\rho_{\mathcal{G}_1}
+  =\rho_{\mathcal{G}_2}\circ w.
+\tag{3.5.4.2}\label{0.3.5.4.2-fr}
+\end{equation*}
+Para todo morfismo $u:\mathcal{G}_2\to\psi_*(\mathcal{F})$, donde
+$\mathcal{F}$ es un haz sobre $X$ con valores en $\boldsymbol{K}$, se tiene,
+según (3.5.3.3), (3.5.4.2) y la definición de $u^\flat$
+\[
+  (u^\sharp\circ\psi^*(w))^\flat
+  =\psi_*(u^\sharp)\circ\psi_*(\psi^*(w))\circ\rho_{\mathcal{G}_1}
+  =\psi_*(u^\sharp)\circ\rho_{\mathcal{G}_2}\circ w
+  =u\circ w
+\]
+o, equivalentemente,
+\begin{equation*}
+  (u\circ w)^\sharp=u^\sharp\circ\psi^*(w).
+\tag{3.5.4.3}\label{0.3.5.4.3-fr}
+\end{equation*}
+Si se toma, en particular, como $u$ un morfismo
+\[
+  \mathcal{G}_2\xrightarrow{w'}\mathcal{G}_3
+  \xrightarrow{\rho_{\mathcal{G}_3}}
+  \psi_*(\psi^*(\mathcal{G}_3)),
+\]
+resulta
+\[
+  \psi^*(w'\circ w)
+  =(\rho_{\mathcal{G}_3}\circ w'\circ w)^\sharp
+  =(\rho_{\mathcal{G}_3}\circ w')^\sharp\circ\psi^*(w)
+  =\psi^*(w')\circ\psi^*(w),
+\]
+de donde se sigue nuestra afirmación.
+
+Finalmente, para todo haz $\mathcal{F}$ sobre $X$ con valores en
+$\boldsymbol{K}$, sea $i_{\mathcal{F}}$ el morfismo identidad de
+$\psi_*(\mathcal{F})$ y denotemos por
+\[
+  \sigma_{\mathcal{F}}:
+  \psi^*(\psi_*(\mathcal{F}))\to\mathcal{F}
+\]
+el morfismo $(i_{\mathcal{F}})^\sharp$~; la fórmula (3.5.4.3) da, en
+particular, la factorización
+\begin{equation*}
+  u^\sharp:\psi^*(\mathcal{G})
+  \xrightarrow{\psi^*(u)}
+  \psi^*(\psi_*(\mathcal{F}))
+  \xrightarrow{\sigma_{\mathcal{F}}}\mathcal{F}
+\tag{3.5.4.4}\label{0.3.5.4.4-fr}
+\end{equation*}
+para todo morfismo $u:\mathcal{G}\to\psi_*(\mathcal{F})$. Diremos que el
+morfismo $\sigma_{\mathcal{F}}$ es \emph{canónico}.
+\end{env}

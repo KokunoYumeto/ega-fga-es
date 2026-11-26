@@ -1,0 +1,229 @@
+\subsection{Anillos de series formales restringidas}
+\label{subsection:0.7.5-fr}
+
+\begin{env}[7.5.1]
+\label{0.7.5.1-fr}
+Sea $A$ un anillo topológico, linealmente topologizado, separado y completo;
+sea $(\mathfrak J_\lambda)$ un sistema fundamental de vecindades de $0$ en
+$A$ formado por ideales (abiertos), de modo que $A$ se identifica canónicamente con
+$\varprojlim A/\mathfrak J_\lambda$ (7.2.1). Para todo $\lambda$, sea
+$B_\lambda=(A/\mathfrak J_\lambda)[T_1,\ldots,T_r]$, donde los $T_i$ son
+indeterminadas; es claro que los $B_\lambda$ forman un sistema proyectivo
+de anillos discretos. Pondremos
+$\varprojlim B_\lambda=A\{T_1,\ldots,T_r\}$, y vamos a ver que este anillo
+topológico es independiente del sistema fundamental de ideales
+$(\mathfrak J_\lambda)$ considerado. De manera precisa, sea $A'$ el subanillo
+del anillo de series formales $A[\![T_1,\ldots,T_r]\!]$ formado por las series
+formales $\sum_\alpha c_\alpha T^\alpha$ (con
+$\alpha=(\alpha_1,\ldots,\alpha_r)\in\mathbf{N}^r$) tales que
+$\lim c_\alpha=0$ (según el filtro de los complementarios de las partes
+finitas de $\mathbf{N}^r$); diremos que estas series son las series
+formales \emph{restringidas} en los $T_i$, con coeficientes en $A$.
+\oldpage[0\textsubscript{I}]{70}
+Para toda vecindad $V$ de $0$ en $A$, sea $V'$ el conjunto de los
+$x=\sum_\alpha c_\alpha T^\alpha\in A'$ tales que $c_\alpha\in V$ para todo
+$\alpha$. Se verifica inmediatamente que los $V'$ forman un sistema fundamental de
+vecindades de $0$ que define sobre $A'$ una topología de anillo \emph{separada};
+vamos a definir canónicamente un \emph{isomorfismo topológico} del
+anillo $A\{T_1,\ldots,T_r\}$ sobre $A'$. Para todo
+$\alpha\in\mathbf{N}^r$ y todo $\lambda$, sea
+$\varphi_{\lambda,\alpha}$ la aplicación de
+$(A/\mathfrak J_\lambda)[T_1,\ldots,T_r]$ en
+$A/\mathfrak J_\lambda$ que a todo polinomio del primer anillo hace
+corresponder el coeficiente de $T^\alpha$ en ese polinomio. Es claro que
+los $\varphi_{\lambda,\alpha}$ forman un sistema proyectivo de homomorfismos
+de $(A/\mathfrak J_\lambda)$-módulos, cuyo límite proyectivo es un
+homomorfismo continuo
+$\varphi_\alpha:A\{T_1,\ldots,T_r\}\to A$; vamos a ver que, para todo
+$y\in A\{T_1,\ldots,T_r\}$, la serie formal
+$\sum_\alpha\varphi_\alpha(y)T^\alpha$ es \emph{restringida}. En efecto, si
+$y_\lambda$ es la componente de $y$ en $B_\lambda$, y si se designa por
+$H_\lambda$ el conjunto finito de los $\alpha\in\mathbf{N}^r$ para los cuales los
+coeficientes del polinomio $y_\lambda$ no son nulos, se tiene
+$\varphi_{\mu,\alpha}(y_\mu)\in\mathfrak J_\lambda$ para
+$\mathfrak J_\mu\subset\mathfrak J_\lambda$ y $\alpha\notin H_\lambda$ y,
+por paso al límite, $\varphi_\alpha(y)\in\mathfrak J_\lambda$ para
+$\alpha\notin H_\lambda$. Se define, pues, un homomorfismo de anillos
+$\varphi:A\{T_1,\ldots,T_r\}\to A'$ poniendo
+$\varphi(y)=\sum_\alpha\varphi_\alpha(y)T^\alpha$, y es inmediato que
+$\varphi$ es continuo. Recíprocamente, si $\theta_\lambda$ es el homomorfismo
+canónico $A\to A/\mathfrak J_\lambda$, para todo elemento
+$z=\sum_\alpha c_\alpha T^\alpha\in A'$ y todo $\lambda$, solo hay un
+número finito de índices $\alpha$ tales que $\theta_\lambda(c_\alpha)\neq0$, y
+por consiguiente
+$\psi_\lambda(z)=\sum_\alpha\theta_\lambda(c_\alpha)T^\alpha$ pertenece a
+$B_\lambda$; los $\psi_\lambda$ son continuos y forman un sistema
+proyectivo de homomorfismos cuyo límite proyectivo es un homomorfismo
+continuo $\psi:A'\to A\{T_1,\ldots,T_r\}$; queda finalmente por verificar que
+$\varphi\circ\psi$ y $\psi\circ\varphi$ son los automorfismos identidad,
+lo que es inmediato.
+\end{env}
+
+\begin{env}[7.5.2]
+\label{0.7.5.2-fr}
+Identificaremos $A\{T_1,\ldots,T_r\}$ con el anillo $A'$ de las series formales
+restringidas mediante los isomorfismos definidos en (7.5.1). Los isomorfismos
+canónicos
+\[
+  ((A/\mathfrak J_\lambda)[T_1,\ldots,T_r])
+  [T_{r+1},\ldots,T_s]
+  \xrightarrow{\sim}
+  (A/\mathfrak J_\lambda)[T_1,\ldots,T_s]
+\]
+definen, por paso al límite proyectivo, un isomorfismo canónico
+\[
+  (A\{T_1,\ldots,T_r\})\{T_{r+1},\ldots,T_s\}
+  \xrightarrow{\sim}
+  A\{T_1,\ldots,T_s\}
+\]
+\end{env}
+
+\begin{env}[7.5.3]
+\label{0.7.5.3-fr}
+Para todo homomorfismo continuo $u:A\to B$ de $A$ en un anillo linealmente
+topologizado $B$, separado y completo, y todo sistema $(b_1,\ldots,b_r)$ de $r$
+elementos de $B$, existe \emph{un homomorfismo continuo y uno solo}
+$\overline u:A\{T_1,\ldots,T_r\}\to B$, tal que $\overline u(a)=u(a)$ para
+todo $a\in A$ y $\overline u(T_j)=b_j$ para $1\leq j\leq r$. Basta, en
+efecto, tomar
+\[
+  \overline u\Bigl(\sum_\alpha c_\alpha T^\alpha\Bigr)
+  =\sum_\alpha u(c_\alpha)b_1^{\alpha_1}\ldots b_r^{\alpha_r}~;
+\]
+las verificaciones del hecho de que la familia
+$(u(c_\alpha)b_1^{\alpha_1}\ldots b_r^{\alpha_r})$ es sumable en $B$ y
+de la continuidad de $\overline u$ son inmediatas y se dejan al lector. Se
+observará que esta propiedad (para $B$ y los $b_j$ arbitrarios)
+\emph{caracteriza} el anillo topológico $A\{T_1,\ldots,T_r\}$ salvo un
+isomorfismo único.
+\end{env}
+
+\begin{proposition}[7.5.4]
+\label{0.7.5.4-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Si $A$ es un anillo admisible, lo mismo ocurre con
+  $A'=A\{T_1,\ldots,T_r\}$.
+  \item[\textup{(ii)}] Sean $A$ un anillo ádico, $\mathfrak J$ un ideal de definición
+  de $A$ tal que $\mathfrak J/\mathfrak J^2$ es de tipo finito
+\oldpage[0\textsubscript{I}]{71}
+  sobre $A/\mathfrak J$. Si se pone $\mathfrak J'=\mathfrak JA'$, $A'$ es entonces
+  un anillo $\mathfrak J'$-ádico, y
+  $\mathfrak J'/\mathfrak J'^{\,2}$ es de tipo finito sobre
+  $A'/\mathfrak J'$. Si, además, $A$ es noetheriano, lo mismo ocurre con
+  $A'$.
+\end{enumerate}
+\end{proposition}
+
+\begin{enumerate}
+  \item[(i)] Si $\mathfrak J$ es un ideal de $A$, $\mathfrak J'$ el ideal de
+  $A'$ formado por los $\sum_\alpha c_\alpha T^\alpha$ tales que
+  $c_\alpha\in\mathfrak J$ para todo $\alpha$, entonces
+  $(\mathfrak J')^n\subset(\mathfrak J^n)'$; si $\mathfrak J$ es un ideal de
+  definición de $A$, $\mathfrak J'$ es, por tanto, un ideal de definición de $A'$.
+
+  \item[(ii)] Pongamos $A_i=A/\mathfrak J^{i+1}$, y para $i\leq j$, sea
+  $u_{ij}$ el homomorfismo canónico
+  $A/\mathfrak J^{j+1}\to A/\mathfrak J^{i+1}$; pongamos
+  $A'_i=A_i[T_1,\ldots,T_r]$, y sea $u'_{ij}$ el homomorfismo
+  $A'_j\to A'_i$ ($i\leq j$) obtenido aplicando $u_{ij}$ a los coeficientes
+  de los polinomios de $A'_j$. Mostremos que el sistema proyectivo
+  $(A'_i,u'_{ij})$ verifica las condiciones de (7.2.7); como $\mathfrak J'$ es
+  el núcleo de $A'\to A'_0$, esto demostrará la primera afirmación de (ii). Ahora bien,
+  es claro que los $u'_{ij}$ son sobreyectivos; el núcleo $\mathfrak J'_i$
+  de $u'_{0i}$ es el conjunto de los polinomios de
+  $A_i[T_1,\ldots,T_r]$ cuyos coeficientes están en
+  $\mathfrak J/\mathfrak J^{i+1}$; en particular, $\mathfrak J'_1$ es
+  el conjunto de los polinomios de $A_1[T_1,\ldots,T_r]$ cuyos coeficientes
+  están en $\mathfrak J/\mathfrak J^2$. Como $\mathfrak J/\mathfrak J^2$
+  es de tipo finito sobre $A_1=A/\mathfrak J^2$, se ve ya que
+  $\mathfrak J'_1/\mathfrak J_1'^{\,2}$ es un módulo de tipo finito sobre $A'_1$
+  (o, lo que equivale a lo mismo, sobre
+  $A'_0=A'_1/\mathfrak J'_1$). Mostremos que el núcleo de $u'_{ij}$ es
+  $\mathfrak J_j'^{\,i+1}$. Es evidente que
+  $\mathfrak J_j'^{\,i+1}$ está contenido en este núcleo. Por otra parte, sean
+  $a_1,\ldots,a_m$ unos elementos de $\mathfrak J$ cuyas clases
+  mod.~$\mathfrak J^2$ generan $\mathfrak J/\mathfrak J^2$; se verifica
+  inmediatamente que las clases mod.~$\mathfrak J^{j+1}$ de los monomios de grado
+  $\leq j$ en los $a_k$ ($1\leq k\leq m$) generan
+  $\mathfrak J/\mathfrak J^{j+1}$, y las clases de los monomios de grado $>i$
+  y $\leq j$ generan, por tanto,
+  $\mathfrak J^{i+1}/\mathfrak J^{j+1}$; un monomio en los $T_k$ que tiene tal
+  elemento como coeficiente es, por tanto, producto de $i+1$ elementos de
+  $\mathfrak J'_j$, lo que establece nuestra afirmación. Finalmente, si $A$ es
+  noetheriano, lo mismo ocurre con
+  $A'/\mathfrak J'=(A/\mathfrak J)[T_1,\ldots,T_r]$, por tanto $A'$ es noetheriano
+  (7.2.8).
+\end{enumerate}
+
+\begin{proposition}[7.5.5]
+\label{0.7.5.5-fr}
+Sean $A$ un anillo noetheriano $\mathfrak J$-ádico, $B$ un anillo topológico
+admisible, $\varphi:A\to B$ un homomorfismo continuo, que hace de $B$ una
+$A$-álgebra. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[a)] $B$ es noetheriano y $\mathfrak JB$-ádico, y
+  $B/\mathfrak JB$ es un álgebra de tipo finito sobre $A/\mathfrak J$.
+
+  \item[b)] $B$ es topológicamente $A$-isomorfo a $\varprojlim B_n$, donde
+  $B_n=B_m/\mathfrak J^{n+1}B_m$ para $m\geq n$, y $B_1$ es un álgebra de
+  tipo finito sobre $A_1=A/\mathfrak J^2$.
+
+  \item[c)] $B$ es topológicamente $A$-isomorfo a un cociente de un álgebra
+  de la forma\linebreak $A\{T_1,\ldots,T_r\}$ por un ideal (necesariamente cerrado en virtud
+  de \textup{(7.3.6)} y \textup{(7.5.4 (ii))}).
+\end{enumerate}
+\end{proposition}
+
+Como $A$ es noetheriano, lo mismo ocurre con
+$A'=A\{T_1,\ldots,T_r\}$ (7.5.4), por tanto \emph{c)} implica que $B$ es noetheriano;
+como $\mathfrak J'=\mathfrak JA'$ es una vecindad abierta de 0 en $A'$ tal
+que los $\mathfrak J'^{n}$ forman un sistema fundamental de vecindades de 0,
+las imágenes $\mathfrak J^nB$ de los $\mathfrak J'^{n}$ forman un sistema
+fundamental de vecindades de 0 en $B$, y como se sabe que $B$ es separado y
+completo, $B$ es un anillo $\mathfrak JB$-ádico. Finalmente, $B/\mathfrak JB$ es
+un álgebra (sobre $A/\mathfrak J$) cociente de
+$A'/\mathfrak JA'=(A/\mathfrak J)[T_1,\ldots,T_r]$, por tanto es de tipo finito, lo
+que termina de probar que \emph{c)} implica \emph{a)}.
+
+Si $B$ es $\mathfrak JB$-ádico y noetheriano, $B$ es isomorfo a
+$\varprojlim B_n$, donde $B_n=B/\mathfrak J^{n+1}B$ (7.2.11), y
+$\mathfrak JB/\mathfrak J^2B$ es un módulo de tipo finito sobre
+$B/\mathfrak JB$. Sea $(a_j)_{1\leq j\leq s}$ un sistema de generadores del
+$(B/\mathfrak JB)$-módulo $\mathfrak JB/\mathfrak J^2B$, y
+$(c_i)_{1\leq i\leq r}$ un sistema de elementos de $B/\mathfrak J^2B$ cuyas
+clases
+\oldpage[0\textsubscript{I}]{72}
+mod.~$\mathfrak JB/\mathfrak J^2B$ forman un sistema de generadores de la
+$(A/\mathfrak J)$-álgebra $B/\mathfrak JB$; se ve inmediatamente que los $c_i,a_j$
+forman un sistema de generadores de la $(A/\mathfrak J^2)$-álgebra
+$B/\mathfrak J^2B$, por tanto \emph{a)} implica \emph{b)}.
+
+Queda por probar que \emph{b)} implica \emph{c)}. La hipótesis implica que $B_1$ es un
+anillo noetheriano, y como $B_1=B_2/\mathfrak J^2B_2$, se tiene
+$\mathfrak J^2B_1=0$, por tanto
+$\mathfrak JB_1=\mathfrak JB_1/\mathfrak J^2B_1$ es un $B_0$-módulo de tipo
+finito. Las condiciones de (7.2.7) son, pues, verificadas por el sistema proyectivo
+$(B_n)$ y $B$ es un anillo $\mathfrak JB$-ádico. Sea
+$(c_i)_{1\leq i\leq r}$ un sistema finito de elementos de $B$ cuyas clases
+mod.~$\mathfrak JB$ generan la $(A/\mathfrak J)$-álgebra
+$B/\mathfrak JB$, y cuyas combinaciones lineales con coeficientes en
+$\mathfrak J$ son tales que sus clases mod.~$\mathfrak J^2B$ generan
+el $B_0$-módulo $\mathfrak JB/\mathfrak J^2B$. Existe un
+$A$-homomorfismo continuo $u$ de $A'=A\{T_1,\ldots,T_r\}$ en $B$ que se
+reduce a $\varphi$ en $A$ y es tal que $u(T_i)=c_i$ para $1\leq i\leq r$
+(7.5.3); si probamos que $u$ es \emph{sobreyectivo}, \emph{c)} quedará establecido, pues de
+$u(A')=B$ se deducirá $u(\mathfrak J^nA')=\mathfrak J^nB$, es decir, $u$
+será un morfismo estricto de anillos topológicos y $B$ será, por tanto, isomorfo a un
+cociente de $A'$ por un ideal cerrado. Ahora bien, como $B$ es completo para la topología
+$\mathfrak JB$-ádica, basta ([1], p.~18-07) mostrar que
+el homomorfismo $\operatorname{grad}(A')\to\operatorname{grad}(B)$ deducido
+canónicamente de $u$ para las filtraciones $\mathfrak J$-ádicas sobre $A'$ y
+$B$ es sobreyectivo. Pero, por definición, los homomorfismos
+$A'/\mathfrak JA'\to B/\mathfrak JB$ y
+$\mathfrak JA'/\mathfrak J^2A'\to\mathfrak JB/\mathfrak J^2B$ deducidos de $u$
+son sobreyectivos; por inducción sobre $n$, se deduce inmediatamente que lo mismo
+ocurre con $\mathfrak JA'/\mathfrak J^nA'\to\mathfrak JB/\mathfrak J^nB$, y
+\emph{a fortiori} con
+$\mathfrak J^nA'/\mathfrak J^{n+1}A'\to
+\mathfrak J^nB/\mathfrak J^{n+1}B$, lo que termina la demostración.
+

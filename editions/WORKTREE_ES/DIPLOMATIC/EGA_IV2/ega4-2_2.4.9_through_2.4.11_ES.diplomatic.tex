@@ -1,0 +1,70 @@
+\begin{proposition}[2.4.9]
+\label{IV.2.4.9-fr}
+Sea $Y$ un preesquema \emph{discret}o. Entonces todo morfismo $f:X\to Y$ es
+universalmente abierto.
+\end{proposition}
+
+Como la cuestión es local en $Y$ (2.4.3, (vii)), es posible limitarse al caso
+en que el espacio subyacente a $Y$ se reduce a un punto; reemplazando $f$ por
+$f_{\mathrm{red}}$ (2.4.3, (vi)), se puede suponer además que $Y$ es el
+espectro de un \emph{cuerpo} $k$; por otra parte, para todo cambio de base
+$Y'\to Y$, los abiertos de $X'=X\times_Y Y'$ que son imágenes inversas de los
+abiertos afines de $X$ recubren $X'$, por lo que se puede suponer que
+$X=\operatorname{Spec}(B)$ es afín, siendo $B$ una \emph{$k$-álgebra}. Se trata,
+pues, de demostrar que, para toda $k$-álgebra $A'$, si se pone
+$B'=B\otimes_k A'$, la imagen por
+$f':\operatorname{Spec}(B')\to\operatorname{Spec}(A')$ de todo abierto de la
+forma $U=D(t)$ ($t\in B'$) es abierta en $\operatorname{Spec}(A')$. Ahora bien,
+$B$ es el límite inductivo de la familia filtrante creciente $(B_\alpha)$ de
+sus sub-$k$-álgebras \emph{de tipo finito}; por tanto (como el funtor
+$\varinjlim$ conmuta con el producto tensorial), $B'$ es el límite inductivo
+de las $A'$-álgebras $B_\alpha\otimes_k A'=B'_\alpha$; existe $\alpha$ tal que
+$t$ sea la imagen en $B'$ de un elemento $t_\alpha\in B'_\alpha$, por lo que
+$D(t)$ es la imagen inversa por el morfismo canónico
+$u_\alpha:\operatorname{Spec}(B')\to\operatorname{Spec}(B'_\alpha)$ del
+abierto $U_\alpha=D(t_\alpha)$ (\textbf I, 1.2.2.2). Pero, como $k$ es un cuerpo,
+$B_\alpha$ es una $k$-álgebra de presentación finita y un $k$-módulo plano,
+por lo que $B'_\alpha$ es una $A'$-álgebra de presentación finita y un
+$A'$-módulo plano; se deduce, pues, de (2.4.6) que la imagen de $U_\alpha$ por
+$f'_\alpha:\operatorname{Spec}(B'_\alpha)\to\operatorname{Spec}(A')$ es
+\emph{abierta} en $\operatorname{Spec}(A')$. Todo se reduce, por tanto, a ver
+que $f'(U)=f'_\alpha(U_\alpha)$; está claro que
+$f'(U)\subset f'_\alpha(U_\alpha)$ y solo queda comprobar que, para todo punto
+$y'\in f'_\alpha(U_\alpha)$, la intersección
+$V=U\cap f'^{-1}(y')$ no es vacía. Ahora bien, se tiene
+$V=u_\alpha^{-1}(V_\alpha)$, donde
+$V_\alpha=U_\alpha\cap f_\alpha'^{-1}(y')$; en otras palabras, $V_\alpha$ es
+un abierto no vacío (por definición de $y'$) del preesquema
+$\operatorname{Spec}(B'_\alpha\otimes_{A'}\boldsymbol{k}(y'))
+=\operatorname{Spec}(B_\alpha\otimes_k \boldsymbol{k}(y'))$
+y $V$ es su imagen inversa por el morfismo
+$v:\operatorname{Spec}(B\otimes_k \boldsymbol{k}(y'))
+\longrightarrow\operatorname{Spec}(B_\alpha\otimes_k \boldsymbol{k}(y'))$.
+Como $B_\alpha$ es una subálgebra de $B$ y $k$ es un cuerpo, el homomorfismo
+$B_\alpha\otimes_k \boldsymbol{k}(y')\to B\otimes_k \boldsymbol{k}(y')$
+\oldpage[IV-2]{22}
+es \emph{inyectivo} por planitud, por lo que el morfismo $v$ es \emph{dominante}
+(\textbf I, 1.2.7), lo que termina la demostración.
+
+\begin{corollary}[2.4.10]
+\label{IV.2.4.10-fr}
+Sean $k$ un cuerpo y $X$, $Y$ dos $k$-preesquemas; entonces el morfismo de
+proyección $X\times_k Y\to X$ es universalmente abierto. En particular,
+para toda extensión $K$ de $k$, el morfismo de proyección $X_{(K)}\to X$ es
+universalmente abierto.
+\end{corollary}
+
+Basta aplicar (2.4.9) al morfismo estructural
+$Y\to\operatorname{Spec}(k)$.
+
+\begin{remark}[2.4.11]
+\label{IV.2.4.11-fr}
+Si $f:X\to Y$ es un morfismo \emph{abierto}, se sabe que, para \emph{toda} parte
+$E$ de $Y$, se tiene
+$f^{-1}(\overline E)=\overline{f^{-1}(E)}$
+(Bourbaki, \emph{Top. gén.}, cap.~I, 3.ª ed., \S~5,
+núm.~4, prop.~7). Esta observación se aplica, por ejemplo,
+cuando $f$ es un morfismo \emph{plano localmente de presentación finita}
+(2.4.6), o un morfismo de proyección $X\times_k Y\to X$ donde $X$, $Y$ son
+preesquemas sobre un cuerpo $k$ (2.4.10), y generaliza entonces (2.3.10).
+\end{remark}

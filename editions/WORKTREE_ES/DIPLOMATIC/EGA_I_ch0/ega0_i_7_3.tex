@@ -1,0 +1,180 @@
+\subsection{Anillos preádicos noetherianos}
+\label{subsection:0.7.3-fr}
+
+\begin{env}[7.3.1]
+\label{0.7.3.1-fr}
+Sean $A$ un anillo, $\mathfrak J$ un ideal de $A$, $M$ un $A$-módulo;
+designaremos por
+$\widehat A=\varprojlim_n A/\mathfrak J^n$ (resp.
+$\widehat M=\varprojlim_u M/\mathfrak J^nM$) el separado completado de $A$
+(resp. $M$) para la topología $\mathfrak J$-preádica. Sea
+$M'\xrightarrow{u}M\xrightarrow{v}M''\to0$
+una sucesión exacta de $A$-módulos; como
+$M/\mathfrak J^nM=M\otimes_A(A/\mathfrak J^n)$, la sucesión
+\[
+  M'/\mathfrak J^nM'\xrightarrow{u_n}
+  M/\mathfrak J^nM\xrightarrow{v_n}
+  M''/\mathfrak J^nM''\to0
+\]
+es exacta para todo $n$. Además, como
+$v(\mathfrak J^nM)=\mathfrak J^nv(M)=\mathfrak J^nM''$,
+$\widehat v=\varprojlim v_n$ es sobreyectiva (Bourbaki,
+\emph{Top. gén.}, cap.~IX, 2.\textsuperscript{a} ed., p.~60, cor.~2).
+Por otra parte, si $z=(z_k)$ es un elemento del núcleo de $\widehat v$, para todo
+entero $k$, existe un $z'_k\in M'/\mathfrak J^kM'$ tal que
+$u_k(z'_k)=z_k$; se concluye que existe
+$z'=(z'_n)\in\widehat{M}'$ tal que las $k$ primeras componentes de
+$\widehat u(z')$ coinciden con las de $z$; es decir, la imagen por
+$\widehat u$ de $\widehat{M}'$ es \emph{densa} en el núcleo de
+$\widehat v$.
+
+Si se supone que $A$ es \emph{noetheriano}, lo mismo ocurre con $\widehat A$, en
+virtud de (7.2.12), siendo entonces $\mathfrak J/\mathfrak J^2$ un $A$-módulo de
+tipo finito. Además:
+\end{env}
+
+\begin{namedtheorem}[7.3.2]{Teorema de Krull}
+\label{0.7.3.2-fr}
+Sean $A$ un anillo \textup{noetheriano}, $\mathfrak J$ un ideal de $A$, $M$ un
+$A$-módulo \textup{de tipo finito}, $M'$ un submódulo de $M$; entonces la topología
+inducida sobre $M'$ por la topología $\mathfrak J$-preádica de $M$ es idéntica
+a la topología $\mathfrak J$-preádica de $M'$.
+\end{namedtheorem}
+
+Esto resulta inmediatamente del
+
+\begin{namedlemma}[7.3.2.1]{Lema de Artin-Rees}
+\label{0.7.3.2.1-fr}
+Bajo las hipótesis de \textup{(7.3.2)}, existe un entero $p$ tal que, para
+$n\geq p$, se tiene
+\[
+  M'\cap\mathfrak J^nM=\mathfrak J^{n-p}
+  (M'\cap\mathfrak J^pM)
+\]
+\end{namedlemma}
+
+Para la demostración, véase ([1], p.~2-04).
+
+\oldpage[0\textsubscript{I}]{67}
+
+\begin{corollary}[7.3.3]
+\label{0.7.3.3-fr}
+Bajo las hipótesis de \textup{(7.3.2)}, la aplicación canónica
+$M\otimes_A\widehat A\to\widehat M$ es biyectiva, y el funtor
+$M\otimes_A\widehat A$ es exacto en $M$ en la categoría de los $A$-módulos de
+tipo finito; por consiguiente, el separado completado $\mathfrak J$-ádico $\widehat A$
+es un $A$-módulo plano \textup{(6.1.1)}.
+\end{corollary}
+
+Observemos primero que en la categoría de los $A$-módulos de tipo finito,
+$\widehat M$ es un funtor \emph{exacto} en $M$. Sea, en efecto,
+$0\to M'\xrightarrow{u}M\xrightarrow{v}M''\to0$
+una sucesión exacta; se sabe ya que
+$\widehat v:\widehat M\to\widehat{M}''$ es sobreyectivo (7.3.1); por otra parte,
+si $i$ es el homomorfismo canónico $M\to\widehat M$, resulta del teorema de
+Krull que la adherencia en $\widehat M$ de $i(u(M'))$ se identifica con el separado
+completado de $M'$ para la topología $\mathfrak J$-preádica; por tanto
+$\widehat u$ es inyectivo, y en virtud de (7.3.1) la imagen de $\widehat u$ es
+igual al núcleo de $\widehat v$.
+
+Dicho esto, la aplicación canónica $M\otimes_A\widehat A\to\widehat M$
+se obtiene pasando al límite proyectivo en las aplicaciones
+$M\otimes_A\widehat A\to M\otimes_A(A/\mathfrak J^n)=M/\mathfrak J^nM$.
+Es claro que esta aplicación es biyectiva cuando $M$ es de la forma
+$A^p$. Si $M$ es un $A$-módulo de tipo finito, se tiene una sucesión exacta
+$A^p\to A^q\to M\to0$, de donde, en virtud de la exactitud \emph{por la derecha} de los
+funtores $M\otimes_A\widehat A$ y $\widehat M$ (en $M$) en la categoría
+de los $A$-módulos de tipo finito, el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+  A^p\otimes\widehat A \arrow[r] \arrow[d] &
+  A^q\otimes\widehat A \arrow[r] \arrow[d] &
+  M\otimes\widehat A \arrow[r] \arrow[d] &
+  0 \\
+  \widehat A^{\,p} \arrow[r] &
+  \widehat A^{\,q} \arrow[r] &
+  \widehat M \arrow[r] &
+  0
+\end{tikzcd}
+\]
+donde las dos filas son exactas y las dos primeras flechas verticales son
+isomorfismos; se obtiene inmediatamente la conclusión.
+
+\begin{corollary}[7.3.4]
+\label{0.7.3.4-fr}
+Sean $A$ un anillo noetheriano, $\mathfrak J$ un ideal de $A$, $M$, $N$ dos
+$A$-módulos de tipo finito; se tienen isomorfismos canónicos funtoriales
+\[
+  (M\otimes_A N)^\wedge
+  \xrightarrow{\sim}
+  \widehat M\otimes_{\widehat A}\widehat N,
+  \qquad
+  (\operatorname{Hom}_A(M,N))^\wedge
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\widehat A}(\widehat M,\widehat N)
+\]
+\end{corollary}
+
+Esto resulta de (7.3.3), (6.2.1) y (6.2.2).
+
+\begin{corollary}[7.3.5]
+\label{0.7.3.5-fr}
+Sean $A$ un anillo noetheriano, $\mathfrak J$ un ideal de $A$. Las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+  \item[$a)$] $\mathfrak J$ está contenido en el radical de $A$.
+  \item[$b)$] $\widehat A$ es un $A$-módulo fielmente plano \textup{(6.4.1)}.
+  \item[$c)$] Todo $A$-módulo de tipo finito es separado para la topología
+  $\mathfrak J$-preádica.
+  \item[$d)$] Todo submódulo de un $A$-módulo de tipo finito es cerrado para la
+  topología $\mathfrak J$-preádica.
+\end{enumerate}
+\end{corollary}
+
+Como $\widehat A$ es un $A$-módulo plano, las condiciones $b)$ y $c)$ son
+equivalentes, pues $b)$ equivale a decir que si $M$ es un $A$-módulo de tipo
+finito, la aplicación canónica
+$M\to\widehat M=M\otimes_A\widehat A$ es inyectiva (6.6.1, $c)$). Es
+inmediato que $c)$ implica $d)$, pues si $N$ es un submódulo de un $A$-módulo
+$M$ de tipo finito, $M/N$ es separado para la topología $\mathfrak J$-preádica,
+por tanto $N$ es cerrado en $M$. Mostremos que $d)$ implica $a)$: si
+$\mathfrak m$ es un ideal maximal de $A$, $\mathfrak m$ es cerrado en $A$
+para la topología $\mathfrak J$-preádica, por tanto $\mathfrak m=\bigcap_{p\geq0}(\mathfrak m+\mathfrak J^p)$,
+y como $\mathfrak m+\mathfrak J^p$ es necesariamente igual a $A$ o a
+$\mathfrak m$, se tiene $\mathfrak m+\mathfrak J^p=\mathfrak m$ para $p$ suficientemente
+\oldpage[0\textsubscript{I}]{68}
+grande, de donde $\mathfrak J^p\subset\mathfrak m$ y
+$\mathfrak J\subset\mathfrak m$ puesto que $\mathfrak m$ es primo. Finalmente,
+$a)$ implica $b)$: sea, en efecto, $P$ la adherencia de $\{0\}$ en un
+$A$-módulo $M$ de tipo finito, para la topología $\mathfrak J$-preádica; en
+virtud del teorema de Krull (7.3.2), la topología inducida sobre $P$ por la topología
+$\mathfrak J$-preádica de $M$ es la topología $\mathfrak J$-preádica de
+$P$, por tanto $\mathfrak JP=P$; como $P$ es de tipo finito, resulta del lema
+de Nakayama que $P=0$ (estando $\mathfrak J$ contenido en el radical de $A$).
+
+Se observará que las condiciones de (7.3.5) se cumplen cuando $A$ es un
+\emph{anillo local noetheriano} y $\mathfrak J\neq A$ un ideal cualquiera de
+$A$.
+
+\begin{corollary}[7.3.6]
+\label{0.7.3.6-fr}
+Si $A$ es un anillo $\mathfrak J$-ádico noetheriano, todo $A$-módulo de tipo
+finito es separado y completo para la topología $\mathfrak J$-preádica.
+\end{corollary}
+
+Como se tiene entonces $\widehat A=A$, esto resulta inmediatamente de (7.3.3).
+
+Se concluye que la prop. (7.2.9) da la descripción de \emph{todos} los
+módulos de tipo finito sobre un anillo ádico noetheriano.
+
+\begin{corollary}[7.3.7]
+\label{0.7.3.7-fr}
+Bajo las hipótesis de \textup{(7.3.2)}, el núcleo de la aplicación canónica
+$M\to\widehat M=M\otimes_A\widehat A$ es el conjunto de los $x\in M$ anulados por
+un elemento de $1+\mathfrak J$.
+\end{corollary}
+
+En efecto, para que $x\in M$ pertenezca a este núcleo, es necesario y suficiente que
+el separado completado del submódulo $Ax$ se reduzca a 0 (por (7.3.2)), es decir,
+que $x\in\mathfrak Jx$.
+

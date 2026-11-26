@@ -1,0 +1,101 @@
+\begin{theorem}[5.10.5]
+\EGAReaderTarget{ega4.c04.thm.5-10-5}{IV.2.s5.10.5-fr}
+Sean $X$ un preesquema localmente noetheriano, $Z$ una parte de $X$ estable
+por especialización y $\mathcal F$ un $\mathcal O_X$-módulo coherente. Para que
+$\mathcal F$ sea $Z$-cerrado, es necesario y suficiente que se tenga
+$\operatorname{prof}_Z(\mathcal F)\geq2$.
+\end{theorem}
+
+En virtud de (5.10.2), es posible limitarse al caso en que $\mathcal F$ es
+$Z$-puro y $\operatorname{prof}_Z(\mathcal F)\geq1$. Además, decir que
+$\operatorname{prof}_Z(\mathcal F)\geq2$ equivale a decir que, para toda parte
+cerrada $Z_\alpha$ de $Z$, $\operatorname{prof}_{Z_\alpha}(\mathcal F)\geq2$;
+y, del mismo modo, de (5.9.8) resulta que decir que $\mathcal F$ es $Z$-cerrado
+equivale a decir que $\mathcal F$ es $Z_\alpha$-cerrado para todo $\alpha$.
+Es posible, por tanto, limitarse ya al caso en que $Z$ es \emph{cerrado}. Puesto que la
+cuestión es local, basta, para todo $x\in Z$, demostrar el teorema para
+$\mathcal F|U$, siendo $U$ una vecindad abierta afín de $x$, y es posible por tanto
+limitarse al caso en que $X=U$ es afín. Se sabe entonces que
+$\operatorname{Ass}(\mathcal F)$ es finito (3.1.6), y como
+$\operatorname{Ass}(\mathcal F)\subset X\setmin Z$, existe una sección $f$ de
+$\mathcal O_X$ sobre $X$ tal que
+$\operatorname{Ass}(\mathcal F)\subset X_f\subset X\setmin Z$ (\textbf{II}, 4.5.4); de ello se
+deduce que $f$ es $\mathcal F$-regular (3.1.9) y que, para todo $y\in Z$, se
+tiene $f_y\in\mathfrak m_y$, por lo que
+$\operatorname{prof}(\mathcal F_y)
+=1+\operatorname{prof}(\mathcal F_y/f_y\mathcal F_y)$
+(\textbf{0}, 16.4.6).
+La condición $\operatorname{prof}_Z(\mathcal F)\geq2$ equivale, por tanto, a
+$\operatorname{prof}_Z(\mathcal F/f\mathcal F)\geq1$, o también, por (5.10.2),
+al hecho de que $\mathcal F/f\mathcal F$ es $Z$-\emph{puro}, y basta ver que esta
+última propiedad equivale al hecho de que $\mathcal F$ es $Z$-\emph{cerrado}.
+
+Consideremos la sucesión exacta
+$0\to\mathcal F\xrightarrow{f}\mathcal F
+\to\mathcal F/f\mathcal F\to0$
+(siendo inyectiva por hipótesis la homotecia de razón
+$f:\mathcal F\xrightarrow{f}\mathcal F$); si se pone $W=X\setmin Z$, se tiene el diagrama
+conmutativo
+\[
+\xymatrix{
+0\ar[r] & \Gamma(X,\mathcal F)\ar[r]^f\ar[d] &
+\Gamma(X,\mathcal F)\ar[r]\ar[d] &
+\Gamma(X,\mathcal F/f\mathcal F)\ar[r]\ar[d] & 0\\
+0\ar[r] & \Gamma(W,\mathcal F)\ar[r]_f &
+\Gamma(W,\mathcal F)\ar[r] & \Gamma(W,\mathcal F/f\mathcal F)
+}
+\]
+donde las dos filas son exactas (por ser $X$ afín). Si el homomorfismo de
+restricción $\Gamma(X,\mathcal F)\to\Gamma(W,\mathcal F)$ es biyectivo, se
+deduce de este diagrama que
+\[
+\Gamma(X,\mathcal F/f\mathcal F)
+\longrightarrow\Gamma(W,\mathcal F/f\mathcal F)
+\]
+es inyectivo, y esto demuestra, por (5.9.8), que, si $\mathcal F$ es $Z$-cerrado,
+$\mathcal F/f\mathcal F$ es $Z$-puro. Recíprocamente, supongamos que
+$\mathcal F/f\mathcal F$ es $Z$-puro, y sea $s$ una sección de $\mathcal F$
+sobre $W$; como $X_f\subset W$, existe un entero $n>0$ tal que
+$f^n(s|X_f)$ se prolonga a una sección $t$ de $\mathcal F$ sobre $X$
+(\textbf I, 1.4.1); además, como las restricciones de $t$ y de $f^ns$ a $X_f$ son
+las mismas, de ello resulta que la restricción de $t$ a $W$ es igual a $f^ns$
+en virtud de la relación $\operatorname{Ass}(\mathcal F)\subset X_f$
+(5.10.2); como $f$ es $\mathcal F$-regular, bastará ver que $t$ es de la forma
+$f^nt'$, donde $t'\in\Gamma(X,\mathcal F)$
+
+\oldpage[IV-2]{116}
+
+para demostrar que el homomorfismo
+$\Gamma(X,\mathcal F)\to\Gamma(W,\mathcal F)$ es sobreyectivo y, por tanto,
+biyectivo. Ahora bien, decir que $t=f^nt'$ significa que la imagen de $t$ en
+$\Gamma(X,\mathcal F/f^n\mathcal F)$ es nula. Pero como
+$f^k\mathcal F/f^{k+1}\mathcal F$ es isomorfo a
+$\mathcal F/f\mathcal F$ y, por tanto, es $Z$-puro por hipótesis, se deduce de
+(5.10.3), por inducción sobre $n$, que $\mathcal F/f^n\mathcal F$ es
+$Z$-puro. Pero,
+por definición, la imagen de $t|W=f^ns$ en
+$\Gamma(W,\mathcal F/f^n\mathcal F)$ es nula, de donde se sigue la conclusión.
+
+\begin{corollary}[5.10.6]
+\label{IV.2.s5.10.6-fr}
+Sea $\mathcal F$ un $\mathcal O_X$-módulo coherente. Para que $\mathcal F$ sea
+$Z$-cerrado en un punto $x$, es necesario y suficiente que
+$\operatorname{prof}_{Z_x}(\widetilde{\mathcal F}_x)\geq2$.
+\end{corollary}
+
+Esto resulta de (5.9.6) y (5.10.5).
+
+\begin{theorem}[5.10.7]
+\label{IV.2.s5.10.7-fr}
+\emph{(Hartshorne).} Sean $X$ un preesquema localmente noetheriano y $Y$ una
+parte cerrada de $X$. Supongamos que, para todo $y\in Y$, se tiene
+$\operatorname{prof}(\mathcal O_{X,y})\geq2$; entonces, para toda componente
+conexa $C$ de $X$, $C\setmin(C\cap Y)$ es conexo.
+\end{theorem}
+
+Es posible limitarse al caso en que $X$ es conexo; de (5.10.5) resulta entonces
+que el homomorfismo canónico
+$\mathcal O_X\to i_*(\mathcal O_X|X\setmin Y)$ (donde $i:X\setmin Y\to X$ es la inyección
+canónica) es biyectivo. Por consiguiente, el homomorfismo de restricción
+$\Gamma(X,\mathcal O_X)\to\Gamma(X\setmin Y,\mathcal O_X)$ es también biyectivo.
+Basta ahora aplicar el lema (\textbf{III}, 7.8.6.1).

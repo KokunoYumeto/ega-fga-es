@@ -1,0 +1,261 @@
+\subsection{Morfismos localmente de presentación finita}
+\label{subsection:IV.1.4-fr}
+
+\begin{env}[1.4.1]
+\label{IV.1.4.1-fr}
+Dado un anillo $A$, diremos que una $A$-álgebra $B$ (conmutativa)
+es \emph{de presentación finita} si es isomorfa al cociente
+$A[T_1,\ldots,T_n]/\mathfrak a$ de un álgebra de polinomios sobre $A$ por un
+ideal \emph{de tipo finito} $\mathfrak a$ de $A[T_1,\ldots,T_n]$. Para toda
+$A$-álgebra (conmutativa) $A'$, $B\otimes_AA'$ es entonces una $A'$-álgebra de
+presentación finita. por ser isomorfa al cociente de $A'[T_1,\ldots,T_n]$ por
+la imagen canónica en este anillo de $\mathfrak a\otimes_AA'$, que es
+evidentemente un $A'[T_1,\ldots,T_n]$-módulo de tipo finito. Si $B$ es una
+$A$-álgebra de presentación finita y $C$ una $B$-álgebra de presentación
+finita, entonces $C$ es una $A$-álgebra de presentación finita. En efecto, sean
+$B=A[S_1,\ldots,S_m]/\mathfrak a$ y
+$C=B[T_1,\ldots,T_n]/\mathfrak b$, donde $\mathfrak a$ (resp. $\mathfrak b$) es
+un ideal de tipo finito de $A[S_1,\ldots,S_m]$ (resp.
+$B[T_1,\ldots,T_n]$); el anillo $B[T_1,\ldots,T_n]$ es isomorfo a
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]/\mathfrak a'$, donde $\mathfrak a'$ es
+la imagen canónica de
+$\mathfrak a\otimes_AA[T_1,\ldots,T_n]$, y es por tanto un ideal de tipo finito de
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]$; el ideal $\mathfrak b$ de
+$B[T_1,\ldots,T_n]$ es de la forma $\mathfrak b'/\mathfrak a'$, donde
+$\mathfrak b'$ es un ideal de $A[S_1,\ldots,S_m,T_1,\ldots,T_n]$; como
+$\mathfrak a'$ y $\mathfrak b'/\mathfrak a'$ son módulos de tipo finito
+sobre $A[S_1,\ldots,S_m,T_1,\ldots,T_n]$, lo mismo ocurre con $\mathfrak b'$,
+y $C$, isomorfa a
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]/\mathfrak b'$, es pues efectivamente una
+$A$-álgebra de presentación finita. Observemos, por último, que si $A$ es
+\emph{noetheriano}, lo mismo ocurre con $A[T_1,\ldots,T_n]$, por lo que toda
+$A$-álgebra de tipo finito es entonces de presentación finita.
+\end{env}
+
+\begin{definition}[1.4.2]
+\label{IV.1.4.2-fr}
+Sean $f:X\to Y$ un morfismo de preesquemas, $x$ un punto de $X$, $y=f(x)$.
+Se dice que $f$ es de presentación finita en $x$ si existe una vecindad
+abierta afín $V$ de $y$ y una vecindad abierta afín $U$ de $x$ tales que
+$f(U)\subset V$ y que el anillo $A(U)$ sea una $A(V)$-álgebra de presentación
+finita. Se dice que $f$ es localmente de presentación finita si es de
+presentación finita en todo punto de $X$.
+\end{definition}
+
+Si $Y$ es localmente noetheriano, es lo mismo decir que $f$ es
+localmente de tipo finito o localmente de presentación finita.
+
+\begin{proposition}[1.4.3]
+\label{IV.1.4.3-fr}
+\begin{enumerate}
+  \item[\textup{(i)}] Todo isomorfismo local es localmente de presentación finita.
+  \item[\textup{(ii)}] Si dos morfismos $f:X\to Y$, $g:Y\to Z$ son localmente de
+  presentación finita, lo mismo ocurre con $g\circ f$.
+
+\oldpage[IV-1]{231}
+
+  \item[\textup{(iii)}] Si $f:X\to Y$ es un $S$-morfismo localmente de presentación
+  finita, $f_{(S')}:X_{(S')}\to Y_{(S')}$ es localmente de presentación finita
+  para toda extensión $S'\to S$ del preesquema de base.
+  \item[\textup{(iv)}] Si $f:X\to X'$ y $g:Y\to Y'$ son dos $S$-morfismos
+  localmente de presentación finita, $f\times_Sg$ es localmente de
+  presentación finita.
+  \item[\textup{(v)}] Si el compuesto $g\circ f$ de dos morfismos es localmente de
+  presentación finita y si $g$ es localmente de tipo finito, entonces $f$ es
+  localmente de presentación finita.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La afirmación (i) es trivial. Para demostrar (iii), se puede limitar al caso
+en que $S=Y$ (\textbf{I}, 3.3.11); sean $x'$ un punto de $X_{(S')}$, $s'$ y $x$ sus
+proyecciones sobre $S'$ y $X$ respectivamente, $s$ la proyección común de $s'$
+y $x$ sobre $S$. Por hipótesis, hay una vecindad abierta afín $V$ (resp.
+$U$) de $s$ (resp. $x$) tales que la imagen de $U$ está contenida en $V$ y que
+$A(U)$ es una $A(V)$-álgebra de presentación finita; sea $V'$ una vecindad
+abierta afín de $s'$ cuya imagen en $S$ esté contenida en $V$; entonces
+$U\times_VV'$ es una vecindad abierta afín de $x'$ cuya imagen en $S'$
+está contenida en $V'$ y cuyo anillo $A(U)\otimes_{A(V)}A(V')$ es una
+$A(V')$-álgebra de presentación finita (1.4.1).
+
+Para demostrar (ii), consideremos un punto $x\in X$, y sean $y=f(x)$,
+$z=g(f(x))$. Hay por hipótesis una vecindad abierta afín $W=\operatorname{Spec}(C)$
+(resp. $V=\operatorname{Spec}(B)$) de $z$ (resp. $y$) tales que $g(V)\subset W$ y que $B$
+es una $C$-álgebra de presentación finita. Por otra parte, hay una vecindad
+abierta afín $V'=\operatorname{Spec}(B')$ (resp. $U=\operatorname{Spec}(A)$) de $y$ (resp. $x$) tales que
+$f(U)\subset V'$ y que $A$ es una $B'$-álgebra de presentación finita. Sea
+$s\in B$ tal que el abierto $D(s)=\operatorname{Spec}(B_s)$ en $V$ sea una vecindad de $y$
+contenida en $V'$, y sea $U'=f^{-1}(D(s))\subset U$; se tiene
+$U'=\operatorname{Spec}(A\otimes_{B'}B_s)$, y $A\otimes_{B'}B_s$ es una $B_s$-álgebra de
+presentación finita (1.4.1); por otra parte $B_s=B[T]/(1\setmin sT)$ es una
+$B$-álgebra de presentación finita por definición; por consiguiente (1.4.1),
+$A\otimes_{B'}B_s$ es una $C$-álgebra de presentación finita, lo que prueba
+(ii).
+
+Se sabe que (iv) resulta de (i), (ii) y (iii) (\textbf{I}, 3.5.1). Para probar (v),
+consideremos el diagrama conmutativo
+\[
+\xymatrix{
+X \ar[r]^{\Gamma_f} \ar[d] & X\times_ZY \ar[d]^{f\times 1} \\
+Y \ar[r]_{\Delta_g} & Y\times_ZY
+}
+\]
+que identifica $X$ con el producto de los $(Y\times_ZY)$-preesquemas $Y$ y
+$X\times_ZY$ (\textbf{I}, 5.3.7, siendo $\Delta_g$ el morfismo diagonal). Si se sabe
+que $\Delta_g$ es localmente de presentación finita, resultará de
+(iii) que lo mismo ocurre con $\Gamma_f$. Por otra parte, se tiene la factorización
+de $f$ en
+$X\xrightarrow{\Gamma_f}X\times_ZY\xrightarrow{p_2}Y$ (\textbf{I}, 5.3.13), donde la
+proyección $p_2$ es igual a $(g\circ f)\times_Z1_Y$; como se supone que $g\circ f$ es
+localmente de presentación finita, lo mismo ocurre con $p_2$ por
+(iv), y resultará finalmente de (ii) que $f$ es también localmente de
+presentación finita. Se ve, por tanto, que se reduce a demostrar el
+\end{proof}
+
+\begin{corollary}[1.4.3.1]
+\label{IV.1.4.3.1-fr}
+Sea $g:Y\to Z$ un morfismo localmente de tipo finito; entonces el morfismo
+diagonal $\Delta_g:Y\to Y\times_ZY$ es localmente de presentación finita.
+\end{corollary}
+
+\oldpage[IV-1]{232}
+
+\begin{proof}
+Se puede limitar al caso en que $Z=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$, siendo $B$ una
+$A$-álgebra de tipo finito; el morfismo $\Delta_g$ corresponde entonces al
+\emph{homomorfismo de aumentación} $\delta:B\otimes_AB\to B$ tal que
+$\delta(x\otimes y)=xy$. Teniendo en cuenta la definición (1.4.2), basta
+mostrar que el núcleo $\mathfrak J$ de $\delta$ es un ideal \emph{de tipo
+finito}, lo que resulta de (\textbf{0}, 20.4.4).
+\end{proof}
+
+\begin{proposition}[1.4.4]
+\label{IV.1.4.4-fr}
+Sean $A$ un anillo, $B$ una $A$-álgebra, $B'$ un álgebra de polinomios
+$A[T_1,\ldots,T_n]$, $u:B'\to B$ un homomorfismo sobreyectivo de
+$A$-álgebras. Para que $B$ sea una $A$-álgebra de presentación finita, es necesario
+y suficiente que el núcleo $\mathfrak J$ de $u$ sea un ideal de tipo finito de
+$B'$.
+\end{proposition}
+
+\begin{proof}
+La condición es suficiente por definición (1.4.1). Para ver que es
+necesaria, observemos que el morfismo $g:\operatorname{Spec}(B')\to\operatorname{Spec}(A)$ es
+localmente de tipo finito; si $B$ es una $A$-álgebra de presentación finita,
+el morfismo $f:\operatorname{Spec}(B)\to\operatorname{Spec}(B')$ correspondiente a $u$ es tal que
+$g\circ f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ es localmente de presentación finita, por lo que
+resulta de (1.4.3, (v)) que $f$ es también localmente de presentación finita.
+Ahora bien, para demostrar que el ideal $\mathfrak J$ es de tipo finito, basta
+probar que $\widetilde{\mathfrak J}$ es un $\widetilde{B}'$-Módulo de tipo
+finito (\textbf{II}, 6.1.4.1). Volviendo a la definición (1.4.2), se reduce finalmente
+a probar el
+\end{proof}
+
+\begin{lemma}[1.4.4.1]
+\label{IV.1.4.4.1-fr}
+Sean $\mathfrak a$ un ideal de un anillo $C$, $s$ un elemento de $C$, tal que
+$C_s/\mathfrak a_s$ sea una $C$-álgebra de presentación finita; entonces
+$\mathfrak a_s$ es un ideal de tipo finito en el anillo $C_s$.
+\end{lemma}
+
+\begin{proof}
+Por hipótesis, existe una $C$-álgebra de polinomios
+$C'=C[T_1,\ldots,T_n]$ y un $C$-homomorfismo sobreyectivo
+$v:C'\to C_s/\mathfrak a_s$ cuyo núcleo $\mathfrak b$ es de tipo finito.
+Sea $p:C_s\to C_s/\mathfrak a_s$ el homomorfismo canónico; para todo $i$,
+hay un $t_i\in C$ tal que $p(t_i/s^k)=v(T_i)$ (se puede suponer que
+el exponente $k$ es el mismo para todos los índices $i$). Consideremos entonces la
+$C_s$-álgebra $D=C_s[T_1,\ldots,T_n]$, y el homomorfismo de $C_s$-álgebras
+$w:D\to C_s$ tal que $w(T_i)=t_i/s^k$; $w$ es evidentemente sobreyectivo, y lo
+mismo ocurre, por consiguiente, con $v'=p\circ w:D\to C_s/\mathfrak a_s$. Por otra
+parte, todo polinomio de $D$ puede escribirse $P/s^m$, donde
+$P\in C'=C[T_1,\ldots,T_n]$, y se tiene
+$v'(P/s^m)=(1/s^m)v(P)$; como $1/s$ es invertible en $C_s$, la relación
+$v'(P/s^m)=0$ en $C_s/\mathfrak a_s$ equivale a $v(P)=0$, y por consiguiente el
+núcleo $\mathfrak b'$ de $v'$ está generado por la imagen canónica de
+$\mathfrak b$ en $D$, y \emph{a fortiori} es \emph{de tipo finito} en el anillo
+$D$. Pero
+$\mathfrak b'=v'^{-1}(0)=w^{-1}(p^{-1}(0))=w^{-1}(\mathfrak a_s)$, y como
+$w$ es sobreyectivo, $\mathfrak a_s=w(\mathfrak b')$, lo que prueba que
+$\mathfrak a_s$ es un ideal de tipo finito de $C_s$.
+\end{proof}
+
+\begin{corollary}[1.4.5]
+\label{IV.1.4.5-fr}
+Sean $X$, $Y$ dos preesquemas, $j:X\to Y$ una inmersión, $U$ un abierto de
+$Y$ tal que $j(X)$ sea cerrado en $U$, $\mathcal J$ el Ideal cuasicoherente de
+$\mathcal O_U$ que define el subpreesquema cerrado de $Y$ asociado a $j$. Para
+que $j$ sea localmente de presentación finita, es necesario y suficiente que
+$\mathcal J$ sea un $\mathcal O_U$-Módulo de tipo finito.
+\end{corollary}
+
+\par\medskip\noindent
+\begin{proposition}[1.4.6]
+\label{IV.1.4.6-fr}
+Sea $\varphi:A\to B$ un homomorfismo de anillos. Para que el morfismo
+correspondiente $f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ sea localmente de presentación finita,
+es necesario y suficiente que $B$ sea una $A$-álgebra de presentación finita.
+\end{proposition}
+
+\begin{proof}
+Siendo la condición trivialmente suficiente, queda por probar que es
+necesaria. Si $f$ es localmente de presentación finita, resulta ya de
+(1.3.6) que $B$ es una $A$-álgebra de tipo finito, por lo que existe un
+homomorfismo sobreyectivo $u:B'=A[T_1,\ldots,T_n]\to B$ de $A$-álgebras;
+resulta de (1.4.3, (v)) que la inmersión
+$j:\operatorname{Spec}(B)\to\operatorname{Spec}(B')$ es localmente
+\oldpage[IV-1]{233}
+de presentación finita; por tanto (1.4.5), si $\mathfrak J$ es el núcleo de $u$,
+el $\widetilde{B}'$-Módulo $\widetilde{\mathfrak J}$ es de tipo finito, y por
+consiguiente (\textbf{II}, 6.1.4.1) $\mathfrak J$ es un ideal de tipo finito.
+\end{proof}
+
+\begin{proposition}[1.4.7]
+\label{IV.1.4.7-fr}
+Sea $\rho:A\to B$ un homomorfismo de anillos que hace de $B$ una $A$-álgebra
+finita. Para que $B$ sea una $A$-álgebra de presentación finita, es necesario y
+suficiente que $B$ sea un $A$-módulo de presentación finita.
+\end{proposition}
+
+Utilizaremos el
+
+\begin{lemma}[1.4.7.1]
+\label{IV.1.4.7.1-fr}
+Si $B$ es una $A$-álgebra finita, existe un $A$-homomorfismo sobreyectivo
+de álgebras $u:B'\to B$, donde $B'$ es una $A$-álgebra finita y de presentación
+finita que es un $A$-módulo libre.
+\end{lemma}
+
+\begin{proof}
+En efecto, hay un sistema finito $(a_i)_{1\leq i\leq m}$ de generadores de la
+$A$-álgebra $B$ tal que cada $a_i$ verifica una relación $F_i(a_i)=0$, donde
+$F_i\in A[X]$ es un polinomio mónico de grado $>0$; la $A$-álgebra cociente
+$B'_i=A[X]/(F_i)$ es, por tanto, libre de rango finito sobre $A$; sea $c_i$ la clase de
+$X$ en $B'_i$. Existe un $A$-homomorfismo de álgebras $u_i:B'_i\to B$
+tal que $u_i(c_i)=a_i$; basta entonces tomar como $B'$ el producto
+tensorial $B'_1\otimes_AB'_2\otimes\ldots\otimes_AB'_m$ y considerar
+el homomorfismo $u_1\otimes u_2\otimes\ldots\otimes u_m:B'\to B$, que es
+sobreyectivo por construcción. Además, si $B''=A[T_1,\ldots,T_m]$ y si $b'_i$
+denota la imagen canónica de $c_i$ en $B'$, el $A$-homomorfismo de álgebras
+$v:B''\to B'$ tal que $v(T_i)=b'_i$ ($1\leq i\leq m$) es sobreyectivo, y su
+núcleo $\mathfrak b'$ es el ideal de $B''$ generado por los $F_i(T_i)$, por tanto de
+tipo finito; esto prueba que $B'$ es una $A$-álgebra de presentación finita.
+\end{proof}
+
+\begin{proof}
+Una vez demostrado este lema, conservemos las mismas notaciones, y sea
+$w=v\circ u:B''\to B$. Si $\mathfrak b$ (resp. $\mathfrak a$) es el núcleo de
+$w$ (resp. $u$), se tiene $\mathfrak a=v(\mathfrak b)$ puesto que $v$ es sobreyectivo.
+Ahora bien (1.4.4), si $B$ es una $A$-álgebra de presentación finita, $\mathfrak b$
+es un ideal de tipo finito de $B''$, por lo que $\mathfrak a$ es un ideal de tipo
+finito de $B'$, y por tanto un $A$-módulo de tipo finito puesto que $B$ es una $A$-álgebra
+finita; como $B'$ es un $A$-módulo libre, $B$ es un $A$-módulo de
+presentación finita. Recíprocamente, si $B'$ es un $A$-módulo de presentación
+finita, $\mathfrak a$ es un $A$-módulo de tipo finito (Bourbaki,
+\emph{Alg. comm.}, cap. I, \S~2, n\textsuperscript{o}~8, lema 9) y
+\emph{a fortiori} un ideal de tipo finito de $B'$; por consiguiente, $B$ es por
+definición una $B'$-álgebra de presentación finita, y como $B'$ es una
+$A$-álgebra de presentación finita, $B$ es una $A$-álgebra de presentación
+finita.
+\end{proof}
+

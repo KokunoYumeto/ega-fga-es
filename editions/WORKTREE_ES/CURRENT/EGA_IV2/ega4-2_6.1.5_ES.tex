@@ -1,0 +1,56 @@
+La proposición (6.1.1) admite el recíproco parcial siguiente:
+
+\begin{proposition}[6.1.5]
+\EGAReaderTarget{ega4.c04.prop.6-1-5}{IV.2.s6.1.5-fr}
+Sean $A$, $B$ dos anillos locales noetherianos, $k$ el cuerpo residual de
+$A$, $\varphi:A\to B$ un homomorfismo local y $M$ un $B$-módulo de tipo finito.
+Se supone que:
+\begin{enumerate}
+\item[\textup{1\textsuperscript{o}}] $A$ es un anillo regular.
+\item[\textup{2\textsuperscript{o}}] $M$ es un $B$-módulo de Cohen--Macaulay.
+\item[\textup{3\textsuperscript{o}}] Se tiene
+$\dim_B(M)=\dim(A)+\dim_{B\otimes_Ak}(M\otimes_Ak)$.
+\end{enumerate}
+Entonces $M$ es un $A$-módulo plano.
+\end{proposition}
+
+Procedamos por inducción sobre $n=\dim(A)$. Si $n=0$, $A$ es un cuerpo
+puesto que es regular (\textbf 0, 17.1.4), y la afirmación es trivial. Supongamos
+$n>0$; sea $\mathfrak m$ el ideal maximal de $A$, y sea
+$x\in\mathfrak m$ un elemento que no pertenece a $\mathfrak m^2$; se sabe
+entonces (\textbf 0, 17.1.8) que $A'=A/xA$ es regular y
+$\dim(A')=\dim(A)\setmin 1$. Pongamos
+\[
+B'=B/xB,\qquad M'=M/xM=M\otimes_AA';
+\]
+se tiene, por tanto,
+\[
+B'\otimes_{A'}k=B\otimes_Ak,\qquad
+M'\otimes_{A'}k=M\otimes_Ak
+\]
+y, en virtud de (\textbf 0, 16.3.9.2), se tiene
+\[
+\dim_{B'}(M')\leq\dim(A')+
+\dim_{B'\otimes_{A'}k}(M'\otimes_Ak);
+\]
+
+\oldpage[IV-2]{137}
+
+se concluye, pues, de (\textbf 0, 16.3.4) que se tiene
+\[
+\dim_B(M)\leq\dim_{B'}(M')+1
+\leq\bigl(\dim(A')+
+\dim_{B\otimes_Ak}(M\otimes_Ak)\bigr)+1
+=\dim(A)+\dim_{B\otimes_Ak}(M\otimes_Ak).
+\]
+
+Como, por hipótesis, los miembros extremos de estas desigualdades son iguales,
+se tiene necesariamente: (i) $\dim_{B'}(M')=\dim_B(M)\setmin 1$ y, como $M$ es por
+hipótesis un $B$-módulo de Cohen--Macaulay, esto significa que $x$ es
+$M$-\emph{regular} (\textbf 0, 16.1.9 y 16.5.5); (ii)
+$\dim_{B'}(M')=\dim(A')+
+\dim_{B'\otimes_{A'}k}(M'\otimes_{A'}k)$; como $M'$ es un $B'$-módulo de
+Cohen--Macaulay en virtud de (i) y de (\textbf 0, 16.1.9 y 16.5.5), y $A'$ es regular,
+la hipótesis de inducción prueba que $M'$ es un $A'$-módulo plano; se deduce
+entonces de $(\mathbf{0}_{\mathrm{III}}, 10.2.7)$ que $M$ es un $A$-módulo plano,
+puesto que $x$ es $M$-regular por (i).

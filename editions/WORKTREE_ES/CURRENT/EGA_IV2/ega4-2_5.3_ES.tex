@@ -1,0 +1,108 @@
+\oldpage[IV-2]{92}
+
+\subsection{Dimensión del soporte de un módulo y polinomio de Hilbert.}
+\label{IV.2.s5.3-fr}
+
+Esta sección utiliza los resultados del capítulo III; no se utilizará en el
+resto de este capítulo.
+
+\begin{proposition}[5.3.1]
+\label{IV.2.s5.3.1-fr}
+Sean $A$ un anillo local artiniano, $X$ un esquema proyectivo sobre
+$\operatorname{Spec}(A)$, $\mathcal L$ un $\mathcal O_X$-módulo invertible
+muy amplio relativamente a $A$, $\mathcal F$ un $\mathcal O_X$-módulo
+coherente $\ne0$; se pone
+$\mathcal F(n)=\mathcal F\otimes_{\mathcal O_X}\mathcal L^{\otimes n}$ para
+$n\in\mathbf Z$. Entonces el grado del polinomio de Hilbert
+$P(n)=\chi_A(\mathcal F(n))$ de $\mathcal F$ con respecto a $A$ \textup{(\textbf{III}, 2.5.3)}
+es igual a la dimensión de $\operatorname{Supp}(\mathcal F)$.
+\end{proposition}
+
+\begin{proof}
+Razonemos por inducción sobre
+$d=\dim(\operatorname{Supp}(\mathcal F))$. Se sabe que existe un
+subpreesquema cerrado $Y$ de $X$ cuyo espacio subyacente es
+$\operatorname{Supp}(\mathcal F)$, y un $\mathcal O_Y$-módulo coherente
+$\mathcal G$ tal que $\mathcal F=j_*(\mathcal G)$, donde $j:Y\to X$ es la
+inyección canónica $(\mathbf{Err}_{\mathrm{III}},30)$. Es inmediato que los
+polinomios de Hilbert de $\mathcal F$ y de $\mathcal G$ son los mismos, por lo
+que es posible limitarse al caso en que
+$X=\operatorname{Supp}(\mathcal F)$. Supongamos primero que $d=0$; como todos
+los puntos de $X$ son cerrados, $X$ es un esquema artiniano (\textbf I, 6.2.2), por lo
+que $\mathcal F(n)=\mathcal F$ para todo entero $n$, y por consiguiente se
+tiene (\textbf{III}, 2.5.3)
+\[
+\chi_A(\mathcal F(n))=\operatorname{long}_A(\Gamma(X,\mathcal F))
+\]
+para $n$ suficientemente grande, y el grado del polinomio de Hilbert es, por
+tanto, $0$. Supongamos ahora que $d>0$, y pongamos
+$Z=\operatorname{Ass}(\mathcal F)$, que es un conjunto finito (3.1.6); existen
+un entero $m>0$ y una sección
+$f\in\Gamma(X,\mathcal L^{\otimes m})$ tales que $X_f$ es una vecindad de
+$Z$ (\textbf{II}, 4.5.4). La multiplicación por $f$ es un homomorfismo
+\[
+\mu_f:\mathcal F\longrightarrow\mathcal F(m)
+\]
+que es inyectivo (3.1.8); se tiene, por tanto, una sucesión exacta
+\begin{equation}
+0\longrightarrow\mathcal F\xrightarrow{\mu_f}\mathcal F(m)
+\longrightarrow\mathcal G\longrightarrow0
+\tag{5.3.1.1}\label{IV.2.s5.3.1.1-fr}
+\end{equation}
+en la que $\mathcal G$ es coherente. En virtud del lema de Nakayama, los puntos
+$x\in\operatorname{Supp}(\mathcal G)$ son exactamente aquellos para los que
+$f(x)=0$. Vamos a deducir de ello que se tiene
+\begin{equation}
+\dim(\operatorname{Supp}(\mathcal G))=d-1.
+\tag{5.3.1.2}\label{IV.2.s5.3.1.2-fr}
+\end{equation}
+Esto resultará del lema siguiente:
+\end{proof}
+
+\begin{lemma}[5.3.1.3]
+\label{IV.2.s5.3.1.3-fr}
+Sean $A$ un anillo local artiniano, $X$ un esquema proyectivo sobre
+$\operatorname{Spec}(A)$, $\mathcal L$ un $\mathcal O_X$-módulo invertible
+amplio relativamente a $A$; entonces, para toda sección $g$ de $\mathcal L$
+sobre $X$, el conjunto $X\setminus X_g$ de los $x\in X$ tales que $g(x)=0$ interseca
+toda componente irreducible de $X$ de dimensión $\ne0$.
+\end{lemma}
+
+\begin{proof}
+En efecto (\textbf{II}, 5.5.7), el conjunto $X_g$ es un abierto afín de $X$, y si
+contiene una componente irreducible $X'$ de $X$, el subpreesquema cerrado
+reducido de $X$ que tiene a $X'$ por espacio subyacente es a la vez proyectivo
+y afín sobre $A$, por tanto finito sobre $A$ (\textbf{III}, 4.4.2), y por consiguiente
+un esquema artiniano, luego de dimensión $0$.
+\end{proof}
+
+\begin{proof}
+Establecido este lema, observemos que, puesto que $Z$ contiene los puntos
+maximales de $X$, $X_f$ es denso, por lo que
+$\operatorname{Supp}(\mathcal G)$ es raro en $X$, y la relación (5.3.1.2)
+resulta del lema y de (5.2.4).
+
+\oldpage[IV-2]{93}
+
+Esto supuesto, de la sucesión exacta (5.3.1.1) se deduce, para todo $n$, la
+sucesión exacta
+\[
+0\longrightarrow\mathcal F(n)\longrightarrow\mathcal F(n+m)
+\longrightarrow\mathcal G(n)\longrightarrow0
+\]
+y, para $n$ suficientemente grande, se tiene también la sucesión exacta
+(\textbf{III}, 2.2.3)
+\[
+0\longrightarrow\Gamma(X,\mathcal F(n))
+\longrightarrow\Gamma(X,\mathcal F(n+m))
+\longrightarrow\Gamma(X,\mathcal G(n))\longrightarrow0
+\]
+de donde, teniendo en cuenta (\textbf{III}, 2.5.3), para $n$ suficientemente grande,
+\[
+\chi_A(\mathcal G(n))
+=\chi_A(\mathcal F(n+m))-\chi_A(\mathcal F(n)).
+\]
+Como, en virtud de (5.3.1.2) y de la hipótesis de inducción, el grado del
+polinomio $\chi_A(\mathcal G(n))$ es $d-1$, la relación precedente implica
+que el grado de $\chi_A(\mathcal F(n))$ es $d$, C.Q.F.D.
+\end{proof}

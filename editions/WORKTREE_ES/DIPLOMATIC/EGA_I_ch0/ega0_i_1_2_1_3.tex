@@ -1,0 +1,38 @@
+\oldpage[0\textsubscript{I}]{13}
+\subsection{Módulos y anillos de fracciones}
+\label{subsection:0.1.2-fr}
+
+\begin{env}[1.2.1]
+\label{0.1.2.1-fr}
+Se dice que un subconjunto $S$ de un anillo $A$ es \emph{multiplicativo} si $1\in S$ y si el producto de dos elementos de $S$ pertenece a $S$.
+Los ejemplos más importantes para lo que sigue serán: $1^\circ$ el conjunto $S_f$ de las potencias $f^n$ ($n\geq 0$) de un elemento $f\in A$; $2^\circ$ el complementario $A\setmin\mathfrak{p}$ de un ideal \emph{primo} $\mathfrak{p}$ de $A$.
+\end{env}
+
+\begin{env}[1.2.2]
+\label{0.1.2.2-fr}
+Sean $S$ un subconjunto multiplicativo de un anillo $A$ y $M$ un $A$-módulo; en el conjunto $M\times S$, la relación entre pares $(m_1,s_1)$, $(m_2,s_2)$:
+\[
+  \text{<<~existe $s\in S$ tal que $s(s_1m_2-s_2m_1)=0$~>>}
+\]
+es una relación de equivalencia.
+Se denota por $S^{-1}M$ el conjunto cociente de $M\times S$ por esta relación, y por $m/s$ la imagen canónica en $S^{-1}M$ del par $(m,s)$; se llama aplicación \emph{canónica} de $M$ en $S^{-1}M$ a la aplicación $i_M^S:m\to m/1$ (también denotada por $i^S$).
+Esta aplicación, en general, no es ni inyectiva ni sobreyectiva; su núcleo es el conjunto de los $m\in M$ tales que existe un $s\in S$ para el cual $sm=0$.
+
+En $S^{-1}M$ se define una ley de grupo aditivo tomando
+\[
+  (m_1/s_1)+(m_2/s_2)=(s_2m_1+s_1m_2)/(s_1s_2)
+\]
+(se comprueba que esto es independiente de las expresiones de los elementos de $S^{-1}M$ considerados).
+En $S^{-1}A$ se define además una ley multiplicativa tomando $(a_1/s_1)(a_2/s_2)=(a_1a_2)/(s_1s_2)$, y finalmente una ley externa en $S^{-1}M$, con $S^{-1}A$ como conjunto de operadores, poniendo $(a/s)(m/s')=(am)/(ss')$.
+Se comprueba así que $S^{-1}A$ está provisto de una estructura de anillo (llamado \emph{anillo de fracciones de $A$ con denominadores en $S$}) y $S^{-1}M$ de una estructura de $S^{-1}A$-módulo (llamado \emph{módulo de fracciones de $M$ con denominadores en $S$}); para todo $s\in S$, $s/1$ es invertible en $S^{-1}A$, y su inverso es $1/s$.
+La aplicación canónica $i_A^S$ (resp. $i_M^S$) es un homomorfismo de anillos (resp. un homomorfismo de $A$-módulos, considerando $S^{-1}M$ como $A$-módulo mediante el homomorfismo $i_A^S:A\to S^{-1}A$).
+\end{env}
+
+\begin{env}[1.2.3]
+\label{0.1.2.3-fr}
+Si $S_f=\{f^n\}_{n\geq 0}$ para un $f\in A$, se escribe $A_f$ y $M_f$ en lugar de $S_f^{-1}A$ y $S_f^{-1}M$; cuando $A_f$ se considera como álgebra sobre $A$, puede escribirse $A_f=A[1/f]$.
+$A_f$ es isomorfa al álgebra cociente $A[T]/(fT-1)A[T]$.
+Cuando $f=1$, $A_f$ y $M_f$ se identifican canónicamente con $A$ y $M$; si $f$ es nilpotente, $A_f$ y $M_f$ se reducen a $0$.
+
+Cuando $S=A\setmin\mathfrak{p}$, donde $\mathfrak{p}$ es un ideal primo de $A$, se escribe $A_{\mathfrak{p}}$ y $M_{\mathfrak{p}}$ en lugar de $S^{-1}A$ y $S^{-1}M$; $A_{\mathfrak{p}}$ es un \emph{anillo local} cuyo ideal maximal $\mathfrak{q}$ está generado por $i_A^S(\mathfrak{p})$, y se tiene $(i_A^S)^{-1}(\mathfrak{q})=\mathfrak{p}$; pasando a los cocientes, $i_A^S$ da un monomorfismo del anillo íntegro $A/\mathfrak{p}$ en el cuerpo $A_{\mathfrak{p}}/\mathfrak{q}$, que se identifica con el cuerpo de fracciones de $A/\mathfrak{p}$.
+\end{env}

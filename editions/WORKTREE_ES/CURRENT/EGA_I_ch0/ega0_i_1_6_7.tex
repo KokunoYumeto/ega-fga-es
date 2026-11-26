@@ -1,0 +1,123 @@
+\subsection{Identificación del módulo $M_f$ con un límite inductivo}
+\label{subsection:0.1.6-fr}
+
+\begin{env}[1.6.1]
+\label{0.1.6.1-fr}
+Sean $M$ un $A$-módulo y $f$ un elemento de $A$. Consideremos una sucesión
+$(M_n)$ de $A$-módulos, todos idénticos a $M$, y para todo par de enteros
+$m\leq n$, sea $\varphi_{nm}$ el homomorfismo $z\to f^{n-m}z$ de $M_m$
+en $M_n$; es inmediato que $((M_n),(\varphi_{nm}))$ es un \emph{sistema
+inductivo} de $A$-módulos; sea $N=\varinjlim M_n$ el límite inductivo de este
+sistema. Vamos a definir un $A$-isomorfismo canónico \emph{funtorial} de
+$N$ sobre $M_f$. Para ello, observemos que, para todo $n$,
+$\theta_n:z\to z/f^n$ es un $A$-homomorfismo de $M=M_n$ en $M_f$, y
+de las definiciones se deduce que se tiene $\theta_n\circ\varphi_{nm}=\theta_m$ para
+$m\leq n$. Existe, por tanto, un $A$-homomorfismo $\theta:N\to M_f$ tal que, si
+$\varphi_n$ denota el homomorfismo canónico $M_n\to N$, se tiene
+$\theta_n=\theta\circ\varphi_n$ para todo $n$. Como, por hipótesis, todo elemento
+de $M_f$ es de la forma $z/f^n$ para al menos un $n$, es claro que
+$\theta$ es sobreyectivo. Por otra parte, si $\theta(\varphi_n(z))=0$, es decir,
+$z/f^n=0$, existe un entero $k>0$ tal que $f^kz=0$, y por tanto
+$\varphi_{n+k,n}(z)=0$, lo que implica $\varphi_n(z)=0$. Se puede, pues,
+identificar $M_f$ y $\varinjlim M_n$ mediante $\theta$.
+\end{env}
+
+\begin{env}[1.6.2]
+\label{0.1.6.2-fr}
+Escribamos ahora $M_{f,n}$, $\varphi_{nm}^f$ y $\varphi_n^f$ en lugar de
+$M_n$, $\varphi_{nm}$ y $\varphi_n$. Sea $g$ un segundo elemento de $A$. Como
+$f^n$ divide $f^ng^n$, se tiene un homomorfismo funtorial
+\[
+  \rho_{fg,f}:M_f\longrightarrow M_{fg}\qquad\text{(1.4.1 y 1.4.3)};
+\]
+
+\oldpage[0\textsubscript{I}]{20}
+
+si se identifican $M_f$ y $M_{fg}$ con $\varinjlim M_{f,n}$ y
+$\varinjlim M_{fg,n}$ respectivamente, $\rho_{fg,f}$ se identifica con el
+\emph{límite inductivo} de las aplicaciones
+$\rho_{fg,f}^n:M_{f,n}\to M_{fg,n}$ definidas por
+$\rho_{fg,f}^n(z)=g^nz$. Esto se deduce inmediatamente de la
+conmutatividad del diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+M_{f,n} \arrow[r,"\rho_{fg,f}^n"] \arrow[d,"\varphi_n^f"']
+  & M_{fg,n} \arrow[d,"\varphi_n^{fg}"] \\
+M_f \arrow[r,"\rho_{fg,f}"]
+  & M_{fg}
+\end{tikzcd}
+\]
+\end{env}
+
+\subsection{Soporte de un módulo}
+\label{subsection:0.1.7-fr}
+
+\begin{env}[1.7.1]
+\label{0.1.7.1-fr}
+Dado un $A$-módulo $M$, se llama \emph{soporte} de $M$ y se denota por
+$\operatorname{Supp}(M)$ al conjunto de los ideales primos $\mathfrak p$ de $A$
+tales que $M_{\mathfrak p}\neq0$. Para que $M=0$, es necesario y suficiente que
+$\operatorname{Supp}(M)=\varnothing$, pues si $M_{\mathfrak p}=0$ para todo
+$\mathfrak p$, el anulador de un elemento $x\in M$ no puede estar contenido en
+ningún ideal primo de $A$, y por tanto es todo $A$.
+\end{env}
+
+\begin{env}[1.7.2]
+\label{0.1.7.2-fr}
+Si $0\to N\to M\to P\to0$ es una sucesión exacta de $A$-módulos, se tiene
+\[
+  \operatorname{Supp}(M)=\operatorname{Supp}(N)\cup\operatorname{Supp}(P)
+\]
+pues, para todo ideal primo $\mathfrak p$ de $A$, la sucesión
+$0\to N_{\mathfrak p}\to M_{\mathfrak p}\to P_{\mathfrak p}\to0$ es exacta
+(1.3.2) y, para que $M_{\mathfrak p}=0$, es necesario y suficiente que
+$N_{\mathfrak p}=P_{\mathfrak p}=0$.
+\end{env}
+
+\begin{env}[1.7.3]
+\label{0.1.7.3-fr}
+Si $M$ es suma de una familia $(M_\lambda)$ de submódulos,
+$M_{\mathfrak p}$ es suma de los $(M_\lambda)_{\mathfrak p}$ para todo ideal
+primo $\mathfrak p$ de $A$ (1.3.3 y 1.3.2), y por tanto
+$\operatorname{Supp}(M)=\bigcup_\lambda\operatorname{Supp}(M_\lambda)$.
+\end{env}
+
+\begin{env}[1.7.4]
+\label{0.1.7.4-fr}
+Si $M$ es un $A$-módulo \emph{de tipo finito}, $\operatorname{Supp}(M)$ es
+el conjunto de los ideales primos \emph{que contienen el anulador de $M$}. En efecto,
+si $M$ es monógeno y está generado por $x$, decir que $M_{\mathfrak p}=0$ significa
+que existe $s\notin\mathfrak p$ tal que $s.x=0$, y por tanto que $\mathfrak p$ no
+contiene el anulador de $x$. Si ahora $M$ admite un sistema finito
+$(x_i)_{1\leq i\leq n}$ de generadores y $\mathfrak a_i$ es el anulador
+de $x_i$, de (1.7.3) se deduce que $\operatorname{Supp}(M)$ es el conjunto de los
+$\mathfrak p$ que contienen alguno de los $\mathfrak a_i$, o, lo que es equivalente,
+el conjunto de los $\mathfrak p$ que contienen $\mathfrak a=\bigcap_i\mathfrak a_i$,
+que es el anulador de $M$.
+\end{env}
+
+\begin{env}[1.7.5]
+\label{0.1.7.5-fr}
+Si $M$ y $N$ son dos $A$-módulos \emph{de tipo finito}, se tiene
+\[
+  \operatorname{Supp}(M\otimes_A N)
+  =\operatorname{Supp}(M)\cap\operatorname{Supp}(N).
+\]
+Se trata de ver que, si $\mathfrak p$ es un ideal primo de $A$, la
+condición $M_{\mathfrak p}\otimes_{A_{\mathfrak p}}N_{\mathfrak p}\neq0$ es
+equivalente a «~$M_{\mathfrak p}\neq0$ y $N_{\mathfrak p}\neq0$~» (teniendo
+en cuenta (1.3.4)). En otras palabras, se trata de ver que, si $P$, $Q$ son dos
+módulos de tipo finito sobre un anillo \emph{local} $B$, no reducidos a $0$, entonces
+$P\otimes_B Q\neq0$. Sea $\mathfrak m$ el ideal maximal de $B$. En virtud del
+lema de Nakayama, los espacios vectoriales $P/\mathfrak mP$ y
+$Q/\mathfrak mQ$ no se reducen a $0$, y por tanto tampoco es nulo su
+producto tensorial
+$(P/\mathfrak mP)\otimes_{B/\mathfrak m}(Q/\mathfrak mQ)=(P\otimes_B Q)\otimes_B(B/\mathfrak m)$,
+de donde se obtiene la conclusión.
+
+En particular, si $M$ es un $A$-módulo de tipo finito, y $\mathfrak a$ un ideal
+de $A$, $\operatorname{Supp}(M/\mathfrak aM)$ es el conjunto de los ideales
+primos que contienen a la vez $\mathfrak a$ y el anulador $\mathfrak n$ de
+$M$ (1.7.4), es decir, el conjunto de los ideales primos que contienen
+$\mathfrak a+\mathfrak n$.
+\end{env}

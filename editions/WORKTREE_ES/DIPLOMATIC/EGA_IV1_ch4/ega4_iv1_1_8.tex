@@ -1,0 +1,284 @@
+\subsection{Morfismos de presentación finita y conjuntos construibles.}
+\label{subsection:IV.1.8-fr}
+
+\begin{env}[1.8.1]
+\label{IV.1.8.1-fr}
+Sea $X$ un preesquema; se sabe que todo abierto cuasicompacto en $X$ es
+unión finita de abiertos afines, y recíprocamente. Para que un abierto $U$ de
+$X$ sea \emph{retrocompacto} en $X$ (\textbf{0}\textsubscript{III}, 9.1.1), es necesario
+y suficiente, por tanto, que para todo \emph{abierto afín} $V$ de $X$, $U\cap V$
+sea cuasicompacto. Cuando $X$ es \emph{cuasiseparado} (1.2.1), todo abierto
+cuasicompacto en $X$ es retrocompacto en $X$ (1.2.7), por lo que todo subconjunto
+localmente construible de $X$ es retrocompacto en $X$
+(\textbf{0}\textsubscript{III}, 9.1.13); si \emph{además} $X$ es
+\emph{cuasicompacto}, hay identidad entre subconjuntos construibles y subconjuntos
+localmente construibles en $X$ (\textbf{0}\textsubscript{III}, 9.1.12), y entre
+subconjuntos abiertos construibles y subconjuntos abiertos cuasicompactos
+(\textbf{0}\textsubscript{III}, 9.1.5).
+\end{env}
+
+\begin{proposition}[1.8.2]
+\label{IV.1.8.2-fr}
+Sean $X$, $Y$ dos preesquemas, $f:X\to Y$ un morfismo. Para todo subconjunto
+construible (\textup{resp.} localmente construible) $Z$ de $Y$, $f^{-1}(Z)$ es
+un subconjunto construible (\textup{resp.} localmente construible) de $X$.
+\end{proposition}
+
+\begin{proof}
+Supongamos $Z$ localmente construible; para todo $x\in X$, habrá una
+vecindad abierta afín $V$ de $f(x)$ tal que $Z\cap V$ sea construible
+en $V$; si la proposición está demostrada para los subconjuntos construibles,
+$f^{-1}(Z)\cap f^{-1}(V)$ será construible en $f^{-1}(V)$, por lo que
+$f^{-1}(Z)$ será localmente construible. Basta, por consiguiente, considerar
+el caso en que $Z$ es construible, y teniendo en cuenta (\textbf{0}\textsubscript{III},
+9.1.3), se reduce al caso en que $Z$ es abierto y \emph{retrocompacto en}
+$Y$, es decir, tal que la inyección canónica $Z\to Y$ es un morfismo
+cuasicompacto; basta entonces ver que $f^{-1}(Z)$ es
+\emph{retrocompacto en $X$}, es decir, tal que la inyección canónica
+$f^{-1}(Z)\to X$ es un morfismo cuasicompacto; pero esto resulta de
+(1.1.2, (iii)), puesto que $f^{-1}(Z)=Z\times_YX$ (\textbf{I}, 4.4.1).
+\end{proof}
+
+\begin{lemma}[1.8.3]
+\label{IV.1.8.3-fr}
+Sean $X$ un preesquema cuasicompacto y cuasiseparado, $Z$ un subconjunto
+construible de $X$. Existen entonces un esquema afín $X'$ y un morfismo
+de presentación finita $f:X'\to X$ tales que $f(X')=Z$.
+\end{lemma}
+
+\begin{proof}
+Como $X$ es cuasicompacto, es unión finita de abiertos afines $X_i$
+($i\in I$), y como $X$ es cuasiseparado, resulta de (1.2.7) que cada una
+de las inmersiones canónicas $g_i:X_i\to X$ es de presentación finita; se
+concluye que si $f_i:X'_i\to X_i$ es un morfismo de presentación finita, lo
+mismo ocurre con $g_i\circ f_i:X'_i\to X$ (1.6.2), y si $X'$ es el
+preesquema suma de los $X'_i$, el morfismo $h:X'\to X$ que coincide con
+$g_i\circ f_i$ en cada $X'_i$ es también de presentación finita
+(1.6.5). Como $Z\cap X_i$ es construible en $X_i$
+(\textbf{0}\textsubscript{III}, 9.1.8), se ve que se reduce a probar el lema
+cuando $X_i$ es \emph{afín} de anillo $A$. Como $Z$ es entonces unión
+finita de conjuntos de la forma $U\cap\complement V$, donde $U$ y $V$ son
+abiertos cuasicompactos (\textbf{0}\textsubscript{III}, 9.1.3), se ve, considerando
+de nuevo una suma adecuada de preesquemas, que se puede reducir al caso en que
+$Z=U\cap\complement V$; como además $U$ es unión finita de abiertos
+afines, se puede incluso limitar al caso en que $U$ es \emph{afín}. Como $V$
+es cuasicompacto, es unión finita de abiertos de la forma $X_{f_i}$, donde
+$f_i\in A$; sea $\mathfrak J$ el ideal de $A$ generado por los $f_i$, y
+sea $Z'$ el subesquema cerrado afín de $X$ que define (y que es por
+construcción de presentación finita sobre $X$); se tiene por definición
+$V=\complement Z'$, por tanto $U\cap\complement V=U\cap Z'$. Consideremos el
+esquema afín $X'=Z'\times_XU$
+\oldpage[IV-1]{239}
+y sea $f:X'\to X$ el morfismo estructural; acabamos de ver que
+la inmersión canónica $Z'\to X$ es de presentación finita, y lo mismo ocurre
+con la inmersión abierta $U\to X$, que es cuasicompacta puesto que $U$ y
+$X$ son afines; se concluye, por tanto, de (1.6.2, (iv)) que $f$ es de
+presentación finita, y se tiene $f(X')=Z'\cap U$ (\textbf{I}, 3.4.8), lo que termina la
+demostración.
+\end{proof}
+
+\begin{theorem}[1.8.4]
+\label{IV.1.8.4-fr}
+\textup{(Chevalley).} --- Sea $f:X\to Y$ un morfismo de presentación
+finita. Para todo subconjunto localmente construible $Z$ de $X$, $f(Z)$ es
+localmente construible en $Y$.
+\end{theorem}
+
+\begin{proof}
+Sean $y\in Y$ y $V$ una vecindad abierta afín de $y$; como $f$ es
+cuasicompacto y cuasiseparado, lo mismo ocurre con su restricción
+$f^{-1}(V)\to V$, por lo que $f^{-1}(V)$ es un preesquema cuasicompacto y
+cuasiseparado (1.2.3); como $Z\cap f^{-1}(V)$ es construible en
+$f^{-1}(V)$ (1.8.1), se ve que se puede limitar al caso en que $Y$ es afín
+y $Z$ construible; $X$ es entonces cuasicompacto y cuasiseparado, por lo que
+(1.8.3), existe un morfismo de presentación finita $g:X'\to X$ tal que
+$Z=g(X')$; como $f\circ g$ es de presentación finita, se ve que se
+reduce al caso en que $Z=X$; es decir, bastará probar el
+\end{proof}
+
+\begin{lemma}[1.8.4.1]
+\label{IV.1.8.4.1-fr}
+Sean $Y$ un esquema afín, $f:X\to Y$ un morfismo cuasicompacto y
+localmente de presentación finita; entonces $f(X)$ es un subconjunto construible
+de $Y$.
+\end{lemma}
+
+\begin{proof}
+Como $X$ es cuasicompacto, es unión finita de abiertos afines; se puede,
+por tanto, limitar al caso en que $Y=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(B)$, siendo $B$ una $A$-álgebra de presentación finita
+(1.4.6). Ahora bien, se tiene el
+\end{proof}
+
+\begin{lemma}[1.8.4.2]
+\label{IV.1.8.4.2-fr}
+Sean $A_0$ un anillo, $(A_\lambda)_{\lambda\in L}$ un sistema inductivo de
+$A_0$-álgebras, $A=\varinjlim A_\lambda$; si $B$ es una $A$-álgebra de
+presentación finita, existen un $\lambda$ y una $A_\lambda$-álgebra de
+presentación finita $B_\lambda$ tales que $B$ es isomorfa a
+$B_\lambda\otimes_{A_\lambda}A$.
+\end{lemma}
+
+\begin{proof}
+Por hipótesis, $B$ es isomorfa a un álgebra de la forma
+$A[T_1,\ldots,T_n]/\mathfrak J$, donde los $T_i$ son indeterminadas y
+$\mathfrak J$ un ideal de tipo finito; sea $(F_j)$ ($1\leq j\leq m$) un
+sistema de generadores de $\mathfrak J$. Sea
+$\varphi_\lambda:A_\lambda\to A$ el homomorfismo canónico. Como $L$ es
+filtrante, existe $\lambda$ tal que cada uno de los coeficientes de cada uno de los
+polinomios $F_j$ es la imagen por $\varphi_\lambda$ de un elemento de
+$A_\lambda$. Es decir, existe un sistema de polinomios
+$(F_{j\lambda})_{1\leq j\leq m}$ de $A_\lambda[T_1,\ldots,T_n]$ tales que
+$F_j=\varphi_\lambda(F_{j\lambda})$ para $1\leq j\leq m$. Si
+$\mathfrak J_\lambda$ es el ideal de $A_\lambda[T_1,\ldots,T_n]$ generado
+por los $F_{j\lambda}$, $\mathfrak J$ es la imagen de
+$\mathfrak J_\lambda\otimes_{A_\lambda}A$ en
+$A[T_1,\ldots,T_n]=A_\lambda[T_1,\ldots,T_n]\otimes_{A_\lambda}A$;
+el anillo $B_\lambda=A_\lambda[T_1,\ldots,T_n]/\mathfrak J_\lambda$ responde a
+la cuestión.
+\end{proof}
+
+Se aplicará aquí este lema considerando $A$ como límite inductivo de sus
+\emph{sub-$\mathbf Z$-álgebras de tipo finito}. Se ve, por tanto, que existe una
+tal sub-$\mathbf Z$-álgebra $A_0$ de $A$, y una $A_0$-álgebra de
+presentación finita $B_0$ tales que $B$ es isomorfa a
+$B_0\otimes_{A_0}A$; pongamos $X_0=\operatorname{Spec}(B_0)$,
+$Y_0=\operatorname{Spec}(A_0)$, de modo que se tiene $X=X_0\times_{Y_0}Y$,
+siendo $f$ la proyección $X\to Y$; sean $f_0:X_0\to Y_0$,
+$g_0:Y\to Y_0$ los morfismos estructurales; resulta de (\textbf{I}, 3.4.8) que
+se tiene $f(X)=g_0^{-1}(f_0(X_0))$; teniendo en cuenta (1.8.2), basta, por tanto,
+mostrar que $f_0(X_0)$ es construible. Es decir, se reduce finalmente
+a demostrar el
+
+\begin{corollary}[1.8.5]
+\label{IV.1.8.5-fr}
+Sean $Y$ un preesquema noetheriano, $f:X\to Y$ un morfismo de tipo finito.
+Para todo subconjunto construible $Z$ de $X$, $f(Z)$ es un subconjunto
+construible de $Y$.
+\end{corollary}
+
+\oldpage[IV-1]{240}
+
+\begin{proof}
+Se reduce, como anteriormente, a probar que $f(X)$ es construible.
+Apliquemos el criterio (\textbf{0}\textsubscript{III}, 9.2.3): hay que probar que para
+todo subconjunto cerrado irreducible $T$ de $Y$, $T\cap f(X)=f(f^{-1}(T))$ es
+raro en $T$ o contiene un abierto no vacío de $T$; tomando un
+subpreesquema de $Y$ que tenga a $T$ por espacio subyacente (\textbf{I}, 5.2.1) y
+considerando su imagen inversa por $f$, se ve finalmente (teniendo en cuenta
+(1.5.4, (iii)) que se reduce a probar que, si se supone $Y$
+\emph{irreducible} y $f$ \emph{dominante}, $f(X)$ contiene un abierto no vacío de
+$Y$. Se puede además suponer $Y$ afín; entonces $X$ es unión finita
+de abiertos afines $V_i$, y como $f(X)$ es denso en $Y$, lo mismo ocurre
+con al menos uno de los $f(V_i)$. Se puede, por tanto, también suponer $X$ afín; si
+$(X_j)$ es la familia (finita) de las componentes irreducibles de $X$, se ve,
+como anteriormente, que al menos uno de los $f(X_j)$ es denso en $Y$; se puede, por tanto,
+suponer $X$ irreducible. Por último, sustituyendo $f$ por $f_{\mathrm{red}}$
+(1.5.4, (vi)) se pueden suponer $X$ y $Y$ \emph{íntegros}. Entonces
+$X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, donde $A$ es un
+anillo íntegro noetheriano, $B$ una $A$-álgebra íntegra de tipo finito que contiene
+a $A$ (\textbf{I}, 1.2.7). Basta mostrar que existe $g\in A$ tal que, para todo
+$y\in D(g)$ (es decir, tal que $g\notin\mathfrak j_y$) el ideal
+$\mathfrak j_y$ es la intersección de $A$ y de un ideal primo de $B$, pues
+esto mostrará que $D(g)\subset f(X)$. Finalmente basta probar el
+\end{proof}
+
+\begin{lemma}[1.8.5.1]
+\label{IV.1.8.5.1-fr}
+Sean $A$ un anillo íntegro, $B$ una $A$-álgebra íntegra de tipo finito.
+Existe $g\in A$ tal que todo homomorfismo de $A$ a un cuerpo
+algebraicamente cerrado $\Omega$, no nulo en $g$, se prolonga a un homomorfismo
+de $B$ a $\Omega$.
+\end{lemma}
+
+\begin{proof}
+Ahora bien, este es un resultado clásico de álgebra conmutativa (Bourbaki,
+\emph{Alg. comm.}, cap. V, \S~3, n\textsuperscript{o}~1, cor. 3 del teorema 1).
+\end{proof}
+
+\begin{corollary}[1.8.6]
+\label{IV.1.8.6-fr}
+Sean $Y$ un preesquema irreducible, $\eta$ su punto genérico,
+$f:X\to Y$ un morfismo localmente de tipo finito. Si $f^{-1}(\eta)$ no es
+vacío, existe una vecindad abierta $U$ de $\eta$ en $Y$ tal que
+$f^{-1}(y)$ es no vacío para todo $y\in U$. Si $\mathscr F$ es un
+$\mathcal O_X$-Módulo cuasicoherente de tipo finito, y si
+$\mathscr F_\eta=\mathscr F\otimes_{\mathcal O_Y}\boldsymbol{k}(\eta)$ no es nulo,
+entonces existe una vecindad abierta $U'$ de $\eta$ en $Y$ tal que
+$\mathscr F_y=\mathscr F\otimes_{\mathcal O_Y}\boldsymbol{k}(y)$ no es nulo para
+todo $y\in U'$.
+\end{corollary}
+
+\begin{proof}
+Si $p_y$ es la proyección canónica de la fibra
+$f^{-1}(y)=X\times_Y\operatorname{Spec}(\boldsymbol{k}(y))$ en $X$, se tiene
+$\mathscr F_y=p_y^*(\mathscr F)$, por tanto
+$\operatorname{Supp}(\mathscr F_y)=p_y^{-1}(\operatorname{Supp}(\mathscr F))
+=\operatorname{Supp}(\mathscr F)\cap f^{-1}(y)$ en virtud de (\textbf{I}, 9.1.13.1) y
+(\textbf{I}, 3.6.1), puesto que $\mathscr F$ es de tipo finito; además
+$\operatorname{Supp}(\mathscr F)$ es cerrado en $X$ (\textbf{0}\textsubscript{I},
+5.2.2), y si $Z$ es un subpreesquema cerrado de $X$ que tiene por espacio
+subyacente $\operatorname{Supp}(\mathscr F)$ (\textbf{I}, 5.2.1), y $j$ la inmersión
+canónica $Z\to X$, $f\circ j$ es localmente de tipo finito (1.3.4); esto
+prueba que la primera afirmación implica la segunda. Para probar la
+primera afirmación, observemos primero que se pueden suponer $X$ y $Y$
+reducidos (1.3.4, (vi)), es decir, $Y$ \emph{íntegro}. Sea $\xi$ un punto de
+$f^{-1}(\eta)$; se pueden sustituir $X$ y $Y$ por vecindades abiertas
+afines de $\xi$ y $\eta$ respectivamente, y por consiguiente suponer que
+$X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, siendo $B$ una
+$A$-álgebra de tipo finito. Además, si $Z$ es el subpreesquema cerrado reducido
+de $X$ que tiene a $\overline{\{\xi\}}$ por conjunto subyacente (\textbf{I}, 5.2.1), se
+puede, como anteriormente, sustituir $X$ por $Z$, es decir, suponer $B$
+\emph{íntegro} (\textbf{I}, 5.1.4). Como el morfismo $f$ es entonces dominante,
+el homomorfismo correspondiente $\varphi:A\to B$ es inyectivo (\textbf{I}, 1.2.7);
+por tanto el corolario resulta finalmente del lema (1.8.5.1).
+\end{proof}
+
+\oldpage[IV-1]{241}
+
+\begin{proposition}[1.8.7]
+\label{IV.1.8.7-fr}
+Sean $S$ un preesquema, $g:X\to S$, $h:Y\to S$ dos morfismos de
+presentación finita, $f:X\to Y$ un $S$-morfismo. Para todo $s\in S$, pongamos
+$X_s=g^{-1}(s)=X\times_S\operatorname{Spec}(\boldsymbol{k}(s))$,
+$Y_s=h^{-1}(s)=Y\times_S\operatorname{Spec}(\boldsymbol{k}(s))$,
+$f_s=f\times 1:X_s\to Y_s$. Entonces el conjunto de los $s\in S$ tales que $f_s$
+es sobreyectivo (\textup{resp.} radicial) es localmente construible.
+\end{proposition}
+
+\begin{proof}
+Sea $E$ el conjunto de los $s\in S$ tales que $f_s$ es sobreyectivo; el conjunto
+$S\setmin E$ es igual a $h(Y\setmin f(X))$; ahora bien, $f$ es de presentación finita (1.6.2, (v))
+por lo que $f(X)$ es localmente construible en $Y$ (1.8.4); como $h$ es de
+presentación finita, $h(Y\setmin f(X))$ es localmente construible en $S$, y por tanto
+también $E$.
+
+Para mostrar que el conjunto $E'$ de los $s\in S$ tales que $f_s$ es radicial
+es localmente construible, utilizaremos el
+\end{proof}
+
+\begin{lemma}[1.8.7.1]
+\EGAReaderTarget{ega4.c04.lem.1-8-7-1}{IV.1.8.7.1-fr}
+Sean $U$, $V$ dos preesquemas; para que un morfismo $f:U\to V$ sea
+radicial, es necesario y suficiente que el morfismo diagonal
+$\Delta_f:U\to U\times_VU$ sea sobreyectivo. Por consiguiente, todo morfismo radicial
+es separado.
+\end{lemma}
+
+\begin{proof}
+En efecto, como $\Delta_f$ es una inmersión (\textbf{I}, 5.3.9), es un morfismo
+localmente de tipo finito (1.3.4); decir que $\Delta_f$ es sobreyectivo significa,
+por tanto, que para todo cuerpo algebraicamente cerrado $K$, la aplicación
+correspondiente $U(K)\to(U\times_VU)(K)=U(K)\times_{V(K)}U(K)$ es sobreyectiva
+(1.3.7 y \textbf{I}, 3.4.2.1); pero por definición de un producto fibrado de conjuntos,
+esto significa que la aplicación $U(K)\to V(K)$ correspondiente a $f$ es
+inyectiva, y esto equivale a decir que $f$ es radicial (\textbf{I}, 3.5.5).
+
+Siendo así, $\Delta_{f_s}$ se deduce de $\Delta_f:X\to X\times_YX$ por el
+cambio de base $\operatorname{Spec}(\boldsymbol{k}(s))\to S$ (\textbf{I}, 5.3.4). Como $f$
+es de presentación finita, lo mismo ocurre con el morfismo estructural
+$X\times_YX\to Y$ (1.6.2, (iv)), y por tanto también con $\Delta_f$ (1.6.2, (v));
+basta, pues, aplicar la primera parte de la proposición a $\Delta_f$,
+utilizando el lema (1.8.7.1).
+\end{proof}
+

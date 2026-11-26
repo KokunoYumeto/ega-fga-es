@@ -1,0 +1,87 @@
+\begin{proposition}[5.7.5]
+\label{IV.2.s5.7.5-fr}
+Sean $X$ un preesquema localmente noetheriano y $\mathscr F$ un
+$\mathcal O_X$-módulo coherente. Para que $\mathscr F$ verifique $(S_k)$
+($k\geq1$), es necesario y suficiente que, para todo entero $r$ tal que
+$0\leq r<k$, todo abierto $U$ de $X$ y toda sucesión
+$(\mathscr F|U)$-regular $(f_i)_{1\leq i\leq r}$ de secciones de
+$\mathcal O_X$ sobre $U$,
+$(\mathscr F|U)/(\sum_{i=1}^r f_i(\mathscr F|U))$
+carezca de ciclo primo asociado inmerso.
+\end{proposition}
+
+Demostremos primero la proposición para $k=1$; puede enunciarse también
+diciendo que, \emph{para que $\mathscr F$ verifique $(S_1)$, es necesario y suficiente
+que $\mathscr F$ carezca de ciclo primo asociado inmerso}. En efecto, decir que
+$\mathscr F$ verifica $(S_1)$ significa que, en los puntos
+$x\in\operatorname{Supp}(\mathscr F)$ tales que $\dim(\mathscr F_x)>0$, se
+tiene $\operatorname{prof}(\mathscr F_x)\geq1$ (puesto que en los demás puntos
+de $\operatorname{Supp}(\mathscr F)$ se tiene $\dim(\mathscr F_x)=0$, por
+tanto $\operatorname{prof}(\mathscr F_x)=0$); pero decir que
+$\operatorname{prof}(\mathscr F_x)\geq1$ significa que $\mathfrak m_x$
+\emph{no está asociado a} $\mathscr F_x$ (\textbf 0, 16.4.6, (i)), o también que $x$
+no está asociado a $\mathscr F$ (3.1.1); por otra parte, si $S$ es un
+subpreesquema de $X$ cuyo espacio subyacente es
+$\operatorname{Supp}(\mathscr F)$, se tiene (5.1.12.1)
+$\dim(\mathscr F_x)=\dim(\mathcal O_{S,x})$; decir que
+$\dim(\mathscr F_x)>0$ significa por tanto que $x$ no es un punto maximal de
+$\operatorname{Supp}(\mathscr F)$ (5.1.2), de donde se sigue la conclusión.
+
+En segundo lugar, mostremos que, para $k$ arbitrario $>1$, la condición del
+enunciado es \emph{necesaria}. Es posible limitarse a considerar el caso en que $U=X$,
+y nuestra afirmación quedará probada (por inducción sobre $k$ y en virtud de la
+primera parte del razonamiento) si mostramos que, cuando $\mathscr F$ verifica
+$(S_k)$ ($k>1$) y $f$ es una sección $\mathscr F$-\emph{regular} de
+$\mathcal O_X$ sobre $X$, entonces $\mathscr F/f\mathscr F$ \emph{verifica}
+$(S_{k-1})$ (es decir, verifica (5.7.2.1) donde $k$ se sustituye por $k-1$).
+Ahora bien, para todo $x\in X$, $f_x$ es un elemento
+$\mathscr F_x$-regular; si es invertible, se tiene
+$\mathscr F_x/f_x\mathscr F_x=0$ y la conclusión es trivial. Si, por el
+contrario, $f_x\in\mathfrak m_x$, se sabe que
+$\operatorname{prof}(\mathscr F_x/f_x\mathscr F_x)
+=\operatorname{prof}(\mathscr F_x)-1$ (\textbf 0, 16.4.6, (i)), y
+$\dim(\mathscr F_x/f_x\mathscr F_x)=\dim(\mathscr F_x)-1$ (\textbf 0, 16.3.4), y
+de ello resulta nuestra afirmación.
+
+Probemos finalmente que, para $k>1$, la condición del enunciado es \emph{suficiente}.
+Procederemos por inducción sobre $k$; sea $x$ un punto de $X$, y supongamos
+primero que $\dim(\mathscr F_x)\geq k$. La hipótesis de inducción implica que
+$\mathscr F$ verifica $(S_{k-1})$, por tanto
+$\operatorname{prof}(\mathscr F_x)\geq k-1$; teniendo en cuenta (\textbf 0, 15.2.4),
+existe, pues, una vecindad abierta $U$ de $x$ y una sucesión
+$(\mathscr F|U)$-regular $(f_i)_{1\leq i\leq k-1}$ de secciones de
+$\mathcal O_X$ sobre $U$, tales que $(f_i)_x\in\mathfrak m_x$ para
+$1\leq i\leq k-1$. La hipótesis implica que
+$\mathscr G=(\mathscr F|U)/(\sum_{i=1}^{k-1}
+f_i(\mathscr F|U))$
+carece de ciclo primo asociado inmerso; pero se tiene
+$\dim(\mathscr G_x)=\dim(\mathscr F_x)-(k-1)\geq1$ (\textbf 0, 16.3.4), por tanto $x$
+no está asociado a $\mathscr G$; se tiene, pues,
+$\operatorname{prof}(\mathscr G_x)\geq1$ (\textbf 0, 16.4.6), y como
+$\operatorname{prof}(\mathscr G_x)=\operatorname{prof}(\mathscr F_x)-(k-1)$
+(\textbf 0, 16.4.6), se tiene $\operatorname{prof}(\mathscr F_x)\geq k$. Supongamos,
+en segundo lugar, que $\dim(\mathscr F_x)=r<k$; como $\mathscr F$ verifica
+$(S_{k-1})$, se tiene
+$\operatorname{prof}(\mathscr F_x)\geq\inf(k-1,r)=r$, y esto termina la
+demostración.
+
+\begin{corollary}[5.7.6]
+\label{IV.2.s5.7.6-fr}
+Supongamos que $\mathscr F$ verifica $(S_k)$ ($k\geq1$); si
+$(f_i)$ ($1\leq i\leq r$) es una sucesión $\mathscr F$-regular de secciones
+de $\mathcal O_X$ sobre $X$ y si $r<k$,
+$\mathscr F/(\sum_{i=1}^r f_i\mathscr F)$ verifica $(S_{k-r})$.
+\end{corollary}
+
+Esto resulta inmediatamente de (5.7.5).
+
+\begin{corollary}[5.7.7]
+\label{IV.2.s5.7.7-fr}
+Para que $\mathscr F$ verifique $(S_2)$, es necesario y suficiente que
+$\mathscr F$ carezca de ciclo primo asociado inmerso y que, para todo abierto
+$U$ de $X$ y toda sección $(\mathscr F|U)$-regular $f$ de $\mathcal O_X$
+sobre $U$, $(\mathscr F|U)/f(\mathscr F|U)$ carezca de ciclo primo asociado
+inmerso.
+\end{corollary}
+
+\oldpage[IV-2]{106}

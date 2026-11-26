@@ -1,0 +1,93 @@
+\documentclass[10pt,oneside,openany]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\babelprovide[import,main]{spanish}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathrsfs}
+\usepackage{iftex}
+\ifLuaTeX\usepackage{luatex85}\fi
+\usepackage[all]{xy}
+\usepackage{tikz-cd}
+\usepackage{xstring,xparse,xcolor,etoolbox}
+\usepackage[a4paper,left=18mm,right=18mm,top=22mm,bottom=23mm,marginparwidth=14mm,marginparsep=2mm]{geometry}
+\usepackage{array,longtable,multicol,booktabs}
+\usepackage[shortlabels]{enumitem}
+\usepackage{marginnote,microtype,graphicx,adjustbox}
+\usepackage[unicode=true,pdfencoding=auto,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,hypertexnames=false,hyperfootnotes=false,linktocpage=true]{hyperref}
+\usepackage{bookmark}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% Keep PDF destinations unique when the cumulative reader resets table counters.
+\renewcommand{\theHtable}{\arabic{part}.\arabic{table}}
+\setcounter{tocdepth}{2}
+\setlength{\emergencystretch}{12em}
+\tolerance=3000
+\binoppenalty=200
+\relpenalty=200
+\hfuzz=0.1pt
+\vfuzz=0.1pt
+\raggedbottom
+\allowdisplaybreaks[3]
+\newtheoremstyle{egaenv}{}{}{\normalfont}{}{\bfseries}{.}{ }{\thmnote{(#3)}}
+\newtheoremstyle{egastatement}{}{}{\itshape}{}{\bfseries}{. ---}{ }{\thmname{#1}\thmnote{ (#3)}}
+\newtheoremstyle{egadescription}{}{}{\normalfont}{}{\bfseries}{. ---}{ }{\thmname{#1}\thmnote{ (#3)}}
+\theoremstyle{egaenv}\newtheorem*{env}{---}
+\theoremstyle{egastatement}
+\newtheorem*{theorem}{Teorema}
+\newtheorem*{proposition}{Proposición}
+\newtheorem*{lemma}{Lema}
+\newtheorem*{corollary}{Corolario}
+\theoremstyle{egadescription}
+\newtheorem*{definition}{Definición}
+\newtheorem*{remark}{Observación}
+\newtheorem*{remarks}{Observaciones}
+\newtheorem*{example}{Ejemplo}
+\newtheorem*{examples}{Ejemplos}
+\newtheorem*{scholium}{Escolio}
+\newtheorem*{notation}{Notación}
+\newenvironment{namedtheorem}[2][]{\par\medskip\noindent\setmanualcurrentlabel{#1}\textbf{#2\ifstrempty{#1}{}{ (#1)}. ---}\ifstrequal{#2}{Observación}{\normalfont}{\ifstrequal{#2}{Observaciones}{\normalfont}{\itshape}}}{\par\medskip}
+\newenvironment{namedlemma}[2][]{\par\medskip\noindent\setmanualcurrentlabel{#1}\textbf{#2\ifstrempty{#1}{}{ (#1)}. ---}\itshape}{\par\medskip}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\contentsname}{Índice general}
+\renewcommand{\bibname}{Bibliografía}
+\providecommand{\refname}{Bibliografía}
+\newcommand{\oldpage}[2][]{\marginnote{\normalfont\scriptsize\textbf{#1}\,|\,#2}\ignorespaces}
+\newcommand{\sectionbreak}{\begin{center}***\end{center}}
+\newcommand{\erratum}[2][]{#2\marginnote{\scriptsize\textbf{Err}\textsubscript{#1}}}
+\providecommand{\shHom}{\mathcal{H}\!\mathit{om}}
+\providecommand{\shProj}{\mathcal{P}\!\mathit{roj}}
+% Literal macro definition from the French EGA II notation index.
+\providecommand{\egaShProj}{\mathcal{P}\!\mathit{roj}}
+\providecommand{\shExt}{\mathcal{E}\!\mathit{xt}}
+\providecommand{\shTor}{\mathcal{T}\!\mathit{or}}
+\providecommand{\shGr}{\mathcal{G}\!\mathit{r}}
+\providecommand{\shDer}{\mathcal{D}\!\mathit{er}}
+\providecommand{\shDiff}{\mathcal{D}\!\mathit{iff}}
+\providecommand{\shHomcont}{\mathcal{H}\!\mathit{om.cont}}
+\providecommand{\shAut}{\mathcal{A}\!\mathit{ut}}
+\providecommand{\Frac}{\operatorname{Frac}}
+\providecommand{\unsure}[1]{#1}
+\providecommand{\completelyunsure}{\textbf{??}}
+\providecommand{\og}{\guillemotleft{}}
+\providecommand{\fg}{\guillemotright{}}
+\makeatletter
+\newcommand{\setmanualcurrentlabel}[1]{\def\@currentlabel{#1}}
+\newcommand{\EGARefNumber}[1]{\begingroup\StrSubstitute{#1}{-fr}{}[\egarefkey]\StrSubstitute{\egarefkey}{-es}{}[\egarefkey]\StrSubstitute{\egarefkey}{.fr}{}[\egarefkey]\StrBehind{\egarefkey}{.}\endgroup}
+\newcommand{\EGAMaybeRefLink}[2]{\@ifundefined{r@#1}{#2}{\hyperref[#1]{#2}}}
+\newcommand{\EGAReferenceAlias}[2]{\ifcsdef{r@#2}{\csletcs{r@#1}{r@#2}}{}}
+\NewDocumentCommand{\sref}{o m o}{\textup{(\IfNoValueF{#1}{\textbf{#1},~}\EGAMaybeRefLink{#2}{\EGARefNumber{#2}}\IfNoValueF{#3}{,~#3})}}
+\newcommand{\eref}[1]{\textup{(\EGAMaybeRefLink{#1}{\EGARefNumber{#1}})}}
+\newcommand{\EGAReaderTarget}[2]{\phantomsection\def\@currentlabel{#2}\label{#1}}
+\newcommand{\EGAReadLink}[2]{\EGAMaybeRefLink{#1}{#2}}
+\newcommand{\EGAUnavailableHyperref}[2]{\EGAMaybeRefLink{#1}{#2}}
+\newcommand{\sgaStableTarget}[1]{\hypertarget{#1}{}}
+\newcommand{\sgaStableOrOriginalLink}[2]{\EGAMaybeRefLink{#1}{#2}}
+\newcommand{\EGAIVFourExternalLabel}[1]{}
+\newcommand{\EGAIVFourExternalCitation}[2]{\expandafter\def\csname b@#1\endcsname{#2}}
+\makeatother
+\newcommand{\EGAResetVolumeCounters}{\setcounter{section}{0}\setcounter{subsection}{0}\setcounter{equation}{0}\setcounter{footnote}{0}\setcounter{figure}{0}\setcounter{table}{0}}
+\newcommand{\EGAVolumeTitlePage}[3]{\clearpage\EGAResetVolumeCounters\chapter*{#2\\#3}\addcontentsline{toc}{chapter}{#2: #3}}
+\newcommand{\MR}[1]{MR #1}
+\newcommand{\MRhref}[2]{\href{#1}{#2}}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\,}
+\pagestyle{plain}
